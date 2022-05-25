@@ -1,17 +1,16 @@
 ---
-title: "sys.dm_pdw_nodes_exec_query_plan (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_pdw_nodes_exec_query_plan (Transact-SQL)"
 description: Dynamic management view that returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
 ms.custom: ""
 ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 
-author: XiaoyuMSFT 
-ms.author: xiaoyul
+author: jacinda-eng
+ms.author: jacindaeng
 monikerRange: "=azure-sqldw-latest"
 ---
 
@@ -21,7 +20,7 @@ monikerRange: "=azure-sqldw-latest"
 Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
 
 > [!NOTE] 
-> In Synapse SQL, adding white spaces in a query constitutes a query change that causes the query hash to be re-calculated and the previous cached execution plan not be reused.
+> In Azure Synapse SQL, adding white spaces in a query constitutes a query change that causes the query hash to be re-calculated and the previous cached execution plan not be reused.
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]

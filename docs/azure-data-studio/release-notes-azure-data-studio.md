@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 05/20/2022
+ms.date: 05/24/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -25,6 +25,12 @@ Azure Data Studio 1.36.2 is the latest general availability (GA) release.
 
 - Release number: 1.36.2
 - Release date: May 20, 2022
+
+#### What's new in 1.36.2
+
+| New Item | Details |
+|----------|---------|
+| Power BI | Introduced support for Power BI Datamart connectivity. |
 
 #### Bug fixes in 1.36.2
 

@@ -8,6 +8,7 @@ ms.technology: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
+ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?
@@ -262,6 +263,7 @@ To download ESUs, follow these steps:
 The following list shows the supported regions for this service:
 
 - Australia East
+- Canada Central
 - Central US
 - East Asia
 - East US

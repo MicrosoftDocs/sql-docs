@@ -1397,8 +1397,8 @@
         items:
         - name: Dedicated host
           href: virtual-machines/windows/dedicated-host.md
-        - name: Extend support for SQL 2008 & R2
-          href: virtual-machines/windows/sql-server-2008-extend-end-of-support.md
+        - name: Extend support for SQL Server
+          href: virtual-machines/windows/sql-server-extend-end-of-support.md
     - name: How-to guides
       items:
       - name: Connect to SQL Server VM

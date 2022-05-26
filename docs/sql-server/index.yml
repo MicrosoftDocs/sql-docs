@@ -52,7 +52,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: SQL Server 2019 
-        url: what-s-new-in-sql-server-ver15.md
+        url: ./what-s-new-in-sql-server-2019.md
       - text: SQL Server Big Data Clusters
         url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio

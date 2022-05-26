@@ -80,7 +80,7 @@ conceptualContent:
     - title: What's new
       links:
         - text: SQL Server 2019
-          url: ./sql-server/what-s-new-in-sql-server-ver15.md
+          url: ./sql-server/what-s-new-in-sql-server-2019.md
           itemType: whats-new
         - text: Azure SQL Database
           url: /azure/azure-sql/database/doc-changes-updates-release-notes-whats-new

@@ -577,7 +577,7 @@ items:
 - name: Resources
   items:
   - name: Release notes 2019 >
-    href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
+    href: ../sql-server/sql-server-2019-release-notes.md?toc=..%2ftoc.json
   - name: Release notes 2017 >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
   - name: Release notes 2016 >

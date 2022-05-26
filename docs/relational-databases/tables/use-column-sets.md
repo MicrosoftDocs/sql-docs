@@ -1,8 +1,8 @@
 ---
-description: "Use Column Sets"
+description: "Use Column Sets to designate a column set to return all sparse columns in the table. A column set is an untyped XML representation that combines all the sparse columns of a table into a structured output."
 title: "Use Column Sets"
 ms.custom: ""
-ms.date: "07/09/2021"
+ms.date: "04/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -31,10 +31,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   A column set cannot be added to a table if that table already contains sparse columns.  
   
--   The column set cannot be changed. To change a column set, you must delete and re-create the sparse columns and the column set.  
+-   The column set column cannot be changed or renamed. To change a column set, you must delete and re-create the sparse columns and the column set. Columns with the SPARSE keyword can be added and dropped from the table.
   
--   A column set can be added to a table that does not include any sparse columns. If sparse columns are later added to the table, they will appear in the column set.  
-  
+-   A column set can be added to a table that does not include any sparse columns. If sparse columns are later added to the table, they will appear in the column set.    
 -   Only one column set is allowed per table.  
   
 -   A column set is optional and is not required to use sparse columns.  
@@ -136,7 +135,7 @@ GO
 ## Examples  
  In the following examples, a document table contains the common set of columns `DocID` and `Title`. The Production group wants a `ProductionSpecification` and `ProductionLocation` column for all production documents. The Marketing group wants a `MarketingSurveyGroup` column for marketing documents.  
   
-### A. Creating a table that has a column set  
+### A. Create a table that has a column set  
  The following example creates the table that uses sparse columns and includes the column set `SpecialPurposeColumns`. The example inserts two rows into the table, and then selects data from the table.  
   
 > [!NOTE]  
@@ -157,7 +156,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. Inserting data to a table by using the names of the sparse columns  
+### B. Insert data to a table using the names of the sparse columns  
  The following examples insert two rows into the table that is created in example A. The examples use the names of the sparse columns and do not reference the column set.  
   
 ```sql  
@@ -170,7 +169,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. Inserting data to a table by using the name of the column set  
+### C. Insert data to a table by using the name of the column set  
  The following example inserts a third row into the table that is created in example A. This time the names of the sparse columns are not used. Instead, the name of the column set is used, and the insert provides the values for two of the four sparse columns in XML format.  
   
 ```sql  
@@ -179,7 +178,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. Observing the results of a column set when SELECT * is used  
+### D. Observe the results of a column set when SELECT * is used  
  The following example selects all the columns from the table that contains a column set. It returns an XML column with the combined values of the sparse columns. It does not return the sparse columns individually.  
   
 ```sql  
@@ -188,14 +187,14 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```output
  DocID  Title        SpecialPurposeColumns  
  1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
  2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
  3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
  ```
   
-### E. Observing the results of selecting the column set by name  
+### E. Observe the results of selecting the column set by name  
  Because the Production department is not interested in the marketing data, this example adds a `WHERE` clause to restrict the output. The example uses the name of the column set.  
   
 ```sql  
@@ -206,13 +205,13 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```output
  DocID  Title        SpecialPurposeColumns  
  1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
  3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
  ```
  
-### F. Observing the results of selecting sparse columns by name  
+### F. Observe the results of selecting sparse columns by name  
  When a table contains a column set, you can still query the table by using the individual column names as shown in the following example.  
   
 ```sql  
@@ -223,7 +222,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```output
  DocID  Title        ProductionSpecification ProductionLocation`  
  1      Tire Spec 1  AXZZ217                 27`  
  3      Tire Spec 2  AXW9R411                38`  
@@ -240,9 +239,9 @@ GO
 ```  
   
 > [!IMPORTANT]  
->  An UPDATE statement that uses a column set updates all the sparse columns in the table. Sparse columns that are not referenced are updated to NULL.  
+>  An UPDATE statement that uses a column set updates all the sparse columns in the table. Sparse columns that are not referenced are updated to `NULL`.  
   
- The following example updates the third record, but only specifies the value of one of the two populated columns. The second column `ProductionLocation` is not included in the `UPDATE` statement and is updated to NULL.  
+ The following example updates the third record, but only specifies the value of one of the two populated columns. The second column `ProductionLocation` is not included in the `UPDATE` statement and is updated to `NULL`.  
   
 ```sql  
 UPDATE DocumentStoreWithColumnSet  
@@ -251,5 +250,5 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## See also  
+## Next steps
  - [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)  

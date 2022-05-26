@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Starts with the $ or \@ character.  
   
- If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] () , ; ? * ! \@ =. These characters are used to either initialize a connection or separate connection values.  
+ If used in an OLE DB or ODBC connection string, a login or password containing special characters must be enclosed in braces and right braces must be escaped. For example, the password `my}Pass;word` must be specified in the connection string like `PWD={my}}Pass;word}`.
   
 ## Related Content  
  [Password Policy](../../relational-databases/security/password-policy.md)  

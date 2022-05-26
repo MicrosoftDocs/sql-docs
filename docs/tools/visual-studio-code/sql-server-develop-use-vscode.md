@@ -2,6 +2,8 @@
 title: Use the Visual Studio Code mssql extension
 description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts for SQL Server on Linux.
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
@@ -71,7 +73,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
    | Connection property | Description |
    |---|---|
-   | **Server name or ADO connection string** | Specify the SQL Server instance name. Use *localhost* to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. To connect to a SQL Server container, specify the IP address of the container's host machine. If you need to specify a port, use a comma to separate it from the name. For example, for a server listening on port 1401, enter `<servername or IP>,1401`.<br/><br/>As an alternative, you can enter the ADO connection string for your database here. |
+   | **Server name or ADO connection string** | Specify the SQL Server instance name. Use *localhost* to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. To connect to a SQL Server container, specify the IP address of the container's host machine. If you need to specify a port, use a comma to separate it from the name. For example, for a server listening on port 1401, enter `<servername or IP>,1401`.<br/><br/>By default, the connection string uses port 1433. A default instance of SQL Server uses 1433 unless modified. If your instance is listening on 1433, you do not need to specify the port.<br/><br/>As an alternative, you can enter the ADO connection string for your database here. |
    | **Database name** (optional) | The database that you want to use. To connect to the default database, don't specify a database name here. |
    | **Authentication Type** | Choose either **Integrated** or **SQL Login**. |
    | **User name** | If you selected **SQL Login**, enter the name of a user with access to a database on the server. |

@@ -21,11 +21,14 @@ helpviewer_keywords:
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
-ms.date: 02/17/2022
+ms.reviewer: "katsmith"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+ms.date: 05/24/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
+
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
 [!INCLUDE[sqlserver2016-asdb-asdbmi-asa.md](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +38,7 @@ This command enables several database configuration settings at the **individual
 Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
 
 - Clear procedure cache.
-- Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (such as 0) for all secondary database used (such as for reporting queries).
+- Set the MAXDOP parameter to a recommended value (1,2, ...) for the primary database based on what works best for that particular workload, and set a different value for secondary replica databases used by reporting queries. For guidance on choosing a MAXDOP, review [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 - Set the query optimizer cardinality estimation model independent of the database to compatibility level.
 - Enable or disable parameter sniffing at the database level.
 - Enable or disable query optimization hotfixes at the database level.
@@ -54,6 +57,7 @@ Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsful
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 
 This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+
 - Set the compatibility level of a user database
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -88,6 +92,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
+    | MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | ACCELERATED_PLAN_FORCING = { ON | OFF }
@@ -99,14 +105,18 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
     | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
+    | OPTIMIZED_PLAN_FORCING = { ON | OFF }
+    | DOP_FEEDBACK = { ON | OFF }
+    | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 }
 ```
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], some option names have changed:      
-> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
-> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
-> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], some option names have changed:
+>
+> - `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
+> - `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> - `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics
@@ -175,7 +185,7 @@ This value is only valid on secondaries while the database in on the primary, an
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY }
 
-Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). The default is ON. Setting PARAMETER_SNIFFING to OFF is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity). The default is ON. Setting PARAMETER_SNIFFING to OFF is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > To accomplish this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](../../t-sql/queries/hints-transact-sql-query.md).
@@ -183,7 +193,7 @@ Enables or disables [parameter sniffing](../../relational-databases/query-proces
 
 PRIMARY
 
-This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
+This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
 
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
@@ -316,6 +326,24 @@ Allows you to enable or disable row mode memory grant feedback at the database s
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
+MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Allows you to disable memory grant feedback percentile for all query executions originating from the database.
+
+> [!NOTE]
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
+
+MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Allows you to disable memory grant feedback persistence for all query executions originating from the database.
+
+> [!NOTE]
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
+
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF }
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
@@ -405,9 +433,9 @@ DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **APPLIES TO**: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
 
-Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created. The compatibility level is preserved even after database pause/resume, backup/restore operations. 
+Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created. The compatibility level is preserved even after database pause/resume, backup/restore operations.
 
-|Compatibility Level    |   Comments|  
+| Compatibility Level |   Comments|  
 |-----------------------|--------------|
 |**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
@@ -421,9 +449,27 @@ Allows you to control whether execution statistics for scalar user-defined funct
 
 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 
 
 If asynchronous statistics update is enabled, enabling this configuration will cause the background request updating statistics to wait for a Sch-M lock on a low priority queue, to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
+OPTIMIZED_PLAN_FORCING **=** { **ON** | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
+
+Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
+
+DOP_FEEDBACK = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled.
+
+PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
 
 ## <a name="Permissions"></a> Permissions
 
@@ -441,10 +487,11 @@ The `ALTER_DATABASE_SCOPED_CONFIGURATION` event is added as a DDL event that can
 
 Database scoped configuration settings will be carried over with the database, which means that when a given database is restored or attached, the existing configuration settings remain.
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], some option names have changed:      
--  `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
--  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
--  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], some option names have changed:
+
+- `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
+- `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+- `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## Limitations and Restrictions
 
@@ -628,7 +675,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ### MAXDOP Resources
 
-- [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#DOP)
+- [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop)
 - [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources
@@ -638,7 +685,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ### PARAMETER_SNIFFING Resources
 
-- [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
+- [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity)
 - ["I smell a parameter!"](/archive/blogs/queryoptteam/i-smell-a-parameter)
 
 ### QUERY_OPTIMIZER_HOTFIXES Resources
@@ -654,13 +701,14 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## More information   
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## More information
+
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)

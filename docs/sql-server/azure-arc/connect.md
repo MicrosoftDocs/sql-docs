@@ -7,9 +7,13 @@ ms.author: sashan
 ms.reviewer: mikeray
 ms.date: 07/30/2021
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
+
+Beginning in SQL Server 2022 (Preview), you can deploy an instance of SQL Server from the command prompt that is connected to Azure Arc. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
 
 You can connect your SQL Server instance to Azure Arc by following these steps.
 
@@ -44,10 +48,9 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ```
 ---
 
-
 ## Initiate the connection from Azure
 
-If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions how to install and uninstall extensions using  the Azure portal, Azure PowerShell or Azure CLI.
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
 >1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.

@@ -39,7 +39,7 @@ ms.author: mathoma
   
     -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) page.  
   
-    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [SQL Server 2019: Hardware and software requirements](../../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
+    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [SQL Server 2019: Hardware and software requirements](../../install/hardware-and-software-requirements-for-installing-sql-server-2019.md).  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
@@ -267,4 +267,3 @@ ms.author: mathoma
  [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Check Parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
-  

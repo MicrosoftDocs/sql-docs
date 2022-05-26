@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: rwestMSFT
 ms.author: randolphwest
-ROBOTS: noindex,nofollow
 ---
 
 # Installation Wizard help

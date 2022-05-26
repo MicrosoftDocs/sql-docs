@@ -73,7 +73,7 @@ SSISBuild.exe -project|-p:<dtproj file path> [-configuration|-c:<configuration n
     SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -o:D:\folder
     ```
 
-- Build a dtproj with configuration "DevConfiguration", encrypted with password, striping its sensitive data, and log level DIAG:
+- Build a dtproj with configuration "DevConfiguration", encrypted with password, stripping its sensitive data, and log level DIAG:
     ```
     SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -ss -l:diag
     ```

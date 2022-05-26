@@ -135,7 +135,7 @@ Before using Query Store for secondary replicas, you need to have an [Always On 
 > [!IMPORTANT]
 > **APPLIES TO**: SQL Server 2022 (16.x) CTP 2.x
 > 
-> You must enable the following set of trace flags before you can enable Query Store for secondary replicas: 12606, 12606, 12607, 12608, 12610, T12624. To enable these trace flags:
+> You must enable the following set of trace flags before you can enable Query Store for secondary replicas: 12606, 12607, 12608, 12610, T12624. To enable these trace flags:
 > 1. Open the services management console (services.msc from the **Run** menu).
 > 1. Right-click on the **SQL Server** service for SQL Server 2022 CTP 2 and select **Properties**.
 > 1. If the service status is *Running*, select **Stop**. This will stop the installed instance.

@@ -1,8 +1,9 @@
 ---
-description: "sp_query_store_clear_hints (Transact-SQL)"
+description: "The sp_query_store_clear_hints system stored procedure removes all Query Store hints for a given query."
 title: "sp_query_store_clear_hints (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/09/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,10 +21,10 @@ helpviewer_keywords:
   - "sp_query_store_clear_hints"
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_hints (Transact-SQL)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes all [Query Store hints](../performance/query-store-hints.md) for a given query_id.
   
@@ -65,7 +66,7 @@ FROM sys.query_store_query_hints
 WHERE query_id = 39;
 ```
 
-## See also  
+## Next steps
 - [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md)   
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)   
 - [Query Store hints](../performance/query-store-hints.md).

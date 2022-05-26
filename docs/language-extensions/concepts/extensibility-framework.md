@@ -1,11 +1,13 @@
 ---
 title: Extensibility architecture in SQL Server Language Extensions
 titleSuffix:
-description: Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine..
+description: "Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. Starting in SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine."
 author: rothja
 ms.author: jroth 
-ms.date: 11/05/2019
+ms.date: 05/24/2022
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
@@ -15,7 +17,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine.
+Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. Starting with SQL Server 2019, Java, Python, and R are supported. The code executes in a language runtime environment as an extension to the core database engine.
 
 ## Background
 
@@ -47,7 +49,7 @@ Components include a **Launchpad** service used to invoke external runtimes (for
 
 ## Launchpad
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages the life-time, resources, and security boundaries of the external process that’s responsible for script execution. This is similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages the life-time, resources, and security boundaries of the external process that's responsible for script execution. This is similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
 

@@ -180,7 +180,7 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
 
 - Use Test-NetConnection (equivalent to Telnet)  to validate connectivity. Here are examples of commands you can use:
 
-   ```DOS
+   ```PowerShell
    $server_name = "your_server_name"
    $IP_address = "your_ip_address"
    $port_number = "your_port_number"

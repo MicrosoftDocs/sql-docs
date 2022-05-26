@@ -49,7 +49,7 @@ You can receive Extended Security Updates in several ways:
 
 ## Extended support dates
 
-For the versions in the table below, consider using [Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support) described in this article, or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).
+For the versions in the table below, consider using [Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support) described in this article, or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).
 
 |SQL Server Version|Extended Support End Date|
 |---|---|

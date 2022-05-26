@@ -1,28 +1,29 @@
 ---
-title: "Back up to URL best practices & troubleshooting"
-description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob storage.
-ms.custom: seo-lt-2019
-ms.date: "12/17/2019"
+title: "Back up to URL best practices & troubleshooting for Microsoft Azure Blob Storage"
+description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob Storage.
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
-ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
-# SQL Server back up to URL best practices and troubleshooting
+# SQL Server back up to URL for Microsoft Azure Blob Storage best practices and troubleshooting
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Azure Blob service.  
+  This article includes best practices and troubleshooting tips for SQL Server backup and restores to Microsoft Azure Blob Storage.
   
- For more information about using Azure Blob storage service for SQL Server backup or restore operations, see:  
+ For more information about using Azure Blob Storage for SQL Server backup or restore operations, see:  
   
--   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups-mb1"></a> Managing Backups  
  The following list includes general recommendations to manage backups:  
@@ -43,15 +44,15 @@ ms.author: kendralittle
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Azure Blob Storage.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
   
 -   Using the `WITH COMPRESSION` option as recommended in the [Managing Backups](#managing-backups-mb1) section, it is very important when backing up large files.  
   
 ## Troubleshooting Backup To or Restore from URL  
 
-Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
+Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob Storage.  
   
-To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
+To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
 
 **Initialization failed** 
 
@@ -136,7 +137,7 @@ When backing up a database, you may see error `Operating system error 50(The req
 
 **Authentication errors**
   
-The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service.
+The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob Storage.
 
 Failures related to credential could be the following: `The credential specified in the **BACKUP** or **RESTORE** command does not exist. `
 
@@ -191,7 +192,7 @@ BACKUP DATABASE is terminating abnormally.
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
+If you turn on the verbose logging using the trace flag 3051, you may also see the following message in the logs:  
   
 `HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
@@ -218,7 +219,8 @@ To resolve this issue, create a configuration file that allows the Backup to URL
   
 2.  Place the configuration file in the Binn folder of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance. For example, if my [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on the C drive of the machine, place the configuration file in `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.  
   
-## See Also  
- [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
-[BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+## Next steps
+
+ - [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
+ - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
+ - [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

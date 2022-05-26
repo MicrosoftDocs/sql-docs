@@ -1,10 +1,7 @@
 ---
-title: "Create Statistics | Microsoft Docs"
+title: Create Statistics
 description: Learn how to create query optimization statistics on columns of a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
@@ -15,59 +12,65 @@ f1_keywords:
 helpviewer_keywords: 
   - "creating statistics"
   - "statistics [SQL Server], creating"
-ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: "katsmith"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Statistics
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  You can create query optimization statistics on one or more columns of a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics.  
+
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+
+You can create query optimization statistics on one or more columns of a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics.  
+
+**In This Topic**
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
+- **Before you begin:**  
+
      [Limitations and Restrictions](#Restrictions)  
   
      [Security](#Security)  
   
--   **To create statistics, using:**  
-  
+- **To create statistics, using:**  
+
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+## <a name="BeforeYouBegin"></a> Before You Begin
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+### <a name="Restrictions"></a> Limitations and Restrictions
   
--   Before creating statistics with the CREATE STATISTICS statement, verify that the AUTO_CREATE_STATISTICS option is set at the database level. This will ensure that the query optimizer continues to routinely create single-column statistics for query predicate columns.  
+- Before creating statistics with the CREATE STATISTICS statement, verify that the AUTO_CREATE_STATISTICS option is set at the database level. This will ensure that the query optimizer continues to routinely create single-column statistics for query predicate columns.  
   
--   You can list up to 32 columns per statistics object.  
+- You can list up to 32 columns per statistics object.  
   
--   You cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
+- You cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
-###  <a name="Security"></a> Security  
+### <a name="Security"></a> Security
   
-####  <a name="Permissions"></a> Permissions  
+#### <a name="Permissions"></a> Permissions
+
  Requires that the user be the table or indexed view owner, or a member of one of the following roles: **sysadmin** fixed server role, **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+### <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To create statistics  
+#### Create statistics using SQL Server Management Studio
   
-1.  In **Object Explorer**, click the plus sign to expand the database in which you want to create a new statistic.  
+1. In **Object Explorer**, Select the plus sign to expand the database in which you want to create a new statistic.  
+
+2. Select the plus sign to expand the **Tables** folder.
+
+3. Select the plus sign to expand the table in which you want to create a new statistic.  
+
+4. Right-select the **Statistics** folder and select **New Statistics...**.  
   
-2.  Click the plus sign to expand the **Tables** folder.  
+    The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
-3.  Click the plus sign to expand the table in which you want to create a new statistic.  
-  
-4.  Right-click the **Statistics** folder and select **New Statistics...**.  
-  
-     The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
-  
-     **Table Name**  
+    **Table Name**  
      Displays the name of the table described by the statistics.  
   
      **Statistics Name**  
@@ -114,9 +117,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      **Filter Expression**  
      Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, click **Add**.  
+5. In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, Select **Add**.  
   
-     The following properties show in the **Select Columns** dialog box. This information is read-only.  
+    The following properties show in the **Select Columns** dialog box. This information is read-only.  
   
      **Name**  
      Displays the name of the column described by the statistics. This can be a single column or a combination of columns in a single table.  
@@ -133,22 +136,22 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      **Allow NULLs**  
      Indicates whether the column accepts NULL values.  
   
-6.  In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then click **OK**.  
+6. In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then Select **OK**.  
   
-7.  In the **New Statistics on Table**_table\_name_ dialog box, click **OK**.  
+7. In the **New Statistics on Table**_table\_name_ dialog box, Select **OK**.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To create statistics  
+### Create statistics using Transact-SQL
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2. On the Standard bar, Select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window and Select **Execute**.  
   
-    ```  
-    USE AdventureWorks2012;   
+    ```sql
+   USE AdventureWorks2012;   
     GO  
     -- Create new statistic object called ContactMail1  
     -- on the BusinessEntityID and EmailPromotion columns in the Person.Person table.   
@@ -158,9 +161,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO  
     ```  
   
-4.  The statistic created above potentially improves the results for the following query.  
+4. The statistic created above potentially improves the results for the following query.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;   
     GO  
     SELECT LastName, FirstName  
@@ -170,6 +173,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO  
     ```  
   
- For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
-  
-  
+## Next steps
+
+For more information, see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).

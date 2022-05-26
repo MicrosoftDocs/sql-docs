@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 05/05/2022
+ms.date: 05/26/2022
 ---
 
 # Table Designer in Azure Data Studio (Preview)

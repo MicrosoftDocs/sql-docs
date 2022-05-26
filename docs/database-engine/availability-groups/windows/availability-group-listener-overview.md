@@ -67,7 +67,7 @@ This article provides an overview of an availability group listener. You can als
  - Listener name was configured: aglistener19
  - Listener port that was configured: 50123
  
-1. Connect to the listener via IP address and port
+1. Connect to the listener via IP address and port. This connection is successful. 
 
    ```console
    sqlcmd -S 192.168.20.15,50123 
@@ -80,7 +80,7 @@ This article provides an overview of an availability group listener. You can als
     sqlcmd -S aglistener19 
     ```
 
- 1.	Connect to the listener by listener name and configured port – successful
+ 1.	Connect to the listener by listener name and configured port. This connection is successful.
 
     ```console
     sqlcmd -S aglistener19,50123 
@@ -88,7 +88,7 @@ This article provides an overview of an availability group listener. You can als
     ```
 
 
- 1. Finally, connect to the listener and SQL Server port. Notice you're using the underlying port SQL Server is listening on here, not the listener port. This scenario also succeeds.
+ 1. Finally, connect to the listener and the SQL Server port. Notice that in this case you're using the port SQL Server is listening on, not the listener port. This connection also succeeds.
 
     ```console
     sqlcmd -S aglistener19,50254

@@ -56,7 +56,7 @@ As you can see in the image above, the script contains the read-only Transact-SQ
 
 #### Deleting columns
 
-To delete a column, simply select on the trash icon as highlighted below
+To delete a column, select on the trash icon as highlighted below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-column.png" alt-text="Screenshot of Table Designer showing how to delete a column.":::
 
@@ -68,7 +68,7 @@ Just like Visual Studio Code, an indicator that your work is NOT saved is the sh
 
 First image below shows work that isn't saved as indicated by the black dot. 
 
-:::image type="content" source="media/table-designer-azure-data-studio/table-designer-work-not-saved.png" alt-text="Screenshot of Table Designer showing work that is not saved.":::
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-work-not-saved.png" alt-text="Screenshot of Table Designer showing work that isn't saved.":::
 
 This image below shows work that has been saved. Notice black dot disappeared.
 
@@ -123,7 +123,7 @@ Now, as mentioned earlier, we'll create our edge table, "lives". Be sure to chec
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-lives-edge-table.png" alt-text="Screenshot of Table Designer showing how to create an edge table.":::
 
-Simply select on the "Type" dropdown to indicate what type of graph table you want. Notice how the script changes in the script pane.
+Select on the "Type" dropdown to indicate what type of graph table you want. Notice how the script changes in the script pane.
 
 We'll now give this edge table a constraint to connect our two node tables. select on "Edge Constraints" to open up the Edge Constraints pane. One constraint, named "EC1" is provided to us by default. We can choose to name this constraint. For this tutorial, we'll leave the name as is. See below: 
 

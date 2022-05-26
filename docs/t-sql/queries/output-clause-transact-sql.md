@@ -129,7 +129,7 @@ DELETE Sales.ShoppingCartItem
 ```
   
  *column_name*  
- Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED**.**_column\_name_.  
+ Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED._column\_name_.  
   
  $action  
  Is available only for the MERGE statement. Specifies a column of type **nvarchar(10)** in the OUTPUT clause in a MERGE statement that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row.  

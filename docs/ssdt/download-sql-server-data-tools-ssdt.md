@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 03/28/2022
+ms.date: 05/06/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services and Integration Services projects are not available for Visual Studio 2022 at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.
 
 > [!NOTE]
 > There's no SSDT standalone installer for Visual Studio 2022.
@@ -44,6 +44,13 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 3. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
 
    ![Data storage and processing workload 2022](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png)
+
+For Analysis Services or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
+
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects2022)
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022)
+
+The extension for Integration Services projects is not available for Visual Studio 2022 at this time.
 
 ## SSDT for Visual Studio 2019
 

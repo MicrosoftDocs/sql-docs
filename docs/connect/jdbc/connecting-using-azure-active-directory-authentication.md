@@ -48,7 +48,7 @@ For **ActiveDirectoryMSI** authentication, the below components must be installe
 
 - Java 8 or above
 - Microsoft JDBC Driver 7.2 (or higher) for SQL Server
-- Client Environment must be an Azure Resource and must have "Identity" feature support enabled.
+- Client Environment must be an Azure Resource and must have "Identity" feature support enabled. Azure Virtual Machine, Azure App Service, and Azure Function App environments are supported by the JDBC driver.
 - A contained database user that represents your Azure Resource's System Assigned Managed Identity or User Assigned Managed Identity, or one of the groups your Managed Identity belongs to, must exist in the target database, and must have the CONNECT permission.
 
 For other authentication modes, the below components must be installed on the client machine:

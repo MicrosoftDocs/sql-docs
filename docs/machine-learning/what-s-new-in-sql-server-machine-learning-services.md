@@ -2,29 +2,40 @@
 title: What's new in SQL Server Machine Learning Services?
 titleSuffix: 
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
-ms.date: 11/17/2020
+ms.date: 05/24/2022
 ms.topic: overview
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - sqlseattle
-  - intro-whats-new
+- sqlseattle
+- intro-whats-new
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# What's new in SQL Server Machine Learning Services
+# What's new in SQL Server Machine Learning Services?
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 This articles describes what new capabilities and features are included in each version of [SQL Server Machine Learning Services](sql-server-machine-learning-services.md). Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+
+::: moniker range=">=sql-server-ver16||>=sql-server-linux-ver16"
+
+## New in SQL Server 2022
+
+ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+
+::: moniker-end
+
+::: moniker range="=sql-server-ver15||=sql-server-linux-ver15"
 ## New in SQL Server 2019
 
 This release adds the top-requested features for Python and R machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-2019-release-notes.md).
 
-> [!NOTE]
-> For the what's new documentation on Java and C# in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](../language-extensions/language-extensions-whats-new.md).
+For the what's new documentation on Java and C# in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](../language-extensions/language-extensions-whats-new.md).
 
 Below are the new features for SQL Server Machine Learning Services, available on both **Windows** and **Linux**:
 

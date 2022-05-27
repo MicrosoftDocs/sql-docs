@@ -3,7 +3,7 @@ title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer:
+ms.reviewer: ""
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

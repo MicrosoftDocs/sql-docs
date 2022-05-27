@@ -1,24 +1,23 @@
 ---
+title: "STRING_ESCAPE (Transact-SQL)"
 description: "STRING_ESCAPE (Transact-SQL)"
-title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "02/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "STRING_ESCAPE"
   - "STRING_ESCAPE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STRING_ESCAPE function"
-ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # STRING_ESCAPE (Transact-SQL)
 

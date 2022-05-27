@@ -1,24 +1,23 @@
 ---
+title: "JSON_QUERY (Transact-SQL)"
 description: "JSON_QUERY (Transact-SQL)"
-title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "JSON_QUERY"
   - "JSON_QUERY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "JSON, extracting"
   - "JSON, querying"
   - "JSON_QUERY function"
-ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON_QUERY (Transact-SQL)
 

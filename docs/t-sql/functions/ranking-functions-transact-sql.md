@@ -1,24 +1,23 @@
 ---
+title: "Ranking Functions (Transact-SQL)"
 description: "Ranking Functions (Transact-SQL)"
-title: "Ranking Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "ranking functions"
   - "row ranking [SQL Server]"
   - "functions [SQL Server], ranking"
   - "ranking rows"
-ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # Ranking Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

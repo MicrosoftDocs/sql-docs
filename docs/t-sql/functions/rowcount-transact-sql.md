@@ -1,27 +1,26 @@
 ---
+title: "@@ROWCOUNT (Transact-SQL)"
 description: "@@ROWCOUNT (Transact-SQL)"
-title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@ROWCOUNT_TSQL"
   - "@@ROWCOUNT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@ROWCOUNT function"
   - "number of rows affected by statement"
   - "row affected by statements [SQL Server]"
   - "statements [SQL Server], last statement"
   - "counting rows"
-ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

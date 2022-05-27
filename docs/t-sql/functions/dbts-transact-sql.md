@@ -1,24 +1,23 @@
 ---
-description: "@@DBTS (Transact-SQL)"
 title: DBTS (Transact-SQL)
-ms.custom: ""
+description: "@@DBTS (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@DBTS_TSQL"
   - "@@DBTS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
-ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 
 # &#x40;&#x40;DBTS (Transact-SQL)

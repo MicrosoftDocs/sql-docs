@@ -1,17 +1,17 @@
 ---
+title: "JSON_PATH_EXISTS (Transact-SQL)"
 description: "JSON_PATH_EXISTS (Transact-SQL)"
-title: "JSON_PATH_EXISTS (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+author: "uc-msft"
+ms.author: "umajay"
 ms.date: 4/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-author: "uc-msft"
-ms.author: "umajay"
-dev_langs: 
+ms.custom:
+  - "event-tier1-build-2022"
+dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # JSON_PATH_EXISTS (Transact-SQL)
 

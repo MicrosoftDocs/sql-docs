@@ -1,21 +1,20 @@
 ---
+title: "Operators (Transact-SQL)"
 description: "Operators (Transact-SQL)"
-title: "Operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "operators [Transact-SQL], about operators"
   - "operators [Transact-SQL]"
-ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

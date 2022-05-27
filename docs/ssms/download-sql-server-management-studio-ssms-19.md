@@ -23,7 +23,7 @@ ms.author: erinstellato
 ms.reviewer: maghan
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 05/26/2022
 ---
 
 # Download SQL Server Management Studio (SSMS) 19 (Preview)
@@ -59,7 +59,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 19 (Preview):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x410) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40a)
 
 > [!TIP]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

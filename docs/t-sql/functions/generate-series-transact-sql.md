@@ -1,24 +1,24 @@
 ---
 title: "GENERATE_SERIES (Transact-SQL)"
 description: "GENERATE_SERIES (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
-f1_keywords:
-  - "GENERATE_SERIES"
-  - "GENERATE_SERIES_TSQL"
-dev_langs:
-  - "TSQL"
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords:
-  - "GENERATE_SERIES function"
-  - "analytic functions, GENERATE_SERIES"
-ms.technology: t-sql
-ms.topic: reference
 author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
+ms.technology: t-sql
+ms.topic: reference
+ms.custom:
+  - "event-tier1-build-2022"
+f1_keywords:
+  - "GENERATE_SERIES"
+  - "GENERATE_SERIES_TSQL"
+helpviewer_keywords:
+  - "GENERATE_SERIES function"
+  - "analytic functions, GENERATE_SERIES"
+dev_langs:
+  - "TSQL"
 ---
 # GENERATE_SERIES (Transact-SQL)
 

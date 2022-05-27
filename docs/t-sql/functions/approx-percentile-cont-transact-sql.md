@@ -64,10 +64,10 @@ This function provides rank-based error guarantees not value based. The function
 
 ## Known Behaviors
 
-- If the trace flag is not enabled below error message would be raised
+- If the trace flag isn't enabled below error message would be raised
 
   Msg 195, Level 15, State 22, Line 1 </br>
-  'approx_percentile_cont' is not a recognized built-in function name
+  'approx_percentile_cont' isn't a recognized built-in function name
 
 - The output of the function may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 - The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.

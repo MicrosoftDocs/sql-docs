@@ -1,51 +1,57 @@
 ---
-title: Extend support for SQL Server 2008 & 2008 R2 
-description: Extend support for SQL Server 2008 and SQL Server 2008 R2 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
+title: Extend support for SQL Server
+description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
 services: virtual-machines-windows
 documentationcenter: ''
 author: bluefooted
 tags: azure-service-management
 ms.service: virtual-machines-sql
 ms.subservice: management
-
 ms.topic: conceptual
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
-ms.date: 04/08/2019
+ms.date: 05/24/2022
 ms.author: pamela
-ms.reviewer: mathoma
+ms.reviewer: mathoma, randolphwest
 ms.custom: "seo-lt-2019"
 ---
-# Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure
+# Extend support for SQL Server with Azure
+
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-SQL Server 2008 and SQL Server 2008 R2 have both reached the [end of their support (EOS) life cycle](https://www.microsoft.com/sql-server/sql-server-2008). Because many customers are still using both versions, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
+SQL Server 2012 has reached the [end of its support (EOS) life cycle](/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
+
+> [!TIP]  
+> Customers on SQL Server 2008 and SQL Server 2008 R2 can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 Unlike with a managed instance, migrating to an Azure VM does not require recertifying your applications. And unlike with staying on-premises, you'll receive free extended security patches by migrating to an Azure VM.
 
 The rest of this article provides considerations for migrating your SQL Server instance to an Azure VM.
 
-For more information about end of support options, see [End of support](/sql/sql-server/end-of-support/sql-server-end-of-life-overview).
+For more information about end of support options, see [End of support](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
 ## Provisioning
 
-There is a pay-as-you-go **SQL Server 2008 R2 on Windows Server 2008 R2** image available on Azure Marketplace.
+There is a pay-as-you-go **SQL Server 2012 on Windows Server 2012 R2** image available on Azure Marketplace.
 
-Customers who are on SQL Server 2008 will need to either self-install or upgrade to SQL Server 2008 R2. Likewise, customers on Windows Server 2008 will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2008 R2.
+Customers who are on an earlier version of SQL Server will need to either self-install or upgrade to SQL Server 2012. Likewise, customers on an earlier version of Windows Server will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2012 R2.
 
-Images deployed through Azure Marketplace come with the SQL IaaS extension pre-installed. The SQL IaaS extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS extension. The SQL IaaS extension is not supported on Windows Server 2008.
+Images deployed through Azure Marketplace come with the SQL IaaS extension pre-installed. The SQL IaaS extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS extension.
 
 > [!NOTE]
-> Although the SQL Server **Create** and **Manage** blades will work with the SQL Server 2008 R2 image in the Azure portal, the following features are _not supported_: Automatic backups, Azure Key Vault integration, R Services, and storage configuration.
+>  
+> Although the SQL Server **Create** and **Manage** options will work with the SQL Server 2012 image in the Azure portal, the following features are _not supported_: Automatic backups, Azure Key Vault integration, and R Services.
 
 ## Licensing
-Pay-as-you-go SQL Server 2008 R2 deployments can convert to [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
+
+Pay-as-you-go SQL Server 2012 deployments can convert to [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 
 To convert a Software Assurance (SA)-based license to pay-as-you-go, customers should register with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). After that registration, the SQL license type will be interchangeable between Azure Hybrid Benefit and pay-as-you-go.
 
-Self-installed SQL Server 2008 or SQL Server 2008 R2 instances on an Azure VM can register with the SQL IaaS Agent extension and convert their license type to pay-as-you-go.
+Self-installed SQL Server 2012 instances on an Azure VM can register with the SQL IaaS Agent extension and convert their license type to pay-as-you-go.
 
 ## Migration
+
 You can migrate EOS SQL Server instances to an Azure VM with manual backup/restore methods. This is the most common migration method from on-premises to an Azure VM.
 
 ### Azure Site Recovery
@@ -62,8 +68,10 @@ The [Azure Database Migration Service](/azure/dms/dms-overview) is an option for
 
 Disaster recovery solutions for EOS SQL Server on an Azure VM are as follows:
 
-- **SQL Server backups**: Use Azure Backup to help protect your EOS SQL Server 2008 and 2008 R2 against ransomware, accidental deletion, and corruption with 15-min RPO and point-in-time recovery. For more details, see [this article](/azure/backup/sql-support-matrix#scenario-support).
+- **SQL Server backups**: Use Azure Backup to help protect your EOS SQL Server 2012 against ransomware, accidental deletion, and corruption with a 15-minute RPO and point-in-time recovery. For more details, see [this article](/azure/backup/sql-support-matrix#scenario-support).
+
 - **Log shipping**: You can create a log shipping replica in another zone or Azure region with continuous restores to reduce the RTO. You need to manually configure log shipping.
+
 - **Azure Site Recovery**: You can replicate your VM between zones and regions through Azure Site Recovery replication. SQL Server requires app-consistent snapshots to guarantee recovery in case of a disaster. Azure Site Recovery offers a minimum 1-hour RPO and a 2-hour (plus SQL Server recovery time) RTO for EOS SQL Server disaster recovery.
 
 ## Security patching
@@ -72,21 +80,10 @@ Extended security updates for SQL Server VMs are delivered through the Microsoft
 
 *Automated patching* is enabled by default. Automated patching allows Azure to automatically patch SQL Server and the operating system. You can specify a day of the week, time, and duration for a maintenance window if the SQL Server IaaS extension is installed. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale for time. For more information, see [Automated patching for SQL Server on Azure Virtual Machines](automated-patching.md).
 
-
 ## Next steps
 
-Migrate your SQL Server VM to Azure:
+- [Migrate a SQL Server database to SQL Server in an Azure VM](migrate-to-vm-from-sql-server.md)
+- [Create a SQL Server VM in the Azure portal](sql-vm-create-portal-quickstart.md)
+- [FAQ for SQL Server on Azure Virtual Machines](frequently-asked-questions-faq.yml)
 
-* [Migrate a SQL Server database to SQL Server in an Azure VM](migrate-to-vm-from-sql-server.md)
-
-Get started with SQL Server on Azure Virtual Machines:
-
-* [Create a SQL Server VM in the Azure portal](sql-vm-create-portal-quickstart.md)
-
-Get answers to commonly asked questions about SQL Server VMs:
-
-* [FAQ for SQL Server on Azure Virtual Machines](frequently-asked-questions-faq.yml)
-
-Find out more about end of support options, and extended security updates:
-
-* [End of support](/sql/sql-server/end-of-support/sql-server-end-of-life-overview) & [Extended Security Updates](/sql/sql-server/end-of-support/sql-server-extended-security-updates)
+Find out more about [end of support](/sql/sql-server/end-of-support/sql-server-end-of-support-overview) options and [Extended Security Updates](/sql/sql-server/end-of-support/sql-server-extended-security-updates).

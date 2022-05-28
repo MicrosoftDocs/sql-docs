@@ -1,28 +1,27 @@
 ---
+title: "TEXTVALID (Transact-SQL)"
 description: "Text and Image Functions - TEXTVALID (Transact-SQL)"
-title: "TEXTVALID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "TEXTVALID_TSQL"
   - "TEXTVALID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "invalid text pointers [SQL Server]"
   - "valid text pointers [SQL Server]"
   - "TEXTVALID function"
   - "checking text pointers"
   - "text-pointer values"
   - "verifying text pointers"
-ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

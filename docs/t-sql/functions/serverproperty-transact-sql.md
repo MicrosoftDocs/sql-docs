@@ -1,30 +1,29 @@
 ---
+title: "SERVERPROPERTY (Transact-SQL)"
 description: "SERVERPROPERTY (Transact-SQL)"
-title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "06/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SERVERPROPERTY_TSQL"
   - "SERVERPROPERTY"
-  - sql13.swb.serverpropeties.connections.f1
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+  - "sql13.swb.serverpropeties.connections.f1"
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "SERVERPROPERTY function"
   - "server instance property information [SQL Server]"
   - "IsHadrEnabled server property"
   - "instances of SQL Server, property information"
   - "server properties [SQL Server]"
-ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SERVERPROPERTY (Transact-SQL)
 

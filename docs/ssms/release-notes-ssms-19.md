@@ -10,7 +10,7 @@ ms.custom:
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 05/24/2022
+ms.date: 05/26/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS) 19 (Preview)
@@ -35,7 +35,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 - Build number: 16.0.19056.0
 - Release date: May 24, 2022
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x410) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40a)
 
 #### What's new in 19.0 Preview 2
 
@@ -54,7 +54,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 #### Bug fixes in 19.0 Preview 2
 
 > [!Note]
-> That any fixes from SSMS 18.11.1 and the next SSMS release are available in SSMS 19.0 Preview 2.
+> Fixes from SSMS 18.11.1 and the next SSMS release are included in SSMS 19.0 Preview 2.
 
 | New Item | Details |
 |----------|---------|
@@ -71,7 +71,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Ledger | Importing a bacpac or dacpac created from a database with the LEDGER = ON option, into a new database on-premises, fails due to the LEDGER property not being set. | Use backup and restore to create a new database on-premises with the LEDGER property enabled. |
 | Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | This will be available in a later preview, use SSMS 18.11.1 to view or edit Maintenance Plans. |
-| SSMS Installer | Installation of Japanese SSMS is not fully localized. | This will be fixed in a later preview, please use SSMS 18.11.1 for the Japanese locale. |
+| SSMS Installer | The original installation of Japanese SSMS was not fully localized and removed from the download page. | This is fixed via an updated build, 16.0.19058.0, now available for download. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
 

@@ -1,22 +1,22 @@
 ---
-description: "The IIF logical function Returns one of two values, depending on whether the Boolean expression evaluates to true or false. "
 title: "IIF (Transact-SQL)"
-ms.custom: ""
+description: "The IIF logical function Returns one of two values, depending on whether the Boolean expression evaluates to true or false. "
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "IIF_TSQL"
   - "IIF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IIF function"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Logical Functions - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

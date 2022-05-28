@@ -1,18 +1,18 @@
 ---
-title: "DATEPART (Transact-SQL) | Microsoft Docs"
+title: "DATEPART (Transact-SQL)"
 description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEPART_TSQL"
   - "DATEPART"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "date and time [SQL Server], DATEPART"
   - "dateparts [SQL Server]"
@@ -23,10 +23,9 @@ helpviewer_keywords:
   - "comparing dates times [SQL Server]"
   - "DATEPART function [SQL Server]"
   - "dates [SQL Server], dateparts"
-ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

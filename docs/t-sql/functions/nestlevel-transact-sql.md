@@ -1,25 +1,24 @@
 ---
+title: "@@NESTLEVEL (Transact-SQL)"
 description: "@@NESTLEVEL (Transact-SQL)"
-title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@NESTLEVEL"
   - "@@NESTLEVEL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@NESTLEVEL function"
   - "nesting stored procedures"
   - "stored procedure nesting levels [SQL Server]"
-ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

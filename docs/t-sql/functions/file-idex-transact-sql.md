@@ -1,28 +1,27 @@
 ---
+title: "FILE_IDEX (Transact-SQL)"
 description: "FILE_IDEX (Transact-SQL)"
-title: "FILE_IDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "FILE_IDEX"
   - "FILE_IDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FILE_IDEX function"
   - "IDs [SQL Server], files"
   - "file IDs [SQL Server]"
   - "names [SQL Server], files"
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_IDEX"
-ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

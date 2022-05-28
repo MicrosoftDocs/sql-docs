@@ -1,28 +1,27 @@
 ---
 title: "[ ] Wildcard to match characters"
-description: Use a wildcard to match one or more characters.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Use a wildcard to match one or more characters.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "seo-lt-2019"
+f1_keywords:
   - "Match"
   - "wildcard"
   - "[ ]"
   - "[_]_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[ ] (wildcard - character(s) to match)"
-ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # \[ \] (Wildcard - Character(s) to Match) (Transact-SQL)

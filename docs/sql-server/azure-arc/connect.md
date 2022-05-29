@@ -102,7 +102,7 @@ az role assignment create --assignee $spID --role 'Azure Connected SQL Server On
 To install the SQL Server extension, run:
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
 
 ---

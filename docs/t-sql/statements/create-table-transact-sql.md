@@ -207,6 +207,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
+    [ WHERE <filter_predicate> ]
     [ WITH ( <index_option> [ ,... n ] ) ]
     [ ON { partition_scheme_name ( column_name )
          | filegroup_name

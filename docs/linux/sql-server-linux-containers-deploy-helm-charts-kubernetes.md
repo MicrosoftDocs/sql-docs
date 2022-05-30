@@ -33,16 +33,17 @@ On your Windows client machine, you'll need the following tools.
 
 If you prefer to use a different client operating system, you'll need to select the appropriate packages for that platform.
 
-### Install kubectl using Azure CLI
+### Install kubectl using the Az PowerShell module
 
-You'll use **kubectl** to interact with the Kubernetes cluster. To install **kubectl**, run the following command from your Windows command prompt:
+You'll use **kubectl** to interact with the Kubernetes cluster. For more information, see [az aks install-cli](/cli/azure/aks#az-aks-install-cli).
+
+To install **kubectl**, run the following command from your Windows command prompt:
 
 ```cmd
 az aks install-cli
 ```
 
-> [!TIP]
->  
+> [!TIP]  
 > You can add **kubectl** to your local `PATH` environment variable, so that you don't have to type in the full path each time.
 
 ## Connect kubectl to the AKS cluster
@@ -73,7 +74,11 @@ az aks install-cli
 
 You're now ready to deploy the SQL Server on AKS cluster via the Helm chart.
 
-1. Download the sample [Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart). Remember to review the readme file, to understand the configuration values that match your configuration requirements.
+This quickstart provides a sample "as-is" [sample "as-is" Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart). The sample is for reference only. Remember to review the `readme` file to understand the configuration values that match your configuration requirements.
+
+If you want to deploy SQL Server in StatefulSet mode, which is the recommended mode for SQL Server deployments, you can view a [sample "as-is" StatefulSet-based Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart-statefulset-deployment) deployment instead.
+
+1. Download the sample [Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart).
 
 1. Switch to the directory where you've downloaded the sample chart, and modify the `values.yaml` file if needed.
 
@@ -139,7 +144,7 @@ Once you've connected, you'll be able to expand the SQL Server instance in **Obj
 
 ## Change the tempdb path
 
-It is a good practice to keep your `tempdb` database separate from your user databases, so in the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountPath` for `tempdb` files.
+It's a good practice to keep your `tempdb` database separate from your user databases, so in the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountPath` for `tempdb` files.
 
 1. Connect to the SQL Server instance, and then run the following Transact-SQL (T-SQL) script:
 
@@ -169,23 +174,21 @@ It is a good practice to keep your `tempdb` database separate from your user dat
 
 1. You must restart the SQL Server container for these changes to take effect.
 
-   > [!IMPORTANT]
-   >  
-   > With SQL Server containers, you must restart the container instead of restarting the SQL Server service.
+   With SQL Server containers, you must restart the container instead of restarting the SQL Server service. For example, if you use Docker or Podman to host your container, you only need to restart the container. For a Kubernetes deployment, follow these steps:
 
-   First, delete the existing container:
+   1. First, delete the existing container:
 
-     ```cmd
-     kubectl scale deployment mssql-latest-deploy --replicas=0
-     ```
+      ```cmd
+      kubectl scale deployment mssql-latest-deploy --replicas=0
+      ```
 
-   Wait a few seconds for the container to be deleted, and then run the following command to redeploy the container:
+   1. Wait a few seconds for the container to be deleted, and then run the following command to redeploy the container:
 
-     ```cmd
-     kubectl scale deployment mssql-latest-deploy --replicas=1
-     ```
+      ```cmd
+      kubectl scale deployment mssql-latest-deploy --replicas=1
+      ```
 
-1. Run `kubectl get all` to get the correct service name for the new SQL Server container, and then open an interactive `bash` session:
+1. Run `kubectl get all` to get the correct service name for the new SQL Server container, and then open an interactive `bash` session. If you have a StatefulSet deployment you can skip this step, because the host and container name doesn't change.
 
      ```cmd
      kubectl exec -it mssql-latest-deploy-7f8c7f5bc-s2qrr bash

@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "stretch cluster"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221

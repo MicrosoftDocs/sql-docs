@@ -1,25 +1,24 @@
 ---
+title: "SQL Server Utilities Statements - GO"
 description: "SQL Server Utilities Statements - GO"
-title: "SQL Server Utilities Statements - GO | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "07/27/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "GO"
   - "GO_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "batches [SQL Server], ending"
   - "ending batches [SQL Server]"
   - "GO command"
-ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # SQL Server Utilities Statements - GO
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

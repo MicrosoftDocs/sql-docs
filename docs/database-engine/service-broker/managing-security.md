@@ -1,12 +1,12 @@
-﻿---
+---
 title: Managing Security (Service Broker)
 description: "Service Broker provides a flexible security framework for helping you secure your applications."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -33,6 +33,7 @@ Service Broker uses the remote service bindings in the database that begins the 
 Service Broker transport security prevents unauthorized network connections to Service Broker endpoints, detects alterations to messages in transit, and optionally provides point-to-point encryption. This helps protect your database against receiving unwanted messages. Because transport security applies to network connections, transport security automatically applies to all conversations between the SQL Server instances. Notice, however, that transport security does not provide end-to-end encryption, and does not provide authentication for individual conversations.
 
 ## Maintaining Security
+
 Maintaining security for Service Broker applications consists of two main tasks--auditing the application configuration and replacing the certificates that the application uses.
 
 Periodically audit the application to determine that the security configuration is unchanged, and that the security configuration meets the business needs for the application.

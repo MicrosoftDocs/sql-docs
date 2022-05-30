@@ -1,19 +1,19 @@
 ---
+title: "SUSER_SID (Transact-SQL)"
 description: "SUSER_SID (Transact-SQL)"
-title: "SUSER_SID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SUSER_SID"
   - "SUSER_SID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], users"
   - "SIDs [SQL Server]"
   - "security identifiers [SQL Server]"
@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], logins"
   - "identification numbers [SQL Server], logins"
   - "SUSER_SID function"
-ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

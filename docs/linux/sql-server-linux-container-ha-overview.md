@@ -3,8 +3,8 @@ title: High availability for SQL Server containers
 description: Learn about high availability for SQL Server containers. Also learn about deploying a container with SQL server on Kubernetes.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: vanto
-ms.date: 08/09/2018
+ms.reviewer: vanto, randolphwest
+ms.date: 05/26/2022
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
@@ -20,11 +20,11 @@ SQL Server 2017 introduces a Docker image that can deploy on Kubernetes. You can
 
 ## Container with SQL Server instance on Kubernetes
 
-Kubernetes 1.6 and later has support for [*storage classes*](https://kubernetes.io/docs/concepts/storage/storage-classes/), [*persistent volume claims*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [*Azure disk volume type*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). 
+Kubernetes 1.6 and later has support for [*storage classes*](https://kubernetes.io/docs/concepts/storage/storage-classes/), [*persistent volume claims*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [*Azure disk volume type*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk).
 
-In this configuration, Kubernetes plays the role of the container orchestrator. 
+In this configuration, Kubernetes plays the role of the container orchestrator.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+:::image type="content" source="media/sql-server-linux-container-ha-overview/kubernetes-sql.png" alt-text="Diagram showing a Kubernetes SQL Server cluster.":::
 
 In the preceding diagram, `mssql-server` is a SQL Server instance (container) in a [*pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a node failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that stays the same after failure of the `mssql-server`.
 
@@ -32,10 +32,9 @@ Kubernetes orchestrates the resources in the cluster. When a node hosting a SQL 
 
 SQL Server 2017 and later support containers on Kubernetes.
 
-To create a container in Kubernetes, see [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)
+To create a container in Kubernetes, see [Deploy a SQL Server container in Kubernetes](quickstart-sql-server-containers-kubernetes.md)
 
 ## Next steps
 
-To deploy SQL Server containers in Azure Kubernetes Service (AKS), see these examples:
-* [Deploy SQL Server in Docker container](./sql-server-linux-docker-container-deployment.md)
-* [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)
+- [Deploy SQL Server in Docker container](sql-server-linux-docker-container-deployment.md)
+- [Quickstart: Deploy a SQL Server container in Kubernetes](quickstart-sql-server-containers-kubernetes.md)

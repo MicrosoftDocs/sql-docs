@@ -15,6 +15,8 @@ ms.date: 03/08/2022
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
+To view the release notes for SSMS 19 Preview 2, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
+
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
 [!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
@@ -51,6 +53,7 @@ SSMS 18.11.1 is the latest general availability (GA) release of SSMS. If you nee
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| Availability Group Dashboard | Connecting to the Availability Group Dashboard for an AG on SQL Server 2016 and below results in "unknown property ClusterType" error. | Use SSMS 18.10 to access the AG Dashboard for SQL Server 2016 and earlier. |
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
@@ -135,6 +138,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| Availability Group Dashboard | Connecting to the Availability Group Dashboard for an AG on SQL Server 2016 and below results in "unknown property ClusterType" error. | Use SSMS 18.10 to access the AG Dashboard for SQL Server 2016 and earlier. |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |

@@ -118,7 +118,7 @@ For system-assigned identity,<br>
 For user-assigned identity with object ID equals to myObjectId,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 9. Azure Active Directory Service Principal Authentication
-`server=Server;databse=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
+`server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
 
 > [!NOTE]
 >

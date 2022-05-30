@@ -1,8 +1,8 @@
 ---
 description: "sys.geo_replication_links (Azure SQL Database)"
-title: "sys.geo_replication_links (Azure SQL Database) | Microsoft Docs"
+title: "sys.geo_replication_links (Azure SQL Database)"
 ms.custom: ""
-ms.date: "01/28/2019"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
@@ -25,7 +25,7 @@ monikerRange: "= azuresqldb-current"
 
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This view resides in the logical master database.  
+Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This view resides in the logical **master** database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -39,13 +39,13 @@ monikerRange: "= azuresqldb-current"
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No. The secondary database is not accessible until failover.<br /><br /> 1 = ReadOnly. The secondary database is accessible only to client connections with ApplicationIntent=ReadOnly.<br /><br /> 2 = All. The secondary database is accessible to any client connection.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Read-Only|  
+|secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No. The secondary database is not accessible until failover.<br /><br /> 1 = ReadOnly. The secondary database is accessible only to client connections with [ApplicationIntent=ReadOnly](/azure/azure-sql/database/read-scale-out#connect-to-a-read-only-replica).<br /><br /> 2 = All. The secondary database is accessible to any client connection.|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Read-Only|  
 |percent_copied|**int**|Seeding progress in percent|
 
 ## Permissions
 
-This view is only available in the **master** database to the server-level principal login. For Azure SQL Database results will only be returned for the server administrator, Azure Active Directory admin, or for a user with the dbmanager role. For Azure SQL Managed Instance results will only be returned for the sysadmin. 
+This view is only available in the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) to the server-level principal login. Results will only be returned for the server administrator, Azure Active Directory admin, or for a user with the dbmanager role.
   
 ## Example
 
@@ -63,8 +63,13 @@ SELECT
 FROM sys.geo_replication_links;  
 ```
 
-## See Also
+## Next steps
 
- [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+Learn more about related concepts in the following articles:
+
+- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+- [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+- [Connect to a read-only replica](/azure/azure-sql/database/read-scale-out#connect-to-a-read-only-replica)
+- [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
+- [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)
+- [Auto-failover groups overview & best practices (Azure SQL Managed Instance)](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi)

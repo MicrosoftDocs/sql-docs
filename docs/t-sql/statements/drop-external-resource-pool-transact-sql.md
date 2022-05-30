@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP EXTERNAL RESOURCE POOL statement"
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlund
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)

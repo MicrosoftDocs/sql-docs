@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Applications
 description: "Service Broker applications are made up of one or more programs and the database objects that those programs use."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 Service Broker applications are made up of one or more programs and the database objects that those programs use. Applications communicate by creating conversations between independent components called services and then exchanging messages within those conversations. Applications use Service Broker by executing Transact-SQL statements in a SQL Server database.
 
 ## Application Components
+
 A Service Broker application is made up of:
 
 - One or more programs that implement a task or related set of tasks. Outside SQL Server, applications can be written in any programming environment that can run Transact-SQL statements in SQL Server. Inside SQL Server, applications can be written as stored procedures using Transact-SQL or a common language runtime (CLR) compliant language.

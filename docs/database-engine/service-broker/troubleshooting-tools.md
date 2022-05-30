@@ -1,12 +1,12 @@
-﻿---
+---
 title: Troubleshooting Tools (Service Broker)
 description: "Service Broker provides several tools to diagnose configuration and conversation problems."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -30,7 +30,7 @@ The **ssbdiagnose** utility analyzes the configuration of Service Broker service
 
 - Determine what errors are preventing messages from being successfully transmitted between services.
 
-For more information about how to use the utility, see [ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
+For more information about how to use the utility, see [Ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
 
 ## The Service Broker Transmission Queue
 
@@ -44,7 +44,7 @@ Not all messages in the transmission queue are caused by errors:
 
 The **is_conversation_error** column indicates whether the message has encountered an error.
 
-For more information about **sys.transmission_queue**, see [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md).
+For more information about **sys.transmission_queue**, see [Sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md).
 
 ## Service Broker SQL Trace Events
 

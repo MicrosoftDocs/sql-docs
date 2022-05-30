@@ -1,14 +1,14 @@
 ---
 description: "sys.sensitivity_classifications (Transact-SQL)"
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
-ms.date: 03/25/2019
+ms.date: 04/19/2022
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "reference"
 ms.custom: ""
-ms.author: mibar
-author: barmichal
+ms.author: matripathy
+author: Madhumitatripathy
 f1_keywords:
   - "sys.sensitivity_classifications "
 dev_langs:

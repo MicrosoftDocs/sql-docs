@@ -1,12 +1,12 @@
-﻿---
+---
 title: Benefits of Programming with Service Broker
 description: "Queuing and asynchronous messaging are needed for many database applications today."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -30,7 +30,7 @@ Some of the benefits of programming with Service Broker are:
 
 - **Improved scalability:** Service Broker routing delivers messages based on the name of the service, rather than on the network address of the computer where the service runs. This allows you to install an application on multiple computers without changing application code.
 
-- **Ability to leverage existing knowledge:** Service Broker uses Transact-SQL to create objects. Applications that use Service Broker are most often implemented in Transact-SQL or Microsoft .NET Framework-compatible languages. You do not have to learn a new language to create Service Broker applications.
+- **Ability to use existing knowledge:** Service Broker uses Transact-SQL to create objects. Applications that use Service Broker are most often implemented in Transact-SQL or Microsoft .NET Framework-compatible languages. You do not have to learn a new language to create Service Broker applications.
 
 ## See also
 

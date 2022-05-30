@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'How to: Deactivate Service Broker Message Delivery in Databases (Transact-SQL)'
 description: "When message delivery is not active, messages remain in the transmission queue."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -14,9 +14,9 @@ ms.date: "03/30/2022"
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-When message delivery is not active, messages remain in the transmission queue. To determine if Service Broker is active for a database, check the **is_broker_enabled** column of the **sys.databases** catalog view.
+When message delivery is not active, messages remain in the transmission queue. To determine whether Service Broker is active for a database, check the **is_broker_enabled** column of the **sys.databases** catalog view.
 
-> [!NOTE]  
+> [!NOTE]
 > Deactivating Service Broker prevents messages from being sent from or delivered to the database. However, this does not prevent messages from arriving in the instance. To prevent messages from arriving in the instance, you must remove or stop the Service Broker endpoint.### To deactivate Service Broker in a database
 
 - Alter the database to set the DISABLE_BROKER option.
@@ -28,7 +28,7 @@ When message delivery is not active, messages remain in the transmission queue. 
 ```sql
     USE master ;
     GO
-    
+
     ALTER DATABASE AdventureWorks2008R2 SET DISABLE_BROKER ;
     GO
 ```

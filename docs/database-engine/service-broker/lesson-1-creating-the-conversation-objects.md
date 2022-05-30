@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 1: Creating the Conversation Objects'
 description: "In this lesson, you will learn to build all the objects that enable a database to support a conversation in the database."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -23,7 +23,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 - Copy and paste the following code into a Query Editor window. Then, run it to ensure that Service Broker is enabled in the AdventureWorks2008R2 database, and switch context to the database.
- 
+
     ```sql  
         USE master;
         GO
@@ -68,7 +68,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
     ```sql  
         CREATE QUEUE TargetQueue1DB;
-        
+
         CREATE SERVICE
                [//AWDB/1DBSample/TargetService]
                ON QUEUE TargetQueue1DB
@@ -82,7 +82,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
     ```sql
         CREATE QUEUE InitiatorQueue1DB;
-        
+
         CREATE SERVICE
                [//AWDB/1DBSample/InitiatorService]
                ON QUEUE InitiatorQueue1DB;
@@ -91,7 +91,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ## Next Steps
 
-You have successfully configured **AdventureWorks2008R2** to support a conversation between the **//AWDB/1DBSample/InitiatorService** and the **//AWDB/1DBSample/TargetService**. Next, you will complete a conversation using the configuration. See [Lesson 2: Beginning a Conversation and Transmitting Messages](lesson-2-beginning-a-conversation-and-transmitting-messages.md).
+You have successfully configured **AdventureWorks2008R2** to support a conversation between the **//AWDB/1DBSample/InitiatorService** and the **//AWDB/1DBSample/TargetService**. Next, you will complete a conversation using the configuration. For more information, see [Lesson 2: Beginning a Conversation and Transmitting Messages](lesson-2-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
 

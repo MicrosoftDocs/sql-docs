@@ -1,8 +1,10 @@
 ---
 title: "Always Encrypted with secure enclaves"
 description: Learn about the Always Encrypted with secure enclaves feature for SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: 08/03/2021
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -16,7 +18,7 @@ monikerRange: ">= sql-server-ver15"
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-Always Encrypted with secure enclaves expands confidential computing capabilities of [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+Always Encrypted with secure enclaves expands confidential computing capabilities of [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, as well as in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 Introduced in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: Database Administrators (DBAs), computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but should not have access to some or all of the actual data.
 
@@ -38,9 +40,13 @@ During statement processing, both the data and the column encryption keys aren't
 
 ## Supported enclave technologies
 
-In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted with secure enclaves uses [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. Intel SGX is a hardware-based trusted execution environment technology supported in databases that use the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration.
+
+### SQL Server 2022
+
+SQL Server 2022 adds the capability to support multi-threading inside the enclave and key caching. SQL Server 2022 continues to use VBS secure memory enclaves and Host Guardian Service for attestation. No other enclave technologies or attestation solutions are supported.
 
 ## Secure enclave attestation
 
@@ -48,12 +54,12 @@ The secure enclave inside the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] 
 
 The process of verifying the enclave is called **enclave attestation**, and it involves both a client driver within the application and [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] contacting an external attestation service. The specifics of the attestation process depend on the type of the enclave (VBS or SGX) and the attestation service.
 
-The attestation process for VBS secure enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] is [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), which requires Host Guardian Service (HGS) as an attestation service. 
+The attestation process for VBS secure enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later is [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), which requires Host Guardian Service (HGS) as an attestation service. 
 
 The attestation of Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] requires [Microsoft Azure Attestation](/azure/attestation/overview).
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] does not support Microsoft Azure Attestation. Host Guardian Service is the only attestation solution supported for VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later does not support Microsoft Azure Attestation. Host Guardian Service is the only attestation solution supported for VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
 ## Supported client drivers
 
@@ -94,20 +100,23 @@ In-place encryption is allowed with both deterministic and randomized encryption
 
 ### Confidential queries
 
+> [!NOTE]
+> [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] adds additional support for confidential queries with JOIN, GROUP BY and ORDER BY operations on encrypted columns.
+
 Confidential queries are [DML queries](../../../t-sql/queries/queries.md) that involve operations on enclave-enabled columns performed inside the secure enclave.
 
 The operations supported inside the secure enclaves are:
 
-| Operation| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
-|:---|:---|:---|
-| [Comparison Operators](../../../mdx/comparison-operators.md) | Supported | Supported |
-| [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | Supported | Supported |
-| [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md) | Supported | Supported |
-| [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md) | Supported | Supported |
-| [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select) | Supported | Supported |
-| [Joins](../../performance/joins.md) | Only nested loop joins supported | Supported |
-| [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md) | Not supported | Supported |
-| [SELECT - GROUP BY- Transact-SQL](../../../t-sql/queries/select-group-by-transact-sql.md) | Not supported | Supported |
+| Operation| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] |
+|:---|:---|:---| :---|
+| [Comparison Operators](../../../mdx/comparison-operators.md) | Supported | Supported | Supported |
+| [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | Supported | Supported | Supported |
+| [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md) | Supported | Supported | Supported |
+| [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md) | Supported | Supported | Supported |
+| [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select) | Supported | Supported | Supported |
+| [Joins](../../performance/joins.md) | Only nested loop joins supported | Supported | Supported |
+| [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md) | Not supported | Supported | Supported |
+| [SELECT - GROUP BY- Transact-SQL](../../../t-sql/queries/select-group-by-transact-sql.md) | Not supported | Supported | Supported |
 
 > [!NOTE]
 > The above operations are supported in secure enclaves only on enclave-enabled columns using **randomized** encryption, and not deterministic encryption. Equality comparison remains the only computation supported on columns using deterministic encryption, and it's performed by comparing the ciphertext outside of the enclave, regardless if the column is enclave-enabled or not. Deterministic encryption supports the following operations involving equality comparisons: 
@@ -116,7 +125,7 @@ The operations supported inside the secure enclaves are:
 > - [SELECT - GROUP BY](../../../t-sql/queries/select-group-by-transact-sql.md)
 > - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
 >
-> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a binary2 sort order (BIN2) collation. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], confidential queries on character strings require a BIN2 collation or a UTF-8 collation. 
+> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a binary2 sort order (BIN2) collation. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], confidential queries on character strings require a BIN2 collation or a UTF-8 collation. 
 
 ### Indexes on enclave-enabled columns
 
@@ -135,7 +144,7 @@ For more information, see [Create and use indexes on columns using Always Encryp
 If an instance of SQL Server fails, its databases may be left in a state where the data files may contain some modifications from incomplete transactions. When the instance is started, it runs a process called [database recovery](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started), which involves rolling back every incomplete transaction found in the transaction log to make sure the integrity of the database is preserved. If an incomplete transaction made any changes to an index, those changes also need to be undone. For example, some key values in the index may need to be removed or reinserted.
 
 > [!IMPORTANT]
-> Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption. ADR is enabled by default in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+> Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption. ADR is enabled by default in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
 With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. Accelerated database recovery (ADR) dramatically reduces the number of undo operations that must be deferred because a column encryption key isn't available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still may need a column encryption key to complete cleaning up old data versions but it does that as a background task that doesn't impact the availability of the database or user transactions. You may see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
 
@@ -175,7 +184,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 - Clustered indexes can't be created on enclave-enabled columns using randomized encryption.
 - Enclave-enabled columns using randomized encryption can't be primary key columns and cannot be referenced by foreign key constraints or unique key constraints.
-- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or SQL Server 2022) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
 - In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you can't encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
 - Expressions defining computed columns can't perform any computations on enclave-enabled columns using randomized encryption (even if the computations are among the supported operations listed in [Confidential queries](#confidential-queries)).

@@ -1,12 +1,12 @@
-﻿---
+---
 title: Managing Conversation Priorities
 description: "Service Broker conversation priorities let you specify which conversations to prioritize so that their messages are not blocked by large numbers of messages from less important conversations."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 Service Broker conversation priorities let you specify which conversations to prioritize so that their messages are not blocked by large numbers of messages from less important conversations.
 
 ## Enabling Conversation Priorities
+
 Conversation priorities are always active for RECEIVE statements. The HONOR_BROKER_PRIORITY database option must be on to make conversation priorities active for SEND statements. By default, this option is off for all databases.
 
 An administrator can enable conversation priorities for SEND statements in a database by using the following statement:

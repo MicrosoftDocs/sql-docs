@@ -9,9 +9,12 @@ ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
+  - "change tracking [SQL Server], Always On Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
+  - "change data capture [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
+  - "replication [SQL Server], Always On Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma

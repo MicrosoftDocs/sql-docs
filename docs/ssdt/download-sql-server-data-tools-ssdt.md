@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 03/28/2022
+ms.date: 05/06/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services and Integration Services projects are not available for Visual Studio 2022 at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.
 
 > [!NOTE]
 > There's no SSDT standalone installer for Visual Studio 2022.
@@ -44,6 +44,13 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 3. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
 
    ![Data storage and processing workload 2022](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png)
+
+For Analysis Services or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
+
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects2022)
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022)
+
+The extension for Integration Services projects is not available for Visual Studio 2022 at this time.
 
 ## SSDT for Visual Studio 2019
 
@@ -112,10 +119,10 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 ## SSDT for VS 2017 (standalone installer)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Download SSDT for Visual Studio 2017 (15.9.9)](https://go.microsoft.com/fwlink/?linkid=2169967)**
+:::image type="icon" source="media/download.png" border="false"::: **[Download SSDT for Visual Studio 2017 (15.9.10)](https://go.microsoft.com/fwlink/?linkid=2192400)**
 
 > [!IMPORTANT]
-> * Before installing SSDT for Visual Studio 2017 (15.9.9), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances. 
+> * Before installing SSDT for Visual Studio 2017 (15.9.10), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances. 
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
 > * To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
 >    * [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -135,17 +142,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](/visualstudio/pro
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-* [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x804)
-* [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x404)
-* [English (United States)](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x409)
-* [French](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x40c)
-* [German](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x407)
-* [Italian](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x410)
-* [Japanese](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x411)
-* [Korean](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x412)
-* [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x416)
-* [Russian](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x419)
-* [Spanish](https://go.microsoft.com/fwlink/?linkid=2169967&clcid=0x40a)
+* [Chinese (Simplified)](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x804)
+* [Chinese (Traditional)](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x404)
+* [English (United States)](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x409)
+* [French](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x40C)
+* [German](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x407)
+* [Italian](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x410)
+* [Japanese](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x411)
+* [Korean](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x412)
+* [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x416)
+* [Russian](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x419)
+* [Spanish](https://go.microsoft.com/fwlink/?LinkID=2192400&clcid=0x40A)
 
 ### Considerations and limitations
 

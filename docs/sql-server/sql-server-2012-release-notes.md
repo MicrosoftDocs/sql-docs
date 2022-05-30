@@ -489,17 +489,18 @@ Issue: Intellisense in SQL Server Management Studio (SSMS) and SQL Server Data T
   
 **Workaround**:  None  
   
-### 5.7 AlwaysOn Availability Groups  
-Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to AlwaysOn Availability Groups, see [AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753166)in Books Online.  
+### 5.7 Always On Availability Groups
+
+Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to Always On Availability Groups, see [Always On Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753166)in Books Online.  
   
-#### 5.7.1 Client-Connectivity for AlwaysOn Availability Groups  
+#### 5.7.1 Client-Connectivity for Always On Availability Groups  
 **Updated on:** August 13, 2012  
   
-This section describes driver support for AlwaysOn Availability Groups and workarounds for not supported drivers.  
+This section describes driver support for Always On Availability Groups and workarounds for not supported drivers.  
   
 **Driver Support**  
   
-The following table summarizes driver support for AlwaysOn Availability Groups:  
+The following table summarizes driver support for Always On Availability Groups:  
   
 |Driver|Multi-Subnet Failover|Application Intent|Read-Only Routing|Multi-Subnet Failover: Faster Single Subnet Endpoint Failover|Multi-Subnet Failover: Named Instance Resolution For SQL Clustered Instances|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
@@ -515,19 +516,19 @@ The following table summarizes driver support for AlwaysOn Availability Groups:
   
 **MultiSubnetFailover Keyword and Associated Features**  
   
-MultiSubnetFailover is a new connection string keyword used to enable faster failover with AlwaysOn Availability Groups and AlwaysOn Failover Cluster Instances in SQL Server 2012. The following three sub-features are enabled when MultiSubnetFailover=True is set in connection string:  
+MultiSubnetFailover is a new connection string keyword used to enable faster failover with Always On Availability Groups and Always On Failover Cluster Instances in SQL Server 2012. The following three sub-features are enabled when MultiSubnetFailover=True is set in connection string:  
   
--   Faster multi-subnet failover to a multi-subnet listener for an AlwaysOn Availability Group or Failover Cluster Instances.  
+-   Faster multi-subnet failover to a multi-subnet listener for an Always On Availability Group or Failover Cluster Instances.  
   
-    -   Named instance resolution to a multi-subnet AlwaysOn Failover Cluster Instance.  
+    -   Named instance resolution to a multi-subnet Always On Failover Cluster Instance.  
   
--   Faster single subnet failover to a single subnet listener for an AlwaysOn Availability Group or Failover Cluster Instances.  
+-   Faster single subnet failover to a single subnet listener for an Always On Availability Group or Failover Cluster Instances.  
   
     -   This feature is used when connecting to a listener that has a single IP in a single subnet. This performs more aggressive TCP connection retries to speed up single subnet failovers.  
   
--   Named instance resolution to a multi-subnet AlwaysOn Failover Cluster Instance.  
+-   Named instance resolution to a multi-subnet Always On Failover Cluster Instance.  
   
-    -   This is to add named instance resolution support for an AlwaysOn Failover Cluster Instances with multiple subnet endpoints.  
+    -   This is to add named instance resolution support for an Always On Failover Cluster Instances with multiple subnet endpoints.  
   
 **MultiSubnetFailover=True Not Supported by NET Framework 3.5 or OLEDB**  
   
@@ -566,8 +567,8 @@ This is due to a limitation in the CTP3 build. Future builds will not have this 
 #### 5.7.4 Side by Side Installation of CTP3 with later versions of Failover Cluster Instances is not supported.  
 This is due to a limitation in the CTP3 build. Future builds will not have this restriction. To upgrade failover cluster instances from CTP3 make sure to upgrade all instances on a node at the same time.  
   
-#### 5.7.5  Timeouts may occur when using multi IPs in the same subnet with AlwaysOn  
-**Issue:** When using multi IPs in the same subnet with AlwaysOn, customers may sometimes see a timeout. This happens if the top IP in the list is bad.  
+#### 5.7.5  Timeouts may occur when using multi IPs in the same subnet with Always On  
+**Issue:** When using multi IPs in the same subnet with Always On, customers may sometimes see a timeout. This happens if the top IP in the list is bad.  
   
 **Workaround:** Use 'multisubnetfailover = true' in the connection string.  
   

@@ -98,7 +98,7 @@ Time in seconds to wait for a connection to the server before terminating reques
 #### `--application-intent -k`
 Declares the application workload type when connecting to a database in a SQL Server Availability Group.
 #### `--multi-subnet-failover -m`
-If application is connecting to AlwaysOn AG on different subnets, setting this provides faster detection and connection to currently active server.
+If application is connecting to Always On AG on different subnets, setting this provides faster detection and connection to currently active server.
 #### `--packet-size`
 Size in bytes of the network packets used to communicate with SQL Server.
 #### `--dac-connection -a`

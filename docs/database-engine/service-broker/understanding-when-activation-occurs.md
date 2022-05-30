@@ -1,12 +1,12 @@
-﻿---
+---
 title: Understanding When Activation Occurs
 description: "The Service Broker activation process consists of two steps. First, Service Broker determines whether activation is necessary."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -42,7 +42,7 @@ Activation is necessary if either of the following is true:
 
 - A new message arrives on a queue that contains no unread messages and there are no activation stored procedures running for the queue.
 
-- The queue contains unread messages, there is no session waiting in a GET CONVERSATION GROUP statement or a RECEIVE statement without a WHERE clause, and no GET CONVERSATION GROUP statement or RECEIVE statement without a WHERE clause has returned an empty result set for a few seconds. In other words when messages are accumulating on the queue because the activated procedures aren’t able to read them fast enough.
+- The queue contains unread messages, there is no session waiting in a GET CONVERSATION GROUP statement or a RECEIVE statement without a WHERE clause, and no GET CONVERSATION GROUP statement or RECEIVE statement without a WHERE clause has returned an empty result set for a few seconds. In other words when messages are accumulating on the queue because the activated procedures aren't able to read them fast enough.
 
 In effect, this procedure allows the queue monitor to tell whether the number of queue readers processing the queue is keeping up with the incoming message traffic. Notice that this approach takes conversation group locking into account. Because only one queue reader at a time can process messages for a conversation, starting queue readers in response to a simpler approach, such as the number of unread messages in the queue, might waste resources. Instead, Service Broker activation considers whether a new queue reader will have useful work to do.
 

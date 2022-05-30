@@ -4,8 +4,8 @@
 title: "rxFeaturize function (MicrosoftML) " 
 description: " Transforms data from an input data set to an output data set. " 
 keywords: "(MicrosoftML), rxFeaturize, manip" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

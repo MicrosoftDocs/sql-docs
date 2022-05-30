@@ -1,12 +1,12 @@
-﻿---
+---
 title: Identity and Access Control (Service Broker)
 description: "Most Service Broker applications that involve more than one instance run in the security context of a database principal created specifically for the application."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -28,7 +28,7 @@ The following considerations apply to database principals created for Service Br
 
 - The user specified as the user for an activation stored procedure must have permission to execute the procedure. Frequently, the user specified has the permissions required to execute the statements in the procedure. Notice, however, that if the stored procedure itself is defined with an EXECUTE AS clause, the statements in the stored procedure run with the security context defined by the stored procedure. SQL Server first sets the security context to the user specified for the queue. SQL Server then executes the stored procedure and the stored procedure changes the security context to the user specified for the procedure.
 
-- When Service Broker transport security uses SSPI, the service account for the remote database must have CONNECT permission in **master**, and must also correspond to a login. Therefore, the account that the remote SQL Server instance runs as must have permission to log in to SQL Server using Windows Authentication. There are no requirements for the login to have other permissions or to own objects in any database.
+- When Service Broker transport security uses SSPI, the service account for the remote database must have CONNECT permission in **master**, and must also correspond to a login. Therefore, the account that the remote SQL Server instance runs as must have permission to sign in to SQL Server using Windows Authentication. There are no requirements for the sign in to have other permissions or to own objects in any database.
 
 ## See also
 

@@ -1,31 +1,30 @@
 ---
+title: "ROLLBACK TRANSACTION (Transact-SQL)"
 description: "ROLLBACK TRANSACTION (Transact-SQL)"
-title: "ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ROLLBACK TRANSACTION"
   - "ROLLBACK"
   - "ROLLBACK_TSQL"
   - "ROLLBACK_TRANSACTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction rollbacks [SQL Server]"
   - "ROLLBACK TRANSACTION statement"
   - "erasing data modifications [SQL Server]"
   - "rolling back transactions, ROLLBACK TRANSACTION"
   - "roll back transactions [SQL Server]"
   - "savepoints [SQL Server]"
-ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

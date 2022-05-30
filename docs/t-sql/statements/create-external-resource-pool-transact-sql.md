@@ -19,8 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL statement"
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlund
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

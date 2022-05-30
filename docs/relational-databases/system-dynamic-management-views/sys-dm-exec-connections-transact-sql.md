@@ -2,7 +2,7 @@
 description: "sys.dm_exec_connections (Transact-SQL)"
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "4/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-Returns information about the connections established to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the details of each connection. Returns server wide connection information for SQL Server. Returns current database connection information for SQL Database.
+Returns information about the connections established to this instance of the database engine and the details of each connection. Returns server wide connection information for SQL Server and Azure SQL Managed Instance. Returns connection information for the current database in Azure SQL Database. Returns connection information for all databases in the same elastic pool for databases in [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in Azure SQL Database.
 
 > [!NOTE]  
 > To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use **sys.dm_exec_connections**.
@@ -48,7 +48,7 @@ Returns information about the connections established to this instance of [!INCL
 |last_read|**datetime**|Timestamp when last read occurred over this connection. Is nullable.|  
 |last_write|**datetime**|Timestamp when last write occurred over this connection. Not Is nullable.|  
 |net_packet_size|**int**|Network packet size used for information and data transfer. Is nullable.|  
-|client_net_address|**varchar(48)**|Host address of the client connecting to this server. Is nullable.<br /><br /> Prior to V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
+|client_net_address|**varchar(48)**|Host address of the client connecting to this server. Is nullable.|  
 |client_tcp_port|**int**|Port number on the client computer that is associated with this connection. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
 |local_net_address|**varchar(48)**|Represents the IP address on the server that this connection targeted. Available only for connections using the TCP transport provider. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
 |local_tcp_port|**int**|Represents the server TCP port that this connection targeted if it were a connection using the TCP transport. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
@@ -61,12 +61,12 @@ Returns information about the connections established to this instance of [!INCL
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
 
-On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
+On Azure SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
-## Physical Joins  
+## Physical joins 
  ![Joins for sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Joins for sys.dm_exec_connections")  
   
-## Relationship Cardinalities  
+## Relationship cardinalities  
   
 | First element | Second element | Relationship |
 | --------------| -------------- | ------------ |  
@@ -74,8 +74,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many to one|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|One to one|  
   
-## Examples  
- Typical query to gather information about a queries own connection.  
+## Examples
+
+The following Transact-SQL query gathers information about a query's own connection.  
   
 ```sql  
 SELECT   
@@ -90,7 +91,11 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## See Also  
+## Next steps
 
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+Learn more about related concepts in the following articles:
+
+- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sessions (Transact-SQL)](sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_sql_text (Transact-SQL)](sys-dm-exec-sql-text-transact-sql.md)
+- [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md)

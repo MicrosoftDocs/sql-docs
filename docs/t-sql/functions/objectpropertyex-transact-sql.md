@@ -1,28 +1,27 @@
 ---
+title: "OBJECTPROPERTYEX (Transact-SQL)"
 description: "OBJECTPROPERTYEX (Transact-SQL)"
-title: "OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "OBJECTPROPERTYEX"
   - "OBJECTPROPERTYEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying schema-scoped object information"
   - "viewing schema-scoped object information"
   - "OBJECTPROPERTYEX function"
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
-ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

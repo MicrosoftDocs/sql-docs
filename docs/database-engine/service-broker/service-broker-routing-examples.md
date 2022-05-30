@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Routing Examples
 description: "This section presents examples of the Service Broker routing process."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,7 +18,7 @@ This section presents examples of the Service Broker routing process. Each examp
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-The routing tables presented in this topic are simplified versions of the **sys.routes** catalog view. The route id and the owner are not important for the routing process, and all routes are considered to have an indefinite lifetime.
+The routing tables presented in this topic are simplified versions of the **sys.routes** catalog view. The route ID and the owner are not important for the routing process, and all routes are considered to have an indefinite lifetime.
 
 A value of NULL in the **remote_service_name** column matches any service name. A value of NULL in the **broker_instance** column matches any Service Broker identifier.
 
@@ -181,7 +181,7 @@ This example describes the typical routing configuration for services outside th
 
    :::column-end:::
    :::column span="1":::
-   tcp://host2.Adventure-Works.com:4022/
+   TCP://host2.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -233,7 +233,7 @@ This example describes the typical routing configuration for services outside th
    :::column-end:::
 :::row-end:::
 
-In this case, all dialogs created in the **AdventureWorks2008R2** database to the service **OrderParts** match the route **OrderPartsRoute**. Service Broker sends these messages to the network address **tcp://host2.Adventure-Works.com:4022/**. All other conversations are delivered to services in the same instance.
+In this case, all dialogs created in the **AdventureWorks2008R2** database to the service **OrderParts** match the route **OrderPartsRoute**. Service Broker sends these messages to the network address **TCP://host2.Adventure-Works.com:4022/**. All other conversations are delivered to services in the same instance.
 
 For conversations created in **AdventureWorks2008R2** with a target service of **OrderParts**, the set of matching routes contains **OrderPartsRoute**, since this route exactly matches the service name. **OrderPartsRoute** is the only route in the set of matching routes, so Service Broker chooses that route.
 
@@ -302,11 +302,11 @@ This example describes the typical routing configuration for a service hosted by
 
    :::column-end:::
    :::column span="1":::
-   tcp://partner1.Adventure-Works.com:4022/
+   TCP://partner1.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
-   tcp://partner2.Adventure-Works.com:4022/
+   TCP://partner2.Adventure-Works.com:4022/
 
    :::column-end:::
 :::row-end:::
@@ -364,7 +364,7 @@ For conversations that arrive from outside of the instance, **AutoCreatedLocal**
 
 This example sends messages from services in **AdventureWorks2008R2** to a different instance unless the service exists in the local instance. Notice that messages for any services that are not in the local instance go to the same network address. This configuration may be useful if the SQL Server instance at that network address performs message forwarding.
 
-In this example, the **AdventureWorks2008R2** database contains the **AutoCreatedLocal** route as well as a route to the address **tcp://forwarding.Adventure-Works.com:4022/**.
+In this example, the **AdventureWorks2008R2** database contains the **AutoCreatedLocal** route as well as a route to the address **TCP://forwarding.Adventure-Works.com:4022/**.
 
 **AdventureWorks2008R2.sys.routes**
 
@@ -423,7 +423,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://forwarding.Adventure-Works.com:4022/
+   TCP://forwarding.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -542,7 +542,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://server1.Adventure-Works.com:4022/
+   TCP://server1.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -565,7 +565,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://server2.Adventure-Works.com:4022/
+   TCP://server2.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -617,7 +617,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
    :::column-end:::
 :::row-end:::
 
-For conversations created in the **AdventureWorks2008R2** database to the service **BalancedService** that do not specify a Service Broker identifier, the set of matching routes contains either **BalancedRouteOne** and **BalancedRouteTwo**. Since the routes contain different Service Broker identifiers, the matching process arbitrarily selects a Service Broker identifier and matches that route. Since only one route matches, Service Broker chooses that route for the conversation. The result is that some conversations route to **tcp://server1.Adventure-Works.com:4022/**, and other conversations route to **tcp://server2.Adventure-Works.com:4022/**. However, once Service Broker receives an acknowledgment for a message in a conversation, Service Broker uses the Service Broker identifier contained in the acknowledgment for other messages in the conversation. Once the first acknowledgment is received, all future messages on the conversation are routed using the Service Broker identifier in the acknowledgment.
+For conversations created in the **AdventureWorks2008R2** database to the service **BalancedService** that do not specify a Service Broker identifier, the set of matching routes contains either **BalancedRouteOne** and **BalancedRouteTwo**. Since the routes contain different Service Broker identifiers, the matching process arbitrarily selects a Service Broker identifier and matches that route. Since only one route matches, Service Broker chooses that route for the conversation. The result is that some conversations route to **TCP://server1.Adventure-Works.com:4022/**, and other conversations route to **TCP://server2.Adventure-Works.com:4022/**. However, once Service Broker receives an acknowledgment for a message in a conversation, Service Broker uses the Service Broker identifier contained in the acknowledgment for other messages in the conversation. Once the first acknowledgment is received, all future messages on the conversation are routed using the Service Broker identifier in the acknowledgment.
 
 For conversations created in the **AdventureWorks2008R2** database to the service **BalancedService** that specify one of the Service Broker identifiers in the routing table, the set of matching routes contains the route that matches the Service Broker identifier. The conversation routes to the address in the route with that Service Broker identifier.
 
@@ -627,7 +627,7 @@ For conversations that arrive from outside of the instance, **AutoCreatedLocal**
 
 ## Example 6: Message Forwarding for a Specific Service
 
-This example forwards messages from outside the local instance to the service **ElsewhereService** to the network address **tcp://elsewhere.Adventure-Works.com:4022/**. For all other services, Service Broker delivers the messages to a service in the local instance or marks the conversation DELAYED if the service does not exist in the local instance.
+This example forward messages from outside the local instance to the service **ElsewhereService** to the network address **TCP://elsewhere.Adventure-Works.com:4022/**. For all other services, Service Broker delivers the messages to a service in the local instance or marks the conversation DELAYED if the service does not exist in the local instance.
 
 **AdventureWorks2008R2.sys.routes**
 
@@ -729,7 +729,7 @@ This example forwards messages from outside the local instance to the service **
 
    :::column-end:::
    :::column span="1":::
-   tcp://elsewhere.Adventure-Works.com:4022/
+   TCP://elsewhere.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -738,7 +738,7 @@ This example forwards messages from outside the local instance to the service **
    :::column-end:::
 :::row-end:::
 
-For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, Service Broker marks the conversation DELAYED. Notice that a conversation created in **AdventureWorks2008R2** to the service **ElsewhereService** does not route to **tcp://elsewhere.Adventure-Works.com:4022/**.
+For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, Service Broker marks the conversation DELAYED. Notice that a conversation created in **AdventureWorks2008R2** to the service **ElsewhereService** does not route to **TCP://elsewhere.Adventure-Works.com:4022/**.
 
 For conversations that arrive from outside of the instance to the service **ElsewhereService**, the route **ForwardingRoute** exactly matches the service name. Therefore, **ForwardingRoute** is the only route in the set of matching routes, and Service Broker chooses that route when message forwarding is on. Service Broker chooses this route even if the local instance contains the service **ElsewhereService**. If message forwarding is off, Service Broker drops the message.
 
@@ -848,7 +848,7 @@ This example sends messages from outside the local instance to a different insta
 
    :::column-end:::
    :::column span="1":::
-   tcp://forwarding.Adventure-Works.com:4022/
+   TCP://forwarding.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::

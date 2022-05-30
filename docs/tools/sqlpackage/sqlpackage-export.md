@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 12/27/2021
+ms.date: 4/18/2022
 ---
 
 # SqlPackage Export parameters and properties
@@ -61,7 +61,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory} )| Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage. |
 |**/p:**|TableData=(STRING[])|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
-|**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Specifies what the target engine version is expected to be. This property affects whether to allow objects supported by Microsoft Azure SQL Database servers with V12 capabilities, such as memory-optimized tables, in the generated bacpac.|
+|**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|This property is deprecated and use is not recommended. Specifies the version the target engine for Azure SQL Database is expected to be.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies an alternative temporary directory used to buffer table data before being written to the package file. The space required in this location may be large and is relative to the full size of the database.|
 |**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified. If set to true, schema validation rules are run on the dacpac or bacpac.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifies whether the supported full-text document types for Microsoft Azure SQL Database v12 should be verified.|

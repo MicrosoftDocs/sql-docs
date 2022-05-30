@@ -1,12 +1,12 @@
-﻿---
+---
 title: Queues
 description: "Queues store messages. When Service Broker receives a message for a service, Service Broker inserts the message into the queue for that service."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -31,7 +31,7 @@ A queue may be associated with a stored procedure. In this case, SQL Server acti
 - [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
 - [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
 - [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-- [Service Broker Activation](service-broker-activation.md)- 
+- [Service Broker Activation](service-broker-activation.md)-
 - [Choosing a Startup Strategy](choosing-a-startup-strategy.md)
 - [Understanding When Activation Occurs](understanding-when-activation-occurs.md)
 - [Creating Service Broker Queues](creating-service-broker-queues.md)

@@ -1,13 +1,13 @@
 ---
-title: 'Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts'
+title: "Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts"
 description: Learn how to deploy a SQL Server on Linux container to Azure Kubernetes Service (AKS) using Helm charts.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh
+ms.date: 05/30/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: quickstart
-ms.date: 04/20/2022
 ---
 
 # Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts
@@ -141,70 +141,6 @@ For example, if you connect to the SQL Server instance using SSMS, you can use t
 Once you've connected, you'll be able to expand the SQL Server instance in **Object Explorer**.
 
 :::image type="content" source="media/sql-server-linux-containers-deploy-helm-charts-kubernetes/expand-object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance":::
-
-## Change the tempdb path
-
-It's a good practice to keep your `tempdb` database separate from your user databases, so in the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountPath` for `tempdb` files.
-
-1. Connect to the SQL Server instance, and then run the following Transact-SQL (T-SQL) script:
-
-   ```sql
-   ALTER DATABASE tempdb MODIFY FILE (
-      NAME = tempdev, FILENAME = '/var/opt/mssql/tempdb/tempdb.mdf'
-   );
-   GO
-   
-   ALTER DATABASE tempdb MODIFY FILE (
-       NAME = templog, FILENAME = '/var/opt/mssql/tempdb/templog.ldf'
-   );
-   GO
-   ```
-
-   > [!NOTE]
-   >  
-   > If there are more files associated with tempdb, you'll need to move them as well.
-
-1. Verify that the `tempdb` file location has been modified, using the following T-SQL script:
-
-   ```sql
-   SELECT *
-   FROM sys.sysaltfiles
-   WHERE dbid = 2;
-   ```
-
-1. You must restart the SQL Server container for these changes to take effect.
-
-   With SQL Server containers, you must restart the container instead of restarting the SQL Server service. For example, if you use Docker or Podman to host your container, you only need to restart the container. For a Kubernetes deployment, follow these steps:
-
-   1. First, delete the existing container:
-
-      ```cmd
-      kubectl scale deployment mssql-latest-deploy --replicas=0
-      ```
-
-   1. Wait a few seconds for the container to be deleted, and then run the following command to redeploy the container:
-
-      ```cmd
-      kubectl scale deployment mssql-latest-deploy --replicas=1
-      ```
-
-1. Run `kubectl get all` to get the correct service name for the new SQL Server container, and then open an interactive `bash` session. If you have a StatefulSet deployment you can skip this step, because the host and container name doesn't change.
-
-     ```cmd
-     kubectl exec -it mssql-latest-deploy-7f8c7f5bc-s2qrr bash
-     ```
-
-    Once connected to the interactive shell, run the following command to check the location of `tempdb`:
-
-    ```bash
-    ls /var/opt/mssql/tempdb/
-    ```
-
-    If the move was successful, you'll see similar output:
-
-    ```output
-    tempdb.mdf templog.ldf
-    ```
 
 ## Clean up resources
 

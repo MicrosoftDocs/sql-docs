@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.db2.convert.f1"
 ---
 # Converting DB2 Schemas (DB2ToSQL)
 After you have connected to DB2, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and set project and data mapping options, you can convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects.  

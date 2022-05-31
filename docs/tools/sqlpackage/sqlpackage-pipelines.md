@@ -137,4 +137,4 @@ By using the [PowerShell](/azure/devops/pipelines/tasks/utility/powershell) task
 
 ## Next steps
 
-- Learn more about [sqlpackage](sqlpackage.md)
+- Learn more about [SqlPackage](sqlpackage.md)

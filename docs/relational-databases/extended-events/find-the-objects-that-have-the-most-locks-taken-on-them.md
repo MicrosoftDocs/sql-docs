@@ -101,7 +101,7 @@ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmans
 > The preceding Transact-SQL code example runs on SQL Server on-premises, but might _not quite run on Azure SQL Database._ The core portions of the example directly involving Events, such as `ADD EVENT sqlserver.lock_acquired` do work on Azure SQL Database too. But preliminary items, such as `sys.server_event_sessions` must be edited to their Azure SQL Database counterparts like `sys.database_event_sessions` for the example to run.
 > For more information about these minor differences between SQL Server on-premises versus Azure SQL Database, see the following articles:
 > - [Extended events in Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
-> - [System objects that support extended events](xevents-references-system-objects.md)
+> - [System objects that support Extended Events](xevents-references-system-objects.md)
 
 After the statements in the preceding Transact-SQL script finish, the **Results** tab of Query Editor displays the following columns:
   

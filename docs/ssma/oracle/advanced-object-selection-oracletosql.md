@@ -11,6 +11,10 @@ ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.multichecktreeview.f1"
+  - "ssma.oracle"
+
 
 ---
 # Advanced Object Selection  (OracleToSQL)
@@ -22,7 +26,8 @@ When you first open the dialog box, click **Show Subcategories Items** to displa
   
 Before you use this dialog box, you might want to force SSMA to load all metadata by either converting schemas or saving the project.  
   
-## Options  
+## Options
+
 **Check All Items**  
 Adds a check mark next to all items. These items will be immediately selected in the metadata explorer.  
   
@@ -46,3 +51,6 @@ If items match the filter criteria, the categories or items will appear as you t
 **Clear Filter**  
 Clears the **Filter** box.  
   
+## See Also
+ 
+[Global Settings](global-settings-dialogs-oracletosql.md)

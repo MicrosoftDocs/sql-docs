@@ -7,8 +7,8 @@ ms.subservice: high-availability
 ms.custom: 
 ms.devlang:
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 12/18/2018
 ---

@@ -11,9 +11,8 @@ ms.topic: conceptual
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 02/22/2022
+ms.date: 05/02/2022
 tags: azure-synapse
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Data Discovery & Classification
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
@@ -53,9 +52,17 @@ The classification includes two metadata attributes:
 - **Labels**: The main classification attributes, used to define the sensitivity level of the data stored in the column.  
 - **Information types**: Attributes that provide more granular information about the type of data stored in the column.
 
-### Define and customize your classification taxonomy
+### Information Protection policy
 
-Data Discovery & Classification comes with a built-in set of sensitivity labels and a built-in set of information types and discovery logic. You can customize this taxonomy and define a set and ranking of classification constructs specifically for your environment.
+Azure SQL offers both SQL Information Protection policy and Microsoft Information Protection policy in data classification, and you can choose either of these two policies based on your requirement.
+
+:::image type="content" source="./media/data-discovery-and-classification-overview/protection-policy-types.png" alt-text="Screenshot of Information Protection policy types." lightbox="./media/data-discovery-and-classification-overview/protection-policy-types.png":::
+
+### SQL Information Protection policy
+
+Data Discovery & Classification comes with a built-in set of sensitivity labels and information types with discovery logic which is native to the SQL logical server. You can continue using the protection labels available in the default policy file, or you can customize this taxonomy. You can define a set and ranking of classification constructs specifically for your environment.
+
+### Define and customize your classification taxonomy
 
 You define and customize of your classification taxonomy in one central place for your entire Azure organization. That location is in [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction), as part of your security policy. Only someone with administrative rights on the organization's root management group can do this task.
 
@@ -65,7 +72,7 @@ For more information, see [Customize the SQL information protection policy in Mi
 
 After the organization-wide policy has been defined, you can continue classifying individual databases by using your customized policy.
 
-### Classify your database
+### Classify database in SQL Information Protection policy mode
 
 > [!NOTE]
 > The below example uses Azure SQL Database, but you should select the appropriate product that you want to configure Data Discovery & Classification.
@@ -105,13 +112,43 @@ After the organization-wide policy has been defined, you can continue classifyin
 
 1. To complete your classification and persistently label (tag) the database columns with the new classification metadata, select **Save** in the **Classification** page.
 
+### Microsoft Information Protection policy
+
+Microsoft Information Protection (MIP) labels provide a simple and uniform way for users to classify sensitive data uniformly across different Microsoft applications. MIP sensitivity labels are created and managed in [Microsoft 365 compliance center](https://compliance.microsoft.com/). To learn how to create and publish MIP sensitive labels in Microsoft 365 compliance center, see the article, [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels).
+
+#### Prerequisites to switch to MIP policy
+
+- The current user has tenant wide security admin permissions to apply policy at the tenant root management group level. For more information, see [Grant tenant-wide permissions to yourself](/azure/defender-for-cloud/tenant-wide-permissions-management#grant-tenant-wide-permissions-to-yourself).
+- Your tenant has an active Microsoft 365 subscription and you have labels published for the current user. For more information, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
+
+### Classify database in Microsoft Information Protection policy mode
+
+1. Go to the [Azure portal](https://portal.azure.com).
+1. Navigate to your database in Azure SQL Database
+1. Go to **Data Discovery & Classification** under the **Security** heading in your database pane.
+1. To select **Microsoft Information Protection policy**, select the **Overview** tab, and select **Configure**.
+1. Select **Microsoft Information Protection policy** in the **Information Protection policy** options, and select **Save**.
+
+   :::image type="content" source="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png" alt-text="Screenshot of selecting Microsoft Information Protection policy for Azure SQL Database." lightbox="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png":::
+
+1. If you go to the **Classification** tab, or select **Add classification**, you will now see M365 sensitivity labels appear in the **Sensitivity label** dropdown.
+
+   :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of Sensitivity label dropdown.":::
+
+   :::image type="content" source="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png" alt-text="Screenshot of Sensitivity label in the Classification tab." lightbox="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png":::
+
+- Information type is `[n/a]` while you are in MIP policy mode and automatic data discovery & recommendations remain disabled.
+- A warning icon may appear against an already classified column if the column was classified using a different Information Protection policy than the currently active policy. For example, if the column was classified with a label using SQL Information Protection policy earlier and now you are in Microsoft Information Protection policy mode. You will see a warning icon against that specific column. This warning icon does not indicate any problem, but is used only for information purposes.
+
+   :::image type="content" source="./media/data-discovery-and-classification-overview/classification-warning.png" alt-text="Screenshot of warnings for classified columns because of different Information Protection policies." lightbox="./media/data-discovery-and-classification-overview/classification-warning.png":::
+
 ## <a id="audit-sensitive-data"></a>Audit access to sensitive data
 
-An important aspect of the classification is the ability to monitor access to sensitive data. [Azure SQL Auditing](/azure/azure-sql/database/auditing-overview) has been enhanced to include a new field in the audit log called `data_sensitivity_information`. This field logs the sensitivity classifications (labels) of the data that was returned by a query. Here's an example:
+An important aspect of the classification is the ability to monitor access to sensitive data. [Azure SQL Auditing](../../azure-sql/database/auditing-overview.md) has been enhanced to include a new field in the audit log called `data_sensitivity_information`. This field logs the sensitivity classifications (labels) of the data that was returned by a query. Here's an example:
 
 [![Audit log](./media/data-discovery-and-classification-overview/11_data_classification_audit_log.png)](./media/data-discovery-and-classification-overview/11_data_classification_audit_log.png#lightbox)
 
-These are the activites that are actually auditable with sensitivity information:
+These are the activities that are actually auditable with sensitivity information:
 - ALTER TABLE ... DROP COLUMN
 - BULK INSERT
 - DELETE
@@ -129,7 +166,7 @@ These are the activites that are actually auditable with sensitivity information
 - DBCC SHOW_STATISTICS
 - sys.dm_db_stats_histogram
 
-Use [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) to returns information from an audit file stored in an Azure Storage account.
+Use [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) to return information from an audit file stored in an Azure Storage account.
 
 ## <a id="permissions"></a>Permissions
 
@@ -223,11 +260,11 @@ You can use the following SQL drivers to retrieve classification metadata:
 
 ## FAQ - Advanced classification capabilities
 
-**Question**: Will [Microsoft Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
-**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies here.
+**Question**: Will [Azure Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
+**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Azure Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
 
 ## Next steps
 
-- Consider configuring [Azure SQL Auditing](/azure/azure-sql/database/auditing-overview) for monitoring and auditing access to your classified sensitive data.
+- Consider configuring [Azure SQL Auditing](../../azure-sql/database/auditing-overview.md) for monitoring and auditing access to your classified sensitive data.
 - For a presentation that includes data Discovery & Classification, see [Discovering, classifying, labeling & protecting SQL data | Data Exposed](https://www.youtube.com/watch?v=itVi9bkJUNc).
-- To classify your Azure SQL Databases and Azure Synapse Analytics with Microsoft Purview labels using T-SQL commands, see [Classify your Azure SQL data using Microsoft Purview labels](/azure/sql-database/scripts/sql-database-import-purview-labels).
+- To classify your Azure SQL Databases and Azure Synapse Analytics with Azure Purview labels using T-SQL commands, see [Classify your Azure SQL data using Azure Purview labels](/azure/sql-database/scripts/sql-database-import-purview-labels).

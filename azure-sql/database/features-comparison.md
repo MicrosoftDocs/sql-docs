@@ -166,7 +166,7 @@ Azure SQL Database and Azure SQL Managed Instance support various data tools tha
 | [BACPAC file (export)](/sql/relational-databases/data-tier-applications/export-a-data-tier-application) | Yes - see [SQL Database export](database-export.md) | Yes - see [SQL Managed Instance export](database-export.md) |
 | [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database) | Yes - see [SQL Database import](database-import.md) | Yes - see [SQL Managed Instance import](database-import.md) |
 | [Data Quality Services (DQS)](/sql/data-quality-services/data-quality-services) | No | No |
-| [Master Data Services (MDS)](/sql/master-data-services/master-data-services-overview-mds) | No | No |
+| [Master Data Services (MDS)](/sql/master-data-services/master-data-services-overview-mds) | No | No. Host MDS on an Azure VM. While SQL Managed Instance cannot run MDS as a service, it can host [MDS databases](/sql/master-data-services/master-data-services-host-database-on-managed-instance) for a MDS service installed on Azure Virtual Machine, using SQL Server authentication. |
 | [SMO](/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | [Yes](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) | Yes [version 150](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) |
 | [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) | Yes | Yes |
 | [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) | Yes | Yes [version 18.0 and higher](/sql/ssms/download-sql-server-management-studio-ssms) |

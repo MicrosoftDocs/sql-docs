@@ -39,7 +39,7 @@ As implemented by SQL Server, AppContainers are an internal mechanism. While you
 
 ## Firewall rules created by Setup
 
-By default, SQL Server disables outbound connections by creating firewall rules. In the past, these rules were based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principle subject to the rule_. 
+By default, SQL Server disables outbound connections by creating firewall rules. In the past, these rules were based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principal subject to the rule_. 
 
 As part of the move to AppContainers, there are new firewall rules based on AppContainer SIDs: one for each of the 20 AppContainers created by SQL Server Setup. Naming conventions for the firewall rule name are **Block network access for AppContainer-00 in SQL Server instance MSSQLSERVER**, where 00 is the number of the AppContainer (00-20 by default), and MSSQLSERVER is the name of the SQL Server instance. 
 

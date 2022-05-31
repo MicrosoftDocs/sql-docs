@@ -65,7 +65,7 @@ Hyperscale service tier is only available in [vCore model](service-tiers-vcore.m
 
 - **Compute**:
 
-  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to high-availabilty and named replicas automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on [SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) requirements.
+  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to [high-availabilty](service-tier-hyperscale-replicas.md#high-availability-replica) and [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on availability and scalability requirements, and create up to 30 named replicas to support a variety of read scale-out workloads.
 
 - **Storage**:
 
@@ -120,7 +120,7 @@ With the ability to rapidly spin up/down additional read-only compute nodes, the
 
 ## Create and manage Hyperscale databases
 
-You can create and manage Hyperscale databases using the [Azure portal](https://portal.azure.com), [Transact-SQL](/sql/t-sql/statements/create-database-transact-sql), [PowerShell](/powershell/module/azurerm.sql/new-azurermsqldatabase), and the [Azure CLI](/cli/azure/sql/db#az_sql_db_create).
+You can create and manage Hyperscale databases using the Azure portal, Transact-SQL, PowerShell and the Azure CLI. Refer [Quickstart: Create a Hyperscale database](hyperscale-database-create-quickstart.md#create-a-hyperscale-database).
 
 
 |  **Operation** |  **Details** | **Learn more** |

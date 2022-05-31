@@ -18,14 +18,14 @@ ms.date: 04/27/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Extended events overview
+# Extended Events overview
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem in SQL Server, Azure SQL Database, and Azure SQL Managed Instance. Extended Events is highly configurable, lightweight, and scales very well. For more information, see [Extended Events Architecture](extended-events.md#extended-events-architecture).
 
 Extended Events replace the deprecated [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and SQL Server Profiler features.
 
-Give XEvents a try: [Quickstart: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+Give XEvents a try: [Quickstart: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 > [!NOTE]  
 > Azure SQL Database supports only database-scoped sessions. Learn how [Code examples can differ for Azure SQL Database and SQL Managed Instance](#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance) and more about [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
@@ -99,10 +99,10 @@ Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsq
 |Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Describes how to identify the source of locks that are hindering database performance.|[Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-|Using the Catalog views and the Dynamic management views (DMVs) for extended events | [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|Using the Catalog views and the Dynamic management views (DMVs) for Extended Events | [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
 
-Use the following Transact-SQL (T-SQL) query to list out all possible extended events and their descriptions:
+Use the following Transact-SQL (T-SQL) query to list out all possible events and their descriptions:
 
 ```sql
 SELECT
@@ -132,9 +132,8 @@ SELECT
 
 ## Next steps
 
-
-- [Quickstart: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+- [Quickstart: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+- [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file)
 - [XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  
 - [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), released June 2019. 

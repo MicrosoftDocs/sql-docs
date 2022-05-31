@@ -225,6 +225,15 @@ Azure Data Studio runs on Windows, macOS, and Linux.  The following versions are
 >
 > Incremental versions within a major operating system release may no longer be in support by the operating system. Consult the documentation for your operating system to ensure you have received applicable updates.
 
+## Supported SQL Server versions
+
+Azure Data Studio supports connecting to the following versions of SQL Server:
+
+- Azure SQL Database
+- SQL Server 2019
+- SQL Server 2017
+- SQL Server 2016
+
 ## System requirements
 
 | Requirement level | CPU cores | RAM memory |

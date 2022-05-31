@@ -112,6 +112,8 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 > Azure SQL now supports using a RSA key stored in a Managed HSM as TDE Protector. 
 Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index).
 
+> [!NOTE]
+> An issue with Thales CipherTrust Manager versions prior to v2.8.0 prevents keys newly imported into Azure Key Vault from being used with Azure SQL Database or Azure SQL Managed Instance for customer-managed TDE scenarios. More details about this issue can be found [here](https://thalesdocs.com/ctp/cm/2.6/release_notes/index.html#ciphertrust-cloud-key-manager_1). For such cases, please wait 24 hours after importing the key into key vault to begin using it as TDE Protector for the server or managed instance. This issue has been resolved in Thales CipherTrust Manager [v2.8.0](https://thalesdocs.com/ctp/cm/2.8/release_notes/index.html#resolved-issues).
 
 ## Recommendations when configuring customer-managed TDE
 
@@ -261,3 +263,6 @@ You may also want to check the following PowerShell sample scripts for the commo
 - [Remove a transparent data encryption (TDE) protector for SQL Database](transparent-data-encryption-byok-remove-tde-protector.md)
 
 - [Manage transparent data encryption in SQL Managed Instance with your own key using PowerShell](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json)
+
+Additionally, enable [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) to secure your databases and their data, with functionalities for discovering and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your databases.
+

@@ -10626,6 +10626,8 @@ items:
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
+      - name: Deploy to AKS with Helm charts
+        href: linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

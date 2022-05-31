@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_sendrow"
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_sendrow (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

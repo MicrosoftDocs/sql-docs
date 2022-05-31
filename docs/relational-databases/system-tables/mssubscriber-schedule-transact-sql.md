@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscriber_schedule system table"
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

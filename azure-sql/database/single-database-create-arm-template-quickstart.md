@@ -6,8 +6,8 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.custom: subject-armqs sqldbrb=1, devx-track-azurepowershell, mode-arm
 ms.topic: quickstart
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.date: 06/24/2020
 ---
 

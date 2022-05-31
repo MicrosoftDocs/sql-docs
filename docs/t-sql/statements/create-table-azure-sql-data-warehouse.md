@@ -6,8 +6,8 @@ ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/30/2021"

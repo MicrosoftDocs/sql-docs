@@ -7,8 +7,8 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.custom: devx-track-azurecli
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 03/12/2019
 ---

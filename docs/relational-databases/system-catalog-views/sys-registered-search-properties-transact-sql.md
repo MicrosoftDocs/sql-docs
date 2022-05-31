@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], viewing registered properties"
   - "sys.registered_search_properties catalog view"
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

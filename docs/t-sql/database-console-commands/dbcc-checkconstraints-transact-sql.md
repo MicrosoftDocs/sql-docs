@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 

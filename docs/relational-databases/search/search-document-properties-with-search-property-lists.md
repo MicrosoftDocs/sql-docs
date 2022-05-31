@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"

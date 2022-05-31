@@ -8,8 +8,8 @@ ms.subservice: deployment-configuration
 ms.custom: overview-samples, mvc, sqldbrb=2, devx-track-azurecli, seo-azure-cli
 ms.devlang: azurecli
 ms.topic: sample
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 12/22/2021
 keywords: sql database, managed instance, azure cli samples, azure cli examples, azure cli code samples, azure cli script examples

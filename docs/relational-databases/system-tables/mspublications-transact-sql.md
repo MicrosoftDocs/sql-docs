@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublications system table"
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,8 +7,8 @@ ms.subservice: service-overview
 ms.custom: sqldbrb=1
 ms.devlang: 
 ms.topic: guide
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 07/29/2019
 ---

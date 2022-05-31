@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysreplicationalerts system table"
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

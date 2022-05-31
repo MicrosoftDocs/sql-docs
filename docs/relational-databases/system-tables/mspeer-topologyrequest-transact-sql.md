@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_topologyrequest"
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

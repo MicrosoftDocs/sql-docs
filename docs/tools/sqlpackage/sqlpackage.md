@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 6/1/2022
 ---
 
 # SqlPackage.exe
@@ -271,6 +271,10 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |VerifyDeployment=(BOOLEAN 'True')| | x | | | x | x |
 |VerifyExtraction=(BOOLEAN)| x | | | | | |
 |VerifyFullTextDocumentTypesSupported=(BOOLEAN)| | | x | | | |
+
+## SqlPackage and database users
+
+[Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.
 
 ## Next steps
 

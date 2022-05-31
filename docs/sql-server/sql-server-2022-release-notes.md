@@ -13,7 +13,8 @@ ms.author: mikeray
 monikerRange: "= sql-server-ver16"
 ---
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
 This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] community technology preview (CTP) 2.0.
 

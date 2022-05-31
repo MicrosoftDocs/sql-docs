@@ -140,7 +140,7 @@ For example, if you connect to the SQL Server instance using SSMS, you can use t
 
 Once you've connected, you'll be able to expand the SQL Server instance in **Object Explorer**.
 
-:::image type="content" source="media/sql-server-linux-containers-deploy-helm-charts-kubernetes/expand-object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance":::
+:::image type="content" source="media/sql-server-linux-containers-deploy-helm-charts-kubernetes/expand-object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance.":::
 
 ## Clean up resources
 

@@ -30,6 +30,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Azure Synapse Analytics | Adds support for [Native external data source](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native#syntax-for-create-external-data-source). |
+| Extract | Adds support for `ExtractTarget` property on extract operations.  Extract now supports extracting to .sql as a file per object organized in a single folder, object type, schema, or object type and schema. |
 | ScriptDOM | Adds support for `IS NOT DISTINCT FROM` syntax. |
 
 

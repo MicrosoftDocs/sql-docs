@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "performance [SQL Server], trace"
   - "debugging [SQL Server], trace flags"
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHconstrainttypes system table"
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

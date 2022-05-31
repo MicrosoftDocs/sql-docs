@@ -7,8 +7,8 @@ ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.custom: sqldbrb=4
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: sashan, moslake, mathoma
 ms.date: 11/09/2021
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

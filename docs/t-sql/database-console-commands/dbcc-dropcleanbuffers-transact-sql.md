@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "removing buffers"
   - "DBCC DROPCLEANBUFFERS statement"
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

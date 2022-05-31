@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "extended events [SQL Server]"
   - "xe"
   - "XEvents"
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.custom:
   - intro-overview
 ms.date: 04/27/2022

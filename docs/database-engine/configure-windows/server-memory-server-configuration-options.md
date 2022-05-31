@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Server memory configuration options
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_semantic_languages catalog view"
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.fulltext_semantic_languages (Transact-SQL)

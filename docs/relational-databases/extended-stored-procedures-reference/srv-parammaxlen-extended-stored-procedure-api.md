@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_parammaxlen"
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_parammaxlen (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

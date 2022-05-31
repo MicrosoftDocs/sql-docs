@@ -183,7 +183,7 @@ landingContent:
       - text: Create & configure availability group
         url: ../linux/sql-server-linux-create-availability-group.md
       - text: Deploy on Kubernetes
-        url: ../linux/tutorial-sql-server-containers-kubernetes.md
+        url: ../linux/quickstart-sql-server-containers-kubernetes.md
       - text: Configure replication
         url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 

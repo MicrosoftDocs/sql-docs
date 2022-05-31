@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 ms.custom:
 - references_regions
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 05/31/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1464,30 +1464,12 @@ In Azure Synapse, this statement can be used with an Azure SQL Database server t
 
 ## Syntax
 
-### [Dedicated SQL pool](#tab/sqlpool)
-
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-```syntaxsql
-CREATE DATABASE database_name [ COLLATE collation_name ]
-(
-    [ MAXSIZE = {
-          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720
-        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400
-        | 153600 | 204800 | 245760
-      } GB ,
-    ]
-    EDITION = 'datawarehouse',
-    SERVICE_OBJECTIVE = {
-         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600'
-        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'
-        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
-        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c'
-        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
-    }
-)
-[;]
-```
+### [Dedicated SQL pool](#tab/sqlpool)
+
+This command is no longer supported for legacy dedicated SQL pools (formerly Azure SQL Data Warehouse) or dedicated SQL pools in an Azure Synapse workspace. Use the Azure portal instead.
+
 ### [Serverless SQL pool](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1499,28 +1481,6 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 #### *database_name*
 The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
-
-#### *collation_name*
-Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
-
-For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](./collations.md).
-
-#### *MAXSIZE*
-The default is 245,760 GB (240 TB).
-
-**Applies to:** Optimized for Compute Gen1
-
-The maximum allowable size for the database. The database cannot grow beyond MAXSIZE.
-
-**Applies to:** Optimized for Compute Gen2
-
-The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
-
-#### *EDITION*
-Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use `datawarehouse`.
-
-#### SERVICE_OBJECTIVE
-Specifies the compute size (service objective). For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## General Remarks
 
@@ -1551,20 +1511,12 @@ You cannot change the database collation after the database is created.
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
-### A. Simple example
-A simple example for creating a data warehouse database. This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest compute power (DW100).
+### A. Simple example in a Synapse Analytics serverless SQL pool
 
-```sql
-CREATE DATABASE TestDW
-(EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
-```
-
-### B. Create a data warehouse database with all the options
-An example of creating a 10-terabyte data warehouse.
+This creates the database in the serverless pool, specifying a collation (Latin1_General_100_CI_AS_KS_WS).
 
 ```sql
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
-(MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');
 ```
 
 ## See also

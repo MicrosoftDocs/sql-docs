@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], backup devices"
   - "devices [SQL Server]"
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Backup Devices (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

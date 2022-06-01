@@ -9068,7 +9068,7 @@ items:
       - name: Download SSMS 19 (Preview)
         href: ssms/download-sql-server-management-studio-ssms-19.md
       - name: SSMS 19 (Preview) release notes
-        href: ssms/release-notes-ssms-current.md
+        href: ssms/release-notes-ssms-19.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
@@ -10531,6 +10531,8 @@ items:
       href: linux/quickstart-install-connect-ubuntu.md
     - name: Run & Connect - Docker
       href: linux/quickstart-install-connect-docker.md
+    - name: Deploy SQL Server container - Kubernetes
+      href: linux/quickstart-sql-server-containers-kubernetes.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
@@ -10572,8 +10574,6 @@ items:
       href: linux/sql-server-linux-create-availability-group.md
     - name: Create with HA with HPE Serviceguard
       href: linux/sql-server-availability-group-ha-hpe.md
-    - name: Deploy SQL Server container - Kubernetes
-      href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
@@ -10626,6 +10626,8 @@ items:
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
+      - name: Deploy to AKS with Helm charts
+        href: linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:
@@ -10723,7 +10725,7 @@ items:
         href: linux/sql-server-linux-container-ha-overview.md
         items:
         - name: Configure a container in Kubernetes
-          href: linux/tutorial-sql-server-containers-kubernetes.md
+          href: linux/quickstart-sql-server-containers-kubernetes.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:
@@ -16243,6 +16245,10 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_PERCENTILE_CONT
+          href: t-sql/functions/approx-percentile-cont-transact-sql.md
+        - name: APPROX_PERCENTILE_DISC
+          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG

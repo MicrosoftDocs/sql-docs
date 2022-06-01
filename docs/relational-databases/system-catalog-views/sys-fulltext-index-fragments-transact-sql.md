@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.fulltext_index_fragments catalog view"
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_memory_buffers dynamic management view"
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8 
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_memory_buffers (Transact-SQL)

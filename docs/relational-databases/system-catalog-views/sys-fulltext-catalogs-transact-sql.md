@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_catalogs catalog view"
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.fulltext_catalogs (Transact-SQL)

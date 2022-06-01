@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "reducing database size"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, pmasl
+ms.reviewer: umajay, KevinConanMSFT
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)

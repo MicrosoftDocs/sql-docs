@@ -436,5 +436,5 @@ GO
 
 ## Next steps
 
-- [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
+- [Deploy SQL Server containers on Azure Kubernetes Service](quickstart-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

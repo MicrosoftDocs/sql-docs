@@ -13,7 +13,8 @@ ms.author: mikeray
 monikerRange: "= sql-server-ver16"
 ---
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
 This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] community technology preview (CTP) 2.0.
 
@@ -28,10 +29,6 @@ This release has the same hardware and software requirements as [SQL Server 2019
 ## Linux
 
 SQL Server 2022 Preview on Linux images are coming soon.
-
-## Azure Virtual Machine
-
-SQL Server 2022 Preview Azure VM images are coming soon.
 
 ## Feature notes
 

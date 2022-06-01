@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "mapping system tables to system views [SQL Server]"
   - "system tables [SQL Server], mapping to catalog views"
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # Mapping System Tables to System Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,24 +1,24 @@
 ---
 title: PERCENTILE_DISC (Transact-SQL)
 description: "PERCENTILE_DISC (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+ms.date: "10/20/2015"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom:
+  - "event-tier1-build-2022"
+f1_keywords:
   - "PERCENTILE_DISC"
   - "PERCENTILE_DISC_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PERCENTILE_DISC function"
   - "analytic functions,PERCENTILE_DISC"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/20/2015"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # PERCENTILE_DISC (Transact-SQL)

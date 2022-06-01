@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergepartitioninfo system table"
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

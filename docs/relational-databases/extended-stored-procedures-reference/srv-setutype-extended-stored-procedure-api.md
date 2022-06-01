@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setutype"
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_setutype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

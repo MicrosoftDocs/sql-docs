@@ -1,24 +1,24 @@
 ---
 title: "DATE_BUCKET (Transact-SQL)"
 description: "DATE_BUCKET (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords:
-  - "DATE_BUCKET"
-  - "DATE_BUCKET_TSQL"
-dev_langs:
-  - "TSQL"
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords:
-  - "DATE_BUCKET function"
-  - "analytic functions, DATE_BUCKET"
 author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
+ms.technology: t-sql
+ms.topic: reference
+ms.custom:
+  - "event-tier1-build-2022"
+f1_keywords:
+  - "DATE_BUCKET"
+  - "DATE_BUCKET_TSQL"
+helpviewer_keywords:
+  - "DATE_BUCKET function"
+  - "analytic functions, DATE_BUCKET"
+dev_langs:
+  - "TSQL"
 ---
 # DATE_BUCKET (Transact-SQL)
 

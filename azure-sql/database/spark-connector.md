@@ -7,8 +7,8 @@ ms.subservice: development
 ms.custom: sqldbrb=2
 ms.devlang:
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.date: 09/02/2020
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_map system table"
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

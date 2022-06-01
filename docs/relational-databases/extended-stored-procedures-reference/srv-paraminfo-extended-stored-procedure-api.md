@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paraminfo"
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_paraminfo (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

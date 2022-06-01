@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], querying"
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Querying Extended Stored Procedures Installed in SQL Server

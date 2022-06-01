@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.dm_fts_outstanding_batches dynamic management view"
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.index_columns"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

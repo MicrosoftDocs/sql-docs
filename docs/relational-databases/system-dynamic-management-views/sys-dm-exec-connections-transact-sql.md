@@ -2,7 +2,7 @@
 description: "sys.dm_exec_connections (Transact-SQL)"
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "4/18/2022"
+ms.date: "5/31/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ Returns information about the connections established to this instance of the da
 |session_id|**int**|Identifies the session associated with this connection. Is nullable.|  
 |most_recent_session_id|**int**|Represents the session ID for the most recent request associated with this connection. (SOAP connections can be reused by another session.) Is nullable.|  
 |connect_time|**datetime**|Timestamp when connection was established. Is not nullable.|  
-|net_transport|**nvarchar(40)**|Always returns **Session** when a connection has multiple active result sets (MARS) enabled.<br /><br /> **Note:** Describes the physical transport protocol that is used by this connection. Is not nullable.|  
+|net_transport|**nvarchar(40)**|When MARS is used, returns **Session** for a each additional connection associated with a MARS logical session.<br /><br /> **Note:** Describes the physical transport protocol that is used by this connection. Is not nullable.|  
 |protocol_type|**nvarchar(40)**|Specifies the protocol type of the payload. It currently distinguishes between TDS ("TSQL"), "SOAP", and "Database Mirroring". Is nullable.|  
 |protocol_version|**int**|Version of the data access protocol associated with this connection. Is nullable.|  
 |endpoint_id|**int**|An identifier that describes what type of connection it is. This endpoint_id can be used to query the sys.endpoints view. Is nullable.|  
@@ -70,10 +70,14 @@ On Azure SQL Database **Basic**, **S0**, and **S1** service objectives, and for 
   
 | First element | Second element | Relationship |
 | --------------| -------------- | ------------ |  
-|dm_exec_sessions.session_id|dm_exec_connections.session_id|One-to-one|  
-|dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many to one|  
-|dm_broker_connections.connection_id|dm_exec_connections.connection_id|One to one|  
-  
+|dm_exec_sessions.session_id|dm_exec_connections.session_id|One-to-zero or one-to-many|  
+|dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many-to-one|  
+|dm_broker_connections.connection_id|dm_exec_connections.connection_id|One-to-one|  
+
+Most commonly, for each row in sys.dm_exec_connections there is a single matching row in [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md). However, in some cases such as system internal sessions or [Service Broker](../../database-engine/configure-windows/sql-server-service-broker) activation procedures, there may be a row in [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md) without a matching row in sys.dm_exec_connections.
+
+When MARS is used, there may be multiple rows in sys.dm_exec_connections for a row in [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md), one row for the parent connection, and one row for each MARS logical session. The latter rows can be identified by the value in the `net_transport` column being set to `Session`. For these connections, the value in the `connection_id` column of sys.dm_exec_connections matches the value in the `connection_id` column of [sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md) for MARS requests in progress.
+
 ## Examples
 
 The following Transact-SQL query gathers information about a query's own connection.  

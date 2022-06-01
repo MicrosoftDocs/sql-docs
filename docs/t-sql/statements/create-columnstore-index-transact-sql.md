@@ -144,7 +144,7 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH (DROP_EXISTING = ON);
 ```
-   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
+   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs if the specified index name already exists.  
   
 ##### MAXDOP = *max_degree_of_parallelism*  
    Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
@@ -279,7 +279,7 @@ WITH ( ONLINE = ON );
    These options specify the filegroups on which the index is created.  
   
 *partition_scheme_name* **(** _column_name_ **)**  
-   Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index is mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
+   Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index are mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
    If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
    A columnstore index on a partitioned table must be partition aligned.  
@@ -382,7 +382,7 @@ If the underlying table has a column of a data type that is not supported for co
 -   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
 -   Cannot be created by using the **INCLUDE** keyword.  
 -   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
--   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] version and Azure SQL Database configured at  Premium tier, Standard tier (S3 and above), and all VCore offerings tiers tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
+-   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] version and Azure SQL Database configured at  Premium tier, Standard tier (S3 and above), and all VCore offerings tiers. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
 
 > [!NOTE]  

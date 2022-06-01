@@ -37,7 +37,7 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ## How to install updates
 
-If you've configured the preview repository (`mssql-server-2022-preview`), then you'll get the latest public CTP of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/).
+If you've configured the preview repository (`mssql-server-preview`), then you'll get the latest public CTP of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/).
 
 If you're updating existing SQL Server packages, run the appropriate update command for each package to get the latest public CTP. For specific update instructions for each package, see the following installation guides:
 

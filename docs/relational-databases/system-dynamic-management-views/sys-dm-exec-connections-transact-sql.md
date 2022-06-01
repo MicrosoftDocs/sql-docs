@@ -73,7 +73,7 @@ On Azure SQL Database **Basic**, **S0**, and **S1** service objectives, and for 
 |[sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).connection_id|sys.dm_exec_connections.connection_id|Many-to-one|  
 |[sys.dm_broker_connections](sys-dm-broker-connections-transact-sql.md).connection_id|sys.dm_exec_connections.connection_id|One-to-one|  
 
-Most commonly, for each row in `sys.dm_exec_connections` there is a single matching row in `sys.dm_exec_sessions`. However, in some cases such as system internal sessions or [Service Broker](../../database-engine/configure-windows/sql-server-service-broker) activation procedures, there may be a row in `sys.dm_exec_sessions` without a matching row in `sys.dm_exec_connections`.
+Most commonly, for each row in `sys.dm_exec_connections` there is a single matching row in `sys.dm_exec_sessions`. However, in some cases such as system internal sessions or [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) activation procedures, there may be a row in `sys.dm_exec_sessions` without a matching row in `sys.dm_exec_connections`.
 
 When MARS is used, there may be multiple rows in `sys.dm_exec_connections` for a row in `sys.dm_exec_sessions`, one row for the parent connection, and one row for each MARS logical session. The latter rows can be identified by the value in the `net_transport` column being set to **Session**. For these connections, the value in the `connection_id` column of `sys.dm_exec_connections` matches the value in the `connection_id` column of `sys.dm_exec_requests` for MARS requests in progress.
 

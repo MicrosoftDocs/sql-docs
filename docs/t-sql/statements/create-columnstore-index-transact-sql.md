@@ -97,7 +97,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, and SQL Server 2022 (16.x) Preview  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -297,10 +297,11 @@ The term default, in this context, is not a keyword. It is an identifier for the
  Requires ALTER permission on the table.  
   
 ##  <a name="GenRemarks"></a> General Remarks  
-A  columnstore index can be created on a temporary table. When the table is dropped or the session ends, the index is also dropped.  
 
-An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] except for string columns.  
- 
+A columnstore index can be created on a temporary table. When the table is dropped or the session ends, the index is also dropped.
+
+An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and SQL Server 2022 (16.x) Preview.
+
 ## Filtered Indexes  
 A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
   
@@ -670,7 +671,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Switch a partition from the table with the columnstore index into an empty staging table. If there is a columnstore index on the staging table, disable the columnstore index. Perform any updates. Build (or rebuild) the columnstore index. Switch the staging table back into the (now empty) partition of the main table.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] and [!INCLUDE [_ss2022](../../includes/applies-to-version/_ss2022.md)]
   
 ### A. Change a clustered index to a clustered columnstore index  
  By using the CREATE CLUSTERED COLUMNSTORE INDEX statement with DROP_EXISTING = ON, you can:  

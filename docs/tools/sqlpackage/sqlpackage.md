@@ -87,7 +87,7 @@ sqlpackage.exe /Version
 
 ## Help
 
-You can display sqlpackage usage information by using `/?` or `/help:True`.
+You can display SqlPackage usage information by using `/?` or `/help:True`.
 
 ```cmd
 sqlpackage.exe /?

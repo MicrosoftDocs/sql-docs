@@ -1,28 +1,27 @@
 ---
 title: "^= Bitwise Exclusive OR Assignment"
-description: Bitwise exclusive OR operation between two integer values, and sets a value to the result of the operation.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Bitwise exclusive OR operation between two integer values, and sets a value to the result of the operation.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "01/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "seo-lt-2019"
+f1_keywords:
   - "^="
   - "^=_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "^= (bitwise exclusive OR equals)"
   - "compound operators, ^="
   - "assignment operators, ^="
   - "augmented operators, ^="
-ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # ^= (Bitwise Exclusive OR Assignment) (Transact-SQL)

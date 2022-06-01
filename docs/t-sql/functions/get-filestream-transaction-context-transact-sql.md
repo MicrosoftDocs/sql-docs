@@ -1,23 +1,22 @@
 ---
-description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
 title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-ms.custom: ""
+description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL"
   - "GET_FILESTREAM_TRANSACTION_CONTEXT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
-ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

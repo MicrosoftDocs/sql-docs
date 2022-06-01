@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text queries [SQL Server]"
   - "queries [full-text search], functions"
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

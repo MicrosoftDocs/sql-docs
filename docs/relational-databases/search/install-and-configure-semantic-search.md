@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "semantic search [SQL Server], installing"
   - "semantic search [SQL Server], configuring"
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom:
   - intro-installation

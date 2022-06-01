@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_document_types catalog view"
 ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

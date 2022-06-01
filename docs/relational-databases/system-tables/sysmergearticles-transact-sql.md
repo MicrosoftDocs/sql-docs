@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergearticles system table"
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

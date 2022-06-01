@@ -31,7 +31,7 @@ helpviewer_keywords:
   - "densities [SQL Server]"
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

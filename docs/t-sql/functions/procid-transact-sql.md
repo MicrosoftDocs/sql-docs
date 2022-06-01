@@ -1,19 +1,19 @@
 ---
+title: "@@PROCID (Transact-SQL)"
 description: "&#x40;&#x40;PROCID (Transact-SQL)"
-title: "@@PROCID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@PROCID"
   - "@@PROCID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [SQL Server], identification numbers"
   - "UDTs [SQL Server], object identifiers"
   - "@@PROCID function"
@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], modules"
   - "IDs [SQL Server], modules"
   - "module object identifiers [SQL Server]"
-ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

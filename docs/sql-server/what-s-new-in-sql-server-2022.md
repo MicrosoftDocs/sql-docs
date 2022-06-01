@@ -54,7 +54,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
 - [Security](#security)
   - TDS 8.0
 - [Performance](#performance)
-  - Query Store enabled by default
   - Parameter sensitive plan optimization
   - XML compression
   - Database tuning advisor

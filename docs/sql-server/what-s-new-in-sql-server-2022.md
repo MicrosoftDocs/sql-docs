@@ -36,10 +36,6 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-## Community technology preview release
-
-This release is community technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
-
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
@@ -48,6 +44,32 @@ This release:
 - Doesn't include support from Microsoft, except for select EAP customers.
 
 After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
+
+## Community technology preview release
+
+This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
+
+- [Analytics](#analytics)
+  - Data Lake Virtualization
+- [Availability](#availability)
+  - Link to Azure SQL Managed Instance
+- [Security](#security)
+  - TDS 8.0
+- [Performance](#performance)
+  - Parameter sensitive plan optimization
+  - XML compression
+  - Database tuning advisor
+- [Management](#management)
+  - Install Azure Arc Agent via SQL Server setup
+  - Snapshot backup
+  - Out of memory DMV and extended events
+- [Language](#language)
+  - APPROXIMATE PERCENTILE
+  - IS \[NOT\] DISTINCT FROM
+  - TRIM scalar function extensions
+- [Tools](#tools)
+
+For details, see the feature descriptions in the sections below.
 
 The following sections provide an overview of these features.
 

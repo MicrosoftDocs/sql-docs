@@ -74,7 +74,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 When you install or upgrade [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you get the latest version of SQL Server from your configured Microsoft repository.
 
-Although the quickstarts refer to the Cumulative Update **CU** repository, you must use the **mssql-server-2022-preview** repository for CTP 2.0.
+Although the quickstarts refer to the Cumulative Update **CU** repository, you must use the **mssql-server-preview** repository for CTP 2.0.
 
 For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 

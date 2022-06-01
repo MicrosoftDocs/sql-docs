@@ -35,7 +35,7 @@ Returns information about the connections established to this instance of the da
 |session_id|**int**|Identifies the session associated with this connection. Is nullable.|  
 |most_recent_session_id|**int**|Represents the session ID for the most recent request associated with this connection. (SOAP connections can be reused by another session.) Is nullable.|  
 |connect_time|**datetime**|Timestamp when connection was established. Is not nullable.|  
-|net_transport|**nvarchar(40)**|When MARS is used, returns **Session** for a each additional connection associated with a MARS logical session.<br /><br /> **Note:** Describes the physical transport protocol that is used by this connection. Is not nullable.|  
+|net_transport|**nvarchar(40)**|When MARS is used, returns **Session** for each additional connection associated with a MARS logical session.<br /><br /> **Note:** Describes the physical transport protocol that is used by this connection. Is not nullable.|  
 |protocol_type|**nvarchar(40)**|Specifies the protocol type of the payload. It currently distinguishes between TDS ("TSQL"), "SOAP", and "Database Mirroring". Is nullable.|  
 |protocol_version|**int**|Version of the data access protocol associated with this connection. Is nullable.|  
 |endpoint_id|**int**|An identifier that describes what type of connection it is. This `endpoint_id` can be used to query the `sys.endpoints` view. Is nullable.|  

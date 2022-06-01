@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 ms.custom:
 - references_regions
 - event-tier1-build-2022
-ms.date: 05/31/2022
+ms.date: 06/01/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1468,7 +1468,24 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ### [Dedicated SQL pool](#tab/sqlpool)
 
-This command is no longer supported for legacy dedicated SQL pools (formerly Azure SQL Data Warehouse) or dedicated SQL pools in an Azure Synapse workspace. Use the Azure portal instead.
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+(
+    [ MAXSIZE = {
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400
+        | 153600 | 204800 | 245760
+      } GB ,
+    ]
+    EDITION = 'datawarehouse',
+    SERVICE_OBJECTIVE = {
+          'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c'
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }
+)
+[;]
+```
 
 ### [Serverless SQL pool](#tab/sqlod)
 ```syntaxsql
@@ -1481,6 +1498,28 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 #### *database_name*
 The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+
+#### *collation_name*
+Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
+
+For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](./collations.md).
+
+#### *MAXSIZE*
+The default is 245,760 GB (240 TB).
+
+**Applies to:** Optimized for Compute Gen1
+
+The maximum allowable size for the database. The database cannot grow beyond MAXSIZE.
+
+**Applies to:** Optimized for Compute Gen2
+
+The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
+
+#### *EDITION*
+Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use `datawarehouse`.
+
+#### SERVICE_OBJECTIVE
+Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you may receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`
 
 ## General Remarks
 
@@ -1511,7 +1550,24 @@ You cannot change the database collation after the database is created.
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
-### A. Simple example in a Synapse Analytics serverless SQL pool
+### A. Simple example
+A simple example for creating a data warehouse database. This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest Gen2 service objective (DW100c).
+
+```sql
+CREATE DATABASE TestDW
+(EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100c');
+```
+
+### B. Create a data warehouse database with all the options
+
+An example of creating a 10-terabyte data warehouse.
+
+```sql
+CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
+(MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000c');
+```
+
+### C. Simple example in a Synapse Analytics serverless SQL pool
 
 This creates the database in the serverless pool, specifying a collation (Latin1_General_100_CI_AS_KS_WS).
 

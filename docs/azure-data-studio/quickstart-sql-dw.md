@@ -59,14 +59,14 @@ For dedicated SQL pools in Azure Synapse, navigate to the Azure Synapse Analytic
 
 1. Select **Manage**. 
 1. In the **Analytics pools** section, select **SQL pools**.
-1. Select **+ New** to create a new dedicated SQL pool. 
-1. Give the dedicated SQL pool a new name `TutorialDB` and pick a performance level. Set to the smallest size to reduce costs for this quickstart
+1. Select **+ New** to create a new dedicated SQL pool.
+1. Give the dedicated SQL pool a new name `TutorialDB` and pick a performance level. Set to the smallest size to reduce costs for this quickstart.
 1. Select **Create**.
 
 For legacy dedicated SQL pools (formerly SQL DW), navigate to the Dedicated SQL pool (formerly SQL DW) in the Azure portal.
 
 1. Select the link for **Server name**, such as `contosowdw.database.windows.net`, to go to the Azure portal page for the logical SQL server. 
-1. Select **+ Create dedicated SQL pool (formerly SQL DW)** to create another dedicated SQL pool in the logical SQL Server.
+1. Select **+ Create dedicated SQL pool (formerly SQL DW)** to create another dedicated SQL pool in the logical SQL server.
 1. Give the dedicated SQL pool a new name `TutorialDB` and pick a performance level. Set to the smallest size to reduce costs for this quickstart.
 1. Select **Review + Create**.
 

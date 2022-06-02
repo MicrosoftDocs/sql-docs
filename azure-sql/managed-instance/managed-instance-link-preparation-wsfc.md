@@ -41,6 +41,8 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 ![Managed Instance link - View server hostname](./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png)
 
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png" alt-text="Screenshot of finding out Windows Server hostname through the command prompt.":::
+
 1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type '%windir%\system32\Cluadmin.msc', and click OK
 
 - Alternatively, Failover Cluster Manager can be accessed by opening Server Manager, selecting Tools in the upper right corner, and then selecting Failover Cluster Manager. 

@@ -761,17 +761,17 @@ This portion of the tutorial uses the following PowerShell cmdlets:
     | **This virtual network** |  |
     | Peering link name | The name for the peering must be unique within the virtual network. |
     | Traffic to remote virtual network | Select **Allow (default)** to enable communication between the two virtual networks through the default `VirtualNetwork` flow. Enabling communication between virtual networks allows resources that are connected to either virtual network to communicate with each other with the same bandwidth and latency as if they were connected to the same virtual network. All communication between resources in the two virtual networks is over the Azure private network. |
-    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering#create-a-peering)|
-    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
+    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering)|
+    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
     | **Remote virtual network** |  |
     | Peering link name | The name of the same peering to be used in the virtual network hosting secondary instance. |
     | Virtual network deployment model | Select **Resource manager**. |
     | I know my resource ID | Leave this checkbox unchecked. |
-    | Subscription | Select the [subscription](../azure-glossary-cloud-terminology.md?toc=%2fazure%2fvirtual-network%2ftoc.json#subscription) of the virtual network hosting the secondary instance that you want to peer with. |
+    | Subscription | Select the Azure subscription of the virtual network hosting the secondary instance that you want to peer with. |
     | Virtual network | Select the virtual network hosting the secondary instance that you want to peer with. If the virtual network is listed, but grayed out, it may be because the address space for the virtual network overlaps with the address space for this virtual network. If virtual network address spaces overlap, they cannot be peered.|
     | Traffic to remote virtual network | Select **Allow (default)** |
-    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
-    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
+    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
+    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
 
 
 1. Click **Add** to configure the peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.

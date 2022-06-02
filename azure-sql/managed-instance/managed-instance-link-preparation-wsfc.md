@@ -90,7 +90,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
 You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This confirms the configuration has been completed successfully.
 
-## Grant Permissions in SQL Server to work with WSFC
+## Grant permissions in SQL Server for WSFC
 
 Next, grant permission in SQL Server to `NT Authority \ System` system account to create Availability Groups using WSFC. Execute the following T-SQL script on your SQL Server:
 

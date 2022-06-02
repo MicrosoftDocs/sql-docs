@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 05/24/2022
+ms.date: 06/02/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -51,7 +51,7 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION
 ```
 
-Ensure that your SQL Server version has the appropriate servicing update installed. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
 
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
@@ -109,10 +109,9 @@ If the availability groups feature isn't enabled, follow these steps to enable i
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-1. Select **OK** in the dialog to restart the SQL Server service.
+- If using **SQL Server 2016**, and if Always On option is disabled with message `This computer is not a node in a failover cluster.`, follow additional steps described in [Prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md). Once you've completed these additional steps, retry this step once again.
 
->[!IMPORTANT]
-> To enable Always On on SQL Server 2016, please install Windows Server Failover Cluster (WSFC) module on the host Windows Server. No WSFC configuration, or multiple nodes configuration is required. Presence of the WSFC module only is required for the Always On check box to be enabled in SQL Server Configuration Manager.
+1. Select **OK** in the dialog to restart the SQL Server service.
 
 ### Enable startup trace flags
 

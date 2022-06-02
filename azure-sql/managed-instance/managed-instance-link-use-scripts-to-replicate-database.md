@@ -22,8 +22,7 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 
 > [!NOTE]
 > - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-replicate-database.md) to set up the link to replicate your database. 
-> - The PowerShell scripts in this article call SQL Managed Instance REST APIs.
-
+> - PowerShell scripts provided in this article invoke SQL Managed Instance REST APIs.
 
 ## Prerequisites 
 
@@ -56,12 +55,15 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 ## Establish trust between instances
 
-The first step in setting up a link is to establish trust between the two instances and secure the endpoints that are used to communicate and encrypt data across the network. Distributed availability groups use the existing availability group database mirroring endpoint, rather than having their own dedicated endpoint. This is why security and trust need to be configured between the two entities through the availability group database mirroring endpoint.
+The first step in setting up a link is to establish trust between the two instances and secure the endpoints that are used to communicate and encrypt data across the network. Distributed availability groups use the existing availability group [database mirroring endpoint](/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md), rather than having their own dedicated endpoint. This is why security and trust need to be configured between the two entities through the availability group database mirroring endpoint.
+
+> [!NOTE]
+> The link is based on the Always On technology. Database mirroring endpoint is a special-purpose endpoint that is used exclusively by Always On to receive connections from other server instances. The term database mirroring endpoint should not be mistaken with, and it's not the same as legacy SQL Server database mirroring feature.
 
 Certificate-based trust is the only supported way to secure database mirroring endpoints on SQL Server and SQL Managed Instance. If you have existing availability groups that use Windows authentication, you need to add certificate-based trust to the existing mirroring endpoint as a secondary authentication option. You can do this by using the `ALTER ENDPOINT` statement.
 
 > [!IMPORTANT]
-> Certificates are generated with an expiration date and time. They must be rotated before they expire.
+> Certificates are generated with an expiration date and time. They must be renewed and rotated before they expire.
 
 Here's an overview of the process to secure database mirroring endpoints for both SQL Server and SQL Managed Instance:
 

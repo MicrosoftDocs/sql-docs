@@ -17,9 +17,9 @@ ms.date: 06/02/2022
 # Prepare your environment for a link with WSFC - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an additional step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
+This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it is optional. This step is not required for SQL Servers 2019-2022, and it is optional.
+Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
 
 ## Install WSFC module on Windows Server
 
@@ -37,7 +37,7 @@ Alternatively, you can also use Server Manager to install WSFC module using the 
 On the Windows Server hosting the SQL Server, configure a single-node (local) cluster using the graphical user interface. Follow these steps:
 
 1. Find out your Windows Server name by executing `hostname` command from the command prompt.
-1. Record the output of this command (sample output marked in the image below), or keep this window open as you will use this name in one of the next steps.
+1. Record the output of this command (sample output marked in the image below), or keep this window open as you'll use this name in one of the next steps.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png" alt-text="Screenshot of finding out Windows Server hostname through the command prompt.":::
 
@@ -67,7 +67,7 @@ On the Windows Server hosting the SQL Server, configure a single-node (local) cl
 1. On the Confirmation screen, click Next.
 1. On the Creating New Cluster screen, wait for the creation to be completed, and then click Finish.
 
-With the above steps, you have created a single-node (local) Windows Server Failover Cluster.
+With the above steps, you've created a single-node (local) Windows Server Failover Cluster.
 
 ## Verification
 
@@ -78,7 +78,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
-You should be able to see the local machine single-node added to this cluster and with the Status being `Up` - which confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
+You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 
@@ -88,13 +88,13 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
-You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option, which confirms the configuration has been completed successfully.
+You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This confirms the configuration has been completed successfully.
 
 ## Grant Permissions in SQL Server to work with WSFC
 
 Next, grant permission in SQL Server to `NT Authority \ System` system account to create Availability Groups using WSFC. Execute the following T-SQL script on your SQL Server:
 
-1. Login to your SQL Server, using a client such is SSMS
+1. Log in to your SQL Server, using a client such is SSMS
 2. Execute the following T-SQL script
 
 ```sql
@@ -110,5 +110,5 @@ GO
 
 ## Next steps
 
-- Continue environment pereparation for the link by returning to the prepare your environment guide and [enablling Always On](managed-instance-link-preparation.md#enable-availability-groups) on your SQL Server.
+- Continue environment preparation for the link by returning to the prepare your environment guide and [enablling Always On](managed-instance-link-preparation.md#enable-availability-groups) on your SQL Server.
 - To learn more about configuring multiple-node WSFC (not mandatory for the link, and optional), see [Create a failover cluster](/windows-server/failover-clustering/create-failover-cluster) guide for Windows Server.

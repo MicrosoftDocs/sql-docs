@@ -37,7 +37,9 @@ Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 On the Windows Server hosting the SQL Server, configure a single node cluster using graphical user interface following these steps:
 
 1. Find out your Windows Server name by executing `hostname` command from the command prompt.
-1 Record the output of this command, or keep this window open as you will use this name in one of the next steps.
+1. Record the output of this command (sample output marked in the image below), or keep this window open as you will use this name in one of the next steps.
+
+![Managed Instance link - View server hostname](./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png)
 
 1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type '%windir%\system32\Cluadmin.msc', and click OK
 
@@ -47,29 +49,36 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 ![Managed Instance link - Access create WSFC option](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
 
-1. Click Next.
-1. Enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command)
-1. Click on Add.
+1. On the Before You Being screen, click Next.
+1. On the Select Server Screen, enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command), the click Add, and then Next.
 
 ![Managed Instance link - Create WSFC by entering hostname](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
 
-1. Enter the cluster name, for example `WSFCluser`
+1. On the Validation Warning screen, leave Yes on, click Next.
+1. On the Before You Being screen, click Next.
+1. On the testing options, leave Run all tests on, and click Next.
+1. On the Confirmation screen, click Next.
+1. When the validation completes on the Summary screen, click Finish.
+
+1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and click Next.
 
 ![Managed Instance link - Create WSFC by entering cluster name](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
 
-1. Click Next, and repeat clicking Next all the way through until the cluster creation is started.
-1. Conclude by clicking on Finish.
+1. On the Confirmation screen, click Next.
+1. On the Creating New Cluster, once creation has been completed, click Finish.
+
+With the above steps, you have created a single-node (local) Windows Server Failvoer Cluster.
 
 ## Verification
 
 To verify that single-node WSFC cluster has been created, follow these steps:
 
-1. In Failover Cluster Manager, click on the cluster name on the left hand side.
+1. In Failover Cluster Manager, click on the cluster name, and expand it by clicking on the `>` arrow.
 1. Click on Nodes.
 
 ![Managed Instance link - Validate WSFC](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png)
 
-You should be able to see the local machine single node added to this cluster which confirms the configuration has been completed.
+You should be able to see the local machine single node added to this cluster and with the Status being `Up` - which confirms the WSFC configuration has been completed successfully. You can now close Failover Cluster Manager tool.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 
@@ -79,7 +88,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
 ![Managed Instance link - Validate Always On in SQL Server Configuration Manager](./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png)
 
-You should be able to check on the option to Enable AlwaysOn Availability Groups which confirms the configuration has been completed.
+You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option, which confirms the configuration has been completed successfully.
 
 ## Grant Permissions in SQL Server to work with WSFC
 

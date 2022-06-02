@@ -26,7 +26,7 @@ Configuration of a local single-node Windows Server Failover Cluster (WSFC) is t
 Run the following PowerShell command as Administrator on Windows Server hosting the SQL Server to install Windows Server Failover Cluster module.
 
 ```powershell
--- Run as Administrator in PowerShell on Windows Server OS hosting the SQL Server
+# Run as Administrator in PowerShell on Windows Server OS hosting the SQL Server
 Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 ```
 

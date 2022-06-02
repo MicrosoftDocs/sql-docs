@@ -529,9 +529,9 @@ Suppose the compute unit price for the primary replica is $0.000163/vCore/second
 
 |Time Interval	| vCores used each second	| GB used each second	| Compute dimension billed	| vCore seconds billed over time interval |
 |---|---|---|---|---|
-|0:00-2:00|	8 |	9	| vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
-| 2:00-8:00	| 1.5	 | 3	| Memory used	| 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds
-8:00-24:00	0	2	Min memory provisioned	3 GB * 1/3 * 36000 seconds = 36000 vCore seconds
+|0:00-2:00 |	8 |	9	| vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
+| 2:00-8:00	| 1.5	 | 3	| Memory used	| 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds|
+|8:00-24:00|	0|	2	|Min memory provisioned	|3 GB * 1/3 * 36000 seconds = 36000 vCore seconds|
 |Total vCore seconds billed over 24 hours||||136800 vCore seconds |
 
 Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then the compute billed for the HA replica over this 24-hour period is $0.000105/vCore/second * 136800 vCore seconds ~ $14.36.

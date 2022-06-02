@@ -155,7 +155,7 @@ The read-write listener and read-only listener can't be reached via [public endp
 
 ## Potential performance degradation after failover 
 
-A typical Azure application uses multiple Azure services and consists of multiple components. The automatic geo-failover of the failover group is triggered based on the state of the Azure SQL components alone. Other Azure services in the primary region may not be affected by the outage and their components may still be available in that region. Once the primary databases switch to the secondary region, the latency between the dependent components may increase. Ensure the redundancy of all the application's components in the secondary region and fail over application components together with the database so that application's perfromance is not affected by higher cross-region latency.. 
+A typical Azure application uses multiple Azure services and consists of multiple components. The automatic geo-failover of the failover group is triggered based on the state of the Azure SQL components alone. Other Azure services in the primary region may not be affected by the outage and their components may still be available in that region. Once the primary databases switch to the secondary region, the latency between the dependent components may increase. Ensure the redundancy of all the application's components in the secondary region and fail over application components together with the database so that application's performance is not affected by higher cross-region latency. 
 
 ## Potential data loss after failover 
 

@@ -51,10 +51,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
 
 - [Analytics](#analytics)
   - Data Lake Virtualization
-- [Availability](#availability)
-  - Link to Azure SQL Managed Instance
-- [Security](#security)
-  - TDS 8.0
 - [Performance](#performance)
   - Parameter sensitive plan optimization
   - XML compression

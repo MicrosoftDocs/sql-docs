@@ -19,66 +19,66 @@ ms.date: 06/02/2022
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an additional step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum mandatory requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, however it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
+Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it is optional. This step is not required for SQL Servers 2019-2022, and it is optional.
 
 ## Install WSFC module on Windows Server
 
-- Run the following PowerShell command as Administrator on Windows Server hosting the SQL Server to install Windows Server Failover Cluster module.
+Run the following PowerShell command as Administrator on Windows Server hosting the SQL Server to install Windows Server Failover Cluster module.
 
 ```powershell
 -- Run as Administrator in PowerShell on Windows Server OS hosting the SQL Server
 Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 ```
 
-- Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
+Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
 
 ## Configure single-node cluster using Failover Cluster Manager
 
-On the Windows Server hosting the SQL Server, configure a single node cluster using graphical user interface following these steps:
+On the Windows Server hosting the SQL Server, configure a single-node (local) cluster using the graphical user interface. Follow these steps:
 
 1. Find out your Windows Server name by executing `hostname` command from the command prompt.
 1. Record the output of this command (sample output marked in the image below), or keep this window open as you will use this name in one of the next steps.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png" alt-text="Screenshot of finding out Windows Server hostname through the command prompt.":::
 
-1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type '%windir%\system32\Cluadmin.msc', and click OK
+1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type `%windir%\system32\Cluadmin.msc`, and click OK.
 
 - Alternatively, Failover Cluster Manager can be accessed by opening Server Manager, selecting Tools in the upper right corner, and then selecting Failover Cluster Manager. 
 
-1. In Windows Cluster manager, click on "Create Cluster" option.
+1. In Windows Cluster manager, click on Create Cluster option.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png" alt-text="Screenshot of accessing the create cluster option.":::
 
-1. On the Before You Being screen, click Next.
-1. On the Select Server Screen, enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command), the click Add, and then Next.
+1. On the Before You Begin screen, click Next.
+1. On the Select Server screen, enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command),  click Add, and then Next.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png" alt-text="Screenshot of entering Windows Server hostname when creating WSFC.":::
 
 1. On the Validation Warning screen, leave Yes on, click Next.
 1. On the Before You Being screen, click Next.
-1. On the testing options, leave Run all tests on, and click Next.
+1. On the Testing Options screen, leave Run all tests on, and click Next.
 1. On the Confirmation screen, click Next.
-1. When the validation completes on the Summary screen, click Finish.
+1. On the Summary screen, wait for the validation to complete, and then click Finish.
 
-1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and click Next.
+1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and then click Next.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png" alt-text="Screenshot of entering the cluster name.":::
 
 1. On the Confirmation screen, click Next.
-1. On the Creating New Cluster, once creation has been completed, click Finish.
+1. On the Creating New Cluster screen, wait for the creation to be completed, and then click Finish.
 
-With the above steps, you have created a single-node (local) Windows Server Failvoer Cluster.
+With the above steps, you have created a single-node (local) Windows Server Failover Cluster.
 
 ## Verification
 
 To verify that single-node WSFC cluster has been created, follow these steps:
 
-1. In Failover Cluster Manager, click on the cluster name, and expand it by clicking on the `>` arrow.
+1. In the Failover Cluster Manager, click on the cluster name on the left hand side, and expand it by clicking on the `>` arrow.
 1. Click on Nodes.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
-You should be able to see the local machine single node added to this cluster and with the Status being `Up` - which confirms the WSFC configuration has been completed successfully. You can now close Failover Cluster Manager tool.
+You should be able to see the local machine single-node added to this cluster and with the Status being `Up` - which confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 

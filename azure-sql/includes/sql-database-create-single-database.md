@@ -135,7 +135,7 @@ The following PowerShell code creates an Azure resource group, server, single da
       -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
    $serverFirewallRule
 
-   # Create General Purpose Gen4 database with 1 vCore
+   # Create General Purpose Gen5 database with 1 vCore
    Write-host "Creating a gen5 2 vCore database..."
    $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
       -ServerName $serverName `

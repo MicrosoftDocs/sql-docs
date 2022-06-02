@@ -11,7 +11,7 @@ ms.topic: reference
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 04/06/2022
+ms.date: 06/02/2022
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -239,8 +239,7 @@ If you need more instances in your current regions, send a support request to ex
 
 This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
-> [!IMPORTANT]
-> Gen4 hardware is being retired and is not available for new deployments.
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
 ### Hardware characteristics
 

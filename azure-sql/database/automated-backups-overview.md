@@ -525,8 +525,8 @@ In Hyperscale, data backup storage size (snapshot backup size), data storage siz
 
 To view backup and data storage metrics in the Azure portal, follow these steps: :
 
-1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
-2.	Select the Metrics page in the **Monitoring** section.
+1.    Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
+2.    Select the Metrics page in the **Monitoring** section.
 
 :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 
@@ -721,7 +721,7 @@ For an overview of database copy, visit [Copy a transactionally consistent copy 
 For configuring backup storage redundancy during managed instance creation, you can specify -BackupStorageRedundancy parameter. Possible values are Geo, Zone, and Local.
 
 ```powershell
-New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4 -BackupStorageRedundancy Geo
+New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen5 -BackupStorageRedundancy Geo
 ```
 
 For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance).

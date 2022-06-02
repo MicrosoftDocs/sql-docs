@@ -157,7 +157,7 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 #### <a id="gen4gen5-1"></a> Gen4/Gen5
 
-Gen4 hardware is [being retired](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/) and is no longer available for new deployments. All new databases must be deployed on other hardware configurations.
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
 Gen5 hardware is available in all public regions worldwide.
 

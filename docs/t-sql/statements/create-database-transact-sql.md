@@ -1462,6 +1462,8 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&p
 
 In Azure Synapse, this statement can be used with an Azure SQL Database server to create a SQL Analytics database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
 
+The CREATE DATABASE statement is supported for standalone dedicated SQL pools (formerly SQL DW) using Gen2 service levels, but is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](../../azure-data-studio/quickstart-sql-dw.md). CREATE DATABASE is supported for serverless SQL pools in Azure Synapse Analytics.
+
 ## Syntax
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).

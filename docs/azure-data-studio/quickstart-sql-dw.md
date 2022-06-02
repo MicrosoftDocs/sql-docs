@@ -23,7 +23,7 @@ To complete this quickstart, you need Azure Data Studio, and a dedicated SQL poo
 
 - [Install Azure Data Studio](./download-azure-data-studio.md).
 
-If you don't already have a dedicated SQL pool, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a legacy dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+If you don't already have a Azure Synapse Analytics dedicated SQL pool, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Remember the server name, and login credentials!
 
@@ -39,7 +39,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
    |   Setting    | Suggested value | Description |
    |--------------|-----------------|-------------| 
-   | **Server name** | The fully qualified server name | For example the name should look like to this: `myworkpsace.sql.azuresynapse.net` for a dedicated SQL endpoint in a Synapse workspace (recommended), or for a legacy dedicated SQL pool outside of an Azure Synapse Analytics workspace, use the Azure SQL logical server: `sqlpoolservername.database.windows.net` . |
+   | **Server name** | The fully qualified server name | For example the name should look like to this: `myworkpsace.sql.azuresynapse.net` for a dedicated SQL endpoint in a Synapse workspace (recommended), or for a standalone dedicated SQL pool outside of an Azure Synapse Analytics workspace, use the Azure SQL logical server: `sqlpoolservername.database.windows.net` . |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
@@ -53,7 +53,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 ## Create a database
 
-You can use an existing dedicated SQL pool for this exercise, including the one created by default. Or you can create a new pool:
+You can use an existing dedicated SQL pool for this exercise, including the one created by default, or you can [create a new pool](#prerequisites).
 
 For dedicated SQL pools in Azure Synapse, navigate to the Azure Synapse Analytics workspace. 
 
@@ -63,7 +63,7 @@ For dedicated SQL pools in Azure Synapse, navigate to the Azure Synapse Analytic
 1. Give the dedicated SQL pool a new name `TutorialDB` and pick a performance level. Set to the smallest size to reduce costs for this quickstart.
 1. Select **Create**.
 
-For legacy dedicated SQL pools (formerly SQL DW), navigate to the Dedicated SQL pool (formerly SQL DW) in the Azure portal.
+For standalone dedicated SQL pools (formerly SQL DW), navigate to the **Dedicated SQL pool (formerly SQL DW)** in the Azure portal.
 
 1. Select the link for **Server name**, such as `contosowdw.database.windows.net`, to go to the Azure portal page for the logical SQL server. 
 1. Select **+ Create dedicated SQL pool (formerly SQL DW)** to create another dedicated SQL pool in the logical SQL server.

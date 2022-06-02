@@ -19,7 +19,7 @@ ms.date: 06/02/2022
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an additional step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Configuration of a single-node Windows Server Failover Cluster (WSFC) is mandatory for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
+Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum mandatory requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, however it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
 
 ## Install WSFC module on Windows Server
 
@@ -30,46 +30,46 @@ Configuration of a single-node Windows Server Failover Cluster (WSFC) is mandato
 Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 ```
 
-Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
+- Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
 
 ## Configure single-node cluster using Failover Cluster Manager
 
 On the Windows Server hosting the SQL Server, configure a single node cluster using graphical user interface following these steps:
 
-1. Open Failover Cluster Manager by pressing Windows key + R on and typing '%windir%\system32\Cluadmin.msc' 
+1. Find out your Windows Server name by executing `hostname` command from the command prompt.
+1 Record the output of this command, or keep this window open as you will use this name in one of the next steps.
+
+1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type '%windir%\system32\Cluadmin.msc', and click OK
+
 - Alternatively, Failover Cluster Manager can be accessed by opening Server Manager, selecting Tools in the upper right corner, and then selecting Failover Cluster Manager. 
 
-1. In Windows Cluster manager, click on "Create Cluster"
+1. In Windows Cluster manager, click on "Create Cluster" option.
 
 ![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
 
-1. Click Next
-1. Enter the current server name (find out by clicking on right button, then properties of This PC, or by typing `hostname` from the command prompt)
-1. Click on Add
+1. Click Next.
+1. Enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command)
+1. Click on Add.
 
 ![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
 
 1. Enter the cluster name, for example `WSFCluser`
 
-1. Open Server Manager
-1. Open Tools in the upper right corner of the Server Manager
-1. Select Failover Cluster Manager from the menu.
-
 ![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
 
-1. Click Next, all the way through until the cluster creation has been started
-1. Conclude by clicking on Finish
+1. Click Next, and repeat clicking Next all the way through until the cluster creation is started.
+1. Conclude by clicking on Finish.
 
 ## Verification
 
 To verify that single-node WSFC cluster has been created, follow these steps:
 
-1. Click on the cluster name on the left hand side
-1. Click on Nodes
+1. In Failover Cluster Manager, click on the cluster name on the left hand side.
+1. Click on Nodes.
 
 ![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png)
 
-You should be able to see single node added to this cluster which confirms the configuration has been completed.
+You should be able to see the local machine single node added to this cluster which confirms the configuration has been completed.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 

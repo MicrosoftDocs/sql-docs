@@ -39,10 +39,11 @@ The Hyperscale service tier in Azure SQL Database provides the following additio
 - Higher overall performance due to higher transaction log throughput and faster transaction commit times regardless of data volumes.
 - Rapid scale out - you can provision one or more [read-only replicas](service-tier-hyperscale-replicas.md) for offloading your read workload and for use as hot-standbys.
 - Rapid Scale up - you can, in constant time, scale up your compute resources to accommodate heavy workloads when needed, and then scale the compute resources back down when not needed.
+- Support for [serverless compute](serverless-tier-overview.md) is in preview, providing automatic scale-up and scale-down and billing for compute based on usage.
 
 The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, storage grows as needed. In fact, Hyperscale databases aren't created with a defined max size. A Hyperscale database grows as needed - and you're billed only for the capacity you use. For read-intensive workloads, the Hyperscale service tier provides rapid scale-out by provisioning additional replicas as needed for offloading read workloads.
 
-Additionally, the time required to create database backups or to scale up or down is no longer tied to the volume of data in the database. Hyperscale databases can be backed up virtually instantaneously. You can also scale a database in the tens of terabytes up or down in minutes. This capability frees you from concerns about being boxed in by your initial configuration choices.
+Additionally, the time required to create database backups or to scale up or down is no longer tied to the volume of data in the database. Hyperscale databases can be backed up virtually instantaneously. You can also scale a database in the tens of terabytes up or down in minute in the provisioned compute tier or use the [serverless compute](serverless-tier-overview.md) to scale automatically. This capability frees you from concerns about being boxed in by your initial configuration choices.
 
 For more information about the compute sizes for the Hyperscale service tier, see [Service tier characteristics](service-tiers-vcore.md#service-tiers).
 
@@ -63,9 +64,13 @@ The Hyperscale service tier supports a broad range of SQL Server workloads, from
 
 Hyperscale service tier is only available in [vCore model](service-tiers-vcore.md). To align with the new architecture, the pricing model is slightly different from General Purpose or Business Critical service tiers:
 
-- **Compute**:
+- **Provisioned compute**:
 
   The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to [high-availabilty](service-tier-hyperscale-replicas.md#high-availability-replica) and [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on availability and scalability requirements, and create up to 30 named replicas to support a variety of read scale-out workloads.
+
+- **Serverless compute**: 
+  
+   Serverless compute is based on usage. Review [serverless compute](serverless-tier-overview.md) for details. 
 
 - **Storage**:
 
@@ -116,7 +121,7 @@ Learn more about the [Hyperscale distributed functions architecture](hyperscale-
 
 ## Scale and performance advantages
 
-With the ability to rapidly spin up/down additional read-only compute nodes, the Hyperscale architecture allows significant read scale capabilities and can also free up the primary compute node for serving more write requests. Also, the compute nodes can be scaled up/down rapidly due to the shared-storage architecture of the Hyperscale architecture.
+With the ability to rapidly spin up/down additional read-only compute nodes, the Hyperscale architecture allows significant read scale capabilities and can also free up the primary compute node for serving more write requests. Also, the compute nodes can be scaled up/down rapidly due to the shared-storage architecture of the Hyperscale architecture. Read-only compute nodes in Hyperscale are also in the [serverless compute tier](serverless-tier-overview.md), which automatically scales compute based on workload demand. 
 
 ## Create and manage Hyperscale databases
 

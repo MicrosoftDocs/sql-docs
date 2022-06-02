@@ -25,7 +25,7 @@ Secondary replicas are always read-only, and can be of three different types:
 - Named replica (in [Preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/))
 - Geo-replica (in [Preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/))
 
-Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together.
+Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together. Secondary replicas are supported by both [serverless](serverless-tier-overview.md) and provisioned compute tiers.
 
 ## High Availability replica
 

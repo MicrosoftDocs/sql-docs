@@ -118,6 +118,7 @@ Consider the following limitations:
 - [Geo-Restore](recovery-using-backups.md#geo-restore) is not currently supported.
 - Zone redundancy cannot currently be specified when migrating an existing database from another Azure SQL Database service tier to Hyperscale.
 - Preview is not yet available in US Gov Virginia & China North 3 regions. All others Azure regions that have [Availability Zones](/azure/availability-zones/az-overview#azure-regions-with-availability-zones) support zone redundant Hyperscale database. 
+- [Serverless](serverless-tier-overview.md) is not currently supported by zone redundancy in Hyperscale.  If zone redundancy is required for serverless, consider using the [General Purpose tier](service-tier-general-purpose.md).
 
 > [!IMPORTANT]
 > At least 1 high availability compute replica and the use of zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.

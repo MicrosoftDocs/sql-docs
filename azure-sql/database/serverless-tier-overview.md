@@ -14,7 +14,11 @@ ms.date: 04/06/2022
 # Azure SQL Database serverless
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Serverless is a compute tier for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns.
+Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute-tiers) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) and [Hyperscale](service-tier-hyperscale.md) service tiers (currently in preview). 
+
+> [!NOTE]
+> - Serverless in the Hyperscale service tier is currently in preview.
+> - Auto-pausing and auto-resuming is currently only supported in the General Purpose service tier. 
 
 ## Serverless compute tier
 
@@ -39,7 +43,7 @@ For more cost details, see [Billing](serverless-tier-overview.md#billing).
 
 ## Scenarios
 
-Serverless is price-performance optimized for single databases with intermittent, unpredictable usage patterns that can afford some delay in compute warm-up after idle usage periods. In contrast, the provisioned compute tier is price-performance optimized for single databases or multiple databases in elastic pools with higher average usage that cannot afford any delay in compute warm-up.
+Serverless is price-performance optimized for single databases with intermittent, unpredictable usage patterns that can afford some delay in compute warm-up after idle usage periods. In contrast, the [provisioned compute tier](service-tiers-sql-database-vcore.md#compute-tiers) is price-performance optimized for single databases or multiple databases in [elastic pools](elastic-pool-overview.md) with higher average usage that cannot afford any delay in compute warm-up.
 
 ### Scenarios well suited for serverless compute
 
@@ -67,7 +71,14 @@ The following table summarizes distinctions between the serverless compute tier 
 
 ## Purchasing model and service tier
 
-SQL Database serverless is currently only supported in the General Purpose tier on Generation 5 hardware in the vCore purchasing model.
+
+The following table describes serverless supportability based on service tiers, hardware, and purchasing models: 
+
+| **Category** | **Supported** | **Not supported**|
+|:---|:---|:---|
+| **Purchasing model** | [vCore](service-tiers-vcore.md) | [DTU](service-tiers-dtu.md) |
+| **Service tier** | [General Purpose](service-tier-general-purpose.md) <br/> [Hyperscale](service-tier-hyperscale.md) (in Preview) | Business Critical| 
+| **Hardware** | Generation 5 | Generation 4 |  
 
 ## Autoscaling
 
@@ -77,7 +88,8 @@ In general, serverless databases are run on a machine with sufficient capacity t
 
 ### Memory management
 
-Memory for serverless databases is reclaimed more frequently than for provisioned compute databases. This behavior is important to control costs in serverless and can impact performance.
+In both the General Purpose and Hyperscale service tiers, memory for serverless databases is reclaimed more frequently than for provisioned compute databases. This behavior is important to control costs in serverless and can impact performance.
+
 
 #### Cache reclamation
 
@@ -96,7 +108,14 @@ When CPU utilization is low, active cache utilization can remain high depending 
 
 The SQL cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained up to the max memory limit.
 
+
+### Disk cache management
+
+In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica supports a Resilient Buffer Pool Extension (RBPEX) which increases the amount of data pages cached on disk to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5)
+
 ## Auto-pausing and auto-resuming
+
+Currently, serverless auto-pausing and auto-resuming is only supported in the General Purpose tier. 
 
 ### Auto-pausing
 
@@ -193,9 +212,10 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
-## Onboarding into serverless compute tier
 
-Creating a new database or moving an existing database into a serverless compute tier follows the same pattern as creating a new database in provisioned compute tier and involves the following two steps.
+## Create a new serverless database 
+
+Creating a new database or moving an existing database into a serverless compute tier follows the same pattern as creating a new database in provisioned compute tier and involves the following two steps:
 
 1. Specify the service objective. The service objective prescribes the service tier, hardware configuration, and max vCores. For service objective options, see [serverless resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5)
 
@@ -207,9 +227,6 @@ Creating a new database or moving an existing database into a serverless compute
    |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
    |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
 
-
-### Create a new database in the serverless compute tier
-
 The following examples create a new database in the serverless compute tier.
 
 #### Use Azure portal
@@ -219,35 +236,93 @@ See [Quickstart: Create a single database in Azure SQL Database using the Azure 
 
 #### Use PowerShell
 
+# [General Purpose](#tab/general-purpose)
+
+Create a new serverless General Purpose database with the following PowerShell example: 
+
 ```powershell
 New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName `
   -ComputeModel Serverless -Edition GeneralPurpose -ComputeGeneration Gen5 `
   -MinVcore 0.5 -MaxVcore 2 -AutoPauseDelayInMinutes 720
 ```
+
+# [Hyperscale](#tab/hyperscale)
+
+Create a new Hyperscale serverless database with the following PowerShell example: 
+
+```powershell
+New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName ` 
+  -ComputeModel Serverless -Edition Hyperscale -ComputeGeneration Gen5 ` 
+  -MinVcore 0.5 -MaxVcore 2
+```
+
+---
+
 #### Use Azure CLI
+
+# [General Purpose](#tab/general-purpose)
+
+Create a new General Purpose serverless database with the following Azure CLI example: 
 
 ```azurecli
 az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
   -e GeneralPurpose -f Gen5 --min-capacity 0.5 -c 2 --compute-model Serverless --auto-pause-delay 720
 ```
 
+# [Hyperscale](#tab/hyperscale)
+
+Create a new Hyperscale serverless database with the following Azure CLI example: 
+
+```azurecli
+az sql db create -g $resourceGroupName -s $serverName -n $databaseName ` 
+  -e Hyperscale -f Gen5 --min-capacity 0.5 -c 2 --compute-model Serverless 
+```
+
+---
+
 
 #### Use Transact-SQL (T-SQL)
 
 When using T-SQL, default values are applied for the min vcores and autopause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API).
+
+For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
+
+# [General Purpose](#tab/general-purpose)
+
+Create a new General Purpose serverless database with the following T-SQL example: 
 
 ```sql
 CREATE DATABASE testdb
 ( EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_S_Gen5_1' ) ;
 ```
 
-For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
+# [Hyperscale](#tab/hyperscale)
 
-### Move a database from the provisioned compute tier into the serverless compute tier
+Create a new Hyperscale serverless database with the following T-SQL example: 
 
-The following examples move a database from the provisioned compute tier into the serverless compute tier.
+```sql
+ALTER DATABASE testdb  
+MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ; 
+```
+
+---
+
+
+
+## Move a database between compute tiers
+
+It's possible to move your database from the provisioned compute tier to the serverless compute tier, and back again. 
+
+When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using Powershell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
+
+The examples in this section show you how to move your provisioned database to serverless. 
+
 
 #### Use PowerShell
+
+# [General Purpose](#tab/general-purpose)
+
+Move a provisioned compute General Purpose database to the serverless compute tier with the following PowerShell example: 
 
 ```powershell
 Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName `
@@ -255,37 +330,74 @@ Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName 
   -MinVcore 1 -MaxVcore 4 -AutoPauseDelayInMinutes 1440
 ```
 
+# [Hyperscale](#tab/hyperscale)
+
+Move a provisioned compute Hyperscale database to the serverless compute tier with the following PowerShell example: 
+
+```powershell
+Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName ` 
+  -Edition Hyperscale -ComputeModel Serverless -ComputeGeneration Gen5 ` 
+  -MinVcore 1 -MaxVcore 4 
+```
+
+---
+
 #### Use Azure CLI
+
+# [General Purpose](#tab/general-purpose)
+
+Move a provisioned compute General Purpose database to the serverless compute tier with the following Azure CLI example: 
 
 ```azurecli
 az sql db update -g $resourceGroupName -s $serverName -n $databaseName `
   --edition GeneralPurpose --min-capacity 1 --capacity 4 --family Gen5 --compute-model Serverless --auto-pause-delay 1440
 ```
 
+# [Hyperscale](#tab/hyperscale)
+
+Move a provisioned compute Hyperscale database to the serverless compute tier with the following Azure CLI example: 
+
+```azurecli
+az sql db update -g $resourceGroupName -s $serverName -n $databaseName ` 
+  --edition Hyperscale --min-capacity 1 --capacity 4 --family Gen5 --compute-model Serverless
+```
+
+---
+
 #### Use Transact-SQL (T-SQL)
 
-When using T-SQL, default values are applied for the min vcores and auto-pause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API).
+When using T-SQL, default values are applied for the min vcores and auto-pause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API). For details, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+
+# [General Purpose](#tab/general-purpose)
+
+Move a provisioned compute General Purpose database to the serverless compute tier with the following T-SQL example: 
 
 ```sql
 ALTER DATABASE testdb 
 MODIFY ( SERVICE_OBJECTIVE = 'GP_S_Gen5_1') ;
 ```
 
-For details, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+# [Hyperscale](#tab/hyperscale)
 
-### Move a database from the serverless compute tier into the provisioned compute tier
+Move a provisioned compute Hyperscale database to the serverless compute tier with the following T-SQL example: 
 
-A serverless database can be moved into a provisioned compute tier in the same way as moving a provisioned compute database into a serverless compute tier.
+```sql
+ALTER DATABASE testdb  
+MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_1') ; 
+```
 
-## Modifying serverless configuration
+---
+
+## Modify serverless configuration
 
 ### Use PowerShell
 
-Modifying the maximum or minimum vCores, and autopause delay, is performed by using the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) command in PowerShell using the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments.
+Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify the maximum or minimum vCores, and autopause delay. Use the the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments.  Serverless auto-pausing is not currently supported in the Hyperscale tier,  so the auto-pause delay argument is only applicable to the General Purpose tier. 
 
 ### Use Azure CLI
 
-Modifying the maximum or minimum vCores, and autopause delay, is performed by using the [az sql db update](/cli/azure/sql/db#az-sql-db-update) command in Azure CLI using the `capacity`, `min-capacity`, and `auto-pause-delay` arguments.
+Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to modify the maximum or minimum vCores, and autopause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` arguments. Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
+
 
 ## Monitoring
 
@@ -307,10 +419,11 @@ Metrics for monitoring the resource usage of the app package and user resource p
 
 |Entity|Metric|Description|Units|
 |---|---|---|---|
-|App package|app_cpu_percent|Percentage of vCores used by the app relative to max vCores allowed for the app.|Percentage|
-|App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating over time the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the min vCores and min memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore.|vCore seconds|
-|App package|app_memory_percent|Percentage of memory used by the app relative to max memory allowed for the app.|Percentage|
-|User resource pool|cpu_percent|Percentage of vCores used by user workload relative to max vCores allowed for user workload.|Percentage|
+|App package|app_cpu_percent|Percentage of vCores used by the app relative to max vCores allowed for the app. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |Percentage|
+|App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating over time the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the min vCores and min memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the way as for the primary replica or a named replica.  This metric is exposed for the primary replica and any named replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package|app_memory_percent|Percentage of memory used by the app relative to max memory allowed for the app. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |Percentage|
+|User resource pool|cpu_percent|Percentage of vCores used by user workload relative to max vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to max data IOPS allowed for user workload.|Percentage|
 |User resource pool|log_IO_percent|Percentage of log MB/s used by user workload relative to max log MB/s allowed for user workload.|Percentage|
 |User resource pool|workers_percent|Percentage of workers used by user workload relative to max workers allowed for user workload.|Percentage|
@@ -341,21 +454,29 @@ For resource limits, see [serverless compute tier](resource-limits-vcore-single-
 
 ## Billing
 
-The amount of compute billed is the maximum of CPU used and memory used each second. If the amount of CPU used and memory used is less than the minimum amount provisioned for each, then the provisioned amount is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore.
+The amount of compute billed for a serverless database is the maximum of CPU used and memory used each second. If the amount of CPU and memory used is less than the minimum amount provisioned for each resource, then the provisioned amount is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the number of  GB by 3 GB per vCore.
 
 - **Resource billed**: CPU and memory
 - **Amount billed**: vCore unit price * max (min vCores, vCores used, min memory GB * 1/3, memory GB used * 1/3) 
 - **Billing frequency**: Per second
 
-The vCore unit price is the cost per vCore per second. Refer to the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) for specific unit prices in a given region.
+The vCore unit price is the cost per vCore per second. For Hyperscale, the vCore unit price for an HA replica or named replica is lower than for the primary replica. 
 
-The amount of compute billed is exposed by the following metric:
+Refer to the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) for specific unit prices in a given region.
+
+The amount of compute billed in serverless for a General Purpose database, or a Hyperscale primary or named replica is exposed by the following metric: 
 
 - **Metric**: app_cpu_billed (vCore seconds)
 - **Definition**: max (min vCores, vCores used, min memory GB * 1/3, memory GB used * 1/3)
-- **Reporting frequency**: Per minute
+- **Reporting frequency**: Per minute based on per second measurements aggregated over 1 minute.
 
-This quantity is calculated each second and aggregated over 1 minute.
+The amount of compute billed in serverless for Hyperscale HA replicas belonging to the primary replica or any named replica is exposed by the following metric: 
+
+- **Metric**: app_cpu_billed_HA_replicas (vCore seconds) 
+- **Definition**: Sum of max (min vCores, vCores used, min memory GB * 1/3, memory GB used * 1/3) for any HA replicas belonging to their parent resource.
+- **Parent resource and metric endpoint**: The primary replica and any named replica each separately expose this metric which measures the compute billed for any associated HA replicas.  
+- **Reporting frequency**: Per minute based on per second measurements aggregated over 1 minute. 
+
 
 ### Minimum compute bill
 
@@ -363,12 +484,13 @@ If a serverless database is paused, then the compute bill is zero.  If a serverl
 
 Examples:
 
-- Suppose a serverless database is not paused and configured with 8 max vCores and 1 min vCore corresponding to 3.0 GB min memory.  Then the minimum compute bill is based on max (1 vCore, 3.0 GB * 1 vCore / 3 GB) = 1 vCore.
-- Suppose a serverless database is not paused and configured with 4 max vCores and 0.5 min vCores corresponding to 2.1 GB min memory.  Then the minimum compute bill is based on max (0.5 vCores, 2.1 GB * 1 vCore / 3 GB) = 0.7 vCores.
+- Suppose a serverless database in the General Purpose tier is not paused and configured with 8 max vCores and 1 min vCore corresponding to 3.0 GB min memory.  Then the minimum compute bill is based on max (1 vCore, 3.0 GB * 1 vCore / 3 GB) = 1 vCore.
+- Suppose a serverless database in the General Purpose tier is not paused and configured with 4 max vCores and 0.5 min vCores corresponding to 2.1 GB min memory.  Then the minimum compute bill is based on max (0.5 vCores, 2.1 GB * 1 vCore / 3 GB) = 0.7 vCores.
+- Suppose a serverless database in the Hyperscale tier has a primary replica with one HA replica and one name replica with no HA replicas.  Suppose each replica is configured with 8 max vCores and 1 min vCore corresponding to 3 GB min memory. Then the minimum compute bill for the primary replica, HA replica, and named replica are each based on max (1 vCore, 3 GB * 1 vCore / 3 GB) = 1 vCore. 
 
 The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) for serverless can be used to determine the min memory configurable based on the number of max and min vCores configured.  As a rule, if the min vCores configured is greater than 0.5 vCores, then the minimum compute bill is independent of the min memory configured and based only on the number of min vCores configured.
 
-### Example scenario
+### General Purpose example scenario
 
 Consider a serverless database configured with 1 min vCore and 4 max vCores.  This configuration corresponds to around 3 GB min memory and 12 GB max memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
 
@@ -386,6 +508,41 @@ More precisely, the compute bill in this example is calculated as follows:
 
 Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50400 vCore seconds ~ $7.31.
 
+### Hyperscale example scenario 
+
+Consider a serverless database in the Hyperscale tier configured with 1 min vCore and 8 max vCores.  Suppose that the primary replica has enabled one HA replica and that a named replica with 1 min vCore and 8 max VCores has also been provisioned.  For each replica, this configuration corresponds to 3 GB min memory and 24 GB max memory.  Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
+
+In this example, the compute billed for the database is summation of the compute billed for each replica and calculated as follows based on the usage pattern described in the tables below: 
+
+**Primary replica**
+
+| Time Interval	| vCores used each second	| GB used each second	| Compute dimension billed | vCore seconds billed over time interval | 
+|---|---|---|---|---|
+|0:00-2:00 | 8	| 15 |	vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
+|2:00-14:00 |	1.5	| 6	 | Memory used |	6 GB * 1/3 * 43200 seconds = 86400 vCore seconds |
+|14:00-24:00 |	0.5	| 2	 | Min vCores provisioned	| 1 vCore * 36000 seconds = 36000 vCore seconds | 
+|**Total vCore seconds billed over 24 hours** |||| 180000 vCore seconds |
+
+Suppose the compute unit price for the primary replica is $0.000163/vCore/second. Then the compute billed for the primary replica over this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000163/vCore/second * 180000 vCore seconds ~ $29.34.
+
+**HA replica**
+
+|Time Interval	| vCores used each second	| GB used each second	| Compute dimension billed	| vCore seconds billed over time interval |
+|---|---|---|---|---|
+|0:00-2:00|	8 |	9	| vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
+| 2:00-8:00	| 1.5	 | 3	| Memory used	| 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds
+8:00-24:00	0	2	Min memory provisioned	3 GB * 1/3 * 36000 seconds = 36000 vCore seconds
+|Total vCore seconds billed over 24 hours||||136800 vCore seconds |
+
+Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then the compute billed for the HA replica over this 24-hour period is $0.000105/vCore/second * 136800 vCore seconds ~ $14.36.
+
+**Named replica** 
+
+Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
+Therefore, the total compute bill for all three replicas of the database is around $29.34 + ~ $14.36 + $15.75 = $59.45.
+
+
+
 ### Azure Hybrid Benefit and reserved capacity
 
 Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the serverless compute tier.
@@ -397,4 +554,4 @@ The serverless compute tier is available worldwide except the following regions:
 ## Next steps
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
-- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).
+- For serverless service tier choices, see [General Purpose](service-tier-general-purpose.md) and [Hyperscale (preview)](service-tier-hyperscale.md). 

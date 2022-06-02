@@ -29,6 +29,31 @@ If you're new to Azure SQL Database, check out the *Azure SQL Database Overview*
 > [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/Azure-SQL-Database-Overview-7-of-61/player]
 
 
+## Purchasing models
+
+SQL Database offers the following purchasing models:
+- The [vCore-based purchasing model](service-tiers-vcore.md) lets you choose the number of vCores, the amount of memory, and the amount and speed of storage. The vCore-based purchasing model also allows you to use [Azure Hybrid Benefit for SQL Server](https://azure.microsoft.com/pricing/hybrid-benefit/) to gain cost savings. For more information about the Azure Hybrid Benefit, see the [Frequently asked questions](#sql-database-frequently-asked-questions) section later in this article.
+- The [DTU-based purchasing model](service-tiers-dtu.md) offers a blend of compute, memory, and I/O resources in three service tiers, to support light to heavy database workloads. Compute sizes within each tier provide a different mix of these resources, to which you can add additional storage resources.
+
+
+## Service tiers
+
+The [vCore-based purchasing model](service-tiers-vcore.md) offers three service tiers: 
+- The [General Purpose](service-tier-general-purpose.md) service tier is designed for common workloads. It offers budget-oriented balanced compute and storage options.
+- The [Business Critical](service-tier-business-critical.md) service tier is designed for OLTP applications with high transaction rates and low latency I/O requirements. It offers the highest resilience to failures by using several isolated replicas.
+- The [Hyperscale](service-tier-hyperscale.md) service tier is designed for most business workloads. Hyperscale provides great flexibility and high performance with independently scalable compute and storage resources. It offers higher resilience to failures by allowing configuration of more than one isolated database replica.
+
+The [DTU-based purchasing model](service-tiers-dtu.md) offers two service tiers: 
+- The [Standard](service-tier-general-purpose.md) service tier is designed for common workloads. It offers budget-oriented balanced compute and storage options.
+- The [Premium](service-tier-business-critical.md) service tier is designed for OLTP applications with high transaction rates and low latency I/O requirements. It offers the highest resilience to failures by using several isolated replicas.
+
+## Compute tiers 
+
+The [vCore-based purchasing model](service-tiers-vcore.md) provides two different compute tiers for Azure SQL Database - the provisioned compute tier, and the serverless compute tier. The [DTU-based purchasing model](service-tiers-dtu.md) provides just the provisioned compute tier. 
+
+- **Provisioned compute tier**: provides a specific amount of compute resource that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. 
+- **[Serverless compute tier](serverless-tier-overview.md)**: auto-scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is only available in the General Purpose and Hyperscale service tiers (currently in preview). 
+
 
 ## Deployment models
 
@@ -42,7 +67,7 @@ Azure SQL Database provides the following deployment options for a database:
 
 SQL Database delivers predictable performance with multiple resource types, service tiers, and compute sizes. It provides dynamic scalability with no downtime, built-in intelligent optimization, global scalability and availability, and advanced security options. These capabilities allow you to focus on rapid app development and accelerating your time-to-market, rather than on managing virtual machines and infrastructure. SQL Database is currently in 38 datacenters around the world, so you can run your database in a datacenter near you.
 
-## Scalable performance and pools
+### Scalable performance and pools
 
 You can define the amount of resources assigned. 
 - With single databases, each database is isolated from others and is portable. Each has its own guaranteed amount of compute, memory, and storage resources. The amount of the resources assigned to the database is dedicated to that database, and isn't shared with other databases in Azure. You can dynamically [scale single database resources](single-database-scale.md) up and down. The single database option provides different compute, memory, and storage resources for different needs. For example, you can get 1 to 128 vCores, or 32 GB to 4 TB. The [Hyperscale service tier](service-tier-hyperscale.md) for single databases enables you to scale to 100 TB, with fast backup and restore capabilities.
@@ -51,26 +76,6 @@ You can define the amount of resources assigned.
 You can build your first app on a small, single database at a low cost per month in the [General Purpose](service-tier-general-purpose.md) service tier. You can then change its service tier manually or programmatically at any time to the [Business Critical](service-tier-business-critical.md) or [Hyperscale](service-tier-hyperscale.md) service tier, to meet the needs of your solution. You can adjust performance without downtime to your app or to your customers. Dynamic scalability enables your database to transparently respond to rapidly changing resource requirements. You pay for only the resources that you need when you need them.
 
 *Dynamic scalability* is different from *autoscale*. Autoscale is when a service scales automatically based on criteria, whereas dynamic scalability allows for manual scaling without downtime. The single database option supports manual dynamic scalability, but not autoscale. For a more automatic experience, consider using elastic pools, which allow databases to share resources in a pool based on individual database needs. Another option is to use scripts that can help automate scalability for a single database. For an example, see [Use PowerShell to monitor and scale a single database](scripts/monitor-and-scale-database-powershell.md).
-
-### Purchasing models
-
-SQL Database offers the following purchasing models:
-- The [vCore-based purchasing model](service-tiers-vcore.md) lets you choose the number of vCores, the amount of memory, and the amount and speed of storage. The vCore-based purchasing model also allows you to use [Azure Hybrid Benefit for SQL Server](https://azure.microsoft.com/pricing/hybrid-benefit/) to gain cost savings. For more information about the Azure Hybrid Benefit, see the [Frequently asked questions](#sql-database-frequently-asked-questions) section later in this article.
-
-- The [DTU-based purchasing model](service-tiers-dtu.md) offers a blend of compute, memory, and I/O resources in three service tiers, to support light to heavy database workloads. Compute sizes within each tier provide a different mix of these resources, to which you can add additional storage resources.
-
-### Service tiers
-
-Azure SQL Database offers three service tiers:
-- The [General Purpose/Standard](service-tier-general-purpose.md) service tier is designed for common workloads. It offers budget-oriented balanced compute and storage options.
-- The [Business Critical/Premium](service-tier-business-critical.md) service tier is designed for OLTP applications with high transaction rates and low latency I/O requirements. It offers the highest resilience to failures by using several isolated replicas.
-- The [Hyperscale](service-tier-hyperscale.md) service tier is designed for most business workloads. Hyperscale provides great flexibility and high performance with independently scalable compute and storage resources. It offers higher resilience to failures by allowing configuration of more than one isolated database replica.
-
-### Serverless compute
-
-The [serverless compute tier](serverless-tier-overview.md) is available within the vCore-based purchasing model when you select the [General Purpose service tier](service-tier-general-purpose.md).
-
-The serverless compute tier automatically scales compute based on workload demand, and bills for the amount of compute used per second. The serverless compute tier automatically pauses databases during inactive periods when only storage is billed, and automatically resumes databases when activity returns.
 
 ### Elastic pools to maximize resource utilization
 

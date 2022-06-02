@@ -19,7 +19,7 @@ ms.date: 06/02/2022
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an additional step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Configuration of a single-node Windows Server Failover Cluster (WSFC) is mandatory for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's also optional.
+Configuration of a single-node Windows Server Failover Cluster (WSFC) is mandatory for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
 
 ## Install WSFC module on Windows Server
 

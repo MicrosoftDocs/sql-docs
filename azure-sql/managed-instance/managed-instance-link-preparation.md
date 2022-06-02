@@ -105,11 +105,11 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/sql-server-configuration-manager-sql-server-properties.png" alt-text="Screenshot that shows SQL Server Configuration Manager, with selections for opening properties for the service.":::
 
 1. Go to the **Always On Availability Groups** tab. 
-1. Select the **Always On Availability Groups** checkbox, and then select **OK**. 
+1. Select the **Enable AlwaysOn Availability Groups** checkbox, and then select **OK**. 
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-- If using **SQL Server 2016**, and if Always On option is disabled with message `This computer is not a node in a failover cluster.`, follow additional steps described in [Prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md). Once you've completed these additional steps, retry this step once again.
+- If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow additional steps described in [Prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md). Once you've completed these additional steps, come back and retry this step again.
 
 1. Select **OK** in the dialog to restart the SQL Server service.
 

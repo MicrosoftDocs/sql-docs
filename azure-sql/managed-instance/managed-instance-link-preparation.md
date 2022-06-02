@@ -41,7 +41,7 @@ To prepare your SQL Server instance, you need to validate that:
 
 You'll need to restart SQL Server for these changes to take effect.
 
-### Install Service Updates
+### Install service updates
 
 To check your SQL Server version, run the following Transact-SQL (T-SQL) script on SQL Server: 
 
@@ -163,7 +163,7 @@ DBCC TRACESTATUS
 
 Your SQL Server version should be 15.0.4198.2 or later, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
 
-:::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in S S M S.":::
+:::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in SSMS.":::
 
 ### Set up database recovery and backup
 
@@ -356,13 +356,13 @@ If the connection is unsuccessful, verify the following items:
 > [!CAUTION]
 > Proceed with the next steps only if you've validated network connectivity between your source and target environments. Otherwise, troubleshoot network connectivity issues before proceeding.
 
-## Migrate a certificate of a TDE-protected database
+## Migrate a certificate of a TDE-protected database (optional)
 
-If you're migrating a SQL Server database protected by Transparent Data Encryption to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
+If you're migrating a SQL Server database protected by Transparent Data Encryption (TDE) to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) v18.11.1 is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
@@ -370,4 +370,4 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 ## Next steps
 
-After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 
+- After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 

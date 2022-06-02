@@ -101,4 +101,4 @@ GO
 
 ## Next steps
 
-Continue preparing the environment for the link by [enablling Always ON](managed-instance-link-preparation.md#enable-availability-groups) on your SQL Server.
+Continue environment pereparation for the link by returning to the prepare your environment guide and [enablling Always On](managed-instance-link-preparation.md#enable-availability-groups) on your SQL Server.

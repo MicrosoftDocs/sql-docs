@@ -976,7 +976,8 @@ Provides the syntax and related information for changing the attributes of a dat
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
-  MODIFY ( <edition_option> [, ... n] )
+  MODIFY NAME = new_database_name
+| MODIFY ( <edition_option> [, ... n] )
 | SET <option_spec> [ ,...n ] [ WITH <termination> ]
 }
 [;]

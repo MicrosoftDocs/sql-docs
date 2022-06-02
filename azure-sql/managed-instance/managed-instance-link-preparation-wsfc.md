@@ -30,7 +30,7 @@ Configuration of a single-node Windows Server Failover Cluster (WSFC) is mandato
 Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 ```
 
-Alternatively, you can also use Server Manager to install WSFC module using the graphical interface.
+Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
 
 ## Configure single-node cluster using Failover Cluster Manager
 

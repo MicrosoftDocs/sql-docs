@@ -488,7 +488,7 @@ Exclusive (X) locks prevent access to a resource by concurrent transactions. Wit
 Data modification statements, such as INSERT, UPDATE, and DELETE combine both modification and read operations. The statement first performs read operations to acquire data before performing the required modification operations. Data modification statements, therefore, typically request both shared locks and exclusive locks. For example, an UPDATE statement might modify rows in one table based on a join with another table. In this case, the UPDATE statement requests shared locks on the rows read in the join table in addition to requesting exclusive locks on the updated rows.  
  
 ### <a name="intent"></a> Intent locks
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (x) lock on a resource lower in the lock hierarchy. intent locks are named intent lock because they are acquired before a lock at the lower level, and therefore signal intent to place locks at a lowe level.  
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses intent locks to protect placing a shared (S) lock or exclusive (x) lock on a resource lower in the lock hierarchy. Intent locks are named "intent locks" because they're acquired before a lock at the lower level and, therefore, signal intent to place locks at a lower level.  
 
 Intent locks serve two purposes:  
   

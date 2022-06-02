@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 05/24/2022
+ms.date: 06/02/2022
 ---
 # Link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -39,8 +39,8 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.11.1](/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. <BR>SQL Server 2016 is not supported at this time. |
-| PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher | Required for manual configuration steps. |
+| [SSMS 18.11.1](/sql/ssms/download-sql-server-management-studio-ssms), or higher | Provides graphical wizards for automated link setup and failover for SQL Servers 2019 and 2022. <BR>SQL Server 2016 is not supported in this version of SSMS. |
+| [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module required for manual configuration steps. |
 
 > [!NOTE]
 > SQL Managed Instance link feature is available in all public Azure regions. 
@@ -138,8 +138,8 @@ Managed Instance link has a set of general limitations, and those are listed in 
 Some Managed Instance link features and capabilities are limited **at this time**. Details can be found in the following list:
 
 - Product version requirements as listed in  [Requirements](#requirements). At this time [!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] is not supported.
-- Private endpoint (VPN/VNET) is supported to connect Distributed Availability Groups to SQL Managed Instance. Public endpoint can't be used to connect to SQL Managed Instance.
-- Managed Instance Link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between instances isn't supported.
+- Private endpoint (VPN/VNET) is supported to establish the link with SQL Managed Instance. Public endpoint can't be used to establish the link with SQL Managed Instance.
+- Managed Instance link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between SQL Server and managed instance isn't supported.
 - Replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server.
 - [Auto failover groups](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance can't be used in parallel while operating the Managed Instance link with SQL Server.
 - Replicated R/O databases aren't part of auto-backup process on SQL Managed Instance.

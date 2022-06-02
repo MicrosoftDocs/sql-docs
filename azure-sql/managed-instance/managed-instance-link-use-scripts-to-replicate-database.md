@@ -360,7 +360,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Create the primary availability group on SQL Server
 USE MASTER
 CREATE AVAILABILITY GROUP [<AGName>]
-WITH (CLUSTER_TYPE = NONE)
+WITH (CLUSTER_TYPE = NONE) -- <- Delete this line for SQL Server 2016 only. Leave as-is for all higher versions.
     FOR database [<DatabaseName>]  
     REPLICA ON   
         '<SQLServerName>' WITH   
@@ -374,7 +374,7 @@ GO
 ```
 
 >[!IMPORTANT]
-> For SQL Server 2016, delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement.
+> For SQL Server 2016, delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement. Leave as-is for all higher SQL Server versions.
 
 Consider the following:
 

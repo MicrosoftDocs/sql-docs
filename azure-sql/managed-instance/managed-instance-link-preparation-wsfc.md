@@ -19,7 +19,7 @@ ms.date: 06/02/2022
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Configuration of a single-node (local) Windows Server Failover Cluster (WSFC) is the minimum requirement for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
+Configuration of a local single-node Windows Server Failover Cluster (WSFC) is the minimum requirement to enable Always On for SQL Server 2016 only. No multiple node WSFC configuration is required for the link, and it's optional. This step is not required for SQL Servers 2019-2022, and it's optional.
 
 ## Install WSFC module on Windows Server
 
@@ -34,7 +34,7 @@ Alternatively, you can also use Server Manager to install WSFC module using the 
 
 ## Configure single-node cluster using Failover Cluster Manager
 
-On the Windows Server hosting the SQL Server, configure a single-node (local) cluster using the graphical user interface. Follow these steps:
+On the Windows Server hosting the SQL Server, configure the local single-node cluster using the graphical user interface. Follow these steps:
 
 1. Find out your Windows Server name by executing `hostname` command from the command prompt.
 1. Record the output of this command (sample output marked in the image below), or keep this window open as you'll use this name in one of the next steps.
@@ -67,7 +67,7 @@ On the Windows Server hosting the SQL Server, configure a single-node (local) cl
 1. On the Confirmation screen, click Next.
 1. On the Creating New Cluster screen, wait for the creation to be completed, and then click Finish.
 
-With the above steps, you've created a single-node (local) Windows Server Failover Cluster.
+With the above steps, you've created the local single-node Windows Server Failover Cluster.
 
 ## Verification
 

@@ -78,7 +78,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
-You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This verification confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
+- You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This verification confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 
@@ -88,7 +88,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
-You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This verification confirms the configuration has been completed successfully.
+- You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This verification confirms the configuration has been completed successfully.
 
 ## Grant permissions in SQL Server for WSFC
 

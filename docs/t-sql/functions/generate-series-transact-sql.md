@@ -71,11 +71,11 @@ No permissions are required for `GENERATE_SERIES`; however, the user needs `EXEC
 
 The following examples demonstrate the syntax for calling `GENERATE_SERIES`.
 
-### A. Generate a series of integer values between 1 and 100 in increments of 1 (default)
+### A. Generate a series of integer values between 1 and 10 in increments of 1 (default)
 
 ```sql
 SELECT value
-FROM GENERATE_SERIES(START = 1, STOP = 100);
+FROM GENERATE_SERIES(START = 1, STOP = 10);
 ```
 
 Here's the result set.

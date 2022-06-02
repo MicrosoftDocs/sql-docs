@@ -51,10 +51,12 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 ![Managed Instance link - Access create WSFC option](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
 
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png" alt-text="Screenshot of accessing the create cluster option.":::
+
 1. On the Before You Being screen, click Next.
 1. On the Select Server Screen, enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command), the click Add, and then Next.
 
-![Managed Instance link - Create WSFC by entering hostname](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png" alt-text="Screenshot of entering Windows Server hostname when creating WSFC.":::
 
 1. On the Validation Warning screen, leave Yes on, click Next.
 1. On the Before You Being screen, click Next.
@@ -64,7 +66,7 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and click Next.
 
-![Managed Instance link - Create WSFC by entering cluster name](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png" alt-text="Screenshot of entering the cluster name.":::
 
 1. On the Confirmation screen, click Next.
 1. On the Creating New Cluster, once creation has been completed, click Finish.
@@ -78,7 +80,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 1. In Failover Cluster Manager, click on the cluster name, and expand it by clicking on the `>` arrow.
 1. Click on Nodes.
 
-![Managed Instance link - Validate WSFC](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png)
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
 You should be able to see the local machine single node added to this cluster and with the Status being `Up` - which confirms the WSFC configuration has been completed successfully. You can now close Failover Cluster Manager tool.
 
@@ -88,7 +90,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 1. Double-click on SQL Server
 1. Click on AlwaysOn High Availability tab
 
-![Managed Instance link - Validate Always On in SQL Server Configuration Manager](./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png)
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
 You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option, which confirms the configuration has been completed successfully.
 

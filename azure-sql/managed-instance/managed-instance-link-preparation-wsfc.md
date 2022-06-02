@@ -45,17 +45,17 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 1. In Windows Cluster manager, click on "Create Cluster" option.
 
-![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
+![Managed Instance link - Create WSFC](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
 
 1. Click Next.
 1. Enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command)
 1. Click on Add.
 
-![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
+![Managed Instance link - Create WSFC and enter hostname](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
 
 1. Enter the cluster name, for example `WSFCluser`
 
-![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
+![Managed Instance link - Create WSFC and enter cluster name](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
 
 1. Click Next, and repeat clicking Next all the way through until the cluster creation is started.
 1. Conclude by clicking on Finish.
@@ -67,7 +67,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 1. In Failover Cluster Manager, click on the cluster name on the left hand side.
 1. Click on Nodes.
 
-![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png)
+![Managed Instance link - Validate WSFC](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png)
 
 You should be able to see the local machine single node added to this cluster which confirms the configuration has been completed.
 
@@ -77,7 +77,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 1. Double-click on SQL Server
 1. Click on AlwaysOn High Availability tab
 
-![Managed Instance link - Create cluster](./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png)
+![Managed Instance link - Validate Always On in SQL Server Configuration Manager](./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png)
 
 You should be able to check on the option to Enable AlwaysOn Availability Groups which confirms the configuration has been completed.
 

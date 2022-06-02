@@ -45,17 +45,17 @@ On the Windows Server hosting the SQL Server, configure a single node cluster us
 
 1. In Windows Cluster manager, click on "Create Cluster" option.
 
-![Managed Instance link - Create WSFC](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
+![Managed Instance link - Access create WSFC option](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png)
 
 1. Click Next.
 1. Enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command)
 1. Click on Add.
 
-![Managed Instance link - Create WSFC and enter hostname](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
+![Managed Instance link - Create WSFC by entering hostname](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png)
 
 1. Enter the cluster name, for example `WSFCluser`
 
-![Managed Instance link - Create WSFC and enter cluster name](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
+![Managed Instance link - Create WSFC by entering cluster name](./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png)
 
 1. Click Next, and repeat clicking Next all the way through until the cluster creation is started.
 1. Conclude by clicking on Finish.

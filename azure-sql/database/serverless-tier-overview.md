@@ -11,16 +11,16 @@ ms.author: moslake
 ms.reviewer: kendralittle, mathoma, wiassaf
 ms.date: 04/06/2022
 ---
-# Azure SQL Database serverless
+# Serverless compute tier for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute-tiers) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) and [Hyperscale](service-tier-hyperscale.md) service tiers (currently in preview). 
+Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute-tiers) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) service tier and currently in preview in the [Hyperscale](service-tier-hyperscale.md) service tier. 
 
 > [!NOTE]
 > - Serverless in the Hyperscale service tier is currently in preview.
 > - Auto-pausing and auto-resuming is currently only supported in the General Purpose service tier. 
 
-## Serverless compute tier
+## Overview
 
 The serverless compute tier for single databases in Azure SQL Database is parameterized by a compute autoscaling range and an auto-pause delay. The configuration of these parameters shapes the database performance experience and compute cost.
 

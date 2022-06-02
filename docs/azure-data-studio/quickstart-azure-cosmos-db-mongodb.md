@@ -132,4 +132,4 @@ In this quickstart, you've learned how to create an API for MongoDB account, cre
 - Interested in importing MongoDB data into Azure Cosmos DB? See [Migrate MongoDB to Azure Cosmos DB's API for MongoDB](/azure/cosmos-db/mongodb/tutorial-mongotools-cosmos-db)
 - Trying to do capacity planning for a migration to Azure Cosmos DB? You can use information about your existing database cluster for capacity planning.
   - If all you know is the number of vCores and servers in your existing database cluster, read about [estimating request units using vCores or vCPUs](/azure/cosmos-db/convert-vcore-to-request-unit)
-  - If you know typical request rates for your current database workload, read about [estimating request units using Azure Cosmos DB capacity planner](/azure/cosmos-db/sql/estimate-ru-with-capacity-planner.md)
+  - If you know typical request rates for your current database workload, read about [estimating request units using Azure Cosmos DB capacity planner](/azure/cosmos-db/sql/estimate-ru-with-capacity-planner)

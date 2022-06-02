@@ -33,6 +33,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
 | [Hyperscale short-term retention](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy) | Retain backups up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured duration. |
+| [Hyperscale serverless](serverless-tier-overview.md) | Automatically scale your Hyperscale databases up and down based on usage when using the serverless compute tier. | 
 | [Javascript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use Javascript or Python SQL bindings with Azure Functions. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Query editor in the Azure portal](connect-query-portal.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com).|
@@ -62,6 +63,14 @@ The following table lists the features of Azure SQL Database that have transitio
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.
+
+### June 2022
+
+| Changes | Details |
+| --- | --- |
+| **Serverless Hyperscale preview** | It's now possible to deploy your Hyperscale databases to the serverless compute tier. This feature is currently in preview. To learn more, see [serverless compute](serverless-tier-overview.md). |
+
+
 
 ### May 2022
 

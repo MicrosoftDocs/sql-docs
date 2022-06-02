@@ -78,7 +78,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
-You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
+You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This verification confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
 
 Next, verify that Always On option can be enabled on SQL Server by following these steps:
 
@@ -88,7 +88,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
-You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This confirms the configuration has been completed successfully.
+You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This verification confirms the configuration has been completed successfully.
 
 ## Grant permissions in SQL Server for WSFC
 
@@ -110,5 +110,5 @@ GO
 
 ## Next steps
 
-- Continue environment preparation for the link by returning to the prepare your environment guide and [enablling Always On](managed-instance-link-preparation.md#enable-availability-groups) on your SQL Server.
-- To learn more about configuring multiple-node WSFC (not mandatory for the link, and optional), see [Create a failover cluster](/windows-server/failover-clustering/create-failover-cluster) guide for Windows Server.
+- Continue environment preparation for the link by returning to [enable Always On on your SQL Server](managed-instance-link-preparation.md#enable-availability-groups) section in prepare your environment for a link guide.
+- To learn more about configuring multiple-node WSFC (not mandatory, and only optional for the link), see [Create a failover cluster](/windows-server/failover-clustering/create-failover-cluster) guide for Windows Server.

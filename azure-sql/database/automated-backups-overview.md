@@ -590,7 +590,7 @@ Find the option to select backup storage redundancy on the **Compute + storage**
 
 ![Configure backup storage redundancy](./media/automated-backups-overview/select-backup-storage-redundancy-managed-instance.png)
 
-To change the Backup storage redundancy option for an existing instance, go to the **Compute + storage** pane, choose the new backup option and select **Apply**. For now, this change will be applied only for PITR backups, while LTR backups will retain the old storage redundancy type. The time to perform the backup redundancy change depends on the size of the all the databases within a single managed instance. Changing the backup redundancy will take more time for instances that have large databases. It's possible to combine the backup storage redundancy change operation with the UpdateSLO operation. Use the **Notification** pane of the Azure portal to view the status of the change operation. 
+To change the Backup storage redundancy option for an existing instance, go to the **Compute + storage** pane, choose the new backup option and select **Apply**. For now, this change will be applied only for PITR backups, while LTR backups will retain the old storage redundancy type. The time it takes to perform the backup redundancy change depends on the size of the all the databases within a single managed instance. Changing the backup redundancy will take more time for instances that have large databases. It's possible to combine the backup storage redundancy change operation with the UpdateSLO operation. Use the **Notification** pane of the Azure portal to view the status of the change operation. 
 
 :::image type="content" source="./media/automated-backups-overview/change-backup-storage-redundancy-managed-instance-notification.png" alt-text="Change backup storage redundancy notification":::
 
@@ -627,6 +627,7 @@ az sql db create \
     --tier Hyperscale \
     --backup-storage-redundancy Zone
 ```
+
 For more information, see [az sql db create](/cli/azure/sql/db#az-sql-db-create) and [az sql db update](/cli/azure/sql/db#az-sql-db-update).
 
 Except for Hyperscale and Basic tier databases, you can update the backup storage redundancy setting for an existing database with the `--backup-storage-redundancy` parameter and the `az sql db update` command. It may take up to 48 hours for the changes to be applied on the database. Switching from geo-redundant backup storage to local or zone redundant storage disables geo-restore.
@@ -660,7 +661,9 @@ For syntax details, see [az sql db copy](/cli/azure/sql/db#az-sql-db-copy). For 
 
 #### [SQL Managed Instance](#tab/managed-instance)
 
-Configuring backup storage redundancy is not available for a SQL Managed Instance when using the Azure CLI. For more information, see the [Azure portal](#configure-backup-storage-redundancy-by-using-the-azure-portal) or [PowerShell](#configure-backup-storage-redundancy-by-using-powershell) options.
+To change the backup storage redundancy after your SQL Managed Instance is created using the Azure CLI, specify the `-BackupStorageRedundancy` parameter when using the `az sql mi update` cmdlet.  View the [update mi backup storage redundancy](/cli/azure/sql/mi#az-sql-mi-update-examples) example. 
+
+Possible values for `-BackupStorageRedundancy` are `Geo` for geo-redundant, `Zone` for zone-redundant, and `Local` for locally-redundant backup storage. 
 
 ---
 
@@ -718,13 +721,10 @@ For an overview of database copy, visit [Copy a transactionally consistent copy 
 
 #### [SQL Managed Instance](#tab/managed-instance)
 
-For configuring backup storage redundancy during managed instance creation, you can specify -BackupStorageRedundancy parameter. Possible values are Geo, Zone, and Local.
+To configure backup storage redundancy when you create your managed instance, specify the `-BackupStorageRedundancy` parameter when using the [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) cmdlet. To change the backup storage redundancy for an existing managed instance, specify the `-BackupStorageRedundancy` parameter when using the `Set-AzSqlInstance` cmdlet. Review the [update an existing instance to be zone redundant](/powershell/module/az.sql/set-azsqlinstance#example-7-update-an-existing-instance-to-be-zone-redundant) example to learn more. 
 
-```powershell
-New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4 -BackupStorageRedundancy Geo
-```
+Possible values for the `-BackupStorageRedundancy` parameter are `Geo` for geo-redundant, `Zone` for zone-redundant, and `Local` for locally-redundant backup storage. 
 
-For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance).
 
 ---
 

@@ -75,7 +75,7 @@ The following examples demonstrate the syntax for calling `GENERATE_SERIES`.
 
 ```sql
 SELECT value
-FROM GENERATE_SERIES(START = 1, STOP = 10);
+FROM GENERATE_SERIES(START = 1, STOP = 100);
 ```
 
 Here's the result set.

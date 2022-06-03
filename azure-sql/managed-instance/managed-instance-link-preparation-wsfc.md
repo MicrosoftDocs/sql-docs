@@ -11,7 +11,7 @@ ms.topic: guide
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/02/2022
+ms.date: 06/03/2022
 ---
 
 # Prepare your environment for a link with WSFC - Azure SQL Managed Instance
@@ -47,12 +47,12 @@ On the Windows Server hosting the SQL Server, configure the local single-node cl
 
 1. In Windows Cluster manager, click on Create Cluster option.
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-01.png" alt-text="Screenshot of accessing the create cluster option.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-cluster-create.png" alt-text="Screenshot of accessing the create cluster option.":::
 
 1. On the Before You Begin screen, click Next.
 1. On the Select Server screen, enter your Windows Server name (type, or copy-paste the output from the earlier executed `hostname` command),  click Add, and then Next.
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-02.png" alt-text="Screenshot of entering Windows Server hostname when creating WSFC.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-cluster-create-select-servers.png" alt-text="Screenshot of entering Windows Server hostname when creating WSFC.":::
 
 1. On the Validation Warning screen, leave Yes on, click Next.
 1. On the Before You Being screen, click Next.
@@ -63,7 +63,7 @@ On the Windows Server hosting the SQL Server, configure the local single-node cl
 
 1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluster`, and then click Next.
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png" alt-text="Screenshot of entering the cluster name.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-cluster-create-cluster-name.png" alt-text="Screenshot of entering the cluster name.":::
 
 1. On the Confirmation screen, click Next.
 1. On the Creating New Cluster screen, wait for the creation to complete.
@@ -79,7 +79,7 @@ To verify that single-node WSFC cluster has been created, follow these steps:
 - In case that you've closed and re-opened Failover Cluster Manager after its creation, the cluster name might not show up on the left hand side (see the image below). Click on Connect to Cluster on the right hand side, choose to connect to `<Cluster on this server...>`, and click OK.
 3. Click on Nodes.
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 
 - You should be able to see the local machine single-node added to this cluster and with the Status being `Up`. This verification confirms the WSFC configuration has been completed successfully. You can now close the Failover Cluster Manager tool.
 
@@ -89,7 +89,7 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 1. Double-click on SQL Server
 1. Click on AlwaysOn High Availability tab
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
 - You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This verification confirms the configuration has been completed successfully.
 

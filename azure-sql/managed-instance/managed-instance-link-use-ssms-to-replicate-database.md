@@ -37,6 +37,18 @@ To replicate your databases to SQL Managed Instance through the link, you need t
 > 
 > SQL Server 2016 is not supported with the current SSMS version. Use [replicate database with scripts](managed-instance-link-use-scripts-to-replicate-database.md) instead.
 
+### Set up database recovery and backup
+
+All databases that will be replicated via the link must be in full recovery mode and have at least one full backup. Use SSMS to backup your database. Follow these steps:
+
+1. In SSMS, right-click on a database name on SQL Server
+1. Select Tasks, and then click on Backup Up...
+1. Ensure Backup type is Full.
+1. Ensure Backup to includes the backup path to a disk with sufficient free storage space.
+1. Click on OK to complete the full backup.
+
+For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).
+
 ## Replicate a database
 
 In the following steps, you use the **New Managed Instance link** wizard in SSMS to create the link between SQL Server and SQL Managed Instance. After you create the link, your source database gets a read-only replica copy on your target managed instance. 

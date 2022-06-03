@@ -42,7 +42,7 @@ The default settings and minimum allowable values for these options are:
 |Option  |  Default | Minimum allowable  | Recommended | 
 |---------|---------|---------|---------|
 |**min server memory (MB)**     |    0     |    0     | 0 |
-|**max server memory (MB)**     |     2,147,483,647 megabytes (MB)     |  128 MB       | 75% of available system memory not consumed by other processes, including [other instances](#multiple-instances-of-includessnoversionincludesssnoversion-mdmd)\* |
+|**max server memory (MB)**     |     2,147,483,647 megabytes (MB)     |  128 MB       | 75% of available system memory not consumed by other processes, including [other instances](#multiple-instances-of-)\* |
 
 *\* For more detailed recommendations, see [max server memory](#max_server_memory).*
 

@@ -96,7 +96,7 @@ select
     end as 'HadrStatus'
 ```
 
-If the availability groups feature isn't enabled, follow these steps to enable it: 
+If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
 1. Open SQL Server Configuration Manager. 
 1. Select **SQL Server Services** from the left pane. 

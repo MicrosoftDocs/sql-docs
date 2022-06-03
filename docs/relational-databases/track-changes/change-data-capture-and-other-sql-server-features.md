@@ -76,9 +76,9 @@ This topic describes how the following features interact with change data captur
 
 ##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
 
-Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
+If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
 
-If you enabled CDC on your database as an Azure AD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [limitations](./about-change-data-capture-sql-server.md?#limitations).
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 

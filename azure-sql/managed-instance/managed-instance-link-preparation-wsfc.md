@@ -58,14 +58,16 @@ On the Windows Server hosting the SQL Server, configure the local single-node cl
 1. On the Before You Being screen, click Next.
 1. On the Testing Options screen, leave Run all tests on, and click Next.
 1. On the Confirmation screen, click Next.
-1. On the Summary screen, wait for the validation to complete, and then click Finish.
+1. On the Validation screen, wait for the validation to complete.
+1. On the Summary screen, click Finish.
 
 1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and then click Next.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png" alt-text="Screenshot of entering the cluster name.":::
 
 1. On the Confirmation screen, click Next.
-1. On the Creating New Cluster screen, wait for the creation to be completed, and then click Finish.
+1. On the Creating New Cluster screen, wait for the creation to complete.
+1. On the Summary screen, click Finish.
 
 With the above steps, you've created the local single-node Windows Server Failover Cluster.
 
@@ -74,7 +76,8 @@ With the above steps, you've created the local single-node Windows Server Failov
 To verify that single-node WSFC cluster has been created, follow these steps:
 
 1. In the Failover Cluster Manager, click on the cluster name on the left hand side, and expand it by clicking on the `>` arrow.
-1. Click on Nodes.
+- In case that you've closed and re-opened Failover Cluster Manager after its creation, the cluster name might not show up on the left hand side (see the image below). Click on Connect to Cluster on the right hand side, choose to connect to `<Cluster on this server...>`, and click OK.
+3. Click on Nodes.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-validate.png" alt-text="Screenshot of validating the WSFC creation.":::
 

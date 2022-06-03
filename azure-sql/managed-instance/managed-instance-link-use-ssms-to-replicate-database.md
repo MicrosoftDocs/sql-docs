@@ -47,7 +47,7 @@ All databases that will be replicated via the link must be in full recovery mode
 1. Ensure Backup-to option has the backup path to a disk with sufficient free storage space available.
 1. Click on OK to complete the full backup.
 
-For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).
+For more information, see [Create a Full Database Backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
 ## Replicate a database
 

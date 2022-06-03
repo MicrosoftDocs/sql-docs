@@ -1289,6 +1289,8 @@
       items:
       - name: Prepare environment for link 
         href: managed-instance/managed-instance-link-preparation.md
+      - name: Prepare host OS for link
+        href: managed-instance/managed-instance-link-preparation.md
       - name: Replicate databases in SSMS
         href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
       - name: Fail over databases in SSMS

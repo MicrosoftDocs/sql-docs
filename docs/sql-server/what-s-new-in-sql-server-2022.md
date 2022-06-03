@@ -49,20 +49,15 @@ After you experience SQL Server 2022 Preview, you're welcome to [submit feedback
 
 This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
 
-- [Analytics](#analytics)
-  - Data Lake Virtualization
 - [Performance](#performance)
+  - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization
-  - XML compression
-  - Database tuning advisor
 - [Management](#management)
-  - Install Azure Arc Agent via SQL Server setup
-  - Snapshot backup
   - Out of memory DMV and extended events
+- [Security](#security)
+  - Support for PFX certificates
 - [Language](#language)
   - APPROXIMATE PERCENTILE
-  - IS \[NOT\] DISTINCT FROM
-  - TRIM scalar function extensions
 - [Tools](#tools)
 
 For details, see the feature descriptions in the sections below.

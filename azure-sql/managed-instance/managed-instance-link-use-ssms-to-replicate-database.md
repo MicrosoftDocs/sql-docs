@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 05/24/2022
+ms.date: 06/03/2022
 ---
 # Replicate a database by using the link feature in SSMS - Azure SQL Managed Instance
 
@@ -76,6 +76,8 @@ In the following steps, you use the **New Managed Instance link** wizard in SSMS
 1. On the **Login to Azure and select Managed Instance** page, select **Sign In** to sign in to Microsoft Azure.  
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-login-to-azure.png" alt-text="Screenshot that shows the area for signing in to Azure.":::
+    
+    - If you are running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you will need to [turn off Internet Explorer ESC on Windows servers](https://docs.microsoft.com/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
 
 1. On the **Login to Azure and select Managed Instance** page, choose the subscription, resource group, and target managed instance from the dropdown lists. Select **Login** and provide login details for SQL Managed Instance. After you've provided all necessary information, select **Next**. 
 

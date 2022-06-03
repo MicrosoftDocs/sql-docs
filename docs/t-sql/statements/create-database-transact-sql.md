@@ -753,7 +753,7 @@ WHERE name = N'MyOptionsTest';
 GO
 ```
 
-### H. Attache a full-text catalog that has been moved
+### H. Attach a full-text catalog that has been moved
 
 The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
 

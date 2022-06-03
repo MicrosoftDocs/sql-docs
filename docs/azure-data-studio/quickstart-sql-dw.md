@@ -23,7 +23,7 @@ To complete this quickstart, you need Azure Data Studio, and a dedicated SQL poo
 
 - [Install Azure Data Studio](./download-azure-data-studio.md).
 
-If you don't already have a Azure Synapse Analytics dedicated SQL pool, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+If you don't already have an Azure Synapse Analytics dedicated SQL pool, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Remember the server name, and login credentials!
 

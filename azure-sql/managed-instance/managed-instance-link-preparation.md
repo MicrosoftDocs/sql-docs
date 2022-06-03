@@ -109,7 +109,7 @@ If the availability groups feature isn't enabled, follow these steps to enable i
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-- If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
+    - If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
 
 1. Select **OK** in the dialog
 1. Restart the SQL Server service.
@@ -166,7 +166,7 @@ DBCC TRACESTATUS
 
 Your SQL Server version should be one of the supported versions with service updates applied, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
 
-:::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in SSMS.":::
+:::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in S S M S.":::
 
 ## Configure network connectivity
 

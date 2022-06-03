@@ -49,6 +49,8 @@ BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
 GO
 ```
 
+For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).
+
 ## Replicate a database
 
 Use the following instructions to manually set up the link between your SQL Server instance and managed instance. After the link is created, your source database gets a read-only replica copy on your target managed instance. 

@@ -39,12 +39,12 @@ To replicate your databases to SQL Managed Instance through the link, you need t
 
 ### Set up database recovery and backup
 
-All databases that will be replicated via the link must be in full recovery mode and have at least one full backup. Use SSMS to backup your database. Follow these steps:
+All databases that will be replicated via the link must be in full recovery mode and have at least one full backup. Use SSMS to back up your database. Follow these steps:
 
 1. In SSMS, right-click on a database name on SQL Server
-1. Select Tasks, and then click on Backup Up...
+1. Select Tasks, and then click on Backup Up.
 1. Ensure Backup type is Full.
-1. Ensure Backup to includes the backup path to a disk with sufficient free storage space.
+1. Ensure Backup-to option has the backup path to a disk with sufficient free storage space available.
 1. Click on OK to complete the full backup.
 
 For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).

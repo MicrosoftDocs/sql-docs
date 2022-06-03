@@ -34,6 +34,21 @@ To replicate your databases to SQL Managed Instance, you need the following prer
 - PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
+## Set up database recovery and backup
+
+All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
+
+```sql
+-- Run on SQL Server
+-- Set full recovery mode for all databases you want to replicate.
+ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
+GO
+
+-- Execute backup for all databases you want to replicate.
+BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
+GO
+```
+
 ## Replicate a database
 
 Use the following instructions to manually set up the link between your SQL Server instance and managed instance. After the link is created, your source database gets a read-only replica copy on your target managed instance. 

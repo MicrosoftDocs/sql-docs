@@ -139,7 +139,7 @@ The failover group will manage geo-failover of all databases on the primary mana
 
 ## <a name="using-read-write-listener-for-oltp-workload"></a> Use the read-write listener (primary MI) 
 
-For read-write workloads, use `<fog-name>.zone_id.database.windows.net` as the server name. Connections will be automatically directed to the primary. This name doesn't change after failover. The geo-failover involves updating the DNS record, so the client connections are redirected to the new primary only after the client DNS cache is refreshed. Because the secondary instance shares the DNS zone with the primary, the client application will be able to reconnect to it using the same server-side SAN certificate. The read-write listener and read-only listener cannot be reached via the [public endpoint for managed instance](public-endpoint-configure.md). 
+For read-write workloads, use `<fog-name>.zone_id.database.windows.net` as the server name. Connections will be automatically directed to the primary. This name doesn't change after failover. The geo-failover involves updating the DNS record, so the new client connections are routed to the new primary only after the client DNS cache is refreshed. Because the secondary instance shares the DNS zone with the primary, the client application will be able to reconnect to it using the same server-side SAN certificate. The existing client connections need to be terminated and then recreated to be routed to the new primary. The read-write listener and read-only listener cannot be reached via the [public endpoint for managed instance](public-endpoint-configure.md). 
 
 ## <a name="using-read-only-listener-to-connect-to-the-secondary-instance"></a> Use the read-only listener (secondary MI) 
 

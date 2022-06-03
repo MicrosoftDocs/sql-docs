@@ -164,24 +164,9 @@ SELECT SERVERPROPERTY ('IsHadrEnabled')
 DBCC TRACESTATUS
 ```
 
-Your SQL Server version should be 15.0.4198.2 or later, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
+Your SQL Server version should be one of the supported versions with service updates applied, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in SSMS.":::
-
-### Set up database recovery and backup
-
-All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server:
-
-```sql
--- Run on SQL Server
--- Set full recovery mode for all databases you want to replicate.
-ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
-GO
-
--- Execute backup for all databases you want to replicate.
-BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
-GO
-```
 
 ## Configure network connectivity
 

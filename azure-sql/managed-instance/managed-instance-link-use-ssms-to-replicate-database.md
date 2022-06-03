@@ -47,7 +47,7 @@ All databases that will be replicated via the link must be in full recovery mode
 1. Ensure Backup-to option has the backup path to a disk with sufficient free storage space available.
 1. Click on OK to complete the full backup.
 
-For more information, see [Create a Full Database Backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
 ## Replicate a database
 
@@ -77,7 +77,7 @@ In the following steps, you use the **New Managed Instance link** wizard in SSMS
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-login-to-azure.png" alt-text="Screenshot that shows the area for signing in to Azure.":::
     
-    - If you are running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you will need to [turn off Internet Explorer ESC on Windows servers](https://docs.microsoft.com/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
+    - If you are running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you will need to [turn off Internet Explorer ESC on Windows servers](/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
 
 1. On the **Login to Azure and select Managed Instance** page, choose the subscription, resource group, and target managed instance from the dropdown lists. Select **Login** and provide login details for SQL Managed Instance. After you've provided all necessary information, select **Next**. 
 

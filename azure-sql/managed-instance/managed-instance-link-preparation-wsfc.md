@@ -39,7 +39,7 @@ On the Windows Server hosting the SQL Server, configure the local single-node cl
 1. Find out your Windows Server name by executing `hostname` command from the command prompt.
 1. Record the output of this command (sample output marked in the image below), or keep this window open as you'll use this name in one of the next steps.
 
-   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-server-hostname.png" alt-text="Screenshot of finding out Windows Server hostname through the command prompt.":::
+   :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-server-hostname.png" alt-text="Screenshot of finding out Windows Server hostname through the command prompt.":::
 
 1. Open Failover Cluster Manager by pressing Windows key + R on the keyboard, type `%windir%\system32\Cluadmin.msc`, and click OK.
 

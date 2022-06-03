@@ -61,7 +61,7 @@ On the Windows Server hosting the SQL Server, configure the local single-node cl
 1. On the Validation screen, wait for the validation to complete.
 1. On the Summary screen, click Finish.
 
-1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluser`, and then click Next.
+1. On the Access Point for Administering the Cluster screen, type your cluster name, for example `WSFCluster`, and then click Next.
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/mi-link-cluster-create-03.png" alt-text="Screenshot of entering the cluster name.":::
 

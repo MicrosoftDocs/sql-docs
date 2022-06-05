@@ -90,11 +90,16 @@ declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
 select
     @IsHadrEnabled as IsHadrEnabled,
     case @IsHadrEnabled
-        when 0 then 'The Always On availability groups is disabled.'
-        when 1 then 'The Always On availability groups is enabled.'
+        when 0 then 'The AlwaysOn availability groups is disabled.'
+        when 1 then 'The AlwaysOn availability groups is enabled.'
         else 'Unknown status.'
     end as 'HadrStatus'
 ```
+
+The above query will display if AlwaysOn availability group is enabled, or not, on your SQL Server.
+
+>[!IMPORTANT]
+> For SQL Server 2016, if you need to enable AlwaysOn availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
 
 If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
@@ -113,9 +118,6 @@ If the availability groups feature isn't enabled, follow these steps to enable i
 
 1. Select **OK** in the dialog
 1. Restart the SQL Server service.
-
->[!IMPORTANT]
-> For SQL Server 2016, you will need to complete extra steps and [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md) before Always On option could be enabled through the SQL Server Configuration Manager. This not required for all higher SQL Server versions.
 
 ### Enable startup trace flags
 

@@ -115,7 +115,7 @@ If the availability groups feature isn't enabled, follow these steps to enable i
 1. Restart the SQL Server service.
 
 >[!IMPORTANT]
-> For SQL Server 2016, you will need to complete extra steps and [prepare your environment for a link with WSFC](managed-instance-link-preparation-wsfc.md) before Always On option could be enabled through the SQL Server Configuration Manager. This not required for all higher SQL Server versions.
+> For SQL Server 2016, you will need to complete extra steps and [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md) before Always On option could be enabled through the SQL Server Configuration Manager. This not required for all higher SQL Server versions.
 
 ### Enable startup trace flags
 

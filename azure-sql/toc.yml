@@ -1290,7 +1290,7 @@
       - name: Prepare environment for link 
         href: managed-instance/managed-instance-link-preparation.md
       - name: SQL Server 2016 prerequisites
-        href: managed-instance/managed-instance-link-preparation.md
+        href: managed-instance/managed-instance-link-preparation-wsfc.md
       - name: Replicate databases in SSMS
         href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
       - name: Fail over databases in SSMS

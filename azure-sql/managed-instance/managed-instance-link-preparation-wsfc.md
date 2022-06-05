@@ -36,14 +36,16 @@ Alternatively, you can also use Server Manager to install WSFC module using the 
 ## Create single-node cluster using Failover Cluster Manager
 
 The next step is to create a cluster on the Windows OS hosting SQL Server. This can be achieved using two methods:
-- Simple PowerShell command, which has certain limitations, and
-- Failover Cluster Manager application, which provides full configuration flexibility.
+1. Simple PowerShell command -- has certain limitations listed below, or
+3. Failover Cluster Manager application -- provides full configuration flexibility.
 
 Both methods are described below.
 
 ### Create cluster using PowerShell
 
-The simplest method to create a local single-node cluster is through executing a simple PowerShell command on the Windows Server OS hosting SQL Server. This method has limitations as it is intended for single-server machines not joined in a domain. Creating a cluster using this method will not allow you to administer it using the graphical user interface Failover Cluster Manager. If you need a quick way to create a cluster on your machine, execute the following PowerShell.
+The simplest method to create a local single-node cluster is through executing a simple PowerShell command on the Windows Server OS hosting SQL Server. This method has limitations as it is intended for single-server machines not joined in a domain. Creating a cluster using this method will not allow you to administer it using the graphical user interface Failover Cluster Manager.
+
+If you need a quick way to create a single-node cluster on your machine, execute the following PowerShell command:
 
 ```powershell
 # Run as Administrator in PowerShell on Windows Server OS hosting the SQL Server
@@ -119,7 +121,10 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
 ## Grant permissions in SQL Server for WSFC
 
-Next, grant permission in SQL Server to `NT Authority \ System` system account to create Availability Groups using WSFC. Execute the following T-SQL script on your SQL Server:
+>[!IMPORTANT]
+> Granting permissions in SQL Server 2016 to Windows OS system account is mandatory. These permissions enable the SQL Server to work with Windows Server Failover Cluster. Without these permissions, creating an Availability Group on SQL Server 2016 will fail.
+
+Next, grant permissions on SQL Server to `NT Authority \ System` Windows host OS system account, to enable creation of Availability Groups in SQL Server using WSFC. Execute the following T-SQL script on your SQL Server:
 
 1. Log in to your SQL Server, using a client such is SSMS
 2. Execute the following T-SQL script

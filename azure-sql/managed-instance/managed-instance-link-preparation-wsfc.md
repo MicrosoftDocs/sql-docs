@@ -11,13 +11,13 @@ ms.topic: guide
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/03/2022
+ms.date: 06/05/2022
 ---
 
-# Prepare your environment for a link with WSFC - Azure SQL Managed Instance
+# Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
+This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
 Extra steps described in this guide are mandatory for SQL Server 2016 only, as this versions of SQL Server cannot enable Always On option without Windows Server Failover Cluster present on the host Windows OS machine. This step is not required for SQL Servers 2019-2022.
 

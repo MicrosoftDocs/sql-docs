@@ -144,19 +144,27 @@ First, create a master key on SQL Server, if not already present. Insert your pa
 -- Create a master key encryption password
 -- Keep the password confidential and in a secure place
 USE MASTER
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>'
+IF NOT EXISTS (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)
+BEGIN
+	PRINT 'Creating master key.' + CHAR(13) + 'Keep the password confidential and in a secure place.'
+	CREATE MASTER KEY ENCRYPTION BY PASSWORD = <strong_password>'
+END
+ELSE
+	PRINT 'Master key already exists.'
 GO
 ```
+
 
 Then generate an authentication certificate on SQL Server. Adjust the certificate expiry date in the script below in place of `@cert_expiry_date` variable. Record this date and set a self-reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
 
 ```sql
 -- Create the SQL Server certificate for the instance link
 USE MASTER
-GO
 
 -- Customize SQL Server certificate expiration date by adjusting the date below
 DECLARE @cert_expiry_date AS varchar(max)='03/30/2025'
+
+-- Build the query to generate the certificate
 DECLARE @sqlserver_certificate_name NVARCHAR(MAX) = N'Cert_' + @@servername  + N'_endpoint'
 DECLARE @sqlserver_certificate_subject NVARCHAR(MAX) = N'Certificate for ' + @sqlserver_certificate_name
 DECLARE @create_sqlserver_certificate_command NVARCHAR(MAX) = N'CREATE CERTIFICATE [' + @sqlserver_certificate_name + '] ' + char (13) +

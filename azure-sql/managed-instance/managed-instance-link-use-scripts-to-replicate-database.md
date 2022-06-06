@@ -84,14 +84,14 @@ Certificate-based trust is the only supported way to secure database mirroring e
 
 Here's an overview of the process to secure database mirroring endpoints for both SQL Server and SQL Managed Instance:
 
-1. Import Azure trusted public root certificate authority keys to SQL Server
+1. Import Azure-trusted public root certificate authority keys to SQL Server
 1. Generate a certificate on SQL Server and obtain its public key.
 1. Obtain a public key of the SQL Managed Instance certificate.
 1. Exchange the public keys between SQL Server and SQL Managed Instance.
 
 The following sections describe these steps in detail.
 
-### Import Azure trusted public root certificate authority keys to SQL Server
+### Import Azure-trusted public root certificate authority keys to SQL Server
 
 Importing public root certificate keys of Microsoft and DigiCert certificate authorities (CA) to SQL Server is a prerequisite for your SQL Server to trust certificates issued by Azure for database.windows.net domains.
 

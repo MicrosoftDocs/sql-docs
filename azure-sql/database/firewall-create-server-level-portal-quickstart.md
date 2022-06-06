@@ -41,11 +41,11 @@ Follow these steps to create a server-level, IP firewall rule for a specific, cl
 
 2. Copy the fully qualified server name. You will use it when you connect to your server and its databases in other quickstarts.
 
-   ![server name](./media/firewall-create-server-level-portal-quickstart/server-name.png)
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-name.png" alt-text="A screenshot that shows where to copy your server name.":::
 
 3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
 
-   ![server-level IP firewall rule](./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png)
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png" alt-text="A screenshot that shows configuration of a server-level IP firewall rule.":::
 
 4. Choose **Add client IP** on the toolbar to add your current IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or for a range of IP addresses.
 

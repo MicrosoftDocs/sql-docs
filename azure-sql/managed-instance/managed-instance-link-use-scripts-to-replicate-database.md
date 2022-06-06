@@ -84,16 +84,16 @@ Certificate-based trust is the only supported way to secure database mirroring e
 
 Here's an overview of the process to secure database mirroring endpoints for both SQL Server and SQL Managed Instance:
 
-1. Import Azure trusted root authority certificates to SQL Server
+1. Import Azure trusted public root certificate authority keys to SQL Server
 1. Generate a certificate on SQL Server and obtain its public key.
 1. Obtain a public key of the SQL Managed Instance certificate.
 1. Exchange the public keys between SQL Server and SQL Managed Instance.
 
 The following sections describe these steps in detail.
 
-### Import Azure trusted root authority certificates to SQL Server
+### Import Azure trusted public root certificate authority keys to SQL Server
 
-Importing the public root certificate keys of Microsoft and DigiCert certificate authorities (CA) to SQL Server is a prerequisite for your SQL Server to trust certificates issued by Azure for database.windows.net domains.
+Importing public root certificate keys of Microsoft and DigiCert certificate authorities (CA) to SQL Server is a prerequisite for your SQL Server to trust certificates issued by Azure for database.windows.net domains.
 
 First, import Microsoft PKI root-authority certificate on SQL Server:
 
@@ -137,7 +137,7 @@ GO
 
 ### Create a certificate on SQL Server and import its public key to SQL Managed Instance
 
-First, create a master key on SQL Server and generate an authentication certificate. Adjust the certificate expiry date - for how long this certificate will be valid, in the `@cert_expiry_date` variable in the code below. Record this date and set a reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
+First, create a master key on SQL Server, if not already present. Insert your password in place of `<strong_password>` below, and keep it in a confidential and secure place.
   
 ```sql
 -- Run on SQL Server
@@ -146,10 +146,15 @@ First, create a master key on SQL Server and generate an authentication certific
 USE MASTER
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>'
 GO
+```
 
+Then generate an authentication certificate on SQL Server. Adjust the certificate expiry date in the script below in place of `@cert_expiry_date` variable. Record this date and set a self-reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
+
+```sql
 -- Create the SQL Server certificate for the instance link
 USE MASTER
 GO
+
 -- Customize SQL Server certificate expiration date by adjusting the date below
 DECLARE @cert_expiry_date AS varchar(max)='03/30/2025'
 DECLARE @sqlserver_certificate_name NVARCHAR(MAX) = N'Cert_' + @@servername  + N'_endpoint'
@@ -157,8 +162,14 @@ DECLARE @sqlserver_certificate_subject NVARCHAR(MAX) = N'Certificate for ' + @sq
 DECLARE @create_sqlserver_certificate_command NVARCHAR(MAX) = N'CREATE CERTIFICATE [' + @sqlserver_certificate_name + '] ' + char (13) +
 '	WITH SUBJECT = ''' + @sqlserver_certificate_subject + ''',' + char (13) +
 '	EXPIRY_DATE = '''+ @cert_expiry_date + ''''+ char (13)
-PRINT (@create_sqlserver_certificate_command)
-EXEC sp_executesql @stmt = @create_sqlserver_certificate_command
+IF NOT EXISTS (SELECT name from sys.certificates WHERE name = @sqlserver_certificate_name)
+BEGIN
+	PRINT (@create_sqlserver_certificate_command)
+	-- Create the SQL Server certificate for the instance link
+	EXEC sp_executesql @stmt = @create_sqlserver_certificate_command
+END
+ELSE
+	PRINT 'Certificate ' + @sqlserver_certificate_name + ' already exists.'
 GO
 ```
 

@@ -11,7 +11,7 @@ ms.topic: guide
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/05/2022
+ms.date: 06/06/2022
 ---
 
 # Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link
@@ -33,7 +33,7 @@ Install-WindowsFeature -Name Failover-Clustering –IncludeManagementTools
 
 Alternatively, you can also use Server Manager to install WSFC module using the graphical user interface.
 
-## Create single-node cluster using Failover Cluster Manager
+## Create single-node cluster
 
 The next step is to create a cluster on the Windows OS hosting SQL Server. This can be achieved using two methods:
 1. Simple PowerShell command -- has certain limitations listed below, or

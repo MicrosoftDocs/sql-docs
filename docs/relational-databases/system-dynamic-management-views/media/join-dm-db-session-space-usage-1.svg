@@ -11,14 +11,15 @@
 		C29.356-12.266,32-6.363,32,0S29.356,12.266,26.096,12.266z"/>
 	<g>
 		
-			<linearGradient id="SVGID_00000173129645219827019730000001616812338316061863_" gradientUnits="userSpaceOnUse" x1="-31.461" y1="-6.1136" x2="-19.2338" y2="6.1136">
+			<linearGradient id="SVGID_00000060730131145432870730000005263602058674641810_" gradientUnits="userSpaceOnUse" x1="-31.461" y1="-6.1136" x2="-19.2338" y2="6.1136">
 			<stop  offset="0" style="stop-color:#B3B4B4"/>
 			<stop  offset="1" style="stop-color:#4F4F4F"/>
 		</linearGradient>
-		<ellipse fill="url(#SVGID_00000173129645219827019730000001616812338316061863_)" cx="-25.347" cy="0" rx="5.575" ry="10.879"/>
+		<ellipse fill="url(#SVGID_00000060730131145432870730000005263602058674641810_)" cx="-25.347" cy="0" rx="5.575" ry="10.879"/>
 	</g>
 </symbol>
 <g id="Shapes">
+	<rect y="0" fill="#FFFFFF" width="510.4" height="105.6"/>
 	<rect fill="none" stroke="#005CA1" width="510.4" height="105.6"/>
 	<g id="Wrench_tool_x28_s_x29_">
 	</g>

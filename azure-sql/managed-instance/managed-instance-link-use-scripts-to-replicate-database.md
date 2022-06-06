@@ -5,7 +5,6 @@ description: Learn how to use a Managed Instance link with T-SQL and PowerShell 
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: 
 ms.devlang: 
 ms.topic: guide
 author: sasapopo
@@ -64,10 +63,10 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 | Terminology	| Description | How to find out |
 | :----| :------------- | :------------- | 
-| SQL Server name | Short single-word SQL Server name. For example: *sqlserver1*. | Run `SELECT @@SERVERNAME` from T-SQL. |
-| SQL Server FQDN | Fully qualified domain name of your SQL Server instance. For example: *sqlserver1.domain.com*. | See your network (DNS) configuration on-premises, or the server name if you're using an Azure virtual machine (VM). |
-| SQL Managed Instance name | Short single-word SQL Managed Instance name. For example: *managedinstance1*. | See the name of your managed instance in the Azure portal. |
-| SQL Managed Instance FQDN | Fully qualified domain name of your SQL Managed Instance name. For example: *managedinstance1.6d710bcf372b.database.windows.net*. | See the host name on the SQL Managed Instance overview page in the Azure portal. |
+| SQL Server name | Short, single-word SQL Server name. For example: *sqlserver1*. | Run `SELECT @@SERVERNAME` from T-SQL. |
+| SQL Server FQDN | Fully qualified domain name (FQDN) of your SQL Server. For example: *sqlserver1.domain.com*. | See your network (DNS) configuration on-premises, or the server name if you're using an Azure virtual machine (VM). |
+| SQL Managed Instance name | Short, single-word SQL Managed Instance name. For example: *managedinstance1*. | See the name of your managed instance in the Azure portal. |
+| SQL Managed Instance FQDN | Fully qualified domain name (FQDN) of your SQL Managed Instance. For example: *managedinstance1.6d710bcf372b.database.windows.net*. | See the host name on the SQL Managed Instance overview page in the Azure portal. |
 | Resolvable domain name | DNS name that can be resolved to an IP address. For example, running *nslookup sqlserver1.domain.com* should return an IP address such as 10.0.1.100. | Use nslookup from the command prompt. |
 
 ## Establish trust between instances

@@ -19,7 +19,7 @@ ms.date: 06/06/2022
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Extra steps described in this guide are mandatory for SQL Server 2016 only, as this versions of SQL Server cannot enable Always On option without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable Always On on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
+Extra steps described in this guide are mandatory for SQL Server 2016 only, as this version of SQL Server can't enable Always On option without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable Always On on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
 
 ## Install WSFC module on Windows Server
 
@@ -43,7 +43,7 @@ Both methods are described below.
 
 ### Create cluster using PowerShell
 
-The simplest method to create a local single-node cluster is through executing a simple PowerShell command on the Windows Server OS hosting SQL Server. This method has limitations as it is intended for single-server machines not joined in a domain. Creating a cluster using this method will not allow you to administer it using the graphical user interface Failover Cluster Manager.
+The simplest method to create a local single-node cluster is through executing a simple PowerShell command on the Windows Server OS hosting SQL Server. This method has limitations as it is intended for single-server machines not joined in a domain. Creating a cluster using this method won't allow you to administer it using the graphical user interface Failover Cluster Manager.
 
 If you need a quick way to create a single-node cluster on your machine, execute the following PowerShell command:
 
@@ -101,7 +101,7 @@ With the above steps, you've created the local single-node Windows Server Failov
 To verify that single-node WSFC cluster has been created, follow these steps:
 
 1. In the Failover Cluster Manager, click on the cluster name on the left-hand side, and expand it by clicking on the `>` arrow.
-   - In case that you've closed and re-opened Failover Cluster Manager after its creation, the cluster name might not show up on the left-hand side (see the image below).
+   - In case that you've closed and reopened Failover Cluster Manager after its creation, the cluster name might not show up on the left-hand side (see the image below).
 1. Click on Connect to Cluster on the right-hand side, choose to connect to `<Cluster on this server...>`, and click OK.
 1. Click on Nodes.
 

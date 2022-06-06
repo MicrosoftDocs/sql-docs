@@ -210,6 +210,29 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 
 [Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
+## Master database zone redundant availability
+In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, Backup policies, firewall rules, auditing rules, threat detection policies, and auto-failover groups. When you create a server, you provide a server login account and password that has administrative rights to the master database on that server and all databases created on that server. 
+
+When a database with zone redundant configuration is added to a new server or an existing server then the master database associated with the server is automatically made zone redundant. You can use the following commands to check the “ZoneRedundant” property for master database.
+
+# [Azure PowerShell](#tab/azure-powershell)
+
+Use the following example command to check the value of "ZoneRedundant" property for master database.
+
+```powershell
+Get-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "myServerName" -DatabaseName "master"
+```
+
+# [Azure CLI](#tab/azure-cli)
+
+Use the following example command to check the value of "ZoneRedundant" property for master database.
+
+```azurecli
+az sql db show --resource-group "myResourceGroup" --server "myServerName" --name master
+```
+
+When you create a server without any database then master database associated with the server is not zone redundant.
+
 ## Testing application fault resiliency
 
 High availability is a fundamental part of the SQL Database and SQL Managed Instance platform that works transparently for your database application. However, we recognize that you may want to test how the automatic failover operations initiated during planned or unplanned events would impact an application before you deploy it to production. You can manually trigger a failover by calling a special API to restart a database, an elastic pool, or a managed instance. In the case of a zone-redundant serverless or provisioned General Purpose database or elastic pool, the API call would result in redirecting client connections to the new primary in an Availability Zone different from the Availability Zone of the old primary. So in addition to testing how failover impacts existing database sessions, you can also verify if it changes the end-to-end performance due to changes in network latency. Because the restart operation is intrusive and a large number of them could stress the platform, only one failover call is allowed every 15 minutes for each database, elastic pool, or managed instance.

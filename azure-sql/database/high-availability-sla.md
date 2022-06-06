@@ -211,9 +211,14 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 [Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 ## Master database zone redundant availability
-In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, Backup policies, firewall rules, auditing rules, threat detection policies, and auto-failover groups. When you create a server, you provide a server login account and password that has administrative rights to the master database on that server and all databases created on that server. 
 
-When a database with zone redundant configuration is added to a new server or an existing server then the master database associated with the server is automatically made zone redundant. You can use the following commands to check the “ZoneRedundant” property for master database.
+In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, Backup policies, firewall rules, auditing rules, threat detection policies, and auto-failover groups. 
+
+When you create a server, you provide a server login account and password that has administrative rights to the master database on that server, as well as all databases created on that server. 
+
+When a database with a zone redundant configuration is added to a new server or an existing server, the master database associated with the server is automatically made zone redundant. When you create a server without any database then the master database associated with the server is **not zone redundant.**
+
+You can use Azure PowerShell or the Azure CLI to check the `ZoneRedundant` property for the master database: 
 
 # [Azure PowerShell](#tab/azure-powershell)
 
@@ -231,7 +236,7 @@ Use the following example command to check the value of "ZoneRedundant" property
 az sql db show --resource-group "myResourceGroup" --server "myServerName" --name master
 ```
 
-When you create a server without any database then master database associated with the server is not zone redundant.
+---
 
 ## Testing application fault resiliency
 

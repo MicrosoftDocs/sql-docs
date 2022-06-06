@@ -147,7 +147,7 @@ USE MASTER
 IF NOT EXISTS (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)
 BEGIN
 	PRINT 'Creating master key.' + CHAR(13) + 'Keep the password confidential and in a secure place.'
-	CREATE MASTER KEY ENCRYPTION BY PASSWORD = <strong_password>'
+	CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>'
 END
 ELSE
 	PRINT 'Master key already exists.'

@@ -233,4 +233,5 @@ FROM sys.configurations WHERE [name] = 'max server memory (MB)';
 - [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
- [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
+- [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
+

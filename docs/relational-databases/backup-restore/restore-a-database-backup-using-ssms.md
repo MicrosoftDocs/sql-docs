@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore a Database Backup Using SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

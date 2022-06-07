@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "thesaurus [full-text search], configuring"
   - "thesaurus [full-text search]"
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---

@@ -12,8 +12,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.xml_schema_attributes catalog view"
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: ""
 ms.date: "06/10/2016"

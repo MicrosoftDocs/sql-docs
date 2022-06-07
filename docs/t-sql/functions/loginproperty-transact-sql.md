@@ -1,14 +1,16 @@
 ---
+title: "LOGINPROPERTY (Transact-SQL)"
 description: "LOGINPROPERTY (Transact-SQL)"
-title: "LOGINPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"
   - "IsLockedIsMustChange"
@@ -25,15 +27,12 @@ f1_keywords:
   - "BadPasswordTime"
   - "IsLockedIsMustChange_TSQL"
   - "LOGINPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default database"
   - "LOGINPROPERTY function"
-ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 # LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

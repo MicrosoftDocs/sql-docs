@@ -59419,6 +59419,11 @@
       "source_path": "azure-sql/database/ledger-verify-database.md",
       "redirect_url": "/sql/relational-databases/security/ledger/ledger-verify-database",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+      "redirect_url": "/sql/linux/quickstart-sql-server-containers-kubernetes",
+      "redirect_document_id": true
     }
   ]
 }

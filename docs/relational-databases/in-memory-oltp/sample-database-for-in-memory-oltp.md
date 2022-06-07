@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: wiassaf
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP

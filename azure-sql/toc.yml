@@ -1289,12 +1289,14 @@
       items:
       - name: Prepare environment for link 
         href: managed-instance/managed-instance-link-preparation.md
+      - name: SQL Server 2016 prerequisites
+        href: managed-instance/managed-instance-link-preparation-wsfc.md
       - name: Replicate databases in SSMS
         href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
-      - name: Fail over databases in SSMS
-        href: managed-instance/managed-instance-link-use-ssms-to-failover-database.md
       - name: Replicate databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-replicate-database.md
+      - name: Fail over databases in SSMS
+        href: managed-instance/managed-instance-link-use-ssms-to-failover-database.md
       - name: Fail over databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-failover-database.md
       - name: Best practices
@@ -1397,8 +1399,8 @@
         items:
         - name: Dedicated host
           href: virtual-machines/windows/dedicated-host.md
-        - name: Extend support for SQL 2008 & R2
-          href: virtual-machines/windows/sql-server-2008-extend-end-of-support.md
+        - name: Extend support for SQL Server
+          href: virtual-machines/windows/sql-server-extend-end-of-support.md
     - name: How-to guides
       items:
       - name: Connect to SQL Server VM

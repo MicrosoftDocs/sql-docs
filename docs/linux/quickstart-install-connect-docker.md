@@ -155,7 +155,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon). |
-   | **mcr.microsoft.com/mssql/server:*nnnn*-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image, where *nnnn* is the version tag. |
+   | **mcr.microsoft.com/mssql/server:2017-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image. |
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -284,7 +284,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon). |
-   | **mcr.microsoft.com/mssql/server:*nnnn*-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image, where *nnnn* is the version tag. |
+   | **mcr.microsoft.com/mssql/server:2019-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image. |
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -413,7 +413,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon). |
-   | **mcr.microsoft.com/mssql/server:*nnnn*-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image, where *nnnn* is the version tag. |
+   | **mcr.microsoft.com/mssql/server:2022-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image. |
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -460,6 +460,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
 ::: moniker-end
 
+<!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 ## <a id="sapassword"></a> Change the system administrator password
 
 The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance that gets created during setup. After you create your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
@@ -566,7 +567,7 @@ The following steps create a new database named `TestDB`.
 
 Next create a new table, `Inventory`, and insert two new rows.
 
-1. From the **sqlcmd** command prompt, switch context to the new `TestDB` database:
+1. From the *sqlcmd* command prompt, switch context to the new `TestDB` database:
 
    ```sql
    USE TestDB;
@@ -624,7 +625,7 @@ The following steps use **sqlcmd** outside of your container to connect to [!INC
 
 1. Find the IP address for your container's host machine, using `ifconfig` or `ip addr`.
 
-1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install sqlcmd on Windows](../tools/sqlcmd-utility.md) or [Install sqlcmd on Linux](sql-server-linux-setup-tools.md).
+1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install **sqlcmd** on Windows](../tools/sqlcmd-utility.md) or [Install **sqlcmd** on Linux](sql-server-linux-setup-tools.md).
 
 1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example, the port is the same as port 1433 on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 

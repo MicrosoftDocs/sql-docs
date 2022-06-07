@@ -1,29 +1,28 @@
 ---
+title: "DB_ID (Transact-SQL)"
 description: "DB_ID (Transact-SQL)"
-title: "DB_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "DB_ID_TSQL"
   - "DB_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing database ID numbers"
   - "IDs [SQL Server], databases"
   - "database IDs [SQL Server]"
   - "identification numbers [SQL Server], databases"
   - "displaying database ID numbers"
   - "DB_ID function"
-ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

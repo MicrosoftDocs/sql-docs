@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "DBCC SHRINKFILE statement"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, pmasl
+ms.reviewer: umajay, dpless
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
 ---
 # DBCC SHRINKFILE (Transact-SQL)
@@ -113,8 +113,8 @@ The wait at low priority feature reduces lock contention. For more information, 
 
 This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operations](../statements/alter-table-transact-sql.md#wait_at_low_priority), with some differences.
 
- - You cannot specify MAX_DURATION. The wait duration is 60000 milliseconds (1 minute).
- - You cannot specify ABORT_AFTER_WAIT option NONE.
+- You cannot modify MAX_DURATION. The wait duration is 60000 milliseconds (1 minute).
+- You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
 
@@ -122,13 +122,16 @@ When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requ
 
 If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will quietly exit. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
 
-#### ABORT_AFTER_WAIT = [**SELF** | BLOCKERS } ]
+#### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
 
 SELF
-Exit the online index rebuild DDL operation currently being executed without taking any action. The option SELF cannot be used with a MAX_DURATION of 0.
+
+Exit the shrink file operation currently being executed without taking any action.
+
 
 BLOCKERS
-Kill all user transactions that block the online index rebuild DDL operation so that the operation can continue. The BLOCKERS option requires the login to have ALTER ANY CONNECTION permission.
+
+Kill all user transactions that block the shrink file operation so that the operation can continue. The BLOCKERS option requires the login to have ALTER ANY CONNECTION permission.
 
 ## Result sets  
 The following table describes result set columns.

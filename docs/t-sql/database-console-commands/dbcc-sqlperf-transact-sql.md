@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC SQLPERF (Transact-SQL)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fulltext_index_columns catalog view"
   - "full-text indexes [SQL Server], properties"
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

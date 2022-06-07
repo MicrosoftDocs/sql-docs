@@ -1,30 +1,30 @@
 ---
-description: "SELECT @local_variable (Transact-SQL)"
 title: SELECT @local_variable (Transact-SQL)
-ms.custom: ""
+description: "SELECT @local_variable (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "11/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "variable_TSQL"
   - "@loca_variable"
   - "@local"
   - "variable"
   - "@loca_variable_TSQL"
   - "@local_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "variables [SQL Server], assigning"
   - "SELECT statement [SQL Server], @local_variable"
   - "@local_variable"
   - "local variables [SQL Server]"
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017"
 ---
 
 # SELECT @local_variable (Transact-SQL)

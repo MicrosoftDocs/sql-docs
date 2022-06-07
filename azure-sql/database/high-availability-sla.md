@@ -107,17 +107,17 @@ For more information on high availability in Hyperscale, see [Database High Avai
 
 ## Hyperscale service tier zone redundant availability (Preview)
 
-Zone redundancy for the Azure SQL Database Hyperscale service tier is [now in public preview](https://aka.ms/zrhyperscale). Enabling this configuration ensures zone-level resiliency through replication across Availability Zones for all Hyperscale layers. By selecting zone-redundancy, you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.
+Zone redundancy for the Azure SQL Database Hyperscale service tier is [now in public preview](https://aka.ms/zrhyperscale). Enabling this configuration ensures zone-level resiliency through replication across Availability Zones for all Hyperscale layers. By selecting zone-redundancy, you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. 
 
 Consider the following limitations: 
 
-- Currently, only the following Azure regions are supported: UK South, Brazil South, West US 2, Japan East, North Europe, Southeast Asia, Canada Central, Central US, South Central US, France Central, Australia East, Germany West Central, East Asia, Korea Central, Norway East, and West US 3.
-- Zone redundant configuration can only be specified during database creation. This setting cannot be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation. Additionally, when using one of these update options the target database will not have the historical backup data from the source database for point-in-time restore.
-- Named replicas are not supported.
-- Only [zone-redundant backup](automated-backups-overview.md) is supported.
+- Zone redundant configuration can only be specified during database creation. This setting cannot be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation.
 - Only Gen5 hardware is supported.
+- Named replicas are not currently supported.
+- Only [zone-redundant backup](automated-backups-overview.md) is currently supported.
 - [Geo-Restore](recovery-using-backups.md#geo-restore) is not currently supported.
 - Zone redundancy cannot currently be specified when migrating an existing database from another Azure SQL Database service tier to Hyperscale.
+- Preview is not yet available in US Gov Virginia & China North 3 regions. All others Azure regions that have [Availability Zones](/azure/availability-zones/az-overview#azure-regions-with-availability-zones) support zone redundant Hyperscale database. 
 
 > [!IMPORTANT]
 > At least 1 high availability compute replica and the use of zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
@@ -206,9 +206,39 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 
 * * *
 
+## Master database zone redundant availability
+
+In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, firewall rules, auditing rules, threat detection policies, and auto-failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the master database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), is also stored in the master database.
+
+When a database with a zone-redundant configuration is created on a logical server, the master database associated with the server is automatically made zone-redundant as well. This ensures that in a zonal outage, applications using the database remain unaffected because features dependent on the master database, such as logins and firewall rules, are still available. Making the master database zone-redundant is an asynchronous process and will take some time to finish in the background. 
+
+When none of the databases on a server are zone-redundant, or when you create an empty server, then the master database associated with the server is **not zone-redundant**.
+
+You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/2021-11-01-preview/databases/get) to check the `ZoneRedundant` property for the master database: 
+
+# [Azure PowerShell](#tab/azure-powershell)
+
+Use the following example command to check the value of "ZoneRedundant" property for master database.
+
+```powershell
+Get-AzSqlDatabase -ResourceGroupName "myResourceGroup" -ServerName "myServerName" -DatabaseName "master"
+```
+
+# [Azure CLI](#tab/azure-cli)
+
+Use the following example command to check the value of "ZoneRedundant" property for master database.
+
+```azurecli
+az sql db show --resource-group "myResourceGroup" --server "myServerName" --name master
+```
+
+---
+
 ## Accelerated Database Recovery (ADR)
 
 [Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+
+
 
 ## Testing application fault resiliency
 

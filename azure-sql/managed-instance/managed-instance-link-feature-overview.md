@@ -82,7 +82,7 @@ The link feature also facilitates migrating from SQL Server to SQL Managed Insta
 - The most performant minimum downtime migration compared to all other solutions available today
 - True online migration to SQL Managed Instance in any service tier 
 
-Since the link feature enables minimum downtime migration, you can migrate to your managed instance while maintaining your primary workload online. While online migration was possible to achieve previously with other solutions when migrating to the general purpose service tier, the link feature now also allows for true online migrations to the business critical service tier as well. 
+Since the link feature enables minimum downtime migration, you can migrate to your managed instance while maintaining your primary workload online. While online migration was possible to achieve previously with other solutions when migrating to the General Purpose service tier, the link feature now also allows for true online migrations to the Business Critical service tier as well. 
 
 ## How it works
 

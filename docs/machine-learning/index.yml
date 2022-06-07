@@ -9,10 +9,13 @@ metadata:
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page 
-  author: dphansen
-  ms.author: davidph
-  ms.date: 09/10/2021
-
+  ms.custom:
+  - event-tier1-build-2022
+  - event-tier1-build-2022
+  - event-tier1-build-2022
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.date: 05/24/2022
 landingContent:
   - title: Machine learning on SQL Server
     linkLists:
@@ -22,10 +25,10 @@ landingContent:
             url: sql-server-machine-learning-services.md
       - linkListType: get-started
         links:
-          - text: Install Machine Learning Services on Windows
-            url: install/sql-machine-learning-services-windows-install.md
+          - text: Install Machine Learning Services on Windows 
+            url: install/sql-machine-learning-services-windows-install-sql-2022.md
           - text: Install Machine Learning Services on Linux
-            url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+            url: ../linux/sql-server-linux-setup-machine-learning-sql-2022.md?toc=/sql/machine-learning/toc.json
       - linkListType: video
         links:
           - text: How to Execute R/Python in SQL Server with Machine Learning Services

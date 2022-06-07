@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_plan_stats management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # sys.dm_exec_query_plan_stats (Transact-SQL)

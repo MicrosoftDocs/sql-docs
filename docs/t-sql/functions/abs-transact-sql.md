@@ -1,26 +1,26 @@
 ---
 title: "ABS (Transact-SQL)"
 description: "ABS (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ABS_TSQL"
   - "ABS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "values [SQL Server], positive"
   - "values [SQL Server], absolute"
   - "ABS function"
   - "absolute positive value"
-author: markingmyname
-ms.author: maghan
-ms.custom: ""
-ms.date: "07/24/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # ABS (Transact-SQL)

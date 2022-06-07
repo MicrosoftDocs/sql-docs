@@ -1,19 +1,19 @@
 ---
+title: "PERMISSIONS (Transact-SQL)"
 description: "PERMISSIONS (Transact-SQL)"
-title: "PERMISSIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "PERMISSIONS_TSQL"
   - "PERMISSIONS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], verifying"
   - "current permission status"
   - "users [SQL Server], permissions status"
@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "verifying permission status"
   - "testing permissions"
   - "PERMISSIONS function"
-ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

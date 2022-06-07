@@ -1,23 +1,22 @@
 ---
-title: "FORMAT (Transact-SQL) | Microsoft Docs"
+title: "FORMAT (Transact-SQL)"
 description: "Transact-SQL reference for the FORMAT function."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FORMAT_TSQL"
   - "FORMAT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FORMAT function"
-ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 # FORMAT (Transact-SQL)
 

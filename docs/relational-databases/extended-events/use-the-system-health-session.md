@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], system_health session"
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the system_health Session

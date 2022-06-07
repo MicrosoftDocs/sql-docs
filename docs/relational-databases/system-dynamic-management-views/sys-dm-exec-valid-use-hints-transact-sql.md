@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_valid_use_hints management view"
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

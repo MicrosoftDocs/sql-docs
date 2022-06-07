@@ -5,8 +5,8 @@ services: sql-database
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 2/17/2022
 ---

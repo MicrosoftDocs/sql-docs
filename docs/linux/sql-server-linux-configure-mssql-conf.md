@@ -123,7 +123,7 @@ To change this setting, use the following steps:
 
 ### <a id="dbmail"></a> Set the default database mail profile for SQL Server on Linux
 
-The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
+The **sqlagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
@@ -131,7 +131,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 
 ### <a id="agenterrorlog"></a> SQL Agent error logs
 
-The **sqlpagent.errorlogfile** and **sqlpagent.errorlogginglevel** settings allows you to set the SQL Agent log file path and logging level respectively. 
+The **sqlagent.errorlogfile** and **sqlagent.errorlogginglevel** settings allows you to set the SQL Agent log file path and logging level respectively. 
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>

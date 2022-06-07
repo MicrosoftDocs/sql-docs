@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "sys.dm_fts_fdhosts dynamic management view"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7 
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_fdhosts (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns information on the current activity of the filter daemon host or hosts on the server instance.  
   

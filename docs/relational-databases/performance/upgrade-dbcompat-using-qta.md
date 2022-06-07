@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "lightweight query profiling"
   - "lightweight profiling"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 

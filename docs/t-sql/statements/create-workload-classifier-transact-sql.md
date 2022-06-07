@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 01/24/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
+ms.reviewer: "wiassaf"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 

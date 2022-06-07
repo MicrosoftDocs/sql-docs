@@ -212,11 +212,15 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 
 ## Master database zone redundant availability
 
-In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, Backup policies, firewall rules, auditing rules, threat detection policies, and auto-failover groups. 
+In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, firewall rules, auditing rules, threat detection policies, and auto-failover groups. 
+
+Data related to some of these features, such as logins and firewall rules, is stored in the master database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md), is also stored in the master database.
 
 When you create a server, you provide a server login account and password that has administrative rights to the master database on that server, as well as all databases created on that server. 
 
-When a database with a zone redundant configuration is added to a new server or an existing server, the master database associated with the server is automatically made zone redundant. When you create a server without any database then the master database associated with the server is **not zone redundant.**
+When a database with a zone-redundant configuration is created on a logical server, the master database associated with the server is automatically made zone-redundant as well. This ensures that in a zonal outage, applications using the database remain unaffected because features dependent on the master database, such as logins and firewall rules, are still available.
+
+When none of the databases on a server are zone-redundant, or when you create an empty server, then the master database associated with the server is **not zone-redundant**.
 
 You can use Azure PowerShell or the Azure CLI to check the `ZoneRedundant` property for the master database: 
 

@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # sys.dm_exec_describe_first_result_set (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This dynamic management function takes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement as a parameter and describes the metadata of the first result set for the statement.  
   

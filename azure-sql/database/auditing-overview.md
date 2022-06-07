@@ -133,6 +133,9 @@ You have the option of choosing a different storage destination for this auditin
 
 To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved, and then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
 
+> [!NOTE] 
+> If you are deploying from the Azure portal, be sure that the storage account is in the same region as your database and server. If you are deploying through other methods, the storage account can be in any region.
+
 - The default value for retention period is 0 (unlimited retention). You can change this value by moving the **Retention (Days)** slider in **Advanced properties** when configuring the storage account for auditing.
   - If you change retention period from 0 (unlimited retention) to any other value, please note that retention will only apply to logs written after retention value was changed (logs written during the period when retention was set to unlimited are preserved, even after retention is enabled).
 

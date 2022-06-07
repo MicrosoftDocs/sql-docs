@@ -61,7 +61,7 @@ Ensure that your SQL Server version has the appropriate servicing update install
 
 ### Create a database master key in the master database
 
-Create database master key in the master database by running the following T-SQL script on SQL Server:
+Create database master key in the master database, if not already present. Insert your password in place of `<strong_password>` in the script below, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server

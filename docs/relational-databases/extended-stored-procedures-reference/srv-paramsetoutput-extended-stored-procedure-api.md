@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramsetoutput"
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

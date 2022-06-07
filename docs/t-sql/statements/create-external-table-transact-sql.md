@@ -1,8 +1,9 @@
 ---
-description: "CREATE EXTERNAL TABLE (Transact-SQL)"
+description: "CREATE EXTERNAL TABLE (Transact-SQL) creates an external table."
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
-ms.custom: ""
-ms.date: 2/15/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 5/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -106,13 +107,13 @@ CREATE EXTERNAL TABLE supports the ability to configure column name, data type, 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
 #### LOCATION = '*folder_or_filepath*'
-Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
+Specifies the folder or the file path and file name for the actual data in Hadoop or Azure Blob Storage. Additionally, S3-compatible object storage is supported starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]). The location starts from the root folder. The root folder is the data location specified in the external data source.
 
 In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it doesn't already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a file in a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return _hidden.txt because it's a hidden file.
 
 ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
 
@@ -419,6 +420,8 @@ WITH
 
 ### H. Create an external table for SQL Server
 
+Before you create a database scoped credential, the user database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) and [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+
 ```sql
      -- Create a Master Key
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
@@ -430,7 +433,11 @@ WITH
      CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
      WITH IDENTITY = 'username', Secret = 'password';
     GO
+```
 
+Create a new external data source named `SQLServerInstance`, and external table named `sqlserver.customer`:
+
+```sql
     /* LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     * CREDENTIAL: the database scoped credential, created above.
@@ -606,6 +613,29 @@ WITH
      LOCATION='customer',
      DATA_SOURCE= external_data_source_name
      );
+```
+
+### L. Query S3-compliant object storage via external table
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+
+The following example demonstrates using T-SQL to query a parquet file stored in S3-compliant object storage via querying external table. The sample uses a relative path within the external data source.
+
+```sql
+CREATE EXTERNAL DATA SOURCE s3_ds
+WITH
+(   LOCATION = 's3://<ip_address>:<port>/'
+,   CREDENTIAL = s3_dc
+);
+GO
+CREATE EXTERNAL FILE FORMAT ParquetFileFormat WITH(FORMAT_TYPE = PARQUET);
+GO
+CREATE EXTERNAL TABLE Region(
+r_regionkey BIGINT,
+r_name CHAR(25),
+r_comment VARCHAR(152) )
+WITH (LOCATION = '/region/', DATA_SOURCE = 's3_ds', 
+FILE_FORMAT = ParquetFileFormat);
+GO
 ```
 
 ## Next steps
@@ -1055,7 +1085,7 @@ WITH
       )
 )
 
-CREATE EXTERNAL TABLE [dbo].[DimProductexternal]
+CREATE EXTERNAL TABLE [dbo].[DimProduct_external]
 ( [ProductKey] [int] NOT NULL,
   [ProductLabel] nvarchar NULL,
   [ProductName] nvarchar NULL )

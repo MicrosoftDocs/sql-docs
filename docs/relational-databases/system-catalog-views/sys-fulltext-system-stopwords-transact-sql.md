@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 487de53f-c637-4d78-85f6-fef5e768cd0c
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

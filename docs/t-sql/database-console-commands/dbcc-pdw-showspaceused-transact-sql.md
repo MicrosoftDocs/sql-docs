@@ -10,7 +10,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---

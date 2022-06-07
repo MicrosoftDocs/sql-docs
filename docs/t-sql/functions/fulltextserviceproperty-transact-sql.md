@@ -1,26 +1,25 @@
 ---
+title: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
 description: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
-title: "FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "FULLTEXTSERVICEPROPERTY_TSQL"
   - "FULLTEXTSERVICEPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], properties"
   - "FULLTEXTSERVICEPROPERTY function"
   - "services [SQL Server], full-text search properties"
   - "test"
-ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

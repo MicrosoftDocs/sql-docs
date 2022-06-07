@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MStracer_history system table"
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

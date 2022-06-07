@@ -1,19 +1,19 @@
 ---
+title: "SIGNBYASYMKEY (Transact-SQL)"
 description: "SIGNBYASYMKEY (Transact-SQL)"
-title: "SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SIGNBYASYMKEY_TSQL"
   - "SIGNBYASYMKEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text signing [SQL Server]"
   - "encryption [SQL Server], asymmetric keys"
   - "signing text [SQL Server]"
@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], SIGNBYASYMKEY function"
   - "cryptography [SQL Server], asymmetric keys"
   - "clear text signing"
-ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

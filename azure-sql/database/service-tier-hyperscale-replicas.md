@@ -73,21 +73,44 @@ Aside from the main scenarios listed above, named replicas offer flexibility and
 - Workload-dependent service level objective: as a named replica can have its own service level objective, it is possible to use different named replicas for different workloads and use cases. For example, one named replica could be used to serve Power BI requests, while another can be used to serve data to Apache Spark for Data Science tasks. Each one can have an independent service level objective and scale independently.
 - Workload-dependent routing: with up to 30 named replicas, it is possible to use named replicas in groups so that an application can be isolated from another. For example, a group of four named replicas could be used to serve requests coming from mobile applications, while another group two named replicas can be used to serve requests coming from a web application. This approach would allow a fine-grained tuning of performance and costs for each group.
 
-The following example creates a named replica `WideWorldImporters_NR` for database `WideWorldImporters`. The primary replica uses service level objective HS_Gen5_4, while the named replica uses HS_Gen5_2. Both use the same logical server `MyServer`. If you prefer to use REST API directly, this option is also possible: [Databases - Create A Database As Named Replica Secondary](/rest/api/sql/2020-11-01-preview/databases/createorupdate#creates-a-database-as-named-replica-secondary).
+The following example creates a named replica `WideWorldImporters_NamedReplica` for database `WideWorldImporters`. The primary replica uses service level objective HS_Gen5_4, while the named replica uses HS_Gen5_2. Both use the same logical server `contosoeast`. If you prefer to use REST API directly, this option is also possible: [Databases - Create A Database As Named Replica Secondary](/rest/api/sql/2020-11-01-preview/databases/createorupdate#creates-a-database-as-named-replica-secondary).
+
+# [Portal](#tab/portal)
+
+1. In the [Azure portal](https://portal.azure.com), browse to the database for which you want to create the named replica.
+2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
+
+    :::image type="content" source="./media/named-replicas-configure-portal\azure-create-named-replicas.png" alt-text="Screenshot that shows create named replica step.":::
+3. Choose Named replica under Replica configuration, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
+
+    :::image type="content" source="./media/named-replicas-configure-portal/azure-choose-named-replica.png" alt-text="Screenshot that shows configuration of named replica.":::
+
+4. Click **Review + create**, review the information, and then click **Create**.
+5. The named replica deployment process begins.
+
+    :::image type="content" source="./media/named-replicas-configure-portal/azure-deployment-named-replica.png" alt-text="Screenshot that shows named replica deployment status.":::
+
+6. When the deployment is complete, the named replica displays its status.
+
+    :::image type="content" source="./media/named-replicas-configure-portal/azure-deployment-complete-named-replica.png" alt-text="Screenshot that shows named replica status after deployment.":::
+
+7. Return to the primary database page, and then select **Replicas**. Your named replica is listed under **Named replicas**.
+
+    :::image type="content" source="./media/named-replicas-configure-portal/azure-named-replicas.png" alt-text="Screenshot that shows the SQL database primary and named replica.":::
 
 # [T-SQL](#tab/tsql)
 ```sql
 ALTER DATABASE [WideWorldImporters]
-ADD SECONDARY ON SERVER [MyServer] 
-WITH (SERVICE_OBJECTIVE = 'HS_Gen5_2', SECONDARY_TYPE = Named, DATABASE_NAME = [WideWorldImporters_NR]);
+ADD SECONDARY ON SERVER [contosoeast] 
+WITH (SERVICE_OBJECTIVE = 'HS_Gen5_2', SECONDARY_TYPE = Named, DATABASE_NAME = [WideWorldImporters_NamedReplica]);
 ```
 # [PowerShell](#tab/azure-powershell)
 ```azurepowershell
-New-AzSqlDatabaseSecondary -ResourceGroupName "MyResourceGroup" -ServerName "MyServer" -DatabaseName "WideWorldImporters" -PartnerResourceGroupName "MyResourceGroup" -PartnerServerName "MyServer" -PartnerDatabaseName "WideWorldImporters_NR" -SecondaryType Named -SecondaryServiceObjectiveName HS_Gen5_2
+New-AzSqlDatabaseSecondary -ResourceGroupName "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters" -PartnerResourceGroupName "MyResourceGroup" -PartnerServerName "contosoeast" -PartnerDatabaseName "WideWorldImporters_NamedReplica" -SecondaryType Named -SecondaryServiceObjectiveName HS_Gen5_2
 ```
 # [Azure CLI](#tab/azure-cli)
 ```azurecli
-az sql db replica create -g MyResourceGroup -n WideWorldImporters -s MyServer --secondary-type named --partner-database WideWorldImporters_NR --partner-server MyServer --service-objective HS_Gen5_2
+az sql db replica create -g MyResourceGroup -n WideWorldImporters -s contosoeast --secondary-type named --partner-database WideWorldImporters_NamedReplica --partner-server contosoeast --service-objective HS_Gen5_2
 ```
 
 ---
@@ -105,38 +128,51 @@ Just like for HA replicas, even though the primary, HA, and named replicas share
 
 ### Modifying a named replica
 
-You can define the service level objective of a named replica when you create it, via the `ALTER DATABASE` command or in any other supported way (AZ CLI, PowerShell, REST API). If you need to change the service level objective after the named replica has been created, you can do it using the `ALTER DATABASE ... MODIFY` command on the named replica itself. For example, if `WideWorldImporters_NR` is the named replica of `WideWorldImporters` database, you can do it as shown below. 
+You can define the service level objective of a named replica when you create it, via the `ALTER DATABASE` command or in any other supported way (Portal, AZ CLI, PowerShell, REST API). If you need to change the service level objective after the named replica has been created, you can do it using the `ALTER DATABASE ... MODIFY` command on the named replica itself. For example, if `WideWorldImporters_NamedReplica` is the named replica of `WideWorldImporters` database, you can do it as shown below. 
+
+# [Portal](#tab/portal)
+
+Open named replica database page, and then select **Compute + storage**. Update the vCores.
+
+:::image type="content" source="./media/named-replicas-configure-portal/azure-update-named-replica.png" alt-text="Screenshot that shows named replica service level objective update.":::
 
 # [T-SQL](#tab/tsql)
 ```sql
-ALTER DATABASE [WideWorldImporters_NR] MODIFY (SERVICE_OBJECTIVE = 'HS_Gen5_4')
+ALTER DATABASE [WideWorldImporters_NamedReplica] MODIFY (SERVICE_OBJECTIVE = 'HS_Gen5_4')
 ```
 # [PowerShell](#tab/azure-powershell)
 ```azurepowershell
-Set-AzSqlDatabase -ResourceGroup "MyResourceGroup" -ServerName "MyServer" -DatabaseName "WideWorldImporters_NR" -RequestedServiceObjectiveName "HS_Gen5_4"
+Set-AzSqlDatabase -ResourceGroup "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters_NamedReplica" -RequestedServiceObjectiveName "HS_Gen5_4"
 ```
 # [Azure CLI](#tab/azure-cli)
 ```azurecli
-az sql db update -g MyResourceGroup -s MyServer -n WideWorldImporters_NR --service-objective HS_Gen5_4
+az sql db update -g MyResourceGroup -s contosoeast -n WideWorldImporters_NamedReplica --service-objective HS_Gen5_4
 ```
 
 ---
 
 ### Removing a named replica
 
-To remove a named replica, you drop it just like you would a regular database. Make sure you are connected to the `master` database of the server with the named replica you want to drop, and then use the following command:
+To remove a named replica, you drop it just like you would a regular database. 
+
+# [Portal](#tab/portal)
+
+Open named replica database page, and choose `Delete` option.
+
+:::image type="content" source="./media/named-replicas-configure-portal/azure-delete-named-replicas.png" alt-text="Screenshot that shows deletion of named replica.":::
 
 # [T-SQL](#tab/tsql)
+Make sure you are connected to the `master` database of the server with the named replica you want to drop, and then use the following command:
 ```sql
-DROP DATABASE [WideWorldImporters_NR];
+DROP DATABASE [WideWorldImporters_NamedReplica];
 ```
 # [PowerShell](#tab/azure-powershell)
 ```azurepowershell
-Remove-AzSqlDatabase -ResourceGroupName "MyResourceGroup" -ServerName "MyServer" -DatabaseName "WideWorldImporters_NR"
+Remove-AzSqlDatabase -ResourceGroupName "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters_NamedReplica"
 ```
 # [Azure CLI](#tab/azure-cli)
 ```azurecli
-az sql db delete -g MyResourceGroup -s MyServer -n WideWorldImporters_NR
+az sql db delete -g MyResourceGroup -s contosoeast -n WideWorldImporters_NamedReplica
 ```
 ---
 

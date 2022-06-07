@@ -15,7 +15,9 @@ helpviewer_keywords:
   - "MaxDop"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: contperf-fy20q4
+ms.custom:
+- contperf-fy20q4
+- event-tier1-build-2022
 ---
 # Configure the max degree of parallelism Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +126,7 @@ GO
  [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)      
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop)       
  [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    
  [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)    
  [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)     

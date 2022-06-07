@@ -1,25 +1,24 @@
 ---
+title: "PWDCOMPARE (Transact-SQL)"
 description: "PWDCOMPARE (Transact-SQL)"
-title: "PWDCOMPARE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "PWDCOMPARE"
   - "PWDCOMPARE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sa account"
   - "passwords [SQL Server], blank"
   - "PWDCOMPARE function [Transact-SQL]"
-ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

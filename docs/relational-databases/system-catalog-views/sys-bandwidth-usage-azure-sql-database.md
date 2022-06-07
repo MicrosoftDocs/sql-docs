@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.bandwidth_usage"
   - "bandwidth_usage"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: "= azuresqldb-current"
 ---
 # sys.bandwidth_usage (Azure SQL Database)

@@ -1,24 +1,23 @@
 ---
+title: "TRANSLATE (Transact-SQL)"
 description: "TRANSLATE (Transact-SQL)"
-title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: 09/14/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "TRANSLATE"
   - "TRANSLATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TRANSLATE function"
-ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
 

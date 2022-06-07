@@ -1,28 +1,27 @@
 ---
+title: "@@PACK_SENT (Transact-SQL)"
 description: "&#x40;&#x40;PACK_SENT (Transact-SQL)"
-title: "@@PACK_SENT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@PACK_SENT"
   - "@@PACK_SENT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "number of output packets written"
   - "@@PACK_SENT function"
   - "packets [SQL Server], output"
   - "networking [SQL Server], output packets"
   - "connections [SQL Server], packets"
   - "output packets written to network [SQL Server]"
-ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

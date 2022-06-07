@@ -1,26 +1,25 @@
 ---
+title: "CERT_ID (Transact-SQL)"
 description: "CERT_ID (Transact-SQL)"
-title: "CERT_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CERT_ID"
   - "CERT_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "identification numbers [SQL Server], certificates"
   - "CERT_ID function"
   - "IDs [SQL Server], certificates"
   - "certificates [SQL Server], IDs"
-ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # CERT_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

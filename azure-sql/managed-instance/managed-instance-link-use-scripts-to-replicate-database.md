@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 03/22/2022
+ms.date: 05/24/2022
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -22,18 +22,34 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 
 > [!NOTE]
 > - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-replicate-database.md) to set up the link to replicate your database. 
-> - The PowerShell scripts in this article call SQL Managed Instance REST APIs.
-
+> - PowerShell scripts provided in this article invoke SQL Managed Instance REST APIs.
 
 ## Prerequisites 
 
 To replicate your databases to SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [SQL Server 2019 Enterprise or Developer edition](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019), starting with [CU15 (15.0.4198.2)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+- PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).
+
+## Set up database recovery and backup
+
+All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
+
+```sql
+-- Run on SQL Server
+-- Set full recovery mode for all databases you want to replicate.
+ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
+GO
+
+-- Execute backup for all databases you want to replicate.
+BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
+GO
+```
+
+For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
 ## Replicate a database
 
@@ -56,12 +72,15 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 ## Establish trust between instances
 
-The first step in setting up a link is to establish trust between the two instances and secure the endpoints that are used to communicate and encrypt data across the network. Distributed availability groups use the existing availability group database mirroring endpoint, rather than having their own dedicated endpoint. This is why security and trust need to be configured between the two entities through the availability group database mirroring endpoint.
+The first step in setting up a link is to establish trust between the two instances and secure the endpoints that are used to communicate and encrypt data across the network. Distributed availability groups use the existing availability group [database mirroring endpoint](/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server), rather than having their own dedicated endpoint. This is why security and trust need to be configured between the two entities through the availability group database mirroring endpoint.
+
+> [!NOTE]
+> The link is based on the Always On technology. Database mirroring endpoint is a special-purpose endpoint that is used exclusively by Always On to receive connections from other server instances. The term database mirroring endpoint should not be mistaken with, and it's not the same as legacy SQL Server database mirroring feature.
 
 Certificate-based trust is the only supported way to secure database mirroring endpoints on SQL Server and SQL Managed Instance. If you have existing availability groups that use Windows authentication, you need to add certificate-based trust to the existing mirroring endpoint as a secondary authentication option. You can do this by using the `ALTER ENDPOINT` statement.
 
 > [!IMPORTANT]
-> Certificates are generated with an expiration date and time. They must be rotated before they expire.
+> Certificates are generated with an expiration date and time. They must be renewed and rotated before they expire.
 
 Here's an overview of the process to secure database mirroring endpoints for both SQL Server and SQL Managed Instance:
 
@@ -358,7 +377,7 @@ Then, use the following script to create the availability group on SQL Server. R
 -- Create the primary availability group on SQL Server
 USE MASTER
 CREATE AVAILABILITY GROUP [<AGName>]
-WITH (CLUSTER_TYPE = NONE)
+WITH (CLUSTER_TYPE = NONE) -- <- Delete this line for SQL Server 2016 only. Leave as-is for all higher versions.
     FOR database [<DatabaseName>]  
     REPLICA ON   
         '<SQLServerName>' WITH   
@@ -370,6 +389,9 @@ WITH (CLUSTER_TYPE = NONE)
             );
 GO
 ```
+
+>[!IMPORTANT]
+> For SQL Server 2016, delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement. Leave as-is for all higher SQL Server versions.
 
 Consider the following:
 

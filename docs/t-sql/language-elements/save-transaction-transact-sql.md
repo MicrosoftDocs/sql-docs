@@ -1,21 +1,21 @@
 ---
+title: "SAVE TRANSACTION (Transact-SQL)"
 description: "SAVE TRANSACTION (Transact-SQL)"
-title: "SAVE TRANSACTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SAVE"
   - "SAVE_TSQL"
   - "SAVE_TRANSACTION_TSQL"
   - "SAVE TRANSACTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rolling back transactions, SAVE TRANSACTION"
   - "SAVE TRANSACTION statement"
   - "transactions [SQL Server], rolling back"
@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "savepoints [SQL Server]"
   - "marked transactions [SQL Server], SAVE TRANSACTION statement"
   - "duplicate savepoints"
-ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

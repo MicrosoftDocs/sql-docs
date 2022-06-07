@@ -22,7 +22,7 @@ Azure SQL Database is based on SQL Server Database Engine architecture that is a
 - Hyperscale
 - Business Critical/Premium
 
-The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that leverages the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
+The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that uses the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
 
 > [!NOTE]
 >
@@ -98,15 +98,15 @@ The vCore-based service tiers are differentiated based on database availability 
 | **Availability** | 1 replica, no Read Scale-out, zone-redundant HA (preview), no local cache | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA (preview), partial local cache | 3 replicas, 1 Read Scale-out, zone-redundant HA, full local storage |
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) |
 
-<sup>1</sup> Elastic pools are not supported in the Hyperscale service tier.
+<sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.
 
 > [!NOTE]
-> Short-term backup retention for of 1-35 days for Hyperscale databases is now in preview.
+> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.
 
 
 ## Distributed functions architecture
 
-Hyperscale separates the query processing engine from the components that provide long-term storage and durability for the data. This architecture provides the ability to smoothly scale storage capacity as far as needed (initial target is 100 TB), as well as the ability to scale compute resources rapidly.
+Hyperscale separates the query processing engine from the components that provide long-term storage and durability for the data. This architecture provides the ability to smoothly scale storage capacity as far as needed (initial target is 100 TB), and the ability to scale compute resources rapidly.
 
 The following diagram illustrates the different types of nodes in a Hyperscale database:
 
@@ -148,10 +148,10 @@ Learn more in [restoring a Hyperscale database to a different region](automated-
 
 ## <a name=regions></a>Available regions
 
-The Azure SQL Database Hyperscale tier is enabled in the vast majority of Azure regions. If you want to create a Hyperscale database in a region where Hyperscale is not enabled by default, you can send an onboarding request via Azure portal. For instructions, see [Request quota increases for Azure SQL Database](quota-increase-request.md). When submitting your request, use the following guidelines:
+The Azure SQL Database Hyperscale tier is enabled in the vast majority of Azure regions. If you want to create a Hyperscale database in a region where Hyperscale isn't enabled by default, you can send an onboarding request via Azure portal. For instructions, see [Request quota increases for Azure SQL Database](quota-increase-request.md). When submitting your request, use the following guidelines:
 
 - Use the [Region access](quota-increase-request.md#region) SQL Database quota type.
-- In the description, add the compute SKU/total cores including high-availability and named replicas, and indicate that you are requesting Hyperscale capacity.
+- In the description, add the compute SKU/total cores including high-availability and named replicas, and indicate that you're requesting Hyperscale capacity.
 - Also specify a projection of the total size of all databases over time in TB.
 
 ## Known limitations
@@ -160,19 +160,19 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 
 | Issue | Description |
 | :---- | :--------- |
-| Backup retention is currently seven days; long-term retention policies aren't yet supported. | Hyperscale has a unique method for managing backups, so a non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<BR/><BR/>For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [programmatically](recovery-using-backups.md#programmatic-recovery-using-automated-backups). You can restore these backups to any non-Hyperscale service tier.|
-| Service tier change from Hyperscale to another tier is not supported directly | Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. Databases created in the Hyperscale service tier are not eligible for reverse migration. Learn the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration). <BR/><BR/> For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using [New-AzSqlDatabaseExport](/powershell/module/az.sql/new-azsqldatabaseexport) or [New-AzSqlDatabaseImport](/powershell/module/az.sql/new-azsqldatabaseimport), from Azure CLI using [az sql db export](/cli/azure/sql/db#az_sql_db_export) and [az sql db import](/cli/azure/sql/db#az_sql_db_import), and from [REST API](/rest/api/sql/) is not supported. Bacpac import/export for smaller Hyperscale databases (up to 200 GB) is supported using SSMS and [SqlPackage](/sql/tools/sqlpackage) version 18.4 and later. For larger databases, bacpac export/import may take a long time, and may fail for various reasons. |
+| Short-term backup retention | Short-term backup retention for 1-35 days for Hyperscale databases is now in preview. |
+| Long-term backup retention is't supported yet | Hyperscale has a unique method for managing backups, so a non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<BR/><BR/>For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [programmatically](recovery-using-backups.md#programmatic-recovery-using-automated-backups). You can restore these backups to any non-Hyperscale service tier.|
+| Service tier change from Hyperscale to another tier isn't supported directly | Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. Databases created in the Hyperscale service tier aren't eligible for reverse migration. Learn the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration). <BR/><BR/> For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using [New-AzSqlDatabaseExport](/powershell/module/az.sql/new-azsqldatabaseexport) or [New-AzSqlDatabaseImport](/powershell/module/az.sql/new-azsqldatabaseimport), from Azure CLI using [az sql db export](/cli/azure/sql/db#az_sql_db_export) and [az sql db import](/cli/azure/sql/db#az_sql_db_import), and from [REST API](/rest/api/sql/) isn't supported. Bacpac import/export for smaller Hyperscale databases (up to 200 GB) is supported using SSMS and [SqlPackage](/sql/tools/sqlpackage) version 18.4 and later. For larger databases, bacpac export/import may take a long time, and may fail for various reasons. |
 | When changing Azure SQL Database service tier to Hyperscale, the operation fails if the database has any data files larger than 1 TB | In some cases, it may be possible to work around this issue by [shrinking](file-space-manage.md#shrinking-data-files) the large files to be less than 1 TB before attempting to change the service tier to Hyperscale. Use the following query to determine the current size of database files. `SELECT file_id, name AS file_name, size * 8. / 1024 / 1024 AS file_size_GB FROM sys.database_files WHERE type_desc = 'ROWS'`;|
 | SQL Managed Instance | Azure SQL Managed Instance isn't currently supported with Hyperscale databases. |
 | Elastic Pools |  Elastic Pools aren't currently supported with Hyperscale.|
-| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale is not supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables are not currently supported in Hyperscale, and must be changed to disk tables.|
+| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables aren't currently supported in Hyperscale, and must be changed to disk tables.|
 | Geo-replication | [Geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md) on Hyperscale is now in public preview. |
-| Intelligent Database Features | With the exception of the "Force Plan" option, all other Automatic Tuning options aren't yet supported on Hyperscale: options may appear to be enabled, but there won't be any recommendations or actions made. |
 | Query Performance Insights | Query Performance Insights is currently not supported for Hyperscale databases. |
 | Shrink Database | DBCC SHRINKDATABASE or DBCC SHRINKFILE isn't currently supported for Hyperscale databases. |
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK  and DBCC CHECKFILEGROUP WITH TABLOCK may be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |
-| Elastic Jobs | Using a Hyperscale database as the Job database is not supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
-|Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
+| Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
+|Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
 |Import Export | Import-Export service is currently not supported for Hyperscale databases. |
 
 ## Next steps

@@ -116,15 +116,15 @@ sections:
           
       - question: Can I set alerts on the instance or resource group level?
         answer: | 
-          No. Advance notifications are configured through [Service Health alerts](/service-health/alerts-activity-log-service-notifications-portal). Service health alerts support configuration of subscription, resource type, and region levels. Therefore, it is not possible to configure notification on the resource group level or instance level. 
+          No. Advance notifications are configured through [Service Health alerts](/azure/service-health/alerts-activity-log-service-notifications-portal). Service health alerts support configuration of subscription, resource type, and region levels. Therefore, it is not possible to configure notification on the resource group level or instance level. 
 
       - question: Can I configure alerts using PowerShell or Azure CLI?
         answer: | 
-          There are no PowerShell and Azure CLI commands dedicated to configuring service health alerts. However, you can use an ARM template and leverage any standard method for deploying it by using CLI and PowerShell. Just follow the guidelines from the [Quickstart: Create activity log alerts on service notifications using an ARM template](/service-health/alerts-activity-log-service-notifications-arm).
+          There are no PowerShell and Azure CLI commands dedicated to configuring service health alerts. However, you can use an ARM template and leverage any standard method for deploying it by using CLI and PowerShell. Just follow the guidelines from the [Quickstart: Create activity log alerts on service notifications using an ARM template](/azure/service-health/alerts-activity-log-service-notifications-arm).
           
       - question: Can I check the list of resources that will be impacted by the event that I got notified for?
         answer: |
-          Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/governance/resource-graph/overview). You will receive an advance notification email which contains the notification ID and a link to the Azure Resource Graph Explorer. 
+          Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email which contains the notification ID and a link to the Azure Resource Graph Explorer. 
           
       - question: The notification says "In Progress", but window has not started yet?
         answer: |
@@ -136,7 +136,7 @@ sections:
           
       - question: Can I check if my instance has been upgraded in the last X days?
         answer: |
-          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieving-list-of-maintenance-events), or use the [Service Health overview page](/service-health/service-health-overview).
+          You can check this only if you have configured advanced notifications in the service health. You can use the [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview) to [retrieve a list of maintenance events](maintenance-window.md#retrieving-list-of-maintenance-events), or use the [Service Health overview page](/azure/service-health/service-health-overview).
 
 additionalContent: |
  ## See Also

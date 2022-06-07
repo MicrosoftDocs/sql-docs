@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_db_rda_schema_update_status dynamic management view"
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

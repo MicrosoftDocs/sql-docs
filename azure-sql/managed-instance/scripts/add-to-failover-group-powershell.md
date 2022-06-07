@@ -11,7 +11,7 @@ ms.topic: sample
 author: emlisa
 ms.author: emlisa
 ms.reviewer: mathoma
-ms.date: 07/16/2019
+ms.date: 06/03/2022
 ---
 # Use PowerShell to add a managed instance to a failover group 
 

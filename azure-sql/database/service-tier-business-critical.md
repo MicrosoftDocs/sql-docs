@@ -29,7 +29,7 @@ Azure upgrades and patches underlying operating system, drivers, and SQL Server 
 
 State-of-the-art availability is enabled in the Business Critical service tier and is designed for intensive workloads that can't tolerate reduced availability due to the ongoing maintenance operations.
 
-Compute and storage is integrated on the single node in the Business Critical model. High availability in this architectural model is achieved by replication of compute (SQL Server database engine process) and storage (locally attached SSD) deployed to a  four node cluster, using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+In the Business Critical model, compute and storage is integrated on each node. High availability is achieved by replication of data between database engine processes on each node of a four node cluster, with each node using locally attached SSD as data storage. This technology is similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 ![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
 

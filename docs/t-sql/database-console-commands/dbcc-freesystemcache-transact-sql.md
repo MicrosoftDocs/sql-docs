@@ -82,7 +82,7 @@ The following example illustrates how to clean caches that are dedicated to a sp
   
 ```sql
 -- Clean all the caches with entries specific to the resource pool named "default".  
-DBCC FREESYSTEMCACHE ('ALL', default);  
+DBCC FREESYSTEMCACHE ('ALL', [default]);  
 ```  
   
 ### B. Releasing entries from their respective caches after they become unused  

@@ -22,7 +22,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes the general differences between client-side and server-side XML formatting in SQLXML.  
   
 ## Multiple Rowset Queries Not Supported in Client-side Formatting  

@@ -126,7 +126,8 @@ If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due 
 
 SELF
 
-Exit the shrink file operation currently being executed without taking any action..
+Exit the shrink file operation currently being executed without taking any action.
+
 
 BLOCKERS
 

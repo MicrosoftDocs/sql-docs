@@ -14,9 +14,9 @@ metadata:
 
 highlightedContent:
   items:
-   - title: Try SQL Server 2019
+   - title: Try SQL Server 2022 Preview
      itemType: download
-     url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
+     url: https://aka.ms/getsqlserver2022
    - title: Get an Azure VM with SQL Server
      itemType: overview
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm

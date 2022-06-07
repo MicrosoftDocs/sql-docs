@@ -18,13 +18,6 @@ Active geo-replication is a feature that lets you to create a continuously synch
 
 Active geo-replication is designed as a business continuity solution that lets you perform quick disaster recovery of individual databases in case of a regional disaster or a large scale outage. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. The geo-failover is initiated programmatically by the application or manually by the user.
 
-> [!NOTE]
-> Active geo-replication for Azure SQL Hyperscale is [now in public preview](service-tier-hyperscale-replicas.md#geo-replica-in-preview). Current limitations include: 
-> - Primary can have only one geo-secondary replica.
-> - Restore or database copy from geo-secondary is not supported.
-> - Can't use geo-secondary as a source for geo-replication to another database.
-> - Audit records are not logged on Geo-secondaries when connecting with ApplicationIntent=Readonly.
-
 
 > [!NOTE]
 > Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](auto-failover-group-sql-db.md).

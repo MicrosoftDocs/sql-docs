@@ -206,23 +206,15 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
 
 * * *
 
-## Accelerated Database Recovery (ADR)
-
-[Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-
 ## Master database zone redundant availability
 
-In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, firewall rules, auditing rules, threat detection policies, and auto-failover groups. 
+In Azure SQL Database, a [server](/azure/azure-sql/database/logical-servers?view=azuresql#what-is-an-azure-sql-database-server) is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer logins, Azure Active Directory authentication, firewall rules, auditing rules, threat detection policies, and auto-failover groups. Data related to some of these features, such as logins and firewall rules, is stored in the master database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md), is also stored in the master database.
 
-Data related to some of these features, such as logins and firewall rules, is stored in the master database. Similarly, data for some DMVs, for example [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md), is also stored in the master database.
-
-When you create a server, you provide a server login account and password that has administrative rights to the master database on that server, as well as all databases created on that server. 
-
-When a database with a zone-redundant configuration is created on a logical server, the master database associated with the server is automatically made zone-redundant as well. This ensures that in a zonal outage, applications using the database remain unaffected because features dependent on the master database, such as logins and firewall rules, are still available.
+When a database with a zone-redundant configuration is created on a logical server, the master database associated with the server is automatically made zone-redundant as well. This ensures that in a zonal outage, applications using the database remain unaffected because features dependent on the master database, such as logins and firewall rules, are still available. Making the master database zone-redundant is an asynchornous process and will take some time to finish in the background. 
 
 When none of the databases on a server are zone-redundant, or when you create an empty server, then the master database associated with the server is **not zone-redundant**.
 
-You can use Azure PowerShell or the Azure CLI to check the `ZoneRedundant` property for the master database: 
+You can use Azure PowerShell or the Azure CLI or the [REST API](https://docs.microsoft.com/en-us/rest/api/sql/2021-11-01-preview/databases/get) to check the `ZoneRedundant` property for the master database: 
 
 # [Azure PowerShell](#tab/azure-powershell)
 
@@ -241,6 +233,12 @@ az sql db show --resource-group "myResourceGroup" --server "myServerName" --name
 ```
 
 ---
+
+## Accelerated Database Recovery (ADR)
+
+[Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+
+
 
 ## Testing application fault resiliency
 

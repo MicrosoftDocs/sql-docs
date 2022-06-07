@@ -759,7 +759,7 @@ MAX_DURATION = *time* [**MINUTES**]
 
 The wait time (an integer value specified in minutes) that the online index rebuild locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specified `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.
 
-ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS**]
+ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** ]
 
 NONE  
 Continue waiting for the lock with normal (regular) priority.

@@ -175,13 +175,13 @@ The following table provides guidance for specific migration scenarios:
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
 |Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Premium|Business critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Standard|Business critical|Upgrade|Must migrate secondary first|
-|Business critical|Standard|Downgrade|Must migrate primary first|
+|Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|Business Critical|Upgrade|Must migrate secondary first|
+|Business Critical|Standard|Downgrade|Must migrate primary first|
 |Premium|General purpose|Downgrade|Must migrate primary first|
 |General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business critical|Upgrade|Must migrate secondary first|
+|Business Critical|General purpose|Downgrade|Must migrate primary first|
+|General purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

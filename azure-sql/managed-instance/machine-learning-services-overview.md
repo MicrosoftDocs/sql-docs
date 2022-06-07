@@ -24,7 +24,7 @@ Machine Learning Services in Azure SQL Managed Instance lets you execute Python 
 
 Use Machine Learning Services with R/Python support in Azure SQL Managed Instance to:
 
-- **Run R and Python scripts to do data preparation and General Purpose data processing** - You can now bring your R/Python scripts to Azure SQL Managed Instance where your data lives, instead of having to move data out to some other server to run R and Python scripts. You can eliminate the need for data movement and associated problems related to latency, security, and compliance.
+- **Run R and Python scripts to do data preparation and general purpose data processing** - You can now bring your R/Python scripts to Azure SQL Managed Instance where your data lives, instead of having to move data out to some other server to run R and Python scripts. You can eliminate the need for data movement and associated problems related to latency, security, and compliance.
 
 - **Train machine learning models in database** - You can train models using any open source algorithms. You can easily scale your training to the entire dataset rather than relying on sample datasets pulled out of the database.
 

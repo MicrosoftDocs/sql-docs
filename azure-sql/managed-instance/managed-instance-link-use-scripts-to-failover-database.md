@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 05/24/2022
+ms.date: 06/07/2022
 ---
 
 # Fail over (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
@@ -31,7 +31,7 @@ To replicate your databases to SQL Managed Instance, you need the following prer
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
+- PowerShell module [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 ## Database failover 

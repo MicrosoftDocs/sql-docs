@@ -10,7 +10,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 07/06/2022
+ms.date: 06/08/2022
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -161,39 +161,39 @@ SELECT @PUBLICKEYENC AS PublicKeyEncoded;
 
 Save the value of `PublicKeyEncoded` from the output, because you'll need it for the next step.
 
-For the next step, use PowerShell with the installed [Az.Sql module 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher. Or use Azure Cloud Shell online to run the commands, because it's always updated with the latest module versions.
+For the next step, use PowerShell with the installed [Az.Sql module 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher. Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
   
-Run the following script in PowerShell, or Azure Cloud Shell. Fill out necessary user information, copy it, paste it, and then run the script.) Replace:
+Run the following script Azure Cloud Shell (PowerShell console). Fill out necessary user information, copy it, paste it, and then run the script. Replace:
 
+- `<PublicKey>` with the public portion of the SQL Server certificate in binary format, which you generated in the previous step. It's a long string value that starts with `0x`.
+- `<CertificateName>` with the 
 - `<SubscriptionID>` with your Azure subscription ID. 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<PublicKeyEncoded>` with the public portion of the SQL Server certificate in binary format, which you generated in the previous step. It's a long string value that starts with `0x`.
 
 ```powershell
-# Run in Azure Cloud Shell
+# Run in Azure Cloud Shell (select PowerShell console)
 # ===============================================================================
-# POWERSHELL SCRIPT TO IMPORT SQL SERVER CERTIFICATE TO MANAGED INSTANCE
-# USER CONFIGURABLE VALUES
-# (C) 2021-2022 SQL Managed Instance product group
+# POWERSHELL SCRIPT TO IMPORT SQL SERVER PUBLIC CERTIFICATE TO MANAGED INSTANCE
+# USER CONFIGURABLE VALUES BELOW
 # ===============================================================================
-# Enter your Azure subscription ID
-$SubscriptionID = "<YourSubscriptionID>"
-
-# Enter your managed instance name – for example, "sqlmi1"
-$ManagedInstanceName = "<YourManagedInstanceName>"
-
-# Enter the name for the server trust certificate – for example, "Cert_sqlserver1_endpoint"
-$certificateName = "<YourServerTrustCertificateName>"
 
 # Insert the certificate public key blob that you got from SQL Server – for example, "0x1234567..."
+$PublicKeyEncoded = "<PublicKey>"
 
-$PublicKeyEncoded = "<PublicKeyEncoded>"
+# Enter the name for the server trust certificate – for example, "Cert_sqlserver1_endpoint"
+$certificateName = "<CertificateName>"
+
+# Enter your Azure subscription ID
+$SubscriptionID = "<SubscriptionID>"
+
+# Enter your managed instance short name – for example, "sqlmi"
+$ManagedInstanceName = "<ManagedInstanceName>
 
 # ===============================================================================
-# INVOKING THE API CALL -- REST OF THE SCRIPT IS NOT USER CONFIGURABLE
+# EXECUTING CLOUD SHELL COMMANDS. REST OF THE SCRIPT IS NOT USER CONFIGURABLE.
 # ===============================================================================
-# Log in and select a subscription if needed.
-#
+
+# Login to Azure and select subscription ID
 if ((Get-AzContext ) -eq $null)
 {
     echo "Logging to Azure subscription"
@@ -201,31 +201,11 @@ if ((Get-AzContext ) -eq $null)
 }
 Select-AzSubscription -SubscriptionName $SubscriptionID
 
-# Build the URI for the API call.
-#
-$miRG = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
-$uriFull = "https://management.azure.com/subscriptions/" + $SubscriptionID + "/resourceGroups/" + $miRG+ "/providers/Microsoft.Sql/managedInstances/" + $ManagedInstanceName + "/serverTrustCertificates/" + $certificateName + "?api-version=2021-08-01-preview"
-echo $uriFull
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
-# Build the API request body.
-#
-$bodyFull = "{ `"properties`":{ `"PublicBlob`":`"$PublicKeyEncoded`" } }"
-
-echo $bodyFull 
-
-# Get auth token and build the HTTP request header.
-#
-$azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$currentAzureContext = Get-AzContext
-$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azProfile)
-$token = $profileClient.AcquireAccessToken($currentAzureContext.Tenant.TenantId)
-$authToken = $token.AccessToken
-$headers = @{}
-$headers.Add("Authorization", "Bearer "+"$authToken")
-
-# Invoke API call
-#
-Invoke-WebRequest -Method PUT -Headers $headers -Uri $uriFull -ContentType "application/json" -Body $bodyFull
+# Upload the public key of the authentication certificate from SQL Server to Azure.
+New-AzSqlInstanceServerTrustCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstance -Name $certificateName -PublicKey $PublicKey 
 ```
 
 The result of this operation will be a time stamp of the successful upload of the SQL Server certificate private key to SQL Managed Instance.
@@ -234,24 +214,48 @@ The result of this operation will be a time stamp of the successful upload of th
 
 The certificate for securing the endpoint for a link is automatically generated on managed instance. This section describes how to get the certificate public key from SQL Managed Instance, and how to import it to SQL Server.
 
-Run the following script in PowerShell, or Azure Cloud Shell. Fill out necessary user information, copy it, paste it, and then run the script.) Replace:
+Run the following script in Azure Cloud Shell. Fill out necessary user information, copy it, paste it, and then run the script). Replace:
 
 - `<SubscriptionID>` with your Azure subscription ID. 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
-- `<ResourceGroup>` with the resource group name of your managed instance.
 
 ```powershell
 # Run in Azure Cloud Shell (select PowerShell console)
+# ===============================================================================
+# POWERSHELL SCRIPT TO EXPORT MANAGED INSTANCE PUBLIC CERTIFICATE
+# USER CONFIGURABLE VALUES BELOW.
+# ===============================================================================
 
-# Select Azure subscription
-Select-AzSubscription -SubscriptionName "<SubscriptionID>"
+# Enter your Azure subscription ID
+$SubscriptionID = "<SubscriptionID>"
+
+# Enter your managed instance short name – for example, "sqlmi"
+$ManagedInstanceName = "<ManagedInstanceName>
+
+# ===============================================================================
+# EXECUTING CLOUD SHELL COMMANDS. REST OF THE SCRIPT IS NOT USER CONFIGURABLE.
+# ===============================================================================
+
+# Login to Azure and select subscription ID
+if ((Get-AzContext ) -eq $null)
+{
+    echo "Logging to Azure subscription"
+    Login-AzAccount
+}
+Select-AzSubscription -SubscriptionName $SubscriptionID
+
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
 # Fetch the public key of the authentication certificate from Managed Instance. Outputs a binary key in the property PublicKey.
-# Replace <ManagedInstance> with the short managed instance name. Replace <ResourceGroup> with the resource group name where managed instance is provisioned.
-Get-AzSqlInstanceEndpointCertificate -ResourceGroupName "<ResourceGroup>" -InstanceName "<ManagedInstanceName>" -EndpointType "DATABASE_MIRRORING"
+Get-AzSqlInstanceEndpointCertificate -ResourceGroupName "$ResourceGroup" -InstanceName "$ManagedInstanceName" -EndpointType "DATABASE_MIRRORING"
 ```
 
-Copy the entire PublicKey property (which starts with `0x`) from the output of Azure CLoud Shell. Run the following query on SQL Server by replacing `<InstanceCertificate>` with the PublicKey value obtained in the previous step. You don't need to use quotation marks.
+Copy the entire PublicKey property (which starts with `0x`) from the output of Azure Cloud Shell.
+
+Run the following query on SQL Server. Fill out necessary user information, copy it, paste it, and then run the script). Replace:
+- `<PublicKey>`  with the PublicKey value obtained in the previous step. You don't need to use quotation marks.
+- `<SQLManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
 
 > [!IMPORTANT]
 > The name of the certificate must be the SQL Managed Instance FQDN.
@@ -260,7 +264,7 @@ Copy the entire PublicKey property (which starts with `0x`) from the output of A
 -- Run on SQL Server
 USE MASTER
 CREATE CERTIFICATE [<SQLManagedInstanceFQDN>]
-FROM BINARY = <InstanceCertificate>
+FROM BINARY = <PublicKey> 
 ```
 
 ### Import Azure-trusted root certificate authority keys to SQL Server

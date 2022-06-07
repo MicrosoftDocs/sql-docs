@@ -120,7 +120,7 @@ The application’s resources should be deployed in each geography where you hav
 
 ![Diagram of configuration with primary in U S West.](./media/designing-cloud-solutions-for-disaster-recovery/scenario3-a.png)
 
-At the end of the work day, for example at 4 PM local time (US West), the active databases should be switched to the next region (East Asia). This task can be fully automated by using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). The task involves the following steps:
+At the end of the work day in US West, for example at 4 PM local time, the active databases should be switched to the next region, East Asia (Japan), where it is 8 AM. Then, at 4 PM in East Asia, the primary should switch to Europe (UK) where it is 8 AM. This task can be fully automated by using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). The task involves the following steps:
 
 * Switch primary server in the failover group to East Asia using friendly failover (1).
 * Remove the failover group between US West and East Asia.

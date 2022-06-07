@@ -34,7 +34,7 @@ In the case of Azure SQL Database, the vCore purchasing model provides higher co
 Two vCore service tiers are available in both Azure SQL Database and Azure SQL Managed Instance:
 
 - [General purpose](service-tier-general-purpose.md) is a budget-friendly tier designed for most workloads with common performance and availability requirements.
-- [Business critical](service-tier-business-critical.md) tier is designed for performance-sensitive workloads with strict availability requirements.
+- [Business Critical](service-tier-business-critical.md) tier is designed for performance-sensitive workloads with strict availability requirements.
 
 The [Hyperscale service tier](service-tier-Hyperscale.md) is also available for single databases in Azure SQL Database. This service tier is designed for most business workloads, providing highly scalable storage, read scale-out, fast scaling, and fast database restore capabilities.
 

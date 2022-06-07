@@ -424,7 +424,7 @@ Min and max per database vCore values apply to resource consumption by user work
 
 ## Previously available hardware
 
-This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
+This section includes details on previously available hardware.
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 

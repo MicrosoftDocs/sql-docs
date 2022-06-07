@@ -29,7 +29,7 @@ helpviewer_keywords:
 Memory utilization for the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] is bounded by a pair of configuration settings, **min server memory (MB)** and **max server memory (MB)**. Over time and under normal circumstances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will attempt claim memory up to the limit set by **max server memory (MB)**.
 
 > [!NOTE]  
-> [Columnstore indexes](../../indexes/columnstore-indexes-overview) and [In-Memory OLTP](../../in-memory-oltp/overview-and-usage-scenarios) don't use memory allocated by the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
+> [Columnstore indexes](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) don't use memory allocated by the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
 
 In older versions of SQL Server, memory utilization was virtually uncapped, indicating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that all system memory was available for use. It is recommended in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to configure an upper limit for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory utilization by configuring the **max server memory (MB)**.
 

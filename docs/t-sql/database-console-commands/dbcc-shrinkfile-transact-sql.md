@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "DBCC SHRINKFILE statement"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, pmasl
+ms.reviewer: umajay, dpless
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
 ---
 # DBCC SHRINKFILE (Transact-SQL)

@@ -1,11 +1,13 @@
 ---
 title: "Quickstart: Restore a backup (SSMS)"
 titleSuffix: Azure SQL Managed Instance
-description: In this quickstart, learn to restore a database backup to Azure SQL Managed Instance using SQL Server Management Studio (SSMS).
+description: In this quickstart, learn how to restore a database backup to Azure SQL Managed Instance by using SQL Server Management Studio (SSMS).
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
-ms.custom: mode-other
+ms.custom:
+   - mode-other
+   - kr2b-contr-experiment
 ms.devlang: 
 ms.topic: quickstart
 author: MilanMSFT
@@ -14,6 +16,7 @@ ms.reviewer: mathoma, nvraparl
 ms.date: 09/13/2021
 ---
 # Quickstart: Restore a database to Azure SQL Managed Instance with SSMS
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 In this quickstart, you'll use SQL Server Management Studio (SSMS) to restore a database (the Wide World Importers - Standard backup file) from Azure Blob storage to [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
@@ -21,8 +24,8 @@ In this quickstart, you'll use SQL Server Management Studio (SSMS) to restore a 
 > [!VIDEO https://www.youtube.com/embed/RxWYojo_Y3Q]
 
 > [!NOTE]
-> For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure Managed Instance using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
-> For more information on various migration methods, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
+> - For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure Managed Instance using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
+> - For more information on various migration methods, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
 ## Prerequisites
 
@@ -51,18 +54,20 @@ In SSMS, follow these steps to restore the Wide World Importers database to SQL 
 
     :::image type="content" source="./media/restore-sample-database-quickstart/new-restore-wizard.png" alt-text="Screenshot that shows opening a new restore wizard window.":::
 
-4. In **Select backup devices**, select **Add**. In **Backup media type**, **URL** is the only option because it is the only source type supported. Select **OK**.
+4. In **Select backup devices**, select **Add**. In **Backup media type**, **URL** is the only option that's available because it's the only source type that's supported. Select **OK**.
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-device.png" alt-text="Screenshot that shows selecting the device.":::
 
 5. In **Select a Backup File Location**, you can choose from three options to provide information about backup files are located:
-    - Select a pre-registered storage container from the dropdown.
-    - Enter a new storage container and a shared access signature. (A new SQL credential will be registered for you.) 
-    - Select **Add** to browse more storage containers from your Azure subscription.
+
+   - Select a pre-registered storage container from the dropdown.
+   - Enter a new storage container and a shared access signature. A new SQL credential will be registered for you.
+   - Select **Add** to browse more storage containers from your Azure subscription.
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-backup-file-location.png" alt-text="Screenshot that shows selecting the backup file location.":::
 
-    Complete the next steps if you select the **Add** button. If you use a different method to provide the backup file location, go to step 12.
+    If you select **Add**, go to the next step. If you use a different method to provide the backup file location, go to step 12.
+
 6. In **Connect to a Microsoft Subscription**, select **Sign in** to sign in to your Azure subscription:
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-connect-subscription-sign-in.png" alt-text="Screenshot that shows Azure subscription sign-in.":::
@@ -71,27 +76,27 @@ In SSMS, follow these steps to restore the Wide World Importers database to SQL 
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot that shows signing in to the Azure session.":::
 
-8. Select the subscription where the storage account with the backup files is located:
+8. Select the subscription of the storage account that contains the backup files:
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-subscription.png" alt-text="Screenshot that shows selecting the subscription.":::
 
-9. Select the storage account where the backup files are located:
+9. Select the storage account that contains the backup files:
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-storage-account.png" alt-text="Screenshot that shows the storage account.":::
 
-10. Select the blob container where the backup files are located:
+10. Select the blob container that contains the backup files:
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-container.png" alt-text="Select Blob container":::
 
-11. Specify the expiration date of the shared access policy and select **Create Credential**. A shared access signature with the correct permissions is created. Select **OK**.
+11. Enter the expiration date of the shared access policy and select **Create Credential**. A shared access signature with the correct permissions is created. Select **OK**.
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-generate-shared-access-signature.png" alt-text="Screenshot that shows generating the shared access signature.":::
 
-12. In the left pane, expand the folder structure to show the folder where the backup files are located. Select all the backup files that are related to the backup set to be restored, and then select **OK**:
+12. In the left pane, expand the folder structure to show the folder that contains the backup files. Select all the backup files that are related to the backup set that you're restoring, and then select **OK**:
 
     :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-backup-file-selection.png" alt-text="Screenshot that shows the backup file selection.":::
 
-    SSMS validates the backup set. The process takes up to a few seconds depending on the size of the backup set.
+    SSMS validates the backup set. The process depends on the size of the backup set and takes at most a few seconds.
 
 13. If the backup is validated, specify the destination database name or leave the database name of the backup set, and then select **OK**:
 

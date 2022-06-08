@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Shrink a file
 
-[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to shrink a data or log file in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

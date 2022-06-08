@@ -5,9 +5,9 @@ description: Export a database to a BACPAC file using the Azure portal or a CLI
 services: sql-database
 ms.service: sql-db-mi
 ms.subservice: data-movement
-author: LitKnd
+author: rothja
 ms.custom: sqldbrb=2
-ms.author: kendralittle
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 12/10/2021
 ms.topic: how-to

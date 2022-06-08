@@ -9,11 +9,14 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 03/08/2022
+adobe-target: true
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+
+To view the release notes for SSMS 19 Preview 2, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

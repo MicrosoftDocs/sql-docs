@@ -7,8 +7,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server

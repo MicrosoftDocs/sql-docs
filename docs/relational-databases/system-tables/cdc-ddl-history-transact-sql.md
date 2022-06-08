@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.ddl_history"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

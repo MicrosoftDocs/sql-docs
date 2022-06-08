@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], viewing keywords"
   - "sys.dm_fts_index_keywords_by_property dynamic management view"
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

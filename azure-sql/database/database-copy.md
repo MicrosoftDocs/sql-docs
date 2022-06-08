@@ -6,8 +6,8 @@ ms.service: sql-database
 ms.subservice: data-movement
 ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: mathoma
 ms.date: 1/19/2022
 ---
@@ -107,7 +107,7 @@ Log in to the master database with the server administrator login or the login t
 
 This command copies Database1 to a new database named Database2 in an elastic pool named pool1. Depending on the size of your database, the copying operation might take some time to complete.
 
-Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a general purpose pool, but you can't copy a standard elastic db into a premium pool. 
+Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool. 
 
    ```sql
    -- Execute on the master database to start copying

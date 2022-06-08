@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.registered_search_property_lists catalog view"
   - "search property lists [SQL Server], viewing"
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.registered_search_property_lists (Transact-SQL)

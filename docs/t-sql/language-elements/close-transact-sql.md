@@ -1,25 +1,24 @@
 ---
+title: "CLOSE (Transact-SQL)"
 description: "CLOSE (Transact-SQL)"
-title: "CLOSE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CLOSE_TSQL"
   - "CLOSE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "closing cursors"
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
-ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # CLOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

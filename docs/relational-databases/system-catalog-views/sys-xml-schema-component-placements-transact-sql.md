@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_component_placements catalog view"
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.xml_schema_component_placements (Transact-SQL)

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.remote_data_archive_tables catalog view"
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # Stretch Database Catalog Views - sys.remote_data_archive_tables

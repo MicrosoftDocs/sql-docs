@@ -117,7 +117,7 @@ $params = @{
   Invoke-SqlCmd @params
 ```
 
-This example is for use with Azure SQL Databases with [read scale-out replicas enabled](read-scale-out.md), [geo-replication](active-geo-replication-overview.md), and [Azure SQL Database hyperscale secondary replicas](service-tier-hyperscale.md). As an example, the primary replica is set to a different default MAXDOP as the secondary replica, anticipating that there may be differences between a read-write and a read-only workload.
+This example is for use with Azure SQL Databases with [read scale-out replicas enabled](read-scale-out.md), [geo-replication](active-geo-replication-overview.md), and [Azure SQL Database Hyperscale secondary replicas](service-tier-hyperscale.md). As an example, the primary replica is set to a different default MAXDOP as the secondary replica, anticipating that there may be differences between a read-write and a read-only workload.
 
 ```powershell
 $dbName = "sample" 

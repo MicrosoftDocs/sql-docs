@@ -156,7 +156,24 @@ There are several improvements to address persistent version store (PVS) storage
  
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], the clean up process will have multiple threads, with one thread per SQL Server database.
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. In SQL Server 2022 (16.x) Preview, the cleanup process has multiple threads, with one thread per SQL Server database. 
+  
+  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have a fewer number of large databases.
+To enable trace flag 3515 for the instance, run the following command:
+
+   ```sql
+   DBCC TRACEON(3515, -1)
+   GO 
+   ```
+
+  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.   
+
+  The example below changes the thread count to 4: 
+
+  ```sql
+  EXEC sp_configure 'ADR Cleaner Thread Count', '4'
+  RECONFIGURE WITH OVERRIDE; 
+  ```
 
 ## Best practices and guidance
 

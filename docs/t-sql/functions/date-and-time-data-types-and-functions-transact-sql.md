@@ -1,19 +1,19 @@
 ---
 title: "Date and Time Data Types and Functions"
-description: Links to Date and Time data types and functions articles.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
+description: Links to Date and Time data types and functions articles.
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom:
+  - "seo-lt-2019"
+  - "event-tier1-build-2022"
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "dates [SQL Server]"
   - "date and time [SQL Server], all data types and functions"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "functions [SQL Server], time"
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # Date and time data types and functions (Transact-SQL)
 

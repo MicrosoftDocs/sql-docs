@@ -168,7 +168,8 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - login.microsoftonline.com/*:443
 - *.vault.azure.net/*:443
 
-Additionally, checking the certificate revocation list may create http traffic on port 80. 
+Additionally, checking the certificate revocation list might create HTTP traffic on port 80. 
+
 
  > [!NOTE]
  > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place. 

@@ -1,17 +1,19 @@
 ---
 title: Job automation overview with Elastic Jobs
 description: 'Use Elastic Jobs for Job Automation to run Transact-SQL (T-SQL) scripts across a set of one or more databases'
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-pools
-ms.custom: sqldbrb=1, contperf-fy21q3
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "contperf-fy21q3"
 dev_langs:
-  -  "TSQL"
+  - "TSQL"
 ms.topic: conceptual
 author: williamdassafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 2/1/2021
 ---
 # Automate management tasks using elastic jobs (preview)

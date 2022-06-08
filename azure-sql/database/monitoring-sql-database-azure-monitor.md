@@ -1,5 +1,5 @@
 ---
-title: Monitoring Azure SQL Database with Azure Monitor 
+title: Monitoring Azure SQL Database with Azure Monitor
 description: Start here to learn how to monitor Azure SQL Database with Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -7,7 +7,8 @@ ms.topic: conceptual
 ms.reviewer: mathoma
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: subject-monitoring
+ms.custom:
+  - "subject-monitoring"
 ms.date: 12/07/2021
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Customer-managed transparent data encryption using user-assigned managed identity
-description: "Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)"
+description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -8,7 +8,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: vanto
 ms.date: 12/16/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Managed identities for transparent data encryption with BYOK

@@ -221,7 +221,8 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
    Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ####  **(** _column_  [ **,**...*n* ] **)**  
-    Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
+   
+   Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
    Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
 
 #### ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  

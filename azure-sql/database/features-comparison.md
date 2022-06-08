@@ -1,18 +1,17 @@
 ---
-title: Compare the database engine features of SQL Database and SQL Managed Instance 
-titleSuffix: Azure SQL Database & SQL Managed Instance 
+title: Compare the database engine features of SQL Database and SQL Managed Instance
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: This article compares the database engine features of Azure SQL Database and Azure SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: service-overview
-ms.custom: 
-ms.devlang: 
 ms.topic: conceptual
 author: danimir
 ms.author: danil
-ms.reviewer: kendralittle, bonova, mathoma, danil
+ms.reviewer: wiassaf, bonova, mathoma, danil
 ms.date: 12/14/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Features comparison: Azure SQL Database and Azure SQL Managed Instance

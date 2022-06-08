@@ -1,16 +1,18 @@
 ---
-title: Azure SQL Database connectivity architecture 
+title: Azure SQL Database connectivity architecture
 description: This article explains the Azure SQL Database connectivity architecture for database connections from within Azure or from outside of Azure.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: fasttrack-edit, sqldbrb=1 
+ms.custom:
+  - "fasttrack-edit"
+  - "sqldbrb=1"
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.devlang: 
 ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, mathoma, vanto
+ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 03/18/2022
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture

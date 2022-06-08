@@ -189,6 +189,9 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
 
+>[!NOTE]
+>See [Pages and Extents Architecture Guide](https://docs.microsoft.com/en-us/sql/relational-databases/pages-and-extents-architecture-guide?view=azure-sqldw-latest#row-overflow-considerations) for details about the limitation of 8060 bytes per row that can be an issue for tables that have many columns resulting in intermittent failures on inserts or updates with error codes 511 and 611.
+
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 
 >[!NOTE]

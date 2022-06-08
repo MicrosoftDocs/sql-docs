@@ -22,7 +22,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the minimum version on the client that is valid for use in obtaining change tracking information from the specified table, when you are using the [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) function.  
     

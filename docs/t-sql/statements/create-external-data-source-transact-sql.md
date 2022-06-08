@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms."
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 3/4/2022
+ms.date: 06/08/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -911,7 +911,7 @@ Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../i
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
 WITH (
-  LOCATION = 'sqlserver://WINSQL2019:58137' ,
+  LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 ) ;
 ```
@@ -928,7 +928,9 @@ CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
 WITH IDENTITY = 'username', SECRET = 'password';
 ```
 
-Next, create the new external data source. The ODBC `Database` parameter is optional. If `Database` is not specified, the default database defined for the account used in the database scoped credential is used. You can provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server).
+Next, create the new external data source. 
+
+The ODBC `Database` parameter is not needed, provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server).
 
 In example below, `WINSQL2019AGL` is the availability group listener name and `dbname` is the name of the database to be the target of the CREATE EXTERNAL TABLE statement.
 
@@ -936,7 +938,7 @@ In example below, `WINSQL2019AGL` is the availability group listener name and `d
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
 WITH (
   LOCATION = 'sqlserver://WINSQL2019AGL' ,
-  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly,Database=dbname' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
   CREDENTIAL = SQLServerCredentials
 );
 ```
@@ -947,13 +949,13 @@ You can demonstrate the redirection behavior of the availability group by specif
 CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadOnlyIntent]
 WITH (
   LOCATION = 'sqlserver://WINSQL2019AGL' , 
-  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly;Database=dbname' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
   CREDENTIAL = [SQLServerCredentials]);
 GO
 CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadWriteIntent]
 WITH (
   LOCATION = 'sqlserver://WINSQL2019AGL' , 
-  CONNECTION_OPTIONS = 'ApplicationIntent=ReadWrite;Database=dbname' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadWrite' ,
   CREDENTIAL = [SQLServerCredentials]);
 GO
 ```

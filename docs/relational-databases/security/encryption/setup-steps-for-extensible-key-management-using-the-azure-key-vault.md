@@ -42,7 +42,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
   2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
 
-- Familiarize yourself with [Access Azure Key Vault behind a firewall](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/key-vault/general/access-behind-firewall.md) if you are planning on using the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
+- Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
 ## Step 1: Set up an Azure AD service principal
 
@@ -161,7 +161,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
   > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
   > [!NOTE]
-  > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can impact peformance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/key-vault/general/access-behind-firewall.md) to ensure the correct rules are in place.
+  > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place.
 
 
 ## [PowerShell](#tab/powershell)

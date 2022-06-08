@@ -1,6 +1,6 @@
 ---
 title: User-assigned managed identity in Azure AD for Azure SQL
-description: User-assigned managed identities (UMI) in Azure AD (AD) for Azure SQL Database, SQL Managed Instance, and dedicated SQL pools in Azure Synapse Analytics. 
+description: User-assigned managed identities (UMI) in Azure AD (AD) for Azure SQL Database, SQL Managed Instance, and dedicated SQL pools in Azure Synapse Analytics.
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 ms.service: sql-db-mi
 ms.subservice: security
@@ -9,7 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 03/09/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # User-assigned managed identity in Azure AD for Azure SQL

@@ -23,8 +23,10 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Shrink a database
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  This article describes how to shrink a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+This article describes how to shrink a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Shrinking data files recovers space by moving pages of data from the end of the file to unoccupied space closer to the front of the file. When enough free space is created at the end of the file, data pages at end of the file can be deallocated and returned to the file system.  
   

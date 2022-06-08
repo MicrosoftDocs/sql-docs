@@ -4,8 +4,9 @@ description: Learn how to create a server-level firewall rule with Azure Portal
 services: sql-database
 ms.service: sql-database
 ms.subservice: security
-ms.custom: sqldbrb=1, mode-ui
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "mode-ui"
 ms.topic: quickstart
 author: rohitnayakmsft
 ms.author: rohitna

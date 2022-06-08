@@ -1,14 +1,17 @@
 ---
 title: Configure Advanced Threat Protection
 description: Advanced Threat Protection detects anomalous database activities indicating potential security threats to the database in Azure SQL Database
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
-ms.custom: seo-dt-2019, sqldbrb=1
+ms.custom:
+  - "seo-dt-2019"
+  - "sqldbrb=1"
 ms.topic: how-to
 author: rmatchoro
 ms.author: ronmat
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 02/16/2022
 ---
 # Configure Advanced Threat Protection for Azure SQL Database

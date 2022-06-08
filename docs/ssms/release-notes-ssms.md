@@ -9,6 +9,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 03/08/2022
+adobe-target: true
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)

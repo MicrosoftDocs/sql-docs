@@ -23,7 +23,7 @@ ms.author: randolphwest
 ---
 # sys.dm_xtp_system_memory_consumers (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
 

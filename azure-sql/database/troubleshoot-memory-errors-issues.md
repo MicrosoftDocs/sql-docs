@@ -1,15 +1,15 @@
 ---
-title: Troubleshoot memory issues 
+title: Troubleshoot memory issues
 titleSuffix: Azure SQL Database
 description: Provides steps to investigate and troubleshoot out of memory issues in Azure SQL Database
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting
-ms.custom: 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 01/14/2022
 ---
 

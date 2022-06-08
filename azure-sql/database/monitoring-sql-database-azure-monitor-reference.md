@@ -7,7 +7,8 @@ ms.topic: conceptual
 ms.reviewer: mathoma, dfurman
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: subject-monitoring
+ms.custom:
+  - "subject-monitoring"
 ms.date: 03/14/2022
 ---
 

@@ -1,15 +1,17 @@
 ---
 title: Elastic Database Jobs (preview)
 description: 'Configure Elastic Database Jobs (preview) to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database'
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-jobs
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ms.topic: conceptual
 author: srinia
 ms.author: srinia
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/03/2022
 ---
 # Create, configure, and manage elastic jobs (preview)

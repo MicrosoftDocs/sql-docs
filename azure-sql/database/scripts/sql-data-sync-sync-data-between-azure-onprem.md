@@ -1,15 +1,19 @@
 ---
-title: "PowerShell: Sync data between SQL Database and SQL Server" 
+title: "PowerShell: Sync data between SQL Database and SQL Server"
 description: Use an Azure PowerShell example script to sync data between Azure SQL Database and SQL Server.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: PowerShell
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+ms.devlang:
+  - "PowerShell"
 ms.topic: sample
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
 ---
 

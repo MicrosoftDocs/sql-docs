@@ -2,14 +2,15 @@
 title: Diagnose and troubleshoot high CPU
 titleSuffix: Azure SQL Database
 description: Learn to diagnose and troubleshoot high CPU problems in Azure SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: performance
-ms.custom: sqldbrb=2
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: how-to
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/06/2022
 ---

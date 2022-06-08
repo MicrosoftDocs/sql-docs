@@ -1,16 +1,20 @@
 ---
-title: "Azure CLI example: Configure active geo-replication for an elastic pool" 
+title: "Azure CLI example: Configure active geo-replication for an elastic pool"
 description: Use this Azure CLI example script to set up active geo-replication for a pooled database in Azure SQL Database and fail it over.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: sqldbrb=1, devx-track-azurecli
-ms.devlang: azurecli
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+ms.devlang:
+  - "azurecli"
 ms.topic: sample
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 01/26/2022 
+ms.date: 01/26/2022
 ---
 
 # Configure active geo-replication for a pooled database in Azure SQL Database using the Azure CLI

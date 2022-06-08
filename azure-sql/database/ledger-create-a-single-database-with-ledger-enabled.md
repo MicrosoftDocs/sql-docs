@@ -6,9 +6,10 @@ ms.subservice: security
 ms.topic: quickstart
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: "05/24/2022"
-ms.custom: mode-other
+ms.custom:
+  - "mode-other"
 ---
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled

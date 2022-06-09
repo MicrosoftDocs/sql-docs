@@ -47,11 +47,11 @@ To get started, install SQL Server on Linux using one of the following quickstar
 You can find SQL Server container images on Linux at the following locations, based on the operating system image that was used to create the image.
 
 - For RHEL-based SQL Server container images, see [SQL Server Red Hat Containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
-- For Ubuntu based SQL Server images, see [SQL Server on Docker Hub](https://hub.docker.com/_/microsoft-mssql-server).
+- For Ubuntu-based SQL Server images, see [SQL Server on Docker Hub](https://hub.docker.com/_/microsoft-mssql-server).
 
 ## Connect
 
-After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with a variety of tools and drivers. The quickstarts demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
+After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with various tools and drivers. The quickstarts demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
 
 | Tool | Tutorial |
 |-----|-----|
@@ -63,7 +63,7 @@ After installation, connect to the SQL Server instance on your Linux machine. Yo
 
 Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] has the same underlying database engine on all supported platforms, including Linux and containers. Therefore, many existing features and capabilities operate the same way. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
 
-If you are already familiar with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, review the release notes for general guidelines and known issues for this release:
+If you're already familiar with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, review the release notes for general guidelines and known issues for this release:
 
 - [SQL Server 2017 release notes](sql-server-linux-release-notes.md)
 - [SQL Server 2019 release notes](sql-server-linux-release-notes-2019.md)

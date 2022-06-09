@@ -39,7 +39,7 @@ This quickstart:
 - Uses resources from the [Create a managed instance](instance-create-quickstart.md) quickstart.
 - Requires the latest version of [SSMS](/sql/ssms/sql-server-management-studio-ssms) installed.
 - Requires SSMS to connect to SQL Managed Instance. See these quickstarts on how to connect:
-  - [Enable a public endpoint](public-endpoint-configure.md) on SQL Managed Instance. This approach is recommended for this tutorial.
+  - [Enable a public endpoint](public-endpoint-configure.md) on SQL Managed Instance. This approach is recommended for this quickstart.
   - [Connect to SQL Managed Instance from an Azure VM](connect-vm-instance-configure.md).
   - [Configure a point-to-site connection to SQL Managed Instance from on-premises](point-to-site-p2s-configure.md).
 
@@ -85,7 +85,7 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
 1. Sign in to your Microsoft Account to initiate the session in Azure.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot of the Sign in to your account dialog. The Microsoft logo, a Sign in box, and other U I elements are visible.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot of the Sign in to your account dialog. The Microsoft logo, a sign-in box, and other U I elements are visible.":::
 
 1. Select the subscription of the storage account that contains the backup files.
 
@@ -183,7 +183,7 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
    WHERE r.command in ('BACKUP DATABASE','RESTORE DATABASE')
    ```
 
-1. When the restore process finishes, view the database in **Object Explorer**. You can verify that the database is completely restored by using the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view.
+1. When the restore process finishes, view the database in **Object Explorer**. You can verify that the database is restored by using the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view.
 
 > [!NOTE]
 > A database restore operation is asynchronous and retryable. You might get an error in SSMS if the connection fails or a time-out expires. SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views.

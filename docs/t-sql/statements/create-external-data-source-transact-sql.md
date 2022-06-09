@@ -1,6 +1,7 @@
 ---
+description: "CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms."
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
-description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
+ms.date: 06/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: randolphwest
@@ -19,7 +20,6 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
 - event-tier1-build-2022
-ms.date: 5/24/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqledge-current"
 ---
 
@@ -32,8 +32,9 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
 <!-- In addition to moniker ranges for SQL Server, SQL DB, APS, Synapse, and SQL MI, 
-     this article has version moniker ranges for SQL Server 2016, 2017 (Windows and Linux), and 2019 due to the syntax differences between each. 
-     Use of the version selector above the TOC is important for this document.-->
+     this article has version moniker ranges for SQL Server 2016, 2017 (Windows and Linux), 2019, and 2022 due to the syntax differences between each. 
+     Use of the version selector above the TOC is important for this document.
+     Pay attention to each ::: moniker range.-->
 <!-- At this time the Azure SQL Edge moniker azuresqledge-current is not functional in sql-docs. 
      Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. -->
 
@@ -176,7 +177,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 ## Examples
 
@@ -259,7 +260,7 @@ WITH
   ) ;
 ```
 
-## See also
+## Next steps
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -446,7 +447,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -559,7 +560,7 @@ WITH
 
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
-## See also
+## Next steps
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -685,7 +686,7 @@ Additional notes and guidance when setting the location:
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using `abfs[s]` is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
-- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a SQL Server 2019 big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in a SQL Server big data cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
+- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
 - [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 
 #### CONNECTION_OPTIONS = *key_value_pair*
@@ -724,7 +725,7 @@ Additional notes and guidance when creating a credential:
 -  Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 - When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -779,7 +780,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -927,12 +928,81 @@ WITH (
 ) ;
 ```
 
+### G. Create external data source to reference a readable secondary replica of Always On availability group
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
+
+To create an external data source that references a readable secondary replica of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the `ApplicationIntent=ReadOnly`.
+
+First, create the database scoped credential, storing credentials for a SQL authenticated login. The SQL ODBC Connector for PolyBase only supports basic authentication. Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](create-master-key-transact-sql.md). The following sample creates a database scoped credential, provide your own login and password.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
+WITH IDENTITY = 'username', SECRET = 'password';
+```
+
+Next, create the new external data source. 
+
+The ODBC `Database` parameter is not needed, provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server).
+
+In example below, `WINSQL2019AGL` is the availability group listener name and `dbname` is the name of the database to be the target of the CREATE EXTERNAL TABLE statement.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
+  CREDENTIAL = SQLServerCredentials
+);
+```
+
+You can demonstrate the redirection behavior of the availability group by specifying `ApplicationIntent` and creating an external table on the system view `sys.servers`. In the following sample script, two external data sources are created, and one external table is created for each. Use the views to test which server is responding to the connection. Similar outcomes can also be achieved via the read-only routing feature. For more information, see [Configure read-only routing for an Always On availability group](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).
+
+```sql
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadOnlyIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadWriteIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadWrite' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+```
+
+Inside the database in the availability group, create a view to return `sys.servers` and the name of the local instance, which helps you identify which replica is responding to the query. For more information, see [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md).
+
+```sql
+CREATE VIEW vw_sys_servers AS 
+SELECT [name] FROM sys.servers
+WHERE server_id = 0;
+GO
+```
+
+Then, create an external table on the source instance:
+
+```sql
+CREATE EXTERNAL TABLE vw_sys_servers_ro
+(    name sysname NOT NULL )
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadOnlyIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+CREATE EXTERNAL TABLE vw_sys_servers_rw
+(    name sysname NOT NULL)
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadWriteIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+SELECT [name] FROM dbo.vw_sys_servers_ro; --should return secondary replica instance
+SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary replica instance
+GO
+```
+
 ## Examples: Bulk operations
 
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### G. Create an external data source for bulk operations retrieving data from Azure Storage
+### H. Create an external data source for bulk operations retrieving data from Azure Storage
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.
 
@@ -955,7 +1025,7 @@ WITH
 
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
-### H. Create external data source to access data in Azure Storage using the abfs:// interface
+### I. Create external data source to access data in Azure Storage using the abfs:// interface
 
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later
 
@@ -980,7 +1050,7 @@ WITH
   ) ;
 ```
 
-## See also
+## Next steps
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -1092,7 +1162,7 @@ Additional notes and guidance when setting the location:
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using `abfs[s]` is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
-- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a SQL Server 2019 big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in a SQL Server big data cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
+- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
 - [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 - For more information on S3-compatible object storage and PolyBase starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md). For an example of querying a parquet file within S3-compatible object storage, see [Virtualize parquet file in a S3-compatible object storage with PolyBase](../../relational-databases/polybase/polybase-virtualize-parquet-file.md).
 
@@ -1132,7 +1202,7 @@ Additional notes and guidance when creating a credential:
 -  Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 - When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 For an example of using a `CREDENTIAL` with S3-compatible object storage and PolyBase, see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md). 
 
@@ -1190,7 +1260,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -1316,6 +1386,13 @@ WITH
 
 To create an external data source that references a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the instance name. 
 
+First, create the database scoped credential, storing credentials for a SQL authenticated login. The SQL ODBC Connector for PolyBase only supports basic authentication. Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](create-master-key-transact-sql.md). The following sample creates a database scoped credential, provide your own login and password.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
+WITH IDENTITY = 'username', SECRET = 'password';
+```
+
 In example below, `WINSQL2019` is the host name and `SQL2019` is the instance name. `'Server=%s\SQL2019'` is the key value pair.
 
 ```sql
@@ -1332,12 +1409,82 @@ Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../i
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
 WITH (
-  LOCATION = 'sqlserver://WINSQL2019:58137' ,
+  LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 ) ;
 ```
 
-### G. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
+### G. Create external data source to reference a readable secondary replica of Always On availability group
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
+
+To create an external data source that references a readable secondary replica of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the `ApplicationIntent=ReadOnly`. 
+
+First, create the database scoped credential, storing credentials for a SQL authenticated login. The SQL ODBC Connector for PolyBase only supports basic authentication. Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](create-master-key-transact-sql.md). The following sample creates a database scoped credential, provide your own login and password.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
+WITH IDENTITY = 'username', SECRET = 'password';
+```
+
+Next, create the new external data source. 
+
+The ODBC `Database` parameter is not needed, provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server).
+
+In example below, `WINSQL2019AGL` is the availability group listener name and `dbname` is the name of the database to be the target of the CREATE EXTERNAL TABLE statement.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
+  CREDENTIAL = SQLServerCredentials
+);
+```
+
+You can demonstrate the redirection behavior of the availability group by specifying `ApplicationIntent` and creating an external table on the system view `sys.servers`. In the following sample script, two external data sources are created, and one external table is created for each. Use the views to test which server is responding to the connection. Similar outcomes can also be achieved via the read-only routing feature. For more information, see [Configure read-only routing for an Always On availability group](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).
+
+```sql
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadOnlyIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadWriteIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadWrite' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+```
+
+Inside the database in the availability group, create a view to return `sys.servers` and the name of the local instance, which helps you identify which replica is responding to the query. For more information, see [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md).
+
+```sql
+CREATE VIEW vw_sys_servers AS 
+SELECT [name] FROM sys.servers
+WHERE server_id = 0;
+GO
+```
+
+Then, create an external table on the source instance:
+
+```sql
+CREATE EXTERNAL TABLE vw_sys_servers_ro
+(    name sysname NOT NULL )
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadOnlyIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+CREATE EXTERNAL TABLE vw_sys_servers_rw
+(    name sysname NOT NULL)
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadWriteIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+SELECT [name] FROM dbo.vw_sys_servers_ro; --should return secondary replica instance
+SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary replica instance
+GO
+```
+
+
+### H. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
 The following sample script creates an external data source `s3_ds` in the source user database in SQL Server. The external data source references the `s3_dc` database scoped credential. 
@@ -1373,7 +1520,7 @@ FROM    OPENROWSET
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### G. Create an external data source for bulk operations retrieving data from Azure Storage
+### I. Create an external data source for bulk operations retrieving data from Azure Storage
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -1396,7 +1543,7 @@ WITH
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 
-### H. Create external data source to access data in Azure Storage using the abfs:// interface
+### J. Create external data source to access data in Azure Storage using the abfs:// interface
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
 
 In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
@@ -1420,7 +1567,7 @@ WITH
   ) ;
 ```
 
-## See also
+## Next steps
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -1694,7 +1841,7 @@ CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
 )
 go
 ```
-## See also
+## Next steps
 
 - [What is Azure SQL Edge?](/azure/azure-sql-edge/overview)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -1756,7 +1903,8 @@ go
 
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asa](../../includes/applies-to-version/_asa.md)]
 
-Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
+Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the primary use case of data virtualization and data load using [PolyBase][intro_pb].
+
 
 > [!IMPORTANT]  
 > To create an external data source to query a [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).
@@ -1846,7 +1994,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -1966,7 +2114,7 @@ WITH
   ) ;
 ```
 
-## See also
+## Next steps
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
@@ -2220,7 +2368,7 @@ WITH
   ) ;
 ```
 
-## See also
+## Next steps
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
@@ -2385,7 +2533,7 @@ WITH
 
 To see this example in use, see [BULK INSERT][bulk_insert_example].
 
-## See also
+## Next steps
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]

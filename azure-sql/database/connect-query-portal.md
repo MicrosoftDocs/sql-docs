@@ -32,7 +32,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
     An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server and databases. To set up an Azure AD server admin:
 
     1. In the [Azure portal](https://portal.azure.com), on your Azure SQL database **Overview** page, select **Server name** under **Essentials** to navigate to the server for your database.
-    1. On the server page, select **Azure Active Directory** under **Settings** in the left menu.
+    1. On the server page, select **Azure Active Directory** in the **Settings** section of the left menu.
     1. On the **Azure Active Directory** page toolbar, select **Set admin**.
 
        ![Screenshot showing the Set admin selection.](./media/connect-query-portal/select-active-directory.png)
@@ -56,7 +56,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 
      ![Screenshot showing signin with SQL authentication](./media/connect-query-portal/login-menu.png)
 
-   - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign in is unsuccessful, try refreshing the page.
+   - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 
 ## Query the database
 

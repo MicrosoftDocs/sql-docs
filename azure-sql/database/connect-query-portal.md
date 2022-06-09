@@ -58,7 +58,7 @@ An Azure AD server administrator can use a single identity to sign in to the Azu
 
      ![Screenshot showing signin with SQL authentication](./media/connect-query-portal/login-menu.png)
 
-   - To connect using Azure AD, if you set up an Azure AD server admin, select **Continue as \<your user or group ID>**. If signin is unsuccessful, try refreshing the page.
+   - To connect using Azure AD, if you set up an Azure AD server admin, select **Continue as \<your user or group ID>**. If sign in is unsuccessful, try refreshing the page.
 
 ## Query the database
 
@@ -79,7 +79,7 @@ Run the following example queries against the AdventureWorksLT sample database:
 
    ![Screenshot showing query editor results for a SELECT query.](./media/connect-query-portal/query-editor-results.png)
 
-1. Optionally, you can select **Save query** to save the query as a *.sql* file, or select **Export data as** to export the results as a *.json*, *.csv*, or *.xml* file.
+1. Optionally, you can select **Save query** to save the query as an *.sql* file, or select **Export data as** to export the results as a *.json*, *.csv*, or *.xml* file.
 
 ### Run an INSERT query
 

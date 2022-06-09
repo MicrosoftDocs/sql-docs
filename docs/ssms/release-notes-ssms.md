@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 03/08/2022
+ms.date: 06/09/2022
 adobe-target: true
 ---
 
@@ -24,11 +24,86 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.11.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.12](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.11.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 18.12
+
+- Release number: 18.12
+- Build number: 15.0.18420.0
+- Release date: June 09, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40a)
+
+#### What's new in 18.12
+
+| New Item | Details |
+|----------|---------|
+| Always Encrypted | Updated AE Tools to only show keys with no expiration date. | 
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.36.2. |
+| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with SQL Server 2022. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
+| Data Classification | Improvements to Data Classification user interface. |
+| Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
+| Query Tuning Advisor | Updated user interface for improved accessibility. |
+| Showplan | The Showplan XML schemas has been updated to include new attributes related to the Query Store Hint feature. |
+
+#### Bug fixes in 18.12
+
+| New Item | Details |
+|----------|---------|
+| Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error.  See [SSMS 18.11.1 Bug](https://feedback.azure.com/d365community/idea/1603d3a2-73ab-ec11-a81c-6045bd7d1bee). |
+| Analysis Services | Corrected behavior of SSMS not saving Analysis Services settings separately. |
+| General SSMS | Fixed issue with Technical Support menu link opening to a blank page. |
+| Intellisense | Fixed Intellisense for contained users. |
+| Ledger | Fixed issue with ledger tables displaying more than once, and display columns for ledger tables. |
+| Link feature for Azure SQL Managed Instance | Fixed issues related to the automated connection and failover wizards for the link feature. |
+| Query Editor |Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/en-us/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
+| Registered Servers | Fixed issue that caused SSMS crash when displaying registered servers after importing  registered servers from Azure Data Studio via settings.json file. See [SSMS (18.11.1) crashing on "show registered servers"](https://feedback.azure.com/d365community/idea/53d07d5e-7acc-ec11-a81b-6045bd7ac9f9). |
+| Partitioning | Addressed missing option to schedule Agent job in the partitioning wizard. |
+
+#### Known issues (18.12)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure Portal for container deletion. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [18.11.1](#18111) | 15.0.18410.0 | March 8, 2022 |
+| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
+| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
+| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
+| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.11.1
+
+![download](media/download-icon.png) [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
 
 - Release number: 18.11.1
 - Build number: 15.0.18410.0
@@ -60,34 +135,9 @@ SSMS 18.11.1 is the latest general availability (GA) release of SSMS. If you nee
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
-| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
-| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
-| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
-| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
-| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
-| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
-| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
-| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
-| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
-
 ### 18.11
+
+![download](media/download-icon.png) [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
 
 - Release number: 18.11
 - Build number: 15.0.18404.0

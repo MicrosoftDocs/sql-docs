@@ -18,7 +18,6 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/28/2020
-
 ---
 # Designing globally available services using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "EKM provider enabled option"
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # EKM provider enabled Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

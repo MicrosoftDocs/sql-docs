@@ -10,8 +10,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "aliases [SQL Server], deleting"
   - "aliases [SQL Server], creating"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "07/14/2021"

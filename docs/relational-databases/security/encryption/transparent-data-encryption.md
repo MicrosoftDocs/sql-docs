@@ -59,7 +59,7 @@ Encryption of a database file is done at the page level. The pages in an encrypt
 
 ### Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]
 
-When you use TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatically creates for you the server-level certificate stored in the master database. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [transparent data encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
+When you use TDE with Azure SQL Database, SQL Database automatically creates for you the server-level certificate stored in the master database. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [transparent data encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
 
 ### Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 

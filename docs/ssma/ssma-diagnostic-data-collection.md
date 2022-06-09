@@ -4,8 +4,8 @@ description: Learn about usage and diagnostic data collection in SQL Server Migr
 ms.prod: sql
 ms.technology: ssma
 ms.topic: conceptual
-author: nahk-ivanov
-ms.author: alexiva
+author: cpichuka
+ms.author: cpichuka
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/02/2021

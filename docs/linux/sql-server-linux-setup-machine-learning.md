@@ -1,19 +1,20 @@
 ---
 title: Install on Linux
-titleSuffix: SQL Server Machine Learning Services
-description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
-author: dphansen
-ms.author: davidph
-manager: cgronlun
-ms.date: 11/24/2020
+titleSuffix: SQL Server 2019 Machine Learning Services
+description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+manager: rothja
+ms.date: 05/24/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ms.custom:
-  - intro-installation
+- intro-installation
+- event-tier1-build-2022
 ---
-# Install SQL Server Machine Learning Services (Python and R) on Linux
+# Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
@@ -21,8 +22,9 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
-> [!NOTE]
-> Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
+> [!IMPORTANT]
+> These instructions are specific to SQL Server 2019. For SQL Server 2022, where installation steps are different, refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
+
 
 <a name="mro"></a>
 

@@ -1,8 +1,9 @@
 ---
 description: "Enable Always Encrypted with secure enclaves for existing encrypted columns"
 title: Enable Always Encrypted with secure enclaves for existing encrypted columns | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/15/2021
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

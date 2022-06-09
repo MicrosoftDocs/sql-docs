@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Installing SSMA for SAP ASE client (SybaseToSQL)

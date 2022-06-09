@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "locks option [SQL Server]"
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the locks Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

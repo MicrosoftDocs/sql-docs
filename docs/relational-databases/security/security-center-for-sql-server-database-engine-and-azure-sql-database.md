@@ -88,7 +88,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
  [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
- [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-ver15.md)  
+ [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-2019.md)  
  [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
 [!INCLUDE[get-help-security](../../includes/get-help-security.md)]

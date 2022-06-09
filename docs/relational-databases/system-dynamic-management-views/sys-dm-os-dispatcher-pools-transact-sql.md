@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
   - "sys.dm_os_dispatcher_pools DMV"
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_dispatcher_pools (Transact-SQL)

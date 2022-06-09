@@ -1,7 +1,7 @@
 ---
-title: "Finding additional SqlClient driver information"
-description: "Page that contains useful information regarding the driver."
-ms.date: "06/15/2019"
+title: Finding additional SqlClient driver information
+description: Page that contains useful information regarding the driver.
+ms.date: 03/31/2022
 dev_langs: 
   - "csharp"
   - "vb"
@@ -20,13 +20,14 @@ ms.reviewer: v-kaywon
 
 For more information about the Microsoft SqlClient Data Provider for SQL Server development in general, see the following online resources:
 
-## Remarks  
-  
-|Resource|Description|  
-|--------------|-----------------|  
-|[.NET Runtime GitHub Repository](https://github.com/dotnet/runtime)|This repo contains the library implementation for .NET Core.|
-|[Microsoft SqlClient Data Provider for SQL Server GitHub Repository](https://github.com/dotnet/SqlClient)|This repo contains the source code for the SqlClient driver.|  
-|[.NET API Browser](/dotnet/api/)|This site contains .NET API information for the driver.|  
-  
+## Remarks
+
+|Resource|Description|
+|--------------|-----------------|
+|[.NET API Browser](/dotnet/api/microsoft.data.sqlclient)|This site contains .NET API information for Microsoft.Data.SqlClient.|
+|[Microsoft SqlClient Data Provider for SQL Server GitHub Repository](https://github.com/dotnet/SqlClient)|This repository contains the source code for Microsoft.Data.SqlClient.|
+|[.NET Runtime GitHub Repository](https://github.com/dotnet/runtime)|This repository contains the runtime library implementation for .NET.|
+
 ## Next steps
- [Overview of the SqlClient driver](overview-sqlclient-driver.md)
+
+[Overview of the SqlClient driver](overview-sqlclient-driver.md)

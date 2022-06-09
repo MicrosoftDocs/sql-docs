@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "priority boost option"
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the priority boost Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

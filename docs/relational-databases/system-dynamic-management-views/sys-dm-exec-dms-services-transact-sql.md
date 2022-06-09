@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "dm_exec_dms_services management view"
   - "sys.dm_exec_dms_services management view"
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_services (Transact-SQL)

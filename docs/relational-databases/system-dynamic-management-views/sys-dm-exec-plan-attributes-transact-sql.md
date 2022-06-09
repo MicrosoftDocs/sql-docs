@@ -16,8 +16,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_plan_attributes dynamic management function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

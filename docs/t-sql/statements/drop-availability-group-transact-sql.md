@@ -49,7 +49,7 @@ DROP AVAILABILITY GROUP group_name
   
 ## Limitations and Recommendations  
   
--   Executing **DROP AVAILABILITY GROUP** requires that the Always On Availability Groups feature is enabled on the server instance. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   Executing **DROP AVAILABILITY GROUP** requires that the Always On Availability Groups feature is enabled on the server instance. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 -   **DROP AVAILABILITY GROUP** cannot be executed as part of batches or within transactions. Also, expressions and variables are not supported.  
   

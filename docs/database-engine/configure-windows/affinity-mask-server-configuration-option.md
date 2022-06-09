@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SMP"
   - "DPC"
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: ""
 ms.date: 06/11/2020

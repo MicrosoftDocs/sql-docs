@@ -2,7 +2,7 @@
 description: "ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2017"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT SPECIFICATION statement"
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

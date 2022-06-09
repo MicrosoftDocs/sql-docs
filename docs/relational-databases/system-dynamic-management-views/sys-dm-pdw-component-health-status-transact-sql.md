@@ -10,8 +10,8 @@ ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_status (Transact-SQL)

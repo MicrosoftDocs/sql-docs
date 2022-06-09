@@ -1,7 +1,8 @@
 ---
 description: "backupset (Transact-SQL)"
 title: "backupset (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "09/07/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)
@@ -93,7 +94,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**compressed_backup_size**|**Numeric(20,0)**|Total Byte count of the backup stored on disk.<br /><br /> To calculate the compression ratio, use **compressed_backup_size** and **backup_size**.<br /><br /> During an **msdb** upgrade, this value is set to NULL. which indicates an uncompressed backup.|  
 |**key_algorithm**|**nvarchar(32)**|The encryption algorithm used to encrypt the backup. NO_Encryption value indicated that the backup was not encrypted.|  
 |**encryptor_thumbprint**|**varbinary(20)**|The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. In the case where the backup was not encrypted, this value is NULL.|  
+|**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or Asymmetric Key. . In the case where the backup was not encrypted, this value is NULL.|
 |**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or asymmetric key. In the case where the backup was not encrypted, this value is NULL.|  
+|**last_valid_restore_time**|**datetime**|The latest point in time to which the backup can be restored. Introduced in SQL Server 2022. |  
 
   
 ## Remarks

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.configurations catalog view"
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

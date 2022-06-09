@@ -2,8 +2,8 @@
 title: Active Directory objects
 titleSuffix: SQL Server Big Data Cluster
 description: Describes Active Directory objects created for SQL Server Big Data Clusters.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
 ms.topic: reference

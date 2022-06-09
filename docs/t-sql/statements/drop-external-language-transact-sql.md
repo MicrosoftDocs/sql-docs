@@ -8,8 +8,10 @@ ms.technology: language-extensions
 ms.topic: language-reference
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: dphansen
+ms.reviewer: rothja
 manager: cgronlun
+dev_langs: 
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

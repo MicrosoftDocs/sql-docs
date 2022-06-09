@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "shared memory connection string"
   - "logging in [SQL Server]"
   - "logins [SQL Server]"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/14/2017"

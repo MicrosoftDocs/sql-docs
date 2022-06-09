@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: contperf-fy20q4
 ms.date: 03/14/2017

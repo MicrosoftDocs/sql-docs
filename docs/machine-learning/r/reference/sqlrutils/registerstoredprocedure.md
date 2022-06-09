@@ -4,8 +4,8 @@
 title: "registerStoredProcedure function (sqlrutils) | Microsoft Docs" 
 description: " registerStoredProcedure: Uses the StoredProcedure object to register the stored procedure with the specified database " 
 keywords: "(sqlrutils), registerStoredProcedure" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

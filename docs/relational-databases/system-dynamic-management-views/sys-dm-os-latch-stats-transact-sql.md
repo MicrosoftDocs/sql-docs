@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_latch_stats dynamic management view"
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017||=azuresqldb-current|| >= aps-pdw-2016||= azure-sqldw-latest"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)

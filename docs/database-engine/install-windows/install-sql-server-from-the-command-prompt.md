@@ -79,11 +79,12 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom:
-  - intro-installation
+- intro-installation
+- event-tier1-build-2022
 ms.date: 01/07/2020
 monikerRange: ">=sql-server-2016"
 ---
@@ -260,14 +261,53 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |Python/Machine Learning Services (In-Database)|/MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |  
 |R/Machine Learning Services (In-Database)|/MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](../../machine-learning/install/sql-ml-component-install-without-internet-access.md).|  
 |Java/Language Extensions| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Optional** | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media. <br /><br /> Providing a path for /SQLJAVADIR indicates you would like to use an already-installed JRE or JDK. |
+|Azure Arc agent extension |/FEATURES=ARC<br/><br/>**Optional**| Connect the instance to Azure Arc. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESUBSCRIPTIONID<br/><br/>**Optional**|Azure subscription the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURERESOURCEGROUP<br/><br/>**Optional**| Azure resource group where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREREGION<br/><br/>**Optional**| Azure region where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURETENANTID<br/><br/>**Optional**| Azure tenant ID in which the service principal exists. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPAL<br/><br/>**Optional**| Service principal to authenticate against given tenant id, subscription and resource group. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPALSECRET<br/><br/>**Optional**| Service principal secret. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREARCPROXY<br/><br/>**Optional**| Name of the proxy server used to connect to Azure Arc. Starting with SQL Server 2022 (Preview).|
   
-###### Sample Syntax:  
+### Sample syntax:
+
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
-  
+
+#### Deploy - connected to Azure Arc
+
+Beginning with SQL Server 2022 (preview) you can install the Azure Arc agent with the SQL Server extension when you are install SQL Server. When you install the Azure Arc agent with SQL Server extension you can automatically enable the instance for Azure Arc which will register the SQL Server instance as a resource in Azure and make it eligible to attach additional Azure management services to it.
+
+The following example deploys a SQL Server instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... > ` ) with your information.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ARC /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /ONBOARDSQLTOARC /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
+```
+
+The following example installs the Azure Arc agent and SQL Server extension to manage an existing SQL Server instance and any other SQL Server instances that are installed.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region> 
+```
+
+The following example shows how to remove the SQL Server extension for Azure Arc agent from setup.
+
+> [!NOTE]
+> This command will not physically uninstall the SQL Server extension. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
+
+```console
+setup.exe /qs /ACTION=Uninstall /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS 
+```
+
+For more information about connecting to Azure Arc, see:
+
+- [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)
+- [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
+
 ##  <a name="SysPrep"></a> SysPrep Parameters  
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, see  
   

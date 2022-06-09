@@ -117,7 +117,7 @@ The configuration and assessment tools below provide an ability to address surfa
 
 - [Surface Area Configuration](surface-area-configuration.md) - It is recommended to enable only the features that are required by your environment in order to minimize the number of features that can be attacked by a malicious user. 
 - [Vulnerability assessment for SQL Server (SSMS)](sql-vulnerability-assessment.md) - SQL vulnerability assessment is a tool in [SSMS v17.4+](../../ssms/download-sql-server-management-studio-ssms.md) that helps discover, track, and remediate potential database vulnerabilities. The vulnerability assessment is a valuable tool to improve your database security and is executed at the database level, per database.
-- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md).
  
 
 ## Common SQL threats 
@@ -158,8 +158,8 @@ To minimize the risk of a side-channel attack, consider the following:
 
 Consider the following common infrastructure threats: 
 
-- [Brute force access](/azure/defender-for-identity/compromised-credentials-alerts) - the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found.
-- Password cracking / [password spray](/azure/security/compass/incident-response-playbook-password-spray) - attackers try a single carefully crafted password against all of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally waiting a set amount of time between attempts to avoid detection.
+- [Brute force access](/defender-for-identity/compromised-credentials-alerts) - the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found.
+- Password cracking / [password spray](/security/compass/incident-response-playbook-password-spray) - attackers try a single carefully crafted password against all of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally waiting a set amount of time between attempts to avoid detection.
 - [Ransomware attacks](/windows/security/threat-protection/intelligence/ransomware-malware) is a type of targeted attack where malware is used to encrypt data and files, preventing access to important content. The attackers then attempt to extort money from victims, usually in the form of cryptocurrencies, in exchange for the decryption key. Most ransomware infections start with email messages with attachments that try to install ransomware,  or websites hosting exploit kits that attempt to use vulnerabilities in web browsers and other software to install ransomware. 
 
 ### Password risks
@@ -185,7 +185,7 @@ Consider the following to minimize ransomware risks:
     - Ensuring the latest operating system and application security updates are applied
     - Use [group managed service accounts (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
     - Limit access to the virtual machines
-    - Require  [Just-in-time (JIT) access](/azure/defender-for-cloud/security-center-just-in-time.md) and [Azure Bastion](/azure//bastion/bastion-overview)
+    - Require  [Just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-usage) and [Azure Bastion](/azure//bastion/bastion-overview)
     - Improve Surface Area Security by avoiding installing tools including sysinternals and SSMS on the local machine
     - Avoid installing Windows Features, roles and enabling services that are not required
     - Additionally, there should be a regular full backup scheduled that is separately secured from a common administrator account so it can't delete copies of the databases. 
@@ -194,6 +194,4 @@ Consider the following to minimize ransomware risks:
 
 For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md). 
 
-For specific product security best practices, see [Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/security-best-practice) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices). 
-
-
+For specific product security best practices, see [Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/security-best-practice) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices).

@@ -1,9 +1,9 @@
 ---
-title: "Encrypt a Column of Data | Microsoft Docs"
+title: "Encrypt a Column of Data"
 description: Learn how to encrypt a column of data by using symmetric encryption in SQL Server using Transact-SQL, sometimes known as column-level or cell-level encryption.
 ms.custom: ""
 titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
-ms.date: "12/15/2020"
+ms.date: 03/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], columns"
   - "column level encryption"
   - "cell level encryption"
-ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
@@ -24,9 +23,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics
+This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
 
-The examples in this article have been validated against AdventureWorks2017. To get sample databases, see [AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md).
+The examples in this article have been validated against `AdventureWorks2017`. To get sample databases, see [AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md).
 
 ## Security  
   
@@ -43,7 +42,7 @@ The following permissions are necessary to perform the steps below:
 
 To use the following examples, you must have a database master key. If your database does not already have a database master key, create one. To create one, connect to your database and run the following script. Be sure to use a complex password.
 
-Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.  
+Copy and paste the following example into the query window that is connected to the `AdventureWorks` sample database. Select **Execute**.  
 
 ```sql  
 CREATE MASTER KEY ENCRYPTION BY   
@@ -56,9 +55,9 @@ Always back up your database master key. For more information on database master
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. On the Standard bar, click **New Query**.  
+2. On the Standard bar, select **New Query**.  
   
-3. Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.
+3. Copy and paste the following example into the query window that is connected to the `AdventureWorks` sample database. Select **Execute**.
 
     ```sql
     CREATE CERTIFICATE Sales09  
@@ -111,9 +110,9 @@ Always back up your database master key. For more information on database master
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. On the Standard bar, click **New Query**.  
+2. On the Standard bar, select **New Query**.  
   
-3. Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.  
+3. Copy and paste the following example into the query window that is connected to the `AdventureWorks` sample database. Select **Execute**.  
   
     ```sql
      CREATE CERTIFICATE HumanResources037  
@@ -160,12 +159,9 @@ Always back up your database master key. For more information on database master
     GO  
     ```  
   
- For more information, see the following:  
+ ## Next steps
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
-  
 -   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
-  
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  

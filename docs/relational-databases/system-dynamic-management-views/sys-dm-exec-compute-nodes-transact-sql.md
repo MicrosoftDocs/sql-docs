@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PolyBase management views"
   - "dm_exec_compute_nodes management view"
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)

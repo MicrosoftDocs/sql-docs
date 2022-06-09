@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CHANGETABLE"
   - "change tracking [SQL Server], CHANGETABLE"
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGETABLE (Transact-SQL)

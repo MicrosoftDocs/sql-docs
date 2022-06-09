@@ -17,8 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_xtp_nonclustered_index_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)

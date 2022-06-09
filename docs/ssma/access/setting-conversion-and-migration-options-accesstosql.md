@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "project settings"
   - "schemas"
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Setting Conversion and Migration Options (AccessToSQL)
 For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  

@@ -59,7 +59,7 @@ Edit the `/etc/network/interfaces` file so that your Active Directory domain con
 ```/etc/network/interfaces
 <...>
 # The primary network interface
-auth eth0
+auto eth0
 iface eth0 inet dhcp
 dns-nameservers **<AD domain controller IP address>**
 dns-search **<AD domain name>**

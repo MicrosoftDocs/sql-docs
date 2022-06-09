@@ -7,8 +7,9 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ms.reviewer: "maghan"
-ms.custom: 
-ms.date: 11/04/2019
+ms.custom:
+- event-tier1-build-2022
+ms.date: 04/15/2022
 ---
 
 # Schema Compare extension
@@ -36,7 +37,7 @@ It can be tedious to manually manage and synchronize different database versions
 
 1. Select the Extensions Icon to view the available extensions.
 
-    ![extension manager icon](media/add-extensions/extension-manager-icon.png)
+    :::image type="content" source="media/schema-compare-extension/schema-compare-marketplace-search.png" alt-text="marketplace search":::
 
 2. Search for the **Schema Compare** extension and select it to view its details. Select **Install** to add the extension.
 
@@ -46,11 +47,11 @@ It can be tedious to manually manage and synchronize different database versions
 
 1. To open the Schema Compare dialog, **right-click** a database in the Object Explorer and Select **Schema Compare**. The database you select is set as the Source database in the comparison.
 
-    ![schema compare launch menu](media/schema-compare-extension/schema-compare-launch.png)
+    :::image type="content" source="media/schema-compare-extension/schema-compare-launch.png" alt-text="schema compare launch":::
 
 2. Select one of the ellipses (...) to change the Source and Target of your Schema Compare and Select OK.
 
-    ![schema compare select source/target](media/schema-compare-extension/schema-compare-select-source-target.png)
+    :::image type="content" source="media/schema-compare-extension/schema-compare-select-source-target.png" alt-text="schema compare select source target":::
 
 3. To customize your comparison, Select the **Options** button in the toolbar.
 

@@ -1,30 +1,29 @@
 ---
+title: "SERVERPROPERTY (Transact-SQL)"
 description: "SERVERPROPERTY (Transact-SQL)"
-title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "06/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SERVERPROPERTY_TSQL"
   - "SERVERPROPERTY"
-  - sql13.swb.serverpropeties.connections.f1
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+  - "sql13.swb.serverpropeties.connections.f1"
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "SERVERPROPERTY function"
   - "server instance property information [SQL Server]"
   - "IsHadrEnabled server property"
   - "instances of SQL Server, property information"
   - "server properties [SQL Server]"
-ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SERVERPROPERTY (Transact-SQL)
 
@@ -73,7 +72,7 @@ Is an expression that contains the property information to be returned for the s
 |IsClustered|Server instance is configured in a failover cluster.<br /><br /> 1 = Clustered.<br /><br /> 0 = Not Clustered.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsExternalAuthenticationOnly|**Applies to**: Azure SQL Database and Azure SQL Managed Instance.<br /><br /> Returns whether [Azure AD-only authentication](/azure/azure-sql/database/authentication-azure-ad-only-authentication) is enabled.<br /><br /> 1 = Azure AD-only authentication is enabled.<br /><br /> 0 = Azure AD-only authentication is disabled.<br /><br /> Base data type: **int**|
 |IsFullTextInstalled|The full-text and semantic indexing components are installed on the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Full-text and semantic indexing components are installed.<br /><br /> 0 = Full-text and semantic indexing components are not installed.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
-|IsHadrEnabled|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is enabled on this server instance.<br /><br /> 0 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is disabled.<br /><br /> 1 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**<br /><br /> For availability replicas to be created and run on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] must be enabled on the server instance. For more information, see [Enable and Disable AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Note:** The IsHadrEnabled property pertains only to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Other high availability or disaster recovery features, such as database mirroring or log shipping, are unaffected by this server property.|  
+|IsHadrEnabled|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is enabled on this server instance.<br /><br /> 0 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is disabled.<br /><br /> 1 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**<br /><br /> For availability replicas to be created and run on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] must be enabled on the server instance. For more information, see [Enable and Disable Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Note:** The IsHadrEnabled property pertains only to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Other high availability or disaster recovery features, such as database mirroring or log shipping, are unaffected by this server property.|  
 |IsIntegratedSecurityOnly|Server is in integrated security mode.<br /><br /> 1 = Integrated security (Windows Authentication)<br /><br /> 0 = Not integrated security. (Both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.)<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsLocalDB|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Server is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsPolyBaseInstalled|**Applies to**: [!INCLUDE[ssSQL2016](../../includes/sssql16-md.md)].<br /><br /> Returns whether the server instance has the PolyBase feature installed.<br /><br /> 0 = PolyBase is not installed.<br /><br /> 1 = PolyBase is installed.<br /><br /> Base data type: **int**|  
@@ -84,6 +83,7 @@ Is an expression that contains the property information to be returned for the s
 |LicenseType|Unused. License information is not preserved or maintained by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. Always returns DISABLED.<br /><br /> Base data type: **nvarchar(128)**|  
 |MachineName|Windows computer name on which the server instance is running.<br /><br /> For a clustered instance, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on a virtual server on Microsoft Cluster Service, it returns the name of the virtual server.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **nvarchar(128)**|  
 |NumLicenses|Unused. License information is not preserved or maintained by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. Always returns NULL.<br /><br /> Base data type: **int**|  
+|PathSeparator|**Applies to**: [!INCLUDE[ssSQL2017](../../includes/sssql17-md.md)] and later.<br /><br />Returns `\` on Windows and `/` on Linux <br /><br /> Base data type: **nvarchar**|
 |ProcessID|Process ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. ProcessID is useful in identifying which Sqlservr.exe belongs to this instance.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |ProductBuild|**Applies to**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] beginning October, 2015.<br /><br /> The build number.<br /><br /> Base data type: **nvarchar(128)**|  
 |ProductBuildType|**Applies to**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br /> Type of build of the current build.<br /><br /> Returns one of the following:<br /><br /> OD = On Demand release a specific customer.<br /><br /> GDR = General Distribution Release released through Windows Update.<br /><br /> NULL = Not applicable.<br /><br /> Base data type: **nvarchar(128)**|  

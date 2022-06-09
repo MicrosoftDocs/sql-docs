@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "dm_exec_compute_node_errors"
   - "sys.dm_exec_compute_node_errors management view"
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_errors (Transact-SQL)

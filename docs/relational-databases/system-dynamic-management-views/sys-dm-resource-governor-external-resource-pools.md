@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "dm_resource_governor_external_resource_pools"
   - "sys.dm_resource_governor_external_resource_pools"
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlun
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

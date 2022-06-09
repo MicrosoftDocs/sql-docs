@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.dm_fts_parser (Transact-SQL)

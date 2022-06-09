@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysfiles system table"
   - "sys.sysfiles compatibility view"
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

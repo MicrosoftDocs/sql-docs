@@ -2,7 +2,7 @@
 title: "Step 3: Connecting to SQL using pyodbc"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
-ms.date: "03/02/2021"
+ms.date: "03/24/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -40,7 +40,7 @@ cursor = cnxn.cursor()
 
 ## Run query  
   
-The cursor.executefunction can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone()
+The cursor.executefunction can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone().
 
 ```python
 #Sample select query
@@ -70,6 +70,7 @@ print('Rows inserted: ' + str(count))
 
 pyODBC uses the Microsoft ODBC driver for SQL Server.
 If your version of the ODBC driver is 17.1 or later, you can use the Azure Active Directory interactive mode of the ODBC driver through pyODBC.
+
 This interactive option works if Python and pyODBC permit the ODBC driver to display the dialog. The option is only available on Windows operating systems.
 
 ### Example connection string for Azure Active Directory interactive authentication

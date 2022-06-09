@@ -17,7 +17,7 @@ You can manage your instances of SQL Server from Azure with SQL Server on Azure 
 
 You can enable SQL Server on [Azure Arc-enabled servers](/azure/azure-arc/servers/overview). It extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
-To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a SQL Arc extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will a  __SQL Server – Azure Arc__ resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
+To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a SQL Arc extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a __SQL Server – Azure Arc__ resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
 ## Architecture
 
@@ -73,7 +73,7 @@ Review [networking configuration, transport layer security, and resource provide
 
 The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](connect.md#prerequisites) section.
 
-If you connected an instance of SQL Server ot Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
+If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
 
 ## Supported Azure regions
 

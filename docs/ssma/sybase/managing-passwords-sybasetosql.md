@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Sybase Console,Managing Passwords"
   - "Sybase Console,Securing Password"
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Managing Passwords (SybaseToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.

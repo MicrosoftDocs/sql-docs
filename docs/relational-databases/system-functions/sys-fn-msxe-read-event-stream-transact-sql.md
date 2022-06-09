@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_MSxe_read_event_stream"
   - "fn_MSxe_read_event_stream"
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

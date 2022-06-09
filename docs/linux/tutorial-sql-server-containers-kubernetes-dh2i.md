@@ -4,7 +4,7 @@ description: This tutorial shows how to deploy a SQL Server Always On availabili
 author: amvin87
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
-ms.date: 07/20/2021
+ms.date: 04/01/2022
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -90,23 +90,26 @@ $mkdir dockefiles
 $cd dockerfiles 
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 
-# now build the image using the command: 
-$docker build -t <tagname> . 
-# you should now be able to see the new image, sqlimage when you run the docker images command 
+# now build the image using the command:
+# <tagname> should be sqldh2i/latest
+$docker build -t <tagname> .
+# you should now be able to see the new image, sqldh2i when you run the docker images command 
 ```
 
 Tag the image and push it to Azure Container Registry (ACR) using the commands below. Make sure you've already logged into Azure Container Registry (ACR) using the docker login command. For more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
 
 ```bash
-$docker tag sqlimage/latest <registry-name>.azurecr.io/sqlimage:latest 
+$docker tag sqldh2i/latest <registry-name>.azurecr.io/sqldh2i:latest 
 #now push to the ACR repo: 
-$docker push <registry-name>.azurecr.io/sqlimage:latest 
+$docker push <registry-name>.azurecr.io/sqldh2i:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
 
 This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see this [Integrate ACR with an AKS cluster](/azure/aks/cluster-container-registry-integration).
 
-```azurecli
+Use the short name for `<registry-name>`. The full qualified name of the registry is not accepted in the below command.
+
+```bash
 az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
 ```
 
@@ -176,7 +179,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 
@@ -235,7 +238,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 
@@ -433,5 +436,5 @@ GO
 
 ## Next steps
 
-- [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
+- [Deploy SQL Server containers on Azure Kubernetes Service](quickstart-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

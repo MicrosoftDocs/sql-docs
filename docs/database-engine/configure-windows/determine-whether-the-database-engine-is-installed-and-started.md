@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "viewing Database Engine installation"
   - "installed Database Engine verification [SQL Server]"
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Determine Whether the Database Engine Is Installed and Started
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

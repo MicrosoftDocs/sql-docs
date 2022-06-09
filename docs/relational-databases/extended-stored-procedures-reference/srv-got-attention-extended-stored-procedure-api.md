@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_got_attention"
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # srv_got_attention (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

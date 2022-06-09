@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "pipes [SQL Server], alternate"
   - "alternate pipes [SQL Server]"
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure a Server to Listen on an Alternate Pipe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

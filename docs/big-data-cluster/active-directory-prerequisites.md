@@ -2,8 +2,8 @@
 title: Deploy in Active Directory mode - prerequisites
 titleSuffix: SQL Server Big Data Cluster
 description: Configure Active Directory for SQL Server Big Data Clusters
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
 ms.topic: conceptual

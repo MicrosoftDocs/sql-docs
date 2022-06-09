@@ -1,11 +1,11 @@
 ---
-description: "sp_data_source_objects (Transact-SQL)"
+description: "sp_data_source_objects returns list of table objects that are available to be virtualized."
 title: "sp_data_source_objects"
 ms.custom: ""
-ms.date: "1/7/2022"
+ms.date: 06/06/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: system-objects
 ms.topic: conceptual
 dev_langs: 
@@ -17,8 +17,8 @@ f1_keywords:
   - "sys.sp_data_source_objects"
 helpviewer_keywords: 
   - "PolyBase"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sp_data_source_objects (Transact-SQL)
 
@@ -26,12 +26,9 @@ ms.author: wiassaf
 
 Returns list of table objects that are available to be virtualized.
 
-> [!NOTE]
-> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
+## Syntax  
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-
-## Syntax  
 
 ```syntaxsql
 sp_data_source_objects  
@@ -53,6 +50,7 @@ This parameter is the root of the name of the object(s) to search for. `@object_
 This call only returns external objects that begin with the value set for `@object_root_name`.
 
 If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, `@object_root_name` cannot contain a partial database name. In these cases, the parameter `@object_root_name` should contain all three parts, with the third part being the object name to search.
+
 > [!CAUTION]
 > Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for `@object_root_name`.
 
@@ -83,7 +81,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks  
 
-The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
+The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. This procedure was first introduced in SQL Server 2019 CU5.
 
 This stored procedure supports connectors for:
 
@@ -97,9 +95,13 @@ The stored procedure does not support generic ODBC data source or Hadoop connect
 
 The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [`SQLTables` function](../native-client-odbc-api/sqltables.md). Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
 
-Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a table. This can include database objects like functions in TeraData, or synonyms in Oracle. PolyBase cannot connect to some ODBC objects as external tables and will therefore not have a value in the `TABLE_LOCATION` column. Despite the absence of values in `TABLE_LOCATION`, the presence of one of these ODBC objects may make a database or schema non-empty.
+Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a table. This can include database objects like functions in Teradata, or synonyms in Oracle. PolyBase cannot connect to some ODBC objects as external tables and will therefore not have a value in the `TABLE_LOCATION` column. Despite the absence of values in `TABLE_LOCATION`, the presence of one of these ODBC objects may make a database or schema non-empty.
 
-Use `sp_data_source_objects` and [`sp_data_source_table_columns`](sp-data-source-table-columns.md) to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external table schemas represented in SQL Server data types.
+Use `sp_data_source_objects` and [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external table schemas represented in SQL Server data types.
+
+### External tables to MongoDB collections that contain arrays
+
+To create external tables to MongoDB collections that contain arrays, you should use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to produce a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB. The flattening actions are performed automatically by the driver. Alternatively, you can use [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md) to detect the collection schema (columns) and manually create the external table. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver. The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema schema.
 
 ### Data source type specific remarks
 

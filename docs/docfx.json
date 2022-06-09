@@ -115,7 +115,6 @@
         "relational-databases/security/**/*.md": "GitHub",
         "relational-databases/sequence-numbers/**/*.md": "GitHub",
         "relational-databases/server-management-objects-smo/**/*.md": "GitHub",
-        "relational-databases/service-broker/**/*.md": "GitHub",
         "relational-databases/spatial/**/*.md": "GitHub",
         "relational-databases/sql-trace/**/*.md": "GitHub",
         "relational-databases/sqlxml/**/*.md": "GitHub",

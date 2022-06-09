@@ -36,7 +36,7 @@ In order to use Active Directory authentication, you must have an AD Domain Cont
 The details for how to configure AD authentication are provided in the tutorial, [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md). The following list provides a summary with a link to each section in the tutorial:
 
 1. [Join a SQL Server host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
-1. [Create an AD user for SQL Server and set the ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
+1. [Create an AD user for SQL Server and set the Service Principal Name](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configure the SQL Server service keytab](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Secure the keytab file](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Configure SQL Server to use the keytab file for Kerberos authentication](sql-server-linux-active-directory-authentication.md#configurekeytab).
@@ -48,6 +48,8 @@ The details for how to configure AD authentication are provided in the tutorial,
 - At this time, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` authentication method will be enabled in a future release.
 - SQL Server on Linux does not support NTLM protocol for remote connections. Local connection may work using NTLM.
 
-## Next Steps
+## Next steps
 
-For more information on how to implement Active Directory authentication for SQL Server on Linux, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+- [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)

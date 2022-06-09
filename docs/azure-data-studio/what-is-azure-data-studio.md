@@ -91,7 +91,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Azure Resource Explorer|Preview||
 |Generate Scripts Wizard||Yes|
 |Object Properties||Yes|
-|Table Designer||Yes|
+|Table Designer|Preview|Yes|
 
 ### Query Editor
 
@@ -168,6 +168,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 - [Azure Data Studio FAQ](faq.yml)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
+- [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

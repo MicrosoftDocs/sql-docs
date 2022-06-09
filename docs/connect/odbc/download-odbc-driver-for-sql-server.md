@@ -78,7 +78,7 @@ The Microsoft ODBC Driver for SQL Server can be downloaded and installed using p
 If you need to download the packages for offline installation, all versions are available via the below links.
 
 > [!Note]
-> Packages named `msodbcsql17-*` are the latest version. Packages named `msodbcsql-*` are version 13 of the driver.
+> Packages named `msodbcsql18-*` are the latest version. Packages named `msodbcsql-*` are version 13 of the driver.
 
 ### Alpine
 
@@ -94,10 +94,10 @@ If you need to download the packages for offline installation, all versions are 
 
 ### Debian
 
-- [Debian 10 .deb packages](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
-- [Debian 9 .deb packages](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
-- [Debian 8 .deb packages (msodbcsql 13.x)](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- Debian 11 .deb packages: [v17](https://packages.microsoft.com/debian/11/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/debian/11/prod/pool/main/m/msodbcsql18/)
+- Debian 10 .deb packages: [v17](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql18/)
+- Debian 9 .deb packages: [v17](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql18/)
+- Debian 8 .deb packages: [v13](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 ### Red Hat
 
@@ -113,13 +113,11 @@ If you need to download the packages for offline installation, all versions are 
 
 ### Ubuntu
 
-- [Ubuntu 20.10 .deb packages](https://packages.microsoft.com/ubuntu/20.10/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 20.04 .deb packages](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb packages (msodbcsql 13.x)](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 14.04 .deb packages (msodbcsql 13.x)](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/)
+- Ubuntu 21.10 .deb packages: [v17](https://packages.microsoft.com/ubuntu/21.10/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/21.10/prod/pool/main/m/msodbcsql18/)
+- Ubuntu 20.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql18/)
+- Ubuntu 18.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql18/)
+- Ubuntu 16.04 .deb packages: [v13](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- Ubuntu 14.04 .deb packages: [v13](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
 
 See also [Installing the Linux driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 

@@ -2,7 +2,7 @@
 title: "Integrated Kerberos authentication (OLE DB driver) | Microsoft Docs"
 description: Learn how to get mutual Kerberos authentication by using OLE DB in OLE DB Driver for SQL Server with this example.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -66,7 +66,7 @@ int _tmain(int argc, _TCHAR* argv[])
     DBPROP rgDBProp[1] = {};
     LPCWSTR lpwszProviderString = L"Server=MyServer;"   // server with SQL Server 2008 (or later)
        L"Trusted_Connection=Yes;"
-       L"Encrypt=yes;"
+       L"Encrypt=Mandatory;"
        L"ServerSPN=CP_SPN;";   // customer-provided SPN
 
     DBPROPSET* prgPropertySets = nullptr;

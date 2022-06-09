@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views

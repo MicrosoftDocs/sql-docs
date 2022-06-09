@@ -2,7 +2,6 @@
 description: "DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)"
 title: "DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -17,8 +16,9 @@ helpviewer_keywords:
   - "database audit specification"
   - "DROP DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 ---
 # DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

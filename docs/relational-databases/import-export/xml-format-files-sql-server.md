@@ -358,7 +358,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -394,7 +394,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -429,7 +429,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT   
-xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -461,7 +461,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -503,7 +503,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -522,7 +522,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  

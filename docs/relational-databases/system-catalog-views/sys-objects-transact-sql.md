@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "table-valued parameters, sys.objects catalog view"
   - "user-defined table types [SQL Server]"
   - "table types [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.objects (Transact-SQL)

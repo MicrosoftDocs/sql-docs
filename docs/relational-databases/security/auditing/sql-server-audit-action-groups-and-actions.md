@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: DavidTrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
 ms.reviewer: vanto
 ms.custom: ""
-ms.date: "05/07/2021"
+ms.date: "03/23/2022"
 ---
 # SQL Server Audit Action Groups and Actions
 
@@ -115,7 +115,8 @@ Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](.
 |TRACE_CHANGE_GROUP|This event is raised for all statements that check for the ALTER TRACE permission. Equivalent to the [Audit Server Alter Trace Event Class](../../../relational-databases/event-classes/audit-server-alter-trace-event-class.md).|  
 |TRANSACTION_GROUP|This event is raised for BEGIN TRANSACTION, ROLLBACK TRANSACTION, and COMMIT TRANSACTION operations, both for explicit calls to those statements and implicit transaction operations. This event is also raised for UNDO operations for individual statements caused by the rollback of a transaction.|  
 |USER_CHANGE_PASSWORD_GROUP|This event is raised whenever the password of a contained database user is changed by using the ALTER USER statement.|  
-|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). Typically triggers or stored procedures include calls to **sp_audit_write** to enable auditing of important events.|  
+|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). Typically triggers or stored procedures include calls to **sp_audit_write** to enable auditing of important events.|
+|LEDGER_OPERATION_GROUP | This event is raised for following actions GENERATE LEDGER DIGEST - When you generate a ledger digest ,VERIFY LEDGER - When you verify a ledger digest. **Applies to Azure SQL Database.**|
   
 ### Considerations  
  Server-level action groups cover actions across a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For example, any schema object access check in any database is recorded if the appropriate action group is added to a server audit specification. In a database audit specification, only schema object accesses in that database are recorded.  
@@ -160,6 +161,7 @@ Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](.
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indicates that a principal successfully logged in to a contained database.|  
 |USER_CHANGE_PASSWORD_GROUP|This event is raised whenever the password of a contained database user is changed by using the ALTER USER statement.|  
 |USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|LEDGER_OPERATION_GROUP | This event is raised for following actions ENABLE LEDGER - When you create a new ledger table ,ALTER LEDGER - When you drop a ledger table and ALTER LEDGER CONFIGURATION **Applies to Azure SQL Database.**|
   
 ## Database-Level Audit Actions  
  Database-level actions support the auditing of specific actions directly on database schema and schema objects, such as Tables, Views, Stored Procedures, Functions, Extended Stored Procedures, Queues, Synonyms. Types, XML Schema Collection, Database, and Schema are not audited. The audit of schema objects may be configured on Schema and Database, which means that events on all schema objects contained by the specified schema or database will be audited. The following table describes database-level audit actions.  

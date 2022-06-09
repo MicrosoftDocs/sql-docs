@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Monitor [SQL Server]"
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SQL Server Monitor Overview
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

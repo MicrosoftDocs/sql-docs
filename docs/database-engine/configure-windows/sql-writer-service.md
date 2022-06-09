@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MSDE Writer"
   - "VSS"
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SQL Writer Service
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "administering SQL Server on Linux, starting and stopping services"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ---
 
 # Start, stop, and restart SQL Server services on Linux
@@ -40,7 +40,7 @@ The [!INCLUDE[ssDE](../includes/ssde-md.md)] service is the default instance, wi
 
 ### SQL Server Agent service
 
-The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../ssms/agent/sql-server-agent.md). SQL Server Agent isn't available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](../sql-server/editions-and-components-of-sql-server-version-15.md).
+The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../ssms/agent/sql-server-agent.md). SQL Server Agent isn't available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](../sql-server/editions-and-components-of-sql-server-2019.md).
 
 ### Additional Information
 

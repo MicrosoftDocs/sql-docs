@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 
 # Database Engine Service Startup Options

@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_statistics_xml management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 

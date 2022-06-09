@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server Big Data Clusters Cumulative Update 14 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: sql

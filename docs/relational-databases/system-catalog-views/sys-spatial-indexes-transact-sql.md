@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.spatial_indexes catalog view"
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.spatial_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,8 +14,8 @@ dev_langs:
   - TSQL
 helpviewer_keywords: 
   - "PolyBase"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: 
 ms.custom: ""
 ms.date: "1/7/2022"

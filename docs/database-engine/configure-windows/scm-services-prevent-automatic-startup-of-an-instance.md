@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "preventing automatic startups [SQL Server]"
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SCM Services - Prevent Automatic Startup of an Instance
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

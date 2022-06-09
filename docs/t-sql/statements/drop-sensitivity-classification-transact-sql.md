@@ -1,14 +1,14 @@
 ---
 description: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 03/25/2019
+ms.date: 04/19/2022
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
 ms.custom: ""
-ms.author: giladm
-author: giladmit
+ms.author: matripathy
+author: Madhumitatripathy
 f1_keywords:
   - "DROP SENSITIVITY CLASSIFICATION"
   - "DROP_SENSITIVITY_CLASSIFICATION"
@@ -58,7 +58,7 @@ Is the name of the database column from which to remove the classification. Curr
 
 ## Permissions  
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission CONTROL, or by the server permission CONTROL SERVER.
 
 
 ## Examples  

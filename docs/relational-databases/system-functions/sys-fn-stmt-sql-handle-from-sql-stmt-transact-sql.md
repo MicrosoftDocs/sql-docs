@@ -11,8 +11,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)

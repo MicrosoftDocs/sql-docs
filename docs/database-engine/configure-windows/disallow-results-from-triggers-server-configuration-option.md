@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "result sets [SQL Server], triggers"
   - "disallow results from triggers option"
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # disallow results from triggers Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

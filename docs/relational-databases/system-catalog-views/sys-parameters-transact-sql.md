@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameters catalog view"
   - "table-valued parameters,sys.parameters"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameters (Transact-SQL)

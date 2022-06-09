@@ -2,8 +2,8 @@
 title: Management notebooks for SQL Server Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Managing Big Data Clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 12/01/2021

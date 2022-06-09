@@ -2,7 +2,7 @@
 title: "Create a server audit & database audit specification"
 description: Learn to create a SQL Server audit and a database audit specification by using SQL Server Management Studio or Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "audits [SQL Server], creating database specification"
   - "database audit [SQL Server]"
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # Create a server audit and database audit specification
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

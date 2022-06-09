@@ -3,8 +3,8 @@ title: Key Versions
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how key versions are used for SQL BDC key management and key rotation for HDFS and SQL Server keys.
 ms.date: 06/14/2021
-author: Danibunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.prod: sql

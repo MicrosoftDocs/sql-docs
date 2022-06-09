@@ -3,7 +3,7 @@ title: Deploy and connect to SQL Server Docker containers
 description: Explore how SQL Server can be deployed on Docker containers and learn about various tools to connect to SQL Server from inside and outside the container
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto, rwestMSFT
+ms.reviewer: vanto, randolphwest
 ms.custom:
   - contperf-fy21q1
   - intro-deployment
@@ -254,19 +254,19 @@ For example, the following command pulls the Cumulative Update 15 for [!INCLUDE[
 
 ::: zone pivot="cs1-bash"
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 

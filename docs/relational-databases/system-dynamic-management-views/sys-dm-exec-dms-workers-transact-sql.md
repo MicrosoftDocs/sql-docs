@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "dm_exec_dms_workers management view"
   - "sys.dm_exec_dms_workers management view"
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_workers (Transact-SQL)

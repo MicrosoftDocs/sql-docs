@@ -2,7 +2,7 @@
 description: "sys.dm_server_audit_status (Transact-SQL)"
 title: "sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2016"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_audit_status dynamic management view"
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

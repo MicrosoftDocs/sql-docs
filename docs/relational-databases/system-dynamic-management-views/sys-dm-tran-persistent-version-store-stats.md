@@ -1,8 +1,9 @@
 ---
-description: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
+description: "The sys.dm_tran_persistent_version_store_stats dynamic management view returns information for accelerated database recovery (ADR) persistent version store (PVS) metrics."
 title: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/18/2022"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -17,8 +18,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_tran_persistent_version_store_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_persistent_version_store_stats (Transact-SQL)
@@ -49,7 +50,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |pvs_off_row_page_skipped_oldest_active_xdesid|    bigint | The number of pages skipped for reclaim due to the oldest active transaction. |
 |pvs_off_row_page_skipped_min_useful_xts|    bigint | The number of pages skipped for reclaim due to a long snapshot scan. |
 |pvs_off_row_page_skipped_oldest_snapshot|    bigint | The number of pages skipped for reclaim due to online index rebuild activities. This is not common for PVS usage. |
-|||
+|pvs_off_row_page_skipped_oldest_aborted_xdesid|bigint| **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.**<BR />The number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions. |
   
 ## Permissions
 

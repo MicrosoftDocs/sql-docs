@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "buffer pool, SQL Server"
   - "resource monitor, SQL Server"
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Management Architecture Guide
@@ -53,40 +53,30 @@ One of the primary design goals of all database software is to minimize disk I/O
  
 > [!NOTE]
 > In a heavily loaded system under memory pressure, queries with merge join, sort and bitmap in the query plan can drop the bitmap when the queries do not get the minimum required memory for the bitmap. This can affect the query performance and if the sorting process can not fit in memory, it can increase the usage of worktables in tempdb database, causing tempdb to grow. To resolve this problem add physical memory or tune the queries to use a different and faster query plan.
- 
-### Providing the maximum amount of memory to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-By using AWE and the Locked Pages in Memory privilege, you can provide the following amounts of memory to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. 
+### Conventional (virtual) memory
 
-> [!NOTE]
-> The following table includes a column for 32-bit versions, which are no longer available.
+All SQL Server editions support conventional memory on 64-bit platform. The SQL Server process can access virtual address space up to Operating System maximum on x64 architecture (SQL Server Standard Edition supports up to 128 GB). With IA64 architecture, the limit was 7 TB (IA64 not supported in SQL Server 2012 (11.x) and above). See [Memory Limits for Windows](/windows/win32/memory/memory-limits-for-windows-releases) for more information.
 
-|Memory policy|32-bit <sup>1</sup> |64-bit|
-|-------|-------|-------| 
-|Conventional memory |All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions. Up to process virtual address space limit: <br>- 2 GB<br>- 3 GB with /3gb boot parameter <sup>2</sup> <br>- 4 GB on WOW64 <sup>3</sup> |All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions. Up to process virtual address space limit: <br>- 7 TB with IA64 architecture (IA64 not supported in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and above)<br>- Operating system maximum with x64 architecture <sup>4</sup>
-|AWE mechanism (Allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to go beyond the process virtual address space limit on 32-bit platform.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise, and Developer editions: Buffer pool is capable of accessing up to 64 GB of memory.|Not applicable <sup>5</sup> |
-|Lock pages in memory operating system (OS) privilege (allows locking physical memory, preventing OS paging of the locked memory.) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise, and Developer editions: Required for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process to use AWE mechanism. Memory allocated through AWE mechanism cannot be paged out. <br> Granting this privilege without enabling AWE has no effect on the server. | Only used when necessary, namely if there are signs that sqlservr process is being paged out. In this case, error 17890 will be reported in the error log, resembling the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+### Address Windows Extensions (AWE) memory
 
-<sup>1</sup> 32-bit versions are not available starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb is an operating system boot parameter.  
-<sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
-<sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
-<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, see [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
+By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) and the Locked Pages in Memory privilege required by AWE, you can keep most of SQL Server process memory "locked": it continues to stay in physical RAM in the case of low virtual memory conditions. This happens in both 32-bit and 64-bit AWE allocations. The locking of memory occurs because AWE memory doesn't go through the Virtual Memory Manager in Windows, which controls paging of memory. The AWE memory allocation API requires the Locked Pages in Memory (SeLockMemoryPrivilege) privilege; see [AllocateUserPhysicalPages notes](/windows/win32/api/memoryapi/nf-memoryapi-allocateuserphysicalpages#remarks). Therefore, the main benefit of using the AWE API is to keep the majority of the memory resident in RAM in case of memory pressure on the system. For information on how to allow SQL Server to use AWE, see [Enable the Lock Pages in Memory Option](../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md).
 
-> [!NOTE]
-> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) and [Managing Memory for Large Databases](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
+If the lock-pages-in-memory privilege (LPIM) is granted (on 32-bit or 64-bit systems), we strongly recommend that you set max server memory to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB). For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Locked Pages in Memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
+
+If the Locked pages in memory privilege is not enabled, SQL Sever will switch to using conventional memory and in cases of OS memory exhaustion, error 17890 may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
--  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8 KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
--  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8 KB.
--  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
--  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
--  **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
+
+- **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8 KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+- **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8 KB.
+- **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
+- Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
+- **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
 
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)],  Single-Page allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager. 
 
@@ -121,7 +111,7 @@ In earlier versions of SQL Server ( [!INCLUDE[ssVersion2005](../includes/ssversi
 
 The virtual address space that is reserved for these allocations is determined by the _**memory\_to\_reserve**_ configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
-Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
+Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value doesn't include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
 
 The following table indicates whether a specific type of memory allocation falls into the *memory_to_reserve* region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 
@@ -147,15 +137,15 @@ The following query returns information about currently allocated memory:
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
-	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
-	locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
-	virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
-	virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
-	virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
-	page_fault_count AS sql_page_fault_count,
-	memory_utilization_percentage AS sql_memory_utilization_percentage, 
-	process_physical_memory_low AS sql_process_physical_memory_low, 
-	process_virtual_memory_low AS sql_process_virtual_memory_low
+    large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
+    locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
+    virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
+    virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
+    virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
+    page_fault_count AS sql_page_fault_count,
+    memory_utilization_percentage AS sql_memory_utilization_percentage, 
+    process_physical_memory_low AS sql_process_physical_memory_low, 
+    process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
  

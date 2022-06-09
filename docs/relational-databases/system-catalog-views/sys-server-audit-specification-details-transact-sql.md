@@ -2,7 +2,7 @@
 description: "sys.server_audit_specification_details (Transact-SQL)"
 title: "sys.server_audit_specification_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/05/2016"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_audit_specification_details catalog view"
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

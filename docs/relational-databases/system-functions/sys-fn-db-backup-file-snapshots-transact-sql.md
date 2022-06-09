@@ -11,8 +11,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

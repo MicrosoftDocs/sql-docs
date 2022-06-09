@@ -27,3 +27,7 @@ This section contains the following topics:
 -   [SQLGetInfo Returned Values for Paradox](../../odbc/microsoft/sqlgetinfo-returned-values-for-paradox.md)  
   
 -   [Other Paradox Driver Programming Details](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
+
+> [!NOTE]  
+
+>  Accessing Paradox ISAM files through the ODBC Desktop Database Drivers requires installation of the Borland database engine.

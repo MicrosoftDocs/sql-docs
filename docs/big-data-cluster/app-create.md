@@ -2,8 +2,8 @@
 title: Deploy applications with azdata
 titleSuffix: SQL Server Big Data Clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 04/13/2021

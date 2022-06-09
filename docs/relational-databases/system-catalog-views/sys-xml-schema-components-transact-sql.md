@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_components catalog view"
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.xml_schema_components (Transact-SQL)

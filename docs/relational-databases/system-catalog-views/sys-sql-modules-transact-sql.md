@@ -17,8 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.sql_modules catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)

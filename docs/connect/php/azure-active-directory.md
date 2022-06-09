@@ -194,45 +194,6 @@ if ($conn === false) {
 ?>
 ```
 
-### Using the user-assigned managed identity with PDO_SQLSRV driver
-
-A user-assigned managed identity is created as a standalone Azure resource. Azure creates an identity in the Azure AD tenant that's trusted by the
-subscription in use. After the identity is created, the identity can be assigned to one or more Azure service instances. Copy the `Object ID` of this identity and set it as the user name in the connection string. 
-
-Therefore, when connecting using the user-assigned managed identity, provide the Object ID as the user name but omit the password.
-
-```php
-<?php
-
-$azureServer = 'myazureserver.database.windows.net';
-$azureDatabase = 'myazuredatabase';
-$azureUser = '2d68f56e-9547-4dae-aee8-f3g28ab9674x';    // Object ID of the identity
-$connectionInfo = "Database = $azureDatabase; Authentication = ActiveDirectoryMsi;";
-
-try {
-    $conn = new PDO("sqlsrv:server = $azureServer; $connectionInfo", $azureUser);
-    echo "Connected successfully with Authentication=ActiveDirectoryMsi (user-assigned).\n";
-    
-    $tsql = "SELECT @@Version AS SQL_VERSION";
-    
-    try {
-        $stmt = $conn->query($tsql);
-        $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-        print_r($result);
-
-        unset($stmt);
-    } catch (PDOException $e) {
-        echo "Failed to run the simple query (user-assigned).\n";
-    }
-    unset($conn);
-} catch (PDOException $e) {
-    echo "Could not connect with Authentication=ActiveDirectoryMsi (user-assigned).\n";
-    print_r($e->getMessage());
-    echo "\n";
-}
-?>
-```
-
 ## Example - connect using service principal objects in Azure Active Directory
 
 To authenticate using a service principal object, you will need the corresponding [application client ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) and the [client secret](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).

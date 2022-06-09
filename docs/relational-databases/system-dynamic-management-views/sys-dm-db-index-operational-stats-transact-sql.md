@@ -17,8 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_index_operational_stats dynamic management function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)

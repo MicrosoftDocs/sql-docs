@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], strick security"
   - "clr strict security option"
 ms.assetid: 
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # CLR strict security   
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

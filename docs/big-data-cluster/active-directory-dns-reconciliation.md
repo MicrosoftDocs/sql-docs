@@ -1,8 +1,8 @@
 ---
 title: Active Directory and Kubernetes DNS Reconciliation in Big Data Clusters deployments
 description: Configure DNS reconciliation for SQL Server Big Data Cluster in Active Directory mode
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/30/2020
 ms.topic: conceptual

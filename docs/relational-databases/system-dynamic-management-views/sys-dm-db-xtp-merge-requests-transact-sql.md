@@ -16,8 +16,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_xtp_merge_requests"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_db_xtp_merge_requests (Transact-SQL)
 

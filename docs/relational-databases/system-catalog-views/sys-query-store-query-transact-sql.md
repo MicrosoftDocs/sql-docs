@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "query_store_query catalog view"
   - "sys.query_store_query catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query (Transact-SQL)

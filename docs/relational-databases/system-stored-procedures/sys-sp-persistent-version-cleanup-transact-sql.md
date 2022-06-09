@@ -14,8 +14,8 @@ f1_keywords:
   - "sp_persistent_version_cleanup_TSQL"
 dev_langs: 
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: This tutorial shows how you can load an run a sample Spark notebook on a SQL Server 2019 big data cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql

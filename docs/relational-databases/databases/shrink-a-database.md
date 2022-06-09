@@ -55,7 +55,7 @@ This article describes how to shrink a database in [!INCLUDE[ssnoversion](../../
 
 ## Remarks
 
-Shrink operations in progress can block other queries on the database, and can be blocked by queries already in progress. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], shrink database operations have a WAIT_AT_LOW_PRIORITY option. This feature is a new additional option for `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`. If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain the necessary locks due to a long-running query already in progress, the shrink operation will eventually time out after one minute and quietly exit, preventing other queries from being blocked. For more information, see [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+Shrink operations in progress can block other queries on the database, and can be blocked by queries already in progress. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], shrink database operations have a WAIT_AT_LOW_PRIORITY option. This feature is a new additional option for `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`. If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain the necessary locks due to a long-running query already in progress, the shrink operation will eventually time out after one minute and silently exit, preventing other queries from being blocked. For more information, see [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   

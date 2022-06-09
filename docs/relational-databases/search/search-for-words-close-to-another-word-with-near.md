@@ -23,7 +23,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search for Words Close to Another Word with NEAR
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   You can use the *proximity term* **NEAR** in a [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
   
 ##  <a name="Custom_NEAR"></a> Overview of NEAR  

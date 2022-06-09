@@ -1,13 +1,14 @@
 ---
 title: Configure named replicas security to allow isolated access
 description: Learn the security considerations for configuring and managing named replica so that a user can access the named replica but not other replicas.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
 author: yorek
 ms.author: damauri
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 7/27/2021
 ---
 # Configure isolated access to a Hyperscale named replica

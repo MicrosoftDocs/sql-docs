@@ -2,17 +2,22 @@
 title: Use .NET Core to connect and query a database
 description: This topic shows you how to use .NET Core to create a program that connects to a database in Azure SQL Database, or Azure SQL Managed Instance, and queries it using Transact-SQL statements.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: sqldbrb=2, devx-track-csharp, mode-other
-ms.devlang: csharp
+ms.custom:
+  - "sqldbrb=2"
+  - "devx-track-csharp"
+  - "mode-other"
+ms.devlang:
+  - "csharp"
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/29/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use .NET Core (C#) to query a database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]

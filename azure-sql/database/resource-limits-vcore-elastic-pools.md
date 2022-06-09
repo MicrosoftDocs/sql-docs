@@ -1,15 +1,17 @@
 ---
 title: Elastic pool vCore resource limits
 description: This page describes some common vCore resource limits for elastic pools in Azure SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-pools
-ms.custom: sqldbrb=1, references_regions
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "references_regions"
 ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/25/2022
 ---
 # Resource limits for elastic pools using the vCore purchasing model
@@ -60,7 +62,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
 |:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|
 |Memory (GB)|7|14|21|28|35|42|
 |Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|
@@ -94,7 +96,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|
@@ -130,7 +132,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
 |Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|500|
@@ -164,7 +166,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|500|
@@ -196,11 +198,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## General purpose - provisioned compute - Fsv2-series
 
-### Fsv2-series compute generation (part 1)
+### Fsv2-series Hardware (part 1)
 
 |Compute size (service objective)|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14| GP_Fsv2_16|
 |:---| ---:|---:|---:|---:|---:|
-|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|8|10|12|14|16|
 |Memory (GB)|15.1|18.9|22.7|26.5|30.2|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -230,11 +232,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Fsv2-series compute generation (part 2)
+### Fsv2-series Hardware (part 2)
 
 |Compute size (service objective)|GP_Fsv2_18|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32| GP_Fsv2_36|GP_Fsv2_72|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|18|20|24|32|36|72|
 |Memory (GB)|34.0|37.8|45.4|60.5|68.0|136.0|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -268,7 +270,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8|
 |:--- | --: |--: |--: |--: |
-|Compute generation|DC|DC|DC|DC|
+|Hardware|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|100|400|400|400|
@@ -298,16 +300,16 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - Gen4
+## Business Critical - provisioned compute - Gen4
 
 > [!IMPORTANT]
 > New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
 
-### Business critical service tier: Generation 4 compute platform (part 1)
+### Business Critical service tier: Generation 4 compute platform (part 1)
 
 |Compute size (service objective)|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|2|3|4|5|6|
 |Memory (GB)|14|21|28|35|42|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|100|
@@ -338,11 +340,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Business critical service tier: Generation 4 compute platform (part 2)
+### Business Critical service tier: Generation 4 compute platform (part 2)
 
 |Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
@@ -373,13 +375,13 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - Gen5
+## Business Critical - provisioned compute - Gen5
 
-### Business critical service tier: Generation 5 compute platform (part 1)
+### Business Critical service tier: Generation 5 compute platform (part 1)
 
 |Compute size (service objective)|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|4|6|8|10|12|14|
 |Memory (GB)|20.8|31.1|41.5|51.9|62.3|72.7|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|100|100|
@@ -410,11 +412,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Business critical service tier: Generation 5 compute platform (part 2)
+### Business Critical service tier: Generation 5 compute platform (part 2)
 
 |Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|100|
@@ -445,13 +447,13 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - M-series
+## Business Critical - provisioned compute - M-series
 
-### M-series compute generation (part 1)
+### M-series hardware (part 1)
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Compute generation|M-series|M-series|M-series|M-series|M-series|M-series|
+|Hardware|M-series|M-series|M-series|M-series|M-series|M-series|
 |vCores|8|10|12|14|16|18|
 |Memory (GB)|235.4|294.3|353.2|412.0|470.9|529.7|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
@@ -482,11 +484,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### M-series compute generation (part 2)
+### M-series hardware (part 2)
 
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
-|Compute generation|M-series|M-series|M-series|M-series|M-series|
+|Hardware|M-series|M-series|M-series|M-series|M-series|
 |vCores|20|24|32|64|128|
 |Memory (GB)|588.6|706.3|941.8|1883.5|3767.0|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|
@@ -516,11 +518,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - DC-series
+## Business Critical - provisioned compute - DC-series
 
 |Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|
 |:--- | --: |--: |--: |--: |
-|Compute generation|DC|DC|DC|DC|
+|Hardware|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|

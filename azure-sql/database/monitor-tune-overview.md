@@ -1,17 +1,18 @@
 ---
 title: Monitoring and performance tuning
 description: An overview of monitoring and performance tuning capabilities and methodology in Azure SQL Database and Azure SQL Managed Instance.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: sqldbrb=2
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: conceptual
-author: dimitri-furman 
+author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, urmilano, wiassaf
+ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 04/14/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

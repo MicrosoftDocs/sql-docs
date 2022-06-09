@@ -47,17 +47,17 @@ SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need 
 | Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
 | Query Tuning Advisor | Updated user interface for improved accessibility. |
-| Showplan | The Showplan XML schemas has been updated to include new attributes related to the Query Store Hint feature. |
+| Showplan | The Showplan XML schema has been updated to include new attributes related to the Query Store Hint feature. |
 
 #### Bug fixes in 18.12
 
 | New Item | Details |
 |----------|---------|
-| Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error.  See [SSMS 18.11.1 Bug](https://feedback.azure.com/d365community/idea/1603d3a2-73ab-ec11-a81c-6045bd7d1bee). |
+| Availability Group Dashboard | Fixed issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error.  See [SSMS 18.11.1 Bug](https://feedback.azure.com/d365community/idea/1603d3a2-73ab-ec11-a81c-6045bd7d1bee). |
 | Analysis Services | Corrected behavior of SSMS not saving Analysis Services settings separately. |
 | General SSMS | Fixed issue with Technical Support menu link opening to a blank page. |
 | Intellisense | Fixed Intellisense for contained users. |
-| Ledger | Fixed issue with ledger tables displaying more than once, and display columns for ledger tables. |
+| Ledger | Fixed issue with display columns and ledger tables displaying more than once. |
 | Link feature for Azure SQL Managed Instance | Fixed issues related to the automated connection and failover wizards for the link feature. |
 | Query Editor |Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
 | Registered Servers | Fixed issue that caused SSMS crash when displaying registered servers after importing  registered servers from Azure Data Studio via settings.json file. See [SSMS (18.11.1) crashing on "show registered servers"](https://feedback.azure.com/d365community/idea/53d07d5e-7acc-ec11-a81b-6045bd7ac9f9). |

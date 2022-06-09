@@ -59,7 +59,7 @@ SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need 
 | Intellisense | Fixed Intellisense for contained users. |
 | Ledger | Fixed issue with ledger tables displaying more than once, and display columns for ledger tables. |
 | Link feature for Azure SQL Managed Instance | Fixed issues related to the automated connection and failover wizards for the link feature. |
-| Query Editor |Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/en-us/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
+| Query Editor |Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
 | Registered Servers | Fixed issue that caused SSMS crash when displaying registered servers after importing  registered servers from Azure Data Studio via settings.json file. See [SSMS (18.11.1) crashing on "show registered servers"](https://feedback.azure.com/d365community/idea/53d07d5e-7acc-ec11-a81b-6045bd7ac9f9). |
 | Partitioning | Addressed missing option to schedule Agent job in the partitioning wizard. |
 

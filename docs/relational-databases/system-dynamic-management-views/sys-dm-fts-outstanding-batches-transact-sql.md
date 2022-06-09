@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.dm_fts_outstanding_batches dynamic management view"
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_outstanding_batches (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns information about each full-text indexing batch.  
   

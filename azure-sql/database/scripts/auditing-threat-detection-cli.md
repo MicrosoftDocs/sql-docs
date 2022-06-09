@@ -1,16 +1,20 @@
 ---
 title: "Azure CLI example: Auditing and Advanced Threat Protection in Azure SQL Database"
 description: Use this Azure CLI example script to configure auditing and Advanced Threat Protection in an Azure SQL Database
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
-ms.custom: security, devx-track-azurecli
-ms.devlang: azurecli
+ms.custom:
+  - "security"
+  - "devx-track-azurecli"
+ms.devlang:
+  - "azurecli"
 ms.topic: sample
 author: DavidTrigano
 ms.author: datrigan
 ms.reviewer: vanto
-ms.date: 01/26/2022 
+ms.date: 01/26/2022
 ---
 
 # Configure SQL Database auditing and Advanced Threat Protection using the Azure CLI

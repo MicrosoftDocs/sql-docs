@@ -1,37 +1,22 @@
 ---
 title: Build a Project from the Command Line
-description: Build a SQL Server Database Project from the command line
+description: Build a SQL Server Database Projects from the command line
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
-ms.date: 5/24/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 10/27/2021
 ---
 
 # Build a database project from command line
 
-While the SQL Database Project extension (preview) provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. The steps to build a project from the command line are different between [SDK-style SQL projects](sql-database-project-extension-sdk-style-projects.md) and the previous non-SDK-style SQL project format.  This article outlines the prerequisites and syntax needed to build a SQL project to dacpac from the command line for both SQL project types.
+While the SQL Database Project extension (preview) provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. This article outlines the prerequisites and syntax needed to build a SQL project to dacpac from the command line.
 
-## SDK-style SQL projects
-
-Using [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) with [SDK-style SQL projects](sql-database-project-extension-sdk-style-projects.md) is the preferred method for working with SQL projects from the command line.
-
-To build an SDK-style SQL project from the command line on Windows, macOS, or Linux, use the following command:
-
-```bash
-dotnet build /p:NetCoreBuild=true
-```
-
-> [!NOTE]
-> The SDK-style SQL projects is currently in preview. 
-
-
-## Non-SDK-style SQL projects
-
-### Prerequisites
+## Prerequisites
 
 1. Install and configure [SQL Database Projects extension](sql-database-project-extension.md).
 
@@ -69,13 +54,13 @@ dotnet build /p:NetCoreBuild=true
 
     3. Clean target, necessary for supporting dual editing in SQL Server Data Tools (SSDT) and Azure Data Studio
 
-    ```console
-    <Target Name="AfterClean">
-        <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json"/>
-    </Target>
-    ```
+        ```console
+        <Target Name="AfterClean">
+            <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json"/>
+        </Target>
+        ```
 
-### Build the project from the command line
+## Build the project from the command line
 
 From the full .NET folder, use the following command:
 
@@ -86,11 +71,10 @@ dotnet build "<sqlproj file path>" /p:NetCoreBuild=true /p:NETCoreTargetsPath="<
 For example, from `/usr/share/dotnet` on Linux:
 
 ```console
-dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" /p:NetCoreBuild=true /p:NETCoreTargetsPath="/home/myuser/.azuredatastudio/extensions/microsoft.sql-database-projects-x.x.x/BuildDirectory"  
+dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" /p:NetCoreBuild=true /p:NETCoreTargetsPath="/home/myuser/.azuredatastudio-insiders/extensions/microsoft.sql-database-projects-0.1.2/BuildDirectory"  
 ```
 
 ## Next steps
 
 - [SQL Database Projects extension](sql-database-project-extension.md)
-- [SDK-style SQL projects in SQL Database Projects extension](sql-database-project-extension-sdk-style-projects.md)
 - [Publish SQL database projects](sql-database-project-extension-build.md#publish-a-database-project)

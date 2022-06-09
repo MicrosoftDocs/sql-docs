@@ -1,26 +1,25 @@
 ---
+title: "SCOPE_IDENTITY (Transact-SQL)"
 description: "SCOPE_IDENTITY (Transact-SQL)"
-title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "07/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SCOPE_IDENTITY"
   - "SCOPE_IDENTITY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "identity columns [SQL Server], SCOPE_IDENTITY function"
   - "SCOPE_IDENTITY function"
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
-ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,23 +1,23 @@
 ---
 title: "!&gt; (Not Greater Than) (Transact-SQL)"
 description: "!&gt; (Not Greater Than) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "!>_TSQL"
   - "!>"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "!> (not greater than)"
   - "not greater than operator (!>)"
-author: LitKnd
-ms.reviewer: ""
-ms.author: kendralittle
-ms.custom: ""
-ms.date: "03/13/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # !&gt; (Not Greater Than) (Transact-SQL)

@@ -1,27 +1,26 @@
 ---
+title: "@@TOTAL_WRITE (Transact-SQL)"
 description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
-title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@TOTAL_WRITE"
   - "@@TOTAL_WRITE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "write activity since last started [SQL Server]"
   - "number of disk writes"
   - "@@TOTAL_WRITE function"
   - "disks [SQL Server], number of disk writes"
   - "total write [SQL Server]"
-ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,13 +1,14 @@
 ---
 title: How to manage a Hyperscale database
 description: How to manage a Hyperscale database, including migrating to Hyperscale, restoring to a different region, and reverse migration.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
 ---
 
@@ -166,7 +167,7 @@ In this case, the only backups available would be from steps 5 and 6 of the time
 
 ### How to reverse migrate a Hyperscale database to the General Purpose service tier
 
-To reverse migrate an existing Hyperscale database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#gen5-compute-generation-part-1) if you aren't sure which service objective is right for your database.
+To reverse migrate an existing Hyperscale database in Azure SQL Database to the General Purpose service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#gen5-hardware-part-1) if you aren't sure which service objective is right for your database.
 
 If you wish to perform an additional service tier change after reverse migrating to General Purpose, identify your eventual target service objective as well and ensure that your database's allocated size is small enough to fit in that service objective.
 

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.fulltext_stoplists catalog view"
   - "stopwords [full-text search]"
 ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

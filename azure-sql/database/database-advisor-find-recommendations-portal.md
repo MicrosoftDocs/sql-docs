@@ -1,15 +1,16 @@
 ---
 title: Apply performance recommendations
 description: Use the Azure portal to find performance recommendations that can optimize performance of your database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: how-to
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: kendralittle, mathoma, wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 12/19/2018
 ---
 # Find and apply performance recommendations

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublications system table"
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

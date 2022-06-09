@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 04/02/2022
+ms.date: 06/05/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -27,7 +27,7 @@ This article teaches you how to prepare your environment for a [Managed Instance
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [SQL Server 2019 Enterprise or Developer edition](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=EXE), starting with [CU15 (15.0.4198.2)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance
@@ -41,9 +41,7 @@ To prepare your SQL Server instance, you need to validate that:
 
 You'll need to restart SQL Server for these changes to take effect.
 
-### Install CU15 (or later)
-
-The link feature for SQL Managed Instance was introduced in CU15 of SQL Server 2019.
+### Install service updates
 
 To check your SQL Server version, run the following Transact-SQL (T-SQL) script on SQL Server: 
 
@@ -53,7 +51,13 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION
 ```
 
-If your SQL Server version is earlier than CU15 (15.0.4198.2), install [CU15](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) or the latest cumulative update. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
+
+| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+|---------|---------|---------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
@@ -86,13 +90,18 @@ declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
 select
     @IsHadrEnabled as IsHadrEnabled,
     case @IsHadrEnabled
-        when 0 then 'The Always On availability groups is disabled.'
-        when 1 then 'The Always On availability groups is enabled.'
+        when 0 then 'The AlwaysOn availability groups is disabled.'
+        when 1 then 'The AlwaysOn availability groups is enabled.'
         else 'Unknown status.'
     end as 'HadrStatus'
 ```
 
-If the availability groups feature isn't enabled, follow these steps to enable it: 
+The above query will display if AlwaysOn availability group is enabled, or not, on your SQL Server.
+
+>[!IMPORTANT]
+> For SQL Server 2016, if you need to enable AlwaysOn availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
+
+If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
 1. Open SQL Server Configuration Manager. 
 1. Select **SQL Server Services** from the left pane. 
@@ -101,11 +110,14 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/sql-server-configuration-manager-sql-server-properties.png" alt-text="Screenshot that shows SQL Server Configuration Manager, with selections for opening properties for the service.":::
 
 1. Go to the **Always On Availability Groups** tab. 
-1. Select the **Always On Availability Groups** checkbox, and then select **OK**. 
+1. Select the **Enable AlwaysOn Availability Groups** checkbox, and then select **OK**. 
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-1. Select **OK** in the dialog to restart the SQL Server service.
+    - If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
+
+1. Select **OK** in the dialog
+1. Restart the SQL Server service.
 
 ### Enable startup trace flags
 
@@ -154,24 +166,9 @@ SELECT SERVERPROPERTY ('IsHadrEnabled')
 DBCC TRACESTATUS
 ```
 
-Your SQL Server version should be 15.0.4198.2 or later, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
+Your SQL Server version should be one of the supported versions with service updates applied, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in S S M S.":::
-
-### Set up database recovery and backup
-
-All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server:
-
-```sql
--- Run on SQL Server
--- Set full recovery mode for all databases you want to replicate.
-ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
-GO
-
--- Execute backup for all databases you want to replicate.
-BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
-GO
-```
 
 ## Configure network connectivity
 
@@ -233,7 +230,7 @@ A successful test shows `TcpTestSucceeded : True`.
 :::image type="content" source="./media/managed-instance-link-preparation/powershell-output-tnc-command.png" alt-text="Screenshot that shows the output of the command for testing a network connection in PowerShell.":::
 
 If the response is unsuccessful, verify the following network settings:
-- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allow traffic to the entire *subnet IP range* of SQL Managed Instance. 
+- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
 - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
 
 
@@ -349,13 +346,13 @@ If the connection is unsuccessful, verify the following items:
 > [!CAUTION]
 > Proceed with the next steps only if you've validated network connectivity between your source and target environments. Otherwise, troubleshoot network connectivity issues before proceeding.
 
-## Migrate a certificate of a TDE-protected database
+## Migrate a certificate of a TDE-protected database (optional)
 
-If you're migrating a SQL Server database protected by Transparent Data Encryption to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
+If you're migrating a SQL Server database protected by Transparent Data Encryption (TDE) to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) v18.11.1 is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
@@ -363,4 +360,4 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 ## Next steps
 
-After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 
+- After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 

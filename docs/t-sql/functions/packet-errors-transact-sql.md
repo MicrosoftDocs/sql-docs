@@ -1,27 +1,26 @@
 ---
+title: "@@PACKET_ERRORS (Transact-SQL)"
 description: "&#x40;&#x40;PACKET_ERRORS (Transact-SQL)"
-title: "@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@PACKET_ERRORS"
   - "@@PACKET_ERRORS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@PACKET_ERRORS function"
   - "number of packet errors"
   - "packets [SQL Server], errors"
   - "networking [SQL Server], packet errors"
   - "connections [SQL Server], packets"
-ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

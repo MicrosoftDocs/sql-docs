@@ -6,8 +6,8 @@ ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/30/2021"
@@ -188,6 +188,9 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 ### <a name="DataTypes"></a> Data type
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
+
+>[!NOTE]
+>Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 

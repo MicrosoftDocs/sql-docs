@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "vlf size"
   - "transaction log internals"
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Transaction Log Architecture and Management Guide

@@ -43,7 +43,7 @@ WITH (SYSTEM_VERSIONING = ON);
 ### Important remarks
 
 - A system-versioned temporal table must have a primary key defined and have exactly one **PERIOD FOR SYSTEM_TIME** defined with two **datetime2** columns, declared as **GENERATED ALWAYS AS ROW START / END**
-- The **PERIOD** columns are always assumed to be non-nullable, even if nullability isn't specified. If the**PERIOD** columns are explicitly defined as nullable, the **CREATE TABLE** statement will fail.
+- The **PERIOD** columns are always assumed to be non-nullable, even if nullability isn't specified. If the **PERIOD** columns are explicitly defined as nullable, the **CREATE TABLE** statement will fail.
 - The history table must always be schema-aligned with the current or temporal table, in terms of number of columns, column names, ordering and data types.
 - An anonymous history table is automatically created in the same schema as current or temporal table.
 - The anonymous history table name has the following format: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*. Suffix is optional and it will be added only if the first part of the table name isn't unique.

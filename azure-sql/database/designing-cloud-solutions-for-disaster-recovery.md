@@ -10,7 +10,7 @@ ms.devlang:
 ms.topic: conceptual
 author: emlisa
 ms.author: emlisa
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 06/06/2022
 ---
 # Designing globally available services using Azure SQL Database

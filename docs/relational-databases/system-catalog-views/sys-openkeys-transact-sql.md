@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 ---
 # sys.openkeys (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database Synapse](../../includes/applies-to-version/sql-asdb-asa.md)] 
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
   This catalog view returns information about encryption keys that are open in the current session.  

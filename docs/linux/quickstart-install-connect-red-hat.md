@@ -57,6 +57,9 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 ## <a id="install"></a> Install SQL Server
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come preinstalled with `python2`, which is required by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Before you begin the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] install steps, execute the command and verify that `python2` is selected as the interpreter:
 
 ```bash
@@ -71,9 +74,6 @@ sudo alternatives --config python
 For more information, see the following blog on installing `python2` and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 
 To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
-
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 1. Download the [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Red Hat repository configuration file:
 
@@ -117,6 +117,21 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
+The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come preinstalled with `python2`, which is required by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Before you begin the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] install steps, execute the command and verify that `python2` is selected as the interpreter:
+
+```bash
+sudo alternatives --config python
+# If not configured, install python2 and openssl10 using the following commands: 
+sudo yum install python2
+sudo yum install compat-openssl10
+# Configure python2 as the default interpreter using this command: 
+sudo alternatives --config python
+```
+
+For more information, see the following blog on installing `python2` and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+
+To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
+
 1. Download the [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Red Hat repository configuration file:
 
    ```bash
@@ -159,10 +174,14 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
+The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] point to the RHEL 8 repository.
+
+To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
+
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat repository configuration file:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-preview.repo
    ```
 
    > [!TIP]  

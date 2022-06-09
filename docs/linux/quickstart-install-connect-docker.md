@@ -177,9 +177,12 @@ Before starting the following steps, make sure that you've selected your preferr
    ```
    ::: zone-end
 
-   You should see output similar to the following screenshot:
+   You should see output similar to the following:
 
-   :::image type="content" source="./media/quickstart-install-connect-docker/docker-ps-command.png" alt-text="Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.":::
+   ```output
+   CONTAINER ID   IMAGE                                        COMMAND                    CREATED         STATUS         PORTS                                       NAMES
+   d4a1999ef83e   mcr.microsoft.com/mssql/server:2017-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
+   ```
 
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
@@ -306,9 +309,12 @@ Before starting the following steps, make sure that you've selected your preferr
    ```
    ::: zone-end
 
-   You should see output similar to the following screenshot:
+   You should see output similar to the following:
 
-   :::image type="content" source="./media/quickstart-install-connect-docker/docker-ps-command.png" alt-text="Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.":::
+   ```output
+   CONTAINER ID   IMAGE                                        COMMAND                    CREATED         STATUS         PORTS                                       NAMES
+   d4a1999ef83e   mcr.microsoft.com/mssql/server:2019-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
+   ```
 
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
@@ -435,9 +441,12 @@ Before starting the following steps, make sure that you've selected your preferr
    ```
    ::: zone-end
 
-   You should see output similar to the following screenshot:
+   You should see output similar to the following:
 
-   :::image type="content" source="./media/quickstart-install-connect-docker/docker-ps-command.png" alt-text="Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.":::
+   ```output
+   CONTAINER ID   IMAGE                                        COMMAND                    CREATED         STATUS         PORTS                                       NAMES
+   d4a1999ef83e   mcr.microsoft.com/mssql/server:2022-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
+   ```
 
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 

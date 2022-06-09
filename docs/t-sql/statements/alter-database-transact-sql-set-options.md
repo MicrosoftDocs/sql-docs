@@ -3,7 +3,7 @@ title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 06/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -638,9 +638,7 @@ RESTRICTED_USER
 Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database. RESTRICTED_USER doesn't limit their number. Disconnect all connections to the database using the timeframe specified by the ALTER DATABASE statement's termination clause. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.
 
 MULTI_USER     
-All users that have the appropriate permissions to connect to the database are allowed.
-
-You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
+All users that have the appropriate permissions to connect to the database are allowed. You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 #### **\<delayed_durability_option> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
@@ -1884,12 +1882,10 @@ To change this state, you must have exclusive access to the database. For more i
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
 
 MULTI_USER     
-All users that have the appropriate permissions to connect to the database are allowed.
-
-You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
+All users that have the appropriate permissions to connect to the database are allowed. You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], should be executed from within the user database. From the `master` database, you may encounter an error message `Msg 42008, Level 16, State 3, Line 1 ODBC error: State: 28000: Error: 18456 Message:'[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user '##MS_InstanceCertificate##'.'.`
 
 **\<delayed_durability_option> ::=**     
 Controls whether transactions commit fully durable or delayed durable.
@@ -2278,52 +2274,77 @@ Not all database options use the WITH \<termination> clause or can be specified 
 ## Examples
 
 ### A. Set the database to READ_ONLY
-Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
+Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database and may take a few seconds to complete. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
 
 ```sql
-USE master;
+--Connect to [database_name];
 GO
 ALTER DATABASE [database_name]
 SET RESTRICTED_USER;
 GO
 ALTER DATABASE [database_name]
 SET READ_ONLY
+--`SET READ_ONLY` command may take a few seconds to complete. 
 GO
 ALTER DATABASE [database_name]
 SET MULTI_USER;
 GO
-
 ```
+
+To set the database back to read-write mode:
+
+```sql
+--Connect to [database_name];
+GO
+ALTER DATABASE [database_name]
+SET READ_WRITE
+GO
+```
+
+To verify:
+
+```sql
+SELECT [name], user_access_desc, is_read_only FROM sys.databases 
+WHERE [name] = 'database_name'
+GO
+```
+
 
 ### B. Enable snapshot isolation on a database
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE [database_name];
-USE master;
+--Connect to [database_name]
 GO
 ALTER DATABASE [database_name]
 SET ALLOW_SNAPSHOT_ISOLATION ON;
 GO
--- Check the state of the snapshot_isolation_framework
--- in the database.
+```
+
+Verify the state of the `snapshot_isolation_framework` in the database.
+
+```sql
+--Connect to [database_name]
 SELECT name, snapshot_isolation_state,
     snapshot_isolation_state_desc AS description
 FROM sys.databases
-WHERE name = N'[database_name]';
+WHERE name = N'database_name';
 GO
 ```
 
 The result set shows that the snapshot isolation framework is enabled.
 
+```output
 |name |snapshot_isolation_state |description|
 |-------------------- |------------------------|----------|
 |[database_name] |1| ON |
+```
 
 ### C. Enable, modify, or disable change tracking
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = ON
 (AUTO_CLEANUP = ON, CHANGE_RETENTION = 2 DAYS);
@@ -2332,6 +2353,7 @@ SET CHANGE_TRACKING = ON
 The following example shows how to change the retention period to 3 days.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);
 ```
@@ -2339,6 +2361,7 @@ SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);
 The following example shows how to disable change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
@@ -2347,6 +2370,7 @@ SET CHANGE_TRACKING = OFF;
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
     (
@@ -2363,6 +2387,7 @@ SET QUERY_STORE = ON
 The following example enables the Query Store and configures its parameters.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
     (
@@ -2373,7 +2398,7 @@ SET QUERY_STORE = ON
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO,
       MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON,
+      WAIT_STATS_CAPTURE_MODE = ON
     );
 ```
 
@@ -2381,6 +2406,7 @@ SET QUERY_STORE = ON
 The following example enables the Query Store and configures its parameters.
 
 ```sql
+--Connect to [database_name]
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
     (

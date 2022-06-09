@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article explains what, why, and how to use Transact-SQL streaming backups. Transact-SQL streaming backups are new in SQL Server 2022 Preview.
+This article explains what, why, and how to use Transact-SQL snapshot backups. Transact-SQL snapshot backups are new in SQL Server 2022 Preview.
 
 Databases are getting larger and larger every day. Traditionally, SQL Server backups are streaming backups. A streaming backup depends on the size of the database. Backup operations consume resources (CPU, memory, I/O, network) which impact throughput of the concurrent OLTP workload for the duration of the backup. One way to make the backup performance constant, rather than depend on the size of data, is by performing a snapshot backup using mechanisms provided by the underlying storage hardware or service.
 

@@ -1,7 +1,6 @@
 ---
 description: "CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms."
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
-ms.custom: ""
 ms.date: 06/08/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -21,7 +20,6 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
 - event-tier1-build-2022
-ms.date: 5/24/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqledge-current"
 ---
 

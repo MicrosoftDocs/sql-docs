@@ -1,5 +1,5 @@
 ---
-title: Query SQL Database with query editor (preview) in the Azure portal
+title: Query SQL Database with query editor in the Azure portal
 description: Learn how to connect to an Azure SQL database and use the Azure portal query editor (preview) to run Transact-SQL (T-SQL) queries.
 titleSuffix: Azure SQL Database
 keywords: connect to sql database,query sql database, azure portal, portal, query editor
@@ -18,11 +18,11 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Query editor (preview) is a tool to run SQL queries against an Azure SQL database in the Azure portal. In this quickstart, you connect to an Azure SQL database and use query editor to run Transact-SQL (T-SQL) queries in the portal.
+Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. In this quickstart, you connect to an Azure SQL database in the portal and use query editor to run Transact-SQL (T-SQL) queries.
 
 ## Prerequisites
 
-- The AdventureWorksLT sample database. If you don't have it, you can [Create a database in Azure SQL Database](single-database-create-quickstart.md) that has the AdventureWorks sample data.
+- The AdventureWorksLT sample Azure SQL database. If you don't have it, you can [create a database in Azure SQL Database](single-database-create-quickstart.md) that has the AdventureWorks sample data.
 
 - A user account with permissions to connect to the database and query editor. You can either:
 
@@ -85,7 +85,7 @@ Run the following example queries against the AdventureWorksLT sample database:
 
 To add a new product to the `SalesLT.Product` table, run the following [INSERT](/sql/t-sql/statements/insert-transact-sql/) T-SQL statement.
 
-1. Replace the previous query with the following query:
+1. In the query editor, replace the previous query with the following query:
 
     ```sql
     INSERT INTO [SalesLT].[Product]
@@ -111,9 +111,9 @@ To add a new product to the `SalesLT.Product` table, run the following [INSERT](
 
 ### Run an UPDATE query
 
-Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statement update the price of your new product.
+Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statement to update the price of your new product.
 
-1. Replace the previous query with the following query:
+1. In the query editor, replace the previous query with the following query:
 
    ```sql
    UPDATE [SalesLT].[Product]
@@ -127,7 +127,7 @@ Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statem
 
 Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL statement to remove your new product.
 
-1. Replace the previous query with this one:
+1. In the query editor, replace the previous query with the following query:
 
    ```sql
    DELETE FROM [SalesLT].[Product]
@@ -171,7 +171,7 @@ The following considerations and limitations apply when connecting to and queryi
 
   These errors occur because the query editor is unable to communicate through ports 443 and 1443. You need to enable outbound HTTPS traffic on these ports. The following instructions walk you through this process, depending on your OS. Your corporate IT department might need to grant approval to open this connection on your local network.
 
-  **For Windows:
+  **For Windows:**
 
   1. Open **Windows Defender Firewall**.
   1. On the left menu, select **Advanced settings**.
@@ -186,7 +186,7 @@ The following considerations and limitations apply when connecting to and queryi
      1. Keep **Domain**, **Private**, and **Public** selected.
      1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
 
-  **For MacOS:
+  **For MacOS:**
   1. On the Apple menu, open **System Preferences**.
   1. Select **Security & Privacy**, and then select **Firewall**.
   1. If **Firewall** is off, select **Click the lock to make changes** at the bottom, and select **Turn on Firewall**.
@@ -204,7 +204,7 @@ The following considerations and limitations apply when connecting to and queryi
 ## Next steps
 
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
-- [Azure SQL glossary of terms](../glossary-terms.md).
+- [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
 - [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)

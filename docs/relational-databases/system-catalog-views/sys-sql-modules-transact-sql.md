@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  This information is also described in [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
  
-Renaming a stored procedure, function, view, or trigger will not change the name of the corresponding object in the definition column of the sys.sql_modules catalog view or the definition returned by the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql) built-in function. For this reason, we recommend that sp_rename not be used to rename these object types. Instead, drop and re-create the object with its new name. Learn more in [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql).
+Renaming a stored procedure, function, view, or trigger will not change the name of the corresponding object in the definition column of the `sys.sql_modules` catalog view, or the definition returned by the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql) built-in function. For this reason, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name. Learn more in [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql).
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

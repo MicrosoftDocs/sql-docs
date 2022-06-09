@@ -27,26 +27,24 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 - A user account with permissions to connect to the database and query editor. You can either:
 
   - Have or set up a user that can connect to the database with SQL authentication.
-  - Set up an Azure Active Directory (Azure AD) admin for the database's [SQL server](logical-servers.md).
+  - Set up an Azure Active Directory (Azure AD) administrator for the database's [SQL server](logical-servers.md).
 
-### Set up an Azure AD server admin (optional)
+    An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server and databases. To set up an Azure AD server admin:
 
-An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server and databases. To set up an Azure AD server admin:
+    1. In the [Azure portal](https://portal.azure.com), on your Azure SQL database **Overview** page, select **Server name** under **Essentials** to navigate to the server for your database.
+    1. On the server page, select **Azure Active Directory** under **Settings** in the left menu.
+    1. On the **Azure Active Directory** page toolbar, select **Set admin**.
 
-1. In the [Azure portal](https://portal.azure.com), on your Azure SQL database **Overview** page, select **Server name** under **Essentials** to navigate to the server for your database.
-1. On the server page, select **Azure Active Directory** under **Settings** in the left menu.
-1. On the **Azure Active Directory** page toolbar, select **Set admin**.
+       ![Screenshot showing the Set admin selection.](./media/connect-query-portal/select-active-directory.png)
 
-   ![Screenshot showing the Set admin selection.](./media/connect-query-portal/select-active-directory.png)
+    1. On the **Azure Active Directory** form, search for and select the user or group you want to be the admin, and then select **Select**.
+    1. On the **Azure Active Directory** main page, select **Save**.
 
-1. On the **Azure Active Directory** form, search for and select the user or group you want to be the admin, and then select **Select**.
-1. On the **Azure Active Directory** main page, select **Save**.
+    > [!NOTE]
+    > - Email addresses like outlook.com or gmail.com aren't supported as Azure AD admins. The user must either be created natively in the Azure AD or federated into the Azure AD.
+      - Azure AD admin sign-in works with accounts that have two-factor authentication enabled, but the query editor doesn't support two-factor authentication.
 
-> [!NOTE]
-> - Email addresses like outlook.com or gmail.com aren't supported as Azure AD admins. The user must either be created natively in the Azure AD or federated into the Azure AD.
-> - Azure AD admin sign-in works with accounts that have two-factor authentication enabled, but the query editor doesn't support two-factor authentication.
-
-## Connect to query editor
+## Connect to the query editor
 
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
@@ -58,11 +56,11 @@ An Azure AD server administrator can use a single identity to sign in to the Azu
 
      ![Screenshot showing signin with SQL authentication](./media/connect-query-portal/login-menu.png)
 
-   - To connect using Azure AD, if you set up an Azure AD server admin, select **Continue as \<your user or group ID>**. If sign in is unsuccessful, try refreshing the page.
+   - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign in is unsuccessful, try refreshing the page.
 
 ## Query the database
 
-Run the following example queries against the AdventureWorksLT sample database:
+On the **Query editor (preview)** page, run the following example queries against your AdventureWorksLT sample database.
 
 ### Run a SELECT query
 
@@ -138,24 +136,24 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL sta
 
 ## Considerations and limitations
 
-The following considerations and limitations apply when connecting to and querying Azure SQL Database with the query editor:
+The following considerations and limitations apply when connecting to and querying Azure SQL Database with the query editor.
 
 ### Query editor limitations
 
-- Query editor doesn't support connecting to the `master` database. To connect to the `master` database, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
-- Query editor can't connect to a [replica database](read-scale-out.md) with `ApplicationIntent=ReadOnly`. To connect in this way from a rich client, use SSMS and specify `ApplicationIntent=ReadOnly` on the **Additional Connection Parameters** tab in connection options. For more information, see [Connect to a read-only replica](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
-- Query editor has a 5-minute timeout for query execution. To run longer queries, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
-- Query editor only supports cylindrical projection for geography data types.
-- Query editor doesn't support IntelliSense for database tables and views, but supports autocomplete for names that have already been typed. For IntelliSense support, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- The query editor doesn't support connecting to the `master` database. To connect to the `master` database, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- The query editor can't connect to a [replica database](read-scale-out.md) with `ApplicationIntent=ReadOnly`. To connect in this way from a rich client, use SSMS and specify `ApplicationIntent=ReadOnly` on the **Additional Connection Parameters** tab in connection options. For more information, see [Connect to a read-only replica](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
+- The query editor has a 5-minute timeout for query execution. To run longer queries, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- The query editor only supports cylindrical projection for geography data types.
+- The query editor doesn't support IntelliSense for database tables and views, but supports autocomplete for names that have already been typed. For IntelliSense support, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
 - Pressing **F5** refreshes the query editor page, and any query currently in the editor isn't saved.
 
 ### Connection considerations
 
-- For public connections to query editor, you need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases.
+- For public connections to the query editor, you need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases.
 
   You don't need to add your IP address to the SQL server firewall rules if you have a Private Link connection set up on the server, and you connect to the server from within the private virtual network.
   
-- To use the query editor, users need at least the role-based access control (RBAC) permission **Read access to the server and database**. Anyone with this level of access can access the query editor. Users who can't assign themselves as the Azure AD admin or access a SQL administrator account shouldn't access the query editor.
+- Users need at least the role-based access control (RBAC) permission **Read access to the server and database** to use the query editor. Anyone with this level of access can access the query editor. Users who can't assign themselves as the Azure AD admin or access a SQL administrator account shouldn't access the query editor.
 
 ### Connection error troubleshooting
 

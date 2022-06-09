@@ -10,9 +10,9 @@ ms.custom: sqldbrb=1, contperf-fy21q3-portal, mode-ui, kr2b-contr-experiment
 ms.topic: quickstart
 author: mbarickman
 ms.author: mbarickman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 06/10/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database
 
@@ -24,14 +24,14 @@ Query editor (preview) is a tool to run SQL queries against an Azure SQL databas
 
 - The AdventureWorksLT sample database. If you don't have it, you can [Create a database in Azure SQL Database](single-database-create-quickstart.md) that has the AdventureWorks sample data.
 
-- A valid user to connect to the database. You can either:
+- A user account with permissions to connect to the database and query editor. You can either:
 
   - Have or set up a user that can connect to the database with SQL authentication.
   - Set up an Azure Active Directory (Azure AD) admin for the database's [SQL server](logical-servers.md).
 
 ### Set up an Azure AD server admin (optional)
 
-An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server with its databases. To set up an Azure AD server admin:
+An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server and databases. To set up an Azure AD server admin:
 
 1. In the [Azure portal](https://portal.azure.com), on your Azure SQL database **Overview** page, select **Server name** under **Essentials** to navigate to the server for your database.
 1. On the server page, select **Azure Active Directory** under **Settings** in the left menu.
@@ -48,17 +48,17 @@ An Azure AD server administrator can use a single identity to sign in to the Azu
 
 ## Connect to query editor
 
-1. In the [Azure portal](https://portal.azure.com), on your database page, select **Query editor (preview)** from the left menu.
+1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
    ![Screenshot that shows selecting query editor.](./media/connect-query-portal/find-query-editor.PNG)
 
-1. On the sign-in screen, provide credentials to access the database. You can connect using SQL authentication or Azure AD.
+1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL authentication or Azure AD.
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
      ![Screenshot showing signin with SQL authentication](./media/connect-query-portal/login-menu.png)
 
-   - To connect using Azure AD if you set up an Azure AD server admin, select **Continue as \<your user or group ID>**. If signin is unsuccessful, try refreshing the page.
+   - To connect using Azure AD, if you set up an Azure AD server admin, select **Continue as \<your user or group ID>**. If signin is unsuccessful, try refreshing the page.
 
 ## Query the database
 
@@ -138,7 +138,7 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL sta
 
 ## Considerations and limitations
 
-The following considerations and limitations apply when connecting to and querying Azure SQL Database with query editor:
+The following considerations and limitations apply when connecting to and querying Azure SQL Database with the query editor:
 
 ### Query editor limitations
 

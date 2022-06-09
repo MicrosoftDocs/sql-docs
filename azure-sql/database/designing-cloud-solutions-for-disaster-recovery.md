@@ -136,7 +136,7 @@ If an outage happens in East Asia, for example, the automatic database failover 
 ![Scenario 3. Outage in East Asia.](./media/designing-cloud-solutions-for-disaster-recovery/scenario3-c.png)
 
 > [!NOTE]
-> You can reduce the time when the end user’s experience in East Asia is degraded by the long latency. To do that you should proactively deploy an application copy and create a secondary database(s) in another local region (e.g., Korea) as a replacement of the offline application instance in Japan. When the latter is back online you can decide whether to continue using Korea or to remove the copy of the application there and switch back to using Japan.
+> You can reduce the time when the end user’s experience in East Asia is degraded by the long latency. To do that you should proactively deploy an application copy and create a secondary database(s) in a nearby region (e.g., the Azure Korea Central data center) as a replacement of the offline application instance in Japan. When the latter is back online you can decide whether to continue using Korea Central or to remove the copy of the application there and switch back to using Japan.
 
 The key **benefits** of this design are:
 

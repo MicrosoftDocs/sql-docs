@@ -8,7 +8,7 @@ ms.date: 06/09/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Stretch Database, pausing and resuming"
   - "pausing Stretch Database"
   - "resuming Stretch Database"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use thisfeature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
 
 To pause or resume data migration to Azure, select **Stretch** for a table in SQL Server Management Studio, and then select **Pause** to pause data migration or **Resume** to resume data migration. You can also use Transact-SQL to pause or resume data migration.
 

@@ -29,7 +29,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use thisfeature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
 
 To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This article describes the info that you have to enter and the choices that you have to make in the wizard.
 

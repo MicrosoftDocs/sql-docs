@@ -19,7 +19,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use thisfeature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
 
 To identify databases and tables that are candidates for Stretch Database, along with potential blocking issues, download and run Microsoft Data Migration Assistant.
 
@@ -52,7 +52,7 @@ Download and install Data Migration Assistant from [here](https://www.microsoft.
 ## Historical note
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use thisfeature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
 
 Stretch Database Advisor was previously a component of SQL Server 2016 Upgrade Advisor. At that time, you had to select and run Stretch Database Advisor as a separate action.
 

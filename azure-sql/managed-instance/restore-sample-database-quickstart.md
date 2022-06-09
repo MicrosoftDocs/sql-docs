@@ -23,8 +23,8 @@ In this quickstart, you'll use SQL Server Management Studio (SSMS) to restore a 
 
 The quickstart restores the Wide World Importers database from a backup file. You'll see two ways to restore the database in SSMS:
 
-- By using a restore wizard
-- By using T-SQL statements
+- A restore wizard
+- T-SQL statements
 
 > [!VIDEO https://www.youtube.com/embed/RxWYojo_Y3Q]
 
@@ -38,8 +38,8 @@ This quickstart:
 
 - Uses resources from the [Create a managed instance](instance-create-quickstart.md) quickstart.
 - Requires the latest version of [SSMS](/sql/ssms/sql-server-management-studio-ssms) installed.
-- Requires using SSMS to connect to SQL Managed Instance. See these quickstarts on how to connect:
-  - [Enable a public endpoint](public-endpoint-configure.md) on SQL Managed Instance. This approach is the recommended one for this tutorial.
+- Requires SSMS to connect to SQL Managed Instance. See these quickstarts on how to connect:
+  - [Enable a public endpoint](public-endpoint-configure.md) on SQL Managed Instance. This approach is recommended for this tutorial.
   - [Connect to SQL Managed Instance from an Azure VM](connect-vm-instance-configure.md).
   - [Configure a point-to-site connection to SQL Managed Instance from on-premises](point-to-site-p2s-configure.md).
 
@@ -67,9 +67,9 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-device.png" alt-text="Screenshot of the Select backup devices dialog. The Add and O K buttons are called out.":::
 
-1. In **Select a Backup File Location**, you can choose from three options to provide information about the location of your backup files:
+1. In **Select a Backup File Location**, choose from one of three options to provide information about the location of your backup files:
 
-   - Select a pre-registered storage container from the dropdown.
+   - Select a pre-registered storage container from the **Azure storage container** list.
    - Enter a new storage container and a shared access signature. A new SQL credential will be registered for you.
    - Select **Add** to browse more storage containers from your Azure subscription.
 
@@ -77,25 +77,25 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
    If you select **Add**, proceed to the next section, [Browse Azure subscription storage containers](#browse-azure-subscription-storage-containers). If you use a different method to provide the location of the backup files, skip to [Restore the database](#restore-the-database).
 
-### Browse Azure subscription storage containers
+#### Browse Azure subscription storage containers
 
-1. In **Connect to a Microsoft Subscription**, select **Sign in** to sign in to your Azure subscription:
+1. In **Connect to a Microsoft Subscription**, select **Sign in** to sign in to your Azure subscription.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-connect-subscription-sign-in.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. The Sign In button is called out.":::
 
-1. Sign in to your Microsoft Account to initiate the session in Azure:
+1. Sign in to your Microsoft Account to initiate the session in Azure.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot of the Sign in to your account dialog. The Microsoft logo, a Sign in box, and other U I elements are visible.":::
 
-1. Select the subscription of the storage account that contains the backup files:
+1. Select the subscription of the storage account that contains the backup files.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-subscription.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. Under Select a subscription to use, the down arrow on the list box is called out.":::
 
-1. Select the storage account that contains the backup files:
+1. Select the storage account that contains the backup files.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-storage-account.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. The down arrow on the Select Storage Account list box is called out.":::
 
-1. Select the blob container that contains the backup files:
+1. Select the blob container that contains the backup files.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-container.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. The down arrow on the Select Blob Container list box is called out.":::
 
@@ -105,25 +105,27 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
 ### Restore the database
 
-1. In the left pane, expand the folder structure to show the folder that contains the backup files. Select all the backup files that are related to the backup set that you're restoring, and then select **OK**:
+Now that you've selected a storage container, you should see the **Locate Backup File in Microsoft Azure** dialog.
+
+1. In the left pane, expand the folder structure to show the folder that contains the backup files. In the right pane, select all the backup files that are related to the backup set that you're restoring, and then select **OK**.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-backup-file-selection.png" alt-text="Screenshot of the Locate Backup File in Microsoft Azure dialog. Four backup files are visible, and one is called out. The O K button is called out.":::
 
-   SSMS validates the backup set. The process depends on the size of the backup set and takes at most a few seconds.
+   SSMS validates the backup set. This process takes at most a few seconds. The duration depends on the size of the backup set.
 
 1. If the backup is validated, you need to specify a name for the database that's being restored. By default, under **Destination**, the **Database** box contains the name of the backup set database. To change the name, enter a new name for **Database**. Select **OK**.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-start-restore.png" alt-text="Screenshot of a page in the restore wizard. In the Destination section, the Database box is called out. The O K button is also called out.":::
 
-   The restore starts. The duration depends on the size of the backup set.
+   The restore process starts. The duration depends on the size of the backup set.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-running-restore.png" alt-text="Screenshot of a page in the restore wizard. A progress indicator is called out.":::
 
-1. When the restore finishes, a dialog shows that it was successful. Select **OK**.
+1. When the restore process finishes, a dialog shows that it was successful. Select **OK**.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-finish-restore.png" alt-text="Screenshot of a dialog over a page in the restore wizard. A message in the dialog indicates that the database was successfully restored.":::
 
-1. In **Object Explorer**, check the restored database:
+1. In **Object Explorer**, check the restored database.
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-restored-database.png" alt-text="Screenshot of Object Explorer. The restored database is called out.":::
 
@@ -169,9 +171,9 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
 
    :::image type="content" source="./media/restore-sample-database-quickstart/restore.png" alt-text="Screenshot that shows the S S M S Query Editor. The RESTORE DATABASE statement is visible, and a message indicates that the query ran successfully.":::
 
-   If the restore is terminated with the message ID 22003, create a new backup file that contains backup checksums, and perform the restore again. See [Enable or disable backup checksums during backup or restore](/sql/relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server).
+   If the restore process is terminated with the message ID 22003, create a new backup file that contains backup checksums, and start the restore process again. See [Enable or disable backup checksums during backup or restore](/sql/relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server).
 
-1. Run the following statement to track the status of your restore.
+1. Run the following statement to track the status of your restore process.
 
    ```tsql
    SELECT session_id as SPID, command, a.text AS Query, start_time, percent_complete
@@ -181,10 +183,10 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
    WHERE r.command in ('BACKUP DATABASE','RESTORE DATABASE')
    ```
 
-1. When the restore finishes, view the database in **Object Explorer**. You can verify that database restore is complete by using the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view.
+1. When the restore process finishes, view the database in **Object Explorer**. You can verify that the database is completely restored by using the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view.
 
 > [!NOTE]
-> A database restore operation is asynchronous and retryable. You might get an error in SSMS if the connection breaks or a time-out expires. SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views.
+> A database restore operation is asynchronous and retryable. You might get an error in SSMS if the connection fails or a time-out expires. SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore process by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views.
 >
 > In some phases of the restore process, you see a unique identifier instead of the actual database name in the system views. To learn about `RESTORE` statement behavior differences, see [T-SQL differences between SQL Server & Azure SQL Managed Instance](./transact-sql-tsql-differences-sql-server.md#restore-statement).
 

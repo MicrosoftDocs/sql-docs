@@ -42,7 +42,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 
     > [!NOTE]
     > - Email addresses like outlook.com or gmail.com aren't supported as Azure AD admins. The user must either be created natively in the Azure AD or federated into the Azure AD.
-      - Azure AD admin sign-in works with accounts that have two-factor authentication enabled, but the query editor doesn't support two-factor authentication.
+    > - Azure AD admin sign-in works with accounts that have two-factor authentication enabled, but the query editor doesn't support two-factor authentication.
 
 ## Connect to the query editor
 

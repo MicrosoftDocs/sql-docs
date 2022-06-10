@@ -1,23 +1,21 @@
 ---
 title: "sys.dm_db_xtp_merge_requests (Transact-SQL)"
-description: "sys.dm_db_xtp_merge_requests tracks database merge requests for tables in In-Memory OLTP in SQL Server 2014."
-ms.custom: ""
+description: sys.dm_db_xtp_merge_requests tracks database merge requests for tables in In-Memory OLTP in SQL Server 2014.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_merge_requests_TSQL"
   - "dm_db_xtp_merge_requests"
   - "sys.dm_db_xtp_merge_requests_TSQL"
   - "sys.dm_db_xtp_merge_requests"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_merge_requests"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_db_xtp_merge_requests (Transact-SQL)
 

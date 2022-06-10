@@ -1,23 +1,21 @@
 ---
-description: "Database Mirroring - sys.dm_db_mirroring_connections returns a row for each connection established for database mirroring. "
 title: "sys.dm_db_mirroring_connections (Transact-SQL)"
-ms.custom: ""
+description: Database Mirroring - sys.dm_db_mirroring_connections returns a row for each connection established for database mirroring.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_mirroring_connections"
   - "dm_db_mirroring_connections"
   - "sys.dm_db_mirroring_connections_TSQL"
   - "dm_db_mirroring_connections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_mirroring_connections dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # Database Mirroring - sys.dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

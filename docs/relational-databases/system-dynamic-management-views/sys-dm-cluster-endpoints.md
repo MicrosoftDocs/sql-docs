@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_cluster_endpoints (Transact-SQL)"
-title: "sys.dm_cluster_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_cluster_endpoints (Transact-SQL)"
+description: sys.dm_cluster_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, big-data-clusters"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_cluster_endpoints"
   - "dm_cluster_endpoints_TSQL"
   - "dm_cluster_endpoints"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cluster_endpoints dynamic management view"
-ms.assetid: 
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_cluster_endpoints (Transact-SQL)

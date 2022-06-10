@@ -1,25 +1,23 @@
 ---
-description: "sys.query_store_wait_stats (Transact-SQL)"
 title: "sys.query_store_wait_stats (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: sys.query_store_wait_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.query_store_wait_stats"
   - "query_store_wait_stats"
   - "sys.query_store_wait_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query_store_wait_stats catalog view"
   - "sys.query_store_wait_stats catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)

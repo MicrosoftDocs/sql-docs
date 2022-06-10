@@ -1,30 +1,28 @@
 ---
-description: "sys.availability_read_only_routing_lists (Transact-SQL)"
-title: "sys.availability_read_only_routing_lists (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.availability_read_only_routing_lists (Transact-SQL)"
+description: sys.availability_read_only_routing_lists (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "availability_read_only_routing_lists_TSQL"
   - "availability_read_only_routing_lists"
   - "sys.availability_read_only_routing_lists"
   - "sys.availability_read_only_routing_lists_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "read-only routing"
   - "Availability Groups [SQL Server], readable secondary replicas"
   - "Availability Groups [SQL Server], read-only routing"
   - "readable secondary replicas"
   - "sys.availability_read_only_routing_lists dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

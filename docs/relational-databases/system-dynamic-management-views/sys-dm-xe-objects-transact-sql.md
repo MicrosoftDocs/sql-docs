@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xe_objects (Transact-SQL)"
 title: "sys.dm_xe_objects (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_xe_objects (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xe_objects"
   - "sys.dm_xe_objects"
   - "sys.dm_xe_objects_TSQL"
   - "dm_xe_objects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_objects dynamic management view"
   - "extended events [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

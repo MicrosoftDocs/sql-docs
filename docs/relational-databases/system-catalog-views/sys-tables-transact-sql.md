@@ -1,24 +1,22 @@
 ---
 title: sys.tables (Transact-SQL)
-description: "sys.tables (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: sys.tables (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.tables_TSQL"
   - "sys.tables"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.tables catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)

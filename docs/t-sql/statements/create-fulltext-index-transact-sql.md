@@ -1,27 +1,25 @@
 ---
-description: "CREATE FULLTEXT INDEX (Transact-SQL)"
-title: "CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE FULLTEXT INDEX (Transact-SQL)"
+description: CREATE FULLTEXT INDEX (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FULLTEXT_INDEX_TSQL"
   - "CREATE_FULLTEXT_INDEX_TSQL"
   - "CREATE FULLTEXT INDEX"
   - "FULLTEXT INDEX"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text indexes [SQL Server], creating"
   - "index creation [SQL Server], CREATE FULLTEXT INDEX statement"
   - "CREATE FULLTEXT INDEX statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

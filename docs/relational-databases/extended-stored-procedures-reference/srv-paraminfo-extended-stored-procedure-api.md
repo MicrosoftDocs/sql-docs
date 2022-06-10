@@ -1,25 +1,21 @@
 ---
-title: "srv_paraminfo (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_paraminfo (Extended Stored Procedure API)"
 description: Learn how srv_paraminfo in the Extended Stored Procedure API returns information about a parameter.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_paraminfo"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paraminfo"
+apilocation: opends60.dll
+apiname: srv_paraminfo
+apitype: "DLLExport"
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
-author: rothja
-ms.author: jroth
 ---
 # srv_paraminfo (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

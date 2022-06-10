@@ -1,26 +1,24 @@
 ---
-description: "SETUSER (Transact-SQL)"
-title: "SETUSER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SETUSER (Transact-SQL)"
+description: SETUSER (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SETUSER_TSQL"
   - "SETUSER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "delegation [SQL Server]"
   - "impersonation [SQL Server]"
   - "SETUSER statement"
   - "user impersonation [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-author: VanMSFT
-ms.author: vanto
 ---
 # SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

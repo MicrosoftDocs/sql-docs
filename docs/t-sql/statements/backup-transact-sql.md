@@ -1,24 +1,22 @@
 ---
-description: "BACKUP (Transact-SQL) backs up a SQL database."
 title: "BACKUP (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: BACKUP (Transact-SQL) backs up a SQL database.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "BACKUP_TSQL"
   - "BACKUP"
   - "BACKUP_DATABASE_TSQL"
   - "BACKUP_LOG_TSQL"
   - "BACKUP LOG"
   - "BACKUP DATABASE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup media [SQL Server], BACKUP statement"
   - "backing up filegroups [SQL Server]"
   - "backup file formats [SQL Server]"
@@ -44,8 +42,8 @@ helpviewer_keywords:
   - "backing up transaction logs [SQL Server]"
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016"
 ---
 # BACKUP (Transact-SQL)

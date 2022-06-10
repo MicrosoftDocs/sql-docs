@@ -1,22 +1,19 @@
 ---
-description: "Partitioned tables and indexes"
 title: "Partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
-ms.custom: ""
+description: Partitioned tables and indexes
+author: VanMSFT
+ms.author: vanto
 ms.date: "4/22/2022"
 ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partitioned tables [SQL Server], about partitioned tables"
   - "partitioned indexes [SQL Server], architecture"
   - "partitioned tables [SQL Server], architecture"
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioned tables and indexes

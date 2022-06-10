@@ -1,21 +1,19 @@
 ---
-description: "SET STATISTICS IO (Transact-SQL)"
-title: "SET STATISTICS IO (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET STATISTICS IO (Transact-SQL)"
+description: SET STATISTICS IO (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_STATISTICS_IO_TSQL"
   - "IO"
   - "IO_TSQL"
   - "SET STATISTICS IO"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disk I/O statistics [SQL Server]"
   - "I/O [SQL Server], disk activity information"
   - "disks [SQL Server], statement statistics"
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "statements [SQL Server], statistical information"
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

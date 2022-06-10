@@ -1,29 +1,27 @@
 ---
-description: "SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)"
-title: "SET REMOTE_PROC_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)"
+description: SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "REMOTE_PROC_TRANSACTIONS_TSQL"
   - "SET REMOTE_PROC_TRANSACTIONS"
   - "REMOTE_PROC_TRANSACTIONS"
   - "SET_REMOTE_PROC_TRANSACTIONS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "remote stored procedures [SQL Server]"
   - "SET REMOTE_PROC_TRANSACTIONS statement"
   - "distributed transactions [SQL Server], starting"
   - "REMOTE_PROC_TRANSACTIONS option"
   - "active transactions"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

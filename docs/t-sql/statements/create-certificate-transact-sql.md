@@ -1,34 +1,32 @@
 ---
-description: "CREATE CERTIFICATE (Transact-SQL)"
-title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "CREATE CERTIFICATE (Transact-SQL)"
+description: CREATE CERTIFICATE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "CERTIFICATE"
   - "CREATE_CERTIFICATE_TSQL"
   - "sql13.swb.createcertificate.f1"
   - "CERTIFICATE_TSQL"
   - "CREATE CERTIFICATE"
   - "sql13.swb.certificateproperties.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], certificates"
   - "certificates [SQL Server], adding"
   - "certificates [SQL Server]"
   - "adding certificates"
   - "cryptography [SQL Server], certificates"
   - "CREATE CERTIFICATE statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,25 +1,21 @@
 ---
-title: "srv_pfield (Extended Stored Procedure API) | Microsoft Docs"
-description: Learn how srv_pfield in the Extended Stored Procedure API returns information about a database connection.  
-ms.custom: ""
+title: "srv_pfield (Extended Stored Procedure API)"
+description: Learn how srv_pfield in the Extended Stored Procedure API returns information about a database connection.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_pfield"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_pfield"
+apilocation: opends60.dll
+apiname: srv_pfield
+apitype: "DLLExport"
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-author: rothja
-ms.author: jroth
 ---
 # srv_pfield (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

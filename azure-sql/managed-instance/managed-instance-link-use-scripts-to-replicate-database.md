@@ -481,15 +481,6 @@ GO
 >[!IMPORTANT]
 > For SQL Server 2016, delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement. Leave as-is for all higher SQL Server versions.
 
-> [!NOTE]
-> The link feature supports one database per link. To replicate multiplate databases on an instance, create a link for each individual database. For example, to replicate 10 databases to SQL Managed Instance, create 10 individual links.
-
-Consider the following:
-
-- The link currently supports replicating one database per availability group. You can replicate multiple databases to SQL Managed Instance by setting up multiple links.
-- Collation between SQL Server and SQL Managed Instance should be the same. A mismatch in collation could cause a mismatch in server name casing and prevent a successful connection from SQL Server to SQL Managed Instance.
-- Error 1475 indicates that you need to start a new backup chain by creating a full backup without the `COPY ONLY` option.
-
 Next, create distributed availability group on SQL Server. In the following code, replace:
 
 - `<DAGName>` with the name of your distributed availability group. When you're replicating several databases, you need one availability group and one distributed availability group for each database. Consider naming each item accordingly - for example, `DAG_<db_name>`. 
@@ -541,15 +532,13 @@ Alternatively, you can use SSMS Object Explorer to find availability groups and 
 
 The final step of the setup process is to create the link. At this time, you accomplish this by making a REST API call. 
 
-You can invoke direct API calls to Azure by using various API clients. For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace: 
-
-- `<SubscriptionID>` with your Azure subscription ID. 
+You can invoke direct API calls to Azure by using various API clients. For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<AGName>` with the name of the availability group created on SQL Server. 
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
-- `<SQLServerAddress>` with the address of the SQL Server instance. This can be a DNS name, a public IP address, or even a private IP address. The provided address must be resolvable from the back-end node that hosts the managed instance.
-  
+- `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
+ 
 ```powershell
 # Run in Azure Cloud Shell
 # =============================================================================
@@ -557,7 +546,7 @@ You can invoke direct API calls to Azure by using various API clients. For simpl
 # ===== Enter user variables here ====
 
 # Enter your managed instance name – for example, "sqlmi1"
-$ManagedInstanceName = "chimera-pilot-gp-01"
+$ManagedInstanceName = "<ManagedInstanceName>"
 
 # Enter the availability group name that was created on SQL Server
 $AGName = "<AGName>"
@@ -576,16 +565,28 @@ $SQLServerIP = "<SQLServerIP>"
 # Find out the resource group name
 $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
-$SourceIP = "tcp://" + $SQLServerIP + ":5022"
+$SourceIP = "TCP://" + $SQLServerIP + ":5022"
 
-New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -PrimaryAvailabilityGroupName $AGName -LinkName $DAGName -SecondaryAvailabilityGroupName $ManagedInstanceName -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
+# Create link on managed instance. Join distributed availability group on SQL Server.
+New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName -PrimaryAvailabilityGroupName $AGName -SecondaryAvailabilityGroupName $ManagedInstanceName -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
 ```
 
 The result of this operation will be a time stamp of the successful execution of the request to create a link.
 
+In case this is needed, to see all links on a managed instance, use [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) PowerShell command in Azure Cloud Shell. To remove an existing link, use [Remove-AzSqlInstanceLink](/powershell/module/az.sql/remove-azsqlinstancelink) PowerShell command in Azure Cloud Shell.
+
+> [!NOTE]
+> The link feature supports one database per link. To replicate multiplate databases on an instance, create a link for each individual database. For example, to replicate 10 databases to SQL Managed Instance, create 10 individual links.
+
+Consider the following:
+
+- The link currently supports replicating one database per availability group. You can replicate multiple databases to SQL Managed Instance by setting up multiple links.
+- Collation between SQL Server and SQL Managed Instance should be the same. A mismatch in collation could cause a mismatch in server name casing and prevent a successful connection from SQL Server to SQL Managed Instance.
+- Error 1475 indicates that you need to start a new backup chain by creating a full backup without the `COPY ONLY` option.
+
 ## Verify the link
 
-To verify that connection has been made between SQL Managed Instance and SQL Server, run the following query on SQL Server. The connection will not be instantaneous after you make the API call. It can take up to a minute for the DMV to start showing a successful connection. Keep refreshing the DMV until the connection appears as `CONNECTED` for the SQL Managed Instance replica.
+To verify that connection has been made between SQL Managed Instance and SQL Server, run the following query on SQL Server. The connection will not be instantaneous. It can take up to a minute for the DMV to start showing a successful connection. Keep refreshing the DMV until the connection appears as CONNECTED for the SQL Managed Instance replica.
 
 ```sql
 -- Run on SQL Server
@@ -607,7 +608,6 @@ After the connection is established, the **Managed Instance Databases** view in 
 > [!IMPORTANT]
 > - The link won't work unless network connectivity exists between SQL Server and SQL Managed Instance. To troubleshoot network connectivity, follow the steps in [Test bidirectional network connectivity](managed-instance-link-preparation.md#test-bidirectional-network-connectivity).
 > - Take regular backups of the log file on SQL Server. If the used log space reaches 100 percent, replication to SQL Managed Instance stops until space use is reduced. We highly recommend that you automate log backups by setting up a daily job. For details, see [Back up log files on SQL Server](managed-instance-link-best-practices.md#take-log-backups-regularly).
-
 
 ## Next steps
 

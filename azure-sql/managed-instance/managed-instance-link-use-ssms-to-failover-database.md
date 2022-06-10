@@ -1,7 +1,7 @@
 ---
-title: Fail over a database by using the link in SSMS
+title: Failover a database by using the link in SSMS
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use the link feature in SQL Server Management Studio (SSMS) to fail over a database from SQL Server to Azure SQL Managed Instance.
+description: Learn how to use the link feature in SQL Server Management Studio (SSMS) to failover a database from SQL Server to Azure SQL Managed Instance.
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: data-movement
@@ -13,11 +13,11 @@ ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 06/09/2022
 ---
-# Fail over a database by using the link in SSMS - Azure SQL Managed Instance
+# Failover a database by using the link in SSMS - Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to fail over a database from SQL Server to Azure SQL Managed Instance by using [the link feature](managed-instance-link-feature-overview.md) in SQL Server Management Studio (SSMS). 
+This article teaches you how to failover a database from SQL Server to Azure SQL Managed Instance by using [the link feature](managed-instance-link-feature-overview.md) in SQL Server Management Studio (SSMS). 
 
 Failing over your database from SQL Server to SQL Managed Instance breaks the link between the two databases. It stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
 
@@ -26,7 +26,7 @@ Failing over your database from SQL Server to SQL Managed Instance breaks the li
 
 ## Prerequisites 
 
-To fail over your databases to SQL Managed Instance, you need the following prerequisites: 
+To failover your databases to SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
@@ -35,12 +35,12 @@ To fail over your databases to SQL Managed Instance, you need the following prer
 - [An environment that's prepared for replication](managed-instance-link-preparation.md).
 - [Setup of the link feature and replication of your database to your managed instance in Azure](managed-instance-link-use-ssms-to-replicate-database.md). 
 
-## Fail over a database
+## Failover a database
 
-In the following steps, you use the **Failover database to Managed Instance** wizard in SSMS to fail over your database from SQL Server to SQL Managed Instance. The wizard takes you through failing over your database, breaking the link between the two instances in the process. 
+In the following steps, you use the **Failover database to Managed Instance** wizard in SSMS to failover your database from SQL Server to SQL Managed Instance. The wizard takes you through failing over your database, breaking the link between the two instances in the process. 
 
 > [!CAUTION]
-> If you're performing a planned manual failover, stop the workload on the source SQL Server database to allow the SQL Managed Instance replicated database to completely catch up and fail over without data loss. If you're performing a forced failover, you might lose data. 
+> If you're performing a planned manual failover, stop the workload on the source SQL Server database to allow the SQL Managed Instance replicated database to completely catch up and failover without data loss. If you're performing a forced failover, you might lose data. 
 
 1. Open SSMS and connect to your SQL Server instance. 
 1. In Object Explorer, right-click your database, hover over **Azure SQL Managed Instance link**, and select **Failover database** to open the **Failover database to Managed Instance** wizard. 

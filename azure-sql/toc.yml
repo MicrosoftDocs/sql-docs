@@ -1295,9 +1295,9 @@
         href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
       - name: Replicate databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-replicate-database.md
-      - name: Fail over databases in SSMS
+      - name: Failover databases in SSMS
         href: managed-instance/managed-instance-link-use-ssms-to-failover-database.md
-      - name: Fail over databases with scripts
+      - name: Failover databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-failover-database.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md

@@ -154,7 +154,7 @@ Now, you can get the public key of the generated certificate on SQL Server:
 
 ```sql
 -- Run on SQL Server
--- Show the public key of the generated SQL Server certificate
+-- Show the name and the public key of generated SQL Server certificate
 USE MASTER
 GO
 DECLARE @sqlserver_certificate_name NVARCHAR(MAX) = N'Cert_' + @@servername  + N'_endpoint'
@@ -172,6 +172,10 @@ First, ensure that you are logged in to Azure and that you have selected the sub
 
 ```powershell
 # Run in Azure Cloud Shell (select PowerShell console)
+
+#Enter your Azure subscription ID
+$SubscriptionID = "<SubscriptionID>"
+
 # Login to Azure and select subscription ID
 if ((Get-AzContext ) -eq $null)
 {
@@ -193,11 +197,11 @@ Then, tun the following script in Azure Cloud Shell (PowerShell console). Fill o
 # POWERSHELL SCRIPT TO IMPORT SQL SERVER PUBLIC CERTIFICATE TO MANAGED INSTANCE
 # ===== Enter user variables here ====
 
-# Insert the certificate public key blob that you got from SQL Server – for example, "0x1234567..."
-$PublicKeyEncoded = "<SQLServerPublicKey>"
-
 # Enter the name for the server SQLServerCertName certificate – for example, "Cert_sqlserver1_endpoint"
 $CertificateName = "<SQLServerCertName>"
+
+# Insert the certificate public key blob that you got from SQL Server – for example, "0x1234567..."
+$PublicKeyEncoded = "<SQLServerPublicKey>"
 
 # Enter your managed instance short name – for example, "sqlmi"
 $ManagedInstanceName = "<ManagedInstanceName>
@@ -213,12 +217,13 @@ New-AzSqlInstanceServerTrustCertificate -ResourceGroupName $ResourceGroup -Insta
 
 The result of this operation will be a time stamp of the successful upload of the SQL Server certificate private key to SQL Managed Instance.
 
+In case this is needed, to see SQL Server certificates uploaded on a managed instance, use [Get-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/get-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell. To remove SQL Server certificate uploaded on a managed instance, use [Remove-AzSqlInstanceServerTrustCertificate](/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate) PowerShell command in Azure Cloud Shell.
+
 ### Get the certificate public key from SQL Managed Instance and import it to SQL Server
 
-The certificate for securing the endpoint for a link is automatically generated on managed instance. This section describes how to get the certificate public key from SQL Managed Instance, and how to import it to SQL Server.
+The certificate for securing the endpoint for a link is automatically generated on Azure SQL Managed Instance. This section describes how to get the certificate public key from SQL Managed Instance, and how to import it to SQL Server.
 
 Run the following script in Azure Cloud Shell. Fill out necessary user information, copy it, paste it, and then run the script). Replace:
-
 - `<SubscriptionID>` with your Azure subscription ID. 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 
@@ -229,7 +234,7 @@ Run the following script in Azure Cloud Shell. Fill out necessary user informati
 # ===== Enter user variables here ====
 
 # Enter your managed instance short name – for example, "sqlmi"
-$ManagedInstanceName = "<ManagedInstanceName>
+$ManagedInstanceName = "<ManagedInstanceName>"
 
 # ==== Do not customize the below ====
 
@@ -237,14 +242,14 @@ $ManagedInstanceName = "<ManagedInstanceName>
 $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
 # Fetch the public key of the authentication certificate from Managed Instance. Outputs a binary key in the property PublicKey.
-Get-AzSqlInstanceEndpointCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -EndpointType "DATABASE_MIRRORING"
+Get-AzSqlInstanceEndpointCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -EndpointType "DATABASE_MIRRORING" | out-string   
 ```
 
-Copy the entire PublicKey output from the Azure Clod Shell (starts with `0x`) as you will require it in the next step.
+Copy the entire PublicKey output (starts with `0x`) from the Azure Clod Shell as you will require it in the next step.
 
 Next, import the obtained public key of managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
-- `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
+- `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 
 > [!IMPORTANT]
 > The name of the certificate must be the SQL Managed Instance FQDN and should not be modified.

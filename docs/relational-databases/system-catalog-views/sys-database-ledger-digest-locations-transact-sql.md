@@ -1,18 +1,16 @@
 ---
-description: "sys.database_ledger_digest_locations (Transact-SQL)"
-title: "sys.database_ledger_digest_locations (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.database_ledger_digest_locations (Transact-SQL)"
+description: sys.database_ledger_digest_locations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 

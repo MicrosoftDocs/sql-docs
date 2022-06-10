@@ -1,16 +1,15 @@
 ---
 title: "sys.dm_pdw_nodes_exec_query_statistics_xml  (Transact-SQL)"
 description: Dynamic management view that returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
-ms.custom: ""
-ms.date: "10/14/2019"
-ms.prod: sql 
-ms.technology: data-warehouse
-ms.reviewer: wiassaf
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: mstehrani
 ms.author: emtehran
+ms.reviewer: wiassaf
+ms.date: "10/14/2019"
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 

@@ -1,26 +1,24 @@
 ---
-description: "sys.databases (Transact-SQL)"
-title: "sys.databases (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.databases (Transact-SQL)"
+description: sys.databases (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "databases"
   - "databases_TSQL"
   - "sys.databases"
   - "sys.databases_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.databases catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.databases (Transact-SQL)

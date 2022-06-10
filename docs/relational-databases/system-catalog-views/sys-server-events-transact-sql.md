@@ -1,25 +1,23 @@
 ---
-description: "sys.server_events (Transact-SQL)"
-title: "sys.server_events (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_events (Transact-SQL)"
+description: sys.server_events (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_events_TSQL"
   - "sys.server_events_TSQL"
   - "server_events"
   - "sys.server_events"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_events catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.server_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

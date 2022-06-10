@@ -1,20 +1,18 @@
 ---
-description: "Extended Events Dynamic Management Views"
-title: "Extended Events Dynamic Management Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "extended events [SQL Server], dynamic management objects"
-  - "dynamic management objects (SQL Server)"
-ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
+title: "Extended Events Dynamic Management Views"
+description: Extended Events Dynamic Management Views
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/15/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "extended events [SQL Server], dynamic management objects"
+  - "dynamic management objects (SQL Server)"
+dev_langs:
+  - "TSQL"
+ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 ---
 # Extended Events Dynamic Management Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_elements (Transact-SQL)"
-title: "sys.xml_schema_elements (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_elements (Transact-SQL)"
+description: sys.xml_schema_elements (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_elements"
   - "sys.xml_schema_elements_TSQL"
   - "xml_schema_elements"
   - "xml_schema_elements_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_elements catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

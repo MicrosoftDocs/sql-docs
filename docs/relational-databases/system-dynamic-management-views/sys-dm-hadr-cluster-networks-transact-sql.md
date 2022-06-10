@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_cluster_networks (Transact-SQL)"
-title: "sys.dm_hadr_cluster_networks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_cluster_networks (Transact-SQL)"
+description: sys.dm_hadr_cluster_networks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_cluster_networks"
   - "sys.dm_hadr_cluster_networks_TSQL"
   - "sys.dm_hadr_cluster_networks"
   - "dm_hadr_cluster_networks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_cluster_networks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

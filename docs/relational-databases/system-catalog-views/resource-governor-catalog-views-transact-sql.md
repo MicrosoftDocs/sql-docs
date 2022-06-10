@@ -1,21 +1,19 @@
 ---
-description: "Resource Governor Catalog Views (Transact-SQL)"
-title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Resource Governor Catalog Views (Transact-SQL)"
+description: Resource Governor Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Resource Governor, catalog views"
   - "catalog views [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Resource Governor Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

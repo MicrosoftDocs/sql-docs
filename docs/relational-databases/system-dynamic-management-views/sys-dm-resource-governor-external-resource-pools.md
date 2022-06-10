@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
-title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
+description: sys.dm_resource_governor_external_resource_pools (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+manager: cgronlun
 ms.date: "08/06/2020"
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_external_resource_pools_TSQL"
   - "sys.dm_resource_governor_external_resource_pools"
   - "dm_resource_governor_external_resource_pools"
   - "dm_resource_governor_external_resource_pools_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_resource_governor_external_resource_pools"
   - "sys.dm_resource_governor_external_resource_pools"
-author: rothja
-ms.author: jroth
-manager: cgronlun
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)

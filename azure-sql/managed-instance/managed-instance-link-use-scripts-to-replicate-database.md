@@ -77,7 +77,7 @@ The first step in setting up a link is to establish trust between the two instan
 > [!NOTE]
 > The link is based on the Always On technology. Database mirroring endpoint is a special-purpose endpoint that is used exclusively by Always On to receive connections from other server instances. The term database mirroring endpoint should not be mistaken with, and it's not the same as the legacy SQL Server database mirroring feature.
 
-Certificate-based trust is the only supported way to secure database mirroring endpoints on SQL Server and SQL Managed Instance. If you have existing availability groups that use Windows authentication, you need to add certificate-based trust to the existing mirroring endpoint as a secondary authentication option. You can do this by using the `ALTER ENDPOINT` statement, as shown further in this article.
+Certificate-based trust is the only supported way to secure database mirroring endpoints on SQL Server and SQL Managed Instance. If you've existing availability groups that use Windows authentication, you need to add certificate-based trust to the existing mirroring endpoint as a secondary authentication option. You can do this by using the `ALTER ENDPOINT` statement, as shown further in this article.
 
 > [!IMPORTANT]
 > Certificates are generated with an expiration date and time. They must be renewed and rotated before they expire.
@@ -110,7 +110,7 @@ ELSE
 GO
 ```
 
-Then, generate an authentication certificate on SQL Server. In the scropt below replace:
+Then, generate an authentication certificate on SQL Server. In the script below replace:
 - `@cert_expiry_date` with the desired certificate expiration date (future date).
 
 Record this date and set a self-reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
@@ -167,7 +167,7 @@ Save values of `SQLServerCertName` and `SQLServerPublicKey` from the output, bec
 
 For the next step, use PowerShell with the installed [Az.Sql module 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher. Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
 
-First, ensure that you are logged in to Azure and that you have selected the subscription where your managed instance is hosted. Selecting the proper subsription is especially important in case you have more than one Azure subscription on your account. Replace:
+First, ensure that you're logged in to Azure and that you've selected the subscription where your managed instance is hosted. Selecting the proper subscription is especially important in case you have more than one Azure subscription on your account. Replace:
 - `<SubscriptionID>` with your Azure subscription ID. 
 
 ```powershell
@@ -185,7 +185,7 @@ if ((Get-AzContext ) -eq $null)
 Select-AzSubscription -SubscriptionName $SubscriptionID
 ```
 
-Then, tun the following script in Azure Cloud Shell (PowerShell console). Fill out necessary user information, copy it, paste it, and then run the script. Replace:
+Then, run the following script in Azure Cloud Shell (PowerShell console). Fill out necessary user information, copy it, paste it, and then run the script. Replace:
 
 - `<SQLServerPublicKey>` with the public portion of the SQL Server certificate in binary format, which you've recorded in the previous step. It's a long string value that starts with `0x`.
 - `<SQLServerCertName>` with the SQL Server certificate name you've recorded in the previous step.
@@ -245,7 +245,7 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 Get-AzSqlInstanceEndpointCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -EndpointType "DATABASE_MIRRORING" | out-string   
 ```
 
-Copy the entire PublicKey output (starts with `0x`) from the Azure Clod Shell as you will require it in the next step.
+Copy the entire PublicKey output (starts with `0x`) from the Azure Clod Shell as you'll require it in the next step.
 
 Next, import the obtained public key of managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
@@ -335,9 +335,9 @@ DECLARE @sqlserver_certificate_name NVARCHAR(MAX) = N'Cert_' + @@servername  + N
 SELECT @sqlserver_certificate_name as 'SQLServerCertName'
 ```
 
-Save SQLServerCertName from the output as you will need it in the next step.
+Save SQLServerCertName from the output as you'll need it in the next step.
 
-Use the below script to creates a new database mirroring endpoint on port 5022 and secure the endpoint with the SQL Server certificate. Replace:
+Use the below script to create a new database mirroring endpoint on port 5022 and secure the endpoint with the SQL Server certificate. Replace:
 - `<SQL_SERVER_CERTIFICATE>` with the name of SQLServerCertName obtained in the previous step.
 
 ```sql
@@ -367,7 +367,7 @@ FROM
     sys.database_mirroring_endpoints
 ```
 
-Successfully created endpoint state_desc columnet should state `STARTED`.
+Successfully created endpoint state_desc column should state `STARTED`.
 
 A new mirroring endpoint was created with certificate authentication and AES encryption enabled.
 

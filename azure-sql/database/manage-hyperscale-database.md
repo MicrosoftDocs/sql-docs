@@ -60,7 +60,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 
@@ -190,7 +190,7 @@ The Azure portal enables you to reverse migrate to the General Purpose service t
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 

@@ -108,4 +108,4 @@ Connect to your managed instance and use Object Explorer to view your replicated
 
 ## Next steps
 
-To break the link and fail over your database to SQL Managed Instance, see [Fail over a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).
+To break the link and failover your database to SQL Managed Instance, see [Failover a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).

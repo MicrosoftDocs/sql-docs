@@ -1,26 +1,24 @@
 ---
-description: "ALTER VIEW (Transact-SQL)"
-title: "ALTER VIEW (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER VIEW (Transact-SQL)"
+description: ALTER VIEW (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_VIEW_TSQL"
   - "ALTER VIEW"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexed views [SQL Server], modifying"
   - "views [SQL Server], modifying"
   - "modifying views"
   - "ALTER VIEW statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER VIEW (Transact-SQL)

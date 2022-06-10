@@ -1,21 +1,19 @@
 ---
-description: "CREATE ENDPOINT (Transact-SQL)"
 title: CREATE ENDPOINT (Transact-SQL)
-ms.custom: ""
+description: CREATE ENDPOINT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ENDPOINT"
   - "CREATE ENDPOINT"
   - "ENDPOINT_TSQL"
   - "CREATE_ENDPOINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database mirroring [SQL Server], endpoint"
   - "HTTP SOAP support [SQL Server]"
   - "CREATE ENDPOINT statement"
@@ -29,9 +27,9 @@ helpviewer_keywords:
   - "TCP protocol option [SQL Server]"
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 
 # CREATE ENDPOINT (Transact-SQL)

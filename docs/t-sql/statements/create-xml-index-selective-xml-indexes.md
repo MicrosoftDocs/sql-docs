@@ -1,18 +1,16 @@
 ---
-description: "CREATE XML INDEX (Selective XML Indexes)"
-title: "CREATE XML INDEX (Selective XML Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE XML INDEX (Selective XML Indexes)"
+description: CREATE XML INDEX (Selective XML Indexes)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE XML INDEX (Selective XML Indexes)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

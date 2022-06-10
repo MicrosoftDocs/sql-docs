@@ -1,25 +1,23 @@
 ---
-description: "ALTER EVENT SESSION (Transact-SQL)"
-title: "ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER EVENT SESSION (Transact-SQL)"
+description: ALTER EVENT SESSION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER EVENT SESSION"
   - "ALTER_EVENT_SESSION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "extended events [SQL Server], Transact-SQL"
   - "ALTER EVENT SESSION statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,28 +1,26 @@
 ---
-description: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
-title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
+description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONCAT_NULL_YIELDS_NULL_TSQL"
   - "SET CONCAT_NULL_YIELDS_NULL"
   - "CONCAT_NULL_YIELDS_NULL"
   - "SET_CONCAT_NULL_YIELDS_NULL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONCAT_NULL_YIELDS_NULL option"
   - "null values [SQL Server], concatenation results"
   - "concatenation [SQL Server]"
   - "SET CONCAT_NULL_YIELDS_NULL statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)

@@ -1,24 +1,22 @@
 ---
-description: "RESTORE Statements restore SQL database backups taken using the BACKUP command."
 title: "RESTORE (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "RESTORE DATABASE"
   - "RESTORE_TSQL"
   - "RESTORE_DATABASE_TSQL"
   - "RESTORE"
   - "RESTORE_LOG_TSQL"
   - "RESTORE LOG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RESTORE DATABASE, see RESTORE statement"
   - "full backups [SQL Server]"
   - "RECOVERY option"
@@ -38,8 +36,8 @@ helpviewer_keywords:
   - "reverting database snapshots"
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016"
 ---
 # RESTORE Statements (Transact-SQL)

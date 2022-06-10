@@ -1,23 +1,21 @@
 ---
-description: "sysmail_unsentitems (Transact-SQL)"
-title: "sysmail_unsentitems (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmail_unsentitems (Transact-SQL)"
+description: sysmail_unsentitems (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmail_unsentitems_TSQL"
   - "sysmail_unsentitems"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmail_unsentitems database mail view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

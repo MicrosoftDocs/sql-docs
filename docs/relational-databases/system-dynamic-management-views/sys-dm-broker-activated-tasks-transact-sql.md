@@ -1,23 +1,21 @@
 ---
-description: "sys.dm_broker_activated_tasks returns a row for each stored procedure activated by Service Broker."
 title: "sys.dm_broker_activated_tasks (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_broker_activated_tasks returns a row for each stored procedure activated by Service Broker.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_broker_activated_tasks"
   - "sys.dm_broker_activated_tasks_TSQL"
   - "dm_broker_activated_tasks"
   - "dm_broker_activated_tasks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_broker_activated_tasks dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

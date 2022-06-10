@@ -1,22 +1,20 @@
 ---
-description: "REVOKE Full-Text Permissions (Transact-SQL)"
-title: "REVOKE Full-Text Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Full-Text Permissions (Transact-SQL)"
+description: REVOKE Full-Text Permissions (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVOKE statement, full-text permissions"
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,28 +1,26 @@
 ---
-description: "SET ARITHIGNORE (Transact-SQL)"
-title: "SET ARITHIGNORE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ARITHIGNORE (Transact-SQL)"
+description: SET ARITHIGNORE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET ARITHIGNORE"
   - "SET_ARITHIGNORE_TSQL"
   - "ARITHIGNORE"
   - "ARITHIGNORE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET ARITHIGNORE statement"
   - "overflow errors [SQL Server]"
   - "ARITHIGNORE option"
   - "divide-by-zero errors"
+dev_langs:
+  - "TSQL"
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ARITHIGNORE (Transact-SQL)

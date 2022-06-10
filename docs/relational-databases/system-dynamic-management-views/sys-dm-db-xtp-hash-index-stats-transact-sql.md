@@ -1,24 +1,22 @@
 ---
 title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL)"
-description: "For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables."
-ms.custom: ""
+description: For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_xtp_hash_index_stats"
   - "sys.dm_db_xtp_hash_index_stats_TSQL"
   - "dm_db_xtp_hash_index_stats"
   - "dm_db_xtp_hash_index_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_hash_index_stats (dynamic management view)"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)

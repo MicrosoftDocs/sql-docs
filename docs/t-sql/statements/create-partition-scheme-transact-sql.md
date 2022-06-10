@@ -1,23 +1,21 @@
 ---
-description: "CREATE PARTITION SCHEME (Transact-SQL)"
 title: "CREATE PARTITION SCHEME (Transact-SQL)"
-ms.custom: ""
+description: CREATE PARTITION SCHEME (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE PARTITION SCHEME"
   - "SCHEME"
   - "PARTITION SCHEME"
   - "CREATE_PARTITION_SCHEME_TSQL"
   - "SCHEME_TSQL"
   - "PARTITION_SCHEME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partitioned indexes [SQL Server], schemes"
   - "partitioned tables [SQL Server], schemes"
   - "CREATE PARTITION SCHEME statement"
@@ -26,9 +24,9 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], filegroups"
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

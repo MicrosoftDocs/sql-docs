@@ -1,16 +1,19 @@
 ---
 title: "MERGE (Transact-SQL)"
-description: "MERGE (Transact-SQL)"
+description: MERGE (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "MERGE"
   - "MERGE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating data [SQL Server]"
   - "modifying data [SQL Server], MERGE statement"
   - "MERGE statement [SQL Server]"
@@ -19,13 +22,9 @@ helpviewer_keywords:
   - "table modifications [SQL Server], MERGE statement"
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
-author: mstehrani
-ms.author: emtehran
-ms.reviewer: wiassaf
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||azure-sqldw-latest"
 ---
 # MERGE (Transact-SQL)
 

@@ -1,25 +1,23 @@
 ---
-description: "sys.certificates (Transact-SQL)"
-title: "sys.certificates (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.certificates (Transact-SQL)"
+description: sys.certificates (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "certificates"
   - "certificates_TSQL"
   - "sys.certificates_TSQL"
   - "sys.certificates"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.certificates catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.certificates (Transact-SQL)

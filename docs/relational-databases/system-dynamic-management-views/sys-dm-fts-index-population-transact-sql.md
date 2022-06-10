@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_fts_index_population returns information about the full-text index and semantic key phrase populations currently in progress in SQL Server."
 title: "sys.dm_fts_index_population (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_fts_index_population returns information about the full-text index and semantic key phrase populations currently in progress in SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_fts_index_population"
   - "dm_fts_index_population"
   - "sys.dm_fts_index_population_TSQL"
   - "dm_fts_index_population_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_index_population dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_population (Transact-SQL)

@@ -1,15 +1,13 @@
 ---
-title: "Disallowed Types and Members in System.Core.dll | Microsoft Docs"
+title: "Disallowed Types and Members in System.Core.dll"
 description: SQL Server CLR programming disallows a type or member with some values for the HostProtectionResource enum. This article lists System.Core.dll disallowed values.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
-author: rothja
-ms.author: jroth
 ---
 # Disallowed Types and Members in System.Core.dll
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

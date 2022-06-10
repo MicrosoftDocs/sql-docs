@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_resource_governor_workload_groups (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/04/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_workload_groups"
   - "sys.dm_resource_governor_workload_groups_TSQL"
   - "dm_resource_governor_workload_groups"
   - "dm_resource_governor_workload_groups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_resource_governor_workload_groups dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_resource_governor_workload_groups (Transact-SQL)

@@ -1,21 +1,19 @@
 ---
 title: "Annotated XDR Schemas (Deprecated in SQLXML 4.0)"
 description: View information about the deprecation of annotated XDR schemas in SQLXML 4.0.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLXML, annotated XDR schemas"
   - "XDR schemas [SQLXML], annotations"
   - "annotated XDR schemas"
   - "schemas [SQLXML]"
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

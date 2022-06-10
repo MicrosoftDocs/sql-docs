@@ -1,19 +1,16 @@
 ---
-description: "SET RESULT_SET_CACHING (Transact-SQL)"
 title: "SET RESULT_SET_CACHING (Transact-SQL)"
-ms.custom: ""
+description: SET RESULT_SET_CACHING (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
 ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: wiassaf
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
 dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-author: mstehrani
-ms.author: emtehran
 monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 

@@ -1,26 +1,24 @@
 ---
-description: "ALTER TABLE column_constraint (Transact-SQL)"
-title: "column_constraint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "column_constraint (Transact-SQL)"
+description: ALTER TABLE column_constraint (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "column_constraint"
   - "column_constraint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER TABLE statement"
   - "constraints [SQL Server], properties"
   - "constraints [SQL Server], definitions"
   - "column_constraint"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
-author: VanMSFT
-ms.author: vanto
 ---
 # ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

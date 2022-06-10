@@ -187,7 +187,6 @@ Storage consumption depends on the selected frequency and retention periods of L
 > - LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed subsequently, even if the STR backup storage redundancy is changed in the future. 
 > - Databases in the Hyperscale service tier for Azure SQL Database do not currently support long-term retention. 
 
-.
 
 ## Backup storage costs
 

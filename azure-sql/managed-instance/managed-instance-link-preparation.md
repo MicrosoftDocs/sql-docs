@@ -283,7 +283,7 @@ Next, create a SQL Agent job on the managed instance called `NetHelper` by runni
 - `SQL_SERVER_ADDRESS` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
--- Run on the managed instance
+-- Run on managed instance
 -- SQL_SERVER_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
 DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
@@ -312,14 +312,14 @@ EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 Run the SQL Agent job by running the following T-SQL command on the managed instance: 
 
 ```sql
--- Run on the managed instance
+-- Run on managed instance
 EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
 Run the following query on the managed instance to show the log of the SQL Agent job: 
 
 ```sql
--- Run on the managed instance
+-- Run on managed instance
 SELECT 
     sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
 FROM

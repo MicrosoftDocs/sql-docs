@@ -14,7 +14,7 @@ ms.custom: kr2b-contr-experiment
 # Quickstart: Create a server-level firewall rule in Azure portal
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This quick-start tutorial describes how to create a [server-level firewall rule](firewall-configure.md) in Azure SQL Database. Firewall rules can give access to [logical SQL servers](logical-servers.md), single databases, and elastic pools and their databases. Firewall rules are also needed to connect on-premises and other Azure resources to databases. Server-level firewall rules do not apply to Azure SQL Managed Instance.
+This quickstart describes how to create a [server-level firewall rule](firewall-configure.md) in Azure SQL Database. Firewall rules can give access to [logical SQL servers](logical-servers.md), single databases, and elastic pools and their databases. Firewall rules are also needed to connect on-premises and other Azure resources to databases. Server-level firewall rules do not apply to Azure SQL Managed Instance.
 
 ## Prerequisites
 

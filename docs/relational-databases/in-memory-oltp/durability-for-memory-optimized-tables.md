@@ -1,16 +1,14 @@
 ---
-title: "Durability for Memory-Optimized Tables | Microsoft Docs"
+title: "Durability for Memory-Optimized Tables"
 description: Learn how In-Memory OLTP provides full durability for memory-optimized tables, by using transaction logging and by saving data changes to on-disk storage.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-author: markingmyname
-ms.author: maghan
 ---
 # Durability for Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

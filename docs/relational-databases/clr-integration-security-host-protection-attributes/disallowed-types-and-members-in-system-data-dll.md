@@ -1,7 +1,6 @@
 ---
 title: "Disallowed Types and Members in System.Data.dll"
 description: Disallowed Types and Members in System.Data.dll
-description: SQL Server CLR programming disallows a type or member with some values for the HostProtectionResource enum. This article lists System.Data.dll disallowed values.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"

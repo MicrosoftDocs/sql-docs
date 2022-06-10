@@ -14,7 +14,7 @@ ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Memory-optimized tables, natively compiled stored procedures, and user-defined functions do not support the full [!INCLUDE[tsql](../../includes/tsql-md.md)] surface area that is supported by disk-based tables, interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, and user-defined functions. When attempting to use one of the unsupported features, the server returns an error.  
   

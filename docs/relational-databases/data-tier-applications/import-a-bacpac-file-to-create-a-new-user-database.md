@@ -28,7 +28,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Import a data-tier application (DAC) file - a .bacpac file - to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premises copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## Before You Begin  

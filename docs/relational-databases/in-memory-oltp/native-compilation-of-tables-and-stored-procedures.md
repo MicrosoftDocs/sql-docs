@@ -14,7 +14,7 @@ ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation of Tables and Stored Procedures
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 In-Memory OLTP introduces the concept of native compilation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can natively compile stored procedures that access memory-optimized tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is also able to natively compile memory-optimized tables. Native compilation allows faster data access and more efficient query execution than interpreted (traditional) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Native compilation of tables and stored procedures produce DLLs.
 
 Native compilation of memory optimized table types is also supported. For more information, see [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).

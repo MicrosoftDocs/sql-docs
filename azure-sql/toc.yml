@@ -660,9 +660,9 @@
         - name: Create updatable ledger tables
           href: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
         - name: Convert regular tables into ledger tables
-          href: /sql/relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables
+          href: /sql/relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables
         - name: How to configure automatic database digests
-          href: /sql/relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest
+          href: /sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database
         - name: Verify ledger database for tampering
           href: /sql/relational-databases/security/ledger/ledger-verify-database
       - name: vNet endpoints - PowerShell

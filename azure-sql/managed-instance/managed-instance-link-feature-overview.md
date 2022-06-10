@@ -20,6 +20,8 @@ The new link feature in Azure SQL Managed Instance connects your SQL Servers h
 
 After a disastrous event, you can continue running your read-only workloads on SQL Managed Instance in Azure. You can also choose to migrate one or more applications from SQL Server to SQL Managed Instance at the same time, at your own pace, and with the best possible minimum downtime compared to other solutions in Azure today.
 
+If you have product improvement suggestions, comments, or you want to report issues, the best way to contact our team is through [SQL Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
+
 ## Requirements
 
 To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.

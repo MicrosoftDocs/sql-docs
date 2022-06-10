@@ -1,28 +1,26 @@
 ---
-description: "CREATE SEQUENCE (Transact-SQL)"
 title: CREATE SEQUENCE (Transact-SQL)
-ms.custom: ""
+description: CREATE SEQUENCE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SEQUENCE"
   - "CREATE SEQUENCE"
   - "SEQUENCE_TSQL"
   - "CREATE_SEQUENCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE SEQUENCE statement"
   - "sequence number object, creating"
   - "sequence object"
   - "number, sequence"
+dev_langs:
+  - "TSQL"
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 
 # CREATE SEQUENCE (Transact-SQL)

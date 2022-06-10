@@ -1,20 +1,19 @@
 ---
-description: "ALTER TABLE index_option (Transact-SQL)"
 title: "ALTER TABLE index_option (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: ALTER TABLE index_option (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
 ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "index_option"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,19 +1,17 @@
 ---
-description: "ALTER PARTITION FUNCTION (Transact-SQL)"
 title: "ALTER PARTITION FUNCTION (Transact-SQL)"
-ms.custom: ""
+description: ALTER PARTITION FUNCTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "4/5/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER PARTITION FUNCTION"
   - "ALTER_PARTITION_FUNCTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "splitting partitions [SQL Server]"
   - "partitioned tables [SQL Server], splitting"
   - "ALTER PARTITION FUNCTION statement"
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "modifying partition functions"
   - "partition functions [SQL Server], modifying"
   - "partitioned tables [SQL Server], merging"
+dev_langs:
+  - "TSQL"
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
 

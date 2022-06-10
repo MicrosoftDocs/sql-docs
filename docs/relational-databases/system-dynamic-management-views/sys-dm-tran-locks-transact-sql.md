@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_locks (Transact-SQL)"
-title: "sys.dm_tran_locks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_locks (Transact-SQL)"
+description: sys.dm_tran_locks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_locks"
   - "sys.dm_tran_locks"
   - "sys.dm_tran_locks_TSQL"
   - "dm_tran_locks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_locks (Transact-SQL)

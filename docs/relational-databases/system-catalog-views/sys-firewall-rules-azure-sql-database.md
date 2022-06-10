@@ -1,24 +1,24 @@
 ---
-description: "sys.firewall_rules (Azure SQL Database)"
-title: "sys.firewall_rules (Azure SQL Database) | Microsoft Docs"
+title: "sys.firewall_rules (Azure SQL Database)"
+description: sys.firewall_rules (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/26/2019"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.firewall_rules"
   - "firewall_rules"
   - "sys.firewall_rules_TSQL"
   - "firewall_rules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "firewall_rules"
   - "sys.firewall_rules"
+dev_langs:
+  - "TSQL"
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

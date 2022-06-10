@@ -1,24 +1,23 @@
 ---
-description: "sys.dm_fts_population_ranges returns information about the specific ranges related to a full-text index population currently in progress. "
 title: "sys.dm_fts_population_ranges (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_fts_population_ranges returns information about the specific ranges related to a full-text index population currently in progress.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: 06/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_fts_population_ranges"
   - "sys.dm_fts_population_ranges_TSQL"
   - "dm_fts_population_ranges_TSQL"
   - "dm_fts_population_ranges"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_population_ranges dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_population_ranges (Transact-SQL)

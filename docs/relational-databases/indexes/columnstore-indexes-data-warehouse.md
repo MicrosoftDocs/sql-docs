@@ -1,16 +1,14 @@
 ---
-description: "Columnstore indexes - Data Warehouse"
-title: "Columnstore indexes - Data Warehouse | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore indexes - Data Warehouse"
+description: Columnstore indexes - Data Warehouse
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse

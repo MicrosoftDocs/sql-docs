@@ -1,27 +1,26 @@
 ---
 title: "CREATE MASTER KEY (Transact-SQL)"
-description: "CREATE MASTER KEY (Transact-SQL) creates a database master key in the database."
+description: CREATE MASTER KEY (Transact-SQL) creates a database master key in the database.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: wiassaf
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "CREATE_MASTER_KEY_TSQL"
   - "CREATE MASTER KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], Database Master Key"
   - "database master key [SQL Server]"
   - "CREATE MASTER KEY statement"
   - "cryptography [SQL Server], Database Master Key"
   - "database master key [SQL Server], creating"
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: wiassaf
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

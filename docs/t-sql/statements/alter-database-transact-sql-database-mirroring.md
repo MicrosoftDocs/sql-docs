@@ -1,23 +1,21 @@
 ---
-description: "ALTER DATABASE Database Mirroring (Transact-SQL)"
-title: "ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE Database Mirroring (Transact-SQL)"
+description: ALTER DATABASE Database Mirroring (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "witness [SQL Server], establishing"
   - "manual failover [SQL Server]"
   - "ALTER DATABASE statement, database mirroring"
   - "database mirroring [SQL Server], Transact-SQL"
+dev_langs:
+  - "TSQL"
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 

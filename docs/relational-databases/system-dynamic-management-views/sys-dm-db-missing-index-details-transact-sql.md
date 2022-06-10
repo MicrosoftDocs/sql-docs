@@ -1,25 +1,23 @@
 ---
-description: "The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes."
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
-ms.custom: ""
+description: The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/8/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_missing_index_details"
   - "dm_db_missing_index_details"
   - "sys.dm_db_missing_index_details_TSQL"
   - "dm_db_missing_index_details_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view"
   - "sys.dm_db_missing_index_details dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_details (Transact-SQL)

@@ -1,16 +1,15 @@
 ---
 title: Restoring, recovering, and managing backups
 description: Transact-SQL RESTORE statements for restoring, recovering, and managing backups.
-ms.custom: "seo-lt-2019​"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019​"
+helpviewer_keywords:
   - "restoring files [SQL Server], RESTORE statement"
   - "RESTORE statement, about restore operations"
   - "database restores [SQL Server], RESTORE statement"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], RESTORE statement"
   - "file restores [SQL Server], RESTORE statement"
   - "transaction log backups [SQL Server], RESTORE statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)

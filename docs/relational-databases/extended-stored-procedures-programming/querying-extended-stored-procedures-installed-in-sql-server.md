@@ -1,19 +1,16 @@
 ---
-description: "Querying Extended Stored Procedures Installed in SQL Server"
 title: "Querying extended stored procedures"
+description: Querying Extended Stored Procedures Installed in SQL Server
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], querying"
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
-author: rothja
-ms.author: jroth
-ms.custom: seo-dt-2019
 ---
 # Querying Extended Stored Procedures Installed in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

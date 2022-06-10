@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_exec_query_stats (Transact-SQL)"
-title: "sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_stats (Transact-SQL)"
+description: sys.dm_exec_query_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_query_stats_TSQL"
   - "dm_exec_query_stats"
   - "sys.dm_exec_query_stats"
   - "sys.dm_exec_query_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

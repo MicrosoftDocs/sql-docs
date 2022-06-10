@@ -1,24 +1,24 @@
 ---
-description: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
-title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
+title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
+description: ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/16/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_DATABASE_ENCRYPTION_KEY_TSQL"
   - "ALTER DATABASE ENCRYPTION"
   - "ALTER_DATABASE_ENCRYPTION_TSQL"
   - "ALTER DATABASE ENCRYPTION KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database encryption key, alter"
   - "ALTER DATABASE ENCRYPTION KEY"
+dev_langs:
+  - "TSQL"
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 

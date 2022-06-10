@@ -1,26 +1,24 @@
 ---
-description: "sys.system_columns (Transact-SQL)"
-title: "sys.system_columns (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.system_columns (Transact-SQL)"
+description: sys.system_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "system_columns_TSQL"
   - "system_columns"
   - "sys.system_columns"
   - "sys.system_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.system_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_columns (Transact-SQL)

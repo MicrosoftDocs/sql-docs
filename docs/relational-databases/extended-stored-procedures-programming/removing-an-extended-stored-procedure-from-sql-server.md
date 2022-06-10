@@ -1,22 +1,19 @@
 ---
-description: "Removing an Extended Stored Procedure from SQL Server"
 title: "Removing an Extended Stored Procedure"
+description: Removing an Extended Stored Procedure from SQL Server
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "deleting extended stored procedures"
   - "removing extended stored procedures"
   - "extended stored procedures [SQL Server], removing"
   - "dropping extended stored procedures"
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-author: rothja
-ms.author: jroth
-ms.custom: seo-dt-2019
 ---
 # Removing an Extended Stored Procedure from SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

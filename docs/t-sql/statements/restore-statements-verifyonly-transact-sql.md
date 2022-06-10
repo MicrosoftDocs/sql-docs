@@ -1,28 +1,26 @@
 ---
-description: "RESTORE Statements - VERIFYONLY (Transact-SQL)"
-title: "RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE VERIFYONLY (Transact-SQL)"
+description: RESTORE Statements - VERIFYONLY (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "VERIFYONLY"
   - "RESTORE VERIFYONLY"
   - "VERIFYONLY_TSQL"
   - "RESTORE_VERIFYONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RESTORE VERIFYONLY statement"
   - "backups [SQL Server], verifying"
   - "verifying backups"
   - "checking backups"
+dev_langs:
+  - "TSQL"
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)

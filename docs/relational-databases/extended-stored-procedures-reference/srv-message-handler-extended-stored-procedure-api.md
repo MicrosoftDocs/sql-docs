@@ -1,25 +1,22 @@
 ---
 title: "srv_message_handler (Extended Stored Procedure API)"
 description: Learn about srv_message_handler and how it calls the installed Extended Stored Procedure API message handler.
-ms.custom: seo-dt-2019
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "srv_message_handler"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_message_handler"
+apilocation: opends60.dll
+apiname: srv_message_handler
+apitype: "DLLExport"
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-author: rothja
-ms.author: jroth
 ---
 # srv_message_handler (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

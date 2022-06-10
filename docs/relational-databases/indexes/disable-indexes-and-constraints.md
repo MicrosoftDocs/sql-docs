@@ -1,16 +1,16 @@
 ---
-description: "Disable Indexes and Constraints"
-title: "Disable Indexes and Constraints | Microsoft Docs"
-ms.custom: ""
+title: "Disable Indexes and Constraints"
+description: Disable Indexes and Constraints
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disabled indexes [SQL Server], index operations"
   - "nonclustered indexes [SQL Server], disabling"
   - "disabled indexes [SQL Server], guidelines"
@@ -22,8 +22,6 @@ helpviewer_keywords:
   - "index disabling [SQL Server]"
   - "indexed views [SQL Server], disabled indexes"
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Indexes and Constraints

@@ -1,19 +1,17 @@
 ---
-description: "DROP SYMMETRIC KEY (Transact-SQL)"
-title: "DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP SYMMETRIC KEY (Transact-SQL)"
+description: DROP SYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP SYMMETRIC KEY"
   - "DROP_SYMMETRIC_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "symmetric keys [SQL Server], removing"
   - "deleting symmetric keys"
   - "encryption [SQL Server], symmetric keys"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "dropping symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
   - "DROP SYMMETRIC KEY statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

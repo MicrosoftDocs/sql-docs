@@ -98,11 +98,11 @@ There could exist up to 100 links from the same, or various SQL Server sources t
 
 ## Use the link feature
 
-To help you set up initial environment, we have prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
+To help you set up initial environment, we've prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
 
 - [Prepare environment for the link](managed-instance-link-preparation.md)
 
-Once you have ensured the pre-requirements have been met, you can create the link using the automated wizard in SSMS, or you can choose to set up the link manually using scripts. Create the link using one of the following instructions:
+Once you've ensured the pre-requirements have been met, you can create the link using the automated wizard in SSMS, or you can choose to set up the link manually using scripts. Create the link using one of the following instructions:
 
 * [Replicate database with link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md), or alternatively
 * [Replicate database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
@@ -111,7 +111,7 @@ Once the link has been created, ensure that you follow the best practices for ma
 
 * [Best practices with link feature for Azure SQL Managed Instance](managed-instance-link-best-practices.md)
 
-If and when you are ready to migrate a database to Azure with a minimum downtime, you can do this using an automated wizard in SSMS, or you can choose to do this manually with scripts. Migrate database to Azure link using one of the following instructions:
+If and when you're ready to migrate a database to Azure with a minimum downtime, you can do this using an automated wizard in SSMS, or you can choose to do this manually with scripts. Migrate database to Azure link using one of the following instructions:
 
 * [Failover database with link feature in SSMS](managed-instance-link-use-ssms-to-failover-database.md), or alternatively
 * [Failover (migrate) database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-failover-database.md)

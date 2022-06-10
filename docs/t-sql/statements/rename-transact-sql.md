@@ -1,17 +1,16 @@
 ---
-description: "RENAME (Transact-SQL)"
-title: "RENAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RENAME (Transact-SQL)"
+description: RENAME (Transact-SQL)
+author: ronortloff
+ms.author: rortloff
+ms.reviewer: "WilliamDAssafMSFT"
 ms.date: "07/20/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: "WilliamDAssafMSFT"
 ms.topic: reference
-author: ronortloff
-ms.author: rortloff
-dev_langs: 
+dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

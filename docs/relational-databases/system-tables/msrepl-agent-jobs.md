@@ -1,23 +1,21 @@
 ---
-description: "MSrepl_agent_jobs (Transact-SQL)"
-title: "MSrepl_agent_jobs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_agent_jobs (Transact-SQL)"
+description: MSrepl_agent_jobs (Transact-SQL)
+author: briancarrig
+ms.author: brcarrig
 ms.date: "10/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_agent_jobs_TSQL"
   - "MSrepl_agent_jobs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_agent_jobs system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 50ca9254-a0d8-45fb-8cfd-e96ad8aca613
-author: briancarrig
-ms.author: brcarrig
 ---
 # MSrepl_agent_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

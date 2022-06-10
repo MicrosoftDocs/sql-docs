@@ -1,14 +1,14 @@
 ---
-description: "CREATE REMOTE SERVICE BINDING (Transact-SQL)"
-title: "CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE REMOTE SERVICE BINDING (Transact-SQL)"
+description: CREATE REMOTE SERVICE BINDING (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE REMOTE SERVICE BINDING"
   - "SERVICE_BINDING_TSQL"
   - "CREATE REMOTE SERVICE"
@@ -25,9 +25,7 @@ f1_keywords:
   - "REMOTE_SERVICE_BINDING_TSQL"
   - "REMOTE"
   - "REMOTE SERVICE BINDING"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "binding remote service [Service Broker]"
   - "dialog security [Service Broker]"
   - "end-to-end security [Service Broker]"
@@ -35,9 +33,9 @@ helpviewer_keywords:
   - "CREATE REMOTE SERVICE BINDING statement"
   - "conversation security [Service Broker]"
   - "remote service bindings [Service Broker], creating"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-author: VanMSFT
-ms.author: vanto
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

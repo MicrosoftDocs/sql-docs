@@ -1,16 +1,15 @@
 ---
 title: "T-SQL not supported by in-memory OLTP"
 description: Learn which Transact-SQL features are not supported for memory-optimized tables, natively compiled stored procedures, and user-defined functions.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP

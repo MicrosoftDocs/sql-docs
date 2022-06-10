@@ -1,14 +1,14 @@
 ---
-description: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
-title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
+description: CREATE COLUMNSTORE INDEX (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_COLUMNSTORE_INDEX_TSQL"
   - "COLUMNSTORE INDEX"
   - "COLUMNSTORE_INDEX_TSQL"
@@ -19,16 +19,14 @@ f1_keywords:
   - "CREATE COLUMNSTORE INDEX"
   - "CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL"
   - "COLUMNSTORE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index creation [SQL Server], columnstore indexes"
   - "columnstore index, creating"
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)

@@ -1,25 +1,23 @@
 ---
 title: GRANT Database Scoped Credential (Transact-SQL)
-description: "GRANT Database Scoped Credential permissions"
+description: GRANT Database Scoped Credential permissions
+author: VanMSFT
+ms.author: vanto
+ms.date: "05/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GRANT DATABASE SCOPED CREDENTIAL"
   - "GRANT_DATABASE_SCOPED_CREDENTIAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], database scoped credential"
   - "permissions [SQL Server], database scoped credential"
   - "database scoped credential [SQL Server], permissions"
   - "GRANT statement, database scoped credentials"
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "05/25/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 

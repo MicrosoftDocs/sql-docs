@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case, we say the current data is *active* or *hot*, and the older data is *cold*.
 

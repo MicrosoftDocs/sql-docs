@@ -1129,17 +1129,17 @@ Provides the connectivity protocol and path to the external data source.
 | External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] |
-| Azure Storage account(V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<BR>Hierarchical Namespace **not** supported |
+| Azure Storage account(V2) | `abs`       | `abs://<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<BR>Hierarchical Namespace **not** supported |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | MongoDB or Cosmos DB API for MongoDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Generic ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
-| Azure Data Lake Storage Gen2 |   `abfs[s]` | `abfss://<container>@<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. |
+| Azure Data Lake Storage Gen2 |   `adls` | `adls://<container>@<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] |
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)] | 
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)]  |
-| S3-compatible object storage | `s3://` | `s3://<ip_address>:<port>/` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] |
+| S3-compatible object storage | `s3` | `s3://<server_name>:<port>/` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] |
 
 #### Location path:
 
@@ -1164,7 +1164,10 @@ Additional notes and guidance when setting the location:
 - The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
 - [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 - For more information on S3-compatible object storage and PolyBase starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md). For an example of querying a parquet file within S3-compatible object storage, see [Virtualize parquet file in a S3-compatible object storage with PolyBase](../../relational-databases/polybase/polybase-virtualize-parquet-file.md).
+- Differing from previous versions, in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Azure Storage Account (v2) changed from `wasb[s]` to `abs`.
+- Differing from previous versions, in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Azure Data Lake Storage Gen2 changed from `abfs[s]` to `adls`.
 
+ 
 #### CONNECTION_OPTIONS = *key_value_pair*
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
@@ -1514,12 +1517,55 @@ FROM    OPENROWSET
         ) AS [cc];
 ```
 
+### I. Create external data source to access data in Azure Storage  
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix also supports authentication using Shared Access Signature. This prefix replaces `wasb` used in previous versions. Specfying TYPE = HADOOP is no longer needed.
+
+The Azure storage account key is no longer needed in this scenario as we can see in the following example:
+
+```sql
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
+GO
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialv2
+WITH
+  IDENTITY = 'SHARED ACCESS SIGNATURE', -- to use SAS the identity must be fixed as-is
+  SECRET = '<Blob_SAS_Token>' ;
+GO
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+  ( LOCATION = 'abs://<container>@<storage_account>.blob.core.windows.net/' ,
+    CREDENTIAL = AzureStorageCredentialv2,
+  ) ;
+```
+
+
+### J. Create external data source to access data in Azure Data Lake Gen2
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `adls` for Azure Data Lake Gen2, replacing `abfs` used in previous versions. The `adls` prefix also supports SAS token as authentication method as shown in the example below:
+
+```sql
+--Create a database scoped credential using SAS Token 
+CREATE DATABASE SCOPED CREDENTIAL datalakegen2
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE', 
+SECRET = '<DataLakeGen2_SAS_Token>';
+GO
+CREATE EXTERNAL DATA SOURCE data_lake_gen2_dfs
+WITH
+(
+LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
+,CREDENTIAL = datalakegen2
+)
+```
+
+
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### I. Create an external data source for bulk operations retrieving data from Azure Storage
+### K. Create an external data source for bulk operations retrieving data from Azure Storage
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -1542,7 +1588,7 @@ WITH
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 
-### J. Create external data source to access data in Azure Storage using the abfs:// interface
+### L. Create external data source to access data in Azure Storage using the abfs:// interface
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
 
 In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 

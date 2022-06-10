@@ -204,7 +204,7 @@ The Network Security Group (NSG) rules on the subnet hosting managed instance ne
 Firewall on the network hosting SQL Server, and the host OS needs to allow:
 - Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
 
-:::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to setup the link between SQL Server and managed instance.":::
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
 
 Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
 

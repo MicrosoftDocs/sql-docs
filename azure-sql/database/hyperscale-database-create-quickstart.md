@@ -289,7 +289,7 @@ GO
 
 Refer to [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true) for more parameters and options.
 
-To add one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica) to your database, use the **Compute and storage** pane for the database in the Azure portal, the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell command, or the [az sql db update](/cli/azure/sql/db#az_sql_db_update) Azure CLI command.
+To add one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica) to your database, use the **Compute and storage** pane for the database in the Azure portal, the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell command, or the [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command.
 
 ---
 
@@ -357,7 +357,7 @@ To delete **myResourceGroup** and all its resources using the Azure portal:
 
 # [Azure CLI](#tab/azure-cli)
 
-Use the following command to remove the resource group and all resources associated with it using the [az group delete](/cli/azure/vm/extension#az_vm_extension_set) command - unless you have an ongoing need for these resources. Some of these resources may take a while to create, and to delete.
+Use the following command to remove the resource group and all resources associated with it using the [az group delete](/cli/azure/vm/extension#az-vm-extension-set) command - unless you have an ongoing need for these resources. Some of these resources may take a while to create, and to delete.
 
 ```azurecli-interactive
 az group delete --name $resourceGroup

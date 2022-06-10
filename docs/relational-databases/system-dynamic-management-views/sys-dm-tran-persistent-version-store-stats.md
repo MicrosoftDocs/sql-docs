@@ -33,13 +33,13 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |database_id  |  int|  The `database_id` of this row.  |
 |pvs_filegroup_id  |  smallint |  The filegroup that hosts PVS version store. |
 |persistent_version_store_size_kb|    bigint | The PVS size in kilobytes. This value is used to determine current space used by PVS. |
-|online_index_version_store_size_kb|    bigint | This is special version store size, in kilobytes, used during online index rebuild.|
+|online_index_version_store_size_kb|    bigint | The special version store size, in kilobytes, used during online index rebuild.|
 |current_aborted_transaction_count|    bigint | The number of abort transactions in the database. Detail of the abort transactions can be viewed in `sys.dm_tran_aborted_transactions`. |
 |oldest_active_transaction_id|    bigint | The transaction ID of the oldest active transaction.  |
 |oldest_aborted_transaction_id|    bigint | The transaction ID of the oldest abort transaction. If the PVS cleaner cannot remove the aborted transaction, this value will reflect the oldest value.|
 |min_transaction_timestamp|    bigint | The minimum useful timestamp in the system from snapshot scans.  |
 |online_index_min_transaction_timestamp|    bigint | The minimum useful timestamp in the system to hold up the PVS cleanup. This corresponds to `online_index_version_store_size_kb`. |
-|secondary_low_water_mark|    bigint | The low water mark aggregated for queries on readable secondaries. It is a transaction id and can be used to compare with `oldest_active_transaction_id` and `oldest_aborted_transaction_id`. |
+|secondary_low_water_mark|    bigint | The low water mark aggregated for queries on readable secondaries. It is a transaction ID and can be used to compare with `oldest_active_transaction_id` and `oldest_aborted_transaction_id`. |
 |offrow_version_cleaner_start_time   | datetime2(7) |  The start time of the off-row PVS cleanup process. |
 |offrow_version_cleaner_end_time   | datetime2(7) | The last end time of the off-row PVS cleanup process. |
 |aborted_version_cleaner_start_time   | datetime2(7) | The start timestamp of a full sweep. |

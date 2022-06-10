@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains information on best practices for managing and configuring accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
+This article contains information on best practices for managing and configuring accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and later. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 > [!NOTE]
 > In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, review [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md) or contact [Azure Support](https://azure.microsoft.com/support/options/). 
@@ -45,11 +45,11 @@ Once you have enabled ADR in your workload, look for signs that the persistent v
 
 ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
 
-   - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).  
+   - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Use the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and use `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).  
 
    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
    
-   - Workloads featuring long-running queries in SNAPSHOT or READ COMMITTED SNAPSHOT isolation modes may delay ADR PVS cleanup in other databases, causing the PVS file to grow. For more information, see the section on long active snapshot scan(s) in [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md#pvs-active-snapshot-scans). This applies to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] elastic pool.
+   - Workloads featuring long-running queries in SNAPSHOT or READ COMMITTED SNAPSHOT isolation modes may delay ADR PVS cleanup in other databases, causing the PVS file to grow. For more information, see the section on long active snapshot scan(s) in [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md#pvs-active-snapshot-scans). This applies to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], or in an [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] elastic pool.
 
 ## Best practices for accelerated database recovery
 
@@ -65,7 +65,7 @@ This section contains guidance and recommendations for ADR.
 
    - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
 
-   - A table has very large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. The workaround can be drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](accelerated-database-recovery-concepts.md#adr-recovery-components).
+   - A table has large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. The workaround can be to drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](accelerated-database-recovery-concepts.md#adr-recovery-components).
 
 - Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
 

@@ -124,7 +124,7 @@ The application’s resources should be deployed in each geography where you hav
 > [!NOTE]
 > The failover group configuration defines which region is used for failover. Because the new primary is in a different geography, the failover results in longer latency for both OLTP and read-only workloads until the impacted region is back online.
 
-![Diagram of configuration with primary in U S West.](./media/designing-cloud-solutions-for-disaster-recovery/scenario3-a.png)
+![Diagram of configuration with primary in US West.](./media/designing-cloud-solutions-for-disaster-recovery/scenario3-a.png)
 
 At the end of the work day in US West, for example at 4 PM local time, the active databases should be switched to the next region, East Asia (Japan), where it is 8 AM. Then, at 4 PM in East Asia, the primary should switch to Europe (UK) where it is 8 AM. This task can be fully automated by using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). The task involves the following steps:
 

@@ -1,29 +1,28 @@
 ---
+title: "GROUPING (Transact-SQL)"
 description: "GROUPING (Transact-SQL)"
-title: "GROUPING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "12/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "GROUPING"
   - "GROUPING_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "null values [SQL Server], GROUPING function"
   - "grouping columns"
   - "ROLLUP operator"
   - "GROUP BY clause, GROUPING function"
   - "GROUPING function"
   - "CUBE operator"
-ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest"
 ---
 # GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

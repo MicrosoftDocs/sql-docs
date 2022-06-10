@@ -4,13 +4,14 @@ titleSuffix:
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/28/2021
+ms.date: 05/24/2022
 ms.topic: overview
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ms.custom:
-  - intro-overview
+- intro-overview
+- event-tier1-build-2022
 ---
 # What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL and Managed Instance](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -76,27 +77,34 @@ The following lists the versions of Python and R that are included in Machine Le
 
 | SQL Server version | Cumulative Update | Python runtime version | R runtime versions |
 |-|-|-|-|
+| SQL Server 2022\* | RTM and later | 3.10.2 | 4.2.0 | 
 | SQL Server 2019 | RTM and later | 3.7.1 | 3.5.2 |
 | SQL Server 2017 | CU22 and later | 3.5.2 and 3.7.2 | 3.3.3 and 3.5.2 |
 | SQL Server 2017 | RTM - CU21 | 3.5.2 | 3.3.3 |
+| SQL Server 2016 | See the [R version](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version) | | |
 
-For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
+\* For supported versions of R and Python and the RevoScaleR and revoscalepy packages, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 <a name="packages"></a>
 
 ## Python and R packages
 
-You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Most common open-source Python and R packages are pre-installed in Machine Learning Services. The following Python and R packages from Microsoft are also included:
+You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Most common open-source Python and R packages are pre-installed in Machine Learning Services. 
+
+> [!NOTE]
+> Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+
+The following Python and R packages from Microsoft are also included at installation:
 
 | Language | Package | Description |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | The primary package for scalable Python. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling. Additionally, functions in this package automatically distribute workloads across available cores for parallel processing. |
-| Python | [microsoftml](python/ref-py-microsoftml.md) | Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. | 
+| Python | [microsoftml](python/ref-py-microsoftml.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. | 
 | R | [RevoScaleR](r/ref-r-revoscaler.md) | The primary package for scalable R. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling. Additionally, functions in this package automatically distribute workloads across available cores for parallel processing. |
-| R | [MicrosoftML (R)](r/ref-r-microsoftml.md) | Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. |
-| R | [olapR](r/ref-r-olapr.md) | R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. |
-| R | [sqlrutils](r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](r/set-up-data-science-client.md). |
-| R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
+| R | [MicrosoftML (R)](r/ref-r-microsoftml.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. |
+| R | [olapR](r/ref-r-olapr.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. |
+| R | [sqlrutils](r/ref-r-sqlrutils.md) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](r/set-up-data-science-client.md). |
+| R | [Microsoft R Open](https://mran.microsoft.com/rro) | **Applies only to SQL Server 2016, SQL Server 2017, and SQL Server 2019.** Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 

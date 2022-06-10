@@ -1,13 +1,17 @@
 ---
-title: Copy a database 
+title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: data-movement
-ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 ms.topic: how-to
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 1/19/2022
 ---
@@ -61,7 +65,7 @@ New-AzSqlDatabaseCopy -ResourceGroupName "<resourceGroup>" -ServerName $sourcese
     -CopyResourceGroupName "myResourceGroup" -CopyServerName $targetserver -CopyDatabaseName "CopyOfMySampleDatabase"
 ```
 
-The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) cmdlet.
+The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/remove-azsqldatabase) cmdlet.
 
 For a complete sample PowerShell script, see [Copy a database to a new server](scripts/copy-database-to-new-server-powershell.md).
 
@@ -107,13 +111,13 @@ Log in to the master database with the server administrator login or the login t
 
 This command copies Database1 to a new database named Database2 in an elastic pool named pool1. Depending on the size of your database, the copying operation might take some time to complete.
 
-Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a general purpose pool, but you can't copy a standard elastic db into a premium pool. 
+Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool. 
 
    ```sql
    -- Execute on the master database to start copying
-   CREATE DATABASE "Database2"
-   AS COPY OF "Database1"
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = "pool1" ) );
+   CREATE DATABASE Database2
+   AS COPY OF Database1
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
    ```
 
 ### Copy to a different server
@@ -130,9 +134,19 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1;
 > [!IMPORTANT]
 > Both servers' firewalls must be configured to allow inbound connection from the IP of the client issuing the T-SQL CREATE DATABASE ... AS COPY OF command. To determine the source IP address of current connection, execute `SELECT client_net_address FROM sys.dm_exec_connections WHERE session_id = @@SPID;`
 
+Similarly, the below command copies Database1 on server1 to a new database named Database2 within an elastic pool called pool2, on server2.
+
+```sql
+-- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+```
+
 ### Copy to a different subscription
 
 You can use the steps in the [Copy a SQL Database to a different server](#copy-to-a-different-server) section to copy your database to a server in a different subscription using T-SQL. Make sure you use a login that has the same name and password as the database owner of the source database. Additionally, the login must be a member of the `dbmanager` role or a server administrator, on both source and target servers.
+
+> [!TIP]
+> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the master database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
 
 ```sql
 --Step# 1

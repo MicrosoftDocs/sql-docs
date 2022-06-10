@@ -1,26 +1,25 @@
 ---
+title: "OBJECT_DEFINITION (Transact-SQL)"
 description: "OBJECT_DEFINITION (Transact-SQL)"
-title: "OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "OBJECT_DEFINITION_TSQL"
   - "OBJECT_DEFINITION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing source text"
   - "source text [SQL Server]"
   - "displaying source text"
   - "OBJECT_DEFINITION function"
-ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

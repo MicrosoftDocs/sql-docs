@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], data types"
   - "data types [SQL Server], extended stored procedures"
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # Data Types (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

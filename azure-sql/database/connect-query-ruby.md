@@ -1,20 +1,26 @@
 ---
-title: Use Ruby to query
-description: This topic shows you how to use Ruby to create a program that connects to a database and query it using Transact-SQL statements.
-titleSuffix: Azure SQL Database & SQL Managed Instance
-services: sql-database
+title: Use Ruby with Azure SQL Database or SQL Managed Instance
+description: This quickstart shows you how to use Ruby to create a program that connects to a database and queries it using Transact-SQL statements.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: sqldbrb=2, mode-other
-ms.devlang: ruby
+ms.custom:
+  - "sqldbrb=2"
+  - "mode-other"
+  - "kr2b-contr-experiment"
+ms.devlang:
+  - "ruby"
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
-ms.date: 05/29/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.reviewer: wiassaf, mathoma
+ms.date: 05/10/2022
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
+
 # Quickstart: Use Ruby to query a database in Azure SQL Database or Azure SQL Managed Instance
+
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This quickstart demonstrates how to use [Ruby](https://www.ruby-lang.org) to connect to a database and query data with Transact-SQL statements.
@@ -25,7 +31,7 @@ To complete this quickstart, you need the following prerequisites:
 
 - A database. You can use one of these quickstarts to create and then configure the database:
 
-  | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
+  | Action | SQL Database | SQL Managed Instance | SQL Server on Azure Virtual Machines |
   |:--- |:--- |:---|:---|
   | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
   || [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
@@ -36,7 +42,7 @@ To complete this quickstart, you need the following prerequisites:
   |||Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
 
   > [!IMPORTANT]
-  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
   
 - Ruby and related software for your operating system:
   
@@ -48,25 +54,22 @@ To complete this quickstart, you need the following prerequisites:
 
 ## Get server connection information
 
-Get the connection information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
+Get the information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and sign-in information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 2. Navigate to the **SQL databases**  or **SQL Managed Instances** page.
 
-3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
+3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Virtual Machines. To copy the server name or host name, hover over it and select the **Copy** icon.
 
 > [!NOTE]
-> For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
+> For connection information for SQL Server on Azure Virtual Machines, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
 ## Create code to query your database in Azure SQL Database
 
 1. In a text or code editor, create a new file named *sqltest.rb*.
 
 1. Add the following code. Substitute the values from your database in Azure SQL Database for `<server>`, `<database>`, `<username>`, and `<password>`.
-
-   >[!IMPORTANT]
-   >The code in this example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query. 
 
    ```ruby
    require 'tiny_tds'
@@ -88,6 +91,9 @@ Get the connection information you need to connect to a database in Azure SQL Da
    end
    ```
 
+   >[!IMPORTANT]
+   >This example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query.
+
 ## Run the code
 
 1. At a command prompt, run the following command:
@@ -95,10 +101,11 @@ Get the connection information you need to connect to a database in Azure SQL Da
    ```bash
    ruby sqltest.rb
    ```
-   
-1. Verify that the top 20 Category/Product rows from your database are returned. 
+
+1. Verify that the top 20 Category/Product rows from your database are returned.
 
 ## Next steps
+
 - [Design your first database in Azure SQL Database](design-first-database-tutorial.md)
 - [GitHub repository for TinyTDS](https://github.com/rails-sqlserver/tiny_tds)
 - [Report issues or ask questions about TinyTDS](https://github.com/rails-sqlserver/tiny_tds/issues)

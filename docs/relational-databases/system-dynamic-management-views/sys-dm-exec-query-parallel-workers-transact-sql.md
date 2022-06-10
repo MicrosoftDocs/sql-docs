@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_parallel_workers dynamic management view"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
-author: "pelopes"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 manager: ajayj
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

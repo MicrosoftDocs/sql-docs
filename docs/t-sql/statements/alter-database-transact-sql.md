@@ -963,7 +963,8 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse, `ALTER DATABASE` modifies the name, maximum size, or service objective for a database.
+In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a pool.
+
 
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 

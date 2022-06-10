@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], engine"
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Engine
@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The following illustration shows a simplified view of an Extended Events session. For more information, see [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Detailed extended events architecture](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
+ ![Detailed Extended Events architecture](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Detailed Extended Events architecture")  
   
  Note the following:  
   

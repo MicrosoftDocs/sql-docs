@@ -3,11 +3,12 @@ title: Active geo-replication
 description: Use active geo-replication to create readable secondary databases of individual databases in Azure SQL Database in the same or different regions.
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: sqldbrb=1
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
-ms.reviewer: kendralittle, mathoma
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma
 ms.date: 4/14/2022
 ---
 
@@ -17,13 +18,6 @@ ms.date: 4/14/2022
 Active geo-replication is a feature that lets you to create a continuously synchronized readable secondary database for a primary database. The readable secondary database may be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary databases are also known as geo-secondaries, or geo-replicas.
 
 Active geo-replication is designed as a business continuity solution that lets you perform quick disaster recovery of individual databases in case of a regional disaster or a large scale outage. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. The geo-failover is initiated programmatically by the application or manually by the user.
-
-> [!NOTE]
-> Active geo-replication for Azure SQL Hyperscale is [now in public preview](service-tier-hyperscale-replicas.md#geo-replica-in-preview). Current limitations include: 
-> - Primary can have only one geo-secondary replica.
-> - Restore or database copy from geo-secondary is not supported.
-> - Can't use geo-secondary as a source for geo-replication to another database.
-> - Audit records are not logged on Geo-secondaries when connecting with ApplicationIntent=Readonly.
 
 
 > [!NOTE]
@@ -36,7 +30,7 @@ If your application requires a stable connection endpoint and automatic geo-fail
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using Active geo-replication.
 
-![active geo-replication](./media/active-geo-replication-overview/geo-replication.png)
+![active geo-replication](./media/active-geo-replication-overview/geo-replication-updated.png)
 
 If for any reason your primary database fails, you can initiate a geo-failover to any of your secondary databases. When a secondary is promoted to the primary role, all other secondaries are automatically linked to the new primary.
 
@@ -197,7 +191,7 @@ To create a geo-secondary in a subscription different from the subscription of t
 10. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
 
 > [!NOTE]
-> Cross-subscription geo-replication operations including setup and geo-failover are only supported using T-SQL commands.
+> Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 > 

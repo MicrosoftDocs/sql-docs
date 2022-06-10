@@ -6,9 +6,11 @@ ms.author: rohitna
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
 ms.service: sql-database
 ms.subservice: security
-ms.topic: overview 
-ms.custom: sqldbrb=1, fasttrack-edit
-ms.reviewer: kendralittle, vanto, mathoma
+ms.topic: overview
+ms.custom:
+  - "sqldbrb=1"
+  - "fasttrack-edit"
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 01/20/2022
 ---
 
@@ -94,6 +96,11 @@ Open a Command Prompt window after you have installed Telnet. Run the Telnet com
 When Telnet connects successfully, you'll see a blank screen at the command window like the below image:
 
  ![Diagram of telnet][2]
+
+Use Powershell command to check the connectivity
+```
+Test-NetConnection -computer myserver.database.windows.net -port 1433
+```
 
 ### Check Connectivity using Psping
 

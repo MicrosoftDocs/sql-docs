@@ -1,26 +1,25 @@
 ---
+title: "IDENT_CURRENT (Transact-SQL)"
 description: "IDENT_CURRENT (Transact-SQL)"
-title: "IDENT_CURRENT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "IDENT_CURRENT"
   - "IDENT_CURRENT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "last identity value generated for table"
   - "identity values [SQL Server], last generated"
   - "identity columns, current value"
   - "IDENT_CURRENT function"
-ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # IDENT_CURRENT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

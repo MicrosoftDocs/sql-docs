@@ -1,16 +1,18 @@
 ---
-title: Azure SQL Database connectivity architecture 
+title: Azure SQL Database connectivity architecture
 description: This article explains the Azure SQL Database connectivity architecture for database connections from within Azure or from outside of Azure.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: fasttrack-edit, sqldbrb=1 
+ms.custom:
+  - "fasttrack-edit"
+  - "sqldbrb=1"
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.devlang: 
 ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, mathoma, vanto
+ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 03/18/2022
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
@@ -105,7 +107,7 @@ Periodically, we will retire Gateways using old hardware and migrate the traffic
 | South Africa West    | 102.133.24.0       | 102.133.25.32/29 |
 | South Central US     | 13.66.62.124, 104.214.16.32, 20.45.121.1, 20.49.88.1 | 20.45.121.32/29, 20.49.88.32/29, 20.49.89.32/29, 40.124.64.136/29 |
 | South East Asia      | 104.43.15.0, 40.78.232.3, 13.67.16.193 | 13.67.16.192/29, 23.98.80.192/29, 40.78.232.192/29|
-| Switzerland North    | 51.107.56.0, 51.107.57.0 | 51.107.56.32/29 |
+| Switzerland North    | 51.107.56.0, 51.107.57.0 | 51.107.56.32/29, 51.103.203.192/29, 20.208.19.192/29, 51.107.242.32/27 |
 | Switzerland West     | 51.107.152.0, 51.107.153.0 | 51.107.153.32/29 |
 | UAE Central          | 20.37.72.64        | 20.37.72.96/29, 20.37.73.96/29 |
 | UAE North            | 65.52.248.0        | 40.120.72.32/29, 65.52.248.32/29 |

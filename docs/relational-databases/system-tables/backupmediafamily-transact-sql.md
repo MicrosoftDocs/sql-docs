@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "backupmediafamily system table"
   - "backup media [SQL Server], backupmediafamily system table"
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # backupmediafamily (Transact-SQL)
 

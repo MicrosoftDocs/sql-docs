@@ -48,6 +48,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The SQL expression for a DEFAULT constraint, object of type D, is found in the [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) catalog view. The SQL expression for a CHECK constraint, object of type C, is found in the [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) catalog view.  
   
  This information is also described in [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ 
+Renaming a stored procedure, function, view, or trigger won't change the name of the corresponding object in the definition column of the `sys.sql_modules` catalog view or the definition returned by the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. For this reason, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name. Learn more in [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -279,11 +279,12 @@ tnc localhost -port 5022
 
 A successful test shows `TcpTestSucceeded : True`. You can then proceed to creating a SQL Agent job on the managed instance to try testing the SQL Server test endpoint on port 5022 from the managed instance.
 
-Next, create a SQL Agent job on the managed instance called `NetHelper` by using the public IP address or DNS name that can be resolved from the managed instance for `SQL_SERVER_ADDRESS`. Run the following T-SQL script on the managed instance: 
+Next, create a SQL Agent job on the managed instance called `NetHelper` by running the following T-SQL script on the managed instance. Replace:
+- `SQL_SERVER_ADDRESS` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
 -- Run on the managed instance
--- SQL_SERVER_ADDRESS should be a public IP address, or the DNS name that can be resolved from the SQL Managed Instance host machine.
+-- SQL_SERVER_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
 DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
@@ -307,7 +308,6 @@ EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 
 EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
-
 
 Run the SQL Agent job by running the following T-SQL command on the managed instance: 
 

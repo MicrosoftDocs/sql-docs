@@ -1,30 +1,28 @@
 ---
-description: "END CONVERSATION (Transact-SQL)"
-title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "END CONVERSATION (Transact-SQL)"
+description: END CONVERSATION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "END DIALOG"
   - "END CONVERSATION"
   - "END_DIALOG_TSQL"
   - "END_CONVERSATION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [Service Broker], conversations"
   - "dialogs [Service Broker], ending"
   - "closing conversations"
   - "END CONVERSATION statement"
   - "conversations [Service Broker], ending"
   - "ending conversations [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

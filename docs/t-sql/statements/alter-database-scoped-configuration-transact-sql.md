@@ -1,12 +1,19 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION"
-description: Enable several database configuration settings at the individual database level.
 titleSuffix: SQL Server (Transact-SQL)
+description: Enable several database configuration settings at the individual database level.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "katsmith"
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom:
+  - "seo-lt-2019"
+  - "event-tier1-build-2022"
+f1_keywords:
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
   - "ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL"
   - "DATABASE_SCOPED_CONFIGURATION_TSQL"
@@ -14,19 +21,12 @@ f1_keywords:
   - "SCOPED_TSQL"
   - "ALTER_DATABASE_SCOPED_TSQL"
   - "DATABASE_SCOPED_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: "katsmith"
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
-ms.date: 05/24/2022
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)

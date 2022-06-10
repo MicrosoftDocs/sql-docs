@@ -1,16 +1,15 @@
 ---
 title: "Performance improvement - in-memory OLTP"
 description: This code sample demonstrates the fast performance of memory-optimized tables with interpreted Transact-SQL and a natively compiled stored procedure.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP

@@ -1,29 +1,27 @@
 ---
-description: "CREATE SCHEMA (Transact-SQL)"
-title: "CREATE SCHEMA (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SCHEMA (Transact-SQL)"
+description: CREATE SCHEMA (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_SCHEMA_TSQL"
   - "SCHEMA"
   - "CREATE SCHEMA"
   - "SCHEMA_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "owners [SQL Server], schemas"
   - "table creation [SQL Server], CREATE SCHEMA statement"
   - "permissions [SQL Server], schemas"
   - "schemas [SQL Server], creating"
   - "CREATE SCHEMA statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE SCHEMA (Transact-SQL)

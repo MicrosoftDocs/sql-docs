@@ -1,27 +1,25 @@
 ---
-description: "ALTER TRIGGER (Transact-SQL)"
-title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER TRIGGER (Transact-SQL)"
+description: ALTER TRIGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER TRIGGER"
   - "ALTER_TRIGGER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DDL triggers, modifying"
   - "triggers [SQL Server], modifying"
   - "modifying triggers"
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

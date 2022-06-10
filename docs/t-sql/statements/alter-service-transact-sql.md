@@ -1,25 +1,24 @@
 ---
-description: "ALTER SERVICE (Transact-SQL)"
-title: "ALTER SERVICE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ALTER SERVICE"
-  - "ALTER_SERVICE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "modifying services"
-  - "contracts [Service Broker], modifying"
-  - "ALTER SERVICE statement"
-  - "services [Service Broker], modifying"
+title: "ALTER SERVICE (Transact-SQL)"
+description: ALTER SERVICE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 04/12/2022
+ms.prod: sql
+ms.prod_service: "sql-database"
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ALTER SERVICE"
+  - "ALTER_SERVICE_TSQL"
+helpviewer_keywords:
+  - "modifying services"
+  - "contracts [Service Broker], modifying"
+  - "ALTER SERVICE statement"
+  - "services [Service Broker], modifying"
+dev_langs:
+  - "TSQL"
 ---
 # ALTER SERVICE (Transact-SQL)
 

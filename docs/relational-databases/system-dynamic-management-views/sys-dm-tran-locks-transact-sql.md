@@ -67,7 +67,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   A wait request status indicates that the requestor does not currently hold a granted request on the resource.  
   
- Because **sys.dm_tran_locks** is populated from internal lock manager data structures, maintaining this information does not add extra overhead to regular processing. Materializing the view does require access to the lock manager internal data structures. This can have minor effects on the regular processing in the server. These effects should be unnoticeable and should only affect heavily used resources. Because the data in this view corresponds to live lock manager state, the data can change at any time, and rows are added and removed as locks are acquired and released. This view has no historical information.  
+ Because **sys.dm_tran_locks** is populated from internal lock manager data structures, maintaining this information does not add extra overhead to regular processing. Materializing the view does require access to the lock manager internal data structures. This can have minor effects on the regular processing in the server. These effects should be unnoticeable and should only affect heavily used resources. Because the data in this view corresponds to live lock manager state, the data can change at any time, and rows are added and removed as locks are acquired and released. Applications querying this view might experience unpredictable performance due to the nature of protecting the integrity of lock manager structures. This view has no historical information.  
   
  Two requests operate on the same resource only if all the resource-group columns are equal.  
   

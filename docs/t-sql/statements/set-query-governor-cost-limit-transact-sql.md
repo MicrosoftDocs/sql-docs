@@ -1,28 +1,26 @@
 ---
-description: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)"
-title: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)"
+description: SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET QUERY_GOVERNOR_COST_LIMIT"
   - "SET_QUERY_GOVERNOR_COST_LIMIT_TSQL"
   - "QUERY_GOVERNOR_COST_LIMIT"
   - "QUERY_GOVERNOR_COST_LIMIT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET QUERY_GOVERNOR_COST_LIMIT statement"
   - "connections [SQL Server], overriding"
   - "QUERY_GOVERNOR_COST_LIMIT option"
   - "overriding connection values"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

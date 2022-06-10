@@ -1,27 +1,25 @@
 ---
-description: "ALTER ROLE (Transact-SQL)"
-title: "ALTER ROLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER ROLE (Transact-SQL)"
+description: ALTER ROLE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_ROLE_TSQL"
   - "ALTER ROLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying database roles"
   - "ALTER ROLE statement"
   - "renaming database roles"
   - "database roles [SQL Server], modifying"
   - "names [SQL Server], database roles"
+dev_langs:
+  - "TSQL"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER ROLE (Transact-SQL)

@@ -1,21 +1,19 @@
 ---
-description: "A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data."
 title: "Create filtered indexes"
-ms.custom: ""
+description: A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/24/2022"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filtered indexes [SQL Server], about filtered indexes"
   - "designing indexes [SQL Server], filtered"
   - "filtered indexes [SQL Server]"
   - "nonclustered indexes [SQL Server], filtered"
   - "indexes [SQL Server], filtered"
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create filtered indexes

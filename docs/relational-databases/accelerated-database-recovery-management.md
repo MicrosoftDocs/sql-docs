@@ -1,7 +1,7 @@
 ---
-description: "Manage accelerated database recovery"
+description: "Best practices for managing and configuring accelerated database recovery (ADR)."
 title: "Manage accelerated database recovery | Microsoft Docs"
-ms.date: "02/18/2021"
+ms.date: 06/10/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -18,10 +18,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains information on best practices for managing and configuring accelerated database recovery (ADR) for SQL Server. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
+This article contains information on best practices for managing and configuring accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 > [!NOTE]
-> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
+> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, review [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md) or contact [Azure Support](https://azure.microsoft.com/support/options/). 
 
 ## Who should consider accelerated database recovery
 
@@ -48,6 +48,8 @@ ADR is not recommended for database environments with a high count of update/del
    - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).  
 
    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
+   
+   - Workloads featuring long-running queries in SNAPSHOT or READ COMMITTED SNAPSHOT isolation modes may delay ADR PVS cleanup in other databases, causing the PVS file to grow. For more information, see the section on long active snapshot scan(s) in [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md#pvs-active-snapshot-scans). This applies to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] elastic pool.
 
 ## Best practices for accelerated database recovery
 

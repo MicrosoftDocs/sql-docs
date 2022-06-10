@@ -3,7 +3,7 @@ description: "The sys.dm_tran_persistent_version_store_stats dynamic management 
 title: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: 06/10/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -59,10 +59,11 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
 ## Remarks   
- 
-For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md).
+
+Review [Best practices for accelerated database recovery](../accelerated-database-recovery-management.md#best-practices-for-accelerated-database-recovery). If your ADR PVS is growing, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md).
 
 ## See also
 
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](../accelerated-database-recovery-management.md)
+- [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md)

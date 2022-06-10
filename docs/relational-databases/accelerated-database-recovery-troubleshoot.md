@@ -1,7 +1,7 @@
 ---
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
-ms.date: "02/18/2022"
+ms.date: "06/10/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -19,11 +19,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 
 [!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
-This article helps administrators diagnose issues with accelerated database recovery (ADR).
+This article helps administrators diagnose issues with accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## Examine the persistent version store (PVS)
 
-Leverage the `sys.dm_tran_persistent_version_store_stats` DMV to identify if the size of the PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
+Leverage the `sys.dm_tran_persistent_version_store_stats` DMV to identify if the size of the accelerated database recovery (ADR) PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
 
 The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted transaction, and other details:
 
@@ -89,18 +89,29 @@ WHERE pvss.database_id = DB_ID();
 
     For more information on troubleshooting long-running queries, see [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries) or [Identify query performance issues in Azure SQL](/azure/azure-sql/identify-query-performance-issues).
 
-3. The persistent version cleanup may be held up due to long active snapshot scan(s). In the original troubleshooting query earlier in this article, the `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. This sample query can be used to decide which is the problematic session:
+<a id="pvs-active-snapshot-scans"></a>
+
+3. The persistent version cleanup may be held up due to long active snapshot scan(s). Statements using read-committed snapshot isolation (RCSI) or SNAPSHOT [isolation levels](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) receive instance-level timestamps. A snapshot scan uses the timestamp to decide the row visibility for the RCSI or SNAPSHOT transaction in the PVS where accelerated database recovery is enabled. Every statement using RCSI has its own timestamp, whereas SNAPSHOT isolation has a transaction-level timestamp. These instance-level transaction timestamp are used even in single-database transactions, because the transaction may be promoted to a cross-database transaction. Snapshot scans can therefore prevent cleanup of records in the ADR PVS, or when ADR is not present, in the `tempdb` version store. Therefore, due to this version tracking, long running transactions using SNAPSHOT or RCSI can cause ADR PVS to delay cleanup in database in the instance, causing the ADR PVS to grow in size.
+
+    In the original [troubleshooting query at the top of this article](#examine-the-persistent-version-store-pvs), the `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. 
+
+    This sample query can be used to decide which is the problematic session:
 
     ```sql
     SELECT 
         snap.transaction_id, snap.transaction_sequence_num, session.session_id, session.login_time, 
-        GETUTCDATE() as now, session.host_name, session.program_name, session.login_name, session.last_request_start_time
+        GETUTCDATE() as [now], session.host_name, session.program_name, session.login_name, session.last_request_start_time
     FROM sys.dm_tran_active_snapshot_database_transactions AS snap
     INNER JOIN sys.dm_exec_sessions AS session ON snap.session_id = session.session_id  
     ORDER BY snap.transaction_sequence_num asc;
     ```
     
-    The solution is same as long active transaction, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active snapshot scan. 
+    To prevent delays to PVS cleanup:
+
+    1. Consider killing the long active transaction session that is delaying PVS cleanup, if possible. 
+    1. Tune long-running queries to reduce query duration and locks required.
+    1. Review the application to determine the nature of the problematic active snapshot scan. Consider a different isolation level, such as READ COMMITTED, instead of SNAPSHOT or READ COMMITTED SNAPSHOT for long-running queries that are delaying ADR PVS cleanup. This problem occurs more frequently with SNAPSHOT isolation level.
+    1. This issue can occur in SQL Server, SQL Server Managed Instance, and elastic pools of Azure SQL Database, but not in singleton Azure SQL databases. In Azure SQL Database elastic pools, consider moving databases out of the elastic pool that have long-running queries using READ COMMIT SNAPSHOT or SNAPSHOT isolation levels. 
 
 4. When the PVS size is growing due to long running transactions on primary or secondary replicas, investigate the long running queries and address the bottleneck. The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions. For more information, see [sys.dm_tran_aborted_transactions (Transact-SQL)](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md). The `nest_aborted` column indicates that the transaction was committed, but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. 
 

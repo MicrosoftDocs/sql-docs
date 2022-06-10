@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/05/2022
+ms.date: 06/09/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -90,8 +90,8 @@ declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
 select
     @IsHadrEnabled as IsHadrEnabled,
     case @IsHadrEnabled
-        when 0 then 'The AlwaysOn availability groups is disabled.'
-        when 1 then 'The AlwaysOn availability groups is enabled.'
+        when 0 then 'The Always On availability groups is disabled.'
+        when 1 then 'The Always On availability groups is enabled.'
         else 'Unknown status.'
     end as 'HadrStatus'
 ```
@@ -157,10 +157,10 @@ After the restart, run the following T-SQL script on SQL Server to validate the 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 
 -- Shows if the Always On availability groups feature is enabled 
-SELECT SERVERPROPERTY ('IsHadrEnabled')
+SELECT SERVERPROPERTY ('IsHadrEnabled') as 'Is Always On enabled? (1 true, 0 false)'
 
 -- Lists all trace flags enabled on SQL Server
 DBCC TRACESTATUS

@@ -176,7 +176,9 @@ If you delete a database, the system keeps backups in the same way it would for 
 
 ### Long-term retention
 
-For both SQL Database and SQL Managed Instance, you can configure full backup long-term retention (LTR) for up to 10 years in Azure Blob storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. Storage redundancy for long-term retention cannot be changed after your Azure SQL resource is created. 
+For both SQL Database and SQL Managed Instance, you can configure full backup long-term retention (LTR) for up to 10 years in Azure Blob storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups.  The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term backup retention](long-term-retention-overview.md). 
+
+Storage redundancy for long-term retention can be changed after the LTR policy is created for Azure SQL Database, but not Azure SQL Managed Instance. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
 
@@ -185,7 +187,7 @@ Storage consumption depends on the selected frequency and retention periods of L
 > - LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed subsequently, even if the STR backup storage redundancy is changed in the future. 
 > - Databases in the Hyperscale service tier for Azure SQL Database do not currently support long-term retention. 
 
-For more information about LTR, see [Long-term backup retention](long-term-retention-overview.md).
+.
 
 ## Backup storage costs
 

@@ -1,7 +1,7 @@
 ---
-title: Fail over a database with the link via T-SQL & PowerShell scripts
+title: Fail ver a database with the link via T-SQL & PowerShell scripts
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use Transact-SQL and PowerShell scripts to fail over a database from SQL Server to SQL Managed Instance by using the Managed Instance link. 
+description: Learn how to use Transact-SQL and PowerShell scripts to failover a database from SQL Server to SQL Managed Instance by using the Managed Instance link. 
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: data-movement
@@ -11,17 +11,17 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/07/2022
+ms.date: 06/09/2022
 ---
 
-# Fail over (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
+# Failover (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts and a [Managed Instance link](managed-instance-link-feature-overview.md) to fail over (migrate) your database from SQL Server to SQL Managed Instance.
+This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts and a [Managed Instance link](managed-instance-link-feature-overview.md) to failover (migrate) your database from SQL Server to SQL Managed Instance.
 
 > [!NOTE]
-> - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to fail over a database with the link. 
+> - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to failover a database with the link. 
 > - The PowerShell scripts in this article make REST API calls on the SQL Managed Instance side. 
 
 ## Prerequisites 
@@ -208,11 +208,11 @@ WHERE
 
 Verify once again that your workload is stopped on SQL Server. Check that LSNs on both SQL Server and SQL Managed Instance match, and that they remain matched and unchanged for some time. Stable LSNs on both instances indicate that the tail log has been replicated to SQL Managed Instance and the workload is effectively stopped.
 
-## Start database fail over and migration to Azure
+## Start database failover and migration to Azure
 
-Invoke a REST API call to fail over your database over the link and finalize your migration to Azure. The REST API call breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance.
+Invoke a REST API call to failover your database over the link and finalize your migration to Azure. The REST API call breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance.
 
-Use the following API to start database fail over to Azure. Replace:
+Use the following API to start database failover to Azure. Replace:
 
 - `<YourSubscriptionID>` with your Azure subscription ID.
 - `<RG>` with the resource group where your managed instance is deployed. 
@@ -222,7 +222,7 @@ Use the following API to start database fail over to Azure. Replace:
 ```PowerShell
 # Run in Azure Cloud Shell
 # ====================================================================================
-# POWERSHELL SCRIPT TO FAIL OVER AND MIGRATE DATABASE WITH SQL MANAGED INSTANCE LINK
+# POWERSHELL SCRIPT TO FAILOVER AND MIGRATE DATABASE WITH SQL MANAGED INSTANCE LINK
 # USER CONFIGURABLE VALUES
 # (C) 2021-2022 SQL Managed Instance product group
 # ====================================================================================

@@ -55,7 +55,7 @@ We'll use the following steps to create a server-level IP-based, firewall rule f
 
 6. Close the **Firewall settings** page.
 
- Open SQL Server Management Studio or another tool of your choice. Use the Server admin account you created earlier to connect to the server and its databases from your IP address.
+ Open SQL Server Management Studio or another tool of your choice. Use the server admin account you created earlier to connect to the server and its databases from your IP address.
 
 7. Save the resources from this quickstart to complete additional SQL database tutorials.
 

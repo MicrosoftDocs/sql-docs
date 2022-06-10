@@ -196,7 +196,17 @@ If your SQL Server instance is hosted outside Azure, establish a VPN connection 
 
 ### Network ports between the environments
 
-Port 5022 needs to allow inbound and outbound traffic between SQL Server and SQL Managed Instance. Port 5022 is the standard database mirroring endpoint port for availability groups. It can't be changed or customized. 
+Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the  environments:
+
+The Network Security Group (NSG) rules on the subnet hosting managed instance needs to allow:
+- Inbound traffic on port 5022 and port range 11000-11999 from the network hosting SQL Server
+
+Firewall on the network hosting SQL Server, and the host OS needs to allow:
+- Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to setup the link between SQL Server and managed instance.":::
+
+Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
 
 The following table describes port actions for each environment: 
 
@@ -204,9 +214,9 @@ The following table describes port actions for each environment:
 |:---|:-----|
 |SQL Server (in Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. Create a network security group (NSG) rule in the virtual network that hosts the VM to allow communication on port 5022. |
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
-|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in the Azure portal to allow inbound and outbound traffic from the IP address of SQL Server on port 5022 to the virtual network that hosts SQL Managed Instance. |
+|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in Azure portal to allow inbound and outbound traffic from the IP address and the networking hosting SQL Server on port 5022 and port range 11000-11999. |
 
-Use the following PowerShell script on the Windows host of the SQL Server instance to open ports in the Windows firewall: 
+Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 
 ```powershell
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 inbound" -Direction inbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP

@@ -204,7 +204,7 @@ $CertificateName = "<SQLServerCertName>"
 $PublicKeyEncoded = "<SQLServerPublicKey>"
 
 # Enter your managed instance short name – for example, "sqlmi"
-$ManagedInstanceName = "<ManagedInstanceName>
+$ManagedInstanceName = "<ManagedInstanceName>"
 
 # ==== Do not customize the below ====
 

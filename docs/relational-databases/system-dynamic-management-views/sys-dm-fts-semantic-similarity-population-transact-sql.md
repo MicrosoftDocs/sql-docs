@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-author: pmasl 
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)

@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 03/22/2022
+ms.date: 06/03/2022
 ---
 # Replicate a database by using the link feature in SSMS - Azure SQL Managed Instance
 
@@ -27,15 +27,31 @@ This article teaches you how to replicate your database from SQL Server to Azure
 To replicate your databases to SQL Managed Instance through the link, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [SQL Server 2019 Enterprise or Developer edition](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019), starting with [CU15 (15.0.4198.2)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 - [SQL Server Management Studio v18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
+>[!IMPORTANT]
+> Current version of SSMS supports automated link configuration for SQL Servers 2019 and 2022.
+> 
+> SQL Server 2016 is not supported with the current SSMS version. Use [replicate database with scripts](managed-instance-link-use-scripts-to-replicate-database.md) instead.
+
+### Set up database recovery and backup
+
+All databases that will be replicated via the link must be in full recovery mode and have at least one full backup. Use SSMS to back up your database. Follow these steps:
+
+1. In SSMS, right-click on a database name on SQL Server
+1. Select Tasks, and then click on Backup Up.
+1. Ensure Backup type is Full.
+1. Ensure Backup-to option has the backup path to a disk with sufficient free storage space available.
+1. Click on OK to complete the full backup.
+
+For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
 ## Replicate a database
 
-In the following steps, you use the **New Managed Instance link** wizard in SSMS to create the link between SQL Server and SQL Managed Instance. After you create the link, your source database gets a read-only replica copy on your target managed instance. 
+In the following steps, you use the **Managed Instance link** wizard in SSMS to create the link between SQL Server and SQL Managed Instance. After you create the link, your source database gets a read-only replica copy on your target managed instance. 
 
 > [!NOTE]
 > The link supports replication of user databases only. Replication of system databases is not supported. To replicate instance-level objects (stored in master or msdb databases), we recommend that you script them out and run T-SQL scripts on the destination instance.
@@ -60,6 +76,8 @@ In the following steps, you use the **New Managed Instance link** wizard in SSMS
 1. On the **Login to Azure and select Managed Instance** page, select **Sign In** to sign in to Microsoft Azure.  
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-login-to-azure.png" alt-text="Screenshot that shows the area for signing in to Azure.":::
+    
+    - If you are running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you will need to [turn off Internet Explorer ESC on Windows servers](/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
 
 1. On the **Login to Azure and select Managed Instance** page, choose the subscription, resource group, and target managed instance from the dropdown lists. Select **Login** and provide login details for SQL Managed Instance. After you've provided all necessary information, select **Next**. 
 

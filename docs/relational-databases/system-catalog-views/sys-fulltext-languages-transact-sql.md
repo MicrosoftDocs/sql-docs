@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "languages [full-text search]"
   - "sys.fulltext_languages catalog view"
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

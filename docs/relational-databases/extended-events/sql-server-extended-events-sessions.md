@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "sessions"
   - "extend events [SQL Server]"
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Sessions
@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Session States  
  The following illustration shows the various states of an Extended Events session.  
 
-![Extended event session state](../../relational-databases/extended-events/media/xesessionstate.png "Extended event session state")
+![Extended Event session state](../../relational-databases/extended-events/media/xesessionstate.png "Extended Event session state")
 
  Referring to the preceding figure, note that session state changes as the different DDL commands are issued for an event session. The following table describes these changes in state.  
   

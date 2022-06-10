@@ -1,18 +1,20 @@
 ---
 title: Create and manage Elastic Database Jobs (preview) with Transact-SQL (T-SQL)
 description: Run scripts across many databases with Elastic Database Job agent using Transact-SQL (T-SQL).
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-jobs
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 dev_langs:
   - "TSQL"
 ms.topic: how-to
 author: srinia
 ms.author: srinia
-ms.reviewer: kendralittle, mathoma
-ms.date: 02/01/2021
+ms.reviewer: wiassaf, mathoma
+ms.date: 05/03/2022
 ---
 # Use Transact-SQL (T-SQL) to create and manage Elastic Database Jobs (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -243,7 +245,7 @@ SELECT @poolEndTime = dateadd(minute, -30, @endTime)
 SELECT elastic_pool_name , end_time, elastic_pool_dtu_limit, avg_cpu_percent, avg_data_io_percent, avg_log_write_percent, max_worker_percent, max_session_percent,
         avg_storage_percent, elastic_pool_storage_limit_mb FROM sys.elastic_pool_resource_stats
         WHERE end_time > @poolStartTime and end_time <= @poolEndTime;
-'),
+',
 @credential_name = 'job_credential',
 @target_group_name = 'ElasticJobGroup',
 @output_type = 'SqlDatabase',

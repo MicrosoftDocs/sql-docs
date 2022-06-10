@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Create a Full Database Backup
 

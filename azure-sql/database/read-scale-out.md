@@ -1,17 +1,19 @@
 ---
 title: Read queries on replicas
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scale-out
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
-ms.reviewer: kendralittle, mathoma
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma
 ms.date: 1/20/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

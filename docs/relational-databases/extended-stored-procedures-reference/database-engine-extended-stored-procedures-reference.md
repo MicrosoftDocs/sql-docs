@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], listed"
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # Database Engine Extended Stored Procedures - Reference
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

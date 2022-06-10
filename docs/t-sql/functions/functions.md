@@ -1,26 +1,25 @@
 ---
+title: "What are the Microsoft SQL database functions?"
 description: "What are the Microsoft SQL database functions?"
-title: "What are the Microsoft SQL database functions? | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "built-in functions [SQL Server]"
   - "function [SQL Server] See functions [SQL Server]"
   - "functions [Transact-SQL]"
   - "functions [SQL Server], about functions"
   - "scalar functions"
   - "functions [SQL Server]"
-ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # What are the SQL database functions?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

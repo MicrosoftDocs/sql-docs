@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservers system table"
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # dbo.systargetservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,7 +1,8 @@
 ---
-description: "Query Store Catalog Views (Transact-SQL)"
-title: "Query Store Catalog Views (Transact-SQL)"
-ms.custom: ""
+description: "Query Store catalog views (Transact-SQL)"
+title: "Query Store catalog views (Transact-SQL)"
+ms.custom:
+- event-tier1-build-2022
 ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -17,7 +18,7 @@ author: rwestMSFT
 ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Query Store Catalog Views (Transact-SQL)
+# Query Store catalog views (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   This section contains the following catalog views.  
@@ -39,10 +40,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
  -  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
 
 -   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
-- 
+
 -   [sys.query_store_query_hints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md)  
-  
-## See also  
+
+- [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
+
+## Next steps
+
+Learn more about Query Store in the following articles:
 
  - [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+ - [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)

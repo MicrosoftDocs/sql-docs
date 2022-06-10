@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Open Data Services [SQL Server]"
   - "ODS [SQL Server]"
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ---
 # Database Engine Extended Stored Procedures - Programming
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

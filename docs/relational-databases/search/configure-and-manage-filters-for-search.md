@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

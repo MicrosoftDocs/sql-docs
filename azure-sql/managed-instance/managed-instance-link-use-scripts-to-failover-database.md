@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 03/15/2022
+ms.date: 05/24/2022
 ---
 
 # Fail over (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
@@ -24,6 +24,17 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 > - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to fail over a database with the link. 
 > - The PowerShell scripts in this article make REST API calls on the SQL Managed Instance side. 
 
+## Prerequisites 
+
+To replicate your databases to SQL Managed Instance, you need the following prerequisites: 
+
+- An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
+- PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
+- A properly [prepared environment](managed-instance-link-preparation.md).
+
+## Database failover 
 
 Database failover from SQL Server to SQL Managed Instance breaks the link between the two databases. Failover stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
 
@@ -197,11 +208,11 @@ WHERE
 
 Verify once again that your workload is stopped on SQL Server. Check that LSNs on both SQL Server and SQL Managed Instance match, and that they remain matched and unchanged for some time. Stable LSNs on both instances indicate that the tail log has been replicated to SQL Managed Instance and the workload is effectively stopped.
 
-## Start database failover and migration to Azure
+## Start database fail over and migration to Azure
 
 Invoke a REST API call to fail over your database over the link and finalize your migration to Azure. The REST API call breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance.
 
-Use the following API to start database failover to Azure. Replace:
+Use the following API to start database fail over to Azure. Replace:
 
 - `<YourSubscriptionID>` with your Azure subscription ID.
 - `<RG>` with the resource group where your managed instance is deployed. 

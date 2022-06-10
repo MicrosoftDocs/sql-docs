@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "rankings [full-text search]"
   - "per-row rank values [full-text search]"
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

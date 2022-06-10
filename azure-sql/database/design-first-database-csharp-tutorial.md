@@ -1,13 +1,15 @@
 ---
-title: Design your first relational database C#
-description: Learn to design your first relational database in Azure SQL Database with C# using ADO.NET.
-services: sql-database
+title: "Design your first relational database C#"
+description: "Learn to design your first relational database in Azure SQL Database with C# using ADO.NET."
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: development
-ms.custom: "seo-lt-2019, sqldbrb=1, devx-track-csharp"
+ms.custom:
+  - "seo-lt-2019, sqldbrb=1, devx-track-csharp"
 ms.topic: tutorial
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 07/29/2019
 ---

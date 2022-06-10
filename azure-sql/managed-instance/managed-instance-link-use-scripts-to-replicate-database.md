@@ -10,7 +10,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/08/2022
+ms.date: 06/09/2022
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -314,7 +314,7 @@ SELECT * FROM sys.certificates
 
 ## Create a mirroring endpoint on SQL Server
 
-If you don't have an existing availability group or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with the certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
+If you don't have an existing availability group or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with earlier generated SQL Server certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
 
 To verify that you don't have an existing database mirroring endpoint created, use the following script:
 
@@ -324,7 +324,21 @@ To verify that you don't have an existing database mirroring endpoint created, u
 SELECT * FROM sys.database_mirroring_endpoints WHERE type_desc = 'DATABASE_MIRRORING'
 ```
 
-If the preceding query doesn't show an existing database mirroring endpoint, run the following script on SQL Server. It creates a new database mirroring endpoint on port 5022 and secures the endpoint with a certificate.
+If the preceding query doesn't show an existing database mirroring endpoint, run the following script on SQL Server to obtain name of the earlier generated SQL Server certificate. 
+
+```sql
+-- Run on SQL Server
+-- Show the name and the public key of generated SQL Server certificate
+USE MASTER
+GO
+DECLARE @sqlserver_certificate_name NVARCHAR(MAX) = N'Cert_' + @@servername  + N'_endpoint'
+SELECT @sqlserver_certificate_name as 'SQLServerCertName'
+```
+
+Save SQLServerCertName from the output as you will need it in the next step.
+
+Use the below script to creates a new database mirroring endpoint on port 5022 and secure the endpoint with the SQL Server certificate. Replace:
+- `<SQL_SERVER_CERTIFICATE>` with the name of SQLServerCertName obtained in the previous step.
 
 ```sql
 -- Run on SQL Server
@@ -335,7 +349,7 @@ CREATE ENDPOINT database_mirroring_endpoint
     AS TCP (LISTENER_PORT=5022, LISTENER_IP = ALL)
     FOR DATABASE_MIRRORING (
         ROLE=ALL,
-        AUTHENTICATION = CERTIFICATE <SQL_SERVER_CERTIFICATE>,
+        AUTHENTICATION = CERTIFICATE [<SQL_SERVER_CERTIFICATE>],
         ENCRYPTION = REQUIRED ALGORITHM AES
     )  
 GO
@@ -352,6 +366,8 @@ SELECT
 FROM 
     sys.database_mirroring_endpoints
 ```
+
+Successfully created endpoint state_desc columnet should state `STARTED`.
 
 A new mirroring endpoint was created with certificate authentication and AES encryption enabled.
 
@@ -388,7 +404,7 @@ Similarly, if encryption doesn't include AES and you need RC4 encryption, it's p
 The following script is an example of how to alter your existing database mirroring endpoint on SQL Server. Replace:
 
 - `<YourExistingEndpointName>` with your existing endpoint name. 
-- `<CERTIFICATE-NAME>` with the name of the generated SQL Server certificate. 
+- `<SQLServerCertName>` with the name of the generated SQL Server certificate (obtained in one of the earlier steps above). 
 
 Depending on your specific configuration, you might need to customize the script further. You can also use `SELECT * FROM sys.certificates` to get the name of the created certificate on SQL Server.
 
@@ -396,12 +412,12 @@ Depending on your specific configuration, you might need to customize the script
 -- Run on SQL Server
 -- Alter the existing database mirroring endpoint to use CERTIFICATE for authentication and AES for encryption
 USE MASTER
-ALTER ENDPOINT <YourExistingEndpointName>   
+ALTER ENDPOINT [<YourExistingEndpointName>]   
     STATE=STARTED   
     AS TCP (LISTENER_PORT=5022, LISTENER_IP = ALL)
     FOR DATABASE_MIRRORING (
         ROLE=ALL,
-        AUTHENTICATION = WINDOWS NEGOTIATE CERTIFICATE <CERTIFICATE-NAME>,
+        AUTHENTICATION = WINDOWS NEGOTIATE CERTIFICATE [<SQLServerCertName>],
         ENCRYPTION = REQUIRED ALGORITHM AES
     )
 GO
@@ -425,10 +441,10 @@ You've successfully modified your database mirroring endpoint for a SQL Managed 
 
 If you don't have an existing availability group, the next step is to create one on SQL Server. Create an availability group with the following parameters for a link:
 
--	SQL Server name
--	Database name
--	A failover mode of `MANUAL`
--	A seeding mode of `AUTOMATIC`
+- SQL Server name
+- Database name
+- A failover mode of `MANUAL`
+- A seeding mode of `AUTOMATIC`
 
 First, find out your SQL Server name by running the following T-SQL statement:
 
@@ -439,12 +455,9 @@ SELECT @@SERVERNAME AS SQLServerName
 
 Then, use the following script to create the availability group on SQL Server. Replace:
 
-- `<SQLServerName>` with the name of your SQL Server instance. 
 - `<AGName>` with the name of your availability group. For multiple databases, you'll need to create multiple availability groups. A Managed Instance link requires one database per availability group. Consider naming each availability group so that its name reflects the corresponding database - for example, `AG_<db_name>`. 
-
-  > [!NOTE]
-  > The link feature supports one database per link. To replicate multiplate databases on an instance, create a link for each individual database. For example, to replicate 10 databases to SQL Managed Instance, create 10 individual links.
 - `<DatabaseName>` with the name of database that you want to replicate.
+- `<SQLServerName>` with the name of your SQL Server instance obtained in the previous step. 
 - `<SQLServerIP>` with the SQL Server IP address. You can use a resolvable SQL Server host machine name as an alternative, but you need to make sure that the name is resolvable from the SQL Managed Instance virtual network.
 
 ```sql
@@ -455,7 +468,7 @@ CREATE AVAILABILITY GROUP [<AGName>]
 WITH (CLUSTER_TYPE = NONE) -- <- Delete this line for SQL Server 2016 only. Leave as-is for all higher versions.
     FOR database [<DatabaseName>]  
     REPLICA ON   
-        '<SQLServerName>' WITH   
+        N'<SQLServerName>' WITH   
             (  
             ENDPOINT_URL = 'TCP://<SQLServerIP>:5022',
             AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
@@ -468,17 +481,20 @@ GO
 >[!IMPORTANT]
 > For SQL Server 2016, delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement. Leave as-is for all higher SQL Server versions.
 
+> [!NOTE]
+> The link feature supports one database per link. To replicate multiplate databases on an instance, create a link for each individual database. For example, to replicate 10 databases to SQL Managed Instance, create 10 individual links.
+
 Consider the following:
 
 - The link currently supports replicating one database per availability group. You can replicate multiple databases to SQL Managed Instance by setting up multiple links.
 - Collation between SQL Server and SQL Managed Instance should be the same. A mismatch in collation could cause a mismatch in server name casing and prevent a successful connection from SQL Server to SQL Managed Instance.
 - Error 1475 indicates that you need to start a new backup chain by creating a full backup without the `COPY ONLY` option.
 
-In the following code, replace:
+Next, create distributed availability group on SQL Server. In the following code, replace:
 
 - `<DAGName>` with the name of your distributed availability group. When you're replicating several databases, you need one availability group and one distributed availability group for each database. Consider naming each item accordingly - for example, `DAG_<db_name>`. 
 - `<AGName>` with the name of the availability group that you created in the previous step. 
-- `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure that the name is resolvable from the SQL Managed Instance virtual network. 
+- `<SQLServerIP>` with the IP address of SQL Server from the previous step. You can use a resolvable SQL Server host machine name as an alternative, but make sure that the name is resolvable from the SQL Managed Instance virtual network (requires configuration of custom Azure DNS for managed instance's subnet). 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<ManagedInstnaceFQDN>` with the fully qualified domain name of your managed instance.
 
@@ -489,23 +505,23 @@ In the following code, replace:
 -- ManagedInstanceFQDN example: 'sqlmi1.73d19f36a420a.database.windows.net'
 USE MASTER
 CREATE AVAILABILITY GROUP [<DAGName>]
-  WITH (DISTRIBUTED) 
-  AVAILABILITY GROUP ON  
-  '<AGName>' WITH 
-  (
-    LISTENER_URL = 'TCP://<SQLServerIP>:5022',
-    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
-    FAILOVER_MODE = MANUAL,
-    SEEDING_MODE = AUTOMATIC,
-    SESSION_TIMEOUT = 20
-  ),
-  '<ManagedInstanceName>' WITH
-  (
-    LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>]',
-    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
-    FAILOVER_MODE = MANUAL,
-    SEEDING_MODE = AUTOMATIC
-  );
+WITH (DISTRIBUTED) 
+    AVAILABILITY GROUP ON  
+    N'<AGName>' WITH 
+    (
+      LISTENER_URL = 'TCP://<SQLServerIP>:5022',
+      AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+      FAILOVER_MODE = MANUAL,
+      SEEDING_MODE = AUTOMATIC,
+      SESSION_TIMEOUT = 20
+    ),
+    N'<ManagedInstanceName>' WITH
+    (
+      LISTENER_URL = 'tcp://<ManagedInstanceFQDN>:5022;Server=[<ManagedInstanceName>]',
+      AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+      FAILOVER_MODE = MANUAL,
+      SEEDING_MODE = AUTOMATIC
+    );
 GO
 ```
 
@@ -538,70 +554,31 @@ You can invoke direct API calls to Azure by using various API clients. For simpl
 # Run in Azure Cloud Shell
 # =============================================================================
 # POWERSHELL SCRIPT FOR CREATING MANAGED INSTANCE LINK
-# USER CONFIGURABLE VALUES
-# (C) 2021-2022 SQL Managed Instance product group 
-# =============================================================================
-# Enter your Azure subscription ID
-$SubscriptionID = "<SubscriptionID>"
+# ===== Enter user variables here ====
+
 # Enter your managed instance name – for example, "sqlmi1"
-$ManagedInstanceName = "<ManagedInstanceName>"
+$ManagedInstanceName = "chimera-pilot-gp-01"
+
 # Enter the availability group name that was created on SQL Server
 $AGName = "<AGName>"
+
 # Enter the distributed availability group name that was created on SQL Server
 $DAGName = "<DAGName>"
+
 # Enter the database name that was placed in the availability group for replication
 $DatabaseName = "<DatabaseName>"
-# Enter the SQL Server address
-$SQLServerAddress = "<SQLServerAddress>"
 
-# =============================================================================
-# INVOKING THE API CALL -- THIS PART IS NOT USER CONFIGURABLE
-# =============================================================================
-# Log in to the subscription if needed
-if ((Get-AzContext ) -eq $null)
-{
-    echo "Logging to Azure subscription"
-    Login-AzAccount
-}
-Select-AzSubscription -SubscriptionName $SubscriptionID
-# -----------------------------------
-# Build the URI for the API call
-# -----------------------------------
-echo "Building API URI"
-$miRG = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
-$uriFull = "https://management.azure.com/subscriptions/" + $SubscriptionID + "/resourceGroups/" + $miRG+ "/providers/Microsoft.Sql/managedInstances/" + $ManagedInstanceName + "/distributedAvailabilityGroups/" + $DAGName + "?api-version=2021-05-01-preview"
-echo $uriFull
-# -----------------------------------
-# Build the API request body
-# -----------------------------------
-echo "Buildign API request body"
-$bodyFull = @"
-{
-    "properties":{
-        "TargetDatabase":"$DatabaseName",
-        "SourceEndpoint":"TCP://$SQLServerAddress`:5022",
-        "PrimaryAvailabilityGroupName":"$AGName",
-        "SecondaryAvailabilityGroupName":"$ManagedInstanceName",
-    }
-}
-"@
-echo $bodyFull 
-# -----------------------------------
-# Get the authentication token and build the header
-# -----------------------------------
-$azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$currentAzureContext = Get-AzContext
-$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azProfile)    
-$token = $profileClient.AcquireAccessToken($currentAzureContext.Tenant.TenantId)
-$authToken = $token.AccessToken
-$headers = @{}
-$headers.Add("Authorization", "Bearer "+"$authToken")
-# -----------------------------------
-# Invoke the API call
-# -----------------------------------
-echo "Invoking API call to have Managed Instance join DAG on SQL Server"
-$response = Invoke-WebRequest -Method PUT -Headers $headers -Uri $uriFull -ContentType "application/json" -Body $bodyFull
-echo $response
+# Enter the SQL Server IP
+$SQLServerIP = "<SQLServerIP>"
+
+# ==== Do not customize the below ====
+
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
+
+$SourceIP = "tcp://" + $SQLServerIP + ":5022"
+
+New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -PrimaryAvailabilityGroupName $AGName -LinkName $DAGName -SecondaryAvailabilityGroupName $ManagedInstanceName -TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
 ```
 
 The result of this operation will be a time stamp of the successful execution of the request to create a link.

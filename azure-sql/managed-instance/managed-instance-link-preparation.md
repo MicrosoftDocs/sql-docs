@@ -48,7 +48,7 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of the SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 ```
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 

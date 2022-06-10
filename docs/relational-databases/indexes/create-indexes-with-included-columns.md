@@ -1,14 +1,14 @@
 ---
-description: "Create indexes with included columns"
-title: "Create indexes with included columns | Microsoft Docs"
-ms.custom: ""
+title: "Create indexes with included columns"
+description: Create indexes with included columns
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index size [SQL Server]"
   - "index keys [SQL Server]"
   - "index columns [SQL Server]"
@@ -19,8 +19,6 @@ helpviewer_keywords:
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create indexes with included columns

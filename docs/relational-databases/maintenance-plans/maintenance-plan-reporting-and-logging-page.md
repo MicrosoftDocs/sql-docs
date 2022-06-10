@@ -1,18 +1,16 @@
 ---
-description: "Maintenance Plan (Reporting and Logging Page)"
-title: "Maintenance Plan (Reporting and Logging Page) | Microsoft Docs"
-ms.custom: ""
+title: "Maintenance Plan (Reporting and Logging Page)"
+description: Maintenance Plan (Reporting and Logging Page)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.reportinglogging.f1"
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Maintenance Plan (Reporting and Logging Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

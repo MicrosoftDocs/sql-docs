@@ -1,28 +1,26 @@
 ---
-description: "CREATE SPATIAL INDEX (Transact-SQL)"
-title: "CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SPATIAL INDEX (Transact-SQL)"
+description: CREATE SPATIAL INDEX (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SPATIAL INDEX"
   - "CREATE SPATIAL INDEX"
   - "CREATE_SPATIAL_INDEX_TSQL"
   - "SPATIAL_INDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "spatial indexes [SQL Server], creating"
   - "index creation [SQL Server], spatial indexes"
   - "CREATE SPATIAL INDEX statement"
   - "CREATE INDEX statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,17 +1,15 @@
 ---
-description: "DROP EXTERNAL TABLE (Transact-SQL)"
 title: "DROP EXTERNAL TABLE (Transact-SQL)"
-ms.custom: ""
+description: DROP EXTERNAL TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/02/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL TABLE (Transact-SQL)

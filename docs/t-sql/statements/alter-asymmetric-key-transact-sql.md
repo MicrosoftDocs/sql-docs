@@ -1,26 +1,26 @@
 ---
-description: "ALTER ASYMMETRIC KEY (Transact-SQL)"
-title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
+title: "ALTER ASYMMETRIC KEY (Transact-SQL)"
+description: ALTER ASYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/12/2017"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_ASYMMETRIC_KEY_TSQL"
   - "ALTER ASYMMETRIC KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTION BY PASSWORD option"
   - "passwords [SQL Server], asymmetric keys"
   - "encryption [SQL Server], asymmetric keys"
   - "DECRYPTION BY PASSWORD option"
   - "ALTER ASYMMETRIC KEY statement"
   - "asymmetric keys [SQL Server], modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

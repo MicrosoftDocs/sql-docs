@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_server_memory_dumps (Transact-SQL)"
-title: "sys.dm_server_memory_dumps (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_server_memory_dumps (Transact-SQL)"
+description: sys.dm_server_memory_dumps (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_server_memory_dumps_TSQL"
   - "dm_server_memory_dumps_TSQL"
   - "dm_server_memory_dumps"
   - "sys.dm_server_memory_dumps"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_server_memory_dumps dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

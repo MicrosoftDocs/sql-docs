@@ -1,18 +1,17 @@
 ---
 title: "Extended Events Tools"
 description: These tools create and manage SQL Server Extended Events sessions. In addition to sessions you create, there is a default system health session on the server.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended events [SQL Server], using"
   - "extended events [SQL Server], options for using"
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Extended Events Tools

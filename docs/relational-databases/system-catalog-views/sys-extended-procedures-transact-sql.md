@@ -1,25 +1,23 @@
 ---
-description: "sys.extended_procedures (Transact-SQL)"
-title: "sys.extended_procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.extended_procedures (Transact-SQL)"
+description: sys.extended_procedures (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "extended_procedures"
   - "sys.extended_procedures"
   - "sys.extended_procedures_TSQL"
   - "extended_procedures_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.extended_procedures catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

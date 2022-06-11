@@ -1,25 +1,23 @@
 ---
-description: "sys.geo_replication_links (Azure SQL Database)"
 title: "sys.geo_replication_links (Azure SQL Database)"
-ms.custom: ""
+description: sys.geo_replication_links (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "dm_geo_replication_links_TSQL"
   - "dm_geo_replication_links"
   - "sys.dm_geo_replication_links"
   - "sys.dm_geo_replication_links_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_geo_replication_links dynamic management view"
   - "dm_geo_replication_links dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.geo_replication_links (Azure SQL Database)
 

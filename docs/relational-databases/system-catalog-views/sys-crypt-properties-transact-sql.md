@@ -1,25 +1,23 @@
 ---
-description: "sys.crypt_properties (Transact-SQL)"
-title: "sys.crypt_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.crypt_properties (Transact-SQL)"
+description: sys.crypt_properties (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "crypt_properties"
   - "crypt_properties_TSQL"
   - "sys.crypt_properties_TSQL"
   - "sys.crypt_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.crypt_properties catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.crypt_properties (Transact-SQL)

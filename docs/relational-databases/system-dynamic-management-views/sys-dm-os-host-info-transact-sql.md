@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_os_host_info (Transact-SQL)"
-title: "sys.dm_os_host_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_host_info (Transact-SQL)"
+description: sys.dm_os_host_info (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/10/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_host_info"
   - "sys.dm_os_host_info_TSQL"
   - "dm_os_host_info"
   - "dm_os_host_info_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_host_info dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_host_info (Transact-SQL)

@@ -1,24 +1,22 @@
 ---
-description: "syscollector_collection_sets (Transact-SQL)"
-title: "syscollector_collection_sets (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syscollector_collection_sets (Transact-SQL)"
+description: syscollector_collection_sets (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syscollector_collection_sets_TSQL"
   - "syscollector_collection_sets"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collector view"
   - "syscollector_collection_sets view"
+dev_langs:
+  - "TSQL"
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

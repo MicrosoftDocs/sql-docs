@@ -1,27 +1,25 @@
 ---
-description: "sys.query_store_query_text (Transact-SQL)"
-title: "sys.query_store_query_text (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.query_store_query_text (Transact-SQL)"
+description: sys.query_store_query_text (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.QUERY_STORE_QUERY_TEXT"
   - "QUERY_STORE_QUERY_TEXT"
   - "SYS.QUERY_STORE_QUERY_TEXT_TSQL"
   - "QUERY_STORE_QUERY_TEXT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_store_query_text catalog view"
   - "query_store_query_text catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_text (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

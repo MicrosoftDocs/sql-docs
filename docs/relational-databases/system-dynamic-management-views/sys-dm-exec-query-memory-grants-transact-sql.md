@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_query_memory_grants (Transact-SQL)"
 title: "sys.dm_exec_query_memory_grants (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_query_memory_grants (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_query_memory_grants_TSQL"
   - "sys.dm_exec_query_memory_grants"
   - "sys.dm_exec_query_memory_grants_TSQL"
   - "dm_exec_query_memory_grants"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_memory_grants dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]

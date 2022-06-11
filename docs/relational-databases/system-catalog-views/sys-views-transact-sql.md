@@ -1,23 +1,21 @@
 ---
 title: sys.views (Transact-SQL)
-description: "sys.views (Transact-SQL)"
+description: sys.views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.views_TSQL"
   - "sys.views"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.views catalog view"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

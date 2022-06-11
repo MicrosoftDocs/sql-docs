@@ -167,7 +167,7 @@ Save values of `SQLServerCertName` and `SQLServerPublicKey` from the output, bec
 
 For the next step, use PowerShell with the installed [Az.Sql module 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher. Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
 
-First, ensure that you're logged in to Azure and that you've selected the subscription where your managed instance is hosted. Selecting the proper subscription is especially important in case you have more than one Azure subscription on your account. Replace:
+First, ensure that you're logged in to Azure and that you've selected the subscription where your managed instance is hosted. Selecting the proper subscription is especially important if you have more than one Azure subscription on your account. Replace:
 - `<SubscriptionID>` with your Azure subscription ID. 
 
 ```powershell
@@ -186,7 +186,6 @@ Select-AzSubscription -SubscriptionName $SubscriptionID
 ```
 
 Then, run the following script in Azure Cloud Shell (PowerShell console). Fill out necessary user information, copy it, paste it, and then run the script. Replace:
-
 - `<SQLServerPublicKey>` with the public portion of the SQL Server certificate in binary format, which you've recorded in the previous step. It's a long string value that starts with `0x`.
 - `<SQLServerCertName>` with the SQL Server certificate name you've recorded in the previous step.
 - `<ManagedInstanceName>` with the short name of your managed instance. 
@@ -221,9 +220,9 @@ In case this is needed, to see all SQL Server certificates uploaded on a managed
 
 ### Get the certificate public key from SQL Managed Instance and import it to SQL Server
 
-The certificate for securing the endpoint for a link is automatically generated on Azure SQL Managed Instance. This section describes how to get the certificate public key from SQL Managed Instance, and how to import it to SQL Server.
+The certificate for securing the link endpoint is automatically generated on Azure SQL Managed Instance. This section describes how to get the certificate public key from SQL Managed Instance, and how to import it to SQL Server.
 
-Run the following script in Azure Cloud Shell. Fill out necessary user information, copy it, paste it, and then run the script). Replace:
+Run the following script in Azure Cloud Shell. Replace:
 - `<SubscriptionID>` with your Azure subscription ID. 
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 
@@ -247,7 +246,7 @@ Get-AzSqlInstanceEndpointCertificate -ResourceGroupName $ResourceGroup -Instance
 
 Copy the entire PublicKey output (starts with `0x`) from the Azure Cloud Shell as you'll require it in the next step.
 
-If you encounter issues in copy-pasting the PublicKey from Azure Cloud Shell console, you could also alternatively run T-SQL command `EXEC sp_get_endpoint_certificate 4` on managed instance to obtain the same public key.
+Alternatively, if you encounter issues in copy-pasting the PublicKey from Azure Cloud Shell console, you could also run T-SQL command `EXEC sp_get_endpoint_certificate 4` on managed instance to obtain its public key for the link endpoint.
 
 Next, import the obtained public key of managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.
@@ -545,6 +544,7 @@ You can invoke direct API calls to Azure by using various API clients. For simpl
 # Run in Azure Cloud Shell
 # =============================================================================
 # POWERSHELL SCRIPT FOR CREATING MANAGED INSTANCE LINK
+# Instructs Managed Instance to join distributed availability group on SQL Server
 # ===== Enter user variables here ====
 
 # Enter your managed instance name – for example, "sqlmi1"
@@ -567,6 +567,7 @@ $SQLServerIP = "<SQLServerIP>"
 # Find out the resource group name
 $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
+# Build properly formatted connection endpoint
 $SourceIP = "TCP://" + $SQLServerIP + ":5022"
 
 # Create link on managed instance. Join distributed availability group on SQL Server.

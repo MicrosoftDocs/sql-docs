@@ -173,7 +173,7 @@ First, ensure that you're logged in to Azure and that you've selected the subscr
 ```powershell
 # Run in Azure Cloud Shell (select PowerShell console)
 
-#Enter your Azure subscription ID
+# Enter your Azure subscription ID
 $SubscriptionID = "<SubscriptionID>"
 
 # Login to Azure and select subscription ID

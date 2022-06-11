@@ -10,7 +10,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 06/11/2022
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -245,7 +245,9 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 Get-AzSqlInstanceEndpointCertificate -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -EndpointType "DATABASE_MIRRORING" | out-string   
 ```
 
-Copy the entire PublicKey output (starts with `0x`) from the Azure Clod Shell as you'll require it in the next step.
+Copy the entire PublicKey output (starts with `0x`) from the Azure Cloud Shell as you'll require it in the next step.
+
+If you encounter issues in copy-pasting the PublicKey from Azure Cloud Shell console, you could also alternatively run T-SQL command `EXEC sp_get_endpoint_certificate 4` on managed instance to obtain the same public key.
 
 Next, import the obtained public key of managed instance security certificate to SQL Server. Run the following query on SQL Server. Replace:
 - `<ManagedInstanceFQDN>` with the fully qualified domain name of managed instance.

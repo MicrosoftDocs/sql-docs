@@ -245,6 +245,11 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 Remove-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $LinkName -Force
 ```
 
+On successful exection of the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. Repoint your application connection string to managed instance to complete the migration process.
+
+> [!IMPORTANT]
+> On successful failover, manually repoint your application(s) connection string to managed instance FQDN to continue running in Azure, and to complete the migration process.
+
 ## Clean up availability groups
 
 After you break the link and migrate a database to Azure SQL Managed Instance, consider cleaning up the availability group and distributed availability group resources from SQL Server if they're no longer necessary. 

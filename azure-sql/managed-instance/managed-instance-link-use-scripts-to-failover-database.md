@@ -58,7 +58,7 @@ First, ensure that you're logged in to Azure and that you've selected the subscr
 ```powershell
 # Run in Azure Cloud Shell (select PowerShell console)
 
-#Enter your Azure subscription ID
+# Enter your Azure subscription ID
 $SubscriptionID = "<SubscriptionID>"
 
 # Login to Azure and select subscription ID
@@ -91,11 +91,11 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 Get-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName 
 ```
 
-Record the `Name` property of the link you'd like to fail over.
+From the output of the above script, record the `Name` property of the link you'd like to fail over.
 
 Then, switch the replication mode from async to sync on managed instance for the link identified by running the below script in Azure Cloud Shell. Replace:
-- `<ManagedInstanceName>` with the name of your managed instance. 
-- `<DAGName>` with the name of the link you found out on the previous step (output from `Name` in the previous step).
+- `<ManagedInstanceName>` with the short name of your managed instance. 
+- `<DAGName>` with the name of the link you found out on the previous step (the `Name` property from the previous step).
 
 ```powershell
 # Run in Azure Cloud Shell
@@ -216,7 +216,7 @@ WHERE
     -- AND drs.is_primary_replica = 1
 ```
 
-Alternatively, you could also use Azure Cloud Shell PowerShell command [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) to fetch the `LastHardenedLsn` property for your link on the managed instance with the same information as the above T-SQL query.
+Alternatively, you could also use Azure Cloud Shell PowerShell command [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) to fetch the `LastHardenedLsn` property for your link on the managed instance which will provide the same information as the above T-SQL query.
 
 Verify once again that your workload is stopped on SQL Server. Check that LSNs on both SQL Server and SQL Managed Instance match, and that they **remain matched** and unchanged for some time. Stable LSNs on both instances indicate that the tail log has been replicated to SQL Managed Instance and the workload is effectively stopped.
 
@@ -224,7 +224,7 @@ Verify once again that your workload is stopped on SQL Server. Check that LSNs o
 
 Run the below script in Azure Cloud Shell to finalize your migration to Azure. The script breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
-- `<DAGName>` with the name of the link you're failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command shown earlier above).
+- `<DAGName>` with the name of the link you're failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command executed earlier above).
 
 ```powershell
 # Run in Azure Cloud Shell

@@ -1,26 +1,25 @@
 ---
-description: "sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_geo_replication_link_status"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
   - "dm_geo_replication_link_status"
   - "dm_geo_replication_link_status_TSQL"
   - "sys.dm_geo_replication_link_status"
   - "sys.dm_geo_replication_link_status_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_geo_replication_link_status dynamic management view"
   - "sys.dm_geo_replication_link_status dynamic management view"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
 

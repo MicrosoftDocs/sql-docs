@@ -1,24 +1,22 @@
 ---
-description: "sys.sql_modules (Transact-SQL)"
 title: "sys.sql_modules (Transact-SQL)"
-ms.custom: ""
+description: sys.sql_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/20/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sql_modules_TSQL"
   - "sql_modules"
   - "sql_modules_TSQL"
   - "sys.sql_modules"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sql_modules catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)

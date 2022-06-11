@@ -1,12 +1,15 @@
 ---
 title: "Set recursive depth relationships with sql:max-depth"
-description: Learn how to specify depth when querying tables that have a recursive relationship by using the sql:max-depth annotation in an XQuery.
+description: "Learn how to specify depth when querying tables that have a recursive relationship by using the sql:max-depth annotation in an XQuery."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "max-depth annotation"
   - "XPath queries [SQLXML], recursive relationships"
   - "depth in recursive relationships [SQLXML]"
@@ -15,13 +18,7 @@ helpviewer_keywords:
   - "self joins"
   - "recursive relationships [SQLXML]"
   - "recursion [SQLXML]"
-  - "sql:max-depth"
-  - "recursive joins [SQLXML]"
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth

@@ -1,23 +1,21 @@
 ---
-description: "sys.dm_broker_connections returns a row for each Service Broker network connection."
 title: "sys.dm_broker_connections (Transact-SQL) "
-ms.custom: ""
+description: sys.dm_broker_connections returns a row for each Service Broker network connection.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_broker_connections"
   - "dm_broker_connections"
   - "sys.dm_broker_connections_TSQL"
   - "dm_broker_connections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_broker_connections dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

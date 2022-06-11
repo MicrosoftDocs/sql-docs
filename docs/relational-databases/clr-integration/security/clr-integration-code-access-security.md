@@ -1,13 +1,13 @@
 ---
-title: "CLR Integration Code Access Security | Microsoft Docs"
+title: "CLR Integration Code Access Security"
 description: For SQL Server CLR integration, CLR supports code access security for managed code, where permissions are granted to assemblies based on code identity.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UNSAFE assemblies"
   - "permissions [CLR integration]"
   - "common language runtime [SQL Server], security"
@@ -15,8 +15,6 @@ helpviewer_keywords:
   - "code access security [CLR integration]"
   - "EXTERNAL_ACCESS assemblies"
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-author: rothja
-ms.author: jroth
 ---
 # CLR Integration Code Access Security
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

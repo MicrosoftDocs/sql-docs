@@ -1,26 +1,25 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL)"
-description: "sys.dm_exec_requests (Transact-SQL)"
+description: sys.dm_exec_requests (Transact-SQL)
+author: akatesmith
+ms.author: katsmith
+ms.reviewer: mikeray
+ms.date: 1/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.dm_exec_requests_TSQL"
   - "sys.dm_exec_requests"
   - "dm_exec_requests_TSQL"
   - "dm_exec_requests"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
-author: akatesmith
-ms.author: katsmith
-ms.reviewer: mikeray
-ms.custom:
-- event-tier1-build-2022
-ms.date: 1/18/2022
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # sys.dm_exec_requests (Transact-SQL)

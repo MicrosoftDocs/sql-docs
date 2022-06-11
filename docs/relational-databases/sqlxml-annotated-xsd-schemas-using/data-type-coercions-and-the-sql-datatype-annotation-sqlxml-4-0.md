@@ -1,27 +1,18 @@
 ---
 title: "Convert data types with sql:datatype (SQLXML)"
-description: Learn how to use the xsd:type and sql:datatype attributes in SQLXML 4.0 to control the mapping between XSD data types and SQL Server data types.
+description: "Learn how to use the xsd:type and sql:datatype attributes in SQLXML 4.0 to control the mapping between XSD data types and SQL Server data types."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "mapping data types [SQLXML]"
   - "type attribute"
-  - "sql:datatype"
-  - "data types [SQLXML], converting"
-  - "annotated XSD schemas, mapping data types"
-  - "xsd:type"
-  - "datatype annotation"
-  - "converting data types [SQLXML]"
-  - "data types [SQLXML], mapping data types"
-  - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type conversions and the sql:datatype Annotation (SQLXML 4.0)

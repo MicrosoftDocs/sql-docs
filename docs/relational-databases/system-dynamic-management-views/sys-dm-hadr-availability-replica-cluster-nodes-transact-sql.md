@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)"
-title: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)"
+description: sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_availability_replica_cluster_nodes"
   - "sys.dm_hadr_availability_replica_cluster_nodes_TSQL"
   - "dm_hadr_availability_replica_cluster_nodes_TSQL"
   - "sys.dm_hadr_availability_replica_cluster_nodes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_availability_replica_cluster_nodes dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,14 @@
 ---
-description: "Index Disk Space Example"
-title: "Index Disk Space Example | Microsoft Docs"
-ms.custom: ""
+title: "Index Disk Space Example"
+description: Index Disk Space Example
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "online index disk space"
   - "disk space [SQL Server], indexes"
   - "index disk space [SQL Server]"
@@ -16,8 +16,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Index Disk Space Example
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,18 @@
 ---
-description: "Azure Synapse Analytics and Analytics Platform System (PDW) catalog views"
 title: Catalog Views
 titleSuffix: Azure Synapse Analytics and Analytics Platform System (PDW)
+description: Azure Synapse Analytics and Analytics Platform System (PDW) catalog views
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.technology: system-objects
-ms.reviewer: 
 ms.topic: language-reference
-dev_langs: 
-  - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Azure Synapse Analytics and Analytics Platform System (PDW) catalog views
 

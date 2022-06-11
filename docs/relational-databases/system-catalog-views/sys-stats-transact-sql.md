@@ -1,25 +1,23 @@
 ---
-description: "sys.stats (Transact-SQL)"
-title: "sys.stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.stats (Transact-SQL)"
+description: sys.stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.stats"
   - "stats_TSQL"
   - "sys.stats_TSQL"
   - "stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.stats catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats (Transact-SQL)

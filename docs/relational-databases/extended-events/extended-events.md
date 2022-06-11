@@ -1,20 +1,18 @@
 ---
 title: "XEvents overview - SQL Server, Azure SQL Database, and Azure SQL Managed Instance"
 description: The Extended Events architecture lets you collect data necessary to identify and troubleshoot a performance problem in SQL Server, Azure SQL Database, and Azure SQL Managed Instance. It is configurable and scalable.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 04/27/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "extended events [SQL Server]"
   - "xe"
   - "XEvents"
-author: rothja
-ms.author: jroth
-ms.custom:
-  - intro-overview
-ms.date: 04/27/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

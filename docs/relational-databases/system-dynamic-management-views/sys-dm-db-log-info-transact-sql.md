@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_log_info (Transact-SQL)"
-title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_log_info (Transact-SQL)"
+description: sys.dm_db_log_info (Transact-SQL)
+author: "savjani"
+ms.author: "pariks"
+manager: ajayj
 ms.date: "04/24/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_log_info"
   - "sys.dm_db_log_info_TSQL"
   - "dm_db_log_info"
   - "dm_db_log_info_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_log_info dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: "savjani"
-ms.author: "pariks"
-manager: ajayj
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)

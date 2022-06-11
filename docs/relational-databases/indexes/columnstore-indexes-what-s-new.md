@@ -1,16 +1,14 @@
 ---
+title: "Columnstore indexes - what&#39;s new"
 description: "Columnstore indexes - what&#39;s new"
-title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
-ms.custom:
-  - intro-whats-new
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/11/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
+ms.custom: intro-whats-new
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - what&#39;s new

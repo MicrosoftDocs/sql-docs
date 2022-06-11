@@ -1,22 +1,20 @@
 ---
-description: "Move an Existing Index to a Different Filegroup"
-title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
-ms.custom: ""
+title: "Move an Existing Index to a Different Filegroup"
+description: Move an Existing Index to a Different Filegroup
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving tables"
   - "switching filegroups for index"
   - "moving indexes"
   - "indexes [SQL Server], moving"
   - "filegroups [SQL Server], switching"
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Move an existing index to a different filegroup
 

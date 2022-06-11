@@ -1,27 +1,25 @@
 ---
-description: "sys.database_query_store_internal_state (Transact-SQL)"
 title: "sys.database_query_store_internal_state (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: sys.database_query_store_internal_state (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "QUERY_STORE_QUERY"
   - "SYS.QUERY_STORE_QUERY_TSQL"
   - "SYS.QUERY_STORE_QUERY"
   - "QUERY_STORE_QUERY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query_store_query catalog view"
   - "sys.query_store_query catalog view"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_internal_state (Transact-SQL)
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]

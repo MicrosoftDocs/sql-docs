@@ -29,7 +29,7 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 To replicate your databases to SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 - PowerShell module [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).

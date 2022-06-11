@@ -70,7 +70,7 @@ if ((Get-AzContext ) -eq $null)
 Select-AzSubscription -SubscriptionName $SubscriptionID
 ```
 
-Ensure that you know the name of the link you would like to failover. Use the below script in Azure Cloud Shell to list all active links on managed instance. Replace:
+Ensure that you know the name of the link you would like to fail over. Use the below script in Azure Cloud Shell to list all active links on managed instance. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
  
 ```powershell
@@ -91,9 +91,9 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 Get-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName 
 ```
 
-Record the `Name` property of the link you'd like to failover.
+Record the `Name` property of the link you'd like to fail over.
 
-Then, switch the replication mode from async to sync on Managed Instance for the link identified by running the below script in Azure Cloud Shell. Replace:
+Then, switch the replication mode from async to sync on managed instance for the link identified by running the below script in Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
 - `<DAGName>` with the name of the link you found out on the previous step (output from `Name` in the previous step).
 
@@ -224,7 +224,7 @@ Verify once again that your workload is stopped on SQL Server. Check that LSNs o
 
 Run the below script in Azure Cloud Shell to finalize your migration to Azure. The script breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
-- `<DAGName>` with the name of the link you are failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command shown earlier above).
+- `<DAGName>` with the name of the link you're failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command shown earlier above).
 
 ```powershell
 # Run in Azure Cloud Shell

@@ -1,28 +1,21 @@
 ---
-title: Migrate a SQL Server database to SQL Server on a virtual machine | Microsoft Docs
+title: Migrate a SQL Server database to SQL Server on a virtual machine
 description: Learn about how to migrate an on-premises user database to SQL Server on an Azure virtual machine.
-services: virtual-machines-windows
-documentationcenter: ''
 author: bluefooted
-editor: ''
-tags: azure-service-management
-ms.assetid: 00fd08c6-98fa-4d62-a3b8-ca20aa5246b1
-ms.service: virtual-machines-sql 
-ms.workload: iaas-sql-server
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.subservice: migration
-ms.topic: how-to
-ms.date: 05/24/2022
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
+ms.date: 06/10/2022
+ms.service: virtual-machines-sql
+ms.subservice: migration
+ms.topic: how-to
+services: virtual-machines-windows
+tags: azure-service-management
 ---
 # Migrate a SQL Server database to SQL Server on an Azure virtual machine
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 There are many ways to migrate an on-premises SQL Server user database to SQL Server in an Azure virtual machine (VM). This article will briefly discuss various methods and recommend the best method for various scenarios.
-
-[!INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-both-include.md)]
 
 > [!NOTE]
 > SQL Server 2012 is approaching its [end of support life cycle](/lifecycle/products/microsoft-sql-server-2012) for on-premises instances. To extend support, you can either migrate your SQL Server instance to an Azure VM, or buy Extended Security Updates to keep it on-premises. For more information, see [Extend support for SQL Server with Azure](sql-server-extend-end-of-support.md).
@@ -36,7 +29,7 @@ The primary migration methods are:
 * Detach the data and log files, copy them to Azure Blob storage, and then attach them to SQL Server in the Azure VM from the URL.
 * Convert the on-premises physical machine to a Hyper-V VHD, upload it to Azure Blob storage, and then deploy it as new VM using uploaded VHD.
 * Ship the hard drive using the Windows Import/Export Service.
-* If you have an AlwaysOn Availability Group deployment on-premises, use the [Add Azure Replica Wizard](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability) to create a replica in Azure, failover, and point users to the Azure database instance.
+* If you have an Always On Availability Group deployment on-premises, use the [Add Azure Replica Wizard](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability) to create a replica in Azure, failover, and point users to the Azure database instance.
 * Use SQL Server [transactional replication](/sql/relational-databases/replication/transactional/transactional-replication) to configure the Azure SQL Server instance as a subscriber, disable replication, and point users to the Azure database instance.
 
 > [!TIP]
@@ -51,7 +44,7 @@ To minimize downtime during the database migration process, use either the Alway
 If it isn't possible to use the above methods, manually migrate your database. Generally, you start with a database backup, follow it with a copy of the database backup into Azure, and then restore the database. You can also copy the database files themselves into Azure and then attach them. There are several methods by which you can accomplish this manual process of migrating a database into an Azure VM.
 
 > [!NOTE]
-> When you upgrade to SQL Server 2014 or SQL Server 2016 from older versions of SQL Server, you should consider whether changes are needed. We recommend that you address all dependencies on features not supported by the new version of SQL Server as part of your migration project. For more information on the supported editions and scenarios, see [Upgrade to SQL Server](/sql/database-engine/install-windows/upgrade-sql-server).
+> When you upgrade from older versions of SQL Server, you should consider whether changes are needed. We recommend that you address all dependencies on features not supported by the new version of SQL Server as part of your migration project. For more information on the supported editions and scenarios, see [Upgrade to SQL Server](/sql/database-engine/install-windows/upgrade-sql-server).
 
 The following table lists each of the primary migration methods and discusses when the use of each method is most appropriate.
 
@@ -103,9 +96,6 @@ Use the [Windows Import/Export Service method](/azure/import-export/storage-impo
 
 ## Next steps
 
-For more information, see [SQL Server on Azure Virtual Machines overview](sql-server-on-azure-vm-iaas-what-is-overview.md).
-
-> [!TIP]
-> If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
-
-For instructions on creating SQL Server on an Azure Virtual Machine from a captured image, see [Tips & Tricks on ‘cloning’ Azure SQL virtual machines from captured images](/archive/blogs/psssql/tips-tricks-on-cloning-azure-sql-virtual-machines-from-captured-images) on the CSS SQL Server Engineers blog.
+* [SQL Server on Azure Virtual Machines overview](sql-server-on-azure-vm-iaas-what-is-overview.md)
+* [Frequently Asked Questions](frequently-asked-questions-faq.yml)
+* [Tips & Tricks on cloning Azure SQL virtual machines from captured images](/archive/blogs/psssql/tips-tricks-on-cloning-azure-sql-virtual-machines-from-captured-images)

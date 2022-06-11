@@ -1,21 +1,19 @@
 ---
 title: "Requirements for Running SQLXML Examples"
 description: Learn the requirements for creating working samples using the examples in the SQLXML 4.0 Programming Concepts section.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "examples [SQLXML]"
   - "sample applications [SQLXML]"
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requirements for Running SQLXML Examples

@@ -1,22 +1,20 @@
 ---
-title: "Maintenance Plans | Microsoft Docs"
+title: "Maintenance Plans"
 description: Learn about maintenance plans, which create a workflow to ensure that your SQL Server database is optimized, regularly backed up, and free of inconsistencies.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "maintenance plans [SQL Server], about database maintenance plans"
   - "maintenance plans [SQL Server], database compatibility level displayed in designer"
   - "maintenance plans [SQL Server]"
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Maintenance Plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

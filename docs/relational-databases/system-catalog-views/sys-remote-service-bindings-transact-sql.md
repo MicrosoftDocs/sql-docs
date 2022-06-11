@@ -1,25 +1,23 @@
 ---
-description: "sys.remote_service_bindings (Transact-SQL)"
-title: "sys.remote_service_bindings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.remote_service_bindings (Transact-SQL)"
+description: sys.remote_service_bindings (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.remote_service_bindings_TSQL"
   - "remote_service_bindings_TSQL"
   - "remote_service_bindings"
   - "sys.remote_service_bindings"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.remote_service_bindings catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
-author: VanMSFT
-ms.author: vanto
 ---
 # sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

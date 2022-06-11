@@ -1,22 +1,20 @@
 ---
-description: "Heaps (Tables without Clustered Indexes)"
-title: "Heaps (Tables without Clustered Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "Heaps (Tables without Clustered Indexes)"
+description: Heaps (Tables without Clustered Indexes)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/01/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "heaps"
   - "forward record"
   - "forwarded record"
   - "forwarding pointer"
   - "RID"
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Heaps (Tables without Clustered Indexes)

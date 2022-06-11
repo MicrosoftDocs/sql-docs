@@ -1,25 +1,24 @@
 ---
-description: "sys.xml_schema_collections (Transact-SQL)"
-title: "sys.xml_schema_collections (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_collections (Transact-SQL)"
+description: sys.xml_schema_collections (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_collections_TSQL"
   - "sys.xml_schema_collections"
   - "xml_schema_collections"
   - "xml_schema_collections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_collections catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.xml_schema_collections (Transact-SQL)

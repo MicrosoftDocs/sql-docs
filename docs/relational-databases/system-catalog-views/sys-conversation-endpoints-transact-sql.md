@@ -1,25 +1,23 @@
 ---
-description: "sys.conversation_endpoints (Transact-SQL)"
-title: "sys.conversation_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.conversation_endpoints (Transact-SQL)"
+description: sys.conversation_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "conversation_endpoints_TSQL"
   - "conversation_endpoints"
   - "sys.conversation_endpoints"
   - "sys.conversation_endpoints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.conversation_endpoints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

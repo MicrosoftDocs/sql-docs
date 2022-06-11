@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xtp_gc_queue_stats (Transact-SQL)"
-title: "sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xtp_gc_queue_stats (Transact-SQL)"
+description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xtp_gc_stats"
   - "dm_xtp_gc_stats_TSQL"
   - "sys.dm_xtp_gc_stats_TSQL"
   - "sys.dm_xtp_gc_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
 

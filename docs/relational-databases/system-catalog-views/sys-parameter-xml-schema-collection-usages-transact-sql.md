@@ -1,25 +1,23 @@
 ---
-description: "sys.parameter_xml_schema_collection_usages (Transact-SQL)"
-title: "sys.parameter_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.parameter_xml_schema_collection_usages (Transact-SQL)"
+description: sys.parameter_xml_schema_collection_usages (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.parameter_xml_schema_collection_usages"
   - "parameter_xml_schema_collection_usages"
   - "parameter_xml_schema_collection_usages_TSQL"
   - "sys.parameter_xml_schema_collection_usages_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.parameter_xml_schema_collection_usages catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameter_xml_schema_collection_usages (Transact-SQL)

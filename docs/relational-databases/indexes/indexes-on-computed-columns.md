@@ -1,22 +1,20 @@
 ---
-description: "Indexes on Computed Columns"
-title: "Indexes on Computed Columns | Microsoft Docs"
-ms.custom: ""
+title: "Indexes on Computed Columns"
+description: Indexes on Computed Columns
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "computed columns, index creation"
   - "index creation [SQL Server], computed columns"
   - "imprecise columns"
   - "persisted computed columns"
   - "precise [SQL Server]"
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Computed Columns

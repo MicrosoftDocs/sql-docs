@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_fts_active_catalogs returns information on the full-text catalogs that have some population activity in progress on the server.  "
 title: "sys.dm_fts_active_catalogs (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_fts_active_catalogs returns information on the full-text catalogs that have some population activity in progress on the server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_fts_active_catalogs_TSQL"
   - "dm_fts_active_catalogs"
   - "dm_fts_active_catalogs_TSQL"
   - "sys.dm_fts_active_catalogs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_active_catalogs dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_active_catalogs (Transact-SQL)

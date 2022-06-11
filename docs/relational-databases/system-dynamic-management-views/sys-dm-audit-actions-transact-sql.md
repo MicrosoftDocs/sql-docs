@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_audit_actions (Transact-SQL)"
-title: "sys.dm_audit_actions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_audit_actions (Transact-SQL)"
+description: sys.dm_audit_actions (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
 ms.date: "03/23/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_audit_actions_TSQL"
   - "sys.dm_audit_actions"
   - "dm_audit_actions_TSQL"
   - "dm_audit_actions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_audit_actions dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: sravanisaluru
-ms.author: srsaluru
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_actions (Transact-SQL)

@@ -1,23 +1,21 @@
 ---
-title: "CLR Table-Valued Functions | Microsoft Docs"
+title: "CLR Table-Valued Functions"
 description: A table-valued function returns a table. In SQL Server CLR integration, you can write table-valued functions in managed code.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL table-valued functions"
   - "table-valued functions [CLR integration]"
   - "TVFs [CLR integration]"
+dev_langs:
+  - "TSQL"
+  - "VB"
+  - "CSharp"
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-author: "rothja"
-ms.author: "jroth"
 ---
 # CLR Table-Valued Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

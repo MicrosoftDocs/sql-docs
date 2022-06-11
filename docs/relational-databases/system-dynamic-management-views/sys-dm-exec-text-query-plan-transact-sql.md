@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_exec_text_query_plan (Transact-SQL)"
-title: "sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.dm_exec_text_query_plan (Transact-SQL)"
+description: sys.dm_exec_text_query_plan (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_exec_text_query_plan"
   - "sys.dm_exec_text_query_plan_TSQL"
   - "dm_exec_text_query_plan_TSQL"
   - "sys.dm_exec_text_query_plan"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_text_query_plan dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_text_query_plan (Transact-SQL)

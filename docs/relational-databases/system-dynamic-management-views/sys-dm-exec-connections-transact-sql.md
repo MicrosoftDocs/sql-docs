@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_connections returns information about the connections established to this instance of the database engine and the details of each connection."
 title: "sys.dm_exec_connections (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_connections returns information about the connections established to this instance of the database engine and the details of each connection.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "6/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_connections_TSQL"
   - "sys.dm_exec_connections_TSQL"
   - "sys.dm_exec_connections"
   - "dm_exec_connections"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_connections dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.dm_exec_connections (Transact-SQL)
 

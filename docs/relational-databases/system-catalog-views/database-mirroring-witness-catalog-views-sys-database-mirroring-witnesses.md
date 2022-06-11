@@ -1,27 +1,25 @@
 ---
-description: "Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses"
-title: "sys.database_mirroring_witnesses (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_mirroring_witnesses (Transact-SQL)"
+description: Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.database_mirroring_witnesses"
   - "sys.database_mirroring_witnesses_TSQL"
   - "database_mirroring_witnesses"
   - "database_mirroring_witnesses_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_witnesses catalog view"
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

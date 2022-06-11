@@ -1,22 +1,20 @@
 ---
-description: "Configure Parallel Index Operations"
-title: "Configure Parallel Index Operations | Microsoft Docs"
-ms.custom: ""
+title: "Configure Parallel Index Operations"
+description: Configure Parallel Index Operations
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index parallel operations [SQL Server]"
   - "processors [SQL Server], parallel index operations"
   - "max degree of parallelism option"
   - "MAXDOP index option, parallel index operations"
   - "parallel index operations [SQL Server]"
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Parallel Index Operations

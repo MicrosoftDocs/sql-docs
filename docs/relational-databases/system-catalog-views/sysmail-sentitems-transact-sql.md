@@ -1,23 +1,21 @@
 ---
-description: "sysmail_sentitems (Transact-SQL)"
-title: "sysmail_sentitems (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmail_sentitems (Transact-SQL)"
+description: sysmail_sentitems (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmail_sentitems_TSQL"
   - "sysmail_sentitems"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmail_sentitems database mail view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

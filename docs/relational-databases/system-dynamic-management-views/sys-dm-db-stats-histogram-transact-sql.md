@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_db_stats_histogram returns the statistics histogram for the specified database object (table or indexed view) in the current database."
 title: "sys.dm_db_stats_histogram (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_db_stats_histogram returns the statistics histogram for the specified database object (table or indexed view) in the current database.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 06/06/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_stats_histogram"
   - "sys.dm_db_stats_histogram_TSQL"
   - "dm_db_stats_histogram"
   - "dm_db_stats_histogram_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_stats_histogram dynamic management function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

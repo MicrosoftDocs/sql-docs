@@ -78,7 +78,7 @@ In the following steps, you use the **Failover database to Managed Instance** wi
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-failover-database/link-failover-results.png" alt-text="Screenshot that shows the Results page with completed status.":::
 
-On successful exection of the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. Repoint your application connection string to managed instance to complete the migration process.
+On successful execution of the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. Repoint your application connection string to managed instance to complete the migration process.
 
 > [!IMPORTANT]
 > On successful failover, manually repoint your application(s) connection string to managed instance FQDN to continue running in Azure, and to complete the migration process.

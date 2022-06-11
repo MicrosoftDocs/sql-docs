@@ -11,8 +11,9 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 06/11/2022
 ---
+
 # Fail over a database by using the link in SSMS - Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -77,9 +78,12 @@ In the following steps, you use the **Failover database to Managed Instance** wi
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-failover-database/link-failover-results.png" alt-text="Screenshot that shows the Results page with completed status.":::
 
-## View the failed-over database 
+On successful exection of the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. Repoint your application connection string to managed instance to complete the migration process.
 
-During the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. 
+> [!IMPORTANT]
+> On successful failover, manually repoint your application(s) connection string to managed instance FQDN to continue running in Azure, and to complete the migration process.
+
+## View the failed-over database 
 
 You can validate that the link has been dropped by reviewing the database on SQL Server. 
 

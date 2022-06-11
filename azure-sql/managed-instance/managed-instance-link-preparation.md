@@ -27,7 +27,7 @@ This article teaches you how to prepare your environment for a [Managed Instance
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance

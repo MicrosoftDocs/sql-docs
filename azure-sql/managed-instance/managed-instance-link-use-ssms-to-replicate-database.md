@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/03/2022
+ms.date: 06/09/2022
 ---
 # Replicate a database by using the link feature in SSMS - Azure SQL Managed Instance
 
@@ -27,15 +27,10 @@ This article teaches you how to replicate your database from SQL Server to Azure
 To replicate your databases to SQL Managed Instance through the link, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Server Management Studio v18.12 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 - A properly [prepared environment](managed-instance-link-preparation.md).
-
->[!IMPORTANT]
-> Current version of SSMS supports automated link configuration for SQL Servers 2019 and 2022.
-> 
-> SQL Server 2016 is not supported with the current SSMS version. Use [replicate database with scripts](managed-instance-link-use-scripts-to-replicate-database.md) instead.
 
 ### Set up database recovery and backup
 
@@ -77,7 +72,7 @@ In the following steps, you use the **Managed Instance link** wizard in SSMS to 
 
     :::image type="content" source="./media/managed-instance-link-use-ssms-to-replicate-database/link-replicate-login-to-azure.png" alt-text="Screenshot that shows the area for signing in to Azure.":::
     
-    - If you are running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you will need to [turn off Internet Explorer ESC on Windows servers](/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
+    - If you're running SSMS on Windows Server, the login screen in some cases might not show up with the error message `Content within this application coming from the website listed below is being blocked by Internet Explorer Enhanced Security Configuration.`. This happens when Windows Server blocks web content from rendering due to security settings configuration. In this case, you'll need to [turn off Internet Explorer ESC on Windows servers](/troubleshoot/developer/browsers/security-privacy/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers).
 
 1. On the **Login to Azure and select Managed Instance** page, choose the subscription, resource group, and target managed instance from the dropdown lists. Select **Login** and provide login details for SQL Managed Instance. After you've provided all necessary information, select **Next**. 
 
@@ -113,4 +108,4 @@ Connect to your managed instance and use Object Explorer to view your replicated
 
 ## Next steps
 
-To break the link and fail over your database to SQL Managed Instance, see [Fail over a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).
+To break the link and fail over your database to SQL Managed Instance, see [Failover a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).

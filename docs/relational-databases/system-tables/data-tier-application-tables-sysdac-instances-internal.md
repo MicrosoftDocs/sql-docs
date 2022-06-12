@@ -1,23 +1,21 @@
 ---
-description: "Data-tier Application Tables - sysdac_instances_internal"
-title: "sysdac_instances_internal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdac_instances_internal (Transact-SQL)"
+description: Data-tier Application Tables - sysdac_instances_internal
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdac_instances_internal_TSQL"
   - "sysdac_instances_internal"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdac_instances_internal"
+dev_langs:
+  - "TSQL"
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: LitKnd
-ms.author: kendralittle
 ---
 # Data-tier Application Tables - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

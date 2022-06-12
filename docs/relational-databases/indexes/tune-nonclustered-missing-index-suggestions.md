@@ -1,14 +1,14 @@
 ---
 title: Tune nonclustered indexes with missing index suggestions
 description: How to use missing index suggestions to create and tune nonclustered indexes.
-author: LitKnd
-ms.author: kendralittle
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.topic: how-to
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 3/15/2022
-ms.custom: template-how-to #Required; leave this attribute/value as-is.
+ms.prod: sql
+ms.service:
+ms.prod_service: "database-engine, sql-database"
+ms.topic: how-to
+ms.custom: "template-how-to #Required; leave this attribute/value as-is."
 ---
 
 # Tune nonclustered indexes with missing index suggestions

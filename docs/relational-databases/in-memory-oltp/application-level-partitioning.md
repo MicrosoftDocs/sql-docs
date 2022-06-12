@@ -1,16 +1,14 @@
 ---
-title: "Application-Level Partitioning | Microsoft Docs"
+title: "Application-Level Partitioning"
 description: Review this example that processes orders. This application stores recent orders in a memory-optimized table and older ones in a disk-based table.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application-Level Partitioning

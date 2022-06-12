@@ -1,26 +1,24 @@
 ---
-description: "sys.column_store_row_groups (Transact-SQL)"
-title: "sys.column_store_row_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.column_store_row_groups (Transact-SQL)"
+description: sys.column_store_row_groups (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.column_store_row_groups_TSQL"
   - "column_store_row_groups"
   - "sys.column_store_row_groups"
   - "column_store_row_groups_TSQL"
   - "deleted bitmap"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_store_row_groups catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

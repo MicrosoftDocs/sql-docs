@@ -1,21 +1,19 @@
 ---
-description: "SET DATEFORMAT (Transact-SQL)"
-title: "SET DATEFORMAT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET DATEFORMAT (Transact-SQL)"
+description: SET DATEFORMAT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEFORMAT"
   - "SET DATEFORMAT"
   - "SET_DATEFORMAT_TSQL"
   - "DATEFORMAT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], formats"
   - "dates [SQL Server], ordering date parts"
   - "SET DATEFORMAT option [SQL Server]"
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "options [SQL Server], date"
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
+dev_langs:
+  - "TSQL"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)

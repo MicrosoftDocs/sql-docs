@@ -1,27 +1,25 @@
 ---
-description: "DROP FUNCTION (Transact-SQL)"
-title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP FUNCTION (Transact-SQL)"
+description: DROP FUNCTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/11/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_FUNCTION_TSQL"
   - "DROP FUNCTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user-defined functions [SQL Server], removing"
   - "removing user-defined functions"
   - "DROP FUNCTION statement"
   - "dropping user-defined functions"
   - "deleting user-defined functions"
+dev_langs:
+  - "TSQL"
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP FUNCTION (Transact-SQL)

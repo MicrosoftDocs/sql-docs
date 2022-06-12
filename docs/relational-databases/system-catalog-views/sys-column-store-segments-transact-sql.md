@@ -1,25 +1,23 @@
 ---
-description: "sys.column_store_segments (Transact-SQL)"
-title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.column_store_segments (Transact-SQL)"
+description: sys.column_store_segments (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/24/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "column_store_segments"
   - "sys.column_store_segments_TSQL"
   - "sys.column_store_segments"
   - "column_store_segments_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_store_segments catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

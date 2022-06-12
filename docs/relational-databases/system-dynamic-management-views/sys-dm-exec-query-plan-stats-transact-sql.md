@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_query_plan_stats (Transact-SQL)"
-title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_plan_stats (Transact-SQL)"
+description: sys.dm_exec_query_plan_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+manager: amitban
 ms.date: 05/22/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_query_plan_stats"
   - "sys.dm_exec_query_plan_stats_TSQL"
   - "dm_exec_query_plan_stats_TSQL"
   - "dm_exec_query_plan_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_plan_stats management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
-author: "pmasl"
-ms.author: "pelopes"
-manager: amitban
 ---
 # sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]

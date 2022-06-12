@@ -1,25 +1,23 @@
 ---
-description: "sys.database_recovery_status (Transact-SQL)"
-title: "sys.database_recovery_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_recovery_status (Transact-SQL)"
+description: sys.database_recovery_status (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_recovery_status_TSQL"
   - "database_recovery_status"
   - "sys.database_recovery_status"
   - "sys.database_recovery_status_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_recovery_status catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.database_recovery_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

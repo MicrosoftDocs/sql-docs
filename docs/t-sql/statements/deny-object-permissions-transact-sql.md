@@ -1,21 +1,19 @@
 ---
-description: "DENY Object Permissions (Transact-SQL)"
-title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Object Permissions (Transact-SQL)"
+description: DENY Object Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DENY statement, objects"
   - "table permissions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: VanMSFT
-ms.author: vanto
 ---
 # DENY Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

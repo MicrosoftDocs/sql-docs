@@ -1,19 +1,17 @@
 ---
-description: "Transaction Related Dynamic Management Views and Functions (Transact-SQL)"
-title: "Transaction Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "dynamic management objects [SQL Server], transactions"
-ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
+title: "Transaction Related Dynamic Management Views and Functions (Transact-SQL)"
+description: Transaction Related Dynamic Management Views and Functions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/03/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "dynamic management objects [SQL Server], transactions"
+dev_langs:
+  - "TSQL"
+ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 ---
 # Transaction Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

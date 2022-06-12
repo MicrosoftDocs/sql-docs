@@ -1,23 +1,22 @@
 ---
 title: "MSmerge_conflict_publication_article (T-SQL)"
-description: Describes the MSmerge_conflict_publication_article stored procedure which contains information on rows that conflicted or row changes that were undone to achieve data convergence. 
-ms.custom: seo-lt-2019
+description: Describes the MSmerge_conflict_publication_article stored procedure which contains information on rows that conflicted or row changes that were undone to achieve data convergence.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "MSmerge_conflict_publication_article_TSQL"
   - "MSmerge_conflict_publication_article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_conflict_publication_article system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_conflict_publication_article (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

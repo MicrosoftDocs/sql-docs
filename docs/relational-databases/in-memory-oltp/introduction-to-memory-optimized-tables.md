@@ -1,16 +1,14 @@
 ---
-title: "Introduction to Memory-Optimized Tables | Microsoft Docs"
+title: "Introduction to Memory-Optimized Tables"
 description: Learn about memory-optimized tables, which are durable and support transactions that are atomic, consistent, isolated, and durable.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Memory-Optimized Tables

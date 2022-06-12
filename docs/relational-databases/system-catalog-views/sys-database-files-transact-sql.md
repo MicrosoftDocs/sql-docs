@@ -1,25 +1,23 @@
 ---
-description: "sys.database_files (Transact-SQL)"
-title: "sys.database_files (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 04/11/2022
+title: "sys.database_files (Transact-SQL)"
+description: sys.database_files (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 04/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.database_files"
   - "sys.database_files_TSQL"
   - "database_files"
   - "database_files_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_files catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)
@@ -79,13 +77,19 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
 FROM sys.database_files;
 ```
 
-For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) on the SQL Customer Advisory Team blog.
-  
-## See also
+Find example queries using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], in [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage). You can:
 
-- [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [File States](../../relational-databases/databases/file-states.md)
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
-- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)
-- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+- [Query a single database for storage space information](/azure/azure-sql/database/file-space-manage#query-a-single-database-for-storage-space-information).
+- [Query an elastic pool for storage space information](/azure/azure-sql/database/file-space-manage#query-an-elastic-pool-for-storage-space-information).
+  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [File States](../../relational-databases/databases/file-states.md)   
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)

@@ -1,23 +1,21 @@
 ---
-description: "MSrepl_originators (Transact-SQL)"
-title: "MSrepl_originators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_originators (Transact-SQL)"
+description: MSrepl_originators (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_originators_TSQL"
   - "MSrepl_originators"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_originators system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSrepl_originators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

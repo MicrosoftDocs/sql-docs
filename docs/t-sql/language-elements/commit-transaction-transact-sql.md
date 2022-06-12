@@ -1,21 +1,21 @@
 ---
+title: "COMMIT TRANSACTION (Transact-SQL)"
 description: "COMMIT TRANSACTION (Transact-SQL)"
-title: "COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "09/09/2016"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "COMMIT"
   - "COMMIT TRANSACTION"
   - "COMMIT_TSQL"
   - "COMMIT_TRANSACTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ending transactions [SQL Server]"
   - "user-defined transactions [SQL Server]"
   - "committed transactions"
@@ -26,10 +26,9 @@ helpviewer_keywords:
   - "transactions [SQL Server], committed"
   - "COMMIT TRANSACTION statement"
   - "rolling back transactions, COMMIT TRANSACTION"
-ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

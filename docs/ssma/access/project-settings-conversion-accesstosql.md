@@ -13,6 +13,9 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.access.projectsettingsconversion.f1"
+
 ---
 # Project Settings (Conversion) (AccessToSQL)
 The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects.  

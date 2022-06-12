@@ -1,29 +1,27 @@
 ---
-description: "SET STATISTICS PROFILE (Transact-SQL)"
-title: "SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET STATISTICS PROFILE (Transact-SQL)"
+description: SET STATISTICS PROFILE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PROFILE"
   - "SET_STATISTICS_PROFILE_TSQL"
   - "PROFILE_TSQL"
   - "SET STATISTICS PROFILE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "profiles [SQL Server], displaying"
   - "statements [SQL Server], profile information"
   - "SET STATISTICS PROFILE statement"
   - "STATISTICS PROFILE option"
   - "statistical information [SQL Server], profiles"
+dev_langs:
+  - "TSQL"
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

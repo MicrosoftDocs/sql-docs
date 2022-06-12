@@ -1,19 +1,17 @@
 ---
-description: "ALTER ASSEMBLY (Transact-SQL)"
-title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER ASSEMBLY (Transact-SQL)"
+description: ALTER ASSEMBLY (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_ASSEMBLY_TSQL"
   - "ALTER ASSEMBLY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "assemblies [CLR integration], modifying"
   - "refreshing assemblies"
   - "assemblies [CLR integration], versioning"
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "modifying assemblies"
   - "adding files"
   - "ALTER ASSEMBLY statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

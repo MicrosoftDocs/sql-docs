@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_hadr_cluster_members (Transact-SQL)"
-title: "sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_cluster_members (Transact-SQL)"
+description: sys.dm_hadr_cluster_members (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/31/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_hadr_cluster_members_TSQL"
   - "sys.dm_hadr_cluster_members"
   - "dm_hadr_cluster_members_TSQL"
   - "dm_hadr_cluster_members"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_cluster_members catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_hadr_cluster_members (Transact-SQL)

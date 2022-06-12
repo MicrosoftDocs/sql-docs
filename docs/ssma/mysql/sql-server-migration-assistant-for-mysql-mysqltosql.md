@@ -11,6 +11,8 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+- "ssma.mysql.general.f1"
 ---
 # SQL Server Migration Assistant for MySQL (MySQLToSQL)
 

@@ -3,21 +3,25 @@ title: Install Machine Learning Server (Standalone)
 description: Setup a standalone machine learning server for Python and R. A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of Microsoft Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 01/03/2020
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
-monikerRange: ">=sql-server-2016"
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
+monikerRange: "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
 [!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
-::: moniker range=">=sql-server-2017"
+> [!IMPORTANT]
+> Machine Learning Server (Standalone) is not shipped with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. This article refers to a retired feature of [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
+
+::: moniker range="=sql-server-2017||=sql-server-ver15"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016"

@@ -1,25 +1,23 @@
 ---
-description: "The sys.dm_db_missing_index_group_stats_query dynamic management view returns information about queries that needed a missing index from groups of missing indexes."
 title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
-ms.custom: ""
+description: The sys.dm_db_missing_index_group_stats_query dynamic management view returns information about queries that needed a missing index from groups of missing indexes.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/7/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_missing_index_group_stats_query_TSQL"
   - "sys.dm_db_missing_index_group_stats_query"
   - "dm_db_missing_index_group_stats_query_TSQL"
   - "dm_db_missing_index_group_stats_query"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_missing_index_group_stats_query dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats_query dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_group_stats_query (Transact-SQL)

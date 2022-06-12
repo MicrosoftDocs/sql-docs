@@ -32,7 +32,7 @@ helpviewer_keywords:
   - "row count accuracy [SQL Server]"
   - "page count accuracy [SQL Server]"
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 

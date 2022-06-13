@@ -30,7 +30,6 @@ Azure Data Studio 1.36.2 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
 | Power BI | Introduced support for Power BI Datamart connectivity.  Please see [Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/blog/announcing-public-preview-of-datamart-in-power-bi/). |
 
 #### Bug fixes in 1.36.2

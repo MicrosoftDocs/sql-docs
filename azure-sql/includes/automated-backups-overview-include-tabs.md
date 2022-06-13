@@ -17,9 +17,6 @@ ms.reviewer: wiassaf, mathoma, danil
 ms.date: 04/26/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Automated backups - Azure SQL Database & Azure SQL Managed Instance
-
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
@@ -46,7 +43,7 @@ To ensure that your data stays within the same region where your database or man
 
 Backup storage redundancy can be configured when you create your database or instance, and can be updated at a later time; the changes made to an existing database apply to future backups only. After the backup storage redundancy of an existing database is updated, it may take up to 48 hours for the changes to be applied. Geo-restore is disabled as soon as a database is updated to use local or zone redundant storage. For Hyperscale databases, the selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy. Learn more in [Hyperscale backups and storage redundancy](#hyperscale-backups-and-storage-redundancy).
 
-The option to configure backup storage redundancy provides flexibility to choose one of the following storage redundancies for backups:
+The option to configure backup storage redundancy provides flexibility to choose one of the following storage redundancies for backups
 
 - **Locally-redundant (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but isn't recommended for applications requiring high availability or durability.
 - **Zone-redundant (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region.
@@ -57,9 +54,6 @@ To learn more about storage redundancy, see [Data redundancy](/azure/storage/com
 
 > [!IMPORTANT]
 > Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
-
-
-
 
 ### Backup usage
 
@@ -165,8 +159,18 @@ Except for Basic tier databases, you can [change backup retention period](#chang
 
 If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. You cannot change backup retention period for a deleted database.
 
-> [!IMPORTANT]
-> If you delete a server or a managed instance, all databases on that server or managed instance are also deleted and cannot be recovered. You cannot restore a deleted server or managed instance. But if you had configured long-term retention (LTR) for a database or managed instance, long-term retention backups are not deleted, and can be used to restore databases to a different server or managed instance in the same subscription, to a point in time when a long-term retention backup was taken.
+
+### [SQL Database](#tab/sql-db)
+
+Differential backups for short-term retention can be configured to either a 12-hour or 24-hour frequency. A 24-hour differential backup frequency may increase the time required to restore the database. 
+
+If you delete a server, all databases on that server are also deleted and cannot be recovered. You cannot restore a deleted server. But if you had configured long-term retention (LTR) for a database, long-term retention backups are not deleted, and can be used to restore databases to a different server in the same subscription, to a point in time when a long-term retention backup was taken.
+
+### [SQL Managed Instance](#tab/sql-mi)
+
+If you delete a managed instance, all databases on that managed instance are also deleted and cannot be recovered. You cannot restore a deleted managed instance. But if you had configured long-term retention (LTR) for a managed instance, long-term retention backups are not deleted, and can be used to restore databases to a different managed instance in the same subscription, to a point in time when a long-term retention backup was taken.
+
+---
 
 
 ### Long-term retention
@@ -175,8 +179,20 @@ For both SQL Database and SQL Managed Instance, you can configure full backup lo
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
 
+### [SQL Database only](#tab/sql-db)
+
+It's possible to change the backup storage redundancy option for long-term retention (LTR) with Azure SQL Database after your database is already created by changing the storage redundancy option of your short-term backups. However, the new storage redundancy option only applies to future backups taken after the change is made. All existing LTR backups for the database will continue to reside in the existing storage blob and only new backups will be stored on the newly requested storage blob type. 
+
 > [!IMPORTANT]
 > - Databases in the Hyperscale service tier for Azure SQL Database do not currently support long-term retention. 
+
+### [SQL Managed Instance only](#tab/sql-mi)
+
+It is possible to set the point-in-time restore (PITR) backup retention rate once a database has been deleted in the 0-35 day range. 
+
+LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed subsequently, even if the STR backup storage redundancy is changed in the future. 
+
+---
 
 
 ## Backup storage costs
@@ -204,7 +220,11 @@ Actual backup billing scenarios are more complex. Because the rate of changes in
 You can monitor total backup storage consumption for each backup type (full, differential, transaction log) over time as described in [Monitor consumption](#monitor-consumption).
 
 
-#### [SQL Database](#tab/single-database)
+### [SQL Database only](#tab/sql-db)
+
+In the DTU model, there's no additional charge for backup storage for databases and elastic pools. The price of backup storage is a part of database or pool price.
+
+For single databases in the vCore model, a backup storage amount equal to 100 percent of the maximum data storage size for the database is provided at no extra charge. For elastic pools in vCore model, a backup storage amount equal to 100 percent of the maximum data storage for the pool is provided at no extra charge. 
 
 For single databases, this equation is used to calculate the total billable backup storage usage:
 
@@ -214,13 +234,19 @@ For pooled databases, the total billable backup storage size is aggregated at th
 
 `Total billable backup storage size = (total size of all full backups + total size of all differential backups + total size of all log backups) - maximum pool data storage`
 
-#### [SQL Managed Instance](#tab/managed-instance)
+Formulae used to calculate backup storage costs for Hyperscale databases can be found in [Hyperscale backup storage costs](#hyperscale-backup-storage-costs). 
 
-![Change PITR retention, managed instance](./media/automated-backups-overview/configure-backup-retention-sqlmi.png)
+For pricing see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. For more information, see [Azure SQL Database cost management](cost-management.md).
+
+### [SQL Managed Instance only](#tab/sql-mi)
+
+For managed instances, a backup storage amount equal to 100 percent of the maximum instance storage size, is provided at no extra charge. 
 
 The total billable backup storage size is aggregated at the instance level and is calculated as follows:
 
 `Total billable backup storage size = (total size of full backups + total size of differential backups + total size of log backups) – maximum instance data storage`
+
+For pricing see the [Azure SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/) page. 
 
 ---
 
@@ -230,18 +256,39 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 1. Add a filter for **Service name**.
 2. In the drop-down list select **sql database** for a single database or an elastic database pool, or select **sql managed instance** for managed instance.
-3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the drop-down list select **single/elastic pool pitr backup storage** for a single database or an elastic database pool, or select **managed instance pitr backup storage** for managed instance. Meters will only show up if there exists consumption.
-5. To monitor LTR backup costs, in the drop-down list select **ltr backup storage** for a single database or an elastic database pool, or select **sql managed instance - ltr backup storage** for managed instance. Meters will only show up if there exists consumption.
+3. Add another filter for **Meter subcategory**, and then choose the meter you're interested in tracking. 
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 
 ![Backup storage cost analysis](./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png)
 
-  >[!IMPORTANT]
-  > Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, managed instance counters will not be present for customers who do not have a managed instance deployed. Likewise, storage counters will not be visible for resources that are not consuming storage. For example, if there is no PITR or LTR backup storage consumption, these meters won't be shown.
 
-For more information, see [Azure SQL Database cost management](cost-management.md).
+>[!IMPORTANT]
+> Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, managed instance counters will not be present for customers who do not have a managed instance deployed. Likewise, storage counters will not be visible for resources that are not consuming storage. For example, if there is no PITR or LTR backup storage consumption, these meters won't be shown.
+
+
+
+The meters vary between Azure SQL Database and Azure SQL Managed Instance: 
+
+### [SQL Database only](#tab/sql-db)
+
+**For PITR backup costs** 
+
+Select the **single/elastic pool pitr backup storage** meter for a single database or an elastic database pool. 
+
+**For LTR backup costs**
+
+Select the **ltr backup storage** meter for a single database or an elastic database pool. 
+
+### [SQL Managed Instance only](#tab/sql-mi)
+
+**For PITR backup costs** 
+Select the **managed instance pitr backup storage** meter for managed instances. 
+
+**For LTR backup costs**
+Select **sql managed instance - ltr backup storage** for managed instances. 
+
+---
 
 ## Encrypted backups
 
@@ -270,12 +317,3 @@ To enforce data residency requirements at an organizational level, these policie
 
 Learn how to assign policies using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell)
 
-## Next steps
-
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
-- Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).

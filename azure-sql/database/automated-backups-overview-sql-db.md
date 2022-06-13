@@ -20,8 +20,15 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Automated backups - Azure SQL Database & Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-
+**** **OPTION 1** ****
 this article uses an include file, and then has a "differences" section that highlights the differences. 
+**** **OPTION 1** ****
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](automated-backups-overview-sql-db.md)
+> * [Azure SQL Managed Instance](../managed-instance/automated-backups-overview-sql-mi.md)
+
+
 
 [!INCLUDE[automated-backup-overview](../includes/automated-backups-overview-include.md)]
 

@@ -17,9 +17,6 @@ ms.reviewer: wiassaf, mathoma, danil
 ms.date: 04/26/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Automated backups - Azure SQL Database & Azure SQL Managed Instance
-
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
@@ -203,27 +200,6 @@ Actual backup billing scenarios are more complex. Because the rate of changes in
 
 You can monitor total backup storage consumption for each backup type (full, differential, transaction log) over time as described in [Monitor consumption](#monitor-consumption).
 
-
-#### [SQL Database](#tab/single-database)
-
-For single databases, this equation is used to calculate the total billable backup storage usage:
-
-`Total billable backup storage size = (size of full backups + size of differential backups + size of log backups) – maximum data storage`
-
-For pooled databases, the total billable backup storage size is aggregated at the pool level and is calculated as follows:
-
-`Total billable backup storage size = (total size of all full backups + total size of all differential backups + total size of all log backups) - maximum pool data storage`
-
-#### [SQL Managed Instance](#tab/managed-instance)
-
-![Change PITR retention, managed instance](./media/automated-backups-overview/configure-backup-retention-sqlmi.png)
-
-The total billable backup storage size is aggregated at the instance level and is calculated as follows:
-
-`Total billable backup storage size = (total size of full backups + total size of differential backups + total size of log backups) – maximum instance data storage`
-
----
-
 ### Monitor costs
 
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal, select **Cost Management**, and then select **Cost analysis**. Select the desired subscription as the **Scope**, and then filter for the time period and service that you're interested in as follows:
@@ -270,12 +246,3 @@ To enforce data residency requirements at an organizational level, these policie
 
 Learn how to assign policies using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell)
 
-## Next steps
-
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
-- Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).

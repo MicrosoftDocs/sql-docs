@@ -1,19 +1,17 @@
 ---
-title: "Collation and CLR Integration Data Types | Microsoft Docs"
+title: "Collation and CLR Integration Data Types"
 description: In SQL Server CLR integration, the .NET Framework string APIs use the CompareInfo property of CultureInfo of the current thread to perform string comparisons.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [CLR integration]"
   - "parameter collation [CLR integration]"
   - "collations [CLR integration]"
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-author: rothja
-ms.author: jroth
 ---
 # Collation and CLR Integration Data Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

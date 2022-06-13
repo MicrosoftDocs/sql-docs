@@ -1,19 +1,15 @@
 ---
-description: "How Extended Stored Procedures Work"
-title: "How Extended Stored Procedures Work | Microsoft Docs"
-ms.custom: ""
+title: "How Extended Stored Procedures Work"
+description: How Extended Stored Procedures Work
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], about extended stored procedures"
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
-author: rothja
-ms.author: jroth
 ---
 # How Extended Stored Procedures Work
 

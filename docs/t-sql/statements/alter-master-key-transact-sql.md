@@ -1,19 +1,18 @@
 ---
-description: "ALTER MASTER KEY (Transact-SQL)"
-title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: "fasttrack-edit"
+title: "ALTER MASTER KEY (Transact-SQL)"
+description: ALTER MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "fasttrack-edit"
+f1_keywords:
   - "ALTER MASTER KEY"
   - "ALTER_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REGENERATE phrase"
   - "ALTER MASTER KEY statement"
   - "decryption [SQL Server], Database Master Key"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "modifying Database Master Key"
   - "service master key [SQL Server], modifying"
   - "DROP ENCRYPTION BY SERVICE MASTER KEY phrase"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER MASTER KEY (Transact-SQL)

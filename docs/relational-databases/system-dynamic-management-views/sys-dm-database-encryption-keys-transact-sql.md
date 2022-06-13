@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_database_encryption_keys (Transact-SQL)"
-title: "sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_database_encryption_keys (Transact-SQL)"
+description: sys.dm_database_encryption_keys (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_database_encryption_keys"
   - "sys.dm_database_encryption_keys_TSQL"
   - "dm_database_encryption_keys"
   - "dm_database_encryption_keys_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_database_encryption_keys dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)

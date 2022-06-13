@@ -3,7 +3,7 @@ title: Configure a load balancer & availability group listener (Azure portal)
 description: Step-by-step instructions for creating a listener for an Always On availability group for SQL Server in Azure virtual machines
 services: virtual-machines
 documentationcenter: na
-author: rajeshsetlem
+author: adbadram
 editor: monicar
 
 ms.assetid: d1f291e9-9af2-41ba-9d29-9541e3adcfcf
@@ -14,7 +14,7 @@ ms.topic: how-to
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
 ms.date: 11/10/2021
-ms.author: rsetlem 
+ms.author: adbadram 
 ms.custom: "seo-lt-2019"
 ms.reviewer: mathoma
 ---

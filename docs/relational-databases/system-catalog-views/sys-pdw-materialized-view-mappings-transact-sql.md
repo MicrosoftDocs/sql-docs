@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_materialized_view_mappings (Transact-SQL)"
-title: "sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_materialized_view_mappings (Transact-SQL)"
+description: sys.pdw_materialized_view_mappings (Transact-SQL)
+author: XiaoyuMSFT
+ms.author: xiaoyul
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuMSFT 
-ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)  
 

@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_db_log_space_usage (Transact-SQL)"
-title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_log_space_usage (Transact-SQL)"
+description: sys.dm_db_log_space_usage (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_log_space_usage"
   - "sys.dm_db_log_space_usage_TSQL"
   - "dm_db_log_space_usage"
   - "dm_db_log_space_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_log_space_usage dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_space_usage (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns space usage information for the transaction log. 
   

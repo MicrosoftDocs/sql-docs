@@ -1,24 +1,22 @@
 ---
-description: "sys.destination_data_spaces (Transact-SQL)"
 title: "sys.destination_data_spaces (Transact-SQL)"
-ms.custom: ""
+description: sys.destination_data_spaces (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.destination_data_spaces"
   - "destination_data_spaces_TSQL"
   - "destination_data_spaces"
   - "sys.destination_data_spaces_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.destination_data_spaces catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

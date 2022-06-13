@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_exec_cached_plan_dependent_objects returns a row for each execution plan, common language runtime (CLR) execution plan, and cursor associated with a plan."
 title: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_cached_plan_dependent_objects returns a row for each execution plan, common language runtime (CLR) execution plan, and cursor associated with a plan.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_cached_plan_dependent_objects"
   - "dm_exec_cached_plan_dependent_objects_TSQL"
   - "sys.dm_exec_cached_plan_dependent_objects_TSQL"
   - "dm_exec_cached_plan_dependent_objects"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_cached_plan_dependent_objects dynamic management function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)

@@ -6,9 +6,11 @@ ms.author: rohitna
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
 ms.service: sql-database
 ms.subservice: security
-ms.topic: overview 
-ms.custom: sqldbrb=1, fasttrack-edit
-ms.reviewer: kendralittle, vanto, mathoma
+ms.topic: overview
+ms.custom:
+  - "sqldbrb=1"
+  - "fasttrack-edit"
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 01/20/2022
 ---
 

@@ -1,29 +1,27 @@
 ---
-description: "CREATE SYMMETRIC KEY (Transact-SQL)"
-title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SYMMETRIC KEY (Transact-SQL)"
+description: CREATE SYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE SYMMETRIC KEY"
   - "SYMMETRIC KEP"
   - "CREATE_SYMMETRIC_KEY_TSQL"
   - "SYMMETRIC_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE SYMMETRIC KEY statement"
   - "temporary symmetric keys [SQL Server]"
   - "symmetric keys [SQL Server], creating"
   - "symmetric keys [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

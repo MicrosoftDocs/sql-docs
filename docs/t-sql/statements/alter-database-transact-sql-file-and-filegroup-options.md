@@ -1,20 +1,19 @@
 ---
 title: "ALTER DATABASE File and Filegroups"
-description: Update a database's files and filegroups using Transact-SQL.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Update a database's files and filegroups using Transact-SQL.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/15/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "seo-lt-2019"
+f1_keywords:
   - "ADD FILE"
   - "ADD_FILE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting files"
   - "removing files"
   - "deleting filegroups"
@@ -40,9 +39,9 @@ helpviewer_keywords:
   - "files [SQL Server], deleting"
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options

@@ -1,29 +1,27 @@
 ---
-description: "CREATE EVENT NOTIFICATION (Transact-SQL)"
-title: "CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE EVENT NOTIFICATION (Transact-SQL)"
+description: CREATE EVENT NOTIFICATION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_EVENT_NOTIFICATION_TSQL"
   - "NOTIFICATION_TSQL"
   - "EVENT"
   - "NOTIFICATION"
   - "CREATE EVENT NOTIFICATION"
   - "EVENT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE EVENT NOTIFICATION statement"
   - "events [SQL Server], notifications"
   - "event notifications [SQL Server], creating"
+dev_langs:
+  - "TSQL"
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

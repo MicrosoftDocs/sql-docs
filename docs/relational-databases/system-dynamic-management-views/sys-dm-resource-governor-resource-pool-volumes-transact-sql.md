@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)"
-title: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)"
+description: sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_resource_pool_volumes_TSQL"
   - "dm_resource_governor_resource_pool_volumes_TSQL"
   - "dm_resource_governor_resource_pool_volumes"
   - "sys.dm_resource_governor_resource_pool_volumes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_resource_governor_resource_pool_volumes"
   - "sys.dm_resource_governor_resource_pool_volumes"
+dev_langs:
+  - "TSQL"
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

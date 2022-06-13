@@ -1,23 +1,21 @@
 ---
-description: "sysssispackages (Transact-SQL)"
-title: "sysssispackages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysssispackages (Transact-SQL)"
+description: sysssispackages (Transact-SQL)
+author: lrtoyou1223
+ms.author: lle
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdtspackages90_TSQL"
   - "sysdtspackages90"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysssispackages system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: lrtoyou1223
-ms.author: lle
 ---
 # sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -72,7 +72,7 @@ The stored procedure [sys.sp_copy_data_in_batches](/sql/relational-databases/sys
 In the script below, we're copying the data from the regular `Employees` table to the new updatable ledger table, `Employees_LedgerTable`. 
 
  ```sql
-sp_copy_data_in_batches @source_table_name = N'Employees' , @targe_table_name = N'Employees_LedgerTable'
+sp_copy_data_in_batches @source_table_name = N'Employees' , @target_table_name = N'Employees_LedgerTable'
 ```
 
 ## Next steps

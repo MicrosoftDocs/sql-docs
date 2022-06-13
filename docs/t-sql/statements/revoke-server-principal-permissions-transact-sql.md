@@ -1,26 +1,25 @@
 ---
 title: "REVOKE Server Principal Permissions"
-description: Revoke permissions on a SQL Server login.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Revoke permissions on a SQL Server login.
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "REVOKE statement, impersonation"
   - "permissions [SQL Server], impersonation"
   - "permissions [SQL Server], logins"
   - "impersonate [SQL Server], revoking"
   - "logins [SQL Server], revoking"
   - "REVOKE statement, logins"
+dev_langs:
+  - "TSQL"
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: VanMSFT
-ms.author: vanto
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

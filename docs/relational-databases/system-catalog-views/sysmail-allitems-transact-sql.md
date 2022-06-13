@@ -1,23 +1,21 @@
 ---
-description: "sysmail_allitems (Transact-SQL)"
-title: "sysmail_allitems (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmail_allitems (Transact-SQL)"
+description: sysmail_allitems (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmail_allitems_TSQL"
   - "sysmail_allitems"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmail_allitems database mail view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

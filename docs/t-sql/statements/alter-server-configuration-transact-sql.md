@@ -1,26 +1,24 @@
 ---
-description: "ALTER SERVER CONFIGURATION (Transact-SQL)"
-title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SERVER CONFIGURATION (Transact-SQL)"
+description: ALTER SERVER CONFIGURATION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER SERVER CONFIGURATION"
   - "ALTER_SERVER_CONFIGURATION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SERVER CONFIGURATION, ALTER"
   - "process affinity, setting"
   - "ALTER SERVER CONFIGURATION statement"
   - "setting process affinity"
+dev_langs:
+  - "TSQL"
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

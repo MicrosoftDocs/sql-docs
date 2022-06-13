@@ -1,27 +1,25 @@
 ---
-description: "sys.availability_groups_cluster (Transact-SQL)"
-title: "sys.availability_groups_cluster (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.availability_groups_cluster (Transact-SQL)"
+description: sys.availability_groups_cluster (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.availability_groups_cluster"
   - "availability_groups_cluster"
   - "availability_groups_cluster_TSQL"
   - "sys.availability_groups_cluster_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_groups_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
+dev_langs:
+  - "TSQL"
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

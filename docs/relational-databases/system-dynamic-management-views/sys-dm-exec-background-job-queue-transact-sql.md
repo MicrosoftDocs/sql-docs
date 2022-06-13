@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_exec_background_job_queue (Transact-SQL)"
 title: "sys.dm_exec_background_job_queue (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_background_job_queue (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_background_job_queue"
   - "sys.dm_exec_background_job_queue_TSQL"
   - "dm_exec_background_job_queue_TSQL"
   - "sys.dm_exec_background_job_queue"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_background_job_queue dynamic management function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_background_job_queue (Transact-SQL)

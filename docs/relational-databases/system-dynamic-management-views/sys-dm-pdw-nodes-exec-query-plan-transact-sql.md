@@ -1,16 +1,15 @@
 ---
 title: "sys.dm_pdw_nodes_exec_query_plan (Transact-SQL)"
-description: Dynamic management view that returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
-ms.custom: ""
-ms.date: "10/14/2019"
-ms.prod: sql 
-ms.technology: data-warehouse
-ms.reviewer: wiassaf
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+description: Dynamic management view that returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.
 author: jacinda-eng
 ms.author: jacindaeng
+ms.reviewer: wiassaf
+ms.date: "10/14/2019"
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 

@@ -1,25 +1,23 @@
 ---
-description: "sys.routes (Transact-SQL)"
-title: "sys.routes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.routes (Transact-SQL)"
+description: sys.routes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "routes"
   - "routes_TSQL"
   - "sys.routes"
   - "sys.routes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.routes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.routes (Transact-SQL)

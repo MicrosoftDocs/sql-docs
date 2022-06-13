@@ -1,21 +1,19 @@
 ---
-description: "CREATE LOGIN (Transact-SQL)"
 title: "CREATE LOGIN (Transact-SQL)"
-ms.custom: ""
+description: CREATE LOGIN (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 03/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_LOGIN_TSQL"
   - "CREATE LOGIN"
   - "LOGIN_TSQL"
   - "LOGIN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "passwords [SQL Server], logins"
   - "mapping logins [SQL Server]"
   - "logins [SQL Server], creating"
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE LOGIN (Transact-SQL)
 

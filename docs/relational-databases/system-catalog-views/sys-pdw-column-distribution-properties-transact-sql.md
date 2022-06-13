@@ -1,18 +1,17 @@
 ---
-description: "sys.pdw_column_distribution_properties (Transact-SQL)"
 title: "sys.pdw_column_distribution_properties (Transact-SQL)"
-ms.custom: seo-dt-2019
+description: sys.pdw_column_distribution_properties (Transact-SQL)
+author: ronortloff
+ms.author: rortloff
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

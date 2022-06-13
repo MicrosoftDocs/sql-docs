@@ -1,16 +1,18 @@
 ---
-title: Network Access Controls 
+title: Network Access Controls
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of how to manage and control network access for Azure SQL Database and Azure Synapse Analytics.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
-ms.custom: sqldbrb=3, devx-track-azurepowershell
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=3"
+  - "devx-track-azurepowershell"
 ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 03/09/2020
 ---
 

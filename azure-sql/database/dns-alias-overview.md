@@ -1,15 +1,16 @@
 ---
 title: DNS alias
 description: Your applications can connect to an alias for the name of the server for Azure SQL Database. Meanwhile, you can change the SQL Database the alias points to anytime, to facilitate testing and so on.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: seo-lt-2019 sqldbrb=1
-ms.devlang:
+ms.custom:
+  - "seo-lt-2019 sqldbrb=1"
 ms.topic: conceptual
 author: emlisa
 ms.author: emlisa
-ms.reviewer: kendralittle, mathoma, vanto
+ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 06/26/2019
 ---
 # DNS alias for Azure SQL Database

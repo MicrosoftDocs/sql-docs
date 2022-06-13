@@ -10533,7 +10533,7 @@ items:
       href: linux/quickstart-install-connect-suse.md
     - name: Install & Connect - Ubuntu
       href: linux/quickstart-install-connect-ubuntu.md
-    - name: Run & Connect - Docker
+    - name: Run & Connect - Container
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md

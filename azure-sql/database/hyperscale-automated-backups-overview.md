@@ -1,7 +1,7 @@
 ---
-title: Automatic, geo-redundant backups
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Azure SQL Database and Azure SQL Managed Instance automatically create a local database backup every few minutes and use Azure read-access geo-redundant storage for geo-redundancy.
+title: Automated backups for Hyperscale databases
+titleSuffix: Azure SQL Database 
+description: Automated backups for Hyperscale databases
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -17,7 +17,7 @@ ms.reviewer: wiassaf, mathoma, danil
 ms.date: 04/26/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Automated backups - Azure SQL Database & Azure SQL Managed Instance
+# Automated backups for Hyperscale databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article explains the differences when using the [automated backup](automated-backups-overview-sql-db.md) feature with Hyperscale databases in Azure SQL Database. 

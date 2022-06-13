@@ -8661,8 +8661,6 @@ items:
   - name: Distributed Replay
     href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Requirements
-      href: tools/distributed-replay/distributed-replay-requirements.md
     - name: Install
       href: tools/distributed-replay/install-distributed-replay.md
     - name: Complete the Post-Installation Steps

@@ -59429,6 +59429,11 @@
       "source_path": "docs/tools/distributed-replay/install-distributed-replay-overview.md",
       "redirect_url": "/sql/tools/distributed-replay/install-distributed-replay",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
+      "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
+      "redirect_document_id": false
     }
   ]
 }

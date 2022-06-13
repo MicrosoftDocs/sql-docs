@@ -36,12 +36,12 @@ dreplay status [-m controller] [-f status_interval]
 **-m** _controller_  
 Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.
 
-If the **-m** parameter is not specified, the local computer is used.
+If the **-m** parameter isn't specified, the local computer is used.
 
 **-f** _status_interval_  
 Specifies the frequency (in seconds) at which to display the status.
 
-If the **-f** parameter is not specified, the default interval is 30 seconds.
+If the **-f** parameter isn't specified, the default interval is 30 seconds.
 
 ## Examples
 

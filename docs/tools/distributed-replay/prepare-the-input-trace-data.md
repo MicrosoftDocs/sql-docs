@@ -50,7 +50,7 @@ For more information about the preprocess stage, see [SQL Server Distributed Rep
 
     4. Use the *controller_working_directory* parameter, **-d**, to specify where the intermediate file should be saved on the controller.
 
-    5. (Optional) Use the *config_file* parameter, **-c**, to specify location of the preprocess configuration file. Use this parameter to point to the new configuration file if you have modified a copy of the default preprocess configuration file.
+    5. (Optional) Use the *config_file* parameter, **-c**, to specify location of the preprocess configuration file. Use this parameter to point to the new configuration file if you've modified a copy of the default preprocess configuration file.
 
     6. (Optional) Use the *status_interval* parameter, **-f**, to specify if you want the administration tool to display status messages at a frequency different than 30 seconds.
 

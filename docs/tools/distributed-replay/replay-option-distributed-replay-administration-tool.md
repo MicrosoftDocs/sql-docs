@@ -39,7 +39,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 **-m** _controller_  
 Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.
 
-If the **-m** parameter is not specified, the local computer is used.
+If the **-m** parameter isn't specified, the local computer is used.
 
 **-d** _controller_working_dir_  
 Specifies the directory on the controller where the intermediate file will be stored. The **-d** parameter is required.
@@ -52,37 +52,37 @@ The following requirements apply:
 
 - The path must not end with a backslash "`\`".
 
-- UNC paths are not supported.
+- UNC paths aren't supported.
 
 **-o**  
 Captures the clients' replay activity and saves it to a result trace file in the path specified by the `<ResultDirectory>` element in the client configuration file, `DReplayClient.xml`.
 
-When the **-o** parameter is not specified, the result trace file is not generated. The console output returns summary information at the end of replay, but no other replay statistics are available.
+When the **-o** parameter isn't specified, the result trace file isn't generated. The console output returns summary information at the end of replay, but no other replay statistics are available.
 
 **-s** _target_server_  
 Specifies the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the distributed workload should be replayed against. You must specify this parameter in the format **server_name[\instance name]**.
 
-You cannot use "`localhost`" or "`.`" as the target server.
+You can't use "`localhost`" or "`.`" as the target server.
 
-The **-s** parameter is not required if the `<Server>` element is specified in the `<ReplayOptions>` section of the replay configuration file, `DReplay.exe.replay.config`.
+The **-s** parameter isn't required if the `<Server>` element is specified in the `<ReplayOptions>` section of the replay configuration file, `DReplay.exe.replay.config`.
 
 If the **-s** parameter is used, the `<Server>` element in the `<ReplayOptions>` section of the replay configuration file will be ignored.
 
 **-w** _clients_  
-This required parameter is a comma-separated list (without spaces) that specifies the computer names of clients that should participate in the distributed replay. IP addresses are not allowed. Be aware that the clients must already be registered with the controller.
+This required parameter is a comma-separated list (without spaces) that specifies the computer names of clients that should participate in the distributed replay. IP addresses aren't allowed. Be aware that the clients must already be registered with the controller.
 
 > [!NOTE]  
 > Each client registers with the controller that is specified in the client configuration file when the client service starts.
 
 **-c** _config_file_  
-Is the full path of the replay configuration file; used to specify the location when it is stored in a different location.
+Is the full path of the replay configuration file; used to specify the location when it's stored in a different location.
 
-The **-c** parameter is not required if you want to use the default values of the replay configuration file, `DReplay.exe.replay.config`.
+The **-c** parameter isn't required if you want to use the default values of the replay configuration file, `DReplay.exe.replay.config`.
 
 **-f** _status_interval_  
 Specifies the frequency (in seconds) at which to display the status.
 
-If **-f** is not specified, the default interval is 30 seconds.
+If **-f** isn't specified, the default interval is 30 seconds.
 
 ## Examples
 
@@ -98,7 +98,7 @@ In this example, the distributed replay derives much of its behavior from a modi
 
 - The **-c** parameter is used to point to the modified configuration file, `DReplay.exe.replay.config`.
 
-- The **-s** parameter is not required because the `<Server>` element is specified in the `<ReplayOptions>` element of the replay configuration file, `DReplay.exe.replay.config`.
+- The **-s** parameter isn't required because the `<Server>` element is specified in the `<ReplayOptions>` element of the replay configuration file, `DReplay.exe.replay.config`.
 
 The event replay stage is initiated with the following syntax, when the administration tool is run from a different computer than the controller:
 

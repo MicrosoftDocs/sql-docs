@@ -38,9 +38,9 @@ Install the Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] D
 
 - You can install the client service on up to 16 (physical or virtual) computers.
 
-- Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we do not recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.
+- Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we don't recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.
 
-- For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.
+- For performance testing scenarios, we don't recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.
 
 - After installation, the controller service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.
 
@@ -51,7 +51,7 @@ Install the Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] D
 
 - Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).
 
-- Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.
+- Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts aren't members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.
 
     > [!NOTE]  
     > You can use local user accounts if you are running the administration tool, controller service, and client service on the same computer.
@@ -82,7 +82,7 @@ Assuming you use the default file locations and a standard installation, the bas
 
 2. The **Setup Support Rules** page identifies issues that might occur when installing the SQL Server Setup support files. You must correct any Setup support failures before continuing with Setup.
 
-3. On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+3. On the **Product Key** page, select an option button to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 4. On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to Microsoft.
 
@@ -110,7 +110,7 @@ Assuming you use the default file locations and a standard installation, the bas
 
     - Network Services, Local Services, and System
 
-     Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.
+     Group accounts (local or domain) and other built-in accounts (like Everyone) aren't accepted.
 
 8. Optionally, select the ellipsis (...) button to change the shared feature directory path.
 
@@ -118,7 +118,7 @@ Assuming you use the default file locations and a standard installation, the bas
 
     2. On 64-bit computers, the default installation path is **C:\Program Files (x86)\\Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**
 
-9. When you are finished, select **Next**.
+9. When you're finished, select **Next**.
 
 10. On the **Installation Rules** page, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup validates your computer configuration. Once the validation process is completed, select **Next**.
 
@@ -126,7 +126,7 @@ Assuming you use the default file locations and a standard installation, the bas
 
 12. On the **Error Reporting** page, specify the information that you want to send to Microsoft to help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, option for error reporting is enabled.
 
-13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that you have specified.
+13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that you've specified.
 
 14. On the **Ready to Install the Program** page, select **Install**.
 
@@ -163,11 +163,11 @@ Use the parameters in the following table to develop command line scripts for in
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Service account for the Distributed Replay controller service.|Checks account and password|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Password for the Distributed Replay controller service account.|Checks account and password|  
-|/CTLRSTARTUPTYPE<br /><br /> **Optional**|Startup type for the Distributed Replay controller service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Optional**|Specify which users have permissions for the Distributed Replay controller service.|Set of user account strings using " " (space) for delimiter<br /><br /> **Important**: When you configure the Distributed Replay controller service, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:<br /><br /> Domain user account<br /><br /> User created local user account<br /><br /> Administrator<br /><br /> Administrator<br /><br /> Virtual account and MSA (Managed Service Account)<br /><br /> Network Services, Local Services, and System<br /><br /> <br /><br /> Note: Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.|  
+|/CTLRSTARTUPTYPE<br /><br /> **Optional**|Start up type for the Distributed Replay controller service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  
+|/CTLRUSERS<br /><br /> **Optional**|Specify which users have permissions for the Distributed Replay controller service.|Set of user account strings using " " (space) for delimiter<br /><br /> **Important**: When you configure the Distributed Replay controller service, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:<br /><br /> Domain user account<br /><br /> User created local user account<br /><br /> Administrator<br /><br /> Administrator<br /><br /> Virtual account and MSA (Managed Service Account)<br /><br /> Network Services, Local Services, and System<br /><br /> <br /><br /> Note: Group accounts (local or domain) and other built-in accounts (like Everyone) aren't accepted.|  
 |/CLTSVCACCOUNT<br /><br /> **Optional**|Service account for the Distributed Replay client service.|Checks account and password|  
 |/CLTSVCPASSWORD<br /><br /> **Optional**|Password for the Distributed Replay client service account.|Checks account and password|  
-|/CLTSTARTUPTYPE<br /><br /> **Optional**|Startup type for the Distributed Replay client service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **Optional**|Start up type for the Distributed Replay client service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **Optional**|The computer name that the client communicates with for the Distributed Replay Controller service.||  
 |/CLTWORKINGDIR<br /><br /> **Optional**|The working directory for the Distributed Replay Client service.|Valid path|  
 |/CLTRESULTDIR<br /><br /> **Optional**|The result directory for the Distributed Replay Client service.|Valid path|
@@ -213,7 +213,7 @@ For more information about how to use a configuration file, see [Install SQL Ser
 
 **Sample Syntax**
 
-Following is an example on how to specify the configuration file at the command prompt:
+Following is an example of how to specify the configuration file at the command prompt:
 
 ```dos
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  

@@ -22,7 +22,7 @@ The Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distribu
 
 ## Benefits of Distributed Replay
 
-Similar to  SQL Server Profiler, you can use Distributed Replay to replay a captured trace against an upgraded test environment. Unlike  SQL Server Profiler, Distributed Replay is not limited to replaying the workload from a single computer.
+Similar to  SQL Server Profiler, you can use Distributed Replay to replay a captured trace against an upgraded test environment. Unlike  SQL Server Profiler, Distributed Replay isn't limited to replaying the workload from a single computer.
 
 Distributed Replay offers a more scalable solution than SQL Server Profiler. With Distributed Replay, you can replay a workload from multiple computers and better simulate a mission-critical workload.
 

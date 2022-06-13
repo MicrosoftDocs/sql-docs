@@ -19,7 +19,7 @@ ms.date: 06/13/2022
 
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
 
-You can start a distributed replay with the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](../../tools/distributed-replay/prepare-the-input-trace-data.md).
+You can start a distributed replay with the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature after you've prepared the input trace data. For more information, see [Prepare the Input Trace Data](../../tools/distributed-replay/prepare-the-input-trace-data.md).
 
 Use the administration tool **replay** option to initiate the event replay stage of the distributed replay. This stage consists of two parts: the trace data dispatch and the starting and synchronizing of the distributed replay.
 
@@ -52,11 +52,11 @@ You can replay trace data in one of two sequencing modes: stress mode or synchro
 
     4. (Optional) Use the **-o** parameter to capture the replay activity in a result trace file on each client.
 
-    5. (Optional) Use the *target_server* parameter, **-s**, to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the distributed replay clients should replay the trace workload. This parameter is not required if you used the `<Server>` element to specify the target server in the `<ReplayOptions>` element of the replay configuration file.
+    5. (Optional) Use the *target_server* parameter, **-s**, to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the distributed replay clients should replay the trace workload. This parameter isn't required if you used the `<Server>` element to specify the target server in the `<ReplayOptions>` element of the replay configuration file.
 
-    6. Use the *clients* parameter, **-w**, to specify the distributed replay clients that should participate in the replay. List the client computer names, separated by commas. Note: IP addresses are not allowed.
+    6. Use the *clients* parameter, **-w**, to specify the distributed replay clients that should participate in the replay. List the client computer names, separated by commas. Note: IP addresses aren't allowed.
 
-    7. (Optional) Use the *config_file* parameter, **-c**, to specify location of the replay configuration file. Use this parameter to point to the new configuration file if you have modified a copy of the default replay configuration file.
+    7. (Optional) Use the *config_file* parameter, **-c**, to specify location of the replay configuration file. Use this parameter to point to the new configuration file if you've modified a copy of the default replay configuration file.
 
     8. (Optional) Use the *status_interval* parameter, **-f**, to specify if you want the administration tool to display status messages at a frequency other than 30 seconds.
 

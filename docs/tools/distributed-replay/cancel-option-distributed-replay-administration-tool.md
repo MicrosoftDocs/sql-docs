@@ -37,10 +37,10 @@ dreplay cancel [-m controller] [-q]
 **-m** *controller*  
 The computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.
 
-If the **-m** parameter is not specified, the local computer is used.
+If the **-m** parameter isn't specified, the local computer is used.
 
 **-q**  
-Quiet mode. Does not prompt for confirmation.
+Quiet mode. Doesn't prompt for confirmation.
 
 The **-q** parameter is optional.
 

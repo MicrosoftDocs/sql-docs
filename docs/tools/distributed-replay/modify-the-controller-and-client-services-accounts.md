@@ -17,7 +17,7 @@ ms.date: 06/13/2022
 
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
 
-In this topic, you will learn how to modify the Distributed Replay controller and client service accounts, and then reapply the access control lists (ACLs).
+In this topic, you'll learn how to modify the Distributed Replay controller and client service accounts, and then reapply the access control lists (ACLs).
 
 ## To start or stop the Distributed Replay services using Computer Management
 
@@ -45,13 +45,13 @@ In this topic, you will learn how to modify the Distributed Replay controller an
 
     - Network Services, Local Services, and System
 
-     Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.
+     Group accounts (local or domain) and other built-in accounts (like Everyone) aren't accepted.
 
 4. Start the Distributed Replay controller service.
 
 ### To modify the Distributed Replay client service
 
-1. Before you modify the Distributed Replay client service, make sure the client service account you are changing was specified during setup (in the CTLRUSERS parameter on the controller computer). If the client service account you are changing was not specified during setup, you must perform the following steps first:
+1. Before you modify the Distributed Replay client service, make sure the client service account you're changing was specified during setup (in the CTLRUSERS parameter on the controller computer). If the client service account you're changing wasn't specified during setup, you must perform the following steps first:
 
     1. Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service.
 

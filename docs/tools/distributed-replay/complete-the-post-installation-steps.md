@@ -19,7 +19,7 @@ ms.date: 06/13/2022
 
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
 
-After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.
+After you install Distributed Replay, you must modify the Distributed Replay controller and client services accounts.
 
 ## To complete the post-installation steps
 
@@ -37,4 +37,4 @@ After you install Distributed Replay you must modify the Distributed Replay cont
 
 ## .NET Framework Security
 
-You must have administrative permissions in order to install any of the Distributed Replay features. Only a SQL Server login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).
+You must have administrative permissions in order to install any of the Distributed Replay features. Only a SQL Server log in having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).

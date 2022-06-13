@@ -38,12 +38,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 **-m** _controller_  
 Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.
 
-If the **-m** parameter is not specified, the local computer is used.
+If the **-m** parameter isn't specified, the local computer is used.
 
 **-i** _input_trace_file_  
 Specifies the full path of the input trace file on the controller, such as `D:\Mytrace.trc`. The **-i** parameter is required.
 
-If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.
+If there are rollover files in the same directory, they'll be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.
 
 > [!NOTE]  
 > If you are using the administration tool on a different computer than the controller, you will need to copy the input trace files to the controller so that a local path can be used for this parameter.
@@ -59,29 +59,29 @@ The following requirements apply:
 
 - The path must not end with a backslash "`\`".
 
-- UNC paths are not supported.
+- UNC paths aren't supported.
 
 **-c** _config_file_  
 Is the full path of the preprocess configuration file; used to specify the location of the preprocess configuration file when stored in a different location. This parameter can be a UNC path, or can reside locally on the computer where you run the administration tool.
 
-The **-c** parameter is not required if no filtering is needed, or if you do not want to modify the maximum idle time.
+The **-c** parameter isn't required if no filtering is needed, or if you don't want to modify the maximum idle time.
 
 Without the **-c** parameter, the default preprocess configuration file, `DReplay.exe.preprocess.config`, is used.
 
 **-f** _status_interval_  
 Specifies the frequency (in seconds) at which to display status messages.
 
-If **-f** is not specified, the default interval is 30 seconds.
+If **-f** isn't specified, the default interval is 30 seconds.
 
 ## Examples
 
-In this example, the preprocess stage is initiated with all of the default settings. The value `localhost` indicates that the controller service is running on the same computer as the administration tool. The *input_trace_file* parameter specifies the location of the input trace data, `c:\mytrace.trc`. Because there is no trace file filtering involved, the **-c** parameter does have to be specified.
+In this example, the preprocess stage is initiated with all of the default settings. The value `localhost` indicates that the controller service is running on the same computer as the administration tool. The *input_trace_file* parameter specifies the location of the input trace data, `c:\mytrace.trc`. Because there's no trace file filtering involved, the **-c** parameter does have to be specified.
 
 ```dos
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```
 
-In this example, the preprocess stage is initiated and a modified preprocess configuration file is specified. Unlike the previous example, the **-c** parameter is used to point to the modified configuration file, if you have stored it in a different location. For example:
+In this example, the preprocess stage is initiated and a modified preprocess configuration file is specified. Unlike the previous example, the **-c** parameter is used to point to the modified configuration file, if you've stored it in a different location. For example:
 
 ```dos
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  

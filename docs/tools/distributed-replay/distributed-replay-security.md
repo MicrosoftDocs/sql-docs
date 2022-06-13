@@ -18,7 +18,7 @@ ms.date: 06/13/2022
 
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
 
-Before you install and use the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, you should review the important security information in this topic. This topic describes the post-installation security configuration steps that are required before you can use Distributed Replay. This topic also describes important considerations with regard to data protection and important removal steps.
+Before you install and use the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, you should review the important security information in this topic. This topic describes the post-installation security configuration steps that are required before you can use Distributed Replay. This topic also describes important considerations regarding data protection and important removal steps.
 
 ## User and Service Accounts  
 
@@ -26,8 +26,8 @@ The following table describes the accounts that are used for Distributed Replay.
 
 |User Account|Requirements|  
 |------------------|------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service account|Can be a domain user account or local user account. If you use a local user account, the administration tool, controller, and client must all be running on the same computer.<br /><br /> **\*\* Security Note \*\*** We recommend that the account is not a member of the local Administrators group in Windows.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service account|Can be a domain user account or local user account. If you use a local user account, the controller, client, and target SQL Server must all be running on the same computer.<br /><br /> **\*\* Security Note \*\*** We recommend that the account is not a member of the local Administrators group in Windows.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller service account|Can be a domain user account or local user account. If you use a local user account, the administration tool, controller, and client must all be running on the same computer.<br /><br /> **\*\* Security Note \*\*** We recommend that the account isn't a member of the local Administrators group in Windows.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service account|Can be a domain user account or local user account. If you use a local user account, the controller, client, and target SQL Server must all be running on the same computer.<br /><br /> **\*\* Security Note \*\*** We recommend that the account isn't a member of the local Administrators group in Windows.|  
 |Interactive user account that is used to run the Distributed Replay administration tool|Can be either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.|
 
 **Important**: When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:  
@@ -42,7 +42,7 @@ The following table describes the accounts that are used for Distributed Replay.
 
 - Network Services, Local Services, and System
 
-Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted. 
+Group accounts (local or domain) and other built-in accounts (like Everyone) aren't accepted. 
 
 To set the service accounts or their passwords after you install Distributed Replay, you can use the Windows Services tool. To change the service accounts associated with the Distributed Replay controller or client services, follow these steps:  
 
@@ -52,7 +52,7 @@ To set the service accounts or their passwords after you install Distributed Rep
 
     - Select **Start**, select **Run**, type **services.msc**, and then press ENTER.
 
-2. In the **Services** dialog box, right-click the service that you want to configure, and then click **Properties**.
+2. In the **Services** dialog box, right-click the service that you want to configure, and then select **Properties**.
 
 3. On the **Log On** tab, select **This account**.
 
@@ -99,7 +99,7 @@ The following table describes which DCOM permissions are required for the admini
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service accounts are used to connect to the workload's target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only Windows Authentication mode is supported for these connections. 
 
-After you install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service on a set of computers, the security principal used for those service accounts must be granted the sysadmin server role on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you intend to replay the trace workload against. This step is not performed automatically during Distributed Replay Setup. 
+After you install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service on a set of computers, the security principal used for those service accounts must be granted the sysadmin server role on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you intend to replay the trace workload against. This step isn't performed automatically during Distributed Replay Setup. 
 
 ## Data Protection  
 
@@ -120,7 +120,7 @@ In the Distributed Replay environment, the following user accounts are granted f
 
 We recommend that you take the following security precautions:  
 
-- Store the input trace data, output trace results, and database files in a location that uses the NTFS file system (NTFS), and apply the appropriate access control lists (ACLs). If it is needed, encrypt the data that is stored on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. Be aware that ACLs are not applied to the trace files and there is no data masking or obfuscation. You should delete these files quickly after use.
+- Store the input trace data, output trace results, and database files in a location that uses the NTFS file system (NTFS), and apply the appropriate access control lists (ACLs). If it's needed, encrypt the data that is stored on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. Be aware that ACLs aren't applied to the trace files and there's no data masking or obfuscation. You should delete these files quickly after use.
 
 - Apply the appropriate ACLs and retention policy to all intermediate and dispatch files that are generated by Distributed Replay.
 

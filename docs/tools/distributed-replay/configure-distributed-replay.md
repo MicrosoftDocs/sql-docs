@@ -63,8 +63,8 @@ The settings specified by the client configuration file include the following:
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Specifies the computer name of the controller. The client will attempt to register with the Distributed Replay environment by contacting the controller.|You can use "`localhost`" or "`.`" to refer to the local computer.|No. By default, the client tries to register with the controller instance that is running locally ("`.`"), if it exists.|  
-|Client working directory|`<WorkingDirectory>`|Is the local path on the client where the dispatch files are saved.<br /><br /> The files in this directory are overwritten on the next replay.|A full directory name, starting with the drive letter.|No. If no value is specified, the dispatch files will be saved in the same location as the default client configuration file. If a value is specified and that folder does not exist on the client, the client service will not start.|  
-|Client result directory|`<ResultDirectory>`|Is the local path on the client where the result trace file from the replay activity (for the client) is saved.<br /><br /> The files in this directory are overwritten on the next replay.|A full directory name, starting with the drive letter.|No. If no value is specified, the result trace file will be saved in the same location as the default client configuration file. If a value is specified and that folder does not exist on the client, the client service will not start.|  
+|Client working directory|`<WorkingDirectory>`|Is the local path on the client where the dispatch files are saved.<br /><br /> The files in this directory are overwritten on the next replay.|A full directory name, starting with the drive letter.|No. If no value is specified, the dispatch files will be saved in the same location as the default client configuration file. If a value is specified and that folder doesn't exist on the client, the client service won't start.|  
+|Client result directory|`<ResultDirectory>`|Is the local path on the client where the result trace file from the replay activity (for the client) is saved.<br /><br /> The files in this directory are overwritten on the next replay.|A full directory name, starting with the drive letter.|No. If no value is specified, the result trace file will be saved in the same location as the default client configuration file. If a value is specified and that folder doesn't exist on the client, the client service won't start.|  
 |Logging level|`<LoggingLevel>`|Is the logging level for the client service.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. By default, the value is `CRITICAL`.|
 
 ### Example
@@ -96,7 +96,7 @@ The preprocess configuration settings are specified in XML elements that are chi
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Include system session activities|`<IncSystemSession>`|Indicates whether system session activities during the capture will be included during replay.|`Yes` &#124; `No`|No. By default, the value is `No`.|  
-|Maximum idle time|`<MaxIdleTime>`|Caps the idle time to an absolute number (in seconds).|An integer that is >= -1.<br /><br /> `-1` indicates no change from the original value in the original trace file.<br /><br /> `0` indicates that there is some activity going on at any given point in time.|No. By default, the value is `-1`.|
+|Maximum idle time|`<MaxIdleTime>`|Caps the idle time to an absolute number (in seconds).|An integer that is >= -1.<br /><br /> `-1` indicates no change from the original value in the original trace file.<br /><br /> `0` indicates that there's some activity going on at any given point in time.|No. By default, the value is `-1`.|
 
 ### Example
 
@@ -130,7 +130,7 @@ The settings specified by the replay configuration file in the `<ReplayOptions>`
 
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s**_target server_ parameter with the **replay** option of the administration tool.|  
+|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You can't use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s**_target server_ parameter with the **replay** option of the administration tool.|  
 |Sequencing mode|`<SequencingMode>`|Specifies the mode that is used for event scheduling.|`synchronization` &#124; `stress`|No. By default, the value is `stress`.|  
 |Stress scale granularity|`<StressScaleGranularity>`|Specifies whether all connections on the Service Profile Identifier (SPID) should be scaled together (SPID) or independently (Connection) under stress mode.|SPID &#124; Connection|Yes. By default, the value is `SPID`.|  
 |Connect time scale|`<ConnectTimeScale>`|Is used to scale the connect time in stress mode.|An integer between `1` and `100`.|No. By default, the value is `100`.|  
@@ -176,17 +176,17 @@ The default replay configuration file:
 
 ### Possible Issue When Running With Synchronization Sequencing Mode
 
-You may encounter a symptom in which the replay functionality appears to "stall", or replays events very slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that do not exist in the restored target database.
+You may encounter a symptom in which the replay functionality appears to "stall", or replays events slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that don't exist in the restored target database.
 
 One example is a captured workload that uses WAITFOR, such as in Service Broker's WAITFOR RECEIVE statement. When using the synchronization sequencing mode, batches are replayed serially. If an INSERT occurs against the source database after the database backup, but before the replay capture trace is started, the WAITFOR RECEIVE issued during replay may have to wait the entire duration of the WAITFOR. Events set to be replayed after the WAITFOR RECEIVE will be stalled. This can result in the Batch Requests/sec performance monitor counter for the replay database target dropping to zero until the WAITFOR completes.
 
 If you need to use synchronization mode and wish to avoid this behavior, you must do the following:
 
-1. Quiesce the databases that you will be using as the replay targets.
+1. Quiesce the databases that you'll be using as the replay targets.
 
 2. Allow all pending activity to complete.
 
-3. Backup the databases and allow backups to complete.
+3. Back up the databases and allow backups to complete.
 
 4. Start the distributed replay trace capture and resume the normal workload.
 

@@ -13,9 +13,9 @@ ms.date: 06/13/2022
 
 # Distributed Replay Requirements
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Before using the Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, consider the product requirements that are outlined in this topic.
 
@@ -68,7 +68,7 @@ You can also create a custom trace template and use it to replay events with Dis
 
 - SQL:BatchStarting
 
-If you are replaying server-side cursors, the following events are also required:  
+If you're replaying server-side cursors, the following events are also required:  
 
 - CursorClose
 
@@ -80,7 +80,7 @@ If you are replaying server-side cursors, the following events are also required
 
 - CursorUnprepare
 
-If you are replaying server-side prepared SQL statements, the following events are also required:  
+If you're replaying server-side prepared SQL statements, the following events are also required:  
 
 - Exec Prepared SQL
 
@@ -159,7 +159,7 @@ We recommend that the target server be located in a test environment. To replay 
 
 - All logins and users on the target server must have the same permissions they had on the original server.
 
-- The database IDs on the target ideally should be the same as those on the source. However, if they are not the same, matching can be performed based on **DatabaseName** if it is present in the trace.
+- The database IDs on the target ideally should be the same as those on the source. However, if they aren't the same, matching can be performed based on **DatabaseName** if it's present in the trace.
 
 - The default database for each login that is contained in the trace data must be set (on the target server) to the respective target database of the login. For example, the trace data to be replayed contains activity for the login, **Fred**, in the database **Fred_Db** on the original instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, on the target server, the default database for the login, **Fred**, must be set to the database that matches **Fred_Db** (even if the database name is different). To set the default database of the login, use the `sp_defaultdb` system stored procedure.
 

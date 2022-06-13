@@ -10,24 +10,27 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/13/2022
 ---
 
 # Review the Replay Results
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
-  
- The location of where the result trace files are stored is specified by the `<ResultDirectory>` XML element in the client configuration file, `DReplayClient.xml`, located on each client. The trace files in the client result directory are overwritten on each replay.  
-  
- To specify what kind of output should be captured in the result trace files, modify the replay configuration file, `DReplay.exe.replay.config`. You can use the `<OutputOptions>` XML element to specify whether the row count or result set contents should be recorded.  
-  
- For more information about these configuration settings, see [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
-  
-## Event Classes Captured in Result Trace Files  
- The following table lists all of the event classes that are captured in the result trace data.  
-  
+[!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
+
+After the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).
+
+The location of where the result trace files are stored is specified by the `<ResultDirectory>` XML element in the client configuration file, `DReplayClient.xml`, located on each client. The trace files in the client result directory are overwritten on each replay.
+
+To specify what kind of output should be captured in the result trace files, modify the replay configuration file, `DReplay.exe.replay.config`. You can use the `<OutputOptions>` XML element to specify whether the row count or result set contents should be recorded.
+
+For more information about these configuration settings, see [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).
+
+## Event Classes Captured in Result Trace Files
+
+The following table lists all of the event classes that are captured in the result trace data.
+
 |Category|EventClass Name|Capture Frequency|Point of Capture|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Replayable Events|Audit Login|One time for each Audit Login event in the original trace data|Upon successful completion or failure of the event|  
@@ -39,22 +42,24 @@ After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVers
 ||Replay Result Set Event|One time for each SQL:BatchStarting and RPC:Starting event.<br /><br /> Only captured if the value of the `<RecordResultSet>` option in the replay configuration file was set to `Yes`.||  
 ||Replay Result Row Event|One time for each row in the result set for SQL:BatchStarting and RPC:Starting events.<br /><br /> Only captured if the value of the `<RecordResultSet>` option in the replay configuration file was set to `Yes`.||  
 |Errors and Warnings|Replay Internal Error|One time for each internal error|Upon internal error condition|  
-||Replay Provider Error|One time for each provider error|Upon provider error condition|  
-  
- Note the following:  
-  
--   For each event that is successfully replayed on the target server, there is one corresponding output event class.  
-  
--   For each event failure or cancellation, there may be multiple errors that are generated.  
-  
-## Event Class Column Mapping  
- The following figure lists which columns of the result trace are available for each type of event class that is captured during the replay.  
-  
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
-  
-## Column Descriptions for Result Trace  
- The following table describes the columns of the result trace data.  
-  
+||Replay Provider Error|One time for each provider error|Upon provider error condition|
+
+Note the following:
+
+- For each event that is successfully replayed on the target server, there is one corresponding output event class.
+
+- For each event failure or cancellation, there may be multiple errors that are generated.
+
+## Event Class Column Mapping
+
+The following figure lists which columns of the result trace are available for each type of event class that is captured during the replay.
+
+![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")
+
+## Column Descriptions for Result Trace
+
+The following table describes the columns of the result trace data.
+
 |Data Column Name|Data Type|Description|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|The name of the event class.|1|  
@@ -73,12 +78,11 @@ After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVers
 |LoginName|**nvarchar**|The user login name. This can be either a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the Microsoft Windows login credentials, in the format *domain_name*\\*user_name*.|14|  
 |CaptureHostName|**nvarchar**|The name of the computer on which the client service is running during capture.|15|  
 |ReplayHostName|**nvarchar**|The name of the computer on which the client is running during replay.|16|  
-|ApplicationName|**nvarchar**|The name of the client application that created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection during capture.|17|  
-  
-## See Also  
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+|ApplicationName|**nvarchar**|The name of the client application that created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection during capture.|17|
+
+## See also
+
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

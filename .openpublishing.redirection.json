@@ -59424,6 +59424,11 @@
       "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
       "redirect_url": "/sql/linux/quickstart-sql-server-containers-kubernetes",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/install-distributed-replay-overview.md",
+      "redirect_url": "/sql/tools/distributed-replay/install-distributed-replay",
+      "redirect_document_id": false
     }
   ]
 }

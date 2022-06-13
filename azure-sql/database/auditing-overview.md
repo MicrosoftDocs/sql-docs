@@ -1,15 +1,18 @@
 ---
 title: Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.reviewer: kendralittle, vanto, mathoma
-ms.custom: azure-synapse, sqldbrb=1
+ms.reviewer: wiassaf, vanto, mathoma
+ms.custom:
+  - "azure-synapse"
+  - "sqldbrb=1"
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

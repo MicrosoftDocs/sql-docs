@@ -1,16 +1,15 @@
 ---
 title: "sys.dm_pdw_nodes_exec_text_query_plan (Transact-SQL)"
 description: Dynamic management view that returns the Showplan in text format for a TSQL batch or for a specific statement within the batch.
-ms.custom: ""
-ms.date: "10/14/2019"
-ms.prod: sql 
-ms.technology: data-warehouse
-ms.reviewer: wiassaf
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: jacinda-eng
 ms.author: jacindaeng
+ms.reviewer: wiassaf
+ms.date: "10/14/2019"
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 

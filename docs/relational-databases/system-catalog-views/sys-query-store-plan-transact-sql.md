@@ -1,28 +1,26 @@
 ---
-description: "sys.query_store_plan (Transact-SQL)"
-title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.query_store_plan (Transact-SQL)"
+description: sys.query_store_plan (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "QUERY_STORE_PLAN_TSQL"
   - "SYS.QUERY_STORE_PLAN"
   - "SYS.QUERY_STORE_PLAN_TSQL"
   - "QUERY_STORE_PLAN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

@@ -1,17 +1,16 @@
 ---
-description: "sys.dm_pdw_exec_requests (Transact-SQL)"
 title: "sys.dm_pdw_exec_requests (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_pdw_exec_requests (Transact-SQL)
+author: jacinda-eng
+ms.author: jacindaeng
+ms.reviewer: wiassaf
 ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: wiassaf
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: jacinda-eng
-ms.author: jacindaeng
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 

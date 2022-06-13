@@ -1,28 +1,26 @@
 ---
-description: "SET NOCOUNT (Transact-SQL)"
 title: "SET NOCOUNT (Transact-SQL)"
-ms.custom: ""
+description: SET NOCOUNT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/09/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NOCOUNT"
   - "SET_NOCOUNT_TSQL"
   - "NOCOUNT_TSQL"
   - "SET NOCOUNT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NOCOUNT option"
   - "number of rows affected by statement"
   - "row affected by statements [SQL Server]"
   - "counting rows"
   - "SET NOCOUNT statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NOCOUNT (Transact-SQL)

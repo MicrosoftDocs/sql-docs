@@ -5,10 +5,9 @@ ms.custom: ""
 ms.date: 06/08/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_COLUMNSTORE_INDEX_TSQL"
   - "COLUMNSTORE INDEX"
   - "COLUMNSTORE_INDEX_TSQL"
@@ -19,15 +18,15 @@ f1_keywords:
   - "CREATE COLUMNSTORE INDEX"
   - "CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL"
   - "COLUMNSTORE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index creation [SQL Server], columnstore indexes"
   - "columnstore index, creating"
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)

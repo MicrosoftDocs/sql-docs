@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_os_child_instances (Transact-SQL)"
-title: "sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_child_instances (Transact-SQL)"
+description: sys.dm_os_child_instances (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/18/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_child_instances"
   - "sys.dm_os_child_instances_TSQL"
   - "dm_os_child_instances"
   - "dm_os_child_instances_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server state information [SQL Server]"
   - "sys.dm_os_child_instances dynamic management view"
   - "monitoring server health"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]

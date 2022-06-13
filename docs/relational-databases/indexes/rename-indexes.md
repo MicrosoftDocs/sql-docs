@@ -1,20 +1,18 @@
 ---
-description: "Rename Indexes"
-title: "Rename Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Rename Indexes"
+description: Rename Indexes
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "renaming indexes"
   - "index names [SQL Server]"
   - "indexes [SQL Server], renaming"
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Indexes

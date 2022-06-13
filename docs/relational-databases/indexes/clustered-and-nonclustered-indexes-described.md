@@ -1,18 +1,17 @@
 ---
 title: "Clustered and nonclustered indexes described"
-description: "Clustered and nonclustered indexes described"
+description: Clustered and nonclustered indexes described
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: 10/25/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Clustered and nonclustered indexes described

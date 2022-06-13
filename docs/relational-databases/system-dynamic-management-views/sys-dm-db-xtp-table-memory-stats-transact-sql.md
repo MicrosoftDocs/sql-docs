@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database."
 title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_xtp_table_memory_stats_TSQL"
   - "dm_db_xtp_table_memory_stats"
   - "sys.dm_db_xtp_table_memory_stats"
   - "dm_db_xtp_table_memory_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_table_memory_stats"
-  - "dm_db_xtp_table_memory_stats" 
-author: rwestMSFT
-ms.author: randolphwest
+  - "dm_db_xtp_table_memory_stats"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)

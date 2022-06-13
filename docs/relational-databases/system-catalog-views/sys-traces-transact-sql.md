@@ -1,25 +1,23 @@
 ---
-description: "sys.traces (Transact-SQL)"
-title: "sys.traces (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.traces (Transact-SQL)"
+description: sys.traces (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "traces"
   - "sys.traces_TSQL"
   - "sys.traces"
   - "traces_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.traces catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.traces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

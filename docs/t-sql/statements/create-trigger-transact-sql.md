@@ -1,19 +1,20 @@
 ---
 title: CREATE TRIGGER (Transact-SQL)
-description: "Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger."
+description: Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: "09/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE TRIGGER"
   - "TRIGGER"
   - "CREATE_TRIGGER_TSQL"
   - "TRIGGER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "recursive DML triggers [SQL Server]"
   - "CREATE TRIGGER statement"
   - "multiple triggers"
@@ -24,10 +25,9 @@ helpviewer_keywords:
   - "DDL triggers, creating"
   - "triggers [SQL Server], creating"
   - "database-scoped triggers [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
 ---
 
 # CREATE TRIGGER (Transact-SQL)

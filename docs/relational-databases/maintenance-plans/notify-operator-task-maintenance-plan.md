@@ -1,20 +1,18 @@
 ---
-description: "Notify Operator Task (Maintenance Plan)"
-title: "Notify Operator Task (Maintenance Plan) | Microsoft Docs"
-ms.custom: ""
+title: "Notify Operator Task (Maintenance Plan)"
+description: Notify Operator Task (Maintenance Plan)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.notifyoperator.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Notify Operator Task dialog box"
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Notify Operator Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

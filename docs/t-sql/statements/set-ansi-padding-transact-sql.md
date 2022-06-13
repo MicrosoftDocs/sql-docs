@@ -1,29 +1,27 @@
 ---
-description: "SET ANSI_PADDING (Transact-SQL)"
-title: "SET ANSI_PADDING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ANSI_PADDING (Transact-SQL)"
+description: SET ANSI_PADDING (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ANSI_PADDING_TSQL"
   - "ANSI_PADDING"
   - "SET_ANSI_PADDING_TSQL"
   - "SET ANSI_PADDING"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], short values"
   - "ANSI_PADDING option"
   - "short values [SQL Server]"
   - "SET ANSI_PADDING statement"
   - "trailing blanks"
+dev_langs:
+  - "TSQL"
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_PADDING (Transact-SQL)

@@ -1,14 +1,14 @@
 ---
-description: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
-ms.custom: ""
+description: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATABASE_ENCRYPTION_KEY_TSQL"
   - "ENCRYPTION_KEY_TSQL"
   - "sql13.swb.dbencryptionkeyo.f1"
@@ -19,15 +19,13 @@ f1_keywords:
   - "sql13.swb.dbencryptionkeyg.f1"
   - "CREATE DATABASE ENCRYPTION"
   - "CREATE_DATABASE_ENCRYPTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database encryption key"
   - "CREATE DATABASE ENCRYPTION KEY statement"
   - "database encryption key, create"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

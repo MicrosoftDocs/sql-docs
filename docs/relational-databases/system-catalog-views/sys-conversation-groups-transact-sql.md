@@ -1,25 +1,23 @@
 ---
-description: "sys.conversation_groups (Transact-SQL)"
-title: "sys.conversation_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.conversation_groups (Transact-SQL)"
+description: sys.conversation_groups (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "conversation_groups_TSQL"
   - "conversation_groups"
   - "sys.conversation_groups"
   - "sys.conversation_groups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.conversation_groups catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

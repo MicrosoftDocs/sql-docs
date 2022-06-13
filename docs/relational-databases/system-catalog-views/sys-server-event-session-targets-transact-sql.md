@@ -1,26 +1,24 @@
 ---
-description: "sys.server_event_session_targets (Transact-SQL)"
-title: "sys.server_event_session_targets (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_event_session_targets (Transact-SQL)"
+description: sys.server_event_session_targets (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_event_session_targets_TSQL"
   - "sys.server_event_session_targets_TSQL"
   - "sys.server_event_session_targets"
   - "server_event_session_targets"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_event_session_targets catalog view"
   - "xe"
+dev_langs:
+  - "TSQL"
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

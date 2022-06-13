@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_user_db_resource_governance (Transact-SQL)"
-title: "sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_user_db_resource_governance (Transact-SQL)"
+description: sys.dm_user_db_resource_governance (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/17/2019"
 ms.prod: sql
 ms.prod_service: sql-database
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.resource_governance"
   - "sys.resource_governance_TSQL"
   - "resource_governance"
   - "resource_governance_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.resource_governance catalog view"
-ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)

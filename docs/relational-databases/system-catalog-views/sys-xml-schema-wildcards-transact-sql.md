@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_wildcards (Transact-SQL)"
-title: "sys.xml_schema_wildcards (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_wildcards (Transact-SQL)"
+description: sys.xml_schema_wildcards (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_wildcards"
   - "sys.xml_schema_wildcards_TSQL"
   - "xml_schema_wildcards"
   - "xml_schema_wildcards_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_wildcards catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

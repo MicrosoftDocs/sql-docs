@@ -1,24 +1,23 @@
 ---
 title: "GRANT Availability Group Permissions"
-description: Grant permissions on an Always On availability group.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Grant permissions on an Always On availability group.
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "Availability Groups [SQL Server], permissions"
   - "GRANT statement, availability groups"
   - "granting permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
+dev_langs:
+  - "TSQL"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-author: VanMSFT
-ms.author: vanto
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

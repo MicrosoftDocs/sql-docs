@@ -62,11 +62,11 @@ Assuming you use the default file locations and a standard installation, the bas
 
 - On a 32-bit system:
 
-[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools
+    [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools
 
-     \- OR -
+    \- OR -
 
-     \<Share Feature Directory>\Tools\\(user-supplied alternative shared feature directory)
+    \<Share Feature Directory>\Tools\\(user-supplied alternative shared feature directory)
 
 - On a 64-bit system:
 

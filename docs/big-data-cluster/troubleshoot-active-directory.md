@@ -1,21 +1,22 @@
 ---
 title: Troubleshoot Active Directory domain group scope
 titleSuffix: SQL Server Big Data Cluster
-description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
+description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain when the deployment is stuck and not moving forward.
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: wiassaf
-ms.date: 07/09/2021
-ms.topic: conceptual
+ms.date: 06/15/2022
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom: kr2b-contr-experiment
 ---
 
 # Troubleshoot SQL Server Big Data Cluster Active Directory integration
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
+This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory (AD) mode.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
@@ -25,7 +26,7 @@ You started deploying SQL Server Big Data Clusters with AD mode however the depl
 
 The following example shows the deployment results in a bash shell.
 
-```
+```output
 The privacy statement can be viewed at:
 https://go.microsoft.com/fwlink/?LinkId=853010
  
@@ -57,7 +58,7 @@ kubectl get pods -n mssql-cluster
 
 The following list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created.
 
-```
+```output
 NAME              READY   STATUS    RESTARTS   AGE
 appproxy-6q4rm    2/2     Running   0          32m
 compute-0-0       3/3     Running   0          32m
@@ -97,13 +98,13 @@ zookeeper-2       2/2     Running   0          32m
 
 To identify why deployment quit without creating compute, data, or storage pods, check the following logs: 
 
-- Check `controller.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\control-<suffix>\controller\controller\<date>\controller.log`). Look for the following entry:
+- Check `controller.log` (*\<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\control-\<suffix>\controller\controller\\\<date>\controller.log*). Look for the following entry:
 
   `WARN | StatefulSet master is not ready with 0 ready pods and 3 unready pods `
 
-- Check `master-0` `provisioner.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\master-0\mssql-server\provisioner\provisioner.log`)
+- Check `master-0` `provisioner.log` (*\<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\master-0\mssql-server\provisioner\provisioner.log*)
 
-  ```
+  ```output
   ERROR | Failed to create sql login for domain user [<domain>.<top-level-domain>\<domain-group>]
     Traceback (most recent call last):
       File "/opt/provisioner/bin/scripts/provisioningpool.py", line 214, in executeNonQueries
@@ -124,7 +125,7 @@ In the example above, the deployment fails to create a login for the domain user
 
 ## Verify
 
-Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/activedirectory/get-adgroup/).
+Check the scope of the domain group (`<domain-group>`). Use [get-adgroup](/powershell/module/activedirectory/get-adgroup/).
 
 If the `<domain-group>` group scope is domain local (`DomainLocal`) deployment fails. 
 
@@ -175,4 +176,3 @@ $ClusterUsersGroupScope_Result
 ## Resolution
 
 To resolve the problem, create the AD groups with either universal or global scope and run the deployment again.
-

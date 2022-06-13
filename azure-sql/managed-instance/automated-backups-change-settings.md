@@ -1,7 +1,7 @@
 ---
-title: Automatic, geo-redundant backups
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Azure SQL Database and Azure SQL Managed Instance automatically create a local database backup every few minutes and use Azure read-access geo-redundant storage for geo-redundancy.
+title: Change automated backup settings 
+titleSuffix: Azure SQL Managed Instance
+description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API. 
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -21,6 +21,10 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article provides examples to modify short-term retention (STR) [automated backup settings](automated-backups-overview-sql-mi.md) for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option used for backups. 
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](automated-backups-change-settings.md)
+> * [Azure SQL Managed Instance](../managed-instance/automated-backups-change-settings.md)
 
 
 ## Change the short-term retention policy

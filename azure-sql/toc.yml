@@ -385,6 +385,8 @@
         href: database/service-tier-hyperscale.md
       - name: Hyperscale architecture
         href: database/hyperscale-architecture.md
+      - name: Hyperscale backups 
+        href: database/hyperscale-automated-backups-overview.md
       - name: FAQ
         displayName: Hyperscale frequently asked questions
         href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
@@ -483,6 +485,14 @@
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
         href: database/disaster-recovery-drills.md
+      - name: Staged backup examples
+        items: 
+        - name: (1) Include w/ differences section
+          href: database/automated-backups-overview-sql-db.md
+        - name: (2) Duplicate article
+          href: database/automated-backups-overview-duplicate.md
+        - name: (3) Include w/ tabs
+          href: database/automated-backups-overview-sql-db-include-tabs.md
 
     - name: SQL Data Sync
       items:
@@ -670,6 +680,8 @@
 
     - name: Business continuity
       items: 
+      - name: Change automated backup settings
+        href: database/automated-backups-change-settings.md
       - name: Configure backup retention using Azure Blob storage
         href: database/long-term-backup-retention-configure.md
       - name: Create auto-failover group
@@ -1002,6 +1014,14 @@
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: Staged backup examples
+      items: 
+      - name: (1) Include w/ differences section
+        href: managed-instance/automated-backups-overview-sql-mi.md
+      - name: (2) Duplicate article
+        href: managed-instance/automated-backups-overview-duplicate.md
+      - name: (3) Include w/ tabs
+        href: managed-instance/automated-backups-overview-sql-mi-include-tabs.md
     - name: Management operations
       items:
       - name: Overview
@@ -1304,6 +1324,8 @@
 
     - name: Configure business continuity 
       items: 
+      - name: Change backup settings
+        href: managed-instance/automated-backups-change-settings.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
       - name: Monitor back up

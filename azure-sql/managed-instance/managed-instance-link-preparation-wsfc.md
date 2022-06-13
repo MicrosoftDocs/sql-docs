@@ -11,7 +11,7 @@ ms.topic: guide
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/06/2022
+ms.date: 06/09/2022
 ---
 
 # Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link
@@ -45,12 +45,13 @@ Both methods are described below.
 
 The simplest method to create a local single-node cluster is through executing a simple PowerShell command on the Windows Server OS hosting SQL Server. This method has limitations as it is intended for single-server machines not joined in a domain. Creating a cluster using this method won't allow you to administer it using the graphical user interface Failover Cluster Manager.
 
-If you need a quick way to create a single-node cluster on your machine, execute the following PowerShell command:
+If you need a quick way to create a single-node cluster on your machine, execute the below provided PowerShell command. Replace:
+- `<ClusterName>` in the script with your desired cluster name. The name should be a single word, with no spaces or special characters (for example `WSFCluster`)
 
 ```powershell
 # Run as Administrator in PowerShell on Windows Server OS hosting the SQL Server
 # This creates a single-node cluster on the host OS, not joined in the domain
-New-Cluster -Name "WSFCluster" -AdministrativeAccessPoint None -Verbose -Force
+New-Cluster -Name "<ClusterName>" -AdministrativeAccessPoint None -Verbose -Force
 ```
 
 In case you need to remove the cluster in the future, for some reason, this can only be done with PowerShell command `Remove-Cluster`.

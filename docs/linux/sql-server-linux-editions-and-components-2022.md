@@ -198,7 +198,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Feature Name|Enterprise|Standard|Web|Express|
 | --- | --- | --- | --- | --- |
 |Spatial indexes|Yes|Yes|Yes|Yes|
-|Planar and geodetic datatypes|Yes|Yes|Yes|Yes|
+|Planar and geodetic data types|Yes|Yes|Yes|Yes|
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|
 
@@ -210,7 +210,7 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 |-----|-----|
 | **Azure support** | Azure Arc agent |
 | | Azure Synapse Link |
-| | Azure Purview integration |
+| **Data governance** | Microsoft Purview integration |
 | **Database engine** | Merge replication |
 | | Stretch DB |
 | | Distributed query with third-party connections |

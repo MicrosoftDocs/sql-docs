@@ -1,21 +1,17 @@
 ---
+title: "Attributes and Name Properties Example (VC++)"
 description: "Attributes and Name Properties Example (VC++)"
-title: "Attributes and Name Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attributes property [ADO], VC++ example"
-  - "Name property [ADO], VC++ example"
-ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Attributes property [ADO], VC++ example"
+  - "Name property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Attributes and Name Properties Example (VC++)
 This example displays the value of the [Attributes](./attributes-property-ado.md) property for [Connection](./connection-object-ado.md), [Field](./field-object.md), and [Property](./property-object-ado.md) objects. It uses the [Name](./name-property-ado.md) property to display the name of each **Field** and **Property** object.  

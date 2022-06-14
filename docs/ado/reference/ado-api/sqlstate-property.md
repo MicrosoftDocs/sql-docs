@@ -1,23 +1,19 @@
 ---
+title: "SQLState Property"
 description: "SQLState Property"
-title: "SQLState Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Error::GetSQLState"
   - "Error::SQLState"
   - "Error::get_SQLState"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLState property"
-ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # SQLState Property
 Indicates the SQL state for a given [Error](./error-object.md) object.  

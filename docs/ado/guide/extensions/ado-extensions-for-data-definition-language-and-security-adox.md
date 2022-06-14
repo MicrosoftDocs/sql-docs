@@ -1,16 +1,12 @@
 ---
+title: "ADO Extensions for Data Definition Language and Security (ADOX)"
 description: "ADO Extensions for Data Definition Language and Security (ADOX)"
-title: "ADO Extensions for Data Definition Language and Security (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
 ---
 # ADO Extensions for Data Definition Language and Security (ADOX)
 This section contains the following topics.  

@@ -1,22 +1,18 @@
 ---
+title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB)"
 description: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB)"
-title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CopyRecord method [ADO], Visual Basic example"
   - "SaveToFile method [ADO], Visual Basic example"
   - "CopyTo method [ADO], Visual Basic example"
-ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # CopyRecord, CopyTo, and SaveToFile Methods Example (VB)
 This example demonstrates how to create copies of a file using [Stream](./stream-object-ado.md) or [Record](./record-object-ado.md) objects. One copy is made to a Web folder for Internet publishing. Other properties and methods shown include [Stream Type](./type-property-ado-stream.md), **Open**, [LoadFromFile](./loadfromfile-method-ado.md), and [Record Open](./open-method-ado-record.md).  

@@ -1,22 +1,18 @@
 ---
+title: "NumericScale Property (ADO)"
 description: "NumericScale Property (ADO)"
-title: "NumericScale Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Parameter::NumericScale"
-  - "Field20::NumericScale"
-helpviewer_keywords: 
-  - "NumericScale property [ADO]"
-ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Parameter::NumericScale"
+  - "Field20::NumericScale"
+helpviewer_keywords:
+  - "NumericScale property [ADO]"
+apitype: "COM"
 ---
 # NumericScale Property (ADO)
 Indicates the scale of numeric values in a [Parameter](./parameter-object.md) or [Field](./field-object.md) object.  

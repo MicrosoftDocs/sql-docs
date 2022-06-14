@@ -1,18 +1,14 @@
 ---
+title: "Key Object Properties, Methods, and Events"
 description: "Key Object Properties, Methods, and Events"
-title: "Key Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Key object [ADOX], members"
-ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Key object [ADOX], members"
 ---
 # Key Object Properties, Methods, and Events
 ## Properties/Collections  

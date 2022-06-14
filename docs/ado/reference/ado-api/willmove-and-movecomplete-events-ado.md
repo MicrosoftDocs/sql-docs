@@ -1,25 +1,21 @@
 ---
+title: "WillMove and MoveComplete Events (ADO)"
 description: "WillMove and MoveComplete Events (ADO)"
-title: "WillMove and MoveComplete Events (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset::MoveComplete"
   - "WillMove"
   - "MoveComplete"
   - "Recordset::WillMove"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MoveComplete event [ADO]"
   - "WillMove event [ADO]"
-ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # WillMove and MoveComplete Events (ADO)
 The **WillMove** event is called before a pending operation changes the current position in the [Recordset](./recordset-object-ado.md). The **MoveComplete** event is called after the current position in the **Recordset** changes.  

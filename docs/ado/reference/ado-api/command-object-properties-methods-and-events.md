@@ -1,18 +1,14 @@
 ---
+title: "Command Object Properties, Methods, and Events"
 description: "Command Object Properties, Methods, and Events"
-title: "Command Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Command object [ADO], members"
-ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Command object [ADO], members"
 ---
 # Command Object Properties, Methods, and Events
 ## Properties/Collections  

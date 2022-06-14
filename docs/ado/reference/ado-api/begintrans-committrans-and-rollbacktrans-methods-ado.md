@@ -1,28 +1,24 @@
 ---
+title: "BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)"
 description: "BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)"
-title: "BeginTrans, CommitTrans, and RollbackTrans Methods (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::raw_RollbackTrans"
   - "Connection15::CommitTrans"
   - "Connection15::raw_CommitTrans"
   - "Connection15::raw_BeginTrans"
   - "Connection15::BeginTrans"
   - "Connection15::RollbackTrans"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BeginTrans method [ADO]"
   - "CommitTrans method [ADO]"
   - "RollbackTrans method [ADO]"
-ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)
 These transaction methods manage transaction processing within a [Connection](./connection-object-ado.md) object as follows:  

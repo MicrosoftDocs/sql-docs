@@ -1,20 +1,16 @@
 ---
+title: "Indexes Append Method Example (VC++)"
 description: "Indexes Append Method Example (VC++)"
-title: "Indexes Append Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Indexes Append method [ADOX], VC++ example"
-ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Indexes Append method [ADOX], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Indexes Append Method Example (VC++)
 The following code demonstrates how to create a new index. The index is on two columns in the table.  

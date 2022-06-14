@@ -871,10 +871,6 @@
           href: database/scripts/add-database-to-failover-group-cli.md
         - name: Pooled database
           href: database/scripts/add-elastic-pool-to-failover-group-cli.md
-      - name: Auditing and threat detection
-        items:
-        - name: Configure auditing and threat-detection
-          href: database/scripts/auditing-threat-detection-cli.md
       - name: Database back up, restore, copy, and import
         items:
         - name: Back up a database

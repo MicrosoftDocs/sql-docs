@@ -517,7 +517,17 @@
         },
         {
           "source_path_from_root": "/azure-sql/database/scripts/sql-database-auditing-and-threat-detection-cli.md",
-          "redirect_url": "/azure/azure-sql/database/scripts/auditing-threat-detection-cli",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
+          "redirect_document_id": false
+        },
+        {
+          "source_path_from_root": "/azure-sql/database/scripts/auditing-threat-detection-cli.md",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
+          "redirect_document_id": false
+        },        
+        {
+          "source_path_from_root": "/azure-sql/database/scripts/auditing-threat-detection-powershell-configure.md",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
           "redirect_document_id": false
         },
         {

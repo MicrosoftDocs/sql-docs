@@ -46,6 +46,7 @@ SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need 
 | Data Classification | Improvements to Data Classification user interface. |
 | Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
+| Query Editor | Added a dialog to allow users to cancel the transaction count check if it takes longer than two seconds when closing the query editor window. |
 | Query Tuning Advisor | Updated user interface for improved accessibility. |
 | Showplan | The Showplan XML schema has been updated to include new attributes related to the Query Store Hint feature. |
 

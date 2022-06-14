@@ -96,10 +96,10 @@ select
     end as 'HadrStatus'
 ```
 
-The above query will display if AlwaysOn availability group is enabled, or not, on your SQL Server.
+The above query will display if Always On availability group is enabled, or not, on your SQL Server.
 
 >[!IMPORTANT]
-> For SQL Server 2016, if you need to enable AlwaysOn availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
+> For SQL Server 2016, if you need to enable Always On availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
 
 If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
@@ -110,11 +110,11 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/sql-server-configuration-manager-sql-server-properties.png" alt-text="Screenshot that shows SQL Server Configuration Manager, with selections for opening properties for the service.":::
 
 1. Go to the **Always On Availability Groups** tab. 
-1. Select the **Enable AlwaysOn Availability Groups** checkbox, and then select **OK**. 
+1. Select the **Enable Always On Availability Groups** checkbox, and then select **OK**. 
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-    - If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
+    - If using **SQL Server 2016**, and if Enable Always On Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
 
 1. Select **OK** in the dialog
 1. Restart the SQL Server service.

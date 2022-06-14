@@ -9,7 +9,7 @@ ms.topic: how-to
 author: rothja
 ms.author: jroth
 ms.reviewer: mathoma
-ms.date: 1/19/2022
+ms.date: 6/14/2022
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 

@@ -9,11 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/13/2022
+monikerRange: "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15"
 ---
 
 # Modify the controller and client services accounts
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver2016-2019-only](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
 [!INCLUDE [distributed-replay-sql-server-2022](../../includes/distributed-replay-sql-server-2022.md)]
 

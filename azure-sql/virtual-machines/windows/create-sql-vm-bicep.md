@@ -14,7 +14,7 @@ ms.subservice: deployment
 
 This quickstart shows you how to use Bicep to create an SQL Server on Azure Virtual Machine (VM).
 
-[!INCLUDE [About Bicep](../../includes/resource-manager-quickstart-bicep-introduction.md)]
+[Bicep](/azure/azure-resource-manager/bicep/overview) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. Bicep offers the best authoring experience for your infrastructure-as-code solutions in Azure. 
 
 ## Prerequisites
 

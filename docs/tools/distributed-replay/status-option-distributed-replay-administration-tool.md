@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/13/2022
-monikerRange: "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15"
+monikerRange:  ">= sql-server-2016 || <= sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
 ---
 
 # Status Option (Distributed Replay Administration Tool)

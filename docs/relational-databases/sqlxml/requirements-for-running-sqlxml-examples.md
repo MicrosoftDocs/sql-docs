@@ -17,7 +17,7 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requirements for Running SQLXML Examples
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The [SQLXML 4.0 Programming](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) section provides numerous examples. This topic lists requirements for creating working samples from these examples.  
   
  To create working samples using the SQLXML 4.0 examples, you need to have the following installed.  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "status information [SQL Server], log shipping"
   - "monitoring log shipping [SQL Server]"
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Monitor Log Shipping (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -23,6 +23,10 @@ This article provides details about updates, improvements, and bug fixes for the
 
 Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 
+- Release number: 1.37.0
+- Release date: June 15, 2022
+
+
 #### What's new in 1.37.0
 
 | New Item | Details |

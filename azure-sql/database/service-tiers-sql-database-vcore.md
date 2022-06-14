@@ -80,7 +80,7 @@ Compute tier options in the vCore model include the provisioned and [serverless]
 
 ## Hardware configuration
 
-Recommended hardware configurations in the vCore model include Gen5 (standard-series), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
+Recommended hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
 Certain hardware configurations such as Gen5 may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
@@ -98,7 +98,7 @@ For regions where Gen4/Gen5 is available, see [Gen4/Gen5 availability](#gen4gen5
 
 - Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
 - Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Gen5, at lower cost.
-- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on Gen5 (standard-series).
+- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
 

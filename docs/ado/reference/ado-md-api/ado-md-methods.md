@@ -1,19 +1,15 @@
 ---
+title: "ADO MD Methods"
 description: "ADO MD Methods"
-title: "ADO MD Methods | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO MD, methods"
-  - "methods [ADO MD]"
-ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD, methods"
+  - "methods [ADO MD]"
 ---
 # ADO MD Methods
 

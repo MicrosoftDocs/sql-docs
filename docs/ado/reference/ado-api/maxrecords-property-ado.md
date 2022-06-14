@@ -1,21 +1,17 @@
 ---
+title: "MaxRecords Property (ADO)"
 description: "MaxRecords Property (ADO)"
-title: "MaxRecords Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::MaxRecords"
-helpviewer_keywords: 
-  - "MaxRecords property [ADO]"
-ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::MaxRecords"
+helpviewer_keywords:
+  - "MaxRecords property [ADO]"
+apitype: "COM"
 ---
 # MaxRecords Property (ADO)
 Indicates the maximum number of records to return to a [Recordset](./recordset-object-ado.md) from a query.  

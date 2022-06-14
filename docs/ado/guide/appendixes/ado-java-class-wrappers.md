@@ -1,18 +1,14 @@
 ---
+title: "ADO Java Class Wrappers"
 description: "ADO Java Class Wrappers"
-title: "ADO Java Class Wrappers | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "class wrappers [ADO]"
-ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "class wrappers [ADO]"
 ---
 # ADO Java Class Wrappers
 This code declares an instance of the ADO [Recordset](../../reference/ado-api/recordset-object-ado.md) class wrapper and initializes it, all on the same line of code. Further, it declares variables for each of the arguments in the [Open](../../reference/ado-api/open-method-ado-recordset.md) method, especially for [LockType](../../reference/ado-api/locktype-property-ado.md) and [CursorType](../../reference/ado-api/cursortype-property-ado.md) (because Java doesn't support enumerated types). It opens and closes the **Recordset** object. Setting Rs1 to NULL merely schedules that variable to be released when Java performs its systematic and intermittent release of unused objects.  

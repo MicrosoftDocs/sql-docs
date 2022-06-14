@@ -1,20 +1,16 @@
 ---
+title: "RDS Tutorial (VBScript)"
 description: "RDS Tutorial (VBScript)"
-title: "RDS Tutorial (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "RDS tutorial [ADO], VBScript"
-ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS tutorial [ADO], VBScript"
+dev_langs:
+  - "VB"
 ---
 # RDS Tutorial (VBScript)
 This is the RDS Tutorial, written in Microsoft Visual Basic Scripting Edition. For a description of the purpose of this tutorial, see the [RDS Tutorial](./rds-tutorial.md).  

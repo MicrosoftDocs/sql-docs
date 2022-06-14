@@ -1,20 +1,16 @@
 ---
+title: "Microsoft OLE DB Provider for SQL Server"
 description: "Microsoft OLE DB Provider for SQL Server Overview"
-title: "Microsoft OLE DB Provider for SQL Server | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for SQL Server"
   - "OLE DB provider for SQL Server [ADO]"
   - "SQLOLEDB [ADO]"
-ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: rothja
-ms.author: jroth
 ---
 # Microsoft OLE DB Provider for SQL Server Overview
 The Microsoft OLE DB Provider for SQL Server, SQLOLEDB, allows ADO to access Microsoft SQL Server.

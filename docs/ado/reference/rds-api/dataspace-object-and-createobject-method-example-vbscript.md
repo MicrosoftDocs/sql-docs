@@ -1,21 +1,17 @@
 ---
+title: "DataSpace Object and CreateObject Method Example (VBScript)"
 description: "DataSpace Object and CreateObject Method Example (VBScript)"
-title: "DataSpace Object and CreateObject Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataSpace object [RDS], VBScript example"
-  - "CreateObject method [ADO], VBScript example"
-ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataSpace object [RDS], VBScript example"
+  - "CreateObject method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # DataSpace Object and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

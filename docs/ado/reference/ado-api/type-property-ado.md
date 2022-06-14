@@ -1,22 +1,18 @@
 ---
+title: "Type Property (ADO)"
 description: "Type Property (ADO)"
-title: "Type Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Parameter::Type"
-  - "Field20::Type"
-helpviewer_keywords: 
-  - "Type property [ADO]"
-ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Parameter::Type"
+  - "Field20::Type"
+helpviewer_keywords:
+  - "Type property [ADO]"
+apitype: "COM"
 ---
 # Type Property (ADO)
 Indicates the operational type or data type of a [Parameter](./parameter-object.md), [Field](./field-object.md), or [Property](./property-object-ado.md) object.  

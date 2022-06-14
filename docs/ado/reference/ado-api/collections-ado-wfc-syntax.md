@@ -1,21 +1,17 @@
 ---
+title: "Collections (ADO - WFC Syntax)"
 description: "Collections (ADO - WFC Syntax)"
-title: "Collections (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syntax indexes [ADO], ADO/WFC"
   - "collections [ADO], ADO/WFC syntax"
   - "ADO/WFC syntax index [ADO]"
-ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Collections (ADO - WFC Syntax)
 **package com.ms.wfc.data**  

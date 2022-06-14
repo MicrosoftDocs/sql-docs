@@ -1,19 +1,15 @@
 ---
+title: "Writing Your Own Customized Handler"
 description: "Writing Your Own Customized Handler"
-title: "Writing Your Own Customized Handler | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DataFactory handler in RDS [ADO]"
-  - "customized handler in RDS [ADO]"
-ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DataFactory handler in RDS [ADO]"
+  - "customized handler in RDS [ADO]"
 ---
 # Writing Your Own Customized Handler
 You may want to write your own handler if you are an IIS server administrator who wants the default RDS support, but more control over user requests and access rights.  

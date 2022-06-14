@@ -1,18 +1,14 @@
 ---
+title: "DataControl Object (RDS) Properties, Methods, and Events"
 description: "DataControl Object (RDS) Properties, Methods, and Events"
-title: "DataControl Object (RDS) Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "DataControl object [ADO], members"
-ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataControl object [ADO], members"
 ---
 # DataControl Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

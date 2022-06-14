@@ -1,22 +1,18 @@
 ---
+title: "Source Property (ADO MD)"
 description: "Source Property (ADO MD)"
-title: "Source Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Cellset::Source"
-  - "Source"
-helpviewer_keywords: 
-  - "Source property [ADO MD]"
-ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Cellset::Source"
+  - "Source"
+helpviewer_keywords:
+  - "Source property [ADO MD]"
+apitype: "COM"
 ---
 # Source Property (ADO MD)
 Indicates the source for the data in the [cellset](./cellset-object-ado-md.md).  

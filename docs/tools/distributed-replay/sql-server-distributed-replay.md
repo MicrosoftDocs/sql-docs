@@ -10,6 +10,7 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 06/13/2022
+monikerRange: "<= sql-server-2019"
 ---
 
 # SQL Server Distributed Replay

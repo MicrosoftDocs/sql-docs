@@ -7,4 +7,4 @@ ms.date: 06/13/2022
 ---
 
 > [!IMPORTANT]
-> SQL Server Distributed Replay is not installed with SQL Server 2022. SQL Server Distributed Replay is installed separately for SQL Server 2022.
+> SQL Server Distributed Replay is not available with SQL Server 2022 (16.x) Preview.

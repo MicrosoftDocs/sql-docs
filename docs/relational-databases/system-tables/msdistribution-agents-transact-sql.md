@@ -1,23 +1,21 @@
 ---
-description: "MSdistribution_agents (Transact-SQL)"
-title: "MSdistribution_agents (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdistribution_agents (Transact-SQL)"
+description: MSdistribution_agents (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdistribution_agents_TSQL"
   - "MSdistribution_agents"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdistribution_agents system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysnotifications (Transact-SQL)"
-title: "dbo.sysnotifications (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysnotifications (Transact-SQL)"
+description: dbo.sysnotifications (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysnotifications_TSQL"
   - "sysnotifications"
   - "sysnotifications_TSQL"
   - "dbo.sysnotifications"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysnotifications system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

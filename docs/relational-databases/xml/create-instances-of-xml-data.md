@@ -2,7 +2,7 @@
 title: Create instances of XML data
 description: Learn how to create instances of XML data using bulk load, constant assignments, the SELECT statement and FOR XML clause, or by type casting string instances.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "generating XML instances [SQL Server]"
   - "XML [SQL Server], generating instances"
   - "white space [XML in SQL Server]"
-ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -60,7 +59,7 @@ FROM OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x);
 
 ### Type cast CLR user-defined types
 
- If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more information about the XML serialization of a CLR user-defined type, see [XML Serialization from CLR Database Objects](/dotnet/standard/serialization/introducing-xml-serialization).
+If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more information about the XML serialization of a CLR user-defined type, see [XML Serialization from CLR Database Objects](/dotnet/standard/serialization/introducing-xml-serialization).
 
 ### Handle white space in typed XML
 
@@ -137,7 +136,7 @@ SELECT @x;
 
 ## Use the SELECT statement with a FOR XML clause
 
- You can use the FOR XML clause in a SELECT statement to return results as XML. For example:
+You can use the FOR XML clause in a SELECT statement to return results as XML. For example:
 
 ```sql
 DECLARE @xmlDoc XML;
@@ -183,7 +182,7 @@ GO
 
 For more information about FOR XML, see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).
 
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns **xml** data type instances to the client as a result of different server constructs such as FOR XML queries that use the TYPE directive, or where the **xml** data type is used to return XML from SQL columns, variables, and output parameters. In client application code, the ADO.NET provider requests that this **xml** data type information be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data returns as a string type. In any case, the client provider will always be able to handle either form of XML.
 
 ## Use constant assignments
@@ -206,7 +205,7 @@ CREATE TABLE T(c1 INT PRIMARY KEY, c2 XML);
 INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>');
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > For typed XML, the XML is validated against the specified schema. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
 
 ## Use bulk load

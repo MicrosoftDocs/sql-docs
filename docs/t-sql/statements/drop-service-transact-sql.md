@@ -1,27 +1,25 @@
 ---
-description: "DROP SERVICE (Transact-SQL)"
-title: "DROP SERVICE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP SERVICE (Transact-SQL)"
+description: DROP SERVICE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_SERVICE_TSQL"
   - "DROP SERVICE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting services"
   - "services [Service Broker], removing"
   - "dropping services"
   - "DROP SERVICE statement"
   - "removing services"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

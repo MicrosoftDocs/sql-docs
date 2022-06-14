@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_db_file_space_usage (Transact-SQL)"
 title: "sys.dm_db_file_space_usage (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_db_file_space_usage (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_file_space_usage"
   - "sys.dm_db_file_space_usage_TSQL"
   - "sys.dm_db_file_space_usage"
   - "dm_db_file_space_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_file_space_usage dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)

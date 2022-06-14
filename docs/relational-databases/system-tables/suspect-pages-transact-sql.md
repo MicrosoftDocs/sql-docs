@@ -1,24 +1,22 @@
 ---
-description: "suspect_pages (Transact-SQL)"
-title: "suspect_pages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "suspect_pages (Transact-SQL)"
+description: suspect_pages (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "suspect_page_table"
   - "suspect_page_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "suspect_pages system table"
   - "suspect pages [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: LitKnd
-ms.author: kendralittle
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

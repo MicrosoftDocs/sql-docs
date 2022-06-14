@@ -1,30 +1,28 @@
 ---
-description: "SEND (Transact-SQL)"
-title: "SEND (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SEND (Transact-SQL)"
+description: SEND (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SEND_ON_CONVERSATION_TSQL"
   - "ON_CONVERSATION_TSQL"
   - "SEND"
   - "SEND_TSQL"
   - "SEND ON CONVERSATION"
   - "ON CONVERSATION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conversations [Service Broker], message sending"
   - "SEND statement"
   - "messages [Service Broker], sending"
   - "sending messages"
+dev_langs:
+  - "TSQL"
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,10 +1,15 @@
 ---
 title: CREATE XML INDEX (Transact-SQL)
-description: "CREATE XML INDEX (Transact-SQL)"
+description: CREATE XML INDEX (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE_XML_INDEX_TSQL"
   - "XML INDEX"
@@ -13,18 +18,13 @@ f1_keywords:
   - "CREATE XML"
   - "CREATE XML INDEX"
   - "XML_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "CREATE XML INDEX statement"
   - "CREATE INDEX statement"
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.custom: ""
-ms.date: 04/29/2022
+dev_langs:
+  - "TSQL"
 ---
 
 # CREATE XML INDEX (Transact-SQL)
@@ -63,6 +63,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
+  | XML_COMPRESSION = { ON | OFF }
 }
 ```
 
@@ -250,6 +251,14 @@ To view information about XML indexes, use the [sys.xml_indexes](../../relationa
 
 For more information about XML indexes, see [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
+### XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+- XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
+- Secondary XML indexes don't inherit the compression property of the Primary XML index.
+- By default, the XML compression setting for XML indexes is set to OFF when the index is created.
+
 ## Additional remarks on index creation
 
 For more information about index creation, see the "Remarks" section in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
@@ -273,7 +282,23 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO
 ```
 
-### B. Creating a secondary XML index
+### B. Creating a primary XML index with XML compression
+
+The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
+
+```sql
+IF EXISTS (SELECT * FROM sys.indexes
+            WHERE name = N'PXML_ProductModel_CatalogDescription')
+    DROP INDEX PXML_ProductModel_CatalogDescription
+        ON Production.ProductModel;  
+GO  
+CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
+    ON Production.ProductModel (CatalogDescription)
+    WITH (XML_COMPRESSION = ON);  
+GO
+```
+
+### C. Creating a secondary XML index
 
 The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
 
@@ -285,7 +310,24 @@ IF EXISTS (SELECT name FROM sys.indexes
 GO  
 CREATE XML INDEX IXML_ProductModel_CatalogDescription_Path
     ON Production.ProductModel (CatalogDescription)
-    USING XML INDEX PXML_ProductModel_CatalogDescription FOR PATH ;  
+    USING XML INDEX PXML_ProductModel_CatalogDescription FOR PATH ;
+GO
+```
+
+### D. Creating a secondary XML index with XML compression
+
+The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.
+
+```sql
+IF EXISTS (SELECT name FROM sys.indexes
+            WHERE name = N'IXML_ProductModel_CatalogDescription_Path')
+    DROP INDEX IXML_ProductModel_CatalogDescription_Path
+        ON Production.ProductModel;  
+GO  
+CREATE XML INDEX IXML_ProductModel_CatalogDescription_Path
+    ON Production.ProductModel (CatalogDescription)
+    USING XML INDEX PXML_ProductModel_CatalogDescription FOR PATH
+    WITH (XML_COMPRESSION = ON);
 GO
 ```
 

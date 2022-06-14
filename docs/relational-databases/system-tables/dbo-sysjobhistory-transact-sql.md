@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL)"
-ms.custom: ""
+description: dbo.sysjobhistory (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysjobhistory_TSQL"
   - "dbo.sysjobhistory"
   - "sysjobhistory"
   - "sysjobhistory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysjobhistory system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

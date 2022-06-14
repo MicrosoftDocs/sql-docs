@@ -16,6 +16,10 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.access.typemappingeditform.f1"
+  - "ssma.access.typemappingeditform.f1"
+
 ---
 # Mapping Source and Target Data Types (AccessToSQL)
 Access database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  

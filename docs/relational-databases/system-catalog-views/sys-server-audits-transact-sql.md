@@ -1,25 +1,23 @@
 ---
-description: "sys.server_audits (Transact-SQL)"
-title: "sys.server_audits (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_audits (Transact-SQL)"
+description: sys.server_audits (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
 ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_audits_TSQL"
   - "sys.server_audits_TSQL"
   - "sys.server_audits"
   - "server_audits"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_audits catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: sravanisaluru
-ms.author: srsaluru
 ---
 # sys.server_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

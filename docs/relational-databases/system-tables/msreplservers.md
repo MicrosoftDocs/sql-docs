@@ -1,23 +1,21 @@
 ---
-description: "MSreplservers (Transact-SQL)"
-title: "MSreplservers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSreplservers (Transact-SQL)"
+description: MSreplservers (Transact-SQL)
+author: briancarrig
+ms.author: brcarrig
 ms.date: "10/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSreplservers_TSQL"
   - "MSreplservers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSreplservers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6d572526-b523-454c-bd20-9e7ae10c9191
-author: briancarrig
-ms.author: brcarrig
 ---
 # MSreplservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

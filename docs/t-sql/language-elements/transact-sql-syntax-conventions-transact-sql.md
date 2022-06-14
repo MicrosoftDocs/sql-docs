@@ -1,18 +1,18 @@
 ---
+title: "Transact-SQL Syntax Conventions (Transact-SQL)"
 description: "Transact-SQL Syntax Conventions (Transact-SQL)"
-title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "sql13.TSQLExpandPortal.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conventions [SQL Server]"
   - "Applies to section in Transact-SQL topics"
   - "code example conventions [SQL Server]"
@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Transact-SQL"
   - "naming conventions [SQL Server]"
   - "syntax [SQL Server], Transact-SQL"
-ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # Transact-SQL Syntax Conventions (Transact-SQL)

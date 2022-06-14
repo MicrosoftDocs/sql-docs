@@ -1,17 +1,17 @@
 ---
+title: "SESSION_ID (Transact-SQL)"
 description: "SESSION_ID (Transact-SQL)"
-title: "SESSION_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "02/23/2018"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+ms.custom: ""
+dev_langs:
   - "TSQL"
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # SESSION_ID (Transact-SQL)

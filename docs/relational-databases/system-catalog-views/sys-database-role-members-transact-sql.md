@@ -1,25 +1,23 @@
 ---
-description: "sys.database_role_members (Transact-SQL)"
-title: "sys.database_role_members (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_role_members (Transact-SQL)"
+description: sys.database_role_members (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/31/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.database_role_members_TSQL"
   - "sys.database_role_members"
   - "database_role_members_TSQL"
   - "database_role_members"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_role_members catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_role_members (Transact-SQL)

@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 04/22/2022
+ms.date: 05/26/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,18 +19,25 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### April 2022 (hotfix)
+### May 2022 (hotfix)
 
-Azure Data Studio 1.36.1 is the latest general availability (GA) release.
+Azure Data Studio 1.36.2 is the latest general availability (GA) release.
 
-- Release number: 1.36.1
-- Release date: April 22, 2022
+- Release number: 1.36.2
+- Release date: May 20, 2022
 
-#### Bug fixes in 1.36.1
+#### What's new in 1.36.2
 
 | New Item | Details |
 |----------|---------|
-| Table Designer | Fix for timeout occurring when viewing table list  |
+| Power BI | Introduced support for Power BI Datamart connectivity.  Please see [Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/blog/announcing-public-preview-of-datamart-in-power-bi/). |
+
+#### Bug fixes in 1.36.2
+
+| New Item | Details |
+|----------|---------|
+| Query Plan Viewer | Fixed issue with execution plan zoom and operator icons. |
+| Query Plan Viewer | Updated parallelism icon direction. |
 
 ## Azure Data Studio feedback
 
@@ -40,7 +47,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#april-2022-hotfix)|
+| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
 | [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
@@ -79,6 +86,19 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
+
+### April 2022 (hotfix)
+
+Azure Data Studio 1.36.1 is the latest general availability (GA) release.
+
+- Release number: 1.36.1
+- Release date: April 22, 2022
+
+#### Bug fixes in 1.36.1
+
+| New Item | Details |
+|----------|---------|
+| Table Designer | Fix for timeout occurring when viewing table list  |
 
 ### April 2022
 

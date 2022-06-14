@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "pausing Stretch Database"
   - "resuming Stretch Database"
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Pause and resume data migration (Stretch Database)

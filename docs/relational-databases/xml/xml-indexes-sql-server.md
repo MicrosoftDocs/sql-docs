@@ -1,11 +1,12 @@
 ---
 title: "XML Indexes (SQL Server)"
 description: Learn how creating XML indexes on xml data type columns can benefit your application by improving query performance.
-ms.custom: ""
-ms.date: 04/29/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,7 +32,6 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], xml data type"
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
-ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -45,12 +45,14 @@ XML indexes can be created on **xml** data type columns. They index all tags, va
 
 - Your XML values are relatively large and the retrieved parts are relatively small. Building the index avoids parsing the whole data at run time and benefits index lookups for efficient query processing.
 
- XML indexes fall into the following categories:
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can use [XML compression](#xml-compression), which provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements.
+
+XML indexes fall into the following categories:
 
 - Primary XML index
 - Secondary XML index
 
- The first index on the **xml** type column must be the primary XML index. Using the primary XML index, the following types of secondary indexes are supported: PATH, VALUE, and PROPERTY. Depending on the type of queries, these secondary indexes might help improve query performance.
+The first index on the **xml** type column must be the primary XML index. Using the primary XML index, the following types of secondary indexes are supported: PATH, VALUE, and PROPERTY. Depending on the type of queries, these secondary indexes might help improve query performance.
 
 > [!NOTE]
 > You cannot create or modify an XML index unless the database options are set correctly for working with the **xml** data type. For more information, see [Use Full-Text Search with XML Columns](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).
@@ -95,13 +97,13 @@ This node information is used to evaluate and construct XML results for a specif
 
 - `//ContactRecord/PhoneNumber` where only the last two steps are known
 
- OR
+OR
 
 - `/Book/*/Title` where the wildcard character `*` is specified in the middle of the expression.
 
 The query processor uses the primary XML index for queries that involve [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)
 
-For example, the following query returns summary information stored in the `CatalogDescription`**xml** type column in the `ProductModel` table. The query returns <`Summary`> information only for product models whose catalog description also stores the <`Features`> description.
+For example, the following query returns summary information stored in the `CatalogDescription`**xml** type column in the `ProductModel` table. The query returns `<Summary>` information only for product models whose catalog description also stores the `<Features>` description.
 
 ```sql
 ;WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")
@@ -111,7 +113,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1
 ```
 
-Regarding the primary XML index, instead of shredding each XML binary large object instance in the base table, the rows in the index that correspond to each XML binary large object are searched sequentially for the expression specified in the `exist()` method. If the path is found in the Path column in the index, the <`Summary`> element together with its subtrees is retrieved from the primary XML index and converted into an XML binary large object as the result of the `query()` method.
+Regarding the primary XML index, instead of shredding each XML binary large object instance in the base table, the rows in the index that correspond to each XML binary large object are searched sequentially for the expression specified in the `exist()` method. If the path is found in the Path column in the index, the `<Summary>` element together with its subtrees is retrieved from the primary XML index and converted into an XML binary large object as the result of the `query()` method.
 
 The primary XML index isn't used when retrieving a full XML instance. For example, the following query retrieves from the table the whole XML instance that describes the manufacturing instructions for a specific product model.
 
@@ -135,7 +137,7 @@ To enhance search performance, you can create secondary XML indexes. A primary X
 
 Following are some guidelines for creating one or more secondary indexes:
 
-- If your workload uses path expressions significantly on XML columns, the PATH secondary XML index is likely to speed up your workload. The most common case is the use of the **exist()** method on XML columns in the WHERE clause of Transact-SQL.
+- If your workload uses path expressions significantly on XML columns, the PATH secondary XML index is likely to speed up your workload. The most common case is the use of the `exist()` method on XML columns in the WHERE clause of Transact-SQL.
 
 - If your workload retrieves multiple values from individual XML instances by using path expressions, clustering paths within each XML instance in the PROPERTY index may be helpful. This scenario typically occurs in a property bag scenario when properties of an object are fetched and its primary key value is known.
 
@@ -143,17 +145,17 @@ Following are some guidelines for creating one or more secondary indexes:
 
 ### PATH secondary XML index
 
-If your queries generally specify path expressions on **xml** type columns, a PATH secondary index may be able to speed up the search. As described earlier in this article, the primary index is helpful when you have queries that specify **exist()** method in the WHERE clause. If you add a PATH secondary index, you may also improve the search performance in such queries.
+If your queries generally specify path expressions on **xml** type columns, a PATH secondary index may be able to speed up the search. As described earlier in this article, the primary index is helpful when you have queries that specify `exist()` method in the WHERE clause. If you add a PATH secondary index, you may also improve the search performance in such queries.
 
 Although a primary XML index avoids having to shred the XML binary large objects at run time, it may not provide the best performance for queries based on path expressions. Because all rows in the primary XML index corresponding to an XML binary large object are searched sequentially for large XML instances, the sequential search may be slow. In this case, having a secondary index built on the path values and node values in the primary index can significantly speed up the index search. In the PATH secondary index, the path and node values are key columns that allow for more efficient seeks when searching for paths. The query optimizer may use the PATH index for expressions such as those shown in the following:
 
 - `/root/Location` which specify only a path
 
- OR
+OR
 
 - `/root/Location/@LocationID[.="10"]` where both the path and the node value are specified.
 
- The following query shows where the PATH index is helpful:
+The following query shows where the PATH index is helpful:
 
 ```sql
 ;WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")
@@ -165,7 +167,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]') = 1;
 ```
 
- In the query, the path expression `/PD:ProductDescription/@ProductModelID` and value `"19"` in the `exist()` method correspond to the key fields of the PATH index. This allows for direct seek in the PATH index and provides better search performance than the sequential search for path values in the primary index.
+In the query, the path expression `/PD:ProductDescription/@ProductModelID` and value `"19"` in the `exist()` method correspond to the key fields of the PATH index. This allows for direct seek in the PATH index and provides better search performance than the sequential search for path values in the primary index.
 
 ### VALUE secondary XML index
 
@@ -173,11 +175,11 @@ If queries are value based, for example, `/Root/ProductDescription/@*[. = "Mount
 
 The key columns of the VALUE index are (node value and path) of the primary XML index. If your workload involves querying for values from XML instances without knowing the element or attribute names that contain the values, a VALUE index may be useful. For example, the following expression will benefit from having a VALUE index:
 
-- `//author[LastName="someName"]` where you know the value of the <`LastName`> element, but the <`author`> parent can occur anywhere.
+- `//author[LastName="someName"]` where you know the value of the `<LastName>` element, but the `<author>` parent can occur anywhere.
 
-- `/book[@* = "someValue"]` where the query looks for the <`book`> element that has some attribute having the value `"someValue"`.
+- `/book[@* = "someValue"]` where the query looks for the `<book>` element that has some attribute having the value `"someValue"`.
 
- The following query returns `ContactID` from the `Contact` table. The `WHERE` clause specifies a filter that looks for values in the `AdditionalContactInfo`**xml** type column. The contact IDs are returned only if the corresponding additional contact information XML binary large object includes a specific telephone number. Because the `telephoneNumber` element may appear anywhere in the XML, the path expression specifies the descendent-or-self axis.
+The following query returns `ContactID` from the `Contact` table. The `WHERE` clause specifies a filter that looks for values in the `AdditionalContactInfo`**xml** type column. The contact IDs are returned only if the corresponding additional contact information XML binary large object includes a specific telephone number. Because the `telephoneNumber` element may appear anywhere in the XML, the path expression specifies the descendent-or-self axis.
 
 ```sql
 ;WITH XMLNAMESPACES (
@@ -190,11 +192,11 @@ FROM Person.Contact
 WHERE AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-1111"]') = 1;
 ```
 
-In this situation, the search value for <`number`> is known, but it can appear anywhere in the XML instance as a child of the `telephoneNumber` element. This kind of query might benefit from an index lookup based on a specific value.
+In this situation, the search value for `<number>` is known, but it can appear anywhere in the XML instance as a child of the `telephoneNumber` element. This kind of query might benefit from an index lookup based on a specific value.
 
 ### PROPERTY secondary index
 
-Queries that retrieve one or more values from individual XML instances might benefit from a PROPERTY index. This scenario occurs when you retrieve object properties by using the **value()** method of the **xml** type and when the primary key value of the object is known.
+Queries that retrieve one or more values from individual XML instances might benefit from a PROPERTY index. This scenario occurs when you retrieve object properties by using the `value()` method of the **xml** type and when the primary key value of the object is known.
 
 The PROPERTY index is built on columns (PK, path and node value) of the primary XML index where PK is the primary key of the base table.
 
@@ -214,6 +216,22 @@ Except for the differences described later in this article, creating an XML inde
 - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
 - [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+
+## XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
+
+Only the XML data type is affected by XML compression. XML data is compressed with the [Xpress Compression Algorithm](/openspecs/windows_protocols/ms-xca/a8b7cb0a-92a6-4187-a23b-5e14273b96f8). Any existing XML indexes are compressed using [data compression](../data-compression/data-compression.md). Data compression is enabled internally for XML indexes when XML compression is enabled.
+
+XML compression can be enabled side-by-side with data compression on the same tables.
+
+XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
+
+Secondary XML indexes don't inherit the compression property of the Primary XML index.
+
+By default, the XML compression setting for XML indexes is set to OFF when the index is created.
 
 ## Get information about XML indexes
 

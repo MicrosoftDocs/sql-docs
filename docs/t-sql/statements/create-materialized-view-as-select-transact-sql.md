@@ -1,20 +1,19 @@
 ---
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
-description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
-ms.custom: ""
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
+author: XiaoyuMSFT
+ms.author: xiaoyul
+ms.reviewer: "wiassaf"
 ms.date: "03/04/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
 ms.technology: data-warehouse
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE VIEW"
   - "VIEW"
   - "SCHEMABINDING_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table creation [SQL Server], CREATE VIEW"
   - "views [SQL Server], creating"
   - "CREATE VIEW statement"
@@ -32,9 +31,9 @@ helpviewer_keywords:
   - "distributed partitioned views [SQL Server]"
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
+dev_langs:
+  - "TSQL"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuMSFT  
-ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  

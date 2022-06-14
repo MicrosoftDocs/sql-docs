@@ -1,18 +1,15 @@
 ---
-description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
-title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
+description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/14/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

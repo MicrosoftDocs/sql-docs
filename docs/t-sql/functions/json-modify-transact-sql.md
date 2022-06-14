@@ -1,17 +1,16 @@
 ---
+title: "JSON_MODIFY (Transact-SQL)"
 description: "JSON_MODIFY (Transact-SQL)"
-title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-dev_langs: 
+ms.custom: ""
+dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON_MODIFY (Transact-SQL)
 
@@ -271,7 +270,7 @@ PRINT @info
     "skills": ["C#", "SQL"]
 } {
     "name": "John",
-    "skills": ["C#", "T-SQL", "Azure"]
+    "skills": "[\"C#\",\"T-SQL\",\"Azure\"]"
 }
 ```  
   

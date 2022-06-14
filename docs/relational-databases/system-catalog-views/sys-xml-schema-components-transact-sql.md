@@ -1,25 +1,24 @@
 ---
-description: "sys.xml_schema_components (Transact-SQL)"
-title: "sys.xml_schema_components (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_components (Transact-SQL)"
+description: sys.xml_schema_components (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "xml_schema_components"
   - "sys.xml_schema_components_TSQL"
   - "sys.xml_schema_components"
   - "xml_schema_components_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_components catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.xml_schema_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

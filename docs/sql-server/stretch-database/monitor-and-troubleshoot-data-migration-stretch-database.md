@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "Stretch Database, monitoring"
   - "monitoring Stretch Database"
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Monitor and troubleshoot data migration (Stretch Database)

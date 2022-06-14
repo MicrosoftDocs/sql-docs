@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_db_wait_stats (Azure SQL Database)"
 title: "sys.dm_db_wait_stats (Azure SQL Database)"
-ms.custom: ""
+description: sys.dm_db_wait_stats (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/12/2021"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_wait_stats_TSQL"
   - "dm_db_wait_stats"
   - "sys.dm_db_wait_stats"
   - "sys.dm_db_wait_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

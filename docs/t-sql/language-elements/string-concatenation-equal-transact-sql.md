@@ -1,22 +1,22 @@
 ---
 title: "+= String concatenation"
 description: Concatenate two strings and set the string to the result of the operation.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "12/07/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "concatenate strings"
   - "string concatenation"
   - "+= (concatenate operator)"
-author: LitKnd
-ms.author: kendralittle
-ms.custom: "seo-lt-2019"
-ms.date: "12/07/2016"
-ms.reviewer: ""
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # += (String Concatenation Assignment) (Transact-SQL)

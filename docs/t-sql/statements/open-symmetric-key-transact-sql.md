@@ -1,25 +1,23 @@
 ---
-description: "OPEN SYMMETRIC KEY (Transact-SQL)"
-title: "OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "OPEN SYMMETRIC KEY (Transact-SQL)"
+description: OPEN SYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPEN SYMMETRIC KEY"
   - "OPEN_SYMMETRIC_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "symmetric keys [SQL Server], opening"
   - "OPEN SYMMETRIC KEY statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

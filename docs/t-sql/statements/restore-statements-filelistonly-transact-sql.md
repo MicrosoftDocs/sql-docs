@@ -1,27 +1,25 @@
 ---
-description: "RESTORE Statements - FILELISTONLY (Transact-SQL)"
-title: "RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE FILELISTONLY (Transact-SQL)"
+description: RESTORE Statements - FILELISTONLY (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "RESTORE FILELISTONLY"
   - "RESTORE_FILELISTONLY_TSQL"
   - "FILELISTONLY"
   - "FILELISTONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backups [SQL Server], file lists"
   - "RESTORE FILELISTONLY statement"
   - "listing backed up files"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)

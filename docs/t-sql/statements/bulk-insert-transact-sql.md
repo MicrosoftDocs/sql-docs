@@ -1,20 +1,20 @@
 ---
 title: "BULK INSERT (Transact-SQL)"
-description: "Transact-SQL reference for the BULK INSERT statement."
-ms.date: 04/25/2022
+description: Transact-SQL reference for the BULK INSERT statement.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 05/12/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "BULK_TSQL"
   - "BULK_INSERT"
   - "BULK_INSERT_TSQL"
   - "BULK INSERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [SQL Server], importing data into"
   - "inserting files"
   - "views [SQL Server], importing data into"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "importing data, bulk import"
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "file importing [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # BULK INSERT (Transact-SQL)
 
@@ -99,7 +99,7 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Import data from a file in Azure Blob Storage](#f-import-data-from-a-file-in-azure-blob-storage).
 
 Azure SQL Database only supports reading from Azure Blob Storage.
 
@@ -117,8 +117,7 @@ At some point, you must examine the constraints on the whole table. If the table
 
 A situation in which you might want constraints disabled (the default behavior) is if the input data contains rows that violate constraints. With CHECK constraints disabled, you can import the data and then use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to remove the invalid data.
 
-> [!NOTE]
->  
+> [!NOTE]  
 > The MAXERRORS option does not apply to constraint checking.
 
 #### CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | '*code_page*' }
@@ -151,7 +150,7 @@ Specifies that BULK INSERT performs the import operation using the specified dat
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
 
-Specifies a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Specifies a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Import data from a file in Azure Blob Storage](#f-import-data-from-a-file-in-azure-blob-storage).
 
 #### ERRORFILE = '*error_file_path*'
 
@@ -163,7 +162,7 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *error
 
 #### ERRORFILE_DATA_SOURCE = '*errorfile_data_source_name*'
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 Specifies a named external data source pointing to the Azure Blob Storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -238,7 +237,7 @@ Specifies a comma-separated values file compliant to the [RFC 4180](https://tool
 ```sql
 BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
-WITH ( FORMAT='CSV');
+WITH ( FORMAT = 'CSV');
 ```
 
 #### FIELDQUOTE = '*field_quote*'
@@ -291,7 +290,7 @@ This example uses the following table in the `bulktest` database:
 CREATE TABLE dbo.t_float(c1 FLOAT, c2 DECIMAL (5,4));
 ```
 
- The user wants to bulk import data into the `t_float` table. The data file, C:\t_float-c.dat, contains scientific notation **float** data; for example:
+The user wants to bulk import data into the `t_float` table. The data file, C:\t_float-c.dat, contains scientific notation **float** data; for example:
 
 ```input
 8.0000000000000002E-2 8.0000000000000002E-2
@@ -317,11 +316,10 @@ To use this format file (using the file name `C:\t_floatformat-c-xml.xml`) to im
 
 ```sql
 BULK INSERT bulktest.dbo.t_float
-FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
+FROM 'C:\t_float-c.dat' WITH (FORMATFILE = 'C:\t_floatformat-c-xml.xml');
 ```
 
-> [!IMPORTANT]
->  
+> [!IMPORTANT]  
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Data types for bulk exporting or importing SQLXML documents
@@ -334,8 +332,7 @@ To bulk export or import SQLXML data, use one of the following data types in you
 |SQLNCHAR or SQLNVARCHAR|The data is sent as Unicode. The effect is the same as specifying the DATAFILETYPE **= 'widechar'** without specifying a format file.|
 |SQLBINARY or SQLVARBIN|The data is sent without any conversion.|
 
-<a id="general-remarks"></a>
-## Remarks 
+## Remarks
 
 For a comparison of the BULK INSERT statement, the INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement, and the **bcp** command, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
 
@@ -351,11 +348,11 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], BULK INSER
 
 Before [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], comma-separated value (CSV) files aren't supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-import operations. However, in some cases, a CSV file can be used as the data file for a bulk import of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about the requirements for importing data from a CSV data file, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-## Logging behavior
+## Log behavior
 
- For information about when row-insert operations that are performed by bulk import into SQL Server are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Minimal logging isn't supported in Azure SQL Database.
+For information about when row-insert operations that are performed by bulk import into SQL Server are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Minimal logging isn't supported in Azure SQL Database.
 
-## <a name="limitations"></a> Restrictions
+## Restrictions
 
 When using a format file with BULK INSERT, you can specify up to 1024 fields only. This is same as the maximum number of columns allowed in a table. If you use a format file with BULK INSERT with a data file that contains more than 1024 fields, BULK INSERT generates the 4822 error. The [bcp utility](../../tools/bcp-utility.md) doesn't have this limitation, so for data files that contain more than 1024 fields, use BULK INSERT without a format file or use the **bcp** command.
 
@@ -381,7 +378,7 @@ To resolve this error, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 For more information about this and other security considerations for using BULK INSERT, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Import data from a file in Azure Blob Storage](#f-import-data-from-a-file-in-azure-blob-storage).
 
 ### Permissions
 
@@ -401,7 +398,7 @@ Additionally, ALTER TABLE permission is required if one or more of the following
 
 ## Examples
 
-### A. Using pipes to import data from a file
+### A. Use pipes to import data from a file
 
 The following example imports order detail information into the `AdventureWorks2012.Sales.SalesOrderDetail` table from the specified data file by using a pipe (`|`) as the field terminator and `|\n` as the row terminator.
 
@@ -409,17 +406,17 @@ The following example imports order detail information into the `AdventureWorks2
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
    FROM 'f:\orders\lineitem.tbl'
    WITH
-      (  
-         FIELDTERMINATOR =' |'
-         , ROWTERMINATOR =' |\n'
+      (
+         FIELDTERMINATOR = ' |'
+         , ROWTERMINATOR = ' |\n'
       );
 ```
 
 > [!IMPORTANT]
->  
+>
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### B. Using the FIRE_TRIGGERS argument
+### B. Use the FIRE_TRIGGERS argument
 
 The following example specifies the `FIRE_TRIGGERS` argument.
 
@@ -428,7 +425,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
    FROM 'f:\orders\lineitem.tbl'
    WITH
      (
-         FIELDTERMINATOR =' |'
+         FIELDTERMINATOR = ' |'
          , ROWTERMINATOR = ':\n'
          , FIRE_TRIGGERS
       );
@@ -437,9 +434,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### C. Using line feed as a row terminator
+### C. Use line feed as a row terminator
 
- The following example imports a file that uses the line feed as a row terminator such as a UNIX output:
+The following example imports a file that uses the line feed as a row terminator such as a UNIX output:
 
 ```sql
 DECLARE @bulk_cmd VARCHAR(1000);
@@ -449,11 +446,10 @@ WITH (ROWTERMINATOR = '''+CHAR(10)+''')';
 EXEC(@bulk_cmd);
 ```
 
-> [!NOTE]
->  
+> [!NOTE]  
 > Owing to the way Microsoft Windows treats text files, `\n` is automatically replaced with `\r\n`.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### D. Specify a code page
@@ -473,7 +469,7 @@ WITH
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### E. Importing data from a CSV file
+### E. Import data from a CSV file
 
 The following example shows how to specify a CSV file, skipping the header (first row), using `;` as field terminator and `0x0a` as line terminator:
 
@@ -481,20 +477,31 @@ The following example shows how to specify a CSV file, skipping the header (firs
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'
-      , FIRSTROW=2
+      , FIRSTROW = 2
       , FIELDQUOTE = '\'
       , FIELDTERMINATOR = ';'
       , ROWTERMINATOR = '0x0a');
 ```
 
-This example will also work for UTF-8 files that don't use fixed-width format.
+The following example shows how to specify a CSV file in UTF-8 format (using a `CODEPAGE` of `65001`), skipping the header (first row), using `;` as field terminator and `0x0a` as line terminator:
+
+```sql
+BULK INSERT Sales.Invoices
+FROM '\\share\invoices\inv-2016-07-25.csv'
+WITH ( CODEPAGE = '65001'
+      , FORMAT = 'CSV'
+      , FIRSTROW = 2
+      , FIELDQUOTE = '\'
+      , FIELDTERMINATOR = ';'
+      , ROWTERMINATOR = '0x0a');
+```
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### <a id="f-importing-data-from-a-file-in-azure-blob-storage"></a> F. Import data from a file in Azure Blob Storage
+### F. Import data from a file in Azure Blob Storage
 
-The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a SAS key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a Shared Access Signature (SAS) key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a SAS key that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -502,17 +509,17 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
- WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
- -- NOTE: Make sure that you don't have a leading ? in SAS token, and
- -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
- -- that expiration period is valid (all dates are in UTC time)
+-- NOTE: Make sure that you don't have a leading ? in SAS token, and
+-- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+-- that expiration period is valid (all dates are in UTC time)
 
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
-          , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+          , CREDENTIAL = MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices
@@ -541,7 +548,7 @@ For complete `BULK INSERT` examples including configuring the credential and ext
 
 ### More examples
 
- Other `BULK INSERT` examples are provided in the following articles:
+Other `BULK INSERT` examples are provided in the following articles:
 
 - [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
 - [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)

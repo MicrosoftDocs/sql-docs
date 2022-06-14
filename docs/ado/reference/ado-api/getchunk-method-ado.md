@@ -1,22 +1,18 @@
 ---
+title: "GetChunk Method (ADO)"
 description: "GetChunk Method (ADO)"
-title: "GetChunk Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Field20::raw_GetChunk"
-  - "Field20::GetChunk"
-helpviewer_keywords: 
-  - "GetChunk method [ADO]"
-ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Field20::raw_GetChunk"
+  - "Field20::GetChunk"
+helpviewer_keywords:
+  - "GetChunk method [ADO]"
+apitype: "COM"
 ---
 # GetChunk Method (ADO)
 Returns all, or a portion, of the contents of a large text or binary data [Field](./field-object.md) object.  

@@ -1,22 +1,18 @@
 ---
+title: "Append Method (ADOX Views)"
 description: "Append Method (ADOX Views)"
-title: "Append Method (ADOX Views) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Views::raw_Append"
-  - "Views::Append"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Views::raw_Append"
+  - "Views::Append"
+helpviewer_keywords:
+  - "Append method [ADOX]"
+apitype: "COM"
 ---
 # Append Method (ADOX Views)
 Creates a new [View](./view-object-adox.md) object and appends it to the [Views](./views-collection-adox.md) collection.  

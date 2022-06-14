@@ -1,19 +1,15 @@
 ---
+title: "Customization File Connect Section"
 description: "Customization File Connect Section"
-title: "Customization File Connect Section | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connect section in RDS [ADO]"
-  - "customization file in RDS [ADO]"
-ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connect section in RDS [ADO]"
+  - "customization file in RDS [ADO]"
 ---
 # Customization File Connect Section
 The default behavior of the handler is to deny all connections. The **connect** section specifies exceptions to that behavior. For example, if all the **connect** sections were absent or empty, then by default no connections could be made.  

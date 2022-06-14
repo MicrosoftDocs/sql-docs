@@ -4,7 +4,7 @@ description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 author: XiaoyuMSFT
 ms.author: xiaoyul
 ms.reviewer: "wiassaf"
-ms.date: "03/04/2020"
+ms.date: 06/14/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
 ms.technology: data-warehouse
@@ -33,7 +33,6 @@ helpviewer_keywords:
   - "maximum number of columns per view"
 dev_langs:
   - "TSQL"
-ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
@@ -72,16 +71,16 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## Arguments
 
-*schema_name*     
+#### *schema_name*     
  Is the name of the schema to which the view belongs.  
   
-*materialized_view_name*   
+#### *materialized_view_name*   
 Is the name of the view. View names must follow the rules for identifiers. Specifying the view owner name is optional.  
 
-*distribution option*     
+#### *distribution option*     
 Only HASH and ROUND_ROBIN distributions are supported.
 
-*select_statement*   
+#### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:
 - The SELECT list contains an aggregate function.
 - GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  Up to 32 columns can be used in the GROUP BY clause.
@@ -129,11 +128,10 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 |SUM(a) is specified by users in the SELECT list of a materialized view definition AND 'a' is a nullable expression |COUNT_BIG (a) |Users need to add the expression 'a' manually in the materialized view definition.|
 |AVG(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
 |STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
-| | | |
 
-Once created, materialized views are visible within SQL Server Management Studio under the views folder of the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] instance.
+Once created, materialized views are visible within [SQL Server Management Studio](https://aka.ms/ssms) under the views folder of the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] instance.
 
-Users can run [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) and [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) to determine the space being consumed by a materialized view.  
+Users can run [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) and [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) to determine the space being consumed by a materialized view. There are also DMVs to provide more customizable queries to identify space and rows consumed. For more information, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).
 
 A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZED VIEW to disable or rebuild a materialized view.   
 
@@ -156,7 +154,7 @@ A user needs following permissions to create a materialized view in addition to 
 
 
 ## Example
-A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT(DISTINCT expression). A query used to take multiple seconds to complete now finishes in sub-second without any change in the user query.   
+A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions unsupported in CREATE MATERIALIZED VIEW, such as `COUNT(DISTINCT expression)`. A query used to take multiple seconds to complete now finishes in sub-second without any change in the user query.   
 
 ```sql 
 
@@ -199,6 +197,7 @@ select DATEDIFF(ms,@timerstart,@timerend);
 ```
 
 B. In this example, User2 creates a materialized view on tables owned by User1.  The materialized view is owned by User1.
+
 ```sql
 /****************************************************************
 Setup:
@@ -214,8 +213,8 @@ CREATE SCHEMA SchemaX;
 GO
 CREATE SCHEMA SchemaY AUTHORIZATION User1;
 GO
-CREATE TABLE [SchemaX].[T1] (	[vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL,	[puYear] [int] NULL );
-CREATE TABLE [SchemaX].[T2] (	[vendorID] [varchar](255) Not NULL,	[totalAmount] [float] Not NULL,	[puYear] [int] NULL);
+CREATE TABLE [SchemaX].[T1] (    [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL,    [puYear] [int] NULL );
+CREATE TABLE [SchemaX].[T2] (    [vendorID] [varchar](255) Not NULL,    [totalAmount] [float] Not NULL,    [puYear] [int] NULL);
 GO
 ALTER AUTHORIZATION ON OBJECT::SchemaX.[T1] TO User1;
 ALTER AUTHORIZATION ON OBJECT::SchemaX.[T2] TO User1;
@@ -237,9 +236,9 @@ EXECUTE AS USER = 'User2';
 GO
 CREATE materialized VIEW [SchemaY].MV_by_User2 with(distribution=round_robin) 
 as 
-		select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
-		from [SchemaX].[T1] A
-		inner join [SchemaX].[T2] B on A.vendorID = B.vendorID group by A.vendorID ;
+        select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
+        from [SchemaX].[T1] A
+        inner join [SchemaX].[T2] B on A.vendorID = B.vendorID group by A.vendorID ;
 GO
 revert;
 GO
@@ -247,14 +246,17 @@ GO
 
 ## See also
 
-[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)      
-[DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)  
-[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+- [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)      
+- [DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)  
+- [EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+- [System views supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+- [T-SQL statements supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+
+## Next steps
+
+- [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)

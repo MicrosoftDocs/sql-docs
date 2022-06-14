@@ -1,22 +1,19 @@
 ---
 title: Columns Collection (ADOX)
 description: "Columns Collection (ADOX)"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Columns_Collection_ADOX"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Columns collection [ADOX]"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Columns_Collection_ADOX"
+helpviewer_keywords:
+  - "Columns collection [ADOX]"
+dev_langs:
+  - "TSQL"
+apitype: "COM"
 ---
 
 # Columns Collection (ADOX)

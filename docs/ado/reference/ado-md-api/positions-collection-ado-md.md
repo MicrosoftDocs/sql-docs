@@ -1,23 +1,19 @@
 ---
+title: "Positions Collection (ADO MD)"
 description: "Positions Collection (ADO MD)"
-title: "Positions Collection (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Axis::Positions"
   - "Cell::Positions"
   - "Positions"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Positions collection [ADO MD]"
-ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Positions Collection (ADO MD)
 Contains the [Position](./position-object-ado-md.md) objects that define a point on an axis.  

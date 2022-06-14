@@ -1,20 +1,16 @@
 ---
+title: "Refresh Method Example (VBScript)"
 description: "Refresh Method Example (VBScript)"
-title: "Refresh Method Example (VBScript) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Refresh method [ADO], VBScript example"
-ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Refresh method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Refresh Method Example (VBScript)
 > [!IMPORTANT]

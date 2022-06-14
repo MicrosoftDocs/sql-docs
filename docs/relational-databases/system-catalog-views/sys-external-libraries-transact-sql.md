@@ -1,24 +1,22 @@
 ---
-description: "sys.external_libraries (Transact-SQL)"
-title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.external_libraries (Transact-SQL)"
+description: sys.external_libraries (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+manager: cgronlun
 ms.date: 06/25/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "external_libraries"
   - "external_libraries_TSQL"
   - "sys.external_libraries"
   - "sys.external_libraries_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.external_libraries catalog view"
-author: rothja
-ms.author: jroth
-manager: cgronlun
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.external_libraries (Transact-SQL)  

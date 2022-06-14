@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_wildcard_namespaces (Transact-SQL)"
-title: "sys.xml_schema_wildcard_namespaces (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_wildcard_namespaces (Transact-SQL)"
+description: sys.xml_schema_wildcard_namespaces (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "xml_schema_wildcard_namespaces_TSQL"
   - "xml_schema_wildcard_namespaces"
   - "sys.xml_schema_wildcard_namespaces_TSQL"
   - "sys.xml_schema_wildcard_namespaces"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_wildcard_namespaces catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

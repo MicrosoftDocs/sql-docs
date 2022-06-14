@@ -1,23 +1,21 @@
 ---
-description: "ALTER TABLE table_constraint (Transact-SQL)"
-title: "table_constraint (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "table_constraint (Transact-SQL)"
+description: ALTER TABLE table_constraint (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "CONSTRAINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table_constraint"
+dev_langs:
+  - "TSQL"
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-author: VanMSFT
-ms.author: vanto
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

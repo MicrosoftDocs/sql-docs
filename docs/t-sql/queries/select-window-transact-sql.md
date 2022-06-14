@@ -28,9 +28,9 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 # SELECT - WINDOW - (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-Named window definition in the WINDOW clause determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. SELECT WINDOW is introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+Named window definition in the WINDOW clause determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied.
 
 > [!NOTE]
 > The WINDOW clause requires database compatibility level 160 or higher. If your database compatibility level is lower than 160, SQL Server cannot execute queries with the WINDOW clause.

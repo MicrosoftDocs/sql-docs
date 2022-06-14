@@ -1,30 +1,28 @@
 ---
-description: "BACKUP MASTER KEY (Transact-SQL)"
-title: "BACKUP MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "BACKUP MASTER KEY (Transact-SQL)"
+description: BACKUP MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "BACKUP MASTER KEY"
   - "DUMP_MASTER_KEY_TSQL"
   - "BACKUP_MASTER_KEY_TSQL"
   - "DUMP MASTER KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BACKUP MASTER KEY statement"
   - "exporting Database Master Keys"
   - "encryption [SQL Server], Database Master Key"
   - "cryptography [SQL Server], Database Master Key"
   - "backing up master keys [SQL Server]"
   - "database master key [SQL Server], exporting"
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

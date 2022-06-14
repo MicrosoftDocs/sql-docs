@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-author: rothja
-ms.author: jroth
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)

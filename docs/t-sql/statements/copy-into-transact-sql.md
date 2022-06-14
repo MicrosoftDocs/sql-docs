@@ -2,21 +2,21 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: wiassaf
 ms.date: 01/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
 ms.topic: language-reference
-f1_keywords: 
+f1_keywords:
   - "COPY_TSQL"
   - "COPY INTO"
   - "COPY"
   - "LOAD"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: wiassaf
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)

@@ -1,22 +1,20 @@
 ---
-description: "RESTORE MASTER KEY (Transact-SQL)"
-title: "RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "RESTORE MASTER KEY (Transact-SQL)"
+description: RESTORE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "RESTORE_MASTER_KEY_TSQL"
   - "RESTORE MASTER KEY"
   - "LOAD_MASTER_KEY_TSQL"
   - "LOAD MASTER KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database master key [SQL Server], importing"
   - "encryption [SQL Server], Database Master Key"
   - "copying Database Master Keys"
@@ -24,8 +22,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], Database Master Key"
   - "transferring Database Master Keys"
   - "RESTORE MASTER KEY statement"
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # RESTORE MASTER KEY (Transact-SQL)
 

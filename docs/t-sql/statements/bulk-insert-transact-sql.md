@@ -1,10 +1,12 @@
 ---
 title: "BULK INSERT (Transact-SQL)"
-description: "Transact-SQL reference for the BULK INSERT statement."
+description: Transact-SQL reference for the BULK INSERT statement.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
 ms.date: 05/12/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
@@ -12,8 +14,6 @@ f1_keywords:
   - "BULK_INSERT"
   - "BULK_INSERT_TSQL"
   - "BULK INSERT"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "tables [SQL Server], importing data into"
   - "inserting files"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "importing data, bulk import"
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "file importing [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # BULK INSERT (Transact-SQL)
 

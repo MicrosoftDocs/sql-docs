@@ -1,21 +1,19 @@
 ---
-title: "Managing CLR Integration Assemblies | Microsoft Docs"
+title: "Managing CLR Integration Assemblies"
 description: You can host managed DLL assemblies in SQL Server.  You can register, alter, and drop assemblies, and also manage associated files and permissions.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database objects [CLR integration], assemblies"
   - "common language runtime [SQL Server], assemblies"
   - "assemblies [CLR integration], managing"
+dev_langs:
+  - "TSQL"
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
-author: rothja
-ms.author: jroth
 ---
 # Managing CLR Integration Assemblies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

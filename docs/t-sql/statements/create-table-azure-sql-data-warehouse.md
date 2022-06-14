@@ -1,17 +1,15 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
-description: "CREATE TABLE (Azure Synapse Analytics)"
+description: CREATE TABLE (Azure Synapse Analytics)
+author: VanMSFT
+ms.author: vanto
+ms.date: "03/30/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/30/2021"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE (Azure Synapse Analytics)
 

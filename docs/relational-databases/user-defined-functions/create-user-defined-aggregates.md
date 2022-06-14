@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
-author: "rothja"
-ms.author: "jroth"
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Create User-defined Aggregates
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

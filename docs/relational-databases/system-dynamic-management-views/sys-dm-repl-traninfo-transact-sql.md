@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_repl_traninfo (Transact-SQL)"
-title: "sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_repl_traninfo (Transact-SQL)"
+description: sys.dm_repl_traninfo (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_repl_traninfo"
   - "dm_repl_traninfo"
   - "sys.dm_repl_traninfo_TSQL"
   - "dm_repl_traninfo_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_repl_traninfo dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

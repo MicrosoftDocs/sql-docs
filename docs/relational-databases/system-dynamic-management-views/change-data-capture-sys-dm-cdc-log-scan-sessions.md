@@ -1,25 +1,23 @@
 ---
-description: "The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns status information about the current log scan session, or aggregated information about all sessions since the instance was last started."
 title: "sys.dm_cdc_log_scan_sessions (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns status information about the current log scan session, or aggregated information about all sessions since the instance was last started.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/10/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_cdc_log_scan_sessions"
   - "dm_cdc_log_scan_sessions_TSQL"
   - "sys.dm_cdc_log_scan_sessions_TSQL"
   - "sys.dm_cdc_log_scan_sessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture [SQL Server], log scan reporting"
   - "sys.dm_cdc_log_scan_sessions dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

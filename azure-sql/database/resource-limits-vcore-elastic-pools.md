@@ -27,7 +27,7 @@ This article provides the detailed resource limits for Azure SQL Database elasti
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
-Each read-only replica of an elastic pool has its own resources, such as vCores, memory, data IOPS, `TempDB`, workers, and sessions. Each read-only replica is subject to elastic pool resource limits detailed later in this article.
+Each read-only replica of an elastic pool has its own resources, such as vCores, memory, data IOPS, `tempdb`, workers, and sessions. Each read-only replica is subject to elastic pool resource limits detailed later in this article.
 
 You can set the service tier, compute size (service objective), and storage amount using:
 
@@ -448,6 +448,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 ## Business Critical - provisioned compute - M-series
+
+For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
 
 ### M-series hardware (part 1)
 

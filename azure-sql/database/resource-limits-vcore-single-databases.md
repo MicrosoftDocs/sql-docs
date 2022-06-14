@@ -618,6 +618,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ## Business Critical - provisioned compute - M-series
 
+For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
+
 ### M-series hardware (part 1)
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|

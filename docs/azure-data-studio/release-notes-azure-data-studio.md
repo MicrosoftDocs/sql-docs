@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 05/26/2022
+ms.date: 06/15/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -32,6 +32,7 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 | Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |
 | Table Designer | Table Designer is now supported by SQL Projects to add or modify database schema without need to be connected to a server instance. |
 | Query Plan Viewer | Smart plan comparison is now available. Can now compare execution plans and view detailed differences between plans in the Properties Table. |
+| Query Plan Viewer | Added toggle button to switch between estimated and actual execution plans. |
 | Query Plan Viewer | Query Plan now comes with improved precision to operator costs for larger plans. |
 | SQL Bindings | Support for Azure SQL Bindings is now available in preview for C#, JavaScript, and Python. |
 | MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
@@ -41,11 +42,11 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 | New Item | Details |
 |----------|---------|
 | Table Designer | Fixed issue that caused app to not prompt user to save before closing. |
+| Table Designer | Fixed issue that returned empty data set upon attempting to edit the first cell of a new row. |
 | Table Designer | Improved resize to fit experience when zooming in on user interface as well as tab behavior issues. |
-| Table Designer | Fixed issue that prevented Tables folder from expanding when using Azure SQL Server. |
 | Query Plan Viewer | Fixed bug that caused custom zoom level spinner to allow values outside valid range. |
 | Schema Compare | Fixed issue with indexes not being added correctly when updating project from database. |
-| Notebooks | Fixed inconsistencies with notebook URI handling. |
+| Notebooks | Fixed inconsistencies with notebook cell behavior and toolbars. |
 | Notebooks | Fixed issues with keyboard navigation. |
 
 ## Azure Data Studio feedback
@@ -106,7 +107,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | New Item | Details |
 |----------|---------|
-| MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
 | Power BI | Introduced support for Power BI Datamart connectivity.  Please see [Announcing public preview of datamart in Power BI](https://powerbi.microsoft.com/blog/announcing-public-preview-of-datamart-in-power-bi/). |
 
 #### Bug fixes in 1.36.2

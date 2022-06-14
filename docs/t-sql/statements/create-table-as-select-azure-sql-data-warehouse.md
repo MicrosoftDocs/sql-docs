@@ -2,7 +2,7 @@
 description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/07/2016"
+ms.date: "06/14/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""

@@ -1324,6 +1324,9 @@
         href: virtual-machines/windows/sql-vm-create-portal-quickstart.md
       - name: PowerShell
         href: virtual-machines/windows/sql-vm-create-powershell-quickstart.md
+      - name: Bicep
+        displayName: Resource Manager, Template, ARM
+        href: virtual-machines/windows/create-sql-vm-bicep.md
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md

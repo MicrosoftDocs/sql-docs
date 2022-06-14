@@ -1,22 +1,20 @@
 ---
-description: "ALTER EXTERNAL LIBRARY (Transact-SQL)"
-title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER EXTERNAL LIBRARY (Transact-SQL)"
+description: ALTER EXTERNAL LIBRARY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+manager: cgronlund
 ms.date: 08/26/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER EXTERNAL LIBRARY"
   - "ALTER_EXTERNAL_LIBRARY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER EXTERNAL LIBRARY"
-author: rothja
-ms.author: jroth
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  

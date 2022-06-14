@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_clr_appdomains (Transact-SQL)"
-title: "sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_clr_appdomains (Transact-SQL)"
+description: sys.dm_clr_appdomains (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_clr_appdomains"
   - "sys.dm_clr_appdomains"
   - "dm_clr_appdomains_TSQL"
   - "sys.dm_clr_appdomains_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

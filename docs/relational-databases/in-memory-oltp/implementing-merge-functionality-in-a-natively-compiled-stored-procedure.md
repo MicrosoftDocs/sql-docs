@@ -1,16 +1,15 @@
 ---
 title: "MERGE function - natively compiled stored procedure"
-description: Use this sample to learn how to simulate the Transact-SQL MERGE statement in a natively compiled module. 
-ms.custom: seo-dt-2019
+description: Use this sample to learn how to simulate the Transact-SQL MERGE statement in a natively compiled module.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure

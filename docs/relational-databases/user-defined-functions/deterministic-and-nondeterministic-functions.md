@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "deterministic functions"
   - "user-defined functions [SQL Server], deterministic"
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-author: "rothja"
-ms.author: "jroth"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deterministic and Nondeterministic Functions

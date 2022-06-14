@@ -1,19 +1,18 @@
 ---
 title: "Monitor and Troubleshoot Managed Database Objects"
 description: Information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies (CLR).
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "common language runtime [SQL Server], performance"
   - "monitoring [CLR integration]"
   - "performance [CLR integration]"
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-author: rothja
-ms.author: jroth
 ---
 # Monitoring and Troubleshooting Managed Database Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

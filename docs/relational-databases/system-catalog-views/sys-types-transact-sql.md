@@ -1,26 +1,24 @@
 ---
-description: "sys.types (Transact-SQL)"
-title: "sys.types (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.types (Transact-SQL)"
+description: sys.types (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "types"
   - "types_TSQL"
   - "sys.types_TSQL"
   - "sys.types"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.types catalog view"
   - "table-valued parameters,sys.types"
+dev_langs:
+  - "TSQL"
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.types (Transact-SQL)

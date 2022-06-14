@@ -1,23 +1,21 @@
 ---
-description: "BACKUP CERTIFICATE (Transact-SQL)"
-title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "BACKUP CERTIFICATE (Transact-SQL)"
+description: BACKUP CERTIFICATE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "DUMP_CERTIFICATE_TSQL"
   - "BACKUP CERTIFICATE"
   - "sql13.swb.exportcertificate.f1"
   - "DUMP CERTIFICATE"
   - "BACKUP_CERTIFICATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], certificates"
   - "decryption [SQL Server], certificates"
   - "exporting certificates"
@@ -26,8 +24,8 @@ helpviewer_keywords:
   - "backing up certificates [SQL Server]"
   - "decryption [SQL Server]"
   - "cryptography [SQL Server], certificates"
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)

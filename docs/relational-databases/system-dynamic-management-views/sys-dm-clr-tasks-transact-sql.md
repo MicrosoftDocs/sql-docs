@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_clr_tasks (Transact-SQL)"
-title: "sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_clr_tasks (Transact-SQL)"
+description: sys.dm_clr_tasks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_clr_tasks"
   - "sys.dm_clr_tasks_TSQL"
   - "dm_clr_tasks"
   - "dm_clr_tasks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_tasks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_clr_tasks (Transact-SQL)

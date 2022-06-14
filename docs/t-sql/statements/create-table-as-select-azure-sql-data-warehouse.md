@@ -1,18 +1,16 @@
 ---
-description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
-title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
+description: CREATE TABLE AS SELECT (Azure Synapse Analytics)
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/07/2016"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: rothja
-ms.author: jroth
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

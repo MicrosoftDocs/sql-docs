@@ -1,24 +1,22 @@
 ---
-description: "sys.system_parameters (Transact-SQL)"
 title: "sys.system_parameters (Transact-SQL)"
-ms.custom: ""
+description: sys.system_parameters (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/30/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.system_parameters"
   - "sys.system_parameters_TSQL"
   - "system_parameters_TSQL"
   - "system_parameters"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.system_parameters catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_parameters (Transact-SQL)

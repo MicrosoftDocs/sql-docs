@@ -1,28 +1,26 @@
 ---
-description: "RESTORE Statements - HEADERONLY (Transact-SQL)"
-title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE HEADERONLY (Transact-SQL)"
+description: RESTORE Statements - HEADERONLY (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HEADERONLY"
   - "RESTORE HEADERONLY"
   - "RESTORE_HEADERONLY_TSQL"
   - "HEADERONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup sets [SQL Server], header information"
   - "headers [SQL Server]"
   - "RESTORE HEADERONLY statement"
   - "backup header information [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)

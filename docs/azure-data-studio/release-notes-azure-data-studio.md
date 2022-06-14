@@ -30,6 +30,7 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
+
 | Backup & Restore | Backup & Restore to URL is now available in preview for Azure SQL Managed Instances. |
 | Table Designer | Added API to support computed column capabilities on Table Designer. |
 | Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |

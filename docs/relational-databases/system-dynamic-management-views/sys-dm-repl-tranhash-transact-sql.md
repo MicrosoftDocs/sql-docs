@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_repl_tranhash (Transact-SQL)"
-title: "sys.dm_repl_tranhash (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_repl_tranhash (Transact-SQL)"
+description: sys.dm_repl_tranhash (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_repl_tranhash"
   - "sys.dm_repl_tranhash_TSQL"
   - "dm_repl_tranhash_TSQL"
   - "dm_repl_tranhash"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_repl_tranhash dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

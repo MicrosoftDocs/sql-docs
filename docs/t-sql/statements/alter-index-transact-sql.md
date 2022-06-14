@@ -1,19 +1,18 @@
 ---
-description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: ALTER INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "indexes [SQL Server], reorganizing"
   - "ALTER INDEX statement"
@@ -44,8 +43,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "index rebuild [SQL Server]"
   - "index reorganize [SQL Server]"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

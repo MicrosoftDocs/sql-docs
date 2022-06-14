@@ -1,25 +1,23 @@
 ---
-description: "sys.computed_columns (Transact-SQL)"
-title: "sys.computed_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.computed_columns (Transact-SQL)"
+description: sys.computed_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.computed_columns_TSQL"
   - "sys.computed_columns"
   - "computed_columns_TSQL"
   - "computed_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.computed_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.computed_columns (Transact-SQL)

@@ -1,22 +1,20 @@
 ---
-description: "Always On Availability Groups Catalog Views (Transact-SQL)"
-title: "Always On Availability Groups Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Always On Availability Groups Catalog Views (Transact-SQL)"
+description: Always On Availability Groups Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 04/11/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
   - "catalog views [SQL Server], Always On Availability Groups"
   - "YY"
+dev_langs:
+  - "TSQL"
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 

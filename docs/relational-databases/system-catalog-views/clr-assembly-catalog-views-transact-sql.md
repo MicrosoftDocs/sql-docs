@@ -1,22 +1,20 @@
 ---
-description: "CLR Assembly Catalog Views (Transact-SQL)"
-title: "CLR Assembly Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CLR Assembly Catalog Views (Transact-SQL)"
+description: CLR Assembly Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalog views [SQL Server], CLR assembly"
   - "assemblies [CLR integration], catalog views"
   - "CLR assembly catalog views"
+dev_langs:
+  - "TSQL"
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # CLR Assembly Catalog Views (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -6,8 +6,8 @@ ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Extended Events for Stretch Database

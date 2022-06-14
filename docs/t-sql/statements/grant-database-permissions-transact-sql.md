@@ -1,25 +1,23 @@
 ---
-description: "GRANT Database Permissions (Transact-SQL)"
-title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Database Permissions (Transact-SQL)"
+description: GRANT Database Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 04/19/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server]"
   - "database permissions [SQL Server]"
   - "granting permissions [SQL Server], databases"
   - "permissions [SQL Server], databases"
   - "database permissions [SQL Server], granting"
   - "GRANT statement, databases"
+dev_langs:
+  - "TSQL"
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Permissions (Transact-SQL)

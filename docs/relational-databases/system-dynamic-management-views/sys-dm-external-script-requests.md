@@ -1,26 +1,23 @@
 ---
-description: "sys.dm_external_script_requests"
-title: "sys.dm_external_script_requests | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_external_script_requests"
+description: sys.dm_external_script_requests
+author: rwestMSFT
+ms.author: randolphwest
+manager: cgronlun
 ms.date: "06/26/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning
-  
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_external_script_requests"
   - "sys.dm_external_script_requests_TSQL"
   - "dm_external_script_requests"
   - "dm_external_script_requests_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_external_script_requests dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-author: rothja
-ms.author: jroth
-manager: cgronlun
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_requests

@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "Stretch Database, enabling table"
   - "enabling table for Stretch Database"
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Enable Stretch Database for a table

@@ -1,15 +1,17 @@
 ---
 title: DROP STATISTICS (Transact-SQL)
-description: "DROP STATISTICS (Transact-SQL)"
+description: DROP STATISTICS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "03/22/2016"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "DROP STATISTICS"
   - "DROP_STATISTICS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing statistics"
   - "column statistics [SQL Server]"
   - "DROP STATISTICS statement"
@@ -17,12 +19,8 @@ helpviewer_keywords:
   - "dropping statistics"
   - "table statistics [SQL Server]"
   - "statistical information [SQL Server], removing"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom:
-- event-tier1-build-2022
-ms.date: "03/22/2016"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

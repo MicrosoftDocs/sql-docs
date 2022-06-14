@@ -1,25 +1,23 @@
 ---
-description: "sys.server_role_members (Transact-SQL)"
-title: "sys.server_role_members (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_role_members (Transact-SQL)"
+description: sys.server_role_members (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_role_members"
   - "sys.server_role_members_TSQL"
   - "server_role_members_TSQL"
   - "sys.server_role_members"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_role_members catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_role_members (Transact-SQL)

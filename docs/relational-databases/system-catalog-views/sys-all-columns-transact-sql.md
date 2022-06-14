@@ -1,26 +1,24 @@
 ---
-description: "sys.all_columns (Transact-SQL)"
-title: "sys.all_columns (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.all_columns (Transact-SQL)"
+description: sys.all_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "all_columns_TSQL"
   - "all_columns"
   - "sys.all_columns_TSQL"
   - "sys.all_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_columns (Transact-SQL)

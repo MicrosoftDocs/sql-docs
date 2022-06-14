@@ -871,10 +871,6 @@
           href: database/scripts/add-database-to-failover-group-cli.md
         - name: Pooled database
           href: database/scripts/add-elastic-pool-to-failover-group-cli.md
-      - name: Auditing and threat detection
-        items:
-        - name: Configure auditing and threat-detection
-          href: database/scripts/auditing-threat-detection-cli.md
       - name: Database back up, restore, copy, and import
         items:
         - name: Back up a database
@@ -1295,9 +1291,9 @@
         href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
       - name: Replicate databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-replicate-database.md
-      - name: Fail over databases in SSMS
+      - name: Failover databases in SSMS
         href: managed-instance/managed-instance-link-use-ssms-to-failover-database.md
-      - name: Fail over databases with scripts
+      - name: Failover databases with scripts
         href: managed-instance/managed-instance-link-use-scripts-to-failover-database.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md

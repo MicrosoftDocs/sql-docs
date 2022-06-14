@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/05/2022
+ms.date: 06/09/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -27,7 +27,7 @@ This article teaches you how to prepare your environment for a [Managed Instance
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance
@@ -48,7 +48,7 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of the SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 ```
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
@@ -56,12 +56,12 @@ Ensure that your SQL Server version has the appropriate servicing update install
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
-Create database master key in the master database by running the following T-SQL script on SQL Server:
+Create database master key in the master database, if not already present. Insert your password in place of `<strong_password>` in the script below, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
@@ -90,16 +90,16 @@ declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
 select
     @IsHadrEnabled as IsHadrEnabled,
     case @IsHadrEnabled
-        when 0 then 'The AlwaysOn availability groups is disabled.'
-        when 1 then 'The AlwaysOn availability groups is enabled.'
+        when 0 then 'The Always On availability groups is disabled.'
+        when 1 then 'The Always On availability groups is enabled.'
         else 'Unknown status.'
     end as 'HadrStatus'
 ```
 
-The above query will display if AlwaysOn availability group is enabled, or not, on your SQL Server.
+The above query will display if Always On availability group is enabled, or not, on your SQL Server.
 
 >[!IMPORTANT]
-> For SQL Server 2016, if you need to enable AlwaysOn availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
+> For SQL Server 2016, if you need to enable Always On availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
 
 If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
@@ -110,11 +110,11 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/sql-server-configuration-manager-sql-server-properties.png" alt-text="Screenshot that shows SQL Server Configuration Manager, with selections for opening properties for the service.":::
 
 1. Go to the **Always On Availability Groups** tab. 
-1. Select the **Enable AlwaysOn Availability Groups** checkbox, and then select **OK**. 
+1. Select the **Enable Always On Availability Groups** checkbox, and then select **OK**. 
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-    - If using **SQL Server 2016**, and if Enable AlwaysOn Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
+    - If using **SQL Server 2016**, and if Enable Always On Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
 
 1. Select **OK** in the dialog
 1. Restart the SQL Server service.
@@ -157,10 +157,10 @@ After the restart, run the following T-SQL script on SQL Server to validate the 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 
 -- Shows if the Always On availability groups feature is enabled 
-SELECT SERVERPROPERTY ('IsHadrEnabled')
+SELECT SERVERPROPERTY ('IsHadrEnabled') as 'Is Always On enabled? (1 true, 0 false)'
 
 -- Lists all trace flags enabled on SQL Server
 DBCC TRACESTATUS
@@ -196,7 +196,17 @@ If your SQL Server instance is hosted outside Azure, establish a VPN connection 
 
 ### Network ports between the environments
 
-Port 5022 needs to allow inbound and outbound traffic between SQL Server and SQL Managed Instance. Port 5022 is the standard database mirroring endpoint port for availability groups. It can't be changed or customized. 
+Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the  environments:
+
+The Network Security Group (NSG) rules on the subnet hosting managed instance needs to allow:
+- Inbound traffic on port 5022 and port range 11000-11999 from the network hosting SQL Server
+
+Firewall on the network hosting SQL Server, and the host OS needs to allow:
+- Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
+
+Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
 
 The following table describes port actions for each environment: 
 
@@ -204,9 +214,9 @@ The following table describes port actions for each environment:
 |:---|:-----|
 |SQL Server (in Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. Create a network security group (NSG) rule in the virtual network that hosts the VM to allow communication on port 5022. |
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
-|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in the Azure portal to allow inbound and outbound traffic from the IP address of SQL Server on port 5022 to the virtual network that hosts SQL Managed Instance. |
+|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in Azure portal to allow inbound and outbound traffic from the IP address and the networking hosting SQL Server on port 5022 and port range 11000-11999. |
 
-Use the following PowerShell script on the Windows host of the SQL Server instance to open ports in the Windows firewall: 
+Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 
 ```powershell
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 inbound" -Direction inbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP
@@ -269,11 +279,12 @@ tnc localhost -port 5022
 
 A successful test shows `TcpTestSucceeded : True`. You can then proceed to creating a SQL Agent job on the managed instance to try testing the SQL Server test endpoint on port 5022 from the managed instance.
 
-Next, create a SQL Agent job on the managed instance called `NetHelper` by using the public IP address or DNS name that can be resolved from the managed instance for `SQL_SERVER_ADDRESS`. Run the following T-SQL script on the managed instance: 
+Next, create a SQL Agent job on the managed instance called `NetHelper` by running the following T-SQL script on the managed instance. Replace:
+- `SQL_SERVER_ADDRESS` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
--- Run on the managed instance
--- SQL_SERVER_ADDRESS should be a public IP address, or the DNS name that can be resolved from the SQL Managed Instance host machine.
+-- Run on managed instance
+-- SQL_SERVER_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
 DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
@@ -298,18 +309,17 @@ EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
-
 Run the SQL Agent job by running the following T-SQL command on the managed instance: 
 
 ```sql
--- Run on the managed instance
+-- Run on managed instance
 EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
 Run the following query on the managed instance to show the log of the SQL Agent job: 
 
 ```sql
--- Run on the managed instance
+-- Run on managed instance
 SELECT 
     sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
 FROM
@@ -352,7 +362,7 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 

@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_cluster_properties (Transact-SQL)"
-title: "sys.dm_os_cluster_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_cluster_properties (Transact-SQL)"
+description: sys.dm_os_cluster_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_cluster_properties_TSQL"
   - "sys.dm_os_cluster_properties"
   - "dm_os_cluster_properties_TSQL"
   - "dm_os_cluster_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

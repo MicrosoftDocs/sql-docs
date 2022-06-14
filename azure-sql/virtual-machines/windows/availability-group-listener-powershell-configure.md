@@ -35,7 +35,7 @@ To complete the steps in this article, your availability groups need to be alrea
 
 Related topics include:
 
-* [Configure AlwaysOn Availability Groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
+* [Configure Always On Availability Groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
 * [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps)
 
 [!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
@@ -195,7 +195,7 @@ $ILB | Add-AzLoadBalancerRuleConfig -Name $LBConfigRuleName -FrontendIpConfigura
 
 1. Launch SQL Server Management Studio and connect to the primary replica.
 
-1. Navigate to **AlwaysOn High Availability** > **Availability Groups** > **Availability Group Listeners**. 
+1. Navigate to **Always On High Availability** > **Availability Groups** > **Availability Group Listeners**. 
 
 1. You should now see the listener name that you created in Failover Cluster Manager. Right-click the listener name and select **Properties**.
 

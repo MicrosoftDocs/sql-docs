@@ -4,11 +4,10 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn the role of the SQL Server storage pool in a SQL Server 2019 Big Data Cluster, as well as the architecture and functionality of a SQL storage pool.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 10/01/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Introducing the storage pool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

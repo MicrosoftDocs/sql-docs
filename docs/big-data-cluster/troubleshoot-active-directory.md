@@ -6,9 +6,9 @@ author: rl-msft
 ms.author: rafidl
 ms.reviewer: wiassaf
 ms.date: 07/09/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Troubleshoot SQL Server Big Data Cluster Active Directory integration

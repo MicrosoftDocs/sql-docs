@@ -16,13 +16,13 @@ ms.custom: kr2b-contr-experiment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory (AD) mode.
+This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Symptom
 
-You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.
+You started deploying SQL Server Big Data Clusters with Active Directory mode. The deployment is stuck and not moving forward.
 
 The following example shows the deployment results in a bash shell.
 
@@ -56,7 +56,7 @@ Check the current deployed pods.
 kubectl get pods -n mssql-cluster
 ```
 
-The following list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created.
+The following list shows only pods that belong to the controller have been deployed. No compute, data or storage pool pods are being created.
 
 ```output
 NAME              READY   STATUS    RESTARTS   AGE
@@ -121,7 +121,7 @@ To identify why deployment quit without creating compute, data, or storage pods,
 
 ## Cause
 
-In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use global or universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md) explains AD group scope requirements.
+In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use global or universal scoped groups. To learn about Active Directory group scope requirements, see [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md).
 
 ## Verify
 
@@ -129,16 +129,16 @@ Check the scope of the domain group (`<domain-group>`). Use [get-adgroup](/power
 
 If the `<domain-group>` group scope is domain local (`DomainLocal`) deployment fails. 
 
-The following PowerShell script checks the scope of two AD groups named `bdcadmins` and `bdcusers`. Replace the names with the names for your groups. 
+The following PowerShell script checks the scope of two Active Directory groups named `bdcadmins` and `bdcusers`. Replace the names with the names for your groups. 
 
 ```powershell
-#Administrators and users AD groups
+#Administrators and users Active Directory groups
 $Cluster_admins_group='bdcadmins'
 $Cluster_users_group='bdcusers'
 
-#Performing AD Group Checks...
+#Performing Active Directory Group Checks...
 
-#AD admin group Check
+#Active Directory admin group Check
 $ClusterAdminGroupScope_Result = New-Object System.Collections.ArrayList
 try {
     $GroupScope = Get-ADgroup -Identity $Cluster_admins_group | Select-Object -ExpandProperty GroupScope
@@ -175,4 +175,4 @@ $ClusterUsersGroupScope_Result
 
 ## Resolution
 
-To resolve the problem, create the AD groups with either universal or global scope and run the deployment again.
+To resolve the problem, create the Active Directory groups with either universal or global scope and run the deployment again.

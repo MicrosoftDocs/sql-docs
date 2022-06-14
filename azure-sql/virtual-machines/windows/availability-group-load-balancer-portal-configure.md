@@ -188,7 +188,7 @@ If the cluster resources and dependencies are correctly configured, you should b
 
 1. Start SQL Server Management Studio, and then connect to the primary replica.
 
-2. Go to **AlwaysOn High Availability** > **Availability Groups** > **Availability Group Listeners**.  
+2. Go to **Always On High Availability** > **Availability Groups** > **Availability Group Listeners**.  
 
     You should now see the listener name that you created in Failover Cluster Manager. 
 

@@ -98,8 +98,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 [Download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases).
 
-> [!Note]
-
+> [!NOTE]
 > All previous versions of Azure Data Studio are not supported.
 
 ### May 2022 (hotfix)

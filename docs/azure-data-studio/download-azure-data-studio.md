@@ -37,8 +37,7 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) version.
 | macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2198762) |
 | Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2198763)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2198880)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2198879) |
 
-> [!Note]
-
+> [!NOTE]
 > Azure Data Studio currently does not support the ARM architecture.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
@@ -93,9 +92,9 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
-    > [!Note]
+    > [!NOTE]
     > The following example also works with the system installer file.
-    > 
+
     > ```console
     > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
     > ```
@@ -131,7 +130,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     azuredatastudio
     ```
 
-> [!Note]
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
@@ -155,7 +154,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     azuredatastudio
     ```
 
-> [!Note]
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
@@ -182,8 +181,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     azuredatastudio
     ```
 
-> [!Note] 
-
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
@@ -221,8 +219,7 @@ Azure Data Studio runs on Windows, macOS, and Linux.  The following versions are
 - macOS: 10.12+, 11, 12
 - Linux: Debian 9+, RHEL 7+, Ubuntu 18.04+
 
-> [!Note]
->
+> [!NOTE]
 > Incremental versions within a major operating system release may no longer be in support by the operating system. Consult the documentation for your operating system to ensure you have received applicable updates.
 
 ## Supported SQL Server versions

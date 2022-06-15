@@ -1,21 +1,17 @@
 ---
+title: "RDS Code Examples in VBScript"
 description: "RDS Code Examples in VBScript"
-title: "RDS Code Examples in VBScript | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "RDS samples [ADO], VBScript"
-  - "VBScript RDS examples [ADO]"
-ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RDS samples [ADO], VBScript"
+  - "VBScript RDS examples [ADO]"
+dev_langs:
+  - "VB"
 ---
 # RDS Code Examples in VBScript
 > [!IMPORTANT]

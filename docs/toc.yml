@@ -8662,16 +8662,11 @@ items:
     href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
     - name: Install
-      href: tools/distributed-replay/install-distributed-replay-overview.md
-      items:
-      - name: Requirements
-        href: tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
-        href: tools/distributed-replay/install-distributed-replay.md
-      - name: Complete the Post-Installation Steps
-        href: tools/distributed-replay/complete-the-post-installation-steps.md
-      - name: Modify the Controller & Client Services Accounts
-        href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+      href: tools/distributed-replay/install-distributed-replay.md
+    - name: Complete the Post-Installation Steps
+      href: tools/distributed-replay/complete-the-post-installation-steps.md
+    - name: Modify the Controller & Client Services Accounts
+      href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
     - name: Configure
       href: tools/distributed-replay/configure-distributed-replay.md
       items:

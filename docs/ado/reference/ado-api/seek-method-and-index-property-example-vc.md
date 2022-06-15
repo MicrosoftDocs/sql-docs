@@ -1,21 +1,17 @@
 ---
+title: "Seek Method and Index Property Example (VC++)"
 description: "Seek Method and Index Property Example (VC++)"
-title: "Seek Method and Index Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Seek method [ADO], VC++ example"
-  - "index property [ADO]"
-ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Seek method [ADO], VC++ example"
+  - "index property [ADO]"
+dev_langs:
+  - "C++"
 ---
 # Seek Method and Index Property Example (VC++)
 This example uses the [Recordset](./recordset-object-ado.md) object's [Seek](./seek-method.md) method and [Index](./index-property.md) property in conjunction with a given ***Employee ID***, to locate the employee's name in the ***Employees*** table of the Nwind.mdb database.  

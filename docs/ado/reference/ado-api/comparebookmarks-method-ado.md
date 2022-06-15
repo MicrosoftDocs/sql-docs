@@ -1,23 +1,19 @@
 ---
+title: "CompareBookmarks Method (ADO)"
 description: "CompareBookmarks Method (ADO)"
-title: "CompareBookmarks Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "CompareBookmarks"
   - "Recordset20::CompareBookmarks"
   - "Recordset20::raw_CompareBookmarks"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CompareBookmarks method [ADO]"
-ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # CompareBookmarks Method (ADO)
 Compares two bookmarks and returns an indication of their relative values.  

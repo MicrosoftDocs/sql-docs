@@ -1,19 +1,15 @@
 ---
+title: "System Requirements for the Address Book Application"
 description: "System Requirements for the Address Book Application"
-title: "System Requirements for the Address Book Application | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "address book application scenario [ADO]"
-  - "RDS scenarios [ADO]"
-ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "address book application scenario [ADO]"
+  - "RDS scenarios [ADO]"
 ---
 # System Requirements for the Address Book Application
 To set up the Address Book sample application, you need to meet the following software and database requirements:  

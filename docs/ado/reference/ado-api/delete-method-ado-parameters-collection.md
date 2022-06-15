@@ -1,22 +1,18 @@
 ---
+title: "Delete Method (ADO Parameters Collection)"
 description: "Delete Method (ADO Parameters Collection)"
-title: "Delete Method (ADO Parameters Collection) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_DynaCollection::Delete"
-  - "_DynaCollection::raw_Delete"
-helpviewer_keywords: 
-  - "Delete method [ADO]"
-ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_DynaCollection::Delete"
+  - "_DynaCollection::raw_Delete"
+helpviewer_keywords:
+  - "Delete method [ADO]"
+apitype: "COM"
 ---
 # Delete Method (ADO Parameters Collection)
 Deletes an object from the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

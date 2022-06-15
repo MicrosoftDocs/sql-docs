@@ -1,8 +1,8 @@
 ---
 title: "Backup Stretch-enabled databases"
 description: Backup Stretch-enabled databases (Stretch Database)
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/09/2022
 ms.service: sql-server-stretch-database

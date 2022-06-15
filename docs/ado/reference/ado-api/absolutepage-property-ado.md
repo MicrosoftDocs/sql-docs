@@ -1,21 +1,17 @@
 ---
+title: "AbsolutePage Property (ADO)"
 description: "AbsolutePage Property (ADO)"
-title: "AbsolutePage Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::AbsolutePage"
-helpviewer_keywords: 
-  - "AbsolutePage property [ADO]"
-ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::AbsolutePage"
+helpviewer_keywords:
+  - "AbsolutePage property [ADO]"
+apitype: "COM"
 ---
 # AbsolutePage Property (ADO)
 Indicates on which page the current record resides.  

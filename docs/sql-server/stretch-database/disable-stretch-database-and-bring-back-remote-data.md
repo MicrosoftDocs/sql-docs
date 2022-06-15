@@ -1,8 +1,8 @@
 ---
 title: "Disable Stretch Database and bring back remote data"
 description: Disable Stretch Database and bring back remote data
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/09/2022
 ms.service: sql-server-stretch-database

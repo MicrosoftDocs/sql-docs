@@ -1,8 +1,8 @@
 ---
 title: "Identify databases and tables"
 description: Identify databases and tables for Stretch Database with Data Migration Assistant
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/09/2022
 ms.service: sql-server-stretch-database

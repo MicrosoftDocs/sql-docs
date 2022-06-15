@@ -1,21 +1,17 @@
 ---
+title: "Property (Visual C++ Syntax Index with #import)"
 description: "Property (Visual C++ Syntax Index with #import)"
-title: "Property (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Property collection [ADO], Visual C++ syntax index with #import"
-ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Property collection [ADO], Visual C++ syntax index with #import"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Property (Visual C++ Syntax Index with #import)
 ## Properties  

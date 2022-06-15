@@ -12,7 +12,7 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scalability
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] contains scalability enhancements to the on-disk storage for memory-optimized tables. 
 
 ## Multiple threads to persist memory-optimized tables  

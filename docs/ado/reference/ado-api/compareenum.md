@@ -1,21 +1,17 @@
 ---
+title: "CompareEnum"
 description: "CompareEnum"
-title: "CompareEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CompareEnum"
-helpviewer_keywords: 
-  - "CompareEnum enumeration [ADO]"
-ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CompareEnum"
+helpviewer_keywords:
+  - "CompareEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # CompareEnum
 Specifies the relative position of two records represented by their bookmarks.  

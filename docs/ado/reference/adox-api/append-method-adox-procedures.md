@@ -1,22 +1,18 @@
 ---
+title: "Append Method (ADOX Procedures)"
 description: "Append Method (ADOX Procedures)"
-title: "Append Method (ADOX Procedures) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Procedures::Append"
-  - "Procedures::raw_Append"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Procedures::Append"
+  - "Procedures::raw_Append"
+helpviewer_keywords:
+  - "Append method [ADOX]"
+apitype: "COM"
 ---
 # Append Method (ADOX Procedures)
 Adds a new [Procedure](./procedure-object-adox.md) object to the [Procedures](./procedures-collection-adox.md) collection.  

@@ -1,19 +1,15 @@
 ---
+title: "FilterColumn Property (RDS)"
 description: "FilterColumn Property (RDS)"
-title: "FilterColumn Property (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "FilterColumn property [ADO]"
-ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "FilterColumn property [ADO]"
+apitype: "COM"
 ---
 # FilterColumn Property (RDS)
 Indicates the column on which to evaluate the filter criteria.  

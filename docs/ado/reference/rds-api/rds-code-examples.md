@@ -1,18 +1,14 @@
 ---
+title: "RDS Code Examples"
 description: "RDS Code Examples"
-title: "RDS Code Examples | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "RDS samples [ADO]"
-ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RDS samples [ADO]"
 ---
 # RDS Code Examples
 > [!IMPORTANT]

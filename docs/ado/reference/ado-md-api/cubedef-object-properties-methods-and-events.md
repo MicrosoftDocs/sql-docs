@@ -1,18 +1,14 @@
 ---
+title: "CubeDef Object Properties, Methods, and Events"
 description: "CubeDef Object Properties, Methods, and Events"
-title: "CubeDef Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "CubeDef object [ADO MD], members"
-ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CubeDef object [ADO MD], members"
 ---
 # CubeDef Object Properties, Methods, and Events
 ## Properties/Collections  

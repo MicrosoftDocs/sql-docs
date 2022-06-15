@@ -1,19 +1,15 @@
 ---
+title: "ADO Methods"
 description: "ADO Methods"
-title: "ADO Methods | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO, methods"
-  - "methods [ADO]"
-ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO, methods"
+  - "methods [ADO]"
 ---
 # ADO Methods
 

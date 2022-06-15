@@ -1,21 +1,17 @@
 ---
+title: "StringFormatEnum"
 description: "StringFormatEnum"
-title: "StringFormatEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "StringFormatEnum"
-helpviewer_keywords: 
-  - "StringFormatEnum enumeration [ADO]"
-ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "StringFormatEnum"
+helpviewer_keywords:
+  - "StringFormatEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # StringFormatEnum
 Specifies the format when retrieving a [Recordset](./recordset-object-ado.md) as a string.  

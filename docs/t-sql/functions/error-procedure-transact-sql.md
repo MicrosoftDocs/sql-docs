@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
 This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute. 
-- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-ver15.md) returns schema_name.stored_procedure_name
+- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-2019.md) returns schema_name.stored_procedure_name
 - SQL Server 2016 returns stored_procedure_name
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -158,5 +158,3 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
-  
-

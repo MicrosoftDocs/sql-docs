@@ -1,23 +1,21 @@
 ---
-description: "cdc.lsn_time_mapping (Transact-SQL)"
-title: "cdc.lsn_time_mapping (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.lsn_time_mapping (Transact-SQL)"
+description: cdc.lsn_time_mapping (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc.lsn_time_mapping"
   - "cdc.lsn_time_mapping_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.lsn_time_mapping"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

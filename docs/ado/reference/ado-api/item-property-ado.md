@@ -1,15 +1,13 @@
 ---
+title: "Item Property (ADO)"
 description: "Item Property (ADO)"
-title: "Item Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Parameters::GetItem"
   - "Indexes::GetItem"
   - "Parameters::Item"
@@ -41,11 +39,9 @@ f1_keywords:
   - "Parameters::get_Item"
   - "Errors::Item"
   - "Procedures::get_Item"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Item property [ADO]"
-ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Item Property (ADO)
 Indicates a specific member of a collection, by name or ordinal number.  

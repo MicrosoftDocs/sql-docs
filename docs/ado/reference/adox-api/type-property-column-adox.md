@@ -1,25 +1,21 @@
 ---
+title: "Type Property (Column) (ADOX)"
 description: "Type Property (Column) (ADOX)"
-title: "Type Property (Column) (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Column::Type"
   - "_Column::GetType"
   - "_Column::get_Type"
   - "_Column::put_Type"
   - "_Column::PutType"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Type property [ADOX]"
-ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Type Property (Column) (ADOX)
 Indicates the data type of a column.  

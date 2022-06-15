@@ -1,15 +1,14 @@
 ---
-description: "Create partitioned tables and indexes"
 title: "Create partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
-ms.custom: ""
+description: Create partitioned tables and indexes
+author: VanMSFT
+ms.author: vanto
 ms.date: "4/20/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.createpartition.progress.f1"
   - "sql13.swb.createpartition.partitioncolumn.f1"
   - "sql13.swb.createpartition.createjob.f1"
@@ -20,15 +19,13 @@ f1_keywords:
   - "sql13.swb.createpartition.getstart.f1"
   - "sql13.swb.createpartition.mappartition.f1"
   - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partitioned indexes [SQL Server], creating"
   - "partition schemes [SQL Server], creating"
   - "partition functions [SQL Server], creating"
   - "partitioned tables [SQL Server], creating"
   - "partition functions [SQL Server]"
   - "partition schemes [SQL Server]"
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create partitioned tables and indexes

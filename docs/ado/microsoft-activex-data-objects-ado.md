@@ -1,18 +1,14 @@
 ---
+title: "Microsoft ActiveX Data Objects (ADO)"
 description: "Microsoft ActiveX Data Objects (ADO)"
-title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ADO, about"
-ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ADO, about"
 ---
 # Microsoft ActiveX Data Objects (ADO)
 

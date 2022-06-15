@@ -1,19 +1,15 @@
 ---
+title: "RDS Usage and Security"
 description: "RDS Usage and Security"
-title: "RDS Usage and Security | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS [ADO]"
-  - "remote data service [ADO]"
-ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS [ADO]"
+  - "remote data service [ADO]"
 ---
 # RDS Usage and Security
 Use the information in this section to set up your server and use RDS quickly. This section includes specific configuration steps that you might need to take when implementing RDS, describes some of the key relationships between RDS and other technologies, and helps identify solutions to problems that you might encounter when setting up an RDS solution.  

@@ -1,20 +1,19 @@
 ---
 title: "Debug Common Language Runtime (CLR) database objects"
 description: SQL Server provides support for debugging Transact-SQL and CLR objects in the database integrating SQL Server debugger with Microsoft Visual Studio debugger.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/06/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database objects [CLR integration], debugging"
   - "permissions [CLR integration]"
   - "debugging [CLR integration]"
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-author: rothja
-ms.author: jroth
 ---
 # How to debug CLR database objects
 

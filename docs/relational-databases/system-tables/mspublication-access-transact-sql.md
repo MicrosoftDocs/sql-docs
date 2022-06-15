@@ -1,23 +1,21 @@
 ---
-description: "MSpublication_access (Transact-SQL)"
-title: "MSpublication_access (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpublication_access (Transact-SQL)"
+description: MSpublication_access (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpublication_access_TSQL"
   - "MSpublication_access"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpublication_access system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

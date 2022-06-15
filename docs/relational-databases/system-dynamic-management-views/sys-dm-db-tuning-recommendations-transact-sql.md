@@ -1,25 +1,23 @@
 ---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL)"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_tuning_recommendations"
   - "dm_db_tuning_recommendations"
   - "sys.dm_db_tuning_recommendations_TSQL"
   - "dm_db_tuning_recommendations_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view"
   - "sys.dm_db_tuning_recommendations dynamic management view"
-author: "jovanpop-msft"
-ms.author: "jovanpop"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)

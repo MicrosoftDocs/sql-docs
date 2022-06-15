@@ -1,21 +1,17 @@
 ---
+title: "CommandText Property (ADO)"
 description: "CommandText Property (ADO)"
-title: "CommandText Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Command15::CommandText"
-helpviewer_keywords: 
-  - "CommandText property [ADO]"
-ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Command15::CommandText"
+helpviewer_keywords:
+  - "CommandText property [ADO]"
+apitype: "COM"
 ---
 # CommandText Property (ADO)
 Indicates the text of a command to be issued against a provider.  

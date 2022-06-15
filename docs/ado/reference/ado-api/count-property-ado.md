@@ -1,21 +1,17 @@
 ---
+title: "Count Property (ADO)"
 description: "Count Property (ADO)"
-title: "Count Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Collection::Count"
-helpviewer_keywords: 
-  - "Count property [ADO]"
-ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Collection::Count"
+helpviewer_keywords:
+  - "Count property [ADO]"
+apitype: "COM"
 ---
 # Count Property (ADO)
 Indicates the number of objects in a collection.  

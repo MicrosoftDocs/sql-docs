@@ -1,15 +1,16 @@
 ---
 title: Split-merge security configuration
 description: Set up x409 certificates for encryption with the split/merge service for elastic scale.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scale-out
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 12/18/2018
 ---
 # Split-merge security configuration

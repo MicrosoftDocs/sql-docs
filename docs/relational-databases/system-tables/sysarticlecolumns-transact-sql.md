@@ -1,23 +1,21 @@
 ---
-description: "sysarticlecolumns (Transact-SQL)"
-title: "sysarticlecolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysarticlecolumns (Transact-SQL)"
+description: sysarticlecolumns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysarticlecolumns"
   - "sysarticlecolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysarticlecolumns system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

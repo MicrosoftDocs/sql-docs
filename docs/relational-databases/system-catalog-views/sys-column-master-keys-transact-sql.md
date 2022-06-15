@@ -1,14 +1,14 @@
 ---
-description: "sys.column_master_keys (Transact-SQL)"
-title: "sys.column_master_keys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.column_master_keys (Transact-SQL)"
+description: sys.column_master_keys (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "column_master_key_definitions_TSQL"
   - "column_master_key_definitions"
   - "sys.column_master_key_definitions_TSQL"
@@ -17,14 +17,12 @@ f1_keywords:
   - "column_master_keys"
   - "sys.column_master_keys_TSQL"
   - "sys.column_master_keys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_master_key_definitions catalog view"
   - "sys.column_master_keys catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_master_keys (Transact-SQL)

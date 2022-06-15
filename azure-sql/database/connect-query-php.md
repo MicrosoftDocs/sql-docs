@@ -2,17 +2,21 @@
 title: Use PHP to query
 description: How to use PHP to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and query it using T-SQL statements.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.devlang: php
+ms.devlang:
+  - "php"
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma, v-masebo
+ms.reviewer: wiassaf, mathoma, v-masebo
 ms.date: 05/29/2020
-ms.custom: sqldbrb=2 , mode-other
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.custom:
+  - "sqldbrb=2"
+  - "mode-other"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use PHP to query a database in Azure SQL Database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

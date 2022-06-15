@@ -1,24 +1,20 @@
 ---
+title: "Stored Procedure Properties Example (JScript)"
 description: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (JScript)"
-title: "Stored Procedure Properties Example (JScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ActiveConnection property [ADO], JScript example"
   - "CommandText property [ADO], JScript example"
   - "Size property [ADO], JScript example"
   - "Direction property [ADO], JScript example"
   - "CommandTimeout property [ADO], JScript example"
-ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "JScript"
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (JScript)
 This example uses the [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [Size](./size-property-ado-parameter.md), and [Direction](./direction-property.md) properties to execute a stored procedure. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveConnectionJS.asp**.  

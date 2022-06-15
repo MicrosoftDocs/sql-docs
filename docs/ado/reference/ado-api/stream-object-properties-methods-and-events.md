@@ -1,18 +1,14 @@
 ---
+title: "Stream Object Properties, Methods, and Events"
 description: "Stream Object Properties, Methods, and Events"
-title: "Stream Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Stream object [ADO], members"
-ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Stream object [ADO], members"
 ---
 # Stream Object Properties, Methods, and Events
 ## Properties  

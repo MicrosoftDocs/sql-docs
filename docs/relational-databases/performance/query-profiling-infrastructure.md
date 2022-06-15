@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "lightweight profiling"
   - "lwp"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Query Profiling Infrastructure

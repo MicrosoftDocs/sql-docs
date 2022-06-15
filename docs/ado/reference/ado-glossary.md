@@ -1,18 +1,14 @@
 ---
+title: "ADO Glossary"
 description: "ADO Glossary"
-title: "ADO Glossary | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO, glossary"
-ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO, glossary"
 ---
 # ADO Glossary
 This topic defines terms relevant to ADO.  

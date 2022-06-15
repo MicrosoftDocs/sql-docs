@@ -1,24 +1,22 @@
 ---
-title: "sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_rda_schema_update_status (Transact-SQL)"
 description: Learn how sys.dm_db_rda_schema_update_status contains a row for each schema update task for the remote data archive of each Stretch-enabled table in the database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_rda_schema_update_status"
   - "sys.dm_db_rda_schema_update_status_TSQL"
   - "dm_db_rda_schema_update_status"
   - "dm_db_rda_schema_update_status_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_rda_schema_update_status dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: pmasl 
-ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

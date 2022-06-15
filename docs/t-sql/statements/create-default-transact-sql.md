@@ -1,27 +1,25 @@
 ---
-description: "CREATE DEFAULT (Transact-SQL)"
-title: "CREATE DEFAULT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE DEFAULT (Transact-SQL)"
+description: CREATE DEFAULT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_DEFAULT_TSQL"
   - "CREATE DEFAULT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], default"
   - "default objects"
   - "CREATE DEFAULT statement"
   - "objects [SQL Server], creating"
   - "DEFAULT definition"
+dev_langs:
+  - "TSQL"
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,30 +1,28 @@
 ---
-description: "Change Tracking Catalog Views - sys.change_tracking_databases"
-title: "sys.change_tracking_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.change_tracking_databases (Transact-SQL)"
+description: Change Tracking Catalog Views - sys.change_tracking_databases
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "change_tracking_databases"
   - "sys.change_tracking_databases_TSQL"
   - "sys.change_tracking_databases"
   - "change_tracking_databases_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.change_tracking_databases"
   - "change tracking [SQL Server], sys.change_tracking_databases"
+dev_langs:
+  - "TSQL"
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_databases
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each database that has change tracking enabled.  
 

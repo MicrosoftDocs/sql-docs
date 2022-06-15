@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC DBREINDEX (Transact-SQL)

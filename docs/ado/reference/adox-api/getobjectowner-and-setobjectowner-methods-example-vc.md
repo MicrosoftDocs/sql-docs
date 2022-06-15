@@ -1,21 +1,17 @@
 ---
+title: "GetObjectOwner and SetObjectOwner Methods Example (VC++)"
 description: "GetObjectOwner and SetObjectOwner Methods Example (VC++)"
-title: "GetObjectOwner and SetObjectOwner Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetObjectOwner method [ADOX], VC++ example"
-  - "GetObjectOwner method [ADOX], VC++ example"
-ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SetObjectOwner method [ADOX], VC++ example"
+  - "GetObjectOwner method [ADOX], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # GetObjectOwner and SetObjectOwner Methods Example (VC++)
 This example demonstrates the [GetObjectOwner](./getobjectowner-method-adox.md) and [SetObjectOwner](./setobjectowner-method.md) methods. This code assumes the existence of the group Accounting (see the [Groups and Users Append, ChangePassword Methods Example (VC++)](./groups-and-users-append-changepassword-methods-example-vc.md) to see how to add this group to the system). The owner of the Categories table is set to Accounting.  

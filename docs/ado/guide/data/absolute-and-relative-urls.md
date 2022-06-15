@@ -1,20 +1,16 @@
 ---
+title: "Absolute and Relative URLs"
 description: "Absolute and Relative URLs"
-title: "Absolute and Relative URLs | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "relative URLs [ADO]"
   - "absolute URLs [ADO]"
   - "URLs [ADO]"
-ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: rothja
-ms.author: jroth
 ---
 # Absolute and Relative URLs
 A URL specifies the location of a target stored on a local or networked computer. The target can be a file, directory, HTML page, image, program, and so on.  

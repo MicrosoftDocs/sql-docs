@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_job_object (Azure SQL Database)"
-title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_job_object (Azure SQL Database)"
+description: sys.dm_os_job_object (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2020"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_resource_stats"
   - "sys.dm_db_resource_stats_TSQL"
   - "dm_db_resource_stats"
   - "dm_db_resource_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

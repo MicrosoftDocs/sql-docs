@@ -5,7 +5,8 @@ description: Learn how to analyze deadlocks and prevent them from reoccurring in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual

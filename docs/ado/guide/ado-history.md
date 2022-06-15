@@ -1,18 +1,14 @@
 ---
+title: "ADO History"
 description: "ADO Features for each Release"
-title: "ADO History | Microsoft Docs"
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2019"
-ms.reviewer: ""
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, what's new"
-ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-author: rothja
-ms.author: jroth
 ---
 # ADO Features for each Release
 

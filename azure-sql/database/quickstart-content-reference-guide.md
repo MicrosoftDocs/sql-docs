@@ -1,14 +1,15 @@
 ---
 title: Single database quickstart content reference
 description: 'Find a content reference of all the quickstarts that help you quickly get started with Azure SQL Database.'
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: guide
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 07/29/2019
 ---

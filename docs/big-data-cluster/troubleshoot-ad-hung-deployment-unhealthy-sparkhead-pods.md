@@ -5,11 +5,11 @@ description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cl
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: wiassaf
-ms.date: 06/02/2022
+ms.date: 06/17/2022
 ms.custom: kr2b-contr-experiment
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Active Directory mode deployment becomes unresponsive: sparkhead pods

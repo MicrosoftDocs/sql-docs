@@ -1,14 +1,17 @@
 ---
 title: Azure PowerShell script examples
 description: Use Azure PowerShell script examples to help you create and manage Azure SQL Database and Azure SQL Managed Instance resources.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: development
-ms.custom: sqldbrb=2
-ms.devlang: PowerShell
+ms.custom:
+  - "sqldbrb=2"
+ms.devlang:
+  - "PowerShell"
 ms.topic: sample
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 03/25/2019
 ---
@@ -41,8 +44,6 @@ The following table includes links to sample Azure PowerShell scripts for Azure 
 |**Scale a single database and an elastic pool**||
 | [Scale a single database](scripts/monitor-and-scale-database-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json) | This PowerShell script monitors the performance metrics of a single database, scales it to a higher compute size, and creates an alert rule on one of the performance metrics. |
 | [Scale an elastic pool](scripts/monitor-and-scale-pool-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json) | This PowerShell script monitors the performance metrics of an elastic pool, scales it to a higher compute size, and creates an alert rule on one of the performance metrics. |
-| **Auditing and threat detection** |
-| [Configure auditing and threat-detection](scripts/auditing-threat-detection-powershell-configure.md?toc=%2fpowershell%2fmodule%2ftoc.json)| This PowerShell script configures auditing and threat-detection policies for a database. |
 | **Restore, copy, and import a database**||
 | [Restore a database](scripts/restore-database-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json)| This PowerShell script restores a database from a geo-redundant backup and restores a deleted database to the latest backup. |
 | [Copy a database to a new server](scripts/copy-database-to-new-server-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json)| This PowerShell script creates a copy of an existing database in a new server. |

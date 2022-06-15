@@ -1,13 +1,13 @@
 ---
-title: "Overview of CLR Integration | Microsoft Docs"
+title: "Overview of CLR Integration"
 description: Microsoft SQL Server hosting CLR is called CLR integration. Authoring in managed code can improve performance. SQL Server uses CAS to help secure managed code.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/19/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "common language runtime [SQL Server], about CLR integration"
   - "extended stored procedures [SQL Server], vs. managed code"
   - "objects [CLR integration]"
@@ -16,8 +16,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], vs. extended stored procedures"
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-author: rothja
-ms.author: jroth
 ---
 # CLR Integration - Overview
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

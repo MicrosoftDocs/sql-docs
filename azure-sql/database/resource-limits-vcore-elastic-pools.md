@@ -1,16 +1,18 @@
 ---
 title: Elastic pool vCore resource limits
 description: This page describes some common vCore resource limits for elastic pools in Azure SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-pools
-ms.custom: sqldbrb=1, references_regions
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "references_regions"
 ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
-ms.date: 04/25/2022
+ms.reviewer: wiassaf, mathoma
+ms.date: 06/07/2022
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -40,97 +42,13 @@ You can set the service tier, compute size (service objective), and storage amou
 
 If all vCores of an elastic pool are busy, then each database in the pool receives an equal amount of compute resources to process queries. Azure SQL Database provides resource sharing fairness between databases by ensuring equal slices of compute time. Elastic pool resource sharing fairness is in addition to any amount of resource otherwise guaranteed to each database when the vCore min per database is set to a non-zero value.
 
-## General purpose - provisioned compute - Gen4
-
-<!---
-vCore resource limits are listed in the following articles, please be sure to update all of them: 
-/database/resource-limits-vcore-single-databases.md
-/database/resource-limits-vcore-elastic-pools.md
-/database/resource-limits-logical-server.md
-/database/service-tier-general-purpose.md
-/database/service-tier-business-critical.md
-/database/service-tier-hyperscale.md
-/managed-instance/resource-limits.md
---->
-
-> [!IMPORTANT]
-> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
-
-### General purpose service tier: Generation 4 compute platform (part 1)
-
-|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
-|:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|1|2|3|4|5|6|
-|Memory (GB)|7|14|21|28|35|42|
-|Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|512|756|1536|1536|1536|2048|
-|Max log size <sup>2</sup>|154|227|461|461|461|614|
-|TempDB max data size (GB)|32|64|96|128|160|192|
-|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
-|Max data IOPS per pool <sup>3</sup> |400|800|1200|1600|2000|2400|
-|Max log rate per pool (MBps)|6|12|18|24|30|36|
-|Max concurrent workers per pool<sup>4</sup> |210|420|630|840|1050|1260|
-|Max concurrent logins per pool <sup>4</sup> |210|420|630|840|1050|1260|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
-|Number of replicas|1|1|1|1|1|1|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
-
-<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
-
-### General purpose service tier: Generation 4 compute platform (part 2)
-
-|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|2048|2048|2048|2048|3584|4096|
-|Max log size (GB) <sup>2</sup>|614|614|614|614|1075|1229|
-|TempDB max data size (GB)|224|256|288|320|512|768|
-|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
-|Max data IOPS per pool <sup>3</sup>|2800|3200|3600|4000|6400|9600|
-|Max log rate per pool (MBps)|42|48|54|60|62.5|62.5|
-|Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
-|Max concurrent logins pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
-|Number of replicas|1|1|1|1|1|1|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
-
-<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).    
-
-<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
-
 ## General purpose - provisioned compute - Gen5
 
 ### General purpose service tier: Generation 5 compute platform (part 1)
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
 |Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|500|
@@ -164,7 +82,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|500|
@@ -196,11 +114,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## General purpose - provisioned compute - Fsv2-series
 
-### Fsv2-series compute generation (part 1)
+### Fsv2-series Hardware (part 1)
 
 |Compute size (service objective)|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14| GP_Fsv2_16|
 |:---| ---:|---:|---:|---:|---:|
-|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|8|10|12|14|16|
 |Memory (GB)|15.1|18.9|22.7|26.5|30.2|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -230,11 +148,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Fsv2-series compute generation (part 2)
+### Fsv2-series Hardware (part 2)
 
 |Compute size (service objective)|GP_Fsv2_18|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32| GP_Fsv2_36|GP_Fsv2_72|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|18|20|24|32|36|72|
 |Memory (GB)|34.0|37.8|45.4|60.5|68.0|136.0|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -268,7 +186,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8|
 |:--- | --: |--: |--: |--: |
-|Compute generation|DC|DC|DC|DC|
+|Hardware|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|100|400|400|400|
@@ -298,88 +216,13 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - Gen4
+## Business Critical - provisioned compute - Gen5
 
-> [!IMPORTANT]
-> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
-
-### Business critical service tier: Generation 4 compute platform (part 1)
-
-|Compute size (service objective)|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|2|3|4|5|6|
-|Memory (GB)|14|21|28|35|42|
-|Max number DBs per pool <sup>1</sup>|50|100|100|100|100|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|2|3|4|5|6|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Max data size (GB)|1024|1024|1024|1024|1024|
-|Max log size (GB) <sup>2</sup>|307|307|307|307|307|
-|TempDB max data size (GB)|64|96|128|160|192|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
-|Max data IOPS per pool <sup>3</sup>|9,000|13,500|18,000|22,500|27,000|
-|Max log rate per pool (MBps)|20|30|40|50|60|
-|Max concurrent workers per pool <sup>4</sup>|420|630|840|1050|1260|
-|Max concurrent logins per pool <sup>4</sup>|420|630|840|1050|1260|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
-|Number of replicas|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
-
-<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
-
-### Business critical service tier: Generation 4 compute platform (part 2)
-
-|Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
-|Columnstore support|N/A|N/A|N/A|N/A|N/A|N/A|
-|In-memory OLTP storage (GB)|7|8|9.5|11|20|36|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Max data size (GB)|1024|1024|1024|1024|1024|1024|
-|Max log size (GB) <sup>2</sup>|307|307|307|307|307|307|
-|TempDB max data size (GB)|224|256|288|320|512|768|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
-|Max data IOPS per pool <sup>3</sup>|31,500|36,000|40,500|45,000|72,000|96,000|
-|Max log rate per pool (MBps)|70|80|80|80|80|80|
-|Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
-|Max concurrent logins per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
-|Number of replicas|4|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
-
-<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
-
-## Business critical - provisioned compute - Gen5
-
-### Business critical service tier: Generation 5 compute platform (part 1)
+### Business Critical service tier: Generation 5 compute platform (part 1)
 
 |Compute size (service objective)|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|4|6|8|10|12|14|
 |Memory (GB)|20.8|31.1|41.5|51.9|62.3|72.7|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|100|100|
@@ -410,11 +253,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Business critical service tier: Generation 5 compute platform (part 2)
+### Business Critical service tier: Generation 5 compute platform (part 2)
 
 |Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|100|
@@ -445,13 +288,13 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - M-series
+## Business Critical - provisioned compute - M-series
 
-### M-series compute generation (part 1)
+### M-series hardware (part 1)
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Compute generation|M-series|M-series|M-series|M-series|M-series|M-series|
+|Hardware|M-series|M-series|M-series|M-series|M-series|M-series|
 |vCores|8|10|12|14|16|18|
 |Memory (GB)|235.4|294.3|353.2|412.0|470.9|529.7|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
@@ -482,11 +325,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### M-series compute generation (part 2)
+### M-series hardware (part 2)
 
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
-|Compute generation|M-series|M-series|M-series|M-series|M-series|
+|Hardware|M-series|M-series|M-series|M-series|M-series|
 |vCores|20|24|32|64|128|
 |Memory (GB)|588.6|706.3|941.8|1883.5|3767.0|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|
@@ -516,11 +359,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - DC-series
+## Business Critical - provisioned compute - DC-series
 
 |Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|
 |:--- | --: |--: |--: |--: |
-|Compute generation|DC|DC|DC|DC|
+|Hardware|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|
@@ -577,7 +420,170 @@ Even though the per database properties are expressed in vCores, they also gover
 Min and max per database vCore values apply to resource consumption by user workloads, but not to resource consumption by internal processes. For example, for a database with a per database max vCores set to half of the pool vCores, user workload cannot consume more than one half of the buffer pool memory. However, this database can still take advantage of pages in the buffer pool that were loaded by internal processes. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes).
 
 > [!NOTE]
-> The resource limits of individual databases in elastic pools are generally the same as for single databases outside of pools that have the same compute size (service objective). For example, the max concurrent workers for an GP_Gen4_1 database is 200 workers. So, the max concurrent workers for a database in a GP_Gen4_1 pool is also 200 workers. Note, the total number of concurrent workers in GP_Gen4_1 pool is 210.
+> The resource limits of individual databases in elastic pools are generally the same as for single databases outside of pools that have the same compute size (service objective). For example, the max concurrent workers for an GP_S_Gen5_10 database is 750 workers. So, the max concurrent workers for a database in a GP_Gen5_10 pool is also 750 workers. Note, the total number of concurrent workers in GP_Gen5_10 pool is 1050. For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md?view=azuresql&preserve-view=true).
+
+
+## Previously available hardware
+
+This section includes details on previously available hardware.
+
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+## General purpose - provisioned compute - Gen4
+
+<!---
+vCore resource limits are listed in the following articles, please be sure to update all of them: 
+/database/resource-limits-vcore-single-databases.md
+/database/resource-limits-vcore-elastic-pools.md
+/database/resource-limits-logical-server.md
+/database/service-tier-general-purpose.md
+/database/service-tier-business-critical.md
+/database/service-tier-hyperscale.md
+/managed-instance/resource-limits.md
+--->
+
+### General purpose service tier: Generation 4 compute platform (part 1)
+
+|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|1|2|3|4|5|6|
+|Memory (GB)|7|14|21|28|35|42|
+|Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|512|756|1536|1536|1536|2048|
+|Max log size <sup>2</sup>|154|227|461|461|461|614|
+|TempDB max data size (GB)|32|64|96|128|160|192|
+|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
+|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Max data IOPS per pool <sup>3</sup> |400|800|1200|1600|2000|2400|
+|Max log rate per pool (MBps)|6|12|18|24|30|36|
+|Max concurrent workers per pool<sup>4</sup> |210|420|630|840|1050|1260|
+|Max concurrent logins per pool <sup>4</sup> |210|420|630|840|1050|1260|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+### General purpose service tier: Generation 4 compute platform (part 2)
+
+|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|7|8|9|10|16|24|
+|Memory (GB)|49|56|63|70|112|159.5|
+|Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|2048|2048|2048|2048|3584|4096|
+|Max log size (GB) <sup>2</sup>|614|614|614|614|1075|1229|
+|TempDB max data size (GB)|224|256|288|320|512|768|
+|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
+|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Max data IOPS per pool <sup>3</sup>|2800|3200|3600|4000|6400|9600|
+|Max log rate per pool (MBps)|42|48|54|60|62.5|62.5|
+|Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent logins pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).    
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+## Business critical - provisioned compute - Gen4
+
+> [!IMPORTANT]
+> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
+
+### Business critical service tier: Generation 4 compute platform (part 1)
+
+|Compute size (service objective)|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|2|3|4|5|6|
+|Memory (GB)|14|21|28|35|42|
+|Max number DBs per pool <sup>1</sup>|50|100|100|100|100|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|2|3|4|5|6|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Max data size (GB)|1024|1024|1024|1024|1024|
+|Max log size (GB) <sup>2</sup>|307|307|307|307|307|
+|TempDB max data size (GB)|64|96|128|160|192|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|
+|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Max data IOPS per pool <sup>3</sup>|9,000|13,500|18,000|22,500|27,000|
+|Max log rate per pool (MBps)|20|30|40|50|60|
+|Max concurrent workers per pool <sup>4</sup>|420|630|840|1050|1260|
+|Max concurrent logins per pool <sup>4</sup>|420|630|840|1050|1260|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
+|Number of replicas|4|4|4|4|4|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+### Business critical service tier: Generation 4 compute platform (part 2)
+
+|Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|7|8|9|10|16|24|
+|Memory (GB)|49|56|63|70|112|159.5|
+|Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
+|Columnstore support|N/A|N/A|N/A|N/A|N/A|N/A|
+|In-memory OLTP storage (GB)|7|8|9.5|11|20|36|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Max data size (GB)|1024|1024|1024|1024|1024|1024|
+|Max log size (GB) <sup>2</sup>|307|307|307|307|307|307|
+|TempDB max data size (GB)|224|256|288|320|512|768|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
+|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Max data IOPS per pool <sup>3</sup>|31,500|36,000|40,500|45,000|72,000|96,000|
+|Max log rate per pool (MBps)|70|80|80|80|80|80|
+|Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent logins per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
+|Number of replicas|4|4|4|4|4|4|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
+
+<sup>2</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 ## Next steps
 

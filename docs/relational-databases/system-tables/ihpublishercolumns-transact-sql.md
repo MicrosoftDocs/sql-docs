@@ -1,23 +1,21 @@
 ---
-description: "IHpublishercolumns (Transact-SQL)"
-title: "IHpublishercolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHpublishercolumns (Transact-SQL)"
+description: IHpublishercolumns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHpublishercolumns"
   - "IHpublishercolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHpublishercolumns system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHpublishercolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

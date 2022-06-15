@@ -8662,16 +8662,11 @@ items:
     href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
     - name: Install
-      href: tools/distributed-replay/install-distributed-replay-overview.md
-      items:
-      - name: Requirements
-        href: tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
-        href: tools/distributed-replay/install-distributed-replay.md
-      - name: Complete the Post-Installation Steps
-        href: tools/distributed-replay/complete-the-post-installation-steps.md
-      - name: Modify the Controller & Client Services Accounts
-        href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+      href: tools/distributed-replay/install-distributed-replay.md
+    - name: Complete the Post-Installation Steps
+      href: tools/distributed-replay/complete-the-post-installation-steps.md
+    - name: Modify the Controller & Client Services Accounts
+      href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
     - name: Configure
       href: tools/distributed-replay/configure-distributed-replay.md
       items:
@@ -10509,12 +10504,16 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
+      - name: SQL Server 2022 Preview
+        href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
     - name: Editions & Features
       items:
+      - name: SQL Server 2022 Preview
+        href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
@@ -10529,7 +10528,7 @@ items:
       href: linux/quickstart-install-connect-suse.md
     - name: Install & Connect - Ubuntu
       href: linux/quickstart-install-connect-ubuntu.md
-    - name: Run & Connect - Docker
+    - name: Run & Connect - Container
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
@@ -10584,6 +10583,8 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
+      - name: Install SQL Server 2022 Preview
+        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent
@@ -10626,6 +10627,8 @@ items:
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
+      - name: Deploy to AKS with Helm charts
+        href: linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

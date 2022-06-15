@@ -1,19 +1,16 @@
 ---
+title: "SubmitChanges Method Example (VBScript)"
 description: "SubmitChanges Method Example (VBScript)"
-title: "SubmitChanges Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "SubmitChanges method [ADO], VBScript example"
-ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SubmitChanges method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # SubmitChanges Method Example (VBScript)
 > [!IMPORTANT]

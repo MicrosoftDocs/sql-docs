@@ -1,26 +1,24 @@
 ---
-description: "backupset (Transact-SQL)"
-title: "backupset (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "backupset (Transact-SQL)"
+description: backupset (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/07/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "backupset"
   - "backupset_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backupset system table"
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: LitKnd
-ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)

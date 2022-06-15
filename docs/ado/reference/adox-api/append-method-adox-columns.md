@@ -1,22 +1,18 @@
 ---
+title: "Append Method (ADOX Columns)"
 description: "Append Method (ADOX Columns)"
-title: "Append Method (ADOX Columns) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Columns::raw_Append"
-  - "Columns::Append"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Columns::raw_Append"
+  - "Columns::Append"
+helpviewer_keywords:
+  - "Append method [ADOX]"
+apitype: "COM"
 ---
 # Append Method (ADOX Columns)
 Adds a new [Column](./column-object-adox.md) object to the [Columns](./columns-collection-adox.md) collection.  

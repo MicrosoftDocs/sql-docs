@@ -1,23 +1,21 @@
 ---
-description: "MSrepl_identity_range (Transact-SQL)"
-title: "MSrepl_identity_range (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_identity_range (Transact-SQL)"
+description: MSrepl_identity_range (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_identity_range_TSQL"
   - "MSrepl_identity_range"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_identity_range system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSrepl_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

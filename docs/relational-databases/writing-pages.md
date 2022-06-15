@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "pages"
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Writing Pages

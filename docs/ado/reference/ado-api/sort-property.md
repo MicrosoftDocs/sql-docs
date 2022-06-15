@@ -1,27 +1,23 @@
 ---
+title: "Sort Property"
 description: "Sort Property"
-title: "Sort Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset15::get_Sort"
   - "Recordset15::put_Sort"
   - "Recordset15::PutSort"
   - "Recordset15::GetSort"
   - "Recordset15::Sort"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DESC [ADO]"
   - "ASC [ADO]"
   - "Sort property [ADO]"
-ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Sort Property
 Indicates one or more field names on which the [Recordset](./recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  

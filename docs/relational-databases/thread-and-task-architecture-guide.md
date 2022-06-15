@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "threads, SQL Server"
   - "quantum, SQL Server"
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-author: "pmasl"
-ms.author: kendralittle
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Thread and Task Architecture Guide

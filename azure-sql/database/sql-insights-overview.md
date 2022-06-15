@@ -16,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 SQL Insights (preview) is a comprehensive solution for monitoring any product in the [Azure SQL family](/azure/azure-sql/index). SQL Insights uses [dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs) to expose the data that you need to monitor health, diagnose problems, and tune performance.  
 
-SQL Insights performs all monitoring remotely. Monitoring agents on dedicated virtual machines connect to your SQL resources and remotely gather data. The gathered data is stored in [Azure Monitor Logs](../logs/data-platform-logs.md) to enable easy aggregation, filtering, and trend analysis. You can view the collected data from the SQL Insights [workbook template](../visualize/workbooks-overview.md), or you can delve directly into the data by using [log queries](../logs/get-started-queries.md).
+SQL Insights performs all monitoring remotely. Monitoring agents on dedicated virtual machines connect to your SQL resources and remotely gather data. The gathered data is stored in [Azure Monitor Logs](/azure/azure-monitor/logs/data-platform-logs) to enable easy aggregation, filtering, and trend analysis. You can view the collected data from the SQL Insights [workbook template](/azure/azure-monitor/visualize/workbooks-overview), or you can delve directly into the data by using [log queries](/azure/azure-monitor/logs/get-started-queries).
 The following diagram details the steps taken by information from the database engine and Azure resource logs, and how they can be surfaced. For a more detailed diagram of Azure SQL logging, see [Monitoring and diagnostic telemetry](/azure/azure-sql/database/monitor-tune-overview#monitoring-and-diagnostic-telemetry).
 
 :::image type="content" source="media/sql-insights/azure-sql-insights-horizontal-analytics.svg" alt-text="Diagram showing how database engine information and resource logs are surfaced through AzureDiagnostics and Log Analytics.":::
@@ -75,9 +75,9 @@ For more instructions, see [Enable SQL Insights (preview)](sql-insights-enable.m
 ## Collected data
 SQL Insights performs all monitoring remotely. No agents are installed on the virtual machines running SQL Server. 
 
-SQL Insights uses dedicated monitoring virtual machines to remotely collect data from your SQL resources. Each monitoring virtual machine has the [Azure Monitor agent](../agents/azure-monitor-agent-overview.md) and the Workload Insights (WLI) extension installed. 
+SQL Insights uses dedicated monitoring virtual machines to remotely collect data from your SQL resources. Each monitoring virtual machine has the [Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-overview) and the Workload Insights (WLI) extension installed. 
 
-The WLI extension includes the open-source [Telegraf agent](https://www.influxdata.com/time-series-platform/telegraf/). SQL Insights uses [data collection rules](../essentials/data-collection-rule-overview.md) to specify the data collection settings for Telegraf's [SQL Server plug-in](https://www.influxdata.com/integration/microsoft-sql-server/).
+The WLI extension includes the open-source [Telegraf agent](https://www.influxdata.com/time-series-platform/telegraf/). SQL Insights uses [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to specify the data collection settings for Telegraf's [SQL Server plug-in](https://www.influxdata.com/integration/microsoft-sql-server/).
 
 Different sets of data are available for Azure SQL Database, Azure SQL Managed Instance, and SQL Server. The following tables describe the available data. You can customize which datasets to collect and the frequency of collection when you [create a monitoring profile](sql-insights-enable.md#create-sql-monitoring-profile).
 
@@ -136,5 +136,5 @@ The tables have the following columns:
 
 ## Next steps
 
-- For frequently asked questions about SQL Insights (preview), see [Frequently asked questions](../faq.yml).
+- For frequently asked questions about SQL Insights (preview), see [Frequently asked questions](/azure/azure-monitor/faq).
 - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

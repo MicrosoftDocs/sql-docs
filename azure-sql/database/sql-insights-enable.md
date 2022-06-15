@@ -16,13 +16,13 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 This article describes how to enable [SQL Insights (preview)](sql-insights-overview.md) to monitor your SQL deployments. Monitoring is performed from an Azure virtual machine that makes a connection to your SQL deployments and uses Dynamic Management Views (DMVs) to gather monitoring data. You can control what datasets are collected and the frequency of collection using a monitoring profile.
 
 > [!NOTE]
-> To enable SQL Insights (preview) by creating the monitoring profile and virtual machine using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](resource-manager-sql-insights.md).
+> To enable SQL Insights (preview) by creating the monitoring profile and virtual machine using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights).
 
 To learn how to enable SQL Insights (preview), you can also refer to this Data Exposed episode.
 > [!VIDEO https://docs.microsoft.com/Shows/Data-Exposed/How-to-Set-up-Azure-Monitor-for-SQL-Insights/player?format=ny]
 
 ## Create Log Analytics workspace
-SQL Insights stores its data in one or more [Log Analytics workspaces](../logs/data-platform-logs.md#log-analytics-workspaces). Before you can enable SQL Insights, you need to either [create a workspace](../logs/quick-create-workspace.md) or select an existing one. A single workspace can be used with multiple monitoring profiles, but the workspace and profiles must be located in the same Azure region. To enable and access the features in SQL Insights, you must have the [Log Analytics contributor role](../logs/manage-access.md) in the workspace. 
+SQL Insights stores its data in one or more [Log Analytics workspaces](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces). Before you can enable SQL Insights, you need to either [create a workspace](/azure/azure-monitor/logs/quick-create-workspace) or select an existing one. A single workspace can be used with multiple monitoring profiles, but the workspace and profiles must be located in the same Azure region. To enable and access the features in SQL Insights, you must have the [Log Analytics contributor role](/azure/azure-monitor/logs/manage-access) in the workspace. 
 
 ## Create monitoring user 
 You need a user (login) on the SQL deployments that you want to monitor. Follow the procedures below for different types of SQL deployments.
@@ -121,7 +121,7 @@ The Azure virtual machine has the following requirements:
 
 - Operating system: Ubuntu 18.04 using Azure Marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). Custom images are not supported.
 - Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4 GiB memory) 
-- Deployed in any Azure region [supported](../agents/azure-monitor-agent-overview.md#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](../agents/azure-monitor-agent-manage.md#prerequisites).
+- Deployed in any Azure region [supported](/azure/azure-monitor/agents/azure-monitor-agent-overview#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 
 > [!NOTE]
 > The Standard_B2s (2 CPUs, 4 GiB memory) virtual machine size will support up to 100 connection strings. You shouldn't allocate more than 100 connections to a single virtual machine.
@@ -135,7 +135,7 @@ Each type of SQL offers methods for your monitoring virtual machine to securely 
 
 SQL Insights supports accessing your Azure SQL Database via its public endpoint as well as from its virtual network.
 
-For access via the public endpoint, you would add a rule under the **Firewall settings** page and the [IP firewall settings](/azure/azure-sql/database/network-access-controls-overview#ip-firewall-rules) section. For specifying access from a virtual network, you can set [virtual network firewall rules](/azure/azure-sql/database/network-access-controls-overview#virtual-network-firewall-rules) and set the [service tags required by the Azure Monitor agent](../agents/azure-monitor-agent-overview.md#networking). [This article](/azure/azure-sql/database/network-access-controls-overview#ip-vs-virtual-network-firewall-rules) describes the differences between these two types of firewall rules.
+For access via the public endpoint, you would add a rule under the **Firewall settings** page and the [IP firewall settings](/azure/azure-sql/database/network-access-controls-overview#ip-firewall-rules) section. For specifying access from a virtual network, you can set [virtual network firewall rules](/azure/azure-sql/database/network-access-controls-overview#virtual-network-firewall-rules) and set the [service tags required by the Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#networking). [This article](/azure/azure-sql/database/network-access-controls-overview#ip-vs-virtual-network-firewall-rules) describes the differences between these two types of firewall rules.
 
 :::image type="content" source="media/sql-insights-enable/set-server-firewall.png" alt-text="Set server firewall" lightbox="media/sql-insights-enable/set-server-firewall.png":::
 
@@ -159,7 +159,7 @@ When settings up your profile for SQL monitoring, you will need one of the follo
 If you have these permissions, a new Key Vault access policy will be automatically created as part of creating your SQL Monitoring profile that uses the Key Vault you specified. 
 
 > [!IMPORTANT]
-> You need to ensure that network and security configuration allows the monitoring VM to access Key Vault. For more information, see [Access Azure Key Vault behind a firewall](../../key-vault/general/access-behind-firewall.md) and [Configure Azure Key Vault networking settings](../../key-vault/general/how-to-azure-key-vault-network-security.md).
+> You need to ensure that network and security configuration allows the monitoring VM to access Key Vault. For more information, see [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) and [Configure Azure Key Vault networking settings](/azure/key-vault/general/how-to-azure-key-vault-network-security).
 
 ## Create SQL monitoring profile
 Open SQL Insights (preview) by selecting **SQL (preview)** from the **Insights** section of the **Azure Monitor** menu in the Azure portal. Click **Create new profile**. 
@@ -174,7 +174,7 @@ The profile will store the information that you want to collect from your SQL sy
 
 For example, you might create one profile named *SQL Production* and another named *SQL Staging* with different settings for frequency of data collection, what data to collect, and which workspace to send the data to. 
 
-The profile is stored as a [data collection rule](../essentials/data-collection-rule-overview.md) resource in the subscription and resource group you select. Each profile needs the following:
+The profile is stored as a [data collection rule](/azure/azure-monitor/essentials/data-collection-rule-overview) resource in the subscription and resource group you select. Each profile needs the following:
 
 - Name. Cannot be edited once created.
 - Location. This is an Azure region.

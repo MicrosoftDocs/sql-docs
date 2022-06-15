@@ -13,7 +13,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Create alerts with SQL Insights (preview)
-SQL Insights (preview) includes a set of alert rule templates you can use to create [alert rules in Azure Monitor](../alert/../alerts/alerts-overview.md) for common SQL issues. The alert rules in SQL Insights (preview) are log alert rules based on performance data stored in the *InsightsMetrics* table in Azure Monitor Logs.  
+SQL Insights (preview) includes a set of alert rule templates you can use to create [alert rules in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) for common SQL issues. The alert rules in SQL Insights (preview) are log alert rules based on performance data stored in the *InsightsMetrics* table in Azure Monitor Logs.  
 
 > [!NOTE]
 > To create an alert for SQL Insights (preview) using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](resource-manager-sql-insights.md#create-an-alert-rule-for-sql-insights).
@@ -26,7 +26,7 @@ SQL Insights (preview) includes a set of alert rule templates you can use to cre
 Use the following steps to enable the alerts in Azure Monitor from the Azure portal. The alert rules that are created will be scoped to all of the SQL resources monitored under the selected monitoring profile.  When an alert rule is triggered, it will trigger on the specific SQL instance or database.
 
 > [!NOTE]
-> You can also create custom [log alert rules](../alerts/alerts-log.md) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
+> You can also create custom [log alert rules](/azure/azure-monitor/alerts/alerts-log.md) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
 
 Select **SQL (preview)** from the **Insights** section of the Azure Monitor menu in the Azure portal. Click **Alerts**
 
@@ -36,7 +36,7 @@ The **Alerts** pane opens on the right side of the page. By default, it will dis
 
 :::image type="content" source="media/sql-insights-alerts/alert-templates.png" alt-text="Alert templates":::
 
-On the **Create Alert rule** page, review the default settings for the rule and edit them as needed. You can also select an [action group](../alerts/action-groups.md) to create notifications and actions when the alert rule is triggered. Click **Enable alert rule** to create the alert rule once you've verified all of its properties.
+On the **Create Alert rule** page, review the default settings for the rule and edit them as needed. You can also select an [action group](/azure/azure-monitor/alerts/action-groups.md) to create notifications and actions when the alert rule is triggered. Click **Enable alert rule** to create the alert rule once you've verified all of its properties.
 
 
 :::image type="content" source="media/sql-insights-alerts/alert-rule.png" alt-text="Alert rules page":::
@@ -52,5 +52,5 @@ If you choose to view the templates, select **Deploy** from the template page to
 
 ## Next steps
 
-Learn more about [alerts in Azure Monitor](../alerts/alerts-overview.md).
+Learn more about [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview.md).
 

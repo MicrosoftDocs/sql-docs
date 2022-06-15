@@ -144,6 +144,16 @@
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
         href: /azure/azure-monitor/insights/azure-sql?toc=%2fazure%2fazure-sql%2ftoc.json
+      - name: SQL Insights (preview)
+        items:
+        - name: Overview
+          href: database/sql-insights-overview.md
+        - name: Enable
+          href: database/sql-insights-enable.md
+        - name: Alerts
+          href: database/sql-insights-alerts.md
+        - name: Troubleshoot
+          href: database/sql-insights-troubleshoot.md
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
       - name: In-memory OLTP
@@ -1171,18 +1181,6 @@
                 href: /sql/machine-learning/administration/extended-events?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
               - name: Monitor PREDICT T-SQL
                 href: /sql/machine-learning/administration/extended-events-predict-tsql?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-            - name: SQL Insights (preview)
-              items:
-              - name: Overview
-                href: /azure/azure-monitor/insights/sql-insights-overview
-              - name: FAQ
-                href: /azure/azure-monitor/faq
-              - name: Enable
-                href: /azure/azure-monitor/insights/sql-insights-enable
-              - name: Alerts
-                href: /azure/azure-monitor/insights/sql-insights-alerts
-              - name: Troubleshoot
-                href: /azure/azure-monitor/insights/sql-insights-troubleshoot
         - name: Security
           items:
           - name: Give users permission

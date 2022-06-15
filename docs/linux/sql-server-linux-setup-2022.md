@@ -88,7 +88,7 @@ You can install SQL Server on Linux from the command line. For step-by-step inst
 
 For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux CTP 2.0, SUSE Linux Enterprise Server (SLES) isn't supported.
 
-You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
+You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal).
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 

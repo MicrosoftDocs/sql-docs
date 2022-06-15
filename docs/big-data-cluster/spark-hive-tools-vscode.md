@@ -5,11 +5,11 @@ description: Submit spark job with the Spark & Hive Tools for Visual Studio Code
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Submit Spark jobs on SQL Server big data cluster in Visual Studio Code

@@ -1,5 +1,6 @@
 ---
 title: Virtualize CSV data from storage pool
+titleSuffix: SQL Server Big Data Clusters
 description: Steps detailing the create external table for virtualization of a CSV file in a Big Data Cluster
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -9,7 +10,6 @@ ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
-subtitle: SQL Server Big Data Clusters
 monikerRange: ">= sql-server-ver15"
 ---
 

@@ -1,27 +1,25 @@
 ---
-description: "sys.availability_group_listeners (Transact-SQL)"
-title: "sys.availability_group_listeners (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.availability_group_listeners (Transact-SQL)"
+description: sys.availability_group_listeners (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "availability_group_listeners_TSQL"
   - "sys.availability_group_listeners"
   - "sys.availability_group_listeners_TSQL"
   - "availability_group_listeners"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_group_listeners catalog view"
   - "Availability Groups [SQL Server], listeners"
+dev_langs:
+  - "TSQL"
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

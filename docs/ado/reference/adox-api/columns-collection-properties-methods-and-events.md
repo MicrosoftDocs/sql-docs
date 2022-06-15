@@ -1,18 +1,14 @@
 ---
+title: "Columns Collection Properties, Methods, and Events"
 description: "Columns Collection Properties, Methods, and Events"
-title: "Columns Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Columns collection [ADOX], members"
-ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Columns collection [ADOX], members"
 ---
 # Columns Collection Properties, Methods, and Events
 ## Properties  

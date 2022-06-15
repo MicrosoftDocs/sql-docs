@@ -1,21 +1,17 @@
 ---
+title: "Dimension Object (ADO MD)"
 description: "Dimension Object (ADO MD)"
-title: "Dimension Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Dimension"
-helpviewer_keywords: 
-  - "Dimension object [ADO MD]"
-ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Dimension"
+helpviewer_keywords:
+  - "Dimension object [ADO MD]"
+apitype: "COM"
 ---
 # Dimension Object (ADO MD)
 Represents one of the dimensions of a multidimensional cube, containing one or more hierarchies of members.  

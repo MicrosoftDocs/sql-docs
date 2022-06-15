@@ -1,8 +1,9 @@
 ---
 description: "Develop applications using Always Encrypted with secure enclaves"
 title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/15/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -29,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 - Your application must use a SQL client driver version that supports secure enclaves. See the below sections for more details.
 
-- You need to configure an attestation protocol and an attestation URL for a database connection. The details for how you configure the attestation protocol and the attestation URL depend on the client driver, you are using.
+- You need to configure an attestation protocol and an attestation URL for a database connection. The details for how you configure the attestation protocol and the attestation URL depend on the client driver you're using.
 
 ## Client drivers for Always Encrypted with secure enclaves
 

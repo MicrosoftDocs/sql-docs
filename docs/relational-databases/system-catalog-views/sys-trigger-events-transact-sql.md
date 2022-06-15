@@ -1,29 +1,27 @@
 ---
-description: "sys.trigger_events (Transact-SQL)"
-title: "sys.trigger_events (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trigger_events (Transact-SQL)"
+description: sys.trigger_events (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "trigger_events_TSQL"
   - "trigger_events"
   - "sys.trigger_events"
   - "sys.trigger_events_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trigger_events catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trigger_events (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contains a row per event for which a trigger fires.  
   

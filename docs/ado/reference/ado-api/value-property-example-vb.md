@@ -1,20 +1,16 @@
 ---
+title: "Value Property Example (VB)"
 description: "Value Property Example (VB)"
-title: "Value Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Value property [ADO], Visual Basic example"
-ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Value property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Value Property Example (VB)
 This example demonstrates the [Value](./value-property-ado.md) property with [Field](./field-object.md) and [Property](./property-object-ado.md) objects by displaying field and property values for the ***Employees*** table.  

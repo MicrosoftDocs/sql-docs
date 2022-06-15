@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "deleting columns"
   - "dropping columns"
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 

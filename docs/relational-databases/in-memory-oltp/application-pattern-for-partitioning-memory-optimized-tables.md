@@ -1,15 +1,16 @@
 ---
 title: "Application pattern - partitioning memory-optimized tables"
 description: Learn about the In-Memory OLTP application design pattern that stores current, active data in a memory-optimized table and older data in a partitioned table.
-ms.custom: seo-dt-2019,issue-PR=4700-14820
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom:
+  - "seo-dt-2019"
+  - "issue-PR=4700-14820"
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables

@@ -1,23 +1,22 @@
 ---
-description: "sys.resource_stats returns CPU usage and storage data for an Azure SQL Database. "
 title: "sys.resource_stats (Azure SQL Database)"
-ms.custom: ""
+description: sys.resource_stats returns CPU usage and storage data for an Azure SQL Database.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: "4/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
-f1_keywords: 
-  - resource_stats
-  - sys.resource_stats
-  - sys.resource_stats_TSQL
-  - resource_stats_TSQL
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "resource_stats"
+  - "sys.resource_stats"
+  - "sys.resource_stats_TSQL"
+  - "resource_stats_TSQL"
+helpviewer_keywords:
   - "sys.resource_stats"
   - "resource_stats"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_stats (Azure SQL Database)

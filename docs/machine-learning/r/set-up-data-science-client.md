@@ -3,18 +3,22 @@ title: Set up an R data science client
 description: Install local R libraries and tools on a development workstation for remote connections to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 06/13/2019
+ms.date: 05/09/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Set up a data science client for R development on SQL Server
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016-2019 2019 linux only](../../includes/applies-to-version/sqlserver2016-2019-2019linux-only.md)]
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
+
+> [!NOTE]
+> Currently this article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] for Linux only.
 
 To develop and deploy R solutions for SQL Server, install [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) on your development workstation to get [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries. The RevoScaleR library, which is also required on the remote SQL Server instance, coordinates computing requests between both systems. 
 
@@ -22,10 +26,7 @@ In this article, learn how to configure an R client development workstation so t
 
 ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
-To validate the installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
-
-> [!Note]
-> An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same R libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the R executable at this location: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. To validate your installation, [open an R console app](#R-tools) to run commands using the R.exe at that location.
+To validate the installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries to RStudio or any another IDE](#install-ide) that you normally use.
 
 ## Commonly used tools
 
@@ -47,18 +48,18 @@ Microsoft's R packages are available in multiple products and services. On a loc
 
 3. Create an MKL_CBWR system environment variable to ensure consistent output on Intel Math Kernel Library (MKL) calculations.
 
-   + In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+   + In Control Panel, select **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
    + Create a new System variable named **MKL_CBWR**, with a value set to **AUTO**.
 
 ## 2 - Locate executables
 
 Locate and list the contents of the installation folder to confirm that R.exe, RGUI, and other packages are installed. 
 
-1. In File Explorer, open the C:\Program Files\Microsoft\R Client\R_SERVER\bin folder to confirm the location of R.exe.
+1. In File Explorer, open the `%ProgramFiles%\Microsoft\R Client\R_SERVER\bin` folder to confirm the location of `R.exe`.
 
 2. Open the x64 subfolder to confirm **RGUI**. You will use this tool in the next step.
 
-3. Open C:\Program Files\Microsoft\R Client\R_SERVER\library to review the list of packages installed with R Client, including RevoScaleR, MicrosoftML, and others.
+3. Open `%ProgramFiles%\Microsoft\R Client\R_SERVER\library` to review the list of packages installed with R Client, including RevoScaleR, MicrosoftML, and others.
 
 
 <a name="R-tools"></a>
@@ -67,7 +68,7 @@ Locate and list the contents of the installation folder to confirm that R.exe, R
 
 When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to get R version information and confirm connectivity.
 
-1. Open C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 and double-click **RGui** to start an R session with an R command prompt.
+1. Open `%ProgramFiles%\Microsoft\R Client\R_SERVER\bin\x64` and double-click **RGui** to start an R session with an R command prompt.
 
    When you start an R session from a Microsoft program folder, several packages, including RevoScaleR, load automatically. 
 
@@ -197,16 +198,13 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. Check R package versions installed on SQL Server. For more information, see [Get R package information](../package-management/r-package-information.md).
 
-1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. To view the package versions installed on the server, see [List all installed R packages](../package-management/r-package-information.md#list-all-installed-r-packages).
+1. Install Microsoft R Client to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. To view the package versions installed on the server, see [List all installed R packages](../package-management/r-package-information.md#list-all-installed-r-packages).
 
-1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
-
-   + For an R Client installation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-   + For a standalone server, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
-
+1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Look for `%ProgramFiles%\Microsoft\R Client\R_SERVER\bin\x64`.
+   
 1. Close and then open RStudio.
 
-When you reopen RStudio, the R executable from R Client (or standalone server) is the default R engine.
+When you reopen RStudio, the R executable from R Client is the default R engine.
 
 
 ### R Tools for Visual Studio (RTVS)
@@ -223,7 +221,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 1. From the **File** menu, select **New** and then select **Project**.
 
-2. The left-hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**. 
+2. The left-hand pane contains a list of preinstalled templates. Select **R**, and select **R Project**. In the **Name** box, type `dbtest` and select **OK**. 
 
    Visual Studio creates a new project folder and a default script file, `Script.R`. 
 
@@ -231,7 +229,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
    The current R library path should be displayed in the **R Interactive** window. 
 
-4. Click the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
+4. Select the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
  
    + View help on packages in the current library by pressing CTRL + 3.
    + See R variables in the **Variable Explorer**, by pressing CTRL + 8.

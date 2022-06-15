@@ -1,18 +1,14 @@
 ---
+title: "Connection Object Properties, Methods, and Events"
 description: "Connection Object Properties, Methods, and Events"
-title: "Connection Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Connection object [ADO], members"
-ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Connection object [ADO], members"
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  

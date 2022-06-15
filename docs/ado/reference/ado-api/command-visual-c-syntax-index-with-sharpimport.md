@@ -1,21 +1,17 @@
 ---
+title: "Command (Visual C++ Syntax Index with #import)"
 description: "Command (Visual C++ Syntax Index with #import)"
-title: "Command (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Command collection [ADO], Visual C++ syntax index with #import"
-ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Command collection [ADO], Visual C++ syntax index with #import"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Command (Visual C++ Syntax Index with #import)
 ## Methods  

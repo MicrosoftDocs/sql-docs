@@ -1,21 +1,17 @@
 ---
+title: "OriginalValue and UnderlyingValue Properties Example (VC++)"
 description: "OriginalValue and UnderlyingValue Properties Example (VC++)"
-title: "OriginalValue and UnderlyingValue Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UnderlyingValue property [ADO], VC++ example"
-  - "OriginalValue property [ADO]"
-ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "UnderlyingValue property [ADO], VC++ example"
+  - "OriginalValue property [ADO]"
+dev_langs:
+  - "C++"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VC++)
 This example demonstrates the [OriginalValue](./originalvalue-property-ado.md) and [UnderlyingValue](./underlyingvalue-property.md) properties by displaying a message if a record's underlying data has changed during a [Recordset](./recordset-object-ado.md) batch update.  

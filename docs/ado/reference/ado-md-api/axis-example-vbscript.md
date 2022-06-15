@@ -1,20 +1,16 @@
 ---
+title: "Axis Example (VBScript)"
 description: "Axis Example (VBScript)"
-title: "Axis Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ADO MD code examples, VBScript"
-ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD code examples, VBScript"
+dev_langs:
+  - "VB"
 ---
 # Axis Example (VBScript)
 This Active Server Page displays OLAP data from an MDX Query string and writes the resulting cellset to an HTML table structure.  

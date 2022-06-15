@@ -1,32 +1,31 @@
 ---
-description: "sys.fulltext_index_columns (Transact-SQL)"
-title: "sys.fulltext_index_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.fulltext_index_columns (Transact-SQL)"
+description: sys.fulltext_index_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fulltext_index_columns"
   - "fulltext_index_columns"
   - "sys.fulltext_index_columns_TSQL"
   - "fulltext_index_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text indexes [SQL Server], columns"
   - "sys.fulltext_index_columns catalog view"
   - "full-text indexes [SQL Server], properties"
+dev_langs:
+  - "TSQL"
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_columns (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contains a row for each column that is part of a full-text index.    
  

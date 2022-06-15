@@ -1,25 +1,24 @@
 ---
+title: "Cryptographic Functions (Transact-SQL)"
 description: "Cryptographic Functions (Transact-SQL)"
-title: "Cryptographic Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "functions [SQL Server], cryptographic"
   - "crypto functions"
   - "cryptography [SQL Server], functions"
   - "decryption [SQL Server], functions"
   - "security functions"
   - "encryption [SQL Server], functions"
-ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Cryptographic functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,26 +1,25 @@
 ---
-description: "ALTER MATERIALIZED VIEW (Transact-SQL)"
-title: "ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER MATERIALIZED VIEW (Transact-SQL)"
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
+author: XiaoyuMSFT
+ms.author: xiaoyul
+ms.reviewer: wiassaf
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: jrasnick
 ms.technology: data-warehouse
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_VIEW_TSQL"
   - "ALTER VIEW"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexed views [SQL Server], modifying"
   - "views [SQL Server], modifying"
   - "modifying views"
   - "ALTER VIEW statement"
-author: XiaoyuMSFT 
-ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azure-sqldw-latest"
 ---
 # ALTER MATERIALIZED VIEW (Transact-SQL)  
 

@@ -1,19 +1,17 @@
 ---
-description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL)"
-ms.custom: ""
+description: DROP DATABASE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/25/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP DATABASE"
   - "DROP_DATABASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "snapshots [SQL Server database snapshots], deleting"
   - "removing databases"
   - "database snapshots [SQL Server], removing"
@@ -22,8 +20,8 @@ helpviewer_keywords:
   - "databases [SQL Server], dropping"
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE (Transact-SQL)

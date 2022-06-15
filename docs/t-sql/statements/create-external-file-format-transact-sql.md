@@ -1,24 +1,22 @@
 ---
-description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
-ms.custom: ""
+description: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/13/2021
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
   - "CREATE_EXTERNAL_FILE_FORMAT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "External"
   - "External, file format"
   - "PolyBase, external file format"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)

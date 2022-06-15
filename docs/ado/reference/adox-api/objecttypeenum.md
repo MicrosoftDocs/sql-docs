@@ -1,21 +1,17 @@
 ---
+title: "ObjectTypeEnum"
 description: "ObjectTypeEnum"
-title: "ObjectTypeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ObjectTypeEnum"
-helpviewer_keywords: 
-  - "ObjectTypeEnum enumeration [ADOX]"
-ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ObjectTypeEnum"
+helpviewer_keywords:
+  - "ObjectTypeEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # ObjectTypeEnum
 Specifies the type of database object for which to set permissions or ownership.  

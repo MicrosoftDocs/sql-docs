@@ -23,7 +23,7 @@ SQL Server Data Files in Microsoft Azure enables native support for SQL Server d
 
  This topic introduces concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage Service.  
   
-For a practical hands-on experience on how to use this feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+For a practical hands-on experience on how to use this feature, see [Tutorial: Using the Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## Why use SQL Server data files in Microsoft Azure? 
 
@@ -181,10 +181,10 @@ Starting with SQL Server 2014, a new SQL Server object has been added to be used
 **Database errors**  
   
 **Errors when creating a database**
-Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url).  
+Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url).  
   
 **Errors when running the Alter statement** 
-Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 **Error code - 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**   
 

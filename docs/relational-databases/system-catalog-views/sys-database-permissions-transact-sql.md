@@ -1,25 +1,23 @@
 ---
-description: "sys.database_permissions (Transact-SQL)"
-title: "sys.database_permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_permissions (Transact-SQL)"
+description: sys.database_permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_permissions"
   - "sys.database_permissions_TSQL"
   - "database_permissions_TSQL"
   - "sys.database_permissions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_permissions catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_permissions (Transact-SQL)

@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_component_health_status (Transact-SQL)"
-title: "sys.dm_pdw_component_health_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_component_health_status (Transact-SQL)"
+description: sys.dm_pdw_component_health_status (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: conceptual
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: ">= aps-pdw-2016"
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_status (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.securable_classes (Transact-SQL)"
-title: "sys.securable_classes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.securable_classes (Transact-SQL)"
+description: sys.securable_classes (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "12/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "securable_classes_TSQL"
   - "securable_classes"
   - "sys.securable_classes_TSQL"
   - "sys.securable_classes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.securable_classes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.securable_classes (Transact-SQL)

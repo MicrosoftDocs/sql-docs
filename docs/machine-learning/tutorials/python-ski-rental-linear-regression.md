@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/26/2020
+ms.date: 06/15/2022
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -15,13 +15,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+In this four-part tutorial series, you will use Python and linear regression in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals. The tutorial uses a [Python notebook in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
@@ -42,7 +42,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 ## Prerequisites
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-* SQL Server Machine Learning Services - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+* SQL Server Machine Learning Services - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 * SQL Server Machine Learning Services - To install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
@@ -66,7 +66,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
   To install these packages:
   1. In your Azure Data Studio notebook, select **Manage Packages**.
   2. In the **Manage Packages** pane, select the **Add new** tab.
-  3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
+  3. For each of the following packages, enter the package name, select **Search**, then select **Install**.
 
   As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
 
@@ -76,7 +76,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
-> If you are using Machine Learning Services on Big Data Clusters, see how to [Restore a database into the SQL Server big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
+> If you are using Machine Learning Services on SQL Server 2019 Big Data Clusters, see how to [Restore a database into the big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
@@ -84,25 +84,26 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
-   * Import from the **TutorialDB.bak** file you downloaded
-   * Name the target database "TutorialDB"
+   * Import from the `TutorialDB.bak` file you downloaded.
+   * Name the target database `TutorialDB`.
 
-1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
+1. You can verify that the restored database exists by querying the `dbo.rental_data` table:
 
    ```sql
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
-1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
+1. Follow the directions in [Restore a database to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
-   * Import from the **TutorialDB.bak** file you downloaded
-   * Name the target database "TutorialDB"
+   * Import from the `TutorialDB.bak` file you downloaded.
+   * Name the target database `TutorialDB`.
 
-1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
+1. You can verify that the restored database exists by querying the `dbo.rental_data` table:
 
    ```sql
    USE TutorialDB;
@@ -112,7 +113,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the TutorialDB database.
+If you're not going to continue with this tutorial, delete the `TutorialDB` database.
 
 ## Next steps
 

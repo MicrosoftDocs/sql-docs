@@ -268,7 +268,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 [`Scaling Up Stochastic Dual Coordinate Ascent`](https://research.microsoft.com/um/people/mbilenko/papers/15-sasdca.pdf)
 
 
-[`Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization`](http://www.jmlr.org/papers/volume14/shalev-shwartz13a/shalev-shwartz13a.pdf)
+[`Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization`](https://jmlr.csail.mit.edu/papers/volume14/shalev-shwartz13a/shalev-shwartz13a.pdf)
 
 
 

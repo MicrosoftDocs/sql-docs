@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
-title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
+description: sys.dm_hadr_physical_seeding_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_physical_seeding_stats_TSQL"
   - "sys.dm_hadr_physical_seeding_stats"
   - "sys.dm_hadr_physical_seeding_stats_TSQL"
-  - "sys.dm_hadr_physical_seeding_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "physical seeding"
   - "sys.dm_hadr_physical_seeding_stats dynamic management view"
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

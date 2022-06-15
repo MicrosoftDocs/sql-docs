@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 02/22/2022
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -20,6 +20,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |Parameter|Description|
 |---|---|
+| [Active Directory authentication](#ad-auth) | Settings for Active Directory authentication. |
 | [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
@@ -32,6 +33,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Edition](#edition) | Set the edition of SQL Server. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
@@ -50,6 +52,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |Parameter|Description|
 |---|---|
+| [Active Directory authentication](#ad-auth) | Settings for Active Directory authentication. |
 | [Agent](#agent) | Enable SQL Server Agent |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
@@ -62,6 +65,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Edition](#edition) | Set the edition of SQL Server. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
@@ -87,6 +91,18 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 * These examples run mssql-conf by specifying the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
 
+## <a id="ad-auth"></a> Configure Active Directory authentication
+
+The **setup-ad-keytab** option can be used to create a keytab, but the user and Service Principal Names (SPNs) must have been created to use this option. The Active Directory utility, [**adutil**](sql-server-linux-ad-auth-adutil-introduction.md) can be used to create users, SPNs, and keytabs.
+
+For options on using **setup-ad-keytab**, run the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup-ad-keytab --help
+```
+
+The **validate-ad-config** option will validate the configuration for Active Directory authentication.
+
 ## <a id="agent"></a> Enable SQL Server Agent
 
 The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is disabled.
@@ -107,7 +123,7 @@ To change this setting, use the following steps:
 
 ### <a id="dbmail"></a> Set the default database mail profile for SQL Server on Linux
 
-The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
+The **sqlagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
@@ -115,7 +131,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 
 ### <a id="agenterrorlog"></a> SQL Agent error logs
 
-The **sqlpagent.errorlogfile** and **sqlpagent.errorlogginglevel** settings allows you to set the SQL Agent log file path and logging level respectively. 
+The **sqlagent.errorlogfile** and **sqlagent.errorlogginglevel** settings allows you to set the SQL Agent log file path and logging level respectively. 
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
@@ -135,7 +151,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 
 ## <a id="collation"></a> Change the SQL Server collation
 
-The **set-collation** option changes the collation value to any of the supported collations.
+The **set-collation** option changes the collation value to any of the supported collations. To make this change, the SQL Server service needs to be stopped.
 
 1. First [backup any user databases](sql-server-linux-backup-and-restore-database.md) on your server.
 
@@ -432,6 +448,10 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 
+## <a id="edition"></a> Edition
+
+The edition of SQL Server can be changed using the **set-edition** option. To change the edition of SQL Server, the SQL Server service first needs to be stopped. For more information on available SQL Server on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#-editions)
+
 ## <a id="hadr"></a> High Availability
 
 The **hadr.hadrenabled** option enables availability groups on your SQL Server instance. The following command enables availability groups by setting **hadr.hadrenabled** to 1. You must restart SQL Server for the setting to take effect.
@@ -726,6 +746,15 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Any settings not shown in this file are using their default values. The next section provides a sample **mssql.conf** file.
 
+## View various options
+
+To view the various options that can be configured using the **mssql-conf** utility, run the `help` command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf --help
+```
+
+The results will give you various configuration options and a short description for each of the settings.
 
 ## <a id="mssql-conf-format"></a> mssql.conf format
 

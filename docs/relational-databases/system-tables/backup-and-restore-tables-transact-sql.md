@@ -1,23 +1,21 @@
 ---
-description: "Backup and Restore Tables (Transact-SQL)"
-title: "Backup and Restore Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Backup and Restore Tables (Transact-SQL)"
+description: Backup and Restore Tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system tables [SQL Server], backup tables"
   - "backup system tables [SQL Server]"
   - "system tables [SQL Server], restore tables"
   - "restore system tables [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: LitKnd
-ms.author: kendralittle
 ---
 # Backup and Restore Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], recovery models"
   - "modifying database recovery models"
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # View or Change the Recovery Model of a Database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

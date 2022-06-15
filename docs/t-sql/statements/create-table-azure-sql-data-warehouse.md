@@ -1,17 +1,15 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
-description: "CREATE TABLE (Azure Synapse Analytics)"
+description: CREATE TABLE (Azure Synapse Analytics)
+author: VanMSFT
+ms.author: vanto
+ms.date: "03/30/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/30/2021"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE (Azure Synapse Analytics)
 
@@ -19,7 +17,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
   Creates a new table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
-To understand tables and how to use them, see [Tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
+To understand tables and how to use them, see [Tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 
 > [!NOTE]
 >  Discussions about [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] in this article apply to both [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
@@ -106,7 +104,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  The schema for the table. Specifying *schema* is optional. If blank, the default schema will be used.  
   
  *table_name*  
- The name of the new table. To create a local temporary table, precede the table name with #.  For explanations and guidance on temporary tables, see [Temporary tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
+ The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
+
 
  *column_name*  
  The name of a table column.
@@ -146,7 +145,8 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Distributing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
+To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute).
+
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
@@ -158,7 +158,8 @@ Distributes the rows evenly across all the distributions in a round-robin fashio
 Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
-For guidance on using table partitions, see [Partitioning tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
+For guidance on using table partitions, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
+
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Creates one or more table partitions. These partitions are horizontal table slices that allow you to apply operations to subsets of rows regardless of whether the table is stored as a heap, clustered index, or clustered columnstore index. Unlike the distribution column, table partitions don't determine the distribution where each row is stored. Instead, table partitions determine how the rows are grouped and stored within each distribution.  
@@ -184,7 +185,10 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 ### <a name="DataTypes"></a> Data type
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
+
+>[!NOTE]
+>Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 
@@ -308,14 +312,15 @@ Creating a partitioned table requires permission in the `db_ddladmin` fixed data
 <a name="GeneralRemarks"></a>  
 ## General Remarks  
  
-For minimum and maximum limits, see [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] capacity limits](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/). 
+For minimum and maximum limits, see [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits). 
  
 ### Determining the number of table partitions
 Each user-defined table is divided into multiple smaller tables that are stored in separate locations called distributions. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions plus one empty partition, there will be 300 partitions (5 x 60= 300). If the table is a clustered columnstore index, there will be one columnstore index per partition, which means you'll have 300 columnstore indexes.
 
-We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For more information, see [Partitioning tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) and [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For more information, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition) and [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
+
 
 ### Rowstore table (heap or clustered index)
 

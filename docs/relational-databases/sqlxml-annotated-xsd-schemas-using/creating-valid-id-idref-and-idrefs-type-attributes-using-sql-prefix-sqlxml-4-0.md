@@ -1,28 +1,21 @@
 ---
 title: "Valid ID attributes using sql:prefix (SQLXML)"
-description: Learn how to create valid ID, IDREF, and IDREFS type attributes using sql:prefix (SQLXML 4.0).
+description: "Learn how to create valid ID, IDREF, and IDREFS type attributes using sql:prefix (SQLXML 4.0)."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "IDREFS relationships [SQLXML]"
   - "annotated XSD schemas, ID type attribute"
   - "IDREF type attribute [SQLXML]"
   - "annotated XSD schemas, IDREFS type attribute"
   - "ID type attribute [SQLXML]"
-  - "sql:prefix"
-  - "prefix annotation"
-  - "IDREF relationships [SQLXML]"
-  - "IDREFS type attribute [SQLXML]"
-  - "annotated XSD schemas, IDREF type attribute"
-  - "ID relationships [SQLXML]"
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix (SQLXML 4.0)

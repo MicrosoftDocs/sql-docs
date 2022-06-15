@@ -1,19 +1,15 @@
 ---
+title: "Property Object (ADOX)"
 description: "Property Object (ADOX)"
-title: "Property Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Property object [ADOX]"
-ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Property object [ADOX]"
+apitype: "COM"
 ---
 # Property Object (ADOX)
 Represents a characteristic of an ADOX object.  

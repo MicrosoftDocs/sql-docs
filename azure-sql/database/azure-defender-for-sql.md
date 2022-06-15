@@ -32,7 +32,7 @@ For more information about Microsoft Defender for SQL pricing, see the [Microsof
 
 There are multiple ways to enable Microsoft Defender plans. You can enable it at the subscription level (**recommended**) either:
 
-- [In Microsoft Defender for Cloud in the Azure portal](#enable-microsoft-defender-for-azure-sql-database-at-the-subscription-level-from-microsoft-defender-for-cloud)
+- [In Microsoft Defender for Cloud in the Azure portal](#enable-microsoft-defender-for-azure-sql-database-at-the-subscription-level-in-microsoft-defender-for-cloud)
 - [Programmatically with the REST API, Azure CLI, PowerShell, or Azure Policy](#enable-microsoft-defender-plans-programatically)
 
 Alternatively, you can enable it at the resource level as described in [Enable Microsoft Defender for Azure SQL Database at the resource level](#enable-microsoft-defender-for-azure-sql-database-at-the-resource-level).

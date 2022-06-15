@@ -1,20 +1,16 @@
 ---
+title: "Views Delete Method Example (VB)"
 description: "Views Delete Method Example (VB)"
-title: "Views Delete Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Delete method [ADOX]"
-ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Delete method [ADOX]"
+dev_langs:
+  - "VB"
 ---
 # Views Delete Method Example (VB)
 The following code shows how to use the [Delete](./delete-method-adox-collections.md) method to delete a view from the catalog.  

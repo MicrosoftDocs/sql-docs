@@ -1,22 +1,18 @@
 ---
+title: "UpdateBatch Method"
 description: "UpdateBatch Method"
-title: "UpdateBatch Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::UpdateBatch"
-  - "Recordset15::raw_UpdateBatch"
-helpviewer_keywords: 
-  - "UpdateBatch method [ADO]"
-ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::UpdateBatch"
+  - "Recordset15::raw_UpdateBatch"
+helpviewer_keywords:
+  - "UpdateBatch method [ADO]"
+apitype: "COM"
 ---
 # UpdateBatch Method
 Writes all pending batch updates to disk.  

@@ -1,21 +1,17 @@
 ---
+title: "Save and Open Methods Example (VC++)"
 description: "Save and Open Methods Example (VC++)"
-title: "Save and Open Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Save method [ADO], VC++ example"
-  - "Open method [ADO]"
-ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Save method [ADO], VC++ example"
+  - "Open method [ADO]"
+dev_langs:
+  - "C++"
 ---
 # Save and Open Methods Example (VC++)
 These three examples demonstrate how the [Save](./save-method.md) and **Open** methods can be used together.  

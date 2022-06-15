@@ -1,18 +1,14 @@
 ---
+title: "Fields Collection Properties, Methods, and Events"
 description: "Fields Collection Properties, Methods, and Events"
-title: "Fields Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Fields collection [ADO], members"
-ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Fields collection [ADO], members"
 ---
 # Fields Collection Properties, Methods, and Events
 ## Properties  

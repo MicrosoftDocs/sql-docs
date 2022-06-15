@@ -1,19 +1,15 @@
 ---
+title: "CancelUpdate Method (RDS)"
 description: "CancelUpdate Method (RDS)"
-title: "CancelUpdate Method (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "CancelUpdate method [RDS]"
-ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CancelUpdate method [RDS]"
+apitype: "COM"
 ---
 # CancelUpdate Method (RDS)
 Cancels any changes made to the current or new row of a [Recordset](../ado-api/recordset-object-ado.md) object.  

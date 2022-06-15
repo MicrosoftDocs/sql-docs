@@ -1,21 +1,18 @@
 ---
+title: "Read Method"
 description: "Read Method"
-title: "Read Method | Microsoft Docs"
-ms.prod: sql
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Stream::raw_Read"
-  - "_Stream::Read"
-helpviewer_keywords: 
-  - "Read method [ADO]"
-ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Stream::raw_Read"
+  - "_Stream::Read"
+helpviewer_keywords:
+  - "Read method [ADO]"
+apitype: "COM"
 ---
 # Read Method
 Reads a specified number of bytes from a binary [Stream](./stream-object-ado.md) object.  

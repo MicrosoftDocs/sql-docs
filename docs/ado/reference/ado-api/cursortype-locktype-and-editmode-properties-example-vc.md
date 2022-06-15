@@ -1,22 +1,18 @@
 ---
+title: "CursorType, LockType, and EditMode Properties Example (VC++)"
 description: "CursorType, LockType, and EditMode Properties Example (VC++)"
-title: "CursorType, LockType, and EditMode Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "LockType property [ADO], VC++ example"
   - "EditMode property [ADO], VC++ example"
   - "CursorType property [ADO], VC++ example"
-ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "C++"
 ---
 # CursorType, LockType, and EditMode Properties Example (VC++)
 This example demonstrates setting the [CursorType](./cursortype-property-ado.md) and [LockType](./locktype-property-ado.md) properties before opening a [Recordset](./recordset-object-ado.md). It also shows the value of the [EditMode](./editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  

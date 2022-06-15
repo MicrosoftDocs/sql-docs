@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "invoking user-defined functions"
   - "user-defined functions [SQL Server], executing"
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
-author: "rothja"
-ms.author: "jroth"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute User-defined Functions

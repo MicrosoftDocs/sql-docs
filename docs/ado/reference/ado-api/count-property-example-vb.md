@@ -1,20 +1,16 @@
 ---
+title: "Count Property Example (VB)"
 description: "Count Property Example (VB)"
-title: "Count Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Count property [ADO], Visual Basic example"
-ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Count property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Count Property Example (VB)
 This example demonstrates the [Count](./count-property-ado.md) property with two collections in the ***Employee*** database. The property obtains the number of objects in each collection, and sets the upper limit for loops that enumerate these collections. Another way to enumerate these collections without using the **Count** property would be to use `For Each...Next` statements.  

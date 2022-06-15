@@ -1,19 +1,15 @@
 ---
+title: "The Microsoft Cursor Service for OLE DB"
 description: "The Microsoft Cursor Service for OLE DB"
-title: "The Microsoft Cursor Service for OLE DB | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "cursor service for ole db [ADO]"
-  - "cursors [ADO], cursor service for OLE DB"
-ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "cursor service for ole db [ADO]"
+  - "cursors [ADO], cursor service for OLE DB"
 ---
 # The Microsoft Cursor Service for OLE DB
 When you select a client-side cursor, or set the **CursorLocation** property to **adUseClient**, you are invoking the Microsoft Cursor Service for OLE DB. You might also see references to the "Client Cursor Engine", which is essentially the same thing in the context of ADO. This service supplements the cursor-support functions of data providers. As a result, you can perceive relatively uniform functionality from all data providers.  

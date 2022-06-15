@@ -2,10 +2,10 @@
 title: Troubleshoot SQL Insights (preview)
 description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
 ms.topic: conceptual
-author: bwren
-ms.author: bwren
-ms.reviewer: wiassaf
-ms.date: 4/19/2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 06/15/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -184,7 +184,7 @@ WorkloadDiagnosticLogs
 
 For common cases, we provide troubleshooting tips in our logs view: 
 
-:::image type="content" source="media/sql-insights-enable/troubleshooting-logs-view.png" alt-text="Troubleshooting logs view.":::
+:::image type="content" source="media/sql-insights-enable/troubleshooting-logs-view.png" alt-text="A screenshot of the Azure Monitor page for Troubleshoot SQL logs in the Azure portal.":::
 
 ## Known issues
 

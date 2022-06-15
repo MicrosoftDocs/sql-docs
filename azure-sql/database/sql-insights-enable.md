@@ -2,10 +2,10 @@
 title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
 ms.topic: conceptual
-author: bwren
-ms.author: bwren
-ms.reviewer: wiassaf
-ms.date: 1/18/2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 06/15/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -50,11 +50,11 @@ GRANT VIEW DATABASE STATE TO [user];
 GO 
 ```
 
-:::image type="content" source="media/sql-insights-enable/telegraf-user-database-script.png" alt-text="Create telegraf user script." lightbox="media/sql-insights-enable/telegraf-user-database-script.png":::
+:::image type="content" source="media/sql-insights-enable/telegraf-user-database-script.png" alt-text="Screenshot of the Query Editor with a create telegraf user script." lightbox="media/sql-insights-enable/telegraf-user-database-script.png":::
 
 Verify the user was created.
 
-:::image type="content" source="media/sql-insights-enable/telegraf-user-database-verify.png" alt-text="Verify telegraf user script." lightbox="media/sql-insights-enable/telegraf-user-database-verify.png":::
+:::image type="content" source="media/sql-insights-enable/telegraf-user-database-verify.png" alt-text="Screenshot of the Query Editor query window verifying the telegraf user script." lightbox="media/sql-insights-enable/telegraf-user-database-verify.png":::
 
 ```sql
 select name as username,
@@ -120,7 +120,7 @@ You will need to create one or more Azure virtual machines that will be used to 
 The Azure virtual machine has the following requirements:
 
 - Operating system: Ubuntu 18.04 using Azure Marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). Custom images are not supported.
-- Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4 GiB memory) 
+- Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4-GiB memory) 
 - Deployed in any Azure region [supported](/azure/azure-monitor/agents/azure-monitor-agent-overview#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 
 > [!NOTE]
@@ -137,9 +137,9 @@ SQL Insights supports accessing your Azure SQL Database via its public endpoint 
 
 For access via the public endpoint, you would add a rule under the **Firewall settings** page and the [IP firewall settings](/azure/azure-sql/database/network-access-controls-overview#ip-firewall-rules) section. For specifying access from a virtual network, you can set [virtual network firewall rules](/azure/azure-sql/database/network-access-controls-overview#virtual-network-firewall-rules) and set the [service tags required by the Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#networking). [This article](/azure/azure-sql/database/network-access-controls-overview#ip-vs-virtual-network-firewall-rules) describes the differences between these two types of firewall rules.
 
-:::image type="content" source="media/sql-insights-enable/set-server-firewall.png" alt-text="Set server firewall" lightbox="media/sql-insights-enable/set-server-firewall.png":::
+:::image type="content" source="media/sql-insights-enable/set-server-firewall.png" alt-text="Screenshot of an Azure SQL Database page in the Azure portal. The Set server firewall button is highlighted." lightbox="media/sql-insights-enable/set-server-firewall.png":::
 
-:::image type="content" source="media/sql-insights-enable/firewall-settings.png" alt-text="Firewall settings." lightbox="media/sql-insights-enable/firewall-settings.png":::
+:::image type="content" source="media/sql-insights-enable/firewall-settings.png" alt-text="Screenshot of an Azure SQL Database Firewall settings page in the Azure portal. Firewall settings." lightbox="media/sql-insights-enable/firewall-settings.png":::
 
 ### Azure SQL Managed Instance
 
@@ -148,7 +148,7 @@ If your monitoring virtual machine will be in the same VNet as your SQL MI resou
 ### SQL Server 
 If your monitoring virtual machine is in the same VNet as your SQL virtual machine resources, then see [Connect to SQL Server within a virtual network](/azure/azure-sql/virtual-machines/windows/ways-to-connect-to-sql#connect-to-sql-server-within-a-virtual-network). If your monitoring virtual machine will be in the different VNet than your SQL virtual machine resources, then see  [Connect to SQL Server over the internet](/azure/azure-sql/virtual-machines/windows/ways-to-connect-to-sql#connect-to-sql-server-over-the-internet).
 
-## Store monitoring password in Key Vault
+## Store monitoring password in Azure Key Vault
 As a security best practice, we strongly recommend that you store your SQL user (login) passwords in a Key Vault, rather than entering them directly into your monitoring profile connection strings.
 
 When settings up your profile for SQL monitoring, you will need one of the following permissions on the Key Vault resource you intend to use:
@@ -162,9 +162,9 @@ If you have these permissions, a new Key Vault access policy will be automatical
 > You need to ensure that network and security configuration allows the monitoring VM to access Key Vault. For more information, see [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) and [Configure Azure Key Vault networking settings](/azure/key-vault/general/how-to-azure-key-vault-network-security).
 
 ## Create SQL monitoring profile
-Open SQL Insights (preview) by selecting **SQL (preview)** from the **Insights** section of the **Azure Monitor** menu in the Azure portal. Click **Create new profile**. 
+Open SQL Insights (preview) by selecting **SQL (preview)** from the **Insights** section of the **Azure Monitor** menu in the Azure portal. Select **Create new profile**. 
 
-:::image type="content" source="media/sql-insights-enable/create-new-profile.png" alt-text="Create new profile." lightbox="media/sql-insights-enable/create-new-profile.png":::
+:::image type="content" source="media/sql-insights-enable/create-new-profile.png" alt-text="Screenshot of the Azure Monitor page in Azure Portal. The create new profile button is highlighted." lightbox="media/sql-insights-enable/create-new-profile.png":::
 
 The profile will store the information that you want to collect from your SQL systems.  It has specific settings for: 
 
@@ -184,16 +184,16 @@ The profile is stored as a [data collection rule](/azure/azure-monitor/essential
 > [!NOTE]
 > The location of the profile should be in the same location as the Log Analytics workspace you plan to send the monitoring data to.
 
-:::image type="content" source="media/sql-insights-enable/profile-details.png" alt-text="Profile details." lightbox="media/sql-insights-enable/profile-details.png":::
+:::image type="content" source="media/sql-insights-enable/profile-details.png" alt-text="A screenshot of the Create new profile details page in the Azure portal." lightbox="media/sql-insights-enable/profile-details.png":::
 
-Click **Create monitoring profile** once you've entered the details for your monitoring profile. It can take up to a minute for the profile to be deployed.  If you don't see the new profile listed in **Monitoring profile** combo box, click the refresh button and it should appear once the deployment is completed.  Once you've selected the new profile, select the **Manage profile** tab to add a monitoring machine that will be associated with the profile.
+Select **Create monitoring profile** once you've entered the details for your monitoring profile. It can take up to a minute for the profile to be deployed.  If you don't see the new profile listed in **Monitoring profile** combo box, select the refresh button and it should appear once the deployment is completed.  Once you've selected the new profile, select the **Manage profile** tab to add a monitoring machine that will be associated with the profile.
 
 ### Add monitoring machine
-Select **Add monitoring machine** to open a context panel to choose the virtual machine to setup to monitor your SQL instances and provide the connection strings.
+Select **Add monitoring machine** to open a context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
 
 Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store your password for the monitoring user, select the Key Vault resources with these secrets and enter the URI and secret name for the password to be used in the connection strings. See the next section for details on identifying the connection string for different SQL deployments.
 
-:::image type="content" source="media/sql-insights-enable/add-monitoring-machine.png" alt-text="Add monitoring machine." lightbox="media/sql-insights-enable/add-monitoring-machine.png":::
+:::image type="content" source="media/sql-insights-enable/add-monitoring-machine.png" alt-text="A screenshot of the Azure portal Add monitoring virtual machine page. Choose the VM, specify the KV url (if used) and the secret name. Enter connection strings for each system to monitor. Choose the KV where you created the secret used in the connection strings." lightbox="media/sql-insights-enable/add-monitoring-machine.png":::
 
 ### Add connection strings 
 The connection string specifies the login name that SQL Insights (preview) should use when logging into SQL to collect monitoring data. If you're using a Key Vault to store the password for your monitoring user, provide the Key Vault URI and name of the secret that contains the password.
@@ -211,9 +211,7 @@ sqlAzureConnections": [
 ]
 ```
 
-Get the details from the **Connection strings** menu item for the database.
-
-:::image type="content" source="media/sql-insights-enable/connection-string-sql-database.png" alt-text="SQL database connection string" lightbox="media/sql-insights-enable/connection-string-sql-database.png":::
+Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the database.
 
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring a single secondary. The collected data will be tagged to reflect primary or secondary. 
 
@@ -227,9 +225,7 @@ Enter the connection string in the form:
    "Server= mysqlserver.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;" 
 ] 
 ```
-Get the details from the **Connection strings** menu item for the managed instance. If using managed instance [public endpoint](/azure/azure-sql/managed-instance/public-endpoint-configure), replace port 1433 with 3342.
-
-:::image type="content" source="media/sql-insights-enable/connection-string-sql-managed-instance.png" alt-text="SQL Managed Instance connection string" lightbox="media/sql-insights-enable/connection-string-sql-managed-instance.png":::
+Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the managed instance. If using managed instance [public endpoint](/azure/azure-sql/managed-instance/public-endpoint-configure), replace port 1433 with 3342.
 
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single secondary. Collected data will be tagged to reflect Primary or Secondary. 
 
@@ -250,7 +246,7 @@ Use the IP address that the SQL Server instance listens on.
 
 If your SQL Server instance is configured to listen on a non-default port, replace 1433 with that port number in the connection string. If you're using Azure SQL virtual machine, you can see which port to use on the **Security** page for the resource.
 
-:::image type="content" source="media/sql-insights-enable/sql-vm-security.png" alt-text="SQL virtual machine security" lightbox="media/sql-insights-enable/sql-vm-security.png":::
+:::image type="content" source="media/sql-insights-enable/sql-vm-security.png" alt-text="A screenshot of the SQL virtual machine Security page in the Azure Portal. The SQL virtual machine security page has a Security & networking section with a Port field." lightbox="media/sql-insights-enable/sql-vm-security.png":::
 
 For any SQL Server instance, you can determine all IP addresses and ports it is listening on by connecting to the instance and executing the following T-SQL query, as long as there is at least one TCP connection to the instance:
 
@@ -268,7 +264,7 @@ Select **Add monitoring virtual machine** to configure the virtual machine to co
 
 If you do not see data, see [Troubleshooting SQL Insights (preview)](sql-insights-troubleshoot.md) to identify the issue. 
 
-:::image type="content" source="media/sql-insights-enable/profile-created.png" alt-text="Profile created" lightbox="media/sql-insights-enable/profile-created.png":::
+:::image type="content" source="media/sql-insights-enable/profile-created.png" alt-text="A screenshot of the Azure portal page for Azure Monitor for SQL. In the Insights menu, SQL is selected. A profile is shown to have been created." lightbox="media/sql-insights-enable/profile-created.png":::
 
 > [!NOTE]
 > If you need to update your monitoring profile or the connection strings on your monitoring VMs, you may do so via the SQL Insights (preview) **Manage profile** tab.  Once your updates have been saved the changes will be applied in approximately 5 minutes.

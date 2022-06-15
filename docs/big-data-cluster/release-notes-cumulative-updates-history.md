@@ -1,14 +1,14 @@
 ---
 title: SQL Server Big Data Clusters cumulative updates history
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the updates and known issues for SQL Server Big Data Clusters. 
+description: This article describes the updates and known issues for SQL Server Big Data Clusters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 06/14/2022
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # SQL Server 2019 Big Data Clusters cumulative updates history

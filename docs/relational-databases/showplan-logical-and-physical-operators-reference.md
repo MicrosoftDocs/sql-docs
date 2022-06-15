@@ -140,7 +140,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Logical and Physical Operators Reference
-[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Operators describe how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes a query or a Data Manipulation Language (DML) statement. The query optimizer uses operators to build a query plan to create the result specified in the query, or to perform the operation specified in the DML statement. The query plan is a tree consisting of physical operators. You can view the query plan by using the SET SHOWPLAN statements, the graphical execution plan options in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or the SQL Server Profiler Showplan event classes.  
   
  Operators are classified as logical and physical operators.  

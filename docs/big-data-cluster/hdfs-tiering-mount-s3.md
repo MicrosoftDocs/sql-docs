@@ -4,11 +4,10 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article explains how to configure HDFS tiering to mount an external S3 file system into HDFS on a SQL Server 2019 big data cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 08/21/2019
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # How to mount S3 for HDFS tiering in a big data cluster

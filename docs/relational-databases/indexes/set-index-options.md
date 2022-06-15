@@ -1,14 +1,14 @@
 ---
-description: "Set Index Options"
-title: "Set Index Options | Microsoft Docs"
-ms.custom: ""
+title: "Set Index Options"
+description: Set Index Options
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALLOW_ROW_LOCKS option"
   - "SORT_IN_TEMPDB option"
   - "DROP_EXISTING clause"
@@ -23,13 +23,10 @@ helpviewer_keywords:
   - "OPTIMIZE_FOR_SEQUENTIAL_KEY option"
   - "ONLINE"
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Index Options
-
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
 
 This topic describes how to modify the properties of an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

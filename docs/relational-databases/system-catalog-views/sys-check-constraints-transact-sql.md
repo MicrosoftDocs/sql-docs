@@ -1,28 +1,26 @@
 ---
 title: sys.check_constraints (Transact-SQL)
-description: "sys.check_constraints (Transact-SQL)"
+description: sys.check_constraints (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.check_constraints"
   - "sys.check_constraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.check_constraints catalog view"
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "06/28/2017"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # sys.check_constraints (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Contains a row for each object that is a CHECK constraint, with **sys.objects.type** = 'C'.  
   

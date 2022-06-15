@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 09/01/2021
-ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: overview
 ms.custom:
   - contperf-fy22q1
   - intro-overview

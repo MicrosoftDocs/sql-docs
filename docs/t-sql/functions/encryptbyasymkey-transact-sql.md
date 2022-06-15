@@ -1,25 +1,24 @@
 ---
+title: "ENCRYPTBYASYMKEY (Transact-SQL)"
 description: "ENCRYPTBYASYMKEY (Transact-SQL)"
-title: "ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ENCRYPTBYASYMKEY"
   - "ENCRYPTBYASYMKEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTBYASYMKEY function"
   - "encryption [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function"
-ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.db2.globalsettingoutputwindow.f1"
 ---
 # Global Settings (Output Window) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

@@ -1,21 +1,19 @@
 ---
-description: "CREATE ROUTE (Transact-SQL)"
-title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE ROUTE (Transact-SQL)"
+description: CREATE ROUTE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_ROUTE_TSQL"
   - "ROUTE"
   - "CREATE ROUTE"
   - "ROUTE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "lifetimes [Service Broker]"
   - "routes [Service Broker], creating"
   - "forwarding brokers [SQL Server]"
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "expired routes [SQL Server]"
   - "activating routes"
   - "CREATE ROUTE statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ROUTE (Transact-SQL)

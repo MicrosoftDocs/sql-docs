@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysjobservers (Transact-SQL)"
-title: "dbo.sysjobservers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysjobservers (Transact-SQL)"
+description: dbo.sysjobservers (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysjobservers"
   - "sysjobservers_TSQL"
   - "dbo.sysjobservers"
   - "dbo.sysjobservers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysjobservers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

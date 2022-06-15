@@ -1,23 +1,21 @@
 ---
-description: "cdc.ddl_history (Transact-SQL)"
-title: "cdc.ddl_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.ddl_history (Transact-SQL)"
+description: cdc.ddl_history (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc.ddl_history_TSQL"
   - "cdc.ddl_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.ddl_history"
+dev_langs:
+  - "TSQL"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

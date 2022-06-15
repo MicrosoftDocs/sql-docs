@@ -112,6 +112,14 @@ For more details, check [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update) c
 
 ---
 
+When specifying hardware parameter in templates or scripts, hardware is provided by using its name. The following table applies:
+
+|Hardware|Name|
+|:-- |:-- |
+|Standard-series (Gen5)|Gen5|
+|Premium-series|G8IM|
+|Memory optimized premium-series|G8IH|
+
 ### Hardware availability
 
 #### <a id="gen4gen5-1"></a> Gen4

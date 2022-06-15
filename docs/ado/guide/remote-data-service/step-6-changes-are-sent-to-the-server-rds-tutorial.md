@@ -1,18 +1,14 @@
 ---
+title: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
 description: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
-title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS tutorial [ADO], changes sent to server"
-ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS tutorial [ADO], changes sent to server"
 ---
 # Step 6: Changes are Sent to the Server (RDS Tutorial)
 If the **Recordset** object is edited, any changes (that is, rows that are added, changed, or deleted) can be sent back to the server.  

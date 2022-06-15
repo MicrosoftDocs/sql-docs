@@ -1,23 +1,21 @@
 ---
-description: "sysdbmaintplans (Transact-SQL)"
-title: "sysdbmaintplans (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdbmaintplans (Transact-SQL)"
+description: sysdbmaintplans (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdbmaintplans_TSQL"
   - "sysdbmaintplans"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdbmaintplans system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysdbmaintplans (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

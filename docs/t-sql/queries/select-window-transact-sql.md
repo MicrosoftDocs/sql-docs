@@ -28,9 +28,9 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 # SELECT - WINDOW - (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-Named window definition in the WINDOW clause determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. SELECT WINDOW is introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+Named window definition in the WINDOW clause determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied.
 
 > [!NOTE]
 > The WINDOW clause requires database compatibility level 160 or higher. If your database compatibility level is lower than 160, SQL Server cannot execute queries with the WINDOW clause.
@@ -71,7 +71,7 @@ ORDER BY order_by_expression
 
 #### window_name
 
-Name of the name of the defined window specification. This name will be used by the window functions in the OVER clause to refer the window specification. Window names must follow the rules for identifiers.
+Name of the defined window specification. This name will be used by the window functions in the OVER clause to refer the window specification. Window names must follow the rules for identifiers.
 
 #### reference_window_name
 
@@ -104,7 +104,7 @@ The restrictions for usage of window specifications in the OVER clause with the 
 
 ## Examples
 
-### Use the window defined in WINDOW clause
+### A. Specifying a window defined in the window clause
 
 The following example query shows uses a named window in the OVER clause.
 
@@ -167,7 +167,7 @@ Here is the result set.
 | 7 | Campbell | 1573012.9383 | 98055 |
 | 8 | Tsoflias | 1421810.9242 | 98055 |
 
-### Simple example reuses windows in OVER clause
+### B. Specifying a single window in multiple over clauses
 
 The following example shows defining a window specification and using it multiple times in an OVER clause.
 
@@ -231,7 +231,7 @@ Here is the result set.
 | 43664 | 773 | 1 | 14 | 1 | 8 | 1 | 4 |
 | 43664 | 778 | 1 | 14 | 1 | 8 | 1 | 4 |
 
-### Defining common specification in WINDOW clause
+### C. Defining common specification in window clause
 
 This example shows defining a common specification in a window and using it to define additional specifications in the OVER clause.
 
@@ -283,7 +283,7 @@ Here is the result set.
 | 43664 | 714 | 1 | 11 | 1 | 6 |
 | 43664 | 716 | 1 | 12 | 1 | 6 |
 
-### Forward and backward window references
+### D. Forward and backward window references
 
 This example shows using named windows as forward and backward references when defining a new window in the WINDOW clause.
 

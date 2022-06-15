@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "UDF"
   - "TVF"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-author: "rothja"
-ms.author: "jroth"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create User-defined Functions (Database Engine)

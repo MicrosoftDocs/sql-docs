@@ -1,12 +1,13 @@
 ---
 title: "Quickstart: Create a local development environment for Azure SQL Database"
-description: Create a local development environment for Azure SQL Database using this hands-on guide. 
-services: sql-database
+description: Create a local development environment for Azure SQL Database using this hands-on guide.
+services:
+  - "sql-database"
 ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: quickstart 
+ms.topic: quickstart
 ms.date: 05/24/2022
 ---
 
@@ -35,7 +36,7 @@ The steps for creating a new project using Visual Studio Code, or Azure Data Stu
  
     :::image type="content" source="./media/local-dev-experience-quickstart/database-project-enter-project-name.png" alt-text="Screenshot of entering a name for a Database Project in Visual Studio Code.":::
     
-1. Select the SDK-style SQL Database Project project. (The [SDK-style SQL project (preview)](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) is recommended for being more concise and manageable when working with multiple developers on a team's repository.)
+1. Select the SDK-style SQL Database Project project. (The SDK-style SQL project is recommended for being more concise and manageable when working with multiple developers on a team's repository.)
  
     :::image type="content" source="./media/local-dev-experience-quickstart/database-project-select-style.png" alt-text="Screenshot of selecting a style for a Database Project in Visual Studio Code.":::
     

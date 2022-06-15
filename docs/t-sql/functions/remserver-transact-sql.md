@@ -1,25 +1,24 @@
 ---
+title: "@@REMSERVER (Transact-SQL)"
 description: "@@REMSERVER (Transact-SQL)"
-title: "@@REMSERVER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@REMSERVER"
   - "@@REMSERVER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], remote servers"
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
-ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

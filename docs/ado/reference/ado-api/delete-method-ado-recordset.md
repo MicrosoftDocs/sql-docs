@@ -1,22 +1,18 @@
 ---
+title: "Delete Method (ADO Recordset)"
 description: "Delete Method (ADO Recordset)"
-title: "Delete Method (ADO Recordset) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::raw_Delete"
-  - "Recordset15::Delete"
-helpviewer_keywords: 
-  - "Delete method [ADO]"
-ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::raw_Delete"
+  - "Recordset15::Delete"
+helpviewer_keywords:
+  - "Delete method [ADO]"
+apitype: "COM"
 ---
 # Delete Method (ADO Recordset)
 Deletes the current record or a group of records.  

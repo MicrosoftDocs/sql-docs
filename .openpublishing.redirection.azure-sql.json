@@ -204,7 +204,7 @@
             "source_path_from_root": "/azure-sql/database/service-tiers-general-purpose-business-critical.md",
             "redirect_url": "/azure/azure-sql/database/service-tiers-vcore",
             "redirect_document_id": false
-        },
+        },                                                                                    
         {
           "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-faq.md",
           "redirect_url": "/azure/azure-sql/virtual-machines/linux/frequently-asked-questions-faq",
@@ -392,8 +392,13 @@
         },
         {
           "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support.md",
-          "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support",
+          "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support",
           "redirect_document_id": true
+        },
+        {
+          "source_path_from_root": "/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support.md",
+          "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support",
+          "redirect_document_id": false
         },
         {
           "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension.md",
@@ -512,7 +517,17 @@
         },
         {
           "source_path_from_root": "/azure-sql/database/scripts/sql-database-auditing-and-threat-detection-cli.md",
-          "redirect_url": "/azure/azure-sql/database/scripts/auditing-threat-detection-cli",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
+          "redirect_document_id": false
+        },
+        {
+          "source_path_from_root": "/azure-sql/database/scripts/auditing-threat-detection-cli.md",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
+          "redirect_document_id": false
+        },        
+        {
+          "source_path_from_root": "/azure-sql/database/scripts/auditing-threat-detection-powershell-configure.md",
+          "redirect_url": "/azure/defender-for-cloud/defender-for-sql-introduction",
           "redirect_document_id": false
         },
         {

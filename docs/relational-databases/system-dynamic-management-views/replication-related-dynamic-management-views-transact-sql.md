@@ -1,20 +1,18 @@
 ---
-description: "Replication Related Dynamic Management Views (Transact-SQL)"
-title: "Replication Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "dynamic management objects [SQL Server], replication"
-  - "replication dynamic management objects [SQL Server]"
-ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
+title: "Replication Related Dynamic Management Views (Transact-SQL)"
+description: Replication Related Dynamic Management Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/15/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "dynamic management objects [SQL Server], replication"
+  - "replication dynamic management objects [SQL Server]"
+dev_langs:
+  - "TSQL"
+ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

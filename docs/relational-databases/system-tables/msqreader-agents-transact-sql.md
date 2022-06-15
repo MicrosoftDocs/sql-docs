@@ -1,23 +1,21 @@
 ---
-description: "MSqreader_agents (Transact-SQL)"
-title: "MSqreader_agents (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSqreader_agents (Transact-SQL)"
+description: MSqreader_agents (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSqreader_agents_TSQL"
   - "MSqreader_agents"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSqreader_agents system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

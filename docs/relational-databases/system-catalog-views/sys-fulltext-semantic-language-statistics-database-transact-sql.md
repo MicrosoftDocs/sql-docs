@@ -1,25 +1,24 @@
 ---
-description: "sys.fulltext_semantic_language_statistics_database (Transact-SQL)"
-title: "sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.fulltext_semantic_language_statistics_database (Transact-SQL)"
+description: sys.fulltext_semantic_language_statistics_database (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fulltext_semantic_language_statistics_database_TSQL"
   - "fulltext_semantic_language_statistics_database_TSQL"
   - "fulltext_semantic_language_statistics_database"
   - "sys.fulltext_semantic_language_statistics_database"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fulltext_semantic_language_statistics_database catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

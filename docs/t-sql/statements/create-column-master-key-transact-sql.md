@@ -1,14 +1,14 @@
 ---
-description: "CREATE COLUMN MASTER KEY (Transact-SQL)"
-title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE COLUMN MASTER KEY (Transact-SQL)"
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEYDEF.GENERAL.F1"
   - "CREATE COLUMN MASTER KEY"
@@ -17,16 +17,14 @@ f1_keywords:
   - "COLUMN_MASTER_KEY_TSQL"
   - "SQL13.SWB.NEWCOLUMNMASTERKEY.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEY.GENERAL.F1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column master key definition"
   - "column master key, create"
   - "CREATE COLUMN MASTER KEY statement"
   - "Always Encrypted, create column master key"
+dev_langs:
+  - "TSQL"
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: jaszymas
-ms.author: jaszymas
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]

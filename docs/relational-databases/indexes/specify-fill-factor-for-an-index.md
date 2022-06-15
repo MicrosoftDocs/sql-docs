@@ -1,20 +1,18 @@
 ---
-description: "Specify Fill Factor for an Index"
-title: "Specify Fill Factor for an Index | Microsoft Docs"
-ms.custom: ""
+title: "Specify Fill Factor for an Index"
+description: Specify Fill Factor for an Index
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current || >= sql-server-2016"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Specify Fill Factor for an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

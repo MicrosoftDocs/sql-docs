@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "UDF"
   - "TVF"
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-author: "rothja"
-ms.author: "jroth"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Defined Functions

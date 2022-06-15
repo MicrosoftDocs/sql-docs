@@ -1,27 +1,26 @@
 ---
+title: "SOME | ANY (Transact-SQL)"
 description: "SOME | ANY (Transact-SQL)"
-title: "SOME | ANY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SOME"
   - "SOME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scalar values"
   - "comparing scalar with single-column set"
   - "ANY operator"
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
-ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

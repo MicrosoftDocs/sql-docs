@@ -1,23 +1,19 @@
 ---
+title: "Chapter Property (ADO)"
 description: "Chapter Property (ADO)"
-title: "Chapter Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ADORecordsetConstruction::Chapter"
   - "ADORecordsetConstruction::put_Chapter"
   - "ADORecordsetConstruction::get_Chapter"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Chapter property [ADO]"
-ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Chapter Property (ADO)
 Gets or sets an OLE DB **Chapter** object from/on an [ADORecordsetConstruction Interface](./adorecordsetconstruction-interface.md) object. When you use **put_Chapter** to set the **Chapter** object, a subset of rows is turned into an ADO [Recordset Object](./recordset-object-ado.md) object. This sets the current chapter of the **Rowset**object. This property is read/write.  

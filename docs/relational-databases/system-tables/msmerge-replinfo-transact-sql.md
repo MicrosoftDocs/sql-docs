@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_replinfo (Transact-SQL)"
-title: "MSmerge_replinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_replinfo (Transact-SQL)"
+description: MSmerge_replinfo (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_replinfo_TSQL"
   - "MSmerge_replinfo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_replinfo system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_replinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

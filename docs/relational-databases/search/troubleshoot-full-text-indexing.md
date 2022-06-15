@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "troubleshooting [full-text search]"
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

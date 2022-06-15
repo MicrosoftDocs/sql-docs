@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_exec_query_parallel_workers (Transact-SQL)"
-title: "sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_parallel_workers (Transact-SQL)"
+description: sys.dm_exec_query_parallel_workers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+manager: ajayj
 ms.date: "05/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_query_parallel_workers_TSQL"
   - "dm_exec_query_parallel_workers"
   - "sys.dm_exec_query_parallel_workers_TSQL"
   - "sys.dm_exec_query_parallel_workers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_parallel_workers dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
-author: "pelopes"
-ms.author: "pelopes"
-manager: ajayj
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)

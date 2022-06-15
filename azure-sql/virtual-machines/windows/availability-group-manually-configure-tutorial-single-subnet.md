@@ -3,7 +3,7 @@ title: "Tutorial: Configure a SQL Server Always On availability group"
 description: "This tutorial shows how to create a SQL Server Always On availability group on Azure Virtual Machines."
 services: virtual-machines
 documentationCenter: na
-author: rajeshsetlem
+author: adbadram
 editor: monicar
 tags: azure-service-management
 
@@ -16,7 +16,7 @@ ms.topic: tutorial
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
 ms.date: 11/10/2021
-ms.author: rsetlem
+ms.author: adbadram
 ms.custom: "seo-lt-2019"
 ms.reviewer: mathoma
 ---
@@ -196,13 +196,13 @@ The cluster core resources are configured with a file share witness.
 
 ## Enable availability groups
 
-Next, enable the **AlwaysOn availability groups** feature. Do these steps on both SQL Servers.
+Next, enable the **Always On availability groups** feature. Do these steps on both SQL Servers.
 
 1. From the **Start** screen, launch **SQL Server Configuration Manager**.
 2. In the browser tree, select **SQL Server Services**, then right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
-3. Select the **AlwaysOn High Availability** tab, then select **Enable AlwaysOn availability groups**, as follows:
+3. Select the **Always On High Availability** tab, then select **Enable Always On availability groups**, as follows:
 
-    ![Enable AlwaysOn availability groups](./media/availability-group-manually-configure-tutorial-single-subnet/54-enableAlwaysOn.png)
+    ![Enable Always On availability groups](./media/availability-group-manually-configure-tutorial-single-subnet/54-enableAlwaysOn.png)
 
 4. Select **Apply**. Select **OK** in the pop-up dialog.
 
@@ -286,7 +286,7 @@ You are now ready to configure an availability group using the following steps:
 
 ### Create the availability group:
 
-1. On remote desktop session to the first SQL Server. In **Object Explorer** in SSMS, right-click **AlwaysOn High Availability** and select **New availability group Wizard**.
+1. On remote desktop session to the first SQL Server. In **Object Explorer** in SSMS, right-click **Always On High Availability** and select **New availability group Wizard**.
 
     ![Launch New availability group Wizard](./media/availability-group-manually-configure-tutorial-single-subnet/56-newagwiz.png)
 
@@ -339,11 +339,11 @@ You are now ready to configure an availability group using the following steps:
 
 ### Check the availability group
 
-1. In **Object Explorer**, expand **AlwaysOn High Availability**, and then expand **availability groups**. You should now see the new availability group in this container. Right-click the availability group and select **Show Dashboard**.
+1. In **Object Explorer**, expand **Always On High Availability**, and then expand **availability groups**. You should now see the new availability group in this container. Right-click the availability group and select **Show Dashboard**.
 
    ![Show availability group Dashboard](./media/availability-group-manually-configure-tutorial-single-subnet/76-showdashboard.png)
 
-   Your **AlwaysOn Dashboard** should look similar to the following screenshot:
+   Your **Always On Dashboard** should look similar to the following screenshot:
 
    ![availability group Dashboard](./media/availability-group-manually-configure-tutorial-single-subnet/78-agdashboard.png)
 
@@ -354,7 +354,7 @@ You are now ready to configure an availability group using the following steps:
    ![availability group in Failover Cluster Manager](./media/availability-group-manually-configure-tutorial-single-subnet/80-clustermanager.png)
 
    > [!WARNING]
-   > Do not try to fail over the availability group from the Failover Cluster Manager. All failover operations should be performed from within **AlwaysOn Dashboard** in SSMS. For more information, see [Restrictions on Using The Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
+   > Do not try to fail over the availability group from the Failover Cluster Manager. All failover operations should be performed from within **Always On Dashboard** in SSMS. For more information, see [Restrictions on Using The Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
     >
 
 At this point, you have an availability group with replicas on two instances of SQL Server. You can move the availability group between instances. You cannot connect to the availability group yet because you do not have a listener. In Azure virtual machines, the listener requires a load balancer. The next step is to create the load balancer in Azure.
@@ -513,7 +513,7 @@ In SQL Server Management Studio, set the listener port.
 
 1. Launch SQL Server Management Studio and connect to the primary replica.
 
-1. Navigate to **AlwaysOn High Availability** > **availability groups** > **availability group Listeners**.
+1. Navigate to **Always On High Availability** > **availability groups** > **availability group Listeners**.
 
 1. You should now see the listener name that you created in Failover Cluster Manager. Right-click the listener name and select **Properties**.
 

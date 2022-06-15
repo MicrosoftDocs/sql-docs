@@ -1,26 +1,24 @@
 ---
-description: "sys.security_policies (Transact-SQL)"
-title: "sys.security_policies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.security_policies (Transact-SQL)"
+description: sys.security_policies (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.SECURITY_POLICIES_TSQL"
   - "SECURITY_POLICIES_TSQL"
   - "SYS.SECURITY_POLICIES"
   - "SECURITY_POLICIES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.security_policies catalog view"
   - "security_policies catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.security_policies (Transact-SQL)

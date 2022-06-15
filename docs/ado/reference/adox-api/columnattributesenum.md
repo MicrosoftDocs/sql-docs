@@ -1,21 +1,17 @@
 ---
+title: "ColumnAttributesEnum"
 description: "ColumnAttributesEnum"
-title: "ColumnAttributesEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ColumnAttributesEnum"
-helpviewer_keywords: 
-  - "ColumnAttributesEnum enumeration [ADOX]"
-ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ColumnAttributesEnum"
+helpviewer_keywords:
+  - "ColumnAttributesEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # ColumnAttributesEnum
 Specifies characteristics of a [Column](./column-object-adox.md).  

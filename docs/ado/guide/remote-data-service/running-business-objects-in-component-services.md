@@ -1,18 +1,14 @@
 ---
+title: "Running Business Objects in Component Services"
 description: "Running Business Objects in Component Services"
-title: "Running Business Objects in Component Services | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "component services in RDS [ADO]"
-ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "component services in RDS [ADO]"
 ---
 # Running Business Objects in Component Services
 > [!IMPORTANT]

@@ -1,30 +1,28 @@
 ---
-description: "sys.sequences (Transact-SQL)"
-title: "sys.sequences (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.sequences (Transact-SQL)"
+description: sys.sequences (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sequences_TSQL"
   - "sys.sequences"
   - "sequences"
   - "sequences_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence number object, sys. sequences catalog view"
   - "sys.sequences catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sequences (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contains a row for each sequence object in a database.  
   

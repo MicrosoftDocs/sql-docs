@@ -1,25 +1,24 @@
 ---
-description: "ALTER CREDENTIAL (Transact-SQL)"
-title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER CREDENTIAL (Transact-SQL)"
+description: ALTER CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/07/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER CREDENTIAL"
   - "ALTER_CREDENTIAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "passwords [SQL Server], credentials"
   - "credentials [SQL Server], ALTER CREDENTIAL statement"
   - "modifying credentials"
   - "authentication [SQL Server], credentials"
   - "ALTER CREDENTIAL statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER CREDENTIAL (Transact-SQL)

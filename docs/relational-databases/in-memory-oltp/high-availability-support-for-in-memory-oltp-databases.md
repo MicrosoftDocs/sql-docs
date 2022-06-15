@@ -1,16 +1,15 @@
 ---
 title: "High availability - in-memory OLTP databases"
 description: SQL Server Databases with memory-optimized tables, with or without native compiled stored procedures, are fully supported with Always On Availability Groups.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/31/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-author: markingmyname
-ms.author: maghan
 ---
 # High Availability Support for In-Memory OLTP databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

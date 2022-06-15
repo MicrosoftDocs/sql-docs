@@ -2,13 +2,16 @@
 title: What's new?
 titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 author: MashaMSFT
 ms.author: mathoma
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: sqldbrb=2, references_regions, ignite-fall-2021
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
+  - "references_regions"
+  - "ignite-fall-2021"
 ms.topic: conceptual
 ms.date: 05/24/2022
 ---
@@ -49,6 +52,7 @@ The following table lists the features of Azure SQL Database that have transitio
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) and [Auto-failover groups](/azure/azure-sql/database/auto-failover-group-sql-db) for Hyperscale databases | June 2022 | Active geo-replication and Auto-failover groups helps to have a turn key business continuity solution for Azure SQL Hyperscale Database that lets you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage.|
 | [Ledger](ledger-overview.md) | May 2022 | The ledger feature in Azure SQL Database allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. |
 | [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | April 2022 | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is now generally available. | 
 | [Zone redundant configuration for General Purpose tier](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) | April 2022 | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability), you can make your provisioned and serverless General Purpose databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
@@ -62,6 +66,14 @@ The following table lists the features of Azure SQL Database that have transitio
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.
+
+### June 2022
+
+| Changes | Details |
+| --- | --- |
+| **Active geo-replication and Auto-failover groups for Hyperscale databases** | Active geo-replication and Auto-failover groups helps to have a turn key business continuity solution for Azure SQL Hyperscale Database that lets you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage. |
+
+
 
 ### May 2022
 

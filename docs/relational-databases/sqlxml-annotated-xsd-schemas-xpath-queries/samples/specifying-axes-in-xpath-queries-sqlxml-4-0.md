@@ -1,13 +1,15 @@
 ---
 title: "Specifying Axes in XPath Queries (SQLXML)"
 description: Learn how to specify axes in SQLXML 4.0 XPath queries.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "XPath queries [SQLXML], axes"
   - "context node [SQLXML]"
   - "attribute axis [SQLXML]"
@@ -16,9 +18,6 @@ helpviewer_keywords:
   - "parent axis"
   - "axes [SQLXML]"
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)

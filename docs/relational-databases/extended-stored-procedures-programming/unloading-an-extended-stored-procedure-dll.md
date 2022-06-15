@@ -1,20 +1,16 @@
 ---
-description: "Unloading an Extended Stored Procedure DLL"
-title: "Unloading an Extended Stored Procedure DLL | Microsoft Docs"
-ms.custom: ""
+title: "Unloading an Extended Stored Procedure DLL"
+description: Unloading an Extended Stored Procedure DLL
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], unloading"
   - "unloading extended stored procedures"
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
-author: LitKnd
-ms.author: kendralittle
 ---
 # Unloading an Extended Stored Procedure DLL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

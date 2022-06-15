@@ -1,19 +1,15 @@
 ---
+title: "ADO MD Collections"
 description: "ADO MD Collections"
-title: "ADO MD Collections | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO MD collections"
-  - "collections [ADO MD]"
-ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD collections"
+  - "collections [ADO MD]"
 ---
 # ADO MD Collections
 

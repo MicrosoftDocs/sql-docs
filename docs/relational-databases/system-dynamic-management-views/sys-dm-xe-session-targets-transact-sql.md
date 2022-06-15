@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xe_session_targets (Transact-SQL)"
 title: "sys.dm_xe_session_targets (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_xe_session_targets (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_xe_session_targets"
   - "dm_xe_session_targets_TSQL"
   - "dm_xe_session_targets"
   - "sys.dm_xe_session_targets_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_session_targets dynamic management view"
   - "extended events [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

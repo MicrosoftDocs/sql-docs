@@ -1,17 +1,16 @@
 ---
-description: "sys.workload_management_workload_groups (Transact-SQL)"
-title: "sys.workload_management_workload_groups (Transact-SQL) | Microsoft Docs"
-ms.custom:
-ms.date: 11/05/2019
-ms.prod: sql
-ms.technology: system-objects
-ms.prod_service: "synapse-analytics"
-ms.reviewer: "wiassaf"
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.workload_management_workload_groups (Transact-SQL)"
+description: sys.workload_management_workload_groups (Transact-SQL)
 author: "ronortloff"
 ms.author: "rortloff"
+ms.reviewer: "wiassaf"
+ms.date: 11/05/2019
+ms.prod: sql
+ms.prod_service: "synapse-analytics"
+ms.technology: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_groups (Transact-SQL)

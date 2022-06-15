@@ -1,15 +1,18 @@
 ---
 title: Scale single database resources
-description: This article describes how to scale the compute and storage resources available for a single database in Azure SQL Database. 
-services: sql-database
+description: This article describes how to scale the compute and storage resources available for a single database in Azure SQL Database.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: performance
-ms.custom: sqldbrb=1, references_regions, devx-track-azurepowershell
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "references_regions"
+  - "devx-track-azurepowershell"
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/09/2021
 ---
 # Scale single database resources in Azure SQL Database

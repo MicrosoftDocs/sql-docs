@@ -1,16 +1,14 @@
 ---
-description: "Columnstore indexes - Query performance"
-title: "Columnstore indexes - Query performance | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore indexes - Query performance"
+description: Columnstore indexes - Query performance
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Query performance

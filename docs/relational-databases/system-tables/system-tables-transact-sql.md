@@ -1,16 +1,14 @@
 ---
-description: "System Tables (Transact-SQL)"
-title: "System Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "System Tables (Transact-SQL)"
+description: System Tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server]"
   - "tables [SQL Server], system tables"
   - "information retrieval [SQL Server]"
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "system tables [SQL Server], about system tables"
   - "system tables [SQL Server], retrieving information from"
   - "retrieving system table information"
+dev_langs:
+  - "TSQL"
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-author: LitKnd
-ms.author: kendralittle
 ---
 # System Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

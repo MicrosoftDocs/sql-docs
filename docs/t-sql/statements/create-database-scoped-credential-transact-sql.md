@@ -1,14 +1,14 @@
 ---
-description: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATABASE SCOPED CREDENTIAL"
   - "DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_TSQL"
@@ -16,14 +16,12 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)

@@ -1,28 +1,26 @@
 ---
-description: "DROP CERTIFICATE (Transact-SQL)"
-title: "DROP CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP CERTIFICATE (Transact-SQL)"
+description: DROP CERTIFICATE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP CERTIFICATE"
   - "DROP_CERTIFICATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], removing"
   - "removing certificates"
   - "dropping certificates"
   - "DROP CERTIFICATE statement"
   - "deleting certificates"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

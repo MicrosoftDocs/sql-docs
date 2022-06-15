@@ -1,21 +1,20 @@
 ---
-description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: CREATE INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE INDEX"
   - "INDEX"
   - "INDEX_TSQL"
   - "CREATE_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "CREATE XML INDEX statement"
   - "PRIMARY XML INDEX statement"
@@ -52,8 +51,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
-author: pmasl
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)

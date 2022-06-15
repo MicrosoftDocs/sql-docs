@@ -1,20 +1,16 @@
 ---
+title: "Error Handling"
 description: "Error Handling in ADO"
-title: "Error Handling | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reporting errors [ADO]"
   - "errors [ADO]"
   - "ADO, error handling"
-ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-author: rothja
-ms.author: jroth
 ---
 # Error Handling in ADO
 ADO uses several different methods to notify an application of errors that occur. This section discusses the types of errors that can occur when you are using ADO and how your application is notified. It concludes by making suggestions about how to handle those errors.  

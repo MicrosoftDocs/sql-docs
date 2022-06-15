@@ -1,20 +1,16 @@
 ---
+title: "AddNew Method Example (JScript)"
 description: "AddNew Method Example (JScript)"
-title: "AddNew Method Example (JScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "AddNew method [ADO], JScript example"
-ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "AddNew method [ADO], JScript example"
+dev_langs:
+  - "JScript"
 ---
 # AddNew Method Example (JScript)
 This example uses the [AddNew](./addnew-method-ado.md) method to create a new record with the specified name. Cut and paste the following code to Notepad or another text editor, and save it as **AddNewJS.asp**.  

@@ -1,18 +1,14 @@
 ---
+title: "Field Object Properties, Methods, and Events"
 description: "Field Object Properties, Methods, and Events"
-title: "Field Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Field object [ADO], members"
-ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Field object [ADO], members"
 ---
 # Field Object Properties, Methods, and Events
 ## Properties/Collections  

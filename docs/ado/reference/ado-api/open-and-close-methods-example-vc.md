@@ -1,21 +1,17 @@
 ---
+title: "Open and Close Methods Example (VC++)"
 description: "Open and Close Methods Example (VC++)"
-title: "Open and Close Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close method [ADO], VC++ example"
-  - "Open method [ADO], VC++ example"
-ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Close method [ADO], VC++ example"
+  - "Open method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Open and Close Methods Example (VC++)
 This example uses the **Open** and [Close](./close-method-ado.md) methods on both [Recordset](./recordset-object-ado.md) and [Connection](./connection-object-ado.md) objects that have been opened.  

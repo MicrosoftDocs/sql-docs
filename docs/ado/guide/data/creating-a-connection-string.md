@@ -1,19 +1,15 @@
 ---
+title: "Creating a Connection String"
 description: "Creating a Connection String"
-title: "Creating a Connection String | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/20/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connections [ADO]"
-  - "connection strings [ADO]"
-ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
+ms.date: "01/20/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connections [ADO]"
+  - "connection strings [ADO]"
 ---
 # Creating a Connection String
 A connection string consists of a list of argument/value pairs (that is, parameters), separated by semi-colons. For example:  

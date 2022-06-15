@@ -1,23 +1,19 @@
 ---
+title: "Fields Collection (ADO)"
 description: "Fields Collection (ADO)"
-title: "Fields Collection (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Fields"
   - "Recordset15::Fields"
   - "_Record::Fields"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Fields collection [ADO]"
-ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Fields Collection (ADO)
 Contains all the [Field](./field-object.md) objects of a [Recordset](./recordset-object-ado.md) or [Record](./record-object-ado.md) object.  

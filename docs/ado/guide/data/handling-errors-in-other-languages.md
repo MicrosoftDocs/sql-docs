@@ -1,16 +1,12 @@
 ---
+title: "Handling Errors In Other Languages"
 description: "Handling Errors In Other Languages"
-title: "Handling Errors In Other Languages | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "02/14/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: rothja
 ms.author: jroth
+ms.date: "02/14/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
 ---
 # Handling Errors In Other Languages
 So far, this section has discussed errors from a Microsoft® Visual Basic® point of view. The remainder of this section will give you an overview of error handling in languages other than Visual Basic.  

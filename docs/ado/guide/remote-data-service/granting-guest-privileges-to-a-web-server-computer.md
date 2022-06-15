@@ -1,18 +1,14 @@
 ---
+title: "Granting Guest Privileges to a Web Server Computer"
 description: "Granting Guest Privileges to a Web Server Computer"
-title: "Granting Guest Privileges to a Web Server Computer | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "guest privileges in RDS [ADO]"
-ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "guest privileges in RDS [ADO]"
 ---
 # Granting Guest Privileges to a Web Server Computer
 The anonymous Web server account (IUSR_*ComputerName*) must be added to the Guests local group on the Web server computer to use RDS.  

@@ -1,20 +1,16 @@
 ---
+title: "Cancel Method Example (VC++)"
 description: "Cancel Method Example (VC++)"
-title: "Cancel Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cancel method [ADO], VC++ example"
-ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Cancel method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Cancel Method Example (VC++)
 This example uses the [Cancel](./cancel-method-ado.md) method to cancel a command executing on a [Connection](./connection-object-ado.md) object if the connection is busy.  

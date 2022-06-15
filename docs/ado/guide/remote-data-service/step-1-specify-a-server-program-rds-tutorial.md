@@ -1,18 +1,14 @@
 ---
+title: "Step 1: Specify a Server Program (RDS Tutorial)"
 description: "Step 1: Specify a Server Program (RDS Tutorial)"
-title: "Step 1: Specify a Server Program (RDS Tutorial) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS tutorial [ADO], specifying server program"
-ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS tutorial [ADO], specifying server program"
 ---
 # Step 1: Specify a Server Program (RDS Tutorial)
 In the most general case, use the [RDS.DataSpace](../../reference/rds-api/dataspace-object-rds.md) object [CreateObject](../../reference/rds-api/createobject-method-rds.md) method to specify the default server program, [RDSServer.DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md), or your own custom server program (business object). A server program is instantiated on the server, and a reference to the server program, or *proxy*, is returned.  

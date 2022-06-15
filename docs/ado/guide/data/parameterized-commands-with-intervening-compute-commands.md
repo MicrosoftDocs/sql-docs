@@ -1,21 +1,17 @@
 ---
+title: "Parameterized Commands with Intervening COMPUTE Commands"
 description: "Parameterized Commands with Intervening COMPUTE Commands"
-title: "Parameterized Commands with Intervening COMPUTE Commands | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data shaping [ADO], parameterized commands"
   - "parameterized commands [ADO]"
   - "APPEND clause [ADO]"
   - "COMPUTE command [ADO]"
-ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: rothja
-ms.author: jroth
 ---
 # Parameterized Commands with Intervening COMPUTE Commands
 A typical parameterized shape APPEND command has a clause that creates a parent **Recordset** with a query command and another clause that creates a child **Recordset** with a parameterized query command - that is, a command containing a parameter placeholder (a question mark, "?"). The resulting shaped **Recordset** has two levels, in which the parent occupies the upper level and the child occupies the lower level.  

@@ -1,21 +1,17 @@
 ---
+title: "PropertyAttributesEnum"
 description: "PropertyAttributesEnum"
-title: "PropertyAttributesEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "PropertyAttributesEnum"
-helpviewer_keywords: 
-  - "PropertyAttributesEnum enumeration [ADO]"
-ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "PropertyAttributesEnum"
+helpviewer_keywords:
+  - "PropertyAttributesEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # PropertyAttributesEnum
 Specifies the attributes of a [Property](./property-object-ado.md) object.  

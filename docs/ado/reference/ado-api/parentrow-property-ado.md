@@ -1,23 +1,19 @@
 ---
+title: "ParentRow Property (ADO)"
 description: "ParentRow Property (ADO)"
-title: "ParentRow Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ADORecordConstruction::put_ParentRow"
   - "ADORecordConstruction::ParentRow"
   - "ADORecordConstruction::putParentRow"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ParentRow property [ADO]"
-ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # ParentRow Property (ADO)
 Sets the container of an OLE DB **Row** object on an **ADORecordConstruction** object, so that the parent of the row is turned into an ADO **Record** object.  

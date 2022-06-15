@@ -1,21 +1,17 @@
 ---
+title: "ResyncEnum"
 description: "ResyncEnum"
-title: "ResyncEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ResyncEnum"
-helpviewer_keywords: 
-  - "ResyncEnum enumeration [ADO]"
-ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ResyncEnum"
+helpviewer_keywords:
+  - "ResyncEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # ResyncEnum
 Specifies whether underlying values are overwritten by a call to [Resync](./resync-method.md).  

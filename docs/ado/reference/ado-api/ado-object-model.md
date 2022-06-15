@@ -1,18 +1,14 @@
 ---
+title: "ADO Object Model"
 description: "ADO Object Model"
-title: "ADO Object Model | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO, object model"
-ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO, object model"
 ---
 # ADO Object Model
 The following figures show the ADO objects and their collections.  

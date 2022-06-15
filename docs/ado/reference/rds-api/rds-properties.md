@@ -1,19 +1,15 @@
 ---
+title: "RDS Properties"
 description: "RDS Properties"
-title: "RDS Properties | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "RDS properties [ADO]"
-  - "properties [ADO], RDS"
-ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RDS properties [ADO]"
+  - "properties [ADO], RDS"
 ---
 # RDS Properties
 > [!IMPORTANT]

@@ -1,21 +1,17 @@
 ---
+title: "ADORecordsetConstruction Interface"
 description: "ADORecordsetConstruction Interface"
-title: "ADORecordsetConstruction Interface | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ADORecordsetConstruction"
-helpviewer_keywords: 
-  - "ADORecordsetConstruction interface [ADO]"
-ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ADORecordsetConstruction"
+helpviewer_keywords:
+  - "ADORecordsetConstruction interface [ADO]"
+apitype: "COM"
 ---
 # ADORecordsetConstruction Interface
 The **ADORecordsetConstruction** interface is used to construct an ADO **Recordset** object from an OLE DB **Rowset** object in a C/C++ application.  

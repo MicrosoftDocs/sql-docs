@@ -1,20 +1,16 @@
 ---
+title: "ActiveCommand Property Example (JScript)"
 description: "ActiveCommand Property Example (JScript)"
-title: "ActiveCommand Property Example (JScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "ActiveCommand property [ADO], JScript example"
-ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ActiveCommand property [ADO], JScript example"
+dev_langs:
+  - "JScript"
 ---
 # ActiveCommand Property Example (JScript)
 This example demonstrates the [ActiveCommand](./activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  

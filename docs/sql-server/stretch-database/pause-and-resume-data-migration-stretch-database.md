@@ -1,8 +1,8 @@
 ---
 title: "Pause and resume data migration"
 description: Pause and resume data migration (Stretch Database)
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/09/2022
 ms.service: sql-server-stretch-database

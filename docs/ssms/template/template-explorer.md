@@ -32,7 +32,7 @@ You can browse the available templates in Template Explorer, then open a templat
 ## Benefits of Templates  
 Templates are available for solutions, projects, and various types of code editors. Templates are available to create objects like databases, tables, views, indexes, stored procedures, triggers, statistics, and functions. In addition, there are templates that help you to manage your server by creating extended properties, linked servers, logins, roles, users, and templates for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
   
-The template scripts provided with SQL Server Management Studio contain parameters to help you customize the code. When you open a template, Use the **Replace Template Parameters** dialog box to insert values into the script.  
+The template scripts provided with SQL Server Management Studio contain parameters to help you customize the code. When you open a template, Use the **Specify Values for Template Parameters** dialog box to insert values into the script.  
   
 Create custom templates for tasks you perform frequently. Organize your custom scripts into the existing folders or create a new folder structure.  
   

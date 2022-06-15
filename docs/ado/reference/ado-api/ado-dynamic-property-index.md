@@ -1,17 +1,14 @@
 ---
+title: "ADO Dynamic Property Index"
 description: "ADO Dynamic Property Index"
-title: "ADO Dynamic Property Index | Microsoft Docs"
-ms.prod: sql
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "dynamic properties [ADO], index"
-ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "dynamic properties [ADO], index"
 ---
 # ADO Dynamic Property Index
 Data providers, service providers, and service components can add dynamic properties to the **Properties** collections of the unopened [Connection](./connection-object-ado.md) and [Recordset](./recordset-object-ado.md) objects. A given provider may also insert additional properties when these objects are opened. Some of these properties are listed in the [ADO Dynamic Properties](./ado-dynamic-properties.md) section. More are listed under the specific providers in the [Appendix A: Providers](../../guide/appendixes/appendix-a-providers.md) section.  

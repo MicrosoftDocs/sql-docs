@@ -1,18 +1,14 @@
 ---
+title: "Configuring RDS"
 description: "Configuring RDS"
-title: "Configuring RDS | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS configuration [ADO]"
-ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS configuration [ADO]"
 ---
 # Configuring RDS
 > [!IMPORTANT]

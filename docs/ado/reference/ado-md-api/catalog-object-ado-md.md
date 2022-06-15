@@ -1,20 +1,17 @@
 ---
 title: "Catalog Object (ADO MD)"
 description: "Catalog Object (ADO MD)"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: reference
-apitype: "COM"
-f1_keywords:
-  - "Catalog object [ADO MD]"
-helpviewer_keywords: 
-  - "Catalog object [ADO MD]"
 author: rothja
 ms.author: jroth
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Catalog object [ADO MD]"
+helpviewer_keywords:
+  - "Catalog object [ADO MD]"
+apitype: "COM"
 ---
 
 # Catalog Object (ADO MD)

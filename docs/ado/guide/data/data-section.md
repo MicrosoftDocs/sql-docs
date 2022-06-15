@@ -1,18 +1,14 @@
 ---
+title: "Data Section"
 description: "Data Section"
-title: "Data Section | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data section [ADO]"
-ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data section [ADO]"
 ---
 # Data Section
 The data section defines the data of the rowset along with any pending updates, insertions, or deletions. The data section can contain zero or more rows. It can only contain data from one rowset where the row is defined by the schema. Also, as noted before, columns without any data can be omitted. If an attribute or subelement is used in the data section and that construct has not been defined in the schema section, it is silently ignored.  

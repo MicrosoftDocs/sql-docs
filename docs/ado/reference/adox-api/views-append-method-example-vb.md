@@ -1,20 +1,16 @@
 ---
+title: "Views Append Method Example (VB)"
 description: "Views Append Method Example (VB)"
-title: "Views Append Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Append method [ADOX]"
+dev_langs:
+  - "VB"
 ---
 # Views Append Method Example (VB)
 The following code demonstrates how to use a [Command](../ado-api/command-object-ado.md) object and the [Views](./views-collection-adox.md) collection [Append](./append-method-adox-views.md) method to create a new view in the underlying data source.  

@@ -12,7 +12,7 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions with Memory-Optimized Tables
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes all the aspects of transactions that are specific to memory-optimized tables and natively compiled stored procedures.  
   

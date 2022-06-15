@@ -1,19 +1,15 @@
 ---
+title: "RDS Objects"
 description: "RDS Objects"
-title: "RDS Objects | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "objects [ADO], RDS"
-  - "RDS objects [ADO]"
-ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "objects [ADO], RDS"
+  - "RDS objects [ADO]"
 ---
 # RDS Objects
 > [!IMPORTANT]

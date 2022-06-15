@@ -1,23 +1,19 @@
 ---
+title: "Users Collection (ADOX)"
 description: "Users Collection (ADOX)"
-title: "Users Collection (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Group::Users"
   - "Users"
   - "Catalog::Users"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Users collection [ADOX]"
-ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Users Collection (ADOX)
 Contains all stored [User](./user-object-adox.md) objects of a [catalog](./catalog-object-adox.md) or [group](./group-object-adox.md).  

@@ -201,7 +201,7 @@ The connection string specifies the login name that SQL Insights (preview) shoul
 The connections string will vary for each type of SQL resource:
 
 #### Azure SQL Database
-TCP connections from the monitoring machine to the IP address and port used by the database must be allowed by any firewalls or [network security groups](../../virtual-network/network-security-groups-overview.md) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Database connectivity architecture](/azure/azure-sql/database/connectivity-architecture).
+TCP connections from the monitoring machine to the IP address and port used by the database must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Database connectivity architecture](/azure/azure-sql/database/connectivity-architecture).
 
 Enter the connection string in the form:
 
@@ -218,7 +218,7 @@ Get the details from the **Connection strings** menu item for the database.
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring a single secondary. The collected data will be tagged to reflect primary or secondary. 
 
 #### Azure SQL Managed Instance
-TCP connections from the monitoring machine to the IP address and port used by the managed instance must be allowed by any firewalls or [network security groups](../../virtual-network/network-security-groups-overview.md) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Managed Instance connection types](/azure/azure-sql/managed-instance/connection-types-overview).
+TCP connections from the monitoring machine to the IP address and port used by the managed instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Managed Instance connection types](/azure/azure-sql/managed-instance/connection-types-overview).
 
 Enter the connection string in the form:
 
@@ -234,7 +234,7 @@ Get the details from the **Connection strings** menu item for the managed instan
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single secondary. Collected data will be tagged to reflect Primary or Secondary. 
 
 #### SQL Server 
-The TCP/IP protocol must be enabled for the SQL Server instance you want to monitor. TCP connections from the monitoring machine to the IP address and port used by the SQL Server instance must be allowed by any firewalls or [network security groups](../../virtual-network/network-security-groups-overview.md) (NSGs) that may exist on the network path.
+The TCP/IP protocol must be enabled for the SQL Server instance you want to monitor. TCP connections from the monitoring machine to the IP address and port used by the SQL Server instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path.
 
 If you want to monitor SQL Server configured for high availability (using either availability groups or failover cluster instances), we recommend monitoring each SQL Server instance in the cluster individually rather than connecting via an availability group listener or a failover cluster name. This ensures that monitoring data is collected regardless of the current instance role (primary or secondary).
 

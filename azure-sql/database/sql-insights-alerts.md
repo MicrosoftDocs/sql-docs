@@ -16,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 SQL Insights (preview) includes a set of alert rule templates you can use to create [alert rules in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) for common SQL issues. The alert rules in SQL Insights (preview) are log alert rules based on performance data stored in the *InsightsMetrics* table in Azure Monitor Logs.  
 
 > [!NOTE]
-> To create an alert for SQL Insights (preview) using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](resource-manager-sql-insights.md#create-an-alert-rule-for-sql-insights).
+> To create an alert for SQL Insights (preview) using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights#create-an-alert-rule-for-sql-insights).
 
 
 > [!NOTE]

@@ -1,8 +1,8 @@
 ---
 title: Columns Collection (ADOX)
 description: "Columns Collection (ADOX)"
-author: markingmyname
-ms.author: maghan
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.technology: ado

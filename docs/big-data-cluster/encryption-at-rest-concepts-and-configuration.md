@@ -5,12 +5,12 @@ description: Learn about encryption at rest on SQL Server 2019 Big Data Clusters
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ms.custom: kr2b-contr-experiment
+ms.metadata: seo-lt-2019
 ---
 
 # Encryption at rest concepts and configuration guide

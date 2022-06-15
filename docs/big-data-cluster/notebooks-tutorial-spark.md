@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 03/30/2020
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: tutorial
 ---
 
 # Run a sample notebook by using Spark

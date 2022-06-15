@@ -80,7 +80,7 @@ Compute tier options in the vCore model include the provisioned and [serverless]
 
 ## Hardware configuration
 
-Recommended hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
+Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
 Certain hardware configurations such as Gen5 may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 

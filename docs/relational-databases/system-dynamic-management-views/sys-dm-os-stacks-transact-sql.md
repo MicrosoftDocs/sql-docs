@@ -21,7 +21,7 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_stacks (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This dynamic management view is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to do the following:  
   

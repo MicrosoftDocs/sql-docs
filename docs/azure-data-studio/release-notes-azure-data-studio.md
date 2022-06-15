@@ -31,13 +31,12 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 | New Item | Details |
 |----------|---------|
 | Backup & Restore | Backup & Restore to URL is now available in preview for Azure SQL Managed Instances. |
-| Table Designer | Added API to support computed column capabilities on Table Designer. |
+| Table Designer | Added support for computed columns in Table Designer. |
 | Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |
-| Table Designer | Table Designer is now supported by SQL Projects to add or modify database schema without need to be connected to a server instance. |
-| Query Plan Viewer | Smart plan comparison is now available. Can now compare execution plans and view detailed differences between plans in the Properties Table. |
-| Query Plan Viewer | Added toggle button to switch between estimated and actual execution plans. |
-| Query Plan Viewer | Query Plan now comes with improved precision to operator costs for larger plans. |
-| SQL Bindings | Support for Azure SQL Bindings is now available in preview for C#, JavaScript, and Python. |
+| Table Designer | Table Designer is now supported in the SQL Database Projects extension for editing tables in the SQL project. |
+| Query Plan Viewer | Plan comparison is now available and includes visual indicators in the Properties pane for easier identification of differences. |
+| Query Plan Viewer | Added a toolbar button to toggle the display for actual exeuction plans. |
+| Query Plan Viewer | Larger query plans will now display additional precision for operator cost. |
 | MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
 
 #### Bug fixes in 1.37.0

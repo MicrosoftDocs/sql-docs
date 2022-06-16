@@ -36,7 +36,7 @@ Once a database has been moved to Hyperscale, you can create a new Hyperscale ge
 
 ### How to migrate a database to the Hyperscale service tier
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen4) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
 
 Select the tab for your preferred tool to migrate your database:
 

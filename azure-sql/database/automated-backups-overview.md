@@ -13,8 +13,8 @@ ms.custom:
 ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: wiassaf, mathoma, danil
-ms.date: 04/26/2022
+ms.reviewer: kendralittle, mathoma, wiassaf, danil
+ms.date: 06/06/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Automated backups - Azure SQL Database & Azure SQL Managed Instance
@@ -543,8 +543,8 @@ In Hyperscale, data backup storage size (snapshot backup size), data storage siz
 
 To view backup and data storage metrics in the Azure portal, follow these steps: :
 
-1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
-2.	Select the Metrics page in the **Monitoring** section.
+1.    Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
+2.    Select the Metrics page in the **Monitoring** section.
 
 :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 

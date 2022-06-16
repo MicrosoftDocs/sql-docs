@@ -2,7 +2,7 @@
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
 ms.custom: ""
-ms.date: 01/18/2022
+ms.date: 06/16/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -35,13 +35,25 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
 ## 5.10
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
-[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
-### Version information
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
+
+- Release number: 5.10.1
+- Released: June 14, 2022
+
+Fixed issues in 5.10.1:
+
+- Fixed User-Assigned Managed Identity (ActiveDirectoryMsi) Authentication when specifying UID
+- Removed block on ActiveDirectoryIntegrated authentication
+
+### Previous 5.10 releases
 
 - Release number: 5.10.0<sup>1</sup>
 - Released: January 31, 2022
+
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
 ### What's new in 5.10
 

@@ -5,7 +5,7 @@ author: schaffererin
 ms.topic: quickstart
 ms.custom: subject-armqs, devx-track-azurepowershell, mode-arm
 ms.author: v-eschaffer
-ms.date: 06/14/2022
+ms.date: 06/17/2022
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ---
@@ -59,11 +59,12 @@ Five Azure resources are defined in the Bicep file:
 
 Make sure to replace the resource group name, *exampleRG*, with the name of your pre-configured resource group.
 
-You're also required to enter the following parameters:
+You're required to enter the following parameters:
 
 - **existingSubnetName**: Replace **\<subnet-name\>** with the name of the subnet.
 - **adminUsername**: Replace **\<admin-user\>** with the admin username of the VM.
-- **adminPassword**: Replace **\<admin-pass\>** with the admin password of the VM.
+
+You'll also be prompted to enter **adminPassword**.
 
 > [!NOTE]
 > When the deployment finishes, you should see a message indicating the deployment succeeded.

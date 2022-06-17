@@ -133,7 +133,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
 
    1. **Find the execution progress of a SQL step**  
 
-      Use the execution ID and step index recorded in the previous steps. Use the execution ID and step index recorded in the previous steps.
+      Use the execution ID and step index recorded in the previous steps.
 
       ```sql  
       -- Find the execution progress of SQL step    

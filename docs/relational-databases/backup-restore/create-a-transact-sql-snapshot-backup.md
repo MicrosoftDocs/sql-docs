@@ -158,14 +158,15 @@ FROM DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY
 ```
 ### Tagging the backupset
-The MEDIANAME and MEDIADESCRIPTION switches can be used in the backup command to store the URI associated with the snapshot. This will allow the backupset to carry the underlying snapshot information along with the database metadata.  
+
+You may use the MEDIANAME and MEDIADESCRIPTION switches in the backup command to store the URI associated with the snapshot. This use allows the backupset to carry the underlying snapshot information along with the database metadata.  
 
 SQL Server will not interpret the LABEL information in any way, it will however help the user to view the URI associated with the snapshot backup with RESTORE LABELONLY command.  
 
-The user could then attach the snapshot disks located at the URI to the VM to restore the snapshot. The snapshot URI stored in the MEDIANAME and MEDIADESCRIPTION will also be available for viewing subsequently in the msdb database table backupmediaset.
+You could then attach the snapshot disks located at the URI to the VM to restore the snapshot. The snapshot URI stored in the MEDIANAME and MEDIADESCRIPTION will also be available for viewing subsequently in the msdb database table `msdb.dbo.backupmediaset`.
 
-[BACKUP (Transact-SQL) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/t-sql/statements/backup-transact-sql?view=sql-server-ver15)
-[backupmediaset (Transact-SQL) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/system-tables/backupmediaset-transact-sql?view=sql-server-ver15)
+[BACKUP (Transact-SQL) - SQL Server | Microsoft Docs](../../t-sql/statements/backup-transact-sql.md)
+[backupmediaset (Transact-SQL) - SQL Server | Microsoft Docs](../system-tables/backupmediaset-transact-sql.md)
 
 ### Output of snapshot backup with RESTORE FILELISTONLY
 

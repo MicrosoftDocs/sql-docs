@@ -35,7 +35,7 @@ Azure Data Studio 1.37.0 is the latest general availability (GA) release.
 | Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |
 | Table Designer | Table Designer is now supported in the SQL Database Projects extension for editing tables in the SQL project. |
 | Query Plan Viewer | Plan comparison is now available and includes visual indicators in the Properties pane for easier identification of differences. |
-| Query Plan Viewer | Added a toolbar button to toggle the display for actual exeuction plans. |
+| Query Plan Viewer | Added a toolbar button to toggle the display for actual execution plans. |
 | Query Plan Viewer | Larger query plans will now display additional precision for operator cost. |
 | MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
 

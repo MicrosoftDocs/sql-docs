@@ -72,12 +72,12 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each phys
 
 > [!NOTE]
 > Virtual log file (VLF) creation follows this method:
-> -    If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
+> - If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size. (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
 > - If the next growth is more than 1/8 of the current log size, then use the pre-2014 method:
->    -    If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs)
->        -    In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], this is slightly different. If the growth is less than or equal to 64MB, create only 1 VLF to cover the growth size.
->    -    If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512MB growth, create eight 64MB VLFs)
->    -    If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs)
+>    - If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs).
+>        - In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and starting in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this is slightly different. If the growth is less than or equal to 64MB, create only one VLF to cover the growth size.
+>    - If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512 MB growth, create eight 64MB VLFs).
+>    - If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs).
 
 If the log files grow to a large size in many small increments, they will have many virtual log files. **This can slow down database startup and also log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they will have few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, refer to the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
 

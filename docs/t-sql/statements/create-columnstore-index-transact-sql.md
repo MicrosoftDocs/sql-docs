@@ -1,5 +1,5 @@
 ---
-description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index or creates a nonclustered columnstore index."
+description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 ms.custom: ""
 ms.date: 06/08/2022
@@ -30,28 +30,16 @@ dev_langs:
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
+Convert a rowstore table to a clustered columnstore index, or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload, or to improve data compression and query performance for data warehousing workloads.  
   
 > [!NOTE]
-> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index.   It is no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's unnecessary to first create a rowstore table and then convert it to a clustered columnstore index.  
 
-> [!TIP]
-> For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
-Skip to examples:  
--   [Examples for converting a rowstore table to columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
--   [Examples for nonclustered columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
-  
-Go to scenarios:  
--   [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
--   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
-Learn more:  
--   [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
--   [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
-  
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -105,11 +93,12 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 [;]  
 
 ```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
+Some of the options aren't available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
 
 |Option| CLUSTERED | NONCLUSTERED |
 |---|---|---|
@@ -131,89 +120,94 @@ If the table already has a clustered columnstore index, you can specify the same
   
 #### ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
-Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or has a clustered index, then the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index. 
+Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or has a clustered index, then the table is converted from a rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index. 
 
-#### ORDER 
+#### ORDER
+
 *Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]*
 
-An ordered clustered columnstore index can be created on columns of any data type except for string columns. Use the `column_store_order_ordinal` column in `sys.index_columns` to determine the order of the column(s) for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index.
+You can create an ordered, clustered, columnstore index on columns of any data type, except for string columns. Use the `column_store_order_ordinal` column in `sys.index_columns` to determine the order of the column or columns for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). To convert to an ordered, clustered, columnstore index, the existing index must be a clustered columnstore index.
 
-    
 #### WITH options
 
 ##### DROP_EXISTING = [OFF] | ON
 
-   `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
+`DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
    
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH (DROP_EXISTING = ON);
 ```
-   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs if the specified index name already exists.  
+
+The default, DROP_EXISTING = OFF, expects the index name is the same as the existing name. An error occurs if the specified index name already exists.  
   
 ##### MAXDOP = *max_degree_of_parallelism*  
-   Overrides the existing maximum degree of parallelism server configuration during the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+   
+This option can override the existing maximum degree of parallelism server configuration during the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
-   *max_degree_of_parallelism* values can be:  
-   - 1 - Suppress parallel plan generation.  
-   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
-   - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
+*max_degree_of_parallelism* values can be:  
+
+- 1, which means to suppress parallel plan generation.  
+- \>1, which means to restrict the maximum number of processors used in a parallel index operation to the specified number, or fewer, based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
+- 0 (default), which means to use the actual number of processors, or fewer, based on the current system workload.  
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH (MAXDOP = 2);
 ```
 
-   For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the CLOSED state.  
-   The default is 0 minutes.  
+
+For a disk-based table, *delay* specifies the minimum number of minutes that a delta rowgroup in the closed state must remain in the delta rowgroup. SQL Server can then compress it into the compressed rowgroup. Because disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the closed state.
+  
+The default is 0 minutes.  
    
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH ( COMPRESSION_DELAY = 10 MINUTES );
 ```
 
-   For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ##### DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
-- `COLUMNSTORE` is the default and specifies to compress with the most performant columnstore compression. This option is the typical choice.  
-- `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
+
+Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:
+
+- `COLUMNSTORE` is the default, and specifies to compress with the most performant columnstore compression. This option is the typical choice.  
+- `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. Use this option for situations such as archival, which requires a smaller storage size and can afford more time for storage and retrieval.  
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
 ```
-   For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
 ###### ONLINE = [ON | OFF]
-- `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
-- `OFF` specifies that the index is not available for use while the new copy is being built.
+
+- `ON` specifies that the columnstore index remains online and available, while the new copy of the index is being built.
+- `OFF` specifies that the index isn't available for use while the new copy is being built.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH ( ONLINE = ON );
 ```
 
-#### ON options 
-   With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
+#### ON options
+
+With these options, you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option isn't specified, the index uses the settings partition or filegroup settings of the existing table.  
   
-   *partition_scheme_name* **(** _column_name_ **)**  
-   Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
+*partition_scheme_name* **(** _column_name_ **)** specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
+*column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
 
-   *filegroup_name*  
-   Specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
+*filegroup_name* specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table isn't partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
 
-   **"**default**"**  
-   To create the index on the default filegroup, use "default" or [ default ].  
-  
-   If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+To create the index on the default filegroup, use "default" or [ default ]. If you specify "default", the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ### CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+
 Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and is updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
 #### *index_name*  
@@ -783,3 +777,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER (PRODUCTKEY,SHIPDATE)
 WITH (DROP_EXISTING = ON);
 ```
+
+## Next steps
+
+Go to scenarios:  
+-   [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+  
+Learn more:  
+-   [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)

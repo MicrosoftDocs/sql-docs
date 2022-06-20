@@ -67,8 +67,11 @@ Depending on the subnet state and designation, the following adjustments may be 
 ### Destination subnet limitations
 
 Consider the following limitations when choosing a destination subnet for an existing instance:
+- SQL Managed Instance can be moved to the subnet that is either:
+ 1. Empty
+ 2. Specially prepared subnet that retains the DNS zone of SQL Managed Instance that is being moved. This can be done by populating an empty subnet with new SQL Managed Instances that are created with populated dnsZonePartner parameter. This parameter as a value accepts the id of SQL Managed Instance [see docs](api-references-create-manage-instance.md)and in this case you can use the instance that would later be moved to the new subnet.
+(Please note that apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.)
 
-- The destination subnet must be in the same virtual network as the source subnet.
 - The DNS zone of the destination subnet must match the DNS zone of the source subnet as changing the DNS zone of a managed instance is not currently supported.
 
 If you want to migrate a SQL Managed Instance with an [auto-failover group](auto-failover-group-sql-mi.md), the following prerequisites apply: 

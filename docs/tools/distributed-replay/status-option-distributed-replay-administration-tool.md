@@ -3,13 +3,13 @@ title: Status Option in admin tool
 titleSuffix: SQL Server Distributed Replay
 description: This article describes the status command-line option and syntax of the SQL Server Distributed Replay administration tool, which displays the current status.
 ms.prod: sql
-ms.reviewer:
-ms.technology: tools-other
+ms.technology: distributed-replay
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.date: 06/13/2022
+ms.date: 06/20/2022
 monikerRange:  "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
 ---
 

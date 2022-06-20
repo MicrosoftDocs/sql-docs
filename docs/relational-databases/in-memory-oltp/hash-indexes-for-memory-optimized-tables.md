@@ -29,10 +29,10 @@ When creating a hash index for a memory-optimized table, the number of buckets n
 
 However, even if the **BUCKET_COUNT** is moderately below or above the preferred range, the performance of your hash index is likely to be tolerable or acceptable. 
 At minimum, consider giving your hash index a **BUCKET_COUNT** roughly equal to the number of rows you predict your memory-optimized table will grow to have.  
-Suppose your growing table has 2,000,000 rows, but the prediction is it will grow 10 times to 20,000,000 rows. Start with a bucket count that is 10 times the number of rows in the table. This gives you room for an increased quantity of rows.  
+Suppose your growing table has 2,000,000 rows, but the prediction is it'll grow 10 times to 20,000,000 rows. Start with a bucket count that is 10 times the number of rows in the table. This gives you room for an increased quantity of rows.  
   
 - Ideally you would increase the bucket count when the quantity of rows reaches the initial bucket count.  
-- Even if the quantity of rows grows to 5 times larger than the bucket count, the performance is still good in most situations.  
+- Even if the quantity of rows grows to five times larger than the bucket count, the performance is still good in most situations.  
   
 Suppose a hash index has 10,000,000 distinct key values.  
   
@@ -167,7 +167,7 @@ go
 The preceding `INSERT` loop does the following:  
   
 - Inserts unique values for the primary key index, and for *ix_OrderSequence*.  
-- Inserts a couple hundred thousands rows which represent only 8 distinct values for `StatusCode`. Therefore there is a high rate of value duplication in index *ix_StatusCode*.  
+- Inserts a couple hundred thousands rows which represent only eight distinct values for `StatusCode`. Therefore there is a high rate of value duplication in index *ix_StatusCode*.  
   
 For troubleshooting when the bucket count is not optimal, examine the following output of the SELECT from **sys.dm_db_xtp_hash_index_stats**. For these results we added `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` to the SELECT copied from section D.1.  
   

@@ -227,6 +227,7 @@ Azure Data Studio runs on Windows, macOS, and Linux.  The following versions are
 Azure Data Studio supports connecting to the following versions of SQL Server:
 
 - Azure SQL Database
+- Azure SQL Managed Instance
 - SQL Server 2022 (Preview)
 - SQL Server 2019
 - SQL Server 2017

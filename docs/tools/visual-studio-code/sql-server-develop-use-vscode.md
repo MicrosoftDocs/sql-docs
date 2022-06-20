@@ -27,7 +27,7 @@ The mssql extension enables mssql commands and T-SQL IntelliSense in the code ed
 
 2. Select **Plain Text** on the lower status bar, or press **Ctrl**+**K** > **M**, and select **SQL** from the languages dropdown. 
 
-   ![Screenshot of Visual Studio Code G U I, SQL language mode](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
+   ![Screenshot of Visual Studio Code G U I, SQL language mode.](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
    > If this is the first time you have used the extension, the extension installs the SQL tools service in the background.
@@ -42,7 +42,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 2. Type *sql* to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
 
-   ![Screenshot of Visual Studio Code G U I, m s s q l commands](./media/sql-server-develop-use-vscode/vscode-commands.png)
+   ![Screenshot of Visual Studio Code G U I, m s s q l commands.](./media/sql-server-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
    >A SQL file, such as the empty SQL file you created, must have focus in the code editor before you can execute the mssql commands.
@@ -70,7 +70,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 6. Verify your connection in the lower status bar.
 
-   ![Screenshot of Visual Studio Code G U I, Connection status](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
+   ![Screenshot of Visual Studio Code G U I, Connection status.](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
 
 As an alternative to the previous steps, you can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
@@ -78,7 +78,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 1. In the new SQL file that you started earlier, type *sql* to display a list of editable code snippets.
 
-   ![Screenshot of editor in Visual Studio Code, SQL snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
+   ![Screenshot of editor in Visual Studio Code, SQL snippets.](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
 
 2. Select **sqlCreateDatabase**.
 
@@ -100,7 +100,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Press **Ctrl**+**Shift**+**E** to execute the Transact-SQL commands. View the results in the query window.
 
-    ![Screenshot of Visual Studio code G U I , create database messages](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
+    ![Screenshot of Visual Studio code G U I , create database messages.](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
 
     > [!TIP]
     > You can customize the shortcut keys for the mssql commands. See [Customize shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
@@ -115,7 +115,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Select the new **TutorialDB** database.
 
-   ![Screenshot of Visual Studio code G U I , choosing a database](./media/sql-server-develop-use-vscode/vscode-use-database.png)
+   ![Screenshot of Visual Studio code G U I , choosing a database.](./media/sql-server-develop-use-vscode/vscode-use-database.png)
 
 5. In the code editor, type *sql* to display the snippets, select **sqlCreateTable**, and then press **Enter**.
 

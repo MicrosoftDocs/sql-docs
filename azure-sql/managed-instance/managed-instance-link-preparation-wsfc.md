@@ -114,11 +114,11 @@ Next, verify that Always On option can be enabled on SQL Server by following the
 
 1. Open SQL Server Configuration Manager
 1. Double-click on SQL Server
-1. Click on AlwaysOn High Availability tab
+1. Click on Always On High Availability tab
 
    :::image type="content" source="./media/managed-instance-link-preparation-wsfc/managed-instance-link-alwayson-validate.png" alt-text="Screenshot of validating that Always On option is enabled in SQL Server.":::
 
-   - You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable AlwaysOn Availability Groups should option. This verification confirms the configuration has been completed successfully.
+   - You should be able to see the name of the WSFC you've created, and you should be able to check-on the Enable Always On Availability Groups should option. This verification confirms the configuration has been completed successfully.
 
 ## Grant permissions in SQL Server for WSFC
 

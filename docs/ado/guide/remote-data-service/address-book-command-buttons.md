@@ -1,19 +1,15 @@
 ---
+title: "Address Book Command Buttons"
 description: "Address Book Command Buttons"
-title: "Address Book Command Buttons | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "address book application scenario [ADO], command buttons"
-  - "RDS scenarios [ADO], command buttons"
-ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "address book application scenario [ADO], command buttons"
+  - "RDS scenarios [ADO], command buttons"
 ---
 # Address Book Command Buttons
 The Address Book application includes the following command buttons:  

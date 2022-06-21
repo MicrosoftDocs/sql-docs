@@ -1,23 +1,19 @@
 ---
+title: "Attributes Property (ADO)"
 description: "Attributes Property (ADO)"
-title: "Attributes Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::Attributes"
   - "Field20::Attributes"
   - "_Parameter::Attributes"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Attributes property [ADO]"
-ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Attributes Property (ADO)
 Indicates one or more characteristics of an object.  

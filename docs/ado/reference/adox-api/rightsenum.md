@@ -1,21 +1,17 @@
 ---
+title: "RightsEnum"
 description: "RightsEnum"
-title: "RightsEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RightsEnum"
-helpviewer_keywords: 
-  - "RightsEnum enumeration [ADOX]"
-ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RightsEnum"
+helpviewer_keywords:
+  - "RightsEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # RightsEnum
 Specifies the rights or permissions for a group or user on an object.  

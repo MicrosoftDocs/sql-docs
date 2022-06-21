@@ -1,24 +1,20 @@
 ---
+title: "GetPermissions Method (ADOX)"
 description: "GetPermissions Method (ADOX)"
-title: "GetPermissions Method (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_User25::GetPermissions"
   - "_Group25::raw_GetPermissions"
   - "_Group25::GetPermissions"
   - "_User25::raw_GetPermissions"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GetPermissions method [ADOX]"
-ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # GetPermissions Method (ADOX)
 Returns the permissions for a [group](./group-object-adox.md) or [user](./user-object-adox.md) on an object or object container.  

@@ -1,21 +1,17 @@
 ---
+title: "RecordCreateOptionsEnum"
 description: "RecordCreateOptionsEnum"
-title: "RecordCreateOptionsEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RecordCreateOptionsEnum"
-helpviewer_keywords: 
-  - "RecordCreateOptionsEnum enumeration [ADO]"
-ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RecordCreateOptionsEnum"
+helpviewer_keywords:
+  - "RecordCreateOptionsEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # RecordCreateOptionsEnum
 Specifies whether an existing **Record** should be opened or a new **Record** created for the [Record](./record-object-ado.md) object [Open](./open-method-ado-record.md) method. The values can be combined with an AND operator.  

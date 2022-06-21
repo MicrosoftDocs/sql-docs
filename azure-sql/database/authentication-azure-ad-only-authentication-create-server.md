@@ -35,7 +35,7 @@ The [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-s
 
 The following section provides you with examples and scripts on how to create a logical server or managed instance with an Azure AD admin set for the server or instance, and have Azure AD-only authentication enabled during server creation. For more information on the feature, see [Azure AD-only authentication](authentication-azure-ad-only-authentication.md).
 
-In our examples, we're enabling Azure AD-only authentication during server or managed instance creation, with a system assigned server admin and password. This will prevent server admin access when Azure AD-only authentication is enabled, and only allows the Azure AD admin to access the resource. It's optional to add parameters to the APIs to include your own server admin and password during server creation. However, the password can’t be reset until you disable Azure AD-only authentication. An example of how to use these optional parameters to specify the server admin login name is presented in the [PowerShell](?tabs=azure-powershell#azure-sql-database) tab on this page.
+In our examples, we're enabling Azure AD-only authentication during server or managed instance creation, with a system assigned server admin and password. This will prevent server admin access when Azure AD-only authentication is enabled, and only allows the Azure AD admin to access the resource. It's optional to add parameters to the APIs to include your own server admin and password during server creation. However, the password can't be reset until you disable Azure AD-only authentication. An example of how to use these optional parameters to specify the server admin login name is presented in the [PowerShell](?tabs=azure-powershell#azure-sql-database) tab on this page.
 
 > [!NOTE]
 > To change the existing properties after server or managed instance creation, other existing APIs should be used. For more information, see [Managing Azure AD-only authentication using APIs](authentication-azure-ad-only-authentication.md#managing-azure-ad-only-authentication-using-apis) and [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md).
@@ -367,7 +367,7 @@ Replace the following values in the example:
 
 
 ```powershell
-New-AzSqlInstance -Name "<managedinstancename>" -ResourceGroupName "<ResourceGroupName>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication -Location "<Location>" -SubnetId "/subscriptions/<SubscriptionID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4
+New-AzSqlInstance -Name "<managedinstancename>" -ResourceGroupName "<ResourceGroupName>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication -Location "<Location>" -SubnetId "/subscriptions/<SubscriptionID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>" -LicenseType LicenseIncluded -StorageSizeInGB 128 -VCore 4 -Edition "GeneralPurpose" -ComputeGeneration Gen5
 ```
 
 For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance).

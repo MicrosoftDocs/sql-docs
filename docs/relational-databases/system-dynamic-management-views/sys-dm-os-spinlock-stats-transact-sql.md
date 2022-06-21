@@ -23,7 +23,7 @@ dev_langs:
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns information about all spinlock waits organized by type.  
   

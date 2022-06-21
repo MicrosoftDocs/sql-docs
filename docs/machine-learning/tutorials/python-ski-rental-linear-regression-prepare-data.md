@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2021
+ms.date: 06/15/2022
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services or on Big Data Clusters.
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services or on SQL Server 2019 Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017"
 In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
@@ -46,9 +46,9 @@ To use the data in Python, you'll load the data from the database into a pandas 
 
 Create a new Python notebook in Azure Data Studio and run the script below. 
 
-The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
+The Python script below imports the dataset from the `dbo.rental_data` table in your database to a pandas data frame **df**.
 
-In the connection string, replace connection details as needed.
+In the connection string, replace connection details as needed. To use Windows authentication with an ODBC connection string, specify `Trusted_Connection=Yes;` instead of the `UID` and `PWD` parameters.
 
 ```python
 import pyodbc
@@ -62,20 +62,13 @@ conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<serve
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
 df = pandas.read_sql(sql=query_str, con=conn_str)
-
 print("Data frame:", df)
-
-# Get all the columns from the dataframe.
-columns = df.columns.tolist()
-
-# Filter the columns to remove ones we don't want to use in the training
-columns = [c for c in columns if c not in ["Year"]]
 ```
 
 You should see results similar to the following.
 
 ```results
-Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
+Data frame:      Year  Month  Day  Rentalcount  WeekDay  Holiday  Snow
 0    2014      1   20          445        2        1     0
 1    2014      2   13           40        5        0     0
 2    2013      3   10          456        1        0     0
@@ -91,6 +84,35 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 [453 rows x 7 columns]
 ```
 
+Filter the columns from the dataframe to remove ones we don't want to use in the training. `Rentalcount` should not be included as it is the target of the predictions.
+
+```python
+columns = df.columns.tolist()
+columns = [c for c in columns if c not in ["Year", "Rentalcount"]]
+
+print("Training set:", test[columns])
+
+```
+
+Note the data the training set will have access to:
+
+```results
+Training set:      Month  Day  Weekday  Holiday  Snow
+1        2   13        5        0     0
+3        3   31        2        0     0
+7        3    8        7        0     0
+15       3    4        2        0     1
+22       1   18        1        0     0
+..     ...  ...      ...      ...   ...
+416      4   13        1        0     1
+421      1   21        3        0     1
+438      2   19        4        0     1
+441      2    3        3        0     1
+447      1    4        6        0     1
+
+[91 rows x 5 columns]
+```
+
 ## Next steps
 
 In part two of this tutorial series, you completed these steps:
@@ -98,7 +120,7 @@ In part two of this tutorial series, you completed these steps:
 * Load the data from the database into a **pandas** data frame
 * Prepare the data in Python by removing some columns
 
-To train a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:
+To train a machine learning model that uses data from the `TutorialDB` database, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
 > [Python Tutorial: Train a linear regression model](python-ski-rental-linear-regression-train-model.md)

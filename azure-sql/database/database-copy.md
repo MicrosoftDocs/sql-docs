@@ -13,7 +13,7 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 1/19/2022
+ms.date: 6/14/2022
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 
@@ -117,7 +117,7 @@ Database1 can be a single or pooled database. Copying between different tier poo
    -- Execute on the master database to start copying
    CREATE DATABASE Database2
    AS COPY OF Database1
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool1 ));
    ```
 
 ### Copy to a different server
@@ -138,7 +138,7 @@ Similarly, the below command copies Database1 on server1 to a new database named
 
 ```sql
 -- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
-CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool2 ) );
 ```
 
 ### Copy to a different subscription

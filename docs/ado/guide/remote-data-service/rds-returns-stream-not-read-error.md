@@ -1,18 +1,14 @@
 ---
+title: "RDS Returns &quot;Stream Not Read&quot; Error"
 description: "RDS Returns &quot;Stream Not Read&quot; Error"
-title: "RDS Returns &quot;Stream Not Read&quot; Error | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "stream not read error in RDS [ADO]"
-ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "stream not read error in RDS [ADO]"
 ---
 # RDS Returns &quot;Stream Not Read&quot; Error
 "The Stream object could not be read because it is empty, or the current position is at the end of the Stream. For non-empty Streams, set the current position with the Position property. To determine if a Stream is empty, check the Size property."  

@@ -1,19 +1,15 @@
 ---
+title: "Named Commands"
 description: "Named Commands"
-title: "Named Commands | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "named commands [ADO]"
-  - "commands [ADO]"
-ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "named commands [ADO]"
+  - "commands [ADO]"
 ---
 # Named Commands
 [Creating and Executing a Simple Command](./creating-and-executing-a-simple-command.md) shows one way to execute a command. There is another way: you can make it a named command, and then call this named command directly on the **Connection** object (assigned to the **ActiveConnection** property of the **Command** object). Naming a command means assigning a name to the **Name** property of a **Command** object. For example,  

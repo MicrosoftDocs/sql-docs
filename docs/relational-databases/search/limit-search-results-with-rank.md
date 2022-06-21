@@ -21,7 +21,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Limit Search Results with RANK
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  
   
 > [!NOTE]  

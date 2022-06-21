@@ -140,6 +140,16 @@
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
         href: /azure/azure-monitor/insights/azure-sql?toc=%2fazure%2fazure-sql%2ftoc.json
+      - name: SQL Insights (preview)
+        items:
+        - name: Overview
+          href: database/sql-insights-overview.md
+        - name: Enable
+          href: database/sql-insights-enable.md
+        - name: Alerts
+          href: database/sql-insights-alerts.md
+        - name: Troubleshoot
+          href: database/sql-insights-troubleshoot.md
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
       - name: In-memory OLTP
@@ -876,10 +886,6 @@
           href: database/scripts/add-database-to-failover-group-cli.md
         - name: Pooled database
           href: database/scripts/add-elastic-pool-to-failover-group-cli.md
-      - name: Auditing and threat detection
-        items:
-        - name: Configure auditing and threat-detection
-          href: database/scripts/auditing-threat-detection-cli.md
       - name: Database back up, restore, copy, and import
         items:
         - name: Back up a database
@@ -1182,18 +1188,6 @@
                 href: /sql/machine-learning/administration/extended-events?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
               - name: Monitor PREDICT T-SQL
                 href: /sql/machine-learning/administration/extended-events-predict-tsql?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-            - name: SQL Insights (preview)
-              items:
-              - name: Overview
-                href: /azure/azure-monitor/insights/sql-insights-overview
-              - name: FAQ
-                href: /azure/azure-monitor/faq
-              - name: Enable
-                href: /azure/azure-monitor/insights/sql-insights-enable
-              - name: Alerts
-                href: /azure/azure-monitor/insights/sql-insights-alerts
-              - name: Troubleshoot
-                href: /azure/azure-monitor/insights/sql-insights-troubleshoot
         - name: Security
           items:
           - name: Give users permission
@@ -1368,6 +1362,9 @@
         href: virtual-machines/windows/sql-vm-create-portal-quickstart.md
       - name: PowerShell
         href: virtual-machines/windows/sql-vm-create-powershell-quickstart.md
+      - name: Bicep
+        displayName: Resource Manager, Template, ARM
+        href: virtual-machines/windows/create-sql-vm-bicep.md
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md

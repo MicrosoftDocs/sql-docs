@@ -1,22 +1,18 @@
 ---
+title: "Save Method"
 description: "Save Method"
-title: "Save Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Recordset::Save"
-  - "_Recordset::raw_Save"
-helpviewer_keywords: 
-  - "Save method [ADO]"
-ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Recordset::Save"
+  - "_Recordset::raw_Save"
+helpviewer_keywords:
+  - "Save method [ADO]"
+apitype: "COM"
 ---
 # Save Method
 Saves the [Recordset](./recordset-object-ado.md) in a file or [Stream](./stream-object-ado.md) object.  

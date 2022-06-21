@@ -1,25 +1,23 @@
 ---
-description: "sys.indexes (Transact-SQL)"
-title: "sys.indexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.indexes (Transact-SQL)"
+description: sys.indexes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 12/21/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.indexes"
   - "indexes"
   - "sys.indexes_TSQL"
   - "indexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.indexes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.indexes (Transact-SQL)

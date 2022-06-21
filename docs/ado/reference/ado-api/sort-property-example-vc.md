@@ -1,20 +1,16 @@
 ---
+title: "Sort Property Example (VC++)"
 description: "Sort Property Example (VC++)"
-title: "Sort Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Sort property [ADO], VC++ example"
-ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Sort property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Sort Property Example (VC++)
 This example uses the [Recordset](./recordset-object-ado.md) object's [Sort](./sort-property.md) property to reorder the rows of a **Recordset** derived from the ***Authors*** table of the **Pubs** database. A secondary utility routine prints each row.  

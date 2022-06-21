@@ -1,23 +1,19 @@
 ---
+title: "RecordCount Property (ADO)"
 description: "RecordCount Property (ADO)"
-title: "RecordCount Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "03/20/2018"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset15::RecordCount"
   - "Recordset15::GetRecordCount"
   - "Recordset15::get_RecordCount"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RecordCount property [ADO]"
-ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # RecordCount Property (ADO)
 

@@ -1,20 +1,16 @@
 ---
+title: "Resync Method Example (VB)"
 description: "Resync Method Example (VB)"
-title: "Resync Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Resync method [ADO], Visual Basic example"
-ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Resync method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Resync Method Example (VB)
 This example demonstrates using the [Resync](./resync-method.md) method to refresh data in a static recordset.  

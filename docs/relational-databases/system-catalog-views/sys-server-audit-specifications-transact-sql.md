@@ -1,25 +1,23 @@
 ---
-description: "sys.server_audit_specifications (Transact-SQL)"
-title: "sys.server_audit_specifications (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_audit_specifications (Transact-SQL)"
+description: sys.server_audit_specifications (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
 ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_audit_specifications_TSQL"
   - "sys.server_audit_specifications_TSQL"
   - "server_audit_specifications"
   - "sys.server_audit_specifications"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_audit_specifications catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
-author: sravanisaluru
-ms.author: srsaluru
 ---
 # sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

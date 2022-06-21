@@ -1,18 +1,15 @@
 ---
-description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
-title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/07/2016"
+title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
+description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/14/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: rothja
-ms.author: jroth
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -169,7 +166,7 @@ Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPD
 
 Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If for example you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
 
-Let's say you created this table using the default distribution type of `ROUND_ROBIN` distributed since no distribution column was specified in the `CREATE TABLE`.
+Let's say you created this table by specifying `HEAP` and using the default distribution type of `ROUND_ROBIN`.
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -197,6 +194,10 @@ CREATE TABLE FactInternetSales
 	Freight MONEY NOT NULL,
 	CarrierTrackingNumber NVARCHAR(25),
 	CustomerPONumber NVARCHAR(25)
+)
+WITH( 
+ HEAP, 
+ DISTRIBUTION = ROUND_ROBIN 
 );
 ```
 
@@ -525,119 +526,7 @@ FROM    [dbo].[FactInternetSales]
 ```
 
 <a name="ctas-replace-implicit-joins-bk"></a>
-
-### J. Use CTAS and implicit joins to replace ANSI joins in the `FROM` clause of an `UPDATE` statement  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.
-
-Imagine you had to update this table:
-
-```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(	[EnglishProductCategoryName]	NVARCHAR(50)	NOT NULL
-,	[CalendarYear]			SMALLINT	NOT NULL
-,	[TotalSalesAmount]		MONEY		NOT NULL
-)
-WITH
-(
-	DISTRIBUTION = ROUND_ROBIN
-)
-;
-```
-
-The original query might have looked something like this:
-
-```sql
-UPDATE	acs
-SET		[TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM	[dbo].[AnnualCategorySales] 	AS acs
-JOIN	(
-		SELECT	[EnglishProductCategoryName]
-		,		[CalendarYear]
-		,		SUM([SalesAmount])				AS [TotalSalesAmount]
-		FROM	[dbo].[FactInternetSales]		AS s
-		JOIN	[dbo].[DimDate]					AS d	ON s.[OrderDateKey]				= d.[DateKey]
-		JOIN	[dbo].[DimProduct]				AS p	ON s.[ProductKey]				= p.[ProductKey]
-		JOIN	[dbo].[DimProductSubCategory]	AS u	ON p.[ProductSubcategoryKey]	= u.[ProductSubcategoryKey]
-		JOIN	[dbo].[DimProductCategory]		AS c	ON u.[ProductCategoryKey]		= c.[ProductCategoryKey]
-		WHERE 	[CalendarYear] = 2004
-		GROUP BY
-				[EnglishProductCategoryName]
-		,		[CalendarYear]
-		) AS fis
-ON	[acs].[EnglishProductCategoryName]	= [fis].[EnglishProductCategoryName]
-AND	[acs].[CalendarYear]				= [fis].[CalendarYear]
-;
-```
-
-Since [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] does not support ANSI joins in the `FROM` clause of an `UPDATE` statement, you cannot use this SQL Server code over without changing it slightly.
-
-You can use a combination of a `CTAS` and an implicit join to replace this code:
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT	ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)	AS [EnglishProductCategoryName]
-,		ISNULL(CAST([CalendarYear] AS SMALLINT),0) 						AS [CalendarYear]
-,		ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)						AS [TotalSalesAmount]
-FROM	[dbo].[FactInternetSales]		AS s
-JOIN	[dbo].[DimDate]					AS d	ON s.[OrderDateKey]				= d.[DateKey]
-JOIN	[dbo].[DimProduct]				AS p	ON s.[ProductKey]				= p.[ProductKey]
-JOIN	[dbo].[DimProductSubCategory]	AS u	ON p.[ProductSubcategoryKey]	= u.[ProductSubcategoryKey]
-JOIN	[dbo].[DimProductCategory]		AS c	ON u.[ProductCategoryKey]		= c.[ProductCategoryKey]
-WHERE 	[CalendarYear] = 2004
-GROUP BY
-		[EnglishProductCategoryName]
-,		[CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-
-<a name="ctas-replace-ansi-joins-bk"></a>
-
-### K. Use CTAS to specify which data to keep instead of using ANSI joins in the FROM clause of a DELETE statement  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-Sometimes the best approach for deleting data is to use `CTAS`. Rather than deleting the data simply select the data you want to keep. This especially true for `DELETE` statements that use ansi joining syntax since [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] does not support ANSI joins in the `FROM` clause of a `DELETE` statement.
-
-An example of a converted DELETE statement is available below:
-
-```sql
-CREATE TABLE dbo.DimProduct_upsert
-WITH
-(   Distribution=HASH(ProductKey)
-,   CLUSTERED INDEX (ProductKey)
-)
-AS -- Select Data you wish to keep
-SELECT     p.ProductKey
-,          p.EnglishProductName
-,          p.Color
-FROM       dbo.DimProduct p
-RIGHT JOIN dbo.stg_DimProduct s
-ON         p.ProductKey = s.ProductKey
-;
-
-RENAME OBJECT dbo.DimProduct        TO DimProduct_old;
-RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
-```
-
-<a name="ctas-simplify-merge-bk"></a>
-
-### L. Use CTAS to simplify merge statements  
+### J. Use CTAS to simplify merge statements  
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
@@ -676,7 +565,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### M. Explicitly state data type and nullability of output  
+### K. Explicitly state data type and nullability of output  
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 When migrating SQL Server code to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], you might find you run across this type of coding pattern:
@@ -830,7 +719,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 You can see therefore that type consistency and maintaining nullability properties on a CTAS is a good engineering best practice. It helps to maintain integrity in your calculations and also ensures that partition switching is possible.
 
-### N. Create an ordered clustered columnstore index with MAXDOP 1  
+### L. Create an ordered clustered columnstore index with MAXDOP 1  
 ```sql
 CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
 AS SELECT * FROM ExampleTable

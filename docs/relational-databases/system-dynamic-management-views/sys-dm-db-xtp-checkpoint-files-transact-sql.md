@@ -1,24 +1,22 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL)"
-description: "sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server."
+description: sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: in-memory-oltp
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_checkpoint_files"
   - "sys.dm_db_xtp_checkpoint_files_TSQL"
   - "dm_db_xtp_checkpoint_files_TSQL"
   - "sys.dm_db_xtp_checkpoint_files"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)

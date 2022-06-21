@@ -1,20 +1,18 @@
 ---
-description: "Perform Index Operations Online"
-title: Perform Index Operations Online | Microsoft Docs
-ms.custom: ""
+title: Perform Index Operations Online
+description: Perform Index Operations Online
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 11/15/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.prod_service: "table-view-index, sql-database"
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index online operations [SQL Server]"
   - "online index operations"
   - "ONLINE option"
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.prod_service: "table-view-index, sql-database"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Perform Index Operations Online

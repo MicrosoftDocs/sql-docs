@@ -1,15 +1,16 @@
 ---
 title: Building scalable cloud databases
 description: Build scalable .NET database apps with the Elastic Database client library.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scale-out
-ms.custom: sqldbrb=1
-ms.devlang:
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
-author: scoriani 
+author: scoriani
 ms.author: scoriani
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 09/25/2018
 ---
 # Building scalable cloud databases

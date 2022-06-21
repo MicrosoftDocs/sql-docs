@@ -1,21 +1,17 @@
 ---
+title: "CommandStream Property (ADO)"
 description: "CommandStream Property (ADO)"
-title: "CommandStream Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Command::CommandStream"
-helpviewer_keywords: 
-  - "CommandStream property [ADO]"
-ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Command::CommandStream"
+helpviewer_keywords:
+  - "CommandStream property [ADO]"
+apitype: "COM"
 ---
 # CommandStream Property (ADO)
 Indicates the stream used as the input for a [Command](./command-object-ado.md) object.  

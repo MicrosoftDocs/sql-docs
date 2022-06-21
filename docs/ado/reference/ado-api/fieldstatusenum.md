@@ -1,21 +1,17 @@
 ---
+title: "FieldStatusEnum"
 description: "FieldStatusEnum"
-title: "FieldStatusEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "FieldStatusEnum"
-helpviewer_keywords: 
-  - "FieldStatusEnum enumeration [ADO]"
-ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "FieldStatusEnum"
+helpviewer_keywords:
+  - "FieldStatusEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # FieldStatusEnum
 Specifies the [status](./status-property-ado-field.md) of a [Field Object](./field-object.md).  

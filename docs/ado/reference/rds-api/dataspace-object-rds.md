@@ -1,19 +1,15 @@
 ---
+title: "DataSpace Object (RDS)"
 description: "DataSpace Object (RDS)"
-title: "DataSpace Object (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "DataSpace object [RDS]"
-ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataSpace object [RDS]"
+apitype: "COM"
 ---
 # DataSpace Object (RDS)
 > [!IMPORTANT]

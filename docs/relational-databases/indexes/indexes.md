@@ -1,22 +1,20 @@
 ---
-description: "Indexes"
-title: "Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Indexes"
+description: Indexes
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/21/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index types [SQL Server]"
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
 
 ## Available index types
 The following table lists the types of indexes available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provides links to additional information.  

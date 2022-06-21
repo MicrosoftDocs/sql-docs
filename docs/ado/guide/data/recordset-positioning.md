@@ -1,21 +1,17 @@
 ---
+title: "Recordset Positioning"
 description: "Recordset Positioning"
-title: "Recordset Positioning | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "record positioning [ADO]"
   - "Recordset object [ADO]"
   - "repositioning record [ADO]"
   - "AbsolutePosition property [ADO]"
-ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-author: rothja
-ms.author: jroth
 ---
 # Recordset Positioning
 Use the **AbsolutePosition** property to move to a record, based on its ordinal position in the **Recordset** object, or to determine the ordinal position of the current record. The provider must support the appropriate functionality for this property to be available.  

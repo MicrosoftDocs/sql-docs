@@ -1,21 +1,17 @@
 ---
+title: "Open and Close Methods Example (VBScript)"
 description: "Open and Close Methods Example (VBScript)"
-title: "Open and Close Methods Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Close method [ADO], VBScript example"
-  - "Open method [ADO], VBScript example"
-ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Close method [ADO], VBScript example"
+  - "Open method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Open and Close Methods Example (VBScript)
 This example uses the [Open](./open-method-ado-recordset.md) and [Close](./close-method-ado.md) methods on both [Recordset](./recordset-object-ado.md) and [Connection](./connection-object-ado.md) objects that have been opened.  

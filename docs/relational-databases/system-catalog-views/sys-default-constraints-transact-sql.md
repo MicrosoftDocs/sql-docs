@@ -1,25 +1,23 @@
 ---
-description: "sys.default_constraints (Transact-SQL)"
-title: "sys.default_constraints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.default_constraints (Transact-SQL)"
+description: sys.default_constraints (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.default_constraints"
   - "sys.default_constraints_TSQL"
   - "default_constraints"
   - "default_constraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.default_constraints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.default_constraints (Transact-SQL)

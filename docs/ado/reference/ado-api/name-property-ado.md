@@ -1,22 +1,18 @@
 ---
+title: "Name Property (ADO)"
 description: "Name Property (ADO)"
-title: "Name Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Parameter::Name"
-  - "Field20::Name"
-helpviewer_keywords: 
-  - "Name property [ADO]"
-ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Parameter::Name"
+  - "Field20::Name"
+helpviewer_keywords:
+  - "Name property [ADO]"
+apitype: "COM"
 ---
 # Name Property (ADO)
 Indicates the name of an object.  

@@ -1,25 +1,23 @@
 ---
-description: "sys.index_columns (Transact-SQL)"
-title: "sys.index_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.index_columns (Transact-SQL)"
+description: sys.index_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.index_columns"
   - "sys.index_columns_TSQL"
   - "index_columns"
   - "index_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.index_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.index_columns (Transact-SQL)

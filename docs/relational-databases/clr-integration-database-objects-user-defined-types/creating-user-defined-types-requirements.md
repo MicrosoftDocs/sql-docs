@@ -1,13 +1,13 @@
 ---
-title: "User-Defined Type Requirements | Microsoft Docs"
-description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server. 
-ms.custom: ""
+title: "User-Defined Type Requirements"
+description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UDTs [CLR integration], requirements"
   - "serialization"
   - "Native serialization format [CLR integration]"
@@ -18,8 +18,6 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-author: rothja
-ms.author: jroth
 ---
 # Creating User-Defined Types - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,22 @@
 ---
 title: "srv_paramsetoutput (Extended Stored Procedure API)"
 description: Learn how srv_paramsetoutput in the Extended Stored Procedure API sets the value of a return parameter.
-ms.custom: seo-dt-2019
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "srv_paramsetoutput"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paramsetoutput"
+apilocation: opends60.dll
+apiname: srv_paramsetoutput
+apitype: "DLLExport"
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-author: rothja
-ms.author: jroth
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

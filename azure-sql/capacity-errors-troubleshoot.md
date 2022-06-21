@@ -71,7 +71,7 @@ To register your subscription using [the Azure CLI](/cli/azure/install-azure-cli
 
 ```azurecli-interactive
 # Register the SQL resource provider to your subscription 
-az provider register --namespace Microsoft.SqlVirtualMac 
+az provider register --namespace Microsoft.Sql 
 ```
 
 # [Azure PowerShell](#tab/powershell)

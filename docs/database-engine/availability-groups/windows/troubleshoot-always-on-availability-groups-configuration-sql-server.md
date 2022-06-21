@@ -130,6 +130,9 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     ```  
   
      For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md).  
+     
+     >[!NOTE]
+     >In some cases, if the endpoint is started but the AG replicas are not communicating, you may try to stop and restart the endpoint. You can use ALTER ENDPOINT [Endpoint_Mirroring] STATE = STOPPED followed by ALTER ENDPOINT [Endpoint_Mirroring] STATE = STARTED
   
 5.  Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
@@ -189,12 +192,12 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
    Test-NetConnection -ComputerName $IP_address -Port $port_number
    ```
 
-- If the Endpoint is listening and connection is successful, then you'll see a blank screen.  If not, you'll receive a connection error from Telnet
-- If Telnet connection to the IP address works but to the ServerName it doesn't, there's likely a DNS or name resolution issue
+- If the Endpoint is listening and connection is successful, you will see "TcpTestSucceeded : True". If not, you'll receive a "TcpTestSucceeded : False".
+- If Test-NetConnection (Telnet) connection to the IP address works but to the ServerName it doesn't, there's likely a DNS or name resolution issue
 - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED", another instance may actually have the port bound and prevent the correct instance from listening and establishing TCP connections.
-- If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
+- If Test-NetConnection fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
 Run the following PowerShell script to examine for disabled inbound traffic rules
-- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you're running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+- If you're running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
    ```powershell
    Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table

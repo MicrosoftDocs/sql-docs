@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_exec_sessions (Transact-SQL)"
-title: "sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_sessions (Transact-SQL)"
+description: sys.dm_exec_sessions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_sessions_TSQL"
   - "sys.dm_exec_sessions"
   - "dm_exec_sessions"
   - "sys.dm_exec_sessions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_sessions dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]

@@ -1,15 +1,16 @@
 ---
-description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
-ms.custom:
-- event-tier1-build-2022
+description: CREATE TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
 ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "FILESTREAM_TSQL"
   - "TABLE"
   - "CREATE_TABLE_TSQL"
@@ -18,9 +19,7 @@ f1_keywords:
   - "TABLE_TSQL"
   - "FILESTREAM_ON"
   - "FILESTREAM_ON_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints"
   - "global temporary tables [SQL Server]"
   - "local temporary tables [SQL Server]"
@@ -46,9 +45,9 @@ helpviewer_keywords:
   - "number of columns per table"
   - "maximum number of bytes per row"
   - "data retention policy"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE TABLE (Transact-SQL)
 

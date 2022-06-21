@@ -1,21 +1,19 @@
 ---
-description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL)"
-ms.custom: ""
+description: CREATE QUEUE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "QUEUE_TSQL"
   - "CREATE QUEUE"
   - "QUEUE"
   - "CREATE_QUEUE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE QUEUE statement"
   - "internal activation [Service Broker]"
   - "stored procedure activation [Service Broker]"
@@ -23,8 +21,8 @@ helpviewer_keywords:
   - "unavailable queues [Service Broker]"
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE QUEUE (Transact-SQL)
 

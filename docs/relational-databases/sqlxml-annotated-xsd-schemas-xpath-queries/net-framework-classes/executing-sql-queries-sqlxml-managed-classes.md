@@ -1,22 +1,21 @@
 ---
 title: "Executing SQL Queries (SQLXML)"
 description: Learn how to execute SQL queries using SQLXML Managed Classes.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "queries [SQLXML], SQLXML Managed Classes"
   - "SQLXML Managed Classes, executing SQL queries"
   - "Managed Classes [SQLXML], executing SQL queries"
   - "ExecuteToStream method"
   - "SQL queries [SQLXML]"
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXML Managed Classes)

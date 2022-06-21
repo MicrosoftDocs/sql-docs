@@ -1,15 +1,18 @@
 ---
 title: Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.reviewer: kendralittle, vanto, mathoma
-ms.custom: azure-synapse, sqldbrb=1
+ms.reviewer: wiassaf, vanto, mathoma
+ms.custom:
+  - "azure-synapse"
+  - "sqldbrb=1"
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -34,7 +37,7 @@ You can use SQL Database auditing to:
 - **Analyze** reports. You can find suspicious events, unusual activity, and trends.
 
 > [!IMPORTANT]
-> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance. During very high activity, or high network load, Azure SQL Database, Azure Synapse and Azure SQL Managed Instance allow operations to proceed and may not record some audited events.
+> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance of the database(s) or instance(s) that are being audited. During periods of very high activity or high network load, the auditing feature may allow transactions to proceed without recording all of the events marked for auditing.
 
 ### Auditing limitations
 

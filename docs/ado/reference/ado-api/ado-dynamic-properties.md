@@ -1,18 +1,15 @@
 ---
+title: "ADO Dynamic Properties"
 description: "ADO Dynamic Properties"
-title: "ADO Dynamic Properties | Microsoft Docs"
-ms.prod: sql
-ms.technology: ado
-ms.custom: 
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.topic: reference
-helpviewer_keywords: 
-  - "dynamic properties [ADO]"
-  - "properties [ADO], dynamic"
-ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "dynamic properties [ADO]"
+  - "properties [ADO], dynamic"
 ---
 # ADO Dynamic Properties
 Dynamic properties can be added to the [Properties](./properties-collection-ado.md) collections of the [Connection](./connection-object-ado.md), [Command](./command-object-ado.md), or [Recordset](./recordset-object-ado.md) objects. The source for these properties is either a data provider, such as the [OLE DB Provider for SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), or a service provider, such as the [Microsoft Cursor Service for OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Refer to the appropriate data provider or service provider documentation for more information about a specific dynamic property.  

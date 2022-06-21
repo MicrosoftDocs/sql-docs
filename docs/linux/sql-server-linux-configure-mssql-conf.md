@@ -691,6 +691,7 @@ The following options are additional network settings configurable using `mssql-
 | network.kerberoscredupdatefrequency | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
 | network.privilegedadaccount | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
 | uncmapping | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+| ldaphostcannon | Set whether OpenLDAP should canonicalize hostnames during the bind step , Values can be `true` or `false`. | 
 
 ## <a id="traceflags"></a> Enable/Disable traceflags
 

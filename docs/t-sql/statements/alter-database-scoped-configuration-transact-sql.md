@@ -25,7 +25,7 @@ ms.reviewer: "katsmith"
 ms.custom:
 - seo-lt-2019
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 06/21/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 

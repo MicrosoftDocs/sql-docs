@@ -35,7 +35,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
     1. On the server page, select **Azure Active Directory** in the **Settings** section of the left menu.
     1. On the **Azure Active Directory** page toolbar, select **Set admin**.
 
-       ![Screenshot showing the Set admin selection.](./media/connect-query-portal/select-active-directory.png)
+       :::image type="content" source="./media/connect-query-portal/select-active-directory.png" alt-text="Screenshot showing the Set admin selection.":::
 
     1. On the **Azure Active Directory** form, search for and select the user or group you want to be the admin, and then select **Select**.
     1. On the **Azure Active Directory** main page, select **Save**.
@@ -48,13 +48,13 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
-   ![Screenshot that shows selecting query editor.](./media/connect-query-portal/find-query-editor.png)
+   :::image type="content" source="./media/connect-query-portal/find-query-editor.png" alt-text="Screenshot that shows selecting query editor.":::
 
 1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL authentication or Azure AD.
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
-     ![Screenshot showing signin with SQL authentication](./media/connect-query-portal/login-menu.png)
+     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing signin with SQL authentication.":::
 
    - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 
@@ -75,7 +75,7 @@ On the **Query editor (preview)** page, run the following example queries agains
 
 1. Select **Run**, and then review the output in the **Results** pane.
 
-   ![Screenshot showing query editor results for a SELECT query.](./media/connect-query-portal/query-editor-results.png)
+   :::image type="content" source="./media/connect-query-portal/query-editor-results.png" alt-text="Screenshot showing query editor results for a SELECT query.":::
 
 1. Optionally, you can select **Save query** to save the query as an *.sql* file, or select **Export data as** to export the results as a *.json*, *.csv*, or *.xml* file.
 

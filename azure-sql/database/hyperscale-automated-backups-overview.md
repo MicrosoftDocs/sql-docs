@@ -24,7 +24,7 @@ This article explains the differences when using the [automated backup](automate
 
 Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot-based and are nearly instantaneous. Log generated is stored in long-term Azure storage for the backup retention period. Hyperscale architecture does not use full database backups or log backups and as such backup frequency, storage costs, scheduling, storage redundancy and restore capabilities differ from single and pooled databases in Azure SQL Database. 
 
-## Storage redundancy
+## Backup storage redundancy
 
 Hyperscale supports configurable storage redundancy. When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy.
 

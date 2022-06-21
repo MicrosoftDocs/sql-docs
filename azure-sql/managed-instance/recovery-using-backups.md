@@ -26,7 +26,7 @@ The content in this article is also duplicated in /azure-sql/database/recovery-u
 > * [Azure SQL Database](../database/recovery-using-backups.md)
 > * [Azure SQL Managed Instance](recovery-using-backups.md)
 
-This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [recovery using backup](../database/recovery-using-backup.md). 
+This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [recovery using backup](../database/recovery-using-backups.md). 
 
 Automatic backups protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery by using [automated database backups](automated-backups-overview.md). You can:
 
@@ -36,7 +36,7 @@ Automatic backups protect your databases from user and application errors, accid
 
 Cross-region and cross-subscription point-in-time restore for SQL Managed Instance isn't currently supported. 
 
-If you configured [backup long-term retention](long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
+If you configured [backup long-term retention](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
 
 > [!IMPORTANT]
 > You can't overwrite an existing database during restore.
@@ -62,7 +62,7 @@ For a single subscription, there are limitations on the number of concurrent res
 
 
 > [!TIP]
-> For Azure SQL Managed Instance, system updates will take precedence over database restores in progress. If there a system update for SQL Managed Instance, all pending restores will be suspended and resumed once the update has been applied. This system behavior might prolong the time of restores and might be especially impactful to long-running restores. To achieve a predictable time of database restores, consider configuring [maintenance windows](maintenance-window.md) that allow scheduling of system updates at a specific day/time, and consider running database restores outside of the scheduled maintenance window day/time.
+> For Azure SQL Managed Instance, system updates will take precedence over database restores in progress. If there a system update for SQL Managed Instance, all pending restores will be suspended and resumed once the update has been applied. This system behavior might prolong the time of restores and might be especially impactful to long-running restores. To achieve a predictable time of database restores, consider configuring [maintenance windows](../database/maintenance-window.md) that allow scheduling of system updates at a specific day/time, and consider running database restores outside of the scheduled maintenance window day/time.
 
 ## Permissions 
 
@@ -132,7 +132,7 @@ To recover a managed database by using the Azure portal, open the managed instan
   ![Screenshot of restore a deleted database in Azure SQL Managed Instance](../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png)
 
 > [!TIP]
-> It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases [programmatically](#programmatic-recovery-using-automated-backups).
+> It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases using the command line. 
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -155,7 +155,7 @@ You can restore a database on any managed instance in any Azure region from the 
 
 Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. There is a delay between when a backup is taken and when it is geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
-![Graphic of geo-restore](./media/recovery-using-backups/geo-restore-2.png)
+![Graphic of geo-restore](../database/media/recovery-using-backups/geo-restore-2.png)
 
 
 ### [Azure portal](#tab/azure-portal)

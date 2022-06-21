@@ -103,7 +103,7 @@ This table summarizes the capabilities and features of [point in time restore (P
 | **Restore via Azure CLI** |Yes|Yes|Yes|
 
 
-\* For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-sql-db.md). 
+\* For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-sql-mi.md). 
 
 \*\* All PITR backups are stored on geo-redundant storage by default. Hence, geo-restore is enabled by default. 
 
@@ -140,7 +140,7 @@ In other words, for any point in time during the retention period, there must be
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3-4 times, however it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3-4 times, however it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 Azure SQL Managed Instance computes your total used backup storage as a cumulative value. Every hour, this value is reported to the Azure billing pipeline, which is responsible for aggregating this hourly usage to calculate your consumption at the end of each month. After the database is deleted, consumption decreases as backups age out and are deleted. Once all backups are deleted and PITR is no longer possible, billing stops.
 
@@ -154,7 +154,7 @@ Azure SQL Managed Instance computes your total used backup storage as a cumulati
 
 Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
-- Reduce the [backup retention period](#change-the-short-term-retention-policy-using-the-azure-portal) to the minimum possible for your needs.
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) to the minimum possible for your needs.
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance), and/or reduce the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
@@ -171,7 +171,7 @@ For all new, restored, and copied databases, Azure SQL Managed Instance retains 
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your instance, and then change it at a later time. If you change your backup redundancy option after your instance is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
 
-Yyou can [change backup retention period](automated-backups-change-settings.md#change-backup-retention-period) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
+Yyou can [change backup retention period](automated-backups-change-settings.md#change-backup-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
 
 It is possible to set the PITR backup retention rate once a database has been deleted in the 0-35 days range.
 
@@ -189,7 +189,7 @@ With SQL Managed Instance, you can configure full backup long-term retention (LT
 
 LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed subsequently, even if the STR backup storage redundancy is changed in the future.  
 
-Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/?service=sql-managed-instance) to estimate the cost of LTR storage.
+Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-managed-instance) to estimate the cost of LTR storage.
 
 ## Backup storage costs
 
@@ -234,7 +234,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 
-![Backup storage cost analysis](./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png)
+![Backup storage cost analysis](../database/media/automated-backups-overview/check-backup-storage-cost-sql-mi.png)
 
 >[!IMPORTANT]
 > Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, managed instance counters will not be present for customers who do not have a managed instance deployed. Likewise, storage counters will not be visible for resources that are not consuming storage. As such, if there is no PITR or LTR backup storage consumption, these meters won't be visible.
@@ -258,7 +258,7 @@ The following built-in policies can be assigned at the subscription or resource 
 
 [SQL Managed Instances should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa9934fd7-29f2-4e6d-ab3d-607ea38e9079)
 
-For a full list of built-in policy definitions for SQL Managed Instance, review the [policy reference](./policy-reference.md).
+For a full list of built-in policy definitions for SQL Managed Instance, review the [policy reference](../database/policy-reference.md).
 
 To enforce data residency requirements at an organizational level, these policies can be assigned to a subscription. After these policies are assigned at a subscription level, users in the given subscription will not be able to create a managed instance with geo-redundant backup storage via Azure portal or Azure PowerShell. 
 
@@ -269,10 +269,9 @@ Learn how to assign policies using the [Azure portal](/azure/governance/policy/a
 
 ## Next steps
 
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Managed instance business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Managed instance business continuity solutions, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
 - To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
 - To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).

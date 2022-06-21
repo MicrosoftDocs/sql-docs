@@ -84,7 +84,7 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 
 Backup storage consumption for a Hyperscale database depends on the retention period, choice of region, backup storage redundancy and workload type. Consider some of the following tuning techniques to reduce your backup storage consumption for a Hyperscale database:
 
-- Reduce the [backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) to the minimum possible for your needs.
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum possible for your needs.
 - Avoid doing large write-operations, such as index maintenance, more frequently than you need to. For index maintenance recommendations, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes).
 - For large data-load operations, consider using data compression when appropriate.
 - Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.

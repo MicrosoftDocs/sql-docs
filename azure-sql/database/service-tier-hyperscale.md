@@ -139,7 +139,7 @@ Back up and restore operations for Hyperscale databases are file-snapshot based.
 
 If you need to restore a Hyperscale database in Azure SQL Database to a region other than the one it's currently hosted in, as part of a disaster recovery operation or drill, relocation, or any other reason, the primary method is to do a geo-restore of the database. Geo-restore is only available when geo-redundant storage (RA-GRS) has been chosen for storage redundancy.
 
-Learn more in [restoring a Hyperscale database to a different region](hyperscale-automated-backups-overview.md#restoring-a-hyperscale-database-to-a-different-region).
+Learn more in [restoring a Hyperscale database to a different region](hyperscale-automated-backups-overview.md#restore-a-hyperscale-database-to-a-different-region).
 
 ## <a name=regions></a>Available regions
 

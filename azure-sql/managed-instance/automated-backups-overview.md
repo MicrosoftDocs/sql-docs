@@ -154,7 +154,7 @@ Azure SQL Managed Instance computes your total used backup storage as a cumulati
 
 Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
-- Reduce the [backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) to the minimum possible for your needs.
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum possible for your needs.
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance), and/or reduce the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
@@ -171,7 +171,7 @@ For all new, restored, and copied databases, Azure SQL Managed Instance retains 
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your instance, and then change it at a later time. If you change your backup redundancy option after your instance is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
 
-Yyou can [change backup retention period](automated-backups-change-settings.md#change-backup-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
+Yyou can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
 
 It is possible to set the PITR backup retention rate once a database has been deleted in the 0-35 days range.
 

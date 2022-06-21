@@ -336,7 +336,9 @@ Like there are storage and CPU recommendations, there are Network specific recom
             ethtool -l eth0
    ```
 
-5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings. Below is an example of Mellanox specific network infrastructure to help explain the configuration. Note that the commands will change based on the environment. Contact the NIC vendor for further guidance:
+5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings. 
+
+    Below is an example of Mellanox specific network infrastructure to help explain the configuration. For more information, see [​​Performance Tuning tools for Mellanox Network Adapters](https://support.mellanox.com/s/article/MLNX2-117-2523kn). Note that the commands will change based on the environment. Contact the NIC vendor for further guidance:
 
    ```bash
             #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
@@ -344,15 +346,15 @@ Like there are storage and CPU recommendations, there are Network specific recom
             #or
             irqbalance --oneshot
 
-            #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
-            tar -xvf mlnx_tuning_scripts.tar.gz
-            # be sure, common_irq_affinity.sh is executable. if not, 
-            # chmod +x common_irq_affinity.sh       
+            #download the Mellanox mlnx tools -- see https://support.mellanox.com/s/article/MLNX2-117-2523kn
+
+            #be sure, common_irq_affinity.sh is executable. if not, 
+            #chmod +x common_irq_affinity.sh       
 
             #display IRQ affinity for Mellanox NIC port; e.g eth0
             ./show_irq_affinity.sh eth0
 
-            #optimize for best throughput performance
+            #optimize for best throughput performance with a Mellanox tool
             ./mlnx_tune -p HIGH_THROUGHPUT
 
             #set hardware affinity to the NUMA node hosting physically the NIC and its port

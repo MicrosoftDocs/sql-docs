@@ -65,7 +65,7 @@ As a result, named replicas offers several benefits over HA replicas, for what c
 - users connected to a named replica will suffer no disconnection if the primary replica is scaled up or down; at the same time users connected to primary replica will be unaffected by named replicas scaling up or down
 -	workloads running on any replica, primary or named, will be unaffected by long running queries running on other replicas
 
-The main goal of named replicas is to enable massive OLTP [read scale-out](read-scale-out.md) scenario, and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads. Examples of how to create such solutions are available here:
+The main goal of named replicas is to enable a broad variety of [read scale-out](read-scale-out.md) scenarios, and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads. Examples of how to create such solutions are available here:
 
 - [OLTP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-oltp-scaleout)
 

@@ -15,14 +15,15 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sysarticlecolumns view"
-ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
+
 # sysarticlecolumns (System View) (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **sysarticlecolumns** view exposes additional information about columns in published articles. This view is stored in the distribution database.  
+The **sysarticlecolumns** view exposes additional information about columns in published articles. This view is stored in the distribution database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

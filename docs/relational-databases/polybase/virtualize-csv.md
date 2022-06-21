@@ -50,7 +50,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';
 
 ### 4. Create Database Scoped Credential
 
-Database scoped credential will be used for the External Data Source. In this example, the CSV file resides in Azure Blob Storage, so use prefix `abs`, and `SHARED ACCESS SIGNATURE` is the identity method. For more information about the connectors and prefixes, including new settings for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [CREATE EXTERNAL DATA SOURCE](create-external-data-source-sql.md?view=sql-server-ver16&preserve-view=true#location--prefixpathport-3).
+Database scoped credential will be used for the External Data Source. In this example, the CSV file resides in Azure Blob Storage, so use prefix `abs`, and `SHARED ACCESS SIGNATURE` is the identity method. For more information about the connectors and prefixes, including new settings for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=sql-server-ver16&preserve-view=true#location--prefixpathport-3).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE Blob_CSV
@@ -110,7 +110,7 @@ WITH    (   cc_call_center_sk         integer                       ,
 
 ### 6. External Table
 
-CREATE EXTERNAL TABLE can also be used to virtualize the csv data in SQL Server. The columns must be defined and strongly typed. For more information, see [CREATE EXTERNAL TABLE](create-external-table-sql.md?view=sql-server-ver16&preserve-view=true).
+CREATE EXTERNAL TABLE can also be used to virtualize the csv data in SQL Server. The columns must be defined and strongly typed. For more information, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md?view=sql-server-ver16&preserve-view=true).
 
 While external tables take more effort to create, they also provide additional benefits over querying an external data source with OPENROWSET. You can:
 

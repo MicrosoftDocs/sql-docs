@@ -1308,7 +1308,7 @@
       - name: Change backup settings
         href: managed-instance/automated-backups-change-settings.md
       - name: Recovery from backup
-        href: managed-instance/recovery-from-backup.md
+        href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
       - name: Monitor back up

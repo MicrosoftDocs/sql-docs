@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Azure SQL Database automatically creates a local database backup every few minutes and uses Azure read-access geo-redundant storage for geo-redundancy.
 services:
   - "sql-database"
-ms.service: sql-datavase
+ms.service: sql-database
 ms.subservice: backup-restore
 ms.custom:
   - "references_regions"
@@ -66,7 +66,7 @@ To learn more about storage redundancy, see [Data redundancy](/azure/storage/com
 
 > [!IMPORTANT]
 > - Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
-> -  Backup storage redundancy for Hyperscale databases can only be set during creation. This setting cannot be modified once the resource is provisioned. Use [Database copy](database-copy.md) to update the backup storage redundancy settings for an existing Hyperscale database.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups#storage-redundancy).
+> -  Backup storage redundancy for Hyperscale databases can only be set during creation. This setting cannot be modified once the resource is provisioned. Use [Database copy](database-copy.md) to update the backup storage redundancy settings for an existing Hyperscale database.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
 
 ## Backup usage
 
@@ -113,7 +113,7 @@ To perform a restore, see [Restore database from backups](recovery-using-backups
 
 | Operation | Azure portal | Azure CLI | Azure PowerShell |
 |---|---|---|---|
-| **Change backup retention** | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy&tabs=azure-portal) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy&tabs=azure-portal) | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy&tabs=azure-cli) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policytabs=azure-cli) | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy&tabs=powershell) <br/>[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy&tabs=powershell) |
+| **Change backup retention** | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal) | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli) | [SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell) <br/>[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell) |
 | **Change long-term backup retention** | [SQL Database](long-term-backup-retention-configure.md#create-long-term-retention-policies)<br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md)<br/>[SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md)  |
 | **Restore a database from a point in time** | [SQL Database](recovery-using-backups.md#point-in-time-restore)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md) | [SQL Database](/cli/azure/sql/db#az-sql-db-restore) <br/> [SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore) | [SQL Database](/powershell/module/az.sql/restore-azsqldatabase) <br/> [SQL Managed Instance](/powershell/module/az.sql/restore-azsqlinstancedatabase) |
 | **Restore a deleted database** | [SQL Database](recovery-using-backups.md)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](long-term-backup-retention-configure.md#restore-from-ltr-backups) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) <br/> [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
@@ -156,7 +156,7 @@ Instructions on how to monitor consumption in Hyperscale can be found in [Hypers
 
 Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
-- Reduce the [backup retention period](#change-the-short-term-retention-policy-using-the-azure-portal) to the minimum possible for your needs.
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) to the minimum possible for your needs.
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance), and/or reduce the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
@@ -175,7 +175,7 @@ Differential backups can be configured to either a 12-hour or a 24-hour frequenc
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
 
-Except for Basic tier databases, you can [change backup retention period](#change-the-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](long-term-retention-overview.md).
+Except for Basic tier databases, you can [change backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](long-term-retention-overview.md).
 
 If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. You cannot change backup retention period for a deleted database.
 
@@ -222,7 +222,7 @@ For pooled databases, the total billable backup storage size is aggregated at th
 
 Total billable backup storage, if any, will be charged in GB/month as per the rate of the backup storage redundancy used. This backup storage consumption will depend on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
 
-Formulae used to calculate backup storage costs for Hyperscale databases can be found in [Hyperscale backup storage costs](#hyperscale-backup-storage-costs). 
+Formulae used to calculate backup storage costs for Hyperscale databases can be found in [Hyperscale backup storage costs](hyperscale-automated-backups-overview.md#backup-storage-costs). 
 
 Azure SQL Database computes your total billable backup storage as a cumulative value across all backup files. Every hour, this value is reported to the Azure billing pipeline, which aggregates this hourly usage to get your backup storage consumption at the end of each month. If a database is deleted, backup storage consumption will gradually decrease as older backups age out and are deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets. Once all backups are deleted, billing stops. 
 
@@ -270,7 +270,7 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 ## Compliance
 
-When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](#change-the-short-term-retention-policy).
+When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy).
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 

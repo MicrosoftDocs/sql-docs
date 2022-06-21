@@ -20,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Change automated backup settings for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides examples to modify short-term retention (STR) [automated backup settings](automated-backups-overview-sql-mi.md) for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option used for backups. 
+This article provides examples to modify short-term retention (STR) [automated backup settings](automated-backups-overview.md) for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option used for backups. 
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](automated-backups-change-settings.md)
@@ -35,13 +35,13 @@ You can change the default PITR backup retention period and the differential bac
 > If you reduce the current retention period, you lose the ability to restore to points in time older than the new retention period. Backups that are no longer needed to provide PITR within the new retention period are deleted. If you increase the current retention period, you do not immediately gain the ability to restore to older points in time within the new retention period. You gain that ability over time, as the system starts to retain backups for longer.
 
 > [!NOTE]
-> These APIs will affect only the PITR retention period. If you configured LTR for your database, it won't be affected. For information about how to change LTR retention periods, see [Long-term retention](long-term-retention-overview.md).
+> These APIs will affect only the PITR retention period. If you configured LTR for your database, it won't be affected. For information about how to change LTR retention periods, see [Long-term retention](../database/long-term-retention-overview.md).
 
 ### [Azure portal](#tab/azure-portal)
 
 To change the PITR backup retention period or the differential backup frequency for active databases by using the Azure portal, go to the managed instance with the databases whose retention period you want to change. Select **Backups** in the left pane, then select the **Retention policies** tab. Select the database(s) for which you want to change the PITR backup retention. Then select **Configure retention** from the action bar.
 
-![Change PITR retention, managed instance](./media/automated-backups-overview/configure-backup-retention-sqlmi.png)
+![Change PITR retention, managed instance](../database/media/automated-backups-overview/configure-backup-retention-sqlmi.png)
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -158,7 +158,7 @@ For more information, see [Backup Retention REST API](/rest/api/sql/backupshortt
 
 In the Azure portal, during an instance creation, the default option for the backup storage redundancy is Geo-redundancy. The option to change it is located on the **Compute + storage** pane accessible from the **Configure Managed Instance** option on the **Basics** tab.
 
-![Open Compute+Storage configuration-pane](./media/automated-backups-overview/open-configuration-blade-managed-instance.png)
+![Open Compute+Storage configuration-pane](../database/media/automated-backups-overview/open-configuration-blade-managed-instance.png)
 
 Find the option to select backup storage redundancy on the **Compute + storage** pane.
 
@@ -166,7 +166,7 @@ Find the option to select backup storage redundancy on the **Compute + storage**
 
 To change the Backup storage redundancy option for an existing instance, go to the **Compute + storage** pane, choose the new backup option and select **Apply**. For now, this change will be applied only for PITR backups, while LTR backups will retain the old storage redundancy type. The time it takes to perform the backup redundancy change depends on the size of the all the databases within a single managed instance. Changing the backup redundancy will take more time for instances that have large databases. It's possible to combine the backup storage redundancy change operation with the UpdateSLO operation. Use the **Notification** pane of the Azure portal to view the status of the change operation. 
 
-:::image type="content" source="./media/automated-backups-overview/change-backup-storage-redundancy-managed-instance-notification.png" alt-text="Change backup storage redundancy notification":::
+:::image type="content" source="../database/media/automated-backups-overview/change-backup-storage-redundancy-managed-instance-notification.png" alt-text="Change backup storage redundancy notification":::
 
 ### [Azure CLI](#tab/azure-cli)
 

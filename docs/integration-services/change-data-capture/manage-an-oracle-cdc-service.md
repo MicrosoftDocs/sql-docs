@@ -4,7 +4,7 @@ description: "Manage an Oracle CDC Service"
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-f1_keywords: ""
+f1_keywords: 
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ""

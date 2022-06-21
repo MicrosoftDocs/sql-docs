@@ -1002,7 +1002,7 @@
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
     - name: Automated backups
-      href: managed-instance/automated-backups-overview.md
+      href: managed-instance/automated-backups-overview.md 
     - name: Auto-failover groups
       href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences
@@ -1307,7 +1307,7 @@
       items: 
       - name: Change backup settings
         href: managed-instance/automated-backups-change-settings.md
-      - name: Recovery from backup
+      - name: Recover using backups
         href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md

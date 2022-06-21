@@ -17,7 +17,7 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 <!---
-The content in this article is also duplicated in /azure-sql/managed-instance/recovery-using-backups.md. Any relevant changes made to this article should be made in the other article as well. 
+Some of the content in this article is duplicated in /azure-sql/managed-instance/recovery-using-backups.md. Any relevant changes made to this article should be made in the other article as well. 
 --->
 
 

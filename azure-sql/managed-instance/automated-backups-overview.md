@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Azure SQL Managed Instance automatically creates a local database backup every few minutes and uses Azure read-access geo-redundant storage for geo-redundancy.
 services:
   - "sql-database"
-ms.service: sql-db-mi
+ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.custom:
   - "references_regions"
@@ -21,14 +21,18 @@ monikerRange: "= azuresql || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 <!---
-The content in this article is also duplicated in /azure-sql/database/automated-backups-overview.md. Any relevant changes made to this article should be made in the other article as well. 
+Some of the content in this article is duplicated in /azure-sql/database/automated-backups-overview.md. Any relevant changes made to this article should be made in the other article as well. 
 --->
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](automated-backups-overview.md)
 > * [Azure SQL Managed Instance](../database/automated-backups-overview.md)
 
-This article describes the automated backup feature for Azure SQL Managed Instance. For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md). To change backup settings, see [Change settings](automated-backups-change-settings.md). 
+This article describes the automated backup feature for Azure SQL Managed Instance. 
+
+For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md).   
+To change backup settings, see [Change settings](automated-backups-change-settings.md).   
+To restore a backup, see [recover using backup](recovery-using-backups.md). 
 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]

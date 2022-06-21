@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Database using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API. 
 services:
   - "sql-database"
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: backup-restore
 ms.custom:
   - "references_regions"
@@ -14,11 +14,15 @@ ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 04/26/2022
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.date: 06/25/2022
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Change automated backup settings for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+<!---
+Some of the content in this article is duplicated in /azure-sql/managed-instance/automated-backups-change-settings.md. Any relevant changes made to this article should be made in the other article as well. 
+--->
 
 
 > [!div class="op_single_selector"]
@@ -261,5 +265,4 @@ It's not currently possible to change the backup storage redundancy using the Re
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
 - Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).
+

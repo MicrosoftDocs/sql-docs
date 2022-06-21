@@ -26,10 +26,14 @@ monikerRange: "= azuresql || = azuresql-db "
 > * [Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md)
 
 <!---
-The content in this article is also duplicated in /azure-sql/managed-instance/automated-backups-overview.md. Any relevant changes made to this article should be made in the other article as well. 
+Some of the content in this article is duplicated in /azure-sql/managed-instance/automated-backups-overview.md. Any relevant changes made to this article should be made in the other article as well. 
 --->
 
-This article describes the automated backup feature for Azure SQL Database. For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md). To change backup settings, see [Change settings](automated-backups-change-settings.md). 
+This article describes the automated backup feature for Azure SQL Database. 
+
+For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md).   
+To change backup settings, see [Change settings](automated-backups-change-settings.md).   
+To restore a backup, see [recover using backup](recovery-using-backups.md). 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
@@ -257,7 +261,7 @@ For more information, see [Azure SQL Database cost management](cost-management.m
 
 ## Encrypted backups
 
-If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see  [Transparent Data Encryption with SQL Database & SQL Managed Instance](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
+If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see  [Transparent Data Encryption with SQL Database](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
 
 ## Backup integrity
 

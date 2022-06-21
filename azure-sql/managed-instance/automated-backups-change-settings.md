@@ -14,11 +14,15 @@ ms.topic: conceptual
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 04/26/2022
+ms.date: 06/25/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Change automated backup settings for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+
+<!---
+Some of the content in this article is duplicated in /azure-sql/database/automated-backups-change-settings.md. Any relevant changes made to this article should be made in the other article as well. 
+--->
 
 This article provides examples to modify short-term retention (STR) [automated backup settings](automated-backups-overview.md) for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option used for backups. 
 

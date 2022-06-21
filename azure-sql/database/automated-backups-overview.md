@@ -112,21 +112,61 @@ This table summarizes the capabilities and features of [point in time restore (P
 To perform a restore, see [Restore database from backups](recovery-using-backups.md). You can try backup configuration and restore operations using the following examples:
 
 
-
+?tabs=
 
 
 Azure portal
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal)
+[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal)   
 [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal)
 
 
 Azure CLI
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli)
+[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli)   
 [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli)
 
 Azure PowerShell
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell)
+[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell)   
 [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell)
+
+
+before the #
+
+Azure portal
+[SQL Database](automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy)   
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy)
+
+
+Azure CLI
+[SQL Database](automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy)   
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy)
+
+Azure PowerShell
+[SQL Database](automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy)   
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy)
+
+
+?preserve-view=true&tabs=sqlpool&view=azuresqldb-mi-current#remarks-2
+
+Azure portal
+[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=azure-portal&view=azuresql-db#change-short-term-retention-policy)   
+?preserve-view=true&tabs=azure-portal&view=azuresql-db
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=azure-portal&view=azuresql-mi#change-short-term-retention-policy)
+?preserve-view=true&tabs=azure-portal&view=azuresql-mi
+
+
+Azure CLI
+[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=azure-cli&view=azuresql-db#change-short-term-retention-policy)   
+?preserve-view=true&tabs=azure-cli&view=azuresql-db
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=azure-cli&view=azuresql-mi#change-short-term-retention-policy)
+?preserve-view=true&tabs=azure-cli&view=azuresql-mi
+
+Azure PowerShell
+[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=powershell&view=azuresql-db#change-short-term-retention-policy)   
+?preserve-view=true&tabs=powershell&view=azuresql-db
+[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=powershell&view=azuresql-mi#change-short-term-retention-policy)
+?preserve-view=true&tabs=powershell&view=azuresql-mi
+
+
 
 ## Backup scheduling
 
@@ -165,7 +205,7 @@ Instructions on how to monitor consumption in Hyperscale can be found in [Hypers
 
 Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
-- Reduce the [backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) to the minimum possible for your needs.
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum possible for your needs.
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance), and/or reduce the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
@@ -184,7 +224,7 @@ Differential backups can be configured to either a 12-hour or a 24-hour frequenc
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
 
-Except for Basic tier databases, you can [change backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](long-term-retention-overview.md).
+Except for Basic tier databases, you can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](long-term-retention-overview.md).
 
 If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. You cannot change backup retention period for a deleted database.
 
@@ -279,7 +319,7 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 ## Compliance
 
-When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-the-short-term-retention-policy).
+When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 

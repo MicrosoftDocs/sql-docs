@@ -7,9 +7,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.technology: ado
 ms.topic: reference
-f1_keywords:
-  - "Recordset::ExecuteComplete"
-  - "ExecuteComplete"
+f1_keywords: ""
 helpviewer_keywords:
   - "FetchComplete event [ADO]"
 apitype: "COM"

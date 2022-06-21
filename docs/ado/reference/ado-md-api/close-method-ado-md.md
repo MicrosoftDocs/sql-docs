@@ -7,14 +7,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.technology: ado
 ms.topic: reference
-f1_keywords:
-  - "Close"
-  - "Cellset::Close"
 helpviewer_keywords:
   - "Close method [ADO MD]"
 apitype: "COM"
 ---
+
 # Close Method (ADO MD)
+
 Closes an open cellset.  
   
 ## Syntax  

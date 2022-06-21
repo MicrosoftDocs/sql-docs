@@ -1,7 +1,7 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
-ms.date: 05/24/2022
+ms.date: 06/21/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -59,6 +59,8 @@ PolyBase provides these same functionalities for the following SQL products from
 
 For more new features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], see [What's new in SQL Server 2022?](../../sql-server/what-s-new-in-sql-server-2022.md)
 
+For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] to virtualize a CSV file in Azure Storage, see [Virtualize CSV file with PolyBase](virtualize-csv.md).
+
 ### PolyBase connectors
 
  The PolyBase feature provides connectivity to the following external data sources:
@@ -78,7 +80,6 @@ For more new features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], s
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-Compliant Storage connector.
 
-
  
  Examples of external connectors include:
 
@@ -88,6 +89,7 @@ For more new features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], s
 - [MongoDB](polybase-configure-mongodb.md)
 - [Hadoop](polybase-configure-hadoop.md)*
 - [S3-compatible object storage](polybase-configure-s3-compatible.md)
+- [CSV in Azure Blob Storage](virtualize-csv.md)
 
 \* PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH), through SQL Server 2019. [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 

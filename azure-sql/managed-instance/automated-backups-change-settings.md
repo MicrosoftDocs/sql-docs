@@ -10,6 +10,7 @@ ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: MilanMSFT
 ms.author: mlazic
@@ -27,8 +28,8 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 This article provides examples to modify short-term retention (STR) [automated backup settings](automated-backups-overview.md) for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option used for backups. 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](automated-backups-change-settings.md)
-> * [Azure SQL Managed Instance](../managed-instance/automated-backups-change-settings.md)
+> * [Azure SQL Database](../database/automated-backups-change-settings.md)
+> * [Azure SQL Managed Instance](automated-backups-change-settings.md)
 
 
 ## Change short-term retention policy

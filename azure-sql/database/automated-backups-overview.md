@@ -10,6 +10,7 @@ ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
+  -  "azure-sql-split"
 ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
@@ -32,16 +33,15 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 This article describes the automated backup feature for Azure SQL Database. 
 
 For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md).   
-To change backup settings, see [Change settings](automated-backups-change-settings.md).   
-To restore a backup, see [recover using backup](recovery-using-backups.md). 
+To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [recover using backup](recovery-using-backups.md). 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
 ## What is a database backup?
 
-Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](long-term-retention-overview.md) for both single and pooled databases.
+Non-Hyperscale databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](long-term-retention-overview.md) for both single and pooled databases.
 
-Non-Hyperscale databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases have a unique architecture and leverage a different technology for backup and restore. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md).
+ Hyperscale databases have a unique architecture and leverage a different technology for backup and restore. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md).
 
 
 ## Backup frequency
@@ -155,7 +155,7 @@ For vCore databases in Azure SQL Database, the storage consumed by each type of 
 
 ![Monitor database backup consumption in the Azure portal](./media/automated-backups-overview/backup-metrics.png)
 
-Instructions on how to monitor consumption in Hyperscale can be found in [Hyperscale monitor backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-consumption)
+Instructions on how to monitor consumption in Hyperscale can be found in [monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-consumption).
 
 ### Fine-tune backup storage consumption
 

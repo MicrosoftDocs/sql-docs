@@ -7,6 +7,7 @@ services:
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
+ms.custom:  "azure-sql-split"
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
@@ -40,7 +41,7 @@ If you configured [backup long-term retention](long-term-retention-overview.md),
 > [!IMPORTANT]
 > You can't overwrite an existing database during restore.
 
-When you're using the Standard or Premium service tier, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and performance level. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
+When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and performance level. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
 
 
 

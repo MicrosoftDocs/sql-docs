@@ -10,6 +10,7 @@ ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
@@ -112,5 +113,4 @@ If you prefer, you can copy the database to a different region as well. Learn ab
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
 - Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).
+

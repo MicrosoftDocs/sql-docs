@@ -10,6 +10,7 @@ ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: MilanMSFT
 ms.author: mlazic
@@ -25,23 +26,22 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 --->
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](automated-backups-overview.md)
-> * [Azure SQL Managed Instance](../database/automated-backups-overview.md)
+> * [Azure SQL Database](../database/automated-backups-overview.md)
+> * [Azure SQL Managed Instance](automated-backups-overview.md)
 
 This article describes the automated backup feature for Azure SQL Managed Instance. 
 
 For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md).   
-To change backup settings, see [Change settings](automated-backups-change-settings.md).   
-To restore a backup, see [recover using backup](recovery-using-backups.md). 
+To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [recover using backup](recovery-using-backups.md). 
 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
 ## What is a database backup?
 
-Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](../database/long-term-retention-overview.md) for both single and pooled databases.
+Databases in Azure SQL Managed Instance use SQL Server engine technology to back up and restore data. Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](../database/long-term-retention-overview.md) for both single and pooled databases.
 
-Databases in Azure SQL Managed Instance use SQL Server engine technology to back up and restore data.
+
 
 
 ### Backup frequency
@@ -128,7 +128,7 @@ To perform a restore, see [Restore database from backups](recovery-using-backups
 
 ## Backup scheduling
 
-The first full backup is scheduled immediately after a new database is created or restored. This backup usually completes within 30 minutes, but it can take longer when the database is large. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed  automatically. The exact timing of all database backups is determined by the SQL Database or SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them. 
+The first full backup is scheduled immediately after a new database is created or restored. This backup usually completes within 30 minutes, but it can take longer when the database is large. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed  automatically. The exact timing of all database backups is determined by the SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them. 
 
 > [!IMPORTANT]
 > For a new, restored, or copied database, point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
@@ -191,7 +191,7 @@ If you delete a database, the system keeps backups in the same way it would for 
 
 With SQL Managed Instance, you can configure full backup long-term retention (LTR) for up to 10 years in Azure Blob storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups.  The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term backup retention](../database/long-term-retention-overview.md). 
 
-LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed subsequently, even if the STR backup storage redundancy is changed in the future.  
+LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed, even if the STR backup storage redundancy changes in the future. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-managed-instance) to estimate the cost of LTR storage.
 
@@ -249,6 +249,11 @@ The **Storage** and **compute** subcategories might interest you as well, but th
 
 If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see  [Transparent Data Encryption with SQL Managed Instance](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
 
+## Backup integrity
+
+All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
+
+
 
 ## Use Azure Policy to enforce backup storage redundancy
 
@@ -277,5 +282,5 @@ Learn how to assign policies using the [Azure portal](/azure/governance/policy/a
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).
+- To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on SQL Managed Instance explained](https://aka.ms/mi-backup-explained).
+- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning).

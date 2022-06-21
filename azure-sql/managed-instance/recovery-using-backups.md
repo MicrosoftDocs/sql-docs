@@ -7,6 +7,7 @@ services:
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
+ms.custom: "azure-sql-split"
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
@@ -40,8 +41,6 @@ If you configured [backup long-term retention](../database/long-term-retention-o
 
 > [!IMPORTANT]
 > You can't overwrite an existing database during restore.
-
-When you're using the General Purpose or Business Critical service tier, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and performance level. For pricing details of extra storage, see the [SQL Managed Instance pricing page](https://azure.microsoft.com/pricing/details/sql-managed-instance/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
 
 ## Recovery time
 

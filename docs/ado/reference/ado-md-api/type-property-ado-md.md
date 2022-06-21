@@ -7,9 +7,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.technology: ado
 ms.topic: reference
-f1_keywords:
-  - "Member::Type"
-  - "Type"
+f1_keywords: 
 helpviewer_keywords:
   - "Type property [ADO MD]"
 apitype: "COM"

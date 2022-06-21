@@ -7,9 +7,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.technology: ado
 ms.topic: reference
-f1_keywords:
-  - "Open"
-  - "Cellset::Open"
+f1_keywords: 
 helpviewer_keywords:
   - "Open method [ADO MD]"
 apitype: "COM"

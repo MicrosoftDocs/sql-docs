@@ -42,7 +42,7 @@ To download SSMS 19 Preview 2, visit [Download SSMS 19](download-sql-server-mana
 SSMS 18.12.1 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.12.1 upgrades it to 18.12.1.
 
 - Release number: 18.12.1
-- Build number: 15.0.18423.0
+- Build number: 15.0.18424.0
 - Release date: June 21, 2022
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback). 

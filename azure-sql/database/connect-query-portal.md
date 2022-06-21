@@ -11,7 +11,7 @@ ms.topic: quickstart
 author: mbarickman
 ms.author: mbarickman
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/10/2022
+ms.date: 06/21/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database
@@ -48,7 +48,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 
 1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
-   ![Screenshot that shows selecting query editor.](./media/connect-query-portal/find-query-editor.PNG)
+   ![Screenshot that shows selecting query editor.](./media/connect-query-portal/find-query-editor.png)
 
 1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL authentication or Azure AD.
 

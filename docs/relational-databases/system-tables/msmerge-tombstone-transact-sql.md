@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_tombstone (Transact-SQL)"
-title: "MSmerge_tombstone (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_tombstone (Transact-SQL)"
+description: MSmerge_tombstone (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_tombstone_TSQL"
   - "MSmerge_tombstone"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_tombstone system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_tombstone (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

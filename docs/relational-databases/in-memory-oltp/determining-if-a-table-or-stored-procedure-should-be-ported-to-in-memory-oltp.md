@@ -1,19 +1,18 @@
 ---
 title: "Should table or stored procedure be ported to in-memory OLTP"
 description: Use the Transaction Performance Analysis report in SQL Server Management Studio to evaluate whether In-Memory OLTP can improve database application performance.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "Analyze, Migrate, Report"
   - "AMR"
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP

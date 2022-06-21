@@ -1,13 +1,15 @@
 ---
 title: "Set selection predicates in location path (SQLXML)"
 description: Learn how specifying selection predicates in the location path expression of an XPath (SQLXML 4.0) query filters the node set that is being queried.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "XPath queries [SQLXML], predicates"
   - "predicates [SQLXML]"
   - "position-based filtering [SQLXML]"
@@ -15,9 +17,6 @@ helpviewer_keywords:
   - "filtering [SQLXML]"
   - "location path for XPath query"
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

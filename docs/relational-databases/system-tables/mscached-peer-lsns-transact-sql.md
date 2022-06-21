@@ -1,23 +1,21 @@
 ---
-description: "MScached_peer_lsns (Transact-SQL)"
-title: "MScached_peer_lsns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MScached_peer_lsns (Transact-SQL)"
+description: MScached_peer_lsns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MScached_peer_lsns_TSQL"
   - "MScached_peer_lsns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MScached_peer_lsns system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: LitKnd
-ms.author: kendralittle
 ---
 # MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

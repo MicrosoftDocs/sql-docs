@@ -1,27 +1,25 @@
 ---
-description: "ALTER PARTITION SCHEME (Transact-SQL)"
 title: "ALTER PARTITION SCHEME (Transact-SQL)"
-ms.custom: ""
+description: ALTER PARTITION SCHEME (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "4/5/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER PARTITION SCHEME"
   - "ALTER_PARTITION_SCHEME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER PARTITION SCHEME statement"
   - "partition schemes [SQL Server], modifying"
   - "modifying partition schemes"
   - "adding filegroups"
   - "NEXT USED filegroups"
+dev_langs:
+  - "TSQL"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 

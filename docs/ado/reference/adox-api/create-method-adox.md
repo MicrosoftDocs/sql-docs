@@ -1,22 +1,18 @@
 ---
+title: "Create Method (ADOX)"
 description: "Create Method (ADOX)"
-title: "Create Method (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Catalog::raw_Create"
-  - "_Catalog::Create"
-helpviewer_keywords: 
-  - "Create method [ADOX]"
-ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Catalog::raw_Create"
+  - "_Catalog::Create"
+helpviewer_keywords:
+  - "Create method [ADOX]"
+apitype: "COM"
 ---
 # Create Method (ADOX)
 Creates a new catalog.  

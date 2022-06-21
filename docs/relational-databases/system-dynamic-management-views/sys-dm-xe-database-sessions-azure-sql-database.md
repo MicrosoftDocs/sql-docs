@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_xe_database_sessions"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.custom: ""
-ms.date: "4/18/2022"
-ms.service: sql-database
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
+description: sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+ms.date: "4/18/2022"
+ms.service: sql-database
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database and Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

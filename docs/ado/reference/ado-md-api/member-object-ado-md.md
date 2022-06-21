@@ -1,21 +1,17 @@
 ---
+title: "Member Object (ADO MD)"
 description: "Member Object (ADO MD)"
-title: "Member Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Member"
-helpviewer_keywords: 
-  - "Member object [ADO MD], members"
-ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Member"
+helpviewer_keywords:
+  - "Member object [ADO MD], members"
+apitype: "COM"
 ---
 # Member Object (ADO MD)
 Represents a member of a level in a cube, the children of a member of a level, or a member of a position along an axis of a cellset.  

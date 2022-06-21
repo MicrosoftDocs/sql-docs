@@ -1,19 +1,15 @@
 ---
+title: "Reshaping"
 description: "Reshaping"
-title: "Reshaping | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "reshaping previously shaped Recordset [ADO]"
-  - "data shaping [ADO], reshaping"
-ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "reshaping previously shaped Recordset [ADO]"
+  - "data shaping [ADO], reshaping"
 ---
 # Reshaping
 A **Recordset** created by a clause of a shape command may be assigned an *alias* name (typically with the AS keyword). The alias of a shaped **Recordset** can be referenced in a completely different command. That is, you can reuse, or *reshape*, a previously shaped **Recordset** in a new shape command. To support this feature, ADO provides a property, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

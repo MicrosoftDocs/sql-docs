@@ -1,21 +1,17 @@
 ---
+title: "ActionEnum"
 description: "ActionEnum"
-title: "ActionEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ActionEnum"
-helpviewer_keywords: 
-  - "ActionEnum enumeration [ADOX]"
-ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ActionEnum"
+helpviewer_keywords:
+  - "ActionEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # ActionEnum
 Specifies the type of action to be performed when [SetPermissions](./setpermissions-method-adox.md) is called.  

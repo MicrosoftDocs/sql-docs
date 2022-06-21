@@ -1,19 +1,18 @@
 ---
 title: "Convert a SQL Trace script to Extended Events session"
 description: Use these procedures to create an Extended Events session equivalent to an existing SQL Trace script that you want to convert.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "SQL Trace, convert script to extended events"
   - "extended events [SQL Server], convert SQL Trace script"
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: LitKnd
-ms.author: kendralittle
-ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session

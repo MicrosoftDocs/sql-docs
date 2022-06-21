@@ -1,20 +1,18 @@
 ---
-title: "Altering an Assembly | Microsoft Docs"
+title: "Altering an Assembly"
 description: Use ALTER ASSEMBLY to update assemblies registered in SQL Server. You can also change the permission set and add source code or other files for an assembly.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "assemblies [CLR integration], modifying"
   - "permissions [CLR integration]"
   - "altering assemblies"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-author: rothja
-ms.author: jroth
 ---
 # Altering an Assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

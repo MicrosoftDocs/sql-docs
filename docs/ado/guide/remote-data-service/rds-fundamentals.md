@@ -1,19 +1,15 @@
 ---
+title: "RDS Fundamentals"
 description: "RDS Fundamentals"
-title: "RDS Fundamentals | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS [ADO]"
-  - "remote data service [ADO]"
-ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS [ADO]"
+  - "remote data service [ADO]"
 ---
 # RDS Fundamentals
 > [!IMPORTANT]

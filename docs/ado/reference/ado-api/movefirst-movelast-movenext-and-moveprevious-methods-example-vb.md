@@ -1,23 +1,19 @@
 ---
+title: "Move Record Pointer of Recordset Example (VB)"
 description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VB)"
-title: "Move Record Pointer of Recordset Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MovePrevious method [ADO], Visual Basic example"
   - "MoveLast method [ADO], Visual Basic example"
   - "MoveFirst method [ADO], Visual Basic example"
   - "MoveNext method [ADO], Visual Basic example"
-ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VB)
 This example uses the [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), and [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) methods to move the record pointer of a [Recordset](./recordset-object-ado.md) based on the supplied command. The MoveAny procedure is required for this procedure to run.  

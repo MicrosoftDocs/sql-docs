@@ -1,27 +1,25 @@
 ---
-description: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
-title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
+description: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
+author: ronortloff
+ms.author: rortloff
 ms.date: "10/20/2021"
-ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL TABLE AS SELECT"
   - "CREATE_EXTERNAL_TABLE_AS_SELECT"
   - "CREATE EXTERNAL TABLE AS SELECT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "External, table"
   - "PolyBase, external table"
   - "External, table create as select"
   - "PolyBase, create table as select"
+dev_langs:
+  - "TSQL"
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

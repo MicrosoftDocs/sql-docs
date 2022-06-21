@@ -1,20 +1,20 @@
 ---
+title: "RAISERROR (Transact-SQL)"
 description: "RAISERROR (Transact-SQL)"
-title: "RAISERROR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "02/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "RAISERROR"
   - "RAISERROR_TSQL"
   - "RAISEERROR_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmessages system table"
   - "errors [SQL Server], RAISERROR statement"
   - "user-defined error messages [SQL Server]"
@@ -26,10 +26,9 @@ helpviewer_keywords:
   - "RAISERROR statement"
   - "CATCH block"
   - "messages [SQL Server], RAISERROR statement"
-ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # RAISERROR (Transact-SQL)

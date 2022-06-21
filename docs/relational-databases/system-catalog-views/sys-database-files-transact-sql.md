@@ -1,25 +1,23 @@
 ---
-description: "sys.database_files (Transact-SQL)"
-title: "sys.database_files (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_files (Transact-SQL)"
+description: sys.database_files (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 04/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.database_files"
   - "sys.database_files_TSQL"
   - "database_files"
   - "database_files_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_files catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)

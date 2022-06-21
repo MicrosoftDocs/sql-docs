@@ -1,19 +1,18 @@
 ---
-description: "sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_xe_database_session_object_columns"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database and Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

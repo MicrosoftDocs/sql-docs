@@ -14,12 +14,12 @@ helpviewer_keywords:
   - "query plan [SQL Server]"
   - "query execution plans"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Execution Plans
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 To be able to execute queries, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] must analyze the statement to determine the most efficient way to access the required data. This analysis is handled by a component called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan, or execution plan.   
 

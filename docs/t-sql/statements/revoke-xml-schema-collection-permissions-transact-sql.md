@@ -1,22 +1,21 @@
 ---
 title: "REVOKE XML Schema Collection Permissions"
 description: Use Transact-SQL to REVOKE XML Schema Collection Permissions.
-ms.custom: "seo-lt-2019"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "REVOKE statement, XML schema collections"
   - "XML schema collections [SQL Server], permissions"
   - "schema collections [SQL Server], permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE XML Schema Collection Permissions (Transact-SQL)

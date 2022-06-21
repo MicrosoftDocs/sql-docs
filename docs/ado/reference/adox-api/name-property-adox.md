@@ -1,15 +1,13 @@
 ---
+title: "Name Property (ADOX)"
 description: "Name Property (ADOX)"
-title: "Name Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Table::PutName"
   - "_Table::GetName"
   - "_Key::Name"
@@ -37,11 +35,9 @@ f1_keywords:
   - "_User25::put_Name"
   - "_Index::GetName"
   - "_User25::GetName"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Name property [ADOX]"
-ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Name Property (ADOX)
 Indicates the name of the object.  

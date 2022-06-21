@@ -1,20 +1,18 @@
 ---
-title: "Creating a User-Defined Type | Microsoft Docs"
+title: "Creating a User-Defined Type"
 description: To create a UDT to install in SQL Server, first create a class in a .NET Framework programming language, which conforms to the specifications for creating UDTs.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user-defined types [CLR integration], creating"
   - "UDTs [CLR integration], creating"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-author: rothja
-ms.author: jroth
 ---
 # Creating User-Defined Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

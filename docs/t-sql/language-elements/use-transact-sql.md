@@ -1,27 +1,26 @@
 ---
+title: "USE (Transact-SQL)"
 description: "USE (Transact-SQL)"
-title: "USE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "11/28/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "USE_TSQL"
   - "USE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "USE statement"
   - "database context [SQL Server]"
   - "context changes [SQL Server]"
   - "modifying database context"
-ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # USE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]

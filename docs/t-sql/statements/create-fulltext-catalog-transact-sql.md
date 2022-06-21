@@ -1,23 +1,21 @@
 ---
 title: "CREATE FULLTEXT CATALOG (Transact-SQL)"
-description: "CREATE FULLTEXT CATALOG (Transact-SQL)"
+description: CREATE FULLTEXT CATALOG (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CATALOG_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text catalogs [SQL Server], creating"
   - "CREATE FULLTEXT CATALOG statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "05/24/2022"
 ---
 
 # CREATE FULLTEXT CATALOG (Transact-SQL)

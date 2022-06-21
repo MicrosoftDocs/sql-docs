@@ -1,16 +1,14 @@
 ---
-description: "Columnstore indexes - Design guidance"
-title: "Columnstore indexes - Design guidance | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore indexes - Design guidance"
+description: Columnstore indexes - Design guidance
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Design guidance

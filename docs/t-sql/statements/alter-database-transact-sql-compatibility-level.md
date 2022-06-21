@@ -1,19 +1,17 @@
 ---
-description: "ALTER DATABASE compatibility level (Transact-SQL)"
 title: "ALTER DATABASE compatibility level (Transact-SQL)"
-ms.custom: ""
+description: ALTER DATABASE compatibility level (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 01/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "COMPATIBILITY_LEVEL_TSQL"
   - "COMPATIBILITY_LEVEL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "80 compatibility level"
   - "ALTER DATABASE statement, compatibility levels"
   - "90 compatibility level"
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "100 compatibility level"
   - "db compatibility level"
   - "db compat level"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE (Transact-SQL) compatibility level

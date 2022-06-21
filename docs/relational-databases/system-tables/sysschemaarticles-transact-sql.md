@@ -1,23 +1,21 @@
 ---
-description: "sysschemaarticles (Transact-SQL)"
-title: "sysschemaarticles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysschemaarticles (Transact-SQL)"
+description: sysschemaarticles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysschemaarticles_TSQL"
   - "sysschemaarticles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysschemaarticles system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

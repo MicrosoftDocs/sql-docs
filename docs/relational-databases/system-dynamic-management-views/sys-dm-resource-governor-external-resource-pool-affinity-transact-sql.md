@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
-title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
+description: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/13/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "sys.dm_resource_governor_external_resource_pool_affinity_TSQL"
   - "dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity"
+dev_langs:
+  - "TSQL"
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -22,6 +22,7 @@ This article provides commands for installing the ODBC driver from the bash shel
 
 > [!Note]
 > The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. Apple M1 (ARM64) support was added starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
+> Additionally, the Homebrew default directory changed with the M1, to `/opt/homebrew`. The paths below use the x64 Homebrew paths, which default to `/usr/local`, so your file paths will vary accordingly.
 
 ## Microsoft ODBC 18
 

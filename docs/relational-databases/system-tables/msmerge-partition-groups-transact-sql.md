@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_partition_groups (Transact-SQL)"
-title: "MSmerge_partition_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_partition_groups (Transact-SQL)"
+description: MSmerge_partition_groups (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_partition_groups_TSQL"
   - "MSmerge_partition_groups"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_partition_groups system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

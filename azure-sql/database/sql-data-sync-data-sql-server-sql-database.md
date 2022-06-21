@@ -1,15 +1,18 @@
 ---
-title: What is SQL Data Sync for Azure? 
-description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases. 
-services: sql-database
+title: What is SQL Data Sync for Azure?
+description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: data sync, sqldbrb=1, fasttrack-edit
-ms.devlang: 
+ms.custom:
+  - "data sync"
+  - "sqldbrb=1"
+  - "fasttrack-edit"
 ms.topic: conceptual
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 2/2/2022
 ---
 # What is SQL Data Sync for Azure?

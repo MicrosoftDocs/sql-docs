@@ -1,21 +1,17 @@
 ---
+title: "Error Object"
 description: "Error Object"
-title: "Error Object | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Error"
-helpviewer_keywords: 
-  - "error object [ADO]"
-ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Error"
+helpviewer_keywords:
+  - "error object [ADO]"
+apitype: "COM"
 ---
 # Error Object
 Contains details about data access errors that pertain to a single operation involving the provider.  

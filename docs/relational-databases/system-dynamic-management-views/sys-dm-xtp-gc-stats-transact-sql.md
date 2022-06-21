@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_xtp_gc_stats (Transact-SQL)"
-title: "sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xtp_gc_stats (Transact-SQL)"
+description: sys.dm_xtp_gc_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xtp_gc_stats"
   - "dm_xtp_gc_stats_TSQL"
   - "sys.dm_xtp_gc_stats_TSQL"
   - "sys.dm_xtp_gc_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Provides information (the overall statistics) about the current behavior of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] garbage-collection process.  
   

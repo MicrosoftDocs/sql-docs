@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 06/22/2020
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes

@@ -1,13 +1,14 @@
 ---
 title: How to manage a Hyperscale database
 description: How to manage a Hyperscale database, including migrating to Hyperscale, restoring to a different region, and reverse migration.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
 ---
 
@@ -35,7 +36,7 @@ Once a database has been moved to Hyperscale, you can create a new Hyperscale ge
 
 ### How to migrate a database to the Hyperscale service tier
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen4) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
 
 Select the tab for your preferred tool to migrate your database:
 
@@ -59,7 +60,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 
@@ -166,7 +167,7 @@ In this case, the only backups available would be from steps 5 and 6 of the time
 
 ### How to reverse migrate a Hyperscale database to the General Purpose service tier
 
-To reverse migrate an existing Hyperscale database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#gen5-compute-generation-part-1) if you aren't sure which service objective is right for your database.
+To reverse migrate an existing Hyperscale database in Azure SQL Database to the General Purpose service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#gen5-hardware-part-1) if you aren't sure which service objective is right for your database.
 
 If you wish to perform an additional service tier change after reverse migrating to General Purpose, identify your eventual target service objective as well and ensure that your database's allocated size is small enough to fit in that service objective.
 
@@ -189,7 +190,7 @@ The Azure portal enables you to reverse migrate to the General Purpose service t
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 

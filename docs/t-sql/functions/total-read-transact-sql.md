@@ -1,27 +1,26 @@
 ---
+title: "@@TOTAL_READ (Transact-SQL)"
 description: "&#x40;&#x40;TOTAL_READ (Transact-SQL)"
-title: "@@TOTAL_READ (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@TOTAL_READ_TSQL"
   - "@@TOTAL_READ"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "number of disk reads"
   - "disks [SQL Server], number of disk reads"
   - "@@TOTAL_READ function"
   - "total read [SQL Server]"
   - "read activity since last started"
-ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

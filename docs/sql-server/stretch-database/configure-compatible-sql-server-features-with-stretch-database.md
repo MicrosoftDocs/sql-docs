@@ -6,8 +6,8 @@ ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Configure compatible SQL Server features with Stretch Database

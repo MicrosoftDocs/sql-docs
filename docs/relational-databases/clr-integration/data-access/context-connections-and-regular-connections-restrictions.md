@@ -1,18 +1,16 @@
 ---
-title: "Restrictions on Regular and Context Connections | Microsoft Docs"
+title: "Restrictions on Regular and Context Connections"
 description: This article describes the restrictions associated with code running in the Microsoft SQL Server process through context and regular connections.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-author: rothja
-ms.author: jroth
 ---
 # Context Connections and Regular Connections - Restrictions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

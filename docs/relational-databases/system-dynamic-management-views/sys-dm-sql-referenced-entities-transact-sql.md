@@ -1,30 +1,28 @@
 ---
-description: "sys.dm_sql_referenced_entities (Transact-SQL)"
-title: "sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_sql_referenced_entities (Transact-SQL)"
+description: sys.dm_sql_referenced_entities (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_sql_referenced_entities_TSQL"
   - "dm_sql_referenced_entities"
   - "sys.dm_sql_referenced_entities"
   - "sys.dm_sql_referenced_entities_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_sql_referenced_entities dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referenced_entities (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns one row for each user-defined entity that is referenced by name in the definition of the specified referencing entity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A dependency between two entities is created when one user-defined entity, called the *referenced entity*, appears by name in a persisted SQL expression of another user-defined entity, called the *referencing entity*. For example, if a stored procedure is the specified referencing entity, this function returns all user-defined entities that are referenced in the stored procedure such as tables, views, user-defined types (UDTs), or other stored procedures.  
   

@@ -1,24 +1,22 @@
 ---
-title: "sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_rda_migration_status (Transact-SQL)"
 description: Learn how sys.dm_db_rda_migration_status contains one row for each batch of migrated data from each Stretch-enabled table on the local instance of SQL Server.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_rda_migration_status"
   - "sys.dm_db_rda_migration_status_TSQL"
   - "dm_db_rda_migration_status"
   - "dm_db_rda_migration_status_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_rda_migration_status dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: pmasl 
-ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

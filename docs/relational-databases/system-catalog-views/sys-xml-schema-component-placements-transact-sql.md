@@ -1,25 +1,24 @@
 ---
-description: "sys.xml_schema_component_placements (Transact-SQL)"
-title: "sys.xml_schema_component_placements (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_component_placements (Transact-SQL)"
+description: sys.xml_schema_component_placements (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_component_placements"
   - "xml_schema_component_placements_TSQL"
   - "xml_schema_component_placements"
   - "sys.xml_schema_component_placements_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_component_placements catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

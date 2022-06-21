@@ -1,27 +1,26 @@
 ---
+title: "OPEN (Transact-SQL)"
 description: "OPEN (Transact-SQL)"
-title: "OPEN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "OPEN_TSQL"
   - "OPEN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "opening cursors"
   - "cursors [SQL Server], opening"
   - "populating cursors [SQL Server]"
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
-ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # OPEN (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

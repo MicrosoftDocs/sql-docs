@@ -1,17 +1,19 @@
 ---
 title: Create and manage Elastic Database Jobs (preview) with Transact-SQL (T-SQL)
 description: Run scripts across many databases with Elastic Database Job agent using Transact-SQL (T-SQL).
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-jobs
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 dev_langs:
   - "TSQL"
 ms.topic: how-to
 author: srinia
 ms.author: srinia
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/03/2022
 ---
 # Use Transact-SQL (T-SQL) to create and manage Elastic Database Jobs (preview)

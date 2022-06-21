@@ -1,23 +1,19 @@
 ---
+title: "Members Collection (ADO MD)"
 description: "Members Collection (ADO MD)"
-title: "Members Collection (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Level::Members"
   - "Members"
   - "Position::Members"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Members collection [ADO MD]"
-ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Members Collection (ADO MD)
 Contains the [Member](./member-object-ado-md.md) objects from a level or a position along an axis.  

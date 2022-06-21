@@ -102,7 +102,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  To clear the statement cache, type **:RESET**. Typing **^C** causes **sqlcmd** to exit. **^C** can also be used to stop the execution of the statement cache after a **GO** command has been issued.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are entered in an interactive session can edited by entering the **:ED** command and the **sqlcmd** prompt. The editor will open and, after editing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and closing the editor, the revised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement will appear in the command window. Enter **GO** to run therevised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are entered in an interactive session can edited by entering the **:ED** command and the **sqlcmd** prompt. The editor will open and, after editing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and closing the editor, the revised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement will appear in the command window. Enter **GO** to run the revised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ## Quoted strings  
  Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables will not be expanded when they appear within a string.  

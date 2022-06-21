@@ -1,23 +1,22 @@
 ---
+title: "KEY_NAME (Transact-SQL)"
 description: "KEY_NAME (Transact-SQL)"
-title: "KEY_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "KEY_NAME_TSQL"
   - "KEY_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "KEY_NAME function"
-ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # KEY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

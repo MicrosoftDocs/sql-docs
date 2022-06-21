@@ -1,25 +1,23 @@
 ---
-description: "dbo.systargetservers (Transact-SQL)"
-title: "dbo.systargetservers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.systargetservers (Transact-SQL)"
+description: dbo.systargetservers (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.systargetservers_TSQL"
   - "dbo.systargetservers"
   - "systargetservers_TSQL"
   - "systargetservers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "systargetservers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.systargetservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

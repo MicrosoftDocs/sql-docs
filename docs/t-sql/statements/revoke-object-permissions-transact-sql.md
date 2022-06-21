@@ -1,23 +1,21 @@
 ---
-description: "REVOKE Object Permissions (Transact-SQL)"
-title: "REVOKE Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Object Permissions (Transact-SQL)"
+description: REVOKE Object Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table permissions [SQL Server], revoking"
   - "REVOKE statement, objects"
   - "revoking permissions to access tables"
   - "object permissions [SQL Server], revoking"
+dev_langs:
+  - "TSQL"
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: VanMSFT
-ms.author: vanto
 ---
 # REVOKE Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

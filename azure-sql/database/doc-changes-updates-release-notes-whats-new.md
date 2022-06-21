@@ -35,7 +35,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
-| [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#hyperscale-backups-storage-redundancy) | Retain backups up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured duration. |
+| [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#backups-storage-redundancy) | Retain backups up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured duration. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 
 | [Ledger](ledger-overview.md) | The Azure SQL Database ledger feature allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |

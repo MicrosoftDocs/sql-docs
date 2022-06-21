@@ -4,18 +4,18 @@ titleSuffix: Azure SQL Managed Instance
 description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API. 
 services:
   - "sql-database"
-ms.service: sql-db-mi
+ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
 ms.topic: conceptual
-author: SudhirRaparla
-ms.author: nvraparl
+author: MilanMSFT
+ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 04/26/2022
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Change automated backup settings for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -27,7 +27,7 @@ This article provides examples to modify short-term retention (STR) [automated b
 > * [Azure SQL Managed Instance](../managed-instance/automated-backups-change-settings.md)
 
 
-## Change the short-term retention policy
+## Change short-term retention policy
 
 You can change the default PITR backup retention period and the differential backup frequency by using the Azure portal, PowerShell, or the REST API. The following examples illustrate how to change the PITR retention to 28 days and the differential backups to 24 hour interval.
 
@@ -162,7 +162,7 @@ In the Azure portal, during an instance creation, the default option for the bac
 
 Find the option to select backup storage redundancy on the **Compute + storage** pane.
 
-![Configure backup storage redundancy](./media/automated-backups-overview/select-backup-storage-redundancy-managed-instance.png)
+![Configure backup storage redundancy](../database/media/automated-backups-overview/select-backup-storage-redundancy-managed-instance.png)
 
 To change the Backup storage redundancy option for an existing instance, go to the **Compute + storage** pane, choose the new backup option and select **Apply**. For now, this change will be applied only for PITR backups, while LTR backups will retain the old storage redundancy type. The time it takes to perform the backup redundancy change depends on the size of the all the databases within a single managed instance. Changing the backup redundancy will take more time for instances that have large databases. It's possible to combine the backup storage redundancy change operation with the UpdateSLO operation. Use the **Notification** pane of the Azure portal to view the status of the change operation. 
 
@@ -189,10 +189,9 @@ It's not currently possible to change the backup storage redundancy option using
 
 ## Next steps
 
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
 - To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on Managed Instance explained](https://aka.ms/mi-backup-explained).
 - To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on Managed Instance](https://aka.ms/mi-backup-tuning).

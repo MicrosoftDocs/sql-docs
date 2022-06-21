@@ -25,7 +25,7 @@ The content in this article is also duplicated in /azure-sql/managed-instance/re
 > * [Azure SQL Database](recovery-using-backups.md)
 > * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md)
 
-This article provides steps to recover a database from a backup in Azure SQL Database. For Azure SQL Managed Instance, see [recovery using backup](../managed-instance/recovery-using-backup.md). 
+This article provides steps to recover a database from a backup in Azure SQL Database. For Azure SQL Managed Instance, see [recovery using backup](../managed-instance/recovery-using-backups.md). 
 
 
 Automatic backups protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery by using [automated database backups](automated-backups-overview.md). You can:

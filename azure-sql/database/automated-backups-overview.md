@@ -111,61 +111,13 @@ This table summarizes the capabilities and features of [point in time restore (P
 
 To perform a restore, see [Restore database from backups](recovery-using-backups.md). You can try backup configuration and restore operations using the following examples:
 
-
-?tabs=
-
-
-Azure portal
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-portal)
-
-
-Azure CLI
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=azure-cli)
-
-Azure PowerShell
-[SQL Database](automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md#change-short-term-retention-policy?tabs=powershell)
-
-
-before the #
-
-Azure portal
-[SQL Database](automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy)
-
-
-Azure CLI
-[SQL Database](automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy)
-
-Azure PowerShell
-[SQL Database](automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy)   
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy)
-
-
-?preserve-view=true&tabs=sqlpool&view=azuresqldb-mi-current#remarks-2
-
-Azure portal
-[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=azure-portal&view=azuresql-db#change-short-term-retention-policy)   
-?preserve-view=true&tabs=azure-portal&view=azuresql-db
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=azure-portal&view=azuresql-mi#change-short-term-retention-policy)
-?preserve-view=true&tabs=azure-portal&view=azuresql-mi
-
-
-Azure CLI
-[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=azure-cli&view=azuresql-db#change-short-term-retention-policy)   
-?preserve-view=true&tabs=azure-cli&view=azuresql-db
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=azure-cli&view=azuresql-mi#change-short-term-retention-policy)
-?preserve-view=true&tabs=azure-cli&view=azuresql-mi
-
-Azure PowerShell
-[SQL Database](automated-backups-change-settings.md?preserve-view=true&tabs=powershell&view=azuresql-db#change-short-term-retention-policy)   
-?preserve-view=true&tabs=powershell&view=azuresql-db
-[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?preserve-view=true&tabs=powershell&view=azuresql-mi#change-short-term-retention-policy)
-?preserve-view=true&tabs=powershell&view=azuresql-mi
-
+| Operation | Azure portal | Azure CLI | Azure PowerShell |
+|---|---|---|---|
+| **Change backup retention** | [SQL Database](automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-portal#change-short-term-retention-policy) | [SQL Database](automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy) <br/> [SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=azure-cli#change-short-term-retention-policy) | [SQL Database](automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy) <br/>[SQL Managed Instance](../managed-instance/automated-backups-change-settings.md?tabs=powershell#change-short-term-retention-policy)|
+| **Change long-term backup retention** | [SQL Database](long-term-backup-retention-configure.md#create-long-term-retention-policies)<br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md) | [SQL Database](long-term-backup-retention-configure.md)<br/>[SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md)  |
+| **Restore a database from a point in time** | [SQL Database](recovery-using-backups.md#point-in-time-restore)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md) | [SQL Database](/cli/azure/sql/db#az-sql-db-restore) <br/> [SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore) | [SQL Database](/powershell/module/az.sql/restore-azsqldatabase) <br/> [SQL Managed Instance](/powershell/module/az.sql/restore-azsqlinstancedatabase) |
+| **Restore a deleted database** | [SQL Database](recovery-using-backups.md)<br>[SQL Managed Instance](../managed-instance/point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](long-term-backup-retention-configure.md#restore-from-ltr-backups) <br/> [SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) <br/> [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
+| **Restore a database from Azure Blob storage** |  |  | <br/>[SQL Managed Instance](../managed-instance/restore-sample-database-quickstart.md) |
 
 
 ## Backup scheduling

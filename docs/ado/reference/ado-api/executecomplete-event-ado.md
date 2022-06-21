@@ -15,12 +15,12 @@ helpviewer_keywords:
 apitype: "COM"
 ---
 # ExecuteComplete Event (ADO)
+
 The **ExecuteComplete** event is called after a command has finished executing.  
   
 ## Syntax  
   
 ```  
-  
 ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnection  
 ```  
   

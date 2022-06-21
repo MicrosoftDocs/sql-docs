@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/09/2022
+ms.date: 06/21/2022
 adobe-target: true
 ---
 
@@ -24,9 +24,70 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.12](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 18.12.1
+
+- Release number: 18.12.1
+- Build number: 15.0.18424.0
+- Release date: June 21, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40a)
+
+#### What's new in 18.12.1
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.37. |
+
+#### Bug fixes in 18.12.1
+
+| New Item | Details |
+|----------|---------|
+| Always Encrypted | Fixed issue with Column Master Key creation generating an exception when using Azure Key Vault as they key store. |
+| Data Classification | Fixed issue with “Could not load file or assembly 'Microsoft.InformationProtection, Version=1.10.98.0” after upgrading to SSMS 18.10 or higher.  See [Latest SSMS 18.11.1 breaks the Data Classification. Get missing assembly error after updating](https://feedback.azure.com/d365community/idea/af89d5d7-45a4-ec11-a81c-0022484ee92d). |
+| SSMS General | Resolved error related to dacpac deployment using the Deploy Data-tier application option in Azure SQL DB with MFA. |
+
+#### Known issues (18.12.1)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure Portal for container deletion. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [18.12](#1812) | 15.0.18420.0 | June 9, 2022 |
+| [18.11.1](#18111) | 15.0.18410.0 | March 8, 2022 |
+| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
+| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
+| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
+| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.12
 
@@ -73,34 +134,6 @@ SSMS 18.12 is the latest general availability (GA) release of SSMS. If you need 
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure Portal for container deletion. |
-
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [18.11.1](#18111) | 15.0.18410.0 | March 8, 2022 |
-| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
-| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
-| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
-| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
-| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
-| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
-| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
-| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
-| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
-| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.11.1
 

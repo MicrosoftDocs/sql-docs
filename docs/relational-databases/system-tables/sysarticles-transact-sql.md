@@ -15,12 +15,13 @@ helpviewer_keywords:
   - "sysarticles system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 ---
+
 # sysarticles (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains a row for each article defined in the local database. This table is stored in the published database.  
+Contains a row for each article defined in the local database. This table is stored in the published database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

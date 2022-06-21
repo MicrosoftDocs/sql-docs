@@ -80,7 +80,7 @@ sections:
           
             With Hyperscale, you can use three kinds of secondary replicas to cater for read scale-out, high availability, and geo-replication requirements. This includes:
             - Up to four [high-availability replicas](service-tier-hyperscale-replicas.md#high-availability-replica) having the same compute size as primary. These serve as hot-standbys to quickly fail over from the primary. You can also use them to offload read workloads from the primary.
-            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
+            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
             - A [geo-replica](service-tier-hyperscale-replicas.md#geo-replica) in a different Azure region to protect against regional outages and to enable geographic read scale-out.
           
   - name: Deep dive questions

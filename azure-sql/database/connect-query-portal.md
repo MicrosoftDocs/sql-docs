@@ -54,7 +54,7 @@ Query editor (preview) is a tool to run SQL queries against Azure SQL Database i
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
-     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing signin with SQL authentication.":::
+     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing sign-in with SQL authentication.":::
 
    - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 

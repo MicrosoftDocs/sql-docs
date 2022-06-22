@@ -191,7 +191,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
 | Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 
 
 ## Hyperscale - provisioned compute - Gen5
 

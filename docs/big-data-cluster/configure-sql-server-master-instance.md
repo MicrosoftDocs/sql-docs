@@ -12,7 +12,7 @@ ms.topic: overview
 ms.custom: intro-overview
 ---
 
-# Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# Configure the master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -20,11 +20,11 @@ ms.custom: intro-overview
 
 This article covers the configuration of the master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-Server configuration settings cannot be configured for SQL Server master instance at deployment time. Starting in CU9, Big Data Clusters includes a configuration management feature that enables administrators to alter or tune various parts of the Big Data Cluster post-deployment and get deeper insights into the configurations running in their big data cluster. 
+Server configuration settings can't be configured for SQL Server master instance at deployment time. Beginning in *Cumulative Update 9*, *Big Data Clusters* includes a configuration management feature. This enables administrators to alter or tune various parts of the Big Data Cluster post-deployment. It also gives them deeper insights into configurations running in their big data cluster.
 
-This article describes a temporary workaround on how to configure settings, including: SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags, enable/disable customer feedback, or `domainmapping`.
+This article describes a temporary workaround of how to configure settings, including: SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags, enable/disable customer feedback, or `domainmapping`.
 
-To change any of these settings, follow these steps:
+To change settings, follow these steps:
 
 1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204:
 
@@ -49,7 +49,7 @@ To change any of these settings, follow these steps:
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
    ```
 
-1. Restart SQL Server instance.  Replace `<namespaceName>` with the big data cluster name.
+1. Restart the SQL Server instance.  Replace `<namespaceName>` with the big data cluster name.
 
    ```bash
    kubectl exec -it master-0  -c mssql-server -n <namespaceName> -- /bin/bash
@@ -58,12 +58,12 @@ To change any of these settings, follow these steps:
    ```
 
 > [!IMPORTANT]
-> If SQL Server master instance is in an availability groups configuration, copy the `mssql-custom.conf` file in all the `master` pods. Note that each restart will cause a failover, so you must make sure you are timing this activity during downtime periods.
+> If SQL Server master instance is in an availability groups configuration, copy the `mssql-custom.conf` file in all the `master` pods. Note that each restart will cause a failover, so you must make sure you're scheduling this activity during downtime.
 
 ## Known limitations
 
 - The steps above require Kubernetes cluster admin permissions
-- You cannot change the server collation for SQL Server master instance of the big data cluster post deployment.
+- You can't change the server collation for the SQL Server master instance of the big data cluster post deployment.
 
 ## Next steps
 

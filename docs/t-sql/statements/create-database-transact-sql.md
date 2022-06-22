@@ -967,7 +967,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
       | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_6' | 'HS_GEN5_8' | 'HS_GEN5_10' | 'HS_GEN5_12' | 'HS_GEN5_14'  | 'HS_GEN5_16' | 'HS_GEN5_18' | 'HS_GEN5_20'  | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_40'  | 'HS_GEN5_48' | 'HS_GEN5_80'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_6' | 'HS_GEN5_8' | 'HS_GEN5_10' | 'HS_GEN5_12' | 'HS_GEN5_14'  | 'HS_GEN5_16' | 'HS_GEN5_18' | 'HS_GEN5_20'  | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_40'  |  'HS_GEN5_80'
       | 'HS_S_GEN5_2' | 'HS_S_GEN5_4' | 'HS_S_GEN5_6' | 'HS_S_GEN5_8' | 'HS_S_GEN5_10' | 'HS_S_GEN5_12' | 'HS_S_GEN5_14'  | 'HS_S_GEN5_16' | 'HS_S_GEN5_18' | 'HS_S_GEN5_20'  | 'HS_S_GEN5_24' | 'HS_S_GEN5_32' | 'HS_S_GEN5_40'  
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
 }
@@ -997,7 +997,7 @@ CREATE DATABASE database_name
       | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
       | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_6' | 'HS_GEN5_8' | 'HS_GEN5_10' | 'HS_GEN5_12' | 'HS_GEN5_14'  | 'HS_GEN5_16' | 'HS_GEN5_18' | 'HS_GEN5_20'  | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_40'  | 'HS_GEN5_48' | 'HS_GEN5_80'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_6' | 'HS_GEN5_8' | 'HS_GEN5_10' | 'HS_GEN5_12' | 'HS_GEN5_14'  | 'HS_GEN5_16' | 'HS_GEN5_18' | 'HS_GEN5_20'  | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_40'  | 'HS_GEN5_80'
       | 'HS_S_GEN5_2' | 'HS_S_GEN5_4' | 'HS_S_GEN5_6' | 'HS_S_GEN5_8' | 'HS_S_GEN5_10' | 'HS_S_GEN5_12' | 'HS_S_GEN5_14'  | 'HS_S_GEN5_16' | 'HS_S_GEN5_18' | 'HS_S_GEN5_20'  | 'HS_S_GEN5_24' | 'HS_S_GEN5_32' | 'HS_S_GEN5_40'  
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]

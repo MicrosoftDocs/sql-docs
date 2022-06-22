@@ -24,7 +24,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  Indexing failures can occur when:  
   
--   The indexer cannot find or load a filter or word breaker component. This failure can occur if the table row contains a document format or content in a language that has not been registered with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This failure can also happen if the registered word breaker or filter component was not signed or failed signature verification when it was being loaded. Azure SQL and Managed Instance do not support third-party word breakers.  
+-   The indexer cannot find or load a filter or word breaker component. This failure can occur if the table row contains a document format or content in a language that has not been registered with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This failure can also happen if the registered word breaker or filter component was not signed or failed signature verification when it was being loaded. Azure SQL and Azure SQL Managed Instance do not support third-party word breakers.  
+
   
 -   A component, such as a word breaker or filter, fails, and returns an error to the indexer. This failure can happen if the document being indexed is corrupt and the filter is unable to extract text from the document. This failure can also occur when a component is unable to handle the content of a single row above a certain size, due to memory limits on the full-text filter daemon host (fdhost.exe).  
   

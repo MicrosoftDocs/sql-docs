@@ -93,8 +93,8 @@ If you encounter any installation errors during setup, check the summary log in 
     
 7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
 
-  - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-  - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
+   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
+   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
 
     The following sample scripts can be adapted for the installation:
     
@@ -105,10 +105,10 @@ If you encounter any installation errors during setup, check the summary log in 
 
 8. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
 
-- Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
-- User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
+   - Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
+   - User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
 
-  The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+   The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
   ```cmd
   .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"

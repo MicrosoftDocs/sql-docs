@@ -22,7 +22,7 @@ ms.author: maghan
 ---
 # System Information Schema Views (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 An information schema view is one of several methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides for obtaining metadata. Information schema views provide an internal, system table-independent view of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata. Information schema views enable applications to work correctly although significant changes have been made to the underlying system tables. The information schema views included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comply with the ISO standard definition for the INFORMATION_SCHEMA.
 

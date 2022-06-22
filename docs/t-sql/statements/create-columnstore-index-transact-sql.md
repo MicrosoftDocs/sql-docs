@@ -384,7 +384,7 @@ Each column in a columnstore index must be of one of the following common busine
   
 If the underlying table has a column of a data type that isn't supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.  
 
-Large object (LOB) data greater than 8 kilobytes is stored in off-row, LOB storage, with just a pointer to the physical location stored within the column segment. The size of the data stored isn't reported in [sys.column_store_segments](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md), [sys.column_store_dictionaries](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md), or [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-catalog-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+Large object (LOB) data greater than 8 kilobytes is stored in off-row, LOB storage, with just a pointer to the physical location stored within the column segment. The size of the data stored isn't reported in [sys.column_store_segments](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md) or [sys.column_store_dictionaries](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md).
   
 Columns that use any of the following data types can't be included in a columnstore index:
 

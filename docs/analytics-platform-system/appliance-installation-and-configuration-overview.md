@@ -15,7 +15,7 @@ ms.custom:
 
 # Appliance installation and configuration for Analytics Platform System
 
-Walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance.
+This article walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance.
 
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:

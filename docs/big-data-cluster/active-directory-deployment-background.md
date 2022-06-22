@@ -16,7 +16,7 @@ ms.custom: intro-deployment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains the updates to SQL Server 2019 CU5 that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
+This article explains updates to SQL Server 2019 *Cumulative Update 5 (CU5)* that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
@@ -29,17 +29,17 @@ Prior to SQL 2019 CU5 there were two issues preventing deployment of multiple bi
 
 ### Service principal names (SPN) and DNS domain naming conflict
 
-The domain name provided at deployment time is used as AD DNS domain. This means the pods can connect to each other in the internal network using this DNS domain. Additionally, users connect to the big data cluster endpoints using this DNS domain. As a result, any Service Principal Name (SPN) created for a service within the big data cluster is going to have the Kubernetes pod, service, or endpoint name qualified with this AD DNS domain. If a user deploys a second cluster in the domain, the SPNs being generated will have the same FQDN since the pod names as well as the DNS domain name do not differ between the two clusters. As an example, consider a case where the AD DNS domain is `contoso.local`. One of the SPNs generated for master pool SQL Server in pod `master-0` would be `MSSQLSvc/master-0.contoso.local:1433`. In the second cluster the user would attempt to deploy, the pod name for `master-0` is the same and the user will provide the same AD DNS domain (``contoso.local``) resulting in the same SPN string. Active Directory would forbid creation of a conflicting SPN leading to a deployment failure for the second cluster.
+The domain name provided at deployment time is used as your *Active Directory (AD)* DNS domain. This means that *pods* can connect to each other within the internal network using this DNS domain. Users also connect to big data cluster endpoints using this DNS domain. As a result, any *Service Principal Name (SPN)* created for a service within the big data cluster has the *Kubernetes* pod, service, or endpoint name qualified with this AD DNS domain. If a user deploys a second cluster in the domain, SPNs generated have the same FQDN, since pod names as well as DNS domain names don't differ between clusters. Consider a case where the AD DNS domain is `contoso.local`. One of the SPNs generated for the master pool SQL Server in pod `master-0` is `MSSQLSvc/master-0.contoso.local:1433`. In the second cluster the user attempts to deploy, the pod name for `master-0` is the same. The user provides the same AD DNS domain (``contoso.local``) resulting in the same SPN string. Active Directory forbids creation of a conflicting SPN leading to a deployment failure for the second cluster.
 
 ### Domain account principal names
 
-During a deployment of a big data cluster with an Active Directory domain, multiple account principals are generated for services running inside the big data cluster. These are essentially AD user accounts. Prior to SQL 2019 CU5 the names for these account would not be unique between clusters. This manifests in an attempt to create the same user account name for a particular service in the big data cluster in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account.
+During deployment of a big data cluster with an Active Directory domain, multiple account principals are generated for services running inside the big data cluster. These are essentially AD user accounts. Prior to SQL Server 2019 CU5 the names for these accounts weren't unique between clusters. This manifests in an attempt to create the same user account name for a particular service in the big data cluster in two different clusters. The second cluster being deployed experiences a conflict in AD and the account can't be created.
 
-## Resolution for collisions
+## How to resolve collisions
 
-### Solution to solve the problem with SPNs and DNS domain - SQL 2019 CU5
+### How to solve the SPNs and DNS domain problem - SQL 2019 CU5
 
-Since SPNs must differ in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
+ SPNs must be unique in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
 
 >[!NOTE]
 >The value passed through the subdomain setting is not a new AD domain, but a DNS domain that is used internally.

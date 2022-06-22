@@ -7,7 +7,6 @@ ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/14/2022
 ms.author: rortloff
-ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
 

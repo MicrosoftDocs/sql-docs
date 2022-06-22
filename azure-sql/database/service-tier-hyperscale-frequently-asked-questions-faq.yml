@@ -383,7 +383,7 @@ sections:
       - question: |
           How does the maximum memory limit in serverless compare to provisioned compute? 
         answer:  | 
-          The maximum amount of memory that a serverless database can scale-up is 3x the maximum number of vcores configured as compared to more than 5x in provisioned compute.  Review [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5) for details. 
+          Memory is allocated at 3 GB for every vCore. The maximum amount of memory that a serverless database can scale-up is 3x the maximum number of vCores configured as compared to more than 5x in provisioned compute.  Review [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5) for details. 
  
  
  
@@ -407,7 +407,7 @@ sections:
       - question: |
           Is the scaling up and down of compute replicas automatic or end-user triggered operation?
         answer: |
-          Scaling in provisioned compute is performed by the end-user.  Scaling in serverless compute is performed automatically by the service.
+          Scaling in provisioned compute is performed by the end-user.  Automatic scaling in serverless compute is performed by the service.
 
       - question: |
           Does the size of my `tempdb` database and RBPEX cache also grow as the compute is scaled up?
@@ -454,7 +454,7 @@ sections:
       - question: |
           Can I scale up/down HA secondary replicas independently of the primary replica?
         answer: |
-          Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
+          Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. Each HA secondary can still autoscale to the configured max cores to accommodate its post-failover role. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
 
       - question: |
           Do I get different `tempdb` sizing for my primary compute and my HA secondary replicas?

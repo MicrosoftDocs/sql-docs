@@ -52,7 +52,7 @@ The [DTU-based purchasing model](service-tiers-dtu.md) offers two service tiers:
 The [vCore-based purchasing model](service-tiers-vcore.md) provides two different compute tiers for Azure SQL Database - the provisioned compute tier, and the serverless compute tier. The [DTU-based purchasing model](service-tiers-dtu.md) provides just the provisioned compute tier. 
 
 - **Provisioned compute tier**: provides a specific amount of compute resource that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour. 
-- **[Serverless compute tier](serverless-tier-overview.md)**: auto-scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is only available in the General Purpose and Hyperscale service tiers (currently in preview). 
+- **[Serverless compute tier](serverless-tier-overview.md)**: auto-scales compute resources based on workload activity and bills for the amount of compute used, per second. The serverless compute tier is generally available in the General Purpose service tier, and is currently in preview in the Hyperscale service tier. 
 
 
 ## Deployment models

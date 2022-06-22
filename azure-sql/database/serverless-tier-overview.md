@@ -111,7 +111,7 @@ The SQL memory cache grows as data is fetched from disk in the same way and with
 
 ### Disk cache management
 
-In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica supports a Resilient Buffer Pool Extension (RBPEX) which increases the amount of data pages cached on disk to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5)
+In the Hyperscale service tier for both serverless and provisioned compute tiers, each compute replica uses a Resilient Buffer Pool Extension (RBPEX) cache, which stores data pages on local SSD to improve IO performance.  However, in the serverless compute tier for Hyperscale, the RBPEX cache for each compute replica automatically grows and shrinks in response to increasing and decreasing workload demand.  The maximum size the RBPEX cache can grow to is three times the maximum memory configured for the database.  For details on maximum memory and RBPEX auto-scaling limits in serverless, see [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5)
 
 ## Auto-pausing and auto-resuming
 
@@ -312,10 +312,11 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 ## Move a database between compute tiers
 
 It's possible to move your database from the provisioned compute tier to the serverless compute tier, and back again. 
-
+>[!NOTE]
+> It's also possible to upgrade your database in the General Purpose tier to the Hyperscale tier. Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
 When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using Powershell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
 
-The examples in this section show you how to move your provisioned database to serverless. 
+The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples provision 1 core. 
 
 
 #### Use PowerShell
@@ -514,7 +515,7 @@ Suppose the compute unit price is $0.000145/vCore/second.  Then the compute bill
 
 # [Hyperscale](#tab/hyperscale)
 
-Consider a serverless database in the Hyperscale tier configured with 1 min vCore and 8 max vCores.  Suppose that the primary replica has enabled one HA replica and that a named replica with 1 min vCore and 8 max VCores has also been provisioned.  For each replica, this configuration corresponds to 3 GB min memory and 24 GB max memory.  Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
+Consider a serverless database in the Hyperscale tier configured with 1 min vCore and 8 max vCores.  Suppose that the primary replica has enabled one HA replica and that a named replica with 1 min vCore and 8 max vCores has also been provisioned.  For each replica, this configuration corresponds to 3 GB min memory and 24 GB max memory.  Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
 
 In this example, the compute billed for the database is summation of the compute billed for each replica and calculated as follows based on the usage pattern described in the tables below: 
 

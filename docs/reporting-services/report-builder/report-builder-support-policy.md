@@ -14,9 +14,9 @@ ms.author: maggies
 
 The support policy for Microsoft Report Builder is as follows.
 
-- Starting with Microsoft Report Builder 15.0 , the SQL Server Reporting Services team has adopted the [Microsoft Modern Lifecycle Policy](/lifecycle/policies/modern).
+- Starting with Microsoft Report Builder 15.0, the SQL Server Reporting Services team has adopted the [Microsoft Modern Lifecycle Policy](/lifecycle/policies/modern).
 - Read the original [Modern Lifecycle Policy announcement](/lifecycle/announcements/modern-policy).
-- For additional information, see the [Modern Policy FAQ](/lifecycle/faq/modern-policy).
+- For more information, see the [Modern Policy FAQ](/lifecycle/faq/modern-policy).
 
 ## Microsoft Report Builder updates
 

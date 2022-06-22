@@ -16,7 +16,7 @@ title: Azure SQL Database Hyperscale named replicas FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
   
-  This FAQ is intended for readers who have a general understanding of the Hyperscale [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) and are looking to have their specific questions and concerns answered.
+  This FAQ is intended for readers who have a general understanding of the Hyperscale [named replicas](service-tier-hyperscale-replicas.md#named-replica) and are looking to have their specific questions and concerns answered.
   
 sections:
   - name: General questions

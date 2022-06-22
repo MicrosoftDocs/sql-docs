@@ -68,7 +68,7 @@ For PowerShell examples on how to configure SQL Data Sync, see [How to sync betw
    :::image type="content" source="./media/sql-data-sync-sql-server-configure/approve-private-link-update.png" alt-text = "Approve private link":::
    
    > [!NOTE]
-   > The private links for the syng group and the sync members neet to be created, approved, and disabled separately. 
+   > The private links for the sync group and the sync members need to be created, approved, and disabled separately. 
 
 ## Add sync members
 

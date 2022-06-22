@@ -1,23 +1,21 @@
 ---
 title: "Get unconsumed data with sql:overflow-field (SQLXML)"
-description: Learn how to use the sql:overflow-field in SQLXML 4.0 to retrieve data that was unconsumed by the OPENXML function.
+description: "Learn how to use the sql:overflow-field in SQLXML 4.0 to retrieve data that was unconsumed by the OPENXML function."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "unconsumed data"
   - "storing unconsumed data"
   - "retrieving unconsumed data"
   - "annotated XSD schemas, unconsumed data"
   - "overflow data [SQLXML]"
-  - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)

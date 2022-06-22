@@ -1,20 +1,16 @@
 ---
+title: "Connect Property Example (VBScript)"
 description: "Connect Property Example (VBScript)"
-title: "Connect Property Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Connect property [ADO], VBScript example"
-ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Connect property [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]

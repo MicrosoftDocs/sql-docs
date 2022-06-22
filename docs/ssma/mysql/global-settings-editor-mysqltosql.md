@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.mysql.globalsettingeditor.f1"
 ---
 # Global Settings (Editor) (MySQLToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

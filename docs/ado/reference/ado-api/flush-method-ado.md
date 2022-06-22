@@ -1,22 +1,18 @@
 ---
+title: "Flush Method (ADO)"
 description: "Flush Method (ADO)"
-title: "Flush Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::Flush"
-  - "_Stream::raw_Flush"
-helpviewer_keywords: 
-  - "Flush method [ADO]"
-ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::Flush"
+  - "_Stream::raw_Flush"
+helpviewer_keywords:
+  - "Flush method [ADO]"
+apitype: "COM"
 ---
 # Flush Method (ADO)
 Forces the contents of the [Stream](./stream-object-ado.md) remaining in the ADO buffer to the underlying object with which the **Stream** is associated.  

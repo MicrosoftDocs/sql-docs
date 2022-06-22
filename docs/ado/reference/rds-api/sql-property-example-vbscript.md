@@ -1,20 +1,16 @@
 ---
+title: "SQL Property Example (VBScript)"
 description: "SQL Property Example (VBScript)"
-title: "SQL Property Example (VBScript) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "SQL property [ADO], VBScript example"
-ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SQL property [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # SQL Property Example (VBScript)
 > [!IMPORTANT]

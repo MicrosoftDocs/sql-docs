@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_db_stats_properties (Transact-SQL)"
-title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_stats_properties (Transact-SQL)"
+description: sys.dm_db_stats_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_stats_properties_TSQL"
   - "sys.dm_db_stats_properties"
   - "dm_db_stats_properties_TSQL"
   - "dm_db_stats_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_stats_properties"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns properties of statistics for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For partitioned tables, see the similar [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
  

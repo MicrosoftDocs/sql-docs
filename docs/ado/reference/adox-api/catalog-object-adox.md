@@ -1,20 +1,17 @@
 ---
 title: "Catalog Object (ADOX)"
 description: "Catalog Object (ADOX)"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-- "Catalog object [ADOX]"
-helpviewer_keywords: 
-- "Catalog object [ADOX]"
 author: rothja
 ms.author: jroth
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Catalog object [ADOX]"
+helpviewer_keywords:
+  - "Catalog object [ADOX]"
+apitype: "COM"
 ---
 
 # Catalog Object (ADOX)

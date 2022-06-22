@@ -3,7 +3,7 @@ title: Configure DNN listener for availability group
 description: Learn how to configure a distributed network name (DNN) listener to replace your virtual network name (VNN) listener and route traffic to your Always On availability group on SQL Server on Azure VM. 
 services: virtual-machines-windows
 documentationcenter: na
-author: rajeshsetlem
+author: adbadram
 tags: azure-resource-manager
 ms.service: virtual-machines-sql
 ms.subservice: hadr
@@ -11,7 +11,7 @@ ms.topic: how-to
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
 ms.date: 11/10/2021
-ms.author: rsetlem
+ms.author: adbadram
 ms.reviewer: mathoma
 
 ---

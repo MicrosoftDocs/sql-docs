@@ -1,20 +1,16 @@
 ---
+title: "Microsoft OLE DB Provider for Microsoft Indexing Service"
 description: "Microsoft OLE DB Provider for Microsoft Indexing Service Overview"
-title: "Microsoft OLE DB Provider for Microsoft Indexing Service | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: 11/08/2018
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "Indexing Service provider [ADO]"
   - "providers [ADO], OLE DB provider for Microsoft Indexing service"
   - "OLE DB provider for Microsoft Indexing service [ADO]"
-ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: rothja
-ms.author: jroth
 ---
 # Microsoft OLE DB Provider for Microsoft Indexing Service Overview
 The Microsoft OLE DB Provider for Microsoft Indexing Service provides programmatic read-only access to file system and Web data indexed by Microsoft Indexing Service. ADO applications can issue SQL queries to retrieve content and file property information.

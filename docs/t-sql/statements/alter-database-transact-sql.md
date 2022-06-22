@@ -1,18 +1,17 @@
 ---
-description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
-ms.custom: "references_regions"
+description: ALTER DATABASE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 12/09/2021
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "references_regions"
+f1_keywords:
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], modifying"
   - "ALTER DATABASE statement"
   - "databases [SQL Server], renaming"
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "modifying databases"
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
 ---
 # ALTER DATABASE (Transact-SQL)
@@ -967,7 +966,8 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse, `ALTER DATABASE` modifies the name, maximum size, or service objective for a database.
+In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a pool.
+
 
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 

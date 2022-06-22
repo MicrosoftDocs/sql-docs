@@ -6,9 +6,9 @@ author: macarv-ms
 ms.author: macarv
 ms.reviewer: wiassaf
 ms.date: 08/20/2020
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods

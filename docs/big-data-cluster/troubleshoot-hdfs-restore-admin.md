@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 04/21/2020
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Restore HDFS permissions

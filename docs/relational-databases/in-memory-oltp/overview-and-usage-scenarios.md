@@ -1,22 +1,21 @@
 ---
 title: "Overview and Usage Scenarios"
 description: Learn about In-Memory OLTP, a technology in SQL Server and Azure SQL Database for optimized transaction processing. Review examples and additional resources.
-ms.custom: ""
+author: "kevin-farlee"
+ms.author: "kfarlee"
+ms.reviewer: wiassaf, randolphwest
 ms.date: 04/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: "kevin-farlee"
-ms.author: "kfarlee"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # In-Memory OLTP overview and usage scenarios
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] is the premier technology available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This article includes an overview of the technology and outlines usage scenarios for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Use this information to determine whether [!INCLUDE[hek_2](../../includes/hek-2-md.md)] is right for your application. The article concludes with an example that shows [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects, reference to a perf demo, and references to resources you can use for next steps.
 

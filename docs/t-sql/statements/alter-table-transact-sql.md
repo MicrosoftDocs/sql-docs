@@ -1,11 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL)
-description: "ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers."
+description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "WAIT_AT_LOW_PRIORITY"
   - "ABORT_AFTER_WAIT"
   - "ABORT_AFTER_WAIT_TSQL"
@@ -13,9 +18,7 @@ f1_keywords:
   - "ALTER TABLE"
   - "WAIT_AT_LOW_PRIORITY_TSQL"
   - "ALTER_COLUMN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], resizing"
   - "changing column size"
   - "MAXDOP index option, ALTER TABLE statement"
@@ -54,12 +57,8 @@ helpviewer_keywords:
   - "dropping columns"
   - "data retention policy"
   - "table changes [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -1021,11 +1020,11 @@ Conditionally drops the column or constraint only if it already exists.
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
 **Applies to**: SQL Server 2022 and later.
 
-Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql) in the [ALTER TABLE table_constraint](/t-sql/statements/alter-table-table-constraint-transact-sql).
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql) in the [ALTER TABLE table_constraint](/sql/t-sql/statements/alter-table-table-constraint-transact-sql).
 
 **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 
-For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-add-table-constraints).
 
 ## Remarks
 

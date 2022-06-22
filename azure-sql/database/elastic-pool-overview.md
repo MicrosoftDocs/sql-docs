@@ -1,15 +1,16 @@
 ---
 title: Manage multiple databases with elastic pools
 description: Manage and scale multiple databases in Azure SQL Database, as many as hundreds or thousands, by using elastic pools. For one price, you can distribute resources where they're needed.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: elastic-pools
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
-author: arvindshmicrosoft 
+author: arvindshmicrosoft
 ms.author: arvindsh
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 06/23/2021
 ---
 # Elastic pools help you manage and scale multiple databases in Azure SQL Database

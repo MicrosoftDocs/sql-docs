@@ -1,23 +1,19 @@
 ---
+title: "Number Property (ADO)"
 description: "Number Property (ADO)"
-title: "Number Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Error::Number"
   - "Error::GetNumber"
   - "Error::get_Number"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "number property [ADO]"
-ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Number Property (ADO)
 Indicates the number that uniquely identifies an [Error](./error-object.md) object.  

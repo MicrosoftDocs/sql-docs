@@ -82,8 +82,8 @@ sections:
           
             With Hyperscale, you can use three kinds of secondary replicas to cater for read scale-out, high availability, and geo-replication requirements. This includes:
             - Up to four [high-availability replicas](service-tier-hyperscale-replicas.md#high-availability-replica) having the same compute size as primary. These serve as hot-standbys to quickly fail over from the primary. You can also use them to offload read workloads from the primary.
-            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
-            - A [geo-replica](service-tier-hyperscale-replicas.md#geo-replica-in-preview) in a different Azure region to protect against regional outages and to enable geographic read scale-out.
+            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
+            - A [geo-replica](service-tier-hyperscale-replicas.md#geo-replica) in a different Azure region to protect against regional outages and to enable geographic read scale-out.
           
   - name: Deep dive questions
     questions:
@@ -129,17 +129,17 @@ sections:
       - question: |
           Can I provision a compute replica with extra RAM for my memory-intensive workload?
         answer: |
-          For read workloads, you can create a [named replica](service-tier-hyperscale-replicas.md#named-replica-in-preview) with a higher compute size (more cores and memory) than the primary. For more information on available compute sizes, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
+          For read workloads, you can create a [named replica](service-tier-hyperscale-replicas.md#named-replica) with a higher compute size (more cores and memory) than the primary. For more information on available compute sizes, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
           
       - question: |
           Can I provision multiple compute replicas of different sizes?
         answer: |
-          For read workloads, this can be achieved using [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview).
+          For read workloads, this can be achieved using [named replicas](service-tier-hyperscale-replicas.md#named-replica).
 
       - question: |
           How many Read Scale-out replicas are supported?
         answer: |
-          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/createorupdate). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) for many read scale-out scenarios.
+          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/createorupdate). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) for many read scale-out scenarios.
           
       - question: |
           For high availability, do I need to provision additional compute replicas?
@@ -316,7 +316,7 @@ sections:
       - question: |
           Can I set up geo-replication with a Hyperscale database?
         answer: |
-          Yes. [Geo-replication](active-geo-replication-overview.md) for Hyperscale databases is in public preview.
+          Yes. [Geo-replication](active-geo-replication-overview.md) can be set up for Hyperscale databases.
 
       - question: |
           Can I take a Hyperscale database backup and restore it to my on-premises server, or on SQL Server in a VM?
@@ -444,7 +444,7 @@ sections:
       - question: |
           Can I create a dedicated endpoint for an HA secondary replica?
         answer: |
-          No. You can only connect to HA secondary replicas by specifying `ApplicationIntent=ReadOnly`. However, you can use dedicated endpoints for [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview). 
+          No. You can only connect to HA secondary replicas by specifying `ApplicationIntent=ReadOnly`. However, you can use dedicated endpoints for [named replicas](service-tier-hyperscale-replicas.md#named-replica). 
 
       - question: |
           Does the system do intelligent load balancing of the read workload on HA secondary replicas?
@@ -454,12 +454,12 @@ sections:
       - question: |
           Can I scale up/down HA secondary replicas independently of the primary replica?
         answer: |
-          Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
+          No. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) provide the ability to scale each replica independently.
 
       - question: |
           Do I get different `tempdb` sizing for my primary compute and my HA secondary replicas?
         answer: |
-          No. Your `tempdb` database is configured based on the provisioned compute size, your HA secondary replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
+          No. Your `tempdb` database is configured based on the provisioned compute size, your HA secondary replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
 
       - question: |
           Can I add indexes and views on my secondary compute replicas?

@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_connections (Transact-SQL) returns information about the connections established to this instance of the database engine and the details of each connection."
 title: "sys.dm_exec_connections (Transact-SQL)"
-ms.custom: ""
-ms.date: "5/31/2022"
+description: sys.dm_exec_connections returns information about the connections established to this instance of the database engine and the details of each connection.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "6/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_connections_TSQL"
   - "sys.dm_exec_connections_TSQL"
   - "sys.dm_exec_connections"
   - "dm_exec_connections"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_connections dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.dm_exec_connections (Transact-SQL)
 
@@ -28,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 Returns information about the connections established to this instance of the database engine and the details of each connection. Returns server wide connection information for SQL Server and Azure SQL Managed Instance. Returns connection information for the current database in Azure SQL Database. Returns connection information for all databases in the same elastic pool for databases in [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in Azure SQL Database.
 
 > [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use **sys.dm_exec_connections**.
+> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use `sys.dm_exec_connections`.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -63,15 +61,16 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 On Azure SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
 ## Physical joins 
- ![Joins for sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Joins for sys.dm_exec_connections")    
+ 
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.svg" alt-text="Diagram of physical joins for sys.dm_exec_connections.":::
   
 ## Relationship cardinalities  
   
 | First element | Second element | Relationship |
 | --------------| -------------- | ------------ |  
-|[sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md).session_id|sys.dm_exec_connections.session_id|One-to-zero or one-to-many|  
-|[sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).connection_id|sys.dm_exec_connections.connection_id|Many-to-one|  
-|[sys.dm_broker_connections](sys-dm-broker-connections-transact-sql.md).connection_id|sys.dm_exec_connections.connection_id|One-to-one|  
+|[sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md).`session_id`|`sys.dm_exec_connections.session_id`|One-to-zero or one-to-many|  
+|[sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).`connection_id`|`sys.dm_exec_connections.connection_id`|Many-to-one|  
+|[sys.dm_broker_connections](sys-dm-broker-connections-transact-sql.md).`connection_id`|`sys.dm_exec_connections.connection_id`|One-to-one|  
 
 Most commonly, for each row in `sys.dm_exec_connections` there is a single matching row in `sys.dm_exec_sessions`. However, in some cases such as system internal sessions or [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) activation procedures, there may be a row in `sys.dm_exec_sessions` without a matching row in `sys.dm_exec_connections`.
 

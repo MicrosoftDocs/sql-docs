@@ -1,22 +1,18 @@
 ---
+title: "SaveToFile Method"
 description: "SaveToFile Method"
-title: "SaveToFile Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::raw_SaveToFile"
-  - "_Stream::SaveToFile"
-helpviewer_keywords: 
-  - "SaveToFile method [ADO]"
-ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::raw_SaveToFile"
+  - "_Stream::SaveToFile"
+helpviewer_keywords:
+  - "SaveToFile method [ADO]"
+apitype: "COM"
 ---
 # SaveToFile Method
 Saves the binary contents of a [Stream](./stream-object-ado.md) to a file.  

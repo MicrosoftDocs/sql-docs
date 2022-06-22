@@ -1,22 +1,16 @@
 ---
+title: "Ordinal Property (ADO MD Cell)"
 description: "Ordinal Property (ADO MD Cell)"
-title: "Ordinal Property (ADO MD Cell) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Cell::Ordinal"
-  - "Ordinal"
-helpviewer_keywords: 
-  - "Ordinal property [ADO MD]"
-ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "Ordinal property [ADO MD]"
+apitype: "COM"
 ---
 # Ordinal Property (ADO MD Cell)
 Uniquely identifies a [cell](./cell-object-ado-md.md) by its position within a cellset.  

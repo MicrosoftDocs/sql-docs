@@ -6,11 +6,10 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/04/2021
-ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-overview
+ms.topic: overview
+ms.custom: intro-overview
 ---
 
 # Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

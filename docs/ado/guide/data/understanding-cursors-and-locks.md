@@ -1,19 +1,15 @@
 ---
+title: "Understanding Cursors and Locks"
 description: "Understanding Cursors and Locks"
-title: "Understanding Cursors and Locks | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "locks [ADO]"
-  - "cursors [ADO]"
-ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "locks [ADO]"
+  - "cursors [ADO]"
 ---
 # Understanding Cursors and Locks
 It is important to understand how cursors operate so you can select the best and most efficient cursor type for an application's data-access requirements. A less-than-optimal cursor configuration can make data-access operations painfully slow.  

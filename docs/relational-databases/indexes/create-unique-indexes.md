@@ -1,14 +1,14 @@
 ---
-description: "Create Unique Indexes"
-title: "Create Unique Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Create Unique Indexes"
+description: Create Unique Indexes
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "unique indexes"
   - "designing indexes [SQL Server], unique"
   - "clustered indexes, unique"
@@ -16,12 +16,10 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], unique"
   - "unique indexes, design guidelines"
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Unique Indexes
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes how to create a unique index on a table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   

@@ -91,7 +91,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  Expand the **Roles** folder.  
   
-6.  Expand the **Server Roles** folder.  
+6.  Expand the **Database Roles** folder.  
   
 7.  Right-click the role you want to edit and select **Properties**.  
   

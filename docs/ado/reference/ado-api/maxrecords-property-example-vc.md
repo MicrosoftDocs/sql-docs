@@ -1,20 +1,16 @@
 ---
+title: "MaxRecords Property Example (VC++)"
 description: "MaxRecords Property Example (VC++)"
-title: "MaxRecords Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MaxRecords property [ADO], VC++ example"
-ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "MaxRecords property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # MaxRecords Property Example (VC++)
 This example uses the [MaxRecords](./maxrecords-property-ado.md) property to open a [Recordset](./recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  

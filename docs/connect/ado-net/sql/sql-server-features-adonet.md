@@ -42,7 +42,7 @@ Describes how .NET applications can request notification from SQL Server when da
 Describes support for snapshot isolation, a row versioning mechanism designed to reduce blocking in transactional applications.  
   
 [SqlClient support for high availability, disaster recovery](sqlclient-support-high-availability-disaster-recovery.md)  
-Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) availability groups.  
+Describes SqlClient support for high-availability, disaster recovery (Always On) availability groups.  
   
 [SqlClient support for LocalDB](sqlclient-support-localdb.md)  
 Describes SqlClient support for LocalDB databases.

@@ -16,7 +16,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Column Collation
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   You can override the database collation for **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data by specifying a different collation for a specific column of a table and using one of the following:  
   
 -   The COLLATE clause of [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), as seen in the examples below. 

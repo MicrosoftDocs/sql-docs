@@ -454,7 +454,7 @@ sections:
       - question: |
           Can I scale up/down HA secondary replicas independently of the primary replica?
         answer: |
-          Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. Each HA secondary can still autoscale to the configured max cores to accommodate its post-failover role. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
+          Not in the provisioned compute tier. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. In serverless, the compute is scaled automatically for each HA replica based on its individual workload demand. Each HA secondary can still autoscale to the configured max cores to accommodate its post-failover role. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) provide the ability to scale each replica independently.
 
       - question: |
           Do I get different `tempdb` sizing for my primary compute and my HA secondary replicas?

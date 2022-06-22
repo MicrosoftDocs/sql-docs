@@ -141,64 +141,57 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+## Hyperscale - serverless compute - Gen 5
 
+The [serverless compute tier](serverless-tier-overview.md) is currently available on Gen5 hardware only.
 
+### Gen5 compute generation (part 1)
 
-## Hyperscale - provisioned compute - Gen4
+| Compute size (service objective) | HS_S_Gen5_2 | HS_S_Gen5_4 | HS_S_Gen5_6 | HS_S_Gen5_8 | HS_S_Gen5_10 | HS_S_Gen5_12 | HS_S_Gen5_14 |
+|--|--|--|--|--|--|--|--|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 8-Jan | 1.25-10 | 1.5-12 | 1.75-14 |
+| Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
+| [Max RBPEX Size](hyperscale-architecture.md#compute) | N/A | N/A | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 448 |
+| Storage type | [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)|
+| Max local SSD IOPS <sup>1</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| IO latency (approximate) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) |
+| Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
-### Gen4 compute generation (part 1)
+### Gen5 compute generation (part 2)
 
-|Compute size (service objective)|HS_Gen4_1|HS_Gen4_2|HS_Gen4_3|HS_Gen4_4|HS_Gen4_5|HS_Gen4_6|
-|:--- | --: |--: |--: |---: | --: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|1|2|3|4|5|6|
-|Memory (GB)|7|14|21|28|35|42|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |100|
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|32|64|96|128|160|192|
-|Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
-|Max local SSD IOPS <sup>1</sup>|4000 |8000 |12000 |16000 |20000 |24000 |
-|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
-|Max concurrent workers|200|400|600|800|1000|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
-
-
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
-
-### Gen4 compute generation (part 2)
-
-|Compute size (service objective)|HS_Gen4_7|HS_Gen4_8|HS_Gen4_9|HS_Gen4_10|HS_Gen4_16|HS_Gen4_24|
-|:--- | ---: |--: |--: | --: |--: |--: |
-|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|224|256|288|320|512|768|
-|Storage type| [Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
-|Max local SSD IOPS <sup>1</sup>|28000 |32000 |36000 |40000 |64000 |76800 |
-|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
-|Max concurrent workers|1400|1600|1800|2000|3200|4800|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
-
-
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+| Compute size (service objective) | HS_S_Gen5_2 | HS_S_Gen5_4 | HS_S_Gen5_6 | HS_S_Gen5_8 | HS_S_Gen5_10 | HS_S_Gen5_12 | HS_S_Gen5_14 |
+|--|--|--|--|--|--|--|--|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 8-Jan | 1.25-10 | 1.5-12 | 1.75-14 |
+| Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
+| [Max RBPEX Size](hyperscale-architecture.md#compute) | N/A | N/A | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 448 |
+| Storage type | [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)|
+| Max local SSD IOPS <sup>1</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| IO latency (approximate) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) |
+| Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
 ## Hyperscale - provisioned compute - Gen5
 

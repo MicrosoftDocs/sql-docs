@@ -33,7 +33,7 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">= sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ---
 # Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 

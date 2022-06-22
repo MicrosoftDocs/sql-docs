@@ -48,12 +48,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!IMPORTANT]  
 >  Ignoring signature verification makes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] less secure. We recommend that you sign any components that you implement or ensure that any components that you acquire are signed. For information about signing components, see [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
+##  <a name="state"></a> Full-Text Index in Inconsistent State after transaction log restored  
 
- > [!IMPORTANT]  
->  Transaction Log Restores are not supported by Azure SQL Managed Instance.  The following troubleshooting guidance does not apply to Azure SQL Managed Instance. 
-
-##  <a name="state"></a> Full-Text Index in Inconsistent State after Transaction Log Restored  
- When restoring the transaction log of a database, you might see a warning indicating that the full-text index is not in a consistent state. The reason for this is that the full-text index on a table was modified after the database was backed up. To bring the full-text index to a consistent state, you must run a full population (crawl) on the table. For more information, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).  
+When restoring the transaction log of a database, you might see a warning indicating that the full-text index is not in a consistent state. The reason for this is that the full-text index on a table was modified after the database was backed up. To bring the full-text index to a consistent state, you must run a full population (crawl) on the table. For more information, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md). 
  
 
   

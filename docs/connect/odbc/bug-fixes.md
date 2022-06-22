@@ -27,6 +27,15 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed loss of Azure Active Directory authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.10 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix issue with sqlcmd -M option requiring argument.
+- Fix issue with polling for first successful connection.
+- Fixed missing dependency in debian package.
+- Fix for only using ADAL when required.
+- Fixed issue with idle connection resiliency when kerberos auth was used.
+- Fixed an issue where sqlcmd hangs when NOHUP/SIGHUP signals are used in a remote client and closed.
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.9 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix UI issues where text was cut off and position of items was off.

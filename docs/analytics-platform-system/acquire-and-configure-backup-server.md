@@ -66,7 +66,7 @@ Use these steps to connect the loading server to the InfiniBand network. If the 
 
 1. Install and configure the appropriate Windows driver for the InfiniBand network adapter.
 
-   InfiniBand drivers for Windows are developed by the OpenFabrics Alliance, an industry consortium of InfiniBand vendors. The correct driver might have been distributed with your InfiniBand network adapter. If not, download the driver from [OpenFabrics Alliance](www.openfabrics.org).
+   InfiniBand drivers for Windows are developed by the OpenFabrics Alliance, an industry consortium of InfiniBand vendors. The correct driver might have been distributed with your InfiniBand network adapter. If not, download the driver from [OpenFabrics Alliance](https://www.openfabrics.org).
 
 1. Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).
 

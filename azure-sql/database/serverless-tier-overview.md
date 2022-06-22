@@ -57,7 +57,7 @@ Serverless is price-performance optimized for single databases with intermittent
 - Databases that cannot tolerate performance trade-offs resulting from more frequent memory trimming or delays in resuming from a paused state.
 - Multiple databases with intermittent, unpredictable usage patterns that can be consolidated into elastic pools for better price-performance optimization.
 
-## Comparison with provisioned compute tier
+### Compare compute tiers
 
 The following table summarizes distinctions between the serverless compute tier and the provisioned compute tier:
 
@@ -72,13 +72,13 @@ The following table summarizes distinctions between the serverless compute tier 
 ## Purchasing model and service tier
 
 
-The following table describes serverless supportability based on service tiers, hardware, and purchasing models: 
+The following table describes serverless support based on purchasing model, service tiers and hardware:: 
 
 | **Category** | **Supported** | **Not supported**|
 |:---|:---|:---|
 | **Purchasing model** | [vCore](service-tiers-vcore.md) | [DTU](service-tiers-dtu.md) |
 | **Service tier** | [General Purpose](service-tier-general-purpose.md) <br/> [Hyperscale](service-tier-hyperscale.md) (in Preview) | Business Critical| 
-| **Hardware** | Generation 5 | Generation 4 |  
+| **Hardware** | Generation 5 | All other hardware |  
 
 ## Autoscaling
 
@@ -106,7 +106,7 @@ When CPU utilization is low, active cache utilization can remain high depending 
 
 #### Cache hydration
 
-The SQL cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained up to the max memory limit.
+The SQL memory cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained up to the max memory limit.
 
 
 ### Disk cache management
@@ -115,7 +115,7 @@ In the Hyperscale service tier for both serverless and provisioned compute tiers
 
 ## Auto-pausing and auto-resuming
 
-Currently, serverless auto-pausing and auto-resuming is only supported in the General Purpose tier. 
+Currently, serverless auto-pausing and auto-resuming are only supported in the General Purpose tier. 
 
 ### Auto-pausing
 
@@ -421,7 +421,7 @@ Metrics for monitoring the resource usage of the app package and user resource p
 |---|---|---|---|
 |App package|app_cpu_percent|Percentage of vCores used by the app relative to max vCores allowed for the app. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |Percentage|
 |App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating over time the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the min vCores and min memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the way as for the primary replica or a named replica.  This metric is exposed for the primary replica and any named replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica.  This metric is exposed for the primary replica and any named replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to max memory allowed for the app. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to max vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to max data IOPS allowed for user workload.|Percentage|
@@ -486,13 +486,15 @@ Examples:
 
 - Suppose a serverless database in the General Purpose tier is not paused and configured with 8 max vCores and 1 min vCore corresponding to 3.0 GB min memory.  Then the minimum compute bill is based on max (1 vCore, 3.0 GB * 1 vCore / 3 GB) = 1 vCore.
 - Suppose a serverless database in the General Purpose tier is not paused and configured with 4 max vCores and 0.5 min vCores corresponding to 2.1 GB min memory.  Then the minimum compute bill is based on max (0.5 vCores, 2.1 GB * 1 vCore / 3 GB) = 0.7 vCores.
-- Suppose a serverless database in the Hyperscale tier has a primary replica with one HA replica and one name replica with no HA replicas.  Suppose each replica is configured with 8 max vCores and 1 min vCore corresponding to 3 GB min memory. Then the minimum compute bill for the primary replica, HA replica, and named replica are each based on max (1 vCore, 3 GB * 1 vCore / 3 GB) = 1 vCore. 
+- Suppose a serverless database in the Hyperscale tier has a primary replica with one HA replica and one named replica with no HA replicas.  Suppose each replica is configured with 8 max vCores and 1 min vCore corresponding to 3 GB min memory. Then the minimum compute bill for the primary replica, HA replica, and named replica are each based on max (1 vCore, 3 GB * 1 vCore / 3 GB) = 1 vCore. 
 
 The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) for serverless can be used to determine the min memory configurable based on the number of max and min vCores configured.  As a rule, if the min vCores configured is greater than 0.5 vCores, then the minimum compute bill is independent of the min memory configured and based only on the number of min vCores configured.
 
-### General Purpose example scenario
+### Scenario examples 
 
-Consider a serverless database configured with 1 min vCore and 4 max vCores.  This configuration corresponds to around 3 GB min memory and 12 GB max memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
+# [General Purpose](#tab/general-purpose)
+
+Consider a serverless database in the General Purpose tier configured with 1 min vCore and 4 max vCores.  This configuration corresponds to around 3 GB min memory and 12 GB max memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
 
 In this case, the database is billed for compute and storage during the first 8 hours.  Even though the database is inactive starting after the second hour, it is still billed for compute in the subsequent 6 hours based on the minimum compute provisioned while the database is online.  Only storage is billed during the remainder of the 24-hour period while the database is paused.
 
@@ -508,7 +510,9 @@ More precisely, the compute bill in this example is calculated as follows:
 
 Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50400 vCore seconds ~ $7.31.
 
-### Hyperscale example scenario 
+
+
+# [Hyperscale](#tab/hyperscale)
 
 Consider a serverless database in the Hyperscale tier configured with 1 min vCore and 8 max vCores.  Suppose that the primary replica has enabled one HA replica and that a named replica with 1 min vCore and 8 max VCores has also been provisioned.  For each replica, this configuration corresponds to 3 GB min memory and 24 GB max memory.  Further suppose that write workload occurs throughout a 24-hour period, but that read-only workload occurs just during the first 8 hours of this time period. 
 
@@ -541,9 +545,10 @@ Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then
 Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
 Therefore, the total compute bill for all three replicas of the database is around $29.34 + ~ $14.36 + $15.75 = $59.45.
 
+---
 
 
-### Azure Hybrid Benefit and reserved capacity
+## Azure Hybrid Benefit and reserved capacity
 
 Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the serverless compute tier.
 

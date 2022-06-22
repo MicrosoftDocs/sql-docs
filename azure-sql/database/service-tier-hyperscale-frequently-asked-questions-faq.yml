@@ -76,7 +76,7 @@ sections:
           
             With Hyperscale, you can scale up the primary compute size in terms of resources like CPU and memory, and then scale down, in constant time. Because the storage is remote, scaling up and scaling down is not a size of data operation.
 
-            Support for [serverless compute](serverless-tier-overview.md) (in preview) provides automatic scale-up and scale-down billing for compute based on usage. 
+            Support for [serverless compute](serverless-tier-overview.md) (in preview) provides automatic scale-up and scale-down and compute is billed based on usage.
 
           - **Scaling In/Out**
           
@@ -124,7 +124,7 @@ sections:
       - question: |
           Can I pause my compute at any time?
         answer: |
-          Not at this time. However you can scale your compute and the number of replicas down to reduce cost during non-peak times, or use the [serverless compute tier](serverless-tier-overview.md) (in preview) to use automatic compute scaling based on usage. 
+          Not at this time. However you can scale your compute and the number of replicas down to reduce cost during non-peak times, or use [serverless](serverless-tier-overview.md) (in preview) to automatically scale compute based on usage. 
 
       - question: |
           Can I provision a compute replica with extra RAM for my memory-intensive workload?
@@ -286,7 +286,7 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, currently, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) in public preview for the provisioned compute tier only. At least 1 HA secondary replica and the use of zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) in public preview. At least 1 HA secondary replica and the use of zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
 
       - question: |
           How often are database backups taken?

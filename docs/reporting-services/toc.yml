@@ -1396,6 +1396,8 @@
         href: ../reporting-services/tools/user-role-properties-management-studio.md
   - name: Report Builder authoring environment
     href: ../reporting-services/tools/report-builder-authoring-environment-ssrs.md
+  - name: Report Builder support policy
+    href: ../reporting-services/tools/report-builder-support-policy.md
   - name: Scripting and PowerShell with Reporting Services
     href: ../reporting-services/tools/scripting-and-powershell-with-reporting-services.md
     items:

@@ -55,7 +55,7 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 1. Open SSMS and connect to your managed instance.
 1. In **Object Explorer**, right-click the **Databases** folder of your managed instance, and then select **Restore Database** to open the restore wizard.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-start.png" alt-text="Screenshot of Object Explorer in S S M S. The Databases folder is selected. In its shortcut menu, Restore Database is selected.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-start.png" alt-text="Screenshot of Object Explorer in SSMS. The Databases folder is selected. In its shortcut menu, Restore Database is selected.":::
 
 ### Select the backup source
 
@@ -65,7 +65,7 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
 1. In **Select backup devices**, select **Add**. In **Backup media type**, **URL** is the only option that's available because it's the only source type that's supported. Select **OK**.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-device.png" alt-text="Screenshot of the Select backup devices dialog. The Add and O K buttons are called out.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-select-device.png" alt-text="Screenshot of the Select backup devices dialog. The Add and OK buttons are called out.":::
 
 1. In **Select a Backup File Location**, choose from one of three options to provide information about the location of your backup files:
 
@@ -85,7 +85,7 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
 1. Sign in to your Microsoft Account to initiate the session in Azure.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot of the Sign in to your account dialog. The Microsoft logo, a sign-in box, and other U I elements are visible.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-sign-in-session.png" alt-text="Screenshot of the Sign in to your account dialog. The Microsoft logo, a sign-in box, and other UI elements are visible.":::
 
 1. Select the subscription of the storage account that contains the backup files.
 
@@ -101,7 +101,7 @@ In SSMS, take the steps in the following sections to restore the Wide World Impo
 
 1. Enter the expiration date of the shared access policy and select **Create Credential**. A shared access signature with the correct permissions is created. Select **OK**.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-generate-shared-access-signature.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. Create Credential, O K, and the Shared Access Policy Expiration box are called out.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-generate-shared-access-signature.png" alt-text="Screenshot of the Connect to a Microsoft Subscription dialog. Create Credential, OK, and the Shared Access Policy Expiration box are called out.":::
 
 ### Restore the database
 
@@ -109,13 +109,13 @@ Now that you've selected a storage container, you should see the **Locate Backup
 
 1. In the left pane, expand the folder structure to show the folder that contains the backup files. In the right pane, select all the backup files that are related to the backup set that you're restoring, and then select **OK**.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-backup-file-selection.png" alt-text="Screenshot of the Locate Backup File in Microsoft Azure dialog. Four backup files are visible, and one is called out. The O K button is called out.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-backup-file-selection.png" alt-text="Screenshot of the Locate Backup File in Microsoft Azure dialog. Four backup files are visible, and one is called out. The OK button is called out.":::
 
    SSMS validates the backup set. This process takes at most a few seconds. The duration depends on the size of the backup set.
 
 1. If the backup is validated, you need to specify a name for the database that's being restored. By default, under **Destination**, the **Database** box contains the name of the backup set database. To change the name, enter a new name for **Database**. Select **OK**.
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-start-restore.png" alt-text="Screenshot of a page in the restore wizard. In the Destination section, the Database box is called out. The O K button is also called out.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore-wizard-start-restore.png" alt-text="Screenshot of a page in the restore wizard. In the Destination section, the Database box is called out. The OK button is also called out.":::
 
    The restore process starts. The duration depends on the size of the backup set.
 
@@ -151,7 +151,7 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
    , SECRET = 'sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2028-09-06T02:52:55Z&st=2018-09-04T18:52:55Z&spr=https&sig=WOTiM%2FS4GVF%2FEEs9DGQR9Im0W%2BwndxW2CQ7%2B5fHd7Is%3D'
    ```
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/credential.png" alt-text="Screenshot that shows the S S M S Query Editor. The CREATE CREDENTIAL statement is visible, and a message indicates that the query ran successfully.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/credential.png" alt-text="Screenshot that shows the SSMS Query Editor. The CREATE CREDENTIAL statement is visible, and a message indicates that the query ran successfully.":::
 
 1. To check your credential, run the following statement, which uses a [container](https://azure.microsoft.com/services/container-instances/) URL to get a backup file list.
 
@@ -160,7 +160,7 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
       'https://mitutorials.blob.core.windows.net/databases/WideWorldImporters-Standard.bak'
    ```
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/file-list.png" alt-text="Screenshot that shows the S S M S Query Editor. The RESTORE FILELISTONLY statement is visible, and the Results tab lists three files.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/file-list.png" alt-text="Screenshot that shows the SSMS Query Editor. The RESTORE FILELISTONLY statement is visible, and the Results tab lists three files.":::
 
 1. Run the following statement to restore the Wide World Importers database.
 
@@ -169,7 +169,7 @@ As an alternative to the restore wizard, you can use T-SQL statements to restore
      'https://mitutorials.blob.core.windows.net/databases/WideWorldImporters-Standard.bak'
    ```
 
-   :::image type="content" source="./media/restore-sample-database-quickstart/restore.png" alt-text="Screenshot that shows the S S M S Query Editor. The RESTORE DATABASE statement is visible, and a message indicates that the query ran successfully.":::
+   :::image type="content" source="./media/restore-sample-database-quickstart/restore.png" alt-text="Screenshot that shows the SSMS Query Editor. The RESTORE DATABASE statement is visible, and a message indicates that the query ran successfully.":::
 
    If the restore process is terminated with the message ID 22003, create a new backup file that contains backup checksums, and start the restore process again. See [Enable or disable backup checksums during backup or restore](/sql/relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server).
 

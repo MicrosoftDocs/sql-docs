@@ -60,7 +60,7 @@ Hyperscale service tier is only available in [vCore model](service-tiers-vcore.m
 
 - **Compute**:
 
-  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to [high-availabilty](service-tier-hyperscale-replicas.md#high-availability-replica) and [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on availability and scalability requirements, and create up to 30 named replicas to support a variety of read scale-out workloads.
+  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to [high-availabilty](service-tier-hyperscale-replicas.md#high-availability-replica) and [named replicas](service-tier-hyperscale-replicas.md#named-replica) automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on availability and scalability requirements, and create up to 30 named replicas to support a variety of read scale-out workloads.
 
 - **Storage**:
 

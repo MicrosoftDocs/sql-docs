@@ -54,6 +54,7 @@ The following table lists the features of Azure SQL Database that have transitio
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Named Replicas](service-tier-hyperscale-replicas.md#named-replica) for Hyperscale databases | June 2022 | Named Replicas enable a broad variety of read scale-out scenarios, and easily implement near-real time hybrid transactional and analytical processing (HTAP) solutions. |
 | [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) and [Auto-failover groups](/azure/azure-sql/database/auto-failover-group-sql-db) for Hyperscale databases | June 2022 | Active geo-replication and Auto-failover groups helps to have a turn key business continuity solution for Azure SQL Hyperscale Database that lets you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage.|
 | [Ledger](ledger-overview.md) | May 2022 | The ledger feature in Azure SQL Database allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. |
 | [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | April 2022 | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is now generally available. | 
@@ -73,6 +74,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
+| **Named Replicas for Hyperscale databases GA** | Named Replicas enable a broad variety of read scale-out scenarios, and easily implement near-real time hybrid transactional and analytical processing (HTAP) solutions. This feature is now generally available. See [named replicas](service-tier-hyperscale-replicas.md#named-replica) to learn more. |
 | **Active geo-replication and Auto-failover groups for Hyperscale databases** | Active geo-replication and Auto-failover groups helps to have a turn key business continuity solution for Azure SQL Hyperscale Database that lets you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage. |
 
 

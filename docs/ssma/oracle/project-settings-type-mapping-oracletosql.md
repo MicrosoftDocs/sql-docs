@@ -11,13 +11,17 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.projectsettingtypemapping.f1"
+
+
 ---
 # Project Settings (Type Mapping) (OracleToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 The Type Mapping page is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
--   To specify settings for all future SSMA projects, on the **Tools** menu click **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop down and then click **Type Mapping** at the bottom of the left pane.  
+-   To specify settings for all future SSMA projects, on the **Tools** menu click **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop-down and then click **Type Mapping** at the bottom of the left pane.  
   
 -   To specify settings for the current project, on the **Tools** menu click **Project Settings**, and then click **Type Mapping** at the bottom of the left pane.  
   

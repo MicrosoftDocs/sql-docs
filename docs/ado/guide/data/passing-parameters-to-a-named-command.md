@@ -1,19 +1,15 @@
 ---
+title: "Passing Parameters to a Named Command"
 description: "Passing Parameters to a Named Command"
-title: "Passing Parameters to a Named Command | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "named commands [ADO]"
-  - "commands [ADO], passing parameters to a named command"
-ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "named commands [ADO]"
+  - "commands [ADO], passing parameters to a named command"
 ---
 # Passing Parameters to a Named Command
 Just as the result of the command is passed out as an *out* variable of the named command, parameters for a parameterized command can been passed in as *in* variables to the named command.  

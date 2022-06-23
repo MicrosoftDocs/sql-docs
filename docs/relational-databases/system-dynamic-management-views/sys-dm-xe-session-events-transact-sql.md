@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xe_session_events (Transact-SQL)"
-title: "sys.dm_xe_session_events (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xe_session_events (Transact-SQL)"
+description: sys.dm_xe_session_events (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_xe_session_events"
   - "sys.dm_xe_session_events_TSQL"
   - "dm_xe_session_events"
   - "dm_xe_session_events_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_session_events dynamic management view"
   - "extended events [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

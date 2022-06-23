@@ -1,24 +1,23 @@
 ---
-description: "SET @local_variable (Transact-SQL)"
 title: "SET @local_variable (Transact-SQL)"
-ms.custom: ""
+description: "SET @local_variable (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "SET @local_variable"
   - "variables [SQL Server], assigning"
   - "SET statement, @local_variable"
   - "local variables [SQL Server]"
-ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

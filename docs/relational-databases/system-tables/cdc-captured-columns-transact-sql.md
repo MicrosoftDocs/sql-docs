@@ -1,23 +1,21 @@
 ---
-description: "cdc.captured_columns (Transact-SQL)"
-title: "cdc.captured_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.captured_columns (Transact-SQL)"
+description: cdc.captured_columns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc.captured_columns"
   - "cdc.captured_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.captured_columns"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

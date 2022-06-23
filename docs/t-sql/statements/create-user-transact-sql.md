@@ -1,14 +1,14 @@
 ---
-description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
-ms.custom: ""
+description: CREATE USER (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WITHOUT_LOGIN_TSQL"
   - "CREATE_USER_TSQL"
   - "SQL13.SWB.DATABASEUSER.OWNEDSCHEMAS.F1"
@@ -16,9 +16,7 @@ f1_keywords:
   - "CREATE USER"
   - "ALLOW_ENCRYPTED_VALUE_MODIFICATIONS"
   - "ALLOW_ENCRYPTED_VALUE_MODIFICATIONS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding users"
   - "WITHOUT LOGIN [SQL Server]"
   - "CREATE USER statement"
@@ -26,8 +24,8 @@ helpviewer_keywords:
   - "USER WITHOUT LOGIN [SQL Server]"
   - "users [SQL Server], adding"
   - "users [SQL Server]"
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

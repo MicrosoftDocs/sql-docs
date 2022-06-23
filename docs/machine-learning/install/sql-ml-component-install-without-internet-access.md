@@ -3,31 +3,52 @@ title: Offline install without internet access
 description: Offline install SQL Server Machine Learning Services with Python and R on computers isolated behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/01/2020
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Offline install SQL Server Machine Learning Services Python and R on computers with no internet access
+# Offline install SQL Server Machine Learning Services on Windows computers with no internet access
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes how to install SQL Server Machine Learning Services offline on computers with no internet access isolated behind a network firewall.
+This article describes how to install SQL Server Machine Learning Services on Windows offline on computers with no internet access isolated behind a network firewall.
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ SQL Server 2019 includes R, Python, and Java
-+ SQL Server 2017 includes R and Python
-+ SQL Server 2016 is R-only
++ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. The offline installation process is therefore similar to the online process. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
++ SQL Server 2019 includes R, Python, and Java.
++ SQL Server 2017 includes R and Python.
++ SQL Server 2016 is R-only.
+
+::: moniker range="=sql-server-ver16"
+
+## SQL Server 2022 offline install
+
+Offline installation of SQL Server 2022 is similar to the online installation experience. 
+
+1. Use SQL Setup to install the Machine Learning services feature.
+2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used for SQL Server 2022.
+3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
+
+   - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
+   - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md)
+
+::: moniker-end
+
+::: moniker range="=sql-server-ver15"
 
 On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
-::: moniker range="=sql-server-ver15"
 ## SQL Server 2019 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -51,7 +72,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ###  2 - Get SQL Server 2019 installation media
 
-1. On a computer having an internet connection, download the [SQL Server 2019 setup program](https://www.microsoft.com/sql-server/sql-server-downloads). 
+1. On a computer having an internet connection, launch SQL Server 2019 Setup from your installation media.
 
 2. Double-click setup and choose the **Download Media** installation type. With this option, setup creates a local .iso (or .cab) file containing the installation media.
 
@@ -60,6 +81,9 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
+
+On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
+
 ## SQL Server 2017 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -80,7 +104,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ###  2 - Get SQL Server 2017 installation media
 
-1. On a computer having an internet connection, download the [SQL Server 2017 setup program](https://www.microsoft.com/sql-server/sql-server-downloads). 
+1. On a computer having an internet connection, launch SQL Server 2017 Setup from your installation media.
 
 2. Double-click setup and choose the **Download Media** installation type. With this option, setup creates a local .iso (or .cab) file containing the installation media.
 
@@ -89,6 +113,8 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
+On an isolated server, machine learning and R language-specific features are added through CAB files. 
 
 ## SQL Server 2016 offline install
 
@@ -104,13 +130,13 @@ Release  | Microsoft R Open | Microsoft R Server |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
 **SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
-### 2 - Get SQL Server 2016 installation media
+### 2 - SQL Server 2016 installation media
 
-You can install SQL Server 2016 RTM, SP 1, or SP 2 as your first installation on the target computer. Any of these versions can accept a cumulative update.
-
-One way to get an .iso file containing the installation media is through [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Sign in, and then use the **Downloads** link to find the SQL Server 2016 release you want to install. The download is in the form of an .iso file, which you can copy to the target computer for an offline installation.
+You can install SQL Server 2016 RTM, SP 1, or SP 2 as your first installation on the target computer. Any of these versions can accept a cumulative update. Locate the SQL Server 2016 Setup application in your installation media.
 
 ::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 
 ## Transfer files
 
@@ -132,36 +158,47 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 5. Continue following the on-screen prompts to complete the installation.
 
+::: moniker-end
 <a name="apply-cu"></a>
 
 ## Apply cumulative updates
 
-We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components. 
 
-::: moniker range="=sql-server-ver15"
+::: moniker range="=sql-server-ver16"
+
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
-2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 
-   + SQL Server 2019 updates *(updates are not yet available for 2019)*
+3. Select the latest cumulative update to download the executable.
+
+4. Transfer all files to the same folder on the offline computer.
+
+6. Run SQL Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
+
 ::: moniker-end
 
-::: moniker range="=sql-server-2017"
+::: moniker range="=sql-server-2017||=sql-server-ver15"
+
+Cumulative updates are installed through the Setup program. 
+
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
-2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 
-   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
+Cumulative updates are installed through the Setup program. 
+
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
-2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
-
-   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 ::: moniker-end
 
+::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 3. Select the latest cumulative update to download the executable.
 
 4. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
@@ -172,7 +209,8 @@ We recommend that you apply the latest cumulative update to both the database en
 
    ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
 
-5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
+7. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
+::: moniker-end
 
 ## Set environment variables
 
@@ -213,4 +251,6 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 ## Next steps
 
-To use Machine Learning Services to execute Python and R scripts in-database, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+To use Machine Learning Services to execute Python and R scripts in-database, see:
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]: [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]: [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)

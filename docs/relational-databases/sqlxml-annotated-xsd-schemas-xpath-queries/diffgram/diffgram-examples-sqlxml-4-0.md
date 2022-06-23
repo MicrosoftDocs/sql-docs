@@ -1,21 +1,18 @@
 ---
 title: "DiffGram Examples (SQLXML)"
 description: View examples of diffgrams in SQLXML 4.0 that perform insert, update, and delete operations to a database.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "DiffGrams [SQLXML], examples"
   - "examples [SQLXML], DiffGram"
-  - "diffgr:parentID"
-  - "parentID annotation"
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DiffGram Examples (SQLXML 4.0)

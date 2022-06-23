@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysschedules (Transact-SQL)"
-title: "dbo.sysschedules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysschedules (Transact-SQL)"
+description: dbo.sysschedules (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysschedules_TSQL"
   - "sysschedules"
   - "sysschedules_TSQL"
   - "dbo.sysschedules"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysschedules system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

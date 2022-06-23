@@ -1,15 +1,18 @@
 ---
 title: Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.reviewer: kendralittle, vanto, mathoma
-ms.custom: azure-synapse, sqldbrb=1
+ms.reviewer: wiassaf, vanto, mathoma
+ms.custom:
+  - "azure-synapse"
+  - "sqldbrb=1"
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -20,7 +23,7 @@ Auditing also:
 
 - Helps you maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.
 
-- Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information about Azure programs that support standards compliance, see the [Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) where you can find the most current list of Azure SQL compliance certifications.
+- Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information, see the [Microsoft Azure Trust Center](https://www.microsoft.com/trust-center/compliance/compliance-overview) where you can find the most current list of SQL Database compliance certifications.
 
 > [!NOTE]
 > For information on Azure SQL Managed Instance auditing, see the following article, [Get started with SQL Managed Instance auditing](../managed-instance/auditing-configure.md).
@@ -34,7 +37,7 @@ You can use SQL Database auditing to:
 - **Analyze** reports. You can find suspicious events, unusual activity, and trends.
 
 > [!IMPORTANT]
-> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance. During very high activity, or high network load, Azure SQL Database, Azure Synapse and Azure SQL Managed Instance allow operations to proceed and may not record some audited events.
+> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance of the database(s) or instance(s) that are being audited. During periods of very high activity or high network load, the auditing feature may allow transactions to proceed without recording all of the events marked for auditing.
 
 ### Auditing limitations
 
@@ -132,6 +135,9 @@ You have the option of choosing a different storage destination for this auditin
 ### <a id="audit-storage-destination"></a>Audit to storage destination
 
 To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved, and then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
+
+> [!NOTE] 
+> If you are deploying from the Azure portal, be sure that the storage account is in the same region as your database and server. If you are deploying through other methods, the storage account can be in any region.
 
 - The default value for retention period is 0 (unlimited retention). You can change this value by moving the **Retention (Days)** slider in **Advanced properties** when configuring the storage account for auditing.
   - If you change retention period from 0 (unlimited retention) to any other value, please note that retention will only apply to logs written after retention value was changed (logs written during the period when retention was set to unlimited are preserved, even after retention is enabled).

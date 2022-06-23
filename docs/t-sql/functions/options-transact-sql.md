@@ -1,25 +1,24 @@
 ---
+title: "@@OPTIONS (Transact-SQL)"
 description: "@@OPTIONS (Transact-SQL)"
-title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@OPTIONS"
   - "@@OPTIONS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET statement, current SET options"
   - "@@OPTIONS function"
   - "current SET options"
-ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,18 +1,16 @@
 ---
-description: "External Operations Catalog Views (Transact-SQL)"
-title: "External Operations Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "External Operations Catalog Views (Transact-SQL)"
+description: External Operations Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # External Operations Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

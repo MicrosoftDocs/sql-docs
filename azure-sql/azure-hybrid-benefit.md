@@ -7,8 +7,8 @@ ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.custom: sqldbrb=4
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: rothja
+ms.author: jroth
 ms.reviewer: sashan, moslake, mathoma
 ms.date: 11/09/2021
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
@@ -22,7 +22,9 @@ Changing to Azure Hybrid Benefit does not require any downtime.
 
 ## Overview
 
-![vcore pricing structure](./media/azure-hybrid-benefit/pricing.png)
+:::image type="complex" source="media/azure-hybrid-benefit/pricing.png" alt-text="Diagram of vCore pricing structure for SQL Database.":::
+Diagram of vCore pricing structure for SQL Database. 'License Included' pricing is made up of base compute and SQL license components. Azure Hybrid Benefit pricing is made up of base compute and software assurance components.
+:::image-end:::
 
 With Azure Hybrid Benefit, you pay only for the underlying Azure infrastructure by using your existing SQL Server license for the SQL Server database engine itself (Base Compute pricing). If you do not use Azure Hybrid Benefit, you pay for both the underlying infrastructure and the SQL Server license (License-Included pricing).
 

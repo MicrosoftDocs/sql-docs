@@ -1,20 +1,16 @@
 ---
+title: "Value Property Example (VC++)"
 description: "Value Property Example (VC++)"
-title: "Value Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Value property [ADO], VC++ example"
-ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Value property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Value Property Example (VC++)
 This example demonstrates the [Value](./value-property-ado.md) property with [Field](./field-object.md) and [Property](./property-object-ado.md) objects by displaying field and property values for the ***Employees*** table.  

@@ -1,20 +1,16 @@
 ---
+title: "Refresh Method Example (VC++)"
 description: "Refresh Method Example (VC++)"
-title: "Refresh Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Refresh method [ADO], VC++ example"
-ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Refresh method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Refresh Method Example (VC++)
 This example demonstrates using the [Refresh](./refresh-method-ado.md) method to refresh the [Parameters](./parameters-collection-ado.md) collection for a stored procedure [Command](./command-object-ado.md) object.  

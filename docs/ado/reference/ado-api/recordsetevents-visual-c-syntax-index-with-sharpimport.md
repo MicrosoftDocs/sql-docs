@@ -1,21 +1,17 @@
 ---
+title: "RecordsetEvents (Visual C++ Syntax Index with #import)"
 description: "RecordsetEvents (Visual C++ Syntax Index with #import)"
-title: "RecordsetEvents (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RecordsetEvents collection [ADO]"
-ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RecordsetEvents collection [ADO]"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # RecordsetEvents (Visual C++ Syntax Index with #import)
 ## Events  

@@ -1,23 +1,21 @@
 ---
-description: "sysdbmaintplan_jobs (Transact-SQL)"
-title: "sysdbmaintplan_jobs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdbmaintplan_jobs (Transact-SQL)"
+description: sysdbmaintplan_jobs (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdbmaintplan_jobs"
   - "sysdbmaintplan_jobs_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdbmaintplan_jobs system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

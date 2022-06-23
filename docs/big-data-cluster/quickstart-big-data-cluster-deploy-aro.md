@@ -4,13 +4,11 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Red Hat OpenShift (ARO).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)

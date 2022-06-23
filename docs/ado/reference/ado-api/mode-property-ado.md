@@ -1,23 +1,19 @@
 ---
+title: "Mode Property (ADO)"
 description: "Mode Property (ADO)"
-title: "Mode Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::Mode"
   - "_Stream::Mode"
   - "_Record::Mode"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Mode property [ADO]"
-ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Mode Property (ADO)
 Indicates the available permissions for modifying data in a [Connection](./connection-object-ado.md), [Record](./record-object-ado.md), or [Stream](./stream-object-ado.md) object.  

@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
-title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
+description: sys.dm_exec_query_statistics_xml (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/16/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_query_statistics_xml"
   - "sys.dm_exec_query_statistics_xml_TSQL"
   - "dm_exec_query_statistics_xml_TSQL"
   - "dm_exec_query_statistics_xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_statistics_xml management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-author: "pmasl"
-ms.author: "pelopes"
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 

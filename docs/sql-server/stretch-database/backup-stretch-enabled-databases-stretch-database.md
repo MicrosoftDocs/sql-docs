@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "Stretch Database, disabling"
   - "disabling Stretch Database"
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Backup Stretch-enabled databases (Stretch Database)

@@ -1,23 +1,21 @@
 ---
-description: "MSsubscription_agents (Transact-SQL)"
-title: "MSsubscription_agents (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscription_agents (Transact-SQL)"
+description: MSsubscription_agents (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscription_agents"
   - "MSsubscription_agents_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscription_agents system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

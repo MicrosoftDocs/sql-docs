@@ -1,22 +1,20 @@
 ---
-description: "ALTER WORKLOAD GROUP (Transact-SQL)"
-title: ALTER WORKLOAD GROUP (Transact-SQL) 
-ms.custom: ""
+title: ALTER WORKLOAD GROUP (Transact-SQL)
+description: ALTER WORKLOAD GROUP (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/23/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_WORKLOAD_GROUP_TSQL"
   - "ALTER WORKLOAD GROUP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER WORKLOAD GROUP statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)

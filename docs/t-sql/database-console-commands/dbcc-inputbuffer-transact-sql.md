@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "DBCC INPUTBUFFER statement"
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC INPUTBUFFER (Transact-SQL)

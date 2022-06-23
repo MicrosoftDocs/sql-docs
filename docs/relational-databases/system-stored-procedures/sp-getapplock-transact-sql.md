@@ -22,7 +22,7 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_getapplock (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Places a lock on an application resource.  
   
@@ -80,7 +80,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 -   The database ID of the database containing the lock resource.  
   
--   The database principle specified in the @DbPrincipal parameter.  
+-   The database principal specified in the @DbPrincipal parameter.  
   
 -   The lock name specified in the @Resource parameter.  
   

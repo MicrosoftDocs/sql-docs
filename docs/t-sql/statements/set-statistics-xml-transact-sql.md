@@ -1,27 +1,25 @@
 ---
-description: "SET STATISTICS XML (Transact-SQL)"
-title: "SET STATISTICS XML (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET STATISTICS XML (Transact-SQL)"
+description: SET STATISTICS XML (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_STATISTICS_XML_TSQL"
   - "SET STATISTICS XML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statistical information [SQL Server], statement processing"
   - "STATISTICS XML option"
   - "SET STATISTICS XML statement"
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

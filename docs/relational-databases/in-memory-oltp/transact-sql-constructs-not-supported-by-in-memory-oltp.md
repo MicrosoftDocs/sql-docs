@@ -1,20 +1,19 @@
 ---
 title: "T-SQL not supported by in-memory OLTP"
 description: Learn which Transact-SQL features are not supported for memory-optimized tables, natively compiled stored procedures, and user-defined functions.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Memory-optimized tables, natively compiled stored procedures, and user-defined functions do not support the full [!INCLUDE[tsql](../../includes/tsql-md.md)] surface area that is supported by disk-based tables, interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, and user-defined functions. When attempting to use one of the unsupported features, the server returns an error.  
   
@@ -62,7 +61,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |Operation|Update of primary key columns|Primary key columns in memory-optimized tables and table types cannot be updated. If the primary key needs to be updated, delete the old row and insert the new row with the updated primary key.|  
 |Operation|CREATE INDEX|Indexes on memory-optimized tables must be specified inline with the **CREATE TABLE** statement, or with the **ALTER TABLE** statement.|  
 |Operation|CREATE FULLTEXT INDEX|Fulltext indexes are not supported for memory-optimized tables.|  
-|Operation|schema change|Memory-optimized tables and natively compiled stored procedures do not support certain schema changes:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]: ALTER TABLE, ALTER PROCEDURE, and sp_rename operations are supported. Other schema changes, for example adding extended properties, are not supported.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]: ALTER TABLE and ALTER PROCEDURE operations are supported. Other schema changes, including sp_rename, are not supported.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: schema changes are not supported. To change the definition of a memory-optimized table or natively compiled stored procedure, first drop the object and then recreate it with the desired definittion.| 
+|Operation|schema change|Memory-optimized tables and natively compiled stored procedures do not support certain schema changes:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]: ALTER TABLE, ALTER PROCEDURE, and sp_rename operations are supported. Other schema changes, for example adding extended properties, are not supported.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]: ALTER TABLE and ALTER PROCEDURE operations are supported. Other schema changes, including sp_rename, are not supported.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: schema changes are not supported. To change the definition of a memory-optimized table or natively compiled stored procedure, first drop the object and then recreate it with the desired definition.| 
 |Operation|TRUNCATE TABLE|The TRUNCATE operation is not supported for memory-optimized tables. To remove all rows from a table, delete all rows using **DELETE FROM** _table_ or drop and recreate the table.|  
 |Operation|ALTER AUTHORIZATION|Changing the owner of an existing memory-optimized table or natively compiled stored procedure is not supported. Drop and recreate the table or procedure to change ownership.|  
 |Operation|ALTER SCHEMA|Transferring an existing table or natively compiled stored procedure to another schema is not supported. Drop and recreate the object to transfer between schemas.|  
@@ -141,7 +140,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |Operator|TSEQUAL|This operator is not supported. Remove **TSEQUAL** from the natively compiled stored procedure.|  
 |Operator|LIKE|This operator is not supported. Remove **LIKE** from the natively compiled stored procedure.|  
 |Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
+|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atomic blocks in [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Operand|TABLESAMPLE|This operator is not supported. Remove **TABLESAMPLE** from the natively compiled stored procedure.|  
 |Option|RECOMPILE|Natively compiled stored procedures are compiled at create time. Remove **RECOMPILE** from the procedure definition.<br /><br /> You can execute sp_recompile on a natively compiled stored procedure, which causes it to recompile on the next execution.|  
 |Option|ENCRYPTION|This option is not supported. Remove **ENCRYPTION** from the procedure definition.|  
@@ -164,7 +163,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |Feature|GROUPING SETS|**GROUPING SETS** cannot be used with **GROUP BY** clauses in natively compiled stored procedures. Remove **GROUPING SETS** from the procedure definition.|  
 |Feature|BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION|Use ATOMIC blocks to control transactions and error handling. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Feature|Inline table variable declarations.|Table variables must reference explicitly defined memory-optimized table types. You should create a memory-optimized table type and use that type for the variable declaration, rather than specifying the type inline.|  
-|Feature|Disk-based tables|Disk-based tables cannot be accessed from natively compiled stored procedures. Remove references to disk-based tables from the natively-compiled stored procedures. Or, migrate the disk-based table(s) to memory optimized.|  
+|Feature|Disk-based tables|Disk-based tables cannot be accessed from natively compiled stored procedures. Remove references to disk-based tables from the natively compiled stored procedures. Or, migrate the disk-based table(s) to memory optimized.|  
 |Feature|Views|Views cannot be accessed from natively compiled stored procedures. Instead of views, reference the underlying base tables.|  
 |Feature|Table valued functions|**Applies to**: [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>Multi-statement table-valued functions cannot be accessed from natively compiled T-SQL modules. Inline table-valued functions are supported, but must be created WITH NATIVE_COMPILATION.<br/><br/>**Applies to**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Table-valued functions cannot be referenced from natively compiled T-SQL modules.|  
 |Option|PRINT|Remove reference|  

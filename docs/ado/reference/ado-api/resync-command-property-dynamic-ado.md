@@ -1,19 +1,15 @@
 ---
+title: "Resync Command Property-Dynamic (ADO)"
 description: "Resync Command Property-Dynamic (ADO)"
-title: "Resync Command Property-Dynamic (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Resync Command property [ADO]"
-ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Resync Command property [ADO]"
+apitype: "COM"
 ---
 # Resync Command Property-Dynamic (ADO)
 Specifies a user-supplied command string that the [Resync](./resync-method.md) method issues to refresh the data in the table named in the [Unique Table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamic property.  

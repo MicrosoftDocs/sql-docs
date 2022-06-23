@@ -1,39 +1,23 @@
 ---
 title: Use the Visual Studio Code mssql extension
-description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts for SQL Server on Linux.
+description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts on Windows, macOS, and Linux.
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 10/27/2021
+ms.date: 5/24/2022
 ---
 
 # SQL Server extension for Visual Studio Code
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
-
-The mssql extension for VS Code includes the [SQL Database projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md) with support for SQL projects on Windows, macOS, and Linux.
-
-## Install the mssql extension in VS Code
-
-1. [Download and install Visual Studio Code](https://code.visualstudio.com/) on your machine.
-
-1. In Visual Studio Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
-
-2. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown.
-
-3. In the **Extensions** pane, type *mssql*.
-
-4. Select the **SQL Server (mssql)** extension, and then select **Install**.
-
-   ![Install the mssql extension](./media/sql-server-develop-use-vscode/vscode-extension.png)
-
-5. After the installation completes, select **Reload** to enable the extension.
+This article shows how to use the **mssql** extension for Visual Studio Code (Visual Studio Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
 ## Create or open a SQL file
 
@@ -43,7 +27,7 @@ The mssql extension enables mssql commands and T-SQL IntelliSense in the code ed
 
 2. Select **Plain Text** on the lower status bar, or press **Ctrl**+**K** > **M**, and select **SQL** from the languages dropdown. 
 
-   ![SQL language mode](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
+   ![Screenshot of Visual Studio Code G U I, SQL language mode.](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
    > If this is the first time you have used the extension, the extension installs the SQL tools service in the background.
@@ -58,7 +42,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 2. Type *sql* to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
 
-   ![mssql commands](./media/sql-server-develop-use-vscode/vscode-commands.png)
+   ![Screenshot of Visual Studio Code G U I, m s s q l commands.](./media/sql-server-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
    >A SQL file, such as the empty SQL file you created, must have focus in the code editor before you can execute the mssql commands.
@@ -71,7 +55,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
    | Connection property | Description |
    |---|---|
-   | **Server name or ADO connection string** | Specify the SQL Server instance name. Use *localhost* to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. To connect to a SQL Server container, specify the IP address of the container's host machine. If you need to specify a port, use a comma to separate it from the name. For example, for a server listening on port 1401, enter `<servername or IP>,1401`.<br/><br/>As an alternative, you can enter the ADO connection string for your database here. |
+   | **Server name or ADO connection string** | Specify the SQL Server instance name. Use *localhost* to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. To connect to a SQL Server container, specify the IP address of the container's host machine. If you need to specify a port, use a comma to separate it from the name. For example, for a server listening on port 1401, enter `<servername or IP>,1401`.<br/><br/>By default, the connection string uses port 1433. A default instance of SQL Server uses 1433 unless modified. If your instance is listening on 1433, you do not need to specify the port.<br/><br/>As an alternative, you can enter the ADO connection string for your database here. |
    | **Database name** (optional) | The database that you want to use. To connect to the default database, don't specify a database name here. |
    | **Authentication Type** | Choose either **Integrated** or **SQL Login**. |
    | **User name** | If you selected **SQL Login**, enter the name of a user with access to a database on the server. |
@@ -86,15 +70,15 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 6. Verify your connection in the lower status bar.
 
-   ![Connection status](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
+   ![Screenshot of Visual Studio Code G U I, Connection status.](./media/sql-server-develop-use-vscode/vscode-connection-status.png)
 
 As an alternative to the previous steps, you can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
-## Create a SQL database
+## Create a database
 
 1. In the new SQL file that you started earlier, type *sql* to display a list of editable code snippets.
 
-   ![SQL snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
+   ![Screenshot of editor in Visual Studio Code, SQL snippets.](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
 
 2. Select **sqlCreateDatabase**.
 
@@ -116,7 +100,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Press **Ctrl**+**Shift**+**E** to execute the Transact-SQL commands. View the results in the query window.
 
-    ![Create database messages](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
+    ![Screenshot of Visual Studio code G U I , create database messages.](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
 
     > [!TIP]
     > You can customize the shortcut keys for the mssql commands. See [Customize shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
@@ -131,7 +115,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Select the new **TutorialDB** database.
 
-   ![Use database](./media/sql-server-develop-use-vscode/vscode-use-database.png)
+   ![Screenshot of Visual Studio code G U I , choosing a database.](./media/sql-server-develop-use-vscode/vscode-use-database.png)
 
 5. In the code editor, type *sql* to display the snippets, select **sqlCreateTable**, and then press **Enter**.
 
@@ -173,14 +157,14 @@ As an alternative to the previous steps, you can also create and edit connection
 
    While you type, T-SQL IntelliSense helps you to complete the statements:
 
-   ![T-SQL IntelliSense](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
+   ![Screenshot of Visual Studio Code U I , T-SQL IntelliSense.](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
 
    > [!TIP]
    > The mssql extension also has commands to help create INSERT and SELECT statements. These were not used in the previous example.
 
 2. Press **Ctrl**+**Shift**+**E** to execute the commands. The two result sets display in the **Results** window.
 
-   ![Results](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
+   ![Screenshot of Visual Studio Code U I, the Results pane.](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## View and save the result
 
@@ -188,21 +172,21 @@ As an alternative to the previous steps, you can also create and edit connection
 
 2. Select the **Results** and **Messages** panel headers to collapse and expand the panels.
 
-   ![Toggle headers](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
+   ![Screenshot of Visual Studio Code U I, Toggle headers.](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
 
    > [!TIP]
    > You can customize the default behavior of the mssql extension. See [Customize extension options](https://github.com/Microsoft/vscode-mssql/wiki/customize-options).
 
 3. Select the maximize grid icon on the second result grid to zoom in to those results.
 
-   ![Maximize grid](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
+   ![Screenshot of Visual Studio Code U I, Maximize grid.](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
 
    > [!NOTE]
    > The maximize icon displays when your T-SQL script produces two or more result grids.
 
 4. Open the grid context menu by right-clicking on the grid.
 
-   ![Context menu](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
+   ![Screenshot of Visual Studio Code U I, Context menu.](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
 
 5. Select **Select All**.
 
@@ -212,13 +196,13 @@ As an alternative to the previous steps, you can also create and edit connection
 
 8. Verify that the JSON file saves and opens in Visual Studio Code.
 
-   ![Save as JSON](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
+   ![Screenshot of editor in Visual Studio Code U I, Save as J SON.](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
 
 If you need to save and run SQL scripts later, for administration or a larger development project, save the scripts with a *.sql* extension.
 
 ## Next steps
 
 - If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
-- Develop for SQL databases in VS Code with the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md)
+- Develop for SQL databases in Visual Studio Code with the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md)
 - For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
 - For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "managing Stretch Database"
   - "troubleshooting Stretch Database"
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Manage and troubleshoot Stretch Database

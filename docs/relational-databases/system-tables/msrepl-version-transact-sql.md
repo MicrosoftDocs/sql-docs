@@ -1,23 +1,21 @@
 ---
-description: "MSrepl_version (Transact-SQL)"
-title: "MSrepl_version (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_version (Transact-SQL)"
+description: MSrepl_version (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_version"
   - "MSrepl_version_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_version system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSrepl_version (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

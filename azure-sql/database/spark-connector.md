@@ -1,16 +1,17 @@
 ---
 title: Use the Spark connector with Microsoft Azure SQL and SQL Server
 description: Learn how to use the Spark Connector with Azure SQL Database, Azure SQL Managed Instance, and SQL Server.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: development
-ms.custom: sqldbrb=2
-ms.devlang:
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/02/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Accelerate real-time big data analytics using the Spark connector
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

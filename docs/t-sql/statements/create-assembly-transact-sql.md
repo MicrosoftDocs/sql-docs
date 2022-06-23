@@ -1,28 +1,26 @@
 ---
-description: "CREATE ASSEMBLY (Transact-SQL)"
-title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE ASSEMBLY (Transact-SQL)"
+description: CREATE ASSEMBLY (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ASSEMBLY"
   - "CREATE ASSEMBLY"
   - "CREATE_ASSEMBLY_TSQL"
   - "ASSEMBLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "assemblies [CLR integration], validating"
   - "validating assemblies"
   - "CREATE ASSEMBLY statement"
   - "assemblies [CLR integration], creating"
+dev_langs:
+  - "TSQL"
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)

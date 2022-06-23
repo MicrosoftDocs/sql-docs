@@ -1,15 +1,16 @@
 ---
 title: Use Azure Resource Health to monitor database health
 description: Use Azure Resource Health to monitor Azure SQL Database and Azure SQL Managed Instance health, helps you diagnose and get support when an Azure issue impacts your SQL resources.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: sqldbrb=2
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: conceptual
 author: AlainDormehlMSFT
 ms.author: aldorme
-ms.reviewer: kendralittle, mathoma, wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/24/2021
 ---
 # Use Resource Health to troubleshoot connectivity for Azure SQL Database and Azure SQL Managed Instance

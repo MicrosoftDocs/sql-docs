@@ -1,22 +1,18 @@
 ---
+title: "AbsolutePage, PageCount, and PageSize Properties Example (VB)"
 description: "AbsolutePage, PageCount, and PageSize Properties Example (VB)"
-title: "AbsolutePage, PageCount, and PageSize Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PageCount property [ADO], Visual Basic example"
   - "AbsolutePage property [ADO], Visual Basic example"
   - "PageSize property [ADO], Visual Basic example"
-ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VB)
 ```  

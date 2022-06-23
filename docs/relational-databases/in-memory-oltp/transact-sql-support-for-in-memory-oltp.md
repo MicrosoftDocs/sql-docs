@@ -1,20 +1,18 @@
 ---
-title: "Transact-SQL Support for In-Memory OLTP | Microsoft Docs"
+title: "Transact-SQL Support for In-Memory OLTP"
 description: Learn about Transact-SQL statements that include syntax options to support In-Memory OLTP. Use links to additional references about supported features.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Support for In-Memory OLTP
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements include syntax options to support In-Memory OLTP:  
   

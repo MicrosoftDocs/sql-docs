@@ -1,20 +1,16 @@
 ---
+title: "Handling ADO Events"
 description: "Handling ADO Events"
-title: "Handling ADO Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [ADO]"
   - "ADO, events"
   - "event handlers [ADO]"
-ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-author: rothja
-ms.author: jroth
 ---
 # Handling ADO Events
 The ADO event model supports certain synchronous and asynchronous ADO operations that issue *events*, or notifications, before the operation starts or after it completes. An event is actually a call to an event-handler routine that you define in your application.  

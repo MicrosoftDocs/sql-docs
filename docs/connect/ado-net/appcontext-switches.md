@@ -1,15 +1,15 @@
 ---
 title: AppContext switches in SqlClient
 description: Learn about the AppContext switches available in SqlClient and how to use them to modify some default behaviors.
-ms.date: 05/28/2021
+ms.date: 06/01/2022
 dev_langs: 
   - "csharp"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: johnnypham
-ms.author: v-jopha
+author: David-Engel
+ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ---
 # AppContext switches in Sqlclient
@@ -27,6 +27,7 @@ Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 is not supported by the driv
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols", true);
 ```
+
 ## Enabling decimal truncation behavior
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]

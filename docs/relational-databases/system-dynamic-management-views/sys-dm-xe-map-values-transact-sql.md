@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xe_map_values (Transact-SQL)"
-title: "sys.dm_xe_map_values (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xe_map_values (Transact-SQL)"
+description: sys.dm_xe_map_values (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_xe_map_values"
   - "dm_xe_map_values"
   - "dm_xe_map_values_TSQL"
   - "sys.dm_xe_map_values_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_map_values dynamic management view"
   - "xe"
+dev_langs:
+  - "TSQL"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

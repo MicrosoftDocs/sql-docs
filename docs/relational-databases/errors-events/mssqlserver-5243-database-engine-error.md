@@ -41,10 +41,6 @@ Restore from BackupIf the problem is not hardware related and a known clean back
 
 Run DBCC CHECKDBIf no clean backup is available, run DBCC CHECKDB without a REPAIR clause to determine the extent of the corruption. DBCC CHECKDB will recommend a REPAIR clause to use. Then, run DBCC CHECKDB with the appropriate REPAIR clause to repair the corruption.
 
-> **alert tag is not supported!!!!**
-> **tr tag is not supported!!!!**
-> **tr tag is not supported!!!!**
-
 If running DBCC CHECKDB with one of the REPAIR clauses does not correct the problem, contact your primary support provider.
   
 ## See Also  

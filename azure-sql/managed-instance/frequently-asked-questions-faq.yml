@@ -55,7 +55,7 @@ sections:
           
           ### Are there any quota limitations for SQL Managed Instance deployments?
           
-          Managed instance has two default limits: limit on the number of subnets you can use and a limit on the number of vCores you can provision. Limits vary across the subscription types and regions. For the list of regional resource limitations by subscription type, see table from [Regional resource limitation](resource-limits.md#regional-resource-limitations). These are soft limits that can be increased on demand. If you need to provision more managed instances in your current regions, send a support request to increase the quota using the Azure portal. For more information, see [Request quota increases for Azure SQL Database](../database/quota-increase-request.md).
+          SQL Managed Instance has two default limits: limit on the number of subnets you can use and a limit on the number of vCores you can provision. Limits vary across the subscription types and regions. For the list of regional resource limitations by subscription type, see table from [Regional resource limitation](resource-limits.md#regional-resource-limitations). These are soft limits that can be increased on demand. If you need to provision more managed instances in your current regions, send a support request to increase the quota using the Azure portal. For more information, see [Request quota increases for Azure SQL Database](../database/quota-increase-request.md).
           
           ### Can I increase the number of databases limit (100) on my managed instance on demand?
           
@@ -82,17 +82,17 @@ sections:
           For new and preview features, see [Release notes](doc-changes-updates-release-notes-whats-new.md).
           
       - question: |
-          Create, update, delete or move SQL Managed Instance
+          Create, update, delete or move a managed instance
         answer: |
-          ### How can I provision Azure SQL Managed Instance?
+          ### How can I provision a managed instance?
           
-          You can provision an instance from [Azure portal](instance-create-quickstart.md), [PowerShell](scripts/create-configure-managed-instance-powershell.md), [Azure CLI](https://techcommunity.microsoft.com/t5/azure-sql-database/create-azure-sql-managed-instance-using-azure-cli/ba-p/386281) and [ARM templates](/archive/blogs/sqlserverstorageengine/creating-azure-sql-managed-instance-using-arm-templates).
+          You can provision a managed instance from [Azure portal](instance-create-quickstart.md), [PowerShell](scripts/create-configure-managed-instance-powershell.md), [Azure CLI](https://techcommunity.microsoft.com/t5/azure-sql-database/create-azure-sql-managed-instance-using-azure-cli/ba-p/386281) and [ARM templates](/archive/blogs/sqlserverstorageengine/creating-azure-sql-managed-instance-using-arm-templates).
           
-          ### Can I provision SQL Managed Instances in an existing subscription?
+          ### Can I provision managed instances in an existing subscription?
           
-          Yes, you can provision a SQL Managed Instance in an existing subscription if that subscription belongs to the [Supported subscription types](resource-limits.md#supported-subscription-types).
+          Yes, you can provision a managed instance in an existing subscription if that subscription belongs to the [Supported subscription types](resource-limits.md#supported-subscription-types).
           
-          ### Why couldn't I provision a SQL Managed Instance in the subnet which name starts with a digit?
+          ### Why couldn't I provision a managed instance in the subnet which name starts with a digit?
           
           This is a current limitation on underlying component that verifies subnet name against the regex ^[a-zA-Z_][^\\\/\:\*\?\"\<\>\|\`\'\^]*(?<![\.\s])$. All names that pass the regex and are valid subnet names are currently supported.
           
@@ -158,7 +158,7 @@ sections:
         answer: |
           ### How can I migrate from Azure SQL Database single or elastic pool to SQL Managed Instance?
           
-          Managed instance offers the same performance levels per compute and storage size as other deployment options of Azure SQL Database. If you want to consolidate data on a single instance, or you simply need a feature supported exclusively in managed instance, you can migrate your data by using export/import (BACPAC) functionality. Here are other ways to consider for SQL Database migration to SQL Managed Instance: 
+          Azure SQL Managed Instance offers the same performance levels per compute and storage size as other deployment options of Azure SQL Database. If you want to consolidate data on a single instance, or you simply need a feature supported exclusively in SQL Managed Instance, you can migrate your data by using export/import (BACPAC) functionality. Here are other ways to consider for SQL Database migration to SQL Managed Instance: 
           - Using [Data Source External](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-129-using-data-source-external-from-azure-sql/ba-p/1443210)
           - Using [SQLPackage](https://techcommunity.microsoft.com/t5/azure-database-support-blog/how-to-migrate-azure-sql-database-to-azure-sql-managed-instance/ba-p/369182)
           - Using [BCP](https://medium.com/azure-sqldb-managed-instance/migrate-from-azure-sql-managed-instance-using-bcp-674c92efdca7)
@@ -249,9 +249,9 @@ sections:
           
           Yes. For instructions, see [Create alerts for SQL Managed Instance](./alerts-create.md). For more tips and tricks, see [the blog](https://techcommunity.microsoft.com/t5/azure-database-support-blog/tips-amp-tricks-1-creating-alerts-for-azure-sql-managed-instance/ba-p/2396044).
           
-          ### Can I create metric alerts on a database in managed instance?
+          ### Can I create metric alerts on a database in a managed instance?
           
-          You cannot, alerting metrics are available for managed instance only. Alerting metrics for individual databases in managed instance are not available.
+          You cannot, alerting metrics are available for a managed instance only. Alerting metrics for individual databases in a managed instance are not available.
           
       - question: |
           Storage size
@@ -285,7 +285,7 @@ sections:
           
           ### Is on-demand backup supported?
           
-          Yes, you can create a copy-only full backup in their Azure Blob Storage, but it will only be restorable to a managed instance. For details, see [Copy-only backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?preserve-view=true&view=sql-server-ver15). However, copy-only backup is impossible if the database is encrypted by service-managed TDE since the certificate used for encryption is inaccessible. In such case, use point-in-time-restore feature to move the database to another SQL Managed Instance, or switch to customer-managed key.
+          Yes, you can create a copy-only full backup in their Azure Blob Storage, but it will only be restorable to a managed instance. For details, see [Copy-only backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?preserve-view=true&view=sql-server-ver15). However, copy-only backup is impossible if the database is encrypted by service-managed TDE since the certificate used for encryption is inaccessible. In such case, use point-in-time-restore feature to move the database to another managed instance, or switch to customer-managed key.
           
           ### Is native restore (from .bak files) to SQL Managed Instance supported?
           
@@ -328,7 +328,7 @@ sections:
           
           ### Can I set the NVA or firewall for the outbound non-management traffic?
           
-          Yes. The simplest way to achieve this is to add 0/0 rule to a UDR associated with managed instance subnet to route traffic through NVA.
+          Yes. The simplest way to achieve this is to add 0/0 rule to a UDR associated with the managed instance subnet to route traffic through NVA.
            
           ### How many IP addresses do I need for a managed instance?
           
@@ -511,7 +511,7 @@ sections:
           
           ### How much do automated backups cost?
           
-          You get the equal amount of free backup storage space as the reserved data storage space purchased, regardless of the backup retention period set. If your backup storage consumption is within the allocated free backup storage space, automated backups on managed instance will have no additional cost for you, therefore will be free of charge. Exceeding the use of backup storage above the free space will result in additional cost. See the Backup storage section of the [pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance) for details. More technical information on SQL Managed Instance automated backups is available at [Backup storage consumption explained](https://techcommunity.microsoft.com/t5/azure-sql-database/backup-storage-consumption-on-managed-instance-explained/ba-p/1390923).
+          You get the equal amount of free backup storage space as the reserved data storage space purchased, regardless of the backup retention period set. If your backup storage consumption is within the allocated free backup storage space, automated backups on SQL Managed Instance will have no additional cost for you, therefore will be free of charge. Exceeding the use of backup storage above the free space will result in additional cost. See the Backup storage section of the [pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance) for details. More technical information on SQL Managed Instance automated backups is available at [Backup storage consumption explained](https://techcommunity.microsoft.com/t5/azure-sql-database/backup-storage-consumption-on-managed-instance-explained/ba-p/1390923).
           
           ### How can I monitor billing cost for my backup storage consumption?
           

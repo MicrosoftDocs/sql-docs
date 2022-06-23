@@ -1,22 +1,21 @@
 ---
 title: "SqlXmlAdapter Object (SQLXML)"
 description: Learn about the SqlXmlAdapter object that provides methods that facilitate interaction with the dataset in the .NET Framework.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "void Update(DataSet ds) method"
   - "SqlXmlAdapter object"
   - "void Fill(DataSet ds) method"
   - "SQLXML Managed Classes, SqlXmlAdapter object"
   - "Managed Classes [SQLXML], SqlXmlAdapter object"
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlAdapter Object

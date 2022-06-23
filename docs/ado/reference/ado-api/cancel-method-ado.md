@@ -1,25 +1,21 @@
 ---
+title: "Cancel Method (ADO)"
 description: "Cancel Method (ADO)"
-title: "Cancel Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset20::Cancel"
   - "_Record::Cancel"
   - "_Connection::Cancel"
   - "Command25::Cancel"
   - "_Stream::Cancel"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Cancel method [ADO]"
-ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Cancel Method (ADO)
 Cancels execution of a pending asynchronous method call.  

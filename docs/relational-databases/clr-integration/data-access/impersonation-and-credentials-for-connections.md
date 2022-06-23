@@ -1,13 +1,13 @@
 ---
-title: "Impersonation and Credentials for Connections | Microsoft Docs"
+title: "Impersonation and Credentials for Connections"
 description: In SQL Server CLR integration, you may want to impersonate the caller in Windows Authentication by using the SqlContext.WindowsIdentity property.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "impersonation [CLR integration]"
   - "security [CLR integration]"
   - "database objects [CLR integration], connections"
@@ -17,8 +17,6 @@ helpviewer_keywords:
   - "credentials [CLR integration]"
   - "database objects [CLR integration], security"
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
-author: rothja
-ms.author: jroth
 ---
 # Impersonation and Credentials for Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

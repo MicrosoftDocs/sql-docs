@@ -1,18 +1,14 @@
 ---
+title: "Appendix B: ADO Errors"
 description: "Appendix B: ADO Error Codes"
-title: "Appendix B: ADO Errors | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "errors [ADO], types"
-ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
-author: rothja
-ms.author: jroth
 ---
 # Appendix B: ADO Error Codes
 See the following topics for more information about particular error messages:

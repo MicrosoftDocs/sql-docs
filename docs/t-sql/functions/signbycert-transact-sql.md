@@ -1,19 +1,19 @@
 ---
+title: "SIGNBYCERT (Transact-SQL)"
 description: "SIGNBYCERT (Transact-SQL)"
-title: "SIGNBYCERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SIGNBYCERT"
   - "SIGNBYCERT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text signing [SQL Server]"
   - "encryption [SQL Server], certificates"
   - "certificates [SQL Server], text signing"
@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "signing text [SQL Server]"
   - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
-ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

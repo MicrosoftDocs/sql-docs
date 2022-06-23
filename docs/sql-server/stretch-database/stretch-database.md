@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database"
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Stretch Database

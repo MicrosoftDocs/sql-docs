@@ -1,18 +1,16 @@
 ---
-description: "Change Data Capture Tables (Transact-SQL)"
-title: "Change Data Capture Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Change Data Capture Tables (Transact-SQL)"
+description: Change Data Capture Tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: LitKnd
-ms.author: kendralittle
 ---
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

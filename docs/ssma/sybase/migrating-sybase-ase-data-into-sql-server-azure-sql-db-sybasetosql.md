@@ -14,6 +14,9 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.sybase.migratedata.f1"
+
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL Database  (SybaseToSQL)
 After you have successfully loaded the Sybase Adaptive Server Enterprise (ASE) database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, you can migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
@@ -102,6 +105,30 @@ To view the migration messages, make sure that the Output pane is visible. Other
   
 > [!NOTE]  
 > When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.  
+
+## Migrating data at scale (Preview)
+
+When large data size 100GB and above needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premise or external Sybase data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data from Sybase.
+
+1. For large offline migration, click on Migrate data at scale. The offline data migration supports database level migration.
+
+1. Provide Azure active directory account for authentication. Once you entered the user name, click on connect.
+
+1. Select the tenant and the subscription that already has the Azure SQL VM or Azure SQL database or managed instance configured and click next.
+
+1. If  there is an existing data factory that will is preferred to be used, you can select the resource group and the data factory name that would be used for this migration. Otherwise, click new to create a resource group and azure data factory.
+
+1. In order to migrate an external data source ,  an integration runtime is required. Either click new and follow the steps to create the integration runtime or use an existing integration service. To create an integration service, a gateway installation needs to be configured and a key needs to be supplied to configure integration runtime.
+
+1. After the integration runtime configuration, the migrate workflow will create the linked service in the data factory.  Provide the Sybase credentials followed by SQL credentials.
+
+1. Finally, provide an unique pipeline name. Pipeline name supports characters and numeric values. Avoid any special characters.
+
+1. If the target tables contains data, it will be truncated and reloaded. A warning dialog box will appear.  Select OK to proceed or cancel to avoid truncate and load activity.
+
+1. It takes few minutes to create a pipeline. The status bar will provide the progress of the pipeline creation. If the pipeline is created successfully, a message wil be written in the output log "A data factory pipeline [PipelineName] is created for the data migration activity."
+
+1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -1,23 +1,21 @@
 ---
-description: "MSlogreader_agents (Transact-SQL)"
-title: "MSlogreader_agents (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSlogreader_agents (Transact-SQL)"
+description: MSlogreader_agents (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSlogreader_agents_TSQL"
   - "MSlogreader_agents"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSlogreader_agents system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSlogreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

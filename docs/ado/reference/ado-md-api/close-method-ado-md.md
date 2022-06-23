@@ -1,24 +1,19 @@
 ---
+title: "Close Method (ADO MD)"
 description: "Close Method (ADO MD)"
-title: "Close Method (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Close"
-  - "Cellset::Close"
-helpviewer_keywords: 
-  - "Close method [ADO MD]"
-ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Close method [ADO MD]"
+apitype: "COM"
 ---
+
 # Close Method (ADO MD)
+
 Closes an open cellset.  
   
 ## Syntax  

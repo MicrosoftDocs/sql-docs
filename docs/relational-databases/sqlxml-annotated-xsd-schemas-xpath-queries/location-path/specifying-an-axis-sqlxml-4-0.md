@@ -1,13 +1,15 @@
 ---
 title: "Specifying an Axis (SQLXML)"
-description: Learn how specifying an axis in an SQLXML 4.0 XPath query specifies the tree relationship between the nodes selected by the location step and the context node.  
+description: Learn how specifying an axis in an SQLXML 4.0 XPath query specifies the tree relationship between the nodes selected by the location step and the context node.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "XPath queries [SQLXML], axes"
   - "XPath queries [SQLXML], location paths"
   - "self axis"
@@ -18,9 +20,6 @@ helpviewer_keywords:
   - "location path for XPath query"
   - "axes [SQLXML]"
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying an Axis (SQLXML 4.0)

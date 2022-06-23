@@ -1,25 +1,23 @@
 ---
-description: "restorefile (Transact-SQL)"
-title: "restorefile (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "restorefile (Transact-SQL)"
+description: restorefile (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "restorefile"
   - "restorefile_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restorefile system table"
   - "restoring files [SQL Server], restorefile system table"
   - "file restores [SQL Server], restorefile system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: LitKnd
-ms.author: kendralittle
 ---
 # restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

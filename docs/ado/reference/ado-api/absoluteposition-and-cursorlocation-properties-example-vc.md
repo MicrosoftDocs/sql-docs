@@ -1,21 +1,17 @@
 ---
+title: "AbsolutePosition and CursorLocation Properties Example (VC++)"
 description: "AbsolutePosition and CursorLocation Properties Example (VC++)"
-title: "AbsolutePosition and CursorLocation Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CursorLocation property [ADO], VC++ example"
-  - "AbsolutePosition property [ADO], VC++ example"
-ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorLocation property [ADO], VC++ example"
+  - "AbsolutePosition property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # AbsolutePosition and CursorLocation Properties Example (VC++)
 This example demonstrates how the [AbsolutePosition](./absoluteposition-property-ado.md) property can track the progress of a loop that enumerates all the records of a [Recordset](./recordset-object-ado.md). It uses the [CursorLocation](./cursorlocation-property-ado.md) property to enable the **AbsolutePosition** property by setting the cursor to a client cursor.  

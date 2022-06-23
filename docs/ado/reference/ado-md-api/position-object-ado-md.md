@@ -1,21 +1,17 @@
 ---
+title: "Position Object (ADO MD)"
 description: "Position Object (ADO MD)"
-title: "Position Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Position"
-helpviewer_keywords: 
-  - "Position object [ADO MD]"
-ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Position"
+helpviewer_keywords:
+  - "Position object [ADO MD]"
+apitype: "COM"
 ---
 # Position Object (ADO MD)
 Represents a set of one or more members of different dimensions that defines a point along an axis.  

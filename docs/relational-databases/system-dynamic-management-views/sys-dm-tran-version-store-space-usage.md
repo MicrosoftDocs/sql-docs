@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
-title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
+description: sys.dm_tran_version_store_space_usage (Transact-SQL)
+author: "savjani"
+ms.author: "pariks"
+manager: ajayj
 ms.date: "04/24/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_version_store_space_usage_TSQL"
   - "sys.dm_tran_version_store_space_usage"
   - "dm_tran_version_store_space_usage"
   - "dm_tran_version_store_space_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_version_store_space_usage dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: "savjani"
-ms.author: "pariks"
-manager: ajayj
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)

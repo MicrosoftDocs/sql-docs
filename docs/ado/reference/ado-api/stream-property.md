@@ -1,25 +1,21 @@
 ---
+title: "Stream Property"
 description: "Stream Property"
-title: "Stream Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ADOStreamConstruction::GetStream"
   - "ADOStreamConstruction::PutStream"
   - "ADOStreamConstruction::put_Stream"
   - "ADOStreamConstruction::Stream"
   - "ADOStreamConstruction::get_Stream"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Stream property"
-ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  

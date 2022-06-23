@@ -143,7 +143,7 @@ To list all of the network credentials stored in SQL Server PDW, use the [sys.dm
 Operations on the loading server can use a UNC path to pull data from outside the trusted internal network. An attacker on the network or with ability to influence name resolution can intercept or modify data sent to the PDW. This situation presents a tampering and information disclosure risk. To help mitigate the risk of tampering:
 
 - Require signing on the connection.
-- On the loading server, set the following group policy option in Security Settings\Local Policies\Security Options:
+- On the loading server, set the following group policy option in *Security Settings\Local Policies\Security Options*:
 
   Microsoft network client: **Digitally sign communications (always)**: *Enabled*.
 

@@ -31,9 +31,9 @@ To install the antivirus software on the physical hosts, exclude the following d
 
 Exclude these directories:
 
-- C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory
-- C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory
-- C:\clusterStorage - Virtual hard disk drive directories
+- *C:\ProgramData\Microsoft\Windows\Hyper-V*. Virtual machine configuration directory.
+- *C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks*. Default virtual hard disk drive directory.
+- *C:\clusterStorage*. Virtual hard disk drive directories.
 
 Exclude these processes:
 
@@ -46,8 +46,8 @@ To install the antivirus software on the virtual machines, exclude the following
 
 Virtual machine `_PDW_region_-CTL01`:
 
-- C:\windows\cluster\
-- G:\
+- *C:\windows\cluster\\*
+- *G:\\*
 
 Virtual machine `_appliance_domain_-AD01` and `_appliance_domain_-AD02`:
 
@@ -55,8 +55,8 @@ Virtual machine `_appliance_domain_-AD01` and `_appliance_domain_-AD02`:
 
 Compute node virtual machines:
 
-- C:\windows\cluster\
-- G:\
+- *C:\windows\cluster\\*
+- *G:\\*
 
 Virtual machine `_appliance_domain_-VMM`
 
@@ -68,7 +68,7 @@ Virtual machine `_appliance_domain_-WDS`
 
 Virtual machine `_appliance_domain_-ISCSI01`
 
-- C:\iscsitarget
+- *C:\iscsitarget*
 
 ## Next steps
 

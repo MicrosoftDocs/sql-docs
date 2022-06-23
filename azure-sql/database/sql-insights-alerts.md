@@ -26,7 +26,7 @@ SQL Insights (preview) includes a set of alert rule templates you can use to cre
 Use the following steps to enable the alerts in Azure Monitor from the Azure portal. The alert rules that are created will be scoped to all of the SQL resources monitored under the selected monitoring profile.  When an alert rule is triggered, it will trigger on the specific SQL instance or database.
 
 > [!NOTE]
-> You can also create custom [log alert rules](/azure/azure-monitor/alerts/alerts-log.md) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
+> You can also create custom [log alert rules](/azure/azure-monitor/alerts/alerts-log) by running queries on the data sets in the *InsightsMetrics* table and then saving those queries as an alert rule. 
 
 Select **SQL (preview)** from the **Insights** section of the Azure Monitor menu in the Azure portal. Click **Alerts**
 
@@ -36,7 +36,7 @@ The **Alerts** pane opens on the right side of the page. By default, it will dis
 
 :::image type="content" source="media/sql-insights-alerts/alert-templates.png" alt-text="Screenshot of the Alerts page for Azure Monitor in the Azure portal. In the tab for Alert templates, a Create rule link for one of the alerts is highlighted.":::
 
-On the **Create Alert rule** page, review the default settings for the rule and edit them as needed. You can also select an [action group](/azure/azure-monitor/alerts/action-groups.md) to create notifications and actions when the alert rule is triggered. Click **Enable alert rule** to create the alert rule once you've verified all of its properties.
+On the **Create Alert rule** page, review the default settings for the rule and edit them as needed. You can also select an [action group](/azure/azure-monitor/alerts/action-groups) to create notifications and actions when the alert rule is triggered. Click **Enable alert rule** to create the alert rule once you've verified all of its properties.
 
 
 :::image type="content" source="media/sql-insights-alerts/alert-rule.png" alt-text="Screenshot of the Alert rules page for Azure Monitor in the Azure portal. The Create Alert rule (step 1 of 2) page shows the thresholds to use for alerts, the name and severity of the alert, and an alert group for notifications (optional).":::
@@ -52,5 +52,5 @@ If you choose to view the templates, select **Deploy** from the template page to
 
 ## Next steps
 
-Learn more about [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview.md).
+Learn more about [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview).
 

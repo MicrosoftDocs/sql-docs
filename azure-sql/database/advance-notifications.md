@@ -66,18 +66,18 @@ The following table shows the general-information notifications you may receive:
 
 |Status|Description|
 |:---|:---|
-|**Planned Deployment**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am (local time) for DB xyz.|
-|**In-Progress** | Maintenance for database *xyz* is starting.| 
-|**Complete** | Maintenance of database *xyz* is complete. |
+|**Planned**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am<sup>1</sup> (local time) in region *xyz*. |
+|**InProgress** | Maintenance for database(s) in region *xyz* is starting. | 
+|**Complete** | Maintenance of database(s) in region *xyz* is complete. |
+
+<sup>1</sup> Start and end time depend on the selected maintenance window. 
 
 The following table shows additional notifications that may be sent while maintenance is ongoing: 
 
 |Status|Description|
 |:---|:---|
-|**Extended** | Maintenance is in progress but didn't complete for database *xyz*. Maintenance will continue at the next maintenance window.| 
-|**Canceled**| Maintenance for database *xyz* is canceled and will be rescheduled later. |
-|**Blocked**|There was a problem during maintenance for database *xyz*. We'll notify you when we resume.| 
-|**Resumed**|The problem has been resolved and maintenance will continue at the next maintenance window.|
+|**Rescheduled** | Maintenance is in progress but didn't complete, there was a problem during maintenance and it could not start, or maintenance did not start and is rescheduled for next window. | 
+|**Canceled**| Maintenance for database(s) in region *xyz* is canceled and will be rescheduled later. |
 
 ## Permissions
 
@@ -104,6 +104,16 @@ resources
 ) on resource
 | project resource, status, resourceGroup, location, startTimeUtc, endTimeUtc, impactType
 ```
+
+In Azure Resource Graph (ARG) explorer you might find values for the status of deployment that are bit different than the ones displayed in the notification content.
+
+|Status|Description|
+|:---|:---|
+|**Pending**| Maintenance is planned on upcoming date, previously planned maintenance was rescheduled and is waiting to start in the next window, or maintenance started but didn't complete in previous window and will continue in the next one. |
+|**InProgress** | Maintenance for resource *xyz* is starting or is in progress. | 
+|**Completed** | Maintenance for resource *xyz* is complete. |
+|**NoUpdatesPending** | Previously planned maintenance for resource *xyz* is canceled and will be rescheduled later. |
+|**RetryLater** | Previously planned maintenance for resource *xyz* didn't start and is rescheduled for later. |
 
 For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](/azure/service-health/resource-graph-samples).
 

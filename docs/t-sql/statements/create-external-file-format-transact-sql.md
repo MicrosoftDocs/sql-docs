@@ -294,7 +294,7 @@ Notes about the table:
   
  Details:  
   
--   To separate month, day and year values, you can use '-', '/', or '.'. For simplicity, the table uses only the ' - ' separator.
+-   To separate month, day and year values, you can use '-', '/', or '.'. For simplicity, the table uses only the ' - ' separator.(One of the separators is required.　Separator cannot be omitted.)
   
 -   To specify the month as text, use three or more characters. Months with one or two characters are interpreted as a number.
   

@@ -117,6 +117,7 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Availability Group Dashboard | Fixed issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error.  See [SSMS 18.11.1 Bug](https://feedback.azure.com/d365community/idea/1603d3a2-73ab-ec11-a81c-6045bd7d1bee). |
 | Analysis Services | Corrected behavior of SSMS not saving Analysis Services settings separately. |
+| Integration Services | Fixed an issue that caused the error "System.ArgumentException: Value does not fall within the expected range" that would be encountered unexpectedly at step "Changing protection level" when deploying SSIS project. |
 | General SSMS | Fixed issue with Technical Support menu link opening to a blank page. |
 | Intellisense | Fixed Intellisense for contained users. |
 | Ledger | Fixed issue with display columns and ledger tables displaying more than once. |

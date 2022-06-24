@@ -54,7 +54,7 @@ Use the Native mode configuration manager to complete the following:
 
     If you specify a remote computer, click **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
-3. In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only SQL Server 2008 and later report server instances appear in the list. You cannot configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+3. In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only SQL Server 2008 and later report server instances appear in the list. You can't configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 4. Click **Connect**.
 
@@ -96,9 +96,9 @@ Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssman
 
     Click **Start**, then click **All Programs**, then click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server Management Studio**. The **Connect to Server** dialog box appears.
 
-2. If the **Connect to Server** dialog box does not appear, in **Object Explorer**, click **Connect** and then select **Reporting Services**.
+2. If the **Connect to Server** dialog box doesn't appear, in **Object Explorer**, click **Connect** and then select **Reporting Services**.
 
-3. In the **Server type** list, select **Reporting Services**. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is not on the list, it is not installed.
+3. In the **Server type** list, select **Reporting Services**. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't on the list, it isn't installed.
 
 4. In the **Server name** list, select a report server instance. Local instances appear in the list. You can also type the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
@@ -126,7 +126,7 @@ Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.
 
 5. Type a name and location for the project, or click **Browse** and select a location.
 
-6. [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview..
+6. [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview.
 
 To get started on your first report, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).
 

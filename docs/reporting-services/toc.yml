@@ -238,7 +238,7 @@
       href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
     - name: Upgrade Reports
       href: ../reporting-services/install-windows/upgrade-reports.md
-    - name: Backup and Restore Operations for Reporting Services
+    - name: Back up and Restore Operations for Reporting Services
       href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: Web portal
   href: ../reporting-services/web-portal-ssrs-native-mode.md

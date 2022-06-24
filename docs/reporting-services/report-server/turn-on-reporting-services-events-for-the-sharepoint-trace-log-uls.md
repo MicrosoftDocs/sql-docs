@@ -34,7 +34,7 @@ ms.author: maggies
 -   [Trace Log Location](#bkmk_trace)  
   
 ##  <a name="bkmk_general"></a> General ULS Log Recommendations  
- The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment.. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
+ The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
   
 |Category|Level|Description|  
 |--------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ Get-SPDiagnosticConfig
   
 2.  **Category:** Events related to the server will have the characters "Report Server", at the beginning of the name. For example "Report Server Alerting Runtime" These events are also logged to the report server log files.  
   
-3.  **Category:** Events related to or communicated from a web front-end component do not contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries do not.  
+3.  **Category:** Events related to or communicated from a web front-end component don't contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries don't.  
   
 ##  <a name="bkmk_list"></a> List of SQL Server Reporting Services Events  
  The following table is a list of the events in the SQL Server Reporting Services Category:  
@@ -136,7 +136,7 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contains "**sql server reporting services**":  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

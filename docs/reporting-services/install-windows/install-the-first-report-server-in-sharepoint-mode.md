@@ -174,7 +174,7 @@ ms.custom:
   
 -   You installed Reporting Services SharePoint mode before SharePoint was installed.  
   
--   The account used to install Reporting Services SharePoint mode, was not a member of the SharePoint farm administrators group. For more information, see the section [Setup accounts](#bkmk_setupaccounts).  
+-   The account used to install Reporting Services SharePoint mode wasn't a member of the SharePoint farm administrators group. For more information, see the section [Setup accounts](#bkmk_setupaccounts).  
   
  The necessary files were installed as part of the SQL Server installation wizard, but the services need to be registered into the SharePoint farm.  
   

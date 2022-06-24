@@ -292,7 +292,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ##  <a name="Globalization"></a> Globalization of Data Alerts  
  Certain script such as Arabic and Hebrew are written right to left. Data alerts support right-to-left scripts as well as left-to-right scripts. Data alerts detect culture and alter the appearance and behavior of the user interface and the layout of data alert messages accordingly. The culture is derived from the regional setting of the operating system on the user's computer. The culture is saved each time you update and then resave the data alert definition.  
   
- Whether data satisfies the rules in the alert definition can be affected by the culture in the alert definition. String comparisons are most commonly affected by culture specific rules.  
+ The culture in the alert definition can affect whether data satisfies the rules in the alert definition. String comparisons are most commonly affected by culture specific rules.  
   
  Determining whether report data satisfies the rules in the alert definition can be affected by the culture in the alert definition. This most commonly occurs in of strings. For example, in an alert definition with the German culture, a rule that compares the English letter "o" and the German letter "ö" would not be satisfied. In the same alert definition using the English culture the rule would be satisfied.  
   

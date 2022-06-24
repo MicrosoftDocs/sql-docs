@@ -21,7 +21,7 @@ ms.author: maggies
 Learn about the central piece of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services installation. It consists of a processing engine along with extensions to add functionality.
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Power View support is no longer available after SQL Server 2017.
 
 A Reporting Services report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#feature-comparison-of-sharepoint-and-native-mode) section for a comparison of features.  
   
@@ -57,7 +57,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |**Data Alerts**|No|Yes|  
 |**Power View**|No|Yes<br /><br /> Requires Silverlight in the client browser. For more information on browser requirements, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL reports**|Yes|Yes<br /><br /> .RDL reports can run on Reporting Services report servers in native mode or in SharePoint mode.|  
-|**.RDLX reports**|No|Yes<br /><br /> Power View .RDLX reports can only run on Reporting Services report servers in SharePoint mode. Power View support is no longer available after SQL Server 2017.|  
+|**.RDLX reports**|No|Yes<br /><br /> Power View .RDLX reports can only run on Reporting Services report servers in SharePoint mode. |  
 |**SharePoint user token credentials for the SharePoint list extension**|No|Yes|  
 |**AAM zones for internet facing deployments**|No|Yes|  
 |**SharePoint backup and recovery**|No|Yes|  

@@ -20,7 +20,7 @@ The following table maps workloads for data analysis and reporting to the Micros
  If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Power View support is no longer available after SQL Server 2017.
   
 |Workloads|User|Excel-based BI&nbsp;tool|SharePoint-based BI&nbsp;tool|SharePoint&nbsp;Online-based BI&nbsp;tool|Power&nbsp;BI-based BI&nbsp;tool|SQL&nbsp;Server-based BI&nbsp;tool|  
 |---------------|----------|-|-|--------------|-|-|  
@@ -34,7 +34,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 |Collaborate and share|||[SharePoint Sites](/sharepoint/getting-started)|[SharePoint Team Sites](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI Sites](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Corporate BI**|IT Pro||||||  
 |Create multi-dimensional/tabular corporate models||||||[Analysis Services](/analysis-services/analysis-services-overview)|  
-|Create ad-hoc data visualizations|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)<br>(Not supported after SQL Server 2017)||||  
+|Create ad-hoc data visualizations|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Create dashboards|||[SharePoint Dashboards](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](/SharePoint/administration/performancepoint-services-overview)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Create operational reports||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Create custom and embedded reports|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  

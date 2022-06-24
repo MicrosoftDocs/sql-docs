@@ -12,22 +12,22 @@ ms.metadata: seo-lt-2019
 ms.custom: kr2b-contr-experiment
 ---
 
-# Operational notebooks for SQL Server Big Data Clusters
+# An Index of Management notebooks for SQL Server Big Data Clusters
 
 This page is an index of notebooks for SQL Server Big Data Clusters. These executable notebooks (.ipynb) manage Big Data Clusters for SQL Server 2019.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-Each notebook checks for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon successful completion, return to the original notebook and select **Run all cells**.
+You can manage SQL Server Big Data Clusters with Jupyter notebooks. When you do, all notebooks check for their own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon successful completion, return to the original notebook and select **Run all cells**.
 
-When all dependencies are installed, but **Run all cells** fails, each notebook analyzes the results. Where possible, a hyperlinked hint gives direction on how to resolve the issue.
+When all dependencies are installed and **Run all cells** fails, each notebook analyzes the results. Where possible, a hyperlinked hint gives direction on how to resolve the issue.
 
 * For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
 * For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
 ## Install and uninstall utilities on Big Data Clusters
 
-This section contains a set of notebooks useful for installing and uninstalling command-line tools and packages needed to manage SQL Server Big Data Clusters.
+The following is a set of notebooks that are useful for installing and uninstalling command-line tools. They also provide packages to manage SQL Server Big Data Clusters.
 
 |Name |Description |
 |---|---|
@@ -43,7 +43,7 @@ This section contains a set of notebooks useful for installing and uninstalling 
 
 ## Backup and restore Big Data Clusters
 
-This section contains a set of notebooks useful for backup and restore operations for SQL Server Big Data Clusters.
+The following is a set of notebooks that are useful for backup and restore operations on SQL Server Big Data Clusters.
 
 | Name | Description |
 |--|--|
@@ -51,7 +51,7 @@ This section contains a set of notebooks useful for backup and restore operation
 
 ## Manage Certificates on Big Data Clusters
 
-A set of notebooks to run a notebook to manage Certificates on Big Data Clusters.
+The following is a set of notebooks to manage Certificates on Big Data Clusters.
 
 |Name |Description |
 |---|---|

@@ -1,22 +1,21 @@
 ---
-title: Deploy multiple in Active Directory domain
-titleSuffix: SQL Server Big Data Cluster
+title: Multiple SQL Server Big Data Clusters
 description: Learn how to deploy multiple SQL Server Big Data Clusters in a single Active Directory domain.
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 07/16/2021
+ms.date: 06/22/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom: kr2b-contr-experiment
 ---
 
-# Deploy multiple [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in the same Active Directory domain
+# Deploy multiple [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] within the same Active Directory domain
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains updates to SQL Server 2019 *Cumulative Update 5 (CU5)* that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
+This article explains updates to SQL Server 2019 *Cumulative Update 5 (CU5)*, which enables configuration of multiple SQL Server 2019 Big Data Clusters. Various Big Data Clusters can now be deployed and integrated with the same Active Directory Domain.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
@@ -25,7 +24,7 @@ Prior to SQL Server 2019 CU5 two issues prevented deployment of multiple big dat
 - A naming conflict for service principal names and DNS domain
 - Domain account principal names
 
-## Object name collisions
+## What are object name collisions?
 
 ### Service principal names (SPN) and DNS domain naming conflict
 
@@ -35,11 +34,11 @@ The domain name provided at deployment is used as your *Active Directory (AD)* D
 
 During deployment of a big data cluster with an Active Directory domain, multiple account principals are generated for services running inside the big data cluster. These are essentially AD user accounts. Prior to SQL Server 2019 CU5 the names for these accounts weren't unique between clusters. This manifests in an attempt to create the same user account name for a particular service in the big data cluster in two different clusters. The second cluster being deployed experiences a conflict in AD and the account can't be created.
 
-## How to resolve collisions
+## How to resolve name collisions
 
-### How to solve the SPNs and DNS domain problem - SQL Server 2019 CU5
+### Steps to solve SPN and DNS domain problems - SQL Server 2019 CU5
 
- SPNs must be unique in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
+ SPNs must be unique in clusters. The DNS domain name passed in at deployment time must also be different. You can specify different DNS names with a newly-introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
 
 >[!NOTE]
 >The value passed through the subdomain setting is not a new AD domain, but a DNS domain that is used internally.
@@ -48,7 +47,7 @@ Let's return to the case of the master pool SQL Server SPN. If the subdomain is 
 
 The big data cluster name or namespace name is used to compute the value of subdomain settings. You can optionally customize the value of the newly introduced subdomain parameter in the active directory configuration spec. When users want to override the subdomain name, they can do so using the new subdomain parameter in the active directory configuration spec.
 
-### How to solve the problem of account name uniqueness
+### How to ensure account name uniqueness
 
 To update account names and guarantee uniqueness use account prefixes. The account prefix is a segment of the account name that is unique between any two clusters. The remaining segment of the account name can be constant. The new account name format looks like the following: `<prefix>-<name>-<podId>`.
 
@@ -80,11 +79,11 @@ The following are parameters added in SQL Server 2019 CU5 for configuring multip
 - Default value: When not provided, subdomain name will be used as the default value. When subdomain is not provided, cluster name will be used as the subdomain name, and hence cluster name will be inherited as accountPrefix as well. If the subdomain is provided and is a multipart name (contains one or more dots), user must provide an accountPrefix.
 - Maximum length: 12 characters
 
-## Impact on AD domain and DNS server
+## AD domain and DNS server adjustments
 
 There are no changes required in the AD domain or domain controller to accommodate deployment of multiple, big data clusters against the same Active Directory domain. The DNS subdomain will be automatically created in the DNS server when it registers external endpoint DNS names.
 
-## Impact on setting up the deployment configuration file used for big data cluster deployment
+## Changes to the deployment configuration file
 
 The *activeDirectory* section in the control plane configuration *control.json* has two new optional parameters: `subdomain` and `accountPrefix`. The cluster name is used for each of these parameters. Provide new values for these settings if you wish to to override default behavior. The cluster name is the same as namespace name.
 

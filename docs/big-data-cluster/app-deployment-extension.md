@@ -1,11 +1,10 @@
 ---
-title: App Deploy extension
-titleSuffix: SQL Server Big Data Clusters
-description: Learn how to deploy an application on SQL Server Big Data Clusters using a Python or R script.
+title: VS Code and App Deploy extension
+description: Learn how to deploy an application to SQL Server Big Data Clusters using a Python script or R script.
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 08/21/2019
+ms.date: 06/21/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -44,7 +43,7 @@ The following sections walk though installation of App Deploy. They also provide
 
 In *Visual Studio Code (VS Code)*, install the *App Deploy* extension:
 
-1. To install App Deploy as part of Visual Studio Code [download the extension](https://aka.ms/app-deploy-vscode) .
+1. To install App Deploy as part of Visual Studio Code [download the extension](https://aka.ms/app-deploy-vscode) from GitHub.
 
 1. Launch Visual Studio Code and navigate to the Extensions sidebar.
 
@@ -89,9 +88,9 @@ Find the endpoint you want to use, then connect to the cluster.
 
 Upon successful connection, Visual Studio Code notifies you that you're connected to the cluster. Deployed apps are displayed in the sidebar and your endpoint and username are saved to `./sqldbc` as part of your user profile. No password or tokens are ever saved. With subsequent log ins, the prompt pre-fills with your saved host and username, but always requires you to input a password. If you wish to connect to a different cluster endpoint, select `New Connection`. The connection is automatically closed when you exit Visual Studio Code and when you open a different workspace. You will then need to reconnect.
 
-### App Template
+### Create an App Template
 
-You need to *Open Workspace* in Visual Studio Code where you want to save your app artifacts.
+In Visual Studio Code, open a workspace in the location where you want to save your app artifacts.
 
 To deploy a new app from a template, select the **New App Template** button on the **App Specifications** pane. A prompt asks you where on your local machine you want to save the name, runtime and the new app. The name and version that you provide should be a DNS-1035 label and must consist of lower-case, alphanumeric characters, or '-'. They need to also start with an alphabetic character and end with an alphanumeric character.
 

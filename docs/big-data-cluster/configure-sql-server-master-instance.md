@@ -1,15 +1,14 @@
 ---
 title: Configure SQL Server master instance
-titleSuffix: Configure SQL Server master instance of Big Data Cluster
 description: Configure the master instance of a SQL Server Big Data Cluster
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 10/04/2021
+ms.date: 6/22/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: overview
-ms.custom: intro-overview
+ms.custom: kr2b-contr-experiment
 ---
 
 # Configure the master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -18,13 +17,13 @@ ms.custom: intro-overview
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-This article covers the configuration of the master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+Learn how to configure the master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-Server configuration settings can't be configured for SQL Server master instance at deployment time. Beginning in *Cumulative Update 9*, *Big Data Clusters* includes a configuration management feature. This enables administrators to alter or tune various parts of the Big Data Cluster post-deployment. It also gives them deeper insights into configurations running in their big data cluster.
+You can configure the master instance of SQL Server Big Data Clusters. However server configuration settings can't be configured at deployment time. Beginning in *Cumulative Update 9*, *Big Data Cluster* includes a configuration management feature. This enables administrators to alter or tune various parts of the Big Data Cluster post-deployment. It also gives them deeper insights into configurations running in their big data cluster.
 
-This article describes a temporary workaround of how to configure settings, including: SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags, enable/disable customer feedback, or `domainmapping`.
+This article describes a temporary workaround for configuring SQL Server master instance settings, including: SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags, enable/disable customer feedback, or `domainmapping`.
 
-To change settings, follow these steps:
+To change master instance settings, follow these steps:
 
 1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204:
 
@@ -67,4 +66,4 @@ To change settings, follow these steps:
 
 ## Next steps
 
-For more information about deploying SQL Server Big Data Clusters, see [Get started with SQL Server Big Data Clusters](deploy-get-started.md).
+For more information on deploying SQL Server Big Data Clusters, see [Get started with SQL Server Big Data Clusters](deploy-get-started.md).

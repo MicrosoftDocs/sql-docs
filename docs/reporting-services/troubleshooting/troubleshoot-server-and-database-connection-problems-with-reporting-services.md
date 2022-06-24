@@ -105,7 +105,7 @@ There are two workarounds for this issue.
 When you create the report server databases, **ReportServer** and **ReportServerTempDB**, on a virtual SQL Server that runs in a MSCS cluster, the remote name in the format `<domain>\<computer_name>$` might not be registered to SQL Server as a login. If you have configured the Report Server service account as an account that requires this remote name for connections, users cannot connect to the /reports and /reportserver directories in Reporting Services. For example, the built-in Windows account NetworkService requires this remote name. To avoid this issue, use an explicit domain account or a SQL Server login to connect to the report server databases.  
     
   ## See Also  
-[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Troubleshoot Reporting Services Subscriptions and Delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  

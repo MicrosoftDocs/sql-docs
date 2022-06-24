@@ -19,7 +19,7 @@ ms.author: maggies
   
  In some scenarios, report parameters can be used to launch script injection attacks when rendering reports to HTML. For more information about securing reports, see [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md).  
   
- For more information about browsers, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ For more information about browsers, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -123,6 +123,9 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contains customer data to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains customer data to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
+> [!NOTE]
+> Power View support is no longer available after SQL Server 2017.
+
 ## Non-personal data
 
 1. Data received from an organization, or generated from their use of the product. It's linkable to an organization and doesn't contain customer data.

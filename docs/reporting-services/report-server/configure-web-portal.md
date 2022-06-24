@@ -25,7 +25,7 @@ To use the web portal, you must satisfy the following prerequisites:
 
 - Your report server must run in native mode. You cannot use the web portal with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-- You must also have Internet Explorer 11 or later with scripting enabled. For more information, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
+- You must also have Internet Explorer 11 or later with scripting enabled. For more information, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
 ## Configure the web portal to use the default URL
 

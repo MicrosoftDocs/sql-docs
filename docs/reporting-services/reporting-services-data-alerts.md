@@ -51,7 +51,10 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ### Reports Supported by Data Alerts  
  You can create data alerts on all types of professional reports that are written in the report definition language (RDL) and created in Report Designer or Report Builder. Reports that include data regions such as tables and charts, reports with subreports, and complex reports with multiple parallel column groups and nested data regions. The only requirements are the report includes at least one data region of any type and the report data source is configured to use stored credentials or no credentials. If the report has no data regions, you cannot create an alert on it.  
   
- You cannot create data alerts on reports created with [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
+ You cannot create data alerts on reports created with Power View.  
+
+ > [!NOTE]
+ > Power View support is no longer available after SQL Server 2017.
   
  When you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in native mode or SharePoint mode or use the standalone version of Report Builder, you can save reports to a report server, your computer, or a SharePoint library. To create data alerts on reports, the reports must be saved or uploaded to a SharePoint library. This means that you cannot create alerts on reports saved to a report server in native mode or your computer. Also, you cannot create alerts embedded in custom applications.  
   

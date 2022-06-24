@@ -126,7 +126,7 @@ End Sub
 [Install Reporting Services Native Mode Report Server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
 [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
 [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
-[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+[Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
 [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

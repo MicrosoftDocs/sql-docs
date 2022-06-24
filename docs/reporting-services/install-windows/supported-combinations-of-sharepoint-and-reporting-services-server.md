@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 A SQL Server Reporting Services report server installed in SharePoint mode requires a version of SharePoint and the SQL Server Reporting Services add-in (rsSharePoint.msi) for SharePoint products, which you install on the SharePoint servers. This topic summarizes the supported combinations.
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add a report within a SharePoint site using SQL Server Reporting Services 2017 and later, use the [Report Viewer web part](../../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add a report within a SharePoint site using SQL Server Reporting Services 2017 and later, use the [Report Viewer web part](../../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md). Power View support is no longer available after SQL Server 2017.
 
 ## Supported combinations of SharePoint and Reporting Services components
 

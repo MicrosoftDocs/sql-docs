@@ -137,7 +137,7 @@ If you use custom permission levels, you must include Add Items and Edit Items i
 ## See also  
 
 - [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
 - [The web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md)
 - [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)

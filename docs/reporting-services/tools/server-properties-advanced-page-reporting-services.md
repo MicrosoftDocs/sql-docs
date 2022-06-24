@@ -191,6 +191,9 @@ The name of the role used when creating security policies on user's My Reports f
 ### RDLXReportTimetout
 RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
 
+> [!NOTE]
+> Power View support is no longer available after SQL Server 2017.
+
 ### RequireIntune
 (Power BI Report Server, Reporting Services 2017 and later only) Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
 

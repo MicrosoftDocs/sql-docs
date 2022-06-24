@@ -74,7 +74,7 @@ Before you can open the Web Portal, you must have sufficient permissions (initia
 
 ### To start The Web Portal
 
-1. Open your browser. For information on supported browsers and browser versions, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
+1. Open your browser. For information on supported browsers and browser versions, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
 2. In the address bar of the Web browser, type the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 

@@ -47,7 +47,7 @@ In some circumstances, when you use Report Manager to view published reports tha
 Verify that you have permission to access the folders that contain the cached files.   
     
 ## See Also  
-[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Troubleshoot Reporting Services Subscriptions and Delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  

@@ -98,7 +98,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.<br />Power View support is no longer available after SQL Server 2017.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  

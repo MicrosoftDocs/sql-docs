@@ -55,9 +55,9 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |**My Reports**|Yes|No|  
 |**My Subscriptions** and batching methods.|Yes|No|  
 |**Data Alerts**|No|Yes|  
-|**Power View**|No|Yes<br /><br /> Requires Silverlight in the client browser. For more information on browser requirements, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|No|Yes<br /><br /> Requires Silverlight in the client browser. For more information on browser requirements, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL reports**|Yes|Yes<br /><br /> .RDL reports can run on Reporting Services report servers in native mode or in SharePoint mode.|  
-|**.RDLX reports**|No|Yes<br /><br /> Power View .RDLX reports can only run on Reporting Services report servers in SharePoint mode.|  
+|**.RDLX reports**|No|Yes<br /><br /> Power View .RDLX reports can only run on Reporting Services report servers in SharePoint mode. Power View support is no longer available after SQL Server 2017.|  
 |**SharePoint user token credentials for the SharePoint list extension**|No|Yes|  
 |**AAM zones for internet facing deployments**|No|Yes|  
 |**SharePoint backup and recovery**|No|Yes|  
@@ -139,7 +139,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explains recommended steps to configure are report server for remote administration.|[Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Provides instructions for configuring the availability of **My Reports** on a Native report server instance.|[Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
-|Provides instructions for setting up the RSClientPrint control that provides print functionality from within supported browsers. For more information on browser requirements, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Provides instructions for setting up the RSClientPrint control that provides print functionality from within supported browsers. For more information on browser requirements, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
 ## Next steps
 

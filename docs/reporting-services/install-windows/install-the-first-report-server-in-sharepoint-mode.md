@@ -41,7 +41,7 @@ ms.custom:
 |-|-|  
 |**(1)**|SharePoint service installed from SQL Server installation. You can create one or more Reporting Services service applications.|  
 |**(2)**|Reporting Services add-in for SharePoint products provides the user interface components on the SharePoint Servers.|  
-|**(3)**|The Excel Service Application used by Power View and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. This is not available in a single server deployment for SharePoint 2016. An [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) is required.|  
+|**(3)**|The Excel Service Application used by Power View and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. This is not available in a single server deployment for SharePoint 2016. An [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) is required. Power View support is no longer available after SQL Server 2017.|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.|  
   
  ![SSRS SharePoint Mode Single Server Deployment](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
@@ -265,7 +265,7 @@ ms.custom:
 
 ##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View site collection feature.
 
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of SQL Server 2016 Reporting Services Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the Reporting Services add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verify that the feature is activated.  
+ Power View, a feature of SQL Server 2016 Reporting Services Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the Reporting Services add-in is installed. If you plan to use Power View, verify that the feature is activated.  
   
  If you install the Reporting Services add-in for SharePoint Products after the installation of the SharePoint Server, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, manually activate the features.  
   
@@ -296,7 +296,7 @@ ms.custom:
   
 -   Creates a Reporting Services service application named "Reporting Services Application".  
   
--   Enables the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature for a site collection.  
+-   Enables the Power View feature for a site collection.  
   
  Parameters  
   
@@ -304,7 +304,7 @@ ms.custom:
   
 -   Update the **-DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
--   Update the **-url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
+-   Update the **-url** parameter of the site that you want the Power View feature enabled.  
   
  **To use the script:**  
   
@@ -390,7 +390,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  This section describes additional configuration steps that are important in most SharePoint deployments.  
   
 ###  <a name="bkmk_configure_ECS"></a> Configure Excel Services and Power Pivot  
- If you want to view [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View reports in an Excel 2016, or Excel 2013, workbook in SharePoint, Excel Services needs to be configured to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in Power Pivot mode. 
+ If you want to view Power View reports in an Excel 2016, or Excel 2013, workbook in SharePoint, Excel Services needs to be configured to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in Power Pivot mode. 
  
  For SharePoint 2016, an [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) needs to be configured in order to use Excel Services. For detailed information, refer to the following white papers.
  

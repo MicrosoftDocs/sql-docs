@@ -170,7 +170,7 @@ For more information, see:
 
 **HTML 5 Rendering Engine:** A new  HTML5 rendering engine that targets modern web "full" standards mode and modern browsers.  The new rendering engine no longer relies on quirks mode used by a few older browsers.
 
-For more information on browser support, see [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+For more information on browser support, see [Browser Support for Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
 **Modern paginated reports:** Design beautifully modern paginated reports with new, modern styles for charts, gauges, maps, and other data visualizations.
 

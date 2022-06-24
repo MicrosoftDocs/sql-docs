@@ -70,13 +70,13 @@ The following table shows the general-information notifications you may receive:
 |**InProgress** | Maintenance for database(s) in region *xyz* is starting. | 
 |**Complete** | Maintenance of database(s) in region *xyz* is complete. |
 
-<sup>1</sup> Start and end time depend on the selected maintenance window. 
+<sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md). 
 
 The following table shows additional notifications that may be sent while maintenance is ongoing: 
 
 |Status|Description|
 |:---|:---|
-|**Rescheduled** | Maintenance is in progress but didn't complete, there was a problem during maintenance and it could not start, or maintenance did not start and is rescheduled for next window. | 
+|**Rescheduled** | Maintenance is in progress but didn't complete, there was a problem during maintenance and it could not start, or maintenance is rescheduled for next window. | 
 |**Canceled**| Maintenance for database(s) in region *xyz* is canceled and will be rescheduled later. |
 
 ## Permissions

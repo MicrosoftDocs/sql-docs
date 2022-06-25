@@ -121,7 +121,7 @@
   items:
   - name: Choosing BI tools for analysis and reporting
     href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
-  - name: Browser support for Reporting Services and Power View
+  - name: Browser support for Reporting Services
     href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
   - name: Plan for report design and report deployment
     href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
@@ -238,7 +238,7 @@
       href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
     - name: Upgrade Reports
       href: ../reporting-services/install-windows/upgrade-reports.md
-    - name: Backup and Restore Operations for Reporting Services
+    - name: Back up and Restore Operations for Reporting Services
       href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: Web portal
   href: ../reporting-services/web-portal-ssrs-native-mode.md
@@ -399,7 +399,7 @@
     items:
     - name: Site collection features - Reporting Services
       href: ../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md
-    - name: Site collection features - Report Server and Power View
+    - name: Site collection features - Report Server
       href: ../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md
     - name: Site settings and features - Reporting Services
       href: ../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md

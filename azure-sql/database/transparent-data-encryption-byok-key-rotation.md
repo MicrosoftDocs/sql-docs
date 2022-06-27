@@ -22,6 +22,8 @@ ms.date: 12/15/2021
 
 This article describes key rotation for a [server](logical-servers.md) using a TDE protector from Azure Key Vault. Rotating the logical TDE Protector for a server means switching to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's data encryption key, not the entire database.
 
+This article discusses both automated and manual methods to rotate the TDE protector on the server.
+
 ## Important considerations when rotating the TDE Protector
 - When the TDE protector is changed/rotated, old backups of the database, including backed-up log files, are not updated to use the latest TDE protector. To restore a backup encrypted with a TDE protector from Key Vault, make sure that the key material is available to the target server. Therefore, we recommend that you keep all the old versions of the TDE protector in Azure Key Vault (AKV), so database backups can be restored.
 - Even when switching from customer managed key (CMK) to service-managed key, keep all previously used keys in AKV. This ensures database backups, including backed-up log files, can be restored with the TDE protectors stored in AKV. 
@@ -56,6 +58,29 @@ For Az module installation instructions, see [Install Azure PowerShell](/powersh
 For installation, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 * * *
+
+
+## Automatic key rotation
+
+Automatic rotation for the TDE Protector can be enabled when configuring the TDE Protector for the server, from the Azure portal or via the below PowerShell or CLI commands. Once enabled, the server will continuously check the key vault for any new versions of the key being used as TDE Protector. If a new version of the key is detected, within 60 minutes the TDE Protector on the server will be automatically rotated to the latest key version.
+
+Using the Azure portal
+1.	Browse to the Transparent Data Encryption blade for an existing server.
+2.	Select the Customer-managed key option and select the key vault and key to be used as the TDE Protector.
+3.	Check the Auto-rotate key checkbox.
+4.	Select Save.
+
+To enable automatic rotation for the TDE Protector using PowerShell or Azure CLI, see the following scripts.
+•	PowerShell
+•	The Azure CLI
+Use the Set-AzSqlServerTransparentDataEncryptionProtector cmdlet.
+PowerShellCopy
+# set the AutoRotation parameter to true to enable auto-rotation of the TDE protector
+Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <keyVaultKeyId> `
+   -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName> `
+    -AutoRotationEnabled <boolean>
+
+
 
 ## Manual key rotation
 

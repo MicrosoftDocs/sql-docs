@@ -304,8 +304,14 @@ sections:
             
       - question: |
           Does replication work in conjunction with clustering?  
-        answer:  Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  
+        answer: | 
+           Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  
 
+      - question: |
+          How do I troubleshoot a third party solution based on SQL replication?  
+        answer: |
+           We recommend contacting the third party vendor for any issues to receive support. Generally if the issue is isolated by the vendor to be a core replication issue that is shipped with SQL Server, then Microsoft Support is involved to assist further.
+        
 additionalContent: |
 
   ## See Also

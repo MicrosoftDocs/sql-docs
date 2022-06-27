@@ -76,7 +76,7 @@ The following table shows additional notifications that may be sent while mainte
 
 |Status|Description|
 |:---|:---|
-|**Rescheduled** | Maintenance is in progress but didn't complete inside maintenance window, there was a problem during maintenance and it could not start, or planned maintenance has started but couldn't progress to the end and will continue in next mantenance window. | 
+|**Rescheduled** | 1) Maintenance is in progress but didn't complete inside maintenance window. 2) there was a problem during maintenance and it could not start. 3)  Planned maintenance has started but couldn't progress to the end and will continue in next maintenance window. | 
 |**Canceled**| Maintenance for database(s) in region *xyz* is canceled and will be rescheduled for later. |
 
 ## Permissions
@@ -109,11 +109,11 @@ In Azure Resource Graph (ARG) explorer you might find values for the status of d
 
 |Status|Description|
 |:---|:---|
-|**Pending**| Maintenance is planned on upcoming date, previously planned maintenance was rescheduled and is waiting to start in the next window, or maintenance started but didn't complete in previous window and will continue in the next one. |
+|**Pending**| 1) Maintenance is planned on upcoming date. 2) Previously planned maintenance was rescheduled and is waiting to start in the next window. 3) Maintenance started but didn't complete in previous window and will continue in the next one. |
 |**InProgress** | Maintenance for resource *xyz* is starting or is in progress. | 
 |**Completed** | Maintenance for resource *xyz* is complete. |
 |**NoUpdatesPending** | Previously planned maintenance for resource *xyz* is canceled and will be rescheduled for later. |
-|**RetryLater** | Planned maintenance for resource *xyz* has started but couldn't progress to the end and will continue in next mantenance window. |
+|**RetryLater** | Planned maintenance for resource *xyz* has started but couldn't progress to the end and will continue in next maintenance window. |
 
 For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](/azure/service-health/resource-graph-samples).
 

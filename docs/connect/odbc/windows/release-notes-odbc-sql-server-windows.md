@@ -2,7 +2,7 @@
 title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
 ms.custom: ""
-ms.date: 03/11/2022
+ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -36,6 +36,25 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## 17.10
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186919)   **TODO: ADD NEW LINKS**
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187028)  
+
+Version number: 17.10.1.1  
+Released: June 30, 2022  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  **TODO: ADD NEW LINKS**
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 
 ## 18.0
 

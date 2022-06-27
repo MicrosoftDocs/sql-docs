@@ -422,7 +422,7 @@ The user resource pool is an inner resource management boundary for a database, 
 
 ### Metrics
 
-Metrics for monitoring the resource usage of the app package and user resource pool of a serverless database are listed in the following table:
+Metrics for monitoring the resource usage of the app package and user resource pool of a serverless database and any geo-replicas are listed in the following table:
 
 |Entity|Metric|Description|Units|
 |---|---|---|---|

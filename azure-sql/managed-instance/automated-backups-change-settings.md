@@ -1,7 +1,7 @@
 ---
 title: Change automated backup settings 
 titleSuffix: Azure SQL Managed Instance
-description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API. 
+description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance using the Azure portal, the Azure CLI, Azure PowerShell, and REST API. 
 services:
   - "sql-database"
 ms.service: sql-managed-instance
@@ -187,7 +187,7 @@ Possible values for `-BackupStorageRedundancy` are `Geo` for geo-redundant, `Zon
 
 ### [Rest API](#tab/rest-api)
 
-It's not currently possible to change the backup storage redundancy option using the Rest API. 
+It's not currently possible to change the backup storage redundancy option using REST API. 
 
 ---
 

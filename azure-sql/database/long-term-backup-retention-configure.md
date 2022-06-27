@@ -3,7 +3,7 @@ title: "Azure SQL Database: Manage long-term backup retention"
 description: Learn how to store and restore automated backups for Azure SQL Database in Azure storage (for up to 10 years) using the Azure portal, Azure CLI, and PowerShell.
 services:
   - "sql-database"
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: backup-restore
 ms.custom:
   - "devx-track-azurepowershell"
@@ -12,12 +12,12 @@ ms.topic: how-to
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/16/2020
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.date: 06/27/2020
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Manage Azure SQL Database long-term backup retention
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb.md)]
 
 With Azure SQL Database, you can set a [long-term backup retention](long-term-retention-overview.md) policy (LTR) to automatically retain backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups using the Azure portal, Azure CLI, or PowerShell. Long-term retention policies are also supported for [Azure SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md).
 

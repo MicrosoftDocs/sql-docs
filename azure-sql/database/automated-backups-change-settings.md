@@ -1,7 +1,7 @@
 ---
 title: Change automated backup settings 
 titleSuffix: Azure SQL Database
-description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Database using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API. 
+description: Change point in time restore and backup redundancy options for automatic backups in Azure SQL Database using the Azure portal, the Azure CLI, Azure PowerShell, and REST API. 
 services:
   - "sql-database"
 ms.service: sql-database
@@ -36,7 +36,7 @@ This article provides examples to modify [automated backup](automated-backups-ov
 
 ## Change short-term retention policy
 
-You can change the default PITR backup retention period and the differential backup frequency by using the Azure portal, PowerShell, or the REST API. The following examples illustrate how to change the PITR retention to 28 days and the differential backups to 24 hour interval.
+You can change the default PITR backup retention period and the differential backup frequency by using the Azure portal, PowerShell, or REST API. The following examples illustrate how to change the PITR retention to 28 days and the differential backups to 24 hour interval.
 
 > [!WARNING]
 > If you reduce the current retention period, you lose the ability to restore to points in time older than the new retention period. Backups that are no longer needed to provide PITR within the new retention period are deleted. If you increase the current retention period, you do not immediately gain the ability to restore to older points in time within the new retention period. You gain that ability over time, as the system starts to retain backups for longer.
@@ -87,7 +87,7 @@ Set-AzSqlDatabaseBackupShortTermRetentionPolicy -ResourceGroupName resourceGroup
 ```
 
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
 #### Sample Request
 
@@ -119,7 +119,6 @@ PUT https://management.azure.com/subscriptions/00000000-1111-2222-3333-444444444
   }
 }
 ```
-
 
 For more information, see [Backup Retention REST API](/rest/api/sql/backupshorttermretentionpolicies).
 
@@ -154,9 +153,24 @@ az sql db create \
     --backup-storage-redundancy Local
 ```
 
+Except for Hyperscale and Basic tier databases, you can update the backup storage redundancy setting for an existing database with the `--backup-storage-redundancy` parameter and the `az sql db update` command. It may take up to 48 hours for the changes to be applied on the database. Switching from geo-redundant backup storage to local or zone redundant storage disables geo-restore.
+
+This example code changes the backup storage redundancy to `Local`.
+
+```azurecli
+az sql db update \
+    --resource-group myresourcegroup \
+    --server myserver \
+    --name mydb \
+    --backup-storage-redundancy Local
+```
+
+
+#### Hyperscale
+
 Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database. Storage redundancy can only be specified during the database creation process for Hyperscale databases. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy). 
 
-Existing Hyperscale databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
+Existing Hyperscale databases can migrate to different storage redundancy using [active geo-replication](active-geo-replication-overview.md), which is preferred due to minimal downtime. Alternatively, you can migrate to a different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
 
 This example creates a database in the [Hyperscale](service-tier-general-purpose.md) service tier with Zone redundancy:
 
@@ -170,18 +184,6 @@ az sql db create \
 ```
 
 For more information, see [az sql db create](/cli/azure/sql/db#az-sql-db-create) and [az sql db update](/cli/azure/sql/db#az-sql-db-update).
-
-Except for Hyperscale and Basic tier databases, you can update the backup storage redundancy setting for an existing database with the `--backup-storage-redundancy` parameter and the `az sql db update` command. It may take up to 48 hours for the changes to be applied on the database. Switching from geo-redundant backup storage to local or zone redundant storage disables geo-restore.
-
-This example code changes the backup storage redundancy to `Local`.
-
-```azurecli
-az sql db update \
-    --resource-group myresourcegroup \
-    --server myserver \
-    --name mydb \
-    --backup-storage-redundancy Local
-```
 
 You cannot update the backup storage redundancy of a Hyperscale database directly. However, you can change it using [the database copy command](database-copy.md) with the `--backup-storage-redundancy` parameter. This example copies a Hyperscale database to a new database using Gen5 hardware and two vCores. The new database has the backup redundancy set to `Zone`.
 
@@ -211,6 +213,19 @@ This example creates a database in the [General Purpose](service-tier-general-pu
 New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database03" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen5" -BackupStorageRedundancy Local
 ```
 
+Except for Hyperscale and Basic tier databases, you can use the `-BackupStorageRedundancy` parameter with the `Set-AzSqlDatabase` cmdlet to update the backup storage redundancy setting for an existing database. Possible values are Geo, Zone, and Local. It may take up to 48 hours for the changes to be applied on the database. Switching from geo-redundant backup storage to local or zone redundant storage disables geo-restore.
+
+This example code changes the backup storage redundancy to `Local`.
+
+```powershell
+# Change the backup storage redundancy for Database01 to zone-redundant. 
+Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -BackupStorageRedundancy Local
+```
+
+For details visit [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase).
+
+#### Hyperscale
+
 Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database. Storage redundancy can only be specified during the database creation process for Hyperscale databases. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
 
 Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
@@ -224,16 +239,6 @@ New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -D
 
 For syntax details visit [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase).
 
-Except for Hyperscale and Basic tier databases, you can use the `-BackupStorageRedundancy` parameter with the `Set-AzSqlDatabase` cmdlet to update the backup storage redundancy setting for an existing database. Possible values are Geo, Zone, and Local. It may take up to 48 hours for the changes to be applied on the database. Switching from geo-redundant backup storage to local or zone redundant storage disables geo-restore.
-
-This example code changes the backup storage redundancy to `Local`.
-
-```powershell
-# Change the backup storage redundancy for Database01 to zone-redundant. 
-Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -BackupStorageRedundancy Local
-```
-
-For details visit [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase)
 
 Backup storage redundancy of an existing Hyperscale database cannot be updated. However, you can use the [database copy command](database-copy.md) to create a copy of the database and use the `-BackupStorageRedundancy` parameter to update the backup storage redundancy. This example copies a Hyperscale database to a new database using Gen5 hardware and two vCores. The new database has the backup redundancy set to `Zone`.
 
@@ -247,13 +252,13 @@ For syntax details, visit [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-
 For an overview of database copy, visit [Copy a transactionally consistent copy of a database in Azure SQL Database](database-copy.md).
 
 > [!NOTE]
-> To use -BackupStorageRedundancy parameter with database restore, database copy or create secondary operations, use Azure PowerShell version Az.Sql 2.11.0. 
+> To use `-BackupStorageRedundancy` parameter with database restore, database copy or create secondary operations, use Azure PowerShell version Az.Sql 2.11.0. 
 
 
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
-It's not currently possible to change the backup storage redundancy using the Rest API. 
+It's not currently possible to change backup storage redundancy using REST API. 
 
 ---
 

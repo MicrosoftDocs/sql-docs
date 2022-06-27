@@ -1,7 +1,7 @@
 ---
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Database
-description: Azure SQL Database automatically creates a local database backup every few minutes and uses Azure read-access geo-redundant storage for geo-redundancy.
+description: Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
 services:
   - "sql-database"
 ms.service: sql-database
@@ -53,9 +53,9 @@ When you restore a database, the service determines which full, differential, an
 
 ## Backup storage redundancy
 
-By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages impacting backup storage in the primary region and allows you to restore your server to a different region in the event of a disaster. 
+By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages impacting backup storage in the primary region and allows you to restore your databases in a different region in the event of a regional outage. 
 
-To ensure your data stays within the same region where your database is deployed, you can change the default geo-redundant backup storage redundancy. The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). 
+The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your data stays within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). 
 
 Backup storage redundancy can be configured when you create your database, and can be updated at a later time; the changes made to an existing database apply to future backups only. After the backup storage redundancy of an existing database is updated, it may take up to 48 hours for the changes to be applied. Geo-restore is disabled as soon as a database is updated to use local or zone redundant storage. 
 
@@ -74,21 +74,21 @@ To learn more about storage redundancy, see [Data redundancy](/azure/storage/com
 
 ## Backup usage
 
-You can use these backups to:
+You can use automatically created backups in the following scenarios:
 
-- **Point-in-time restore existing database** - [Restore an existing database to a point in time in the past](recovery-using-backups.md#point-in-time-restore) within the retention period by using the Azure portal, Azure PowerShell, Azure CLI, or REST API. This operation creates a new database on the same server as the original database, but uses a different name to avoid overwriting the original database. After restore completes, you can delete the original database. Alternatively, you can [rename](/sql/relational-databases/databases/rename-a-database) both the original database, and then rename the restored database to the original database name. 
-- **Point-in-time restore deleted database** - [Restore a deleted database to the time of deletion](recovery-using-backups.md#deleted-database-restore) or to any point in time within the retention period. The deleted database can be restored only on the same server where the original database was created. When deleting a database, the service takes a final transaction log backup before deletion, to prevent any data loss.
-- **Geo-restore** - [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a geographic disaster when you cannot access your database or backups in the primary region. It creates a new database on any existing server in any Azure region.
+- **Restore an existing database to a point in time** - [Restore an existing database to a point in time in the past](recovery-using-backups.md#point-in-time-restore) within the retention period by using the Azure portal, Azure PowerShell, Azure CLI, or REST API. This operation creates a new database on the same server as the original database, but uses a different name to avoid overwriting the original database. After restore completes, you can optionally delete the original database, and rename the restored database to the original database name. Alternatively, instead of deleting the original database, you can [rename](/sql/relational-databases/databases/rename-a-database) it, and then rename the restored database to the original database name. 
+- **Restore a deleted database to a point in time** - [Restore a deleted database to the time of deletion](recovery-using-backups.md#deleted-database-restore) or to any point in time within the retention period. The deleted database can be restored only on the same server where the original database was created. When deleting a database, the service takes a final transaction log backup before deletion, to prevent any data loss.
+- **Geo-restore a database** - [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a regional outage when you cannot access your database or backups in the primary region. It creates a new database on any existing server in any Azure region.
    > [!IMPORTANT]
    > Geo-restore is available only for databases configured with geo-redundant backup storage. If you are not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
-- **Restore from long-term backup** - [Restore a database from a specific long-term backup](long-term-retention-overview.md) of a single or pooled database, if the database has been configured with a long-term retention policy (LTR). LTR allows you to [restore an old version of the database](long-term-backup-retention-configure.md) by using the Azure portal, Azure CLI, or Azure PowerShell to satisfy a compliance request or to run an old version of the application. For more information, see [Long-term retention](long-term-retention-overview.md).
+- **Restore a database from long-term backup** - [Restore a database from a specific long-term backup](long-term-retention-overview.md) of a single or pooled database, if the database has been configured with a long-term retention (LTR) policy. LTR allows you to [restore an older version of the database](long-term-backup-retention-configure.md) by using the Azure portal, Azure CLI, or Azure PowerShell to satisfy a compliance request or to run an older version of the application. For more information, see [Long-term retention](long-term-retention-overview.md).
 
 > [!NOTE]
 > In Azure Storage, the term *replication* refers to copying blobs from one location to another. In SQL, *database replication* refers to various technologies used to keep multiple secondary databases synchronized with a primary database.
 
 ## <a id="restore-capabilities"></a>Restore capabilities and features
 
-This table summarizes the capabilities and features of [point in time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention backups](long-term-retention-overview.md).
+This table summarizes the capabilities and features of [point in time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term backup retention](long-term-retention-overview.md).
 
 | **Backup Properties** | Point in time recovery (PITR) | Geo-restore | Long-term backup restore |
 |---|---|---|---|
@@ -113,7 +113,7 @@ This table summarizes the capabilities and features of [point in time restore (P
 
 ## Restore a database from backup
 
-To perform a restore, see [Restore database from backups](recovery-using-backups.md). You can try backup configuration and restore operations using the following examples:
+To perform a restore, see [Restore database from backups](recovery-using-backups.md). You can explore backup configuration and restore operations using the following examples:
 
 | Operation | Azure portal | Azure CLI | Azure PowerShell |
 |---|---|---|---|
@@ -133,7 +133,7 @@ The first full backup is scheduled immediately after a new database is created o
 
 ## Backup storage consumption
 
-With SQL Server backup and restore technology, restoring a database to a point in time requires an uninterrupted backup chain consisting of one full backup, optionally one differential backup, and one or more transaction log backups. Azure SQL Database schedules include one full backup every week. Therefore, to provide PITR within the entire retention period, the system must store additional full, differential, and transaction log backups for up to a week longer than the configured retention period. 
+With SQL Server backup and restore technology, restoring a database to a point in time requires an uninterrupted backup chain consisting of one full backup, optionally one differential backup, and one or more transaction log backups. Azure SQL Database schedules one full backup every week. Therefore, to provide PITR within the entire retention period, the system must store additional full, differential, and transaction log backups for up to a week longer than the configured retention period. 
 
 In other words, for any point in time during the retention period, there must be a full backup that is older than the oldest time of the retention period, as well as an uninterrupted chain of differential and transaction log backups from that full backup until the next full backup. Hyperscale databases use a different backup scheduling mechanism, for more details see [Hyperscale backup scheduling](hyperscale-automated-backups-overview.md#backup-scheduling). 
 
@@ -174,11 +174,11 @@ Azure SQL Database provides both short-term and long-term retention of backups. 
 
 ### Short-term retention
 
-For all new, restored, and copied databases, Azure SQL Database retains sufficient backups to allow PITR within the last seven days by default. Regular full, differential and log backups are taken to ensure databases are restorable to any point-in-time within the retention period defined for the database. Short-term back up retention of 1-35 days for Hyperscale databases is now in Preview. To learn more, review [Managing backup retention in Hyperscale](hyperscale-automated-backups-overview.md#backup-retention). 
+For all new, restored, and copied databases, Azure SQL Database retains sufficient backups to allow PITR within the last seven days by default. Regular full, differential and log backups are taken to ensure databases are restorable to any point-in-time within the retention period defined for the database. Short-term back up retention of 1-35 days for Hyperscale databases is now in preview. To learn more, review [Managing backup retention in Hyperscale](hyperscale-automated-backups-overview.md#backup-retention). 
 
 Differential backups can be configured to either a 12-hour or a 24-hour frequency. A 24-hour differential backup frequency may increase the time required to restore the database. 
 
-You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
+You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 1-35 days. 
 
 Except for Basic tier databases, you can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](long-term-retention-overview.md).
 
@@ -297,7 +297,7 @@ For a full list of built-in policy definitions for SQL Database, review the [pol
 To enforce data residency requirements at an organizational level, these policies can be assigned to a subscription. After these policies are assigned at a subscription level, users in the given subscription will not be able to create a database or a managed instance with geo-redundant backup storage via Azure portal or Azure PowerShell. 
 
 > [!IMPORTANT]
-> Azure policies are not enforced when creating a database via T-SQL. To enforce data residency when creating a database using T-SQL, [use 'LOCAL' or 'ZONE' as input to BACKUP_STORAGE_REDUNDANCY paramater in CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
+> Azure policies are not enforced when creating a database via T-SQL. To specify data residency when creating a database using T-SQL, [use 'LOCAL' or 'ZONE' as input to BACKUP_STORAGE_REDUNDANCY paramater in CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
 
 Learn how to assign policies using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). 
 

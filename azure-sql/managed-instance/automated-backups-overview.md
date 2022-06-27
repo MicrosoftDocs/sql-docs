@@ -29,10 +29,10 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 > * [Azure SQL Database](../database/automated-backups-overview.md)
 > * [Azure SQL Managed Instance](automated-backups-overview.md)
 
-This article describes the automated backup feature for Azure SQL Managed Instance. 
+This article describes the automated backup feature for Azure SQL Managed Instance. For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md).   
 
-For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md).   
-To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [recover using backup](recovery-using-backups.md). 
+- To change backup settings, see [Change settings](automated-backups-change-settings.md). 
+- To restore a backup, see [recover using backup](recovery-using-backups.md). 
 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]

@@ -247,13 +247,13 @@ For syntax details, visit [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-
 For an overview of database copy, visit [Copy a transactionally consistent copy of a database in Azure SQL Database](database-copy.md).
 
 > [!NOTE]
-> To use -BackupStorageRedundancy parameter with database restore, database copy or create secondary operations, use Azure PowerShell version Az.Sql 2.11.0. 
+> To use -BackupStorageRedundancy parameter with database restore, database copy or create secondary operations, use Azure PowerShell version Az.Sql 2.11.0 or later. 
 
 
 
 ### [Rest API](#tab/rest-api)
 
-It's not currently possible to change the backup storage redundancy using the Rest API. 
+It's not currently possible to change the backup storage redundancy using REST API. 
 
 ---
 

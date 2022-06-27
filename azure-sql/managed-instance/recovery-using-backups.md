@@ -15,7 +15,7 @@ ms.date: 06/25/2022
 monikerRange: "= azuresql ||  = azuresql-mi"
 ---
 # Recover using automated database backups - Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 
 <!---

@@ -3657,7 +3657,7 @@
     },
     {
       "source_path": "docs/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md",
-      "redirect_url": "https://docs.microsoft.com/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },
     {
@@ -59422,3 +59422,4 @@
     }
   ]
 }
+

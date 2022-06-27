@@ -322,7 +322,7 @@ It's possible to move your database from the provisioned compute tier to the ser
 
 When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using Powershell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
 
-The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples provision 1 core. 
+The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the max vCores to 1. 
 
 
 #### Use PowerShell

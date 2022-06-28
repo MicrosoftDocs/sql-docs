@@ -21,18 +21,10 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Automated backups for Hyperscale databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article explains the differences when using the [automated backup](automated-backups-overview.md) feature with Hyperscale databases in Azure SQL Database. 
+This article explains the [automated backup](automated-backups-overview.md) feature with Hyperscale databases in Azure SQL Database. 
 
 Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot-based and are nearly instantaneous. Log generated is stored in long-term Azure storage for the backup retention period. Hyperscale architecture does not use full database backups or log backups and as such backup frequency, storage costs, scheduling, storage redundancy and restore capabilities differ from single and pooled databases in Azure SQL Database. 
 
-## Backup storage redundancy
-
-Hyperscale supports configurable storage redundancy. When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy.
-
-Consider storage redundancy carefully when you create a Hyperscale database as backup storage redundancy for Hyperscale databases can only be set during database creation. This setting cannot be modified once the resource is provisioned. Geo-restore is only available when geo-redundant storage (RA-GRS) has been chosen for backup storage redundancy. The [database copy](database-copy.md) process can be used to update the storage redundancy settings for an existing Hyperscale database. Copying a database to a different storage type will be a size-of-data operation. 
-
-> [!IMPORTANT]
-> Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
 ## Backup and restore performance
 
@@ -76,9 +68,9 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
 2.	Select the Metrics page in the **Monitoring** section.
 
-:::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
+   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 
-3.  From the Metric drop-down list, select the **Data backup Storage** and **Log Backup Storage** metrics with an appropriate aggregation rule. 
+3.  From the Metric drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
 
 
 ### Reduce backup storage consumption
@@ -90,6 +82,16 @@ Backup storage consumption for a Hyperscale database depends on the retention pe
 - For large data-load operations, consider using data compression when appropriate.
 - Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.
 - Use locally-redundant or zone-redundant backup storage when geo-restore capability is unnecessary (for example: dev/test environments). 
+
+## Data and backup storage redundancy
+
+Hyperscale supports configurable storage redundancy. When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy. 
+
+Consider storage redundancy carefully when you create a Hyperscale database as backup storage redundancy for Hyperscale databases can only be set during database creation. This setting cannot be modified once the resource is provisioned. Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [Database copy](database-copy.md).
+
+> [WARNING]
+> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
+> - Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
 
 ## Restore a Hyperscale database to a different region

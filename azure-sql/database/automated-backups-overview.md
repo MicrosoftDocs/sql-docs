@@ -67,7 +67,7 @@ The option to configure backup storage redundancy provides flexibility to choose
 
 > [WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
-> - Backup storage redundancy for Hyperscale databases can only be set during creation. This setting cannot be modified once the resource is provisioned. Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, use use [Database copy](database-copy.md). Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
+> - Backup storage redundancy for Hyperscale databases can only be set during creation. This setting cannot be modified once the resource is provisioned. Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [Database copy](database-copy.md). Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
 
 ## Backup usage
 
@@ -125,7 +125,7 @@ The first full backup is scheduled immediately after a new database is created o
 
 > [!IMPORTANT]
 > - For a new, restored, or copied database, point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
-> - Hyperscale databases are protected immediately after creation, unlike other databases where the initial backup takes time, even if the Hyperscale database was created with a large of data via copy or restore. To learn more, review [Hyperscale Automated backups](hyperscale-automated-backups-overview.md). 
+> - Hyperscale databases are protected immediately after creation, unlike other databases where the initial backup takes time, even if the Hyperscale database was created with a large amount of data via copy or restore. To learn more, review [Hyperscale Automated backups](hyperscale-automated-backups-overview.md). 
 
 ## Backup storage consumption
 

@@ -75,6 +75,9 @@ When complete, the restore creates a new database on the same instance as the or
 
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
+> [!IMPORTANT]
+> You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
+
 
 - **Database replacement**
 
@@ -99,7 +102,7 @@ To restore a database in SQL Managed Instance by using the Azure CLI, see [az sq
 
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by SQL Database and SQL Managed Instance, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Arguments for the commands in the Az module and in Azure Resource Manager modules are to a great extent identical.
+> The PowerShell Azure Resource Manager module is still supported by SQL Managed Instance, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Arguments for the commands in the Az module and in Azure Resource Manager modules are to a great extent identical.
 
 > [!NOTE]
 > Restore points represent a period between the earliest restore point and the latest log backup point. Information on latest restore point is currently unavailable on Azure PowerShell.
@@ -185,7 +188,7 @@ For a PowerShell script that shows how to perform geo-restore for a database in 
 
 ### Geo-restore considerations
 
-You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database. For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](../database/disaster-recovery-guidance.md#recover-using-geo-restore).
+For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](../database/disaster-recovery-guidance.md#recover-using-geo-restore).
 
 > [!IMPORTANT]
 > Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) up to 1 hour and an estimated recovery time of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 

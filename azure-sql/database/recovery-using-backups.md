@@ -26,7 +26,7 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 > * [Azure SQL Database](recovery-using-backups.md)
 > * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md)
 
-This article provides steps to recover a database from a backup in Azure SQL Database. For Azure SQL Managed Instance, see [recovery using backup](../managed-instance/recovery-using-backups.md). 
+This article provides steps to recover any database from a backup in Azure SQL Database, including Hyperscale databases. For Azure SQL Managed Instance, see [recovery using backup](../managed-instance/recovery-using-backups.md). 
 
 
 Automatic backups protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery by using [automated database backups](automated-backups-overview.md). You can:
@@ -81,7 +81,8 @@ When complete, the restore creates a new database on the same server as the orig
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
 > [!IMPORTANT]
-> You can only run restore on the same server, cross-server restoration is not supported by point-in-time restore.
+> - You can only run restore on the same server, cross-server restoration is not supported by point-in-time restore.
+> - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 
 - **Database replacement**
 
@@ -105,7 +106,7 @@ To restore a database by using the Azure CLI, see [az sql db restore](/cli/azure
 
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by SQL Database and SQL Managed Instance, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Arguments for the commands in the Az module and in Azure Resource Manager modules are to a great extent identical.
+> The PowerShell Azure Resource Manager module is still supported by SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Arguments for the commands in the Az module and in Azure Resource Manager modules are to a great extent identical.
 
 > [!NOTE]
 > Restore points represent a period between the earliest restore point and the latest log backup point. Information on latest restore point is currently unavailable on Azure PowerShell.
@@ -176,7 +177,7 @@ To restore a database by using the REST API:
 
 > [!IMPORTANT]
 > - Geo-restore is available only for databases configured with geo-redundant [backup storage](automated-backups-overview.md#backup-storage-redundancy). If you are not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
-> - Geo-restore can only be performed on databases residing in the same subscription only.
+> - Geo-restore can only be performed on databases residing in the same subscription.
 
 You can restore a database on any [logical server](logical-servers.md) in any Azure region from the most recent geo-replicated backups. Geo-restore uses a geo-replicated backup as its source. You can request geo-restore even if the database or datacenter is inaccessible due to an outage.
 
@@ -224,14 +225,13 @@ To restore a database by using the REST API:
 
 ### Geo-restore considerations
 
-You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database. For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](disaster-recovery-guidance.md#recover-using-geo-restore).
+For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](disaster-recovery-guidance.md#recover-using-geo-restore).
 
-> [!IMPORTANT]
-> Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) up to 1 hour and an estimated recovery time of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
->
-> For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-sql-db.md). It offers a much lower RPO and recovery time objective, and the capacity is always guaranteed. 
->
-> For more information about business continuity choices, see [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) up to 1 hour and an estimated recovery time of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
+
+For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-sql-db.md). It offers a much lower RPO and recovery time objective, and the capacity is always guaranteed. 
+
+For more information about business continuity choices, see [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
 
 

@@ -405,7 +405,7 @@ GO
 
 ```sql
 ALTER USER Philip
-WITHNAME = Philipe
+WITH NAME = Philipe
 , DEFAULT_SCHEMA = Development
 , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per';
 GO

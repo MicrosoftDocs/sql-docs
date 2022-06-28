@@ -23,21 +23,21 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 This article explains the [automated backup](automated-backups-overview.md) feature with Hyperscale databases in Azure SQL Database. 
 
-Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot-based and are nearly instantaneous. Log generated is stored in long-term Azure storage for the backup retention period. Hyperscale architecture does not use full database backups or log backups and as such backup frequency, storage costs, scheduling, storage redundancy and restore capabilities differ from single and pooled databases in Azure SQL Database. 
+Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot-based and are nearly instantaneous. Log generated is stored in long-term Azure storage for the backup retention period. Hyperscale architecture does not require full, differential, or log backups and as such backup frequency, storage costs, scheduling, storage redundancy and restore capabilities differ from other databases in Azure SQL Database. 
 
 
 ## Backup and restore performance
 
-Storage and compute separation enables Hyperscale to push down backup and restore operation to the storage layer to reduce the processing burden on the primary compute replica. As a result, database backups don't impact performance of the primary compute node. 
+Storage and compute separation enables Hyperscale to push down backup and restore operations to the storage layer to eliminate resource consumption by backup on compute replicas. Database backups don't impact performance of either primary or secondary compute replicas. 
 
-Backup and restore operations for Hyperscale databases are fast regardless of data size due to the use of storage snapshots. A database can be restored to any point in time within its backup retention period. Point in time recovery (PITR) is achieved by reverting to file snapshots, and as such is not a size of data operation. Restore of a Hyperscale database within the same Azure region is a constant-time operation, and even multiple-terabyte databases can be restored in minutes instead of hours or days. Creation of new databases by restoring an existing backup or copying the database also takes advantage of this feature: creating database copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when the same storage type is used.
+Backup and restore operations for Hyperscale databases are fast regardless of data size due to the use of storage snapshots. Backup is virtually instantaneous. A database can be restored to any point in time within its backup retention period by reverting to applicable file snapshots, followed by applying transaction log to make the restored database transactionally consistent. As such, restore is not a size of data operation. Restore of a Hyperscale database within the same Azure region completes within minutes instead of hours or days, even for multi-terabyte databases. Creation of new databases by restoring an existing backup or copying the database also takes advantage of compute and storage separation in Hyperscale: creating copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when the same storage type is used.
 
 ## Backup retention
 
 Default short-term backup retention (STR) for Hyperscale databases is 7 days; long-term retention (LTR) policies aren't currently supported.
 
 > [!NOTE]
-> Short-term backup retention up to 35 days for Hyperscale databases is now in preview. 
+> Short-term backup retention in the 1-35 day range for Hyperscale databases is now in preview. 
 
 ## Backup scheduling
 
@@ -59,11 +59,11 @@ Deleted Hyperscale databases incur backup costs to support recovery to a point i
 
 Data storage size is included in the formula because allocated database storage is not billed separately for a deleted database. For a deleted database, data is stored post deletion to enable recovery during the configured backup retention period. Billable backup storage for a deleted database reduces gradually over time after it is deleted. It becomes zero when backups are no longer retained, and recovery is no longer possible. However if it is a permanent deletion and backups are no longer needed, to optimize costs you can reduce retention before deleting the database.
 
-## Monitor backup consumption
+## Monitor backup storage consumption
 
-In Hyperscale, data backup storage size (snapshot backup size), data storage size(database size) and log backup storage size(transactions log backup size) are reported via Azure Monitor metrics. 
+In Hyperscale, data backup storage size (snapshot backup size), data storage size (allocated database size) and log backup storage size (transactions log backup size) are reported via Azure Monitor metrics. 
 
-To view backup and data storage metrics in the Azure portal, follow these steps: :
+To view backup and data storage metrics in the Azure portal, follow these steps:
 
 1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
 2.	Select the Metrics page in the **Monitoring** section.
@@ -102,9 +102,9 @@ If you need to restore a Hyperscale database in Azure SQL Database to a region o
 2. Follow the instructions in the [geo-restore](./recovery-using-backups.md#geo-restore) section of the page on restoring a database in Azure SQL Database from automatic backups.
 
 > [!NOTE]
-> Because the source and target are in separate regions, the database cannot share snapshot storage with the source database as in non-geo restores, which complete quickly regardless of database size. In the case of a geo-restore of a Hyperscale database, it will be a size-of-data operation, even if the target is in the paired region of the geo-replicated storage. Therefore, a geo-restore will take time proportional to the size of the database being restored. If the target is in the paired region, data transfer will be within a region, which will be significantly faster than a cross-region data transfer, but it will still be a size-of-data operation.
+> Because the source and target are in separate regions, the database cannot share snapshot storage with the source database as in non-geo restores, which complete quickly regardless of database size. In the case of a geo-restore of a Hyperscale database, it will be a size-of-data operation, even if the target is in the paired region of the geo-replicated storage. Therefore, a geo-restore will take a significantly longer time compared to a point-in-time restore in the same region. If the target is in the paired region, data transfer will be within a region, which will be significantly faster than a cross-region data transfer, but it will still be a size-of-data operation.
 
-If you prefer, you can copy the database to a different region as well. Learn about [Database Copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
+If you prefer, you can copy the database to a different region as well. This is the method to use if geo-restore is not available because it is not supported with the selected storage redundancy type. Learn about [Database Copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
 
 
 

@@ -33,7 +33,7 @@ Automatic backups protect your databases from user and application errors, accid
 
 - Create a new database on the same server, recovered to a specified point in time within the retention period.
 - Create a database on the same server, recovered to the deletion time for a deleted database.
-- Create a new database on any server in the same region, recovered to the point of the most recent backups.
+- Create a new database on any server in the same region, recovered to the time of a recent backup.
 - Create a new database on any server in any other region, recovered to the point of the most recent replicated backups. 
 
 If you configured [backup long-term retention](long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
@@ -41,7 +41,7 @@ If you configured [backup long-term retention](long-term-retention-overview.md),
 > [!IMPORTANT]
 > You can't overwrite an existing database during restore.
 
-When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and performance level. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
+When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and service objective. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
 
 
 
@@ -74,7 +74,7 @@ To recover by using automated backups, you must be a member of the SQL Server Co
 
 ## Point-in-time restore
 
-You can restore a standalone or pooled database to an earlier point in time.  The request can specify any service tier or compute size for the restored database. Ensure that you have sufficient resources on the server to which you are restoring the database. 
+You can restore any database to an earlier point in time within its retention period.  The restore request can specify any service tier or compute size for the restored database. When restoring a database into an elastic pool, ensure you have sufficient resources in the pool to accommodate the database.
 
 When complete, the restore creates a new database on the same server as the original database. The restored database is charged at normal rates, based on its service tier and compute size. You don't incur charges until the database restore is complete.
 
@@ -138,14 +138,14 @@ To restore a database by using the REST API:
 
 ## Deleted database restore
 
-You can restore a deleted database to the deletion time, or an earlier point in time, on the same server. You restore a deleted database by creating a new database from the backup.
+You can restore a deleted database to the deletion time, or an earlier point in time, on the same server.
 
 > [!IMPORTANT]
 > If you delete a server, all its databases are also deleted and can't be recovered. You can't restore a deleted server.
 
 ### [Azure portal](#tab/azure-portal)
 
-You restore deleted databases from the Azure portal from the server resource.
+You restore deleted databases from the Azure portal, using the **Deleted databases** page for the server that hosted the deleted database.
 
 > [!TIP]
 > It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases programmatically. 
@@ -179,7 +179,7 @@ To restore a database by using the REST API:
 > - Geo-restore is available only for databases configured with geo-redundant [backup storage](automated-backups-overview.md#backup-storage-redundancy). If you are not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
 > - Geo-restore can only be performed on databases residing in the same subscription.
 
-You can restore a database on any [logical server](logical-servers.md) in any Azure region from the most recent geo-replicated backups. Geo-restore uses a geo-replicated backup as its source. You can request geo-restore even if the database or datacenter is inaccessible due to an outage.
+Geo-restore uses geo-replicated backups as the source. You can restore a database on any [logical server](logical-servers.md) in any Azure region from the most recent geo-replicated backups. You can request a geo-restore even if the database or the entire region is inaccessible due to an outage.
 
 Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. There is a delay between when a backup is taken and when it is geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 

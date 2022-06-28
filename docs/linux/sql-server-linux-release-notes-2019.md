@@ -21,6 +21,7 @@ The following release notes apply to [!INCLUDE [sssql19-md](../includes/sssql19-
 ## Supported platforms
 
 [!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
+Support for SQL Server on Ubuntu 16.04 is limited. As Ubuntu 16.04 has transitioned into the extended security maintenance (ESM) support phase at the end of April 2021 from its standard, five-year maintenance window for Ubuntu long term support (LTS) releases. For more details, please refer: [Ubuntu 16.04 LTS transitions to Extended Security Maintenance (ESM) | Ubuntu](https://ubuntu.com/blog/ubuntu-16-04-lts-transitions-to-extended-security-maintenance-esm)
 
 ## Tools
 

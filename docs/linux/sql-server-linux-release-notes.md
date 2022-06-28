@@ -27,6 +27,8 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) |
 | Docker Engine 1.8+ on Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) |
 
+Limited support for SQL Server on Ubuntu 16.04 as it has transitioned into the extended security maintenance (ESM) support phase at the end of April 2021 from its standard, five-year maintenance window for Ubuntu long term support (LTS) releases. For more details, please refer: [Ubuntu 16.04 LTS transitions to Extended Security Maintenance (ESM) | Ubuntu](https://ubuntu.com/blog/ubuntu-16-04-lts-transitions-to-extended-security-maintenance-esm)
+
 > [!TIP]  
 > For more information, review the [system requirements](sql-server-linux-setup.md#system) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. For the latest support policy for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 

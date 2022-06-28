@@ -293,8 +293,9 @@ Specifies the graph match pattern. For more information about the arguments for 
 > - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
 > - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
 >
-> **Case 2**: Microsoft is working on fixing this problem. This article will be updated when the fix is ready.
-> - Until further notice, avoid using the MERGE command to update distribution key columns in HASH distributed tables. 
+> **Case 2**: this case no longer applies to Synapse SQL version ***10.0.15658.0*** and higher, as the distribution key cannot be updated with MERGE.
+> - Until your Synapse SQL Dedicated pool is on this version, avoid using the MERGE command to update distribution key columns in HASH distributed tables. 
+>     - Instead, if joining on the distribution key and performing an update in *WHEN MATCHED* clause, remove the hash distribution key from the UPDATE SET list of columns (as this is redundant). If not using the distribution key as the JOIN column, then perform the update using a separate UPDATE FROM … JOIN statement.
 > - Use the scripts below to identify and repair any affected tables manually.
 >
 > To check which hash distributed tables in a database may be of concern (if used in the Cases above), run this statement

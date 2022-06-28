@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # sp_create_plan_guide (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a plan guide for associating query hints or actual query plans with queries in a database. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   

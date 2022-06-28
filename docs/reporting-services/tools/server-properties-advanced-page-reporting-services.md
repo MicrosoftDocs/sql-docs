@@ -31,7 +31,7 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 (Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
 
 ### AccessControlAllowOrigin
-(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
+(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials aren't set; if credentials are specified an explicit list of origins must be specified.
 
 ### AccessControlExposeHeaders
 (Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of headers that the server will expose to clients. The default value is blank.
@@ -40,7 +40,7 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 (Power BI Report Server, Reporting Services 2017 and later only) Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
 ### AllowedResourceExtensionsForUpload
-(Power BI Report Server, Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+(Power BI Report Server, Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix aren't required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 ### CustomHeaders 
 
@@ -61,7 +61,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 > [!NOTE]
 > Too many headers may impact performance. 
 
-We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add a HSTS configuration if your server isn't configured for https. Incompatible headers may result in browser rendering errors.
+We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add an HSTS configuration if your server isn't configured for https. Incompatible headers may result in browser rendering errors.
 
 #### CustomHeaders XML format
 
@@ -131,7 +131,7 @@ Determines whether Windows-integrated security is supported for report data sour
 |Values|Description|
 |---------|---------|
 |**True**|Windows-integrated security is enabled.|
-|**False**|Windows-integrated security is not enabled. Report data sources that are configured to use Windows-integrated security will not run.|
+|**False**|Windows-integrated security isn't enabled. Report data sources that are configured to use Windows-integrated security will not run.|
 
 ### EnableLoadReportDefinition
 Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
@@ -156,7 +156,7 @@ Includes external error information (for example, error information about report
 Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
 
 ###  ExecutionLogDaysKept  
-The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries are not deleted from the Execution Log table. The default value is **60**.  
+The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries aren't deleted from the Execution Log table. The default value is **60**.  
 
 > [!NOTE]
 > Setting a value of **0** *deletes* all entries from the execution log. A value of **-1** keeps the entries of the execution log and doesn't delete them.
@@ -189,7 +189,10 @@ The name of the role used when creating security policies on user's My Reports f
 (Power BI Report Server only) Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
 ### RDLXReportTimetout
-RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
+RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.
+
+> [!NOTE]
+> Power View support is no longer available after SQL Server 2017.
 
 ### RequireIntune
 (Power BI Report Server, Reporting Services 2017 and later only) Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
@@ -218,7 +221,7 @@ Defines how snapshots are compressed. The default value is **SQL**. The valid va
 |Values|Description|
 |---------|---------|
 |**SQL**|Snapshots are compressed when stored in the report server database. This compression is the current behavior.|
-|**None**|Snapshots are not compressed.|
+|**None**|Snapshots aren't compressed.|
 |**All**|Snapshots are compressed for all storage options, which include the report server database or the file system.|
 
 ### StoredParametersLifetime
@@ -228,10 +231,10 @@ Specifies the maximum number of days that a stored parameter can be stored. Vali
 Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
 
 ### SupportedHyperlinkSchemes 
-(Power BI Report Server January 2019, Reporting Services 2019 and later only) Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
+(Power BI Report Server January 2019, Reporting Services 2019 and later only) Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http, https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
 
 ### SystemReportTimeout
-The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.  
+The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.  
 
 ### SystemSnapshotLimit
 The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  

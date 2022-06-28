@@ -158,7 +158,7 @@ WITH (MAXDOP = 2);
 
 For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### COMPRESSION_DELAY = 0 | *delay* [ Minutes ]  
 
 For a disk-based table, *delay* specifies the minimum number of minutes that a delta rowgroup in the closed state must remain in the delta rowgroup. SQL Server can then compress it into the compressed rowgroup. Because disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the closed state.
   
@@ -214,7 +214,7 @@ Create a nonclustered columnstore index on a rowstore table stored as a heap or 
 
 Specifies the name of the index. *index_name*  must be unique within the table, but doesn't have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-#### **(** _column_  [ **,**...*n* ] **)**  
+#### ( *column* [ ,...*n* ] )  
    
 Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.
 Each column must be of a supported data type for columnstore indexes. See [Limitations and restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
@@ -258,7 +258,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 WITH ( ONLINE = ON );
 ```
 
-##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### COMPRESSION_DELAY = 0 | \<delay>[Minutes]  
 
 Specifies a lower bound on how long a row should stay in a delta rowgroup, before it's eligible for migration to a compressed rowgroup. For example, you can say that if a row is unchanged for 120 minutes, that row is eligible for compressing into columnar storage format. 
 
@@ -290,7 +290,7 @@ For guidance on filtered indexes, see [Create filtered indexes](../../relational
 
 The following options specify the filegroups on which the index is created:  
   
-##### *partition_scheme_name* **(** _column_name_ **)**  
+##### *partition_scheme_name* ( *column_name* )  
 
 Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index are mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
 
@@ -304,17 +304,17 @@ A columnstore index on a partitioned table must be partition aligned. For more i
 
 Specifies a filegroup name on which to create the index. If *filegroup_name* isn't specified and the table isn't partitioned, the index uses the same filegroup as the underlying table. The filegroup must already exist.  
  
-##### **"**default**"**  
+##### "default"  
 
 Creates the specified index on the default filegroup.  
   
 The term default, in this context, isn't a keyword. It's an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session, which is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="Permissions"></a> Permissions  
+## Permissions  
 
 Requires ALTER permission on the table.  
   
-## <a name="GenRemarks"></a> General remarks  
+## <a id="GenRemarks"></a> General remarks  
 
 You can create a columnstore index on a temporary table. When the table is dropped or the session ends, the index is also dropped.
 
@@ -352,7 +352,7 @@ If the SET options are incorrect, the following conditions can occur:
   
 For more information about filtered indexes, see [Create filtered indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitations and restrictions  
+## <a id="LimitRest"></a> Limitations and restrictions  
 
 Each column in a columnstore index must be of one of the following common business data types:
  
@@ -364,8 +364,8 @@ Each column in a columnstore index must be of one of the following common busine
 - time [ ( *n* ) ]  
 - float [ ( *n* ) ]  
 - real [ ( *n* ) ]  
-- decimal [ ( *precision* [ *, scale* ] **)** ]
-- numeric [ ( *precision* [ *, scale* ] **)** ]    
+- decimal [ ( *precision* [ *, scale* ] ) ]
+- numeric [ ( *precision* [ *, scale* ] ) ]    
 - money  
 - smallmoney  
 - bigint  
@@ -430,7 +430,7 @@ The following limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql1
   
 For information about the performance benefits and limitations of columnstore indexes, see [Columnstore indexes overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
-##  <a name="Metadata"></a> Metadata  
+## Metadata  
 
 All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index doesn't have key columns. The following system views provide information about columnstore indexes:  
   
@@ -441,7 +441,7 @@ All of the columns in a columnstore index are stored in the metadata as included
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> Examples: convert table from rowstore to columnstore  
+## <a id="convert"></a> Examples: convert table from rowstore to columnstore  
   
 ### A. Convert a heap to a clustered columnstore index  
 
@@ -617,7 +617,7 @@ ON dbo.[MyFactTable]
 REORGANIZE;  
 ```  
   
-##  <a name="nonclustered"></a> Examples for nonclustered columnstore indexes  
+## <a id="nonclustered"></a> Examples for nonclustered columnstore indexes  
   
 ### A. Create a columnstore index as a secondary index on a rowstore table  
 
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-### <a name="ncDML"></a> D. Change the data in a nonclustered columnstore index  
+### <a id="ncDML"></a> D. Change the data in a nonclustered columnstore index  
 
 Applies to: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   

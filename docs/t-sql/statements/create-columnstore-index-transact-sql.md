@@ -288,7 +288,7 @@ For guidance on filtered indexes, see [Create filtered indexes](../../relational
   
 #### ON options  
 
-The following options specify the filegroups on which the index is created:  
+The following options specify the filegroups on which the index is created.  
   
 ##### *partition_scheme_name* ( *column_name* )  
 
@@ -322,7 +322,7 @@ You can create a columnstore index on a temporary table. When the table is dropp
 
 A *filtered index* is an optimized, nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
   
-### Required SET Options for filtered indexes  
+### Required SET options for filtered indexes  
 
 The SET options in the required value column are required whenever any of the following conditions occur:  
 

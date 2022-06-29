@@ -1529,6 +1529,18 @@ LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
 )
 ```
 
+### J. Create external data source to access data in a CSV file
+
+As in other examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage. Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
+
+```sql
+CREATE EXTERNAL DATA SOURCE Blob_CSV
+WITH
+(
+ LOCATION = 'abs://<container>@<storage_account>.blob.core.windows.net'
+,CREDENTIAL = blob_storage 
+);
+```
 
 ## Examples: Bulk Operations
 

@@ -1,9 +1,10 @@
 ---
 title: Virtualize a CSV file with PolyBase
-description: Virtualize a CSV file with PolyBase starting with SQL Server 2022
+description: "Virtualize a CSV file with PolyBase starting with SQL Server 2022."
 author: HugoMSFT 
 ms.author: hudequei 
-ms.date: 06/21/2022
+ms.reviewer: wiassaf
+ms.date: 06/29/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: tutorial
@@ -13,10 +14,11 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 
 # Virtualize CSV file with PolyBase
+ [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] can virtualize data from CSV files. This process allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands, like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] can query data directly from CSV files. This concept, commonly referred to as data virtualization, allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands like any other table. This feature uses PolyBase connectors, and minimizes the need for copying data via ETL processes.
 
-In the example below, the csv file is stored on Azure Blob Storage.
+In the example below, the CSV file is stored on Azure Blob Storage and accessed via OPENROWQUERY or an external table.
 
 For more information on data virtualization, [Introducing data virtualization with PolyBase](polybase-guide.md).
 
@@ -32,25 +34,29 @@ RECONFIGURE;
 
 ### 2. Create a user database
 
-This exercise creates a sample database to work with the data and store the scoped credential. In this example, a new empty database named `CSV_Demo` will be used.
+This exercise creates a sample database with default settings and location. You'll use this empty sample database to work with the data and store the scoped credential. In this example, a new empty database named `CSV_Demo` will be used. 
 
 ```sql
 CREATE DATABASE [CSV_Demo];
 ```
 
-### 3. Create a master key
+### 3. Create a master key and database scoped credential
 
-The master key is required to encrypt the credential secret:
+The database master key in the user database is required to encrypt the database scoped credential secret, `blob_storage`.
 
 ```sql
 USE [CSV_Demo];
-
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
 ```
 
-### 4. Create Database Scoped Credential
+```sql
+CREATE DATABASE SCOPED CREDENTIAL blob_storage   
+WITH IDENTITY = '<user_name>', Secret = '<password>';  
+```
 
-Database scoped credential will be used for the External Data Source. In this example, the CSV file resides in Azure Blob Storage, so use prefix `abs`, and `SHARED ACCESS SIGNATURE` is the identity method. For more information about the connectors and prefixes, including new settings for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=sql-server-ver16&preserve-view=true#location--prefixpathport-3).
+### 4. Create external data source
+
+Database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage, so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For more information about the connectors and prefixes, including new settings for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=sql-server-ver16&preserve-view=true#location--prefixpathport-3).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE Blob_CSV
@@ -61,9 +67,22 @@ WITH
 );
 ```
 
-### 5. Use OPENROWQUERY to access the data
+For example, if your storage account is named `s3sampledata` and the container is named `import`, the code would be:
 
-In this example the file is named `call_center.csv`, and the data starts on the second row.
+```sql
+CREATE EXTERNAL DATA SOURCE Blob_CSV
+WITH
+(
+ LOCATION = 'abs://import@s3sampledata.blob.core.windows.net'
+,CREDENTIAL = blob_storage
+)
+```
+
+## Use OPENROWQUERY to access the data
+
+In this example the file is named `call_center.csv`, and the data starts on the second row. 
+
+Since the external data source `Blob_CSV` is mapped to a container level and the `call_center.csv` is located on the root-level of the container, just the filename is required to locate the file. To query a file in a folder structure, provide a folder mapping relative to the external data source's LOCATION parameter.
 
 ```sql
 SELECT  * 
@@ -108,11 +127,9 @@ WITH    (   cc_call_center_sk         integer                       ,
         AS [cc];
 ```
 
-### 6. External Table
+## Query data with an external table
 
-CREATE EXTERNAL TABLE can also be used to virtualize the csv data in SQL Server. The columns must be defined and strongly typed. For more information, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md?view=sql-server-ver16&preserve-view=true).
-
-While external tables take more effort to create, they also provide additional benefits over querying an external data source with OPENROWSET. You can:
+CREATE EXTERNAL TABLE can also be used to virtualize the CSV data in SQL Server. The columns must be defined and strongly typed. While external tables take more effort to create, they also provide additional benefits over querying an external data source with OPENROWSET. You can:
 
 1. Strengthen the definition of the data typing for a given column.
 2. Define nullability.
@@ -120,11 +137,15 @@ While external tables take more effort to create, they also provide additional b
 4. Create statistics for a column to optimize the quality of the query plan.
 5. Create a more granular model within SQL Server for data access to enhance your security model.
 
+For more information, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+
 For the following example, the same data source will be used.
 
-### 6.1 Create External File Format
+### 1. Create external file format
 
-To define the file's formatting or to skip the first row of a file, an external file format is required. In the following example, the data starts on the second row. External file formats are also recommended due to reusability.
+To define the file's formatting, an external file format is required. External file formats are also recommended due to reusability.
+
+In the following example, the data starts on the second row. 
 
 ```sql
 CREATE EXTERNAL FILE FORMAT csv_ff
@@ -132,12 +153,11 @@ WITH
 (   FORMAT_TYPE = DELIMITEDTEXT
 ,   FORMAT_OPTIONS  (    FIELD_TERMINATOR = ','
                     ,    STRING_DELIMITER = '"'
-                  ,    FIRST_ROW = 2
-                    )
+                    ,    FIRST_ROW = 2 )
 );
 ```
 
-### 6.2 Create External Table
+### 2. Create external table
 
 ```sql
 CREATE EXTERNAL TABLE extCall_Center_csv
@@ -183,7 +203,7 @@ WITH
 GO
 ```
 
-## Next Steps
+## Next steps
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)

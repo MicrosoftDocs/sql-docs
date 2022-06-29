@@ -1,7 +1,7 @@
 ---
-title: "PolyBase Transact-SQL reference | Microsoft Docs"
-description: To use PolyBase, create external tables for your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, and MongoDB.
-ms.date: 09/24/2018
+title: "PolyBase Transact-SQL reference"
+description: "Use PolyBase to query your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
+ms.date: 06/29/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: reference
@@ -18,39 +18,55 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-To use  PolyBase, you must create external tables to reference your external data.  
-  
-[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-  
-[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-  
-[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
-  
-[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
-  
-[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
+This article reviews options for using [PolyBase](polybase.md) to query external data in-place, referred to as data virtualization, for a variety of external data sources. 
 
->[!NOTE]
->In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+To use PolyBase, you must create external tables to reference your external data. Refer to:
+  
+ - [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) 
+ - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+ - [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+ - [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+ - [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
+
+> [!NOTE]
+> In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+
+For more information and tutorials on creating various external data sources, see:
+
+- [Hadoop](polybase-configure-hadoop.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+- [SQL Server](polybase-configure-sql-server.md)
+- [Oracle](polybase-configure-oracle.md)
+- [Teradata](polybase-configure-teradata.md)
+- [MongoDB](polybase-configure-mongodb.md)
+- [S3-compatible object storage](polybase-configure-s3-compatible.md)
+- [ODBC generic types](polybase-configure-odbc-generic.md)
+- [CSV](virtualize-csv.md)
 
 ## Prerequisites  
 
-Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
-  
+To get started, install PolyBase on your SQL Server in [Windows](polybase-installation.md) or [Linux](polybase-linux-setup.md), then see [PolyBase configuration](polybase-configuration.md).
+ 
 ## Create external tables for Hadoop
 
-Applies to: SQL Server (starting with 2016), Parallel Data Warehouse
+Applies to: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]
 
-**1. Create Database Scoped Credential**
+#### 1. Create database scoped credential
 
-This step is required only for Kerberos-secured Hadoop clusters.  
+This step is required only for Kerberos-secured Hadoop clusters. 
+
+Create a master key on the database. This is required to encrypt the credential secret.  
 
 ```sql
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
   
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
+```
+
+Then, create a database scoped credential for Kerberos-secured Hadoop clusters. `IDENTITY` is the Kerberos user name and `SECRET` is the Kerberos password.
+
+```sql  
 -- Create a database scoped credential  for Kerberos-secured Hadoop clusters.  
 -- IDENTITY: the Kerberos user name.  
 -- SECRET: the Kerberos password  
@@ -59,7 +75,15 @@ CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
 WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
 ```
 
-**2. Create External Data Source**
+#### 2. Create external data source
+
+Create an external data source. 
+
+- `LOCATION` is required and is the Hadoop name node IP address and port. 
+- `RESOURCE MANAGER LOCATION` is optional. This is the Hadoop Resource Manager location to enable [pushdown computation](polybase-pushdown-computation.md). 
+- `CREDENTIAL` is the database scoped credential, created in the previous step.
+  
+Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ```sql  
 -- Create an external data source.  
@@ -75,7 +99,9 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
 ```
 
-**3. Create External File Format**
+#### 3. Create external file format
+
+Create an external file format, where `FORMAT_TYPE` ius the format in Hadoop, such as `DELIMITEDTEXT`, `RCFILE`, `ORC`, or `PARQUET`. 
 
 ```sql  
 -- Create an external file format.  
@@ -88,7 +114,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
   
 ```  
 
-**4. Create External Table**  
+#### 4. Create external table
+
+Create an external table pointing to data stored in Hadoop, where `LOCATION` is the path to the file or directory that contains the data relative to HDFS root.
 
 ```sql  
 -- Create an external table pointing to data stored in Hadoop.  
@@ -107,7 +135,9 @@ WITH (LOCATION='/Demo/',
 );  
 ```  
 
-**5. Create Statistics**  
+#### 5. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql  
 -- Create statistics on an external table.   
@@ -115,15 +145,16 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure blob storage  
-Applies to: SQL Server (starting with 2016), Azure Synapse Analytics, Parallel Data Warehouse
 
-**1. Create Database Scoped Credential**  
+Applies to: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]
+
+#### 1. Create database scoped credential
 
 ```sql  
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
   
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
   
 -- Create a database scoped credential  for Azure blob storage.  
 -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -133,7 +164,12 @@ CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
 WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';  
 ```  
 
-**2. Create External Data Source**  
+#### 2. Create external data source
+
+- `LOCATION` is required and is the Azure account storage account name and blob container name. 
+- `CREDENTIAL` is the database scoped credential, created in the previous step.
+
+Be aware that options for `TYPE` and `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ```sql  
 -- Create an external data source.  
@@ -148,7 +184,7 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
   
 ```  
 
-**3. Create External File Format**  
+#### 3. Create external file format
 
 ```sql  
 -- Create an external file format.  
@@ -161,7 +197,7 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
   
 ```  
 
-**4. Create External Table**  
+#### 4. Create external table
 
 ```sql  
 -- Create an external table pointing to data stored in Azure storage.  
@@ -181,7 +217,9 @@ WITH (LOCATION='/Demo/',
 );  
 ```  
 
-**5. Create Statistics**  
+#### 5. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql  
 -- Create statistics on an external table.   
@@ -190,11 +228,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure Data Lake Store
-Applies to: Azure Synapse Analytics
+Applies to: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
 
 For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
-**1. Create Database Scoped Credential**   
+#### 1. Create database scoped credential
 
 ```sql
 -- Create a Database Master Key.
@@ -206,7 +244,7 @@ CREATE MASTER KEY;
 -- Create a database scoped credential
 -- IDENTITY: Pass the client id and OAuth 2.0 Token Endpoint taken from your Azure Active Directory Application
 -- SECRET: Provide your AAD Application Service Principal key.
--- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/library/mt270260.aspx
+-- For more information on Create database scoped credential: https://msdn.microsoft.com/library/mt270260.aspx
 
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
@@ -215,35 +253,52 @@ WITH
 ;
 ```  
 
-**2. Create External Data Source to reference Azure Data Lake Store Gen 1 or 2 **  
+#### 2. Create external data source to reference Azure Data Lake Store (ADLS) Gen 1 or 2
+
+- `LOCATION` is required and is the Azure account storage account name and blob container name. 
+- `CREDENTIAL` is the database scoped credential, created in the previous step.
+
+Be aware that options for `TYPE` and `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+For ADLS Gen1 (not recommended):
 
 ```sql  
--- For Gen 1 - Create an external data source
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
--- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
--- CREDENTIAL: Provide the credential created in the previous step.
-
+-- For ADLS Gen1 - Create an external data source
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
-    CREDENTIAL = AzureStorageCredential
-);
+WITH 
+  ( LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
+    CREDENTIAL = AzureStorageCredential,
+    TYPE = HADOOP
+  );
+```
 
--- For Gen 2 - Create an external data source
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
--- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
--- CREDENTIAL: Provide the credential created in the previous step
+For ADLS Gen2 prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use `abfss`:
+
+```sql
+-- For ADLS Gen 2 - Create an external data source
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
   -- Please note the abfss endpoint when your account has secure transfer enabled
   ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
     CREDENTIAL = ADLS_credential ,
     TYPE = HADOOP
-  ) ;
+  );
 ```  
 
-**3. Create External File Format**  
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `adls` for ADLS Gen2:
+
+```sql
+-- For ADLS Gen 2 in SQL Server 2022 and later - Create an external data source
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+  ( LOCATION = 'abfss://daily@logs.dfs.core.windows.net/' ,
+    CREDENTIAL = AzureStorageCredential ,
+    TYPE = HADOOP
+  );
+```
+
+
+#### 3. Create external file format
 
 ```sql  
 -- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
@@ -262,7 +317,7 @@ WITH
 );
 ```  
 
-**4. Create External Table**  
+#### 4. Create external table
 
 ```sql  
 -- LOCATION: Folder under the ADLS root folder.
@@ -288,7 +343,9 @@ WITH
 ;
 ```  
 
-**5. Create Statistics**
+#### 5. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
@@ -296,11 +353,11 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 
 ## Create external tables for SQL Server
 
-**1. Create Database Scoped Credential**  
+#### 1. Create database scoped credential
 
 ```sql
      -- Create a Master Key
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
  
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
@@ -310,11 +367,15 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
      WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Create External Data Source**
+#### 2. Create external data source
+
+Create the external data source to the other SQL Server. 
+
+Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default. Applies to: SQL Server 2019 (15.x) and later.
     *  CREDENTIAL: the database scoped credential, created above.
     */  
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
@@ -325,14 +386,14 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**3. Create Schema** 
+#### 3. Create schema
 
 ```sql
      CREATE SCHEMA sqlserver;
      GO
 ```
 
-**4. Create External Table**  
+#### 4. Create external table
  
 ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -354,7 +415,9 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
      );
  ```
 
-**5. Create Statistics**  
+#### 5. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql
 CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
@@ -362,7 +425,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 
 ## Create external tables for Oracle
 
-**1. Create Database Scoped Credential**  
+#### 1. Create database scoped credential
 
  ```sql
   -- Create a Master Key
@@ -377,7 +440,9 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Create External Data Source**
+#### 2. Create external data source
+
+Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
   ```sql
    /* 
@@ -393,9 +458,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
      CREDENTIAL = credential_name)
    ```
 
-
-
-**3. Create External Table**  
+#### 3. Create external table
  
 ```sql
    /*
@@ -419,14 +482,17 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    );
    ```
 
-**4. Create Statistics**  
+#### 4. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
   ```sql
    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
    ```
+
 ## Create external tables for Teradata
 
-**1. Create Database Scoped Credential**  
+#### 1. Create database scoped credential
 
  ```sql
   -- Create a Master Key
@@ -441,7 +507,9 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Create External Data Source**
+#### 2. Create external data source
+
+Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
@@ -458,9 +526,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 
 ```
 
-
-
-**3. Create External Table**  
+#### 3. Create external table
  
 ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -490,14 +556,17 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
      );
 ```
 
-**4. Create Statistics**  
+#### 4. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
 ```
+
 ## Create external tables for MongoDB
 
-**1. Create Database Scoped Credential**  
+#### 1. Create database scoped credential
 
  ```sql
   -- Create a Master Key
@@ -512,7 +581,9 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Create External Data Source**
+#### 2. Create external data source
+
+Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ```sql
      /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
@@ -528,9 +599,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
     );
 ```
 
-
-
-**3. Create External Table**  
+#### 3. Create external table
  
 ```sql
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
@@ -550,16 +619,21 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
      );
 ```
 
-**4. Create Statistics**  
+#### 4. Create statistics
+
+Finally, manually create a statistics object on the new external table.
 
 ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
 ```
 
-
 ## Next steps  
+
 For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
-  
-## See Also  
-[Get started with PolyBase](./polybase-guide.md)   
-[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)
+
+## See also  
+
+ - [Get started with PolyBase](./polybase-guide.md)   
+ - [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)
+ - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+ - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)

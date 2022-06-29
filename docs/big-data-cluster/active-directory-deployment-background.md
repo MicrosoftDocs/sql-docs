@@ -85,7 +85,7 @@ There are no changes required in the AD domain or domain controller to accommoda
 
 ## Changes to the deployment configuration file
 
-The *activeDirectory* section in the control plane configuration *control.json* has two new optional parameters: `subdomain` and `accountPrefix`. The cluster name is used for each of these parameters. Provide new values for these settings if you wish to to override default behavior. The cluster name is the same as namespace name.
+The *activeDirectory* section in the control plane configuration *control.json* has two new optional parameters: `subdomain` and `accountPrefix`. The cluster name is used for each of these parameters. Provide new values for these settings if you wish to override default behavior. The cluster name is the same as namespace name.
 
 You have the option to use any endpoint DNS name, as long as it's fully qualified. It also can't conflict with any other big data cluster deployed in the same domain. You can use the value of the subdomain parameter to ensure DNS names are different across clusters. Consider the gateway endpoint. You can use the name `gateway` for the endpoint and register it in the DNS server automatically. To do this as part of your big data cluster deployment, use `gateway.bdc1.contoso.local` as the DNS name. If `bdc1` is the subdomain and `contoso.local` is the AD DNS domain name. Other acceptable values are: `gateway-bdc1.contoso.local` or simply `gateway.contoso.local`.
 

@@ -1,5 +1,5 @@
 ---
-title: VS Code and App Deploy extension
+title: Visual Studio Code and App Deploy extension
 description: Learn how to deploy an application to SQL Server Big Data Clusters using a Python script or R script.
 author: HugoMSFT
 ms.author: hudequei
@@ -37,11 +37,11 @@ The App Deploy extension supports the following tasks in Visual Studio Code:
 - Generates a run spec to consume the app or delete the app from the cluster.
 - Consumes deployed apps through a run specification YAML.
 
-The following sections walk though installation of App Deploy. They also provide an overview on how it works.
+The following sections walk through installation of App Deploy. They also provide an overview on how it works.
 
 ### How to install the App Deploy extension in Visual Studio Code
 
-In *Visual Studio Code (VS Code)*, install the *App Deploy* extension:
+In *Visual Studio Code*, install the *App Deploy* extension:
 
 1. To install App Deploy as part of Visual Studio Code [download the extension](https://aka.ms/app-deploy-vscode) from GitHub.
 
@@ -78,7 +78,7 @@ You can also find this endpoint from the command line with the following command
 azdata bdc endpoint list
 ```
 
-Another way to retreive this information is to navigate to the server in *Azure Data Studio* and right-click **Manage**. The endpoints for services are listed.
+Another way to retrieve this information is to navigate to the server in *Azure Data Studio* and right-click **Manage**. The endpoints for services are listed.
 
 ![ADS End Point](media/vs-extension/ads_end_point.png)
 
@@ -94,7 +94,7 @@ In Visual Studio Code, open a workspace in the location where you want to save y
 
 To deploy a new app from a template, select the **New App Template** button on the **App Specifications** pane. A prompt asks you where on your local machine you want to save the name, runtime and the new app. The name and version that you provide should be a DNS-1035 label and must consist of lower-case, alphanumeric characters, or '-'. They need to also start with an alphabetic character and end with an alphanumeric character.
 
-Preferrably place the extension in your current Visual Studio Code workspace. This gives you the full functionality of the extension.
+Preferably place the extension in your current Visual Studio Code workspace. This gives you the full functionality of the extension.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
@@ -150,7 +150,7 @@ You can view all of the apps you have deployed with the following links:
 
 If you click `links`, you will see that you can access the `swagger.json` of your deployed app. This enables you to write clients to call your app:
 
-![A Screenshot that shows the VS Code UI displaying the swagger.json file.](media/vs-extension/swagger.png)
+![A Screenshot that shows the Visual Studio Code UI displaying the swagger.json file.](media/vs-extension/swagger.png)
 
 For more information, view [Consume applications on big data clusters](app-consume.md).
 
@@ -201,4 +201,4 @@ Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../i
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
 
-Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback).
+Our goal is to make this extension useful for you and we appreciate your feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback).

@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "02/17/2022"
+ms.date: "06/30/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -26,6 +26,13 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed use of XADTC with Azure SQL Managed Instance.
 - Fixed loss of Azure Active Directory authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.10 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix issue with polling for first successful connection.
+- Fixed missing dependency in Debian package.
+- Fix for only using ADAL when required.
+- Fixed issue with idle connection resiliency when Kerberos auth was used.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.9 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

@@ -54,7 +54,7 @@ To update account names and guarantee uniqueness use account prefixes. The accou
 >[!NOTE]
 >Active Directory requires account names to be limited to 20 characters. The big data cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves 12 characters for the account prefix.
 
-You have the option to customize your account name. Use the `accountPrefix` parameter in the active directory configuration spec. SQL Server 2019 CU5 introduces `accountPrefix` in the configuration spec. By default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the initial 12-characters substring of the subdomain name are used as an account prefix.
+You have the option to customize your account name. Use the `accountPrefix` parameter in the active directory configuration spec. SQL Server 2019 CU5 introduces `accountPrefix` in the configuration spec. By default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the initial 12-characters substring of the subdomain name is used as an account prefix.
 
 The subdomain only applies to the DNS. Hence the new LDAP user account name is `bdc-ldap@contoso.local`. The account name is not `bdc-ldap@bdc.contoso.local`.
 

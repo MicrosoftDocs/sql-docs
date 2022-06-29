@@ -34,7 +34,7 @@ Databases in Azure SQL Managed Instance and non-Hyperscale databases in Azure SQ
 
 ### Backup frequency
 
-Both Azure SQL Database and Azure SQL Managed Instance use SQL Server technology to create [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
+Both Azure SQL Database and SQL Managed Instance use SQL Server technology to create [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
 
 When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 

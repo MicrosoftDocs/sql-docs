@@ -41,6 +41,9 @@ ms.author: mikeray
 2.  Right-click the server instance in Object Explorer, point to **Reports**, and point to **Standard Reports**.  
   
 3.  Click **Transaction Log Shipping Status**.  
+
+> [!NOTE]
+> [Remote access](../configure-windows/configure-the-remote-access-server-configuration-option.md) is required for the log shipping status report in SQL Server Management Studio (SSMS) to work. 
   
 ## See Also  
  [Monitor Log Shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  

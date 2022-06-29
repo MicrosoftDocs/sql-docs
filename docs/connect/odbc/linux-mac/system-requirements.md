@@ -53,6 +53,7 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |Red Hat Enterprise Linux 6     |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Red Hat Enterprise Linux 7     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Red Hat Enterprise Linux 8     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 9     |    |Yes |    |    |    |    |   |    |    |    |    |    |    |   |
 |SUSE Linux Enterprise Server 11<sup>1</sup>|    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |SUSE Linux Enterprise Server 12|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |

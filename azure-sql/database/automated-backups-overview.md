@@ -41,7 +41,7 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](long-term-retention-overview.md) for both single and pooled databases.
 
-Single and pooled databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases aim to address major painpoints with existing technology, and therefore have a unique architecture using [storage snapshots](hyperscale-architecture.md#azure-storage) for backup and restore. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md).
+Single and pooled databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage), which addresses certain limitations of traditional technology. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). This article focuses on backup and restore for service tiers other than Hyperscale.
 
 
 ## Backup frequency

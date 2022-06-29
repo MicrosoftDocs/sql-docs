@@ -41,8 +41,7 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
 
 1. In the **Delete Object** dialog box, select **OK**.
 
-    > [!IMPORTANT]
-    >  Select **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.
+   Select **Show Dependencies** in the **Delete Object** dialog box to open the *function_name* **Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 

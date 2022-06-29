@@ -35,6 +35,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
+| New distributions supported. | Ubuntu 22.04, Red Hat 9 |
 | TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

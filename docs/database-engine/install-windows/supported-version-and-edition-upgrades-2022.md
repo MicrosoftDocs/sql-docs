@@ -1,20 +1,18 @@
 ---
 title: "Supported version and edition upgrades (SQL Server 2022 Preview)"
 description: The supported version and edition upgrades for SQL Server 2022 Preview.
-ms.custom:
-- event-tier1-build-2022
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/25/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2017"
 ---
 # Supported version and edition upgrades (SQL Server 2022 Preview)

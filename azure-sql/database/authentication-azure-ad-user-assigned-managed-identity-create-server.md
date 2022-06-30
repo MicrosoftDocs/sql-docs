@@ -67,11 +67,11 @@ The following steps outline the process of creating a new Azure SQL Database log
 
 12. On the Security tab, under **Identity**, select **Configure Identities**.
 
-    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/create-server-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create database process":::
+    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/create-server-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create database process.":::
 
 13. On the **Identity** blade, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
 
-    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring server identity":::
+    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring server identity.":::
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/select-a-user-assigned-managed-identity.png" alt-text="Azure portal screenshot of user assigned managed identity when configuring server identity":::
 

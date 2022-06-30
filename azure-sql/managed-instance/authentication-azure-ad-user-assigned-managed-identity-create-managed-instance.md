@@ -49,11 +49,11 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 1. On the Security tab, under **Identity**, select **Configure Identities**.
 
-    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/create-instance-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create managed instance process":::
+    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/create-instance-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create managed instance process.":::
 
 1. On the **Identity** blade, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
 
-    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring managed instance identity":::
+    :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring managed instance identity.":::
 
     :::image type="content" source="../database/media/authentication-azure-ad-user-assigned-managed-identity/select-a-user-assigned-managed-identity.png" alt-text="Azure portal screenshot of user assigned managed identity when configuring managed instance identity":::
 

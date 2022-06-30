@@ -64,6 +64,7 @@ For installation, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 Automatic rotation for the TDE Protector can be enabled when configuring the TDE Protector for the server, from the Azure portal or via the below PowerShell or CLI commands. Once enabled, the server will continuously check the key vault for any new versions of the key being used as TDE Protector. If a new version of the key is detected, within 60 minutes the TDE Protector on the server will be automatically rotated to the latest key version.
 
+# [Portal](#tab/azure-portal)
 Using the Azure portal
 1.	Browse to the Transparent Data Encryption blade for an existing server.
 2.	Select the Customer-managed key option and select the key vault and key to be used as the TDE Protector.
@@ -71,16 +72,31 @@ Using the Azure portal
 4.	Select Save.
 
 To enable automatic rotation for the TDE Protector using PowerShell or Azure CLI, see the following scripts.
-•	PowerShell
-•	The Azure CLI
-Use the Set-AzSqlServerTransparentDataEncryptionProtector cmdlet.
-PowerShellCopy
-# set the AutoRotation parameter to true to enable auto-rotation of the TDE protector
+
+# [PowerShell](#tab/azure-powershell)
+For Az module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
+
+Use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) cmdlet.
+
+```powershell
 Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <keyVaultKeyId> `
    -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName> `
     -AutoRotationEnabled <boolean>
+```
 
+# [The Azure CLI](#tab/azure-cli)
 
+For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
+
+Use the [az sql server tde-key set](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-set) command.
+
+```azurecli
+az sql server tde-key set --server-key-type AzureKeyVault
+                          --auto-rotation-enabled true
+                          [--kid] <keyVaultKeyId>
+                          [--resource-group] <SQLDatabaseResourceGroupName> 
+                          [--server] <logicalServerName>
+```
 
 ## Manual key rotation
 

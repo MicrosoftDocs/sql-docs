@@ -98,6 +98,10 @@ For more information, see [BACKUP (Transact-SQL)](../../t-sql/statements/backup-
  For compressed backups, the size of the final backup file depends on how compressible the data is, and this is unknown before the backup operation finishes.  Therefore, by default, when backing up a database using compression, the Database Engine uses a pre-allocation algorithm for the backup file. This algorithm pre-allocates a predefined percentage of the size of the database for the backup file. If more space is needed during the backup operation, the Database Engine grows the file. If the final size is less than the allocated space, at the end of the backup operation, the Database Engine shrinks the file to the actual final size of the backup.  
   
  To allow the backup file to grow only as needed to reach its final size, use trace flag 3042. Trace flag 3042 causes the backup operation to bypass the default backup compression pre-allocation algorithm. This trace flag is useful if you need to save on space by allocating only the actual size required for the compressed backup. However, using this trace flag might cause a slight performance penalty (a possible increase in the duration of the backup operation).  
+
+## Intel QAT backup compression
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces QAT backup compression algorithm.
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

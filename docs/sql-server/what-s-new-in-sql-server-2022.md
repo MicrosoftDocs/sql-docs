@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 06/20/2022
+ms.date: 07/15/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -51,6 +51,8 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
 
 - [Performance](#performance)
   - Query Store enabled by default for new databases
+  - Hybrid buffer pool with direct write
+  - Intel QAT backup compression
   - Parameter sensitive plan optimization
 - [Management](#management)
   - Out of memory DMV and extended events
@@ -109,6 +111,7 @@ The following sections provide an overview of these features.
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | System page latch concurrency enhancements | Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit tempdb heavy workloads.|
 | Buffer pool parallel scan | Improves the performance of buffer pool scan operations on large-memory machines by utilizing multiple CPU cores. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602). |
+| Hybrid buffer pool with direct write | |
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires Query Store enabled. See [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires Query Store enabled. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
@@ -122,6 +125,7 @@ The following sections provide an overview of these features.
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 | Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
+| Intel QAT backup compression | [Backup compression (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) |
 | Shrink database WAIT_AT_LOW_PRIORITY | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. SQL Server 2022 Preview adds WAIT_AT_LOW_PRIORITY as an additional option for shrink operations (DBCC SHRINKDATABASE and DBCC SHRINKFILE). When you specify WAIT_AT_LOW_PRIORITY, new queries requiring Sch-S or Sch-M locks aren't blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [Shrink a database](../relational-databases/databases/shrink-a-database.md) and [Shrink a file](../relational-databases/databases/shrink-a-file.md).|
 | Asynchronous auto update statistics concurrency|Avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Backup and restore to S3 compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|

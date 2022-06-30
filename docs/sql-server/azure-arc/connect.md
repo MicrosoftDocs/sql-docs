@@ -102,7 +102,7 @@ az role assignment create --assignee $spID --role 'Azure Connected SQL Server On
 To install the SQL Server extension, run:
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
 
 ---
@@ -189,7 +189,7 @@ If you disconnected your SQL Server instance by mistake, you can restore its __S
 1. If you also uninstalled the SQL Server extension by mistake, reinstall it.
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
  > [!NOTE]
    > The location property must match the location of the **Server - Azure Arc** resource for the server specified by the *--machine-name* parameter.
@@ -203,7 +203,7 @@ If you disconnected your SQL Server instance by mistake, you can restore its __S
 3. Make sure to remove your instance from the exclusion list and update the extension settings.
 
 ```azurecli
-    az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[\"{named instance 1}\",\"{named instance 3}}\"]}'
+    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[\"{named instance 1}\",\"{named instance 3}}\"]}'
 ```
 The instance will be restored after the next sync with the agent. For information on how to manage vm extensions using Portal or PowerShell, see [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions).
 

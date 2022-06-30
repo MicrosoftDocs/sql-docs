@@ -500,7 +500,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format. Note this may be case sensitive in the Oracle database.
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -515,7 +515,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='.mySchema.customer',
+    LOCATION='DB1.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
 ```

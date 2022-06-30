@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 
 # Virtualize CSV file with PolyBase
- [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+ [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)] and later
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] can query data directly from CSV files. This concept, commonly referred to as data virtualization, allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands like any other table. This feature uses PolyBase connectors, and minimizes the need for copying data via ETL processes.
 
@@ -158,6 +158,8 @@ WITH
 ```
 
 ### 2. Create external table
+
+LOCATION is the file path of the `call_center.csv` file relative to the path of the location in the external data source, defined by DATA_SOURCE. Use FILE_FORMAT to specify the path to the `csv_ff` external file format file relative to TODO.
 
 ```sql
 CREATE EXTERNAL TABLE extCall_Center_csv

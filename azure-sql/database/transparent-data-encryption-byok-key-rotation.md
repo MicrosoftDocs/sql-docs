@@ -64,6 +64,8 @@ For installation, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 Automatic rotation for the TDE Protector can be enabled when configuring the TDE Protector for the server, from the Azure portal or via the below PowerShell or CLI commands. Once enabled, the server will continuously check the key vault for any new versions of the key being used as TDE Protector. If a new version of the key is detected, within 60 minutes the TDE Protector on the server will be automatically rotated to the latest key version.
 
+Automatic rotation in server or managed instance can be used in conjunction with automatic key rotation in Azure Key Vault to enable end-to-end zero touch rotation for TDE keys.  
+
 # [Portal](#tab/azure-portal)
 Using the Azure portal
 1.	Browse to the Transparent Data Encryption blade for an existing server.
@@ -85,7 +87,6 @@ Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <ke
 ```
 
 # [The Azure CLI](#tab/azure-cli)
-
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
 Use the [az sql server tde-key set](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-set) command.
@@ -100,10 +101,17 @@ az sql server tde-key set --server-key-type AzureKeyVault
 
 ## Manual key rotation
 
-Manual key rotation uses the following commands to add a completely new key, which could be under a new key name or even another key vault. Using this approach supports adding the same key to different key vaults to support high-availability and geo-dr scenarios.
+Manual key rotation uses the following commands to add a completely new key, which could be under a new key name or even another key vault. Using this approach supports adding the same key to different key vaults to support high-availability and geo-dr scenarios. Manual key rotation can also be done using the Portal.
+With manual key rotation, when a new key version is generated in key vault (either manually or via automatic key rotation policy in key vault), the same must be manually set as the TDE Protector on the server.
 
 > [!NOTE]
 > The combined length for the key vault name and key name cannot exceed 94 characters.
+
+# [Portal](#tab/azure-portal)
+Using the Azure portal
+1.	Browse to the Transparent Data Encryption blade for an existing server.
+2.	Select the Customer-managed key option and select the key vault and key to be used as the new TDE Protector.
+3.	Select Save.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -139,6 +147,9 @@ az sql server tde-key set --server-key-type AzureKeyVault --kid <keyVaultKeyId> 
 * * *
 
 ## Switch TDE protector mode
+
+# [Portal](#tab/azure-portal)
+- To switch the TDE protector from Microsoft-managed to BYOK mode, browse to the Transparent Data Encryption blade for an existing server, select the Customer-managed key option and select the key vault and key to be used as the TDE Protector then select Save.
 
 # [PowerShell](#tab/azure-powershell)
 

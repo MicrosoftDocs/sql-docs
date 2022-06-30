@@ -16,21 +16,21 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Estimate Memory Requirements for Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it is important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
+Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it's important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
 
-Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table's memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
+Whether you're creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table, it's important to have a reasonable estimate of each table's memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
-If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) provide guidance on migrating from disk-based to memory-optimized tables. 
+If you're contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) provide guidance on migrating from disk-based to memory-optimized tables. 
   
 ## Basic Guidance for Estimating Memory Requirements
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256 GB for SCHEMA_AND_DATA tables.
 
 The size of a memory-optimized table corresponds to the size of data plus some overhead for row headers. When migrating a disk-based table to memory-optimized, the size of the memory-optimized table will roughly correspond to the size of the clustered index or heap of the original disk-based table.
 
 Indexes on memory-optimized tables tend to be smaller than nonclustered indexes on disk-based tables. The size of nonclustered indexes is in the order of `[primary key size] * [row count]`. The size of hash indexes is `[bucket count] * 8 bytes`. 
 
-When there is an active workload, additional memory is needed to account for row versioning and various operations. How much memory is needed in practice depends on the workload, but to be safe the recommendation is to start with two times the expected size of memory-optimized tables and indexes, and observe what are the memory requirements in practice. The overhead for row versioning always depends on the characteristics of the workload - especially long-running transactions increase the overhead. For most workloads using larger databases (e.g., >100GB), overhead tends to be limited (25% or less).
+When there is an active workload, extra memory is needed to account for row versioning and various operations. How much memory is needed in practice depends on the workload, but to be safe the recommendation is to start with two times the expected size of memory-optimized tables and indexes, and observe what are the memory requirements in practice. The overhead for row versioning always depends on the characteristics of the workload - especially long-running transactions increase the overhead. For most workloads using larger databases (e.g., >100 GB), overhead tends to be limited (25% or less).
 
   
 ## Detailed Computation of Memory Requirements 
@@ -86,7 +86,7 @@ A memory-optimized table row is comprised of three parts:
     Row header/timestamps = 24 bytes.  
   
 - **Index pointers**   
-    For each hash index in the table, each row has an 8-byte address pointer to the next row in the index.  Since there are 4 indexes, each row will allocate 32 bytes for index pointers (an 8 byte pointer for each index).  
+    For each hash index in the table, each row has an 8-byte address pointer to the next row in the index.  Since there are four indexes, each row will allocate 32 bytes for index pointers (an 8 byte pointer for each index).  
   
 - **Data**   
     The size of the data portion of the row is determined by summing the type size for each data column.  In our table we have five 4-byte integers, three 50-byte character columns, and one 30-byte character column.  Therefore the data portion of each row is 4 + 4 + 4 + 4 + 4 + 50 + 50 + 30 + 50 or 200 bytes.  
@@ -117,14 +117,14 @@ SELECT * FROM t_hk
    WHERE Col2 >= 3;
 ```  
   
-If you are migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
+If you're migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
   
 ```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
   
-If you are creating a new table, you'll need to estimate the array size or gather data from your testing prior to deployment.  
+If you're creating a new table, you'll need to estimate the array size or gather data from your testing prior to deployment.  
   
 For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
@@ -136,7 +136,7 @@ Thus, in our example, the memory needed for each hash array is:
   
 8,388,608 * 8 = 2^23 \* 8 = 2^23 \* 2^3 = 2^26 = 67,108,864 or approximately 64 MB.  
   
-Since we have three hash indexes, the memory needed for the hash indexes is 3 * 64MB = 192MB.  
+Since we have three hash indexes, the memory needed for the hash indexes is 3 * 64 MB = 192 MB.  
   
 #### Memory for nonclustered indexes  
   
@@ -162,11 +162,11 @@ SELECT * FROM t_hk
   
 ###  <a name="bkmk_MemoryForRowVersions"></a> Memory for row versioning
 
-To avoid locks, In-Memory OLTP uses optimistic concurrency when updating or deleting rows. This means that when a row is updated, an additional version of the row is created. In addition, deletes are logical - the existing row is marked as deleted, but not removed immediately. The system keeps old row versions (including deleted rows) available until all transactions that could possibly use the version have finished execution. 
+To avoid locks, In-Memory OLTP uses optimistic concurrency when updating or deleting rows. This means that when a row is updated, another version of the row is created. In addition, deletes are logical - the existing row is marked as deleted, but not removed immediately. The system keeps old row versions (including deleted rows) available until all transactions that could possibly use the version have finished execution. 
   
-Because there may be a number of additional rows in memory at any time waiting for the garbage collection cycle to release their memory, you must have sufficient memory to accommodate these additional rows.  
+Because there may be many more rows in memory at any time waiting for the garbage collection cycle to release their memory, you must have sufficient memory to accommodate these other rows.  
   
-The number of additional rows can be estimated by computing the peak number of row updates and deletions per second, then multiplying that by the number of seconds the longest transaction takes (minimum of 1).  
+The number of extra rows can be estimated by computing the peak number of row updates and deletions per second, then multiplying that by the number of seconds the longest transaction takes (minimum of 1).  
   
 That value is then multiplied by the row size to get the number of bytes you need for row versioning.  
   
@@ -178,14 +178,14 @@ Memory needs for stale rows is then estimated by multiplying the number of stale
   
 ###  <a name="bkmk_TableVariables"></a> Memory for table variables
   
-Memory used for a table variable is released only when the table variable goes out of scope. Deleted rows, including rows deleted as part of an update, from a table variable are not subject to garbage collection. No memory is released until the table variable exits scope.  
+Memory used for a table variable is released only when the table variable goes out of scope. Deleted rows, including rows deleted as part of an update, from a table variable aren't subject to garbage collection. No memory is released until the table variable exits scope.  
   
-Table variables defined in a large SQL batch, as opposed to a procedure scope, which are used in many transactions, can consume a lot of memory. Because they are not garbage collected, deleted rows in a table variable can consume a lot memory and degrade performance since read operations need to scan past the deleted rows.  
+Table variables defined in a large SQL batch, as opposed to a procedure scope, which are used in many transactions, can consume a lot of memory. Because they aren't garbage collected, deleted rows in a table variable can consume a lot memory and degrade performance since read operations need to scan past the deleted rows.  
   
 ###  <a name="bkmk_MemoryForGrowth"></a> Memory for growth
 
 The above calculations estimate your memory needs for the table as it currently exists. In addition to this memory, you need to estimate the growth of the table and provide sufficient memory to accommodate that growth.  For example, if you anticipate 10% growth then you need to multiple the results from above by 1.1 to get the total memory needed for your table.  
   
-## See Also
+## See also
 
 [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

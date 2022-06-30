@@ -29,7 +29,8 @@ This article identifies the determinism of built-in system functions and the eff
 
 ### Determining if a function is deterministic
 
-You can check whether or not a function is deterministic by checking the "is_deterministic" object property for the function. The example below determines if the function Sales.CalculateSalesTax is deterministic.
+You can check whether a function is deterministic by querying the `is_deterministic` object property for the function. The example below determines if the function `Sales.CalculateSalesTax` is deterministic.
+
 
 ```sql
 SELECT OBJECTPROPERTY(OBJECT_ID('Sales.CalculateSalesTax'), 'IsDeterministic');

@@ -27,6 +27,15 @@ Deterministic functions must be [schema-bound](user-defined-functions.md#SchemaB
 
 This article identifies the determinism of built-in system functions and the effect on the deterministic property of user-defined functions when it contains a call to extended stored procedures.
 
+### Determining if a function is deterministic
+
+You can check whether a function is deterministic by querying the `is_deterministic` object property for the function. The example below determines if the function `Sales.CalculateSalesTax` is deterministic.
+
+
+```sql
+SELECT OBJECTPROPERTY(OBJECT_ID('Sales.CalculateSalesTax'), 'IsDeterministic');
+```
+
 ## Built-in function determinism
 
 You can't influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query doesn't change the determinism of a function that is used in that query.

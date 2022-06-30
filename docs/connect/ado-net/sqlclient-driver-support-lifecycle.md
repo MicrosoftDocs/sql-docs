@@ -29,7 +29,8 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 |--|--|--|--|--|--|
-| 4.1 | January 31, 2022 | - | - | Current | - |
+| 5.0 | July 15, 2022 | - | - | Current | January 15, 2024 |
+| 4.1 | January 31, 2022 | - | - | Current | June 30, 2023 |
 | 4.0 | November 18, 2021 | 4.0.1 | January 17, 2022 | LTS | November 19, 2024 |
 | 3.1 | March 30, 2022 | - | - | Current | - |
 | 2.1 | November 19, 2020 | 2.1.4 | September 20, 2021 | LTS | November 20, 2023 |
@@ -65,21 +66,22 @@ Current releases are supported for three months after a subsequent Current or LT
 
 ## SQL version compatibility with Microsoft.Data.SqlClient
 
-|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
-|---|---|---|---|---|---|---|---|---|
-|4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|4.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|3.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|2.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|2.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|1.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|1.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
+|---|---|---|---|---|---|---|---|---|---|
+|5.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|4.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|3.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|2.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|2.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|1.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|1.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 
 ## Supported OS versions
 
 ### Support for .NET Framework applications
 
-Microsoft.Data.SqlClient supports all operating systems supported by .NET Framework v4.6.1 and above.
+Microsoft.Data.SqlClient supports all operating systems supported by .NET Framework v4.6.2 and above.
 
 [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 

@@ -21,7 +21,7 @@ The Microsoft.Data.SqlClient library is distributed as a NuGet package. Simply a
 If you need to download the Microsoft.Data.SqlClient package for offline use, it's available on NuGet.org. Refer to the dependencies section from the links below to download the dependencies.
 
 ## Download stable versions of Microsoft SqlClient Data Provider for SQL Server
-
+* [5.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.0)
 * [4.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.1.0)
 * [4.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.1)
 * [4.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.0)

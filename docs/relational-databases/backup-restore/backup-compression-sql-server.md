@@ -99,10 +99,6 @@ For more information, see [BACKUP (Transact-SQL)](../../t-sql/statements/backup-
   
  To allow the backup file to grow only as needed to reach its final size, use trace flag 3042. Trace flag 3042 causes the backup operation to bypass the default backup compression pre-allocation algorithm. This trace flag is useful if you need to save on space by allocating only the actual size required for the compressed backup. However, using this trace flag might cause a slight performance penalty (a possible increase in the duration of the backup operation).  
 
-## Intel QAT backup compression
-
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces QAT backup compression algorithm.
-  
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 -   [Configure Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/configure-backup-compression-sql-server.md)  

@@ -1,12 +1,12 @@
 ---
 description: "The sp_estimate_data_compression_savings system stored procedure returns the current size of the requested object and estimates the object size for the requested compression state."
 
-title: "sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs"
+title: "sp_estimate_data_compression_savings (Transact-SQL)"
 ms.custom: ""
-ms.date: "04/08/2022"
+ms.date: "07/01/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: dimitri-furman, wiassaf
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -17,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "compression [SQL Server], estimating"
   - "sp_estimate_data_compression_savings"
-ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
 ---
@@ -27,9 +26,9 @@ ms.author: maghan
   Returns the current size of the requested object and estimates the object size for the requested compression state. Compression can be evaluated for whole tables or parts of tables. This includes heaps, clustered indexes, nonclustered indexes, columnstore indexes, indexed views, and table and index partitions. The objects can be compressed by using row, page, columnstore or columnstore archive compression. If the table, index, or partition is already compressed, you can use this procedure to estimate the size of the table, index, or partition if it is recompressed or stored without compression.  
   
 > [!NOTE]
-> Compression and `sp_estimate_data_compression_savings` are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-2019.md). 
+> Compression and `sp_estimate_data_compression_savings` are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-2019.md). 
 > 
-> `sp_estimate_data_compression_savings` is available in Azure SQL Database and Azure SQL Managed Instance.  
+> The `sys.sp_estimate_data_compression_savings` system stored procedure is available in Azure SQL Database and Azure SQL Managed Instance.  
   
  To estimate the size of the object if it were to use the requested compression setting, this stored procedure samples the source object and loads this data into an equivalent table and index created in tempdb. The table or index created in tempdb is then compressed to the requested setting and the estimated compression savings is computed.  
   
@@ -42,7 +41,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_estimate_data_compression_savings   
      [ @schema_name = ] 'schema_name'    
    , [ @object_name = ] 'object_name'   
@@ -53,24 +52,25 @@ sp_estimate_data_compression_savings
 ```  
   
 ## Arguments  
- [ @schema_name= ] '*schema_name*'  
+
+#### [ @schema_name= ] '*schema_name*'  
  Is the name of the database schema that contains the table or indexed view. *schema_name* is **sysname**. If *schema_name* is NULL, the default schema of the current user is used.  
   
- [ @object_name= ] '*object_name*'  
+#### [ @object_name= ] '*object_name*'  
  Is the name of the table or indexed view that the index is on. *object_name* is **sysname**.  
   
- [ @index_id= ] *index_id*  
+#### [ @index_id= ] *index_id*  
  Is the ID of the index. *index_id* is **int**, and can be one of the following values: the ID number of an index, NULL, or 0 if *object_id* is a heap. To return information for all indexes for a base table or view, specify NULL. If you specify NULL, you must also specify NULL for *partition_number*.  
   
- [ @partition_number= ] *partition_number*  
+#### [ @partition_number= ] *partition_number*  
  Is the partition number in the object. *partition_number* is **int**, and can be one of the following values: the partition number of an index or heap, NULL or 1 for a nonpartitioned index or heap.  
   
  To specify the partition, you can also specify the [$PARTITION](../../t-sql/functions/partition-transact-sql.md) function. To return information for all partitions of the owning object, specify NULL.  
   
- [ @data_compression= ] '*data_compression*'  
+#### [ @data_compression= ] '*data_compression*'  
  Is the type of compression to be evaluated. *data_compression* can be one of the following values: NONE, ROW, PAGE, COLUMNSTORE, or COLUMNSTORE_ARCHIVE.  
   
-## Return Code Values  
+## Return code values  
  0 (success) or 1 (failure)  
   
 ## Result Sets  
@@ -104,13 +104,13 @@ sp_estimate_data_compression_savings
  Requires `SELECT` permission on the table, `VIEW DATABASE STATE` and `VIEW DEFINITION` on the database containing the table and on `tempdb`.
 
   
-## Limitations and Restrictions  
- Prior to SQL Server 2019, this procedure did not apply to columnstore indexes, and therefore did not accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE.  Starting with SQL Server 2019, and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
+## Limitations and restrictions  
+ Prior to SQL Server 2019, this procedure did not apply to columnstore indexes, and therefore did not accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE. Starting with SQL Server 2019, and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
 
  > [!IMPORTANT]
  > When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled, creation of columnstore indexes on temporary tables is not supported. Because of this limitation, `sp_estimate_data_compression_savings` is not supported with the COLUMNSTORE and COLUMNSTORE_ARCHIVE data compression parameters when Memory-Optimized TempDB Metadata is enabled.
 
-## Considerations for Columnstore Indexes
+## Considerations for columnstore indexes
  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the `@data_compression` parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
 
  |Source Object|Reference Object|
@@ -144,11 +144,12 @@ EXEC sys.sp_estimate_data_compression_savings 'Production', 'WorkOrderRouting', 
 GO  
 ```  
   
-## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Unicode Compression Implementation](../../relational-databases/data-compression/unicode-compression-implementation.md)  
+## Next steps
+
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
+- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+- [Unicode Compression Implementation](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

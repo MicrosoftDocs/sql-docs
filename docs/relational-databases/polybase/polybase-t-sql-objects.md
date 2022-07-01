@@ -244,7 +244,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed);
 ```  
 
 ## Create external tables for Azure Data Lake Store
-Applies to: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)
+
+Applies to: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], Analytics Platform System (PDW)
 
 For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 

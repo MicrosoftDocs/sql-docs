@@ -84,6 +84,8 @@ ms.author: mathoma
 5.  **Recover availability group database replicas as needed.** Non-availability group databases should recover and come back online on their own as part of the regular SQL Server startup process.  
   
      You can minimize potential data loss and recovery time for the availability group replicas by bringing them back online in this sequence:  primary replica, synchronous secondary replicas, asynchronous secondary replicas.  
+     
+     Note that after using Forced Quorum it is necessary to perform a Forced Failover with possible data loss to bring the Availability Group back online. For more information, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
   
 6.  **Repair or replace failed components and re-validate cluster.** Now that you have recovered from the initial disaster and quorum failure, you should repair or replace the failed nodes and adjust related WSFC and Always On configurations accordingly.  This can include dropping availability group replicas, evicting nodes from the cluster, or flattening and re-installing software on a node.  
   

@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Altering Memory-Optimized Tables
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Schema and index changes on memory-optimized tables can be performed by using the ALTER TABLE statement. In SQL Server 2016 and Azure SQL Database ALTER TABLE operations on memory-optimized tables are OFFLINE, meaning that the table is not available for querying while the operation is in progress. The database application can continue to run, and any operation that is accessing the table is blocked until the alteration process is completed. It is possible to combine multiple ADD, DROP or ALTER operations in a single ALTER TABLE statement.
 

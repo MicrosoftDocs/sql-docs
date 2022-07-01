@@ -1,6 +1,6 @@
 ---
 title: User-assigned managed identity in Azure AD for Azure SQL
-description: User-assigned managed identities (UMI) in Azure AD (AD) for Azure SQL Database, SQL Managed Instance, and dedicated SQL pools in Azure Synapse Analytics.
+description: User-assigned managed identities (UMI) in Azure AD (AD) for Azure SQL Database and SQL Managed Instance.
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 ms.service: sql-db-mi
 ms.subservice: security
@@ -8,23 +8,20 @@ ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 03/09/2022
+ms.date: 06/30/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # User-assigned managed identity in Azure AD for Azure SQL
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
-
-> [!NOTE]
-> User-assigned managed identity for Azure SQL is in **public preview**. 
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 Azure Active Directory (AD) supports two types of managed identities: System-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
-A system-assigned managed identity is automatically assigned to a managed instance when it is created. When using Azure AD authentication with Azure SQL Managed Instance, a managed identity must be assigned to the server identity. Previously, only a system-assigned managed identity could be assigned to the Managed Instance or SQL Database server identity. With support for user-assigned managed identity, the UMI can be assigned to Azure SQL Managed Instance or Azure SQL Database as the instance or server identity. This feature is now supported for SQL Database. 
+A system-assigned managed identity is automatically assigned to a managed instance when it is created. When using Azure AD authentication with Azure SQL Managed Instance, a managed identity must be assigned to the server identity. Previously, only a system-assigned managed identity could be assigned to the Managed Instance or SQL Database server identity. With support for user-assigned managed identity, the UMI can be assigned to Azure SQL Managed Instance or Azure SQL Database as the instance or server identity. This feature is now supported for SQL Database.
 
-> [!NOTE]
-> This article applies only to dedicated SQL pools (formerly SQL DW) in standalone Azure SQL servers. For more information on user-assigned managed identities for dedicated pools in Azure Synapse workspaces, see [Using a user-assigned managed identity](/azure/synapse-analytics/security/workspaces-encryption#using-a-user-assigned-managed-identity).
+In addition to using UMI and SMI as the server or instance identity, the UMI and SMI can be used to access the database using the SQL connection string option `Authentication=Active Directory Managed Identity`. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
+There will need to be a SQL user mapped to the managed identity in the target database.
 
 ## Benefits of using user-assigned managed identities
 
@@ -131,7 +128,7 @@ To create an Azure SQL logical server with a user-assigned managed identity, see
 To set the identity for the SQL server or SQL managed instance in the [Azure portal](https://portal.azure.com):
 
 1. Go to your **SQL server** or **SQL managed instance** resource. 
-1. Under **Security**, select the **Identity (preview)** setting. 
+1. Under **Security**, select the **Identity** setting. 
 1. Under **User assigned managed identity**, select **Add**. 
 1. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
 
@@ -193,6 +190,3 @@ The ARM template used in [Creating an Azure SQL logical server using a user-assi
 
 > [!div class="nextstepaction"]
 > [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
-
-> [!div class="nextstepaction"]
-> [Using a user-assigned managed identity in Azure Synapse workspaces](/azure/synapse-analytics/security/workspaces-encryption#using-a-user-assigned-managed-identity)

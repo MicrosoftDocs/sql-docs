@@ -29,7 +29,11 @@ ms.date: 03/01/2022
   - Perform disaster recovery (DR) drills in production when data loss is not acceptable
   - Relocate the databases to a different region
   - Return the databases to the primary region after the outage has been mitigated (failback)
-
+  
+  >
+  > [!NOTE]
+  > During planned failovers or disaster recovery drills, it is recommended that the primary databases and the target secondary geo-replica databases have matching service tiers . If a secondary has lower memory than the primary, it may get into Out-of-memory situations and may not be able to recover fully after the recovery drill. In such cases, the affected geo-secondary database may be put in a limited read-only mode. To avoid such situations, it is recommended to upgrade the service tier of the secondary database to match that of the primary database involved in the planned failover, before the drill starts. Note that such a service tier upgrade can be a size-of-data operation and may take a while to finish.
+  > 
 - **Unplanned failover**
 
   Unplanned or forced failover immediately switches the secondary to the primary role without waiting for recent changes to propagate from the primary. This operation may result in data loss. Unplanned failover is used as a recovery method during outages when the primary is not accessible. When the outage is mitigated, the old primary will automatically reconnect and become a new secondary. A planned failover may be executed to fail back, returning the replicas to their original primary and secondary roles.

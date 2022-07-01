@@ -121,14 +121,16 @@ FROM dbo.DimEmployee;
 ```  
   
  Here is a partial result set.  
-  
+
+```
 DepartmentName        MedianCont    MedianDisc  
 --------------------   ----------   ----------  
 Document Control       16.826900    16.8269  
 Engineering            34.375000    32.6923  
 Human Resources        17.427850    16.5865  
 Shipping and Receiving  9.250000     9.0000
-  
+```
+
 ## See Also  
 
 [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)

@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Change existing columns to XML columns
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The ALTER TABLE statement supports the **xml** data type. For example, you can alter any string type column to the **xml** data type. In these cases, the documents contained in the column must be well formed. Also, if you're changing the type of the column from string to typed xml, the documents in the column are validated against the specified XSD schemas.
 

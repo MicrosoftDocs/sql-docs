@@ -92,8 +92,6 @@ The RECOMPILE hint is not compatible with forced parameterization set at the dat
 
 For information on which query hints can be applied, see [Supported query hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md#supported-query-hints).
 
-<!-- t63 warning-->
-
 ## See also
 
 - [Query Store hints](query-store-hints.md)

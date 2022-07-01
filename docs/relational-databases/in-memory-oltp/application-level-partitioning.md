@@ -12,7 +12,7 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application-Level Partitioning
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This application processes orders. There is a lot of processing on recent orders. There is not a lot of processing on older orders. Recent orders are in a memory-optimized table. Older orders are in a disk-based table. All orders after the *hotDate* are in the memory-optimized table. All orders before the *hotDate* are in the disk-based table. Assume an extreme OLTP workload with a lot of concurrent transactions. This business rule (recent orders in a memory-optimized table) must be enforced even if several concurrent transactions are attempting to change the *hotDate*.  
   
  This sample does not use a partitioned table for the disk-based table but does track an explicit split point between the two tables, using a third table. The split point can be used to ensure that newly inserted data is always inserted into the appropriate table based on the date. It could also be used to determine where to look for data. Late arriving data still goes into the appropriate table.  

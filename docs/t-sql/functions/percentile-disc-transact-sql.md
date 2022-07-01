@@ -89,14 +89,16 @@ WHERE dh.EndDate IS NULL;
 ```  
   
 Here is a partial result set.  
-  
+
+```
 DepartmentName        MedianCont    MedianDisc
 --------------------   ----------   ----------
 Document Control       16.8269      16.8269
 Engineering            34.375       32.6923
 Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
-  
+```
+
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### Basic syntax example

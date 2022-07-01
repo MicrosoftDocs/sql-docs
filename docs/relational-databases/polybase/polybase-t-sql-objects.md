@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Transact-SQL reference"
 description: "Use PolyBase to query your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
-ms.date: 06/30/2022
+ms.date: 07/01/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: tutorial
@@ -736,9 +736,9 @@ WITH
 
 #### 4. Create external table
 
-- LOCATION is the file path of the `call_center.csv` file relative to the path of the location in the external data source.
+- LOCATION is the file path of the `call_center.csv` file relative to the path of the location in the external data source. In this case, the file lies in a subfolder called `2022`.
 - DATA_SOURCE is the external data source. 
-- FILE_FORMAT is the path to the `csv_ff` external file format file relative to TODO.
+- FILE_FORMAT is the path to the `csv_ff` external file format in the SQL Server.
 
 ```sql
 CREATE EXTERNAL TABLE extCall_Center_csv
@@ -777,7 +777,7 @@ CREATE EXTERNAL TABLE extCall_Center_csv
 )
 WITH
 (
-    LOCATION = 'call_center.csv',
+    LOCATION = '/2022/call_center.csv',
     DATA_SOURCE = Blob_CSV
     ,FILE_FORMAT = csv_ff
 )

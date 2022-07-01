@@ -1,7 +1,7 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
-ms.date: 06/21/2022
+ms.date: 07/01/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -141,7 +141,9 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Next steps
 
-Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. Then see the following configuration guides depending on your data source:
+Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
+
+Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. For more tutorials, review the following:
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure blob storage](polybase-configure-azure-blob-storage.md)
@@ -151,3 +153,5 @@ Before using PolyBase, you must [install PolyBase on Windows](polybase-installat
 - [MongoDB](polybase-configure-mongodb.md)
 - [ODBC Generic Types](polybase-configure-odbc-generic.md)
 - [S3-compatible object storage](polybase-configure-s3-compatible.md)
+- [CSV](virtualize-csv.md)
+

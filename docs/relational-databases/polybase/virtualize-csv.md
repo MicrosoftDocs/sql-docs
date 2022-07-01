@@ -4,7 +4,7 @@ description: "Virtualize a CSV file with PolyBase starting with SQL Server 2022.
 author: HugoMSFT 
 ms.author: hudequei 
 ms.reviewer: wiassaf
-ms.date: 06/29/2022
+ms.date: 07/01/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: tutorial
@@ -82,12 +82,12 @@ WITH
 
 In this example the file is named `call_center.csv`, and the data starts on the second row. 
 
-Since the external data source `Blob_CSV` is mapped to a container level and the `call_center.csv` is located on the root-level of the container, just the filename is required to locate the file. To query a file in a folder structure, provide a folder mapping relative to the external data source's LOCATION parameter.
+Since the external data source `Blob_CSV` is mapped to a container level. The `call_center.csv` is located in a subfolder called `2022` in the root of the container. To query a file in a folder structure, provide a folder mapping relative to the external data source's LOCATION parameter.
 
 ```sql
 SELECT  * 
 FROM    OPENROWSET
-        (   BULK 'call_center.csv'
+        (   BULK '/2022/call_center.csv'
         ,   FORMAT = 'CSV'
         ,   DATA_SOURCE = 'Blob_CSV'
         ,   FIRSTROW    = 2
@@ -159,7 +159,7 @@ WITH
 
 ### 2. Create external table
 
-LOCATION is the file path of the `call_center.csv` file relative to the path of the location in the external data source, defined by DATA_SOURCE. Use FILE_FORMAT to specify the path to the `csv_ff` external file format file relative to TODO.
+LOCATION is the folder and file path of the `call_center.csv` file relative to the path of the location in the external data source, defined by DATA_SOURCE. In this case, the file lies in a subfolder called `2022`. Use FILE_FORMAT to specify the path to the `csv_ff` external file format in the SQL Server.
 
 ```sql
 CREATE EXTERNAL TABLE extCall_Center_csv
@@ -198,7 +198,7 @@ CREATE EXTERNAL TABLE extCall_Center_csv
 )
 WITH
 (
-    LOCATION = 'call_center.csv',
+    LOCATION = '/2022/call_center.csv',
     DATA_SOURCE = Blob_CSV
     ,FILE_FORMAT = csv_ff
 )
@@ -207,7 +207,8 @@ GO
 
 ## Next steps
 
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
+
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
-  

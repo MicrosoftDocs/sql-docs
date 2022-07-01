@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources using the ODBC connector.
+PolyBase starting in SQL Server 2019 allows you to connect to ODBC-compatible data sources using the ODBC connector.
 
 This article demonstrate how to create configuring connectivity using an ODBC data source. The guidance provided uses one specific ODBC driver as an example. Check with your ODBC provider for specific examples. Reference the ODBC driver documentation for your data source to determine the appropriate connection string options. The examples in this article may not apply to any specific ODBC driver.
 
@@ -128,3 +128,5 @@ The following Transact-SQL commands are used in this section:
 ## Next steps
 
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).

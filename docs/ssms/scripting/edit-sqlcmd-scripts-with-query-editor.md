@@ -110,7 +110,7 @@ By using the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor in SQL Ser
 -   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports environment variables and variables that are defined as part of a SQLCMD script, but does not support built-in SQLCMD or **osql** variables. SQLCMD processing by SQL Server Management Studio is case sensitive for variables. For example, PRINT '$(COMPUTERNAME)' produces the correct result, but PRINT '$(ComputerName)' returns an error.  
   
 > [!CAUTION]
->  SQL Server Management Studio uses [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient for execution in regular and SQLCMD mode. When run from the command line, SQLCMD uses the OLE DB provider. Because different default options may apply, it is possible to get different behavior while executing the same query in SQL Server Management Studio SQLCMD Mode, and in the SQLCMD utility.  
+>  SQL Server Management Studio uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient for execution in regular and SQLCMD mode. When run from the command line, SQLCMD uses the OLE DB provider. Because different default options may apply, it is possible to get different behavior while executing the same query in SQL Server Management Studio SQLCMD Mode, and in the SQLCMD utility.  
   
 ## Supported SQLCMD Syntax  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports the following SQLCMD script keywords:  

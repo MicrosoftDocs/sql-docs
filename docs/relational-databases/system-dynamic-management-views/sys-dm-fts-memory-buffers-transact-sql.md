@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Returns information about memory buffers belonging to a specific memory pool that are used as part of a full-text crawl or a full-text crawl range.  
   
 > [!NOTE]
-> The following column will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `row_count`. Avoid using this column in new development work, and plan to modify applications that currently use it.  
+> The following column will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `row_count`. Avoid using this column in new development work, and plan to modify applications that currently use it.  
 
   
 |Column|Data type|Description|  

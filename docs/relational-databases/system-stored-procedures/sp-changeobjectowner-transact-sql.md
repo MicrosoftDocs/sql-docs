@@ -25,7 +25,7 @@ ms.author: vanto
   Changes the owner of an object in the current database.  
   
 > [!IMPORTANT]
->  This stored procedure only works with the objects available in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) or [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) instead. **sp_changeobjectowner** changes both the schema and the owner. To preserve compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this stored procedure will only change object owners when both the current owner and the new owner own schemas that have the same name as their database user names.  
+>  This stored procedure only works with the objects available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) or [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) instead. **sp_changeobjectowner** changes both the schema and the owner. To preserve compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this stored procedure will only change object owners when both the current owner and the new owner own schemas that have the same name as their database user names.  
 > 
 > [!IMPORTANT]
 >  A new permission requirement has been added to this stored procedure.  

@@ -337,13 +337,13 @@ Because a read-only database does not allow data modifications:
 - No locking occurs in read-only databases. This can cause faster query performance.
 
 > [!NOTE]
-> The keyword `READONLY` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READONLY` in new development work, and plan to modify applications that currently use `READONLY`. Use `READ_ONLY` instead.
+> The keyword `READONLY` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READONLY` in new development work, and plan to modify applications that currently use `READONLY`. Use `READ_ONLY` instead.
 
 READ_WRITE | READWRITE
 Specifies the group is READ_WRITE. Updates are enabled for the objects in the filegroup. To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
+> The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
 > [!TIP]
 > The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the `DATABASEPROPERTYEX` function.
 
@@ -364,9 +364,9 @@ SIZE, MAXSIZE, and FILEGROWTH parameters cannot be set when a UNC path is specif
 
 SIZE and FILEGROWTH parameters cannot be set for memory optimized filegroups.
 
-The keyword `READONLY` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READONLY` in new development work, and plan to modify applications that currently use READONLY. Use `READ_ONLY` instead.
+The keyword `READONLY` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READONLY` in new development work, and plan to modify applications that currently use READONLY. Use `READ_ONLY` instead.
 
-The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
+The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
 
 ## Moving Files
 
@@ -895,13 +895,13 @@ Because a read-only database does not allow data modifications:
 - No locking occurs in read-only databases. This can cause faster query performance.
 
 > [!NOTE]
-> The keyword READONLY will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using READONLY in new development work, and plan to modify applications that currently use READONLY. Use READ_ONLY instead.
+> The keyword READONLY will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using READONLY in new development work, and plan to modify applications that currently use READONLY. Use READ_ONLY instead.
 
 READ_WRITE | READWRITE
 Specifies the group is READ_WRITE. Updates are enabled for the objects in the filegroup. To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
+> The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.
 
 The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the `DATABASEPROPERTYEX` function.
 

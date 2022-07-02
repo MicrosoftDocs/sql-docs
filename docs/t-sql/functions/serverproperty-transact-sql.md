@@ -51,7 +51,7 @@ Is an expression that contains the property information to be returned for the s
   
 |Property|Values returned|  
 |--------------|---------------------|  
-|BuildClrVersion|Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **nvarchar(128)**|  
+|BuildClrVersion|Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **nvarchar(128)**|  
 |Collation|Name of the default collation for the server.<br /><br /> NULL = Input is not valid, or an error.<br /><br /> Base data type: **nvarchar(128)**|  
 |CollationID|ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation.<br /><br /> Base data type: **int**|  
 |ComparisonStyle|Windows comparison style of the collation.<br /><br /> Base data type: **int**|  

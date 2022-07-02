@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 06/20/2022
+ms.date: 07/15/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -51,14 +51,27 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
 
 - [Performance](#performance)
   - Query Store enabled by default for new databases
+  - Hybrid buffer pool with direct write
   - Parameter sensitive plan optimization
+  - Degree of parallelism (DOP) feedback
+  - XML Compression
 - [Management](#management)
   - Out of memory DMV and extended events
+  - Snapshot backups
 - [Security](#security)
   - Support for PFX certificates
+  - Azure Active Directory authentication support for SQL Server on Linux
+  - Attach to Azure from setup - Azure Arc-enabled instance
+  - Attach to Azure from configuration manager - Azure Arc-enabled instance
+  - Ledger
+  - Support MS-TDS 8.0 protocol
 - [Language](#language)
   - APPROXIMATE PERCENTILE
+  - DATETRUNC
+  - IS \[NOT\] DISTINCT FROM
+  - TRIM()
 - [Tools](#tools)
+  - Database tuning advisor improvements
 
 For details, see the feature descriptions in the sections below.
 
@@ -100,8 +113,8 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
-| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview. Requires enabling Query Store.|
-| Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. <br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. |
+| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview.|
+| Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback).<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. <br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution.  Requires enabling Query Store. Query store is enabled by default for new databases. |
 |Ordered clustered columnstore index | Ordered clustered columnstore index (CCI) sorts the existing data in memory before the index builder compresses the data into index segments. This has the potential of more efficient segment elimination, resulting in better performance as the number of segments to read from disk is reduced. For more information, see [CREATE COLUMNSTORE INDEX (Transact-SQL)](../t-sql/statements/create-columnstore-index-transact-sql.md).</br></br>Also available in Synapse Analytics. See [Query performance](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci#query-performance).|
 | In-memory OLTP management | Improve memory management in large memory servers to reduce out-of-memory conditions. |
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitivity Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
@@ -109,6 +122,7 @@ The following sections provide an overview of these features.
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | System page latch concurrency enhancements | Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit tempdb heavy workloads.|
 | Buffer pool parallel scan | Improves the performance of buffer pool scan operations on large-memory machines by utilizing multiple CPU cores. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602). |
+| Hybrid buffer pool with direct write | Enhances the capabilities of the in-memory database feature, [Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md). The performance improvement is achieved by combining Hybrid Buffer Pool with another existing in-memory database feature, [persisted log buffer](../relational-databases/databases/add-persisted-log-buffer.md)Persisted Log Buffer.<br/><br/> In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], when both features are enabled for the same database, Hybrid Buffer Pool takes advantage of the durable log buffer to make implicit writes from the persisted log buffer to the database pages on persistent memory.|
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires Query Store enabled. See [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires Query Store enabled. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
@@ -136,6 +150,10 @@ The following sections provide an overview of these features.
 | SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW - (Transact-SQL)](../t-sql/queries/select-window-transact-sql.md).|
 | Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-add-table-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
 | T-SQL functions |- [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
+|DATETRUNC||
+|IS \[NOT\] DISTINCT FROM ||
+|TRIM ||
+| Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
 
 ## Tools
 
@@ -157,11 +175,11 @@ This section provides additional information for the features highlighted above.
 
 ### Query Store improvements
 
-Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. To use Query Store features, enable Query Store. For instructions, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
+Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. CTP 2.1 introduces Query Store enabled by default for new databases. If you need to enable the query store, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
 
 - For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings.
 
-- For databases that are restored from previous SQL Server instances it's recommended to [enable Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling) and separately evaluate the [database compatibility level settings](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) as some Intelligent Query Processing features are enabled by the compatibility level setting.
+- For databases that are restored from previous SQL Server instances, separately evaluate the [database compatibility level settings](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) as some Intelligent Query Processing features are enabled by the compatibility level setting.
 
 If there's concern about the overhead Query Store may introduce, administrators can leverage custom capture policies to further tune what the Query Store captures. Custom capture policies are available to help further tune Query Store captures. Custom capture policies can be used to be more selective about which queries, and query details are captured. For example, an administrator may choose to capture only the most expensive queries, repeated queries, or the queries that have a high level of compute overhead. [Custom capture policies](../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_policy_option_list--) can help Query Store capture the most important queries in your workload. Note that except for the STALE_CAPTURE_POLICY_THRESHOLD option, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value. For example, these are the default values in the `QUERY_CAPTURE_MODE = AUTO`:
 

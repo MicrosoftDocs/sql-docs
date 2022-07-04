@@ -10,7 +10,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/11/2022
+ms.date: 07/04/2022
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -114,6 +114,9 @@ Then, generate an authentication certificate on SQL Server. In the script below 
 - `@cert_expiry_date` with the desired certificate expiration date (future date).
 
 Record this date and set a self-reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
+
+> [!IMPORTANT]
+> It is strongly recommended to use the auto-generated certificate name from this script. While customizing your own certificate name on SQL Server is allowed, this name should not contain any `\` characters.
 
 ```sql
 -- Create the SQL Server certificate for the instance link
@@ -253,7 +256,7 @@ Next, import the obtained public key of managed instance security certificate to
 - `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 
 > [!IMPORTANT]
-> The name of the certificate must be the SQL Managed Instance FQDN and should not be modified.
+> The name of the certificate must be SQL Managed Instance FQDN and should not be modified. The link will not be operational if using a custom name.
 
 ```sql
 -- Run on SQL Server

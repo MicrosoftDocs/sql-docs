@@ -318,7 +318,7 @@ SELECT * FROM sys.certificates
 
 ## Create a mirroring endpoint on SQL Server
 
-If you don't have an existing availability group or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with earlier generated SQL Server certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
+If you don't have an existing availability group, or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with earlier generated SQL Server certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
 
 To verify that you don't have an existing database mirroring endpoint created, use the following script:
 
@@ -534,9 +534,9 @@ Alternatively, you can use SSMS Object Explorer to find availability groups and 
 
 ## Create a link
 
-The final step of the setup process is to create the link. At this time, you accomplish this by making a REST API call. 
+The final step of the setup process is to create the link. 
 
-You can invoke direct API calls to Azure by using various API clients. For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace:
+For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<AGName>` with the name of the availability group created on SQL Server. 
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 

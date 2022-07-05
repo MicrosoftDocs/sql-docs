@@ -1,47 +1,48 @@
 ---
-title: "Deprecated database engine features in SQL Server 2017 | Microsoft Docs"
+title: "Deprecated database engine features in SQL Server 2017"
 titleSuffix: "SQL Server 2019"
 description: Find out about deprecated database engine features that are still available in SQL Server 2017 (14.x), but shouldn't be used in new applications.
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: "03/03/2021"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
-ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
-# Deprecated Database Engine Features in SQL Server 2017
+# Deprecated Database Engine features in SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.  
-  
+  This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.
+
 When a feature is marked deprecated, it means:
+
 - The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
 - We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
-- For new development work, do not use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.     
+- For new development work, do not use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.
 
-You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
+You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).
 
-The values of these counters are also available by executing the following statement:  
+The values of these counters are also available by executing the following statement:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## Features deprecated in the next version of SQL Server
+
 The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
 
 ### Back up and Restore
@@ -358,8 +359,9 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | Inline XDR Schema Generation | The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. | XMLDATA |
 
-> [!NOTE]
-> The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
-  
-## See Also  
- [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  
+> [!NOTE]  
+> The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).
+
+## See also
+
+- [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)

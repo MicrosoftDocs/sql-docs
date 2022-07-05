@@ -22,7 +22,8 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+Starting with [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
+
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
@@ -43,7 +44,7 @@ The percentile to compute. The value must range between 0.0 and 1.0. to calculat
 
 *order_by_expression*
 
-Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to an exact or approximate numeric type, with no other data types allowed. Exact numeric types are int, bigint, smallint, tinyint, numeric, bit, decimal, smallmoney, and money. Approximate numeric types are float and real.
+Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to an supported exact or approximate numeric type, with no other data types allowed. Supported exact numeric types are int, bigint, smallint, tinyint, bit, smallmoney, and money. Supported approximate numeric types are float and real. Decimal and float data types are not supported. 
 
 ## Return types
 
@@ -58,18 +59,6 @@ Approximate percentile functions use KLL sketch. The sketch is built by reading 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error rate within a 99% probability.
 
 ## Known issues
-
-- If the trace flag isn't enabled below error message would be raised
-
-  Msg 195, Level 15, State 22, Line 1 </br>
-  'approx_percentile_disc' isn't a recognized built-in function name
-
-- In the current release, the size of the sketch is limited to a page (8 KB) due to which you may get below error while calculating discrete approx. percentile for decimal or numeric data types with larger data set.
-
-  Msg 9836, Level 16, State 10, Line 17 </br>
-  Internal APPROX_PERCENTILE_* runtime error('6'): APPROX_PERCENTILE_* add item  </br>
-
-  Workaround: Use the cast/convert to change decimal or numeric data type to float data type or use continuous approximate percentile function.
 
 - The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 

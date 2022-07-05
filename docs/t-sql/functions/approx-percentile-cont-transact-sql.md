@@ -22,7 +22,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 # APPROX_PERCENTILE_CONT (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+Starting with [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
 This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
@@ -63,11 +63,6 @@ Approximate percentile functions use KLL sketch. The sketch is built by reading 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error.
 
 ## Known Behaviors
-
-- If the trace flag isn't enabled below error message would be raised
-
-  Msg 195, Level 15, State 22, Line 1 </br>
-  'approx_percentile_cont' isn't a recognized built-in function name
 
 - The output of the function may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 - The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.

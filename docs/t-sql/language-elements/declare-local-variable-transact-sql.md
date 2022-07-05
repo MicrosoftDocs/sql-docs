@@ -50,7 +50,7 @@ DECLARE
      [ ROWGUIDCOL ]
      [ <column_constraint> ]
 
-<column_constraint>::=
+<column_constraint> ::=
 {
     [ NULL | NOT NULL ]
     { PRIMARY KEY | UNIQUE }
@@ -61,7 +61,7 @@ DECLARE
   | [ CHECK ( logical_expression ) ] [ ,...n ]
 }
 
-<table_constraint>::=
+<table_constraint> ::=
 {
     { PRIMARY KEY | UNIQUE }
       [ CLUSTERED | NONCLUSTERED ]
@@ -72,14 +72,30 @@ DECLARE
 }
 
 <index_option> ::=
-See CREATE TABLE for index option syntax.
+{
+    PAD_INDEX = { ON | OFF }
+  | FILLFACTOR = fillfactor
+  | IGNORE_DUP_KEY = { ON | OFF }
+  | STATISTICS_NORECOMPUTE = { ON | OFF }
+  | STATISTICS_INCREMENTAL = { ON | OFF }
+  | ALLOW_ROW_LOCKS = { ON | OFF }
+  | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
+  | COMPRESSION_DELAY = { 0 | delay [ Minutes ] }
+  | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
+       [ ON PARTITIONS ( { partition_number_expression | <range> }
+       [ , ...n ] ) ]
+  | XML_COMPRESSION = { ON | OFF }
+      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+      [ , ...n ] ) ] ]
+}
 ```
 
 The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse:
 
 ```syntaxsql
 DECLARE
-{{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]
+{{ @local_variable [AS] data_type } [ = value [ COLLATE <collation_name> ] ] } [,...n]
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -95,7 +111,7 @@ Any system-supplied, common language runtime (CLR) user-defined table type, or a
 
 For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).
 
-=*value*  
+= *value*  
 Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
 
 #### @*cursor_variable_name*
@@ -179,6 +195,10 @@ A constraint that enforces domain integrity by limiting the possible values that
 
 *logical_expression*  
 A logical expression that returns TRUE or FALSE.
+
+#### \<index_option>
+
+Specifies one or more index options. For a complete description of these options, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
 
 ## Remarks
 

@@ -30,9 +30,9 @@ Variables are declared in the body of a batch or procedure with the DECLARE stat
 
 ## Syntax
 
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+The following syntax is for SQL Server and Azure SQL Database:
 
+```syntaxsql
 DECLARE
 {
   { @local_variable [AS] data_type [ = value ] }
@@ -75,7 +75,7 @@ DECLARE
 See CREATE TABLE for index option syntax.
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse is as follows:
+The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse:
 
 ```syntaxsql
 DECLARE

@@ -35,7 +35,7 @@ If you want to use Always Encrypted and Stretch Database together, you have to c
 
 If you have already enabled Stretch Database on the table, and you want to use Always Encrypted columns, you have to do the following things.
 
-1. Disable Stretch Database on the table and bring the remote data back from Azure. For more info, see [Disable Stretch Database and bring back remote data](disable-stretch-database-and-bring-back-remote-data.md).
+1. Disable Stretch Database on the table and bring back the remote data from Azure. For more info, see [Disable Stretch Database and bring back remote data](disable-stretch-database-and-bring-back-remote-data.md).
 1. Configure Always Encrypted on the selected columns.
 1. Re-enable Stretch Database on the table. For more info, see [Enable Stretch Database for a database](enable-stretch-database-for-a-table.md).
 
@@ -49,4 +49,4 @@ If you're using temporal tables, you can enable Stretch Database on the history 
 
 - For guidance about using temporal tables with Stretch Database, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 - To filter rows to migrate from the history table by using a sliding window, see [Select rows to migrate by using a filter function](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
-- You can't enable Stretch Database on the temporal history table if the table is memory-optimized. Memory-optimized tables are not supported.
+- You can't enable Stretch Database on the temporal history table if the table is memory-optimized. Memory-optimized tables aren't supported.

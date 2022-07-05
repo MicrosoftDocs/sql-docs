@@ -60,7 +60,7 @@ The important prerequisites include the following.
 
 Select the tables that you want to enable for Stretch.
 
-Tables with lots of rows appear at the top of the sorted list. Before the Wizard displays the list of tables, it analyzes them for data types that are not currently supported by Stretch Database.
+Tables with lots of rows appear at the top of the sorted list. Before the Wizard displays the list of tables, it analyzes them for data types that aren't currently supported by Stretch Database.
 
 :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-select-tables.png" alt-text="Screenshot showing how to select tables page of Stretch Database wizard.":::
 
@@ -144,7 +144,7 @@ If you want to use a different type of filter function to select rows to migrate
 
         - If you select **SQL Server Authentication**, provide the administrator login and password.
 
-        - Select **Active Directory Integrated Authentication** to use a federated service account for SQL Server to communicate with the remote Azure server. If the selected server is not integrated with Azure Active Directory, this option doesn't appear.
+        - Select **Active Directory Integrated Authentication** to use a federated service account for SQL Server to communicate with the remote Azure server. If the selected server isn't integrated with Azure Active Directory, this option doesn't appear.
 
         :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-select-existing-server.png" alt-text="Screenshot showing how to select existing Azure server - Stretch Database wizard.":::
 
@@ -156,7 +156,7 @@ If a database master key already exists, enter the password for it.
 
 :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-secure-password-empty.png" alt-text="Screenshot showing the Secure credentials page of the Stretch Database wizard with the Password text box empty.":::
 
-If the database does not have an existing master key, enter a strong password to create a database master key.
+If the database doesn't have an existing master key, enter a strong password to create a database master key.
 
 :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-secure-password-populated.png" alt-text="Screenshot showing the Secure credentials page of the Stretch Database wizard with the New Password and Confirm Password text boxes populated.":::
 
@@ -187,7 +187,7 @@ To monitor the status of data migration, see [Monitor and troubleshoot data migr
 ## <a id="KnownIssues"></a> Troubleshooting the wizard
 
 **The Stretch Database wizard failed.**
-If Stretch Database is not yet enabled at the server level, and you run the wizard without the system administrator permissions to enable it, the wizard fails. Ask the  system administrator to enable Stretch Database on the local server instance, and then run the wizard again. For more info, see [Prerequisite: Permission to enable Stretch Database on the server](enable-stretch-database-for-a-database.md#EnableTSQLServer).
+If Stretch Database isn't yet enabled at the server level, and you run the wizard without the system administrator permissions to enable it, the wizard fails. Ask the  system administrator to enable Stretch Database on the local server instance, and then run the wizard again. For more info, see [Prerequisite: Permission to enable Stretch Database on the server](enable-stretch-database-for-a-database.md#EnableTSQLServer).
 
 ## Next steps
 

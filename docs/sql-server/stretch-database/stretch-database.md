@@ -26,9 +26,9 @@ If you just want to get started with Stretch Database right away, see [Get start
 
 Stretch Database provides the following benefits:
 
-- **Cost-effective availability for cold data.** Stretch warm and cold transactional data dynamically from SQL Server to Microsoft Azure with SQL Server Stretch Database. Unlike typical cold data storage, your data is always online and available to query. You can provide longer data retention timelines without breaking the bank for large tables like Customer Order History. Benefit from the low cost of Azure rather than scaling expensive, on-premises storage. You choose the pricing tier and configure settings in the Azure Portal to maintain control over price and costs. Scale up or down as needed. Visit [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) for details.
+- **Cost-effective availability for cold data.** Stretch warm and cold transactional data dynamically from SQL Server to Microsoft Azure with SQL Server Stretch Database. Unlike typical cold data storage, your data is always online and available to query. You can provide longer data retention timelines without breaking the bank for large tables like Customer Order History. Benefit from the low cost of Azure rather than scaling expensive, on-premises storage. You choose the pricing tier and configure settings in the Azure portal to maintain control over price and costs. Scale up or down as needed. Visit [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) for details.
 
-- **Doesn't require changes to queries or applications.** Access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud.  You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications - the location of the data is completely transparent to the application.
+- **Doesn't require changes to queries or applications.** Access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud.  You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications - the location of the data is transparent to the application.
 
 - **Streamlines on-premises data maintenance.** Reduce on-premises maintenance and storage for your data. Backups for your on-premises data run faster and finish within the maintenance window. Backups for the cloud portion of your data run automatically. Your on-premises storage needs are greatly reduced. Azure storage can be 80% less expensive than adding to on-premises SSD.
 
@@ -62,11 +62,11 @@ If you can make the following statements, Stretch Database may help to meet your
 |I have to keep transactional data for a long time.|The size of my tables is getting out of control.|
 |Sometimes I have to query the cold data.|My users say that they want access to cold data, but they only rarely use it.|
 |I have apps, including older apps, that I don't want to update.|I have to keep buying and adding more storage.|
-|I want to find a way to save money on storage.|I can't backup or restore such large tables within the SLA.|
+|I want to find a way to save money on storage.|I can't back up or restore such large tables within the SLA.|
 
 ## What kind of databases and tables are candidates for Stretch Database?
 
-Stretch Database targets transactional databases with large amounts of cold data, typically stored in a small number of tables. These tables may contain more than a billion rows.
+Stretch Database targets transactional databases with large amounts of cold data, typically stored in a few tables. These tables may contain more than a billion rows.
 
 If you use the temporal table feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use Stretch Database to migrate all or part of the associated history table to cost-effective storage in Azure. For more info, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 

@@ -25,7 +25,7 @@ To identify databases and tables that are candidates for Stretch Database, along
 
 ## Get Data Migration Assistant
 
-Download and install Data Migration Assistant from [here](https://www.microsoft.com/download/details.aspx?id=53595). This tool is not included on the SQL Server installation media.
+Download and install Data Migration Assistant from [here](https://www.microsoft.com/download/details.aspx?id=53595). This tool isn't included on the SQL Server installation media.
 
 ## Run Data Migration Assistant
 

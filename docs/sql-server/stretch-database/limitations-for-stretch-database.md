@@ -29,7 +29,7 @@ Stretch-enabled tables have the following limitations.
 
 ### Constraints
 
-- Uniqueness is not enforced for UNIQUE constraints and PRIMARY KEY constraints in the Azure table that contains the migrated data.
+- Uniqueness isn't enforced for UNIQUE constraints and PRIMARY KEY constraints in the Azure table that contains the migrated data.
 
 ### DML operations
 
@@ -41,7 +41,7 @@ Stretch-enabled tables have the following limitations.
 
 - You can't create an index for a view that includes Stretch-enabled tables.
 
-- Filters on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes are not propagated to the remote table.
+- Filters on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes aren't propagated to the remote table.
 
 ## <a id="Limitations"></a> Limitations that currently prevent you from enabling Stretch for a table
 

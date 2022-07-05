@@ -25,7 +25,7 @@ To configure a table for  Stretch Database, select **Stretch | Enable** for a ta
 
 - If your table contains both hot and cold data, you can specify a filter function to select the rows to migrate.
 
-**Prerequisites**. If you select **Stretch | Enable** for a table, and you have not yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.
+**Prerequisites**. If you select **Stretch | Enable** for a table, and you haven't yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.
 
 **Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on  a table also requires ALTER permissions on the table.
 
@@ -48,7 +48,7 @@ Review the purpose of the wizard and the prerequisites.
 
 Confirm that the table you want to enable is displayed and selected.
 
-You can migrate an entire table or you can specify a simple filter function in the wizard. If you want to use a different type of filter function to select rows to migrate, do one of the following things.
+You can migrate an entire table or you can specify a filter function in the wizard. If you want to use a different type of filter function to select rows to migrate, do one of the following things.
 
 - Exit the wizard and run the ALTER TABLE statement to enable Stretch for the table and to specify a filter function.
 

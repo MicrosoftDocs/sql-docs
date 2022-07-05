@@ -19,7 +19,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To monitor data migration in Stretch Database Monitor, select **Tasks | Stretch | Monitor** for a database in SQL Server Management Studio .
+To monitor data migration in Stretch Database Monitor, select **Tasks | Stretch | Monitor** for a database in SQL Server Management Studio.
 
 ## Check the status of data migration in the Stretch Database Monitor
 
@@ -42,7 +42,7 @@ There are several problems that can affect migration. Check the following things
 
 - Check network connectivity for the SQL Server computer.
 
-- Check that the Azure firewall is not blocking your SQL Server from connecting to the remote endpoint.
+- Check that the Azure firewall isn't blocking your SQL Server from connecting to the remote endpoint.
 
 - Check the dynamic management view **sys.dm_db_rda_migration_status** for the status of the latest batch. If an error has occurred, check the error_number, error_state, and error_severity values for the batch.
 

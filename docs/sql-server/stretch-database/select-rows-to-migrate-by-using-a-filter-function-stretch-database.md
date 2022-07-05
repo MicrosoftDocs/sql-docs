@@ -28,7 +28,7 @@ If you store cold data in a separate table, you can configure Stretch Database t
 
 If you don't specify a filter function, the entire table is migrated.
 
-When you run the Enable Database for Stretch Wizard, you can migrate an entire table or you can specify a simple filter function in the wizard. If you want to use a different type of filter function to select rows to migrate, do one of the following things.
+When you run the Enable Database for Stretch Wizard, you can migrate an entire table, or you can specify a filter function in the wizard. If you want to use a different type of filter function to select rows to migrate, do one of the following things.
 
 - Exit the wizard and run the ALTER TABLE statement to enable Stretch for the table and to specify a filter function.
 
@@ -55,7 +55,7 @@ Schema binding is required to prevent columns that are used by the filter functi
 
 ### Return value
 
-If the function returns a non-empty result, the row is eligible to be migrated. Otherwise - that is, if the function doesn't return a result - the row is not eligible to be migrated.
+If the function returns a non-empty result, the row is eligible to be migrated. Otherwise - that is, if the function doesn't return a result - the row isn't eligible to be migrated.
 
 ### Conditions
 
@@ -87,7 +87,7 @@ A primitive condition can do one of the following comparisons.
 
 - Compare a function parameter to a constant expression. For example, `@column1 < 1000`.
 
-     Here's an example that checks whether the value of a *date* column is &lt; 1/1/2016.
+     Here's an example that checks whether the value of a *date* column is less than January 1st, 2016.
 
     ```sql
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)
@@ -203,7 +203,7 @@ ALTER TABLE SensorTelemetry
 
 ## <a id="addafterwiz"></a>Add a filter function after running the Wizard
 
-If you want use a function that you can't create in the **Enable Database for Stretch** Wizard, you can run the **ALTER TABLE** statement to specify a function after you exit the wizard. Before you can apply a function, however, you have to stop the data migration that's already in progress and bring back migrated data. (For more info about why this is necessary, see [Replace an existing filter function](#replacePredicate).)
+If you want to use a function that you can't create in the **Enable Database for Stretch** Wizard, you can run the **ALTER TABLE** statement to specify a function after you exit the wizard. Before you can apply a function, however, you have to stop the data migration that's already in progress and bring back migrated data. (For more info about why this is necessary, see [Replace an existing filter function](#replacePredicate).)
 
 1. Reverse the direction of migration and bring back the data already migrated. You can't cancel this operation after it starts. You also incur costs on Azure for outbound data transfers (egress). For more info, see [How Azure pricing works](https://azure.microsoft.com/pricing/details/data-transfers/).
 
@@ -266,7 +266,7 @@ To filter rows by using a sliding window,  keep in mind the following requiremen
 
 - The function has to be deterministic. Therefore you can't create a function that automatically recalculates the sliding window as time passes.
 
-- The function uses schema binding. Therefore you can't simply update the function "in place" every day by calling **ALTER FUNCTION** to move the sliding window.
+- The function uses schema binding. Therefore you can't just update the function "in place" every day by calling **ALTER FUNCTION** to move the sliding window.
 
 Start with a filter function like the following example, which migrates rows where the **systemEndTime** column contains a value earlier than January 1, 2016.
 
@@ -300,7 +300,7 @@ When you want to update the sliding window, do the following things.
 
 2.  Replace the previous filter function with the new one by calling **ALTER TABLE**, as shown in the following example.
 
-3.  Optionally, drop the previous filter function that you're no longer using by calling **DROP FUNCTION**. (This step is not shown in the example.)
+3.  Optionally, drop the previous filter function that you're no longer using by calling **DROP FUNCTION**. (This step isn't shown in the example.)
 
 ```sql
 BEGIN TRAN
@@ -608,7 +608,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 
 ```
 
-After you remove the filter function, all rows in the table are eligible for migration. As a result, you cannot specify a filter function for the same table later unless you bring back all the remote data for the table from Azure first. This restriction exists to avoid the situation where rows that are not eligible for migration when you provide a new filter function have already been migrated to Azure.
+After you remove the filter function, all rows in the table are eligible for migration. As a result, you can't specify a filter function for the same table later unless you bring back all the remote data for the table from Azure first. This restriction exists to avoid the situation where rows that aren't eligible for migration when you provide a new filter function have already been migrated to Azure.
 
 ## Check the filter function applied to a table
 

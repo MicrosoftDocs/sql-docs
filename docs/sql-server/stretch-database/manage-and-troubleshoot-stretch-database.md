@@ -86,7 +86,7 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
   > [!IMPORTANT]
   > When **sp_rda_reconcile_columns** recreates columns that you accidentally deleted from the remote table, it does not restore the data that was previously in the deleted columns.
 
-**sp_rda_reconcile_columns** does not delete columns from the remote table that exist in the remote table but not in the Stretch-enabled SQL Server table. If there are columns in the remote Azure table that no longer exist in the Stretch-enabled SQL Server table, these extra columns do not prevent Stretch Database from operating normally. You can optionally remove the extra columns manually.
+**sp_rda_reconcile_columns** doesn't delete columns from the remote table that exist in the remote table but not in the Stretch-enabled SQL Server table. If there are columns in the remote Azure table that no longer exist in the Stretch-enabled SQL Server table, these extra columns don't prevent Stretch Database from operating normally. You can optionally remove the extra columns manually.
 
 ## Manage performance and costs
 
@@ -100,7 +100,7 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
 
 ### Increase Azure performance level for resource-intensive operations such as indexing
 
-When you build, rebuild, or reorganize an index on a large table that's configured for Stretch Database, and you anticipate heavy querying of the migrated data in Azure during this time, consider increasing the performance level of the corresponding remote Azure database for the duration of the operation. For more info about performance levels and pricing, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+When you build, rebuild, or reorganize an index on a large table that's configured for Stretch Database, and you anticipate heavy querying of the migrated data in Azure during this time, consider increasing the performance level of the corresponding remote Azure database during the operation. For more info about performance levels and pricing, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ### You can't pause the SQL Server Stretch Database service on Azure
 

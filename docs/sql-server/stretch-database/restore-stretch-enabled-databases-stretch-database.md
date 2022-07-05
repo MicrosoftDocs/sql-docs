@@ -32,34 +32,34 @@ After you restore the SQL Server database, you have to run the stored procedure 
 
 ### Recover a live Azure database
 
-The SQL Server Stretch Database service on Azure snapshots all live data at least every 8 hours using Azure Storage Snapshots. These snapshots are maintained for 7 days. This allows you to restore the data to one of at least 21 points in time within the past 7 days up to the time when the last snapshot was taken.
+The SQL Server Stretch Database service on Azure snapshots all live data at least every 8 hours using Azure Storage Snapshots. These snapshots are maintained for seven days. This allows you to restore the data to one of at least 21 points in time within the past seven days up to the time when the last snapshot was taken.
 
 To restore a live Azure database to an earlier point in time by using the Azure portal, do the following things.
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
-2. On the left side of the screen select **BROWSE** and then select **SQL Databases**.
-3. Navigate to your database and select it.
-4. At the top of the database blade, select **Restore**.
-5. Specify a new **Database name**, select a **Restore Point** and then select **Create**.
-6. The database restore process will begin and can be monitored using **NOTIFICATIONS**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. On the left side of the screen select **BROWSE** and then select **SQL Databases**.
+1. Navigate to your database and select it.
+1. At the top of the database screen, select **Restore**.
+1. Specify a new **Database name**, select a **Restore Point** and then select **Create**.
+1. The database restore process will begin and can be monitored using **NOTIFICATIONS**.
 
 ### Recover a deleted Azure database
 
-The SQL Server Stretch Database service on Azure takes a database snapshot before a database is dropped and retains it for 7 days. After this occurs, it no longer retains snapshots from the live database. This lets you restore a deleted database to the point when it was deleted.
+The SQL Server Stretch Database service on Azure takes a database snapshot before a database is dropped and retains it for seven days. After this occurs, it no longer retains snapshots from the live database. This lets you restore a deleted database to the point when it was deleted.
 
-To restore a deleted Azure database to the point when it was deletedby using the Azure portal, do the following things.
+To restore a deleted Azure database to the point when it was deleted by using the Azure portal, do the following things.
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. On the left side of the screen select **BROWSE** and then select **SQL Servers**.
 1. Navigate to your server and select it.
-1. Scroll down to Operations on your server's blade, select the **Deleted Databases** tile.
+1. Scroll down to Operations, and select the **Deleted Databases** tile.
 1. Select the deleted database you want to restore.
 1. Specify a new **Database name** and select **Create**.
 1. The database restore process will begin and can be monitored using **NOTIFICATIONS**.
 
 ## <a id="reconnect"></a>Restore the connection between the SQL Server database and the remote Azure database
 
-1. If you're going to connect to a restored Azure database with a different name or in a different region, run the stored procedure [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) to disconnect from the previous Azure database.
+1. If you're going to connect to a restored Azure database with a different name, or in a different region, run the stored procedure [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) to disconnect from the previous Azure database.
 
 1. Run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect the local Stretch-enabled database to the Azure database.
 

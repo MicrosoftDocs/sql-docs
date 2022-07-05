@@ -31,7 +31,7 @@ Backing up is only one part of a complete high availability and business continu
 
 To back up your Stretch-enabled SQL Server databases, you can continue to use the SQL Server backup methods that you currently use. For more info, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
-Backups of a Stretch-enabled SQL Server database contain only local data and data eligible for migration at the point in time when the backup runs. (Eligible data is data that has not yet been migrated, but will be migrated to Azure based on the migration settings of the tables.) This is known as a **shallow** backup and does not include the data already migrated to Azure.
+Backups of a Stretch-enabled SQL Server database contain only local data and data eligible for migration at the point in time when the backup runs. (Eligible data is data that hasn't yet been migrated, but will be migrated to Azure based on the migration settings of the tables.) This is known as a **shallow** backup and doesn't include the data already migrated to Azure.
 
 ## Back up your remote Azure data
 
@@ -39,7 +39,7 @@ Microsoft Azure automatically backs up the remote data that Stretch Database has
 
 ### Azure reduces the risk of data loss with automatic backup
 
-The SQL Server Stretch Database service on Azure protects your remote databases with automatic storage snapshots at least every 8 hours. It retains each snapshot for 7 days to provide you with a range of possible restore points.
+The SQL Server Stretch Database service on Azure protects your remote databases with automatic storage snapshots at least every 8 hours. It retains each snapshot for seven days to provide you with a range of possible restore points.
 
 ### Azure reduces the risk of data loss with geo-redundancy
 

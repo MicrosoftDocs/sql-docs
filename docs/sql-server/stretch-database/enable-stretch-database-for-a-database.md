@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 To configure an existing database for Stretch Database, select **Tasks > Stretch > Enable** for a database in SQL Server Management Studio to open the **Enable Database for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database for a database.
 
-If you select **Tasks > Stretch > Enable** for an individual table, and you have not yet enabled the database for Stretch Database, the wizard configures the database for Stretch Database and lets you select tables as part of the process. Follow the steps in this article instead of the steps in [Enable Stretch Database for a table](enable-stretch-database-for-a-table.md).
+If you select **Tasks > Stretch > Enable** for an individual table, and you haven't yet enabled the database for Stretch Database, the wizard configures the database for Stretch Database and lets you select tables as part of the process. Follow the steps in this article instead of the steps in [Enable Stretch Database for a table](enable-stretch-database-for-a-table.md).
 
 Enabling Stretch Database on  a database or a table requires db_owner permissions. Enabling Stretch Database on a database also requires CONTROL DATABASE permissions.
 
@@ -34,7 +34,7 @@ Enabling Stretch Database on  a database or a table requires db_owner permission
 
 - Review [Limitations for Stretch Database](limitations-for-stretch-database.md).
 
-- Stretch Database migrates data to Azure . Therefore you have to have an Azure account and a subscription for billing. To get an Azure account, [click here](https://azure.microsoft.com/pricing/free-trial/).
+- Stretch Database migrates data to Azure, so you need an Azure account and a subscription for billing. [Sign up](https://azure.microsoft.com/pricing/free-trial/) for an Azure account.
 
 - Have the connection and login info you need to create a new Azure server or to select an existing Azure server.
 
@@ -72,7 +72,7 @@ Enabling Stretch Database on  a database or a table requires db_owner permission
 
 1. On the Azure server, create a firewall rule with the IP address range of the  SQL Server that lets SQL Server communicate with the remote server.
 
-   You can easily find the values you need and create the firewall rule by attempting to connect to the Azure server from Object Explorer in SQL Server Management Studio (SSMS). SSMS helps you to create the rule by opening the following dialog box which already includes the required IP address values.
+   You can easily find the values you need and create the firewall rule by attempting to connect to the Azure server from Object Explorer in SQL Server Management Studio (SSMS). SSMS helps you to create the rule by opening the following dialog box, which already includes the required IP address values.
 
    :::image type="content" source="media/enable-stretch-database-for-a-database/firewall-rule-for-stretch.png" alt-text="Screenshot of a firewall rule for Stretch.":::
 

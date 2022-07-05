@@ -37,11 +37,11 @@ DECLARE
 {
   { @local_variable [AS] data_type [ = value ] }
   | { @cursor_variable_name CURSOR }
-} [,...n]
+} [ ,...n ]
 | { @table_variable_name [AS] <table_type_definition> }
 
 <table_type_definition> ::=
-     TABLE ( { <column_definition> | <table_constraint> } [ ,...n] )
+     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )
 
 <column_definition> ::=
      column_name { scalar_data_type | AS computed_column_expression }
@@ -75,9 +75,9 @@ DECLARE
 See CREATE TABLE for index option syntax.
 ```
 
-```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse is as follows:
 
+```syntaxsql
 DECLARE
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]
 ```
@@ -163,13 +163,9 @@ Indicates if null is allowed in the variable. The default is **NULL**.
 
 A constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.
 
-You can define an inline CLUSTERED or NONCLUSTERED index on the PRIMARY KEY.
-
 #### UNIQUE
 
 A constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.
-
-You can define an inline CLUSTERED or NONCLUSTERED index on the UNIQUE constraint.
 
 #### CLUSTERED | NONCLUSTERED
 

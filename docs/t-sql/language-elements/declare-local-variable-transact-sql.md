@@ -41,14 +41,15 @@ DECLARE
 | { @table_variable_name [AS] <table_type_definition> }
 
 <table_type_definition> ::=
-     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )
+    TABLE ( { <column_definition> | <table_constraint> | <table_index> } } [ ,...n ] )
 
 <column_definition> ::=
-     column_name { scalar_data_type | AS computed_column_expression }
-     [ COLLATE collation_name ]
-     [ [ DEFAULT constant_expression ] | IDENTITY [ (seed, increment ) ] ]
-     [ ROWGUIDCOL ]
-     [ <column_constraint> ]
+    column_name { scalar_data_type | AS computed_column_expression }
+    [ COLLATE collation_name ]
+    [ [ DEFAULT constant_expression ] | IDENTITY [ (seed, increment ) ] ]
+    [ ROWGUIDCOL ]
+    [ <column_constraint> ]
+    [ <column_index> ]
 
 <column_constraint> ::=
 {
@@ -61,6 +62,16 @@ DECLARE
   | [ CHECK ( logical_expression ) ] [ ,...n ]
 }
 
+<column_index> ::=
+    INDEX index_name [ CLUSTERED | NONCLUSTERED ]
+    [ WITH ( <index_option> [ ,... n ] ) ]
+    [ ON { partition_scheme_name (column_name )
+         | filegroup_name
+         | default
+         }
+    ]
+    [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
+
 <table_constraint> ::=
 {
     { PRIMARY KEY | UNIQUE }
@@ -71,9 +82,26 @@ DECLARE
   | [ CHECK ( logical_expression ) ] [ ,...n ]
 }
 
+<table_index> ::=
+{
+    {
+      INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
+         (column_name [ ASC | DESC ] [ ,... n ] )
+    | INDEX index_name CLUSTERED COLUMNSTORE
+    | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
+    }
+    [ WITH ( <index_option> [ ,... n ] ) ]
+    [ ON { partition_scheme_name ( column_name )
+         | filegroup_name
+         | default
+         }
+    ]
+    [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]
+}
+
 <index_option> ::=
 {
-    PAD_INDEX = { ON | OFF }
+  PAD_INDEX = { ON | OFF }
   | FILLFACTOR = fillfactor
   | IGNORE_DUP_KEY = { ON | OFF }
   | STATISTICS_NORECOMPUTE = { ON | OFF }
@@ -95,7 +123,7 @@ The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse:
 
 ```syntaxsql
 DECLARE
-{{ @local_variable [AS] data_type } [ = value [ COLLATE <collation_name> ] ] } [,...n]
+{ { @local_variable [AS] data_type } [ = value [ COLLATE <collation_name> ] ] } [ ,...n ]
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 07/05/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -85,15 +85,16 @@ To confirm that the Always On availability groups feature is enabled, run the fo
 
 ```sql
 -- Run on SQL Server
--- Is Always On enabled on this SQL Server instance?
-declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
-select
-    @IsHadrEnabled as IsHadrEnabled,
-    case @IsHadrEnabled
-        when 0 then 'The Always On availability groups is disabled.'
-        when 1 then 'The Always On availability groups is enabled.'
-        else 'Unknown status.'
-    end as 'HadrStatus'
+-- Is Always On enabled on this SQL Server
+DECLARE @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
+SELECT
+    @IsHadrEnabled as 'Is HADR enabled',
+    CASE @IsHadrEnabled
+        WHEN 0 THEN 'Always On availability groups is DISABLED.'
+        WHEN 1 THEN 'Always On availability groups is ENABLED.'
+        ELSE 'Unknown status.'
+    END
+	as 'HADR status'
 ```
 
 The above query will display if Always On availability group is enabled, or not, on your SQL Server.
@@ -280,12 +281,12 @@ tnc localhost -port 5022
 A successful test shows `TcpTestSucceeded : True`. You can then proceed to creating a SQL Agent job on the managed instance to try testing the SQL Server test endpoint on port 5022 from the managed instance.
 
 Next, create a SQL Agent job on the managed instance called `NetHelper` by running the following T-SQL script on the managed instance. Replace:
-- `SQL_SERVER_ADDRESS` with the IP address of SQL Server that can be accessed from managed instance.
+- `<SQL_SERVER_IP_ADDRESS>` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
 -- Run on managed instance
--- SQL_SERVER_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
-DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
+-- SQL_SERVER_IP_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
+DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_IP_ADDRESS>'
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
 
@@ -306,7 +307,6 @@ EXEC msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
 
 EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 
-EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
 Run the SQL Agent job by running the following T-SQL command on the managed instance: 

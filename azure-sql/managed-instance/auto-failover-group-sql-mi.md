@@ -233,6 +233,7 @@ Be aware of the following limitations:
 
 - Failover groups can't be created between two instances in the same Azure region.
 - Failover groups can't be renamed. You will need to delete the group and re-create it with a different name.
+- A failover group contains a maximum of two managed instances. Adding additional instances to the failover group is unsupported. 
 - Database rename isn't supported for databases in failover group. You will need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however will not be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.

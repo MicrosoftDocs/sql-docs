@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/11/2022
+ms.date: 07/04/2022
 ---
 
 # Failover (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
@@ -22,7 +22,6 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 
 > [!NOTE]
 > - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to failover a database with the link. 
-> - The PowerShell scripts in this article make REST API calls on the SQL Managed Instance side. 
 
 ## Prerequisites 
 

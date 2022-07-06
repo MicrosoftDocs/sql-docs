@@ -335,7 +335,7 @@ BEGIN
   
     -- Wait and see if the job has completed.
     --
-    WAITFOR DELAY '00:00:05'
+    WAITFOR DELAY '00:00:01'
     SELECT @stop_exec_date = sja.stop_execution_date
     FROM msdb.dbo.sysjobs sj JOIN msdb.dbo.sysjobactivity sja ON sj.job_id = sja.job_id
     WHERE sj.name = 'NetHelper'

@@ -323,25 +323,21 @@ GO
 CREATE PROCEDURE ExecuteNetHelper AS
 BEGIN
   -- Start the job.
-  --
   DECLARE @NetHelperstartTimeUtc datetime = getutcdate()
   DECLARE @stop_exec_date datetime = null
   EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
   
   -- Wait for job to complete and then see the outcome.
-  --
   WHILE (@stop_exec_date is null)
   BEGIN
   
     -- Wait and see if the job has completed.
-    --
     WAITFOR DELAY '00:00:01'
     SELECT @stop_exec_date = sja.stop_execution_date
     FROM msdb.dbo.sysjobs sj JOIN msdb.dbo.sysjobactivity sja ON sj.job_id = sja.job_id
     WHERE sj.name = 'NetHelper'
   
     -- If job has completed, get the outcome of the network test.
-    --
     IF (@stop_exec_date is not null)
     BEGIN
       SELECT 
@@ -355,7 +351,6 @@ BEGIN
     END
   
     -- In case of operation timeout (90 seconds), print timeout message.
-    --
     IF (datediff(second, @NetHelperstartTimeUtc, getutcdate()) > 90)
     BEGIN
   	SELECT 'NetHelper timed out during the network check. Please investigate SQL Agent logs for more information.'

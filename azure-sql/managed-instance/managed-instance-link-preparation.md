@@ -362,7 +362,7 @@ BEGIN
 END
 ```
 
-Run the following query on the managed instance to execute the network probe through the agent job, and to show the resulting log:
+Run the following query on managed instance to execute network probe through the agent job, and to show the resulting log:
 
 ```sql
 -- Run on managed instance
@@ -370,11 +370,11 @@ EXEC ExecuteNetHelper
 
 ```
 
-If the connection is successful, the log will show `True`. If the connection is unsuccessful, the log will show `False`. 
+If the connection was successful, the log will show `True`. If the connection was unsuccessful, the log will show `False`. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-output-tnchelper.png" alt-text="Screenshot that shows the expected output of the NetHelper SQL Agent job.":::
 
-If the connection is unsuccessful, verify the following items: 
+If the connection was unsuccessful, verify the following items: 
 
 - The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
 - An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 

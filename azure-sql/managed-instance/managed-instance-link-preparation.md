@@ -289,7 +289,7 @@ DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_IP_ADDRESS>' -- insert 
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
 
-IF EXISTS(select * from msdb.dbo.sysjobs where name = 'NetHelper') THROW 70000, 'Agent job NetHelper already exists. Please rename the job, or drop the existing before creating it again.', 1
+IF EXISTS(select * from msdb.dbo.sysjobs where name = 'NetHelper') THROW 70000, 'Agent job NetHelper already exists. Please rename the job, or drop the existing job before creating it again.', 1
 -- To delete NetHelper job run: EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'
 
 EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
@@ -298,7 +298,7 @@ EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
     @category_name=N'[Uncategorized (Local)]',
     @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
 
-EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'tnc step',
+EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
     @step_id=1,
     @os_run_priority=0, @subsystem=N'PowerShell',
     @command = @tncCommand,
@@ -312,9 +312,9 @@ EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 ```
 
 >[!TIP]
-> In case that you need to modify the IP address of your SQL Server for some future probe, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the script above.
+> In case that you need to modify the IP address of your SQL Server for the connectivity probe from managed instance, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the script above.
 
-Then, create a stored procedure 'ExecuteNetHelper' that will help run the job and obtain the results from the network probe. Run the following T-SQL script on managed instance:
+Then, create a stored procedure `ExecuteNetHelper` that will help run the job and obtain results from the network probe. Run the following T-SQL script on managed instance:
 
 ```sql
 -- Run on managed instance
@@ -362,7 +362,7 @@ BEGIN
 END
 ```
 
-Run the following query on managed instance to execute network probe through the agent job, and to show the resulting log:
+Run the following query on managed instance to execute the stored procedure that will execute the NetHelper agent job and show the resulting log:
 
 ```sql
 -- Run on managed instance
@@ -379,8 +379,10 @@ If the connection was unsuccessful, verify the following items:
 - The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
 - An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
 - If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
-- SQL Server is running. 
-- After resolving issues, re-run NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
+- SQL Server is running.
+- There exist test endpoint on SQL Server.
+
+After resolving issues, re-run NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
 
 Finally, after the network test has been successful, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
 

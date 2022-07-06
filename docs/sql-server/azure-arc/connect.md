@@ -181,7 +181,7 @@ Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly register
 
 ## Delete your SQL Server - Azure Arc resource
 
-To delete your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and click the **Delete** button. It will delete this resource and instruct the SQL Server extension on the machine to stop monitoring this SQL Server instance.  
+To delete your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and select the **Delete** button. It will delete this resource and instruct the SQL Server extension on the machine to stop monitoring this SQL Server instance.  
 
 ![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
 

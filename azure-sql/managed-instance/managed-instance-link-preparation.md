@@ -318,9 +318,11 @@ Then, create a stored procedure 'ExecuteNetHelper' that will help run the job an
 
 ```sql
 -- Run on managed instance
-IF EXISTS(select * from sys.objects where name = 'ExecuteNetHelper') THROW 70001, 'Stored procedure ExecuteNetHelper already exists. Rename or drop the existing procedure before creating it again.', 1
+IF EXISTS(SELECT * FROM sys.objects WHERE name = 'ExecuteNetHelper') 
+	THROW 70001, 'Stored procedure ExecuteNetHelper already exists. Rename or drop the existing procedure before creating it again.', 1
 GO
 CREATE PROCEDURE ExecuteNetHelper AS
+-- To delete the procedure run: DROP PROCEDURE ExecuteNetHelper
 BEGIN
   -- Start the job.
   DECLARE @NetHelperstartTimeUtc datetime = getutcdate()

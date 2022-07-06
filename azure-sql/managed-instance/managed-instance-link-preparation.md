@@ -318,7 +318,7 @@ Then, create a stored procedure 'ExecuteNetHelper' that will help run the job an
 
 ```sql
 -- Run on managed instance
-IF EXISTS(select * from sys.objects where name = 'ExecuteNetHelper') THROW 70001, 'Object ExecuteNetHelper already exists. Rename object or drop existng it before creating again.', 1
+IF EXISTS(select * from sys.objects where name = 'ExecuteNetHelper') THROW 70001, 'Stored procedure ExecuteNetHelper already exists. Rename or drop the existing procedure before creating it again.', 1
 GO
 CREATE PROCEDURE ExecuteNetHelper AS
 BEGIN

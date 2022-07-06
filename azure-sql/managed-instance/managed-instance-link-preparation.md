@@ -327,10 +327,8 @@ SELECT
     sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
 FROM
     msdb.dbo.sysjobs sj
-    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs
-    ON sj.job_id = sjs.job_id
-    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl
-    ON sjs.step_uid = sjsl.step_uid
+    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs ON sj.job_id = sjs.job_id
+    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl ON sjs.step_uid = sjsl.step_uid
 WHERE
     sj.name = 'NetHelper'
 ```

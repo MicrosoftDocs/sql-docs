@@ -120,7 +120,7 @@ To install the SQL Server Extension - Azure Arc for Linux Operating System, run:
 
 ## Initiate the connection from the target machine
 
-If the server is not Arc-Server enabled yet, you can initiate the connection from the target machine using the onboarding script.  This script onboard the server to Arc-Server and as well as install "SQL Server Extension - Azure Arc".
+If the server is not an Arc-Server enabled yet, you can initiate the connection from the target machine using the onboarding script. This script onboard the server to Arc-Server and as well as install "SQL Server Extension - Azure Arc".
 
 ### Generate a onboarding script for SQL Server
 

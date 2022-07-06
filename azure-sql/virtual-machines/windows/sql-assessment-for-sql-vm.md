@@ -42,7 +42,12 @@ To use the SQL best practices assessment feature, you must have the following pr
 
 ## Enable
 
-To enable SQL best practices assessments, follow these steps: 
+You can enable SQL best practices assessments using the Azure portal or the Azure CLI. 
+
+
+# [Azure portal](#tab/azure-portal)
+
+To enable SQL best practices assessments using the Azure portal, follow these steps: 
 
 1. Sign into the [Azure portal](https://portal.azure.com) and go to your [SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
 1. Select **SQL best practices assessments** under **Settings**. 
@@ -52,6 +57,15 @@ To enable SQL best practices assessments, follow these steps:
     1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time). 
 1. Select **Apply** to save your changes and deploy the Microsoft Monitoring Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
     
+# [Azure CLI](#tab/azure-cli)
+
+To enable the SQL best practices assessments feature using the Azure CLI, use the following command example:
+
+```azure-cli
+az sql vm update --enable-assessment true --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+```
+---
+
 
 ## Assess SQL Server VM
 
@@ -61,7 +75,29 @@ Assessments run:
 
 ### Run scheduled assessment
 
-If you set a schedule in the configuration blade, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten.  
+You can configuren assessment on a schedule using the Azure portal and the Azure CLI. 
+
+# [Azure portal](#tab/azure-portal)
+
+If you set a schedule in the configuration blade, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten. 
+
+# [Azure CLI](#tab/azure-cli)
+
+To enable the feature and set a schedule for assessment runs using the Azure CLI, use the following command examples: 
+
+```azure-cli
+# Schedule is set to every 2 weeks starting on Sunday at 11 pm (VM OS time)
+az sql vm update --assessment-weekly-interval 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+
+# To schedule assessment for 2nd Sunday of each month at 11 pm (VM OS time)
+az sql vm update --monthly-occurrence 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+ 
+# To schedule assessment for the last Sunday of each month at 11 pm (VM OS time)
+az sql vm update --monthly-occurrence -1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+
+```
+
+---
 
 ### Run on demand assessment
 

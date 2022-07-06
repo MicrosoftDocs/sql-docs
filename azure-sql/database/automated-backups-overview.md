@@ -148,7 +148,7 @@ For vCore databases in Azure SQL Database, the storage consumed by each type of 
 
 ![Monitor database backup consumption in the Azure portal](./media/automated-backups-overview/backup-metrics.png)
 
-Instructions on how to monitor consumption in Hyperscale can be found in [monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-consumption).
+Instructions on how to monitor consumption in Hyperscale can be found in [monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-storage-consumption).
 
 ### Fine-tune backup storage consumption
 

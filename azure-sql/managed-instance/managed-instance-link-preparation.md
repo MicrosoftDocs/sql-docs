@@ -380,9 +380,9 @@ If the connection was unsuccessful, verify the following items:
 - An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
 - If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
 - SQL Server is running.
-- There exist test endpoint on SQL Server.
+- There exists test endpoint on SQL Server.
 
-After resolving issues, re-run NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
+After resolving issues, rerun NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
 
 Finally, after the network test has been successful, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
 

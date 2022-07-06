@@ -312,7 +312,7 @@ EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 ```
 
 >[!TIP]
-> In case that you need to modify the IP address of your SQL Server for some future probe, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the steps abve.
+> In case that you need to modify the IP address of your SQL Server for some future probe, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the script above.
 
 Then, create a stored procedure 'ExecuteNetHelper' that will help run the job and obtain the results from the network probe. Run the following T-SQL script on managed instance:
 

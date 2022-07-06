@@ -314,7 +314,12 @@ Run the SQL Agent job by running the following T-SQL command on the managed inst
 ```sql
 -- Run on managed instance
 EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
+
 ```
+
+>[!IMPORTANT]
+> Wait 10-20 seconds for the agent job to complete before moving to the next step.
+>
 
 Run the following query on the managed instance to show the log of the SQL Agent job: 
 
@@ -324,10 +329,8 @@ SELECT
     sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
 FROM
     msdb.dbo.sysjobs sj
-    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs
-    ON sj.job_id = sjs.job_id
-    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl
-    ON sjs.step_uid = sjsl.step_uid
+    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs ON sj.job_id = sjs.job_id
+    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl ON sjs.step_uid = sjsl.step_uid
 WHERE
     sj.name = 'NetHelper'
 ```

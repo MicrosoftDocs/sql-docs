@@ -317,7 +317,9 @@ EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 
 ```
 
-Please wait 10-20 seconds for the agent job to complete before moving to the next step.
+>[!IMPORTANT]
+> Wait 10-20 seconds for the agent job to complete before moving to the next step.
+>
 
 Run the following query on the managed instance to show the log of the SQL Agent job: 
 

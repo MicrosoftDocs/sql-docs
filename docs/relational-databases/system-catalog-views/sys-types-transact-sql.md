@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name of the type. Is unique within the schema.|  
 |**system_type_id**|**tinyint**|ID of the internal system-type of the type.|  
-|**user_type_id**|**int**|ID of the type. Is unique within the database. For system data types, **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|ID of the type. Is unique within the database. For most system data types, **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|ID of the schema to which the type belongs.|  
 |**principal_id**|**int**|ID of the individual owner if different from schema owner. By default, schema-contained objects are owned by the schema owner. However, an alternate owner can be specified by using the ALTER AUTHORIZATION statement to change ownership.<br /><br /> NULL if there is no alternate individual owner.|  
 |**max_length**|**smallint**|Maximum length (in bytes) of the type.<br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text** columns, the **max_length** value will be 16.|  

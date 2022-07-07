@@ -35,7 +35,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ```syntaxsql
 ALTER DATABASE database_name
-SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+SET COMPATIBILITY_LEVEL = { 160 | 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -45,7 +45,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 *database_name*
 Is the name of the database to be modified.
 
-COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 }
+COMPATIBILITY_LEVEL { 160 \| 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 }
 Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. The following compatibility level values can be configured (not all versions supports all of the above listed compatibility level):
 
 <a name="supported-dbcompats"></a>
@@ -54,7 +54,7 @@ Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|160|160, 150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
@@ -90,7 +90,7 @@ To view the current compatibility level of a database, query the `compatibility_
 > A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is upgraded to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which is not supported for other databases. This does not have an impact on the functionality of replication. Upgrading to later service packs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will result in the compatibility level of the distribution database to be increased to match that of the **master** database.
 
 > [!NOTE]
-> As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to leverage the latest query optimization improvements.
+> As of **July 2022**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 160 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to leverage the latest query optimization improvements.
 
 To use database compatibility level 120 or higher for a database overall, but opt-in to the [**cardinality estimation**](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], which maps to database compatibility level 110, see [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
 

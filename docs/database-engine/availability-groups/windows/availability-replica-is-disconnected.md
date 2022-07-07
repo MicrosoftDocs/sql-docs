@@ -39,7 +39,7 @@ ms.author: mathoma
   
 -   There are network/connectivity issues or Ports are blocked at the firewall.  
 
--	  Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (e.g. 5022) 
+-   Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (e.g. 5022) 
  
 ## Possible Solutions  
 

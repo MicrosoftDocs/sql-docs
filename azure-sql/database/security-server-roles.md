@@ -32,7 +32,7 @@ For example, the server-level role **##MS_ServerStateReader##** holds the permis
 > [!NOTE]
 > Any permission can be denied within user databases, in effect, overriding the server-wide grant via role membership. However, in the system database *master*, permissions cannot be granted or denied.
 
-Azure SQL Database currently provides three fixed server roles. The permissions that are granted to the fixed server roles can't be changed and these roles can't have other fixed roles as members. You can add server-level logins as members to server-level roles.
+Azure SQL Database currently provides seven fixed server roles. The permissions that are granted to the fixed server roles can't be changed and these roles can't have other fixed roles as members. You can add server-level logins as members to server-level roles.
 
 > [!IMPORTANT]
 > Each member of a fixed server role can add other logins to that same role.

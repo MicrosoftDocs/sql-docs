@@ -32,7 +32,7 @@ ms.date: 03/01/2022
   
   >
   > [!NOTE]
-  > During planned failovers or disaster recovery drills, it is recommended that the primary databases and the target secondary geo-replica databases have matching service tiers . If a secondary has lower memory than the primary, it may get into Out-of-memory situations and may not be able to recover fully after the recovery drill. In such cases, the affected geo-secondary database may be put in a limited read-only mode called `checkpoint-only mode`. To avoid such situations, it is recommended to upgrade the service tier of the secondary database to match that of the primary database involved in the planned failover, before the drill starts. Note that such a service tier upgrade can be a size-of-data operation and may take a while to finish.
+  > During planned failovers or disaster recovery drills, the primary databases and the target secondary geo-replica databases should have matching service tiers. If a secondary database has lower memory than the primary database, you may encounter out-of-memory issues, preventing full recovery after failover.  If this happens, the affected geo-secondary database may be put into a limited read-only mode called **checkpoint-only mode**. To avoid this, upgrade the service tier of the secondary database to match the primary database during the planned failover, or drill. Service tier upgrades can be size-of-data operations, and take a while to finish. 
   > 
 - **Unplanned failover**
 

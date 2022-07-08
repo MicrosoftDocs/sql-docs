@@ -55,6 +55,7 @@ Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsful
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
+- Enable or disable uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger.
 
 This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 
@@ -108,6 +109,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | OPTIMIZED_PLAN_FORCING = { ON | OFF }
     | DOP_FEEDBACK = { ON | OFF }
     | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+    | LEDGER_DIGEST_STORAGE_ENDPOINT = { <endpoint URL string> | OFF }
 }
 ```
 
@@ -471,6 +473,12 @@ PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 
 It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
 
+LEDGER_DIGEST_STORAGE_ENDPOINT = { &lt;endpoint URL string&gt; | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Enables or disables uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account or a ledger in Azure Confidential Ledger. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
+
 ## <a name="Permissions"></a> Permissions
 
 Requires `ALTER ANY DATABASE SCOPED CONFIGURATION` on the database. This permission can be granted by a user with `CONTROL` permission on a database.
@@ -669,6 +677,31 @@ This example sets the resumable index paused duration to 60 minutes.
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
 SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
+```
+
+### M. Enable and disable uploading ledger digests
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+This example enables uploading ledger digests to an Azure storage account.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net'
+```
+
+This example enables uploading ledger digests to a ledger in Azure Confidential Ledger.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://myledger.confidential-ledger.azure.com'
+```
+
+This example disables uploading ledger digests.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = OFF
 ```
 
 ## Additional Resources

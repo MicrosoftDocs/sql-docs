@@ -30,15 +30,35 @@ The verification process and the integrity of the database depend on the integri
 ### Automatic generation and storage of database digests
 
 > [!NOTE]
-> Automatic generation and storage of database digests is currently available in Azure SQL Database, but not supported on SQL Server.
+> Automatic generation and storage of database digests in SQL Server only supports Azure Storage Account.
 
 Ledger integrates with the [immutable storage feature of Azure Blob Storage](/azure/storage/blobs/immutable-storage-overview) and [Azure Confidential Ledger](/azure/confidential-ledger/index). This integration provides secure storage services in Azure to help protect the database digests from potential tampering. This integration provides a simple and cost-effective way for users to automate digest management without having to worry about their availability and geographic replication.  Azure Confidential Ledger has a stronger integrity guarantee for customers who might be concerned about privileged administrators access to the digest. [This table](/azure/architecture/guide/technology-choices/multiparty-computing-service#confidential-ledger-and-azure-blob-storage) compares the immutable storage feature of Azure Blob Storage with Azure Confidential Ledger.  
 
-You can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md). When you configure automatic generation and storage, database digests are generated on a predefined interval of 30 seconds and uploaded to the selected storage service. If no transactions occur in the system in the 30-second interval, a database digest won't be generated and uploaded. This mechanism ensures that database digests are generated only when data has been updated in your database. When the endpoint is an Azure Blob Storage, the database server will create a new container, named **sqldbledgerdigests** and use a naming pattern like:
-ServerName/DatabaseName/CreationTime. The creation time is needed because a database with the same name can be dropped and recreated or restored, allowing for different “incarnations” of the database under the same name. See [Digest Management Considerations](ledger-digest-management.md)
+You can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md). When you configure automatic generation and storage, database digests are generated on a predefined interval of 30 seconds and uploaded to the selected storage service. If no transactions occur in the system in the 30-second interval, a database digest won't be generated and uploaded. This mechanism ensures that database digests are generated only when data has been updated in your database. When the endpoint is an Azure Blob Storage, the Azure SQL database server will create a new container, named **sqldbledgerdigests** and use a naming pattern like:
+ServerName/DatabaseName/CreationTime. The creation time is needed because a database with the same name can be dropped and recreated or restored, allowing for different “incarnations” of the database under the same name. See [Digest Management Considerations](ledger-digest-management.md). 
 
-> [!IMPORTANT]
-> If you use Azure Blob Storage, configure an [immutability policy](/azure/storage/blobs/immutable-policy-configure-version-scope) on your container after provisioning to ensure that database digests are protected from tampering.
+> [!NOTE]
+> For SQL Server, the container needs to be created manually by the user.
+
+#### Azure Storage Account Permission
+
+If you use an Azure Storage Account, configure an [immutability policy](/azure/storage/blobs/immutable-policy-configure-version-scope) on your container after provisioning, to ensure that database digests are protected from tampering. Make sure the immutability policy allows protected append writes to append blobs and that the policy is locked. Secondly, make sure that your logical SQL Server in Azure SQL Database has sufficient RBAC permissions to write digests by adding it to the Storage Blob Data Contributor role.
+
+If you use SQL Server, you have to create a SAS key on the digest container to allow SQL Server to connect and authenticate against the Azure Storage Account.
+
+- Create a container on the Azure Storage Account, named **sqldbledgerdigests**
+- Create a policy on a container with the Read, Add, Create, Write, and List permissions and generate a shared access signature (SAS) key.
+- For each container used for digest file storage, create a SQL Server credential whose name matches the container path.
+
+The following example assumes that an Azure storage container, a policy and a SAS key have been created. This is needed by SQL Server to access the digest files in the container.
+
+In the following code snippet, replace `'<your SAS key>'` with the SAS key. The SAS key will look like `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`.
+
+```sql
+CREATE CREDENTIAL [https://ledgerstorage.blob.core.windows.net/sqldbledgerdigests]  
+WITH IDENTITY='SHARED ACCESS SIGNATURE',  
+SECRET = '<your SAS key>'   
+```  
 
 ### Manual generation and storage of database digests
 

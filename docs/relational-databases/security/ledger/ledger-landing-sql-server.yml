@@ -51,6 +51,8 @@ landingContent:
             url: ledger-digest-management.md
           - text: Database verification
             url: ledger-database-verification.md
+          - text: Monitor digest uploads
+            url: ledger-monitor-digest-uploads.md
 
 
   # Card 

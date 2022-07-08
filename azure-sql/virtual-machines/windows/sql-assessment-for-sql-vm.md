@@ -84,7 +84,7 @@ Assessments run:
 
 ### Run scheduled assessment
 
-You can configuren assessment on a schedule using the Azure portal and the Azure CLI. 
+You can configure assessment on a schedule using the Azure portal and the Azure CLI. 
 
 # [Azure portal](#tab/azure-portal)
 

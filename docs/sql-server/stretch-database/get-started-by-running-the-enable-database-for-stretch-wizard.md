@@ -90,8 +90,8 @@ If you want to provide a filter function to select rows to migrate, do the follo
 
 1. Select **Check** to test the function. If the function returns results from the table - that is, if there are rows to migrate that satisfy the condition - the test reports **Success**.
 
-> [!NOTE]
-> The textbox that displays the filter query is read-only. You can't edit the query in the textbox.
+   > [!NOTE]
+   > The textbox that displays the filter query is read-only. You can't edit the query in the textbox.
 
 1. Select Done to return to the **Select tables** page.
 

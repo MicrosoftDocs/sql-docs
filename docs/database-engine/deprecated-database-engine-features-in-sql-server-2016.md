@@ -26,7 +26,8 @@ When a feature is marked deprecated, it means:
 
 - The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
 - We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
-- For new development work, do not use deprecated features. For existing aplications, plan to modify applications that currently use these features as soon as possible.
+- For new development work, do not use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.
+
 
 For [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], see [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
 

@@ -1,6 +1,6 @@
 ---
-title: "Backup Stretch-enabled databases"
-description: "Backup Stretch-enabled databases (Stretch Database)"
+title: Backup Stretch-enabled databases
+description: Back up Stretch-enabled databases (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

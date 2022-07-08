@@ -1,6 +1,6 @@
 ---
-title: "Configure compatible SQL Server features"
-description: "Configure compatible SQL Server features with Stretch Database"
+title: Configure compatible SQL Server features
+description: Configure compatible SQL Server features with Stretch Database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

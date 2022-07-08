@@ -1,6 +1,6 @@
 ---
-title: "Get started by running the Enable Database for Stretch Wizard"
-description: "Get started by running the Enable Database for Stretch Wizard"
+title: Get started by running the Enable Database for Stretch Wizard
+description: Get started by running the Enable Database for Stretch Wizard
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -31,7 +31,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This article describes the info that you have to enter and the choices that you have to make in the wizard.
+To configure a database for Stretch Database, run the Enable Database for Stretch Wizard. This article describes the info that you have to enter and the choices that you have to make in the wizard.
 
 To learn more about Stretch Database, see [Stretch Database](stretch-database.md).
 
@@ -42,9 +42,9 @@ To learn more about Stretch Database, see [Stretch Database](stretch-database.md
 
 1. In SQL Server Management Studio, in Object Explorer, select the database on which you want to enable Stretch.
 
-1. Right-click and select **Tasks**, then select **Stretch**, and then select **Enable** to launch the wizard.
+1. Right-click and select **Tasks > Stretch > Enable** to launch the wizard.
 
-## <a id="Intro"></a> Introduction
+## Introduction
 
 Review the purpose of the wizard and the prerequisites.
 
@@ -56,7 +56,7 @@ The important prerequisites include the following.
 
 :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-introduction.png" alt-text="Screenshot showing the Introduction page of Stretch Database wizard.":::
 
-## <a id="Tables"></a> Select tables
+## Select tables
 
 Select the tables that you want to enable for Stretch.
 
@@ -80,7 +80,7 @@ If you want to provide a filter function to select rows to migrate, do the follo
 
 1. In the **Select the tables you want to stretch** list, select **Entire Table** in the row for the table. The **Select rows to stretch** dialog box opens.
 
-     :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-define-date-predicate.png" alt-text="Screenshot showing how to define a date-based filter predicate.":::
+   :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-define-date-predicate.png" alt-text="Screenshot showing how to define a date-based filter predicate.":::
 
 1. In the **Select rows to stretch** dialog box, select **Choose Rows**.
 
@@ -105,7 +105,7 @@ If you want to use a different type of filter function to select rows to migrate
 
 - Run the ALTER TABLE statement to specify a filter function after you exit the wizard. For the required steps, see [Add a filter function after running the Wizard](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).
 
-## <a id="Configure"></a> Configure Azure
+## Configure Azure
 
 1. Sign in to Microsoft Azure with a Microsoft account.
 
@@ -148,7 +148,7 @@ If you want to use a different type of filter function to select rows to migrate
 
         :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-select-existing-server.png" alt-text="Screenshot showing how to select existing Azure server - Stretch Database wizard.":::
 
-## <a id="Credentials"></a> Secure credentials
+## Secure credentials
 
 You have to have a database master key to secure the credentials that Stretch Database uses to connect to the remote database.
 
@@ -162,7 +162,7 @@ If the database doesn't have an existing master key, enter a strong password to 
 
 For more info about the database master key, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) and [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md). For more info about the credential that the wizard creates,  see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-## <a id="Network"></a> Select IP address
+## Select IP address
 
 Use the subnet IP address range (recommended), or the public IP address of your SQL Server, to create a firewall rule on Azure that lets SQL Server communicate with the remote Azure server.
 
@@ -174,7 +174,7 @@ The IP address or addresses that you provide on this page tell the Azure server 
 
 Review the values that you entered and the options that you selected in the wizard and the estimated costs on Azure. Then select **Finish** to enable Stretch.
 
-:::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-summary.png" alt-text="Screenshot of the Summary page of the Stretch Database wizard.":::
+:::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-summary.png" alt-text="Screenshot showing the Summary page of the Stretch Database wizard.":::
 
 ## Results
 
@@ -184,10 +184,10 @@ To monitor the status of data migration, see [Monitor and troubleshoot data migr
 
 :::image type="content" source="media/get-started-by-running-the-enable-database-for-stretch-wizard/stretch-wizard-results.png" alt-text="Screenshot showing the Results page of the Stretch Database wizard.":::
 
-## <a id="KnownIssues"></a> Troubleshooting the wizard
+## Troubleshoot the wizard
 
 **The Stretch Database wizard failed.**
-If Stretch Database isn't yet enabled at the server level, and you run the wizard without the system administrator permissions to enable it, the wizard fails. Ask the  system administrator to enable Stretch Database on the local server instance, and then run the wizard again. For more info, see [Prerequisite: Permission to enable Stretch Database on the server](enable-stretch-database-for-a-database.md#EnableTSQLServer).
+If Stretch Database isn't yet enabled at the server level, and you run the wizard without the system administrator permissions to enable it, the wizard fails. Ask the system administrator to enable Stretch Database on the local server instance, and then run the wizard again. For more info, see [Prerequisite: Permission to enable Stretch Database on the server](enable-stretch-database-for-a-database.md#EnableTSQLServer).
 
 ## Next steps
 

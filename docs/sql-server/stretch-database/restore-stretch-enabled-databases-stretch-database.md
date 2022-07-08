@@ -1,6 +1,6 @@
 ---
-title: "Restore Stretch-enabled databases"
-description: "Restore Stretch-enabled databases (Stretch Database)"
+title: Restore Stretch-enabled databases
+description: Restore Stretch-enabled databases (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -26,7 +26,7 @@ Backing up is only one part of a complete high availability and business continu
 
 To recover from hardware failure or corruption, restore the Stretch-enabled SQL Server database from a backup. You can continue to use the SQL Server restore methods that you currently use. For more info, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-After you restore the SQL Server database, you have to run the stored procedure **sys.sp_rda_reauthorize_db** to re-establish the connection between the Stretch-enabled SQL Server database and the remote Azure database. For more info, see [Restore the connection between the SQL Server database and the remote Azure database](#reconnect).
+After you restore the SQL Server database, you have to run the stored procedure `sys.sp_rda_reauthorize_db` to re-establish the connection between the Stretch-enabled SQL Server database and the remote Azure database. For more info, see [Restore the connection between the SQL Server database and the remote Azure database](#reconnect).
 
 ## Restore your remote Azure data
 
@@ -37,11 +37,11 @@ The SQL Server Stretch Database service on Azure snapshots all live data at leas
 To restore a live Azure database to an earlier point in time by using the Azure portal, do the following things.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. On the left side of the screen select **BROWSE** and then select **SQL Databases**.
+1. On the left side of the screen select **Browse** and then select **SQL Databases**.
 1. Navigate to your database and select it.
-1. At the top of the database screen, select **Restore**.
+1. At the top of the database pane, select **Restore**.
 1. Specify a new **Database name**, select a **Restore Point** and then select **Create**.
-1. The database restore process will begin and can be monitored using **NOTIFICATIONS**.
+1. The database restore process will begin and can be monitored using **Notifications**.
 
 ### Recover a deleted Azure database
 
@@ -50,12 +50,12 @@ The SQL Server Stretch Database service on Azure takes a database snapshot befor
 To restore a deleted Azure database to the point when it was deleted by using the Azure portal, do the following things.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. On the left side of the screen select **BROWSE** and then select **SQL Servers**.
+1. On the left side of the screen select **Browse** and then select **SQL Servers**.
 1. Navigate to your server and select it.
-1. Scroll down to Operations, and select the **Deleted Databases** tile.
+1. Scroll down to Operations on your server's pane, and select the **Deleted Databases** tile.
 1. Select the deleted database you want to restore.
 1. Specify a new **Database name** and select **Create**.
-1. The database restore process will begin and can be monitored using **NOTIFICATIONS**.
+1. The database restore process will begin and can be monitored using **Notifications**.
 
 ## <a id="reconnect"></a>Restore the connection between the SQL Server database and the remote Azure database
 
@@ -63,18 +63,18 @@ To restore a deleted Azure database to the point when it was deleted by using th
 
 1. Run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect the local Stretch-enabled database to the Azure database.
 
-   - Provide the existing database scoped credential as a sysname or a varchar(128) value. (Don't use varchar(max).) You can look up the credential name in the view **sys.database_scoped_credentials**.
+   - Provide the existing database scoped credential as a **sysname** or a **varchar(128)** value. (Don't use **varchar(max)**.) You can look up the credential name in the view `sys.database_scoped_credentials`.
 
    - Specify whether to make a copy of the remote data and connect to the copy (recommended).
 
-   ```sql
-   USE <Stretch-enabled database name>;
-   GO
-   EXEC sp_rda_reauthorize_db
-       @credential = N'<existing_database_scoped_credential_name>',
-       @with_copy = 1 ;
-   GO
-   ```
+     ```sql
+     USE <Stretch-enabled database name>;
+     GO
+     EXEC sp_rda_reauthorize_db
+         @credential = N'<existing_database_scoped_credential_name>',
+         @with_copy = 1;
+     GO
+     ```
 
 ## See also
 

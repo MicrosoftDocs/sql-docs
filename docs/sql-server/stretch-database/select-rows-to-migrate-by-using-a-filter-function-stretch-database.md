@@ -1,6 +1,6 @@
 ---
-title: "Select rows to migrate by using a filter function"
-description: "Select rows to migrate by using a filter function (Stretch Database)"
+title: Select rows to migrate by using a filter function
+description: Select rows to migrate by using a filter function (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This article describes how to write an inline table-valued function to select rows to migrate.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If you provide a filter function that performs poorly, data migration also performs poorly. Stretch Database applies the filter function to the table by using the CROSS APPLY operator.
 
 If you don't specify a filter function, the entire table is migrated.
@@ -45,8 +45,8 @@ CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 /
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE someCol = @column1 /* replace with an actual predicate */
+RETURN SELECT 1 AS is_eligible
+       WHERE someCol = @column1 /* replace with an actual predicate */
 ```
 
 The parameters for the function have to be identifiers for columns from the table.
@@ -59,7 +59,7 @@ If the function returns a non-empty result, the row is eligible to be migrated. 
 
 ### Conditions
 
-The &lt;*predicate*&gt; can consist of one condition, or of multiple conditions joined with the AND logical operator.
+The *\<predicate>* can consist of one condition, or of multiple conditions joined with the AND logical operator.
 
 ```syntaxsql
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]
@@ -82,50 +82,47 @@ A primitive condition can do one of the following comparisons.
 | <function_parameter> { IS NULL | IS NOT NULL }
 | <function_parameter> IN ( constant [ ,...n ] )
 }
-
 ```
 
 - Compare a function parameter to a constant expression. For example, `@column1 < 1000`.
 
-     Here's an example that checks whether the value of a *date* column is less than January 1st, 2016.
+  The following example checks whether the value of a *date* column is less than January 1st, 2016.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+    RETURN SELECT 1 AS is_eligible
+           WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
     GO
 
     ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
         FILTER_PREDICATE = dbo.fn_stretchpredicate(date),
         MIGRATION_STATE = OUTBOUND
-    ) )
-
+    ) );
     ```
 
 - Apply the IS NULL or IS NOT NULL operator to a function parameter.
 
 - Use the IN operator to compare a function parameter to a list of constant values.
 
-     Here's an example that checks whether the value of a *shipment_status*  column is `IN (N'Completed', N'Returned', N'Cancelled')`.
+  The following example checks whether the value of a *shipment_status*  column is `IN (N'Completed', N'Returned', N'Cancelled')`.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 IN (N'Completed', N'Returned', N'Cancelled')
-    GO
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 IN (N'Completed', N'Returned', N'Cancelled')
+  GO
 
-    ALTER TABLE table1 SET ( REMOTE_DATA_ARCHIVE = ON (
-        FILTER_PREDICATE = dbo.fn_stretchpredicate(shipment_status),
-        MIGRATION_STATE = OUTBOUND
-    ) )
-
-    ```
+  ALTER TABLE table1 SET ( REMOTE_DATA_ARCHIVE = ON (
+      FILTER_PREDICATE = dbo.fn_stretchpredicate(shipment_status),
+      MIGRATION_STATE = OUTBOUND
+  ) );
+  ```
 
 ### Comparison operators
 
@@ -163,7 +160,7 @@ Add a filter function to a table by running the **ALTER TABLE** statement and sp
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),
     MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
-) )
+) );
 ```
 
 After you bind the function to the table as a predicate, the following things are true.
@@ -174,8 +171,7 @@ After you bind the function to the table as a predicate, the following things ar
 
 You can't drop the inline table-valued function as long as a table is using the function as its filter predicate.
 
-> [!TIP]
-> To improve the performance of the filter function, create an index on the columns used by the function.
+To improve the performance of the filter function, create an index on the columns used by the function.
 
 ### Passing column names to the filter function
 
@@ -195,38 +191,38 @@ Instead, specify the filter function with a one-part column name as shown in the
 
 ```sql
 ALTER TABLE SensorTelemetry
-  SET ( REMOTE_DATA_ARCHIVE = ON  (
+  SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(ScanDate),
     MIGRATION_STATE = OUTBOUND )
   )
 ```
 
-## <a id="addafterwiz"></a>Add a filter function after running the Wizard
+## <a id="addafterwiz"></a> Add a filter function after running the Wizard
 
 If you want to use a function that you can't create in the **Enable Database for Stretch** Wizard, you can run the **ALTER TABLE** statement to specify a function after you exit the wizard. Before you can apply a function, however, you have to stop the data migration that's already in progress and bring back migrated data. (For more info about why this is necessary, see [Replace an existing filter function](#replacePredicate).)
 
 1. Reverse the direction of migration and bring back the data already migrated. You can't cancel this operation after it starts. You also incur costs on Azure for outbound data transfers (egress). For more info, see [How Azure pricing works](https://azure.microsoft.com/pricing/details/data-transfers/).
 
-    ```sql
-    ALTER TABLE [<table name>]
-        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
-    ```
+   ```sql
+   ALTER TABLE [<table name>]
+       SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) );
+   ```
 
-2. Wait for migration to finish. You can check the status in **Stretch Database Monitor** from SQL Server Management Studio, or you can query the **sys.dm_db_rda_migration_status** view. For more info, see [Monitor and troubleshoot data migration](monitor-and-troubleshoot-data-migration-stretch-database.md) or [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).
+2. Wait for migration to finish. You can check the status in **Stretch Database Monitor** from SQL Server Management Studio, or you can query the `sys.dm_db_rda_migration_status` view. For more info, see [Monitor and troubleshoot data migration](monitor-and-troubleshoot-data-migration-stretch-database.md) or [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).
 
 3. Create the filter function that you want to apply to the table.
 
 4. Add the function to the table and restart data migration to Azure.
 
-    ```sql
-    ALTER TABLE [<table name>]
-        SET ( REMOTE_DATA_ARCHIVE
-            (
-                FILTER_PREDICATE = dbo.predicateFunction(col1) /* replace predicateFunction and col1 with the actual function call */
-                ,MIGRATION_STATE = OUTBOUND
-            )
-            );
-    ```
+   ```sql
+   ALTER TABLE [<table name>]
+       SET ( REMOTE_DATA_ARCHIVE
+           (
+               FILTER_PREDICATE = dbo.predicateFunction(col1) /* replace predicateFunction and col1 with the actual function call */
+               , MIGRATION_STATE = OUTBOUND
+           )
+           );
+   ```
 
 ## Filter rows by date
 
@@ -239,9 +235,9 @@ CREATE FUNCTION dbo.fn_stretch_by_date(@date datetime2)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-       RETURN SELECT 1 AS is_eligible WHERE @date < CONVERT(datetime2, '1/1/2016', 101)
+   RETURN SELECT 1 AS is_eligible
+          WHERE @date < CONVERT(datetime2, '1/1/2016', 101)
 GO
-
 ```
 
 ## Filter rows by the value in a status column
@@ -255,9 +251,9 @@ CREATE FUNCTION dbo.fn_stretch_by_status(@status nvarchar(128))
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-       RETURN SELECT 1 AS is_eligible WHERE @status IN (N'Completed', N'Returned', N'Cancelled')
+   RETURN SELECT 1 AS is_eligible
+          WHERE @status IN (N'Completed', N'Returned', N'Cancelled')
 GO
-
 ```
 
 ## Filter rows by using a sliding window
@@ -276,8 +272,7 @@ RETURNS TABLE
 WITH SCHEMABINDING
 AS
 RETURN SELECT 1 AS is_eligible
-  WHERE @systemEndTime < CONVERT(datetime2, '2016-01-01T00:00:00', 101) ;
-
+       WHERE @systemEndTime < CONVERT(datetime2, '2016-01-01T00:00:00', 101);
 ```
 
 Apply the filter function to the table.
@@ -285,208 +280,197 @@ Apply the filter function to the table.
 ```sql
 ALTER TABLE [<table name>]
 SET (
-        REMOTE_DATA_ARCHIVE = ON
-                (
-                        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(ValidTo)
-                                , MIGRATION_STATE = OUTBOUND
-                )
+    REMOTE_DATA_ARCHIVE = ON
+        (
+            FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(ValidTo)
+                , MIGRATION_STATE = OUTBOUND
         )
+    )
 ;
 ```
 
 When you want to update the sliding window, do the following things.
 
-1.  Create a new function that specifies the new sliding window. The following example selects dates earlier than January 2, 2016, instead of January 1, 2016.
+1. Create a new function that specifies the new sliding window. The following example selects dates earlier than January 2, 2016, instead of January 1, 2016.
 
-2.  Replace the previous filter function with the new one by calling **ALTER TABLE**, as shown in the following example.
+1. Replace the previous filter function with the new one by calling **ALTER TABLE**, as shown in the following example.
 
-3.  Optionally, drop the previous filter function that you're no longer using by calling **DROP FUNCTION**. (This step isn't shown in the example.)
+1. Optionally, drop the previous filter function that you're no longer using by calling **DROP FUNCTION**. (This step isn't shown in the example.)
 
 ```sql
 BEGIN TRAN
 GO
-        /*(1) Create new predicate function definition */
-        CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160102(@systemEndTime datetime2)
-        RETURNS TABLE
-        WITH SCHEMABINDING
-        AS
-        RETURN SELECT 1 AS is_eligible
-               WHERE @systemEndTime < CONVERT(datetime2,'2016-01-02T00:00:00', 101)
-        GO
+/*(1) Create new predicate function definition */
+CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160102(@systemEndTime datetime2)
+RETURNS TABLE
+WITH SCHEMABINDING
+AS
+RETURN SELECT 1 AS is_eligible
+       WHERE @systemEndTime < CONVERT(datetime2,'2016-01-02T00:00:00', 101)
+GO
 
-        /*(2) Set the new function as the filter predicate */
-        ALTER TABLE [<table name>]
-        SET
-        (
-               REMOTE_DATA_ARCHIVE = ON
-               (
-                       FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160102(ValidTo),
-                       MIGRATION_STATE = OUTBOUND
-               )
-        )
-COMMIT ;
+/*(2) Set the new function as the filter predicate */
+ALTER TABLE [<table name>]
+SET
+(
+    REMOTE_DATA_ARCHIVE = ON
+    (
+        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160102(ValidTo),
+        MIGRATION_STATE = OUTBOUND
+    )
+)
+COMMIT;
 ```
 
 ## More examples of valid filter functions
 
 - The following example combines two primitive conditions by using the AND logical operator.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-      WHERE @column1 < N'20150101' AND @column2 IN (N'Completed', N'Returned', N'Cancelled')
-    GO
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 < N'20150101' AND @column2 IN (N'Completed', N'Returned', N'Cancelled');
+  GO
 
-    ALTER TABLE table1 SET ( REMOTE_DATA_ARCHIVE = ON (
-        FILTER_PREDICATE = dbo.fn_stretchpredicate(date, shipment_status),
-        MIGRATION_STATE = OUTBOUND
-    ) )
-
-    ```
+  ALTER TABLE table1 SET ( REMOTE_DATA_ARCHIVE = ON (
+      FILTER_PREDICATE = dbo.fn_stretchpredicate(date, shipment_status),
+      MIGRATION_STATE = OUTBOUND
+  ) )
+  ```
 
 - The following example uses several conditions and a deterministic conversion with CONVERT.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 < -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled')
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 < -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled');
+  GO
+  ```
 
 - The following example uses mathematical operators and functions.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 < SQRT(400) + 10
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 < SQRT(400) + 10;
+  GO
+  ```
 
 - The following example uses the BETWEEN and NOT BETWEEN operators. This usage is valid because the resulting function conforms to the rules described here after you replace the BETWEEN and NOT BETWEEN operators with the equivalent AND and OR expressions.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 BETWEEN 0 AND 100
-                AND (@column2 NOT BETWEEN 200 AND 300 OR @column1 = 50)
-    GO
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 BETWEEN 0 AND 100
+             AND (@column2 NOT BETWEEN 200 AND 300 OR @column1 = 50);
+  GO
+  ```
 
-    ```
+  The preceding function is equivalent to the following function after you replace the BETWEEN and NOT BETWEEN operators with the equivalent AND and OR expressions.
 
-     The preceding function is equivalent to the following function after you replace the BETWEEN and NOT BETWEEN operators with the equivalent AND and OR expressions.
-
-    ```sql
-    CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 < 200 OR @column2 > 300 OR @column1 = 50)
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 < 200 OR @column2 > 300 OR @column1 = 50);
+  GO
+  ```
 
 ## Examples of filter functions that aren't valid
 
 - The following function isn't valid because it contains a non-deterministic conversion.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_example5(@column1 datetime)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 < CONVERT(datetime, '1/1/2016')
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_example5(@column1 datetime)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 < CONVERT(datetime, '1/1/2016');
+  GO
+  ```
 
 - The following function isn't valid because it contains a non-deterministic function call.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_example6(@column1 datetime)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 < DATEADD(day, -60, GETDATE())
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_example6(@column1 datetime)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 < DATEADD(day, -60, GETDATE());
+  GO
+  ```
 
 - The following function isn't valid because it contains a subquery.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_example7(@column1 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 IN (SELECT SupplierID FROM Supplier WHERE Status = 'Defunct')
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_example7(@column1 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 IN (SELECT SupplierID FROM Supplier WHERE Status = 'Defunct');
+  GO
+  ```
 
 - The following functions aren't valid because expressions that use algebraic operators or built-in functions must evaluate to a constant when you define the function. You can't include column references in algebraic expressions or function calls.
 
-    ```sql
-    CREATE FUNCTION dbo.fn_example8(@column1 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE @column1 % 2 =  0
-    GO
+  ```sql
+  CREATE FUNCTION dbo.fn_example8(@column1 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE @column1 % 2 = 0;
+  GO
 
-    CREATE FUNCTION dbo.fn_example9(@column1 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE SQRT(@column1) = 30
-    GO
+  CREATE FUNCTION dbo.fn_example9(@column1 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE SQRT(@column1) = 30;
+  GO
+  ```
 
-    ```
+- The following function isn't valid because it violates the rules described here after you replace the BETWEEN operator with the equivalent AND expression.
 
-- The following function isn't valid because it violates the rules described here  after you replace the BETWEEN operator with the equivalent AND expression.
+  ```sql
+  CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE (@column1 BETWEEN 1 AND 200 OR @column1 = 300) AND @column2 > 1000;
+  GO
+  ```
 
-    ```sql
-    CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE (@column1 BETWEEN 1 AND 200 OR @column1 = 300) AND @column2 > 1000
-    GO
+  The preceding function is equivalent to the following function after you replace the BETWEEN operator with the equivalent AND expression. This function isn't valid because primitive conditions can only use the OR logical operator.
 
-    ```
-
-     The preceding function is equivalent to the following function after you replace the BETWEEN operator with the equivalent AND expression. This function isn't valid because primitive conditions can only use the OR logical operator.
-
-    ```sql
-    CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)
-    RETURNS TABLE
-    WITH SCHEMABINDING
-    AS
-    RETURN  SELECT 1 AS is_eligible
-            WHERE (@column1 >= 1 AND @column1 <= 200 OR @column1 = 300) AND @column2 > 1000
-    GO
-
-    ```
+  ```sql
+  CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+  AS
+  RETURN SELECT 1 AS is_eligible
+         WHERE (@column1 >= 1 AND @column1 <= 200 OR @column1 = 300) AND @column2 > 1000;
+  GO
+  ```
 
 ## How Stretch Database applies the filter function
 
@@ -498,7 +482,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 
 If the function returns a non-empty result for the row, the row is eligible to be migrated.
 
-## <a id="replacePredicate"></a>Replace an existing filter function
+## <a id="replacePredicate"></a> Replace an existing filter function
 
 You can replace a previously specified filter function by running the **ALTER TABLE** statement again and specifying a new value for the **FILTER_PREDICATE** parameter. For example:
 
@@ -506,7 +490,7 @@ You can replace a previously specified filter function by running the **ALTER TA
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),
     MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
-    ) )
+    ) );
 ```
 
 The new inline table-valued function has the following requirements.
@@ -530,11 +514,10 @@ CREATE FUNCTION dbo.fn_stretchpredicate_old(@column1 datetime, @column2 int)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
-            AND (@column2 < -100 OR @column2 > 100)
+RETURN SELECT 1 AS is_eligible
+       WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
+           AND (@column2 < -100 OR @column2 > 100);
 GO
-
 ```
 
 The following function is a valid replacement because the new date constant (which specifies a later cutoff date) makes the function less restrictive.
@@ -544,11 +527,10 @@ CREATE FUNCTION dbo.fn_stretchpredicate_new(@column1 datetime, @column2 int)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '2/1/2016', 101)
-            AND (@column2 < -50 OR @column2 > 50)
+RETURN SELECT 1 AS is_eligible
+       WHERE @column1 < CONVERT(datetime, '2/1/2016', 101)
+           AND (@column2 < -50 OR @column2 > 50);
 GO
-
 ```
 
 ### Examples of replacements that aren't valid
@@ -560,11 +542,10 @@ CREATE FUNCTION dbo.fn_notvalidreplacement_1(@column1 datetime, @column2 int)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101)
-            AND (@column2 < -100 OR @column2 > 100)
+RETURN SELECT 1 AS is_eligible
+       WHERE @column1 < CONVERT(datetime, '1/1/2015', 101)
+           AND (@column2 < -100 OR @column2 > 100);
 GO
-
 ```
 
 The following function isn't a valid replacement because one of the comparison operators has been removed.
@@ -574,11 +555,10 @@ CREATE FUNCTION dbo.fn_notvalidreplacement_2(@column1 datetime, @column2 int)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
-            AND (@column2 < -50)
+RETURN SELECT 1 AS is_eligible
+       WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
+           AND (@column2 < -50);
 GO
-
 ```
 
 The following function isn't a valid replacement because a new condition has been added with the AND logical operator.
@@ -588,12 +568,11 @@ CREATE FUNCTION dbo.fn_notvalidreplacement_3(@column1 datetime, @column2 int)
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
-RETURN  SELECT 1 AS is_eligible
-        WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
-            AND (@column2 < -100 OR @column2 > 100)
-            AND (@column2 <> 0)
+RETURN SELECT 1 AS is_eligible
+       WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)
+           AND (@column2 < -100 OR @column2 > 100)
+           AND (@column2 <> 0);
 GO
-
 ```
 
 ## Remove a filter function from a table
@@ -604,8 +583,7 @@ To migrate the entire table instead of selected rows, remove the existing functi
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE = NULL,
     MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
-) )
-
+) );
 ```
 
 After you remove the filter function, all rows in the table are eligible for migration. As a result, you can't specify a filter function for the same table later unless you bring back all the remote data for the table from Azure first. This restriction exists to avoid the situation where rows that aren't eligible for migration when you provide a new filter function have already been migrated to Azure.

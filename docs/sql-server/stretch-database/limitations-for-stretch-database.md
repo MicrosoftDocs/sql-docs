@@ -1,6 +1,6 @@
 ---
-title: "Limitations for Stretch Database"
-description: "Limitations for Stretch Database"
+title: Limitations for Stretch Database
+description: Limitations for Stretch Database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 Learn about limitations for Stretch-enabled tables, and about limitations that currently prevent you from enabling Stretch for a table.
 
-## <a id="Caveats"></a> Limitations for Stretch-enabled tables
+## Limitations for Stretch-enabled tables
 
 Stretch-enabled tables have the following limitations.
 
@@ -43,7 +43,7 @@ Stretch-enabled tables have the following limitations.
 
 - Filters on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes aren't propagated to the remote table.
 
-## <a id="Limitations"></a> Limitations that currently prevent you from enabling Stretch for a table
+## Limitations that currently prevent you from enabling Stretch for a table
 
 The following items currently prevent you from enabling Stretch for a table.
 
@@ -59,15 +59,11 @@ The following items currently prevent you from enabling Stretch for a table.
 
 ### Data types
 
-- text, ntext and image
-
-- timestamp
-
-- sql_variant
-
-- XML
-
-- CLR data types including geometry, geography, hierarchyid, and CLR user-defined types
+- **text**, **ntext** and **image**
+- **timestamp**
+- **sql_variant**
+- **xml**
+- CLR data types including **geometry**, **geography**, **hierarchyid**, and CLR user-defined types
 
 ### Column types
 

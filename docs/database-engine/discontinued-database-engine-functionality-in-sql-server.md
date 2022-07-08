@@ -46,7 +46,7 @@ This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features tha
 
 ## Discontinued features in [!INCLUDE[sssql22](../includes/sssql22-md.md)]
 
-- The following Machine Learning Services packages are no longer included with installation of SQL Server 2022. Instead, you can installed any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
+- The following Machine Learning Services packages are no longer included with installation of SQL Server 2022. Instead, you can install any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
 
     | **Language** | **Package** |
     | :-- | :-- |

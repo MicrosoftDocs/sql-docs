@@ -29,7 +29,7 @@ You can also use Transact-SQL to disable Stretch Database for a table or for a d
 
 After you disable Stretch Database for a table, data migration stops and query results no longer include results from the remote table.
 
-If you simply want to pause data migration, see [Pause and resume data migration &#40;Stretch Database&#41;](pause-and-resume-data-migration-stretch-database.md).
+If you want to pause data migration, see [Pause and resume data migration &#40;Stretch Database&#41;](pause-and-resume-data-migration-stretch-database.md).
 
 > [!NOTE]
 > Disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).

@@ -16254,6 +16254,10 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_PERCENTILE_CONT
+          href: t-sql/functions/approx-percentile-cont-transact-sql.md
+        - name: APPROX_PERCENTILE_DISC
+          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG

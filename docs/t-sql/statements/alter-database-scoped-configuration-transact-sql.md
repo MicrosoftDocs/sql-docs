@@ -440,7 +440,7 @@ Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors 
 |**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
 |**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
-|**9000**| Preview compatibility level. Some preview features may be gated under this level (called out in feature-specific documentation). This level also includes abilities of highest non-9000 level.|
+|**9000**| Preview compatibility level. Preview features gated under this level are called out in feature-specific documentation. This level also includes abilities of highest non-9000 level.|
 
 EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF }
 

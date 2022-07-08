@@ -1,6 +1,6 @@
 ---
-title: "Identify databases and tables"
-description: "Identify databases and tables for Stretch Database with Data Migration Assistant"
+title: Identify databases and tables
+description: Identify databases and tables for Stretch Database with Data Migration Assistant
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -50,6 +50,9 @@ Download and install Data Migration Assistant from [here](https://www.microsoft.
 1. Review the recommendations related to Stretch Database. Each recommendation lists the tables for which Stretch Database may be appropriate, along with any potential blocking issues.
 
 ## Historical note
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 Stretch Database Advisor was previously a component of SQL Server 2016 Upgrade Advisor. At that time, you had to select and run Stretch Database Advisor as a separate action.
 

@@ -1,6 +1,6 @@
 ---
-title: "Extended Events for Stretch Database"
-description: "Extended Events for Stretch Database"
+title: Extended Events for Stretch Database
+description: Extended Events for Stretch Database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

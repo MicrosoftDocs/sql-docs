@@ -28,7 +28,7 @@ Stretch Database provides the following benefits:
 
 - **Cost-effective availability for cold data.** Stretch warm and cold transactional data dynamically from SQL Server to Microsoft Azure with SQL Server Stretch Database. Unlike typical cold data storage, your data is always online and available to query. You can provide longer data retention timelines without breaking the bank for large tables like Customer Order History. Benefit from the low cost of Azure rather than scaling expensive, on-premises storage. You choose the pricing tier and configure settings in the Azure portal to maintain control over price and costs. Scale up or down as needed. Visit [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) for details.
 
-- **Doesn't require changes to queries or applications.** Access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud.  You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications - the location of the data is transparent to the application.
+- **Doesn't require changes to queries or applications.** Access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications - the location of the data is transparent to the application.
 
 - **Streamlines on-premises data maintenance.** Reduce on-premises maintenance and storage for your data. Backups for your on-premises data run faster and finish within the maintenance window. Backups for the cloud portion of your data run automatically. Your on-premises storage needs are greatly reduced. Azure storage can be 80% less expensive than adding to on-premises SSD.
 
@@ -48,7 +48,7 @@ After you enable Stretch Database for a SQL Server instance and a database, and 
 
 **You can pause data migration** to troubleshoot problems on the local server or to maximize the available network bandwidth.
 
-:::image type="content" source="media/stretch-database/stretch-overview.png" alt-text="Diagram of the Stretch Database overview.":::
+:::image type="content" source="media/stretch-database/stretch-overview.png" alt-text="Diagram showing the Stretch Database overview.":::
 
 ## Is Stretch Database for you?
 

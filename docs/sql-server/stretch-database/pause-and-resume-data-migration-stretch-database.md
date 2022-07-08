@@ -1,6 +1,6 @@
 ---
-title: "Pause and resume data migration"
-description: "Pause and resume data migration (Stretch Database)"
+title: Pause and resume data migration
+description: Pause and resume data migration (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -26,13 +26,13 @@ Pause data migration on individual tables when you want to troubleshoot problems
 
 ## Pause data migration
 
-### Use SQL Server Management Studio to pause data migration
+### Use SQL Server Management Studio
 
 1. In SQL Server Management Studio, in Object Explorer, select the Stretch-enabled table for which you want to pause data migration.
 
-1. Right-click and select **Stretch**, and then select **Pause**.
+1. Right-click and select **Stretch > Pause**.
 
-### Use Transact-SQL to pause data migration
+### Use Transact-SQL
 
 Run the following command.
 
@@ -40,19 +40,19 @@ Run the following command.
 USE [<Stretch-enabled database name>];
 GO
 ALTER TABLE [<Stretch-enabled table name>]
-    SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = PAUSED ) ) ;
+    SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = PAUSED ) );
 GO
 ```
 
 ## Resume data migration
 
-### Use SQL Server Management Studio to resume data migration
+### Use SQL Server Management Studio
 
 1. In SQL Server Management Studio, in Object Explorer, select the Stretch-enabled table for which you want to resume data migration.
 
-1. Right-click and select **Stretch**, and then select **Resume**.
+1. Right-click and select **Stretch > Resume**.
 
-### Use Transact-SQL to resume data migration
+### Use Transact-SQL
 
 Run the following command.
 
@@ -60,19 +60,19 @@ Run the following command.
 USE [<Stretch-enabled database name>];
 GO
 ALTER TABLE [<Stretch-enabled table name>]
-    SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = OUTBOUND ) ) ;
+    SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = OUTBOUND ) );
 GO
 ```
 
 ## Check whether migration is active or paused
 
-### Use SQL Server Management Studio to check whether migration is active or paused
+### Use SQL Server Management Studio
 
 In SQL Server Management Studio, open **Stretch Database Monitor** and check the value of the **Migration State** column. For more info, see [Monitor and troubleshoot data migration](monitor-and-troubleshoot-data-migration-stretch-database.md).
 
-### Use Transact-SQL to check whether migration is active or paused
+### Use Transact-SQL
 
-Query the catalog view **sys.remote_data_archive_tables** and check the value of the **is_migration_paused** column. For more info, see [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).
+Query the catalog view `sys.remote_data_archive_tables` and check the value of the `is_migration_paused` column. For more info, see [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).
 
 ## See also
 

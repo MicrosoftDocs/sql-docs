@@ -1,6 +1,6 @@
 ---
-title: "Enable Stretch Database for a table"
-description: "Enable Stretch Database for a table"
+title: Enable Stretch Database for a table
+description: Enable Stretch Database for a table
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -19,7 +19,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To configure a table for  Stretch Database, select **Stretch | Enable** for a table in SQL Server Management Studio to open the **Enable Table for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database on an existing table, or to create a new table with Stretch Database enabled.
+To configure a table for Stretch Database, select **Stretch | Enable** for a table in SQL Server Management Studio to open the **Enable Table for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database on an existing table, or to create a new table with Stretch Database enabled.
 
 - If you store cold data in a separate table, you can migrate the entire table.
 
@@ -27,24 +27,24 @@ To configure a table for  Stretch Database, select **Stretch | Enable** for a ta
 
 **Prerequisites**. If you select **Stretch | Enable** for a table, and you haven't yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.
 
-**Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on  a table also requires ALTER permissions on the table.
+**Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on a table also requires ALTER permissions on the table.
 
 > [!NOTE]
 > Later, if you disable Stretch Database, remember that disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them manually.
 
-## <a id="EnableWizardTable"></a> Use the wizard to enable Stretch Database on a table
+## Use the wizard
 
-### Launch the wizard
+### 1. Launch the wizard
 
 1. In SQL Server Management Studio, in Object Explorer, select the table on which you want to enable Stretch.
 
-1. Right-click and select **Stretch**, and then select **Enable** to launch the wizard.
+1. Right-click and select **Stretch > Enable** to launch the wizard.
 
-### Introduction
+### 2. Introduction
 
 Review the purpose of the wizard and the prerequisites.
 
-### Select database tables
+### 3. Select database tables
 
 Confirm that the table you want to enable is displayed and selected.
 
@@ -56,15 +56,15 @@ You can migrate an entire table or you can specify a filter function in the wiza
 
 The ALTER TABLE syntax is described later in this article.
 
-### Summary
+### 4. Summary
 
 Review the values that you entered and the options that you selected in the wizard. Then select **Finish** to enable Stretch.
 
-### Results
+### 5. Results
 
 Review the results.
 
-## <a id="EnableTSQLTable"></a> Use Transact-SQL to enable Stretch Database on a table
+## Use Transact-SQL
 
 You can enable Stretch Database for an existing table or create a new table with Stretch Database enabled by using Transact-SQL.
 
@@ -77,23 +77,23 @@ Use the following options when you run CREATE TABLE or ALTER TABLE to enable Str
   > [!IMPORTANT]
   > If you provide a filter function that performs poorly, data migration also performs poorly. Stretch Database applies the filter function to the table by using the CROSS APPLY operator.
 
-- Specify `MIGRATION_STATE = OUTBOUND` to start data migration immediately or  `MIGRATION_STATE = PAUSED` to postpone the start of data migration.
+- Specify `MIGRATION_STATE = OUTBOUND` to start data migration immediately or `MIGRATION_STATE = PAUSED` to postpone the start of data migration.
 
 ### Enable Stretch Database for an existing table
 
 To configure an existing table for Stretch Database, run the ALTER TABLE command.
 
-Here's an example that migrates the entire table and begins data migration immediately.
+The following example migrates the entire table and begins data migration immediately.
 
 ```sql
 USE [<Stretch-enabled database name>];
 GO
 ALTER TABLE [<table name>]
-    SET ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) ) ;
+    SET ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) );
 GO
 ```
 
-Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+The following example migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
 ```sql
 USE [<Stretch-enabled database name>];
@@ -101,7 +101,7 @@ GO
 ALTER TABLE [<table name>]
     SET ( REMOTE_DATA_ARCHIVE = ON (
         FILTER_PREDICATE = dbo.fn_stretchpredicate(),
-        MIGRATION_STATE = PAUSED ) ) ;
+        MIGRATION_STATE = PAUSED ) );
 GO
 ```
 
@@ -111,7 +111,7 @@ For more info, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/a
 
 To create a new table with Stretch Database enabled, run the CREATE TABLE command.
 
-Here's an example that migrates the entire table and begins data migration immediately.
+The following example migrates the entire table and begins data migration immediately.
 
 ```sql
 USE [<Stretch-enabled database name>];
@@ -121,11 +121,11 @@ CREATE TABLE [<table name>]
         col1 int
         /* replace the sample "col1" column shown above, with the actual list of columns */
     )
-    WITH ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) ) ;
+    WITH ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) );
 GO
 ```
 
-Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+The following example migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
 ```sql
 USE [<Stretch-enabled database name>];
@@ -137,7 +137,7 @@ CREATE TABLE [<table name>]
     )
     WITH ( REMOTE_DATA_ARCHIVE = ON (
         FILTER_PREDICATE = dbo.fn_stretchpredicate(),
-        MIGRATION_STATE = PAUSED ) ) ;
+        MIGRATION_STATE = PAUSED ) );
 GO
 ```
 

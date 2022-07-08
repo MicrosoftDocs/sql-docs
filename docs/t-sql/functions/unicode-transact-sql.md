@@ -49,7 +49,7 @@ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier
 ## Examples  
   
 ### A. Using UNICODE and the NCHAR function  
- The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
+ The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the string `Åkergatan 24`, and to print the actual first character, `Å`.  
   
 ```sql  
 DECLARE @nstring NCHAR(12);  

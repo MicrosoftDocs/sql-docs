@@ -164,24 +164,6 @@ There are three charts on the **Trends** page to show changes over time: all iss
 
 If there are multiple runs in a single day, only the latest run is included in the graphs on the **Trends** page. 
 
-## Known Issues
-
-You may encounter some of the following known issues when using SQL best practices assessments. 
-
-### Configuration error for Enable SQL best practices assessment
-
-If your virtual machine is already associated with a Log Analytics workspace that you don't have access to or that is in another subscription, you will see an error in the configuration blade. For the former, you can either obtain permissions for that workspace or switch your VM to a different Log Analytics workspace by following [these instructions](/azure/azure-monitor/agents/agent-manage) to remove Microsoft Monitoring Agent. 
-
-### Deployment failure for Enable or Run Assessment 
-
-Refer to the [deployment history](/azure/azure-resource-manager/templates/deployment-history) of the resource group containing the SQL VM to view the error message associated with the failed action. 
- 
-### Failed assessments 
-
-If the assessment or uploading the results failed for some reason, the status of that run will indicate the failure. Clicking on the status will open a context pane where you can see the details about the failure and possible ways to remediate the issue.
-
->[!TIP]
->If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12) to use strong cryptography. 
 
 ## Enable for all VMs in a subscription
 
@@ -216,6 +198,25 @@ foreach ($sqlvm in $sqlvms)
 }
 
 ```
+
+## Known Issues
+
+You may encounter some of the following known issues when using SQL best practices assessments. 
+
+### Configuration error for Enable SQL best practices assessment
+
+If your virtual machine is already associated with a Log Analytics workspace that you don't have access to or that is in another subscription, you will see an error in the configuration blade. For the former, you can either obtain permissions for that workspace or switch your VM to a different Log Analytics workspace by following [these instructions](/azure/azure-monitor/agents/agent-manage) to remove Microsoft Monitoring Agent. 
+
+### Deployment failure for Enable or Run Assessment 
+
+Refer to the [deployment history](/azure/azure-resource-manager/templates/deployment-history) of the resource group containing the SQL VM to view the error message associated with the failed action. 
+ 
+### Failed assessments 
+
+If the assessment or uploading the results failed for some reason, the status of that run will indicate the failure. Clicking on the status will open a context pane where you can see the details about the failure and possible ways to remediate the issue.
+
+>[!TIP]
+>If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12) to use strong cryptography. 
 
 
 

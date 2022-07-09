@@ -76,7 +76,7 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role cannot add, modify, or delete any data in the user tables within a database.|  
 |**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data from the user tables and views within a database.|  
 
-The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
+The effective permissions of the fixed-database roles cannot be changed, and you cannot use DENY to restrict members of a fixed-database role.  This is similar to how permissions checks are skipped for an object owner, where there is an ownership chain, or dbo. The following figure shows the effective permissions assigned to the fixed-database roles:
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 

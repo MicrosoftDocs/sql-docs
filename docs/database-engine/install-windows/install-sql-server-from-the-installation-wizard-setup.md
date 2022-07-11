@@ -54,10 +54,10 @@ The the installation experience depends on your version of SQL Server. Select yo
         **_\* SQL Server 2016 & SQL Server 2017 \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Server 2019](install-sql-server-from-the-installation-wizard.md?view=sql-server-2019&preserve-view=true)
+        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2019&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Server 2022](install-sql-server-from-the-installation-wizard.md?view=sql-server-2022&preserve-view=true)
+        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2022&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -235,13 +235,13 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 :::row:::
     :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Server 2019 \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Server 2022](install-sql-server-from-the-installation-wizard.md?view=sql-server-2022&preserve-view=true)
+        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2022&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -426,10 +426,10 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 :::row:::
     :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Server 2019](install-sql-server-from-the-installation-wizard.md?view=sql-server-2019&preserve-view=true)
+        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2019&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Server 2022 \*_** &nbsp;

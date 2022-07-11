@@ -49,7 +49,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <distribution_option> ::=
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
-      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
       | DISTRIBUTION = ROUND_ROBIN 
       | DISTRIBUTION = REPLICATE
     }   
@@ -93,20 +92,6 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
-
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Preview) 
-Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.  To enable this feature, set the database compatibility level to 9000 to join the preview.  Check  [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md) for details.
-
->[!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. Check [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md)) for details.<Br>
-  >`ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;` <br><br>
-> - To opt-out the preview, run this command to change the database's compatibility level to 0.<br>
-  >`ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 0;` <br><br>
->This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable.  Queries over MCD tables will 
->return this error: <br>
-  >`Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`<br><br>
-> - To regain access to MCD tables, opt-in the preview again. <br><br>
-> - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 

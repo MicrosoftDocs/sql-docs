@@ -103,7 +103,7 @@ GO
 |SELECT DATETRUNC(millisecond, \@d)|2021-12-08 11:30:15.1230000|
 |SELECT DATETRUNC(microsecond, \@d)|2021-12-08 11:30:15.1234560|
 
-The table below lists some examples using `literals` with corresponding return values
+The table below lists some Example using `literals` with corresponding return values
 
 |*DATETRUNC Query*|Return value|  
 |---|---|
@@ -112,7 +112,7 @@ The table below lists some examples using `literals` with corresponding return v
 |DECLARE \@d char(200) = \'2021-12-08\'<br />SELECT DATETRUNC(millisecond, \@d)|Returns a DateTime2(7):<br /> 2021-12-08 00:00:00.0000000|
 |DECLARE \@d nvarchar(max) = \'2021-12-08 11:12:11\'<br />SELECT DATETRUNC(minute, \@d)|Returns a DateTime2(7):<br />2021-12-08 11:12:00.0000000|
 
-The table below lists some examples using `variables` with corresponding return values
+The table below lists some Example using `variables` with corresponding return values
 
 |*DATETRUNC Query*|Return value|  
 |---|---|
@@ -143,7 +143,7 @@ AND DATETRUNC(month, TransactionDate) >= '2015-12-01';
 
 The date argument accepts any expression that can resolve to a T-SQL date type (or a string literal that can later resolve to a *DateTime2(7)*). The OrderDate column from an Sales.Orders table serves as an argument.
 
-Examples:
+Example
 
 ```sql
 SELECT DATETRUNC(m, SYSDATETIME()) AS [DATETRUNC Using SYSDATETIME];
@@ -158,7 +158,7 @@ SELECT DATETRUNC(month, DATEADD(month, 4, OrderDate)) AS OrderMonth FROM Sales.O
 
 If the datepart being used has the same unit maximum precision as the input date type, truncating the input date to this datepart would have no effect.
 
-#### Examples:
+#### Example
 
 ```sql
 DECLARE @d datetime = '2021-12-08 11:30:15.123';
@@ -188,7 +188,7 @@ Both statements return the same result
 
 A *SmallDateTime* is only precise up to the nearest minute, even though it has a field for seconds. Therefore, truncating it to the nearest minute or the nearest second would have no effect.
 
-#### Example:
+#### Example
 
 ```sql
 DECLARE @d smalldatetime = '2021-12-08 11:31:15';
@@ -243,7 +243,7 @@ A *DATEPART* error is thrown if the datepart used isn't supported by the DATETRU
 
 - A time-related datepart is used with data type *date* or a date-related datepart is used with data type *time*.
 
-#### Example:
+#### Example
 
 ```sql
 DECLARE @d time = '12:12:12';
@@ -257,7 +257,7 @@ The datepart year is not supported by date function datetrunc for data type time
 
 - The datepart requires a higher fractional time scale precision than what is supported by the data type (See section on Fractional Time Scale Precision).
 
-Example:
+#### Example
 
 ```sql
 DECLARE @d datetime2(3) = '2021-12-12 12:12:12.12345';

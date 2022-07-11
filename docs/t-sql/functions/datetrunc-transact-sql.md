@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: "derekw"
 ms.date: "07/15/2022"
-monikerRange: "| >= sql-server-2016 || >= sql-server-linux-2017 |"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # DATETRUNC (Transact-SQL)

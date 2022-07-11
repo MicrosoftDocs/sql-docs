@@ -31,7 +31,7 @@ Before you test the package, verify that the control and data flows in the Lesso
   
 **Data Flow**  
   
-![Data flow in package](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![Data flow in package](../integration-services/media/task5lesson5data.gif "Data flow in package")
   
 ## Test the Lesson 5 package  
   

@@ -231,7 +231,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="=sql-server-ver15"
 
 :::row:::
     :::column:::
@@ -422,7 +422,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver16"
+::: moniker range="=sql-server-ver16"
 
 :::row:::
     :::column:::

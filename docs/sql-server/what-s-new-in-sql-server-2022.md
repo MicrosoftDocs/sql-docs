@@ -49,6 +49,9 @@ After you experience SQL Server 2022 Preview, you're welcome to [submit feedback
 
 This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
 
+- [Analytics](#analytics)
+  - Object storage integration (Data Lake Virtualization)
+  - Data virtualization
 - [Performance](#performance)
   - Query Store enabled by default for new databases
   - Hybrid buffer pool with direct write
@@ -56,11 +59,11 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Degree of parallelism (DOP) feedback
   - XML Compression
 - [Management](#management)
+  - Install Azure Arc agent with Configuration Manager
   - Out of memory DMV and extended events
   - Snapshot backups
 - [Security](#security)
   - Support for PFX certificates
-  - Azure Active Directory authentication support for SQL Server on Linux
   - Attach to Azure from setup - Azure Arc-enabled instance
   - Attach to Azure from configuration manager - Azure Arc-enabled instance
   - Ledger
@@ -83,6 +86,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 |Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For more information, see [What is Azure Synapse Link for SQL? (Preview) - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues).|
 |Object storage integration | SQL Server 2022 Preview introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization. <br/><br/> Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL.|
+|Data Virtualization ||
 
 ## Availability
 

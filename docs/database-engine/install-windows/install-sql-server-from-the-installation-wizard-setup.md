@@ -241,7 +241,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
         **_\* SQL Server 2019 \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2022&preserve-view=true)
+        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true)
     :::column-end:::
 :::row-end:::
 

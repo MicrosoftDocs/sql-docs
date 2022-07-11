@@ -278,8 +278,7 @@ Msg 9837, Level 16, State 3, Line 84
 An invalid date value was encountered: The date value is less than the minimum date value allowed for the data type.
 ```
 
-
 ## See also
 
-[Valid a date or time type supported by T-SQL](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-ver15#DateandTimeDataTypes)
-[DATEPART](../../t-sql/functions/datepart-transact-sql.md)
+- [DATEPART](../../t-sql/functions/datepart-transact-sql.md)
+- [Valid a date or time type supported by TSQL](date-and-time-data-types-and-functions-transact-sql.md)

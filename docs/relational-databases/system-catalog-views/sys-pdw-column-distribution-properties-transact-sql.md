@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|ID of the object to which the column belongs.||  
 |**column_id**|**int**|ID of the column.||  
-|**distribution_ordinal**|**tinyint**|Ordinal (1-based) within set of distribution.|0 = Not a distribution column. 1 = [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is using this column to distribute the parent table.|  
+|**distribution_ordinal**|**tinyint**|Ordinal (1-based) within set of distribution.|0 = Not a distribution column. 1 or >1 = [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is using this column to distribute the parent table.|  
   
 ## See Also  
  [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

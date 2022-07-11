@@ -1,10 +1,10 @@
 ---
-title: "Monitor and troubleshoot data migration"
+title: Monitor and troubleshoot data migration
 description: Monitor and troubleshoot data migration (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 06/09/2022
+ms.date: 07/04/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -17,7 +17,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 To monitor data migration in Stretch Database Monitor, select **Tasks > Stretch > Monitor** for a database in SQL Server Management Studio.
 
@@ -29,7 +29,7 @@ Select **Tasks > Stretch > Monitor** for a database in SQL Server Management Stu
 
 - The bottom portion of the monitor displays the status of data migration for each Stretch-enabled table in the database.
 
-:::image type="content" source="media/monitor-and-troubleshoot-data-migration-stretch-database/stretch-monitor.png" alt-text="Screenshot of Stretch Database Monitor.":::
+:::image type="content" source="media/monitor-and-troubleshoot-data-migration-stretch-database/stretch-monitor.png" alt-text="Screenshot showing the Stretch Database Monitor.":::
 
 ## Check the status of data migration in a dynamic management view
 
@@ -37,13 +37,13 @@ Open the dynamic management view `sys.dm_db_rda_migration_status` to see how man
 
 ## Troubleshoot data migration
 
-**Rows from my Stretch-enabled table are not being migrated to Azure. What's the problem?**
+### Rows from my Stretch-enabled table are not being migrated to Azure. What's the problem?
 
 There are several problems that can affect migration. Check the following things.
 
 - Check network connectivity for the SQL Server computer.
 
-- Check that the Azure firewall is not blocking your SQL Server from connecting to the remote endpoint.
+- Check that the Azure firewall isn't blocking your SQL Server from connecting to the remote endpoint.
 
 - Check the dynamic management view `sys.dm_db_rda_migration_status` for the status of the latest batch. If an error has occurred, check the error_number, error_state, and error_severity values for the batch.
 
@@ -51,10 +51,10 @@ There are several problems that can affect migration. Check the following things
 
   - For more info about the content of a SQL Server error message, see [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).
 
-**The Azure firewall is blocking connections from my local server.**
+### The Azure firewall is blocking connections from my local server
 
 You may have to add a rule in the Azure firewall settings of the Azure server to let SQL Server communicate with the remote Azure server.
 
 ## See also
 
-- [Manage and troubleshoot Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)
+- [Manage and troubleshoot Stretch Database](manage-and-troubleshoot-stretch-database.md)

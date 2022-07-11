@@ -1,10 +1,10 @@
 ---
-title: "Limitations for Stretch Database"
+title: Limitations for Stretch Database
 description: Limitations for Stretch Database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 06/09/2022
+ms.date: 07/04/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -19,17 +19,17 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 Learn about limitations for Stretch-enabled tables, and about limitations that currently prevent you from enabling Stretch for a table.
 
-## <a name="Caveats"></a> Limitations for Stretch-enabled tables
+## Limitations for Stretch-enabled tables
 
 Stretch-enabled tables have the following limitations.
 
 ### Constraints
 
-- Uniqueness is not enforced for UNIQUE constraints and PRIMARY KEY constraints in the Azure table that contains the migrated data.
+- Uniqueness isn't enforced for UNIQUE constraints and PRIMARY KEY constraints in the Azure table that contains the migrated data.
 
 ### DML operations
 
@@ -41,9 +41,9 @@ Stretch-enabled tables have the following limitations.
 
 - You can't create an index for a view that includes Stretch-enabled tables.
 
-- Filters on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes are not propagated to the remote table.
+- Filters on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes aren't propagated to the remote table.
 
-## <a name="Limitations"></a> Limitations that currently prevent you from enabling Stretch for a table
+## Limitations that currently prevent you from enabling Stretch for a table
 
 The following items currently prevent you from enabling Stretch for a table.
 
@@ -60,13 +60,9 @@ The following items currently prevent you from enabling Stretch for a table.
 ### Data types
 
 - **text**, **ntext** and **image**
-
 - **timestamp**
-
 - **sql_variant**
-
 - **xml**
-
 - CLR data types including **geometry**, **geography**, **hierarchyid**, and CLR user-defined types
 
 ### Column types
@@ -93,6 +89,6 @@ The following items currently prevent you from enabling Stretch for a table.
 
 ## See also
 
-- [Identify databases and tables for Stretch Database by running Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)
-- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)
-- [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)
+- [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md)
+- [Enable Stretch Database for a database](enable-stretch-database-for-a-database.md)
+- [Enable Stretch Database for a table](enable-stretch-database-for-a-table.md)

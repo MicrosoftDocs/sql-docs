@@ -1,10 +1,10 @@
 ---
-title: "Disable Stretch Database and bring back remote data"
+title: Disable Stretch Database and bring back remote data
 description: Disable Stretch Database and bring back remote data
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 06/09/2022
+ms.date: 07/04/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -17,7 +17,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 To disable Stretch Database for a table, select **Stretch** for a table in SQL Server Management Studio. Then select one of the following options.
 
@@ -29,9 +29,10 @@ You can also use Transact-SQL to disable Stretch Database for a table or for a d
 
 After you disable Stretch Database for a table, data migration stops and query results no longer include results from the remote table.
 
-If you simply want to pause data migration, see [Pause and resume data migration &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+If you want to pause data migration, see [Pause and resume data migration &#40;Stretch Database&#41;](pause-and-resume-data-migration-stretch-database.md).
 
-Disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+> [!NOTE]
+> Disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ## Disable Stretch Database for a table
 
@@ -39,21 +40,21 @@ Disabling Stretch Database for a table or for a database does not delete the rem
 
 1. In SQL Server Management Studio, in Object Explorer, select the table for which you want to disable Stretch Database.
 
-2. Right-click and select **Stretch**, and then select one of the following options.
+1. Right-click and select **Stretch**, and then select one of the following options.
 
-   - **Disable | Bring data back from Azure**. Copy the remote data for the table from Azure back to SQL Server, then disable Stretch Database for the table. This command can't be canceled.
+   - **Disable > Bring data back from Azure**. Copy the remote data for the table from Azure back to SQL Server, then disable Stretch Database for the table. This command can't be canceled.
 
      Copying the remote data for the table from Azure back to SQL Server incurs data transfer costs. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).
 
      After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.
 
-   - **Disable | Leave data in Azure**. Disable Stretch Database for the table.  Abandon the remote data for the table in Azure.
+   - **Disable > Leave data in Azure**. Disable Stretch Database for the table. Abandon the remote data for the table in Azure.
 
-      Disabling Stretch Database for a table does not delete the remote data or the remote table. If you want to delete the remote table, you have to drop it by using the Azure management portal. The remote table continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+     Disabling Stretch Database for a table doesn't delete the remote data or the remote table. If you want to delete the remote table, you have to drop it by using the Azure management portal. The remote table continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ### Use Transact-SQL
 
-- To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command.After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.
+- To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command. After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.
 
   This command can't be canceled.
 
@@ -61,7 +62,7 @@ Disabling Stretch Database for a table or for a database does not delete the rem
   USE [<Stretch-enabled database name>];
   GO
   ALTER TABLE [<Stretch-enabled table name>]
-     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
+     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) );
   GO
   ```
 
@@ -73,11 +74,11 @@ Disabling Stretch Database for a table or for a database does not delete the rem
   USE <Stretch-enabled database name>;
   GO
   ALTER TABLE <Stretch-enabled table name>
-     SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
+     SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) );
   GO
   ```
 
-Disabling Stretch Database for a table does not delete the remote data or the remote table. If you want to delete the remote table, you have to drop it by using the Azure management portal. The remote table continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+  Disabling Stretch Database for a table does not delete the remote data or the remote table. If you want to delete the remote table, you have to drop it by using the Azure management portal. The remote table continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ## Disable Stretch Database for a database
 
@@ -87,9 +88,9 @@ Before you can disable Stretch Database for a database, you have to disable Stre
 
 1. In SQL Server Management Studio, in Object Explorer, select the database for which you want to disable Stretch Database.
 
-2. Right-click and select **Tasks**, and then select **Stretch**, and then select **Disable**.
+1. Right-click and select **Tasks > Stretch > Disable**.
 
-Disabling Stretch Database for a database does not delete the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal. The remote database continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+   Disabling Stretch Database for a database doesn't delete the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal. The remote database continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ### Use Transact-SQL
 
@@ -97,13 +98,13 @@ Run the following command.
 
 ```sql
 ALTER DATABASE [<Stretch-enabled database name>]
-    SET REMOTE_DATA_ARCHIVE = OFF ;
+    SET REMOTE_DATA_ARCHIVE = OFF;
 GO
 ```
 
-Disabling Stretch Database for a database does not delete the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal. The remote database continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
+Disabling Stretch Database for a database doesn't delete the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal. The remote database continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ## See also
 
 - [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [Pause and resume data migration &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)
+- [Pause and resume data migration &#40;Stretch Database&#41;](pause-and-resume-data-migration-stretch-database.md)

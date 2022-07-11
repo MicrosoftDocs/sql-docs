@@ -1,10 +1,10 @@
 ---
-title: "Backup Stretch-enabled databases"
-description: Backup Stretch-enabled databases (Stretch Database)
+title: Backup Stretch-enabled databases
+description: Back up Stretch-enabled databases (Stretch Database)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 06/09/2022
+ms.date: 07/04/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "Stretch Database, disabling"
   - "disabling Stretch Database"
 ---
-# Backup Stretch-enabled databases (Stretch Database)
+# Back up Stretch-enabled databases (Stretch Database)
 
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 Database backups help you to recover from many types of failures, errors, and disasters.
 
@@ -25,14 +25,13 @@ Database backups help you to recover from many types of failures, errors, and di
 
 - Microsoft Azure automatically backs up the remote data that Stretch Database has migrated from SQL Server to Azure.
 
-> [!TIP]  
-> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
+Backing up is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## Back up your SQL Server data
 
 To back up your Stretch-enabled SQL Server databases, you can continue to use the SQL Server backup methods that you currently use. For more info, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
-Backups of a Stretch-enabled SQL Server database contain only local data and data eligible for migration at the point in time when the backup runs. (Eligible data is data that has not yet been migrated, but will be migrated to Azure based on the migration settings of the tables.) This is known as a *shallow* backup and does not include the data already migrated to Azure.
+Backups of a Stretch-enabled SQL Server database contain only local data and data eligible for migration at the point in time when the backup runs. (Eligible data is data that hasn't yet been migrated, but will be migrated to Azure based on the migration settings of the tables.) This is known as a **shallow** backup and doesn't include the data already migrated to Azure.
 
 ## Back up your remote Azure data
 
@@ -40,13 +39,13 @@ Microsoft Azure automatically backs up the remote data that Stretch Database has
 
 ### Azure reduces the risk of data loss with automatic backup
 
-The SQL Server Stretch Database service on Azure protects your remote databases with automatic storage snapshots at least every 8 hours. It retains each snapshot for 7 days to provide you with a range of possible restore points.
+The SQL Server Stretch Database service on Azure protects your remote databases with automatic storage snapshots at least every 8 hours. It retains each snapshot for seven days to provide you with a range of possible restore points.
 
 ### Azure reduces the risk of data loss with geo-redundancy
 
 Azure database backups are stored on geo-redundant Azure Storage (RA-GRS) and are therefore geo-redundant by default. Geo-redundant storage replicates your data to a secondary region that is hundreds of miles away from the primary region. In both primary and secondary regions, your data is replicated three times each, across separate fault domains and upgrade domains. This ensures that your data is durable even in the case of a complete regional outage or disaster that renders one of the Azure regions unavailable.
 
-### <a name="stretchRPO"></a>Stretch Database reduces the risk of data loss for your Azure data by retaining migrated rows temporarily
+### <a id="stretchRPO"></a>Stretch Database reduces the risk of data loss for your Azure data by retaining migrated rows temporarily
 
 After Stretch Database migrates eligible rows from SQL Server to Azure, it retains those rows in the staging table for a minimum of 8 hours. If you restore a backup of your Azure database, Stretch Database uses the rows saved in the staging table to reconcile the SQL Server and the Azure databases.
 
@@ -65,5 +64,5 @@ To check the number of hours of data that Stretch Database currently retains tem
 
 ## See also
 
-- [Restore Stretch-enabled databases](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
-- [Manage and troubleshoot Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)
+- [Restore Stretch-enabled databases](restore-stretch-enabled-databases-stretch-database.md)
+- [Manage and troubleshoot Stretch Database](manage-and-troubleshoot-stretch-database.md)

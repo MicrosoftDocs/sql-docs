@@ -90,4 +90,6 @@ You can make a connection to other data sources that recognizes a SQL Server con
 
 ## Next steps
 
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
+
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).

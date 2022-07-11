@@ -30,7 +30,8 @@ DATETRUNC(datepart, date)
 
 ## Arguments
 
-*datetrunc*  
+#### datetrunc
+
 The datepart specifies the precision for truncation. This table lists all the valid datepart values for `DATETRUNC`, given that it's also a valid part of the input date type:
 
 |*datepart*|Abbreviations|Truncation Notes|  
@@ -51,7 +52,7 @@ The datepart specifies the precision for truncation. This table lists all the va
 > [!NOTE]
 > The *weekday*, *timezoneoffset*, and *nanosecond* T-SQL dateparts are not supported for DATETRUNC.
 
-*date*
+#### date
 
 The date parameter accepts any expression, column, or user-defined variable that can resolve to any [valid date or time type supported by T-SQL.] such as:
 
@@ -157,7 +158,7 @@ SELECT DATETRUNC(month, DATEADD(month, 4, OrderDate)) AS OrderMonth FROM Sales.O
 
 If the datepart being used has the same unit maximum precision as the input date type, truncating the input date to this datepart would have no effect.
 
-Examples:
+#### Examples:
 
 ```sql
 DECLARE @d datetime = '2021-12-08 11:30:15.123';
@@ -187,7 +188,7 @@ Both statements return the same result
 
 A *SmallDateTime* is only precise up to the nearest minute, even though it has a field for seconds. Therefore, truncating it to the nearest minute or the nearest second would have no effect.
 
-Example:
+#### Example:
 
 ```sql
 DECLARE @d smalldatetime = '2021-12-08 11:31:15';
@@ -203,7 +204,9 @@ All three statements return the same result
 
 ## DateTime2 Precision
 
-A *DateTime2* is only precise up to 1/3rd of a microsecond. Therefore, although truncating a *DateTime2* to a microsecond will yield its stored value.
+#### DateTime2
+
+A DateTime2 is only precise up to 1/3rd of a microsecond. Therefore, although truncating a *DateTime2* to a microsecond will yield its stored value.
 
 ```sql
 DECLARE @d1 datetime2 = '2021-12-12 11:11:11.997';
@@ -240,7 +243,7 @@ A *DATEPART* error is thrown if the datepart used isn't supported by the DATETRU
 
 - A time-related datepart is used with data type *date* or a date-related datepart is used with data type *time*.
 
-Example:
+#### Example:
 
 ```sql
 DECLARE @d time = '12:12:12';

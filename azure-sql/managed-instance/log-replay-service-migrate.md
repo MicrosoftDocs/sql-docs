@@ -53,11 +53,11 @@ LRS doesn't require a specific naming convention for backup files. It scans all 
 
 You can start LRS in either **autocomplete** or **continuous** mode.
 
-Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you don't plan to add any additional files once the migration has been started. This migration mode is recommended for passive workloads that don't require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last of the specified backup files have been restored, and the migrated database will become available for read and write access on SQL Managed Instance.
+Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you don't plan to add any more files once the migration has been started. This migration mode is recommended for passive workloads that don't require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last of the specified backup files have been restored. Migrated database will become available for read and write access on SQL Managed Instance.
 
 In case that you plan to keep adding new backup files while migration is in progress, use continuous mode. This mode is recommended for active workloads requiring data catch-up. Upload the currently available backup chain to Azure Blob Storage, start the migration in continuous mode, and keep adding new backup files from your workload as needed. The system will periodically scan Azure Blob Storage folder and restore any new differential backup files found. When you're ready to cutover, stop the workload on your SQL Server, generate and upload the last backup file. Ensure that the last backup file has restored by watching that the final log-tail backup is shown as restored on SQL Managed Instance. Then, initiate manual cutover. The final cutover step makes the database come online and available for read and write access on SQL Managed Instance.
 
-After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore additional differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
+After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore more differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
 
 ### Migration workflow
 
@@ -65,7 +65,7 @@ Typical migration workflow is shown in the image below, and steps outlined in th
 
 Autocomplete mode needs to be used only when all backup chain files are available in advance. This mode is recommended for passive workloads for which no data catch-up is required.
 
-Continuous mode migration needs to be used when you don't have the entire backup chain in advance, and when you plan to add new backup files once the migration is in progress. This is mode recommended for active workloads for which data catch-up is required.
+Continuous mode migration needs to be used when you don't have the entire backup chain in advance, and when you plan to add new backup files once the migration is in progress. This mode is recommended for active workloads for which data catch-up is required.
 
 :::image type="content" source="./media/log-replay-service-migrate/log-replay-service-conceptual.png" alt-text="Diagram that explains the Log Replay Service orchestration steps for SQL Managed Instance." border="false":::
 	
@@ -118,11 +118,11 @@ Running LRS through the provided clients requires one of the following Azure rol
 
 ## Requirements
 
-Please ensure the following requirements are met:
+Ensure the following requirements are met:
 - Use the full recovery model on SQL Server (mandatory).
 - Use `CHECKSUM` for backups on SQL Server (mandatory).
 - Place backup files for an individual database inside a separate folder in a flat-file structure (mandatory). Nested folders inside database folders aren't supported.
-- Plan to complete the migration within 36 hours after you start LRS (mandatory). This is a grace period during which system-managed software patches are postponed.
+- Plan to complete the migration within 36 hours after you start LRS (mandatory). This time window is a grace period during which system-managed software patches are postponed.
 
 ## Best practices
 
@@ -413,7 +413,7 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb
 
 ### Scripting the migration job
 
-PowerShell and CLI clients that start LRS in continuous mode are synchronous. This means the client waits for the API response to report on success or failure to start the job. 
+PowerShell and CLI clients that start LRS in continuous mode are synchronous. in this mode, PowerShell and CLI will wait for the API response to report on success or failure to start the job. 
 
 During this wait, the command won't return control to the command prompt. If you're scripting the migration experience, and you need the LRS start command to give back control immediately to continue with rest of the script, you can run PowerShell as a background job with the `-AsJob` switch. For example:
 

@@ -42,7 +42,7 @@ ms.topic: conceptual
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -76,7 +76,7 @@ ms.topic: conceptual
 | [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -111,7 +111,7 @@ ms.topic: conceptual
 | [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 

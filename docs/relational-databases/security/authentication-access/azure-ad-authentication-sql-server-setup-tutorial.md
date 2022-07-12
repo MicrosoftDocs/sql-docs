@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux. Azure Virtual Machines aren't supported.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
 
 In this tutorial, you learn how to:
 
@@ -308,7 +308,7 @@ SQL Server tools that support Azure AD authentication for Azure SQL are also sup
 
 On Windows, Azure Active Directory parameters are stored in the Windows Registry.
 
-On Linux, Azure Active Directory parameters are stored in `mssql-conf`. For more information about the Azure AD configuration options in Linux, see [Configure SQL Server on Linux with the mssql-conf tool](../../../linux/sql-server-linux-configure-mssql-conf.md)
+On Linux, Azure Active Directory parameters are stored in `mssql-conf`. For more information about the Azure AD configuration options in Linux, see [Configure SQL Server on Linux with the mssql-conf tool](../../../linux/sql-server-linux-configure-mssql-conf.md).
 
 ## Known issues
 

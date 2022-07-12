@@ -185,7 +185,7 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Linux support
 
-SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux the CA must be placed on a predefined location to be created at `/usr/local/share/ca-certificates/mssql-ca-certificates`, only the first 50 certificates can be stored and supported in this folder.
+SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux the CA must be placed on a predefined location to be created at `/var/opt/mssql/security/ca-certificates`, only the first 50 certificates can be stored and supported in this folder.
 
 SQL Server will read the certificates from the folder during startup and add them to the trust store.
 

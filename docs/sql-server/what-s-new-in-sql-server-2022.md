@@ -49,6 +49,9 @@ After you experience SQL Server 2022 Preview, you're welcome to [submit feedback
 
 This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
 
+- [Analytics](#analytics)
+  - Object storage integration (Data Lake Virtualization)
+  - Data virtualization
 - [Performance](#performance)
   - Query Store enabled by default for new databases
   - Hybrid buffer pool with direct write
@@ -56,15 +59,14 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Degree of parallelism (DOP) feedback
   - XML Compression
 - [Management](#management)
-  - Out of memory DMV and extended events
+  - Install Azure Arc agent with Configuration Manager
   - Snapshot backups
 - [Security](#security)
   - Support for PFX certificates
-  - Azure Active Directory authentication support for SQL Server on Linux
   - Automation process to set up Azure AD administrator for SQL Server
   - Attach to Azure from setup - Azure Arc-enabled instance
   - Attach to Azure from configuration manager - Azure Arc-enabled instance
-  - Ledger
+  - Ledger - automatic digest upload to Azure Storage
   - Support MS-TDS 8.0 protocol
 - [Language](#language)
   - APPROXIMATE PERCENTILE
@@ -84,6 +86,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 |Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For more information, see [What is Azure Synapse Link for SQL? (Preview) - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues).|
 |Object storage integration | SQL Server 2022 Preview introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization. <br/><br/> Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL.|
+|Data Virtualization ||
 
 ## Availability
 
@@ -101,7 +104,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multi-cloud environments.
 | Microsoft Purview integration | Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data use management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Access provisioning by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-data-owner-policies-arc-sql-server) for details.|
-| Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](/sql/relational-databases/security/ledger/ledger-overview).|
+| Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. You can enable automatic digest upload to Azure Storage. See [Ledger](/sql/relational-databases/security/ledger/ledger-overview).|
 | Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) to connect to SQL Server.|
 | Automation process to set up Azure AD administrator for SQL Server | Use Automation process to set up Azure AD administrator for SQL Server to connect to SQL Server. |
 | Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|

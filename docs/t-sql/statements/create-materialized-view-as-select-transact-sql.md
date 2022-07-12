@@ -58,7 +58,6 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 <distribution_option> ::=
     {  
         DISTRIBUTION = HASH ( distribution_column_name )  
-      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
       | DISTRIBUTION = ROUND_ROBIN  
     }
 
@@ -78,8 +77,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 #### *materialized_view_name*   
 Is the name of the view. View names must follow the rules for identifiers. Specifying the view owner name is optional.  
 
-*distribution option*
-Only HASH and ROUND_ROBIN distributions are supported. For details and to understand how to choose the best distribution column, see the [Table distribution options](create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE.
+#### *distribution option*     
+Only HASH and ROUND_ROBIN distributions are supported.
 
 #### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:

@@ -35,15 +35,15 @@ Consider using LRS in the following cases:
 - You need to use differential backups.
 
 > [!NOTE]
-> - We recommend automating the migration of databases from SQL Server to SQL Managed Instance by using Database Migration Service. This service uses the same LRS cloud service at the back end, with log shipping in `NORECOVERY` mode. Consider manually using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
-> - LRS is the only method to restore differential backups on managed instance. It isn't possible to manually restore differential backups on managed instance, nor to manually set the NORECOVERY mode.
+> - We recommend automating the migration of databases from SQL Server to SQL Managed Instance by using Database Migration Service. Consider using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
+> - LRS is the only method to restore differential backups on managed instance. It isn't possible to manually restore differential backups on managed instance, nor to manually set the `NORECOVERY` mode using T-SQL.
 >
 
 ## How it works
 
 Building a custom solution to migrate databases to the cloud with LRS requires several orchestration steps, as shown in the diagram and a table later in this section.
 
-Migration consists of making database backups on SQL Server with `CHECKSUM` enabled, and copying backup files to Azure Blob Storage. Full, log, and differential backups are supported. LRS cloud service is used to restore backup files from Azure Blob Storage to SQL Managed Instance. Blob Storage is intermediary storage between SQL Server and SQL Managed Instance.
+Migration consists of making database backups on SQL Server with `CHECKSUM` enabled, and copying backup files to Azure Blob Storage. Full, log, and differential backups are supported. LRS cloud service is used to restore backup files from Azure Blob Storage to SQL Managed Instance. Blob Storage serves as an intermediary storage between SQL Server and SQL Managed Instance.
 
 LRS monitors Blob Storage for any new differential or log backups added after the full backup has been restored. LRS then automatically restores these new files. You can use the service to monitor the progress of backup files being restored to SQL Managed Instance, and stop the process if necessary.
 
@@ -55,7 +55,7 @@ You can start LRS in either **autocomplete** or **continuous** mode.
 
 Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you don't plan to add any more files once the migration has been started. This migration mode is recommended for passive workloads that don't require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last of the specified backup files have been restored. Migrated database will become available for read and write access on SQL Managed Instance.
 
-In case that you plan to keep adding new backup files while migration is in progress, use continuous mode. This mode is recommended for active workloads requiring data catch-up. Upload the currently available backup chain to Azure Blob Storage, start the migration in continuous mode, and keep adding new backup files from your workload as needed. The system will periodically scan Azure Blob Storage folder and restore any new differential backup files found. When you're ready to cutover, stop the workload on your SQL Server, generate and upload the last backup file. Ensure that the last backup file has restored by watching that the final log-tail backup is shown as restored on SQL Managed Instance. Then, initiate manual cutover. The final cutover step makes the database come online and available for read and write access on SQL Managed Instance.
+In case that you plan to keep adding new backup files while migration is in progress, use continuous mode. This mode is recommended for active workloads requiring data catch-up. Upload the currently available backup chain to Azure Blob Storage, start the migration in continuous mode, and keep adding new backup files from your workload as needed. The system will periodically scan Azure Blob Storage folder and restore any new log or differential backup files found. When you're ready to cutover, stop the workload on your SQL Server, generate and upload the last backup file. Ensure that the last backup file has restored by watching that the final log-tail backup is shown as restored on SQL Managed Instance. Then, initiate manual cutover. The final cutover step makes the database come online and available for read and write access on SQL Managed Instance.
 
 After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore more differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
 
@@ -79,7 +79,7 @@ Continuous mode migration needs to be used when you don't have the entire backup
 
 ### Migrating multiple databases
 
-If you're migrating several databases, you need to:
+LRS supports migration of multiple databases simultaneously. Backup files for each database must be stored on Blob Storage in a separate folder, with a flat-file structure. If you're migrating several databases, you need to:
 
 - Place backup files for each database in a separate folder on Azure Blob Storage in a flat-file structure. For example, use separate database folders: `bolbcontainer/database1/files`, `blobcontainer/database2/files`, etc.
 - Don't use nested folders inside database folders as this structure isn't supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
@@ -408,7 +408,7 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb
 ```
 
 > [!IMPORTANT]
-> Once LRS has been started in continuous mode, you'll be able to add differential backups to Azure Blob Storage until the manual cutover. Once manual cutover has been initiated, no additional differential files can be added, nor restored.
+> Once LRS has been started in continuous mode, you'll be able to add new log and differential backups to Azure Blob Storage until the manual cutover. Once manual cutover has been initiated, no additional differential files can be added, nor restored.
 > 
 
 ### Scripting the migration job

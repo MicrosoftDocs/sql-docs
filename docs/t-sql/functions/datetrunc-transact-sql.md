@@ -75,7 +75,9 @@ The date parameter accepts any expression, column, or user-defined variable that
 
 The returned data type for this function is dynamic. DATETRUNC returns a truncated date of the same data type (and, if applicable, the same fractional time scale) as the input date. For example, if DATETRUNC was given a *DateTimeOffset(3)* input date, it would return a truncated *DateTimeOffset(3)*. If the value supplied to the input date parameter was a string literal that could resolve to a *DateTime2(7)*, DATETRUNC would return a *DateTime2(7*).
 
-## Fractional Time Scale Precision
+## Examples
+
+### A. Fractional Time Scale Precision
 
 Milliseconds have a scale of 3 (.123), microseconds have a scale of 6 (.123456), and nanoseconds have a scale of 9 (.123456789). The *time***, ***datetime2***,** and *datetimeoffset* data types have a maximum scale of 7 (.1234567). Therefore, to truncate a date to a *millisecond* datepart, the fractional time scale must be at least 3. Similarly, to truncate a date using the *microsecond* datepart, the fractional time scale must be at least 6. DATETRUNC doesn't support the *nanosecond* datepart since no T-SQL date type supports a fractional scale of 9.
 
@@ -154,12 +156,9 @@ USE WideWorldImporters;
 SELECT DATETRUNC(month, DATEADD(month, 4, OrderDate)) AS OrderMonth FROM Sales.Orders;
 ```
 
-## Truncating a date to a datepart representing its maximum precision
+### B. Truncating a date to a datepart representing its maximum precision
 
 If the datepart being used has the same unit maximum precision as the input date type, truncating the input date to this datepart would have no effect.
-
-#### Example
-
 ```sql
 DECLARE @d datetime = '2021-12-08 11:30:15.123';
 SELECT @d, DATETRUNC(millisecond, @d);
@@ -184,11 +183,9 @@ Both statements return the same result
 2021-12-08 2021-12-08  2021-12-08 2021-12-08
 ```
 
-## SmallDateTime Precision
+### C. SmallDateTime Precision
 
 A *SmallDateTime* is only precise up to the nearest minute, even though it has a field for seconds. Therefore, truncating it to the nearest minute or the nearest second would have no effect.
-
-#### Example
 
 ```sql
 DECLARE @d smalldatetime = '2021-12-08 11:31:15';
@@ -202,9 +199,7 @@ All three statements return the same result
 2021-12-08 11:30:15.123  2021-12-08 11:30:15.123  2021-12-08 11:30:15.123
 ```
 
-## DateTime2 Precision
-
-#### DateTime2
+### D. DateTime2 Precision
 
 A DateTime2 is only precise up to 1/3rd of a microsecond. Therefore, although truncating a *DateTime2* to a microsecond will yield its stored value.
 
@@ -243,8 +238,6 @@ A *DATEPART* error is thrown if the datepart used isn't supported by the DATETRU
 
 - A time-related datepart is used with data type *date* or a date-related datepart is used with data type *time*.
 
-#### Example
-
 ```sql
 DECLARE @d time = '12:12:12';
 SELECT DATETRUNC(year, @d);
@@ -256,8 +249,6 @@ The datepart year is not supported by date function datetrunc for data type time
 ```
 
 - The datepart requires a higher fractional time scale precision than what is supported by the data type (See section on Fractional Time Scale Precision).
-
-#### Example
 
 ```sql
 DECLARE @d datetime2(3) = '2021-12-12 12:12:12.12345';
@@ -284,4 +275,4 @@ An invalid date value was encountered: The date value is less than the minimum d
 ## See also
 
 - [DATEPART](../../t-sql/functions/datepart-transact-sql.md)
-- [Valid a date or time type supported by TSQL](date-and-time-data-types-and-functions-transact-sql.md)
+- [Validate a date or time type supported by TSQL](date-and-time-data-types-and-functions-transact-sql.md)

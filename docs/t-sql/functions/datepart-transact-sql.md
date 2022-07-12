@@ -85,7 +85,7 @@ For *date*, `DATEPART` will accept a column expression, expression, string liter
   
 ## Return Type
 
- **int**  
+#### int  
   
 ## Return Value
 

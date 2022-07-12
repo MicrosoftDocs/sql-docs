@@ -42,7 +42,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of SQL Server 2022.
+The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of SQL Server 2022. Your use of any third-party object storage provider is governed by the terms and conditions of that third-party service, and Microsoft is not responsible for any aspect of that third-party service. 
 
 | **Vendor (alphabetical)**       | **Offering**                  | 
 |---------------------------------|-------------------------------|

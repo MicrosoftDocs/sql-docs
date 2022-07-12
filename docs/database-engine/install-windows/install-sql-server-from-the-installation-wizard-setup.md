@@ -22,7 +22,57 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-This article explains how to install SQL Server with the Installation Wizard. 
+This article explains how to install SQL Server with the Installation Wizard.
+
+The the installation experience depends on the version of SQL Server. Select your version.
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
+
+:::row:::
+    :::column:::
+        **_\* SQL Server 2016 & SQL Server 2017 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true)
+    :::column-end:::
+:::row-end:::
+
+:::moniker-end
+
+::: moniker range="=sql-server-ver15"
+
+:::row:::
+    :::column:::
+        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Server 2019 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true)
+    :::column-end:::
+:::row-end:::
+
+:::moniker-end
+
+::: moniker range="=sql-server-ver16"
+
+:::row:::
+    :::column:::
+        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Server 2022 \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
+
+:::moniker-end
 
 This article provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Installation Wizard. The Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you don't have to install them individually. To install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
@@ -45,21 +95,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 > [!NOTE]  
 > For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
 
-The the installation experience depends on your version of SQL Server. Select your version. 
-
 ::: moniker range=">=sql-server-2016 <=sql-server-2017"
-
-:::row:::
-    :::column:::
-        **_\* SQL Server 2016 & SQL Server 2017 \*_** &nbsp;
-    :::column-end:::
-    :::column:::
-        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true)
-    :::column-end:::
-:::row-end:::
 
 ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement
 
@@ -232,18 +268,6 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
-
-:::row:::
-    :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* SQL Server 2019 \*_** &nbsp;
-    :::column-end:::
-    :::column:::
-        [SQL Server 2022](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true)
-    :::column-end:::
-:::row-end:::
 
 ## To install SQL Server 2019 
   
@@ -423,18 +447,6 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver16"
-
-:::row:::
-    :::column:::
-        [SQL Server 2016 & SQL Server 2017](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-2017&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Server 2019](install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* SQL Server 2022 \*_** &nbsp;
-    :::column-end:::
-:::row-end:::
 
 ## To install SQL Server 2022
 

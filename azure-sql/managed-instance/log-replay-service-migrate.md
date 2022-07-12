@@ -51,7 +51,7 @@ LRS does not require a specific naming convention for backup files. It scans all
 
 ### Autocomplete versus Continuous mode migration
 
-You can start LRS in either **autocomplete** or **continuous mode**.
+You can start LRS in either **autocomplete** or **continuous** mode.
 
 Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you do not plan to add any additional files once the migration has been started. This migration mode is recommended for passive workloads that do not require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last of the specified backup files have been restored, and the migrated database will become available for read and write access on SQL Managed Instance.
 

@@ -407,6 +407,10 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb
 	--storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
 ```
 
+> [!IMPORTANT]
+> Once LRS has been started in continuous mode, you will be able to add differential backups to Azure Blob Storage until the manual cutover. Once manual cutover has been initiated, no additional differential files can be added, nor restored.
+> 
+
 ### Scripting the migration job
 
 PowerShell and CLI clients that start LRS in continuous mode are synchronous. This means the client waits for the API response to report on success or failure to start the job. 
@@ -441,7 +445,7 @@ To monitor migration progress through the Azure CLI, use the following command:
 az sql midb log-replay show -g mygroup --mi myinstance -n mymanageddb
 ```
 
-## Stop the migration
+## Stop the migration (optional)
 
 If you need to stop the migration, use PowerShell or the Azure CLI. Stopping the migration deletes the restoring database on SQL Managed Instance, so resuming the migration won't be possible.
 
@@ -461,9 +465,9 @@ az sql midb log-replay stop -g mygroup --mi myinstance -n mymanageddb
 
 ## Complete the migration (continuous mode)
 
-If you started LRS in continuous mode, ensure that workload on your SQL Server has been stopped to prevent any new backup files from being generated. Ensure that the last backup from SQL Server has been uploaded to Azure Blob Storage. Monitor the restore progress on managed instance, ensuring that the last tail-log backup has been restored.
+If you started LRS in continuous mode, ensure that your application and SQL Server workload have been stopped to prevent any new backup files from being generated. Ensure that the last backup from SQL Server has been uploaded to Azure Blob Storage. Monitor the restore progress on managed instance, ensuring that the last log-tail backup has been restored.
 
-Once the last tail-log backup has been restored on managed instance, initiate the manual cutover to complete the migration. After the cutover has completed, the database will become available for read and write access on managed instance.
+Once the last log-tail backup has been restored on managed instance, initiate the manual cutover to complete the migration. After the cutover has completed, the database will become available for read and write access on managed instance.
 
 To complete the migration process in LRS continuous mode through PowerShell, use the following command:
 

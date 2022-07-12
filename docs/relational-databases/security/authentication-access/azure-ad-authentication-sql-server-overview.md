@@ -1,15 +1,14 @@
 ---
 title: "Azure Active Directory (Azure AD) authentication for SQL Server overview"
 description: Learn about Azure Active Directory authentication support for SQL Server
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.technology: security
-ms.reviewer: vanto
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 author: GithubMirek
 ms.author: mireks
+ms.reviewer: vanto, randolphwest
+ms.date: 07/12/2022
+ms.prod: sql
+ms.technology: security
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 
@@ -37,7 +36,7 @@ If your Windows Server Active Directory is federated with Azure AD, users can au
 > [!IMPORTANT]
 > Azure AD authentication is only supported for SQL Server running in the mixed mode authentication (allowing SQL Server and Windows authentication mode). If only Windows authentication mode is chosen, Azure AD authentication is not supported.
 
-## Connecting SQL Server to Azure to use Azure AD
+## Connect SQL Server to Azure with Azure AD
 
 For SQL Server to communicate with Azure, both SQL Server and the Windows host it runs on must be registered with [Azure Arc](/sql/sql-server/azure-arc/overview). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [SQL Server extension (WindowsAgent.SqlServer)](/sql/sql-server/azure-arc/overview). This will facilitate SQL Server’s  communication with Azure.
 
@@ -75,8 +74,8 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 - [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
-- [Linked server for SQL Server with Azure Active Director authentication](azure-ad-authentication-sql-server-linked-server.md)
+- [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
 
 ## Next steps
 
-[Connect your SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
+- [Connect your SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)

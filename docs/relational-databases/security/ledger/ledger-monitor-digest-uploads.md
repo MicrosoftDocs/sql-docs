@@ -30,10 +30,10 @@ We recommend to configure alerts on Failed Ledger Digest Uploads if you want to 
 ::: zone pivot="as1-sql-server"
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-You can monitor Failed and Successful Ledger Digest Uploads with [Extended Events](docs/relational-databases/extended-events/extended-events.md) in SQL Server. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
+You can monitor Failed and Successful Ledger Digest Uploads with [Extended Events](../../extended-events/extended-events.md) in SQL Server. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
 
 We recommend to configure an alert on event number *37417 - Uploading ledger digest failed*.
-This could be done with a [SQL Agent Alert](docs/ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool. 
+This could be done with a [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) docs\ssms\agent\create-an-alert-using-an-error-number.md or your favorite third-party monitoring tool. 
 
 ::: zone-end
 

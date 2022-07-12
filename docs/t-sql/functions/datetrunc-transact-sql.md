@@ -9,8 +9,8 @@ f1_keywords:
   - "DATETRUNC"
 dev_langs:
   - "TSQL"
-author: markingmyname
-ms.author: maghan
+author: aashnabafna-ms
+ms.author: aashnabafna
 ms.reviewer: "derekw"
 ms.date: "07/15/2022"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
@@ -31,9 +31,7 @@ DATETRUNC(datepart, date)
 ## Arguments
 
 #### datetrunc
-
 The datepart specifies the precision for truncation. This table lists all the valid datepart values for `DATETRUNC`, given that it's also a valid part of the input date type:
-
 |*datepart*|Abbreviations|Truncation Notes|  
 |---|---|---|
 |**year**|**yy**, **yyyy**|  
@@ -165,7 +163,7 @@ SELECT @d, DATETRUNC(millisecond, @d);
 GO
 ```
 
-Both statements return the same result
+Both statements return the same output.
 
 ```output
 2021-12-08 11:30:15.123  2021-12-08 11:30:15.123
@@ -177,7 +175,7 @@ SELECT @d, DATETRUNC(day, @d);
 GO
 ```
 
-Both statements return the same result
+Both statements return the same output.
 
 ```output
 2021-12-08 2021-12-08  2021-12-08 2021-12-08
@@ -193,7 +191,7 @@ SELECT @d, DATETRUNC(minute, @d), DATETRUNC(second, @d);
 GO
 ```
 
-All three statements return the same result
+All three statements return the same output
 
 ```output
 2021-12-08 11:30:15.123  2021-12-08 11:30:15.123  2021-12-08 11:30:15.123

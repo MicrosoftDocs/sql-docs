@@ -18,16 +18,16 @@ ms.author: wiassaf
 ---
 # Data-tier Applications
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-A data-tier application (DAC) is a logical database entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - such as tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of the entire database model and is portable in an artifact known as a DAC package, or *.dacpac*. [Tooling support](#dac-tools) for data-tier applications enables developers and database administrators to deploy dacpacs to new or existing databases, where deployments to existing databases updates the database model from the existing state to match the contents of the dacpac.Developers build DACs from SQL database projects, a declarative development concept for building SQL objects that enables source control on the database schema.
+A data-tier application (DAC) is a logical database entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - such as tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of the entire database model and is portable in an artifact known as a DAC package, or *.dacpac*. [Tooling support](#dac-tools) for data-tier applications enables developers and database administrators to deploy dacpacs to new or existing databases. Deployments to an existing database updates the database model from the existing state to match the contents of the dacpac. Developers build DACs from SQL database projects, a declarative development concept for building SQL objects that enables source control on the database schema.
 
-A *.bacpac* is a related artifact that by default encapsulates the database schema as well as the data stored in the database. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) - and archiving an existing database in an open format.
+A *.bacpac* is a related artifact that by default encapsulates the database schema and the data stored in the database. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) - and archiving an existing database in an open format.
 
 ## Benefits of Data-tier Applications
-The lifecycle of a database application may involve developers and DBAs exchanging scripts and sharing ad hoc integration notes for application update activities. While this is acceptable in some circumstances, it can be difficult to integrate with CI/CD pipelines and general development processes.
+The lifecycle of a database application may involve developers and DBAs exchanging scripts and sharing single use integration notes for application update activities. While this process is acceptable in some circumstances, it can be difficult to integrate with DevOps pipelines and general development processes.
 
-Data-tier applications enable declarative database development, simplifying the development process and providing a more consistent and predictable development experience. A developer can author a database with SQL database projects in their choice of integrated development environment (IDE) and the SQL database project can be build to a DAC package locally or in a CI/CD pipeline.The DAC package is in turn deployed to a test, staging or production database through an automated process or manually with a CLI or GUI tool.The *.dacpac* can be used to update a database with new or modified objects, to revert to a previous version of the database, or to provision an entirely new database. Conversely, a *.dacpac* can be generated from an existing database and used to establish a SQL database project based on the current database schema.
+Data-tier applications enable declarative database development, simplifying the development process and providing a more consistent and predictable development experience. A developer can author a database with SQL database projects in their choice of integrated development environment (IDE). A SQL database project can be compiled to a DAC package locally or in a DevOps pipeline. The DAC package is in turn deployed to a test, staging or production database through an automated process or manually with a CLI or GUI tool.The *.dacpac* can be used to update a database with new or modified objects, to revert to a previous version of the database, or to provision an entirely new database. Conversely, a *.dacpac* can be generated from an existing database and used to establish a SQL database project based on the current database schema.
 
-The advantage of a DAC-driven deployment over a migration-driven process is that the process enables the identification and validation of behaviors from different source and target databases. Tooling used during database deployment/upgrades has options to flag risky actions such as column size changes that might cause data loss as well as the ability to directly script the upgrade plan.This plan can be evaluated manually before proceeding with the update.
+The advantage of a DAC-driven deployment over a migration-driven process is that the process enables the identification and validation of behaviors from different source and target databases. Tooling used during database deployment/upgrades has options to flag risky actions such as column size changes that might cause data loss and the ability to directly script the upgrade plan.This plan can be evaluated manually before proceeding with the update.
 
 ## Operations
 
@@ -36,7 +36,7 @@ A DAC supports the following operations:
 
 - **EXTRACT** - the user can extract a database into a *.dacpac*. For more information, see [SqlPackage extract](../../tools/sqlpackage/sqlpackage-extract.md) and [Extract a DAC From a Database](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md).
 
-- **DEPLOY**/**PUBLISH** - the user can deploy a *.dacpac* to a host server. When the deployment is done to an existing database, the difference between the database and the DAC is applied to the database as an object update operation.  The term "publish" is often used interchangeably with "deploy". For more information see [SqlPackage publish](../../tools/sqlpackage/sqlpackage-publish.md), [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md), and [Deploy a Database By Using a DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md).
+- **DEPLOY**/**PUBLISH** - the user can deploy a *.dacpac* to a host server. When the deployment is done to an existing database, the difference between the database and the DAC is applied to the database as an object update operation.  The term "publish" is often used interchangeably with "deploy". For more information, see [SqlPackage publish](../../tools/sqlpackage/sqlpackage-publish.md), [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md), and [Deploy a Database By Using a DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md).
 
 These capabilities can be found in SqlPackage, SQL Server Management Studio, Azure Data Studio, and SQL Server Data Tools.
 
@@ -58,7 +58,7 @@ A *.bacpac*, on the other hand, is focused on capturing schema and data supporti
 
 - **IMPORT** - The user can import the schema and the data into a new database. For more information, see [SqlPackage import](../../tools/sqlpackage/sqlpackage-import.md) and [Import a BACPAC File to Create a New User Database](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md).
 
-These capabilities are supported by the tools SqlPackage, SQL Server Management Studio, Azure Data Studio, and the Azure Portal.
+These capabilities are supported by the tools SqlPackage, SQL Server Management Studio, Azure Data Studio, and the Azure portal.
 
 
 ## DAC Tools
@@ -85,20 +85,20 @@ In these tools, developers can design a database in an unconnected, client-side 
 
 ### Version support
 
-In general, DAC tools are capable of reading *.dacpac* files generated by DAC tools from previous [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] versions, and can also deploy DAC packages to previous versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. However, DAC tools from earlier versions cannot read *.dacpac* files generated by DAC tools from later versions. At a minimum, DAC tools support the in-support versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] at the time of their release.
+In general, DAC tools are capable of reading *.dacpac* files generated by DAC tools from previous [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] versions, and can also deploy DAC packages to previous versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. However, DAC tools from earlier versions can't read *.dacpac* files generated by DAC tools from later versions. At a minimum, DAC tools support the in-support versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] at the time of their release.
 
 ### File format
 A *.dacpac* is a compressed folder with a .dacpac extension, and similarly a *.bacpac* is a compressed folder with a .bacpac extension. An advanced user can unpack the file to view the multiple XML sections representing details of the origin, the objects in the database, and other characteristics. To unpack a *.dacpac* or *.bacpac*, replace the file extension with *.zip* and use a file compression utility to unzip the file.
 
 
 ### Data-tier application registration
-In SQL Server Management Studio additional actions can be taken on a database to register it as a data-tier application.
+In SQL Server Management Studio other actions can be taken on a database to register it as a data-tier application.
 
 - **REGISTER** - the user can register a database as a data-tier application.
 
 - **UNREGISTER** - a database previously registered as a DAC can be unregistered.
 
-- **UPGRADE** - a database can be upgraded using a *.dacpac*. Upgrade is supported even on databases that are not previously registered as data-tier applications, but as a consequence of the upgrade, the database will be implicitly registered.
+- **UPGRADE** - a database can be upgraded using a *.dacpac*.
 
 For more information about these actions, see the below tasks.
 

@@ -36,7 +36,7 @@ Consider using LRS in the following cases:
 
 > [!NOTE]
 > - We recommend automating the migration of databases from SQL Server to SQL Managed Instance by using Database Migration Service. This service uses the same LRS cloud service at the back end, with log shipping in `NORECOVERY` mode. Consider manually using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
-> - LRS is the only method to restore differential backups on managed instance. It is not possible to manually restore differential backups on managed instance, nor to manually set the NORECOVERY mode.
+> - LRS is the only method to restore differential backups on managed instance. It isn't possible to manually restore differential backups on managed instance, nor to manually set the NORECOVERY mode.
 >
 
 ## How it works
@@ -82,7 +82,7 @@ Continuous mode migration needs to be used when you don't have the entire backup
 If you're migrating several databases, you need to:
 
 - Place backup files for each database in a separate folder on Azure Blob Storage in a flat-file structure. For example, use separate database folders: `bolbcontainer/database1/files`, `blobcontainer/database2/files`, etc.
-- Don't use nested folders inside database folders as this structure is not supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
+- Don't use nested folders inside database folders as this structure isn't supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
 - Start LRS separately for each database.
 - Specify different URI paths to separate database folders on Azure Blob Storage. 
 
@@ -299,7 +299,7 @@ The SAS authentication is generated with the time validity that you specified. Y
 :::image type="content" source="./media/log-replay-service-migrate/lrs-generated-uri-token.png" alt-text="Screenshot that shows an example of the U R I version of an S A S token.":::
 
    > [!NOTE]
-   > Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) is not supported at this time. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
+   > Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported at this time. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
 
 ### Copy parameters from the SAS token
 
@@ -343,7 +343,7 @@ Select-AzSubscription -SubscriptionId <subscription ID>
 
 You start the migration by starting LRS. You can start the service in either autocomplete or continuous mode. 
 
-When you use autocomplete mode, the migration completes automatically when the last of the specified backup files have been restored. This option requires the entire backup chain to be available in advance, and uploaded to Azure Blob Storage. It doesn't allow adding new backup files while migration is in progress. This option requires the start command to specify the filename of the last backup file. This mode is recommended for passive workloads for which data catch-up is not required.
+When you use autocomplete mode, the migration completes automatically when the last of the specified backup files have been restored. This option requires the entire backup chain to be available in advance, and uploaded to Azure Blob Storage. It doesn't allow adding new backup files while migration is in progress. This option requires the start command to specify the filename of the last backup file. This mode is recommended for passive workloads for which data catch-up isn't required.
 
 When you use continuous mode, the service continuously scans Azure Blob Storage folder and restores any new backup files that keep getting added while migration is in progress. The migration completes only after the manual cutover has been requested. Continuous mode migration needs to be used when you don't have the entire backup chain in advance, and when you plan to add new backup files once the migration is in progress. This mode is recommended for active workloads for which data catch-up is required.
 
@@ -387,7 +387,7 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last
 
 ### Start LRS in continuous mode
 
-Ensure that you have uploaded your initial backup chain to Azure Blob Storage.
+Ensure that you've uploaded your initial backup chain to Azure Blob Storage.
 
 The following PowerShell example starts LRS in continuous mode:
 
@@ -491,11 +491,11 @@ Consider the following limitations of LRS:
 - During the migration process, databases being migrated can't be used for read-only access on SQL Managed Instance.
 - System-managed software patches are blocked for 36 hours once the LRS has been started. After this time window expires, the next software maintenance update stops LRS. You'll need to restart the LRS migration from the beginning.
 - LRS requires databases on SQL Server to be backed up with the `CHECKSUM` option enabled.
-- The SAS token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have **Read** and **List** permissions only. For example, if you grant **Read**, **List** and **Write** permissions, LRS will not be able to start because of the extra **Write** permission.
-- Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) is not supported. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
+- The SAS token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have **Read** and **List** permissions only. For example, if you grant **Read**, **List** and **Write** permissions, LRS won't be able to start because of the extra **Write** permission.
+- Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
 - Backup files containing % and $ characters in the file name can't be consumed by LRS. Consider renaming such file names.
 - Backup files for different databases must be placed in separate folders on Blob Storage in a flat-file structure. Nested folders inside individual database folders aren't supported.
-- If using autocomplete mode, the entire backup chain needs to be available in advance on Azure Blob Storage. It is not possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
+- If using autocomplete mode, the entire backup chain needs to be available in advance on Azure Blob Storage. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - LRS must be started separately for each database pointing to the full URI path containing an individual database folder. 
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 

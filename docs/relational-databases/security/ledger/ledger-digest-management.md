@@ -30,15 +30,46 @@ The verification process and the integrity of the database depend on the integri
 ### Automatic generation and storage of database digests
 
 > [!NOTE]
-> Automatic generation and storage of database digests is currently available in Azure SQL Database, but not supported on SQL Server.
+> Automatic generation and storage of database digests in SQL Server only supports Azure Storage Account.
 
 Ledger integrates with the [immutable storage feature of Azure Blob Storage](/azure/storage/blobs/immutable-storage-overview) and [Azure Confidential Ledger](/azure/confidential-ledger/index). This integration provides secure storage services in Azure to help protect the database digests from potential tampering. This integration provides a simple and cost-effective way for users to automate digest management without having to worry about their availability and geographic replication.  Azure Confidential Ledger has a stronger integrity guarantee for customers who might be concerned about privileged administrators access to the digest. [This table](/azure/architecture/guide/technology-choices/multiparty-computing-service#confidential-ledger-and-azure-blob-storage) compares the immutable storage feature of Azure Blob Storage with Azure Confidential Ledger.  
 
-You can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md). When you configure automatic generation and storage, database digests are generated on a predefined interval of 30 seconds and uploaded to the selected storage service. If no transactions occur in the system in the 30-second interval, a database digest won't be generated and uploaded. This mechanism ensures that database digests are generated only when data has been updated in your database. When the endpoint is an Azure Blob Storage, the database server will create a new container, named **sqldbledgerdigests** and use a naming pattern like:
-ServerName/DatabaseName/CreationTime. The creation time is needed because a database with the same name can be dropped and recreated or restored, allowing for different “incarnations” of the database under the same name. See [Digest Management Considerations](ledger-digest-management.md)
+You can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI. For more information, see [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md). When you configure automatic generation and storage, database digests are generated on a predefined interval of 30 seconds and uploaded to the selected storage service. If no transactions occur on the system in the 30-second interval, a database digest won't be generated and uploaded. This mechanism ensures that database digests are generated only when data has been updated in your database. When the endpoint is an Azure Blob Storage, the Azure SQL database server will create a new container, named **sqldbledgerdigests** and use a naming pattern like:
+ServerName/DatabaseName/CreationTime. The creation time is needed because a database with the same name can be dropped and recreated or restored, allowing for different “incarnations” of the database under the same name. See [Digest Management Considerations](ledger-digest-management.md). 
 
-> [!IMPORTANT]
-> If you use Azure Blob Storage, configure an [immutability policy](/azure/storage/blobs/immutable-policy-configure-version-scope) on your container after provisioning to ensure that database digests are protected from tampering.
+> [!NOTE]
+> For SQL Server, the container needs to be created manually by the user.
+
+#### Azure Storage Account Immutability Policy
+
+If you use an Azure Storage Account for the storage of the database digests, configure an [immutability policy](/azure/storage/blobs/immutable-policy-configure-version-scope) on your container after provisioning, to ensure that database digests are protected from tampering. Make sure the immutability policy allows protected append writes to append blobs and that the policy is locked.
+
+#### Azure Storage Account Permission
+
+If you use **Azure SQL Database**, make sure that your logical SQL Server (System Identity) has sufficient RBAC permissions to write digests by adding it to the Storage Blob Data Contributor role.
+
+If you use **SQL Server**, you have to create a SAS key on the digest container to allow SQL Server to connect and authenticate against the Azure Storage Account.
+
+- Create a container on the Azure Storage Account, named **sqldbledgerdigests**
+- Create a policy on a container with the Read, Add, Create, Write, and List permissions and generate a shared access signature (SAS) key.
+- For each container used for digest file storage, create a SQL Server credential whose name matches the container path.
+
+The following example assumes that an Azure storage container, a policy and a SAS key have been created. This is needed by SQL Server to access the digest files in the container.
+
+In the following code snippet, replace `'<your SAS key>'` with the SAS key. The SAS key will look like `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`.
+
+```sql
+CREATE CREDENTIAL [https://ledgerstorage.blob.core.windows.net/sqldbledgerdigests]  
+WITH IDENTITY='SHARED ACCESS SIGNATURE',  
+SECRET = '<your SAS key>'   
+```  
+
+#### Azure Confidential Ledger Permission
+
+If you use **Azure SQL Database**, make sure that your logical SQL Server (System Identity) has sufficient RBAC permissions to write digests by adding it to the Contributor role.
+
+> [!NOTE]
+> Automatic generation and storage of database digests in SQL Server only supports Azure Storage Account.
 
 ### Manual generation and storage of database digests
 
@@ -64,18 +95,18 @@ The returned result set is a single row of data. It should be saved to the trust
 ```
 
 ## Digest management considerations
-> [!NOTE]
-> This section only applies to Azure SQL Database, and not SQL Server.
 
 ### Database restore
 
-Restoring the database back to an earlier point in time, also known as [Point in Time Restore](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore), is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage or Azure Confidential Ledger, the *create time* of the database is captured that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different “incarnations” of the database. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information will be protected as well.
+Restoring the database back to an earlier point in time, also known as [Point in Time Restore](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore), is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage or Azure Confidential Ledger, the *create time* of the database is captured that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different “incarnations” of the database. For SQL Server, the *create time* is the current UTC time when the digest upload is enabled for the first time. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information will be protected as well.
 
-### Active geo-replication
+### Active geo-replication and Always On Availability Groups
 
-Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests.
+Active geo-replication can be configured for an Azure SQL database. Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests.
 
 Dropping the link between the primary and the secondaries when ledger digests are configured isn't supported. You should first disable the *Enable automatic digest storage* database setting, remove the synchronization between the primary and the secondary and re-enable the *Enable automatic digest storage* database setting.
+
+When your database is part of an Always On Availability Group in SQL Server, the same principle as Active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
 
 ## Next steps
 

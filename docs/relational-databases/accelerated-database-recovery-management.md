@@ -59,7 +59,7 @@ This section contains guidance and recommendations for ADR.
 
 - Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
 
-- Avoid long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo long active transactions, long-running transactions can delay version cleanup and increase the size of the PVS.
+- Avoid multiple long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo, multiple long-running transactions can delay version cleanup and increase the size of the PVS.
 
 - Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. SLOG is checkpointed, so avoiding large transactions that use SLOG can help overall performance. These scenarios can cause the SLOG to take up more space:
 
@@ -105,7 +105,9 @@ In this case, when the PVS filegroup is not specified, the `PRIMARY` filegroup h
 
 You can configure ADR to use another filegroup, aside from the default `PRIMARY` filegroup, to hold PVS data.
 
-Before running this script, create the `VersionStoreFG` filegroup and create a new data file in the filegroup. For example:
+Before enabling ADR in a filegroup besides `PRIMARY`, you must create the filegroup and data file. 
+
+Create the `VersionStoreFG` filegroup and create a new data file in the filegroup. For example:
 
 ```sql
 ALTER DATABASE [MyDatabase] ADD FILEGROUP [VersionStoreFG];

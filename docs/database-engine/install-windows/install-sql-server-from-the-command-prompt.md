@@ -264,7 +264,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |Azure Arc agent extension |/AZURERESOURCEGROUP<br/><br/>**Optional**| Azure resource group where the SQL Server instance resource will be created. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZUREREGION<br/><br/>**Optional**| Azure region where the SQL Server instance resource will be created. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZURETENANTID<br/><br/>**Optional**| Azure tenant ID in which the service principal exists. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
-|Azure Arc agent extension |/AZURESERVICEPRINCIPAL<br/><br/>**Optional**| Service principal to authenticate against given tenant id, subscription and resource group. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPAL<br/><br/>**Optional**| Service principal to authenticate against given tenant ID, subscription and resource group. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZURESERVICEPRINCIPALSECRET<br/><br/>**Optional**| Service principal secret. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZUREARCPROXY<br/><br/>**Optional**| Name of the proxy server used to connect to Azure Arc. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 

@@ -94,7 +94,7 @@ sqlpackage.exe /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{l
 Create a .sql file containing the schema definition of the database:
 
 ```cmd
-sqlpackage.exe /Action:Extract /TargetFile:{filename}.sql /DiagnosticsFile:{logFile}.log /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password} /ExtractTarget:File
+sqlpackage.exe /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password} /p:ExtractTarget:File
 ```
 
 

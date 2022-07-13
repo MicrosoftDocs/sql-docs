@@ -26,8 +26,6 @@ Manually starts persistent version store (PVS) cleanup process, a key element of
 
 It is not typically necessary to start the PVS cleanup process manually using `sys.sp_persistent_version_cleanup`. However in some scenarios, in a known period of rest/recovery after busy OLTP activity, you may want to initiate the PVS cleanup process manually.
 
-Currently the version cleaner is a single threaded background task.
-
 For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
@@ -50,7 +48,7 @@ Optional. Default is 0. When 1, forces cleanup of all database pages even if not
 
 #### [clean_option]
 
-Optional. Possible options determine whether or not to reclaim off-row PVS page:
+Optional. Possible options determine whether or not to reclaim off-row PVS page. This reference is not commonly needed and the default value `0` is recommended.
 
 | Value | Description |
 |:--|:--|
@@ -82,8 +80,6 @@ If the PVS cleanup process is already running against the desired database, this
 SELECT * FROM sys.dm_exec_requests
 WHERE command LIKE '%PERSISTED_VERSION_CLEANER%';
 ```
-
-
 
 ### Limitations
 

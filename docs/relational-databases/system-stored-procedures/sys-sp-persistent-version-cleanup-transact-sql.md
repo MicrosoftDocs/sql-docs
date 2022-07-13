@@ -40,7 +40,7 @@ EXEC sys.sp_persistent_version_cleanup [database_name] [, scan_all_pages] [, cle
 
 #### [database_name]
 
-Optional. The name of the database to cleanup. If not provided, uses the current database context. 
+Optional. The name of the database to clean up. If not provided, uses the current database context. 
 
 #### [scan_all_pages]
 
@@ -74,7 +74,7 @@ The `sys.sp_persistent_version_cleanup` stored procedure is synchronous, meaning
 
 In SQL Server 2019, the PVS cleanup process only executes for one database at a time. In Azure SQL Database and Azure SQL Managed Instance, and beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the PVS cleanup process can execute in parallel against multiple databases in the same instance.
 
-If the PVS cleanup process is already running against the desired database, this stored procedure will be blocked and wait for completion before starting another PVS cleanup process. Active, long-running transactions in any database where ADR is enabled can also block scleanup of the PVS. You can monitor the version cleaner task by looking for its process with the following sample query: 
+If the PVS cleanup process is already running against the desired database, this stored procedure will be blocked and wait for completion before starting another PVS cleanup process. Active, long-running transactions in any database where ADR is enabled can also block cleanup of the PVS. You can monitor the version cleaner task by looking for its process with the following sample query: 
 
 ```sql
 SELECT * FROM sys.dm_exec_requests

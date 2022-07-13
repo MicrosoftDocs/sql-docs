@@ -138,6 +138,8 @@ Login failed with invalid TLS version
 
 In the [Azure portal](https://portal.azure.com), go to your **SQL server** resource. Under the **Security** settings, select **Networking** and then choose the **Connectivity** tab. Select the **Minimum TLS Version** desired for all databases associated with the server, and select **Save**.
 
+:::image type="content" source="media/connectivity-settings/minimal-tls-version.png" alt-text="Screenshot of the Connectivity tab of the Networking settings for your logical server, minimal TLS version drop-down selected." lightbox="media/connectivity-settings/minimal-tls-version.png":::
+
 ### [PowerShell](#tab/azure-powershell)
 
 It's possible to change the minimum TLS version by using Azure PowerShell. 
@@ -188,6 +190,8 @@ It's possible to change the connection policy by using the Azure portal, Azure P
 It's possible to change your connection policy for your logical server by using the Azure portal. 
 
 In the [Azure portal](https://portal.azure.com), go to your **SQL server** resource. Under the **Security** settings, select **Networking** and then choose the **Connectivity** tab. Choose the desired connection policy, and select **Save**.
+
+:::image type="content" source="media/connectivity-settings/change-connection-policy.png" alt-text="Screenshot of the Connectivity tab of the Networking page, Connection policy selected.":::
 
 ### [PowerShell](#tab/azure-powershell)
 

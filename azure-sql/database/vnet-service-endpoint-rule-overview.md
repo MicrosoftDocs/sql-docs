@@ -216,18 +216,10 @@ You must already have a subnet that's tagged with the particular virtual network
 
 1. Sign in to the [Azure portal][http-azure-portal-link-ref-477t].
 
-1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Firewalls and virtual networks**.
+1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Networking**.
+1. Under the **Public access** tab, ensure **Public network access** is set to **Select networks**, otherwise the **Virtual networks** settings are hidden. Select **+ Add existing virtual network** in the **Virtual networks** section.
 
-    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Azure SQL logical server properties, Firewalls and Virtual Networks highlighted" lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
-
-1. Set **Allow Azure services and resources to access this server** to **No**.
-
-    > [!IMPORTANT]
-    > If you leave the control set to **ON**, your server accepts communication from any subnet inside the Azure boundary. That is communication that originates from one of the IP addresses that's recognized as those within ranges defined for Azure datacenters. Leaving the control set to **ON** might be excessive access from a security point of view. The Microsoft Azure Virtual Network service endpoint feature in coordination with the virtual network rules feature of SQL Database together can reduce your security surface area.
-
-1. Select **+ Add existing virtual network** in the **Virtual networks** section.
-
-    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png" alt-text="Screenshot that shows selecting + Add existing (subnet endpoint, as a SQL rule)." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="logical server properties, Networking" lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
 
 1. In the new **Create/Update** pane, fill in the boxes with the names of your Azure resources.
 
@@ -236,11 +228,18 @@ You must already have a subnet that's tagged with the particular virtual network
 
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png" alt-text="Screenshot that shows filling in boxes for the new rule." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png":::
 
-1. Select the **OK** button near the bottom of the pane.
-
 1. See the resulting virtual network rule on the **Firewall** pane.
 
+
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png" alt-text="Screenshot that shows the new rule on the Firewall pane." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png":::
+
+1. Set **Allow Azure services and resources to access this server** to **No**.
+
+    > [!IMPORTANT]
+    > If you leave **Allow Azure services and resources to access this server** checked, your server accepts communication from any subnet inside the Azure boundary. That is communication that originates from one of the IP addresses that's recognized as those within ranges defined for Azure datacenters. Leaving the control enabled might be excessive access from a security point of view. The Microsoft Azure Virtual Network service endpoint feature in coordination with the virtual network rules feature of SQL Database together can reduce your security surface area.
+
+1. Select the **OK** button near the bottom of the pane.
+
 
 > [!NOTE]
 > The following statuses or states apply to the rules:

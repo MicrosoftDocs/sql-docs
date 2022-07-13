@@ -1,7 +1,7 @@
 ---
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
-ms.date: "06/10/2022"
+ms.date: 07/12/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -57,7 +57,7 @@ WHERE pvss.database_id = DB_ID();
 
 1. Check `pvs_pct_of_database_size` size, note any difference from the typical, compared to baselines during other periods of application activity. PVS is considered large if it's significantly larger than baseline or if it is close to 50% of the size of the database. Use the following steps as a troubleshooting aid for a PVS that is large.
 
-2. Active transactions prevent cleaning up the PVS. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a long time by querying `sys.dm_tran_database_transactions` based on the transaction ID. Check for long-running, active transactions with a query like the below sample, which declares variables to set thresholds for duration or log amount:
+2. Active, long-running transactions in any database where ADR is enabled can prevent cleanup of the PVS. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a long time by querying `sys.dm_tran_database_transactions` based on the transaction ID. Check for long-running, active transactions with a query like the below sample, which declares variables to set thresholds for duration or log amount:
 
     ```sql
     DECLARE @longTxThreshold int = 1800; --number of seconds to use as a duration threshold for long-running transactions
@@ -108,7 +108,7 @@ WHERE pvss.database_id = DB_ID();
     
     To prevent delays to PVS cleanup:
 
-    1. Consider killing the long active transaction session that is delaying PVS cleanup, if possible. 
+    1. Consider killing the long active transaction session that is delaying PVS cleanup, if possible. Long-running transactions in any database where ADR is enabled may delay ADR PVS cleanup.
     1. Tune long-running queries to reduce query duration and locks required. For more information and guidance, see [Understand and resolve blocking in SQL Server](/troubleshoot/sql/performance/understand-resolve-blocking) or [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking).
     1. Review the application to determine the nature of the problematic active snapshot scan. Consider a different isolation level, such as READ COMMITTED, instead of SNAPSHOT or READ COMMITTED SNAPSHOT for long-running queries that are delaying ADR PVS cleanup. This problem occurs more frequently with SNAPSHOT isolation level.
     1. This issue can occur in SQL Server, Azure SQL Managed Instance, and elastic pools of Azure SQL Database, but not in singleton Azure SQL databases. In Azure SQL Database elastic pools, consider moving databases out of the elastic pool that have long-running queries using READ COMMIT SNAPSHOT or SNAPSHOT isolation levels.

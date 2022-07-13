@@ -1,8 +1,8 @@
 ---
-description: "sys.sp_persistent_version_cleanup (Transact-SQL)"
+description: "The sys.sp_persistent_version_cleanup system stored procedure manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR)."
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/18/2022"
+ms.date: 07/12/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -74,39 +74,44 @@ Requires the **ALTER DATABASE** permission to execute.
 
 The `sys.sp_persistent_version_cleanup` stored procedure is synchronous, meaning that it will not complete until all version information is cleaned up from the current PVS. 
 
-Database Mirroring cannot be set for a database where ADR is enabled or there are still versions in the persisted version store (PVS). If ADR is disabled, run `sys.sp_persistent_version_cleanup` to clean up previous versions still in the PVS.
+In SQL Server 2019, the PVS cleanup process only executes for one database at a time. In Azure SQL Database and Azure SQL Managed Instance, and beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the PVS cleanup process can execute in parallel against multiple databases in the same instance.
 
-In SQL Server 2019, the PVS cleanup process only executes for one database at a time. In Azure SQL Database and Azure SQL Managed Instance, the PVS cleanup process can execute in parallel against multiple databases in the same instance.
-
-If the PVS cleanup process is already running against the desired database, this stored procedure will be blocked and wait for completion before starting another PVS cleanup process. You can monitor the version cleaner task by looking for its process with the following sample query: 
+If the PVS cleanup process is already running against the desired database, this stored procedure will be blocked and wait for completion before starting another PVS cleanup process. Active, long-running transactions in any database where ADR is enabled can also block scleanup of the PVS. You can monitor the version cleaner task by looking for its process with the following sample query: 
 
 ```sql
 SELECT * FROM sys.dm_exec_requests
 WHERE command LIKE '%PERSISTED_VERSION_CLEANER%';
 ```
 
+
+
+### Limitations
+
+Database Mirroring cannot be set for a database where ADR is enabled or there are still versions in the persisted version store (PVS). If ADR is disabled, run `sys.sp_persistent_version_cleanup` to clean up previous versions still in the PVS.
+
 ## Example
 
-To activate the PVS cleanup process manually between workloads or during maintenance windows, use:
+To activate the PVS cleanup process manually between workloads or during maintenance windows, use the following sample script:
 
 ```sql
 EXEC sys.sp_persistent_version_cleanup [database_name]; 
 ```
 
-For example,
+For example:
 
 ```sql
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
-Or to assume the current database context,
+Or, to assume the current database context:
 
 ```sql
 USE [WideWorldImporters];
+GO
 EXEC sys.sp_persistent_version_cleanup;
 ```
 
-## See also
+## Next steps
 
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
 - [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md)

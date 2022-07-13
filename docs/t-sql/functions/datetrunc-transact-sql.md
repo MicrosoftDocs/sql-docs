@@ -31,7 +31,9 @@ DATETRUNC(datepart, date)
 ## Arguments
 
 #### datetrunc
-The datepart specifies the precision for truncation. This table lists all the valid datepart values for `DATETRUNC`, given that it's also a valid part of the input date type:
+
+The datepart specifies the precision for truncation. This table lists all the valid datepart values for `DATETRUNC`, given that it's also a valid part of the input date type.
+
 |*datepart*|Abbreviations|Truncation Notes|  
 |---|---|---|
 |**year**|**yy**, **yyyy**|  

@@ -175,7 +175,7 @@ az sql db update \
 
 #### Hyperscale
 
-Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database. Storage redundancy can only be specified during the database creation process for Hyperscale databases. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy). 
+Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database as the storage redundancy can only be specified during the database creation process for Hyperscale databases and cannot be updated later. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy). 
 
 Existing Hyperscale databases can migrate to different storage redundancy using [active geo-replication](active-geo-replication-overview.md), which is preferred due to minimal downtime. Alternatively, you can migrate to a different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
 

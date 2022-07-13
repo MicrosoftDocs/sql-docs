@@ -55,7 +55,7 @@ When you restore a database, the service determines which full, differential, an
 
 By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages impacting backup storage in the primary region and allows you to restore your databases in a different region in the event of a regional outage. 
 
-The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your data stays within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
+The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term retention (STR) backups and long-term retention (LTR) backups. To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 
 Backup storage redundancy can be configured when you create your database, and can be updated at a later time; the changes made to an existing database apply to future backups only. After the backup storage redundancy of an existing database is updated, it may take up to 48 hours for the changes to be applied. 
 
@@ -185,7 +185,7 @@ If you delete a database, the system keeps backups in the same way it would for 
 
 For SQL Database, you can configure full backup long-term retention (LTR) for up to 10 years in Azure Blob storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups.  The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term backup retention](long-term-retention-overview.md). Databases in the Hyperscale service tier do not currently support long-term retention. 
 
-Storage redundancy for long-term retention can be changed after the LTR policy is created for Azure SQL Database. Updating the backup storage redundancy for an existing Azure SQL Database only applies the change to subsequent backups taken in the future for the database. All existing LTR backups for the database will continue to reside in the existing storage blob and new backups will be stored on the newly requested storage blob type. 
+Updating the backup storage redundancy for an existing Azure SQL Database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob and new backups will be replicated based on the configured backup storage redundancy. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
 
@@ -215,7 +215,7 @@ Azure SQL Database computes your total billable backup storage as a cumulative v
 
 Backup storage cost is calculated differently for Hyperscale databases, more information can be found in [Hyperscale backup storage costs](hyperscale-automated-backups-overview.md#backup-storage-costs). 
 
-For single databases in SQL Database, a backup storage amount equal to 100 percent of the maximum data storage size for the database is provided at no extra charge.  The following equation is used to calculate the total billable backup storage usage:
+For single databases, a backup storage amount equal to 100 percent of the maximum data storage size for the database is provided at no extra charge.  The following equation is used to calculate the total billable backup storage usage:
 
 `Total billable backup storage size = (size of full backups + size of differential backups + size of log backups) – maximum data storage`
 
@@ -240,8 +240,8 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 1. Add a filter for **Service name**.
 2. In the drop-down list select **sql database** for a single database or an elastic database pool.
 3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the drop-down list select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters will only show up if they've been consumed.
-5. To monitor LTR backup costs, in the drop-down list select **ltr backup storage** for a single database or an elastic database pool. Meters will only show up if they've been consumed.
+4. To monitor PITR backup costs, in the drop-down list select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters will show up only if there is backup storage consumption.
+5. To monitor LTR backup costs, in the drop-down list select **ltr backup storage** for a single database or an elastic database pool. Meters will show up only if there is backup storage consumption.
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 

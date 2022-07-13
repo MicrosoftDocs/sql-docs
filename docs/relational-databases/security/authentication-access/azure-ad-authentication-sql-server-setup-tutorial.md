@@ -117,8 +117,8 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    1. Select **Add Access Policy**.
    1. For **Key permissions**, use **0 selected**.
-   1. For **Secret permissions**, select **Get**.
-   1. For **Certificate permissions**, select **Get**.
+   1. For **Secret permissions**, select **Get** and **List**.
+   1. For **Certificate permissions**, select **Get** and **List**.
    1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
    1. Select **Add** and then select **Save**.
 

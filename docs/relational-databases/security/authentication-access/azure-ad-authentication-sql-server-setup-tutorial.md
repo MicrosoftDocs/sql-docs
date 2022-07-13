@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux. Azure Virtual Machines aren't supported.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
 
 In this tutorial, you learn how to:
 
@@ -33,7 +33,7 @@ In this tutorial, you learn how to:
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- SQL Server Arc extension version 1.1.1795.50 or higher is installed.
+- SQL Server Azure Arc extension version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
@@ -42,8 +42,6 @@ In this tutorial, you learn how to:
 - To perform Azure AD authentication, SQL Server needs to be able to query Azure AD and requires an Azure AD app registration, which it can authenticate as. The app registration also needs a handful of permissions for the queries SQL Server will perform.
 
 - SQL Server uses a certificate for this authentication, and it is stored in Azure Key Vault (AKV). The Azure Arc agent downloads the certificate to the SQL Server instance host.
-
-- Azure AD authentication is only supported for SQL Server running in the mixed mode authentication (allowing SQL Server and Windows authentication mode). If only Windows authentication mode is chosen, Azure AD authentication isn't supported.
 
 > [!WARNING]  
 > Connections authenticated by Azure AD are always encrypted. If SQL Server is using a self-signed certificate, you must add `trust server cert = true` in the connection string. SQL Server and Windows authenticated connections don't require encryption, but it is recommended.
@@ -117,8 +115,8 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    1. Select **Add Access Policy**.
    1. For **Key permissions**, use **0 selected**.
-   1. For **Secret permissions**, select **Get**.
-   1. For **Certificate permissions**, select **Get**.
+   1. For **Secret permissions**, select **Get** and **List**.
+   1. For **Certificate permissions**, select **Get** and **List**.
    1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
    1. Select **Add** and then select **Save**.
 
@@ -306,9 +304,7 @@ SQL Server tools that support Azure AD authentication for Azure SQL are also sup
 > [!WARNING]  
 > Azure AD parameters are configured by the Azure Arc agent, and should not be reconfigured manually.
 
-On Windows, Azure Active Directory parameters are stored in the Windows Registry.
-
-On Linux, Azure Active Directory parameters are stored in `mssql-conf`. For more information about the Azure AD configuration options in Linux, see [Configure SQL Server on Linux with the mssql-conf tool](../../../linux/sql-server-linux-configure-mssql-conf.md)
+On Linux, Azure Active Directory parameters are stored in `mssql-conf`. For more information about the Azure AD configuration options in Linux, see [Configure SQL Server on Linux with the mssql-conf tool](../../../linux/sql-server-linux-configure-mssql-conf.md).
 
 ## Known issues
 

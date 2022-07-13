@@ -42,7 +42,7 @@ ms.topic: conceptual
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -76,7 +76,7 @@ ms.topic: conceptual
 | [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -111,7 +111,7 @@ ms.topic: conceptual
 | [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
-| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+| [Trace flags](#traceflags) | Set the traceflags that the service is going to use. |
 
 ::: moniker-end
 
@@ -120,11 +120,11 @@ ms.topic: conceptual
 
 ## Usage tips
 
-* For Always On Availability Groups and shared disk clusters, always make the same configuration changes on each node.
+- For Always On Availability Groups and shared disk clusters, always make the same configuration changes on each node.
 
-* For the shared disk cluster scenario, don't attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
+- For the shared disk cluster scenario, don't attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
-* These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
+- These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
@@ -175,6 +175,20 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 ## <a id="azure-ad"></a> Configure Azure Active Directory authentication
 
 Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for SQL Server. For more information, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
+
+### Change the default Azure AD certificate path
+
+By default, the Azure AD certificate file is stored in `/var/opt/mssql/aadsecrets/`. You can change this path if you use a certificate store or an encrypted drive. To change the path, you can use the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/location.pfx
+```
+
+In the previous example, `/path/to/new/location.pfx` is your preferred path *including* the certificate name.
+
+The certificate downloaded by the SQL Server Azure Arc agent for Azure AD authentication will now be stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+
+### Azure AD configuration options
 
 The following options are used by Azure AD authentication for an instance of SQL Server running on Linux.
 
@@ -340,8 +354,8 @@ To change these settings, use the following steps:
    sudo systemctl start mssql-server
    ```
 
-   > [!NOTE]
-   > If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new `master` database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata.
+   > [!NOTE]  
+   > If SQL Server cannot find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new `master` database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata.
 
 ## <a id="masterdatabasename"></a> Change the name of `master` database files
 
@@ -362,7 +376,7 @@ To change these settings, use the following steps:
    sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > You can only change the name of the `master` database and log files after SQL Server has started successfully. Before the initial run, SQL Server expects the files to be named master.mdf and mastlog.ldf.
 
 1. Change the name of the `master` database data and log files
@@ -384,7 +398,7 @@ The **filelocation.defaultdumpdir** setting changes the default location where t
 
 To set up this new location, use the following commands:
 
-1. Create the target directory for new dump files. The following example creates a new **/tmp/dump** directory:
+1. Create the target directory for new dump files. The following example creates a new `/tmp/dump` directory:
 
    ```bash
    sudo mkdir /tmp/dump
@@ -599,9 +613,9 @@ The following options are available to the memory settings.
 
 |Option |Description |
 |--- |--- |
-| memory.disablememorypressure | SQL Server disable memory pressure. Values can be `true` or `false`. |
-| memory.memory_optimized | Enable or disable SQL Server memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
-| memory.enablecontainersharedmemory | Applicable for SQL Server containers only. Use this setting to enable shared memory inside SQL Server containers. By default, this is set to `false`. Values can be `true` or `false`. |
+| **memory.disablememorypressure** | SQL Server disable memory pressure. Values can be `true` or `false`. |
+| **memory.memory_optimized** | Enable or disable SQL Server memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
+| **memory.enablecontainersharedmemory** | Applicable for SQL Server containers only. Use this setting to enable shared memory inside SQL Server containers. By default, this is set to `false`. Values can be `true` or `false`. |
 
 ## <a id="msdtc"></a> Configure MSDTC
 
@@ -625,23 +639,23 @@ There are several other settings for **mssql-conf** that you can use to monitor 
 
 | Option | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed transactions |
-| distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64 MB |
-| distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10 MB |
-| distributedtransaction.servertcpport | MSDTC rpc server port |
-| distributedtransaction.trace_cm | Traces in the connection manager |
-| distributedtransaction.trace_contact | Traces the contact pool and contacts |
-| distributedtransaction.trace_gateway | Traces Gateway source |
-| distributedtransaction.trace_log | Log tracing |
-| distributedtransaction.trace_misc | Traces that can't be categorized into the other categories |
-| distributedtransaction.trace_proxy | Traces that are generated in the MSDTC proxy |
-| distributedtransaction.trace_svc | Traces service and .exe file startup |
-| distributedtransaction.trace_trace | The trace infrastructure itself |
-| distributedtransaction.trace_util | Traces utility routines that are called from multiple locations |
-| distributedtransaction.trace_xa | XA Transaction Manager (XATM) tracing source |
-| distributedtransaction.tracefilepath | Folder in which trace files should be stored |
-| distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
+| **distributedtransaction.allowonlysecurerpccalls** | Configure secure only RPC calls for distributed transactions |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure security only RPC calls for distributed transactions |
+| **distributedtransaction.maxlogsize** | DTC transaction log file size in MB. Default is 64 MB |
+| **distributedtransaction.memorybuffersize** | Circular buffer size in which traces are stored. This size is in MB and default is 10 MB |
+| **distributedtransaction.servertcpport** | MSDTC rpc server port |
+| **distributedtransaction.trace_cm** | Traces in the connection manager |
+| **distributedtransaction.trace_contact** | Traces the contact pool and contacts |
+| **distributedtransaction.trace_gateway** | Traces Gateway source |
+| **distributedtransaction.trace_log** | Log tracing |
+| **distributedtransaction.trace_misc** | Traces that can't be categorized into the other categories |
+| **distributedtransaction.trace_proxy** | Traces that are generated in the MSDTC proxy |
+| **distributedtransaction.trace_svc** | Traces service and .exe file startup |
+| **distributedtransaction.trace_trace** | The trace infrastructure itself |
+| **distributedtransaction.trace_util** | Traces utility routines that are called from multiple locations |
+| **distributedtransaction.trace_xa** | XA Transaction Manager (XATM) tracing source |
+| **distributedtransaction.tracefilepath** | Folder in which trace files should be stored |
+| **distributedtransaction.turnoffrpcsecurity** | Enable or disable RPC security for distributed transactions |
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
@@ -747,17 +761,17 @@ The following options are additional network settings configurable using `mssql-
 
 |Option |Description |
 |--- |--- |
-| network.disablesssd | Disable querying SSSD for AD account information and default to LDAP calls. Values can be `true` or `false`. |
-| network.enablekdcfromkrb5conf | Enable looking up KDC information from krb5.conf. Values can be `true` or `false`. |
-| network.forcesecureldap | Force using LDAPS to contact domain controller. Values can be `true` or `false`. |
-| network.ipaddress | IP address for incoming connections. |
-| network.kerberoscredupdatefrequency | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
-| network.privilegedadaccount | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
-| uncmapping | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+| **network.disablesssd** | Disable querying SSSD for AD account information and default to LDAP calls. Values can be `true` or `false`. |
+| **network.enablekdcfromkrb5conf** | Enable looking up KDC information from krb5.conf. Values can be `true` or `false`. |
+| **network.forcesecureldap** | Force using LDAPS to contact domain controller. Values can be `true` or `false`. |
+| **network.ipaddress** | IP address for incoming connections. |
+| **network.kerberoscredupdatefrequency** | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
+| **network.privilegedadaccount** | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| **uncmapping** | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
 
 ## <a id="traceflags"></a> Enable/Disable trace flags
 
-This **traceflag** option enables or disables trace flags for the startup of the SQL Server service. To enable/disable a trace flag, use the following commands:
+The **traceflag** option enables or disables trace flags for the startup of the SQL Server service. To enable/disable a trace flag, use the following commands:
 
 1. Enable a trace flag using the following command. For example, for Trace Flag 1234:
 

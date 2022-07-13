@@ -26,7 +26,7 @@ This article introduces settings that control connectivity to the server for Azu
 
 You can change these settings from the networking tab of your [logical server](logical-servers.md): 
 
-:::image type="content" source="media/single-database-create-quickstart/manage-connectivity-settings.png" alt-text="Screenshot of the Firewalls and virtual networks settings in Azure portal for SQL server":::
+:::image type="content" source="media/connectivity-settings/manage-connectivity-settings.png" alt-text="Screenshot of the Firewalls and virtual networks settings in Azure portal for SQL server":::
 
 > [!IMPORTANT]
 > This article doesn't apply to Azure SQL Managed Instance. This article also does not apply to dedicated SQL pools in Azure Synapse Analytics workspaces. See [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) for guidance on how to configure IP firewall rules for Azure Synapse Analytics with workspaces.
@@ -67,8 +67,6 @@ To enable public network access for the logical server hosting your databases, g
 From this page, you can add a virtual network rule, as well as configure firewall rules for your public endpoint. 
 
 Choose the **Private access** tab to configure a [private endpoint](private-endpoint-overview.md). 
-
-You can also configure outbound networking restrictions, the connection policy, and in-transit encryption options under the **Connectivity** tab. 
 
 
 > [!NOTE]

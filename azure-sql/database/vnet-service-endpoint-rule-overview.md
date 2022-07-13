@@ -142,7 +142,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
     | Assign access to | User, group, or service principal |
     | Members | Server or workspace hosting your dedicated SQL pool that you've registered with Azure AD |
 
-    ![Screenshot that shows Add role assignment page in Azure portal.](../includes/role-based-access-control/media/add-role-assignment-page.png)
+    :::image type="content" source="../includes/role-based-access-control/media/add-role-assignment-page.png" alt-text="Screenshot that shows Add role assignment page in Azure portal.":::
 
    > [!NOTE]
    > Only members with Owner privilege on the storage account can perform this step. For various Azure built-in roles, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
@@ -181,7 +181,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 
 Azure SQL auditing can write SQL audit logs to your own storage account. If this storage account uses the virtual network service endpoints feature, see how to [write audit to a storage account behind VNet and firewall](./audit-write-storage-account-behind-vnet-firewall.md).
 
-## Add a virtual network firewall rule to your Azure SQL server
+## Add a virtual network firewall rule to your server
 
 Long ago, before this feature was enhanced, you were required to turn on virtual network service endpoints before you could implement a live virtual network rule in the firewall. The endpoints related a given virtual network subnet to a database in SQL Database. As of January 2018, you can circumvent this requirement by setting the **IgnoreMissingVNetServiceEndpoint** flag. Now, you can add a virtual network firewall rule to your server without turning on virtual network service endpoints.
 

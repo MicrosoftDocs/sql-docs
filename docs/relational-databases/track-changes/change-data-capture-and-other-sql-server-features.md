@@ -68,11 +68,15 @@ This topic describes how the following features interact with change data captur
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
  
 ##  <a name="Serverless"></a> Serverless databases  
-  If a serverless database enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
+  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
   
 ## <a name="AlwaysOn"></a> Availability groups 
  
  When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
+
+## <a name="FailoverAzureSQLDB"></a> Failover on Azure SQL DB 
+ 
+If the database is enabled for change data capture (CDC), after the failover capture and cleanup happen automatically on new primary. 
 
 ##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
 

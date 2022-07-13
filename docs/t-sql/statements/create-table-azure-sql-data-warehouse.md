@@ -213,7 +213,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 |`7`|27|7|  
   
  `datetime`  
- Stores date and time of day with 19 to 23 characters according to the Gregorian calendar. The date can contain year, month, and day. The time contains hour, minutes, seconds.As an option, you can display three digits for fractional seconds. The storage size is 8 bytes.  
+ Stores date and time of day with 19 to 23 characters according to the Gregorian calendar. The date can contain year, month, and day. The time contains hour, minutes, seconds. As an option, you can display three digits for fractional seconds. The storage size is 8 bytes.  
   
  `smalldatetime`  
  Stores a date and a time. Storage size is 4 bytes.  

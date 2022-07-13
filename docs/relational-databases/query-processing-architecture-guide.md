@@ -12,18 +12,17 @@ helpviewer_keywords:
   - "batch mode execution"
 author: "akatesmith"
 ms.author: "katsmith"
-ms.reviewer: "maghan"
+ms.reviewer: maghan, randolphwest
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: 06/30/2022
 ---
 
 # Query Processing Architecture Guide
 
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The 
-following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## Execution modes
 
@@ -34,14 +33,14 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INC
 
 ### Row mode execution
 
-*Row mode execution- is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
+*Row mode execution* is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
 
 ### Batch mode execution  
 
-*Batch mode execution- is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.
+*Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.
 
 When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 
@@ -281,14 +280,14 @@ GO
 Based on this view, both of these [!INCLUDE[tsql](../includes/tsql-md.md)] statements perform the same operations on the base tables and produce the same results:
 
 ```sql
-/- SELECT referencing the EmployeeName view. */
+/* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
   ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
-/- SELECT referencing the Person and Employee tables directly. */
+/* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -331,7 +330,7 @@ Hints can propagate through levels of nested views. For example, suppose a query
 When the `FORCE ORDER` hint is used in a query that contains a view, the join order of the tables within the view is determined by the position of the view in the ordered construct. For example, the following query selects from three tables and a view:
 
 ```sql
-SELECT - FROM Table1, Table2, View1, Table3
+SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
     AND View1.Col2 = Table3.Col2;
@@ -460,7 +459,7 @@ The plan cache has two stores for all compiled plans:
 The query below provides information about memory usage for these two cache stores:
 
 ```sql
-SELECT - FROM sys.dm_os_memory_clerks
+SELECT * FROM sys.dm_os_memory_clerks
 WHERE name LIKE '%plans%';
 ```
 
@@ -502,11 +501,11 @@ The algorithms to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements 
 ```sql
 USE AdventureWorks2014;
 GO
-SELECT - FROM Person;
+SELECT * FROM Person;
 GO
-SELECT - FROM Person.Person;
+SELECT * FROM Person.Person;
 GO
-SELECT - FROM Person.Person;
+SELECT * FROM Person.Person;
 GO
 ```
 
@@ -590,7 +589,7 @@ The actual [!INCLUDE[tsql](../includes/tsql-md.md)] text of a batch is stored in
 The query below provides information about memory usage for the sql manager cache:
 
 ```sql
-SELECT - FROM sys.dm_os_memory_objects
+SELECT * FROM sys.dm_os_memory_objects
 WHERE type = 'MEMOBJ_SQLMGR';
 ```
 
@@ -603,7 +602,7 @@ USE WideWorldImporters;
 GO
 CREATE PROCEDURE usp_SalesByCustomer @CID int
 AS
-SELECT - FROM Sales.Customers
+SELECT * FROM Sales.Customers
 WHERE CustomerID = @CID
 GO
 
@@ -826,7 +825,7 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents aren't available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
 > The trace event `SQL:StmtRecompile` also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations. 
 > Whereas `SP:Recompile` generates only for stored procedures and triggers, `SQL:StmtRecompile` generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
-> The *EventSubClass- column of `SP:Recompile` and `SQL:StmtRecompile` contains an integer code that indicates the reason for the recompilation. The codes are described [here](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
+> The *EventSubClass* column of `SP:Recompile` and `SQL:StmtRecompile` contains an integer code that indicates the reason for the recompilation. The codes are described [here](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
 > When the `AUTO_UPDATE_STATISTICS` database option is set to `ON`, queries are recompiled when they target tables or indexed views whose statistics have been updated or whose cardinalities have changed significantly since the last execution. 
@@ -843,13 +842,13 @@ The use of parameters, including parameter markers in ADO, OLE DB, and ODBC appl
 The only difference between the following two `SELECT` statements is the values that are compared in the `WHERE` clause:
 
 ```sql
-SELECT - 
+SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
-SELECT - 
+SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -864,7 +863,7 @@ Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
-     N'SELECT - 
+     N'SELECT * 
      FROM AdventureWorks2014.Production.Product 
      WHERE ProductSubcategoryID = @Parm',
      N'@Parm INT',
@@ -881,7 +880,7 @@ Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement
 
    ```
    SQLExecDirect(hstmt, 
-     "SELECT - 
+     "SELECT * 
      FROM AdventureWorks2014.Production.Product 
      WHERE ProductSubcategoryID = ?",
      SQL_NTS);
@@ -896,7 +895,7 @@ If you do not explicitly build parameters into the design of your applications, 
 When forced parameterization is enabled, simple parameterization can still occur. For example, the following query cannot be parameterized according to the rules of forced parameterization:
 
 ```sql
-SELECT - FROM Person.Address
+SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
 
@@ -914,19 +913,19 @@ If a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed without para
 Consider this statement:
 
 ```sql
-SELECT - FROM AdventureWorks2014.Production.Product 
+SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 The value 1 at the end of the statement can be specified as a parameter. The relational engine builds the execution plan for this batch as if a parameter had been specified in place of the value 1. Because of this simple parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recognizes that the following two statements generate essentially the same execution plan and reuses the first plan for the second statement:
 
 ```sql
-SELECT - FROM AdventureWorks2014.Production.Product 
+SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
-SELECT - FROM AdventureWorks2014.Production.Product 
+SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
 
@@ -974,7 +973,7 @@ Additionally, the following query clauses aren't parameterized. Note that in the
 - Constant-foldable expressions that are arguments of the `+`, `-`, `*`, `/`, and `%` operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
   - No columns, variables, or subqueries appear in the expression. 
   - The expression contains a `CASE` clause. 
-- Arguments to query hint clauses. These include the *number_of_rows- argument of the `FAST` query hint, the *number_of_processors- argument of the `MAXDOP` query hint, and the *number- argument of the `MAXRECURSION` query hint.
+- Arguments to query hint clauses. These include the *number_of_rows* argument of the `FAST` query hint, the *number_of_processors* argument of the `MAXDOP` query hint, and the *number* argument of the `MAXRECURSION` query hint.
 
 Parameterization occurs at the level of individual [!INCLUDE[tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 
@@ -1025,7 +1024,7 @@ Preparing a statement is more effective if parameter markers are used. For examp
 Using the first way, the application can execute a separate query for each product requested:
 
 ```sql
-SELECT - FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
 
@@ -1034,7 +1033,7 @@ Using the second way, the application does the following:
 1. Prepares a statement that contains a parameter marker (?):
 
    ```sql
-   SELECT - FROM AdventureWorks2014.Production.Product  
+   SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
 
@@ -1341,7 +1340,7 @@ Partition elimination is now done in this seek operation.
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (as the logical leading column) and possibly other index key columns, and then a second-level seek, with a different condition, can be done on one or more additional columns, for each distinct value that meets the qualification for the first-level seek operation. That is, this operation, called a skip scan, allows the Query Optimizer to perform a seek or scan operation based on one condition to determine the partitions to be accessed and a second-level index seek operation within that operator to return rows from these partitions that meet a different condition. For example, consider the following query.
 
 ```sql
-SELECT - FROM T WHERE a < 10 and b = 2;
+SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 For this example, assume that table T, defined as `T(a, b, c)`, is partitioned on column a, and has a clustered index on column b. The partition boundaries for table T are defined by the following partition function:
@@ -1358,7 +1357,7 @@ The following illustration is a logical representation of the skip scan operatio
 
 ### Displaying Partitioning Information in Query Execution Plans
 
-The execution plans of queries on partitioned tables and indexes can be examined by using the [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` statements `SET SHOWPLAN_XML` or `SET STATISTICS XML`, or by using the graphical execution plan output in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. For example, you can display the compile-time execution plan by selecting *Display Estimated Execution Plan- on the Query Editor toolbar and the run-time plan by selecting *Include Actual Execution Plan*. 
+The execution plans of queries on partitioned tables and indexes can be examined by using the [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` statements `SET SHOWPLAN_XML` or `SET STATISTICS XML`, or by using the graphical execution plan output in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. For example, you can display the compile-time execution plan by selecting *Display Estimated Execution Plan* on the Query Editor toolbar and the run-time plan by selecting *Include Actual Execution Plan*. 
 
 Using these tools, you can ascertain the following information:
 

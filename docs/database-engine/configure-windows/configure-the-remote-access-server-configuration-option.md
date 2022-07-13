@@ -57,6 +57,8 @@ The default value for the **remote access** option is **1** (enabled). This gran
 
 This setting doesn't take effect until you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
+Remote access is required for the log shipping status report in SQL Server Management Studio (SSMS) to work and the LSAlert Job to complete appropriately. 
+
 ## Permissions
 
 Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.

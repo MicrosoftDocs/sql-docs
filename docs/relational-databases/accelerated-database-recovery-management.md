@@ -1,7 +1,7 @@
 ---
 description: "Best practices for managing and configuring accelerated database recovery (ADR)."
 title: "Manage accelerated database recovery | Microsoft Docs"
-ms.date: 06/10/2022
+ms.date: 07/12/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -27,7 +27,7 @@ This article contains information on best practices for managing and configuring
 
 Many customers find accelerated database recovery (ADR) a valuable technology to improve recovery time. An accumulation of the factors below should be considered before deciding which databases should use ADR, evaluate the factors below and if the accumulation of factors weighs in favor or against using ADR. 
 
-- ADR is recommended for workloads with long running transactions. 
+- ADR is recommended for workloads with long running transactions that cannot be avoided. For example, in cases where long-running transactions are at risk of being rolled back, ADR can help.
 
 - ADR is recommended for workloads that have seen cases where active transactions are causing the transaction log to grow significantly.  
 
@@ -59,7 +59,7 @@ This section contains guidance and recommendations for ADR.
 
 - Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
 
-- Avoid long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo long active transactions, long-running transactions can delay version cleanup and increase the size of the PVS.
+- Avoid multiple long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo, multiple long-running transactions can delay version cleanup and increase the size of the PVS.
 
 - Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. SLOG is checkpointed, so avoiding large transactions that use SLOG can help overall performance. These scenarios can cause the SLOG to take up more space:
 
@@ -79,8 +79,7 @@ This section contains guidance and recommendations for ADR.
 ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
 
 ```syntaxsql
-ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
-[(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
+ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF};
 ```
 
 Use this syntax to control whether the feature is on or off, and designate a specific filegroup for the *persistent version store* (PVS) data. If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. 
@@ -89,10 +88,11 @@ An exclusive lock is necessary on the database to change this state.  That means
 
 ## Managing the persistent version store filegroup
 
-The ADR feature is based on having changes versioned, with different versions of a data element kept in the PVS.
-There are considerations to locating where the PVS is located and in how to manage the size of the data in the PVS.
+The ADR feature is based on having changes versioned, with different versions of a data element kept in the PVS. There are considerations to locating where the PVS is located and in how to manage the size of the data in the PVS.
 
 ### To enable ADR without specifying a filegroup
+
+This operation requires exclusive access to the database.
 
 ```sql
 ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON;
@@ -101,13 +101,29 @@ GO
 
 In this case, when the PVS filegroup is not specified, the `PRIMARY` filegroup holds the PVS data.
 
-### To enable ADR and specify that the PVS should be stored in the [VersionStoreFG] filegroup
+### To enable ADR and specify that the PVS should be stored in a filegroup
 
-Before running this script, create the filegroup.
+You can configure ADR to use another filegroup, aside from the default `PRIMARY` filegroup, to hold PVS data.
+
+Before enabling ADR in a filegroup besides `PRIMARY`, you must create the filegroup and data file. 
+
+Create the `VersionStoreFG` filegroup and create a new data file in the filegroup. For example:
+
+```sql
+ALTER DATABASE [MyDatabase] ADD FILEGROUP [VersionStoreFG];
+GO
+ALTER DATABASE [MyDatabase] ADD FILE ( NAME = N'VersionStoreFG'
+, FILENAME = N'E:\DATA\VersionStore.ndf'
+, SIZE = 8192KB , FILEGROWTH = 65536KB )
+TO FILEGROUP [VersionStoreFG];
+GO
+```
+
+Only after the filegroup and a secondary data file have been created, enable ADR and specify that the PVS should be stored in a specific filegroup. This operation requires exclusive access to the database. 
 
 ```sql
 ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON
-(PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
+(PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG]);
 ```
 
 ### To disable the ADR feature
@@ -132,7 +148,7 @@ Changing the location of the PVS is a three-step process.
    GO
    ```
 
-2. Wait until all of the versions stored in the PVS can be freed
+2. Wait until all of the versions stored in the PVS can be freed.
 
    In order to be able to turn on ADR with a new location for the persistent version store, you must first make sure that all of the version information has been purged from the previous PVS location. In order to force that cleanup to happen, run the command:
 
@@ -147,7 +163,7 @@ Changing the location of the PVS is a three-step process.
    FROM sys.dm_tran_persistent_version_store_stats where database_id = [MyDatabaseID];
    ```
 
-   When the value of `persistent_version_store_size_kb` is 0, you can re-enable the ADR feature, configuring the PVS to be located in the new filegroup.
+   When the value of `persistent_version_store_size_kb` is `0`, you can re-enable the ADR feature, configuring the PVS to be located in the new filegroup.
 
 3. Turn on ADR, specifying the new location for the PVS:
 

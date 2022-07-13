@@ -48,7 +48,7 @@ You can change the default PITR backup retention period and the differential bac
 
 To change the PITR backup retention period or the differential backup frequency for active databases by using the Azure portal, go to the server with the databases whose retention period you want to change. Select **Backups** in the left pane, then select the **Retention policies** tab. Select the database(s) for which you want to change the PITR backup retention. Then select **Configure retention** from the action bar.
 
-![Change PITR retention, server level](./media/automated-backups-overview/configure-backup-retention-sqldb.png)
+:::image type="content" source="./media/automated-backups-overview/configure-backup-retention-sqldb.png" alt-text="Change PITR retention, server level":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -127,16 +127,23 @@ For more information, see [Backup Retention REST API](/rest/api/sql/backupshortt
 
 ## Configure backup storage redundancy
 
-Backup storage redundancy for databases in Azure SQL Database can be configured at the time of database creation or can be updated for an existing database; the changes made to an existing database apply to future backups only. The default value is geo-redundant storage. For differences in pricing between locally redundant, zone-redundant and geo-redundant backup storage visit [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). 
+You can configure backup storage redundancy for databases in Azure SQL Database when you create your database, and then change the storage redundancy after the database is already created. Backup storage redundancy changes made to existing databases apply to future backups only.  The default value is geo-redundant storage. For differences in pricing between locally redundant, zone-redundant and geo-redundant backup storage visit [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). 
 
 Storage redundancy for Hyperscale databases is unique, review [Hyperscale backups storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy) to learn more. 
 
 
 ### [Azure portal](#tab/azure-portal)
 
-In the Azure portal, you can configure the backup storage redundancy on the **Create SQL Database** pane. The option is available under the Backup Storage Redundancy section. 
+In the Azure portal, you can choose a backup storage redundancy option when you create your database, and then subsequently update the backup storage redundancy from the **Compute & storage** page of your database settings. 
 
-![Open Create SQL Database pane](./media/automated-backups-overview/sql-database-backup-storage-redundancy.png)
+When you're creating your database, choose the backup storage redundancy option on the **Basics** tab: 
+
+:::image type="content" source="./media/automated-backups-overview/sql-database-backup-storage-redundancy.png" alt-text="Screenshot of the Azure portal where you can change backup storage redundancy from the basics tab when you create your SQL Database.":::
+
+For existing databases, go to your database in the [Azure portal](https://portal.azure.com), select **Compute & storage** under **Settings** and choose your desired backup storage redundancy option: 
+
+:::image type="content" source="./media/automated-backups-overview/change-redundancy-for-existing-databases.png" alt-text="Screenshot of the Compute + storage tab for your SQL Database in the Azure portal showing where to change backup storage redundancy for existing databases.":::
+
 
 ### [Azure CLI](#tab/azure-cli)
 

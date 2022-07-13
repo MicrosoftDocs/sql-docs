@@ -59,6 +59,17 @@ Deleted Hyperscale databases incur backup costs to support recovery to a point i
 
 Data storage size is included in the formula because allocated database storage is not billed separately for a deleted database. For a deleted database, data is stored post deletion to enable recovery during the configured backup retention period. Billable backup storage for a deleted database reduces gradually over time after it is deleted. It becomes zero when backups are no longer retained, and recovery is no longer possible. However if it is a permanent deletion and backups are no longer needed, to optimize costs you can reduce retention before deleting the database.
 
+### Monitor backup costs
+
+To understand backup storage costs, go to **Cost Management * Billing** in the Azure portal, choose **Cost Management** and then select **Cost analysis**. Select the desired subscription as the **Scope**, and then filter for the time period and service you're interested in by following these steps: 
+
+1. Add a filter for **Service name**.
+1. Choose **sql-database** from the drop-down.
+1. Add another filter for **Meter**. 
+1. To monitor PITR backup costs, choose **Data Stored - Backup - RA** from the drop-down. 
+
+:::image type="content" source="./media/hyperscale-automated-backups-overview/monitor-hyperscale-backup-costs.png.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
+
 ## Monitor backup storage consumption
 
 In Hyperscale, data backup storage size (snapshot backup size), data storage size (allocated database size) and log backup storage size (transactions log backup size) are reported via Azure Monitor metrics. 
@@ -71,6 +82,8 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
    :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 
 3.  From the Metric drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
+
+
 
 
 ### Reduce backup storage consumption

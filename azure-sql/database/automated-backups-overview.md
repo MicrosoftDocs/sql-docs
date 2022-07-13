@@ -41,7 +41,7 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](long-term-retention-overview.md) for both single and pooled databases.
 
-Single and pooled databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage), which addresses certain limitations of traditional technology. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). This article focuses on backup and restore for service tiers other than Hyperscale.
+For service tiers other than Hyperscale, Azure SQL Database uses SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage), which avoids long backup/restore times for larger databases using traditional backup technology. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
 
 ## Backup frequency
@@ -146,7 +146,7 @@ Azure SQL Database computes your total used backup storage as a cumulative value
 
 For vCore databases in Azure SQL Database, the storage consumed by each type of backup (full, differential, and log) is reported on the database monitoring pane as a separate metric. The following diagram shows how to monitor the backup storage consumption for a single database. 
 
-![Monitor database backup consumption in the Azure portal](./media/automated-backups-overview/backup-metrics.png)
+:::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Monitor database backup consumption in the Azure portal":::
 
 Instructions on how to monitor consumption in Hyperscale can be found in [monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-storage-consumption).
 
@@ -169,7 +169,7 @@ Azure SQL Database provides both short-term and long-term retention of backups. 
 
 For all new, restored, and copied databases, Azure SQL Database retains sufficient backups to allow PITR within the last seven days by default. Regular full, differential and log backups are taken to ensure databases are restorable to any point-in-time within the retention period defined for the database. Short-term back up retention of 1-35 days for Hyperscale databases is now in preview. To learn more, review [Managing backup retention in Hyperscale](hyperscale-automated-backups-overview.md#backup-retention). 
 
-Differential backups can be configured to either a 12-hour or a 24-hour frequency. A 24-hour differential backup frequency may increase the time required to restore the database. 
+Differential backups can be configured to either a 12-hour or a 24-hour frequency. A 24-hour differential backup frequency may increase the time required to restore the database. In the vCore model, the default time frame for differential backups is 12 hours, whereas in the DTU model, the default time frame is 24 hours.  
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 1-35 days. 
 
@@ -225,8 +225,6 @@ For elastic pools, a backup storage amount equal to 100 percent of the maximum d
 
 Total billable backup storage, if any, will be charged in GB/month as per the rate of the backup storage redundancy used. This backup storage consumption will depend on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
 
-
-
 As a simplified example, assume a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month * 24 hours per day). SQL Database will report to Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the amount/GB/month rate in your region.
 
 Now, a more complex example. Suppose the same idle database has its retention increased from seven days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Database would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB/month.
@@ -247,7 +245,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 
-![Backup storage cost analysis](./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png)
+:::image type="content" source="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Backup storage cost analysis":::
 
 > [!IMPORTANT]
 > Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, storage counters will not be visible for resources that are not consuming storage. As such, if there is no PITR or LTR backup storage consumption, these meters won't be visible.

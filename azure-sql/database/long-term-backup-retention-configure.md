@@ -76,15 +76,15 @@ You can configure SQL Database to [retain automated backups](long-term-retention
 
 1. In the Azure portal, navigate to your server and then select **Backups**. Select the **Retention policies** tab to modify your backup retention settings.
 
-   ![retention policies experience](./media/long-term-backup-retention-configure/ltr-policies-tab.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-policies-tab.png" alt-text="retention policies experience":::
 
 2. On the Retention policies tab, select the database(s) on which you want to set or modify long-term backup retention policies. Unselected databases will not be affected.
 
-   ![select database to configure backup retention policies](./media/long-term-backup-retention-configure/ltr-policies-tab-configure.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-policies-tab-configure.png" alt-text="select database to configure backup retention policies":::
 
 3. In the **Configure policies** pane, specify your desired retention period for weekly, monthly, or yearly backups. Choose a retention period of '0' to indicate that no long-term backup retention should be set.
 
-   ![configure policies pane](./media/long-term-backup-retention-configure/ltr-configure-policies.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-policies.png" alt-text="configure policies pane":::
 
 4. Select **Apply** to apply the chosen retention settings to all selected databases.
 
@@ -148,23 +148,23 @@ View the backups that are retained for a specific database with an LTR policy, a
 
 1. In the Azure portal, navigate to your server and then select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the Available LTR backups column. A pane will appear with a list of the available LTR backups for the selected database.
 
-   ![available backups experience](./media/long-term-backup-retention-configure/ltr-available-backups-tab.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="available backups experience":::
 
 1. In the **Available LTR backups** pane that appears, review the available backups. You may select a backup to restore from or to delete.
 
-   ![view available LTR backups](./media/long-term-backup-retention-configure/ltr-available-backups-manage.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-manage.png" alt-text="view available LTR backups":::
 
 1. To restore from an available LTR backup, select the backup from which you want to restore, and then select **Restore**.
 
-   ![restore from available LTR backup](./media/long-term-backup-retention-configure/ltr-available-backups-restore.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-restore.png" alt-text="restore from available LTR backup":::
 
 1. Choose a name for your new database, then select **Review + Create** to review the details of your Restore. Select **Create** to restore your database from the chosen backup.
 
-   ![configure restore details](./media/long-term-backup-retention-configure/restore-ltr.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/restore-ltr.png" alt-text="configure restore details":::
 
 1. On the toolbar, select the notification icon to view the status of the restore job.
 
-   ![restore job progress](./media/long-term-backup-retention-configure/restore-job-progress-long-term.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/restore-job-progress-long-term.png" alt-text="restore job progress":::
 
 1. When the restore job is completed, open the **SQL databases** page to view the newly restored database.
 

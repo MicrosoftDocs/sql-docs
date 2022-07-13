@@ -96,7 +96,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
 To recover a database to a point in time by using the Azure portal, open the database overview page and select **Restore** on the toolbar. Choose the backup source, and select the point-in-time backup point from which a new database will be created.
 
-![Screenshot of database restore options for SQL Database.](./media/recovery-using-backups/pitr-backup-sql-database-annotated.png)
+:::image type="content" source="./media/recovery-using-backups/pitr-backup-sql-database-annotated.png" alt-text="Screenshot of database restore options for SQL Database.":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -152,7 +152,7 @@ You restore deleted databases from the Azure portal, using the **Deleted databas
 
 To recover a deleted database to the deletion time by using the Azure portal, open the server overview page, and select **Deleted databases**. Select a deleted database that you want to restore, and type the name for the new database that will be created with data restored from the backup.
 
-  ![Screenshot of restore deleted database](./media/recovery-using-backups/restore-deleted-sql-database-annotated.png)
+  :::image type="content" source="./media/recovery-using-backups/restore-deleted-sql-database-annotated.png" alt-text="Screenshot of restore deleted database":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -183,7 +183,7 @@ Geo-restore uses geo-replicated backups as the source. You can restore a databas
 
 Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. There is a delay between when a backup is taken and when it is geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
-![Graphic of geo-restore](./media/recovery-using-backups/geo-restore-2.png)
+:::image type="content" source="./media/recovery-using-backups/geo-restore-2.png" alt-text="Graphic of geo-restore":::
 
 
 ### [Azure portal](#tab/azure-portal)
@@ -197,7 +197,7 @@ To geo-restore a single database from the Azure portal in the region and server 
 3. For **Use existing data**, select **Backup**.
 4. For **Backup**, select a backup from the list of available geo-restore backups.
 
-    ![Screenshot of Create SQL Database options](./media/recovery-using-backups/geo-restore-azure-sql-database-list-annotated.png)
+    :::image type="content" source="./media/recovery-using-backups/geo-restore-azure-sql-database-list-annotated.png" alt-text="Screenshot of Create SQL Database options":::
 
 Complete the process of creating a new database from the backup. When you create a database in Azure SQL Database, it contains the restored geo-restore backup.
 

@@ -46,7 +46,7 @@ Databases in Azure SQL Managed Instance use SQL Server engine technology to back
 
 ### Backup frequency
 
-Azure SQL Managed Instance creates [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 5 to 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
+Azure SQL Managed Instance creates [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
 
 When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
@@ -89,7 +89,7 @@ This table summarizes the capabilities and features of [point in time restore (P
 | **Backup Properties** | Point in time recovery (PITR) | Geo-restore | Long-term backup restore |
 |---|---|---|---|
 | **Types of SQL backup** | Full, Differential, Log | Replicated copies of PITR backups | Only the full backups |
-| **Recovery Point Objective (RPO)** |  5-10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
+| **Recovery Point Objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
 | **Recovery Time Objective (RTO)** | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 7 days by default, Up to 35 days |  Enabled by default, same as source.\*\* | Not enabled by default, Retention Up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. Can optionally configure zone or locally redundant storage. | Available when PITR backup storage redundancy is set to Geo-redundant. Not available when PITR backup store is zone or locally redundant storage. | Geo-redundant by default. Can configure zone or locally redundant storage. |
@@ -227,7 +227,7 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 
-![Backup storage cost analysis](../database/media/automated-backups-overview/check-backup-storage-cost-sql-mi.png)
+:::image type="content" source="../database/media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Backup storage cost analysis":::
 
 >[!IMPORTANT]
 > Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, managed instance counters will not be present for customers who do not have a managed instance deployed. Likewise, storage counters will not be visible for resources that are not consuming storage. As such, if there is no PITR or LTR backup storage consumption, these meters won't be visible.

@@ -91,7 +91,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
 To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the database overview page, and select **Restore** on the toolbar. Choose the point-in-time backup point from which a new database will be created.
 
-  ![Screenshot of database restore options for SQL managed instance.](../database/media/recovery-using-backups/pitr-backup-managed-instance-annotated.png)
+  :::image type="content" source="../database/media/recovery-using-backups/pitr-backup-managed-instance-annotated.png" alt-text="Screenshot of database restore options for SQL managed instance.":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -131,7 +131,7 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 
 To recover a managed database by using the Azure portal, open the managed instance overview page, and select **Deleted databases**. Select a deleted database that you want to restore, and type the name for the new database that will be created with data restored from the backup.
 
-  ![Screenshot of restore a deleted database in Azure SQL Managed Instance](../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png)
+  :::image type="content" source="../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of restore a deleted database in Azure SQL Managed Instance":::
 
 > [!TIP]
 > It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases using the command line. 
@@ -157,7 +157,7 @@ You can restore a database on any managed instance in any Azure region from the 
 
 Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. There is a delay between when a backup is taken and when it is geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
-![Graphic of geo-restore](../database/media/recovery-using-backups/geo-restore-2.png)
+:::image type="content" source="../database/media/recovery-using-backups/geo-restore-2.png" alt-text="Graphic of geo-restore":::
 
 
 ### [Azure portal](#tab/azure-portal)
@@ -171,7 +171,7 @@ To geo-restore a database from the Azure portal to an existing managed instance 
 3. Under **Use existing data**, select **Backup**.
 4. Select a backup from the list of available geo-restore backups.
 
-    ![Screenshot of New database options](../database/media/recovery-using-backups/geo-restore-sql-managed-instance-list-annotated.png)
+    :::image type="content" source="../database/media/recovery-using-backups/geo-restore-sql-managed-instance-list-annotated.png" alt-text="Screenshot of New database options":::
 
 Complete the process of creating a new database. When you create the instance database, it contains the restored geo-restore backup.
 

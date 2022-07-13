@@ -46,7 +46,7 @@ You can change the default PITR backup retention period and the differential bac
 
 To change the PITR backup retention period or the differential backup frequency for active databases by using the Azure portal, go to the managed instance with the databases whose retention period you want to change. Select **Backups** in the left pane, then select the **Retention policies** tab. Select the database(s) for which you want to change the PITR backup retention. Then select **Configure retention** from the action bar.
 
-![Change PITR retention, managed instance](../database/media/automated-backups-overview/configure-backup-retention-sqlmi.png)
+:::image type="content" source="../database/media/automated-backups-overview/configure-backup-retention-sqlmi.png" alt-text="Change PITR retention, managed instance":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -163,11 +163,11 @@ For more information, see [Backup Retention REST API](/rest/api/sql/backupshortt
 
 In the Azure portal, during an instance creation, the default option for the backup storage redundancy is Geo-redundancy. The option to change it is located on the **Compute + storage** pane accessible from the **Configure Managed Instance** option on the **Basics** tab.
 
-![Open Compute+Storage configuration-pane](../database/media/automated-backups-overview/open-configuration-blade-managed-instance.png)
+:::image type="content" source="../database/media/automated-backups-overview/open-configuration-blade-managed-instance.png" alt-text="Open Compute+Storage configuration-pane":::
 
 Find the option to select backup storage redundancy on the **Compute + storage** pane.
 
-![Configure backup storage redundancy](../database/media/automated-backups-overview/select-backup-storage-redundancy-managed-instance.png)
+:::image type="content" source="../database/media/automated-backups-overview/select-backup-storage-redundancy-managed-instance.png" alt-text="Configure backup storage redundancy":::
 
 To change the Backup storage redundancy option for an existing instance, go to the **Compute + storage** pane, choose the new backup option and select **Apply**. For now, this change will be applied only for PITR backups, while LTR backups will retain the old storage redundancy type. The time it takes to perform the backup redundancy change depends on the size of the all the databases within a single managed instance. Changing the backup redundancy will take more time for instances that have large databases. It's possible to combine the backup storage redundancy change operation with the UpdateSLO operation. Use the **Notification** pane of the Azure portal to view the status of the change operation. 
 

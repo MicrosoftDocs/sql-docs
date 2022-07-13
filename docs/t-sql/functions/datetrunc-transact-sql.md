@@ -9,9 +9,9 @@ f1_keywords:
   - "DATETRUNC"
 dev_langs:
   - "TSQL"
-author: aashnabafna-ms
-ms.author: aashnabafna
-ms.reviewer: "derekw"
+author: thesqlsith
+ms.author: derekwes
+ms.reviewer: aashnabafna, maghan
 ms.date: "07/15/2022"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---

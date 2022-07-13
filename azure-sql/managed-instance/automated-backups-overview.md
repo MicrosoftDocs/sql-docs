@@ -55,9 +55,9 @@ When you restore a database, the service determines which full, differential, an
 
 By default, Azure SQL Managed Instance stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages impacting backup storage in the primary region and allows you to restore your instance to a different region in the event of a disaster. 
 
-The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your data stays within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
+The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 
-Backup storage redundancy can be configured when you create your database, and can be updated at a later time; the changes made to an existing database apply to future backups only. After the backup storage redundancy of an existing database is updated, it may take up to 48 hours for the changes to be applied. 
+Backup storage redundancy can be configured when you create your instance, and can be updated at a later time at the instance level; the changes made to an existing instance apply to all databases on the instance, but for future backups only. After the backup storage redundancy of an existing instance is updated, it may take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy are applicable to short-term backups only - long-term retention policies inherit the redundancy option of short-term backups at the time the policy is created and the redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
 The option to configure backup storage redundancy provides flexibility to choose one of the following storage redundancies for backups:
 
@@ -91,7 +91,7 @@ This table summarizes the capabilities and features of [point in time restore (P
 | **Types of SQL backup** | Full, Differential, Log | Replicated copies of PITR backups | Only the full backups |
 | **Recovery Point Objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
 | **Recovery Time Objective (RTO)** | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
-| **Retention** | 7 days by default, Up to 35 days |  Enabled by default, same as source.\*\* | Not enabled by default, Retention Up to 10 years. |
+| **Retention** | 1 to 35 days |  Enabled by default, same as source.\*\* | Not enabled by default, Retention Up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. Can optionally configure zone or locally redundant storage. | Available when PITR backup storage redundancy is set to Geo-redundant. Not available when PITR backup store is zone or locally redundant storage. | Geo-redundant by default. Can configure zone or locally redundant storage. |
 | **Use to create new database in same region** | Supported | Supported | Supported |
 | **Use to create new database in another region** | Not Supported | Supported in any Azure region | Supported in any Azure region |
@@ -122,7 +122,7 @@ To perform a restore, see [Restore database from backups](recovery-using-backups
 
 ## Backup scheduling
 
-The first full backup is scheduled immediately after a new database is created or restored. This backup usually completes within 30 minutes, but it can take longer when the database is large. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed  automatically. The exact timing of all database backups is determined by the SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them. 
+The first full backup is scheduled immediately after a new database is created or restored, or after backup redundancy changes. This backup usually completes within 30 minutes, but it can take longer when the database is large. For a new database, the backup is fast, but the backup time can vary for a restore database, and depends on the size of the database. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed automatically. The exact timing of all database backups is determined by the SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them. 
 
 > [!IMPORTANT]
 > For a new, restored, or copied database, point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
@@ -141,7 +141,7 @@ Azure SQL Managed Instance computes your total used backup storage as a cumulati
 
 
 > [!IMPORTANT]
-> Backups of a database are retained to provide PITR even if the database has been deleted. While deleting and re-creating a database may save storage and compute costs, it may increase backup storage costs, because the service retains backups for each deleted database, every time it is deleted. 
+> Backups of a database are retained to provide PITR even if the database has been deleted. While deleting and re-creating a database may save storage and compute costs, it may increase backup storage costs, because the service retains backups for each deleted database, every time it is deleted. To decrease backup costs, you can change the retention period to 0 days, but this is only possible for deleted databases. 
 
 
 
@@ -164,18 +164,16 @@ Azure SQL Managed Instance provides both short-term and long-term retention of b
 
 For all new, restored, and copied databases, Azure SQL Managed Instance retains sufficient backups to allow PITR within the last seven days by default. Regular full, differential and log backups are taken to ensure databases are restorable to any point-in-time within the retention period defined for the database or managed instance. 
 
-You can specify your backup storage redundancy option for short-term retention (STR) when you create your instance, and then change it at a later time. If you change your backup redundancy option after your instance is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 7-35 days. 
+You can specify your backup storage redundancy option for short-term retention (STR) when you create your instance, and then change it at a later time. If you change your backup redundancy option after your instance is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 1-35 days. 
 
-Yyou can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
+You can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. 
 
-It is possible to set the PITR backup retention rate once a database has been deleted in the 0-35 days range.
+If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. However, for a deleted database, the retention period is updated from 1-35 days to 0-35 days, making it possible to delete backups manually. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](../database/long-term-retention-overview.md).
 
-If you delete a database, the retention period is updated from 1-35 days to 0-35 days, making it possible to delete backups manually. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [Long-term retention](../database/long-term-retention-overview.md).
 
-If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. You cannot change backup retention period for a deleted database.
 
 > [!IMPORTANT]
-> If you delete a managed instance, all databases on that managed instance are also deleted and cannot be recovered. You cannot restore a deleted managed instance. But if you had configured long-term retention (LTR) for a managed instance, long-term retention backups are not deleted, and can be used to restore databases on a different  managed instance in the same subscription, to a point in time when a long-term retention backup was taken. To learn more, review [restore long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup).
+> If you delete a managed instance, all databases on that managed instance are also deleted and cannot be recovered. You cannot restore a deleted managed instance. But if you had configured long-term retention (LTR) for a managed instance, long-term retention backups are not deleted, and can be used to restore databases to a different managed instance in the same subscription, to a point in time when a long-term retention backup was taken. To learn more, review [restore long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup).
 
 
 ### Long-term retention
@@ -193,6 +191,8 @@ Azure SQL Managed Instance computes your total billable backup storage as a cumu
 The price for backup storage varies and depends on your chosen backup storage redundancy option, and your region. Backup storage is charged per GB/month consumed, at the same rate for all backups. 
 
 Backup storage redundancy impacts backup costs in the following way:
+
+- locally-redundant price = published price
 - zone-redundant price = published price x 1.25
 - geo-redundant price =  published price x 2
 - geo-zone-redundant price = published price x 3.4
@@ -211,7 +211,7 @@ Total billable backup storage, if any, will be charged in GB/month as per the ra
 
 As a simplified example, assume a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month * 24 hours per day). SQL Managed Instance will report to Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the amount/GB/month rate in your region.
 
-Now, a more complex example. Suppose the same idle database has its retention increased from seven days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Managed Instance would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB/month.
+Now, a more complex example. Suppose the same idle database has its retention increased from seven days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Managed Instance would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB/month. Retention costs do not increase immediately, but gradually every day since the amount of backups grow until they reach the maximum retention period of 14 days. 
 
 Actual backup billing scenarios are more complex. Because the rate of changes in the database depends on the workload and is variable over time, the size of each differential and log backup will vary as well, causing the hourly backup storage consumption to fluctuate accordingly. Furthermore, each differential backup contains all changes made in the database since the last full backup, thus the total size of all differential backups gradually increases over the course of a week, and then drops sharply once an older set of full, differential, and log backups ages out. For example, if a heavy write activity such as index rebuild has been run just after a full backup completed, then the modifications made by the index rebuild will be included in the transaction log backups taken over the duration of rebuild, in the next differential backup, and in every differential backup taken until the next full backup occurs. For the latter scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
 
@@ -222,8 +222,8 @@ To understand backup storage costs, go to **Cost Management + Billing** in the A
 1. Add a filter for **Service name**.
 2. In the drop-down list select **sql managed instance** for managed instance.
 3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the drop-down list select **managed instance pitr backup storage**. Meters will only show up if they've been consumed. 
-5. To monitor LTR backup costs, in the drop-down list select **sql managed instance - ltr backup storage**. Meters will only show up if they've been consumed.
+4. To monitor PITR backup costs, in the drop-down list select **managed instance pitr backup storage**. Meters will show up only if there is backup storage consumption.
+5. To monitor LTR backup costs, in the drop-down list select **sql managed instance - ltr backup storage**. Meters will show up only if there is backup storage consumption.
 
 The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
 

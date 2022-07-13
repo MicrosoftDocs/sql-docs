@@ -1,19 +1,18 @@
 ---
-title: "Linked server for SQL Server with Azure Active Director authentication"
-description: Learn about how to use linked server for SQL Server with Azure Active Director authentication
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.technology: security
-ms.reviewer: vanto
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
+title: "Linked server for SQL Server with Azure Active Directory authentication"
+description: Learn about how to use linked server for SQL Server with Azure Active Directory authentication
 author: GithubMirek
 ms.author: mireks
+ms.reviewer: vanto, randolphwest
+ms.date: 07/12/2022
+ms.prod: sql
+ms.technology: security
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 
-# Linked server for SQL Server with Azure Active Director authentication  
+# Linked server for SQL Server with Azure Active Directory authentication
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 

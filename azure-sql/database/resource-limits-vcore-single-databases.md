@@ -12,7 +12,7 @@ ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/07/2022
+ms.date: 07/14/2022
 ---
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -155,7 +155,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |100|
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|64|128|192|256|320|384|448|
+|`Tempdb` max data size (GB)|64|128|192|256|320|384|448|
 |Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|8000 |16000 |24000 |32000 |40000 |48000 |56000 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
@@ -166,7 +166,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Multi-AZ|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|[Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview)|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
-
 
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -194,14 +193,18 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 #### Notes
 
-**Note 1**: Hyperscale is a multi-tiered architecture with separate compute and storage components: [Hyperscale Service Tier Architecture](service-tier-hyperscale.md#distributed-functions-architecture)
+**Note 1**: Hyperscale is a multi-tiered architecture with separate compute and storage components. for more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
 
-**Note 2**: Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+**Note 2**: Latency numbers are representative for typical workloads at steady state, but are not guaranteed. All Hyperscale service objectives have the following approximate IO latency:
+
+- 1-2 ms (local storage read)
+- 1-5 ms (remote storage read)
+- 3-5 ms (write)
+
 
 ## Hyperscale - provisioned compute - DC-series
 

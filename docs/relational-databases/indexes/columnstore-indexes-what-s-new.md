@@ -3,7 +3,7 @@ title: "What's new in columnstore indexes"
 description: "This article details features by version and the latest new features of SQL Server columnstore indexes."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/12/2022
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  <sup>3</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
  
-## [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] 
+## SQL Server 2022 (16.x)
  [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] adds these new features.
 
 1. Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Changes to how strings are compressed can deliver an order of magnitude of improvement to queries over hot data (in memory). For cold storage (on disk or remote), row-group elimination for string data delivers performance improvements by skipping row-groups altogether. Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
@@ -57,19 +57,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 1. Lower CPU overhead for string queries using optimized SIMD processor instructions.
 
-## [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 
+## SQL Server 2019 (15.x)
  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] adds these new features.
 
 ### Functional
 - Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the tuple mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
 
-## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+## SQL Server 2017 (14.x)
  [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] adds these new features.
 
 ### Functional
 - [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted computed columns are not supported in clustered columnstore indexes. You cannot create a nonclustered index on a columnstore index that has a computed column. 
 
-## [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
+## SQL Server 2016 (13.x) 
  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  
   
 ### Functional  
@@ -185,7 +185,7 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 -   For in-memory tables, a columnstore index must include all the columns; the columnstore index cannot have a filtered condition.  
 -   For in-memory tables, queries on columnstore indexes run only in InterOP mode, and not in the in-memory native mode. Parallel execution is supported.  
   
-## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+## SQL Server 2014 (12.x)
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] introduced the clustered column store index as the primary storage format. This allowed regular loads as well as update, delete, and insert operations.  
   
 -   The table can use a clustered column store index as the primary table storage. No other indexes are allowed on the table, but the clustered column store index is updateable so you can perform regular loads and make changes to individual rows.  
@@ -194,7 +194,7 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 -   The clustered columnstore index and the nonclustered columnstore index function in a very similar way; they use the same columnar storage format, same query processing engine, and the same set of dynamic management views. The difference is primary versus secondary index types, and the nonclustered columnstore index is read-only.  
 -   These operators run in batch mode for multi-threaded queries: scan, filter, project, join, group by, and union all.  
   
-## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+## SQL Server 2012 (11.x)
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced the nonclustered columnstore index as another index type on rowstore tables and batch processing for queries on columnstore data.  
   
 -   A rowstore table can have one nonclustered columnstore index.  
@@ -202,11 +202,12 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 -   The column store index always requires extra storage, typically an additional 10% over rowstore, because it stores a copy of the data.  
 -   Batch processing provides 2x or better query performance, but it is only available for parallel query execution.  
   
-## See Also  
- [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
- [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
+## Next steps 
+
+ - [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ - [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ - [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+ - [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ - [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+ - [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

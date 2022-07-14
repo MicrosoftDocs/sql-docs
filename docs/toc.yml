@@ -16461,6 +16461,9 @@ items:
           href: t-sql/functions/datetimefromparts-transact-sql.md
         - name: DATETIMEOFFSETFROMPARTS
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
+        - name: DATETTRUNC
+          href: t-sql/functions/datetrunc-transact-sql.md
+
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
         - name: EOMONTH

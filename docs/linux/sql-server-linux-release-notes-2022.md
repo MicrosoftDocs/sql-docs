@@ -26,7 +26,7 @@ The following release notes apply to the public community technology preview (CT
 | Ubuntu 20.04 LTS | XFS or EXT4 | [Installation guide](../linux/quickstart-install-connect-ubuntu.md) | [Get Ubuntu 20.04](https://releases.ubuntu.com/20.04/) |
 | Docker Engine 1.8+ on Linux | N/A | [Installation guide](../linux/quickstart-install-connect-docker.md) | [Get Docker](https://www.docker.com/get-started) |
 
-SUSE Linux Enterprise Server (SLES) **is not supported** for CTP 2.0, and will follow in a later release.
+SUSE Linux Enterprise Server (SLES) **is not supported** for CTP 2.1, and will follow in a later release.
 
 > [!TIP]  
 > For more information, review the [system requirements](../linux/sql-server-linux-setup.md#system) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. For the latest support policy for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [Technical support policy for Microsoft SQL Server](/troubleshoot/sql/general/support-policy-sql-server).
@@ -66,7 +66,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## Known issues
 
-The following sections describe known issues with the CTP 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux.
+The following sections describe known issues with the CTP 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux.
 
 ### General
 

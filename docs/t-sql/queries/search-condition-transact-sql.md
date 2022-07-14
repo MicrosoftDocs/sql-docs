@@ -4,7 +4,7 @@ description: "Search Condition (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/12/2022
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -25,6 +25,7 @@ helpviewer_keywords:
   - "EXISTS keyword"
   - "search conditions [SQL Server], about search conditions"
   - "NOT operator [Transact-SQL]"
+  - "IS [NOT] DISTINCT FROM [Transact-SQL]"
   - "BETWEEN operator"
   - "SOME | ANY keyword"
   - "predicates [full-text search]"
@@ -37,12 +38,13 @@ dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Search Condition (Transact-SQL)
+# Search condition (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Is a combination of one or more predicates that use the logical operators AND, OR, and NOT.  
+A combination of one or more predicates that use the logical operators AND, OR, and NOT.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -50,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- Syntax for SQL Server and Azure SQL Database  
   
 <search_condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+    MATCH (<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
 
 <search_condition_without_match> ::= 
     { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
@@ -101,7 +103,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     | expression [ NOT ] BETWEEN expression AND expression   
     | expression IS [ NOT ] NULL   
     | expression [ NOT ] IN (subquery | expression [ ,...n ] )   
-    | expression [ NOT ] EXISTS (subquery)     }   
+    | expression [ NOT ] EXISTS (subquery)
+    }
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -176,7 +179,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Specifies a search for null values, or for values that are not null, depending on the keywords used. An expression with a bitwise or arithmetic operator evaluates to NULL if any one of the operands is NULL.  
 
  IS [ NOT ] DISTINCT FROM  
- Specifies whether two expressions evaluate to NULL when compared, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](is-distinct-from-transact-sql.md).
+ Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](is-distinct-from-transact-sql.md).
   
  CONTAINS  
  Searches columns that contain character-based data for precise or less precise (*fuzzy*) matches to single words and phrases, the proximity of words within a certain distance of one another, and weighted matches. This option can only be used with SELECT statements. For more information, see [CONTAINS &#40;Transact-SQL&#41;](contains-transact-sql.md).  

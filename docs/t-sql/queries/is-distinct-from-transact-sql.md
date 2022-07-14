@@ -4,7 +4,7 @@ description: "Transact-SQL reference for the IS [NOT] DISTINCT FROM language ele
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
-ms.date: 07/12/2022
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -27,11 +27,11 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022.md)]
 
-Determines whether two expressions when compared with each other evaluate to NULL and guarantee a true or false value as the result.
+Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL.
 
 IS [NOT] DISTINCT FROM is a predicate used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -41,7 +41,7 @@ expression IS [NOT] DISTINCT FROM expression
 
 ## Arguments
 
-### *expression*
+#### *expression*
 
 Any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).
 
@@ -62,7 +62,7 @@ The following sample table uses values `A` and `B` to illustrate the behavior of
 
 When executing a query that contains IS [NOT] DISTINCT FROM against linked servers, the query text sent to the linked server will vary, based on whether we can determine that the linked server has the capability to parse the syntax.
 
-If we determine that the linked server can parse IS [NOT] DISTINCT FROM, we will decode the syntax as-is. If we cannot determine that a linked server can parse IS [NOT] DISTINCT FROM, we will decode to the following expressions:
+If we determine that the linked server can parse IS [NOT] DISTINCT FROM, we will decode the syntax as-is. If we can't determine that a linked server can parse IS [NOT] DISTINCT FROM, we will decode to the following expressions:
 
 `A IS DISTINCT FROM B` will decode to: `((A <> B OR A IS NULL OR B IS NULL) AND NOT (A IS NULL AND B IS NULL))`
 
@@ -102,7 +102,7 @@ NULL        NULL
 
 ### B. Use IS NOT DISTINCT FROM
 
-The following example returns rows where the `id` field is not distinct from the integer value of 17.
+The following example returns rows where the `id` field isn't distinct from the integer value of 17.
 
 ```sql
 USE tempdb;
@@ -149,7 +149,7 @@ GO
 SELECT * FROM #SampleTempTable WHERE id IS DISTINCT FROM NULL;
 ```
 
-The results return only the rows where the `id` was not NULL.
+The results return only the rows where the `id` wasn't NULL.
 
 ```output
 id          message
@@ -161,7 +161,7 @@ id          message
 
 ### D. Use IS NOT DISTINCT FROM against a NULL value
 
-The following example returns rows where the `id` field is not distinct from NULL.
+The following example returns rows where the `id` field isn't distinct from NULL.
 
 ```sql
 USE tempdb;

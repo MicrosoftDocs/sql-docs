@@ -9,7 +9,7 @@ ms.topic: how-to
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
-ms.date: 07/12/2022
+ms.date: 07/13/2022
 ---
 
 # Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (Preview)
@@ -49,11 +49,18 @@ LRS monitors Blob Storage for any new differential or log backups added after th
 
 LRS doesn't require a specific naming convention for backup files. It scans all files placed on Azure Blob Storage and constructs the backup chain from reading the file headers only. Databases are in a **restoring** state during the migration process. Databases are restored in [NORECOVERY](/sql/t-sql/statements/restore-statements-transact-sql#comparison-of-recovery-and-norecovery) mode, so they can't be used for read or write workloads until the migration process completes.
 
+If you're migrating several databases, you need to:
+
+- Place backup files for each database in a separate folder on Azure Blob Storage in a flat-file structure. For example, use separate database folders: `bolbcontainer/database1/files`, `blobcontainer/database2/files`, etc.
+- Don't use nested folders inside database folders as this structure isn't supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
+- Start LRS separately for each database.
+- Specify different URI paths to separate database folders on Azure Blob Storage. 
+
 ### Autocomplete versus Continuous mode migration
 
 You can start LRS in either **autocomplete** or **continuous** mode.
 
-Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you don't plan to add any more files once the migration has been started. This migration mode is recommended for passive workloads that don't require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last of the specified backup files have been restored. Migrated database will become available for read and write access on SQL Managed Instance.
+Use autocomplete mode in cases when you have the entire backup chain generated in advance, and when you don't plan to add any more files once the migration has been started. This migration mode is recommended for passive workloads that don't require data catch-up. Upload all backup files to the Azure Blob Storage, and start the autocomplete mode migration. The migration will complete automatically when the last specified backup file has been restored. Migrated database will become available for read and write access on SQL Managed Instance.
 
 In case that you plan to keep adding new backup files while migration is in progress, use continuous mode. This mode is recommended for active workloads requiring data catch-up. Upload the currently available backup chain to Azure Blob Storage, start the migration in continuous mode, and keep adding new backup files from your workload as needed. The system will periodically scan Azure Blob Storage folder and restore any new log or differential backup files found. When you're ready to cutover, stop the workload on your SQL Server, generate and upload the last backup file. Ensure that the last backup file has restored by watching that the final log-tail backup is shown as restored on SQL Managed Instance. Then, initiate manual cutover. The final cutover step makes the database come online and available for read and write access on SQL Managed Instance.
 
@@ -76,15 +83,6 @@ Continuous mode migration needs to be used when you don't have the entire backup
 | **2.1. Monitor the operation's progress**. | You can monitor progress of the restore operation with PowerShell ([get-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/get-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_show cmdlets](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-show)). |
 | **2.2. Stop the operation if required (optional)**. | If you need to stop the migration process, use PowerShell ([stop-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/stop-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_stop](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-stop)). <br /><br /> Stopping the operation deletes the database that you're restoring to SQL Managed Instance. After you stop an operation, you can't resume LRS for a database. You need to restart the migration process from the beginning. |
 | **3. Cut over to the cloud when you're ready**. | If LRS was started in autocomplete mode, the migration will automatically complete once the specified last backup file has been restored. <br /><br />  If LRS was started in continuous mode, stop the application and workload. Take the last log-tail backup and upload it to Azure Blob Storage. Ensure that the last log-tail backup has been restored on managed instance. Complete the cutover by initiating an LRS `complete` operation with PowerShell ([complete-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/complete-azsqlinstancedatabaselogreplay)) or the Azure CLI [az_sql_midb_log_replay_complete](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-complete). This operation stops LRS and brings the database online for read and write workloads on SQL Managed Instance. <br /><br /> Repoint the application connection string from SQL Server to SQL Managed Instance. You'll need to orchestrate this step yourself, either through a manual connection string change in your application, or automatically (for example, if your application can read the connection string from a property, or a database). |
-
-### Migrating multiple databases
-
-LRS supports migration of multiple databases simultaneously. Backup files for each database must be stored on Blob Storage in a separate folder, with a flat-file structure. If you're migrating several databases, you need to:
-
-- Place backup files for each database in a separate folder on Azure Blob Storage in a flat-file structure. For example, use separate database folders: `bolbcontainer/database1/files`, `blobcontainer/database2/files`, etc.
-- Don't use nested folders inside database folders as this structure isn't supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
-- Start LRS separately for each database.
-- Specify different URI paths to separate database folders on Azure Blob Storage. 
 
 ## Getting started
 
@@ -382,8 +380,9 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last
 ```
 
 > [!IMPORTANT]
-> Ensure that the entire backup chain has been uploaded to Azure Blob Storage prior to starting the migration in autocomplete mode. This mode doesn't allow new backup files to be added once the migration is in progress.
-> 
+> - Ensure that the entire backup chain has been uploaded to Azure Blob Storage prior to starting the migration in autocomplete mode. This mode doesn't allow new backup files to be added once the migration is in progress.
+> - Ensure that you have specified the last backup file correctly, and that you have not uploaded more files after it. If the system detects more backup files beyond the last specified backup file, the migration will fail.
+>
 
 ### Start LRS in continuous mode
 

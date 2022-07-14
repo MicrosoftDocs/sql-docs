@@ -276,29 +276,23 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
 >|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types||  
 
+> [!TIP]
+> If you're using the distribution hash key as the JOIN column in MERGE and performing just an equality comparison, you can omit the distribution key from the list of columns in the `WHEN MATCHED THEN UPDATE SET` clause, as this is a redundant update. If not using the distribution key as the JOIN column, then perform the distribution key update using a separate `UPDATE FROM … JOIN` statement.
+
 >[!IMPORTANT]
-> Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
->
+> Preview features are meant for testing only and should not be used on production instances or production data. As a preview feature, MERGE is subject to undergo changes in behavior or functionality. Please also keep a copy of your test data if the data is important.
+> 
 > In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen in 2 cases:
 > 
-> **Case 1**
-> - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
-> - The TARGET table of the MERGE has secondary indices or a UNIQUE constraint.
+>|Scenario|Comment|  
+>|---------------|-----------------|  
+>|**Case 1** <br> Using MERGE on a HASH distributed TARGET table that contains secondary indices or a UNIQUE constraint. | - Fixed in Synapse SQL version ***10.0.15563.0*** and higher. <br> - If ```SELECT @@VERSION``` returns a lower version than 10.0.15563.0, manually pause and resume the Synapse SQL pool to pick up this fix. <br> - Until the fix has been applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints. |
+>|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - This scenario is no longer possible in most cases with Synapse SQL version ***10.0.15658.0*** and higher. <br> - Refrain from using MERGE to update distribution key columns to avoid potential distribution impact. |
 >
-> **Case 2**
-> - The MERGE T-SQL statement updated a distribution key column of a HASH distributed table.
->
-> **Case 1**: fixed in Synapse SQL version ***10.0.15563.0*** and higher.   
-> - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
-> - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
-> - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
->
-> **Case 2**: this case no longer applies to Synapse SQL version ***10.0.15658.0*** and higher, as the distribution key cannot be updated with MERGE.
-> - Until your Synapse SQL Dedicated pool is on this version, avoid using the MERGE command to update distribution key columns in HASH distributed tables. 
->     - Instead, if joining on the distribution key and performing an update in *WHEN MATCHED* clause, remove the hash distribution key from the UPDATE SET list of columns (as this is redundant). If not using the distribution key as the JOIN column, then perform the update using a separate UPDATE FROM … JOIN statement.
-> - Use the scripts below to identify and repair any affected tables manually.
+> **Note that the updates in both scenarios do not repair tables already affected by previous MERGE execution.** Use scripts below to identify and repair any affected tables manually.
 >
 > To check which hash distributed tables in a database may be of concern (if used in the Cases above), run this statement
+>
 >```sql
 > -- Case 1
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b

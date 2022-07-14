@@ -84,7 +84,7 @@ column_name <data_type>
   
  *type_name* can be:  
   
--   A [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type.  
+-   A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type.  
   
 -   An alias data type based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type. Alias data types must be created by using CREATE TYPE before they can be used in a table definition.  
   

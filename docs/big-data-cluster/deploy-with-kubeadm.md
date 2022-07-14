@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Configure Kubernetes on multiple machines for SQL Server big data cluster deployments

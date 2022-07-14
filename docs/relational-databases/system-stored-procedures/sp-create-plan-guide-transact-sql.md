@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # sp_create_plan_guide (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a plan guide for associating query hints or actual query plans with queries in a database. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
@@ -102,7 +102,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error. Trying to drop a table that has a trigger defined on it that is referenced by a plan guide also causes an error.  
   
 > [!NOTE]
-> Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You should verify the desirability of the plan guides in each database after performing a server upgrade.  
+> Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You should verify the desirability of the plan guides in each database after performing a server upgrade.  
   
 ## Plan Guide matching requirements  
  For plan guides that specify \@type = 'SQL' or \@type = 'TEMPLATE' to successfully match a query, the values for *batch_text* and *\@parameter_name data_type* [,*...n* ] must be provided in exactly the same format as their counterparts submitted by the application. This means you must provide the batch text exactly as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiler receives it. To capture the actual batch and parameter text, you can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. For more information, see [Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  

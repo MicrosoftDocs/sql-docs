@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # tempdb database
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the `tempdb` system database, a global resource available to all users connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure SQL Managed Instance. 
 
@@ -203,7 +203,8 @@ Metadata contention in `tempdb` has historically been a bottleneck to scalabilit
 
 This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
-Currently the memory-optimized tempdb metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
+> [!NOTE]
+> Currently the memory-optimized tempdb metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
 
 Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
 

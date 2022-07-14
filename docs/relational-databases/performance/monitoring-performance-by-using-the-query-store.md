@@ -338,7 +338,7 @@ Stored procedures configure the Query Store.
 
 <sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
-## <a name="Scenarios"></a> Key usage scenarios
+## <a name="Scenarios"></a> Query Store Maintenance
 
 ### <a name="OptionMgmt"></a> Option management
 

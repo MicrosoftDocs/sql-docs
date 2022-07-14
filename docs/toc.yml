@@ -7588,6 +7588,10 @@ items:
           href: relational-databases/polybase/polybase-configure-mongodb.md
         - name: S3-compliant object storage
           href: relational-databases/polybase/polybase-configure-s3-compatible.md
+        - name: Virtualize parquet file
+          href: relational-databases/polybase/polybase-virtualize-parquet-file.md       
+        - name: Virtualize CSV file in Azure Storage
+          href: relational-databases/polybase/virtualize-csv.md                           
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups
@@ -7597,9 +7601,7 @@ items:
       - name: Data Virtualization Wizard
         items:
         - name: Virtualize data
-          href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize parquet file
-          href: relational-databases/polybase/polybase-virtualize-parquet-file.md          
+          href: relational-databases/polybase/data-virtualization.md   
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -10459,9 +10461,15 @@ items:
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
   - name: Visual Studio Code 
-    items: 
-    - name: T-SQL scripts
+    items:
+    - name: Overview
+      href: tools/visual-studio-code/mssql-extensions.md
+    - name: Connect and Query Tutorial
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
+    - name: Query History
+      href: tools/visual-studio-code/mssql-query-history.md
+    - name: SQL Database Projects
+      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server

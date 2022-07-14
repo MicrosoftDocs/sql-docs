@@ -3,7 +3,7 @@ title: "sys.server_role_members (Transact-SQL)"
 description: sys.server_role_members (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/03/2021"
+ms.date: "06/15/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.technology: system-objects
@@ -64,7 +64,7 @@ INNER JOIN sys.server_principals AS members
 ```  
 
 > [!NOTE]
-> In Azure SQL Database, SQL logins are not persisted in the `sys.server_principals` catalog view. TTherefore, to retrieve the server-level role membership in Azure SQL Database, the catalog view `sys.sql_logins` needs to be joined.
+> In Azure SQL Database, SQL logins are not persisted in the `sys.server_principals` catalog view. Therefore, to retrieve the server-level role membership in Azure SQL Database, the catalog view `sys.sql_logins` needs to be joined.
 
 
 ### B. Azure SQL Database: Listing all principals (SQL authentication) which are members of a server-level role

@@ -109,3 +109,4 @@ SELECT * FROM sys.external_data_sources;
 
  - To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md)
  - [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md)
+ - For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).

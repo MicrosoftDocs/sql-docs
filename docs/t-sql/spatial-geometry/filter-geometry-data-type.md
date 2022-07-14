@@ -1,11 +1,7 @@
 ---
+title: Filter (geometry Data Type)
 description: "Filter (geometry Data Type)"
-title: "Filter (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -16,11 +12,15 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "Filter method"
-ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic 
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/03/2017"
 ---
+
 # Filter (geometry Data Type)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A method that offers a fast, index-only intersection method to determine if a **geometry** instance intersects another **geometry** instance, assuming an index is available.

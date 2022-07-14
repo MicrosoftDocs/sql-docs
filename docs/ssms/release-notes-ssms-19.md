@@ -25,7 +25,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409)**
 
 SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 

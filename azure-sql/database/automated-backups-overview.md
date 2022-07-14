@@ -13,8 +13,8 @@ ms.custom:
 ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: wiassaf, mathoma, danil
-ms.date: 04/26/2022
+ms.reviewer: kendralittle, mathoma, wiassaf, danil
+ms.date: 06/06/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Automated backups - Azure SQL Database & Azure SQL Managed Instance
@@ -34,7 +34,7 @@ Databases in Azure SQL Managed Instance and non-Hyperscale databases in Azure SQ
 
 ### Backup frequency
 
-Both Azure SQL Database and Azure SQL Managed Instance use SQL Server technology to create [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 5 to 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
+Both Azure SQL Database and SQL Managed Instance use SQL Server technology to create [full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week, [differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12-24 hours, and [transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. The frequency of transaction log backups is based on the compute size and the amount of database activity.
 
 When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
@@ -52,7 +52,7 @@ The option to configure backup storage redundancy provides flexibility to choose
 
 - **Locally-redundant (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but isn't recommended for applications requiring high availability or durability.
 - **Zone-redundant (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region.
-- **Geo-redundant (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region using LRS, then copies your data asynchronously to a single physical location in a secondary region that is not a paired region and is hundreds of miles away from the primary region.
+- **Geo-redundant (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region using LRS, then copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
 - **Geo-zone-redundant (GZRS)**:  (Azure SQL Managed Instance *only*) Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region and is also replicated to a secondary geographic region for protection from regional disasters. 
 
 To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
@@ -84,7 +84,7 @@ This table summarizes the capabilities and features of [point in time restore (P
 | **Backup Properties** | Point in time recovery (PITR) | Geo-restore | Long-term backup restore |
 |---|---|---|---|
 | **Types of SQL backup** | Full, Differential, Log | Replicated copies of PITR backups | Only the full backups |
-| **Recovery Point Objective (RPO)** |  5-10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
+| **Recovery Point Objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
 | **Recovery Time Objective (RTO)** | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes <12 hours, but could take longer dependent on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 7 days by default, Up to 35 days |  Enabled by default, same as source.\*\* | Not enabled by default, Retention Up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. Can optionally configure zone or locally redundant storage. | Available when PITR backup storage redundancy is set to Geo-redundant. Not available when PITR backup store is zone or locally redundant storage. | Geo-redundant by default. Can configure zone or locally redundant storage. |
@@ -241,6 +241,7 @@ Backup storage redundancy impacts backup costs in the following way:
 - locally redundant price = x
 - zone-redundant price = 1.25x
 - geo-redundant price = 2x
+- geo-zone redundant price = 3.4x
 
 For more details about backup storage pricing visit [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/) and [Azure SQL Managed Instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/).
 
@@ -543,8 +544,8 @@ In Hyperscale, data backup storage size (snapshot backup size), data storage siz
 
 To view backup and data storage metrics in the Azure portal, follow these steps: :
 
-1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
-2.	Select the Metrics page in the **Monitoring** section.
+1.    Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
+2.    Select the Metrics page in the **Monitoring** section.
 
 :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 

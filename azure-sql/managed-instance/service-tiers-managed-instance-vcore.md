@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
-ms.date: 04/06/2022
+ms.date: 06/02/2022
 ms.custom: ignite-fall-2021
 ---
 # vCore purchasing model - Azure SQL Managed Instance
@@ -124,7 +124,9 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 #### <a id="gen4gen5-1"></a> Gen4
 
-Gen4 hardware is [being retired](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/) and is no longer available for new deployments. All new instances must be deployed on other hardware configurations.
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+Gen5 hardware is available in all public regions worldwide.
 
 #### Standard-series (Gen5) and premium-series
 

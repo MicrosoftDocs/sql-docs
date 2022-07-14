@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 05/01/2020
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Symptom: AD mode login fails - untrusted domain (Big Data Clusters)

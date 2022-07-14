@@ -60,7 +60,7 @@ The following sample table uses values `A` and `B` to illustrate the behavior of
 | 0 | NULL | Unknown | False |
 | NULL | NULL | Unknown | True |
 
-When performing a query that contains IS [NOT] DISTINCT FROM against linked servers, the query text sent to the linked server will vary, based on whether we can determine that the linked server has the capability to parse the syntax.
+When executing a query that contains IS [NOT] DISTINCT FROM against linked servers, the query text sent to the linked server will vary, based on whether we can determine that the linked server has the capability to parse the syntax.
 
 If we determine that the linked server can parse IS [NOT] DISTINCT FROM, we will decode the syntax as-is. If we cannot determine that a linked server can parse IS [NOT] DISTINCT FROM, we will decode to the following expressions:
 

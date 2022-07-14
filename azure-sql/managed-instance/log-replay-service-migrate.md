@@ -499,8 +499,8 @@ Consider the following limitations of LRS:
 - LRS must be started separately for each database pointing to the full URI path containing an individual database folder. 
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 
-> [!NOTE]
-> If you require database to be R/O accessible during the migration, a faster minimum downtime migration, and if you require migration window larger than 36 hours, please consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.
+> [!TIP]
+> If you require database to be R/O accessible during the migration, a much longer timeframe to perform the migration, and the best possible minimum downtime, consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.
 >
 
 ## Troubleshooting

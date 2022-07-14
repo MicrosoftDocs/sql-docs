@@ -128,12 +128,16 @@ We recommend the following best practices:
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
-- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This will help achieve a more predictable time of database migrations.
+- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This configuration will help achieve a more predictable time of database migrations.
 
 > [!IMPORTANT]
 > - You can't use databases being restored through LRS until the migration process completes. 
 > - LRS doesn't support read-only access to databases during the migration.
 > - After the migration completes, the migration process is finalized and can't be resumed with additional differential backups.
+
+> [!TIP]
+> System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of very large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
+> 
 
 ## Steps to migrate
 
@@ -347,10 +351,6 @@ When you use continuous mode, the service continuously scans Azure Blob Storage 
 
 > [!NOTE]
 > When migrating multiple databases, LRS must be started separately for each database pointing to the full URI path of Azure Blob storage container and the individual database folder.
-> 
-
-> [!TIP]
-> System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of very large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
 > 
 
 ### Start LRS in autocomplete mode

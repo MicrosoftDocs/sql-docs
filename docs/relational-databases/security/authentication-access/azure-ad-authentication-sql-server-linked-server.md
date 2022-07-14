@@ -57,8 +57,8 @@ For password authentication, using `Authentication=ActiveDirectoryPassword` in t
    - **Local Login**: specify the login name used to connect to `S1`.
    - **Impersonate**: leave unchecked.
    - **Remote User**: username of the Azure AD user used to connect to S2, in the format of `user@contoso.com`.
-   1. **Remote Password**: password of the Azure AD user.
-   1. **For a login not defined in the list above, connections will**: `Not be made`
+   - **Remote Password**: password of the Azure AD user.
+   - **For a login not defined in the list above, connections will**: `Not be made`
 1. Select **OK**.
 
    :::image type="content" source="media/linked-server-add-security.png" alt-text="Screenshot of setting security for linked server":::
@@ -87,8 +87,8 @@ For access token authentication, the linked server is created with `AccessToken=
    - **Local Login**: specify the login name used to connect to `S1`.
    - **Impersonate**: leave unchecked.
    - **Remote User**: **client ID** of the Azure AD Application used to connect to S2. You can find the **Application (client) ID** in the **Overview** menu of your Azure AD Application.
-   1. **Remote Password**: **Secret ID** obtained from creating a **New client secret** for the application.
-   1. **For a login not defined in the list above, connections will**: `Not be made`
+   - **Remote Password**: **Secret ID** obtained from creating a **New client secret** for the application.
+   - **For a login not defined in the list above, connections will**: `Not be made`
 1. Select **OK**.
 
 ## See also

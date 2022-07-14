@@ -25,7 +25,7 @@ This article helps administrators diagnose issues with accelerated database reco
 
 Leverage the [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md) DMV to identify if the size of the accelerated database recovery (ADR) PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
 
-Included in the following sample script is the column `sys.dm_tran_persistent_version_store_stats.pvs_off_row_page_skipped_oldest_aborted_xdesid`, which was added in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and contains the number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions.
+Included in the following sample script is the column `sys.dm_tran_persistent_version_store_stats.pvs_off_row_page_skipped_oldest_aborted_xdesid`, which was added in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] and contains the number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions.
 
 The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted transaction, and other details:
 
@@ -153,7 +153,7 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 
 ## Use trace flags to capture cleanup failures
  
-  *Applies to [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and later*
+  *Applies to [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and later*
 
   Trace flag 4025 can be enabled to record ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes. For more information, see [DBCC TRACEON (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 

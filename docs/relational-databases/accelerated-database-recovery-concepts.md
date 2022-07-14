@@ -1,7 +1,7 @@
 ---
 description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: "05/24/2022"
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore

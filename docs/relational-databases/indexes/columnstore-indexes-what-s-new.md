@@ -40,6 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|yes|||
 |Tuple mover background merge support|||||yes|yes|yes|yes|
+|Ordered clustered columnstore indexes||||||yes||yes|
 
  <sup>1</sup> For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
  
@@ -50,16 +51,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] 
  [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] adds these new features.
 
-### Functional
+1. Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Changes to how strings are compressed can deliver an order of magnitude of improvement to queries over hot data (in memory). For cold storage (on disk or remote), row-group elimination for string data delivers performance improvements by skipping row-groups altogether. Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
 
-1. Changes to how strings are compressed can deliver an order of magnitude of improvement to queries over hot data (in memory). For cold storage (on disk or remote), row-group elimination for string data delivers performance improvements as well.
+1.  Predicate pushdown with clustered columnstore rowgroup elimination of strings uses boundary values to optimize string searches, including for ordered clustered columnstore indexes. New rowgroup elimination capabilities extend to string, binary, and guid data types, and the datetimeoffset data type for scale greater than two.
 
-    - Fast scan for strings improves performance by using an array of collation-sensitive string hash values, instead of decompressing and copying string data to be scanned for the parameter. The array is indexed by data identifiers that can be compared against a parameter.
-    - Predicate pushdown for strings uses a new binary comparison for pattern matching instead of substring routines which have more overhead.
-    - Predicate pushdown with clustered columnstore rowgroup elimination of strings uses boundary values to optimize string searches, including for ordered clustered columnstore indexes. New rowgroup elimination capabilities extend to string, binary, and guid data types, and the datetimeoffset data type for scale greater than two. Also introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] is clustered columnstore rowgroup elimination for the prefix of LIKE predicates. This introduces significant performance improvement for queries on clustered columnstore indexes.
-    - Lower CPU overhead for string queries using optimized SIMD processor instructions for binary comparisons and the elimination of string encoding by using hash values.
-
-2. Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
+1. Lower CPU overhead for string queries using optimized SIMD processor instructions.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] adds these new features.

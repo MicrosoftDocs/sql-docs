@@ -138,4 +138,4 @@ We recommend that you only use Distributed Replay in a test environment. After y
 ## See also
 
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)
+- [Install Distributed Replay - Overview](./install-distributed-replay.md)

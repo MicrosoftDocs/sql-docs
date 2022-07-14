@@ -50,7 +50,7 @@ Install the Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] D
 
 **Prerequisites:**
 
-- Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).
+- Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](./sql-server-distributed-replay.md).
 
 - Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts aren't members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.
 
@@ -227,6 +227,6 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 
 - [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
 - [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
 - [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

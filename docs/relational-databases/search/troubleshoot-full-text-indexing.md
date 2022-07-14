@@ -17,7 +17,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshoot Full-Text Indexing
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
      
 ##  <a name="failure"></a> Troubleshoot Full-Text Indexing Failures  
  While populating or maintaining a full-text index, the full-text indexer, for reasons described below, might fail to index one or more rows. These row-level errors do not prevent the population from completing. The indexer skips these rows, which means that you are not able to query for content contained in these rows.  

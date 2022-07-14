@@ -14,7 +14,7 @@ ms.topic: quickstart
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/11/2022
+ms.date: 07/14/2022
 ---
 # Quickstart: Create a single database - Azure SQL Database
 

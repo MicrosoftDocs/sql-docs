@@ -10,7 +10,7 @@ ms.topic: how-to
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 07/11/2022
+ms.date: 07/14/2022
 ms.custom:
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"

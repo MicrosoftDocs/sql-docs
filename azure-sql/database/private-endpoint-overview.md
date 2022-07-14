@@ -11,7 +11,7 @@ ms.custom:
   - "sqldbrb=1"
   - "fasttrack-edit"
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/20/2022
+ms.date: 07/14/2022
 ---
 
 # Azure Private Link for Azure SQL Database and Azure Synapse Analytics

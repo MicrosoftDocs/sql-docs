@@ -71,13 +71,13 @@ The date parameter accepts any expression, column, or user-defined variable that
 > [!NOTE]
 > DateTrunc will also accept any string literal (of any string type) that can resolve to a *DateTime2(7).*
 
-## Return Type
+## Return type
 
 The returned data type for this function is dynamic. DATETRUNC returns a truncated date of the same data type (and, if applicable, the same fractional time scale) as the input date. For example, if DATETRUNC was given a *DateTimeOffset(3)* input date, it would return a truncated *DateTimeOffset(3)*. If the value supplied to the input date parameter was a string literal that could resolve to a *DateTime2(7)*, DATETRUNC would return a *DateTime2(7*).
 
 ## Examples
 
-### A. Fractional Time Scale Precision
+### A. Fractional time scale precision
 
 Milliseconds have a scale of 3 (.123), microseconds have a scale of 6 (.123456), and nanoseconds have a scale of 9 (.123456789). The *time***, ***datetime2***,** and *datetimeoffset* data types have a maximum scale of 7 (.1234567). Therefore, to truncate a date to a *millisecond* datepart, the fractional time scale must be at least 3. Similarly, to truncate a date using the *microsecond* datepart, the fractional time scale must be at least 6. DATETRUNC doesn't support the *nanosecond* datepart since no T-SQL date type supports a fractional scale of 9.
 
@@ -143,7 +143,7 @@ WHERE InvoiceID IS NOT NULL
 AND DATETRUNC(month, TransactionDate) >= '2015-12-01';
 ```
 
-The date argument accepts any expression that can resolve to a T-SQL date type (or a string literal that can later resolve to a *DateTime2(7)*). The OrderDate column from an Sales.Orders table serves as an argument.
+The date argument accepts any expression that can resolve to a T-SQL date type (or a string literal that can later resolve to a *DateTime2(7)*). The OrderDate column from a Sales.Orders table serves as an argument.
 
 Example
 
@@ -156,7 +156,7 @@ USE WideWorldImporters;
 SELECT DATETRUNC(month, DATEADD(month, 4, OrderDate)) AS OrderMonth FROM Sales.Orders;
 ```
 
-### B. Truncating a date to a datepart representing its maximum precision
+### B. Truncate a date to a datepart representing its maximum precision
 
 If the datepart being used has the same unit maximum precision as the input date type, truncating the input date to this datepart would have no effect.
 ```sql
@@ -183,7 +183,7 @@ Both statements return the same output.
 2021-12-08 2021-12-08  2021-12-08 2021-12-08
 ```
 
-### C. SmallDateTime Precision
+### C. SmallDateTime precision
 
 A *SmallDateTime* is only precise up to the nearest minute, even though it has a field for seconds. Therefore, truncating it to the nearest minute or the nearest second would have no effect.
 
@@ -199,7 +199,7 @@ All three statements return the same output
 2021-12-08 11:30:15.123  2021-12-08 11:30:15.123  2021-12-08 11:30:15.123
 ```
 
-### D. DateTime2 Precision
+### D. DateTime2 precision
 
 A DateTime2 is only precise up to 1/3rd of a microsecond. Therefore, although truncating a *DateTime2* to a microsecond will yield its stored value.
 
@@ -238,39 +238,39 @@ A *DATEPART* error is thrown if the datepart used isn't supported by the DATETRU
 
 - A time-related datepart is used with data type *date* or a date-related datepart is used with data type *time*.
 
-```sql
-DECLARE @d time = '12:12:12';
-SELECT DATETRUNC(year, @d);
-```
+   ```sql
+   DECLARE @d time = '12:12:12';
+   SELECT DATETRUNC(year, @d);
+   ```
 
-```output
-Msg 9810, Level 16, State 10, Line 78
-The datepart year is not supported by date function datetrunc for data type time.
-```
+   ```output
+   Msg 9810, Level 16, State 10, Line 78
+   The datepart year is not supported by date function datetrunc for data type time.
+   ```
 
 - The datepart requires a higher fractional time scale precision than what is supported by the data type (See section on Fractional Time Scale Precision).
 
-```sql
-DECLARE @d datetime2(3) = '2021-12-12 12:12:12.12345';
-SELECT DATETRUNC(microsecond, @d);
-```
+   ```sql
+   DECLARE @d datetime2(3) = '2021-12-12 12:12:12.12345';
+   SELECT DATETRUNC(microsecond, @d);
+   ```
 
-```output
-Msg 9810, Level 16, State 11, Line 81
-The datepart microsecond is not supported by date function datetrunc for data type datetime2.
-```
+   ```output
+   Msg 9810, Level 16, State 11, Line 81
+   The datepart microsecond is not supported by date function datetrunc for data type datetime2.
+   ```
 
 - A *DATE TOO SMALL* error is thrown if the date truncation attempts to backtrack to a date before the minimum date supported by that date type. This only occurs when using the *week* datepart.
 
-```sql
-DECLARE @d date= '0001-01-01 00:00:00';
-SELECT DATETRUNC(week, @d);
-```
+   ```sql
+   DECLARE @d date= '0001-01-01 00:00:00';
+   SELECT DATETRUNC(week, @d);
+   ```
 
-```output
-Msg 9837, Level 16, State 3, Line 84
-An invalid date value was encountered: The date value is less than the minimum date value allowed for the data type.
-```
+   ```output
+   Msg 9837, Level 16, State 3, Line 84
+   An invalid date value was encountered: The date value is less than the minimum date value allowed for the data type.
+   ```
 
 ## See also
 

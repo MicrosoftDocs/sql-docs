@@ -74,7 +74,7 @@ Based on your choices, Azure performs the following storage configuration tasks 
 * Associates the storage pool with a new drive on the virtual machine.
 * Optimizes this new drive based on your specified workload type (Data warehousing, Transactional processing, or General).
 
-For a full walkthrough of how to create a SQL Server VM in the Azure portal, see [the provisioning tutorial](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal).
+For a full walkthrough of how to create a SQL Server VM in the Azure portal, see [the provisioning tutorial](./create-sql-vm-portal.md).
 
 
 
@@ -256,4 +256,3 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 ## Next steps
 
 For other topics related to running SQL Server in Azure VMs, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md).
-

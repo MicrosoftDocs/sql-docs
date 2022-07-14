@@ -9,7 +9,7 @@ ms.topic: how-to
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
-ms.date: 07/13/2022
+ms.date: 07/14/2022
 ---
 
 # Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (Preview)
@@ -120,7 +120,6 @@ Ensure the following requirements are met:
 - Use the full recovery model on SQL Server (mandatory).
 - Use `CHECKSUM` for backups on SQL Server (mandatory).
 - Place backup files for an individual database inside a separate folder in a flat-file structure (mandatory). Nested folders inside database folders aren't supported.
-- Plan to complete the migration within 36 hours after you start LRS (mandatory). This time window is a grace period during which system-managed software patches are postponed.
 
 ## Best practices
 
@@ -129,11 +128,16 @@ We recommend the following best practices:
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
+- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This configuration will help achieve a more predictable time of database migrations.
 
 > [!IMPORTANT]
 > - You can't use databases being restored through LRS until the migration process completes. 
 > - LRS doesn't support read-only access to databases during the migration.
 > - After the migration completes, the migration process is finalized and can't be resumed with additional differential backups.
+
+> [!TIP]
+> System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of very large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
+> 
 
 ## Steps to migrate
 
@@ -349,9 +353,6 @@ When you use continuous mode, the service continuously scans Azure Blob Storage 
 > When migrating multiple databases, LRS must be started separately for each database pointing to the full URI path of Azure Blob storage container and the individual database folder.
 > 
 
-> [!IMPORTANT]
-> After you start LRS, any system-managed software patches are halted for 36 hours. After this window, the next automated software patch will automatically stop LRS. If that happens, you can't resume migration and need to restart it from the beginning.
-
 ### Start LRS in autocomplete mode
 
 Ensure that the entire backup chain has been uploaded to Azure Blob Storage. This option doesn't allow new backup files to be added once the migration is in progress.
@@ -488,7 +489,7 @@ az sql midb log-replay complete -g mygroup --mi myinstance -n mymanageddb --last
 Consider the following limitations of LRS: 
 
 - During the migration process, databases being migrated can't be used for read-only access on SQL Managed Instance.
-- System-managed software patches are blocked for 36 hours once the LRS has been started. After this time window expires, the next software maintenance update stops LRS. You'll need to restart the LRS migration from the beginning.
+- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. Plan to run and complete migrations outside of the scheduled maintenance window.
 - LRS requires databases on SQL Server to be backed up with the `CHECKSUM` option enabled.
 - The SAS token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have **Read** and **List** permissions only. For example, if you grant **Read**, **List** and **Write** permissions, LRS won't be able to start because of the extra **Write** permission.
 - Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
@@ -498,8 +499,8 @@ Consider the following limitations of LRS:
 - LRS must be started separately for each database pointing to the full URI path containing an individual database folder. 
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 
-> [!NOTE]
-> If you require database to be R/O accessible during the migration, a faster minimum downtime migration, and if you require migration window larger than 36 hours, please consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.
+> [!TIP]
+> If you require database to be R/O accessible during the migration, a much longer timeframe to perform the migration, and the best possible minimum downtime, consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.
 >
 
 ## Troubleshooting

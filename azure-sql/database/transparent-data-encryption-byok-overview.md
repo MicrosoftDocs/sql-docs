@@ -149,20 +149,24 @@ Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant,
 
 ## Rotation of TDE protector
 
-Rotating the logical TDE Protector for a server means switching to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database.
-Rotation of the TDE Protector can either be done manually or by using the autorotation feature.
+Rotating the TDE Protector for a server means switching to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database.
+Rotation of the TDE Protector can either be done manually or by using the automated rotation feature.
 
-Automatic rotation of the TDE Protector can be enabled when configuring the TDE Protector for the server. Automatic rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE Protector. If a new version of the key is detected, the TDE Protector on the server will be automatically rotated to the latest key version within 60 minutes.
+Automated rotation of the TDE Protector can be enabled when configuring the TDE Protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE Protector. If a new version of the key is detected, the TDE Protector on the server will be automatically rotated to the latest key version within 60 minutes.
+
+When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE Protector on Azure SQL Database and Managed Instance.
 
 > [!NOTE]
-> Automatic rotation of the TDE Protector feature is currently in public preview for Azure SQL Database and Managed Instance. 
+> Automated rotation of the TDE Protector feature is currently in public preview for Azure SQL Database and Managed Instance. 
 
-### Geo-replication considerations when enabling automatic rotation of the TDE Protector
+### Geo-replication considerations when configuring automated rotation of the TDE Protector
 To avoid issues while establishing or during geo-replication, when automatic rotation of the TDE Protector is enabled on the primary or secondary server, it's important to follow these rules when configuring geo-replication:
-•	Both the primary and secondary servers must be connected to the same key vault.
-•	For a server with autorotation enabled, before initiating geo-replication, the encryption key and key vault being used as TDE Protector on the primary server must be set as the TDE Protector on the secondary server as well.
-•	For an existing geo-replication setup, prior to enabling autorotation on the primary server, the secondary server's TDE Protector must be updated to use the same encryption key and key vault being used as TDE Protector on the primary.
+•	Both the primary and secondary servers must have Get, wrapKey and unwrapKey permissions to the primary server's key vault (key vault having primary server's TDE Protector key)
+•	For a server with automated key rotation enabled, before initiating geo-replication, add the encryption key being used as TDE Protector on the primary server to the secondary server. The secondary server requires access to the key in the same key vault being used with the primary server (and not another key with the same key material). Alternatively, before initiating geo-replication, ensure that the secondary server's managed identity (user-assigned or system-assigned) has required permissions on the primary server's key vault, and the system will attempt to add the key to the secondary server.  
+•	For an existing geo-replication setup, prior to enabling automated key rotation on the primary server, add the encryption key being used as TDE Protector on the primary server to the secondary server. The secondary server requires access to the key in the same key vault being used with the primary server (and not another key with the same key material). Alternatively, before enabling automated key, ensure that the secondary server's managed identity (user-assigned or system-assigned) has required permissions on the primary server's key vault, and the system will attempt to add the key to the secondary server.  
 
+> [!IMPORTANT]
+> When enabling automated key rotation with geo-replication for HyperScale databases, the primary server's TDE Protector key must be explicitly added to the secondary server. Merely providing secondary server's identity access to the primary server's key vault is not sufficient in this case. 
 
 ## Inaccessible TDE protector
 

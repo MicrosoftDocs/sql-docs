@@ -286,7 +286,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|Scenario|Comment|  
 >|---------------|-----------------|  
 >|**Case 1** <br> Using MERGE on a HASH distributed TARGET table that contains secondary indices or a UNIQUE constraint. | - Fixed in Synapse SQL version ***10.0.15563.0*** and higher. <br> - If ```SELECT @@VERSION``` returns a lower version than 10.0.15563.0, manually pause and resume the Synapse SQL pool to pick up this fix. <br> - Until the fix has been applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints. |
->|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - Do not use MERGE to update distribution key columns. <br> - Ensure your Synapse SQL pool is on version ***10.0.15658.0*** and higher, as updating distribution key column is not supported. |
+>|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - Do not use MERGE to update distribution key columns as this is not supported. <br> - Ensure your Synapse SQL pool is on version ***10.0.15658.0*** and higher. |
 >
 > **Note that the updates in both scenarios do not repair tables already affected by previous MERGE execution.** Use scripts below to identify and repair any affected tables manually.
 >

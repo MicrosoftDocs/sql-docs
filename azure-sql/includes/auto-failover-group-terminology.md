@@ -30,10 +30,10 @@ ms.date: 03/01/2022
   - Relocate the databases to a different region
   - Return the databases to the primary region after the outage has been mitigated (failback)
   
-  >
   > [!NOTE]
-  > During planned failovers or disaster recovery drills, the primary databases and the target secondary geo-replica databases should have matching service tiers. If a secondary database has lower memory than the primary database, you may encounter out-of-memory issues, preventing full recovery after failover.  If this happens, the affected geo-secondary database may be put into a limited read-only mode called **checkpoint-only mode**. To avoid this, upgrade the service tier of the secondary database to match the primary database during the planned failover, or drill. Service tier upgrades can be size-of-data operations, and take a while to finish. 
-  > 
+  > If in-memory OLTP objects exist, it is recommended the primary databases and the target secondary geo-replica databases have matching service tiers. This is because in-memory OLTP objects are always hydrated in memory. A lower service tier on the target geo-replica database may result in out-of-memory issues. If this happens, the affected geo-secondary database replica may be put into a limited read-only mode called in-memory OLTP checkpoint-only mode. Read-only SQL table queries are allowed, but read-only in-memory OLTP table queries are disallowed on the affected geo secondary database replica. Planned failover is blocked if all replicas in the geo secondary database are in checkpoint only mode. Unplanned failover may fail due to out-of-memory issues.
+To avoid this, upgrade the service tier of the secondary database to match the primary database during the planned failover, or drill. Note that service tier upgrades can be size-of-data operations, and may take a while to finish.
+
 - **Unplanned failover**
 
   Unplanned or forced failover immediately switches the secondary to the primary role without waiting for recent changes to propagate from the primary. This operation may result in data loss. Unplanned failover is used as a recovery method during outages when the primary is not accessible. When the outage is mitigated, the old primary will automatically reconnect and become a new secondary. A planned failover may be executed to fail back, returning the replicas to their original primary and secondary roles.

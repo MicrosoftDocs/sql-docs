@@ -36,6 +36,7 @@ helpviewer_keywords:
   - "CPSA"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
+monikerRange: ">= sql-server-2016"
 ---
 # Editions and supported features of SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  

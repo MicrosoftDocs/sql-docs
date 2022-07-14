@@ -102,7 +102,7 @@ Always specify **-M** when connecting to the availability group listener of a [!
 > **-M** isn't supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this article.
 
 **-N`[s|m|o]`**  
-Set the connection encryption mode to be Strict, Mandatory, or Optional respectively. Defaults to mandatory if not specified. (`[s|m|o]` added in ODBC 18.0)
+Set the connection encryption mode to be Strict, Mandatory, or Optional respectively. Defaults to mandatory if not specified. (`[s|m|o]` added in sqlcmd 18.0)
 
 **-o** *output_file*  
 Identify the file that receives output from `sqlcmd`.

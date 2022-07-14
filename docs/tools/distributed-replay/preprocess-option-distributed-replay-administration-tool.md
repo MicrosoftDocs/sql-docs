@@ -3,15 +3,14 @@ title: Preprocess option
 titleSuffix: SQL Server Distributed Replay
 description: The Microsoft SQL Server Distributed Replay tool, DReplay.exe, is a command-line tool that you can use to communicate with the distributed replay controller.
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.technology: distributed-replay
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.date: 06/13/2022
-monikerRange:  "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
+ms.date: 06/20/2022
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # Preprocess Option (Distributed Replay Administration Tool)

@@ -37,12 +37,12 @@ You can use SQL Database auditing to:
 - **Analyze** reports. You can find suspicious events, unusual activity, and trends.
 
 > [!IMPORTANT]
-> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance. During very high activity, or high network load, Azure SQL Database, Azure Synapse and Azure SQL Managed Instance allow operations to proceed and may not record some audited events.
+> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance of the database(s) or instance(s) that are being audited. During periods of very high activity or high network load, the auditing feature may allow transactions to proceed without recording all of the events marked for auditing.
 
 ### Auditing limitations
 
-- **Premium storage** is currently **not supported**.
-- **Hierarchical namespace** for **Azure Data Lake Storage Gen2 storage account** is currently **not supported**.
+- **Premium storage** with **BlockBlobStorage** is supported.
+- **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure the auditing in Azure SQL Server or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - https://docs.microsoft.com/rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->

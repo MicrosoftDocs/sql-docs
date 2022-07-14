@@ -4,13 +4,11 @@ titleSuffix: SQL Server Big Data Clusters
 description: A description of the pods typically deployed in a SQL Server Big Data Cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 02/11/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 
 # Resources deployed with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

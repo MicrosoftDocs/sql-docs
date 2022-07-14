@@ -24,7 +24,7 @@ ms.author: mikeray
 ---
 # Add namespaces to queries using WITH XMLNAMESPACES
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) provides namespace URI support in the following way:
 

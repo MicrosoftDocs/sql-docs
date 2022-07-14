@@ -81,10 +81,20 @@ If you encounter any installation errors during setup, check the summary log in 
 
 5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
 
-6. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+6. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
 
-  - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-  - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
+    ```r
+    # R Terminal
+    install.packages("iterators")
+    install.packages("foreach")
+    install.packages("R6")
+    install.packages("jsonlite")
+    ```
+    
+7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+
+   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
+   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
 
     The following sample scripts can be adapted for the installation:
     
@@ -93,18 +103,18 @@ If you encounter any installation errors during setup, check the summary log in 
     R CMD INSTALL "c:\temp\RevoScaleR.zip"
     ```
 
-7. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
+8. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
 
-- Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
-- User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
+   - Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
+   - User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
 
-  The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+   The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
   ```cmd
   .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
   ```
 
-8. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
+9. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -117,9 +127,9 @@ If you encounter any installation errors during setup, check the summary log in 
     EXEC sp_configure  'external scripts enabled';
     ```
 
-9. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+10. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-10. Verify the installation by executing a simple T-SQL command to return the version of R:
+11. Verify the installation by executing a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';

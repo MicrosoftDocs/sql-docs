@@ -10,7 +10,6 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
-  - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
   - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"
   - "sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1"
   - "sql13.rep.newpubwizard.pubproperties.general.f1"

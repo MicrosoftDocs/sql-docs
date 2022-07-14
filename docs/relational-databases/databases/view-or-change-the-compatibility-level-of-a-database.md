@@ -17,7 +17,7 @@ ms.date: "2/2/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or change the compatibility level of a database
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This article describes how to view or change the compatibility level of a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 > [!IMPORTANT]

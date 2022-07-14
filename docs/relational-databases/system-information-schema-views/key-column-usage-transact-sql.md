@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # KEY_COLUMN_USAGE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each column that is constrained as a key in the current database. This information schema view returns information about the objects to which the current user has permissions.  
   

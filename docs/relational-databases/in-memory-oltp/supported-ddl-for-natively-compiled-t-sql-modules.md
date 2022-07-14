@@ -12,7 +12,7 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported DDL for Natively Compiled T-SQL modules
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic lists the supported DDL constructs for natively compiled T-SQL modules, such as stored procedures, scalar UDFs, inline TVFs, and triggers.  
   
  For information on features and T-SQL surface area that can be used as part of natively compiled T-SQL modules, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  

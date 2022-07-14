@@ -18,7 +18,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Validate a DAC Package
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  

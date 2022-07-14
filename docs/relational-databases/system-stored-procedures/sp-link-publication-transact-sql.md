@@ -28,7 +28,7 @@ ms.author: maghan
 >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  Under certain conditions, this stored procedure can fail if the Subscriber is running [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later, and the Publisher is running an earlier version. If the stored procedure fails in this scenario, upgrade the Publisher to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later.  
+>  Under certain conditions, this stored procedure can fail if the Subscriber is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later, and the Publisher is running an earlier version. If the stored procedure fails in this scenario, upgrade the Publisher to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

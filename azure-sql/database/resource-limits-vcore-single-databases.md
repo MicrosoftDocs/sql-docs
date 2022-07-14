@@ -137,6 +137,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|N/A|N/A|N/A|N/A|N/A|
 |Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
 
+
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
@@ -146,7 +147,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 ### Gen5 hardware (part 1)
 
 |Compute size (service objective)|HS_Gen5_2|HS_Gen5_4|HS_Gen5_6|HS_Gen5_8|HS_Gen5_10|HS_Gen5_12|HS_Gen5_14|
-|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|:--- | --: |--: |--: |--: |---: | --: |--: |
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
@@ -159,7 +160,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|8000 |16000 |24000 |32000 |40000 |48000 |56000 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|IO latency<sup>2</sup> (approximate) local storage read |1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|
+|IO latency<sup>2</sup> (approximate) remote storage read |1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|
+|IO latency<sup>2</sup> (approximate) write |3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -167,7 +170,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
+
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. All Hyperscale service objectives have the same approximate IO latency.
+
 
 ### Gen5 hardware (part 2)
 
@@ -185,7 +192,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|64000 |72000 |80000 |96000 |128000 |160000 |204800 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|IO latency<sup>2</sup> (approximate) local storage read |1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|1-2ms|
+|IO latency<sup>2</sup> (approximate) remote storage read |1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|1-5ms|
+|IO latency<sup>2</sup> (approximate) write |3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|3-5ms|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -195,21 +204,16 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. All Hyperscale service objectives have the same approximate IO latency.
+
 #### Notes
 
 **Note 1**: Hyperscale is a multi-tiered architecture with separate compute and storage components. for more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
 
-**Note 2**: Latency numbers are representative for typical workloads at steady state, but are not guaranteed. All Hyperscale service objectives have the following approximate IO latency:
-
-- 1-2 ms (local storage read)
-- 1-5 ms (remote storage read)
-- 3-5 ms (write)
-
-
 ## Hyperscale - provisioned compute - DC-series
 
 |Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|
-|:--- | --: |--: |--: |--: |---: | 
+|:--- | --: |--: |--: |--: |
 |Hardware|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
@@ -222,7 +226,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|14000|28000|42000|44800|
 |Max log rate (MBps)|100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|IO latency<sup>2</sup> (approximate) local storage read |1-2ms|1-2ms|1-2ms|1-2ms|
+|IO latency<sup>2</sup> (approximate) remote storage read |1-5ms|1-5ms|1-5ms|1-5ms|
+|IO latency<sup>2</sup> (approximate) write |3-5ms|3-5ms|3-5ms|3-5ms|
 |Max concurrent workers|160|320|480|640|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
@@ -230,8 +236,10 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|
 
-
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. All Hyperscale service objectives have the same approximate IO latency.
+
 
 ### Notes
 

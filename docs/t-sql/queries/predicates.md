@@ -25,7 +25,8 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-A *predicate* an expression that evaluates to TRUE, FALSE, or UNKNOWN. Predicates are used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
+A *predicate* is an expression that evaluates to TRUE, FALSE, or UNKNOWN. Predicates are used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
+
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following predicates:
 

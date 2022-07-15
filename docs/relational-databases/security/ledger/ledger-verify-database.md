@@ -22,7 +22,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 - Have an active Azure subscription if you're using Azure SQL Database. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
-- [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 ## Run ledger verification for the database
 
@@ -31,7 +31,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 > [!NOTE]
 > Automatic digest storage is only applicable to Azure SQL Database. If you are using SQL Server, switch over to the *T-SQL using a manual generated digest* tab.
 
-1. Connect to your database by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 1. Create a new query with the following T-SQL statement:
 
@@ -93,7 +93,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
 # [T-SQL using a manual generated digest](#tab/t-sql-manual)
 
-1. Connect to your database by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 1. Create a new query with the following T-SQL statement:
 
    ```sql
@@ -140,14 +140,14 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    ```
 
 > [!NOTE]
-> In this example, we call the [sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql) stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
+> In this example, we call the [sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
 
 ---
 
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
-- [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
-- [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)
-- [sp_verify_database_ledger](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql)
-- [sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql)
+- [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
+- [sp_verify_database_ledger_from_digest_storage](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
+- [sp_verify_database_ledger](../../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
+- [sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)

@@ -454,7 +454,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
   
 1. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.  
 
-1. On the **Activation** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. 
+1. On the **Activation** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key.
   
    To continue, select **Next**.
   
@@ -466,7 +466,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
    > [!NOTE]
    > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
-1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
+1. In the **Global Rules** page, Setup automatically advances to the **Product Updates** page if there are no rule errors.  
   
 1. The **Microsoft Update** page will appear next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.  
 
@@ -496,6 +496,20 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
   
      > [!NOTE]
      > The path specified for each of the above options must be different.  
+
+    [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces **Azure extension for SQL Server**. This shared feature deploys **Azure Arc SQL Extension**. Azure Arc SQL Extension is a service for integration scenarios with Azure, like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md). This feature is not selected by default. However, if this control is selected and disabled (you can't un-select it), then the server host at least one Azure Arc-enabled instance.
+
+1. If you include **Azure extension for SQL Server**, setup presents **Enable Azure connected features**. Provide the following information:
+
+    * Azure login or service principal. If you provide the service principal, provide the service principal secret.
+    * **Azure subscription ID**: Azure subscription the SQL Server instance resource will be created.
+    * **Azure resource group**: Azure resource group where the SQL Server instance resource will be created.
+    * **Azure region**: Azure region where the SQL Server instance resource will be created.
+    * **Azure tenant ID**: Azure tenant ID in which the service principal exists.
+    * **Proxy server URL**: (Optional) - Name of the proxy server used to connect to Azure Arc.
+
+    > [!NOTE]
+    > If the server is already enabled for Azure Arc, some values will be populated, and you won't be able to change them. For example, if you are installing a second instance of SQL Server, and the previous instance is enrolled, setup uses information from the previous instance.
   
 1. The **Feature Rules** page automatically advances if all rules pass.  
   

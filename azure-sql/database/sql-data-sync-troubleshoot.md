@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/20/2018
+ms.date: 07/15/2022
 ---
 # Troubleshoot issues with SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -39,6 +39,8 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 - [I see this message: "Cannot insert the value NULL into the column \<column>. Column does not allow nulls." What does this mean, and how can I fix it?](#sync-nulls)
 
 - [How does Data Sync handle circular references? That is, when the same data is synced in multiple sync groups, and keeps changing as a result?](#sync-circ)
+ 
+- [Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"](#syncGroupOperationResults)
 
 ### <a name="sync-fails"></a> Sync fails in the portal UI for on-premises databases that are associated with the client agent
 

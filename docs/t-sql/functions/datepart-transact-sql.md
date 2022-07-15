@@ -22,8 +22,8 @@ dev_langs:
   - "TSQL"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.date: "07/29/2017"
+ms.reviewer: "derekw"
+ms.date: "07/19/2022"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 

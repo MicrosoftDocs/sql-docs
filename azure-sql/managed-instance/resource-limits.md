@@ -75,6 +75,7 @@ Support for the premium-series hardware (public preview) is currently available 
 | North Central US | Yes | Yes | 
 | North Europe | Yes | Yes | 
 | Norway East | Yes | | 
+| South Africa North | Yes | | 
 | South Africa West | Yes | | 
 | South Central US | Yes | Yes | 
 | Southeast Asia | Yes |  | 

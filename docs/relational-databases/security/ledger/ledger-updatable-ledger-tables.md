@@ -34,7 +34,7 @@ For information on options available when you specify the `LEDGER` argument in y
 
 An updatable ledger table needs to have the following [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. This data is useful for forensics purposes in understanding how data was inserted over time.
 
-If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#x-creating-a-updatable-ledger-table).
+If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#y-creating-an-updatable-ledger-table).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ The ledger view's schema mirrors the columns defined in the updatable ledger and
 ### Ledger view schema
 
 > [!NOTE]
-> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement. For more information, see [ledger view options](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#ledger-view-options) and the corresponding examples in [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current).
+> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement. For more information, see [ledger view options](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#ledger-view-option) and the corresponding examples in [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |

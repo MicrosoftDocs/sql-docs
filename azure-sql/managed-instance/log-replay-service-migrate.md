@@ -9,7 +9,7 @@ ms.topic: how-to
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
-ms.date: 07/14/2022
+ms.date: 07/15/2022
 ---
 
 # Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (Preview)
@@ -84,6 +84,14 @@ Continuous mode migration needs to be used when you don't have the entire backup
 | **2.2. Stop the operation if required (optional)**. | If you need to stop the migration process, use PowerShell ([stop-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/stop-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_stop](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-stop)). <br /><br /> Stopping the operation deletes the database that you're restoring to SQL Managed Instance. After you stop an operation, you can't resume LRS for a database. You need to restart the migration process from the beginning. |
 | **3. Cut over to the cloud when you're ready**. | If LRS was started in autocomplete mode, the migration will automatically complete once the specified last backup file has been restored. <br /><br />  If LRS was started in continuous mode, stop the application and workload. Take the last log-tail backup and upload it to Azure Blob Storage. Ensure that the last log-tail backup has been restored on managed instance. Complete the cutover by initiating an LRS `complete` operation with PowerShell ([complete-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/complete-azsqlinstancedatabaselogreplay)) or the Azure CLI [az_sql_midb_log_replay_complete](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-complete). This operation stops LRS and brings the database online for read and write workloads on SQL Managed Instance. <br /><br /> Repoint the application connection string from SQL Server to SQL Managed Instance. You'll need to orchestrate this step yourself, either through a manual connection string change in your application, or automatically (for example, if your application can read the connection string from a property, or a database). |
 
+### Migrating very large databases
+
+In case of migrating very large databases, the following should be taken into consideration:
+- Single LRS job can run for a maximum of 30 days. On expiry of this timeframe, the job will be automatically cancelled.
+- In the case of long-running jobs, system updates will interrupt and prolong the migration jobs. It is highly recommended to use the [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
+- Migration jobs interrupted by system updates will be automatically suspended and resumed for General Purpose managed instances, and restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.
+- To increase the upload speed of your SQL Server backup files to Azure Blob Storage, provided there is a sufficient network bandwidth from your infrastructure, consider using parallelization with multiple threads.
+
 ## Getting started
 
 Consider the requirements in this section to get started with using LRS to migrate. 
@@ -128,7 +136,8 @@ We recommend the following best practices:
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
-- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This configuration will help achieve a more predictable time of database migrations.
+- Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This configuration will help achieve a more predictable time of database migrations, as impactful system upgrades interrupt migration in progress.
+- Plan to complete a single LRS migration job within a maximum of 30 days. On expiry of this timeframe, the LRS job will be automatically cancelled.
 
 > [!IMPORTANT]
 > - You can't use databases being restored through LRS until the migration process completes. 
@@ -349,6 +358,8 @@ When you use autocomplete mode, the migration completes automatically when the l
 
 When you use continuous mode, the service continuously scans Azure Blob Storage folder and restores any new backup files that keep getting added while migration is in progress. The migration completes only after the manual cutover has been requested. Continuous mode migration needs to be used when you don't have the entire backup chain in advance, and when you plan to add new backup files once the migration is in progress. This mode is recommended for active workloads for which data catch-up is required.
 
+Plan to complete a single LRS migration job within a maximum of 30 days. On expiry of this timeframe, the LRS job will be automatically cancelled.
+
 > [!NOTE]
 > When migrating multiple databases, LRS must be started separately for each database pointing to the full URI path of Azure Blob storage container and the individual database folder.
 > 
@@ -498,6 +509,7 @@ Consider the following limitations of LRS:
 - If using autocomplete mode, the entire backup chain needs to be available in advance on Azure Blob Storage. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - LRS must be started separately for each database pointing to the full URI path containing an individual database folder. 
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
+- Single LRS job can run for the maximum of 30 days, after which it will be automatically cancelled.
 
 > [!TIP]
 > If you require database to be R/O accessible during the migration, a much longer timeframe to perform the migration, and the best possible minimum downtime, consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.

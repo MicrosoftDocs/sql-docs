@@ -59,5 +59,5 @@ Users with the **public** role are allowed to execute this stored procedure.
 
 ## See also
 
-- [Digest management](/sql/relational-databases/security/ledger/ledger-digest-management)
-- [Ledger overview](/sql/relational-databases/security/ledger/ledger-overview)
+- [Digest management](../security/ledger/ledger-digest-management.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

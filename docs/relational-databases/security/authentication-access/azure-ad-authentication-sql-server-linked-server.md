@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-[Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) can now be configured with [Azure Active Directory (Azure AD) authentication](azure-ad-authentication-sql-server-overview.md), and it supports two mechanisms for providing credentials:
+[Linked servers](../../linked-servers/linked-servers-database-engine.md) can now be configured with [Azure Active Directory (Azure AD) authentication](azure-ad-authentication-sql-server-overview.md), and it supports two mechanisms for providing credentials:
 
 - Password
 - Access token
@@ -24,12 +24,12 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 For this article, it's assumed that there are two SQL Server instances (`S1` and `S2`). Both have been configured to support Azure AD authentication, and they trust each other’s SSL/TLS certificate. The examples below will be run on server `S1` to create a linked server to server `S2`.
 
 > [!NOTE]
-> The subject name of the SSL/TLS certificate used by `S2` must match the server name provided in the [`provstr`](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) attribute. This should either be the Fully Qualified Domain Name (**FQDN**) or **hostname** of `S2`.
+> The subject name of the SSL/TLS certificate used by `S2` must match the server name provided in the [`provstr`](../../system-stored-procedures/sp-addlinkedserver-transact-sql.md) attribute. This should either be the Fully Qualified Domain Name (**FQDN**) or **hostname** of `S2`.
 
 ## Prerequisites
 
 - Fully operational Azure AD authentication for SQL Server. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md) and [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
-- [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) version 18.0 or higher. Or download the latest [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 ## Linked server configurations for Azure AD authentication
 
@@ -93,6 +93,6 @@ For access token authentication, the linked server is created with `AccessToken=
 
 ## See also
 
-- [Connect SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
+- [Connect SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)
 - [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
 - [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)

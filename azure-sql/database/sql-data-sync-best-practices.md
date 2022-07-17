@@ -36,14 +36,14 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 -   **For sync setup**: 
     - SQL Server permissions: CREATE/ALTER TABLE, ALTER DATABASE, CREATE PROCEDURE, SELECT/ALTER SCHEMA, CREATE TYPE. These permissions are included (along with other permissions) in the built-in database role `ddl_admin`.
-    - At the resource group level, membership in the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role is necessary. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+    - At the resource group level, membership in the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role is necessary. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal). Membership in broader roles like Contributor and Owner work too, if already assigned.
     - The following read-only permissions at the subscription level are needed. For more information, see [Role-based access control resource provider operations](/azure/role-based-access-control/resource-provider-operations).
         - "Microsoft.Sql/locations/syncMemberOperationResults/read"
         - "Microsoft.Sql/locations/syncAgentOperationResults/read"
         - "Microsoft.Sql/locations/syncGroupOperationResults/read"
 
 -   **For ongoing sync**. 
-    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on tables that are selected for syncing, and on sync metadata and tracking tables. EXECUTE permission on stored procedures created by the service. EXECUTE permission on user-defined table types.
+    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on tables that are selected for syncing, and on sync metadata and tracking tables in the `dss` schema. EXECUTE permission on stored procedures created by the service in the `dss` schema. EXECUTE permission on user-defined table types.
 
 -   **For deprovisioning**. 
     - SQL Server permissions: ALTER on all tables part of sync; SELECT and DELETE on sync metadata tables; CONTROL on sync tracking tables, stored procedures, and user-defined types.

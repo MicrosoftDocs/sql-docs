@@ -44,7 +44,7 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 ### <a name="sync-fails"></a> Sync fails in the portal UI for on-premises databases that are associated with the client agent
 
-Sync fails in the SQL Data Sync portal UI for on-premises databases that are associated with the client agent. On the local computer that's running the agent, you see System.IO.IOException errors in the Event Log. The errors say that the disk has insufficient space.
+Sync fails in the SQL Data Sync portal UI for on-premises databases that are associated with the client agent. On the local computer that's running the agent, you see `System.IO.IOException` errors in the Event Log. The errors say that the disk has insufficient space.
 
 - **Cause**. The drive has insufficient space.
 

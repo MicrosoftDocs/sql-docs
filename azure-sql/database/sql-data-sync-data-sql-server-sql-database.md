@@ -149,15 +149,16 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - A primary key can't have the following data types: sql_variant, binary, varbinary, image, xml.
 - Be cautious when you use the following data types as a primary key, because the supported precision is only to the second: time, datetime, datetime2, datetimeoffset.
 - The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
-- A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space
+- A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
 - Azure Active Directory authentication isn't supported.
 - If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
-- Columns with User-Defined Data Types aren't supported
+- Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 
 - If two primary keys are only different in case (for example, `Foo` and `foo`), Data Sync won't support this scenario.
 - Truncating tables is not an operation supported by Data Sync (changes won't be tracked).
 - Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
 - Memory-optimized tables are not supported.
+- Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
 
 #### Unsupported data types
 
@@ -193,7 +194,7 @@ Data Sync can't sync read-only or system-generated columns. For example:
 > [!NOTE]
 > If you use Sync private link, these network requirements do not apply. 
 
-When the sync group is established, the Data Sync service needs to connect to the hub database. When establish the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
+When the sync group is established, the Data Sync service needs to connect to the hub database. When establishing the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
 
  * *Deny public network access* must be set to *Off*.
  * *Allow Azure services and resources to access this server* must be set to *Yes*, or you must create IP rules for the [IP addresses used by Data Sync service](network-access-controls-overview.md#data-sync).

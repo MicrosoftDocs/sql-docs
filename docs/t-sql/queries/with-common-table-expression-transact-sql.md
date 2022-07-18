@@ -64,8 +64,6 @@ Specifies a SELECT statement whose result set populates the common table express
 
 If more than one *CTE_query_definition* is defined, the query definitions must be joined by one of these set operators: UNION ALL, UNION, EXCEPT, or INTERSECT.
 
-## Remarks
-
 ## Guidelines for creating and using common table expressions
 
 The following guidelines apply to nonrecursive common table expressions. For guidelines that apply to recursive common table expressions, see [Guidelines for Defining and Using Recursive Common Table Expressions](#guidelines-for-defining-and-using-recursive-common-table-expressions) that follows.

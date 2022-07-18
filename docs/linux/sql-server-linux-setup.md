@@ -22,7 +22,7 @@ This article provides guidance for installing, updating, and uninstalling [!INCL
 For other deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
-- [Docker containers](./sql-server-linux-docker-container-deployment.md)
+- [Linux containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md) ([!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only)
 
 This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:

@@ -10204,7 +10204,7 @@ items:
         href: linux/sql-server-linux-kubernetes-best-practices-statefulsets.md
       - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
-      - name: Troubleshoot Docker containers
+      - name: Troubleshoot containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md

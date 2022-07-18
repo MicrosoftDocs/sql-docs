@@ -52,7 +52,7 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 Create the custom container image that will be used in our deployment manifests. The custom container image will deploy SQL Server, .NET, and DxEnterprise in a container. The deployment sample dockerfile is provided below. You can modify it to meet your needs, such as changing the SQL Server version.
 
-For more information on Docker and using dockerfiles, see the [docker documentation](https://docs.docker.com/get-started/).
+For more information on Docker and using dockerfiles, see the [Docker documentation](https://docs.docker.com/get-started/).
 
 ```bash
 FROM mcr.microsoft.com/mssql/server:2019-latest

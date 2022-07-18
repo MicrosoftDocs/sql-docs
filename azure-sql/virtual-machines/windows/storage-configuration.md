@@ -110,9 +110,7 @@ You can modify the disk settings for the drives that were configured during the 
 
 ![Configure Storage for Existing SQL Server VM](./media/storage-configuration/sql-vm-storage-extend-drive.png)
 
-You can also configure the settings for tempdb directly from the portal. Select **Configure** to open the tempdb settings page, where you can add more data files: 
-
-![Configure tempdb settings for Existing SQL Server VM](./media/storage-configuration/tempdb-customization.png)
+You can also configure the settings for tempdb directly from the Azure portal, such as the number of data files, their intial size, and the autogrowth ratio. See [configure tempdb](manage-sql-vm-portal.md#storage) to learn more. 
 
 
 

@@ -98,7 +98,7 @@ When Telnet connects successfully, you'll see a blank screen at the command wind
 
  ![Diagram of telnet][2]
 
-Use Powershell command to check the connectivity
+Use PowerShell command to check the connectivity
 ```
 Test-NetConnection -computer myserver.database.windows.net -port 1433
 ```

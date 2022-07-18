@@ -68,7 +68,7 @@ To understand backup storage costs, go to **Cost Management * Billing** in the A
 1. Add another filter for **Meter**. 
 1. To monitor PITR backup costs, choose **Data Stored - Backup - RA** from the drop-down. 
 
-:::image type="content" source="./media/hyperscale-automated-backups-overview/monitor-hyperscale-backup-costs.png.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
+:::image type="content" source="./media/hyperscale-automated-backups-overview/monitor-hyperscale-backup-costs.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage costs.":::
 
 ## Monitor backup storage consumption
 
@@ -79,11 +79,9 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
 2.	Select the Metrics page in the **Monitoring** section.
 
-   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
+   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage consumption.":::
 
 3.  From the Metric drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
-
-
 
 
 ### Reduce backup storage consumption

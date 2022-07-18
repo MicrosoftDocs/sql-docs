@@ -129,7 +129,7 @@ For more information, see [Backup Retention REST API](/rest/api/sql/backupshortt
 
 You can configure backup storage redundancy for databases in Azure SQL Database when you create your database, and then change the storage redundancy after the database is already created. Backup storage redundancy changes made to existing databases apply to future backups only.  The default value is geo-redundant storage. For differences in pricing between locally redundant, zone-redundant and geo-redundant backup storage visit [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). 
 
-Storage redundancy for Hyperscale databases is unique, review [Hyperscale backups storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy) to learn more. 
+Storage redundancy for Hyperscale databases is unique, review [Hyperscale backups storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) to learn more. 
 
 
 ### [Azure portal](#tab/azure-portal)
@@ -175,7 +175,7 @@ az sql db update \
 
 #### Hyperscale
 
-Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database as the storage redundancy can only be specified during the database creation process for Hyperscale databases and cannot be updated later. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy). 
+Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database as the storage redundancy can only be specified during the database creation process for Hyperscale databases and cannot be updated later. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). 
 
 Existing Hyperscale databases can migrate to different storage redundancy using [active geo-replication](active-geo-replication-overview.md), which is preferred due to minimal downtime. Alternatively, you can migrate to a different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
 
@@ -233,7 +233,7 @@ For details visit [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabas
 
 #### Hyperscale
 
-Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database. Storage redundancy can only be specified during the database creation process for Hyperscale databases. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
+Carefully consider the configuration option for `--backup-storage-redundancy` when creating a Hyperscale database. Storage redundancy can only be specified during the database creation process for Hyperscale databases. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.  Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
 Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore: sample code to copy a Hyperscale database follows in this section.
 

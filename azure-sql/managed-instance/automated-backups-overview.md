@@ -67,7 +67,7 @@ The option to configure backup storage redundancy provides flexibility to choose
 - **Geo-zone-redundant (GZRS)**:  Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region and is also replicated to a secondary geographic region for protection from regional disasters, where you also have three synchronous copies that were copied over from the primary region to the secondary region asynchronously. 
 
 
-> [WARNING]
+> [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
 
 

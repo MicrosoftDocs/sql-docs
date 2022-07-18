@@ -324,12 +324,12 @@ sections:
       - question: |
           Will I be charged for backup storage costs in Hyperscale?
         answer: |
-           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
+           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How can I measure backup storage size in my Hyperscale database?
         answer: |
-          Details on how to measure backup storage size are captured in [Automated Backups](hyperscale-automated-backups-overview.md#backup-storage-redundancy).
+          Details on how to measure backup storage size are captured in [Automated Backups](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How do I know what my backup bill will be?

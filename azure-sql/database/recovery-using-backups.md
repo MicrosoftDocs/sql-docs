@@ -39,7 +39,8 @@ Automatic backups protect your databases from user and application errors, accid
 If you configured [backup long-term retention](long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
 
 > [!IMPORTANT]
-> You can't overwrite an existing database during restore.
+> - You can't overwrite an existing database during restore.
+> - Database restore operations do not restore the tags of the original database. 
 
 When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and service objective. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
 
@@ -70,7 +71,7 @@ There isn't a built-in method to restore the entire server. For an example of ho
 
 ## Permissions
 
-To recover by using automated backups, you must be a member of the SQL Server Contributor role in the subscription, or you must be the subscription owner. For more information, see [Azure RBAC: Built-in roles](/azure/role-based-access-control/built-in-roles). You can recover by using the Azure portal, PowerShell, or the REST API. You can't use Transact-SQL.
+To recover by using automated backups, you must be a member of the Contributor role or the SQL Server Contributor role in the subscription or resource group containing the logical server, or you must be the subscription or resource group owner. For more information, see [Azure RBAC: Built-in roles](/azure/role-based-access-control/built-in-roles). You can recover by using the Azure portal, PowerShell, or the REST API. You can't use Transact-SQL.
 
 ## Point-in-time restore
 
@@ -83,6 +84,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 > [!IMPORTANT]
 > - You can only run restore on the same server, cross-server restoration is not supported by point-in-time restore.
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
+> - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
 
 - **Database replacement**
 
@@ -116,8 +118,6 @@ To restore a standalone or pooled database, see [Restore-AzSqlDatabase](/powersh
   | Cmdlet | Description |
   | --- | --- |
   | [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) |Gets one or more databases. |
-  | [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) | Gets a deleted database that you can restore. |
-  | [Get-AzSqlDatabaseGeoBackup](/powershell/module/az.sql/get-azsqldatabasegeobackup) |Gets a geo-redundant backup of a database. |
   | [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) |Restores a database. |
 
   > [!TIP]
@@ -134,7 +134,43 @@ To restore a database by using the REST API:
 
 ---
 
-  
+## Long-term backup restore
+
+To perform a restore operation of a long-term backup, you can use the Azure CLI, Azure PowerShell, and the REST API. For more details, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
+
+### [Azure portal](#tab/azure-portal)
+
+To recover a long-term backup by using the Azure portal, go to your logical server, select **Backups** under **Settings** and then choose **Manage** under **Available LTR backups** for the database you're trying to restore: 
+
+:::image type="content" source="media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal showing available long term retention backups.":::
+
+
+### [Azure CLI](#tab/azure-cli)
+
+
+To restore a database by using the Azure CLI, see [az sql db ltr-backup restore](/cli/azure/sql/ltr-backup#az-sql-db-ltr-backup-restore).
+
+### [PowerShell](#tab/powershell)
+
+To restore a standalone or pooled database, see [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase).
+
+  | Cmdlet | Description |
+  | --- | --- |
+  | [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) |Gets one or more databases. |
+  | [Get-AzSqlDatabaseGeoBackup](/powershell/module/az.sql/get-azsqldatabasegeobackup) |Gets a geo-redundant backup of a database. |
+  | [Restore-AzSqlDatabase -FromLongTermRetentionBackup](/powershell/module/az.sql/restore-azsqldatabase) |Restores a database from long-term backup. |
+
+
+### [Rest API](#tab/rest-api)
+
+To restore a database by using the REST API:
+
+| API | Description |
+| --- | --- |
+| [REST (createMode=Recovery)](/rest/api/sql/databases) |Restores a database. |
+| [Get Create or Update Database Status (createMode=RestoreLongTermRetentionBackup)](/rest/api/sql/operations) |Restores a database from long-term backup. |
+
+---
 
 ## Deleted database restore
 
@@ -161,6 +197,13 @@ To restore a database by using the Azure CLI, see [az sql db restore](/cli/azure
 ### [PowerShell](#tab/powershell)
 
 For a sample PowerShell script showing how to restore a deleted database in Azure SQL Database, see [Restore a database using PowerShell](scripts/restore-database-powershell.md).
+
+
+  | Cmdlet | Description |
+  | --- | --- |
+  | [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) |Gets one or more databases. |
+  | [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) | Gets a deleted database that you can restore. |
+  | [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) |Restores a database. |
 
 ### [Rest API](#tab/rest-api)
 
@@ -208,6 +251,12 @@ To restore a database by using the Azure CLI, see [az sql db restore](/cli/azure
 ### [PowerShell](#tab/powershell)
 
 For a PowerShell script that shows how to perform geo-restore for a single database, see [Use PowerShell to restore a single database to an earlier point in time](scripts/restore-database-powershell.md).
+
+  | Cmdlet | Description |
+  | --- | --- |
+  | [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) |Gets one or more databases. |
+  | [Get-AzSqlDatabaseGeoBackup](/powershell/module/az.sql/get-azsqldatabasegeobackup) |Gets a geo-redundant backup of a database. |
+  | [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) |Restores a database. |
 
 ### [Rest API](#tab/rest-api)
 

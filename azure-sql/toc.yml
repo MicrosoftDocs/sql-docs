@@ -187,7 +187,7 @@
       items: 
       - name: Configure temporal retention policy
         href: database/temporal-tables-retention-policy.md
-      - name: Configure backup retention using Azure Blob storage
+      - name: Configure long-term backup retention
         href: database/long-term-backup-retention-configure.md
 
     - name: Security  

@@ -39,7 +39,7 @@ We'll use the following steps to create a server-level IP-based, firewall rule f
 
 2. Copy the fully qualified server name. You will use it when you connect to your server and its databases in other quickstarts. Select **Set server firewall** on the toolbar. 
 
-   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-name.png" alt-text="A screenshot that shows where to copy your server name, and set server firewall on the toolbar." lightbox="./media/firewall-create-server-level-portal-quickstart/server-name.png":::
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-name.png" alt-text="A screenshot that shows where to copy your server name, and how to set server firewall on the toolbar." lightbox="./media/firewall-create-server-level-portal-quickstart/server-name.png":::
 
 3. Set **Public network access** to **Selected networks** to reveal the virtual networks and firewall rules. When set to **Disabled**, virtual networks and firewall rule settings are hidden. 
 

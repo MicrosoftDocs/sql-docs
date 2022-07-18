@@ -65,13 +65,13 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Networking tab showing firewall rules.":::
+   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Screenshot that shows the networking tab for firewall rules.":::
 
 
 1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2. 
 1. Select **Next: Security** at the bottom of the page.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking-connections.png" alt-text="Networking tab showing connection policy and encryption.":::
+   :::image type="content" source="./media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption.":::
   
 1. On the **Security** page, you can choose to start a free trial of [Microsoft Defender for SQL](../database/azure-defender-for-sql.md), as well as configure [Ledger](/sql/relational-databases/security/ledger/ledger-overview), [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) and [Transparent data encryption (TDE)](transparent-data-encryption-byok-overview.md) if you desire.  Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure [database collation](/sql/t-sql/statements/collations) and a [maintenance window](maintenance-window.md). 

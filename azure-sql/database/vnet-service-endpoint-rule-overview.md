@@ -219,7 +219,7 @@ You must already have a subnet that's tagged with the particular virtual network
 1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Networking**.
 1. Under the **Public access** tab, ensure **Public network access** is set to **Select networks**, otherwise the **Virtual networks** settings are hidden. Select **+ Add existing virtual network** in the **Virtual networks** section.
 
-    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="logical server properties, Networking" lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Screenshot that shows logical server properties for Networking." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
 
 1. In the new **Create/Update** pane, fill in the boxes with the names of your Azure resources.
 

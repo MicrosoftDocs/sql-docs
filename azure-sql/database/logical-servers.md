@@ -41,7 +41,14 @@ A server in SQL Database and Azure Synapse:
 - Can contain logins similar to those in instances of SQL Server in your on-premises environment that are granted access to one or more databases on the server, and can be granted limited administrative rights. For more information, see [Logins](logins-create-manage.md).
 - The default collation for all databases created on a server is `SQL_LATIN1_GENERAL_CP1_CI_AS`, where `LATIN1_GENERAL` is English (United States), `CP1` is code page 1252, `CI` is case-insensitive, and `AS` is accent-sensitive.
 
-## Manage servers, databases, and firewalls using the Azure portal
+
+To create a managed instance, see [Create a managed instance](../managed-instance/instance-create-quickstart.md)
+
+## Manage servers, databases, and firewalls
+
+You can manage servers, databases, and firewalls by using the Azure portal, Azure PowerShell, the Azure CLI, Transact-SQL (T-SQL) and REST API. 
+
+### [Portal](#tab/portal)
 
 You can create the resource group for a server ahead of time or while creating the server itself. There are multiple methods for getting to a new SQL server form, either by creating a new SQL server or as part of creating a new database.
 
@@ -58,13 +65,7 @@ To create a database in SQL Database using the [Azure portal](https://portal.azu
 > [!IMPORTANT]
 > For information on selecting the pricing tier for your database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
 
-To create a managed instance, see [Create a managed instance](../managed-instance/instance-create-quickstart.md)
-
-## Manage servers, databases, and firewalls
-
-You can manage servers, databases, and firewalls by using the Azure portal, Azure PowerShell, the Azure CLI, Transact-SQL (T-SQL) and REST API. 
-
-### [Portal](#tab/portal)
+### Manage existing server
 
 To manage an existing server, navigate to the server using a number of methods - such as from specific database page, the **SQL servers** page, or the **All resources** page.
 

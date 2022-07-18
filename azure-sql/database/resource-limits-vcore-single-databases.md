@@ -12,7 +12,7 @@ ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/14/2022
+ms.date: 07/18/2022
 ---
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -178,7 +178,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md).
 
 
 
@@ -212,7 +212,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md).
 
 ## Hyperscale - provisioned compute - DC-series
 
@@ -244,7 +244,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md).
 
 ## General purpose - provisioned compute - Gen5
 
@@ -587,7 +587,7 @@ This section includes details on previously available hardware.
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md).
 
 
 ### Gen4 hardware (part 2)
@@ -621,7 +621,7 @@ This section includes details on previously available hardware.
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md).
 
 
 ## General purpose - provisioned compute - Gen4

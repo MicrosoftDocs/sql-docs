@@ -60,20 +60,37 @@ To create a database in SQL Database using the [Azure portal](https://portal.azu
 
 To create a managed instance, see [Create a managed instance](../managed-instance/instance-create-quickstart.md)
 
-### Manage an existing server
+## Manage servers, databases, and firewalls
+
+You can manage servers, databases, and firewalls by using the Azure portal, Azure PowerShell, the Azure CLI, Transact-SQL (T-SQL) and REST API. 
+
+### [Portal](#tab/portal)
 
 To manage an existing server, navigate to the server using a number of methods - such as from specific database page, the **SQL servers** page, or the **All resources** page.
 
-To manage an existing database, navigate to the **SQL databases** page and click the database you wish to manage. The following screenshot shows how to begin setting a server-level firewall for a database from the **Overview** page for a database.
+To manage an existing database, navigate to the **SQL databases** page and select the database you wish to manage. 
 
-   ![server firewall rule](./media/single-database-create-quickstart/server-firewall-rule.png)
+For example, to configure a firewall rule, follow these steps: 
+
+1. Navigate to your database resource in the [Azure portal](https://portal.azure.com). Select **Set server firewall** on the toolbar. 
+
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-name.png" alt-text="A screenshot that shows where to copy your server name, and set server firewall on the toolbar." lightbox="./media/firewall-create-server-level-portal-quickstart/server-name.png":::
+
+1. Set **Public network access** to **Selected networks** to reveal the virtual networks and firewall rules. When set to **Disabled**, virtual networks and firewall rule settings are hidden. 
+
+1. Choose **Add a firewall rule** to configure the firewall. 
+
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png" alt-text="A screenshot that shows configuration of a server-level IP firewall rule." lightbox="./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png":::
 
 > [!IMPORTANT]
 > To configure performance properties for a database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
+
 > [!TIP]
 > For an Azure portal quickstart, see [Create a database in SQL Database in the Azure portal](single-database-create-quickstart.md).
 
-## Manage servers, databases, and firewalls using PowerShell
+### [PowerShell](#tab/powershell)
+
+You can configure your database using Azure PowerShell. 
 
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
@@ -102,7 +119,7 @@ To create and manage servers, databases, and firewalls with Azure PowerShell, us
 > For a PowerShell quickstart, see [Create a database in Azure SQL Database using PowerShell](single-database-create-quickstart.md). For PowerShell example scripts, see [Use PowerShell to create a database in Azure SQL Database and configure a firewall rule](scripts/create-and-configure-database-powershell.md) and [Monitor and scale a database in Azure SQL Database using PowerShell](scripts/monitor-and-scale-database-powershell.md).
 >
 
-## Manage servers, databases, and firewalls using the Azure CLI
+### [Azure CLI](#tab/azure-cli)
 
 To create and manage servers, databases, and firewalls with the [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](/azure/cloud-shell/overview) to run the CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
 
@@ -132,7 +149,7 @@ To create and manage servers, databases, and firewalls with the [Azure CLI](/cli
 > For an Azure CLI quickstart, see [Create a database in Azure SQL Database using the Azure CLI](az-cli-script-samples-content-guide.md). For Azure CLI example scripts, see [Use the CLI to create a database in Azure SQL Database and configure a firewall rule](scripts/create-and-configure-database-cli.md) and [Use Azure CLI to monitor and scale a database in Azure SQL Database](scripts/monitor-and-scale-database-cli.md).
 >
 
-## Manage servers, databases, and firewalls using Transact-SQL
+### [Transact-SQL](#tab/t-sql)
 
 To create and manage servers, databases, and firewalls with Transact-SQL, use the following T-SQL commands. You can issue these commands using the Azure portal, [SQL Server Management Studio](/sql/ssms/use-sql-server-management-studio), [Visual Studio Code](https://code.visualstudio.com/docs), or any other program that can connect to a server and pass Transact-SQL commands. For managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
 
@@ -161,7 +178,7 @@ To create and manage servers, databases, and firewalls with Transact-SQL, use th
 > [!TIP]
 > For a quickstart using SQL Server Management Studio on Microsoft Windows, see [Azure SQL Database: Use SQL Server Management Studio to connect and query data](connect-query-ssms.md). For a quickstart using Visual Studio Code on the macOS, Linux, or Windows, see [Azure SQL Database: Use Visual Studio Code to connect and query data](connect-query-vscode.md).
 
-## Manage servers, databases, and firewalls using the REST API
+### [REST API](#tab/rest-api)
 
 To create and manage servers, databases, and firewalls, use these REST API requests.
 
@@ -183,6 +200,9 @@ To create and manage servers, databases, and firewalls, use these REST API reque
 |[Firewall rules - Delete](/rest/api/sql/firewallrules/delete)|Deletes a firewall rule.|
 |[Firewall rules - Get](/rest/api/sql/firewallrules/get)|Gets a firewall rule.|
 |[Firewall rules - List by server](/rest/api/sql/firewallrules/listbyserver)|Returns a list of firewall rules.|
+
+---
+
 
 ## Next steps
 

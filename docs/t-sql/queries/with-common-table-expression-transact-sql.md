@@ -52,7 +52,7 @@ Specifies a temporary named result set, known as a common table expression (CTE)
 
 #### *expression_name*
 
-A valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same WITH \<common_table_expression> clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.
+A valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same `WITH <common_table_expression>` clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.
 
 #### *column_name*
 
@@ -178,7 +178,7 @@ The current implementation of CTEs in [!INCLUDE[ssSDW](../../includes/sssdw-md.m
 
 ## Examples
 
-### A. Creating a simple common table expression
+### A. Create a common table expression
 
 The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
 
@@ -231,7 +231,7 @@ AS
        GROUP BY SalesPersonID, YEAR(OrderDate)
 
 )
-,   -- Use a comma to separate multiple CTE definitions.
+, -- Use a comma to separate multiple CTE definitions.
 
 -- Define the second CTE query, which returns sales quota data by year for each sales person.
 Sales_Quota_CTE (BusinessEntityID, SalesQuota, SalesQuotaYear)
@@ -275,8 +275,8 @@ The following example shows the hierarchical list of managers and the employees 
 CREATE TABLE dbo.MyEmployees
 (
 EmployeeID SMALLINT NOT NULL,
-FirstName NVARCHAR(30)  NOT NULL,
-LastName  NVARCHAR(40) NOT NULL,
+FirstName NVARCHAR(30) NOT NULL,
+LastName NVARCHAR(40) NOT NULL,
 Title NVARCHAR(50) NOT NULL,
 DeptID SMALLINT NOT NULL,
 ManagerID SMALLINT NULL,
@@ -285,15 +285,15 @@ CONSTRAINT FK_MyEmployees_ManagerID_EmployeeID FOREIGN KEY (ManagerID) REFERENCE
 );
 -- Populate the table with values.
 INSERT INTO dbo.MyEmployees VALUES
-(1, N'Ken', N'Sánchez', N'Chief Executive Officer',16,NULL)
-,(273, N'Brian', N'Welcker', N'Vice President of Sales',3,1)
-,(274, N'Stephen', N'Jiang', N'North American Sales Manager',3,273)
-,(275, N'Michael', N'Blythe', N'Sales Representative',3,274)
-,(276, N'Linda', N'Mitchell', N'Sales Representative',3,274)
-,(285, N'Syed', N'Abbas', N'Pacific Sales Manager',3,273)
-,(286, N'Lynn', N'Tsoflias', N'Sales Representative',3,285)
-,(16,  N'David',N'Bradley', N'Marketing Manager', 4, 273)
-,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);
+(1, N'Ken', N'Sánchez', N'Chief Executive Officer',16, NULL)
+,(273, N'Brian', N'Welcker', N'Vice President of Sales', 3, 1)
+,(274, N'Stephen', N'Jiang', N'North American Sales Manager', 3, 273)
+,(275, N'Michael', N'Blythe', N'Sales Representative', 3, 274)
+,(276, N'Linda', N'Mitchell', N'Sales Representative', 3, 274)
+,(285, N'Syed', N'Abbas', N'Pacific Sales Manager', 3, 273)
+,(286, N'Lynn', N'Tsoflias', N'Sales Representative', 3, 285)
+,(16, N'David', N'Bradley', N'Marketing Manager', 4, 273)
+,(23, N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);
 ```
 
 ```sql
@@ -377,7 +377,7 @@ WITH cte (EmployeeID, ManagerID, Title) AS
   UNION ALL
     SELECT cte.EmployeeID, cte.ManagerID, cte.Title
     FROM cte
-    JOIN  dbo.MyEmployees AS e
+    JOIN dbo.MyEmployees AS e
         ON cte.ManagerID = e.EmployeeID
 )
 --Uses MAXRECURSION to limit the recursive levels to 2
@@ -396,7 +396,7 @@ AS
     FROM dbo.MyEmployees
     WHERE ManagerID IS NOT NULL
   UNION ALL
-    SELECT  e.EmployeeID, e.ManagerID, e.Title
+    SELECT e.EmployeeID, e.ManagerID, e.Title
     FROM dbo.MyEmployees AS e
     JOIN cte ON e.ManagerID = cte.EmployeeID
 )
@@ -532,12 +532,12 @@ WITH vw AS
     SELECT itmIDComp, itmID
     FROM @t2
 )
-,r AS
+, r AS
 (
     SELECT t.itmID AS itmIDComp
            , NULL AS itmID
-           ,CAST(0 AS BIGINT) AS N
-           ,1 AS Lvl
+           , CAST(0 AS BIGINT) AS N
+           , 1 AS Lvl
     FROM (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4) AS t (itmID)
 
 UNION ALL

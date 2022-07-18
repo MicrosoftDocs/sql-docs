@@ -178,7 +178,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
 
-<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](service-tier-hyperscale.md#distributed-functions-architecture).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
 
 

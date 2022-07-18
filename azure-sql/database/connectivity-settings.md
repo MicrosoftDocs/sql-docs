@@ -34,7 +34,7 @@ You can change these settings from the networking tab of your [logical server](l
 
 ## Deny public network access
 
-The default for the the **Connectivity method** setting is **No access** so that customers can connect by using either public endpoints (with IP-based server- level firewall rules or with virtual-network firewall rules) or private endpoints (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
+The default for the **Connectivity method** setting is **No access** so that customers can connect by using either public endpoints (with IP-based server- level firewall rules or with virtual-network firewall rules) or private endpoints (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
 
 When **Connectivity method** is set to **No access**, only connections via private endpoints are allowed. All connections via public endpoints will be denied with an error message similar to:  
 

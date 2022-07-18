@@ -41,7 +41,7 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention](long-term-retention-overview.md) for both single and pooled databases.
 
-For service tiers other than Hyperscale, Azure SQL Database uses SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage), which avoids long backup/restore times for larger databases using traditional backup technology. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
+For service tiers other than Hyperscale, Azure SQL Database uses SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage). This avoids long backup/restore times for larger databases when the traditional SQL Server backup technology is used. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
 
 ## Backup frequency
@@ -169,7 +169,7 @@ Azure SQL Database provides both short-term and long-term retention of backups. 
 
 For all new, restored, and copied databases, Azure SQL Database retains sufficient backups to allow PITR within the last seven days by default. Regular full, differential and log backups are taken to ensure databases are restorable to any point-in-time within the retention period defined for the database. Short-term back up retention of 1-35 days for Hyperscale databases is now in preview. To learn more, review [Managing backup retention in Hyperscale](hyperscale-automated-backups-overview.md#backup-retention). 
 
-Differential backups can be configured to either a 12-hour or a 24-hour frequency. A 24-hour differential backup frequency may increase the time required to restore the database. In the vCore model, the default time frame for differential backups is 12 hours, whereas in the DTU model, the default time frame is 24 hours.  
+Differential backups can be configured to occur either once in 12 hours, or once in 24 hours. A 24-hour differential backup frequency may increase the time required to restore the database, compared to the 12-hour frequency. In the vCore model, the default frequency for differential backups is once in 12 hours, whereas in the DTU model, the default frequency is once in 24 hours.  
 
 You can specify your backup storage redundancy option for short-term retention (STR) when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option while backup copies made with the previous STR redundancy option are not moved or copied, but are left in the original storage account until the retention period expires, which can be 1-35 days. 
 

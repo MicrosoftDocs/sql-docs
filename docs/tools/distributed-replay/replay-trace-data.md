@@ -28,7 +28,7 @@ Use the administration tool **replay** option to initiate the event replay stage
 You can replay trace data in one of two sequencing modes: stress mode or synchronization mode. The default behavior is to replay trace data in stress mode. For more information about the event replay stage and sequencing modes, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
 
 > [!NOTE]  
-> The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).
+> The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](./sql-server-distributed-replay.md).
 
 ## To replay the trace
 
@@ -68,6 +68,6 @@ You can replay trace data in one of two sequencing modes: stress mode or synchro
 
 ## See also
 
-- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
 - [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
 - [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

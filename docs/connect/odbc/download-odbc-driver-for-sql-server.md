@@ -45,6 +45,8 @@ Microsoft ODBC Driver 18.0.1.1 for SQL Server (x64):
 Microsoft ODBC Driver 18.0.1.1 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40a)
 
+## Version 17
+
 Version 17.10.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.1 upgrades it to 17.10.1.
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2200731)**  

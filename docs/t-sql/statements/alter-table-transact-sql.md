@@ -1020,11 +1020,11 @@ Conditionally drops the column or constraint only if it already exists.
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
 **Applies to**: SQL Server 2022 and later.
 
-Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql) in the [ALTER TABLE table_constraint](/sql/t-sql/statements/alter-table-table-constraint-transact-sql).
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 
 **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 
-For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-add-table-constraints).
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](../../relational-databases/security/resumable-add-table-constraints.md).
 
 ## Remarks
 

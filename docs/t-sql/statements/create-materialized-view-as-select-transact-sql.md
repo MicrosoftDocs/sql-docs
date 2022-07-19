@@ -129,7 +129,7 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 |AVG(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
 |STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 
-Once created, materialized views are visible within [SQL Server Management Studio](https://aka.ms/ssms) under the views folder of the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] instance.
+Once created, materialized views are visible within [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) under the views folder of the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] instance.
 
 Users can run [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) and [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) to determine the space being consumed by a materialized view. There are also DMVs to provide more customizable queries to identify space and rows consumed. For more information, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).
 

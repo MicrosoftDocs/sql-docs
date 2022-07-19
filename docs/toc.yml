@@ -9356,8 +9356,6 @@ items:
               href: ssms/scripting/transact-sql-debugger-output-window.md
             - name: T-SQL Debugger - Watch Window
               href: ssms/scripting/transact-sql-debugger-watch-window.md
-            - name: T-SQL Debugger - QuickWatch Dialog Box
-              href: ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
           - name: Status Bar (Database Engine Query Editor)
             href: ssms/scripting/status-bar-database-engine-query-editor.md
           - name: View Spatial Data in Object Explorer

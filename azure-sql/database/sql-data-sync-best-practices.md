@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/15/2022
+ms.date: 07/19/2022
 ---
 # Best practices for Azure SQL Data Sync 
 
@@ -28,7 +28,7 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 -   Install the client agent by using the least privileged user account that has network service access.  
 -   Install the client agent on a computer that isn't the SQL Server computer.  
--   Don't register an on-premises database with more than one agent.    
+-   Don't register an on-premises database with more than one agent.
     -   Avoid this even if you're syncing different tables for different sync groups.  
     -   Registering an on-premises database with multiple client agents poses challenges when you delete one of the sync groups.
 
@@ -36,17 +36,21 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 -   **For sync setup**: 
     - SQL Server permissions: CREATE/ALTER TABLE, ALTER DATABASE, CREATE PROCEDURE, SELECT/ALTER SCHEMA, CREATE TYPE. These permissions are included (along with other permissions) in the built-in database role `ddl_admin`.
-    - At the resource group level, membership in the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role is necessary. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal). Membership in broader roles like Contributor and Owner work too, if already assigned.
-    - The following read-only permissions at the subscription level are needed. For more information, see [Role-based access control resource provider operations](/azure/role-based-access-control/resource-provider-operations).
+    - At the resource group level, membership in the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role is necessary. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal). Membership in broader roles like Contributor or Owner work too, if already assigned.
+    - Permissions at the subscription level should not be needed, but could provide a simplified (though not *least required*) way to provide necessary permissions for multiple Azure Data Sync implementations in a subscription. An original, deprecated API required these [Azure RBAC permissions](/azure/role-based-access-control/resource-provider-operations), but should no longer be in use.
         - "Microsoft.Sql/locations/syncMemberOperationResults/read"
         - "Microsoft.Sql/locations/syncAgentOperationResults/read"
         - "Microsoft.Sql/locations/syncGroupOperationResults/read"
 
 -   **For ongoing sync**. 
-    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on tables that are selected for syncing, and on sync metadata and tracking tables in the `dss` schema. EXECUTE permission on stored procedures created by the service in the `dss` schema. EXECUTE permission on user-defined table types.
+    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on user tables that are selected for syncing. EXECUTE permission on user-defined table types.
+    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on sync metadata and system-created tracking tables. EXECUTE permission on stored procedures created by the service.
+        - The `DataSync` schema is used for system-created objects in the hub and member databases. 
+        - The `dss` and `TaskHosting` schemas are used for system-created objects in the sync metadata database.
 
 -   **For deprovisioning**. 
     - SQL Server permissions: ALTER on all tables part of sync; SELECT and DELETE on sync metadata tables; CONTROL on sync tracking tables, stored procedures, and user-defined types.
+    - For cleanup, remove system-created objects in the `DataSync`, `dss`, and `TaskHosting` schemas.
 
 Azure SQL Database supports only a single set of credentials. To accomplish these tasks within this constraint, consider the following options:
 

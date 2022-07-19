@@ -25,7 +25,7 @@ For an overview of SQL Data Sync, see [Sync data across cloud and on-premises da
 For PowerShell examples on how to configure SQL Data Sync, see [How to sync between databases in SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance at this time.
+> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Create sync group
 

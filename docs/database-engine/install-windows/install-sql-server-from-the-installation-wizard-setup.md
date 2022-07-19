@@ -497,7 +497,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
      > [!NOTE]
      > The path specified for each of the above options must be different.  
 
-    [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces **Azure extension for SQL Server**. This shared feature deploys **Azure Arc SQL Extension**. Azure Arc SQL Extension is a service for integration scenarios with Azure, like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md). This feature is not selected by default. However, if this control is selected and disabled (you can't un-select it), then the server host at least one Azure Arc-enabled instance.
+    [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces **Azure extension for SQL Server**. This shared feature deploys **Azure Arc SQL Extension**. Azure Arc SQL Extension is a service for integration scenarios with Azure, like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md). This feature is not selected by default. However, if this control is selected and disabled (you can't un-select it), it means that the extension was installed previously.
 
 1. If you include **Azure extension for SQL Server**, setup presents **Enable Azure connected features**. Provide the following information:
 

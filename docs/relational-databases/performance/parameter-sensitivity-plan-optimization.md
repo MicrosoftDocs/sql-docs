@@ -99,7 +99,7 @@ To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPE
 
 To disable PSP optimization at the query level, use the `DISABLE_PARAMETER_SENSITIVE_PLAN_OPTIMIZATION` query hint.
 
-If parameter sniffing is disabled by trace flag 4136, `PARAMETER_SNIFFING` database scoped configuration, or the `USE HINT('DISABLE_PARAMETER_SNIFFING')` query hint, PSP optimization will be disabled for the associated workloads and execution contexts. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query) and [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql).
+If parameter sniffing is disabled by trace flag 4136, `PARAMETER_SNIFFING` database scoped configuration, or the `USE HINT('DISABLE_PARAMETER_SNIFFING')` query hint, PSP optimization will be disabled for the associated workloads and execution contexts. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 The number of unique plan variants per dispatcher stored in the plan cache is limited to avoid cache bloating. The internal threshold isn't documented.
 

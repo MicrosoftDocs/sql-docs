@@ -486,5 +486,5 @@ Remove-AzResourceGroup -Name $resourceGroupName
 
 Connect and query your database by using different tools and languages:
 
-- [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
-- [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
+- [Create and use updatable ledger tables](/sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables)
+- [Create and use append-only ledger tables](/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables)

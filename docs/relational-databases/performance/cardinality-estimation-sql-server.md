@@ -226,7 +226,7 @@ For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at 
   
 ### Legacy cardinality estimator
 
-For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

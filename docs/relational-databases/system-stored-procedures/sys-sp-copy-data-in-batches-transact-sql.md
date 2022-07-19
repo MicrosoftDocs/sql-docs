@@ -53,6 +53,6 @@ This operation requires **SELECT** on the source table, **INSERT** in the target
 
 ## See also
 
-- [Ledger considerations and limitations](/sql/relational-databases/security/ledger/ledger-limits)
-- [Ledger overview](/sql/relational-databases/security/ledger/ledger-overview)
-- [How to convert regular tables into ledger tables](/sql/relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables)
+- [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)
+- [How to convert regular tables into ledger tables](../security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md)

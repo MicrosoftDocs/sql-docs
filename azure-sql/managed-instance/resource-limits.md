@@ -36,7 +36,7 @@ For information on previously available hardware, see [Previously available hard
 
 Hardware configurations have different characteristics, as described in the following table:
 
-|    | **Standard-series (Gen5)** | **Premium-series ** | **Memory optimized premium-series (preview)** | 
+|    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series (preview)** | 
 |:-- |:-- |:-- |:-- |
 | **CPU** |  Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors |
 | **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |

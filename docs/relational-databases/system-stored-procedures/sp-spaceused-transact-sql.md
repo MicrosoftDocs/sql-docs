@@ -186,7 +186,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2016;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
 GO  
@@ -196,7 +196,7 @@ GO
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
 ```sql  
-USE AdventureWorks008R2;  
+USE AdventureWorks2016;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
 GO  

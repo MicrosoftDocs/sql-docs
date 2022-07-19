@@ -305,7 +305,7 @@ This simple example shows how to change the distribution method for a table. To 
 
 In most cases you won't need to change a hash-distributed table to a round-robin table. More often, you might need to change a round-robin table to a hash distributed table. For example, you might initially load a new table as round-robin and then later move it to a hash-distributed table to get better join performance.
 
-This example uses the AdventureWorksDW sample database. To load the Azure Synapse Analytics version, see [Quickstart: Create and query a dedicated SQL pool (formerly SQL DW) in Azure synapse Analytics using the Azure portal](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+This example uses the AdventureWorksDW sample database. To load the Azure Synapse Analytics version, see [Quickstart: Create and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics using the Azure portal](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
 
  
 ```sql

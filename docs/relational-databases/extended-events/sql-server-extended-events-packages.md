@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # SQL Server Extended Events Packages
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   A package is a container for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
   

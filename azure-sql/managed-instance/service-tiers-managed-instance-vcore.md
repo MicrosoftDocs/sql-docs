@@ -126,13 +126,11 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
-Gen5 hardware is available in all public regions worldwide.
-
 #### Standard-series (Gen5) and premium-series
 
-Standard-series (Gen5) hardware is available in all public regions worldwide.
+Standard-series (Gen5) and premium-series hardware is available in all public regions worldwide.
   
-Premium-series and memory optimized premium-series hardware is in preview, and has limited regional availability. For more details, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
+Memory optimized premium-series hardware is in preview, and has limited regional availability. For more details, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
 ## Next steps
 

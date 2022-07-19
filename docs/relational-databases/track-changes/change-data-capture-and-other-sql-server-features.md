@@ -74,7 +74,7 @@ This topic describes how the following features interact with change data captur
  
  When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
 
-## <a name="FailoverAzureSQLDB"></a> Failover on Azure SQL DB 
+## <a name="FailoverAzureSQLDB"></a> Failover in Azure SQL Database 
  
 If the database is enabled for change data capture (CDC), after the failover capture and cleanup happen automatically on new primary. 
 

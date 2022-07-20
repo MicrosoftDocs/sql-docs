@@ -42,7 +42,8 @@ You can change the default PITR backup retention period and the differential bac
 > If you reduce the current retention period, you lose the ability to restore to points in time older than the new retention period. Backups that are no longer needed to provide PITR within the new retention period are deleted. If you increase the current retention period, you do not immediately gain the ability to restore to older points in time within the new retention period. You gain that ability over time, as the system starts to retain backups for longer.
 
 > [!NOTE]
-> These APIs will affect only the PITR retention period. If you configured LTR for your database, it won't be affected. For information about how to change LTR retention periods, see [Long-term retention](long-term-retention-overview.md).
+> - These APIs will affect only the PITR retention period. If you configured LTR for your database, it won't be affected. For information about how to change LTR retention periods, see [Long-term retention](long-term-retention-overview.md).
+> - Hyperscale databases do not support configuring the differential backup frequency. 
 
 ### [Azure portal](#tab/azure-portal)
 

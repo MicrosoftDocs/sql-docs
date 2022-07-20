@@ -43,6 +43,31 @@ Default short-term backup retention (STR) for Hyperscale databases is 7 days; lo
 
 There are no traditional full, differential, and transaction log backups for Hyperscale databases. Instead, regular storage snapshots of data files are taken. The generated transaction log is retained as-is for the configured retention period. At restore time, relevant transaction log records are applied to the restored storage snapshot, resulting in a transactionally-consistent database without any data loss as of the specified point in time within the retention period. 
 
+
+## Monitor backup storage consumption
+
+In Hyperscale, data backup storage size (snapshot backup size), data storage size (allocated database size) and log backup storage size (transactions log backup size) are reported via Azure Monitor metrics. 
+
+To view backup and data storage metrics in the Azure portal, follow these steps:
+
+1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
+2.	Select the Metrics page in the **Monitoring** section.
+
+   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage consumption.":::
+
+3.  From the Metric drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
+
+
+### Reduce backup storage consumption
+
+Backup storage consumption for a Hyperscale database depends on the retention period, choice of region, backup storage redundancy and workload type. Consider some of the following tuning techniques to reduce your backup storage consumption for a Hyperscale database:
+
+- Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum possible for your needs.
+- Avoid doing large write-operations, such as index maintenance, more frequently than you need to. For index maintenance recommendations, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes).
+- For large data-load operations, consider using data compression when appropriate.
+- Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.
+- Use locally-redundant or zone-redundant backup storage when geo-restore capability is unnecessary (for example: dev/test environments). 
+
 ## Backup storage costs
 
 Hyperscale backup storage cost depends on the choice of region and backup storage redundancy. It also depends on the workload type. Write-heavy workloads are more likely to change data pages frequently, which results in larger storage snapshots. Such workloads also generate more transaction log, contributing to the overall backup costs. Backup storage is charged per GB/month consumed, for pricing details see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. 
@@ -70,29 +95,6 @@ To understand backup storage costs, go to **Cost Management * Billing** in the A
 
 :::image type="content" source="./media/hyperscale-automated-backups-overview/monitor-hyperscale-backup-costs.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage costs.":::
 
-## Monitor backup storage consumption
-
-In Hyperscale, data backup storage size (snapshot backup size), data storage size (allocated database size) and log backup storage size (transactions log backup size) are reported via Azure Monitor metrics. 
-
-To view backup and data storage metrics in the Azure portal, follow these steps:
-
-1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
-2.	Select the Metrics page in the **Monitoring** section.
-
-   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage consumption.":::
-
-3.  From the Metric drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
-
-
-### Reduce backup storage consumption
-
-Backup storage consumption for a Hyperscale database depends on the retention period, choice of region, backup storage redundancy and workload type. Consider some of the following tuning techniques to reduce your backup storage consumption for a Hyperscale database:
-
-- Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum possible for your needs.
-- Avoid doing large write-operations, such as index maintenance, more frequently than you need to. For index maintenance recommendations, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes).
-- For large data-load operations, consider using data compression when appropriate.
-- Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.
-- Use locally-redundant or zone-redundant backup storage when geo-restore capability is unnecessary (for example: dev/test environments). 
 
 ## Data and backup storage redundancy
 

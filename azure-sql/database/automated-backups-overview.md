@@ -50,6 +50,8 @@ Azure SQL Database creates [full backups](/sql/relational-databases/backup-resto
 
 When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 
+The Hyperscale architecture does not require full, differential, or log backups. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
+
 
 ## Backup storage redundancy
 
@@ -297,8 +299,7 @@ Learn how to assign policies using the [Azure portal](/azure/governance/policy/a
 ## Next steps
 
 - Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
-- Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
-- Get more information about how to [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
-
+- To change backup settings, see [Change settings](automated-backups-change-settings.md). 
+- To restore a backup, see [recover using backup](recovery-using-backups.md) or [restore a database to a point in time by using PowerShell](scripts/restore-database-powershell.md).
+- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage see [Manage long-term backup retention](long-term-backup-retention-configure.md).
+- For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md).

@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### To add a SQL Server Publisher that is Part of an Availability Group
+### To add a SQL Server Publisher
 
 [!NOTE For more information on how to configure the publisher as part of an avaialbility group, see our [Configure Replication for Always On Availability Groups](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) documentation.]
 
@@ -44,7 +44,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Add Publisher** dialog box, click **Add**, and then click **Add SQL Server Publisher**.  
   
-3.  In the **Connect to Server** dialog box, enter the listener of the Publisher Availablility Group. As the active publisher node can change, we want to make sure Replication Monitor directs traffic to the proper replica similar to your client applications. The value passed to [sp_redirect_publisher](../../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md) is what needs to be entered for Replication Monitor. The value that was entered can be found by querying the distribution database table [msredirected_publishers](../../../relational-databases/system-tables/msredirected-publishers.md). Then select the authentication type. If you select **SQL Server Authentication**, enter a login and password. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
+3. In the **Connect to Server** dialog box:
+    If your publisher server is standalone or part of a Failover Cluster Instance, then in the Connect to Server dialog box, enter the name of the publisher and select the authentication type.
+  
+    If your publisher is part of an Availability Group, then in the **Connect to Server** dialog box, enter the listener of the Publisher Availablility Group. As the active publisher node can change, we want to make sure Replication Monitor directs traffic to the proper replica similar to your client applications. The value passed to [sp_redirect_publisher](../../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md) is what needs to be entered for Replication Monitor. The value that was entered can be found by querying the distribution database table [msredirected_publishers](../../../relational-databases/system-tables/msredirected-publishers.md). Then select the authentication type. If you select **SQL Server Authentication**, enter a login and password. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
   
 4.  Click **Connect**. If the Publisher uses a remote Distributor, you will be prompted to connect to the Distributor in the **Connect to Server** dialog box. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
   

@@ -54,7 +54,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Data virtualization
 - [Performance](#performance)
   - Query Store enabled by default for new databases
-  - Hybrid buffer pool with direct write
   - Parameter sensitive plan optimization
   - Degree of parallelism (DOP) feedback
   - XML Compression
@@ -127,7 +126,6 @@ The following sections provide an overview of these features.
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | System page latch concurrency enhancements | Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit tempdb heavy workloads.|
 | Buffer pool parallel scan | Improves the performance of buffer pool scan operations on large-memory machines by utilizing multiple CPU cores. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602). |
-| Hybrid buffer pool with direct write | Enhances the capabilities of the in-memory database feature, [Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md). The performance improvement is achieved by combining Hybrid Buffer Pool with another existing in-memory database feature, [persisted log buffer](../relational-databases/databases/add-persisted-log-buffer.md)Persisted Log Buffer.<br/><br/> In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], when both features are enabled for the same database, Hybrid Buffer Pool takes advantage of the durable log buffer to make implicit writes from the persisted log buffer to the database pages on persistent memory.|
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires Query Store enabled. See [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires Query Store enabled. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|

@@ -1,9 +1,10 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
-description: CREATE TABLE (Azure Synapse Analytics)
-author: VanMSFT
-ms.author: vanto
-ms.date: "03/30/2021"
+description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto, xiaoyul
+ms.date: 07/20/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
@@ -61,6 +62,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
       | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
@@ -150,6 +152,16 @@ To understand how to choose the best distribution method and use distributed tab
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
+
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (***Preview***) 
+Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+>[!NOTE]
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To opt-out the preview, run this command to change the database's compatibility level to 0. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 0;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>     - To regain access to MCD tables, opt-in the preview again. 
+>     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
@@ -468,9 +480,9 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Create a hash-distributed table
+### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns (preview)
 
- The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
+The following example creates the same table as the previous example. However, for this table, rows are distributed (on `id` and `zipCode` columns). The table is created with a clustered columnstore index, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```sql
 CREATE TABLE myTable
@@ -481,7 +493,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = HASH (id),   
+    DISTRIBUTION = HASH (id, zipCode), 
     CLUSTERED COLUMNSTORE INDEX  
   );  
 ```  

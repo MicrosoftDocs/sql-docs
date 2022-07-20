@@ -1,10 +1,10 @@
 ---
-title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
+title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) creates a materialized view to persist the data returned from the view definition query and automatically gets updated as data changes in the underlying tables."
 description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
-author: XiaoyuMSFT
-ms.author: xiaoyul
-ms.reviewer: "wiassaf"
-ms.date: 06/14/2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: xiaoyul
+ms.date: 07/20/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
 ms.technology: data-warehouse
@@ -58,6 +58,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 <distribution_option> ::=
     {  
         DISTRIBUTION = HASH ( distribution_column_name )  
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview        
       | DISTRIBUTION = ROUND_ROBIN  
     }
 
@@ -78,18 +79,19 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Is the name of the view. View names must follow the rules for identifiers. Specifying the view owner name is optional.  
 
 #### *distribution option*     
-Only HASH and ROUND_ROBIN distributions are supported.
+Only HASH and ROUND_ROBIN distributions are supported. For details and to understand how to choose the best distribution column, see [CREATE TABLE Table distribution options](create-table-azure-sql-data-warehouse.md#TableDistributionOptions).
 
 #### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:
+
 - The SELECT list contains an aggregate function.
 - GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  Up to 32 columns can be used in the GROUP BY clause.
 
 Aggregate functions are required in the SELECT list of the materialized view definition.  Supported aggregations include MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
 When MIN/MAX aggregates are used in the SELECT list of materialized view definition, following requirements apply:
- 
-- FOR_APPEND is required.  For example:
+
+- `FOR_APPEND` is required.  For example:
   ```sql 
   CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
@@ -99,7 +101,7 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't  apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
+- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
   
 ## Remarks
 

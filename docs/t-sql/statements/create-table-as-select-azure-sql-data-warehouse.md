@@ -1,9 +1,10 @@
 ---
 title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
-author: VanMSFT
-ms.author: vanto
-ms.date: "06/14/2022"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto, xiaoyul
+ms.date: 07/20/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
@@ -49,6 +50,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <distribution_option> ::=
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
       | DISTRIBUTION = ROUND_ROBIN 
       | DISTRIBUTION = REPLICATE
     }   
@@ -92,6 +94,16 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
+
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (***Preview***) 
+Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+>[!NOTE]
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To opt-out the preview, run this command to change the database's compatibility level to 0. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 0;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>     - To regain access to MCD tables, opt-in the preview again. 
+>     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
@@ -171,29 +183,29 @@ Let's say you created this table by specifying `HEAP` and using the default dist
 ```sql
 CREATE TABLE FactInternetSales
 (
-	ProductKey INT NOT NULL,
-	OrderDateKey INT NOT NULL,
-	DueDateKey INT NOT NULL,
-	ShipDateKey INT NOT NULL,
-	CustomerKey INT NOT NULL,
-	PromotionKey INT NOT NULL,
-	CurrencyKey INT NOT NULL,
-	SalesTerritoryKey INT NOT NULL,
-	SalesOrderNumber NVARCHAR(20) NOT NULL,
-	SalesOrderLineNumber TINYINT NOT NULL,
-	RevisionNumber TINYINT NOT NULL,
-	OrderQuantity SMALLINT NOT NULL,
-	UnitPrice MONEY NOT NULL,
-	ExtendedAmount MONEY NOT NULL,
-	UnitPriceDiscountPct FLOAT NOT NULL,
-	DiscountAmount FLOAT NOT NULL,
-	ProductStandardCost MONEY NOT NULL,
-	TotalProductCost MONEY NOT NULL,
-	SalesAmount MONEY NOT NULL,
-	TaxAmt MONEY NOT NULL,
-	Freight MONEY NOT NULL,
-	CarrierTrackingNumber NVARCHAR(25),
-	CustomerPONumber NVARCHAR(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
 )
 WITH( 
  HEAP, 

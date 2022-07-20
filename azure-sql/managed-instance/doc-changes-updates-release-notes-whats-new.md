@@ -69,7 +69,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| Premium-series hardware GA | Deploy your SQL Managed Instance to the new premiumseries hardware to take advantage of the latest Intel Ice Lake CPUs. See [Premium-series hardware](resource-limits.md#service-tier-characteristics) to learn more.   | 
+| Premium-series hardware GA | Deploy your SQL Managed Instance to the new premium series hardware to take advantage of the latest Intel Ice Lake CPUs. The premium-series hardware is now generally available. See [Premium-series hardware](resource-limits.md#service-tier-characteristics) to learn more.   | 
 
 ### May 2022
 

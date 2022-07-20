@@ -14,7 +14,7 @@ metadata:
   author: VanMSFT
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
-  ms.date: 05/25/2021
+  ms.date: 07/22/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -46,6 +46,8 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-digest-management
           - text: Database verification
             url: /sql/relational-databases/security/ledger/ledger-database-verification
+          - text: Monitor digest uploads
+            url: /sql/relational-databases/security/ledger/ledger-monitor-digest-uploads
 
 
   # Card 

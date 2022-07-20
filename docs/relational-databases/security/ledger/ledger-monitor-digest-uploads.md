@@ -1,7 +1,7 @@
 ---
-title: "Monitor Digest Uploads"
+title: "Monitor digest uploads"
 description: This article provides information on monitoring the digest uploads for ledger.
-ms.date: "05/24/2022"
+ms.date: "07/22/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.custom:
@@ -19,7 +19,7 @@ zone_pivot_groups: as1-azuresql-sql
 
 ::: zone pivot="as1-azure-sql-database"
 
-You can monitor failed and successful ledger digest uploads in the Azure portal in the **Metrics** view of the Azure SQL Database. 
+You can monitor failed and successful ledger digest uploads in the [Azure portal](https://portal.azure.com) in the **Metrics** view of your Azure SQL Database.
 
 :::image type="content" source="media/ledger/monitor-ledger-digest-uploads.png" alt-text="Metrics view of the Azure SQL Database failed and successful ledger digest uploads in the Azure portal":::
 
@@ -31,8 +31,7 @@ We recommend you configure alerts on failed ledger digest uploads if you want to
 
 You can monitor failed and successful ledger digest uploads with [Extended Events](../../extended-events/extended-events.md) in SQL Server. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
 
-We recommend you configure an alert on event number *37417 - Uploading ledger digest failed*.
-This could be done with a [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool. 
+We recommend you configure an alert on event number *37417 - Uploading ledger digest failed*. This could be done with a [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool.
 
 ::: zone-end
 

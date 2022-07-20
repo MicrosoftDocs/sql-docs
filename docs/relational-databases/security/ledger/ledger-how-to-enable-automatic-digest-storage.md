@@ -10,7 +10,7 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.date: "07/22/2022"
 monikerRange: "= azuresqldb-current"
 zone_pivot_groups: as1-azuresql-sql
 ---
@@ -93,12 +93,12 @@ In this article, we'll describe how you can configure automatic generation and s
 - SQL Server 2022
 - [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
 - An Azure Blob Storage
-- A container on the Azure Storage Account
-- A SQL Server Credential, See [Digest Management](ledger-digest-management.md).  
+- An Azure Storage container
+- A [SQL Server credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). For more information, see [Digest Management](ledger-digest-management.md).  
 
 ## Enable database digest uploads using T-SQL
 
-To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
+To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account. To disable uploading ledger digests, set the option value to `OFF`. The default is `OFF`.
 
 1. Sign into your SQL Server 2022 instance using SSMS or Azure Data Studio.
 1. Configure automatic generation and storage of database digests using the following T-SQL statement:

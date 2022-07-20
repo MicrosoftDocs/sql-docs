@@ -38,7 +38,9 @@ The following file formats are supported:
 - JSON - Applies to Azure SQL Edge only. For information on using OPENROWSET to import JSON data in other platforms, see [Import JSON documents into SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) or [Query JSON files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+- Delta Table - Applies to SQL Server 2022.
+ 
 ## Syntax
   
 ### [Delimited text](#tab/delimited)
@@ -116,6 +118,17 @@ WITH (
         'org.apache.hadoop.io.compress.SnappyCodec'  
       | 'org.apache.hadoop.io.compress.GzipCodec'      
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+```
+### [Delta Table](#tab/Delta)
+```syntaxsql
+-- Create an external file format for Delta Table files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+         FORMAT_TYPE = DELTA  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
     ]);  
 ```
 
@@ -409,7 +422,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
+### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics and SQL Server 2022 Only)
  This example creates an external file format for CSV file with a single header row. 
   
 ```sql  
@@ -432,6 +445,15 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
+### G. Create a Delta table external file format
+This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If DATA_COMPRESSION isn't specified, the default is no compression.
+```sql
+CREATE EXTERNAL FILE FORMAT DeltaFileFormat
+WITH(
+	FORMAT_TYPE = DELTA,
+  DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);
+```
 
 ## See Also
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

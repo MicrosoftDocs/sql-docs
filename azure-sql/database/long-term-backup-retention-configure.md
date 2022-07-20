@@ -12,7 +12,7 @@ ms.topic: how-to
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 06/27/2020
+ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-db"
 ---
 

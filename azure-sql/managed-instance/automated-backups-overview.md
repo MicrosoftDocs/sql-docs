@@ -15,7 +15,7 @@ ms.topic: conceptual
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, wiassaf, danil
-ms.date: 06/25/2022
+ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups - Azure SQL Managed Instance

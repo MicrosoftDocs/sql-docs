@@ -15,8 +15,8 @@ ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 04/26/2022
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+ms.date: 07/20/2022
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups for Hyperscale databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

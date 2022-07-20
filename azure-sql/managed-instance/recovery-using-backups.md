@@ -11,7 +11,7 @@ ms.custom: "azure-sql-split"
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 06/25/2022
+ms.date: 07/20/2022
 monikerRange: "= azuresql ||  = azuresql-mi"
 ---
 # Recover using automated database backups - Azure SQL Managed Instance

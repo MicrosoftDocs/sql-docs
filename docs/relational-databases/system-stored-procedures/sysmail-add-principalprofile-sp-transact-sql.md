@@ -61,7 +61,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
  When **\@is_default** is '**0**' and no other association exists, the stored procedure returns an error.  
   
- The stored procedure **sysmail_add_principalprofile_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database is not **msdb**.  
+ The stored procedure **sysmail_add_principalprofile_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database isn't **msdb**.  
   
 ## Permissions  
  Execute permissions for this procedure default to members of the **sysadmin** fixed server role.  

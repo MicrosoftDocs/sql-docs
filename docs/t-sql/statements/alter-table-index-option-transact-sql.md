@@ -178,7 +178,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 
  **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion. **MAXDOP** is supported with `RESUMABLE = ON` as well.
 
- For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](/sql/relational-databases/security/resumable-add-table-constraints).
+ For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](../../relational-databases/security/resumable-add-table-constraints.md).
 
  MAXDOP **=**_max_degree_of_parallelism_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
@@ -303,4 +303,3 @@ BLOCKERS
  [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)   
  [computed_column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-computed-column-definition-transact-sql.md)   
  [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
-  

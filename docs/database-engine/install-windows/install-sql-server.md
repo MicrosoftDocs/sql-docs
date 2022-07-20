@@ -100,7 +100,7 @@ Other SQL Server components can be found here:
 |-----------|-----------------|  
 |[SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|Install and configure the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[SQL Server Replication](../../database-engine/install-windows/install-sql-server-replication.md)|Install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication.|  
-|[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists articles to install the Distributed Replay feature.|  
+|[Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)|Lists articles to install the Distributed Replay feature.|  
 |[SQL Server Management Tools with SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|Install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools.|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components.|  
   

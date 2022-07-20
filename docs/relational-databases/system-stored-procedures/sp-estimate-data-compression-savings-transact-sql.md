@@ -104,17 +104,17 @@ The following result set is returned to provide current and estimated size for t
 
 ## Remarks
 
-Use `sp_estimate_data_compression_savings` to estimate the savings that can occur when you enable a table or partition for row, page, columnstore columnstore archive, or XML compression. For instance, if the average size of the row can be reduced by 40 percent, you can potentially reduce the size of the object by 40 percent. You might not receive a space savings because this depends on the fill factor and the size of the row. For example, if you have a row that is 8,000 bytes long and you reduce its size by 40 percent, you can still fit only one row on a data page. There are no savings.
+Use `sp_estimate_data_compression_savings` to estimate the savings that can occur when you enable a table or partition for row, page, columnstore, columnstore archive, or XML compression. For instance, if the average size of the row can be reduced by 40 percent, you can potentially reduce the size of the object by 40 percent. You might not receive a space savings because this depends on the fill factor and the size of the row. For example, if you have a row that is 8,000 bytes long and you reduce its size by 40 percent, you can still fit only one row on a data page. There are no savings.
 
-If the results of running `sp_estimate_data_compression_savings` on an uncompressed table or index indicate that the size will increase, this means that many rows use almost the whole precision of the data types, and the addition of the small overhead needed for the compressed format is more than the savings from compression. In this rare case, do not enable compression.
+If the results of running `sp_estimate_data_compression_savings` on an uncompressed table or index indicate that the size will increase, this means that many rows use almost the whole precision of the data types, and the addition of the small overhead needed for the compressed format is more than the savings from compression. In this rare case, don't enable compression.
 
 If a table is already enabled for compression, you can use `sp_estimate_data_compression_savings` to estimate the average size of the row if the table is uncompressed.
 
-An intent shared (IS) lock is acquired on the table during this operation. If an IS lock cannot be obtained, the procedure will be blocked. The table is scanned under the default read committed isolation level.
+An intent shared (IS) lock is acquired on the table during this operation. If an IS lock can't be obtained, the procedure will be blocked. The table is scanned under the default read committed isolation level.
 
 If the requested compression setting is same as the current compression setting, the stored procedure will return the estimated size with no data fragmentation and using the existing fill factor for indexes on the source object.
 
-If the index or partition ID does not exist, no results are returned.
+If the index or partition ID doesn't exist, no results are returned.
 
 ## Permissions
 
@@ -122,11 +122,11 @@ Requires `SELECT` permission on the table, `VIEW DATABASE STATE` and `VIEW DEFIN
 
 ## Limitations and restrictions
 
-Prior to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], this procedure did not apply to columnstore indexes, and therefore did not accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE. Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
+Prior to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], this procedure didn't apply to columnstore indexes, and therefore didn't accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE. Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
 
-When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled, creation of columnstore indexes on temporary tables is not supported. Because of this limitation, `sp_estimate_data_compression_savings` is not supported with the COLUMNSTORE and COLUMNSTORE_ARCHIVE data compression parameters when Memory-Optimized TempDB Metadata is enabled.
+When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled, creation of columnstore indexes on temporary tables isn't supported. Because of this limitation, `sp_estimate_data_compression_savings` isn't supported with the COLUMNSTORE and COLUMNSTORE_ARCHIVE data compression parameters when Memory-Optimized TempDB Metadata is enabled.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Community Technology Preview (CTP) 2.1 does not estimate savings for XML indexes.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Community Technology Preview (CTP) 2.1 doesn't estimate savings for XML indexes.
 
 ## Considerations for columnstore indexes
 
@@ -136,7 +136,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], and in 
 |-----------------|---------------|
 |Heap|Clustered columnstore index|
 |Clustered index|Clustered columnstore index|
-|Nonclustered index|Nonclustered columnstore index (including the key columns and any included columns of the provided nonclustered index, as well as the partition column of the table, if any)|
+|Nonclustered index|Nonclustered columnstore index (including the key columns and any included columns of the provided nonclustered index, and the partition column of the table, if any)|
 |Nonclustered columnstore index|Nonclustered columnstore index (including the same columns as the provided nonclustered columnstore index)|
 |Clustered columnstore index|Clustered columnstore index|
 

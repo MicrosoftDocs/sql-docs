@@ -68,9 +68,8 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Ledger - automatic digest upload to Azure Storage
 - [Language](#language)
   - APPROXIMATE PERCENTILE
-  - DATETRUNC
+  - DATETRUNC ()
   - IS \[NOT\] DISTINCT FROM
-  - TRIM()
 - [Tools](#tools)
   - Database tuning advisor improvements
 
@@ -92,7 +91,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). To experience this feature, you can [register here](https://aka.ms/mi-link-2022-signup).|
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
-|Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. For more information, visit [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)<br/> - Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
+|Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. For more information, visit [ALTER AVAILABILITY GROUP ()](../t-sql/statements/alter-availability-group-transact-sql.md)<br/> - Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
 | Improved availability groups | - ParallelRedoThreadPool : Instance level thread pool shared with all databases having redo work. With this, each database can take the benefit of parallel redo. Limited to max 100 threads limit earlier. <br/> - Parallel Redo Batch Redo - Redo of log records are batched under one latch improving speed. This helps both, catchup redo and crash recovery redo. |
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|
 
@@ -146,16 +145,14 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
-| Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
-| JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/json-array-transact-sql.md)|
-| SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW - (Transact-SQL)](../t-sql/queries/select-window-transact-sql.md).|
 | Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-add-table-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
-| T-SQL functions |- [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
-| DATETRUNC | Returns an input `date` truncated to a specified `datepart`. For more information, see [DATETRUNC (Transact-SQL)](../t-sql/functions/datetrunc-transact-sql.md). |
-| IS \[NOT\] DISTINCT FROM | Determines whether two expressions when compared with each other evaluate to NULL, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../t-sql/queries/is-distinct-from-transact-sql.md). |
-| TRIM | Removes the space character `char(32)` or other specified characters from the start and end of a string.. For more information, see [TRIM (Transact-SQL)](../t-sql/functions/trim-transact-sql.md) |
 | Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
+| CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
+| SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW ](../t-sql/queries/select-window-transact-sql.md).|
+| IS \[NOT\] DISTINCT FROM | Determines whether two expressions when compared with each other evaluate to NULL, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../t-sql/queries/is-distinct-from-transact-sql.md). |
+| Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET ()](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES ()](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE ()](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE ()](../t-sql/functions/last-value-transact-sql.md)|
+| JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md)|
+| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md).<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
 
 ## Tools
 

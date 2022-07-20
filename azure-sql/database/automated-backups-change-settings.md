@@ -42,7 +42,7 @@ You can change the default PITR backup retention period and the differential bac
 
 > [!NOTE]
 > - These APIs will affect only the PITR retention period. If you configured LTR for your database, it won't be affected. For information about how to change LTR retention periods, see [Long-term retention](long-term-retention-overview.md).
-> - Hyperscale databases do not support configuring the differential backup frequency. 
+> - Hyperscale databases do not support configuring the differential backup frequency because differential backups are not applicable to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)
 

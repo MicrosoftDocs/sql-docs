@@ -66,7 +66,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Attach to Azure from setup - Azure Arc-enabled instance
   - Attach to Azure from configuration manager - Azure Arc-enabled instance
   - Ledger - automatic digest upload to Azure Storage
-  - Support MS-TDS 8.0 protocol
 - [Language](#language)
   - APPROXIMATE PERCENTILE
   - DATETRUNC

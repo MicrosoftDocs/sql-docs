@@ -92,7 +92,7 @@ An expression that contains the property information to be returned for the serv
 | `ProductMinorVersion` | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />The minor version.<br /><br />Base data type: **nvarchar(128)** |
 | `ProductUpdateLevel` | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />Update level of the current build. CU indicates a cumulative update.<br /><br />Returns one of the following:<br /><br />CU*n* = Cumulative Update<br /><br />NULL = Not applicable.<br /><br />Base data type: **nvarchar(128)** |
 | `ProductUpdateReference` | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br />KB article for that release.<br /><br />Base data type: **nvarchar(128)** |
-| `ProductVersion` | Version of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in the form of `*major.minor.build.revision*`.<br /><br />Base data type: **nvarchar(128)** |
+| `ProductVersion` | Version of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in the form of *major.minor.build.revision*.<br /><br />Base data type: **nvarchar(128)** |
 | `ResourceLastUpdateDateTime` | Returns the date and time that the Resource database was last updated.<br /><br />Base data type: **datetime** |
 | `ResourceVersion` | Returns the version Resource database.<br /><br />Base data type: **nvarchar(128)** |
 | `ServerName` | Both the Windows server and instance information associated with a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />NULL = Input isn't valid, or an error.<br /><br />Base data type: **nvarchar(128)** |
@@ -122,7 +122,7 @@ GO
 
 If the local server name has been changed from the default server name at installation time, [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) returns the new name.
 
-Starting with SQL Server 2019 CU1, the `ServerName` property of the `SERVERPROPERTY` function returns the Windows Server name as it is saved, compared to previous major versions that used uppercase. This behavior changed back to uppercase between CU9 and CU12, but starting from CU13 the server name will return as it is saved.
+Starting with SQL Server 2019 CU1, the `ServerName` property of the `SERVERPROPERTY` function returns the Windows server name as it is saved, compared to previous major versions that used uppercase. This behavior changed back to uppercase between CU9 and CU12, but starting from CU13 the server name will return as it is saved.
 
 If the Windows server name contains any lowercase characters, this change of behavior may cause differences between the `ServerName` property of the `SERVERPROPERTY` function, and [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) (uppercase versus lowercase), even if there is no name change for the server.
 

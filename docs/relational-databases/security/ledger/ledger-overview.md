@@ -120,7 +120,7 @@ The [ledger verification](ledger-database-verification.md) process takes as inpu
 
 ## See also
 
-- [Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed](https://docs.microsoft.com/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed)
+- [Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed](/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed)
 
 ### Customer success
 

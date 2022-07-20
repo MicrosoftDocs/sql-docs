@@ -22,9 +22,9 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-  Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Hadoop or Azure Blob storage.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces the ability to use Create External Table as Select (CETAS), creates an external table and then exports, in parallel, the result of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compliant object storage.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ] table_name }
     [(column_name [,...n ] ) ]
     WITH (   
-        LOCATION = 'hdfs_folder',  
+        LOCATION = '<prefix>://<path>[:<port>]',  
         DATA_SOURCE = external_data_source_name,  
         FILE_FORMAT = external_file_format_name  
         [ , <reject_options> [ ,...n ] ]  
@@ -58,13 +58,12 @@ CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ]
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name***
  is the one- to three-part name of the table to create in the database. For an external table, only the table metadata is stored in the relational database.
  
-**[ ( column_name [ ,...n ] ) ]**
-is the name of a table column.
-
- **LOCATION =  '*hdfs_folder*'**
- specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase will create the path and folder if it doesn't already exist.
-
-The external files are written to *hdfs_folder* and named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. An example is QID776_20160130_182739_0.orc.
+  **[ ( column_name [ ,...n ] ) ]**
+  is the name of a table column.
+  
+  **LOCATION =  'prefix://path[:port]'** provides the connectivity protocol (prefix), path and optionally the port, to the external data source, where the result of the SELECT statement will write.
+  
+  If the destination is a S3-compliant object storage a bucket must first exist, but Polybase can create sub-folders if required. SQL Server 2022 supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compliant object storage.
 
  **DATA_SOURCE = *external_data_source_name***
  specifies the name of the external data source object that contains the location where the external data is stored or will be stored. The location is either a Hadoop cluster or an Azure Blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
@@ -132,7 +131,9 @@ You cannot specify any other column options such as data types, collation, or nu
 - **ADMINISTER BULK OPERATIONS**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage.
+- **Write** permission to read and write to the external location.
+ 
+**The option *'allow polybase export'* must also be enabled on SP_CONFIGURE.**
 
  > [!IMPORTANT]
  >  The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, so it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged and must be granted only to trusted principals in the system.
@@ -140,30 +141,18 @@ You cannot specify any other column options such as data types, collation, or nu
 ## Error handling
  When CREATE EXTERNAL TABLE AS SELECT exports data to a text-delimited file, there's no rejection file for rows that fail to export.
 
- When you create the external table, the database attempts to connect to the external Hadoop cluster or Blob storage. If the connection fails, the command will fail and the external table won't be created. It can take a minute or more for the command to fail because the database retries the connection at least three times.
+ When you create the external table, the database attempts to connect to the external location. If the connection fails, the command will fail and the external table won't be created. It can take a minute or more for the command to fail because the database retries the connection at least three times.
 
  If CREATE EXTERNAL TABLE AS SELECT is canceled or fails, the database will make a one-time attempt to remove any new files and folders already created on the external data source.
-
- The database will report any Java errors that occur on the external data source during the data export.
 
 ##  <a name="GeneralRemarks"></a> General remarks
  After the CREATE EXTERNAL TABLE AS SELECT statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
 
  The external table name and definition are stored in the database metadata. The data is stored in the external data source.
 
- The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. An example is QID776_20160130_182739_0.orc.
-
- The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
+  The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
 
  For query plans, created with EXPLAIN, the database uses these query plan operations for external tables:
-
-- External shuffle move
-- External broadcast move
-- External partition move
-
- **Applies to:** Parallel Data Warehouse
-
-As a prerequisite for creating an external table, the appliance administrator needs to configure Hadoop connectivity. For more information, see "Configure Connectivity to External Data (Analytics Platform System)" in the Analytics Platform System documentation, which you can download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48241).
 
 ## Limitations and restrictions
  Because external table data resides outside of the database, backup and restore operations will only operate on data stored in the database. As a result, only the metadata will be backed up and restored.
@@ -176,15 +165,9 @@ As a prerequisite for creating an external table, the appliance administrator ne
 
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and DROP VIEW are the only data definition language (DDL) operations allowed on external tables.
 
- External tables for serverless SQL pool cannot be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS.
+  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).
 
- PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
-
- [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).
-
- When CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe "|" character.
-
-CREATE EXTERNAL TABLE AS SELECT to Parquet or ORC files will cause errors, which can include rejected records when the following characters are present in the data:
+ CREATE EXTERNAL TABLE AS SELECT to Parquet  will cause errors, which can include rejected records when the following characters are present in the data:
 
 - |
 - “ (quotation mark character)
@@ -192,82 +175,65 @@ CREATE EXTERNAL TABLE AS SELECT to Parquet or ORC files will cause errors, which
 - /r
 - /n
 
-To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
+To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet by using an external tool.
 
 ## Locking
  Takes a shared lock on the SCHEMARESOLUTION object.
 
 ##  <a name="Examples"></a> Examples
 
-### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT
+### D. Use CREATE EXTERNAL TABLE AS SELECT exporting data as parquet
 
- The following example creates a new external table named `hdfsCustomer` that uses the column definitions and data from the source table `dimCustomer`.
+ The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database.
 
- The table definition is stored in the database, and the results of the SELECT statement are exported to the '/pdwdata/customer.tbl' file on the Hadoop external data source *customer_ds*. The file is formatted according to the external file format *customer_ff*.
-
- The file name is generated by the database and contains the query ID for ease of aligning the file with the query that generated it.
-
- The path `hdfs://xxx.xxx.xxx.xxx:5000/files/` preceding the Customer directory must already exist. If the Customer directory doesn't exist, the database will create the directory.
+The result of the SELECT statement will be saved on an S3-compliant object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
 > [!NOTE]
->  This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.
-
- The resulting Hadoop location and file name will be `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`.
+>Delta format is only supported on SQL Server 2022 as Read-only.
 
 ```sql  
--- Example is based on AdventureWorks   
-CREATE EXTERNAL TABLE hdfsCustomer  
-WITH (  
-        LOCATION='/pdwdata/customer.tbl',  
-        DATA_SOURCE = customer_ds,  
-        FILE_FORMAT = customer_ff  
-) AS SELECT * FROM dimCustomer;  
+-- Credential to access the s3-compliant object storage
+CREATE DATABASE SCOPED CREDENTIAL s3_dsc
+WITH IDENTITY = 'S3 Access Key',
+SECRET = '<accesskeyid>:<secretkeyid>'
+GO
+
+-- S3-compliant object storage data source
+CREATE EXTERNAL DATA SOURCE s3_eds
+WITH
+( LOCATION = 's3://<ip>:<port>'
+,CREDENTIAL = s3_dsc)
+
+-- External File Format for PARQUET
+CREATE EXTERNAL FILE FORMAT ParquetFileFormat WITH(FORMAT_TYPE = PARQUET);
+GO
+
+CREATE EXTERNAL TABLE ext_sales
+WITH 
+(   LOCATION = '/cetas/sales.parquet',
+    DATA_SOURCE = s3_eds,  
+    FILE_FORMAT = ParquetFileFormat
+) AS SELECT * FROM ADVENTUREWORKS2019.[SALES].[SALESORDERDETAIL]
 ```
 
-### B. Use a query hint with CREATE EXTERNAL TABLE AS SELECT
+### E. Use CREATE EXTERNAL TABLE AS SELECT from delta table to parquet
 
- This query shows the basic syntax for using a query join hint with the CREATE EXTERNAL TABLE AS SELECT statement. After the query is submitted, the database uses the hash join strategy to generate the query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-Compliant object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
 
-> [!NOTE]
->  This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.
+```sql
+-- External File Format for PARQUET
+CREATE EXTERNAL FILE FORMAT ParquetFileFormat WITH(FORMAT_TYPE = PARQUET);
+GO
 
-```sql  
--- Example is based on AdventureWorks  
-CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
-WITH   
-    (   
-        LOCATION = '/files/Customer',  
-        DATA_SOURCE = customer_ds,  
-        FILE_FORMAT = customer_ff  
-    )  
-AS SELECT T1.* FROM dbo.FactInternetSales T1 JOIN dbo.DimCustomer T2  
-ON ( T1.CustomerKey = T2.CustomerKey )  
-OPTION ( HASH JOIN );  
+CREATE EXTERNAL TABLE Delta_to_Parquet
+WITH 
+(   LOCATION = '/backup/sales.parquet',
+    DATA_SOURCE = s3_parquet,  
+    FILE_FORMAT = ParquetFileFormat
+) AS 
+SELECT * FROM OPENROWSET
+(BULK '/delta/sales_fy22/', FORMAT = 'DELTA', DATA_SOURCE = 's3_delta') as [r]
 ```
-
-### C. Use CETAS to change column attributes
-This example uses CETAS to change data types, nullability, and collation for several columns in the `FactInternetSales` table.
-
-```sql  
--- Example is based on AdventureWorks  
-CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
-WITH   
-    (   
-        LOCATION = '/files/Customer',  
-        DATA_SOURCE = customer_ds,  
-        FILE_FORMAT = customer_ff  
-    )  
-AS SELECT T1.ProductKey AS ProductKeyNoChange,
-          T1.OrderDateKey AS OrderDate,
-          T1.ShipDateKey AS ShipDate,
-          T1.CustomerKey AS CustomerKeyNoChange,
-          T1.OrderQuantity AS Quantity,
-          T1.SalesAmount AS Money
-FROM dbo.FactInternetSales T1 JOIN dbo.DimCustomer T2  
-ON ( T1.CustomerKey = T2.CustomerKey )  
-OPTION ( HASH JOIN ); 
-```
-
 
 ## See also
  - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)

@@ -23,7 +23,7 @@ You can monitor failed and successful ledger digest uploads in the [Azure portal
 
 :::image type="content" source="media/ledger/monitor-ledger-digest-uploads.png" alt-text="Metrics view of the Azure SQL Database failed and successful ledger digest uploads in the Azure portal":::
 
-We recommend you configure alerts on failed ledger digest uploads if you want to be notified when a digest upload failed. Failures might occur due to revoked permissions on the storage account or network configuration that makes the storage account inaccessible. Optionally, you could also configure an alert on successful ledger digest uploads. This could be interesting if the number of uploads dropped under a certain value or zero, due to someone that disabled the automatic digest upload. This would not be considered a failure since the digest upload was explicitly disabled.
+We recommend you configure alerts on failed ledger digest uploads if you want to be notified when a digest upload failed. Failures might occur due to revoked permissions on the storage account or network configuration that makes the storage account inaccessible. Optionally, you could also configure an alert on successful ledger digest uploads. If the number of successful ledger digest uploads drops under a certain value or zero due to someone disabling the automatic digest upload, the alert can help raise attention to this matter. Digest uploads that are explicitly disabled wouldn't be considered a failure in this case.
 
 ::: zone-end
 
@@ -31,7 +31,7 @@ We recommend you configure alerts on failed ledger digest uploads if you want to
 
 You can monitor failed and successful ledger digest uploads with [Extended Events](../../extended-events/extended-events.md) in SQL Server. Select the events *ledger_digest_upload_failed* and *ledger_digest_upload_success* in the Extended Event session.
 
-We recommend you configure an alert on event number *37417 - Uploading ledger digest failed*. This could be done with a [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool.
+We recommend you configure an alert on event number *37417 - Uploading ledger digest failed*. The alert can be configured using [SQL Agent Alert](../../../ssms/agent/create-an-alert-using-an-error-number.md) or your favorite third-party monitoring tool.
 
 ::: zone-end
 

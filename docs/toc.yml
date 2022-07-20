@@ -9358,8 +9358,6 @@ items:
               href: ssms/scripting/transact-sql-debugger-output-window.md
             - name: T-SQL Debugger - Watch Window
               href: ssms/scripting/transact-sql-debugger-watch-window.md
-            - name: T-SQL Debugger - QuickWatch Dialog Box
-              href: ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
           - name: Status Bar (Database Engine Query Editor)
             href: ssms/scripting/status-bar-database-engine-query-editor.md
           - name: View Spatial Data in Object Explorer
@@ -16256,6 +16254,10 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_PERCENTILE_CONT
+          href: t-sql/functions/approx-percentile-cont-transact-sql.md
+        - name: APPROX_PERCENTILE_DISC
+          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG
@@ -16459,6 +16461,9 @@ items:
           href: t-sql/functions/datetimefromparts-transact-sql.md
         - name: DATETIMEOFFSETFROMPARTS
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
+        - name: DATETTRUNC
+          href: t-sql/functions/datetrunc-transact-sql.md
+
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
         - name: EOMONTH
@@ -17233,6 +17238,8 @@ items:
           href: t-sql/queries/contains-transact-sql.md
         - name: FREETEXT
           href: t-sql/queries/freetext-transact-sql.md
+        - name: IS DISTINCT FROM
+          href: t-sql/queries/is-distinct-from-transact-sql.md
         - name: IS NULL
           href: t-sql/queries/is-null-transact-sql.md
     - name: Statements

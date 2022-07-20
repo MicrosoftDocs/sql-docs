@@ -85,7 +85,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Current ledger limitations
-            url: ledger-limits.md
+            url: /sql/relational-databases/security/ledger/ledger-limits
           - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
 

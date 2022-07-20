@@ -117,5 +117,5 @@ For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](/
 - [Ledger overview](ledger-overview.md)
 - [Digest management](ledger-digest-management.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)
-- [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
-- [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)
+- [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
+- [sp_verify_database_ledger_from_digest_storage](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)

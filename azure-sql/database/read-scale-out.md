@@ -59,6 +59,14 @@ For example, the following connection string connects the client to a read-only 
 Server=tcp:<server>.database.windows.net;Database=<mydatabase>;ApplicationIntent=ReadOnly;User ID=<myLogin>;Password=<myPassword>;Trusted_Connection=False; Encrypt=True;
 ```
 
+To connect to a read-only replica using SQL Server Management Studio (SSMS), select **Options**
+
+![SSMS Options](./media/read-scale-out/SSMS-Options.png)
+
+Select **Additional Connection Parameters** and enter `ApplicationIntent=ReadOnly` and then select **Connect**
+
+![SSMS Additional Parameters](./media/read-scale-out/SSMS-Additional-Connection-Parameters.png)
+
 Either of the following connection strings connects the client to a read-write replica (replacing the items in the angle brackets with the correct values for your environment and dropping the angle brackets):
 
 ```sql

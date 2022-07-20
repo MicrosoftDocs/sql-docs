@@ -12,8 +12,6 @@ metadata:
   ms.devlang:
   ms.custom:
   - event-tier1-build-2022
-  - event-tier1-build-2022
-  - event-tier1-build-2022
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
@@ -97,15 +95,15 @@ landingContent:
       - linkListType: reference
         links:
           - text: sys.database_ledger_blocks (Transact-SQL)
-            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql
+            url: ../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md
           - text: sys.database_ledger_transactions (Transact-SQL)
-            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql
+            url: ../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md
           - text: sys.database_ledger_digest_locations (Transact-SQL)
-            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql
+            url: ../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md
           - text: sys.ledger_table_history (Transact-SQL)
-            url: /sql/relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql
+            url: ../../system-catalog-views/sys-ledger-table-history-transact-sql.md
           - text: sys.ledger_column_history (Transact-SQL)
-            url: /sql/relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql
+            url: ../../system-catalog-views/sys-ledger-column-history-transact-sql.md
 
 
   # Card
@@ -114,13 +112,13 @@ landingContent:
       - linkListType: reference
         links:
           - text: sys.sp_generate_database_ledger_digest (Transact-SQL)
-            url: /sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql
+            url: ../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md
           - text: sys.sp_verify_database_ledger (Transact-SQL)
-            url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql
+            url: ../../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
           - text: sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
-            url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
+            url: ../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
           - text: sys.sp_copy_data_in_batches (Transact-SQL)
-            url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql
+            url: ../../system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md
 
 
   # Card 
@@ -132,3 +130,4 @@ landingContent:
             url: https://docs.microsoft.com/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
           - text: Learn how Lenovo reinforces trust using ledger in Azure SQL Database
             url: https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi
+

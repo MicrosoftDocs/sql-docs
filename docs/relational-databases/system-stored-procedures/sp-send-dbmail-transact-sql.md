@@ -125,7 +125,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Is a query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Note that the query is executed in a separate session, so local variables in the script calling **sp_send_dbmail** are not available to the query.  
  
    >[!NOTE]
-   > When using `@query` parameter, `@profile_name` cannot reference principal that belongs to an Azure AD group. If Azure AD authentication is used, principal needs to be directly mapped to Azure AD server principal (login), otherwise it will not effectively be able to execute the query. This is due to Azure SQL Managed Instance impersonation and EXECUTE AS [limitations](../../../azure-sql/managed-instance/transact-sql-tsql-differences-sql-server.md#logins-and-users).
+   > When using `@query` parameter, `@profile_name` cannot reference principal that belongs to an Azure AD group. If Azure AD authentication is used, principal needs to be directly mapped to Azure AD server principal (login), otherwise it will not effectively be able to execute the query. This is due to Azure SQL Managed Instance impersonation and EXECUTE AS [limitations](https://docs.microsoft.com/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
   
 `[ @execute_query_database = ] 'execute_query_database'`
  Is the database context within which the stored procedure runs the query. The parameter is of type **sysname**, with a default of the current database. This parameter is only applicable if **\@query** is specified.  

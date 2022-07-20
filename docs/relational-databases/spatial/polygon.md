@@ -101,6 +101,33 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` is not valid because the inner ring touches the exterior ring in two places. `@g2` is not valid because the second inner ring in within the interior of the first inner ring. `@g3` is not valid because the two inner rings touch at multiple consecutive points. `@g4` is not valid because the interiors of the two inner rings overlap. `@g5` is not valid because the exterior ring is not the first ring. `@g6` is not valid because the ring does not have at least three distinct points.  
   
+
+##  Orientation of spatial data
+
+The ring orientation of a polygon is not an important factor in the planar system. The _OGC Simple Features for SQL Specification_ doesn't dictate a ring ordering, and SQL Server doesn't enforce ring ordering.
+
+In an ellipsoidal system, a polygon without an orientation has no meaning, or is ambiguous. For example, does a ring around the equator describe the northern or southern hemisphere? If we use the geography data type to store the spatial instance, we must specify the orientation of the ring and accurately describe the location of the instance.
+
+The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
+
+<br/>
+
+|Counter-clockwise Order |Clockwise Order |
+|---------|---------|
+| :::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of "left-hand rule" part 1" width="100px" height="100px":::     |   :::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of "left-hand rule" part 2" width="100px" height="100px":::      |
+
+
+When the compatibility level is 100 or below in SQL Server then the geography data type has the following restrictions:
+
+- Each geography instance must fit inside a single hemisphere. No spatial objects larger than a hemisphere can be stored.
+
+- Any geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) or Well-Known Binary (WKB) representation that produces an object larger than a hemisphere throws an ArgumentException.
+
+- The geography data type methods that require the input of two geography instances, such as STIntersection(), STUnion(), STDifference(), and STSymDifference(), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.
+ 
+Orientation can be reversed leveraging the [ReorientObject](https://docs.microsoft.com/en-us/sql/t-sql/spatial-geography/reorientobject-geography-data-type?view=sql-server-ver16) extended method.
+
+
 ## Examples  
 ### Example A.  
 The following example creates a simple `geometry` `Polygon` instance with a gap and SRID 10.

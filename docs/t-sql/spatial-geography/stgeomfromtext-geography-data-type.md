@@ -52,6 +52,9 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
  The OGC type of the **geography** instance returned by STGeomFromText() is set to the corresponding WKT input.  
   
  This method will throw an **ArgumentException** if the input contains an antipodal edge.  
+
+> [!Note]
+> The order in which the points are listed matters for geography polygons. It determines if the polygon area is to the inside or outside of the given ring. See [Polygon](../../relational-databases/spatial/polygon.md#orientation-of-spatial-data) for more information.
   
 ## Examples  
  The following example uses `STGeomFromText()` to create a `geography` instance.  

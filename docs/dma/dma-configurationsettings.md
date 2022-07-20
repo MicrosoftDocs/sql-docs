@@ -2,10 +2,10 @@
 title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: "seo-lt-2019"
-ms.date: "03/12/2019"
+ms.date: 07/20/2022
 ms.prod: sql
 ms.prod_service: "dma"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: dma
 ms.topic: conceptual
 keywords: ""
@@ -107,9 +107,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 ## Stretch Database: Recommendation threshold
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], and will be removed in a future version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible.
-
-
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation, under Storage feature recommendation, first identifies tables that it thinks will benefit from this feature, and then it identifies changes that need to be made to enable the table for this feature.
 

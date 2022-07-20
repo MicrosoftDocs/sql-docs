@@ -4,7 +4,7 @@ description: Enable Stretch Database for a database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/04/2022
+ms.date: 07/20/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -29,8 +29,6 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 > Later, if you disable Stretch Database, remember that disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them manually.
 
 ## Before you get started
-
-- Before you configure a database for Stretch, we recommend that you run the Stretch Database Advisor to identify databases and tables that are eligible for Stretch. The Stretch Database Advisor also identifies blocking issues. For more info, see [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md).
 
 - Review [Limitations for Stretch Database](limitations-for-stretch-database.md).
 
@@ -73,6 +71,9 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 1. On the Azure server, create a firewall rule with the IP address range of the SQL Server that lets SQL Server communicate with the remote server.
 
    You can easily find the values you need and create the firewall rule by attempting to connect to the Azure server from Object Explorer in SQL Server Management Studio (SSMS). SSMS helps you to create the rule by opening the following dialog box, which already includes the required IP address values.
+
+   > [!IMPORTANT]  
+   > Stretch Database support is removed in SQL Server Management Studio v19. To manage Stretch Database, you can use SQL Server Management Studio v18.9.1 or lower.
 
    :::image type="content" source="media/enable-stretch-database-for-a-database/firewall-rule-for-stretch.png" alt-text="Screenshot showing a firewall rule for Stretch.":::
 
@@ -143,5 +144,4 @@ Enabling Stretch Database on a database or a table requires db_owner permissions
 
 ## See also
 
-- [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md)
 - [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)

@@ -4,7 +4,7 @@ description: Enable Stretch Database for a table
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/04/2022
+ms.date: 07/20/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -19,13 +19,16 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To configure a table for Stretch Database, select **Stretch | Enable** for a table in SQL Server Management Studio to open the **Enable Table for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database on an existing table, or to create a new table with Stretch Database enabled.
+To configure a table for Stretch Database, select **Stretch > Enable** for a table in SQL Server Management Studio to open the **Enable Table for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database on an existing table, or to create a new table with Stretch Database enabled.
+
+> [!IMPORTANT]  
+> Stretch Database support is removed in SQL Server Management Studio v19. To manage Stretch Database, you can use SQL Server Management Studio v18.9.1 or lower.
 
 - If you store cold data in a separate table, you can migrate the entire table.
 
 - If your table contains both hot and cold data, you can specify a filter function to select the rows to migrate.
 
-**Prerequisites**. If you select **Stretch | Enable** for a table, and you haven't yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.
+**Prerequisites**. If you select **Stretch > Enable** for a table, and you haven't yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.
 
 **Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on a table also requires ALTER permissions on the table.
 

@@ -4,7 +4,7 @@ description: Disable Stretch Database and bring back remote data
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/04/2022
+ms.date: 07/20/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -19,13 +19,7 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To disable Stretch Database for a table, select **Stretch** for a table in SQL Server Management Studio. Then select one of the following options.
-
-- **Disable > Bring data back from Azure**. Copy the remote data for the table from Azure back to SQL Server, then disable Stretch Database for the table. This operation incurs data transfer costs, and it can't be canceled.
-
-- **Disable > Leave data in Azure**. Disable Stretch Database for the table. Abandon the remote data for the table in Azure.
-
-You can also use Transact-SQL to disable Stretch Database for a table or for a database.
+You can use Transact-SQL to disable Stretch Database for a table or for a database.
 
 After you disable Stretch Database for a table, data migration stops and query results no longer include results from the remote table.
 
@@ -35,22 +29,6 @@ If you want to pause data migration, see [Pause and resume data migration &#40;S
 > Disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ## Disable Stretch Database for a table
-
-### Use SQL Server Management Studio
-
-1. In SQL Server Management Studio, in Object Explorer, select the table for which you want to disable Stretch Database.
-
-1. Right-click and select **Stretch**, and then select one of the following options.
-
-   - **Disable > Bring data back from Azure**. Copy the remote data for the table from Azure back to SQL Server, then disable Stretch Database for the table. This command can't be canceled.
-
-     Copying the remote data for the table from Azure back to SQL Server incurs data transfer costs. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).
-
-     After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.
-
-   - **Disable > Leave data in Azure**. Disable Stretch Database for the table. Abandon the remote data for the table in Azure.
-
-     Disabling Stretch Database for a table doesn't delete the remote data or the remote table. If you want to delete the remote table, you have to drop it by using the Azure management portal. The remote table continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ### Use Transact-SQL
 
@@ -83,14 +61,6 @@ If you want to pause data migration, see [Pause and resume data migration &#40;S
 ## Disable Stretch Database for a database
 
 Before you can disable Stretch Database for a database, you have to disable Stretch Database on the individual Stretch-enabled tables in the database.
-
-### Use SQL Server Management Studio
-
-1. In SQL Server Management Studio, in Object Explorer, select the database for which you want to disable Stretch Database.
-
-1. Right-click and select **Tasks > Stretch > Disable**.
-
-   Disabling Stretch Database for a database doesn't delete the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal. The remote database continues to incur Azure costs until you delete it. For more info, see [SQL Server Stretch Database Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).
 
 ### Use Transact-SQL
 

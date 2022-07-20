@@ -19,22 +19,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   The server from which you launch Replication Monitor is automatically added to the monitor if it is a Publisher. Additional Publishers can be added through the **Add Publisher** dialog box. After adding a Publisher, it is displayed in a group in the left pane of the monitor. The **My Publishers** group is included by default, but you can create new groups to manage one or more replication topologies. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-### To add a SQL Server Publisher that is Standalone or Failover Cluster Instance
-  
-1.  Right-click the **Replication Monitor** node or a Publisher group node in the left pane, and then click **Add Publisher**.  
-  
-2.  In the **Add Publisher** dialog box, click **Add**, and then click **Add SQL Server Publisher**.  
-  
-3.  In the **Connect to Server** dialog box, enter the name of the Publisher and then select the authentication type. If you select **SQL Server Authentication**, enter a login and password. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
-4.  Click **Connect**. If the Publisher uses a remote Distributor, you will be prompted to connect to the Distributor in the **Connect to Server** dialog box. The credentials you specify are saved by Replication Monitor to use when connecting to this server in the future. The Windows account or SQL Server login specified must be a member of the **sysadmin** fixed server role or a member of the **replmonitor** fixed database role in the distribution database.  
-  
-5.  The name of the Publisher and Distributor are displayed in the **Start monitoring the following Publisher(s)** grid.  
-  
-6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
-  
-7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
-  
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### To add a SQL Server Publisher
 

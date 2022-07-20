@@ -145,7 +145,7 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute).
+To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute). For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )

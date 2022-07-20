@@ -78,7 +78,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Is the name of the view. View names must follow the rules for identifiers. Specifying the view owner name is optional.  
 
 #### *distribution option*     
-Only HASH and ROUND_ROBIN distributions are supported.
+Only HASH and ROUND_ROBIN distributions are supported. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 #### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:

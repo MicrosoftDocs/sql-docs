@@ -93,7 +93,7 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
 
-For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
+For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 <a name="table-partition-options-bk"></a>
 
@@ -171,29 +171,29 @@ Let's say you created this table by specifying `HEAP` and using the default dist
 ```sql
 CREATE TABLE FactInternetSales
 (
-	ProductKey INT NOT NULL,
-	OrderDateKey INT NOT NULL,
-	DueDateKey INT NOT NULL,
-	ShipDateKey INT NOT NULL,
-	CustomerKey INT NOT NULL,
-	PromotionKey INT NOT NULL,
-	CurrencyKey INT NOT NULL,
-	SalesTerritoryKey INT NOT NULL,
-	SalesOrderNumber NVARCHAR(20) NOT NULL,
-	SalesOrderLineNumber TINYINT NOT NULL,
-	RevisionNumber TINYINT NOT NULL,
-	OrderQuantity SMALLINT NOT NULL,
-	UnitPrice MONEY NOT NULL,
-	ExtendedAmount MONEY NOT NULL,
-	UnitPriceDiscountPct FLOAT NOT NULL,
-	DiscountAmount FLOAT NOT NULL,
-	ProductStandardCost MONEY NOT NULL,
-	TotalProductCost MONEY NOT NULL,
-	SalesAmount MONEY NOT NULL,
-	TaxAmt MONEY NOT NULL,
-	Freight MONEY NOT NULL,
-	CarrierTrackingNumber NVARCHAR(25),
-	CustomerPONumber NVARCHAR(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
 )
 WITH( 
  HEAP, 

@@ -5,7 +5,7 @@ description: "Breaking changes to database engine features in SQL Server 2019"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: "12/13/2019"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: release-landing

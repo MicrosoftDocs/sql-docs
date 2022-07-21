@@ -1,7 +1,7 @@
 ---
 title: "Ledger overview"
 description: Learn the basics of the ledger feature.
-ms.date: "07/22/2022"
+ms.date: 07/25/2022
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma

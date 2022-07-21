@@ -85,7 +85,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-installation
 - event-tier1-build-2022
-ms.date: 07/12/2022
+ms.date: 07/25/2022
 monikerRange: ">=sql-server-2016"
 ---
 

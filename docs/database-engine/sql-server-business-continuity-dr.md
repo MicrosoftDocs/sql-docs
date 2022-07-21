@@ -4,7 +4,7 @@ description: Use this overview of business continuity solutions for high availab
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mikeray
-ms.date: 09/14/2017
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual

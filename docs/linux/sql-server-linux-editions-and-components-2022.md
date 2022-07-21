@@ -1,7 +1,7 @@
 ---
 description: "Editions and supported features of SQL Server 2022 Preview on Linux"
 title: "Editions and supported features of SQL Server 2022 Preview - Linux"
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual

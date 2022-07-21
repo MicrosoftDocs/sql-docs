@@ -5,7 +5,7 @@ description: Install, update, and uninstall SQL Server 2022 Preview on Linux. Th
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:

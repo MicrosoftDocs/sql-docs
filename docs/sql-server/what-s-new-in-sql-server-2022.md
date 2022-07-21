@@ -70,8 +70,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - APPROXIMATE PERCENTILE
   - DATETRUNC ()
   - IS \[NOT\] DISTINCT FROM
-- [Tools](#tools)
-  - Database tuning advisor improvements
 
 For details, see the feature descriptions in the sections below.
 

@@ -50,8 +50,10 @@ After you experience SQL Server 2022 Preview, you're welcome to [submit feedback
 This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization)
-  - Data virtualization
+  - Object storage integration (Data Lake Virtualization) - updated location for S3-compliant object storage certificate for SQL Server on Linux.
+  - Data virtualization: 
+     - SQL Server 2022 (16.x) supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
+     - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
 - [Performance](#performance)
   - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization

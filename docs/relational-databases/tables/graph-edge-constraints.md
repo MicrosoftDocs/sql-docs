@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 ---
 # Edge constraints
 
-[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
@@ -156,7 +156,7 @@ The following example uses ALTER TABLE to add an edge constraint to the **bought
 -- CREATE node and edge tables
 CREATE TABLE Customer
    (
-      ID INTEGER PRIMARY KEY,
+      ID INTEGER PRIMARY KEY
       , CustomerName VARCHAR(100)
    )
    AS NODE;

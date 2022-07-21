@@ -93,17 +93,8 @@ maxDataReaderDegreeOfParallelism="8"/>
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../includes/ssnotedepfuturedontuse-md.md)]
 
-With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation, under Storage feature recommendation, first identifies tables that it thinks will benefit from this feature, and then it identifies changes that need to be made to enable the table for this feature.
+With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer availabile as an advisor option.
 
-Starting with Data Migration Assistant v2.0, you can control this threshold for a table to qualify for the Stretch Database feature using the recommendedNumberOfRows configuration value. Default value is 100,000 rows. If you want to analyze the stretch capabilities for even smaller tables, then lower the value accordingly.
-
-```xml
-<advisorGroup>
-<advisorSettings>
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
-</advisorSettings>
-</advisorGroup>
-```
 
 ## SQL connection timeout
 

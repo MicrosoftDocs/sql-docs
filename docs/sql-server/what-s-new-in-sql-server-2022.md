@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 07/15/2022
+ms.date: 07/25/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -50,8 +50,10 @@ After you experience SQL Server 2022 Preview, you're welcome to [submit feedback
 This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization)
-  - Data virtualization
+  - Object storage integration (Data Lake Virtualization) - updated location for S3-compliant object storage certificate for SQL Server on Linux.
+  - Data virtualization: 
+     - SQL Server 2022 (16.x) supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
+     - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
 - [Performance](#performance)
   - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization
@@ -64,14 +66,13 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Support for PFX certificates
   - Automation process to set up Azure AD administrator for SQL Server
   - Attach to Azure from setup - Azure Arc-enabled instance
-  - Attach to Azure from configuration manager - Azure Arc-enabled instance
+  - Attach to Azure from Configuration Manager - Azure Arc-enabled instance
   - Ledger - automatic digest upload to Azure Storage
 - [Language](#language)
-  - APPROXIMATE PERCENTILE
-  - DATETRUNC ()
+  - APPROX_PERCENTILE_DISC()
+  - APPROX_PERCENTILE_CONT()
+  - DATETRUNC()
   - IS \[NOT\] DISTINCT FROM
-- [Tools](#tools)
-  - Database tuning advisor improvements
 
 For details, see the feature descriptions in the sections below.
 
@@ -83,7 +84,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 |Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For more information, see [What is Azure Synapse Link for SQL? (Preview) - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues).|
 |Object storage integration | SQL Server 2022 Preview introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization. <br/><br/> Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL.|
-|Data Virtualization ||
+|Data Virtualization | Query different types of data on different types of data sources from SQL Server. |
 
 ## Availability
 
@@ -119,7 +120,7 @@ The following sections provide an overview of these features.
 | Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback).<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. <br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution.  Requires enabling Query Store. Query store is enabled by default for new databases. |
 |Ordered clustered columnstore index | Ordered clustered columnstore index (CCI) sorts the existing data in memory before the index builder compresses the data into index segments. This has the potential of more efficient segment elimination, resulting in better performance as the number of segments to read from disk is reduced. For more information, see [CREATE COLUMNSTORE INDEX (Transact-SQL)](../t-sql/statements/create-columnstore-index-transact-sql.md).</br></br>Also available in Synapse Analytics. See [Query performance](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci#query-performance).|
 | In-memory OLTP management | Improve memory management in large memory servers to reduce out-of-memory conditions. |
-| Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitivity Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
+| Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | System page latch concurrency enhancements | Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit tempdb heavy workloads.|
@@ -133,7 +134,8 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Setup attached to Azure | Install Azure Arc agent via SQL Server at setup. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
+| Setup attached to Azure | Install Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
+| Manage Azure Arc SQL Extension | Use SQL Server Configuration Manager to manage Azure Arc SQL Extension service. See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 | Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
@@ -152,7 +154,8 @@ The following sections provide an overview of these features.
 | IS \[NOT\] DISTINCT FROM | Determines whether two expressions when compared with each other evaluate to NULL, and guarantees a true or false value as the result. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../t-sql/queries/is-distinct-from-transact-sql.md). |
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET ()](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES ()](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE ()](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE ()](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md)|
-| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md).<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
+| Aggregate functions | - [APPROX_PERCENTILE_CONT ()](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC ()](../t-sql/functions/approx-percentile-disc-transact-sql.md)
+| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
 
 ## Tools
 

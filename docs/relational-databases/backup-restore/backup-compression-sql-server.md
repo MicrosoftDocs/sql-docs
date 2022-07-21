@@ -2,7 +2,7 @@
 title: "Backup Compression (SQL Server) | Microsoft Docs"
 description: Learn about compression of SQL Server backups, including restrictions, performance trade-offs, Configuring backup compression, and the compression ratio.
 ms.custom: ""
-ms.date: "07/08/2020"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

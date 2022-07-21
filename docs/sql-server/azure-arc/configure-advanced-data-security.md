@@ -5,7 +5,7 @@ description: Configure Azure Defender for an instance of SQL Server on Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/12/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.topic: conceptual
 ---

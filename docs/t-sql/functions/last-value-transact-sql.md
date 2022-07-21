@@ -4,7 +4,7 @@ description: "LAST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/09/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
 ms.technology: t-sql

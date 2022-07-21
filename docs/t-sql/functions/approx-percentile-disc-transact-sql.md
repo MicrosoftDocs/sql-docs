@@ -1,5 +1,5 @@
 ---
-title: APPOX_PERCENTILE_DISC (Transact-SQL)
+title: APPROX_PERCENTILE_DISC (Transact-SQL)
 description: A function that returns the value from the set of values in a group based on the provided percentile and sort specification.
 ms.prod: sql
 ms.technology: t-sql
@@ -16,7 +16,7 @@ author: blakhani-msft
 ms.author: blakhani 
 ms.reviewer: "maghan"
 ms.custom: ""
-ms.date: "04/24/2022"
+ms.date: 07/25/2022
 monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 
@@ -58,7 +58,7 @@ Approximate percentile functions use KLL sketch. The sketch is built by reading 
 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error rate within a 99% probability.
 
-## Known issues
+## Known behaviors
 
 - The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 
@@ -92,6 +92,6 @@ FROM tblEmployee
 GROUP BY DeptId
 ```
 
-## See Also  
+## See also  
 
 [PERCENTILE_DISC](../../t-sql/functions/percentile-disc-transact-sql.md)

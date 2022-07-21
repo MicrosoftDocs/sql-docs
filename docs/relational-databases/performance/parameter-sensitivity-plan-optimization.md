@@ -1,6 +1,6 @@
 ---
-title: Parameter Sensitivity Plan optimization
-description: Learn about Parameter Sensitivity Plan Optimization in the Query Store.
+title: Parameter Sensitive Plan optimization
+description: Learn about Parameter Sensitive Plan Optimization in the Query Store.
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -14,16 +14,16 @@ ms.author: derekw
 ms.reviewer: maghan
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
-# Parameter Sensitivity Plan optimization
+# Parameter Sensitive Plan optimization
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
-[Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
+Parameter Sensitive Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
+[Parameter Sensitive](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#parameter-sensitivity).
 

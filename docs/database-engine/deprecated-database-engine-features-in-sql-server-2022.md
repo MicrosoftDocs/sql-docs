@@ -5,7 +5,7 @@ description: "Deprecated database engine features in [!INCLUDE[sssql22-md](../in
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/04/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual

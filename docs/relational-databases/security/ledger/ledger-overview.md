@@ -1,7 +1,7 @@
 ---
 title: "Ledger overview"
 description: Learn the basics of the ledger feature.
-ms.date: "05/24/2022"
+ms.date: 07/25/2022
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
@@ -117,3 +117,11 @@ The [ledger verification](ledger-database-verification.md) process takes as inpu
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)
 - [Configure a ledger database](ledger-how-to-configure-ledger-database.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)
+
+## See also
+
+- [Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed](/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed)
+
+### Customer success
+
+Learn how [Lenovo is reinforcing customer trust using ledger in Azure SQL Database](https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger) by watching this [video](https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi).

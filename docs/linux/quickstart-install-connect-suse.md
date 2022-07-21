@@ -4,7 +4,7 @@ description: This quickstart shows how to install SQL Server on SUSE Linux Enter
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

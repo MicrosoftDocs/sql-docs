@@ -25,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

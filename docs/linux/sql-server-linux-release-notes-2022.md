@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2022 Preview on Linux
 description: This article contains the release notes and supported features for SQL Server 2022 Preview running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

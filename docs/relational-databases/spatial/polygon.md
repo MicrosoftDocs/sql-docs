@@ -114,7 +114,7 @@ The interior of the polygon in an ellipsoidal system is defined by the "left-han
 
 |Counter-clockwise Order |Clockwise Order |
 |---------|---------|
-| :::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of "left-hand rule" part 1" width="100px" height="100px":::     |   :::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of "left-hand rule" part 2" width="100px" height="100px":::      |
+| :::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of "left-hand rule" part 1":::     |   :::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of "left-hand rule" part 2":::      |
 
 
 When the compatibility level is 100 or below in SQL Server then the geography data type has the following restrictions:
@@ -125,7 +125,7 @@ When the compatibility level is 100 or below in SQL Server then the geography da
 
 - The geography data type methods that require the input of two geography instances, such as STIntersection(), STUnion(), STDifference(), and STSymDifference(), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.
  
-Orientation can be reversed leveraging the [ReorientObject](https://docs.microsoft.com/en-us/sql/t-sql/spatial-geography/reorientobject-geography-data-type?view=sql-server-ver16) extended method.
+Orientation can be reversed leveraging the [ReorientObject](https://docs.microsoft.com/sql/t-sql/spatial-geography/reorientobject-geography-data-type) extended method.
 
 
 ## Examples  

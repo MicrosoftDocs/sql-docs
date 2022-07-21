@@ -22,7 +22,7 @@ ms.author: wiassaf
 # systranschemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **systranschemas** table is used to track schema changes in articles published in transactional and snapshot publications. This table is stored in both publication and subscription databases.  
+  The **systranschemas** table is used to track schema changes in articles published in transactional and snapshot publications and for Change Data Capture. This table is stored in both publication and subscription databases.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

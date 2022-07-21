@@ -24,7 +24,7 @@ dev_langs:
 
 Returns the current size of the requested object and estimates the object size for the requested compression state. Compression can be evaluated for whole tables or parts of tables. This includes heaps, clustered indexes, nonclustered indexes, columnstore indexes, indexed views, and table and index partitions. The objects can be compressed by using row, page, columnstore or columnstore archive compression. If the table, index, or partition is already compressed, you can use this procedure to estimate the size of the table, index, or partition if it is recompressed or stored without compression.
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can compress off-row XML data in columns using the `xml` data type, reducing storage and memory requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md). `sp_estimate_data_compression_savings` supports XML compression estimates.
 
 > [!NOTE]  
 > Compression and `sp_estimate_data_compression_savings` are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-2019.md).
@@ -77,11 +77,15 @@ To specify the partition, you can also specify the [$PARTITION](../../t-sql/func
 
 The type of compression to be evaluated. *data_compression* can be one of the following values: NONE, ROW, PAGE, COLUMNSTORE, or COLUMNSTORE_ARCHIVE.
 
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, NULL is also a possible value. *data_compression* can't be NULL if *xml_compression* is NULL.
+
 #### [ @xml_compression = ] *xml_compression*
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
-Specifies whether to calculate savings for XML compression. *xml_compression* is **bit**, and can be 0 or 1. The default is **0**.
+Specifies whether to calculate savings for XML compression. *xml_compression* is **bit**, and can be NULL, 0, or 1. The default is NULL.
+
+*xml_compression* can't be NULL if *data_compression* is NULL.
 
 ## Return code values
 

@@ -18,7 +18,7 @@ dev_langs:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 ---
 # DENY Certificate Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a certificate.  
 

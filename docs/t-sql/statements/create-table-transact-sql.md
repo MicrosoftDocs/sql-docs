@@ -797,7 +797,7 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-XML_COMPRESSION   
+XML_COMPRESSION
 **Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:

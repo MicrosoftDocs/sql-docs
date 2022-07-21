@@ -47,7 +47,7 @@ sys.sp_cdc_set_scheduler_job  [ @jobType = ] N'JobType'
  Instructs the CDC scheduler to pause or resume scheduling the job.  Valid values are `pause` or `resume`. There is no default value.  
 
 `[ @abortTask = ] abortTask`
- Indicates whether you want to abort the current running task or not. Valid **int** values are `1` or `0`, with no default value. The `abortTask` value is only used when the _state_ value is `pause`.
+ Indicates whether you want to abort the current running task or not. Valid **int** values are `1` or `0`, with no default value. The `abortTask` value is only used when the _state_ value is `pause`. However, currently it only **accepts `1` as the valid input.**
 
 ## Return Code Values  
  **0** (success) or **1** (failure)  

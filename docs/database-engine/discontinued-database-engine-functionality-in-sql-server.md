@@ -4,7 +4,7 @@ description: Learn which database engine functionality and features were discont
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: release-landing

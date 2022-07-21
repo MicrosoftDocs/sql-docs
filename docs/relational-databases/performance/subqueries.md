@@ -3,7 +3,7 @@ title: "Subqueries (SQL Server)"
 description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/14/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: performance
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: "seo-lt-2019"
-ms.date: "03/12/2019"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""

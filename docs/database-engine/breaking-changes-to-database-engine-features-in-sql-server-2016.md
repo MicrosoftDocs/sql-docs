@@ -5,7 +5,7 @@ description: Learn about Database Engine changes in SQL Server 2016 (13.x) and e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/22/2020
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: release-landing

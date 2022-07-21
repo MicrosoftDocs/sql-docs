@@ -16,7 +16,7 @@ author: blakhani-msft
 ms.author: blakhani 
 ms.reviewer: "maghan"
 ms.custom: ""
-ms.date: "04/24/2022"
+ms.date: 07/25/2022
 monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 

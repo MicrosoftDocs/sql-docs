@@ -131,7 +131,7 @@ For details on configuring Always Encrypted, see:
 - [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
-## Get started with Always Encrypted
+## <a id="getting-started-with-always-encrypted"></a> Get started with Always Encrypted
 
 Use the [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) to quickly start using Always Encrypted. The wizard will provision the required keys and configure encryption for selected columns. If the columns you're setting encryption for already contain some data, the wizard will encrypt the data. The following example demonstrates the process for encrypting a column.
 
@@ -186,7 +186,7 @@ Always Encrypted isn't supported for the columns with the below characteristics.
 - Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../../includes/ssnotedepfuturedontuse-md.md)]
 
 - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
 - Table-valued parameters targeting encrypted columns aren't supported.

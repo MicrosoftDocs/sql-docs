@@ -10,13 +10,16 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.date: "07/22/2022"
 monikerRange: "= azuresqldb-current"
+zone_pivot_groups: as1-azuresql-sql
 ---
 
 # Enable automatic digest storage
 
 [!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
+
+::: zone pivot="as1-azure-sql-database"
 
 In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
@@ -79,6 +82,35 @@ az sql db ledger-digest-uploads enable \
 ```
 
 ---
+::: zone-end
+
+::: zone pivot="as1-sql-server"
+
+In this article, we'll describe how you can configure automatic generation and storage of database digests through using T-SQL in **SQL Server 2022**. For information on configuring automatic generation and storage of database digests in Azure SQL Database, use the switch at the top of this page to toggle over to Azure SQL Database.
+
+## Prerequisites
+
+- SQL Server 2022
+- [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
+- An Azure Blob Storage
+- An Azure Storage container
+- A [SQL Server credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). For more information, see [Digest Management](ledger-digest-management.md).  
+
+## Enable database digest uploads using T-SQL
+
+To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account. To disable uploading ledger digests, set the option value to `OFF`. The default is `OFF`.
+
+1. Sign into your SQL Server 2022 instance using SSMS or Azure Data Studio.
+1. Configure automatic generation and storage of database digests using the following T-SQL statement:
+
+   ```sql
+   ALTER DATABASE SCOPED CONFIGURATION
+    SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net';
+   ```
+
+For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql).
+
+::: zone-end
 
 ## Next steps
 

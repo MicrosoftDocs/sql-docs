@@ -8498,6 +8498,8 @@ items:
         href: relational-databases/security/ledger/ledger-digest-management.md?view=sql-server-ver16&preserve-view=true
       - name: Database verification
         href: relational-databases/security/ledger/ledger-database-verification.md?view=sql-server-ver16&preserve-view=true
+      - name: Monitor digest uploads
+        href: relational-databases/security/ledger/ledger-monitor-digest-uploads.md?view=sql-server-ver16&preserve-view=true
       - name: Recover ledger database after tampering
         href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
       - name: Ledger limitations

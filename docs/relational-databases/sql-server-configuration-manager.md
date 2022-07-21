@@ -60,7 +60,7 @@ Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager
   
 Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] using startup parameters.  For more information, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md).
 
-Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start, pause, resume, or stop Azure Arc SQL extension.
+Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start, pause, resume, or stop Azure Arc SQL Extension.
   
 ## Changing the Accounts Used by the Services
 

@@ -58,7 +58,7 @@ Approximate percentile functions use KLL sketch. The sketch is built by reading 
 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error rate within a 99% probability.
 
-## Known issues
+## Known behaviors
 
 - The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 
@@ -92,6 +92,6 @@ FROM tblEmployee
 GROUP BY DeptId
 ```
 
-## See Also  
+## See also  
 
 [PERCENTILE_DISC](../../t-sql/functions/percentile-disc-transact-sql.md)

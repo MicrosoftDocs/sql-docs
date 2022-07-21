@@ -5,7 +5,7 @@ description: "Deprecated database engine features in [!INCLUDE[sssql19-md](../in
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: "02/12/2021"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: release-landing

@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/30/2021
+ms.date: 07/25/2022
 ms.prod: sql
 ms.topic: conceptual
 ---

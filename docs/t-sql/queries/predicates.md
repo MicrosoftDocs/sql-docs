@@ -4,7 +4,7 @@ description: "Predicates"
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/12/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql

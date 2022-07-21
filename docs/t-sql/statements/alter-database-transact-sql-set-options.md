@@ -4,7 +4,7 @@ description: Learn about how to set database options such as Automatic tuning, e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql

@@ -2,7 +2,7 @@
 description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
 ms.custom: "seo-lt-2019"
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: table-view-index

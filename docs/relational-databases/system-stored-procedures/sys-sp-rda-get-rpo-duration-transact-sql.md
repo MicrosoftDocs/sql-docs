@@ -2,7 +2,7 @@
 title: "sys.sp_rda_get_rpo_duration (Transact-SQL) | Microsoft Docs"
 description: Use sys.sp_rda_get_rpo_duration to get the number of hours of migrated data that SQL Server retains in a staging table to fully restore the remote Azure database.
 ms.custom: ""
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: randolphwest
 ms.technology: stored-procedures

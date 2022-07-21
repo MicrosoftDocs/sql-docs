@@ -3,7 +3,7 @@ title: "Plan and Test the Database Engine Upgrade Plan"
 description: This article describes planning before you begin your SQL Server upgrade, including a planning checklist and developing and testing an upgrade plan.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual

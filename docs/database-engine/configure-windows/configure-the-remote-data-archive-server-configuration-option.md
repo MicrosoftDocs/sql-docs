@@ -3,7 +3,7 @@ title: "Configure the remote data archive Server Configuration Option"
 description: Learn how to use the remote data archive option in SQL Server to specify whether databases and tables on the server can be enabled for Stretch.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration

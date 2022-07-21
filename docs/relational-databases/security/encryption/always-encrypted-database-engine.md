@@ -4,7 +4,7 @@ description: Overview of Always Encrypted that supports transparent client-side 
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto, randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual

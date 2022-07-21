@@ -14,7 +14,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.custom: FY22Q2Fresh
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints

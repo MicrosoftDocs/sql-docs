@@ -1,19 +1,17 @@
 ---
 title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
-ms.custom: "seo-lt-2019"
-ms.date: 07/20/2022
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: randolphwest
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Assess"
-ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.prod: sql
+ms.prod_service: "dma"
+ms.technology: dma
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Data Migration Assistant, Assess"
 ---
 
 # Configure settings for Data Migration Assistant
@@ -34,7 +32,7 @@ Be sure to save a copy of the original config file before making any modificatio
 
 ## Number of databases to assess in parallel
 
-Data Migration Assistant assesses multiple databases in parallel. During assessment Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can time out if several databases on the same server are assessed in parallel. 
+Data Migration Assistant assesses multiple databases in parallel. During assessment Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can time out if several databases on the same server are assessed in parallel.
 
 Starting with Data Migration Assistant v2.0, you can control this by setting the parallelDatabases configuration value. Default value is 8.
 
@@ -48,7 +46,7 @@ Starting with Data Migration Assistant v2.0, you can control this by setting the
 
 ## Number of databases to migrate in parallel
 
-Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, Data Migration Assistant will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You may encounter timeout failures when several databases are selected for migration. 
+Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, Data Migration Assistant will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You may encounter timeout failures when several databases are selected for migration.
 
 Starting with Data Migration Assistant v2.0, if you experience this problem you can reduce the parallelDatabases configuration value. You can increase the value to reduce the overall migration time.
 
@@ -62,7 +60,7 @@ Starting with Data Migration Assistant v2.0, if you experience this problem you 
 
 ## DacFX settings
 
-During assessment, Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can fail with time-outs for extremely large databases, or if the server is under load. Starting with Data Migration v1.0, you can modify the following configuration values to avoid errors. 
+During assessment, Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can fail with time-outs for large databases, or if the server is under load. Starting with Data Migration v1.0, you can modify the following configuration values to avoid errors.
 
 > [!NOTE]
 > The entire `<dacfx>` entry is commented by default. Remove the comments and then modify the value as needed.
@@ -82,8 +80,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 ```xml
 <advisorGroup>
 <advisorSettings>
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
-maxDataReaderDegreeOfParallelism="8"/>
+<dacFx commandTimeout="60" databaseLockTimeout="5000" maxDataReaderDegreeOfParallelism="8"/>
 </advisorSettings>
 </advisorGroup>
 ```
@@ -93,8 +90,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../includes/ssnotedepfuturedontuse-md.md)]
 
-With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer availabile as an advisor option.
-
+With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
 
 ## SQL connection timeout
 
@@ -109,7 +105,7 @@ for source and target instances while running an assessment or migration, by set
 
 ## Ignore error codes
 
-Each rule has an error code in its title. If you don't need rules and want to ignore them, use the ignoreErrorCodes property. You can specify to ignore a single error or multiple errors. To ignore multiple errors, use a semicolon, e.g., ignoreErrorCodes="46010;71501". The default value is 71501, which is associated with unresolved references identified when an object references system objects such as procedures, views, etc.
+Each rule has an error code in its title. If you don't need rules and want to ignore them, use the `ignoreErrorCodes` property. You can specify to ignore a single error or multiple errors. To ignore multiple errors, use a semicolon, for example, `ignoreErrorCodes="46010;71501"`. The default value is 71501, which is associated with unresolved references identified when an object references system objects such as procedures, views, etc.
 
 ```xml
 <workflowSettings>

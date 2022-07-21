@@ -2,7 +2,7 @@
 title: "sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs"
 description: Use sys.sp_rda_set_query_mode to specify if queries against the current Stretch-enabled database and its tables return local and remote data, or local data only.  
 ms.custom: ""
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: randolphwest
 ms.technology: stored-procedures

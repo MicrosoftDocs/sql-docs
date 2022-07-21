@@ -4,7 +4,7 @@ description: DROP DATABASE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.technology: t-sql

@@ -4,7 +4,7 @@ description: "The sp_estimate_data_compression_savings system stored procedure r
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dimitri-furman, wiassaf, randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects

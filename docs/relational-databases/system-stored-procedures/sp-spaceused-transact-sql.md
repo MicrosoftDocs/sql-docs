@@ -2,7 +2,7 @@
 description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
 title: "sp_spaceused (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: randolphwest

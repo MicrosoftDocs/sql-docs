@@ -2,7 +2,7 @@
 title: "sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs"
 description: Learn about sys.sp_rda_reconcile_columns. Use this stored procedure to reconcile columns in remote Azure tables and Stretch-enabled SQL Server tables.
 ms.custom: ""
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: randolphwest
 ms.technology: stored-procedures

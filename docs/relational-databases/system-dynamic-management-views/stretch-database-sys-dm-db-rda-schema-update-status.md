@@ -3,7 +3,7 @@ title: "sys.dm_db_rda_schema_update_status (Transact-SQL)"
 description: Learn how sys.dm_db_rda_schema_update_status contains a row for each schema update task for the remote data archive of each Stretch-enabled table in the database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: stored-procedures
 ms.topic: "reference"

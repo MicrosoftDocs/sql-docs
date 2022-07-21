@@ -4,7 +4,7 @@ description: Learn how sys.remote_data_archive_databases contains one row for ea
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 07/20/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: stored-procedures
 ms.topic: "reference"

@@ -30,7 +30,7 @@ Starting with SQL Server 2022, resumable operations for online index creation an
 The new SQL Server extensions allow a resumable operation for the [Data Definition Language (DDL)](../../t-sql/statements/statements.md#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](../../t-sql/statements/alter-table-transact-sql.md) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
 
 > [!NOTE]
-> Resumable add table constraints apply only to PRIMARY KEY and UNIQUE constraints.
+> Resumable add table constraints apply only to PRIMARY KEY and UNIQUE KEY constraints.
 
 ## Resumable operations
 

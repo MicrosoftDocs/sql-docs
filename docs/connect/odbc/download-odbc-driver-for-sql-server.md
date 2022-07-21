@@ -1,7 +1,7 @@
 ---
 title: Download ODBC Driver for SQL Server
 description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
-ms.date: 07/29/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -30,7 +30,7 @@ Version 18.1.1.1 is the latest general availability (GA) version. The Microsoft 
 ### Version information
 
 - Release number: 18.1.1.1
-- Released: July 29, 2022
+- Released: August 8, 2022
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

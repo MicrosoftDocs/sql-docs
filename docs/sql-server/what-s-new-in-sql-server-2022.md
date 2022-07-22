@@ -60,11 +60,10 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Degree of parallelism (DOP) feedback
 - [Management](#management)
   - Install Azure Arc agent with Configuration Manager
+  - Attach to Azure from setup - Azure Arc-enabled instance
   - Snapshot backups
 - [Security](#security)
   - Automation process to set up Azure AD administrator for SQL Server
-  - Attach to Azure from setup - Azure Arc-enabled instance
-  - Attach to Azure from Configuration Manager - Azure Arc-enabled instance
   - Ledger - automatic digest upload to Azure Storage
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()

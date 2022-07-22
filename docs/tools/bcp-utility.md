@@ -638,7 +638,7 @@ The following example illustrates the **out** option on the `WideWorldImporters.
   
  The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
 
-At a command prompt, enter the following command: \(The system will prompt you for your password.\)
+At a command prompt, enter the following command: (The system will prompt you for your password.)
 
 ```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>

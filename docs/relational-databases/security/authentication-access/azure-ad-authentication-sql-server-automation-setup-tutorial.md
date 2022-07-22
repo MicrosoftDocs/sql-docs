@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-In this article, we'll go over how to set up the Azure Active Directory (Azure AD) admin to allow Azure AD authentication for SQL Server using APIs such as:
+In this article, we'll go over how to set up the Azure Active Directory (Azure AD) admin to allow Azure AD authentication for SQL Server using the Azure portal, and APIs such as:
 
 - PowerShell
 - The Azure CLI
@@ -59,27 +59,25 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 #### Set access policies for the SQL Server host
 
-1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**
+1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
+1. Select **Add Access Policy**.
+1. For **Key permissions**, use **0 selected**.
+1. For **Secret permissions**, select **Get** and **List**.
+1. For **Certificate permissions**, select **Get** and **List**.
+1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
+1. Select **Add** and then select **Save**.
 
-   1. Select **Add Access Policy**.
-   1. For **Key permissions**, select **Get** and **List**.
-   1. For **Secret permissions**, select **Get** and **List**.
-   1. For **Certificate permissions**, select **Get** and **List**.
-   1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
-   1. Select **Add** and then select **Save**.
-
-      You must **Save** to ensure the permissions are applied. They aren't applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
+   You must **Save** to ensure the permissions are applied. They aren't applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
 
 #### Set access policies for Azure AD users
 
 1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
-
-   1. Select **Add Access Policy**.
-   1. For **Key permissions**, select **Get**, **List**, and **Create**.
-   1. For **Secret permissions**, select **Get**, **List**, and **Set**.
-   1. For **Certificate permissions**, select **Get**, **List**, and **Create**.
-   1. For **Select principal**, add the Azure AD user you want to use to connect to SQL Server.
-   1. Select **Add** and then select **Save**.
+1. Select **Add Access Policy**.
+1. For **Key permissions**, select **Get**, **List**, and **Create**.
+1. For **Secret permissions**, select **Get**, **List**, and **Set**.
+1. For **Certificate permissions**, select **Get**, **List**, and **Create**.
+1. For **Select principal**, add the Azure AD user you want to use to connect to SQL Server.
+1. Select **Add** and then select **Save**.
 
 ## Setting up the Azure AD admin for the SQL Server
 
@@ -109,7 +107,7 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 1. Select **Change key vault** and select your existing Azure Key vault resource.
 
-1. Select **Service-managed app registration**. During the process of setting your Azure AD admin, the system will automatically create an application with a name like `<hostname>-<instanceName><uniqueNumber>`.
+1. Select **Service-managed app registration**.
 
 1. Select **Save**. This will send a request to the Arc server agent, which will configure Azure AD authentication for that SQL Server instance. The following actions are applied after you save.
 
@@ -124,23 +122,17 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application.
 
-The following modules are required for this tutorial. Install the latest versions of the modules or higher than the noted version below:
+- [The Azure CLI](/cli/azure/install-azure-cli) version 2.37.0 or higher is required
+- Az.ConnectedMachine 0.5.1 or higher is required
 
-- Az.Accounts 3.37.0
-- Az.ConnectedMachine 0.3.0
-- Az.KeyVault 4.5.0
-- Az.Resources 6.0.0
-
-Use the command `install-module <modul_name>` to install each module. To check the module version use `get-module -Name <module_name> -ListAvailable`.
-
-To install the `Az.ConnectedMachine` module, use `az extension add --name ConnectedMachine`.
+To install the `Az.ConnectedMachine` module, use `az extension add --name ConnectedMachine`. To check which version of the Azure CLI is installed, use `az version`.
 
 The following input parameters are used for the Azure CLI script:
 
 - `<applicationName>` - Application name that will be created
 - `<certSubjectName>` - Certificate name that will be created
 - `<keyVaultName>` - Your key vault name. This key vault must be created before running the script
-- `<machineName>` Machine name of your SQL Server host
+- `<machineName>` - Machine name of your SQL Server host
 - `<resourceGroupName>` - Resource group name that contains your **SQL Server – Azure Arc** instance
 - `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
 - `<instanceName>` - Optional parameter for SQL Server named instances. Use this parameter when you have a named instance. If omitted, the default name of `MSSQLSERVER` is used
@@ -557,16 +549,12 @@ The following modules are required for this tutorial. Install the latest version
 - Az.KeyVault 4.5.0
 - Az.Resources 6.0.0
 
-Use the command `install-module <modul_name>` to install each module. To check the module version use `get-module -Name <module_name> -ListAvailable`.
-
-To install the `Az.ConnectedMachine` module, use `az extension add --name ConnectedMachine`.
-
 The following input parameters are used for the PowerShell script:
 
 - `<applicationName>` - Application name that will be created
 - `<certSubjectName>` - Certificate name that will be created
 - `<keyVaultName>` - Your key vault name. This key vault must be created before running the script
-- `<machineName>` Machine name of your SQL Server host
+- `<machineName>` - Machine name of your SQL Server host
 - `<resourceGroupName>` - Resource group name that contains your **SQL Server – Azure Arc** instance
 - `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
 - `<instanceName>` - Optional parameter for SQL Server named instances. Use this parameter when you have a named instance. If omitted, the default name of `MSSQLSERVER` is used
@@ -891,9 +879,9 @@ The following ARM template sets up an Azure AD admin using an existing Azure Key
 
 The following input parameters are used for the ARM template:
 
-- `<machineName>` Machine name of your SQL Server host
-- `<Location>`: Location of your **SQL Server – Azure Arc** resource group, such as `West US`, or `Central US`
-- `<tenantId>` - Optional parameter for tenant ID. The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**
+- `<machineName>` - Machine name of your SQL Server host
+- `<Location>` - Location of your **SQL Server – Azure Arc** resource group, such as `West US`, or `Central US`
+- `<tenantId>` - The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**
 - `<instanceName>` - SQL Server instance name. The default instance name of SQL Server is `MSSQLSERVER`
 - `<certSubjectName>` - Certificate name that you created
 - `<subscriptionId>` - Subscription ID. Your subscription ID can be found in the Azure portal

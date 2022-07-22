@@ -1126,6 +1126,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
 - A serial execution plan is considered faster than any possible parallel execution plan for the particular query.
 - The query contains scalar or relational operators that cannot be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
 
+<a id="DOP"></a>
 ### Degree of Parallelism (DOP)
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria: 

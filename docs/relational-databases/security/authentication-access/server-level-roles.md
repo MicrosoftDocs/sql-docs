@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)
   
- SQL Server 2019 and previous versions provided nine fixed server roles. SQL Server 2022 comes with seven additional server roles, which have the prefix `##MS_` and the suffix `##` to distinguish from other regular user-created principals and custom server roles. The permissions that are granted to the fixed server roles (except **public**) can't be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
+ SQL Server 2019 and previous versions provided nine fixed server roles. SQL Server 2022 comes with 10 additional server roles, which have the prefix `##MS_` and the suffix `##` to distinguish from other regular user-created principals and custom server roles. The permissions that are granted to the fixed server roles (except **public**) can't be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
   
  The fixed server roles that don't start with the `##MS_` prefix are provided for convenience and backward compatibility. Assign more specific permissions whenever possible or use the new server roles.
 

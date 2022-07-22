@@ -23,7 +23,7 @@ This release is published July 26, 2022
 ### Arc-enabled SQL Server
 
 - Preview support for SQL Server Extension - Azure Arc for SQL Servers running on Linux operating system
-- Azure Active Directory authentication configuration enabled via SQL Server Extension - Azure Arc for SQL Servers running on Linux Operating System
+- Azure Active Directory authentication configuration enabled via SQL Server Extension - Azure Arc for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, running on Linux operating system
 
 ## July 30, 2021
 

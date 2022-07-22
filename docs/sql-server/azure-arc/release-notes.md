@@ -11,6 +11,20 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+--
+## July 19, 2022
+
+This release is published July 19, 2022
+
+### Image tag
+
+`v1.0.2019.2`
+
+### Arc-enabled SQL Server
+
+- Preview support for SQL Server Extension - Azure Arc for SQL Servers running on Linux operating system
+- Azure Active Directory authentication configuration enabled via SQL Server Extension - Azure Arc for SQL Servers running on Linux Operating System
+
 ## July 30, 2021
 
 Azure Arc-enabled SQL Server releases for general availability support

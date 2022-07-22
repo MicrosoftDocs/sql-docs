@@ -3,7 +3,7 @@ title: "Server-level roles | Microsoft Docs"
 description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "07/12/2022"
+ms.date: "07/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -66,7 +66,7 @@ The following table shows the fixed server-level roles and their capabilities.
 The following table shows additional fixed server-level roles that are introduced with SQL Server 2022 and their capabilities.
 
 > [!NOTE]
-> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics.
+> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics. **##MS_PerformanceDefinitionReader##**, **##MS_ServerPerformanceStateReader##**, and **##MS_ServerSecurityStateReader##** is introduced in SQL Server 2022 CTP 2.1, and are not available in Azure SQL Database.
 
 |Fixed server-level role |Description |
 |------------------------------|-----------------|  
@@ -74,7 +74,10 @@ The following table shows additional fixed server-level roles that are introduce
 |**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own.|
 |**##MS_DefinitionReader##**|Members of the **##MS_DefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY DEFINITION**, and respectively has **VIEW DEFINITION** permission on any database on which the member of this role has a user account.|
 |**##MS_LoginManager##**|Members of the **##MS_LoginManager##** fixed server role can create and delete logins.|
+|**##MS_PerformanceDefinitionReader##**|Members of the **##MS_PerformanceDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY PERFORMANCE DEFINITION**, and respectively has **VIEW PERFORMANCE DEFINITION** permission on any database on which the member of this role has a user account. This is a subset of what the **##MS_DefinitionReader##** server role has access to.|
 |**##MS_SecurityDefinitionReader##**|Members of the **##MS_SecurityDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY SECURITY DEFINITION**, and respectively has **VIEW SECURITY DEFINITION** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_DefinitionReader##** server role has access to.|
+|**##MS_ServerPerformanceStateReader##**|Members of the **##MS_ServerPerformanceStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER PERFORMANCE STATE**, and respectively has **VIEW DATABASE PERFORMANCE STATE** permission on any database on which the member of this role has a user account. This is a subset of what the **##MS_ServerStateReader##** server role has access to.|
+|**##MS_ServerSecurityStateReader##**|Members of the **##MS_ServerSecurityStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER SECURITY STATE**, and respectively has **VIEW DATABASE SECURITY STATE** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_ServerStateReader##** server role has access to.|
 |**##MS_ServerStateReader##**|Members of the **##MS_ServerStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER STATE**, and respectively has **VIEW DATABASE STATE** permission on any database on which the member of this role has a user account.|
 |**##MS_ServerStateManager##**|Members of the **##MS_ServerStateManager##** fixed server role have the same permissions as the **##MS_ServerStateReader##** role. Also, it holds the **ALTER SERVER STATE** permission, which allows access to several management operations, such as: `DBCC FREEPROCCACHE`, `DBCC FREESYSTEMCACHE ('ALL')`, `DBCC SQLPERF()`|
 
@@ -89,9 +92,12 @@ Each fixed server-level role has certain permissions assigned to it. The followi
 |---|---|---|
 |**##MS_DatabaseConnector##**|CONNECT ANY DATABASE |CONNECT |
 |**##MS_DatabaseManager##**|CREATE ANY DATABASE<br />ALTER ANY DATABASE | ALTER|
-|**##MS_DefinitionReader##**|VIEW ANY DATABASE<br />VIEW ANY DEFINITION<br />VIEW ANY SECURITY DEFINITION| VIEW DEFINITION<br />VIEW SECURITY DEFINITION|
+|**##MS_DefinitionReader##**|VIEW ANY DATABASE<br />VIEW ANY DEFINITION<br />VIEW ANY PERFORMANCE DEFINITION<br />VIEW ANY SECURITY DEFINITION| VIEW DEFINITION<br />VIEW PERFORMANCE DEFINITION<br />VIEW SECURITY DEFINITION|
 |**##MS_LoginManager##**|CREATE LOGIN<br />ALTER ANY LOGIN | N/A |
+|**##MS_PerformanceDefinitionReader##**|VIEW ANY PERFORMANCE DEFINITION|VIEW PERFORMANCE DEFINITION |
 |**##MS_SecurityDefinitionReader##**| VIEW ANY SECURITY DEFINITION | VIEW SECURITY DEFINITION |
+|**##MS_ServerPerformanceStateReader##**|VIEW SERVER PERFORMANCE STATE|VIEW DATABASE PERFORMANCE STATE |
+|**##MS_ServerSecurityStateReader##**|VIEW SERVER SECURITY STATE|VIEW DATABASE SECURITY STATE|
 |**##MS_ServerStateReader##**|VIEW SERVER STATE<br />VIEW SERVER PERFORMANCE STATE<br />VIEW SERVER SECURITY STATE | VIEW DATABASE STATE<br />VIEW DATABASE PERFORMANCE STATE<br />VIEW DATABASE SECURITY STATE |
 |**##MS_ServerStateManager##**| ALTER SERVER STATE<br />VIEW SERVER STATE<br />VIEW SERVER PERFORMANCE STATE<br />VIEW SERVER SECURITY STATE | VIEW DATABASE STATE<br />VIEW DATABASE PERFORMANCE STATE<br />VIEW DATABASE SECURITY STATE |
 

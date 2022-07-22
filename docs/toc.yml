@@ -8528,6 +8528,8 @@ items:
       items: 
       - name: Set up Azure AD authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
+      - name: Set Azure AD admin automation
+        href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial.md
   - name: Reference
     items:
     - name: Permissions or Securables page

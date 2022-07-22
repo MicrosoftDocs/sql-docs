@@ -32,8 +32,8 @@ ms.custom:
 > For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Considerations"></a> Considerations  
+
+### <a name="considerations"></a> Considerations  
 
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
 

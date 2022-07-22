@@ -119,7 +119,7 @@ The following list describes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
 
     - Install Rules
 
-2. On the **Setup Role** page, Select **SQL Server Feature Installation**.
+2. On the **Setup Role** page, select **SQL Server Feature Installation**.
 
     ![SQL Server Feature Installation for setup role](../../reporting-services/install-windows/media/rs-setuprole.png "SQL Server Feature Installation for setup role")
 

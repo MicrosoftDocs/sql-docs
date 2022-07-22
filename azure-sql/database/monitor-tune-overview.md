@@ -70,7 +70,7 @@ In the Azure portal, Azure SQL Database and Azure SQL Managed Instance provide m
 
 ### Azure SQL Database and Azure SQL Managed Instance resource monitoring
 
-You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is reaching 100% of processor, memory, or IO resources. High DTU or processor percentage, as well as high IO percentage, indicates that your workload might need more CPU or IO resources. It might also indicate queries that need to be optimized.
+You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is reaching 100% of processor, memory, or IO resources. High DTU or processor percentage, as well as high IO percentage, indicates that your workload might need more CPU or IO resources. It might also indicate queries that need to be optimized. See [Microsoft.Sql/servers/databases](https://docs.microsoft.com/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [Microsoft.Sql/managedInstances](https://docs.microsoft.com/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances) for supported metrics on Azure SQL Database and SQL Managed Instance.
 
   ![Resource metrics](./media/monitor-tune-overview/resource-metrics.png)
 

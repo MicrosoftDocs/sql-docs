@@ -89,6 +89,5 @@ The following items currently prevent you from enabling Stretch for a table.
 
 ## See also
 
-- [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md)
 - [Enable Stretch Database for a database](enable-stretch-database-for-a-database.md)
 - [Enable Stretch Database for a table](enable-stretch-database-for-a-table.md)

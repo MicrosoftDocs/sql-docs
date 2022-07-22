@@ -19,18 +19,6 @@ helpviewer_keywords:
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
-To monitor data migration in Stretch Database Monitor, select **Tasks > Stretch > Monitor** for a database in SQL Server Management Studio.
-
-## Check the status of data migration in the Stretch Database Monitor
-
-Select **Tasks > Stretch > Monitor** for a database in SQL Server Management Studio to open Stretch Database Monitor and monitor data migration.
-
-- The top portion of the monitor displays general information about both the Stretch-enabled SQL Server database and the remote Azure database.
-
-- The bottom portion of the monitor displays the status of data migration for each Stretch-enabled table in the database.
-
-:::image type="content" source="media/monitor-and-troubleshoot-data-migration-stretch-database/stretch-monitor.png" alt-text="Screenshot showing the Stretch Database Monitor.":::
-
 ## Check the status of data migration in a dynamic management view
 
 Open the dynamic management view `sys.dm_db_rda_migration_status` to see how many batches and rows of data have been migrated. For more info, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).

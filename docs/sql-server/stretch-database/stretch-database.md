@@ -70,7 +70,7 @@ Stretch Database targets transactional databases with large amounts of cold data
 
 If you use the temporal table feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use Stretch Database to migrate all or part of the associated history table to cost-effective storage in Azure. For more info, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 
-Use Stretch Database Advisor, a feature of SQL Server 2016 Upgrade Advisor, to identify databases and tables for Stretch Database. For more info, see [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md). To learn more about potential blocking issues, see [Limitations for Stretch Database](limitations-for-stretch-database.md).
+To learn more about potential blocking issues, see [Limitations for Stretch Database](limitations-for-stretch-database.md).
 
 ## Test drive Stretch Database
 
@@ -81,4 +81,4 @@ Use Stretch Database Advisor, a feature of SQL Server 2016 Upgrade Advisor, to i
 
 ## Next steps
 
-- [Identify databases and tables for Stretch Database by running Stretch Database Advisor](stretch-database-databases-and-tables-stretch-database-advisor.md)
+- [Disable Stretch Database and bring back remote data](disable-stretch-database-and-bring-back-remote-data.md)

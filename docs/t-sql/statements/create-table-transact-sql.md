@@ -797,7 +797,7 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-XML_COMPRESSION
+XML_COMPRESSION   
 **Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
@@ -921,6 +921,9 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).
 
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 **Enabling Stretch Database for a table**
 

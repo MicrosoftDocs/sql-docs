@@ -48,7 +48,7 @@ You can change the default PITR backup retention period and the differential bac
 
 To change the PITR backup retention period or the differential backup frequency for active databases by using the Azure portal, go to the server with the databases whose retention period you want to change. Select **Backups** in the left pane, then select the **Retention policies** tab. Select the database(s) for which you want to change the PITR backup retention. Then select **Configure retention** from the action bar.
 
-:::image type="content" source="./media/automated-backups-overview/configure-backup-retention-sqldb.png" alt-text="Change PITR retention, server level":::
+:::image type="content" source="./media/automated-backups-overview/configure-backup-retention-sqldb.png" alt-text="Screenshot of the Azure portal where you can change the PITR retention settings at the server level. ":::
 
 ### [Azure CLI](#tab/azure-cli)
 

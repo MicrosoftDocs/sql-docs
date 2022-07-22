@@ -75,7 +75,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | Changes | Details |
 | --- | --- |
 | **Named Replicas for Hyperscale databases GA** | Named Replicas enable a broad variety of read scale-out scenarios, and easily implement near-real time hybrid transactional and analytical processing (HTAP) solutions. This feature is now generally available. See [named replicas](service-tier-hyperscale-replicas.md#named-replica) to learn more. |
-| **Active geo-replication and Auto-failover groups for Hyperscale databases GA** | [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) and [Auto-failover groups](/azure/azure-sql/database/auto-failover-group-sql-db) are now generally available for for Hyperscale databases,  providing a turn-key business continuity solution, letting you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage. |
+| **Active geo-replication and Auto-failover groups for Hyperscale databases GA** | [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) and [Auto-failover groups](/azure/azure-sql/database/auto-failover-group-sql-db) are now generally available for Hyperscale databases,  providing a turn-key business continuity solution, letting you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage. |
 
 
 ### May 2022

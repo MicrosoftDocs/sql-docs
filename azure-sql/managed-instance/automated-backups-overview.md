@@ -68,7 +68,7 @@ The option to configure backup storage redundancy provides flexibility to choose
 
 
 > [!WARNING]
-> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
+> [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
 
 
 ## Backup usage
@@ -86,7 +86,7 @@ You can use these backups to:
 
 This table summarizes the capabilities and features of [point in time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention backups](../database/long-term-retention-overview.md).
 
-| **Backup Properties** | Point in time recovery (PITR) | Geo-restore | Long-term backup restore |
+| Backup Properties | Point in time recovery (PITR) | Geo-restore | Long-term backup restore |
 |---|---|---|---|
 | **Types of SQL backup** | Full, Differential, Log | Replicated copies of PITR backups | Only the full backups |
 | **Recovery Point Objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|

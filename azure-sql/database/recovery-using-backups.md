@@ -188,7 +188,7 @@ You restore deleted databases from the Azure portal, using the **Deleted databas
 
 To recover a deleted database to the deletion time by using the Azure portal, open the server overview page, and select **Deleted databases**. Select a deleted database that you want to restore, and type the name for the new database that will be created with data restored from the backup.
 
-  :::image type="content" source="./media/recovery-using-backups/restore-deleted-sql-database-annotated.png" alt-text="Screenshot of restore deleted database":::
+  :::image type="content" source="./media/recovery-using-backups/restore-deleted-sql-database-annotated.png" alt-text="Screenshot of the Azure portal showing you to restore a deleted database.":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -240,7 +240,7 @@ To geo-restore a single database from the Azure portal in the region and server 
 3. For **Use existing data**, select **Backup**.
 4. For **Backup**, select a backup from the list of available geo-restore backups.
 
-    :::image type="content" source="./media/recovery-using-backups/geo-restore-azure-sql-database-list-annotated.png" alt-text="Screenshot of Create SQL Database options":::
+    :::image type="content" source="./media/recovery-using-backups/geo-restore-azure-sql-database-list-annotated.png" alt-text="Screenshot of the Azure portal, options to create a database.":::
 
 Complete the process of creating a new database from the backup. When you create a database in Azure SQL Database, it contains the restored geo-restore backup.
 

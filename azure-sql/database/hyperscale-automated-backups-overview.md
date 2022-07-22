@@ -102,7 +102,7 @@ Hyperscale supports configurable storage redundancy. When creating a Hyperscale 
 
 Consider storage redundancy carefully when you create a Hyperscale database as backup storage redundancy for Hyperscale databases can only be set during database creation. This setting cannot be modified once the resource is provisioned. Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [Database copy](database-copy.md).
 
-> [WARNING]
+> [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
 > - Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 

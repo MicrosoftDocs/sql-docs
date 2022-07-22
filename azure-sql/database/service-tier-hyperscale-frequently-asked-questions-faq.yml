@@ -146,7 +146,7 @@ sections:
           
           However, if there's only the primary replica, it may take a minute or two to create a new replica after failover, vs. seconds in case when an HA secondary replica is available. The new replica will have cold caches initially, which may result in higher storage latency and reduced query performance immediately after failover.
           
-          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica replicas. That way there is a hot-standby replica available that serves as a failover target.
+          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica. That way there is a hot-standby replica available that serves as a failover target.
           
   - name: Data size and storage questions
     questions:

@@ -55,11 +55,6 @@ The recovery time to restore a database by using automated database backups is a
 
 For a large or very active database, the restore might take several hours. If there is a prolonged outage in a region, it's possible that a high number of geo-restore requests will be initiated for disaster recovery. When there are many requests, the recovery time for individual databases can increase. Most database restores finish in less than 12 hours.
 
-For a single subscription, there are limitations on the number of concurrent restore requests. These limitations apply to any combination of point-in-time restores, geo-restores, and restores from long-term retention backup: 
-- **Max # of concurrent requests being processed**: ??
-- **Max # of concurrent requests being submitted**: ??
-
-
 > [!TIP]
 > For Azure SQL Managed Instance, system updates will take precedence over database restores in progress. If there a system update for SQL Managed Instance, all pending restores will be suspended and resumed once the update has been applied. This system behavior might prolong the time of restores and might be especially impactful to long-running restores. To achieve a predictable time of database restores, consider configuring [maintenance windows](../database/maintenance-window.md) that allow scheduling of system updates at a specific day/time, and consider running database restores outside of the scheduled maintenance window day/time.
 
@@ -131,7 +126,7 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 
 To recover a managed database by using the Azure portal, open the managed instance overview page, and select **Deleted databases**. Select a deleted database that you want to restore, and type the name for the new database that will be created with data restored from the backup.
 
-  :::image type="content" source="../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of restore a deleted database in Azure SQL Managed Instance":::
+  :::image type="content" source="../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of restore a deleted database in Azure SQL Managed Instance.":::
 
 > [!TIP]
 > It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases using the command line. 
@@ -157,7 +152,7 @@ You can restore a database on any managed instance in any Azure region from the 
 
 Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. There is a delay between when a backup is taken and when it is geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
-:::image type="content" source="../database/media/recovery-using-backups/geo-restore-2.png" alt-text="Graphic of geo-restore":::
+:::image type="content" source="../database/media/recovery-using-backups/geo-restore-2.png" alt-text="Diagram of restoring a database across regions for the purpose of geo-restore.":::
 
 
 ### [Azure portal](#tab/azure-portal)
@@ -171,7 +166,7 @@ To geo-restore a database from the Azure portal to an existing managed instance 
 3. Under **Use existing data**, select **Backup**.
 4. Select a backup from the list of available geo-restore backups.
 
-    :::image type="content" source="../database/media/recovery-using-backups/geo-restore-sql-managed-instance-list-annotated.png" alt-text="Screenshot of New database options":::
+    :::image type="content" source="../database/media/recovery-using-backups/geo-restore-sql-managed-instance-list-annotated.png" alt-text="Screenshot of New database options in the Azure portal.":::
 
 Complete the process of creating a new database. When you create the instance database, it contains the restored geo-restore backup.
 

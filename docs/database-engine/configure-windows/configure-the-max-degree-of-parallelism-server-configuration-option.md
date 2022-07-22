@@ -162,7 +162,7 @@ If a query has a query plan forced through Query Store, DOP feedback can still b
 
 If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](/sql/relational-databases/performance/query-store-hints).
 
-#### Extended Events
+#### Extended events
 
 The following XEs are available for the feature:
 

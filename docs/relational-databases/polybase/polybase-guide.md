@@ -1,7 +1,7 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
-ms.date: 07/01/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -56,8 +56,8 @@ PolyBase provides these same functionalities for the following SQL products from
 | S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3 compatible object storage. |
 | Some connectors separate from PolyBase services | The S3-compatible object storage connector, as well as ADSL Gen2, and Azure Blob Storage, are no longer dependent of PolyBase services. PolyBase services must still run to support connectivity with Oracle, Teradata, MongoDB, and Generic ODBC. The PolyBase feature must still be installed on your SQL Server instance. |
 | Parquet file format | PolyBase is now capable of querying data from Parquet files stored on S3-compatible object storage. For more information, see to [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md). |
-|Delta Table format | Polybase is now capable of querying data from Delta Table format stored on S3-compatible object storage, Azure Storage Account V2, and Azure Data Lake Storage Gen2. For more information, see to [Virtualize Delta Table format](virtualize-delta.md)|
-|Create External Table as Select (CETAS) | Polybase can now use CETAS to creates an external table and then exports, in parallel, the result of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compliant object storage. For more information, see [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-sql.md)|
+|Delta table format | PolyBase is now capable of querying data from Delta Table format stored on S3-compatible object storage, Azure Storage Account V2, and Azure Data Lake Storage Gen2. For more information, see to [Virtualize Delta Table format](virtualize-delta.md)|
+|Create External Table as Select (CETAS) | PolyBase can now use CETAS to create an external table and then export, in parallel, the result of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compatible object storage. For more information, see [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-sql.md)|
 
 For more new features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], see [What's new in SQL Server 2022?](../../sql-server/what-s-new-in-sql-server-2022.md)
 
@@ -82,7 +82,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-Compliant Storage connector.
 
- 
+
  Examples of external connectors include:
 
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](polybase-configure-sql-server.md)
@@ -145,7 +145,7 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
-Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. For more tutorials, review the following:
+Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. For more tutorials, review the following articles:
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure blob storage](polybase-configure-azure-blob-storage.md)
@@ -156,4 +156,4 @@ Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with example
 - [ODBC Generic Types](polybase-configure-odbc-generic.md)
 - [S3-compatible object storage](polybase-configure-s3-compatible.md)
 - [CSV](virtualize-csv.md)
-
+- [Delta table](virtualize-delta.md)

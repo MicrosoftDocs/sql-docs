@@ -114,7 +114,7 @@ ms.author: maggies
     >[!TIP]  
     >**Note:** If you do not see the **Site Settings** option, close and reopen your browser and browse to web portal with administrative privileges.  
   
-3.  On the Site settings page, Select **Security** and then select **Add group or user**.  
+3.  On the Site settings page, select **Security** and then select **Add group or user**.  
   
 4.  In the **Group or user name** field, type your Windows user account in this format: `<domain>\<user>`.  
 

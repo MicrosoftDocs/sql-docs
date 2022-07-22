@@ -10,7 +10,7 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "07/22/2022"
+ms.date: 07/25/2022
 monikerRange: "= azuresqldb-current"
 zone_pivot_groups: as1-azuresql-sql
 ---

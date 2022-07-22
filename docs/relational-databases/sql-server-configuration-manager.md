@@ -20,7 +20,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: 
 ms.custom: FY22Q2Fresh
-ms.date: 11/17/2021
+ms.date: 07/25/2022
 ---
 
 # SQL Server Configuration Manager

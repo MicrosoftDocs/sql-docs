@@ -5,7 +5,7 @@ description: Find out about deprecated database engine features that are still a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: "02/11/2021"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: release-landing

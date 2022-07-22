@@ -4,7 +4,7 @@ description: This article provides a step-by-step procedure for installing a new
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.date: "12/13/2019"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

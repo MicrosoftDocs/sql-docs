@@ -1,7 +1,7 @@
 ---
 title: "Digest management"
 description: This article provides information on digest management for a ledger database.
-ms.date: "07/22/2022"
+ms.date: 07/25/2022
 ms.service: sql-database
 ms.subservice: security
 ms.custom:

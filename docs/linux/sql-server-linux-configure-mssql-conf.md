@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/12/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual

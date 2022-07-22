@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory Authentication for
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 07/12/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial

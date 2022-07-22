@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql

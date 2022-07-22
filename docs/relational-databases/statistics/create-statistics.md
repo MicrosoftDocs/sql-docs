@@ -31,7 +31,7 @@ Before creating statistics with the CREATE STATISTICS statement, verify that the
 
 You can list up to 32 columns per statistics object.
 
-You cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.
+You can't drop, rename, or alter the definition of a table column that is defined in a filtered statistic predicate.
 
 ## Permissions
 
@@ -39,13 +39,13 @@ Requires that the user be the table or indexed view owner, or a member of one of
 
 ### Use SQL Server Management Studio
 
-1. In **Object Explorer**, Select the plus sign to expand the database in which you want to create a new statistic.
+1. In **Object Explorer**, select the plus sign to expand the database in which you want to create a new statistic.
 
 1. Select the plus sign to expand the **Tables** folder.
 
 1. Select the plus sign to expand the table in which you want to create a new statistic.
 
-1. Right-select the **Statistics** folder and select **New Statistics...**.
+1. Right-click the **Statistics** folder and select **New Statistics...**.
 
    The following properties show on the **General** page in the **New Statistics on Table** *table_name* dialog box.
 
@@ -59,9 +59,9 @@ Requires that the user be the table or indexed view owner, or a member of one of
    |**Size**|Displays the size of the data type for each column.|
    |**Identity**|Indicates an identity column when it is checked.|
    |**Allow NULLs**|Indicates whether the column accepts NULL values.|
-   |**Add**|Add additional columns from the table to the statistics grid.|
+   |**Add**|Add more columns from the table to the statistics grid.|
    |**Remove**|Remove the selected column from the statistics grid.|
-   |**Move Up**|Move the selected column to an earlier location in the statistics grid. The location in the grid can substantially impact the usefulness of the statistics.|
+   |**Move Up**|Move the selected column to an earlier location in the statistics grid. The location in the grid can substantially affect the usefulness of the statistics.|
    |**Move Down**|Move the selected column to a later location in the statistics grid.|
    |**Statistics for these columns were last updated**|Indicates how old the statistics are. Statistics are more valuable when they are current. Update statistics after large changes to the data or after adding atypical data. Statistics for tables that have a consistent distribution of data need to be updated less frequently.|
    |**Update statistics for these columns**|Check to update the statistics when the dialog box is closed.|
@@ -72,7 +72,7 @@ Requires that the user be the table or indexed view owner, or a member of one of
    | --- | --- |
    |**Filter Expression**|Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1, 2, 3 )`|
 
-1. In the **New Statistics on Table** *table_name* dialog box, on the **General** page, Select **Add**.
+1. In the **New Statistics on Table** *table_name* dialog box, on the **General** page, select **Add**.
 
    The following properties show in the **Select Columns** dialog box. This information is read-only.
 
@@ -84,7 +84,7 @@ Requires that the user be the table or indexed view owner, or a member of one of
    |**Identity**|Indicates an identity column when checked.|
    |**Allow NULLs**|Indicates whether the column accepts NULL values.|
 
-1. In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then Select **OK**.
+1. In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then select **OK**.
 
 1. In the **New Statistics on Table** *table_name* dialog box, select **OK**.
 
@@ -92,7 +92,7 @@ Requires that the user be the table or indexed view owner, or a member of one of
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-1. On the Standard bar, Select **New Query**.
+1. On the Standard bar, select **New Query**.
 
 1. Copy and paste the following example into the query window and select **Execute**.
 

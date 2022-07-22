@@ -61,7 +61,6 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
   - Install Azure Arc agent with Configuration Manager
   - Snapshot backups
 - [Security](#security)
-  - Support for PFX certificates
   - Automation process to set up Azure AD administrator for SQL Server
   - Attach to Azure from setup - Azure Arc-enabled instance
   - Attach to Azure from configuration manager - Azure Arc-enabled instance
@@ -103,7 +102,7 @@ The following sections provide an overview of these features.
 | Microsoft Purview integration | Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data use management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Access provisioning by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-data-owner-policies-arc-sql-server) for details.|
 | Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. You can enable automatic digest upload to Azure Storage. See [Ledger](/sql/relational-databases/security/ledger/ledger-overview).|
 | Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) to connect to SQL Server.|
-| Automation process to set up Azure AD administrator for SQL Server | [Use automation process to set up Azure AD administrator](azure-ad-authentication-sql-server-automation-setup-tutorial.md) to use Azure AD authentication for SQL Server. |
+| Automation process to set up Azure AD administrator for SQL Server | [Use automation process to set up Azure AD administrator](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial) to use Azure AD authentication for SQL Server. |
 | Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 | New permissions & roles | Enable least privileged access for administrative tasks with new [built-in server-level roles](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles-introduced-in-sql-server-2022).|
 | Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular).|

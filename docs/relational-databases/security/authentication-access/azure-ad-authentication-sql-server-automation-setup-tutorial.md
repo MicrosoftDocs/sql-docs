@@ -43,17 +43,19 @@ The following permissions are necessary to set up Azure AD admin in the **SQL Se
 
 Follow the guide to make sure your [SQL Server is connected to Azure Arc](../../../sql-server/azure-arc/connect.md). The user setting up Azure AD admin for the **SQL Server – Azure Arc** resource should have the **Contributor** role for the server.
 
-1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
+1. Go to the [Azure portal](https://portal.azure.com)
+1. Select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
 1. Select **Access control (IAM)**.
-1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up Azure AD admin.
+1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Azure AD admin.
 
 ### Configure permissions for Azure Key Vault
 
-Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't already have one. The user setting up Azure AD admin should have the **Contributor** role for your Azure Key Vault. To add a role to a user in Azure Key Vault
+Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't already have one. The user setting up Azure AD admin should have the **Contributor** role for your Azure Key Vault. To add a role to a user in Azure Key Vault:
 
+1. Go to the [Azure portal](https://portal.azure.com)
 1. Go to your **Key vault** resource.
 1. Select the **Access control (IAM)**.
-1. Select **Add** > **Add role assignment** to add a role to a selected user.
+1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Azure AD admin.
 
 #### Set access policies for the SQL Server host
 
@@ -902,7 +904,7 @@ The following input parameters are used for the ARM template:
 - `<applicationName>` - The name of [your created Azure AD application](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application)
 - `<appID>` - The **Application (client) ID** of your Azure AD application can be found on the **Overview** menu of the application
 - `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
-- `<adminID>` - The **Object ID** of the Azure AD user or group, or the **Application (client) ID** of the application if you're using another application as the Azure AD admin account. For more information, see [Tutorial: Create Azure AD users using Azure AD applications](authentication-aad-service-principal-tutorial.md)
+- `<adminID>` - The **Object ID** of the Azure AD user or group, or the **Application (client) ID** of the application if you're using another application as the Azure AD admin account. For more information, see [Tutorial: Create Azure AD users using Azure AD applications](/azure/azure-sql/database/authentication-aad-service-principal-tutorial)
 - `<adminType>` - Use `0` for Azure AD users and applications, and `1` for Azure AD groups
 
 Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/Microsoft.Template), and **Build your own template in the editor**. Next, **Save** the configuration once you pasted in the example.

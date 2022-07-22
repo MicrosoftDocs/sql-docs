@@ -108,7 +108,7 @@ An extended event session on a read-only replica that is based on a session defi
 
 ### Transaction isolation level on read-only replicas
 
-Transactions on read-only replicas always use the snapshot [transaction isolation level](sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#database-engine-isolation-levels), regardless of transaction isolation level of the session, and regardless of any query hints. Snapshot isolation uses row versioning to avoid blocking scenarios where readers block writers.
+Transactions on read-only replicas always use the snapshot [transaction isolation level](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#database-engine-isolation-levels), regardless of transaction isolation level of the session, and regardless of any query hints. Snapshot isolation uses row versioning to avoid blocking scenarios where readers block writers.
 
 In rare cases, if a snapshot isolation transaction accesses object metadata that has been modified in another concurrent transaction, it may receive error [3961](/sql/relational-databases/errors-events/mssqlserver-3961-database-engine-error), "Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation."
 

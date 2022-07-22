@@ -101,7 +101,7 @@ When a block is formed, its associated database digest is published and stored o
 Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables hasn't been tampered with.
 
 > [!NOTE]
-> Automatic digest management is only supported in Azure SQL Database. Managing digests manually is supported both in Azure SQL Database and SQL Server.
+> [Automatic digest management](ledger-how-to-enable-automatic-digest-storage.md) is only supported in Azure SQL Database and SQL Server 2022 CTP 2.1 and higher. Managing digests manually is supported both in Azure SQL Database and SQL Server.
 
 ### Ledger verification
 

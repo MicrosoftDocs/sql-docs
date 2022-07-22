@@ -87,8 +87,11 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
 ####  <a name="Permissions"></a> Permissions  
  Execute permissions on `sp_configure` with no parameters or with only the first parameter are granted to all users by default. To execute `sp_configure` with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio 
+<a id="use-sql-server-management-studio"></a>
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio or Azure Data Studio
   
+In [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], install the `Database Admin Tool Extensions for Windows` extension, or use the below T-SQL method.
+
 #### To configure the max degree of parallelism option  
 
 These options change the MAXDOP for the instance.
@@ -100,8 +103,6 @@ These options change the MAXDOP for the instance.
 3.  In the **Max Degree of Parallelism** box, select the maximum number of processors to use in parallel plan execution.  
   
 ##  <a name="TsqlProcedure"></a> Use Transact-SQL  
-
-As there is no GUI for this option in [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], use the T-SQL method.
   
 #### To configure the max degree of parallelism option with T-SQL
   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
---
-## July 19, 2022
 
-This release is published July 19, 2022
+## July 26, 2022
+
+This release is published July 26, 2022
 
 ### Image tag
 

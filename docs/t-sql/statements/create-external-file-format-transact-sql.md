@@ -156,9 +156,9 @@ Specifies the format of the external data.
 
   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`
 
 - DELIMITEDTEXT
   Specifies a text format with column delimiters, also called field terminators.
@@ -171,38 +171,42 @@ Specifies the format of the external data.
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
  To work properly, Gzip compressed files must have the ".gz" file extension.
  
- #### [Delimited text](#tab/delimited)
+#### [Delimited text](#tab/delimited)
  The DELIMITEDTEXT format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
 
 #### [RC](#tab/rc)
  The RCFILE format type supports this compression method:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
   
 #### [ORC](#tab/orc)
  The ORC file format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [Parquet](#tab/parquet)
  The PARQUET file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [JSON](#tab/json)
  The JSON file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+
+### [Delta table](#tab/delta)
+ N/A
 ---  
+
 ### Delimited text format options
 
 The format options described in this section are optional and only apply to delimited text files.
 
 #### FIELD_TERMINATOR
 `FIELD_TERMINATOR = *field_terminator*`  
-Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
+Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character `|`. For guaranteed support, we recommend using one or more ASCII characters.
   
   
 Examples:  
@@ -218,7 +222,7 @@ Examples:
 #### STRING_DELIMITER
 `STRING_DELIMITER = *string_delimiter*`
 
-Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
+Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ASCII characters.
  
   
  Examples:  
@@ -389,7 +393,7 @@ WITH (
 ```  
   
 ### B. Create an RCFile external file format  
- This example creates an external file format for a RCFile that uses the `serialization/deserialization` method `o`rg.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
+ This example creates an external file format for a RCFile that uses the `serialization/deserialization` method `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -442,7 +446,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 ### F. Create a JSON external file format  
 **Applies to:**  Azure SQL Edge
 
- This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
+ This example creates an external file format for a JSON file that compresses the data with the `org.apache.io.compress.SnappyCodec` data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  

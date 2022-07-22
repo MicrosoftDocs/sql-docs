@@ -81,7 +81,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 ## Setting up the Azure AD admin for the SQL Server
 
-New APIs and portal functionality allows users to set up an Azure AD admin for SQL Server without having to separately create an Azure certificate and Azure AD application. Select a tab to learn how to set up an Azure AD Admin for your SQL Server connected to Azure Arc with automatic certificate and application creation.
+New APIs and portal functionality allows users to set up an Azure AD admin for SQL Server without having to separately create an Azure certificate and Azure AD application. Select a tab to learn how to set up an Azure AD admin for your SQL Server connected to Azure Arc with automatic certificate and application creation.
 
 > [!NOTE]
 > The ARM template still requires the creation of an Azure Key Vault certificate and Azure AD application before setting up an Azure AD admin. For more information on this process, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).

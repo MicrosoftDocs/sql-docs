@@ -1,5 +1,5 @@
 ---
-title: "Installation Wizard Help | Microsoft Docs"
+title: "Installation Wizard Help"
 description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
 ms.custom:
   - intro-installation
@@ -13,7 +13,6 @@ f1_keywords:
 helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
-ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: rwestMSFT
 ms.author: randolphwest
 ---
@@ -422,7 +421,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 ### UI element list
 
-* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).
 
 ## <a name="memory"><a/> Database Engine Configuration - Memory page
 

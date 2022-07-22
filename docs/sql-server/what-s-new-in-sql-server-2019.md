@@ -1,7 +1,7 @@
 ---
-title: "What's new in SQL Server 2019 | Microsoft Docs"
+title: "What's new in SQL Server 2019"
 description: Learn about new features for SQL Server 2019 (15.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.date: 11/04/2019
+ms.date: 07/22/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -155,7 +155,7 @@ When an extract, transform, and load (ETL) process fails because the source and 
 |:---|:---|
 |Always Encrypted with secure enclaves|Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.<br><br> Support for rich computations (pattern matching and comparison operations) unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries. See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Certificate management in SQL Server Configuration Manager|Certificate management tasks such as viewing and deploying certificates is now possible by using SQL Server Configuration Manager. See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
-|Data Discovery & Classification|Data Discovery & Classification provides capabilities for classifying and labeling columns in user tables. Classifying sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in an organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>|
+|Data Discovery & Classification|Data Discovery & Classification provides capabilities for classifying and labeling columns in user tables. Classifying sensitive data (business, financial, healthcare, personally identifiable information (PII), etc.) can play a pivotal role in an organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>|
 |SQL Server Audit|[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field `data_sensitivity_information` in the audit log record, which contains the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
@@ -219,7 +219,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |New feature or update | Details |
 |:---|:---| 
 |New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. See [Database Engine Configuration - Memory page](./install/instance-configuration.md#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value aligns with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).| 
 |Setup warning on Server/CAL license Product Key|If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. Users can still acknowledge the limitation and continue setup, or enter a License Key that supports the operating system maximum number of processors.|
 | &nbsp; | &nbsp; |
 
@@ -276,5 +276,6 @@ This release of SQL Server Reporting Services features support for Azure SQL Man
 - [SQL Server Workshops](https://aka.ms/sqlworkshops)
 - [[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] release notes](sql-server-version-15-release-notes.md)
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]: Technical white paper](https://aka.ms/sql2019whitepaper)
+- [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

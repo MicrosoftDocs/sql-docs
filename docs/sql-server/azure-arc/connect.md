@@ -13,7 +13,7 @@ ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
 
-Beginning with SQL Server 2022 (preview) you can install the Azure Arc agent with the SQL Server extension when you are installing SQL Server on Windows Operating System. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
+Beginning in SQL Server 2022 (Preview), you can deploy an instance of SQL Server from the command prompt that is connected to Azure Arc. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
 
 You can connect your SQL Server instance to Azure Arc by following these steps.
 
@@ -50,7 +50,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Initiate the connection from Azure
 
-If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension, "*SQL Server Extension - Azure Arc*".  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions using the Azure portal, Azure PowerShell or Azure CLI.
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
 >1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.
@@ -72,7 +72,7 @@ To install the SQL Server extension, use the following steps:
 
 1. Open the __Server - Azure Arc__ resource. 
 2. Under __Extensions__, click __+ Add__ 
-1. Select `SQL Server Extension - Azure Arc` from the list and click __Create__.
+1. Select `WindowsAgent.SqlServer` from the list and click __Create__.
 
 # [PowerShell](#tab/powershell)
 
@@ -99,18 +99,10 @@ spID=$(az resource list -n <ArcMachineName> --query [*].identity.principalId --o
 az role assignment create --assignee $spID --role 'Azure Connected SQL Server Onboarding' --scope /subscriptions/<mySubscriptionID>/resourceGroups/<myResourceGroup>
 ```
 
-To install the SQL Server Extension - Azure Arc for Windows Operating System, run:
+To install the SQL Server extension, run:
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
-```
-
----
-
-To install the SQL Server Extension - Azure Arc for Linux Operating System, run:
-
-```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
 
 ---
@@ -120,9 +112,11 @@ To install the SQL Server Extension - Azure Arc for Linux Operating System, run:
 
 ## Initiate the connection from the target machine
 
-If the server is not an Arc-Server enabled yet, you can initiate the connection from the target machine using the onboarding script. This script onboard the server to Arc-Server and as well as install "SQL Server Extension - Azure Arc".
+If you want to customize the process of connecting the SQL Server instance to Azure Arc, you can initiate the connection from the target machine using the onboarding script.
 
 ### Generate a onboarding script for SQL Server
+
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions how to install and uninstall extensions using  Azure portal, Azure PowerShell, or Azure CLI.
 
 1. Search for __SQL Server - Azure Arc__ resource type and add a new one through the creation blade.
    ![Start creation](media/join/start-creation-of-sql-server-azure-arc-resource.png)
@@ -179,20 +173,20 @@ Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly register
 
 ![Validate connected SQL server ](media/join/validate-sql-server-azure-arc.png)
 
-## Delete your SQL Server - Azure Arc resource
+## Disconnect your SQL Server instance
 
-To delete your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and select the **Delete** button. It will delete this resource and instruct the SQL Server extension on the machine to stop monitoring this SQL Server instance.  
+To disconnect your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and click the **Unregister** button. It will delete this resource and instruct the SQL Server extension on the machine to stop monitoring this SQL Server instance.  
 
 ![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
 
 > [!IMPORTANT]
-> Because there could be multiple SQL Server instances installed on the same machine, the *Delete* button will not uninstall the SQL Server extension.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
+> Because there could be multiple SQL Server instances installed on the same machine, the *Unregister* button will not uninstall the SQL Server extension.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
 
 ## Restore a deleted SQL Server - Azure Arc resource
 
-If you deleted your SQL Server instance by mistake, you can restore its __SQL Server - Azure Arc__ resource with the following steps.
+If you disconnected your SQL Server instance by mistake, you can restore its __SQL Server - Azure Arc__ resource with the following steps.
 
-1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Please make sure to replace "WindowsAgent.SqlServer" with "LinuxAgent.SqlServer" for SQL Servers running on Linux Operating system in the commands below.
+1. If you also uninstalled the SQL Server extension by mistake, reinstall it.
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'

@@ -71,12 +71,20 @@ If the Locked pages in memory privilege is not enabled, SQL Sever will switch to
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
+<<<<<<< HEAD
+-  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
+-  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
+-  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
+-  **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
+=======
 
 - **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8 KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 - **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8 KB.
 - **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
 - Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
 - **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
+>>>>>>> upstream/main
 
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)],  Single-Page allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager. 
 
@@ -100,7 +108,7 @@ As soon as this allocation is performed, the *Resource Monitor* background task 
 
 This behavior is typically observed during the following operations: 
 -  Large Columnstore index queries.
--  Large [Batch Mode on Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) queries.
+-  Large [Batch Mode on Rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore) queries.
 -  Columnstore index (re)builds, which use large volumes of memory to perform Hash and Sort operations.
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.

@@ -905,7 +905,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more details. |
 | Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. |
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256 K   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
-| ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
+| ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 

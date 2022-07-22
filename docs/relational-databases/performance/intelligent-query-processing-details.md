@@ -1,5 +1,5 @@
 ---
-title: "Intelligent query processing"
+title: "Intelligent query processing details"
 description: "Intelligent query processing features described in detail."
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -28,13 +28,13 @@ You can make workloads automatically eligible for intelligent query processing b
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 160;
 ```
 
-All IQP features are available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], sometimes depending on each database's compatibility mode. For more information on changes introduced with new versions of SQL Server, see:
+All [IQP features](intelligent-query-processing.md) are available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], sometimes depending on each database's compatibility mode. For more information on changes introduced with new versions, see:
 
 - [What's new in SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md)
 - [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md)
 - [What's new in SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md)
 
-## Batch mode Adaptive joins
+## Batch mode Adaptive Joins
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

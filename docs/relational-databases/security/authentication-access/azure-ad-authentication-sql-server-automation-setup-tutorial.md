@@ -72,7 +72,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 #### Set access policies for Azure AD users
 
-1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**
+1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
 
    1. Select **Add Access Policy**.
    1. For **Key permissions**, select **Get**, **List**, and **Create**.
@@ -81,7 +81,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
    1. For **Select principal**, add the Azure AD user you want to use to connect to SQL Server.
    1. Select **Add** and then select **Save**.
 
-## Setting up Azure AD authentication for SQL Server
+## Setting up the Azure AD admin for the SQL Server
 
 New APIs and portal functionality allows users to set up an Azure AD admin for SQL Server without having to separately create an Azure certificate and Azure AD application. Select a tab to learn how to set up an Azure AD Admin for your SQL Server connected to Azure Arc with automatic certificate and application creation.
 
@@ -90,14 +90,14 @@ New APIs and portal functionality allows users to set up an Azure AD admin for S
 
 # [Portal](#tab/azure-portal)
 
-A new Azure portal functionality is enabled to set up an Azure AD admin, and creates an Azure Key Vault certificate and Azure AD application necessary to use Azure AD authentication with SQL Server.
+A new Azure portal functionality is enabled to set up an Azure AD admin, and creates an Azure Key Vault certificate and Azure AD application in the same process. This is necessary to use Azure AD authentication with SQL Server.
 
 > [!NOTE]
-> Previously, before setting up an Azure AD admin, [an Azure Key Vault certificate and Azure AD application registration was needed](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application).
+> Previously, before setting up an Azure AD admin, [an Azure Key Vault certificate and Azure AD application registration was needed](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application). This is no longer the case with this new functionality.
 
 ## Setting up Azure AD admin using the Azure portal
 
-1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
+1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**. Select the instance for your SQL Server host.
 
 1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate the SQL Server - Azure Arc resources](../../../sql-server/azure-arc/connect.md?#validate-the-sql-server---azure-arc-resources).
 
@@ -963,7 +963,7 @@ Once the Azure AD admin has been set up, using the Azure AD admin credentials al
 1. In the [Azure portal](https://portal.azure.com), select **Azure Active Directory** > **App registrations**, select the newly created application. The application should have a name like `<hostname>-<instanceName><uniqueNumber>`.
 1. Select the **API permissions** menu.
 
-1. Select **Grant admin consent**
+1. Select **Grant admin consent**.
 
    :::image type="content" source="media/configured-app-permissions.png" alt-text="Screenshot of application permissions in the Azure portal.":::
 

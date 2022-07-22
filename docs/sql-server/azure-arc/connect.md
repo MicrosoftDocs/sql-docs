@@ -13,7 +13,7 @@ ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
 
-Beginning with SQL Server 2022 (preview) you can install the Azure Arc agent with the SQL Server extension when you are installing SQL Server on Windows Operating System. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you can install the Azure Arc agent with the SQL Server extension when you are installing SQL Server on Windows Operating System. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
 
 You can connect your SQL Server instance to Azure Arc by following these steps.
 
@@ -107,11 +107,13 @@ To install the SQL Server Extension - Azure Arc for Windows Operating System, ru
 
 ---
 
-To install the SQL Server Extension - Azure Arc for Linux Operating System, run:
+To install the SQL Server Extension - Azure Arc for Linux operating system, run:
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
+
+SQL Server Extension - Azure Arc for Linux is available for preview.
 
 ---
 

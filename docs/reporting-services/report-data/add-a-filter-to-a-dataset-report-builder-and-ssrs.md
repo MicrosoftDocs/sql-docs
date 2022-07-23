@@ -14,6 +14,8 @@ ms.author: maggies
 ---
 # Add a Filter to a Dataset (Report Builder and SSRS)
   Add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source. When you add a filter to a dataset, all report parts or data regions use only data that matches the filter conditions.  
+
+ [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
   
  For a shared dataset, a filter that applies to all dependent items must be part of the shared dataset definition on the report server. A report or report part that contains an instance of a shared dataset can create an additional filter that applies only to the instance.  
   

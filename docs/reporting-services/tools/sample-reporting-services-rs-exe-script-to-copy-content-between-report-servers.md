@@ -63,7 +63,7 @@ The script can be used to copy content between report servers of the same mode o
 |Cache refresh options|Yes|Yes|Dependent settings are migrated as part of a catalog item. The following is the sample out of the script as it migrates a report (.rdl) and related settings such as cache refresh options:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
 |Cache refresh plans|Yes|Yes||  
 |Images|Yes|Yes||  
-|Report parts|Yes|Yes||  
+|Report parts<br>[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]|Yes|Yes||  
   
 ##  <a name="bkmk_required_permissions"></a> Required permissions  
  The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual article to see the required permissions. For example the ListChildren method topic notes the required permissions of:  

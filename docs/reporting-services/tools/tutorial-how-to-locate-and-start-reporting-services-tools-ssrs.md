@@ -153,6 +153,8 @@ When your paginated report is ready, publish it to a report server or [save it t
 
 ## <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]
 
+[!INCLUDE [ssrs-mobile-report-deprecated](../includes/ssrs-mobile-report-deprecated.md)]
+
 Use [SQL Server Mobile Report Publisher](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) to create mobile reports you can view in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal and in mobile devices such as iPads and iPhones.\
 You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or from the Microsoft Download Center.
 

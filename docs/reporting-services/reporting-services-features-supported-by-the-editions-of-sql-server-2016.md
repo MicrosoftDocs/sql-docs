@@ -85,7 +85,7 @@ The following software client applications are available on the Microsoft Downlo
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
 | Power BI Desktop optimized for Power BI Report Server, **.pbix** | Yes, with Software Assurance | | | | Yes |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**<br>[!INCLUDE [ssrs-mobile-report-deprecated](../includes/ssrs-mobile-report-deprecated.md)]|Yes||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows, and Android), **.rsmobile**|Yes||||Yes|  
   
 > [!NOTE]  

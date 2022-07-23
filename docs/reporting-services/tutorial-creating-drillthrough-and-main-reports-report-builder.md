@@ -299,7 +299,7 @@ By default parameters are visible, which is not appropriate for this report. You
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="DSave"></a>6. Save the Report to a SharePoint Library  
-You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
+You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
   
 #### To save the report  
   

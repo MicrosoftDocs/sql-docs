@@ -64,7 +64,7 @@ The following procedure compares the schema of a database project with a connect
   
     To change the grouping preference, click the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
   
-7.  Find the `Products` table in the `Tables` group. Click on the row and notice that the source and target definitions of the table appear in the **Object Definitions** pane with the differences highlighted. You can also expand the `Products` table row in the **Results** pane to inspect the specific elements in the table that are different.  
+7.  Find the `Products` table in the `Tables` group. Select the row and notice that the source and target definitions of the table appear in the **Object Definitions** pane with the differences highlighted. You can also expand the `Products` table row in the **Results** pane to inspect the specific elements in the table that are different.  
   
 8.  By default all differences are included in the scope of the Update Target action. You can exclude differences that you do not want to synchronize. To do so, uncheck the in the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. Notice that the row is immediately grayed out. When it is time to update the target database, this row will not be considered for any pending changes.  
   

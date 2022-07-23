@@ -44,7 +44,7 @@ When you want to summarize data in a visual format in a paginated report, use a 
   
 2.  On the **Insert** tab, click **Chart**, and then click **Insert Chart**.  
   
-3.  Click on the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
+3.  Select the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
   
      The **Select Chart Type** dialog box appears.  
   

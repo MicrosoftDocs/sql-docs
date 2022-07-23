@@ -358,7 +358,7 @@ The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
 You can view your current settings by querying `sys.database_scoped_configurations`. Please note that this feature will not work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
 
-Given feedback data is now persisted in the Query Store, there is some increase in the Query Store usage requirements. Based on current estimates, this size increase should not be greater than 10%.
+Given feedback data is now persisted in the Query Store, there is some increase in the Query Store usage requirements.
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 

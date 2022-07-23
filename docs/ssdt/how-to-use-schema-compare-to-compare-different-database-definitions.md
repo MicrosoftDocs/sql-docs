@@ -62,7 +62,7 @@ The following procedure compares the schema of a database project with a connect
   
     By default the results list hides objects that are the same in both schemas or that are not supported for update (for example, built-in objects).  You can click on the appropriate filter buttons in the tool bar to show these objects.  
   
-    To change the grouping preference, click the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
+    To change the grouping preference, select the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
   
 7.  Find the `Products` table in the `Tables` group. Select the row and notice that the source and target definitions of the table appear in the **Object Definitions** pane with the differences highlighted. You can also expand the `Products` table row in the **Results** pane to inspect the specific elements in the table that are different.  
   

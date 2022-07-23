@@ -117,7 +117,7 @@ A connection timeout has occurred on a previously established connection to avai
 To modify the lease time out value, use the Failover Cluster Manager and follow these steps: 
 
 
-1. In the roles tab, find the target AG role. Click on the target AG role. 
+1. In the roles tab, find the target AG role. Select the target AG role. 
 2. Right-click the AG resource at the bottom of the window and select **Properties**. 
 
    ![Failover cluster manager](media/availability-group-lease-healthcheck-timeout/image2.png) 

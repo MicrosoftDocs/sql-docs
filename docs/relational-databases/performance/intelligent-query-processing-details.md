@@ -198,13 +198,14 @@ For an insufficiently-sized memory grant condition that result in a spill to dis
 
 Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." 
 
-For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The memory grant feedback feature is disabled after several repeated runs of the query and this can be observed by monitoring the `memory_grant_feedback_loop_disabled` extended event. This condition is mitigated with the [persistence and percentile mode for memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. 
+For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The memory grant feedback feature is disabled after several repeated runs of the query and this can be observed by monitoring the `memory_grant_feedback_loop_disabled` extended event. This condition is mitigated with the [persistence and percentile mode for memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. The persistence feature of memory grant feedback requires the Query Store to be enabled in the database and set to "read write" mode.
 
 For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity).
 
 ### Memory grant feedback caching
 
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
+Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], changes were not captured in the Query Store.
+
 Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced, and it is not stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the second and later consecutive executions can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity

@@ -60,7 +60,7 @@ The following procedure compares the schema of a database project with a connect
   
     When the comparison is complete, the structural differences between the project and the database appear in the **Results** pane in the upper part of the window. By default, the comparison results group all the differences are grouped by action (such as Delete, Change, or Add). The **Results** pane displays a row for each database object that differs between the database definitions. Each row identifies the object in the source or target schema (or both) and the action that will be taken on the target schema to make the target object the same as the source object.  If an object has been refactored and either renamed or moved to a new schema, the source and target names are different and the source name appears in bold font to highlight the difference.  
   
-    By default the results list hides objects that are the same in both schemas or that are not supported for update (for example, built-in objects).  You can click on the appropriate filter buttons in the tool bar to show these objects.  
+    By default the results list hides objects that are the same in both schemas or that are not supported for update (for example, built-in objects).  You can select the appropriate filter buttons in the tool bar to show these objects.  
   
     To change the grouping preference, select the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
   

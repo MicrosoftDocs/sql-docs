@@ -113,7 +113,8 @@ Select the reference data that you want to include in your data-tier application
   
  **Action** - During the **Create and save DAC package file** action, the wizard extracts a DAC from your SQL Server database. Then, a DAC package is created in memory and saved to the location you specified. Select the links in the **Result** column to see the outcome of the corresponding step.  
   
- **Save Report** - Click to save the results of the wizard's progress to a file.  
+ **Save Report** - Select to save the results of the wizard's progress to a file.  
+
   
  **Finish** - Click to close the wizard after processing has completed, or if an error occurs.  
    

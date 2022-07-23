@@ -76,7 +76,7 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 -   Report Parts
 
-    [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   KPIs  
   

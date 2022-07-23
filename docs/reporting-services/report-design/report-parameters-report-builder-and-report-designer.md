@@ -118,7 +118,7 @@ Create a parameter manually from the Report Data pane. You can configure report 
   
  **Report part with a parameter**
  
-[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
  
 Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
   

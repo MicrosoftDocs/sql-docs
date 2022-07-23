@@ -32,7 +32,7 @@ ms.author: maggies
   
 -   Use report parts, shared data sources, shared queries, and subreports to define data visualizations for re-use.  
 
-    [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   Manage report data sources separately from the report definition. For example, you can change from a test data source to a production data source without changing the report.  
   

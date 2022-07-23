@@ -17,7 +17,7 @@ ms.author: maggies
 
 # Report Parts in Report Designer (SSRS)
 
-[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
 
 In Report Designer, after you create tables, charts, and other paginated report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports.  
   

@@ -30,7 +30,7 @@ ms.author: maggies
   
  You do not need to restart Report Builder for this setting to take effect.  
  
- [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
 
  **Show this number of recent sites and servers**  
  Specify the number of recent sites and connections to show in the **Open Report** and **Save As Report** dialog boxes.  

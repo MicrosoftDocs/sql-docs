@@ -58,7 +58,7 @@ ms.author: maggies
 |View resources|Resources|Read Content<br /><br /> Read Properties|  
 |View resources|Report Parts|Read Content<br /><br /> Read Properties|  
 
-[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 ## See Also  
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

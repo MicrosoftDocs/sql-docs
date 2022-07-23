@@ -17,8 +17,8 @@ ms.author: maggies
   
  In Report Builder, you can author reports, shared datasets, and reusable report parts. From a report server or SharePoint site, you can edit reports and add shared data sources, shared datasets, and shared report parts.  
 
- [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
-  
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]  
+
  To author, publish, and use reports and report-related items, you should understand how security features relate to the following areas:  
   
 -   **The report server or SharePoint site where you publish reports** These features are managed by the report server administrator or SharePoint site administrator.  

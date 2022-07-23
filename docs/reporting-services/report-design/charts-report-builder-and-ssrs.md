@@ -36,7 +36,7 @@ The more time you spend carefully preparing and understanding your data before y
   
  You can publish charts separately from a report as *report parts*. For more information, see [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
 
-[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
  
 ##  <a name="DesigningChart"></a> Designing a Chart  

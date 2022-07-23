@@ -33,7 +33,7 @@ ms.author: maggies
   
 -   **Shared dataset.** The field collection is the list of fields for the query in the shared dataset definition at the time that you directly added the shared dataset to your report, or when you added a report part that included the shared dataset. The local field collection does not change when the shared dataset definition changes on the report server. To update the local field collection, you must refresh the list for the local shared dataset.  
 
-    [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
 
 -   **Embedded dataset.** The field collection is the list of fields that is returned from running the current query against the data source.  
   

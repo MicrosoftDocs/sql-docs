@@ -44,7 +44,7 @@ monikerRange: "= sql-server-2016"
 |Datasources|Yes|Following migration, Re-link reports to datasources.|  
 |Models|Yes||  
 |Datasets|Yes||  
-|Report Parts||Following migration, verify or update the path to the report parts.<br><br>[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)] |  
+|Report Parts||Following migration, verify or update the path to the report parts.<br><br>[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)] |  
 |Schedules|Yes|See the ListSchedules method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) and the <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> method.|  
 |Snapshots|||

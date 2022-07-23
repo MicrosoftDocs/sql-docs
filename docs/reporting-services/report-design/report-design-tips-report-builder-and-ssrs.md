@@ -51,7 +51,7 @@ ms.author: maggies
   
         1.  **Data region as a report part.** When report authors browse the Report Part Gallery, a descriptive name helps them find the report parts they are looking for.  
 
-        [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]
+        [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
         2.  **Data region as a data feed.** With appropriate permissions, a report reader can create an ATOM data feed from a data region.  
   

@@ -506,13 +506,13 @@ The following table summarizes driver support for Always On Availability Groups:
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET with .NET Framework 4.0 with connectivity patch**\&#42;**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **\&#42;\&#42;**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 4.0 with connectivity patch*|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch**|Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
-**\&#42;** Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
+*Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
+**Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover Keyword and Associated Features**  
   

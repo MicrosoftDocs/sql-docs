@@ -39,6 +39,9 @@ In this tutorial, you learn how to:
 
 ### Authentication prerequisites
 
+> [!NOTE]
+> Extended functionality has been implemented in Azure to allow the automatic creation of the Azure Key Vault certificate and Azure AD application during setting up an Azure AD admin for the SQL Server. For more information, see [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md).
+
 - To perform Azure AD authentication, SQL Server needs to be able to query Azure AD and requires an Azure AD app registration, which it can authenticate as. The app registration also needs a handful of permissions for the queries SQL Server will perform.
 
 - SQL Server uses a certificate for this authentication, and it is stored in Azure Key Vault (AKV). The Azure Arc agent downloads the certificate to the SQL Server instance host.

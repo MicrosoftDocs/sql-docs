@@ -82,15 +82,15 @@ Cascading actions on an edge constraint let users define the actions that the da
 The database engine raises an error when you try to delete a node that has connecting edge(s).
 
 *CASCADE*
-When a node is delete from the database, connecting edge(s) are deleted.
+When a node is deleted from the database, connecting edge(s) are deleted.
 
 ## Working with edge constraints
 
-You can define a edge constraint in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. An edge constraint can be defined on a graph edge table only. To create, delete, or modify an edge constraint, you must have **ALTER** permission on the table.
+You can define an edge constraint in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. An edge constraint can be defined on a graph edge table only. To create, delete, or modify an edge constraint, you must have **ALTER** permission on the table.
 
 ### Create edge constraints
 
-The following examples show you how to create an edge constraints on new or existing tables
+The following examples show you how to create an edge constraint on new or existing tables.
 
 #### To create an edge constraint on a new edge table
 

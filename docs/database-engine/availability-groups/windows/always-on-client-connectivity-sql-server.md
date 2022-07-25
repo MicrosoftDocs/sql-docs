@@ -32,8 +32,8 @@ ms.author: mathoma
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET with .NET Framework 4.0 with connectivity patch*|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 4.0 with connectivity patch *|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **|Yes|Yes|Yes|Yes|Yes|  
 |[Microsoft ODBC Driver 13.1+ for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes|
 |[Microsoft JDBC Driver 4.0+ for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes| 
 |[Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes| 

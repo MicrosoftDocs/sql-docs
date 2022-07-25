@@ -62,7 +62,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) 
       | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
@@ -97,6 +97,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ```  
 
 <a name="Arguments"></a>
+
 ## Arguments
 
  *database_name*  
@@ -107,7 +108,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
  *table_name*  
  The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
-
 
  *column_name*  
  The name of a table column.
@@ -153,7 +153,7 @@ To understand how to choose the best distribution method and use distributed tab
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (***Preview***) 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Currently in *preview*) 
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
 
 >[!NOTE]

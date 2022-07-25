@@ -50,7 +50,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <distribution_option> ::=
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
-      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )
       | DISTRIBUTION = ROUND_ROBIN 
       | DISTRIBUTION = REPLICATE
     }   

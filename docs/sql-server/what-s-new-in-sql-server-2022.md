@@ -65,6 +65,7 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
 - [Security](#security)
   - Automation process to set up Azure AD administrator for SQL Server
   - Ledger - automatic digest upload to Azure Storage
+  - 3 additional fixed server-level roles added
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()

@@ -317,6 +317,8 @@ Using a percentile-based calculation over recent history of the query, instead o
 
 The query optimizer uses a high percentile of past memory grant sizing requirements for executions of the cached plan to calculate memory grant sizes, using data persisted in the Query Store. The percentile adjustment which will perform the memory grant adjustments is based on the recent history of executions. Over time, the memory grant given reduces spills and wasted memory. 
 
+Persistence also applies to [DOP Feedback](#dop-feedback) and [CE Feedback](#ce-feedback), also detailed in this article.
+
 ### Before you enable Memory Grant Feedback: Persistence and Percentile
 
 It is recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you are getting the intended benefit from the feature.
@@ -325,7 +327,7 @@ It is recommended that you have a performance baseline for your workload before 
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you are connected to when executing the query.
 
-`ALTER DATABASE <DATABASE NAME> SET COMPATABILITY LEVEL = 140; -- OR HIGHER`
+`ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
 The Query Store must be enabled for every database where the persistence portion of this feature is used.
 
@@ -333,7 +335,7 @@ The Query Store must be enabled for every database where the persistence portion
 
 Both of these features are enabled by default when the above instructions are followed. If you want to enable the trace flags but then disable or re-enable the feature, you can do this using a database scoped configuration.
 
-### Percentile
+##### Percentile
 
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
@@ -343,7 +345,7 @@ Disabling memory grant feedback percentile will also remove existing collected f
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
 
-### Persistence
+##### Persistence
 
 To disable memory grant feedback persistence for all query executions originating from the database.
 
@@ -561,6 +563,10 @@ For more information, see [parallel plan execution](../../relational-databases/q
 ## Optimized plan forcing with Query Store
 
 For complete information, see [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md).
+
+## CE feedback
+
+For complete information, see [Cardinality estimation (CE) Feedback](cardinality-estimation-sql-server.md#cardinality-estimation-ce-feedback).
 
 ## See also
 

@@ -157,7 +157,7 @@ setspn -S MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 For a named instance, use:  
   
 ```  
-SETSPN -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
+setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Client Connections  

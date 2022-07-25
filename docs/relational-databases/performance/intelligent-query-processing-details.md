@@ -12,7 +12,7 @@ ms.reviewer: "wiassaf"
 ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
-ms.date: 07/22/2022
+ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -557,6 +557,10 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 This feedback is available for queries that operate in the database compatibility level 160 (introduced in SQL Server 2022) or higher, and when Query Store is enabled for the database and is in a "read write" state.
 
 For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing) and [Configure the MAXDOP server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
+## Optimized plan forcing with Query Store
+
+For complete information, see [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md).
 
 ## See also
 

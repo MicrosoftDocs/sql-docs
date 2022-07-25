@@ -153,7 +153,7 @@ To understand how to choose the best distribution method and use distributed tab
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Currently in *preview*) 
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Currently in preview*) 
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
 
 >[!NOTE]

@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: kendralittle, mathoma
-  ms.date: 04/28/2022
+  ms.date: 07/20/2022
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -146,7 +146,7 @@ sections:
           
           However, if there's only the primary replica, it may take a minute or two to create a new replica after failover, vs. seconds in case when an HA secondary replica is available. The new replica will have cold caches initially, which may result in higher storage latency and reduced query performance immediately after failover.
           
-          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica replicas. That way there is a hot-standby replica available that serves as a failover target.
+          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica. That way there is a hot-standby replica available that serves as a failover target.
           
   - name: Data size and storage questions
     questions:
@@ -324,12 +324,12 @@ sections:
       - question: |
           Will I be charged for backup storage costs in Hyperscale?
         answer: |
-           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
+           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How can I measure backup storage size in my Hyperscale database?
         answer: |
-          Details on how to measure backup storage size are captured in [Automated Backups](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
+          Details on how to measure backup storage size are captured in [Automated Backups](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How do I know what my backup bill will be?
@@ -344,7 +344,7 @@ sections:
       - question: |
           How can I minimize backup storage costs?
         answer: |
-          Details on how to minimize the backup storage costs are captured in [Automated Backups](automated-backups-overview.md#reduce-backup-storage-consumption).
+          Details on how to minimize the backup storage costs are captured in [Automated Backups](hyperscale-automated-backups-overview.md#reduce-backup-storage-consumption).
 
   - name: Performance questions
     questions:

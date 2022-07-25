@@ -114,7 +114,7 @@ EXPLAIN
 GO  
 ```  
   
- After executing the statement using the **EXPLAIN** option, the message tab presents a single line titled **explain**, and starting with the XML text `\<?xml version="1.0" encoding="utf-8"?>` Click on the XML to open the entire text in an XML window. To better understand the following comments, you should turn on the display of line numbers in SSDT.  
+ After executing the statement using the **EXPLAIN** option, the message tab presents a single line titled **explain**, and starting with the XML text `\<?xml version="1.0" encoding="utf-8"?>` Select the XML to open the entire text in an XML window. To better understand the following comments, you should turn on the display of line numbers in SSDT.  
   
 #### To turn on line numbers  
   

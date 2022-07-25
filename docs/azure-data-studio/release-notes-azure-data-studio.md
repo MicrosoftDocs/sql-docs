@@ -4,7 +4,7 @@ description: This article has release notes for Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: tdoshin
+author: timioshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
@@ -32,12 +32,12 @@ Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 |----------|---------|
 | VS Code merge | VS Code merge from version 1.59 to 1.62 to keep Azure Data Studio up to date with changes in VS Code UI framework. |
 | Table Designer | New column added to Table Designer for easier access to additional actions specific to individual rows. |
+| Query Plan Viewer | The Top Operations pane view now includes clickable links to Operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
 | Query Plan Viewer | Improved UI on selected operation node in the Execution Plan. |
 | Query Plan Viewer | Execution plan shortcut no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
-| Query Plan Viewer | The Properties view window now responds to changes to the orientation of the plan for a better UI. For example, if a plan is switched to a vertical/horizontal orientation, the Properties view window switches accordingly. |
+| Query Plan Viewer | Plan labels are now updated in the Properties window when plans are compared and the orientation is toggled from horizontal to vertical, and back. |
 | Query Plan Viewer | Updates were made to the Command Palette. All execution plan commands are prefixed with "Execution Plan", so that they are easier to find and use. |
-| Query Plan Viewer | A collapse/expand functionality is now available for execution plans when they are not being compared or vice-versa. |
-| Query Plan Viewer | The "Enable Actual Plan" icon was updated for easier distinguishing from the "Estimated Plan" icon. |
+| Query Plan Viewer | A collapse/expand functionality is now available for plans with numerous operators. |
 
 #### Bug fixes in 1.38.0
 

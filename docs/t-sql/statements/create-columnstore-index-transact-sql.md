@@ -2,7 +2,7 @@
 description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index or creates a nonclustered columnstore index."
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 ms.custom: ""
-ms.date: 06/08/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -136,7 +136,7 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 #### ORDER 
 *Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]*
 
-An ordered clustered columnstore index can be created on columns of any data type except for string columns. Use the `column_store_order_ordinal` column in `sys.index_columns` to determine the order of the column(s) for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index.
+An ordered clustered columnstore index can be created on columns of any data type except for string columns. Use the `column_store_order_ordinal` column in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index.
 
     
 #### WITH options
@@ -372,6 +372,8 @@ If the underlying table has a column of a data type that is not supported for co
 
 LOB data greater than 8 kilobytes is stored in off-row LOB storage with just a pointer to the physical location stored within the column segment.  The size of LOB data stored in off-row LOB, will not be reported in [sys.column_store_segments](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md), [sys.column_store_dictionaries]((../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md), and [sys.dm_db_column_store_row_group_physical_stats]((../../relational-databases/system-catalog-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
   
+LOB data types (the (max) length data types) cannot be the key of an [ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
+
 **Columns that use any of the following data types cannot be included in a columnstore index:**
 -   ntext, text, and image  
 -   nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and prior versions, and nonclustered columnstore indexes) 

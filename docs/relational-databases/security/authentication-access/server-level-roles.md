@@ -3,7 +3,7 @@ title: "Server-level roles | Microsoft Docs"
 description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "07/12/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -68,7 +68,7 @@ The following table shows additional fixed server-level roles that are introduce
 > [!NOTE]
 > These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics.
 
-|Built-in server-level role |Description |
+|Fixed server-level role |Description |
 |------------------------------|-----------------|  
 |**##MS_DatabaseConnector##**|Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to. <br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role.|
 |**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own.|
@@ -83,7 +83,7 @@ The following table shows additional fixed server-level roles that are introduce
 
 ### Permissions of new fixed server roles in SQL Server 2022
 
-Each built-in server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
+Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
 
 |Fixed server-level role  | Server-level permissions | Database-level permissions |
 |---|---|---|

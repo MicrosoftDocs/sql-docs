@@ -15,20 +15,20 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Append-only ledger tables allow only `INSERT` operations on your tables, which ensure that privileged users such as database administrators can't alter data through traditional [Data Manipulation Language](/sql/t-sql/queries/queries) operations. Append-only ledger tables are ideal for systems that don't update or delete records, such as security information event and management systems or blockchain systems where data needs to be replicated from the blockchain to a database. Because there are no `UPDATE` or `DELETE` operations on an append-only table, there's no need for a corresponding history table as there is with [updatable ledger tables](ledger-updatable-ledger-tables.md).
+Append-only ledger tables allow only `INSERT` operations on your tables, which ensure that privileged users such as database administrators can't alter data through traditional [Data Manipulation Language](../../../t-sql/queries/queries.md) operations. Append-only ledger tables are ideal for systems that don't update or delete records, such as security information event and management systems or blockchain systems where data needs to be replicated from the blockchain to a database. Because there are no `UPDATE` or `DELETE` operations on an append-only table, there's no need for a corresponding history table as there is with [updatable ledger tables](ledger-updatable-ledger-tables.md).
 
 :::image type="content" source="media/ledger/ledger-table-architecture-append-only.png" alt-text="Diagram that shows architecture of ledger tables.":::
 
-You can create an append-only ledger table by specifying the `LEDGER = ON` argument in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement and specifying the `APPEND_ONLY = ON` option.
+You can create an append-only ledger table by specifying the `LEDGER = ON` argument in your [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md) statement and specifying the `APPEND_ONLY = ON` option.
 
 > [!IMPORTANT]
 > After a table is created as a ledger table, it can't be reverted to a table that doesn't have ledger functionality. As a result, an attacker can't temporarily remove ledger capabilities, make changes to the table, and then reenable ledger functionality.
 
 ### Append-only ledger table schema
 
-An append-only table needs to have the following [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. When you create an append-only ledger table, `GENERATED ALWAYS` columns will be created in your ledger table. This data is useful for forensics purposes in understanding how data was inserted over time.
+An append-only table needs to have the following [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. When you create an append-only ledger table, `GENERATED ALWAYS` columns will be created in your ledger table. This data is useful for forensics purposes in understanding how data was inserted over time.
 
-If you don't specify the definitions of the `GENERATED ALWAYS` columns in the [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) statement, the system automatically adds them by using the following default names.
+If you don't specify the definitions of the `GENERATED ALWAYS` columns in the [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) statement, the system automatically adds them by using the following default names.
 
 | Default column name | Data type | Description |
 |--|--|--|
@@ -42,7 +42,7 @@ For every append-only ledger table, the system automatically generates a view, c
 ### Ledger view schema
 
 > [!NOTE]
-> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true) statement. For more information, see [ledger view options](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true#ledger-view-options) and the corresponding examples in [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true).
+> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement. For more information, see [ledger view options](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#ledger-view-option) and the corresponding examples in [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |

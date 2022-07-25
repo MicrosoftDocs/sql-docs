@@ -14,7 +14,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Auto Stats Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Auto Stats** event class indicates that an automatic updating of index and column statistics has occurred.  **Auto Stats** also fires when statistics are being loaded for use by the optimizer.
   
 ## Auto Stats Event Class Data Columns  

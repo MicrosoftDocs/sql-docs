@@ -2,17 +2,10 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION"
 titleSuffix: SQL Server (Transact-SQL)
 description: Enable several database configuration settings at the individual database level.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: "katsmith"
-ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "seo-lt-2019"
-  - "event-tier1-build-2022"
 f1_keywords:
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
   - "ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL"
@@ -24,9 +17,16 @@ f1_keywords:
 helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "katsmith"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+ms.date: 06/21/2022
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -129,7 +129,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 9000 } 
 }
 ```
 
@@ -429,17 +429,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 | 9000 }
 
 **APPLIES TO**: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
 
-Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created. The compatibility level is preserved even after database pause/resume, backup/restore operations.
+Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations.
 
 | Compatibility Level |   Comments|  
 |-----------------------|--------------|
-|**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
+|**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine and is represented by `0` in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).  AUTO currently maps to Level 20 functionality. |
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
-|**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. |
+|**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
+|**9000**| Preview compatibility level. Preview features gated under this level are called out in feature-specific documentation. This level also includes abilities of highest non-9000 level.|
 
 EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF }
 

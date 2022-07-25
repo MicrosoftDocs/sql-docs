@@ -1,12 +1,12 @@
 ---
 title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
-ms.date: 05/24/2022
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/06/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: rwestMSFT
-ms.author: randolphwest
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
@@ -15,6 +15,9 @@ monikerRange: ">=sql-server-2016"
 [!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
+
+> [!WARNING]  
+> Effective July 12, 2022, the SQL Registry portal will be retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.

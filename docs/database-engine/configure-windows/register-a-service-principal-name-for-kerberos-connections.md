@@ -151,7 +151,7 @@ setspn -S MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname
 > If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance using a domain user account, use:  
 
 ```  
-SETSPN -S MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+setspn -S MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
 ```  
   
 For a named instance, use:  

@@ -126,7 +126,7 @@ Server srv;
 srv = new Server();   
 //Create a new table in the AdventureWorks2012 database.   
 Database db;   
-db = srv.Databases("AdventureWorks2012");   
+db = srv.Databases["AdventureWorks2012"];   
 Table tb;   
 //Specify the parent database, table schema, and the table name in the constructor.   
 tb = new Table(db, "Test_Table", "HumanResources");   
@@ -183,7 +183,7 @@ Server srv;
 srv = new Server();   
 //Set properties on the uspGetEmployeedManagers stored procedure on the AdventureWorks2012 database.   
 Database db;   
-db = srv.Databases("AdventureWorks2012");   
+db = srv.Databases["AdventureWorks2012"];   
 StoredProcedure sp;   
 sp = db.StoredProcedures("uspGetEmployeeManagers");   
 sp.AnsiNullsStatus = false;   
@@ -240,7 +240,7 @@ Server srv;
 srv = new Server();   
 //Reference the AdventureWorks2012 database.   
 Database db;   
-db = srv.Databases("AdventureWorks2012");   
+db = srv.Databases["AdventureWorks2012"];   
 //Assign the Table object type to a System.Type object variable.   
 Table tb;   
 Type typ;   

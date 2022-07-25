@@ -53,9 +53,9 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 ## To configure SQL Server Agent
 
-1. Select the **Start** button, and then, on the **Start**  menu, Select **Control Panel**.  
-2. In Control Panel, Select **System and Security**, Select **Administrative Tools**, and then select **Local Security Policy**.
-3. In Local Security Policy, Select the chevron to expand the **Local Policies** folder, and then Select the **User Rights Assignment** folder.
+1. Select the **Start** button, and then, on the **Start**  menu, select **Control Panel**.  
+2. In Control Panel, select **System and Security**, select **Administrative Tools**, and then select **Local Security Policy**.
+3. In Local Security Policy, select the chevron to expand the **Local Policies** folder, and then Select the **User Rights Assignment** folder.
 4. Right-click a permission that you want to configure for use with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and select **Properties**.
-5. In the permission's properties dialog box, verify that the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs is listed. If not, Select **Add User or Group**, enter the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs in the **Select Users, Computers, Service Accounts, or Groups** dialog box, and then Select **OK**.
-6. Repeat for each permission that you want to add to run with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. When finished, Select **OK**.
+5. In the permission's properties dialog box, verify that the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs is listed. If not, select **Add User or Group**, enter the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs in the **Select Users, Computers, Service Accounts, or Groups** dialog box, and then Select **OK**.
+6. Repeat for each permission that you want to add to run with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. When finished, select **OK**.

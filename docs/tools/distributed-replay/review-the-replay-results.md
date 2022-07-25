@@ -10,7 +10,7 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 06/20/2022
-monikerRange:  "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # Review the Replay Results
@@ -83,6 +83,6 @@ The following table describes the columns of the result trace data.
 ## See also
 
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
 - [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
 - [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

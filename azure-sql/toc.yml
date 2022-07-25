@@ -125,12 +125,8 @@
           href: database/high-availability-sla.md
         - name: Backup and recovery 
           items:
-          - name: Automated backups
-            href: database/automated-backups-overview.md
           - name: Accelerated database recovery
             href: accelerated-database-recovery.md
-          - name: Recovery using backups
-            href: database/recovery-using-backups.md
           - name: Long-term backup retention
             href: database/long-term-retention-overview.md
 
@@ -191,7 +187,7 @@
       items: 
       - name: Configure temporal retention policy
         href: database/temporal-tables-retention-policy.md
-      - name: Configure backup retention using Azure Blob storage
+      - name: Configure long-term backup retention
         href: database/long-term-backup-retention-configure.md
 
     - name: Security  
@@ -395,6 +391,8 @@
         href: database/service-tier-hyperscale.md
       - name: Hyperscale architecture
         href: database/hyperscale-architecture.md
+      - name: Hyperscale backups 
+        href: database/hyperscale-automated-backups-overview.md
       - name: FAQ
         displayName: Hyperscale frequently asked questions
         href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
@@ -485,6 +483,8 @@
 
     - name: Business continuity
       items: 
+      - name: Automated backups
+        href: database/automated-backups-overview.md
       - name: Active geo-replication
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
@@ -493,6 +493,7 @@
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
         href: database/disaster-recovery-drills.md
+
 
     - name: SQL Data Sync
       items:
@@ -680,8 +681,12 @@
 
     - name: Business continuity
       items: 
+      - name: Change automated backup settings
+        href: database/automated-backups-change-settings.md
       - name: Configure backup retention using Azure Blob storage
         href: database/long-term-backup-retention-configure.md
+      - name: Recover using backups
+        href: database/recovery-using-backups.md
       - name: Create auto-failover group
         href: database/auto-failover-group-configure-sql-db.md
       - name: Configure geo-replication - Portal
@@ -996,6 +1001,8 @@
     items:
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
+    - name: Automated backups
+      href: managed-instance/automated-backups-overview.md 
     - name: Auto-failover groups
       href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences
@@ -1298,6 +1305,10 @@
 
     - name: Configure business continuity 
       items: 
+      - name: Change backup settings
+        href: managed-instance/automated-backups-change-settings.md
+      - name: Recover using backups
+        href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
       - name: Monitor back up
@@ -1351,6 +1362,9 @@
         href: virtual-machines/windows/sql-vm-create-portal-quickstart.md
       - name: PowerShell
         href: virtual-machines/windows/sql-vm-create-powershell-quickstart.md
+      - name: Bicep
+        displayName: Resource Manager, Template, ARM
+        href: virtual-machines/windows/create-sql-vm-bicep.md
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md

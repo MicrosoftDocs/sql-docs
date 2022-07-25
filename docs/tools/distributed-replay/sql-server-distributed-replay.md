@@ -10,7 +10,7 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 06/20/2022
-monikerRange:  "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
+monikerRange:  ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # SQL Server Distributed Replay
@@ -224,5 +224,5 @@ Replaying events associated with missing or incorrect logins results in replay e
 
 ## See also
 
-- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)
+- [Install Distributed Replay - Overview](./install-distributed-replay.md)
 - [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)

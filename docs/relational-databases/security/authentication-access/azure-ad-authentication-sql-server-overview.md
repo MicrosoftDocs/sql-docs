@@ -28,7 +28,7 @@ You can now connect to SQL Server using the following authentication methods usi
 - Azure Active Directory Universal with Multi-Factor Authentication
 - Azure Active Directory access token
 
-The current authentication modes, such as [SQL authentication and Windows authentication](/sql/relational-databases/security/choose-an-authentication-mode) remain unchanged.
+The current authentication modes, such as [SQL authentication and Windows authentication](../choose-an-authentication-mode.md) remain unchanged.
 
 As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL Server. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
@@ -39,9 +39,9 @@ If your Windows Server Active Directory is federated with Azure AD, users can au
 
 ## Connecting SQL Server to Azure to use Azure AD
 
-For SQL Server to communicate with Azure, both SQL Server and the Windows host it runs on must be registered with [Azure Arc](/sql/sql-server/azure-arc/overview). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [SQL Server extension (WindowsAgent.SqlServer)](/sql/sql-server/azure-arc/overview). This will facilitate SQL Server’s  communication with Azure.
+For SQL Server to communicate with Azure, both SQL Server and the Windows host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [SQL Server extension (WindowsAgent.SqlServer)](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
 
-To get started, see [Connect your SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect).
+To get started, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 
 ## Authentication methods
 
@@ -79,4 +79,4 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 ## Next steps
 
-[Connect your SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
+[Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)

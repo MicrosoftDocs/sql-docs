@@ -142,7 +142,7 @@ GO
 ```
 
 #### Extended Event Output
-Using SQL Server Management Studio, connect to the primary SQL Server, and expand the Management node, then expand Extended Events. Locate the session (AlwaysOn_dbfault was the name in the sample above) and expand it to see the output files. Click on the output file and the event file will open into a new tab.
+Using SQL Server Management Studio, connect to the primary SQL Server, and expand the Management node, then expand Extended Events. Locate the session (AlwaysOn_dbfault was the name in the sample above) and expand it to see the output files. Select the output file and the event file will open into a new tab.
 
 Explanation of the fields:
 

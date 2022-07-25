@@ -169,6 +169,8 @@ There is metadata with each segment to allow for fast elimination of segments wi
 After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), the columnstore index will not benefit until it is rebuilt for the first time using a REBUILD or DROP/CREATE. You can see segment elimination boundaries in [sys.column_store_segments](../system-catalog-views/sys-column-store-segments-transact-sql.md). 
 
 Segment elimination does not apply to LOB data types, such as the (max) data type lengths.
+
+Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates.
     
 ## Next steps
 

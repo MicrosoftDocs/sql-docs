@@ -37,7 +37,7 @@ ms.author: wiassaf
   5. Once tuning is complete,  view all recommendations including any columnstore indexes in the **Recommendations** pane (see figure below).      
   ![DTA columnstore index recommendation](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
-  6. Click on the **Definition** hyperlink to view the SQL Data Definition Language (DDL) statement that can create the recommended index. By default, DTA uses the suffix **col** in the name of columnstore indexes to make it easier to identify columnstore indexes (see figure below).
+  6. Select the **Definition** hyperlink to view the SQL Data Definition Language (DDL) statement that can create the recommended index. By default, DTA uses the suffix **col** in the name of columnstore indexes to make it easier to identify columnstore indexes (see figure below).
   ![DTA columnstore index definition](../../relational-databases/performance/media/dta-columnstore-index-definition.gif) 
   
   

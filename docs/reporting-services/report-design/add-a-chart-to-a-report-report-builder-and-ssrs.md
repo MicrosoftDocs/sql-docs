@@ -42,9 +42,10 @@ When you want to summarize data in a visual format in a paginated report, use a 
   
 1.  Create a report and define a dataset. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-2.  On the **Insert** tab, click **Chart**, and then click **Insert Chart**.  
+2.  On the **Insert** tab, select **Chart**, and then select **Insert Chart**.  
+
   
-3.  Click on the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
+3.  Select the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
   
      The **Select Chart Type** dialog box appears.  
   

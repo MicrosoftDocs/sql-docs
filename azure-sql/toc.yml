@@ -393,15 +393,14 @@
         href: database/hyperscale-architecture.md
       - name: Hyperscale backups 
         href: database/hyperscale-automated-backups-overview.md
-      - name: FAQ
-        displayName: Hyperscale frequently asked questions
-        href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
       - name: Replicas
         displayName: Hyperscale replicas
         href: database/service-tier-hyperscale-replicas.md
-      - name: Replicas FAQ
-        displayName: Hyperscale replicas frequently asked questions
-        href: database/service-tier-hyperscale-named-replicas-faq.yml
+      - name: FAQ
+        displayName: Hyperscale frequently asked questions
+        href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
+
+
 
     - name: Purchasing models
       items: 

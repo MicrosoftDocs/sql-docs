@@ -119,7 +119,7 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
    - Assign the certificate from the Azure Key Vault to the application.
    - Saves these settings to Azure Arc.
 
-   :::image type="content" source="media/configure-azure-ad-certificate-application-for-sql-server-instance.png" alt-text="Screenshot of setting Azure Active Directory authentication with automatic certificate and application generation in the Azure portal.":::
+   :::image type="content" source="media/configure-azure-ad-certificate-application-for-sql-server-instance.png" alt-text="Screenshot of setting Azure Active Directory authentication with automatic certificate and application generation in the Azure portal." lightbox="media/configure-azure-ad-certificate-application-for-sql-server-instance.png":::
 
 > [!NOTE]
 > The certificates created for the Azure AD setup are not rotated automatically. Customers can choose to provide their own certificate and application for the Azure AD admin setup. For more information, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).

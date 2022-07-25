@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Learn about which columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  
-## Feature Summary for Product Releases  
+## Feature summary for product releases  
 
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 1. Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Ordered columnstore indexes can improve row-group elimination, which can deliver performance improvements by skipping row groups altogether. Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
 
-1. Predicate pushdown with clustered columnstore rowgroup elimination of strings uses boundary values to optimize string searches, including for ordered clustered columnstore indexes. New rowgroup elimination capabilities extend to string, binary, and guid data types, and the datetimeoffset data type for scale greater than two.
+1. Predicate pushdown with clustered columnstore rowgroup elimination of strings uses boundary values to optimize string searches. All columnstore indexes benefit from enhanced segment elimination by data type. Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], these segment elimination capabilities extend to string, binary, and guid data types, and the datetimeoffset data type for scale greater than two. Previously, columnstore segment elimination applied only to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. 
 
 ## SQL Server 2019 (15.x)
  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] adds these new features.

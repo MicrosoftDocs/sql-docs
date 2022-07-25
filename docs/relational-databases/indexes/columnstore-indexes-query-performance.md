@@ -1,14 +1,13 @@
 ---
 title: "Columnstore indexes - Query performance"
-description: Columnstore indexes - Query performance
+description: "Columnstore index query performance recommendations for achieving the very fast query performance."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 01/11/2019
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Query performance
@@ -24,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ### 1. Organize data to eliminate more rowgroups from a full table scan    
     
--   **Leverage insert order.** In common case in traditional data warehouse, the data is indeed inserted in time order and analytics is done in time dimension. For example,  analyzing sales by quarter. For this kind of  workload, the rowgroup elimination happens automatically. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can find out number rowgroups skipped as part of query processing.    
+-   **Leverage insert order.** In common case in traditional data warehouse, the data is indeed inserted in time order and analytics is done in time dimension. For example,  analyzing sales by quarter. For this kind of workload, the rowgroup elimination happens automatically. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can find out number rowgroups skipped as part of query processing.    
     
 -   **Leverage the rowstore clustered index.** If the common query predicate is on a column (for example, C1) that is unrelated to the insert order of the row, you can create a rowstore clustered index on columns C1 and then create clustered columnstore index by dropping the rowstore clustered index. if you create the clustered columnstore index explicitly using `MAXDOP = 1`, the resulting clustered columnstore index is perfectly ordered on column C1. If you specify `MAXDOP = 8`, then you will see overlap of values across eight rowgroups. A common case of this strategy when you initially create columnstore index with large set of data. Note, for nonclustered columnstore index (NCCI), if the base rowstore table has a clustered index, the rows are already ordered. In this case, the resultant nonclustered columnstore index will automatically be ordered. One important point to note is that columnstore index does not inherently maintain the order of rows. As new rows are inserted or older rows are updated, you may need to repeat the process as the analytics query performance may deteriorate    
     
@@ -117,7 +116,7 @@ For more information, see the [Query Processing Architecture Guide](../../relati
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
  
--	 The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
+-     The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
 -  Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
 -  This aggregate is not a distinct aggregate.
 -  The aggregate column is not a string column.
@@ -160,8 +159,19 @@ With string predicate pushdown, the query execution computes the predicate again
     -   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
     -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
     -   Expression evaluating NULLs are not supported.    
+
+## Segment elimination
+
+Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index.
+
+There is metadata with each segment to allow for fast elimination of segments without reading them. This segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. 
+
+After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), the columnstore index will not benefit until it is rebuilt for the first time using a REBUILD or DROP/CREATE. You can see segment elimination boundaries in [sys.column_store_segments](../system-catalog-views/sys-column-store-segments-transact-sql.md). 
+
+Segment elimination does not apply to LOB data types, such as the (max) data type lengths.
     
-## See Also    
+## Next steps
+
  [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     

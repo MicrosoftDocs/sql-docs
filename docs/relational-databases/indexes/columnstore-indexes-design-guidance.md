@@ -1,14 +1,13 @@
 ---
 title: "Columnstore indexes - Design guidance"
-description: Columnstore indexes - Design guidance
+description: "High-level recommendations for designing columnstore indexes."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "12/01/2017"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Design guidance
@@ -158,6 +157,12 @@ To preserve the sorted order during conversion:
     ON MyFactTable  
     WITH (DROP_EXISTING = ON);  
     ```
+
+### Understand segment elimination
+
+Each rowgroup contains one column segment for every column in the table. Each column segment is compressed together and stored on physical media.
+
+There is metadata with each segment to allow for fast elimination of segments without reading them. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. For more information, see [Segment elimination](columnstore-indexes-query-performance.md#segment-elimination).
 
 ## Related Tasks  
 These are tasks for creating and maintaining columnstore indexes. 

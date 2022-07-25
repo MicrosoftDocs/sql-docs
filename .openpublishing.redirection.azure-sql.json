@@ -457,7 +457,7 @@
     },
     {
       "source_path_from_root": "/azure-sql/database/service-tier-hyperscale-named-replicas-faq.yml",
-      "redirect_url": "/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq",
+      "redirect_url": "/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq#read-scale-out-questions",
       "redirect_document_id": true
     },
     {

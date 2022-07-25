@@ -63,4 +63,3 @@ SELECT @g.ToString();
   
 ## See Also  
  [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  

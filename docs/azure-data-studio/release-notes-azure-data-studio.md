@@ -30,7 +30,7 @@ Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| VS Code merges to 1.62 | This release includes updates to VS Code from the three previous VS Code releases. Read [their release notes]('https://code.visualstudio.com/updates/v1_62') to learn more. |
+| VS Code merges to 1.62 | This release includes updates to VS Code from the three previous VS Code releases. Read [their release notes](https://code.visualstudio.com/updates/v1_62) to learn more. |
 | Table Designer | New column added to Table Designer for easier access to additional actions specific to individual rows. |
 | Query Plan Viewer | The Top Operations pane view now includes clickable links to operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
 | Query Plan Viewer | Improved UI on selected operation node in the Execution Plan. |

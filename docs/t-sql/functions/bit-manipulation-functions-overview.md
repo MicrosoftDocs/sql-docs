@@ -19,7 +19,7 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 
 [!INCLUDE [_ss2022](../../includes/applies-to-version/_ss2022.md)]
 
-Bit manipulation functions such as moving, retrieving (getting), setting, or counting single bits within an integer or binary value, allows you to process and store data more efficiently than with individual bits.
+Bit manipulation functions such as moving, retrieving (getting), setting, or counting single bits within an integer or binary value, allow you to process and store data more efficiently than with individual bits.
 
 A *bit* has two values (`1` or `0`, which represent `on` or `off`, or `true` or `false`). A *byte* is made up of a sequence of 8 bits. Bit manipulation functions in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] treat the "leftmost" bit in a byte as the biggest (the most significant). To the bit manipulation functions, bits are numbered from right to left, with bit `0` being the rightmost and the smallest and bit `7` being the leftmost and largest.
 

@@ -1,7 +1,7 @@
 ---
-title: "What's new in SQL Server 2019 | Microsoft Docs"
+title: "What's new in SQL Server 2019"
 description: Learn about new features for SQL Server 2019 (15.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.date: 11/04/2019
+ms.date: 07/22/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -80,7 +80,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 |Forcing fast forward and static cursors | Provides Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/tune-performance-with-the-query-store.md#ctp23).|
 |Resource governance| The configurable value for the `REQUEST_MAX_MEMORY_GRANT_PERCENT` option of `CREATE WORKLOAD GROUP` and `ALTER WORKLOAD GROUP` has been changed from an integer to a float data type, to allow more granular control of memory limits. See [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) and [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Reduced recompilations for workloads| Improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23). |
-|Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#improved-indirect-checkpoint-scalability).|
 |Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including TempDB) starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].|
 |Scheduler worker migration |Worker migration allows an idle scheduler to migrate a worker from the runnable queue of another scheduler on the same NUMA node and immediately resume the task of the migrated worker. This enhancement provides more balanced CPU usage in situations where long-running tasks happen to be assigned to the same scheduler. See [SQL Server 2019 Intelligent Performance - Worker Migration](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610) for more information. |
 | &nbsp; | &nbsp; |
@@ -219,7 +219,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |New feature or update | Details |
 |:---|:---| 
 |New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. See [Database Engine Configuration - Memory page](./install/instance-configuration.md#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value aligns with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).| 
 |Setup warning on Server/CAL license Product Key|If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. Users can still acknowledge the limitation and continue setup, or enter a License Key that supports the operating system maximum number of processors.|
 | &nbsp; | &nbsp; |
 
@@ -276,5 +276,6 @@ This release of SQL Server Reporting Services features support for Azure SQL Man
 - [SQL Server Workshops](https://aka.ms/sqlworkshops)
 - [[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] release notes](sql-server-version-15-release-notes.md)
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]: Technical white paper](https://aka.ms/sql2019whitepaper)
+- [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

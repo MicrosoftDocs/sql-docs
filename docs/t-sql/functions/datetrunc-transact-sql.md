@@ -75,7 +75,7 @@ The date parameter accepts any expression, column, or user-defined variable that
 
 The returned data type for DATETRUNC is dynamic. DATETRUNC returns a truncated date of the same data type (and, if applicable, the same fractional time scale) as the input date. For example, if DATETRUNC was given a **datetimeoffset(3)** input date, it would return a **datetimeoffset(3)**. If it was given a string literal that could resolve to a **datetime2(7)**, DATETRUNC would return a **datetime2(7)**.
 
-## Fractional Time Scale Precision
+## Fractional time scale precision
 
 Milliseconds have a fractional time scale of 3 (`.123`), microseconds have a fractional time scale of 6 (`.123456`), and nanoseconds have a fractional time scale of 9 (`.123456789`). The **time**, **datetime2**, and **datetimeoffset** data types allow a maximum fractional time scale of 7 (`.1234567`). Therefore, to truncate to the *millisecond* datepart, the fractional time scale must be at least 3. Similarly, to truncate to the *microsecond* datepart, the fractional time scale must be at least 6. DATETRUNC doesn't support the *nanosecond* datepart since no T-SQL date type supports a fractional time scale of 9.
 

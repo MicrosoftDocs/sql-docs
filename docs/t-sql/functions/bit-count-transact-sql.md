@@ -36,19 +36,19 @@ BIT_COUNT ( expression_value )
 
 #### *expression_value*
 
-Any integer or binary expression that is not a large object (LOB).
+Any integer or binary expression that isn't a large object (LOB).
 
 ## Return type
 
 **bigint**
 
-BIT_COUNT does not cast prior to counting the number of bits. This is because the same number can have a different number of ones in its binary representation depending on the data type.
+BIT_COUNT doesn't cast prior to counting the number of bits. This is because the same number can have a different number of ones in its binary representation depending on the data type.
 
 For example, `SELECT BIT_COUNT (CAST (-1 as smallint))` and `SELECT BIT_COUNT (CAST (-1 as int))` will return 16 and 32 respectively. This is intended, as the binary representation of `-1` can have a different number of bits set to 1 depending on the data type.
 
 ## Remarks
 
-In the initial implementation, we will not support Distributed Query functionality for the the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.
 
 ## Examples
 

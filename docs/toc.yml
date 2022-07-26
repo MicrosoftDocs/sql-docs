@@ -16306,7 +16306,7 @@ items:
         - name: PERCENT_RANK
           href: t-sql/functions/percent-rank-transact-sql.md
       - name: Bit manipulation
-        href: t-sql/functions/bit-manipulation-functions-transact-sql.md
+        href: t-sql/functions/bit-manipulation-functions-overview.md
         items:
         - name: LEFT_SHIFT
           href: t-sql/functions/left-shift-transact-sql.md

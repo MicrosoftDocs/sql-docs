@@ -39,7 +39,7 @@ expression_value << shift_amount
 
 #### *expression_value*
 
-Any integer or binary expression that is not a large object (LOB).
+Any integer or binary expression that isn't a large object (LOB).
 
 #### *shift_amount*
 
@@ -55,7 +55,7 @@ LEFT_SHIFT performs a logical shift. After bits are shifted, any vacant position
 
 ## Remarks
 
-In the initial implementation, we will not support Distributed Query functionality for the the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.
 
 ## Examples
 

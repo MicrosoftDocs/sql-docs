@@ -27,7 +27,7 @@ For example, a binary sequence of `00000111` is the decimal equivalent of the nu
 
 00000111 = (2^2 + 2^1 + 2^0 = 4 + 2 + 1 = 7)
 
-What this means in practice is that while [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] stores this value as `11100000` (byte-reversed), the bit manipulation functions will treat it as though it is `00000111`.
+What this means in practice is that while [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] stores this value as `11100000` (byte-reversed), the bit manipulation functions will treat it as though it's `00000111`.
 
 When looking at multiple bytes, the first byte (reading left to right) is the biggest.
 
@@ -35,7 +35,7 @@ You can use the following images to visualize how [!INCLUDE [ssnoversion-md](../
 
 **int**
 
-:::image type="content" source="media/bit-manipulation-functions-overview/int.png" alt-text="Diagram showing an int value where four bytes represent the reversed binary of each byte from left to right.":::
+:::image type="content" source="media/bit-manipulation-functions-overview/int.png" alt-text="Diagram showing an int value where 4 bytes represent the reversed binary of each byte from left to right.":::
 
 **smallint**
 
@@ -57,4 +57,4 @@ The following types aren't supported: **varchar**, **nvarchar**, **image**, **nt
 
 ## Remarks
 
-In the initial implementation, we will not support Distributed Query functionality for the the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.

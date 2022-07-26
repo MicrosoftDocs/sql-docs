@@ -36,7 +36,7 @@ GET_BIT ( expression_value, bit_offset )
 
 #### *expression_value*
 
-Any integer or binary expression that is not a large object (LOB).
+Any integer or binary expression that isn't a large object (LOB).
 
 #### *bit_offset*
 
@@ -52,7 +52,7 @@ GET_BIT will throw an error if *bit_offset* is negative or greater than the last
 
 ## Remarks
 
-In the initial implementation, we will not support Distributed Query functionality for the the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.
 
 ## Examples
 

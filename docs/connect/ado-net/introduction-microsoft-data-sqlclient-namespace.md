@@ -1,7 +1,7 @@
 ---
 title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
-ms.date: 03/31/2022
+ms.date: 07/26/2022
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,6 +21,98 @@ There are a few differences in less-used APIs compared to System.Data.SqlClient 
 ## API reference
 
 The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](/dotnet/api/microsoft.data.sqlclient).
+
+## Release notes for Microsoft.Data.SqlClient 5.0
+
+### Breaking changes in 5.0
+
+- Dropped support for .NET Framework 4.6.1 [#1574](https://github.com/dotnet/SqlClient/pull/1574)
+- Added a dependency on the [Microsoft.SqlServer.Server](https://github.com/dotnet/SqlClient/tree/main/src/Microsoft.SqlServer.Server) package. This new dependency may cause namespace conflicts if your application references that namespace and still has package references (direct or indirect) to System.Data.SqlClient from .NET Core.
+- Dropped classes from the `Microsoft.Data.SqlClient.Server` namespace and replaced them with supported types from the [Microsoft.SqlServer.Server](https://github.com/dotnet/SqlClient/tree/main/src/Microsoft.SqlServer.Server) package.[#1585](https://github.com/dotnet/SqlClient/pull/1585).
+The affected classes and enums are:
+  - Microsoft.Data.SqlClient.Server.IBinarySerialize -> Microsoft.SqlServer.Server.IBinarySerialize
+  - Microsoft.Data.SqlClient.Server.InvalidUdtException -> Microsoft.SqlServer.Server.InvalidUdtException
+  - Microsoft.Data.SqlClient.Server.SqlFacetAttribute -> Microsoft.SqlServer.Server.SqlFacetAttribute
+  - Microsoft.Data.SqlClient.Server.SqlFunctionAttribute -> Microsoft.SqlServer.Server.SqlFunctionAttribute
+  - Microsoft.Data.SqlClient.Server.SqlMethodAttribute -> Microsoft.SqlServer.Server.SqlMethodAttribute
+  - Microsoft.Data.SqlClient.Server.SqlUserDefinedAggregateAttribute -> Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute
+  - Microsoft.Data.SqlClient.Server.SqlUserDefinedTypeAttribute -> Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute
+  - (enum) Microsoft.Data.SqlClient.Server.DataAccessKind -> Microsoft.SqlServer.Server.DataAccessKind
+  - (enum) Microsoft.Data.SqlClient.Server.Format -> Microsoft.SqlServer.Server.Format
+  - (enum) Microsoft.Data.SqlClient.Server.SystemDataAccessKind -> Microsoft.SqlServer.Server.SystemDataAccessKind
+
+### New features in 5.0
+
+- Added support for `TDS8`. To use TDS 8, users should specify Encrypt=Strict in the connection string. [#1608](https://github.com/dotnet/SqlClient/pull/1608) [Read more](#tds-8-enhanced-security)
+- Added support for specifying Server SPN and Failover Server SPN on the connection. [#1607](https://github.com/dotnet/SqlClient/pull/1607) [Read more](#server-spn)
+- Added support for aliases when targeting .NET Core on Windows. [#1588](https://github.com/dotnet/SqlClient/pull/1588) [Read more](#support-for-aliases)
+- Added SqlDataSourceEnumerator. [#1430](https://github.com/dotnet/SqlClient/pull/1430), [Read more](#sql-data-source-enumerator-support)
+- Added a new AppContext switch to suppress insecure TLS warnings. [#1457](https://github.com/dotnet/SqlClient/pull/1457), [Read more](#suppress-insecure-tls-warnings)
+
+### TDS 8 enhanced security
+
+To use TDS 8, specify Encrypt=Strict in the connection string. Strict mode disables TrustServerCertificate (always treated as False in Strict mode). HostNameInCertificate has been added to help some Strict mode scenarios. TDS 8 begins and continues all server communication inside a secure, encrypted TLS connection.
+
+New Encrypt values have been added to clarify connection encryption behavior. `Encrypt=Mandatory` is equivalent to `Encrypt=True` and encrypts connections during the TDS connection negotiation. `Encrypt=Optional` is equivalent to `Encrypt=False` and only encrypts the connection if the server tells the client that encryption is required during the TDS connection negotiation.
+
+`HostNameInCertificate` can be specified in the connection string when using aliases to connect with encryption to a server that has a server certificate with a different name or alternate subject name than the name used by the client to identify the server (DNS aliases, for example). Example usage: `HostNameInCertificate=MyDnsAliasName`
+
+### Server SPN
+
+When connecting in an environment that has unique domain/forest topography, you might have specific requirements for Server SPNs. The ServerSPN/Server SPN and FailoverServerSPN/Failover Server SPN connection string settings can be used to override the auto-generated server SPNs used during integrated authentication in a domain environment
+
+### Support for SQL aliases
+
+Users can configure Aliases by using the SQL Server Configuration Manager. These are stored in the Windows registry and are already supported when targeting .NET Framework. This release brings support for aliases when targeting .NET or .NET Core on Windows.
+
+### SQL Data Source Enumerator support
+
+Provides a mechanism for enumerating all available instances of SQL Server within the local network.
+
+```cs
+using Microsoft.Data.Sql;
+static void Main()  
+  {  
+    // Retrieve the enumerator instance and then the data.  
+    SqlDataSourceEnumerator instance =  
+      SqlDataSourceEnumerator.Instance;  
+    System.Data.DataTable table = instance.GetDataSources();  
+  
+    // Display the contents of the table.  
+    DisplayData(table);  
+  
+    Console.WriteLine("Press any key to continue.");  
+    Console.ReadKey();  
+  }  
+  
+  private static void DisplayData(System.Data.DataTable table)  
+  {  
+    foreach (System.Data.DataRow row in table.Rows)  
+    {  
+      foreach (System.Data.DataColumn col in table.Columns)  
+      {  
+        Console.WriteLine("{0} = {1}", col.ColumnName, row[col]);  
+      }  
+      Console.WriteLine("============================");  
+    }  
+  }  
+```
+
+### Suppress insecure TLS warnings
+
+A security warning is output on the console if the TLS version less than 1.2 is used to negotiate with the server. This warning could be suppressed on SQL connection while `Encrypt = false` by enabling the following AppContext switch on the application startup:
+
+```cs
+Switch.Microsoft.Data.SqlClient.SuppressInsecureTLSWarning
+```
+
+## 5.0 Target platform support
+
+- .NET Framework 4.6.2+ (Windows x86, Windows x64)
+- .NET Core 3.1+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+- .NET Standard 2.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+
+Full release notes, including dependencies, are available in the GitHub Repository: [5.0 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/5.0).
 
 ## Release notes for Microsoft.Data.SqlClient 4.1
 
@@ -57,7 +149,7 @@ Full release notes, including dependencies, are available in the GitHub Reposito
 - Dropped obsolete `Asynchronous Processing` connection property from .NET Framework. [#1148](https://github.com/dotnet/SqlClient/pull/1148)
 - Removed `Configurable Retry Logic` safety switch. [#1254](https://github.com/dotnet/SqlClient/pull/1254) [Read more](#remove-configurable-retry-logic-safety-switch)
 - Dropped support for .NET Core 2.1 [#1272](https://github.com/dotnet/SqlClient/pull/1272)
-- [.NET Framework] Exception will not be thrown if a User ID is provided in the connection string when using `Active Directory Integrated` authentication [#1359](https://github.com/dotnet/SqlClient/pull/1359)
+- [.NET Framework] Exception won't be thrown if a User ID is provided in the connection string when using `Active Directory Integrated` authentication [#1359](https://github.com/dotnet/SqlClient/pull/1359)
 
 ### New features in 4.0
 

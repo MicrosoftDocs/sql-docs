@@ -351,6 +351,8 @@ String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWo
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 
+> [!WARNING]  
+> The above connection string uses `encrypt=false`, which is not recommended for production use. For more information about encrypting your database connection with JDBC, see [Connecting with encryption](connecting-with-ssl-encryption.md).
 Starting from JDBC API 4.0, the `DriverManager.getConnection()` method is enhanced to load JDBC drivers automatically. Therefore, applications don't need to call the `Class.forName` method to register or load the driver when using driver jar libraries.  
   
 When the getConnection method of the DriverManager class is called, an appropriate driver is located from the set of registered JDBC drivers. sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file includes "META-INF/services/java.sql.Driver" file, which contains the **com.microsoft.sqlserver.jdbc.SQLServerDriver** as a registered driver. The existing applications, which currently load the drivers by using the Class.forName method, will continue to work without modification.  

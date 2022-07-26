@@ -347,7 +347,7 @@ To use the sqljdbc.jar class library, applications must first register the drive
 When the driver is loaded, you can establish a connection with a connection URL and the getConnection method of the DriverManager class:
 
 ```java
-String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;user=MyUserName;password=*****;";  
+String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;user=MyUserName;password=*****;encrypt=false;";  
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 

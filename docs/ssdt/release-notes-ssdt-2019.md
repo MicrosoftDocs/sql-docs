@@ -36,13 +36,13 @@ More information is available in release notes.**
 
 - Sometimes this product or Visual Studio Tools for Applications 2019 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, please try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", please try to repair VSTA 2019 via control panel. We've reported this issue to VS team. Sorry for any inconvenience.
 
-- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver15). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
+- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
 
 - SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
 
 ## Offline Installation
 Please follow the below steps to install this product in an offline environment:
-1. Follow this [document](https://docs.microsoft.com/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to create an offline installation of Visual Studio, and make sure following prerequisites are included:
+1. Follow this [document](/visualstudio/install/create-an-offline-installation-of-visual-studio) to create an offline installation of Visual Studio, and make sure following prerequisites are included:
     - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[16.0,)" DisplayName="C# and Visual Basic"
     - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,)" DisplayName="Visual Studio core editor"
     - Prerequisite Id="Microsoft.VisualStudio.Component.SQL.SSDT" Version="[16.0,)" DisplayName="SQL Server Data Tools"
@@ -140,7 +140,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Build Version: 15.0.2000.165
 - Tested against Visual Studio 2019 16.9
 - Whats' new:
-    1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
+    1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
     1. Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. 
     1. List available locations based on selected subscription in Integration Runtime Creation Wizard
 - Bug fixes:
@@ -162,7 +162,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Build Version: 15.0.2000.152
 - Tested against Visual Studio 2019 16.8
 - Whats' new:
-    1. Add ExecuteOnProxy property on Execute SQL Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
+    1. Add ExecuteOnProxy property on Execute SQL Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
 - Bug fixes:
     1. Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component.
     1. Fixed some issues related to accessibility and high-DPI.
@@ -349,7 +349,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - What's New:
     1. Fixed major UI layout issues in high DPI mode.
     1. Upgraded .NET framework version to 4.7 for script task/component when the target server version is SQL Server 2019
-    1. Added ConnectByProxy property in ODBC Connection Manager so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis) in ODBC connection manager.
+    1. Added ConnectByProxy property in ODBC Connection Manager so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis) in ODBC connection manager.
     1. Added localization support for the installer and the designer UI when the target server version is SQL Server 2014, or 2016. Now we support following languages:
         - Chinese (Simplified)
         - Chinese (Traditional)

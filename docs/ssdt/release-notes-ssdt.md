@@ -13,7 +13,7 @@ ms.date: 04/14/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
-# Release notes for SQL Server Data Tools (SSDT)
+# Release notes for SQL Server Data Tools (SSDT) in VS2017
 
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 

@@ -12,31 +12,37 @@ ms.custom: seo-lt-2019
 ms.date: 07/26/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
-This project may be used for building high performance data integration and workflow solutions, including extraction, transformation, and loading (ETL) operations for data warehousing. Currently the supported target server version starts from SQL Server 2012 up to 2022.
+# Release notes for SQL Server Data Tools (SSDT) in VS2019
+
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
+
+> [!IMPORTANT]
+> Release notes updates for **SSDT 2019 and later** are now listed under [Visual Studio](/visualstudio/ide/whats-new-visual-studio-docs).
+> You can download the [SSAS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects), [SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects), and the [SSRS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) 2019 and later VSIX files from the [Visual Studio Marketplace](<https://marketplace.visualstudio.com/>).
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
 ## Important
   - **Version 3.16 is the latest general availability (GA) version, which does not support target server version SqlServer2022. Download [SQL Server Integration Services Projects 3.16](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.16/1645603822968/Microsoft.DataTools.IntegrationServices.exe).
 More information is available in release notes.**
-  - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, please manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/en-us/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/en-us/download/details.aspx?id=58228)
+  - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, please manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
 
 ## Common Issues
-- In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/en-us/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/en-us/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
-  - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-  - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-  - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-  - [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+  - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+  - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+  - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+  - [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
 
 - Sometimes this product or Visual Studio Tools for Applications 2019 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, please try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", please try to repair VSTA 2019 via control panel. We've reported this issue to VS team. Sorry for any inconvenience.
 
-- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver15). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/en-us/download/details.aspx?id=50402).
+- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver15). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
 
 - SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
 
 ## Offline Installation
 Please follow the below steps to install this product in an offline environment:
-1. Follow this [document](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to create an offline installation of Visual Studio, and make sure following prerequisites are included:
+1. Follow this [document](https://docs.microsoft.com/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to create an offline installation of Visual Studio, and make sure following prerequisites are included:
     - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[16.0,)" DisplayName="C# and Visual Basic"
     - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,)" DisplayName="Visual Studio core editor"
     - Prerequisite Id="Microsoft.VisualStudio.Component.SQL.SSDT" Version="[16.0,)" DisplayName="SQL Server Data Tools"
@@ -134,7 +140,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Build Version: 15.0.2000.165
 - Tested against Visual Studio 2019 16.9
 - Whats' new:
-    1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
+    1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
     1. Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. 
     1. List available locations based on selected subscription in Integration Runtime Creation Wizard
 - Bug fixes:
@@ -156,7 +162,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Build Version: 15.0.2000.152
 - Tested against Visual Studio 2019 16.8
 - Whats' new:
-    1. Add ExecuteOnProxy property on Execute SQL Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
+    1. Add ExecuteOnProxy property on Execute SQL Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
 - Bug fixes:
     1. Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component.
     1. Fixed some issues related to accessibility and high-DPI.
@@ -301,8 +307,8 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Build Version: 15.0.2000.68
 - This is the general available (GA) release.
 - What's New:
-    1. Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=100619).
-    1. Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=58228).
+    1. Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
+    1. Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=58228).
     1. Added localization support for designer UI when target server version is SQL Server 2012. Please refer to the release notes of version 3.2 for the full list of supported languages.
 - Bug Fixes:
     1. Fixed an issue that SSIS debugger may occasionally fail to be launched due to IDtsHost interface not registered when target server version is SQL Server 2017 or 2019.
@@ -343,7 +349,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - What's New:
     1. Fixed major UI layout issues in high DPI mode.
     1. Upgraded .NET framework version to 4.7 for script task/component when the target server version is SQL Server 2019
-    1. Added ConnectByProxy property in ODBC Connection Manager so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis) in ODBC connection manager.
+    1. Added ConnectByProxy property in ODBC Connection Manager so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis) in ODBC connection manager.
     1. Added localization support for the installer and the designer UI when the target server version is SQL Server 2014, or 2016. Now we support following languages:
         - Chinese (Simplified)
         - Chinese (Traditional)

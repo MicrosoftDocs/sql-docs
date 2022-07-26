@@ -1,3 +1,17 @@
+---
+title: Release notes for SQL Server Data Tools (SSDT)
+description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
+ms.prod: sql
+ms.prod_service: sql-tools
+ms.technology: ssdt
+ms.topic: conceptual
+author: chugugrace
+ms.author: chugu
+ms.reviewer: maghan, drskwier
+ms.custom: seo-lt-2019
+ms.date: 07/26/2022
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
+---
 This project may be used for building high performance data integration and workflow solutions, including extraction, transformation, and loading (ETL) operations for data warehousing. Currently the supported target server version starts from SQL Server 2012 up to 2022.
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.

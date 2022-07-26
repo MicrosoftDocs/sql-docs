@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 07/25/2022
+ms.date: 07/26/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -56,8 +56,8 @@ This release is community technology preview (CTP) 2.1. CTP 2.1 includes updates
      - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
 - [Performance](#performance)
   - Query Store enabled by default for new databases
-  - Parameter sensitive plan optimization
-  - Degree of parallelism (DOP) feedback
+  - Parameter sensitive plan optimization - Supportability
+  - Degree of parallelism (DOP) feedback - Supportability
 - [Management](#management)
   - Install Azure Arc agent with Configuration Manager
   - Attach to Azure from setup - Azure Arc-enabled instance

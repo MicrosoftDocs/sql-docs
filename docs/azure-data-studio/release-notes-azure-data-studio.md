@@ -34,7 +34,7 @@ Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 | Table Designer | New column added to Table Designer for easier access to additional actions specific to individual rows. |
 | Query Plan Viewer | The Top Operations pane view now includes clickable links to operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
 | Query Plan Viewer | Improved UI on selected operation node in the Execution Plan. |
-| Query Plan Viewer | The keyboard command CTRL + M no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
+| Query Plan Viewer | The keyboard command **CTRL + M** no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
 | Query Plan Viewer | Plan labels are now updated in the Properties window when plans are compared and the orientation is toggled from horizontal to vertical, and back. |
 | Query Plan Viewer | Updates were made to the Command Palette. All execution plan commands are prefixed with "Execution Plan", so that they are easier to find and use. |
 | Query Plan Viewer | A collapse/expand functionality is now available at the operator level to allow users to hide or display sections of the plan during analysis. |

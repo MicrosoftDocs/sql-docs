@@ -16307,6 +16307,19 @@ items:
           href: t-sql/functions/percentile-disc-transact-sql.md
         - name: PERCENT_RANK
           href: t-sql/functions/percent-rank-transact-sql.md
+      - name: Bit manipulation
+        href: t-sql/functions/bit-manipulation-functions-overview.md
+        items:
+        - name: LEFT_SHIFT
+          href: t-sql/functions/left-shift-transact-sql.md
+        - name: RIGHT_SHIFT
+          href: t-sql/functions/right-shift-transact-sql.md
+        - name: BIT_COUNT
+          href: t-sql/functions/bit-count-transact-sql.md
+        - name: GET_BIT
+          href: t-sql/functions/get-bit-transact-sql.md
+        - name: SET_BIT
+          href: t-sql/functions/set-bit-transact-sql.md
       - name: Collation
         items:
         - name: Collation - COLLATIONPROPERTY
@@ -16467,7 +16480,6 @@ items:
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
         - name: DATETTRUNC
           href: t-sql/functions/datetrunc-transact-sql.md
-
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
         - name: EOMONTH

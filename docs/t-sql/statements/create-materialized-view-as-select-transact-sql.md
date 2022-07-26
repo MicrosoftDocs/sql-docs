@@ -79,7 +79,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Is the name of the view. View names must follow the rules for identifiers. Specifying the view owner name is optional.  
 
 #### *distribution option*     
-Only HASH and ROUND_ROBIN distributions are supported. For details and to understand how to choose the best distribution column, see [CREATE TABLE Table distribution options](create-table-azure-sql-data-warehouse.md#TableDistributionOptions).
+Only HASH and ROUND_ROBIN distributions are supported. For more information on distribution options, see [CREATE TABLE Table distribution options](create-table-azure-sql-data-warehouse.md#TableDistributionOptions). For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor). 
 
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* )     
 Distributes the rows based on the values of a single column.

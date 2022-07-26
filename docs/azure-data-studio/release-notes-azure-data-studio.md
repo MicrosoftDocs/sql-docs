@@ -4,7 +4,7 @@ description: This article has release notes for Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: timioshin
+author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
@@ -30,21 +30,21 @@ Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| VS Code merge | VS Code merge from version 1.59 to 1.62 to keep Azure Data Studio up to date with changes in VS Code UI framework. |
+| VS Code merges to 1.62 | This release includes updates to VS Code from the three previous VS Code releases. Read [their release notes]('https://code.visualstudio.com/updates/v1_62') to learn more. |
 | Table Designer | New column added to Table Designer for easier access to additional actions specific to individual rows. |
-| Query Plan Viewer | The Top Operations pane view now includes clickable links to Operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
+| Query Plan Viewer | The Top Operations pane view now includes clickable links to operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
 | Query Plan Viewer | Improved UI on selected operation node in the Execution Plan. |
-| Query Plan Viewer | Execution plan shortcut no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
+| Query Plan Viewer | The keyboard command CTRL + M no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
 | Query Plan Viewer | Plan labels are now updated in the Properties window when plans are compared and the orientation is toggled from horizontal to vertical, and back. |
 | Query Plan Viewer | Updates were made to the Command Palette. All execution plan commands are prefixed with "Execution Plan", so that they are easier to find and use. |
-| Query Plan Viewer | A collapse/expand functionality is now available for plans with numerous operators. |
+| Query Plan Viewer | A collapse/expand functionality is now available at the operator level to allow users to hide or display sections of the plan during analysis. |
 
 #### Bug fixes in 1.38.0
 
 | New Item | Details |
 |----------|---------|
 | Table Designer | Fix for edit data tab switching back to previously selected column when adding a new row. Editing the table is now disabled while new rows are being added and only reenabled afterwards. |
-| Query Editor | Fixed coloring issues for new T-SQL functions in Query Editor. |
+| Query Editor | Fixed coloring issues for new T-SQL functions in the Query Editor. |
 | Query Plan Viewer | Fixed bug that caused custom zoom level spinner to allow values outside valid range. |
 | Dashboard | Fixed issue that caused incorrect displaying of insight widgets on the dashboard. |
 

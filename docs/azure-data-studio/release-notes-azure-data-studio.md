@@ -43,7 +43,7 @@ Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| Table Designer | Fix for edit data tab switching back to previously selected column when adding a new row. Editing the table is now disabled while new rows are being added and only reenabled afterwards. |
+| Table Designer | Error found in edit data tab when switching back to previously selected column when adding a new row. To fix this, editing the table is now disabled while new rows are being added and only reenabled afterwards. |
 | Query Editor | Fixed coloring issues for new T-SQL functions in the Query Editor. |
 | Query Plan Viewer | Fixed bug that caused custom zoom level spinner to allow values outside valid range. |
 | Dashboard | Fixed issue that caused incorrect displaying of insight widgets on the dashboard. |

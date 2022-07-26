@@ -121,13 +121,13 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
                    [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
+                  end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
                    [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
+                  start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
                    [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
+                  end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
                    [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES]
         ]
@@ -560,6 +560,8 @@ ROWGUIDCOL doesn't enforce uniqueness of the values stored in the column and doe
 
 #### [ {ADD | DROP} PERSISTED ]  
 Specifies that the PERSISTED property is added to or dropped from the specified column. The column must be a computed column that's defined with a deterministic expression. For columns specified as PERSISTED, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] physically stores the computed values in the table and updates the values when any other columns on which the computed column depends are updated. By marking a computed column as PERSISTED, you can create indexes on computed columns defined on expressions that are deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
+
+`SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 Any computed column that's used as a partitioning column of a partitioned table must be explicitly marked PERSISTED.
 

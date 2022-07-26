@@ -202,7 +202,6 @@ SELECT TOP 3
 	
 	  sqlConnectionSB.UserID = "MyLogin";  // "@yourservername"  as suffix sometimes.  
 	  sqlConnectionSB.Password = "MyPassword";  
-	  sqlConnectionSB.IntegratedSecurity = false;  
 	
 	  // Adjust these values if you like. (ADO.NET 4.5.1 or later.)  
 	  sqlConnectionSB.ConnectRetryCount = 3;  

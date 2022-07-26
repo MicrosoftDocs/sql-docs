@@ -23,7 +23,7 @@ dev_langs:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 ---
 # DROP SIGNATURE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Drops a digital signature from a stored procedure, function, trigger, or assembly.  
   

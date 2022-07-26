@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "buffer manager, SQL Server"
   - "buffer pool, SQL Server"
   - "resource monitor, SQL Server"
-ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rwestMSFT
 ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -332,10 +331,11 @@ However, the use of mutexes can lead to contention if many threads are allocatin
 
 Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] can dynamically detect contention on a specific CMemThread object and promote the object to a per-node or a per-CPU based implementation. Once promoted, the PMO remains promoted until the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is restarted. CMemThread contention can be detected by the presence of high CMEMTHREAD waits in the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV, and by observing the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV columns *contention_factor*, *partition_type*, *exclusive_allocations_count*, and *waiting_tasks_count*.
 
-## See Also
-[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
-[Reading Pages](../relational-databases/reading-pages.md)   
-[Writing Pages](../relational-databases/writing-pages.md)   
-[How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
-[Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
-[Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)
+## Next steps
+
+ - [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ - [Reading Pages](../relational-databases/reading-pages.md)   
+ - [Writing Pages](../relational-databases/writing-pages.md)   
+ - [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+ - [Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
+ - [Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

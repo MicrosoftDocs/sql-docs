@@ -305,13 +305,13 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
-Memory Grant Feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
+Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
-Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be significantly out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we are always adjusting memory based on the last used grant value. The next image shows the behavior possible with Memory Grant Feedback without percentile and persistence mode.
+Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be significantly out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we are always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
 
 :::image type="content" source="./media/memory-grant-feedback-without-percentile-and-persistence-mode.svg" alt-text="A graph of granted vs actual needed memory behavior in Memory Grant feedback without percentile and persistence mode memory grant feedback." :::
 
-As you can see, in this unusual but possible query behavior, the oscillation between the actual needed and granted memory amounts results in wasted and insufficient memory if the query execution itself alternates in terms of the amount of memory. In this scenario, Memory Grant Feedback disables itself, recognizing it's doing more harm than good. 
+As you can see, in this unusual but possible query behavior, the oscillation between the actual needed and granted memory amounts results in wasted and insufficient memory if the query execution itself alternates in terms of the amount of memory. In this scenario, memory grant feedback disables itself, recognizing it's doing more harm than good. 
 
 Using a percentile-based calculation over recent history of the query, instead of simply the last execution, we can smooth the grant size values based on past execution usage history and try to optimize for minimizing spills. For example, the same alternating workload would see the following memory grant behavior:
 
@@ -319,13 +319,13 @@ Using a percentile-based calculation over recent history of the query, instead o
 
 The query optimizer uses a high percentile of past memory grant sizing requirements for executions of the cached plan to calculate memory grant sizes, using data persisted in the Query Store. The percentile adjustment which will perform the memory grant adjustments is based on the recent history of executions. Over time, the memory grant given reduces spills and wasted memory. 
 
-Persistence also applies to [DOP Feedback](#dop-feedback) and [CE Feedback](#ce-feedback), also detailed in this article.
+Persistence also applies to [DOP feedback](#dop-feedback) and [CE feedback](#ce-feedback), also detailed in this article.
 
-### Before you enable Memory Grant Feedback: Persistence and Percentile
+### Before you enable memory grant feedback: persistence and percentile
 
 It is recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you are getting the intended benefit from the feature.
 
-### Enabling Memory Grant Feedback: Persistence and Percentile
+### Enabling memory grant feedback: persistence and percentile
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you are connected to when executing the query.
 
@@ -552,7 +552,7 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 ## <a id="dop-feedback"></a> Degree of parallelism (DOP) feedback
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces a new feature to called DOP Feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid excess parallelism.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces a new feature to called DOP feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism.
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. 
 
@@ -566,7 +566,7 @@ For complete information, see [Optimized plan forcing with Query Store](optimize
 
 ## CE feedback
 
-For complete information, see [Cardinality estimation (CE) Feedback](cardinality-estimation-sql-server.md#cardinality-estimation-ce-feedback).
+For complete information, see [Cardinality estimation (CE) feedback](cardinality-estimation-sql-server.md#cardinality-estimation-ce-feedback).
 
 ## See also
 

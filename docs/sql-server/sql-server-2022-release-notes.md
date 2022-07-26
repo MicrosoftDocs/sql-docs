@@ -28,11 +28,14 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 ## Feature notes
 
-This section identifies known issues you may experience with this product:
+This section identifies known issues you may experience with this product.
 
 ## Build number
 
-The CTP 2.1 build number for SQL Server 2022 Preview is `16.0.600.9`.
+| Preview build | Version number | Date |
+|:--|:--|:--|
+| CTP 2.1 | 16.0.700.4 | July 27, 2022 |
+| CTP 2.0 | 16.0.600.9 | May 20, 2022 |
 
 ## Next steps
 

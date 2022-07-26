@@ -12,7 +12,7 @@ ms.reviewer: "wiassaf"
 ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
-ms.date: 07/25/2022
+ms.date: 07/26/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -256,7 +256,9 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.  
 
-To enable row mode memory grant feedback in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], enable database compatibility level 150 or higher for the database you are connected to when executing the query. The Query Store must be enabled for the database and in a "read write" state.
+To enable row mode memory grant feedback in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], enable database compatibility level 150 or higher for the database you are connected to when executing the query. 
+
+Memory grant feedback does not require the Query Store, however, the persistence improvements introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
 
 Row mode memory grant feedback activity will be visible via the `memory_grant_updated_by_feedback` extended event.
 
@@ -340,8 +342,6 @@ Both of these features are enabled by default when the above instructions are fo
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
 `ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE = OFF;`
-
-Disabling memory grant feedback percentile will also remove existing collected feedback.
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
 

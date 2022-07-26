@@ -9,6 +9,7 @@ ms.date: 06/15/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
+ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

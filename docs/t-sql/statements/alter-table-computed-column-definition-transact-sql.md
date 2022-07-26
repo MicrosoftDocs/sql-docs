@@ -15,7 +15,7 @@ dev_langs:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the properties of a computed column that is added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

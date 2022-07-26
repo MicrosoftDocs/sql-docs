@@ -16,7 +16,7 @@ ms.custom: "seo-lt-2019"
 ---
 # FOR XML support for the user-defined data types (UDT)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 FOR XML doesn't support common language runtime (CLR) user-defined data types (UDTs).
 

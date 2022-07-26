@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_column_distribution_properties (Transact-SQL)"
 description: "The sys.pdw_column_distribution_properties system catalog view returns distribution information for columns."
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/20/2022
 ms.reviewer: wiassaf
 ms.prod: sql

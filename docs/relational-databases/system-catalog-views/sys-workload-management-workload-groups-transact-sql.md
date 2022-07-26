@@ -1,8 +1,8 @@
 ---
 title: "sys.workload_management_workload_groups (Transact-SQL)"
 description: sys.workload_management_workload_groups (Transact-SQL)
-author: "ronortloff"
-ms.author: "rortloff"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: "wiassaf"
 ms.date: 11/05/2019
 ms.prod: sql

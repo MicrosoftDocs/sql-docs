@@ -1,8 +1,8 @@
 ---
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/20/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"

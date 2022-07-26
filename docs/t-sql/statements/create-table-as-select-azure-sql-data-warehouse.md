@@ -1,9 +1,10 @@
 ---
 title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
-author: VanMSFT
-ms.author: vanto
-ms.date: "06/14/2022"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto, xiaoyul
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
@@ -49,6 +50,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <distribution_option> ::=
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )
       | DISTRIBUTION = ROUND_ROBIN 
       | DISTRIBUTION = REPLICATE
     }   
@@ -89,11 +91,22 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 <a name="table-distribution-options-bk"></a>
 
 ### Table distribution options
+For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
 
-For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Preview*) 
+Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+> [!NOTE]
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>     - To regain access to MCD tables, opt-in the preview again. 
+>     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
+
+For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
 <a name="table-partition-options-bk"></a>
 

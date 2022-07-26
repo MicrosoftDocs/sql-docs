@@ -63,7 +63,7 @@ A very common solution to this problem is to ensure transaction log backups are 
 
 ### Log truncation explained
 
-There is a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there is empty space inside the log file to reclaim. Shrinking a log file alone cannot solve the problem of a full log file, instead, you must discover why the log file is full and cannot be truncated.
+There's a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there's empty space inside the log file to reclaim. Shrinking a log file alone can't solve the problem of a full log file, instead, you must discover why the log file is full and can't be truncated.
 
 > [!WARNING]
 > Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and might slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
@@ -72,7 +72,7 @@ There is a difference between truncating a transaction log and shrinking a trans
 
 To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
-The following set of T-SQL commands will help you identify if a database transaction log is not truncated and the reason for it. The following script will also recommend steps to resolve the issue:
+The following set of T-SQL commands will help you identify if a database transaction log isn't truncated and the reason for it. The following script will also recommend steps to resolve the issue:
 
 
 ```tsql
@@ -166,7 +166,7 @@ SELECT * FROM #CannotTruncateLog_Db
 
 
 DECLARE no_truncate_db CURSOR FOR
-    SELECT log_reuse_wait, log_reuse_wait_desc, @dbname, database_id, recovery_model_desc FROM #CannotTruncateLog_Db;
+    SELECT log_reuse_wait, log_reuse_wait_desc, DbName, database_id, recovery_model_desc FROM #CannotTruncateLog_Db;
 
 
 OPEN no_truncate_db
@@ -339,7 +339,7 @@ Sometimes you just have to end the transaction; you may have to use the [KILL](.
 
 ### AVAILABILITY_REPLICA log_reuse_wait
 
-When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow, and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
 
 ### CHECKPOINT log_reuse_wait
 
@@ -354,7 +354,7 @@ select * from sys.dm_db_log_info(db_id('dbname'))
 
 ### For more information on log_reuse_wait factors
 
-For a more details see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
+For more details see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
 
 ## 2. Resolve full disk volume
 
@@ -384,7 +384,7 @@ For more information see [Add Data or Log Files to a Database](../../relational-
 ### Utility script for recommended actions
 
 
-These steps can be partly-automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
+These steps can be partly automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
 
 
 ```tsql

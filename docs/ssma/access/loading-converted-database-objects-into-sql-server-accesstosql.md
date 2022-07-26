@@ -72,7 +72,7 @@ To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
     -   A cross sign means no action will be taken.  
   
-    Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
+    Select the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
 If you want to save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or you want to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  

@@ -102,7 +102,7 @@ Beginning with SQL Server 2012 SP1 CU2, you can back up and restore directly to 
 For more information, see the one of the following articles based on your version of SQL Server:
 
 - **SQL Server 2016 and later**: [SQL Server Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service)
-- **SQL Server 2014**: [SQL Server 2014 Backup to URL](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014)
+- **SQL Server 2014**: [SQL Server 2014 Backup to URL](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url)
 - **SQL Server 2012**: [SQL Server 2012 Backup to URL](/previous-versions/sql/sql-server-2012/jj919148(v=sql.110))
 
 ### Managed Backup
@@ -114,7 +114,7 @@ Beginning in SQL Server 2016, Managed Backup got additional options for scheduli
 For more information, see one of the following articles based on your version of SQL Server:
 
 - [Managed Backup to Microsoft Azure for SQL Server 2016 and later](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure)
-- [Managed Backup to Microsoft Azure for SQL Server 2014](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure?view=sql-server-2014)
+- [Managed Backup to Microsoft Azure for SQL Server 2014](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure)
 
 ## Decision matrix
 

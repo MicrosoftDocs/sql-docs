@@ -47,7 +47,7 @@ Any integer.
 
 The same type as *expression_value*.
 
-The *bit_offset* parameter is used to identify the *n*th bit of the data to set. In integer types, the `0^`th bit is the least significant bit. In binary types, the `0^`th bit is the least significant bit in the rightmost byte.
+The *bit_offset* parameter is used to identify the *n*th bit of the data to set. In integer types, the `0`th bit is the least significant bit. In binary types, the `0`th bit is the least significant bit in the rightmost byte.
 
 *bit_value* can be an integer or a bit. However, the only valid values for *bit_value* are 1 and 0, regardless of the data type. SET_BIT will throw an error if *bit_value* isn't 1 or 0 or null.
 

@@ -46,7 +46,7 @@ Any integer.
 
 **bit**
 
-The *bit_offset* parameter in GET_BIT is used to identify the *n*th bit of the data to get or set. In integer types, the `0^`th bit is the least significant bit. In binary types, the `0^`th bit is the least significant bit in the rightmost byte.
+The *bit_offset* parameter in GET_BIT is used to identify the *n*th bit of the data to get or set. In integer types, the `0`th bit is the least significant bit. In binary types, the `0`th bit is the least significant bit in the rightmost byte.
 
 GET_BIT will throw an error if *bit_offset* is negative or greater than the last bit in the data type.
 

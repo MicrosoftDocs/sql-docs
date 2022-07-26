@@ -148,7 +148,7 @@ To recover a long-term backup by using the Azure portal, go to your logical serv
 ### [Azure CLI](#tab/azure-cli)
 
 
-To restore a database by using the Azure CLI, see [az sql db ltr-backup restore](/cli/azure/sql/ltr-backup#az-sql-db-ltr-backup-restore).
+To restore a database by using the Azure CLI, see [az sql db ltr-backup restore](/cli/azure/sql/db/ltr-backup#az-sql-db-ltr-backup-restore).
 
 ### [PowerShell](#tab/powershell)
 

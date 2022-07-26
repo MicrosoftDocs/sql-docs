@@ -112,21 +112,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 <sup>1</sup> Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
 
 For more information, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
-    
+
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
  
--     The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
--  Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
--  This aggregate is not a distinct aggregate.
--  The aggregate column is not a string column.
--  The aggregate column is not a virtual column. 
--  The input and output datatype must be one of the following and must fit within 64 bits.
-    -  `tinyint`, `int`, `bigint`, `smallint`, `bit`
-    -  `smallmoney`, `money`, `decimal` and `numeric` with precision <= 18
-    -  `smalldate`, `date`, `datetime`, `datetime2`, `time`
-    
- Aggregate push down is further accelerated by efficient Aggregation on compressed/encoded data in cache-friendly execution and by leveraging SIMD    
+- The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
+- Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
+- This aggregate is not a distinct aggregate.
+- The aggregate column is not a string column.
+- The aggregate column is not a virtual column. 
+- The input and output datatype must be one of the following and must fit within 64 bits:
+    - `tinyint`, `int`, `bigint`, `smallint`, `bit`
+    - `smallmoney`, `money`, `decimal` and `numeric` with precision <= 18
+    - `smalldate`, `date`, `datetime`, `datetime2`, `time`
     
  ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
     

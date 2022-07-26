@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  <sup>3</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
  
 ## SQL Server 2022 (16.x)
- [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] adds these new features. For more information, see [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../../sql-server/what-s-new-in-sql-server-2022.md).
+ [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] adds these new features. For more information, see [What's new in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]](../../sql-server/what-s-new-in-sql-server-2022.md).
 
 1. Ordered clustered columnstore indexes improve performance for queries based on ordered column predicates. Ordered columnstore indexes can improve row-group elimination, which can deliver performance improvements by skipping row groups altogether. Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
 

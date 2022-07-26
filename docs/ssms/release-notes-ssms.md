@@ -58,7 +58,7 @@ SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you nee
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
-| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure Portal for container deletion. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure portal for container deletion. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -134,7 +134,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
-| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure Portal for container deletion. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure portal for container deletion. |
 
 ### 18.11.1
 
@@ -152,12 +152,12 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
 | Data Classification | Introduced Set Microsoft Information Protection Policy menu option. |
-| Data Classification | Added M365 authentication window to set MIP policy. |
-| Data Classification | Classify Data page and Add Classification page display the M365 sensitivity labels when in MIP policy mode. |
+| Data Classification | Added Microsoft 365 authentication window to set MIP policy. |
+| Data Classification | Classify Data page and Add Classification page display the Microsoft 365 sensitivity labels when in MIP policy mode. |
 | Data Classification | Added warning icon against the columns if the prior classification and current Information Protection policy mode doesn't match. |
-| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Managed Instance.  See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Azure SQL Managed Instance.  See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Introduced failover wizard to assist with migration of databases from SQL Server to Azure SQL Managed Instance using the link feature. |
-| Link feature for Azure SQL Managed Instance | Introduced dashboard to monitor the status of the hybrid link established between SQL Server and Managed Instance. |
+| Link feature for Azure SQL Managed Instance | Introduced dashboard to monitor the status of the hybrid link established between SQL Server and Azure SQL Managed Instance. |
 
 #### Known issues (18.11.1)
 
@@ -294,9 +294,9 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.30.0. |
 | Always Encrypted | Scripting support for Ledger tables. |
-| Analysis Services | Support for XMLA endpoint to refresh datasets in PowerBI premium Gen 2. |
+| Analysis Services | Support for XMLA endpoint to refresh datasets in Power BI premium Gen 2. |
 | Azure SQL DB | Adds support for backup_storage_redundancy in database create/modify dialogs. |
-| Azure SQL DB | Adds `create login` script support for AAD-based login syntax. |
+| Azure SQL DB | Adds `create login` script support for Azure AD-based login syntax. |
 | Integration Services | Improvement for IR Creation Wizard, Job Migration Wizard and SSIS package scheduler to support AzureUSGovernment and AzureChinaCloud. |
 | Intellisense | Syntax highlighting for External Language Management and Query Store (query_store_plan_feedback, query_store_query_variant). |
 
@@ -377,7 +377,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.27.0. |
 | Azure SQL DB | Improved the diagnostic reporting when an error occurs while interacting with Azure. |
 | General SSMS | Added command `/resetuserdata` to ssms.exe, which resets the user data including the "Most Recently Used" lists. |
-| General SSMS | Updated MSODBC and OLEDB drivers installed with SSMS. The updated version to MSODBC notably adds a workaround to connection error *AADSTS530000* (AAD configuration with Conditional Access policies that would require Windows Account Manager). See [Using Azure Active Directory](../connect/odbc/using-azure-active-directory.md) for more information. |
+| General SSMS | Updated MSODBC and OLEDB drivers installed with SSMS. The updated version to MSODBC notably adds a workaround to connection error *AADSTS530000* (Azure AD configuration with Conditional Access policies that would require Windows Account Manager). See [Using Azure Active Directory](../connect/odbc/using-azure-active-directory.md) for more information. |
 | IntelliSense/Editor | Added support for [greatest](../t-sql/functions/logical-functions-greatest-transact-sql.md) and [least](../t-sql/functions/logical-functions-least-transact-sql.md) in IntelliSense |
 | IntelliSense/Editor | Added support for BACKUP_STORAGE_REDUNDANCY syntax (CREATE/ALTER DATABASE). |
 | ShowPlan | Always show Estimated Number of Rows for All Executions property |
@@ -390,7 +390,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Always Encrypted | Fixed the Always Encrypted wizard to not include a port number in key paths for column master keys stored in Azure Key Vault. The bug caused failures in the ODBC and PHP drivers that didn't expect port numbers in key paths. |
 | Always On Availability Group | Fixed an issue where the "Add New Availability Group" Wizard doesn't join AG databases into new AG automatically on secondary replica. |
 | Auditing | Fixed an issue where SSMS was throwing an error dialog when trying to bring up the Properties on Audit Specification. |
-| Auditing | Fixed an issue were some Audit Specifications wizards and property dialogs where not working properly on some localized versions of SSMS (e.g. Create, Japanese). |
+| Auditing | Fixed an issue were some Audit Specifications wizards and property dialogs were not working properly on some localized versions of SSMS (e.g. Create, Japanese). |
 | Azure SQL DB | Fixed an issue that was causing the "Create firewall rule" to fail in some cases. |
 | Azure SQL DB | Fixed an issue where the "Properties" dialog on a Table was displaying the incorrect server name (local machine instead of the Azure SQL DB server name). |
 | Azure SQL DB | Fixed an issue that was causing the "Create firewall rule" to fail when the server name had invalid characters (such as capital letters) in the name. |
@@ -624,7 +624,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | Fixed an issue where database properties "Size" display the Max Size instead of the actual size of the database for SQL Azure DBs (note: for DW, it still shows the Max Size). |
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
-| General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics aren't updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| General SSMS | Fixed an issue on the **Statistic Properties** dialog were selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics aren't updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
 | General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
@@ -699,7 +699,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Integration Services | Support migrating on-premises SSIS agent jobs to ADF pipelines and triggers.
 | Integration Services | Made an improvement for the user experience of exporting SSIS projects from SSIS DB. Compared with the old Export, which loaded and upgraded packages in the SSIS project, the new version-independent Export won't load and upgrade packages in the SSIS project. Instead, it keeps packages in the projects as they are in SSIS DB except changing protection level to EncryptSensitiveWithUserKey. |
 | SMO/Scripting | Added new DwMaterializedViewDistribution property to View object. |
-| SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-prem). |
+| SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-premises). |
 | SMO/Scripting | Added *Notebook* as a destination for Generate Scripts wizard. |
 | SMO/Scripting | Added support for *Azure Synapse Analytics serverless SQL pool*. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name, and engineEdition fields can now contain usual comma-separated lists (*platform*: \[*Windows*, *Linux*\]), not only regular expressions (*platform*: *\/Windows\|Linux\/*)
@@ -759,7 +759,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | SMO/Scripting | Fixed an issue related to scripting External objects. |
 | SMO/Scripting | Fixed an issue where *Generate Scripts* wasn't allowing choosing the scripting option for Extended Properties against SQL Database. Also, fixed the scripting of such extended properties. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Wrong help link in XTPHashAvgChainBuckets rule. |
-| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38262124) and [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
+| XEvent UI | Fixed an issue here items in the grid were being selected on hovering. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38262124) and [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 #### Known issues (18.5)
 

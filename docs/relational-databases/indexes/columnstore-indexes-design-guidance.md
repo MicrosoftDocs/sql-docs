@@ -51,7 +51,7 @@ Consider using a clustered columnstore index when:
 
 - Each partition has at least a million rows. Columnstore indexes have rowgroups within each partition. If the table is too small to fill a rowgroup within each partition, you won't get the benefits of columnstore compression and query performance.
 - Queries primarily perform analytics on ranges of values. For example, to find the average value of a column, the query needs to scan all the column values. It then aggregates the values by summing them to determine the average.
-- Most of the inserts are on large volumes of data with minimal updates and deletes. Many workloads such as Internet of Things (IOT) insert large volumes of data with minimal updates and deletes. These workloads can benefit from the compression and query performance gains that comes from using a clustered columnstore index.
+- Most of the inserts are on large volumes of data with minimal updates and deletes. Many workloads such as Internet of Things (IOT) insert large volumes of data with minimal updates and deletes. These workloads can benefit from the compression and query performance gains that come from using a clustered columnstore index.
 
 Don't use a clustered columnstore index when:
 
@@ -190,4 +190,4 @@ To create an empty columnstore index for:
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)], refer to [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
-For more information on how convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
+For more information on how to convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).

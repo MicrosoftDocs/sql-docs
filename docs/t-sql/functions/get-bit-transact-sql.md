@@ -52,7 +52,7 @@ GET_BIT will throw an error if *bit_offset* is negative or greater than the last
 
 ## Remarks
 
-In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, Distributed Query functionality for the bit manipulation functions within linked server or ad hoc queries (OPENQUERY) won't be supported.
 
 ## Examples
 

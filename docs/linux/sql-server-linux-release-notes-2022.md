@@ -48,6 +48,10 @@ If you're updating existing SQL Server packages, run the appropriate update comm
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="ctp21"></a> CTP 2.1 (July 2022)
+
+SQL Server 2022 CTP 2.1 (16.0.700.4) Linux packages and containers, as well as Azure Images, will be available soon at their current release locations.
+
 ## <a id="ctp20"></a> CTP 2.0 (May 2022)
 
 The following section provides package locations and known issues for the first public community technology preview (CTP). To learn more about new features [!INCLUDE[sssql22](../includes/sssql22-md.md)] running on Linux, see the [What's new in SQL Server 2022 Preview](../sql-server/what-s-new-in-sql-server-2022.md).

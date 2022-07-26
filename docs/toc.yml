@@ -7592,6 +7592,8 @@ items:
           href: relational-databases/polybase/polybase-virtualize-parquet-file.md       
         - name: Virtualize CSV file in Azure Storage
           href: relational-databases/polybase/virtualize-csv.md                           
+        - name: Virtualize delta table in Azure Storage
+          href: relational-databases/polybase/virtualize-delta.md                           
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups

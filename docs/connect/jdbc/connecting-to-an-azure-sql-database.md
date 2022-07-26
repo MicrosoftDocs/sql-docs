@@ -31,7 +31,7 @@ To connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should c
   
 ## Login timeout
 
-When connecting to Azure SQL databases the recommended default `loginTimeout` is 30 seconds. If you are connecting to a serverless instance, it's recommended to use an even longer `loginTimeout` of 60 seconds or more. If the serverless instance has been idle, it can take some time to wake up on an initial connection. For more information on how to set the `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
+When connecting to Azure SQL databases, the recommended default `loginTimeout` is 30 seconds. If you're connecting to a serverless instance, it's recommended to use an even longer `loginTimeout` of 60 seconds or more. If the serverless instance has been idle, it can take some time to wake up on an initial connection. For more information on how to set the `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
 
 ## Connections dropped
 

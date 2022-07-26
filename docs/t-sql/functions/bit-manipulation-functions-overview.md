@@ -57,4 +57,4 @@ The following types aren't supported: **varchar**, **nvarchar**, **image**, **nt
 
 ## Remarks
 
-In the initial implementation, we won't support Distributed Query functionality for the bit manipulation function intrinsics, within linked server and ad hoc queries.
+In the initial implementation, Distributed Query functionality for the bit manipulation functions within linked server or ad hoc queries (OPENQUERY) will not be supported.

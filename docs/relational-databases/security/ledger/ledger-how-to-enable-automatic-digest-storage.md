@@ -17,7 +17,7 @@ zone_pivot_groups: as1-azuresql-sql
 
 # Enable automatic digest storage
 
-[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 and Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 ::: zone pivot="as1-azure-sql-database"
 

@@ -1,5 +1,5 @@
 ---
-title: Release notes for SQL Server Data Tools (SSDT)
+title: Release notes for SQL Server Data Tools (SSDT) in VS2019
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ This project may be used for building high performance data integration and work
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
-# Important
+## Important
   - **Version 3.16 is the latest general availability (GA) version, which does not support target server version SqlServer2022. Download [SQL Server Integration Services Projects 3.16](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.16/1645603822968/Microsoft.DataTools.IntegrationServices.exe).
 More information is available in release notes.**
   - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, please manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/en-us/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/en-us/download/details.aspx?id=58228)
 
-# Common Issues
+## Common Issues
 - In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/en-us/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/en-us/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
   - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
   - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
@@ -34,7 +34,7 @@ More information is available in release notes.**
 
 - SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
 
-# Offline Installation
+## Offline Installation
 Please follow the below steps to install this product in an offline environment:
 1. Follow this [document](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to create an offline installation of Visual Studio, and make sure following prerequisites are included:
     - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[16.0,)" DisplayName="C# and Visual Basic"
@@ -48,7 +48,7 @@ Please follow the below steps to install this product in an offline environment:
 
 1. VS Community does not support offline activation. To use this product with VS Community, you must login to your Microsoft account occasionally in VS Community. If you want to use this product in a totally offline environment, we recommend you to install this product on VS Professional or Enterprise, which support offline activation via a product key.
 
-# Release Notes
+## Release Notes
   **Version 4.1**
 - Release Date: Jul 26th, 2022
 - Build Version: 16.0.694.0

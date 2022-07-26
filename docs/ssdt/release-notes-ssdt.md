@@ -1,5 +1,5 @@
 ---
-title: Release notes for SQL Server Data Tools (SSDT)
+title: Release notes for SQL Server Data Tools (SSDT) in VS2017
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2017 and earlier Visual Studio versions."
 ms.prod: sql
 ms.prod_service: sql-tools

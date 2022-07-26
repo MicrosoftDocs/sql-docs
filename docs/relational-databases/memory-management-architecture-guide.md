@@ -64,7 +64,7 @@ By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-
 
 If the lock-pages-in-memory privilege (LPIM) is granted (on 32-bit or 64-bit systems), we strongly recommend that you set max server memory to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB). For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Locked Pages in Memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
-If the Locked pages in memory privilege is not enabled, SQL Sever will switch to using conventional memory and in cases of OS memory exhaustion, error 17890 may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+If the Locked pages in memory privilege is not enabled, SQL Server will switch to using conventional memory and in cases of OS memory exhaustion, error 17890 may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
@@ -296,7 +296,7 @@ Memory brokers monitor the demand consumption of memory by each component and th
 For more information about memory brokers, see [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
 
 ### Error Detection  
-Database pages can use one of two optional mechanisms that help insure the integrity of the page from the time it is written to disk until it is read again: torn page protection and checksum protection. These mechanisms allow an independent method of verifying the correctness of not only the data storage, but hardware components such as controllers, drivers, cables, and even the operating system. The protection is added to the page just before writing it to disk, and verified after it is read from disk.
+Database pages can use one of two optional mechanisms that help ensure the integrity of the page from the time it is written to disk until it is read again: torn page protection and checksum protection. These mechanisms allow an independent method of verifying the correctness of not only the data storage, but hardware components such as controllers, drivers, cables, and even the operating system. The protection is added to the page just before writing it to disk, and verified after it is read from disk.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824. 
 

@@ -58,7 +58,7 @@ Joins are expressed logically using the following [!INCLUDE[tsql](../../includes
 
 Specifying the join conditions in the `FROM` clause helps separate them from any other search conditions that may be specified in a `WHERE` clause, and is the recommended method for specifying joins. A simplified ISO `FROM` clause join syntax is:
 
-```
+```sql
 FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 

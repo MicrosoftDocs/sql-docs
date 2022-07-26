@@ -143,7 +143,8 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with SQL Server 2022) or higher.
 
-- Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user cancelled query is also perceived as a regression. The DOP feedback does not recompile plans.
+- Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. The DOP feedback does not recompile plans.
+
 
 - Stable feedback is re-verified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 

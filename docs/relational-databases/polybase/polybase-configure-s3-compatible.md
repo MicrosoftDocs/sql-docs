@@ -24,7 +24,7 @@ This article explains how to use PolyBase to query external data in an S3-compat
 To use the S3-compatible object storage integration features, you will need the following tools and resources:
 
 * Install the PolyBase feature for SQL Server.
-* Install [SQL Server Management Studio (SSMS)](https://aka.ms/ssms) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+* Install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 * S3-compatible storage.
 * An S3 bucket created. Buckets cannot be created or configured from SQL Server.
 * A user (`Access Key ID`) has been configured and the secret (`Secret Key ID`) and that user is known to you. You will need both to authenticate against the S3 object storage endpoint.
@@ -109,3 +109,4 @@ SELECT * FROM sys.external_data_sources;
 
  - To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md)
  - [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md)
+ - For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).

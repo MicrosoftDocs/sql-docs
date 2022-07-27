@@ -98,7 +98,7 @@ To use the Machine Learning extension in Azure Data Studio, follow the steps bel
 
 1. Open the **Connections** viewlet in Azure Data Studio.
 
-1. Right Select on your server and select **Manage**.
+1. Right-click on your server and select **Manage**.
 
 1. Select **Machine Learning** in the left side menu under **General**.
 

@@ -1,19 +1,18 @@
 ---
+title: Create and Edit an Oracle CDC Service
 description: "Create and Edit an Oracle CDC Service"
-title: "Create and Edit an Oracle CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
-ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/20/2017"
 ---
+
 # Create and Edit an Oracle CDC Service
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]

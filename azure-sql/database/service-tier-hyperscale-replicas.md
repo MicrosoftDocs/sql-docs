@@ -24,7 +24,7 @@ Secondary replicas are always read-only, and can be of three different types:
 
 - High Availability replica
 - Geo-replica
-- Named replica (in [Preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/))
+- Named replica
 
 
 Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together.
@@ -48,7 +48,7 @@ Server=tcp:<myserver>.database.windows.net;Database=<mydatabase>;ApplicationInte
 
 All HA replicas are identical in their resource capacity. If more than one HA replica is present, the read-intent workload is distributed arbitrarily across all available HA replicas. When there are multiple HA replicas, keep in mind that each one could have different data latency with respect to data changes made on the primary. Each HA replica uses the same data as the primary on the same set of page servers. However, local data caches on each HA replica reflect the changes made on the primary via the transaction log service, which forwards log records from the primary replica to HA replicas. As the result, depending on the workload being processed by an HA replica, application of log records may happen at different speeds, and thus different replicas could have different data latency relative to the primary replica.
 
-## Named replica (in Preview)
+## Named replica
 
 A named replica, just like an HA replica, uses the same page servers as the primary replica. Similar to HA replicas, there is no data copy needed to add a named replica. 
 
@@ -65,10 +65,9 @@ As a result, named replicas offers several benefits over HA replicas, for what c
 - users connected to a named replica will suffer no disconnection if the primary replica is scaled up or down; at the same time users connected to primary replica will be unaffected by named replicas scaling up or down
 -	workloads running on any replica, primary or named, will be unaffected by long running queries running on other replicas
 
-The main goal of named replicas is to enable massive OLTP [read scale-out](read-scale-out.md) scenario, and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads. Examples of how to create such solutions are available here:
+The main goal of named replicas is to enable a broad variety of [read scale-out](read-scale-out.md) scenarios, and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads. Examples of how to create such solutions are available here:
 
 - [OLTP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-oltp-scaleout)
-- [HTAP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-htap)
 
 Aside from the main scenarios listed above, named replicas offer flexibility and elasticity to also satisfy many other use cases:
 - [Access Isolation](hyperscale-named-replica-security-configure.md): you can grant access to a specific named replica, but not the primary replica or other named replicas.
@@ -184,7 +183,7 @@ az sql db delete -g MyResourceGroup -s contosoeast -n WideWorldImporters_NamedRe
 ### Known issues
 
 #### Partially incorrect data returned from sys.databases
-During Public Preview, row values returned from `sys.databases`, for named replicas, in columns other than `name` and `database_id`, may be inconsistent and incorrect. For example, the `compatibility_level` column for a named replica could be reported as 140 even if the primary database from which the named replica has been created is set to 150. A workaround, when possible, is to get the same data using the  `DATABASEPROPERTYEX()`  function, which will return correct data.
+Row values returned from `sys.databases`, for named replicas, in columns other than `name` and `database_id`, may be inconsistent and incorrect. For example, the `compatibility_level` column for a named replica could be reported as 140 even if the primary database from which the named replica has been created is set to 150. A workaround, when possible, is to get the same data using the  `DATABASEPROPERTYEX()`  function, which will return correct data.
 
 ## Geo-replica
 

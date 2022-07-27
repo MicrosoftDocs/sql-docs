@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Table Value Constructor (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified either as the VALUES clause of an INSERT ... VALUES statement, or as a derived table in either the USING clause of the MERGE statement or the FROM clause.
   

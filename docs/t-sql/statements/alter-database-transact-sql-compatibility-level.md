@@ -3,7 +3,7 @@ title: "ALTER DATABASE compatibility level (Transact-SQL)"
 description: ALTER DATABASE compatibility level (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/26/2022
+ms.date: 07/11/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -35,7 +35,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ```syntaxsql
 ALTER DATABASE database_name
-SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+SET COMPATIBILITY_LEVEL = { 160 | 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -45,7 +45,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 *database_name*
 Is the name of the database to be modified.
 
-COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 }
+COMPATIBILITY_LEVEL { 160 \| 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 }
 Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. The following compatibility level values can be configured (not all versions supports all of the above listed compatibility level):
 
 <a name="supported-dbcompats"></a>
@@ -54,8 +54,8 @@ Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|160, 150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|150|160, 150, 140, 130, 120, 110, 100|
 |[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -105,7 +105,7 @@ SELECT SERVERPROPERTY('ProductVersion');
 > [!NOTE]
 > Not all features that vary by compatibility level are supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-To determine the current compatibility level, query the **compatibility_level** column of [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+To determine the current compatibility level, query the `compatibility_level` column of [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ```sql
 SELECT name, compatibility_level FROM sys.databases;

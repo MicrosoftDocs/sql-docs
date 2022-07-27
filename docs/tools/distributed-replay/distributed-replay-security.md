@@ -9,7 +9,7 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 06/20/2022
-monikerRange:  "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15"
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # Distributed Replay Security
@@ -137,4 +137,4 @@ We recommend that you only use Distributed Replay in a test environment. After y
 ## See also
 
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)
+- [Install Distributed Replay - Overview](./install-distributed-replay.md)

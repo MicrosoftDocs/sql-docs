@@ -4,7 +4,7 @@ description: This article provides a step-by-step procedure for installing a new
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.date: 07/25/2022
+ms.date: 07/27/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
-ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: rwestMSFT
 ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
@@ -454,14 +453,14 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
   
 1. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.  
 
-1. On the **Activation** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key.
+1. On the **Activation** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or you have purchased a license for a specific Edition and have a Product key.
   
    To continue, select **Next**.
   
 1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.  
 
    > [!NOTE]
-   > If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or click **Back** and enter a License Key that supports the operating system maximum number of processors.
+   > If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a Product Key that supports the operating system maximum number of processors.
 
    > [!NOTE]
    > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
@@ -470,7 +469,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
   
 1. The **Microsoft Update** page will appear next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.  
 
-1. On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.  
+1. On the **Product Updates** page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critical product updates are displayed. If no product updates are discovered, Setup doesn't display this page and automatically advances to the **Install Setup Files** page.  
 
 1. On the **Install Setup Files** page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for Setup is found and you specify to include it, that update will also be installed. If no update is found, Setup will automatically advance.
   
@@ -497,19 +496,19 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
      > [!NOTE]
      > The path specified for each of the above options must be different.  
 
-    [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces **Azure extension for SQL Server**. This shared feature deploys **Azure Arc SQL Extension**. Azure Arc SQL Extension is a service for integration scenarios with Azure, like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md). This feature is not selected by default. However, if this control is selected and disabled (you can't un-select it), it means that the extension was installed previously.
+    [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces **Azure extension for SQL Server** as a shared feature. Azure Arc SQL Extension is a service for integration scenarios with Azure, like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md). Azure Arc SQL Extension is a service for integration scenarios with Azure, and is required to enable Microsoft Defender for Cloud, Purview, Azure Active directory and other Azure services. This feature is not selected by default. If you select Azure extension for SQL Server you must have an active Azure subscription and a service principle to authenticate the SQL Server instance to Azure. You also need to provide a set of additional parameters. However, if this control is selected and disabled (you can't un-select it), it means that the extension was already installed on your machine. 
 
-1. If you include **Azure extension for SQL Server**, setup presents **Enable Azure connected features**. Provide the following information:
+1. If you include **Azure extension for SQL Server**, setup presents **Enable Azure connected features** dialog. Provide the following required information:
 
-    * Azure login or service principal. If you provide the service principal, provide the service principal secret.
-    * **Azure subscription ID**: Azure subscription the SQL Server instance resource will be created.
+    * Azure service principal. If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
+    * **Azure subscription ID**: Azure subscription where the SQL Server instance resource will be created.
     * **Azure resource group**: Azure resource group where the SQL Server instance resource will be created.
     * **Azure region**: Azure region where the SQL Server instance resource will be created.
     * **Azure tenant ID**: Azure tenant ID in which the service principal exists.
-    * **Proxy server URL**: (Optional) - Name of the proxy server used to connect to Azure Arc.
+    * **Proxy server URL**: (Optional) - Name of the HTTP proxy server used to connect to Azure Arc.
 
     > [!NOTE]
-    > If the server is already enabled for Azure Arc, some values will be populated, and you won't be able to change them. For example, if you are installing a second instance of SQL Server, and the previous instance is enrolled, setup uses information from the previous instance.
+    > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale.md#connect-multiple-instances). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
   
 1. The **Feature Rules** page automatically advances if all rules pass.  
   

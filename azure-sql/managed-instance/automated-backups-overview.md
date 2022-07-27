@@ -31,7 +31,6 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 
 This article describes the automated backup feature for Azure SQL Managed Instance. 
 
-For Azure SQL Database, see [Automated backups for SQL Database](../database/automated-backups-overview.md).   
 To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [Recover using automated database backups](recovery-using-backups.md). 
 
 
@@ -39,7 +38,7 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 ## What is a database backup?
 
-Database backups are an essential part of any business continuity and disaster recovery strategy, because they protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) for both single and pooled databases.
+Database backups are an essential part of any business continuity and disaster recovery strategy, because they help protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) for both single and pooled databases.
 
 Databases in Azure SQL Managed Instance use SQL Server engine technology to back up and restore data.
 
@@ -69,7 +68,7 @@ To learn more about storage redundancy, see [Data redundancy](/azure/storage/com
 
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. 
 
-Changes made to backup storage redundancy are applicable to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups at the time the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
+Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
 You can choose one of the following storage redundancies for backups:
 
@@ -77,7 +76,10 @@ You can choose one of the following storage redundancies for backups:
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 - **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
 
-  The result is three synchronous copies in the primary region, and three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
+  The result is:
+  
+  - Three synchronous copies in the primary region.
+  - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
 - **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region. 
 
   The data is also replicated to a secondary geographic region for protection from regional disasters. In that region, you also have three synchronous copies that were copied over from the primary region to the secondary region asynchronously. 
@@ -100,7 +102,7 @@ You can use these backups to:
 
 ## <a id="restore-capabilities"></a>Restore capabilities and features
 
-This table summarizes the capabilities and features of [point-in-time restore](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention backups](../database/long-term-retention-overview.md).
+This table summarizes the capabilities and features of [point-in-time restore](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention](../database/long-term-retention-overview.md).
 
 | Backup properties | PITR | Geo-restore | LTR |
 |---|---|---|---|
@@ -125,7 +127,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 
 ## Restoring a database from backup 
 
-To perform a restore, see [Restore database from backups](recovery-using-backups.md). You can try backup configuration and restore operations by using the following examples.
+To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can try backup configuration and restore operations by using the following examples.
 
 | Operation | Azure portal | Azure CLI | Azure PowerShell |
 |---|---|---|---|
@@ -139,12 +141,12 @@ To perform a restore, see [Restore database from backups](recovery-using-backups
 
 The first full backup is scheduled immediately after a new database is created or restored, or after backup redundancy changes. This backup usually finishes within 30 minutes, but it can take longer when the database is large. 
 
-For a new database, the backup is fast. But the backup time can vary for a restore database, and it depends on the size of the database. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. 
+For a new database, the backup is fast. But the backup time can vary for a restored database, and it depends on the size of the database. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. 
 
 After the first full backup, all further backups are scheduled and managed automatically. The exact timing of all database backups is determined by the SQL Managed Instance service as it balances the overall system workload. You can't change the schedule of backup jobs or disable them. 
 
 > [!IMPORTANT]
-> For a new, restored, or copied database, the point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
+> For a new, restored, or copied database, the point-in-time restore capability becomes available when the initial transaction log backup that follows the initial full backup is created.
 
 ## Backup storage consumption
 
@@ -156,7 +158,7 @@ In other words, for any point in time during the retention period, there must be
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3-4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
 
 Azure SQL Managed Instance computes your total used backup storage as a cumulative value. Every hour, this value is reported to the Azure billing pipeline. The pipeline is responsible for aggregating this hourly usage to calculate your consumption at the end of each month. After the database is deleted, consumption decreases as backups age out and are deleted. After all backups are deleted and PITR is no longer possible, billing stops.
 
@@ -176,7 +178,7 @@ Backup storage consumption up to the maximum data size for a database is not cha
 
 ## Backup retention
 
-Azure SQL Managed Instance provides both short-term and long-term retention of backups. Short-term retention backups allow PITR within the retention period for the database. Long-term retention provides backups for various compliance requirements.  
+Azure SQL Managed Instance provides both short-term and long-term retention of backups. Short-term retention allows PITR within the retention period for the database. Long-term retention provides backups for various compliance requirements.  
 
 ### Short-term retention
 
@@ -184,7 +186,7 @@ For all new, restored, and copied databases, Azure SQL Managed Instance retains 
 
 You can specify your backup storage redundancy option for STR when you create your instance, and then change it at a later time. If you change your backup redundancy option after your instance is created, new backups will use the new redundancy option. Backup copies made with the previous STR redundancy option are not moved or copied. They're left in the original storage account until the retention period expires, which can be 1 to 35 days. 
 
-You can [change backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. 
+You can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. 
 
 If you delete a database, the system keeps backups in the same way that it would for an online database with its specific retention period. However, for a deleted database, the retention period is updated from 1-35 days to 0-35 days, making it possible to delete backups manually. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](../database/long-term-retention-overview.md).
 
@@ -196,98 +198,100 @@ If you delete a database, the system keeps backups in the same way that it would
 
 With SQL Managed Instance, you can configure full LTR backups for up to 10 years in Azure Blob Storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. 
 
-To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term backup retention](../database/long-term-retention-overview.md). 
+To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](../database/long-term-retention-overview.md). 
 
-LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time the LTR policy is defined and cannot be changed, even if the STR backup storage redundancy changes in the future. 
+LTR backup storage redundancy in Azure SQL Managed Instance is inherited from the backup storage redundancy used by STR at the time that the LTR policy is defined. You can't change it, even if the STR backup storage redundancy changes in the future. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-managed-instance) to estimate the cost of LTR storage.
 
 ## Backup storage costs
 
-Azure SQL Managed Instance computes your total billable backup storage as a cumulative value across all backup files. Every hour, this value is reported to the Azure billing pipeline, which aggregates this hourly usage to get your backup storage consumption at the end of each month. If a database is deleted, backup storage consumption will gradually decrease as older backups age out and are deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets. Once all backups are deleted, billing stops. 
+Azure SQL Managed Instance computes your total billable backup storage as a cumulative value across all backup files. Every hour, this value is reported to the Azure billing pipeline. The pipeline aggregates this hourly usage to get your backup storage consumption at the end of each month. 
 
-The price for backup storage varies and depends on your chosen backup storage redundancy option, and your region. Backup storage is charged per GB/month consumed, at the same rate for all backups. 
+If a database is deleted, backup storage consumption will gradually decrease as older backups age out and are deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets. After all backups are deleted, billing stops. 
 
-Backup storage redundancy impacts backup costs in the following way:
+The price for backup storage varies. It depends on your chosen backup storage redundancy option and your region. Backup storage is charged based on gigabytes consumed per month, at the same rate for all backups. 
 
-- locally-redundant price = published price
-- zone-redundant price = published price x 1.25
-- geo-redundant price =  published price x 2
-- geo-zone-redundant price = published price x 3.4
+Backup storage redundancy affects backup costs in the following way:
+
+- `Locally redundant price = published price`
+- `Zone-redundant price = published price x 1.25`
+- `Geo-redundant price = published price x 2`
+- `Geo-zone-redundant price = published price x 3.4`
 
 For pricing, review the [Azure SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/) page. 
 
-
 > [!NOTE]
-> Azure invoice will show only the excess backup storage consumed, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4TB of data storage, you will get 4TB of free backup storage space. In case that you have used the total of 5.8TB of backup storage space, Azure invoice will show only 1.8TB, as only excess backup storage used is charged.
+> An Azure invoice shows only the excess backup storage consumption, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4 TB of data storage, you'll get 4 TB of free backup storage space. If you use a total of 5.8 TB of backup storage space, the Azure invoice will show only 1.8 TB, because you're charged only for excess backup storage that you've used.
 
-For managed instances, the total billable backup storage size is aggregated at the instance level and is calculated as follows:
+For managed instances, the total size of billable backup storage is aggregated at the instance level and is calculated as follows:
 
 `Total billable backup storage size = (total size of full backups + total size of differential backups + total size of log backups) – maximum instance data storage`
 
-Total billable backup storage, if any, will be charged in GB/month per region as per the rate of the backup storage redundancy used. Backup storage consumption depends on the workload and size of individual databases, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
+Total billable backup storage, if any, is charged in gigabytes per month for each region, according to the rate of the backup storage redundancy that you've used. Backup storage consumption depends on the workload and size of individual databases and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
 
-As a simplified example, assume a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month * 24 hours per day). SQL Managed Instance will report to Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the amount/GB/month rate in your region.
+As a simplified example, assume that a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month times 24 hours per day). SQL Managed Instance will report to the Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the rate for gigabytes per month in your region.
 
-Now, a more complex example. Suppose the same idle database has its retention increased from seven days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Managed Instance would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB/month. Retention costs do not increase immediately, but gradually every day since the amount of backups grow until they reach the maximum retention period of 14 days. 
+Here's another example. Suppose the same idle database has its retention increased from 7 days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Managed Instance would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB per month. Retention costs don't increase immediately. They increase gradually every day, because the backups grow until they reach the maximum retention period of 14 days.
 
-Actual backup billing scenarios are more complex. Because the rate of changes in the database depends on the workload and is variable over time, the size of each differential and log backup will vary as well, causing the hourly backup storage consumption to fluctuate accordingly. Furthermore, each differential backup contains all changes made in the database since the last full backup, thus the total size of all differential backups gradually increases over the course of a week, and then drops sharply once an older set of full, differential, and log backups ages out. For example, if a heavy write activity such as index rebuild has been run just after a full backup completed, then the modifications made by the index rebuild will be included in the transaction log backups taken over the duration of rebuild, in the next differential backup, and in every differential backup taken until the next full backup occurs. For the latter scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
+Actual backup billing scenarios are more complex. Because the rate of changes in the database depends on the workload and is variable over time, the size of each differential and log backup will also vary. The hourly consumption of backup storage will fluctuate accordingly. 
 
-### Monitor costs
+Each differential backup also contains all changes made in the database since the last full backup. So, the total size of all differential backups gradually increases over the course of a week. Then it drops sharply after an older set of full, differential, and log backups ages out. 
 
-To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal, select **Cost Management**, and then select **Cost analysis**. Select the desired subscription as the **Scope**, and then filter for the time period and service that you're interested in as follows:
+For example, assume that a heavy write activity, such as index rebuild,  runs just after a full backup is completed. The modifications that the index rebuild makes will then be included:
+
+- In the transaction log backups taken over the duration of the rebuild.
+- In the next differential backup.
+- In every differential backup taken until the next full backup occurs. 
+
+For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
+
+### Monitoring costs
+
+To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 
 1. Add a filter for **Service name**.
-2. In the drop-down list select **sql managed instance** for managed instance.
+2. In the drop-down list, select **sql managed instance** for a managed instance.
 3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the drop-down list select **managed instance pitr backup storage**. Meters will show up only if there is backup storage consumption.
-5. To monitor LTR backup costs, in the drop-down list select **sql managed instance - ltr backup storage**. Meters will show up only if there is backup storage consumption.
+4. To monitor PITR backup costs, in the drop-down list, select **managed instance pitr backup storage**. Meters will show up only if backup storage consumption exists.
 
-The **Storage** and **compute** subcategories might interest you as well, but they're not associated with backup storage costs.
+   To monitor LTR backup costs, in the drop-down list, select **sql managed instance - ltr backup storage**. Meters will show up only if backup storage consumption exists.
 
-:::image type="content" source="../database/media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Backup storage cost analysis":::
+The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
+
+:::image type="content" source="../database/media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs.":::
 
 >[!IMPORTANT]
-> Meters are only visible for counters that are currently in use. If a counter is not available, it is likely that the category is not currently being used. For example, managed instance counters will not be present for customers who do not have a managed instance deployed. Likewise, storage counters will not be visible for resources that are not consuming storage. As such, if there is no PITR or LTR backup storage consumption, these meters won't be visible.
-
-
+> Meters are visible only for counters that are currently in use. If a counter is not available, it's likely that the category is not currently being used. For example, managed instance counters won't be present for customers who do not have a managed instance deployed. Likewise, storage counters won't be visible for resources that are not consuming storage. If there is no PITR or LTR backup storage consumption, these meters won't be visible.
 
 ## Encrypted backups
 
-If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see  [Transparent Data Encryption with SQL Managed Instance](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
+If your database is encrypted with TDE, backups are automatically encrypted at rest, including LTR backups. All new databases in Azure SQL are configured with TDE enabled by default. For more information on TDE, see [Transparent data encryption with SQL Managed Instance](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql).
 
 ## Backup integrity
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
 
+## Using Azure Policy to enforce backup storage redundancy
 
+If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL Managed Instance by using Azure Policy. 
 
-## Use Azure Policy to enforce backup storage redundancy
-
-If you have data residency requirements that require you to keep all your data in a single Azure region, you may want to enforce zone-redundant or locally redundant backups for your SQL Managed Instance using Azure Policy. 
-
-Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service level agreements. For more information, see [Overview of Azure Policy](/azure/governance/policy/overview). 
+Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service-level agreements. For more information, see [Overview of Azure Policy](/azure/governance/policy/overview). 
 
 ### Built-in backup storage redundancy policies 
 
-The following built-in policies can be assigned at the subscription or resource group level to block creating new instances with geo-redundant backup storage: 
+To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). For example, if you assign the following built-in policy at the subscription or resource group level, users in the subscription won't be able to create a managed instance with geo-redundant backup storage via the Azure portal or Azure PowerShell: [SQL Managed Instances should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa9934fd7-29f2-4e6d-ab3d-607ea38e9079).
 
-[SQL Managed Instances should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa9934fd7-29f2-4e6d-ab3d-607ea38e9079)
-
-For a full list of built-in policy definitions for SQL Managed Instance, review the [policy reference](../database/policy-reference.md).
-
-To enforce data residency requirements at an organizational level, these policies can be assigned to a subscription. After these policies are assigned at a subscription level, users in the given subscription will not be able to create a managed instance with geo-redundant backup storage via Azure portal or Azure PowerShell. 
+For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md). 
 
 > [!IMPORTANT]
-> Azure policies are not enforced when creating a database via T-SQL. To enforce data residency when creating a database using T-SQL, [use 'LOCAL' or 'ZONE' as input to BACKUP_STORAGE_REDUNDANCY paramater in CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
-
-Learn how to assign policies using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell).
+> Azure policies are not enforced when you're creating a database via T-SQL. To enforce data residency when you're creating a database by using T-SQL, [use LOCAL or ZONE as input to the BACKUP_STORAGE_REDUNDANCY parameter in the CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
 
 ## Next steps
 
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Managed instance business continuity solutions, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
-- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
-- Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).
+- To learn about the other SQL Managed Instance business continuity solutions, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
+- For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
+- For more information about how to restore a database to a point in time by using the Azure portal, see [Recover using automated database backups](recovery-using-backups.md).
 - To learn all about backup storage consumption on Azure SQL Managed Instance, see [Backup storage consumption on SQL Managed Instance explained](https://aka.ms/mi-backup-explained).
-- To learn how to fine-tune backup storage retention and costs for Azure SQL Managed Instance, see [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning).
+- To learn how to fine-tune backup storage retention and costs for SQL Managed Instance, see [Fine tuning backup storage costs on SQL Managed Instance](https://aka.ms/mi-backup-tuning).

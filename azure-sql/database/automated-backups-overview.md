@@ -30,9 +30,8 @@ monikerRange: "= azuresql || = azuresql-db "
 Some of the content in this article is duplicated in /azure-sql/managed-instance/automated-backups-overview.md. Any relevant changes made to this article should be made in the other article as well. 
 --->
 
-This article describes the automated backup feature for Azure SQL Database. 
+This article describes the automated backup feature for Azure SQL Database.  
 
-For Azure SQL Managed Instance, see [Automated backups for SQL Managed Instance](../managed-instance/automated-backups-overview.md).   
 To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [Recover using automated database backups](recovery-using-backups.md). 
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
@@ -93,7 +92,7 @@ You can use automatically created backups in the following scenarios:
 
 ## <a id="restore-capabilities"></a>Restore capabilities and features
 
-This table summarizes the capabilities and features of [point-in-time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term backup retention](long-term-retention-overview.md).
+This table summarizes the capabilities and features of [point-in-time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention](long-term-retention-overview.md).
 
 | **Backup property** | PITR | Geo-restore | LTR |
 |---|---|---|---|
@@ -134,7 +133,7 @@ The first full backup is scheduled immediately after a new database is created o
 After the first full backup, all further backups are scheduled and managed automatically. The exact timing of all database backups is determined by the SQL Database service as it balances the overall system workload. You can't change the schedule of backup jobs or disable them. 
 
 > [!IMPORTANT]
-> - For a new, restored, or copied database, the point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
+> - For a new, restored, or copied database, the point-in-time restore capability becomes available when the initial transaction log backup that follows the initial full backup is created.
 > - Hyperscale databases are protected immediately after creation, unlike other databases where the initial backup takes time. The protection is immediate even if the Hyperscale database was created with a large amount of data via copy or restore. To learn more, review [Hyperscale automated backups](hyperscale-automated-backups-overview.md). 
 
 ## Backup storage consumption
@@ -177,7 +176,7 @@ Backup storage consumption up to the maximum data size for a database is not cha
 
 ## Backup retention
 
-Azure SQL Database provides both short-term and long-term retention of backups. Short-term retention backups allow PITR within the retention period for the database. Long-term retention provides backups for various compliance requirements.  
+Azure SQL Database provides both short-term and long-term retention of backups. Short-term retention allows PITR within the retention period for the database. Long-term retention provides backups for various compliance requirements.  
 
 ### Short-term retention
 
@@ -200,7 +199,7 @@ If you delete a database, the system keeps backups in the same way that it would
 
 For SQL Database, you can configure full LTR backups for up to 10 years in Azure Blob Storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. 
 
-To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term backup retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention. 
+To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention. 
 
 Updating the backup storage redundancy for an existing Azure SQL database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob. New backups will be replicated based on the configured backup storage redundancy. 
 
@@ -219,7 +218,7 @@ Backup storage redundancy affects backup costs in the following way:
 For pricing, see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. 
 
 > [!NOTE]
-> An Azure invoice will show only the excess backup storage consumption, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4 TB of data storage, you'll get 4 TB of free backup storage space. If you used the total of 5.8 TB of backup storage space, the Azure invoice will show only 1.8 TB, because you're charged only for  excess backup storage that you've used.
+> An Azure invoice shows only the excess backup storage consumption, not the entire backup storage consumption. For example, in a hypothetical scenario, if you have provisioned 4 TB of data storage, you'll get 4 TB of free backup storage space. If you use a total of 5.8 TB of backup storage space, the Azure invoice will show only 1.8 TB, because you're charged only for excess backup storage that you've used.
 
 ### DTU model
 
@@ -237,13 +236,13 @@ For single databases, a backup storage amount equal to 100 percent of the maximu
 
 `Total billable backup storage size = (size of full backups + size of differential backups + size of log backups) – maximum data storage`
 
-For elastic pools, a backup storage amount equal to 100 percent of the maximum data storage for the pool storage size is provided at no extra charge. For pooled databases, the total billable backup storage size is aggregated at the pool level and is calculated as follows:
+For elastic pools, a backup storage amount equal to 100 percent of the maximum data storage for the pool storage size is provided at no extra charge. For pooled databases, the total size of billable backup storage is aggregated at the pool level and is calculated as follows:
 
 `Total billable backup storage size = (total size of all full backups + total size of all differential backups + total size of all log backups) - maximum pool data storage`
 
 Total billable backup storage, if any, is charged in gigabytes per month according to the rate of the backup storage redundancy that you've used. This backup storage consumption depends on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
 
-As a simplified example, assume a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month times 24 hours per day). SQL Database will report to the Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the rate for gigabytes per month in your region.
+As a simplified example, assume that a database has accumulated 744 GB of backup storage and that this amount stays constant throughout an entire month because the database is completely idle. To convert this cumulative storage consumption to hourly usage, divide it by 744.0 (31 days per month times 24 hours per day). SQL Database will report to the Azure billing pipeline that the database consumed 1 GB of PITR backup each hour, at a constant rate. Azure billing will aggregate this consumption and show a usage of 744 GB for the entire month. The cost will be based on the rate for gigabytes per month in your region.
 
 Here's another example. Suppose the same idle database has its retention increased from 7 days to 14 days in the middle of the month. This increase results in the total backup storage doubling to 1,488 GB. SQL Database would report 1 GB of usage for hours 1 through 372 (the first half of the month). It would report the usage as 2 GB for hours 373 through 744 (the second half of the month). This usage would be aggregated to a final bill of 1,116 GB per month.
 
@@ -253,7 +252,7 @@ Each differential backup also contains all changes made in the database since th
 
 For example, assume that a heavy write activity, such as an index rebuild, runs just after a full backup is completed. The modifications that the index rebuild makes will then be included:
 
-- In the transaction log backups taken over the duration of rebuild.
+- In the transaction log backups taken over the duration of the rebuild.
 - In the next differential backup.
 - In every differential backup taken until the next full backup occurs. 
 

@@ -1,9 +1,9 @@
 ---
-title: "Query Store hints (preview) best practices"
+title: "Query Store hints best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
 ms.custom:
 - event-tier1-build-2022
-ms.date: 07/26/2022
+ms.date: 08/01/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -14,12 +14,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# Query Store hints (preview) best practices
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+# Query Store hints best practices
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi.md)]
 
-This article details best practices for using [Query Store hints (Preview)](query-store-hints.md). Query Store hints enable shaping query plan shapes without modifying application code.
-
-Query Store hints are a preview feature in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+This article details best practices for using [Query Store hints](query-store-hints.md). Query Store hints enable shaping query plan shapes without modifying application code.
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).

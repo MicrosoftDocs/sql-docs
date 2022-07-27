@@ -252,7 +252,7 @@ OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 
 ### Set a Query Store hint
 
- Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature.
+ Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using [Query Store hints](query-store-hints.md).
 
 1. Identify the query in the [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) Query Store catalog views. For example, search for an executed query by text fragment:
 

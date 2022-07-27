@@ -1,9 +1,9 @@
 ---
-title: "Query Store hints (preview)"
+title: "Query Store hints"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
 ms.custom:
 - event-tier1-build-2022
-ms.date: "5/24/2022"
+ms.date: "08/01/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -17,13 +17,12 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 
-# Query Store hints (preview)
-
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+# Query Store hints
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi.md)]
 
 This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 
-Query Store hints are a preview feature in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -93,7 +92,7 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 |QueryStoreStatementHintSource|Source of Query Store hint (ex: "User")|
 
 > [!Note]
-> During the Query Store hints preview, these XML elements will be available only via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
+> TODO During the Query Store hints preview, these XML elements will be available only via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
 
 
 ## Query Store hints and feature interoperability

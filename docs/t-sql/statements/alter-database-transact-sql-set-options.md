@@ -332,7 +332,7 @@ The database is shut down cleanly and its resources are freed after the last use
 
 The database automatically reopens when a user tries to use the database again. For example, this re-open behavior occurs when a user issues a `USE database_name` statement. The database may shut down cleanly with AUTO_CLOSE set to ON. If so, the database doesn't re-open until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts.
 
-After a database is shut down, the next time an application attempts to use the database, the database must first be opened and then the status changed to online. This might take some time and can result in application timeouts.
+After a database is shut down, the next time an application attempts to use the database, the database must first be opened, and then the status changed to online. This might take some time and can result in application timeouts.
 
 OFF     
 The database remains open after the last user exits.
@@ -349,7 +349,7 @@ The AUTO_CLOSE option is useful for desktop databases because it allows for data
 
 When the database is set to `AUTOCLOSE = ON`, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
-The AUTO_CLOSE setting can be a useful feature in some rare situations, for example, in a SQL Server instance without enough memory to operate stably with a large number of databases, or for a legacy 32-bit SQL Server instance with a large number of databases. In such scenarios, it may be useful to enable AUTO_CLOSE and conserve the memory resources required to keep a database open when there is no application using the database. When the database is open, there are some default memory allocations that are required (for example, internal structures to represent various database metadata objects and transaction log buffers).
+The AUTO_CLOSE setting can be a useful feature in some rare situations, for example, in an SQL Server instance without enough memory to operate stably with a large number of databases, or for a legacy 32-bit SQL Server instance with a large number of databases. In such scenarios, it may be useful to enable AUTO_CLOSE and conserve the memory resources required to keep a database open when there is no application using the database. When the database is open, some default memory allocations are required (for example, internal structures to represent various database metadata objects and transaction log buffers).
 
 #### <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     

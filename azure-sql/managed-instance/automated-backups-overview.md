@@ -282,7 +282,7 @@ Azure Policy is a service that you can use to create, assign, and manage policie
 
 To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). For example, if you assign the following built-in policy at the subscription or resource group level, users in the subscription won't be able to create a managed instance with geo-redundant backup storage via the Azure portal or Azure PowerShell: [SQL Managed Instances should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa9934fd7-29f2-4e6d-ab3d-607ea38e9079).
 
-For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md). 
+For a full list of built-in policy definitions for SQL Managed Instance, review the [policy reference](../database/policy-reference.md). 
 
 > [!IMPORTANT]
 > Azure policies are not enforced when you're creating a database via T-SQL. To enforce data residency when you're creating a database by using T-SQL, [use LOCAL or ZONE as input to the BACKUP_STORAGE_REDUNDANCY parameter in the CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).

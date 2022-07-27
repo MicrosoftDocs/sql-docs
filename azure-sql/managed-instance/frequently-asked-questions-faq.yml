@@ -515,7 +515,7 @@ sections:
           
           ### How can I monitor billing cost for my backup storage consumption?
           
-          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](../database/automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
+          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](../database/automated-backups-overview.md?tabs=managed-instance#monitoring-costs). 
           
           ### How can I optimize my backup storage costs on the managed instance?
           

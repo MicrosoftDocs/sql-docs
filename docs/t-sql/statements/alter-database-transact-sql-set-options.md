@@ -332,7 +332,7 @@ The database is shut down cleanly and its resources are freed after the last use
 
 The database automatically reopens when a user tries to use the database again. For example, this re-open behavior occurs when a user issues a `USE database_name` statement. The database may shut down cleanly with AUTO_CLOSE set to ON. If so, the database doesn't re-open until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts.
 
-After a database is shut down, next time an application attempts to use the database, the database must be opened first and then change the status to online. This could take some time and can result in application time outs.
+After a database is shut down, the next time an application attempts to use the database, the database must first be opened and then the status changed to online. This might take some time and can result in application timeouts.
 
 OFF     
 The database remains open after the last user exits.

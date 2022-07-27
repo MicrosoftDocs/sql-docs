@@ -64,8 +64,17 @@ Backup storage redundancy can be configured when you create your database, and c
 The option to configure backup storage redundancy provides flexibility to choose one of the following storage redundancies for backups:
 
 - **Locally-redundant (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but isn't recommended for applications requiring high availability or durability.
+  
+   :::image type="content" source="media/automated-backups-overview/multi-paired-lrs.png" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+
 - **Zone-redundant (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. Currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
+ 
+   :::image type="content" source="media/automated-backups-overview/multi-paired-zrs.png" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+
 - **Geo-redundant (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region using LRS, then copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
+ 
+   :::image type="content" source="media/automated-backups-overview/multi-paired-grs.png" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
+
 
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 

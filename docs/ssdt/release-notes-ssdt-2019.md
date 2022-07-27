@@ -139,7 +139,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Download [SQL Server Integration Services Projects 3.13](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.13/1618812066840/Microsoft.DataTools.IntegrationServices.exe)
 - Build Version: 15.0.2000.165
 - Tested against Visual Studio 2019 16.9
-- What‘s new:
+- What's new:
     1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
     1. Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. 
     1. List available locations based on selected subscription in Integration Runtime Creation Wizard
@@ -161,7 +161,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Release Date: Jan 25th, 2021
 - Build Version: 15.0.2000.152
 - Tested against Visual Studio 2019 16.8
-- Whats' new:
+- What's new:
     1. Add ExecuteOnProxy property on Execute SQL Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
 - Bug fixes:
     1. Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component.
@@ -183,7 +183,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Release Date: December 23rd, 2020
 - Build Version: 15.0.2000.149
 - Tested against Visual Studio 2019 16.8
-- Whats' new:
+- What's new:
     1. Make creating SSISDB optional in IR Creation Wizard.
 - Bug fixes:
     1. Fixed an issue that Azure Subscription ComboBox items are duplicate in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name.

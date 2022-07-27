@@ -73,7 +73,12 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - APPROX_PERCENTILE_CONT()
   - DATETRUNC()
   - IS \[NOT\] DISTINCT FROM
-  - Bit manipulation functions
+  - Bit manipulation functions:
+     - LEFT_SHIFT()
+     - RIGHT_SHIFT()
+     - BIT_COUNT()
+     - GET_BIT()
+     - SET_BIT()
 
 For details, see the feature descriptions in the sections below.
 

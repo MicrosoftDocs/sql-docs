@@ -466,6 +466,10 @@
             href: /sql/relational-databases/security/ledger/ledger-digest-management
           - name: Database verification
             href: /sql/relational-databases/security/ledger/ledger-database-verification
+          - name: Monitor digest uploads
+            href: /sql/relational-databases/security/ledger/ledger-monitor-digest-uploads
+          - name: Recover ledger database after tampering
+            href: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
           - name: Ledger limitations
             href: /sql/relational-databases/security/ledger/ledger-limits
         - name: Network access controls

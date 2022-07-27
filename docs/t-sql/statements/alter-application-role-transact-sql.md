@@ -23,7 +23,7 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 
 # ALTER APPLICATION ROLE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Changes the name, password, or default schema of an application role.  
   

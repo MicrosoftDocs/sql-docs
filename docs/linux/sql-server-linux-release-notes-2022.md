@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2022 Preview on Linux
 description: This article contains the release notes and supported features for SQL Server 2022 Preview running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -26,7 +26,7 @@ The following release notes apply to the public community technology preview (CT
 | Ubuntu 20.04 LTS | XFS or EXT4 | [Installation guide](../linux/quickstart-install-connect-ubuntu.md) | [Get Ubuntu 20.04](https://releases.ubuntu.com/20.04/) |
 | Docker Engine 1.8+ on Linux | N/A | [Installation guide](../linux/quickstart-install-connect-docker.md) | [Get Docker](https://www.docker.com/get-started) |
 
-SUSE Linux Enterprise Server (SLES) **is not supported** for CTP 2.0, and will follow in a later release.
+SUSE Linux Enterprise Server (SLES) **is not supported** for CTP 2.1, and will follow in a later release.
 
 > [!TIP]  
 > For more information, review the [system requirements](../linux/sql-server-linux-setup.md#system) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. For the latest support policy for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [Technical support policy for Microsoft SQL Server](/troubleshoot/sql/general/support-policy-sql-server).
@@ -48,6 +48,10 @@ If you're updating existing SQL Server packages, run the appropriate update comm
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="ctp21"></a> CTP 2.1 (July 2022)
+
+SQL Server 2022 CTP 2.1 (16.0.700.4) Linux packages and containers, as well as Azure Images, will be available soon at their current release locations.
+
 ## <a id="ctp20"></a> CTP 2.0 (May 2022)
 
 The following section provides package locations and known issues for the first public community technology preview (CTP). To learn more about new features [!INCLUDE[sssql22](../includes/sssql22-md.md)] running on Linux, see the [What's new in SQL Server 2022 Preview](../sql-server/what-s-new-in-sql-server-2022.md).
@@ -66,7 +70,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## Known issues
 
-The following sections describe known issues with the CTP 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux.
+The following sections describe known issues with the CTP 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux.
 
 ### General
 

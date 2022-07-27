@@ -16,7 +16,7 @@ ms.author: mikeray
 ---
 # Canonical forms and pattern restrictions
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The XSD pattern facet allows for the restriction of the lexical space of simple types. When a pattern restriction is put on a type for which there's more than one possible lexical representation, some values could cause unexpected behavior upon validation.
 

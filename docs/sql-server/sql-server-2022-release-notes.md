@@ -30,7 +30,7 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
-1. Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 CTP2.1 installation. For CTP2.1, please install the two drivers from the above links as necessary. The new drivers will be installed by later versions of SQL Server 2022.
+1. Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 CTP2.1 installation. For CTP2.1, please install the two drivers from the provided links as necessary. The new drivers will be installed by later versions of SQL Server 2022.
 
 ## Build number
 

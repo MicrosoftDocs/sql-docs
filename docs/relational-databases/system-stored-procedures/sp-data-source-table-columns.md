@@ -34,7 +34,7 @@ Returns list of columns in external data source table.
   
 ## Syntax  
   
-```sqlsyntax
+```syntaxsql
 sp_data_source_table_columns
          [ @data_source = ] 'data_source'
        , [ @table_location = ] 'table_location'

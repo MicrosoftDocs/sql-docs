@@ -52,7 +52,7 @@ This release is community technology preview (CTP) 2.1.
 SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization) - updated location for S3-compliant object storage certificate for SQL Server on Linux.
+  - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
   - Data virtualization: 
      - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
      - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
@@ -140,14 +140,14 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Setup attached to Azure | Install Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
+| Integrated setup experience for the Azure extension for SQL Server | Install the Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
 | Manage Azure Arc SQL Extension | Use SQL Server Configuration Manager to manage Azure Arc SQL Extension service. See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 | Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
 | Shrink database WAIT_AT_LOW_PRIORITY | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. SQL Server 2022 Preview adds WAIT_AT_LOW_PRIORITY as an additional option for shrink operations (DBCC SHRINKDATABASE and DBCC SHRINKFILE). When you specify WAIT_AT_LOW_PRIORITY, new queries requiring Sch-S or Sch-M locks aren't blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [Shrink a database](../relational-databases/databases/shrink-a-database.md) and [Shrink a file](../relational-databases/databases/shrink-a-file.md).|
 | Asynchronous auto update statistics concurrency|Avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-| Backup and restore to S3 compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
+| Backup and restore to S3-compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
 
 ## Language
 

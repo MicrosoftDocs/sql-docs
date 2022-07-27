@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Parameter Sensitive Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
-[Parameter Sensitive](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
+[Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#parameter-sensitivity).
 
@@ -37,7 +37,7 @@ You can also override the default simple parameterization behavior of SQL Server
 
 ## PSP optimization implementation
 
-During the initial compilation, column statistics histograms identify non-uniform distributions and evaluate the most “at-risk” parameterized predicates, up to three out of all available predicates.
+During the initial compilation, column statistics histograms identify non-uniform distributions and evaluate the most "at-risk" parameterized predicates, up to three out of all available predicates.
 
 For eligible plans, the initial compilation produces a **dispatcher plan** that contains the PSP optimization logic called a dispatcher expression. A dispatcher plan maps to **query variants** based on the cardinality range boundary values predicates.
 
@@ -141,7 +141,7 @@ At this time, the following are known issue(s) that will be addressed in upcomin
  SELECT c2 FROM my_schema.my_table WHERE c1 = @var1;
  ```
 
-## See also
+## Next steps
 
 - [Intelligent query processing](intelligent-query-processing.md)  
 - [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity)

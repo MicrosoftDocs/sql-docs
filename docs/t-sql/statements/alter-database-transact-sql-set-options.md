@@ -808,7 +808,7 @@ Determines the frequency at which data written to the Query Store is persisted t
 Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. The default value is **100 MB** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the default value is **1 GB**.
 
 > [!NOTE]
-> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
 > If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
@@ -1946,7 +1946,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 > `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 
 > [!NOTE]
-> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
 > If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 

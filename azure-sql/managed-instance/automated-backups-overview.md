@@ -80,7 +80,7 @@ You can choose one of the following storage redundancies for backups:
   
   - Three synchronous copies in the primary region.
   - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
-- **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region. 
+- **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS account is copied across three Azure availability zones in the primary region. 
 
   The data is also replicated to a secondary geographic region for protection from regional disasters. In that region, you also have three synchronous copies that were copied over from the primary region to the secondary region asynchronously. 
 
@@ -274,7 +274,7 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 ## Using Azure Policy to enforce backup storage redundancy
 
-If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL Managed Instance by using Azure Policy. 
+If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL managed instance by using Azure Policy. 
 
 Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service-level agreements. For more information, see [Overview of Azure Policy](/azure/governance/policy/overview). 
 

@@ -157,7 +157,7 @@ Azure SQL Database computes your total used backup storage as a cumulative value
 
 ### Monitor consumption
 
-For vCore databases in Azure SQL Database, the storage that each type of backup (full, differential, and log) consumes is reported on the database monitoring pane as a separate metric. The following diagram shows how to monitor the backup storage consumption for a single database. 
+For vCore databases in Azure SQL Database, the storage that each type of backup (full, differential, and log) consumes is reported on the database monitoring pane as a separate metric. The following screenshot shows how to monitor the backup storage consumption for a single database. 
 
 :::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal.":::
 

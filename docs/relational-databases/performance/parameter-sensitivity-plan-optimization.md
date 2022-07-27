@@ -14,7 +14,7 @@ ms.author: derekw
 ms.reviewer: maghan
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
@@ -37,7 +37,7 @@ You can also override the default simple parameterization behavior of SQL Server
 
 ## PSP optimization implementation
 
-During the initial compilation, column statistics histograms identify non-uniform distributions and evaluate the most “at-risk” parameterized predicates, up to three out of all available predicates.
+During the initial compilation, column statistics histograms identify non-uniform distributions and evaluate the most "at-risk" parameterized predicates, up to three out of all available predicates.
 
 For eligible plans, the initial compilation produces a **dispatcher plan** that contains the PSP optimization logic called a dispatcher expression. A dispatcher plan maps to **query variants** based on the cardinality range boundary values predicates.
 
@@ -141,7 +141,7 @@ At this time, the following are known issue(s) that will be addressed in upcomin
  SELECT c2 FROM my_schema.my_table WHERE c1 = @var1;
  ```
 
-## See also
+## Next steps
 
 - [Intelligent query processing](intelligent-query-processing.md)  
 - [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity)

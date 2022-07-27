@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 07/26/2022
+ms.date: 07/27/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -61,8 +61,8 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - Parameter sensitive plan optimization - Supportability
   - Degree of parallelism (DOP) feedback - Supportability
 - [Management](#management)
-  - Install Azure Arc agent with Configuration Manager
-  - Attach to Azure from setup - Azure Arc-enabled instance
+  - Manage Azure Arc agent with SQL Server Configuration Manager
+  - Attach to Azure from setup - enabling Arc extension for SQL Server is now an opt-in feature
   - Snapshot backups
 - [Security](#security)
   - Automation process to set up Azure AD administrator for SQL Server
@@ -73,6 +73,7 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - APPROX_PERCENTILE_CONT()
   - DATETRUNC()
   - IS \[NOT\] DISTINCT FROM
+  - Bit manipulation functions
 
 For details, see the feature descriptions in the sections below.
 
@@ -156,7 +157,7 @@ The following sections provide an overview of these features.
 | JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md)|
 | Aggregate functions | - [APPROX_PERCENTILE_CONT ()](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC ()](../t-sql/functions/approx-percentile-disc-transact-sql.md)
 | T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
-| Bit manipulation functions |- [LEFT_SHIFT ()](../t-sql/functions/left-shift-transact-sql.md)<br/>- [RIGHT_SHIFT ()](../t-sql/functions/right-shift-transact-sql.md)<br/>- [BIT_COUNT ()](../t-sql/functions/bit-count-transact-sql.md)<br/>- [GET_BIT ()](../t-sql/functions/get-bit-transact-sql.md)<br/>- [SET_BIT ()](../t-sql/functions/set-bit-transact-sql.md)|
+| [Bit manipulation functions](../t-sql/functions/bit-manipulation-functions-overview.md) |- [LEFT_SHIFT ()](../t-sql/functions/left-shift-transact-sql.md)<br/>- [RIGHT_SHIFT ()](../t-sql/functions/right-shift-transact-sql.md)<br/>- [BIT_COUNT ()](../t-sql/functions/bit-count-transact-sql.md)<br/>- [GET_BIT ()](../t-sql/functions/get-bit-transact-sql.md)<br/>- [SET_BIT ()](../t-sql/functions/set-bit-transact-sql.md)|
 
 ## Tools
 

@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 ---
 
 # Query Store hints
-[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 

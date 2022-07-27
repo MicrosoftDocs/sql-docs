@@ -3,7 +3,7 @@ title: "Query Store hints (preview) best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
 ms.custom:
 - event-tier1-build-2022
-ms.date: 07/01/2022
+ms.date: 07/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -88,7 +88,7 @@ Carefully load test changes for mission critical or sensitive systems before app
 
 Applying the RECOMPILE query hint with Query Store hints is not supported when the database option [PARAMETERIZATION is set to FORCED](../../t-sql/statements/alter-database-transact-sql-set-options.md#parameterization_option-). For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization).
 
-The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, the Database Engine will ignore the RECOMPILE hint and will apply other hints if leveraged. Additionally, starting in July 2022 in Azure SQL Database, a warning (error code 12460) should be issued stating that the RECOMPILE hint was ignored.
+The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, the Database Engine will ignore the RECOMPILE hint and will apply other hints if leveraged. Additionally, starting in July 2022 in Azure SQL Database, a warning (error code 12461) should be issued stating that the RECOMPILE hint was ignored.
 
 For information on which query hints can be applied, see [Supported query hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md#supported-query-hints).
 

@@ -5,7 +5,7 @@ description: Install, update, and uninstall SQL Server 2022 Preview on Linux. Th
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] community technology preview (CTP) 2.0 on Linux.
+This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] community technology preview (CTP) 2.1 on Linux.
 
 > [!TIP]  
 > For installing [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] or [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux, see the [Installation guidance for SQL Server on Linux](./sql-server-linux-setup.md).
@@ -38,7 +38,7 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 SQL Server is supported on Red Hat Enterprise Linux (RHEL), and Ubuntu. It's also supported as a Docker image, which can run on Docker Engine on Linux.
 
 > [!IMPORTANT]  
-> SUSE Linux Enterprise Server (SLES) **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.0, and will follow in a later release.
+> SUSE Linux Enterprise Server (SLES) **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.1, and will follow in a later release.
 
 | Platform | File System | Installation Guide | Get |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 When you install or upgrade [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you get the latest version of SQL Server from your configured Microsoft repository.
 
-Although the quickstarts refer to the Cumulative Update **CU** repository, you must use the **mssql-server-preview** repository for CTP 2.0.
+Although the quickstarts refer to the Cumulative Update **CU** repository, you must use the **mssql-server-preview** repository for CTP 2.1.
 
 For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
@@ -86,7 +86,7 @@ You can install SQL Server on Linux from the command line. For step-by-step inst
 - [Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 
-For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux CTP 2.0, SUSE Linux Enterprise Server (SLES) isn't supported.
+For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux CTP 2.1, SUSE Linux Enterprise Server (SLES) isn't supported.
 
 You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal).
 

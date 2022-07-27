@@ -103,7 +103,7 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 *   If Query Store hints contradict, SQL Server will not block query execution and Query Store hint will not be applied.
 *   Simple parameterization - Query Store hints are not supported for statements that qualify for simple parameterization.
 *   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are leveraged.
-    *    Additionally, SQL Server will issue a warning (error code 12460) stating that the RECOMPILE hint was ignored.
+    *    Additionally, SQL Server will issue a warning (error code 12461) stating that the RECOMPILE hint was ignored.
     *    For more information on forced parameterization use case considerations, see [Guidelines for Using Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 *   Currently, Query Store hints can be applied against the primary replica of an Always On availability group.
 

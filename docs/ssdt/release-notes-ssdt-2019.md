@@ -52,7 +52,7 @@ Please follow the below steps to install this product in an offline environment:
 
 1. Double click on the installer of this product and perform installation, or you can run the installer in quite mode. Please launch the installer with "/?" argument to get more details of the arguments list of the installer.
 
-1. VS Community does not support offline activation. To use this product with VS Community, you must login to your Microsoft account occasionally in VS Community. If you want to use this product in a totally offline environment, we recommend you to install this product on VS Professional or Enterprise, which support offline activation via a product key.
+1. VS Community does not support offline activation. To use this product with VS Community, you must log in to your Microsoft account occasionally in VS Community. If you want to use this product in a totally offline environment, we recommend you to install this product on VS Professional or Enterprise, which support offline activation via a product key.
 
 ## Release Notes
   **Version 4.1**
@@ -64,13 +64,13 @@ Please follow the below steps to install this product in an offline environment:
     2. IR deployment wizard is now supporting Synapse link.
 - Bug fixes:
     1. Fixed a bug that testing connection in OData connection manager failed when the authentication type is “Microsoft Dynamics CRM online” and target server version is SQL Server 2016 or SQL Server 2017.  
-    2. Fixed a bug that ssis project targeting SqlServer 2019 execute will fail if the machine install sqlserver 2019 at the same time.
+    2. Fixed a bug that ssis project targeting SqlServer 2019 execute will fail if the machine installs sqlserver 2019 at the same time.
 - Known issues:
     1. SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
     2. **Cannot design Oracle and Teradata Components.**
 
 **Version 4.0 preview:**
-- Release Date: Jun 1th, 2022
+- Release Date: Jun 1st, 2022
 - Download [SQL Server Integration Services Projects 4.0](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/4.0/1654076518070/Microsoft.DataTools.IntegrationServices.exe)
 - Build Version: 16.0.521.0
 - Tested against Visual Studio 2019 16.11
@@ -87,7 +87,7 @@ Please follow the below steps to install this product in an offline environment:
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 
 **Version 3.16:**
-- Release Date: Feb 23th, 2022
+- Release Date: Feb 23rd, 2022
 - Download [SQL Server Integration Services Projects 3.16](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.16/1645603822968/Microsoft.DataTools.IntegrationServices.exe)
 - Build Version: 15.0.2000.180
 - Tested against Visual Studio 2019 16.11
@@ -139,7 +139,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Download [SQL Server Integration Services Projects 3.13](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.13/1618812066840/Microsoft.DataTools.IntegrationServices.exe)
 - Build Version: 15.0.2000.165
 - Tested against Visual Studio 2019 16.9
-- Whats' new:
+- What‘s new:
     1. Add ExecuteOnProxy property on Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis).
     1. Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. 
     1. List available locations based on selected subscription in Integration Runtime Creation Wizard
@@ -180,7 +180,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 
 
 **Version 3.11:**
-- Release Date: December 23th, 2020
+- Release Date: December 23rd, 2020
 - Build Version: 15.0.2000.149
 - Tested against Visual Studio 2019 16.8
 - Whats' new:
@@ -188,7 +188,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - Bug fixes:
     1. Fixed an issue that Azure Subscription ComboBox items are duplicate in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name.
     1. Fixed an issue that auto-generated code under bufferwrapper.cs of script component adds extra double-quotes when current locale is Germany.
-    1. Fixed an issue that download WSDL buttonis not displayed when target server version is SQL Server 2012, 2014, 2016.
+    1. Fixed an issue that download WSDL button is not displayed when target server version is SQL Server 2012, 2014, 2016.
     1. Fixed an issue that building large projects may fail due to out of memory exception.
     1. Fixed an issue that the package is not downgraded to current target server version of the project when it is saved as copy to file system or MSDB in package deployment model.
     1. Fixed an issue that Dimension Processing Destination doesn't work due to "No such interface" error.
@@ -198,7 +198,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 
 
 **Version 3.10:**
-- Release Date: September 23th, 2020
+- Release Date: September 23rd, 2020
 - Build Version: 15.0.2000.132
 - Tested against Visual Studio 2019 16.7
 - Bug fixes:
@@ -244,7 +244,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 - What's New:
     1. Added assessment for packages to be executed in Azure in Azure-enabled project.
 - Bug fixes:
-    1. Fixed an issue that Trasfer Database Task does not work when a database has filegroups that contains a filestream.
+    1. Fixed an issue that Transfer Database Task does not work when a database has filegroups that contains a filestream.
     1. Fixed an issue that when using ODBC components in Foreach Loop component, the ODBC component will meet 'Function sequence error' in the second loop during package execution.
     1. Fixed an issue that Rebuild Index Task UI will be cut off in low resolution mode.
     1. Fixed an issue that the "Sign In" button does not show up in high DPI mode.
@@ -385,7 +385,7 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
     1. Fix an issue that Oracle connector properties are not able to be set from variable expression
     1. Fix an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019
     1. Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager’s properties.
-    1. Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocal (targetting to SQL Server 2019).
+    1. Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocol (targeting to SQL Server 2019).
     1. Fix an issue that packages containing DQS connection manager cannot be loaded again after saving. 
 - Known issues:
     1. SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
@@ -405,6 +405,6 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
     1. When the target server version is set to SQL Server 2012~2016, the display language will always be English
     1. On some systems, the OLEDB connection manager connection setting page is not displayed correctly. Use the All properties grid to configure connection settings. 
     1. Cannot be uninstalled from control panel. Here is a work around: open extension.vsixmanifest under &lt;VSInstanceRootDir&gt;\Common7\IDE\CommonExtensions\Microsoft\SSIS, change the value of attribute "InstalledByMsi" at line 10 from "true" to "false", save extension.vsixmanifest, and then you can uninstall this product from control panel.
-    1. Installation will fail if you install this product on an empty VS instance which doesn't install any workloads. To work around this, please make sure NuGet manager is installed before you launching this installer.
+    1. Installation will fail if you install this product on an empty VS instance which doesn't install any workloads. To work around this, please make sure NuGet manager is installed before you launch this installer.
     1. Cannot add new data source under package deployment mode. The error message is "The wizard for 'Microsoft.AnalysisServices.DataSource' cannot be found."
     1. Packages containing DQS connection manager cannot be opened again after saving using this product.

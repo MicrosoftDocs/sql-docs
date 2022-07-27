@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 [!NOTE
 If you are having issues resolving connections with Replication monitor to Availability Groups, please check the following:
 1. You have properly set up redirection through [sp_redirect_publisher](../../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md). There should only be one record per publication and database, which should reference the original primary publisher in MSRedirected_Publishers.
-2. Verify that you did **not** add the listener as a publisher on the distributor. You can verify this by running [sp_helpdistpublisher](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md on the distributor instance. 
+2. Verify that you did **not** add the listener as a publisher on the distributor. You can verify this by running [sp_helpdistpublisher](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md) on the distributor instance. 
 3. Make sure that the value you are passing as the publisher into Replication Monitor is the value stored in [distribution..MSRedirected_Publishers](../../../relational-databases/system-tables/msredirected-publishers.md). If your publisher Availability Group listener is using a custom port and redirection was configured passing the port, then you need to pass the port as well into Replication Monitor. In contrast, if your listener uses a custom port and you used an alias to configure redirection to the listener, then you will need to recreate the alias on the client that is launching Replication Monitor. We recommend not using aliases and instead passing the port.]
   
 ### To add an Oracle Publisher  

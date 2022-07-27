@@ -83,16 +83,16 @@ To remove hints associated with a `query_id`, use [sys.sp_query_store_clear_hint
 
 ## Execution Plan XML attributes
 
-When hints are applied, the following result set appears in the StmtSimple element of the [Execution Plan](execution-plans.md) in [XML format](save-an-execution-plan-in-xml-format.md):
+When hints are applied, the following result set appears in the `StmtSimple` element of the [Execution Plan](execution-plans.md) in [XML format](save-an-execution-plan-in-xml-format.md):
 
 |**Attribute**| **Description**|
 |--|--|
-|QueryStoreStatementHintText|Actual Query Store hint(s) applied to the query|
-|QueryStoreStatementHintId|Unique identifier of a query hint|
-|QueryStoreStatementHintSource|Source of Query Store hint (ex: "User")|
+|`QueryStoreStatementHintText`|Actual Query Store hint(s) applied to the query|
+|`QueryStoreStatementHintId`|Unique identifier of a query hint|
+|`QueryStoreStatementHintSource`|Source of Query Store hint (ex: "User")|
 
 > [!Note]
-> TODO During the Query Store hints preview, these XML elements will be available only via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
+> These XML elements are available via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
 
 
 ## Query Store hints and feature interoperability
@@ -102,7 +102,7 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 *   If Query Store hints contradict, SQL Server will not block query execution and Query Store hint will not be applied.
 *   Simple parameterization - Query Store hints are not supported for statements that qualify for simple parameterization.
 *   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are leveraged.
-    *    Additionally, SQL Server will issue a warning (error code 12460) stating that the RECOMPILE hint was ignored.
+    *    Additionally, SQL Server will issue a warning (error code 12461) stating that the RECOMPILE hint was ignored.
     *    For more information on forced parameterization use case considerations, see [Guidelines for Using Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 *   Currently, Query Store hints can be applied against the primary replica of an Always On availability group.
 
@@ -110,7 +110,7 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 
 *    Complete index and statistics maintenance before evaluating queries for potential new Query Store hints.
 *    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), before leveraging Query Store hints.
-    * For example, Parameter Sensitive Plan (PSP) optimization was introduced in SQL Server 2022 (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
+     * For example, Parameter Sensitive Plan (PSP) optimization was introduced in SQL Server 2022 (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
 *    Query Store hints override SQL Server query plan behavior. It is recommended to only leverage Query Store hints when it is necessary to address performance related issues.
 *    It is recommended to reevaluate Query Store hints, statement level hints, plan guides, and Query Store forced plans any time data distributions change and during database migrations projects. Changes in data distribution may cause Query Store hints to generate suboptimal execution plans.
 

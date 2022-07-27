@@ -30,7 +30,9 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
-1. Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 CTP2.1 installation. For CTP2.1, please install the two drivers from the provided links as necessary. The new drivers will be installed by later versions of SQL Server 2022.
+- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 CTP2.1 installation. For CTP2.1, please install the two drivers from the provided links as necessary. The new drivers will be installed by later versions of SQL Server 2022.
+
+- When SQL Server is installed on an Azure Arc-enabled server, Setup UI fails to automatically populate the Azure parameters from the installed Connected Machine agent. If you specify a subscription ID, Service identity or Resource group that is different than those the Connected Machine agent uses, it will result in a non-functional Azure configuration. We recommend that you not select Azure extension for SQL Server in the Feature Selection section in this case in CTP2.1.  Instead, you use Azure Portal to install the extension. For more information, see [Connect to Azure Arc from Portal](azure-arc/connect.md).
 
 ## Build number
 

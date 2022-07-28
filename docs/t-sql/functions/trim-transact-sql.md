@@ -41,10 +41,10 @@ TRIM ( string )
 
 ## Arguments
 
-characters
+*characters*  
 Is a literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types aren't allowed.
 
-string
+*string*  
 Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
 
 ## Return Types

@@ -2,7 +2,7 @@
 title: "Availability replica is disconnected in an availability group"
 description: "Identify possible causes for why a replica is disconnected within an Always On availability group."
 ms.custom: "seodec18"
-ms.date: "05/17/2016"
+ms.date: "07/28/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -29,23 +29,23 @@ ms.author: mathoma
  This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  
   
 ## Possible Causes  
- The secondary replica is not connected to the primary replica. The connected state is DISCONNECTED. This issue can be caused by the following:  
+ The secondary replica isn't connected to the primary replica. The connected state is DISCONNECTED. This issue can be caused by the following:  
   
 -   The connection port might be in conflict with another application.  
   
 -   The encryption type or algorithm is mismatched.  
   
--   The connection endpoint has been deleted or has not been started.  
+-   The connection endpoint has been deleted or hasn't been started.  
   
 -   There are network/connectivity issues or Ports are blocked at the firewall.  
 
--   Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (e.g. 5022) 
+-   Service/startup account isn't a domain user and  isn't able to connect to the DC and to the remote node and port (for example, 5022) 
  
 ## Possible Solutions  
 
 Check the database mirroring endpoint configuration for the instances of the primary and secondary replica and update the mismatched configuration. Also, check if the port is conflicting, and if so, change the port number. 
 
-Following are possible solutions for this issue:  
+The following are possible solutions for this issue:  
  
 -  The connection port might be in conflict with another application.
    Run the following commands to diagnose port issue:
@@ -54,7 +54,7 @@ Following are possible solutions for this issue:
    $server_name = "server_instance"  #replace with your instance
    Sqlcmd -S $server_name -E -Q "SELECT type_desc, port FROM sys.tcp_endpoints WHERE type_desc = 'DATABASE_MIRRORING'; "
    ```
-   The above command will return the port number which you have to use in below command.
+   The above command will return the port number that you have to use in below command.
    
    ```PowerShell
    $port = "5022"
@@ -72,7 +72,7 @@ Following are possible solutions for this issue:
     ```
 
 
--	The connection endpoint has been deleted or has not been started.
+-	The connection endpoint has been deleted or hasn't been started.
 	
 	Run the following command if the mirroring endpoint exits and is started.
 	
@@ -101,18 +101,18 @@ Following are possible solutions for this issue:
     Test-NetConnection -ComputerName $computer -Port $port 
     ```
 
--	Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (e.g. 5022) 
+-	Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (for example, 5022) 
 
-	To test whether the service account can connect to the remote node, follow these steps. These assume that you are not logged in with the service account:
+	To test whether the service account can connect to the remote node, follow these steps. The steps assume that you are not logged in with the service account:
 
    1.	Start-> Windows PowerShell->right-click on the icon
    2.	Select More->Run as Different User -> Use a different account
    3.	Type the service account name and password 
-   4.	Once Windows PowerShell opens type the following command to make sure you have logged in with the service account
+   4.	Once Windows PowerShell opens, type the following command to verify you've logged in with the service account
    
    ```PowerShell	
    whoami
-   ```	
+   ```
 	
    5.	Then you can test the connection to the remote node. For example:
 

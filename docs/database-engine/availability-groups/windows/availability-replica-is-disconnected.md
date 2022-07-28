@@ -54,7 +54,7 @@ Following are possible solutions for this issue:
    $server_name = "server_instance"  #replace with your instance
    Sqlcmd -S $server_name -E -Q "SELECT type_desc, port FROM sys.tcp_endpoints WHERE type_desc = 'DATABASE_MIRRORING'; "
    ```
-   The above command will return the port numer which you have to use in below command.
+   The above command will return the port number which you have to use in below command.
    
    ```PowerShell
    $port = "5022"
@@ -74,7 +74,7 @@ Following are possible solutions for this issue:
 
 -	The connection endpoint has been deleted or has not been started.
 	
-    Run the following command if the mirroring endoint exits and is started.
+    Run the following command if the mirroring endpoint exits and is started.
 	
     ```PowerShell
     $server_name = "…."

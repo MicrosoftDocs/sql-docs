@@ -3304,7 +3304,7 @@ This command must be run while connected to the user database.
 
 You can determine this option's status by examining the `is_auto_create_stats_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsAutoCreateStatistics` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-For more information, see the section "Using the database-wide statistics options" in Statistics.
+For more information, see the section "Using the database-wide statistics options" in [Statistics](../../relational-databases/statistics/statistics.md).
 
 #### **<db_encryption_option> ::=**     
 Controls the database encryption state.

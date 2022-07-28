@@ -1,9 +1,9 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL)"
-description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
+description: Learn how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/26/2022
+ms.date: 06/28/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -39,7 +39,7 @@ Select one of the following tabs for the syntax, arguments, remarks, permissions
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 > [!NOTE]
-> Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
+> Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement doesn't complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
 
 ## Select a product
 
@@ -444,7 +444,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 #### **\<change_tracking_option> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
 ON     
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -778,7 +778,7 @@ Controls whether the Query Store is enabled in this database, and also controls 
 ON     
 Enables the Query Store. 
 
-Many new performance features of SQL Server 2022 such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the Examples section later in this article.  
+Many new performance features of SQL Server 2022 such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the [Examples](#examples) section later in this article.  
 
 OFF [ ( FORCED ) ]      
 Disables the Query Store. <!--OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].--> FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
@@ -1250,10 +1250,10 @@ Specifies when to roll back incomplete transactions when the database is transit
 > [!NOTE]
 > Not all database options use the WITH \<termination> clause. For more information, see the table under [Setting options](#SettingOptions) of the "Remarks" section of this article.
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE     
+ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE
 Specifies whether to roll back after the specified number of seconds or immediately.
 
-NO_WAIT     
+NO_WAIT
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
 
 ## <a name="SettingOptions"></a> Setting options
@@ -1817,7 +1817,7 @@ OFF
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.  
 
 #### **\<change_tracking_option> ::=**     
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
 ON     
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -2699,7 +2699,7 @@ OFF
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.
 
 #### **\<change_tracking_option> ::=**     
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
 ON
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -3050,7 +3050,7 @@ You can determine this option's status by examining the `is_recursive_triggers_o
 
 #### **\<target_recovery_time_option> ::=**     
 
-**target_recovery_time_option** is not supported on Azure SQL Managed Instance.
+**target_recovery_time_option** isn't supported on Azure SQL Managed Instance.
 
 Specifies the frequency of indirect checkpoints on a per-database basis. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the default value for new databases is **1 minute**, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.
 
@@ -3391,7 +3391,7 @@ Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 OFF     
 Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABASE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check the `is_read_committed_snapshot_on` column in `sys.databases`.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABASE command.  The database doesn't have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check the `is_read_committed_snapshot_on` column in `sys.databases`.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 

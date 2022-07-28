@@ -64,7 +64,7 @@ Following are possible solutions for this issue:
   
 -	The encryption type or algorithm is mismatched. 
 	
-	  Run this on both servers and compare the encryption and make sure both are same:
+	Run this on both servers and compare the encryption and make sure both are same:
 
     ```PowerShell
     $server_name = "server_instance"  #replace with your instance
@@ -74,14 +74,14 @@ Following are possible solutions for this issue:
 
 -	The connection endpoint has been deleted or has not been started.
 	
-    Run the following command if the mirroring endpoint exits and is started.
+	Run the following command if the mirroring endpoint exits and is started.
 	
     ```PowerShell
     $server_name = "…."
     Sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
     ```
 
-    Run the below command if you suspect that endpoint is not responding to connections or is not running. 
+	Run the below command if you suspect that endpoint is not responding to connections or is not running. 
   
      ```SQL
      ALTER ENDPOINT hadr_endpoint   
@@ -93,7 +93,7 @@ Following are possible solutions for this issue:
 
 -	There are network /connectivity issues or Ports are blocked at the firewall
 
-	 Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:
+	Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:
 
     ```PowerShell
     $computer = $env:computername
@@ -103,7 +103,7 @@ Following are possible solutions for this issue:
 
 -	Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (e.g. 5022) 
 
-    To test whether the service account can connect to the remote node, follow these steps. These assume that you are not logged in with the service account:
+	To test whether the service account can connect to the remote node, follow these steps. These assume that you are not logged in with the service account:
 
    1.	Start-> Windows PowerShell->right-click on the icon
    2.	Select More->Run as Different User -> Use a different account

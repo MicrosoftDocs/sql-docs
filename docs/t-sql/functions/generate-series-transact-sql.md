@@ -21,7 +21,7 @@ dev_langs:
 ---
 # GENERATE_SERIES (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asde.md)]
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 

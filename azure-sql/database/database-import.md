@@ -26,6 +26,7 @@ You can import a SQL Server database into Azure SQL Database or SQL Managed Inst
 
 > [!NOTE]
 > [Import and Export using Private Link](database-import-export-private-link.md) is in preview.
+> Import and Export functionality on Azure SQL Database Hyperscale tier is now in preview.
 
 ## Using Azure portal
 

@@ -34,10 +34,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(**128**)**|Specific name of the catalog. This name is the same as ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar(**128**)**|Specific name of the schema.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|SPECIFIC_SCHEMA|**nvarchar(**128**)**|Specific name of the schema.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |SPECIFIC_NAME|**nvarchar(**128**)**|Specific name of the catalog. This name is the same as ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar(**128**)**|Catalog name of the function.|  
-|ROUTINE_SCHEMA|**nvarchar(**128**)**|Name of the schema that contains this function.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|ROUTINE_SCHEMA|**nvarchar(**128**)**|Name of the schema that contains this function.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |ROUTINE_NAME|**nvarchar(**128**)**|Name of the function.|  
 |ROUTINE_TYPE|**nvarchar(**20**)**|Returns PROCEDURE for stored procedures, and FUNCTION for functions.|  
 |MODULE_CATALOG|**nvarchar(**128**)**|NULL. Reserved for future use.|  

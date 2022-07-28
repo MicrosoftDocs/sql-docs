@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_workload_management_workload_groups_stats (Transact-SQL)"
 description: sys.dm_workload_management_workload_groups_stats (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/02/2019"
 ms.prod: sql
 ms.technology: data-warehouse

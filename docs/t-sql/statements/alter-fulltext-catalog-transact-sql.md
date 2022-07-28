@@ -23,7 +23,7 @@ dev_langs:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Changes the properties of a full-text catalog.  
   

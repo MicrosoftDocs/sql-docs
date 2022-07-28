@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_pdw_sql_requests (Transact-SQL)"
 description: sys.dm_pdw_sql_requests (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: data-warehouse

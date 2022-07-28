@@ -193,7 +193,7 @@ MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](..
 
 Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], optimizing an execution plan that uses MSTVFs can use interleaved execution, which results in using actual cardinality instead of the above heuristics.
 
-For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
+For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/intelligent-query-processing-details.md#interleaved-execution-for-mstvfs).
 
 ANSI_WARNINGS isn't honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the `INSERT` or `UPDATE` statement succeeds.
 

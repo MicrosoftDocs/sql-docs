@@ -3,12 +3,11 @@ title: "Columnstore indexes - Data Warehouse"
 description: Columnstore indexes - Data Warehouse
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "12/01/2017"
+ms.date: 06/28/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse
@@ -16,8 +15,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 
   Columnstore indexes, in conjunction with partitioning, are essential for building a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse.  
   
-## What's new  
- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduces these features for columnstore performance enhancements:  
+## Key features for data warehousing
+
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced these features for columnstore performance enhancements:  
   
 -   Always On supports querying a columnstore index on a readable secondary replica.  
 -   Multiple Active Result Sets (MARS) supports columnstore indexes.  
@@ -29,6 +29,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 -   Aggregate Pushdown for efficient processing of aggregates. This is supported on all database compatibility levels.  
 -   String predicate pushdown for efficient processing of string predicates. This is supported on all database compatibility levels.  
 -   Snapshot isolation for database compatibility level 130 and higher.  
+-   Ordered cluster columnstore indexes are available in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). 
+
+For more information about new features in versions and platforms of SQL Server and Azure SQL, see [What's new in columnstore indexes](columnstore-indexes-what-s-new.md).
   
 ## Improve performance by combining nonclustered and columnstore indexes  
  Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
@@ -117,13 +120,14 @@ COMMIT TRAN
 ```  
   
 ### Snapshot isolation and read-committed snapshot isolations  
- Use snapshot isolation (SI) to guarantee transactional consistency, and read-committed snapshot isolations (RCSI) to guarantee statement level consistency for queries on columnstore indexes. This allows the queries to run without blocking data writers. This non-blocking behavior also significantly reduces the likelihood of deadlocks for complex transactions. For more information, see [Snapshot Isolation in SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) on MSDN.  
+
+ Use snapshot isolation (SI) to guarantee transactional consistency, and read-committed snapshot isolations (RCSI) to guarantee statement level consistency for queries on columnstore indexes. This allows the queries to run without blocking data writers. This non-blocking behavior also significantly reduces the likelihood of deadlocks for complex transactions. For more information, see [Snapshot Isolation in SQL Server](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md#arguments).
   
-## See Also  
- [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
- [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
- [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
-  
+## Next steps
+
+ - [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ - [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ - [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+ - [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ - [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
+ - [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 

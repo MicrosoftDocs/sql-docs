@@ -24,7 +24,7 @@ dev_langs:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Controls the behavior of the [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
   

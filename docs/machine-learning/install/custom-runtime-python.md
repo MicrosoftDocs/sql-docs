@@ -75,7 +75,7 @@ Use the following SQL script to verify the installation and functionality of the
 
 ```sql
 EXEC sp_execute_external_script
-@language =N'Python',
+@language =N'myPython',
 @script=N'
 import sys
 print(sys.path)

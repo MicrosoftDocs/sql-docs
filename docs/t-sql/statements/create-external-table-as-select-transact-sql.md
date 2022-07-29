@@ -204,7 +204,8 @@ You cannot specify any other column options such as data types, collation, or nu
 - `/r`
 - `/n`
 
-To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet by using an external tool.
+To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you use an external tool to convert them to Parquet (or ORC, for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]).
+
 
 ## Locking
  Takes a shared lock on the SCHEMARESOLUTION object.

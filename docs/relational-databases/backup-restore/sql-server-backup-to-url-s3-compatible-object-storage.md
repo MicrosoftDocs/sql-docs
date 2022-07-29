@@ -244,7 +244,7 @@ Virtual host example:
 
 ### Create credential
 
-<!--> - The name of the credential must include the bucket name.|-->
+<!-- The name of the credential must include the bucket name. -->
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
 - The Access Key ID and Secret Key ID must not contain a colon. Access Key Id and Secret Key ID is the user and password created on the S3-compliant object storage.
 - Only alphanumeric values are allowed.

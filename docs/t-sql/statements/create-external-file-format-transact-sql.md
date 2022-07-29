@@ -455,15 +455,6 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### G. Create a Delta table external file format
-This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If DATA_COMPRESSION isn't specified, the default is no compression.
-```sql
-CREATE EXTERNAL FILE FORMAT DeltaFileFormat
-WITH(
-	FORMAT_TYPE = DELTA,
-  DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-);
-```
 
 ### G. Create a Delta table external file format
 

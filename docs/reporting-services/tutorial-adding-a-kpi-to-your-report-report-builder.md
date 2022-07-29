@@ -300,7 +300,7 @@ You can further enhance the text by applying different font styles, sizes, and c
 4.  Click **Run** to preview the report.  
   
 ## <a name="Save"></a>7. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
   
 ### To save the report on a report server  
   

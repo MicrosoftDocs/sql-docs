@@ -119,6 +119,7 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
 ### [Delta table](#tab/delta)
 ```syntaxsql
 -- Create an external file format for delta table files.
@@ -425,7 +426,6 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-
 <a id="e-create-a-delimited-text-file-skipping-header-row-azure-synapse-analytics-only"></a>
 ### E. Create a Delimited Text File Skipping Header Row 
 **Applies To:** Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later

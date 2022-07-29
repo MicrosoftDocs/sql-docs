@@ -42,6 +42,9 @@ The first option is to mount a directory on your host as a data volume in your c
 > [!NOTE]
 > SQL Server 2019 containers automatically start up as non-root, while SQL Server 2017 containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 

@@ -17,7 +17,7 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# Validate a DAC Package
+# Validate a DAC package
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
 
@@ -68,22 +68,22 @@ Multiple tools are available to publish a DAC package to a test instance. The [S
 
 7. OPTIONAL: Right-click the database in object explorer and select **Create project from database** to generate a SQL project from the database.
   
-##  <a name="ViewDBChanges"></a> View Database Changes
+##  <a name="ViewDBChanges"></a> View database changes
 After the current version of a DAC was deployed to production, changes may have been made directly to the associated database that might conflict with the schema defined in a new version of the DAC. Before upgrading to a new version of the DAC, check to see if such changes have been made to the database.
 Under several scenarios you may want to view the difference between a database and a DAC package. For example, changes may have been made directly to the associated database that might conflict with the schema defined in a new version of the DAC.
 
 ### All databases
-**View Database Changes by Using Schema Compare**
+**View database changes by using schema compare**
 - Using the [Schema Compare extension in Azure Data Studio](/sql/azure-data-studio/extensions/schema-compare-extension#compare-schemas), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows, macOS, and Linux.
 
 - Using [SQL Server Data Tools in Visual Studio](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows.
 
-**View Database Changes by Using SqlPackage CLI**
+**View database changes by using SqlPackage CLI**
 
 The SqlPackage CLI can be used with the [DeployReport action](../../tools/sqlpackage/sqlpackage-deploy-drift-report.md) to view the differences between a *.dacpac* and a database through the actions that would be taken if the *.dacpac* were published to the database.
 
 ### Databases registered as a data-tier application
-**View Database Changes by Using a Wizard**  
+**View database changes by using a wizard**  
   
 1.  Run the **Upgrade Data-tier Application** wizard, specifying the currently deployed DAC and the DAC package containing the new version of the DAC.  
   
@@ -93,7 +93,7 @@ The SqlPackage CLI can be used with the [DeployReport action](../../tools/sqlpac
   
 4.  For more information on using the wizard, see [Upgrade a Data-tier Application](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md).  
   
-**View Database Changes by Using PowerShell**  
+**View database changes by using PowerShell**  
 
 1.  Create a SMO Server object and set it to the instance that contains the DAC to be viewed.
 
@@ -122,26 +122,26 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
 
-**View Database Changes by Using SqlPackage CLI**
+**View database changes by using SqlPackage CLI**
 
 The SqlPackage CLI can be used with the [DriftReport action](../../tools/sqlpackage/sqlpackage-deploy-drift-report.md) to view the changes that were made to a database since it was last registered.
 
-##  <a name="ViewUpgradeActions"></a> View Upgrade Actions  
+##  <a name="ViewUpgradeActions"></a> View upgrade actions  
 
 ### All databases
 
-**View Database Changes by Using SQL Project Publish**
+**View database changes by using SQL project publish**
 - Using the [SQL Database Projects extension in Azure Data Studio](/sql/azure-data-studio/extensions/sql-database-project-extension-build), the actions to be taken when a SQL project will be published to a database can be viewed on Windows, macOS, and Linux by selecting "Generate Script" during the publish process.
 
 - Using [SQL Server Data Tools in Visual Studio](/sql/ssdt/how-to-change-target-platform-and-publish-a-database-project#to-publish-a-database-project), the actions to be taken when a SQL project will be published to a database can be viewed on Windows as a deployment script.
 
-**View Upgrade Actions by Using SqlPackage CLI**
+**View upgrade actions by using SqlPackage CLI**
 The SqlPackage CLI can be used with the [DeployReport action](../../tools/sqlpackage/sqlpackage-deploy-drift-report.md) to view the differences between a *.dacpac* and a database through the actions that would be taken if the *.dacpac* were published to the database.
 
 ### Databases registered as a data-tier application
  Before using a new version of a DAC package to upgrade a DAC that was deployed from an earlier DAC package, you can generate a report that contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that will be run during the upgrade, and then review the statements.  
   
- **Report Upgrade Actions by Using a Wizard**  
+ **Report upgrade actions by using a wizard**  
   
 1.  Run the **Upgrade Data-tier Application** wizard, specifying the currently deployed DAC and the DAC package containing the new version of the DAC.  
   
@@ -151,7 +151,7 @@ The SqlPackage CLI can be used with the [DeployReport action](../../tools/sqlpac
   
 4.  For more information on using the wizard, see [Upgrade a Data-tier Application](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md).  
   
- **Report Upgrade Actions by Using PowerShell**  
+ **Report upgrade actions by using PowerShell**  
   
 1.  Create a SMO Server object and set it to the instance that contains the deployed DAC.  
   

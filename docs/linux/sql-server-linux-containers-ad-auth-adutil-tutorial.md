@@ -207,6 +207,9 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
 Run your SQL Server container, and mount the correct AD configuration files that were previously created as shown below:
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>" \
 -p 5433:1433 --name sql1 \

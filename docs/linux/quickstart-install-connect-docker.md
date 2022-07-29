@@ -110,6 +110,9 @@ Before starting the following steps, make sure that you've selected your preferr
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
@@ -242,6 +245,9 @@ Before starting the following steps, make sure that you've selected your preferr
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
@@ -373,6 +379,9 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone-end
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
+
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
 
    ::: zone pivot="cs1-bash"
    ```bash

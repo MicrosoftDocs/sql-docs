@@ -179,7 +179,7 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Region
 
-Your S3-Compatible Object Storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTION` or `RESTORE_OPTION`. These options requires the value to be declared in JSON format.
+Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTION` or `RESTORE_OPTION`. These options require the value to be declared in JSON format.
 
 If no value is declared *us-east-1* will be assigned as default.
 

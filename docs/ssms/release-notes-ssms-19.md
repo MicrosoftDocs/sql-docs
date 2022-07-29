@@ -42,13 +42,13 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 | New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.36.2. |
-| Always Encrypted | Added the ability to explicitly configure an attestation protocol in the “Connect To Server” dialog when using Always Encrypted with secure enclaves (column encryption). |
+| Always Encrypted | Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption). |
 | Client Driver | Changed to Microsoft.Data.SqlClient. |
 | Contained Always On Availability Group | Added support for Contained Always On Availability Groups. |
 | Data Classification | Improvements to Data Classification user interface. |
-| Ledger | Added support for Ledger feature Database ledger. For more information, visit [What is the database ledger?](/sql/relational-databases/security/ledger/ledger-database-ledger). |
+| Ledger | Added support for Ledger feature Database ledger. For more information, visit [What is the database ledger?](../relational-databases/security/ledger/ledger-database-ledger.md). |
 | Query Execution or Results | Improved checks for open connections. |
-| Query Tuning Advisor | Updated user interface for improved accessibility. |
+| Query Tuning Assistant | Updated user interface for improved accessibility. |
 | Showplan | The showplan XML schema has been updated. |
 
 #### Bug fixes in 19.0 Preview 2

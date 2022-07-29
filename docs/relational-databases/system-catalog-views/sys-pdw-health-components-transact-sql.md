@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_health_components (Transact-SQL)"
 description: See a reference for the system catalog view sys.pdw_health_components (Transact-SQL) for Analytics Platform System.
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2022"
 ms.prod: sql
 ms.technology: system-objects

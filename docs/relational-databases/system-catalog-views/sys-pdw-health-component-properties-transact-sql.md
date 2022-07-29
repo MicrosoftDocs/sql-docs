@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_health_component_properties (Transact-SQL)"
 description: sys.pdw_health_component_properties (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2022"
 ms.prod: sql
 ms.technology: system-objects

@@ -24,13 +24,13 @@ In this article, we'll show you how to connect to SQL Server 2022 using the stri
 
 - SQL Server 2022
 - ODBC or OLE DB Driver for SQL Server
-  - [ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) version 18.0.1.1 or higher
-  - [OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server) version 19.0.0 or higher
-- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine)
+  - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
+  - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher
+- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ## Connect to SQL Server using a .NET application
 
-For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](/sql/relational-databases/security/networking/tds-8-and-tls-1-3#additional-changes-to-connection-string-encryption-properties).
+For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](./tds-8-and-tls-1-3.md#additional-changes-to-connection-string-encryption-properties).
 
 ## Connect using an ODBC DSN
 

@@ -76,7 +76,7 @@ If there are multiple files per table, put each set of files into different dire
 
 **Example:**  
 
-```sqlsyntax
+```syntaxsql
 Create External Table foo
 (col1 int)WITH (LOCATION='/bar/foobar.txt',DATA_SOURCE…); OR
 Create External Table foo

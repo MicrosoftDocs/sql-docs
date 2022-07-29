@@ -3,7 +3,7 @@ title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/09/2022
+ms.date: 07/22/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -303,14 +303,14 @@ CREATE CERTIFICATE AdventureWorks2019Cert
 GO
 -- Backup database
 BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak',
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
 WITH FORMAT, MAXTRANSFERSIZE = 20971520, COMPRESSION,
 ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2019Cert)
 GO
 
 -- Restore database
 RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak',
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
 WITH REPLACE
 ```
 

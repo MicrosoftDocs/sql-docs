@@ -22,7 +22,7 @@ dev_langs:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a full-text index from a specified table or indexed view.  
   

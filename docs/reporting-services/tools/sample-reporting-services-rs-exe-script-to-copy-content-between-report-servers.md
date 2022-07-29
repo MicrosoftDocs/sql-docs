@@ -64,6 +64,8 @@ The script can be used to copy content between report servers of the same mode o
 |Cache refresh plans|Yes|Yes||  
 |Images|Yes|Yes||  
 |Report parts|Yes|Yes||  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 ##  <a name="bkmk_required_permissions"></a> Required permissions  
  The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual article to see the required permissions. For example the ListChildren method topic notes the required permissions of:  

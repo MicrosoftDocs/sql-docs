@@ -3,7 +3,8 @@ title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/09/2022
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -864,7 +865,7 @@ Wait statistics information per query won't be captured.
 #### **\<query_capture_policy_option_list> :: =**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-Controls the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
+Controls the [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the `QUERY_CAPTURE_MODE = AUTO` setting captures query store details when any of the following thresholds are hit:
 
@@ -967,6 +968,9 @@ The current setting of this option can be determined by examining the `page_veri
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
 
 #### REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     

@@ -119,10 +119,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Is a semicolon-delimited list of file names to attach to the e-mail message. Files in the list must be specified as absolute paths. The attachments list is of type **nvarchar(max)**. By default, Database Mail limits file attachments to 1 MB per file.  
  
  > [!IMPORTANT]
- > This parameter is not available in Azure SQL Managed Instance because it cannot access local file system.
+ > This parameter isn't available in Azure SQL Managed Instance because it cannot access local file system.
   
 `[ @query = ] 'query'`
  Is a query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Note that the query is executed in a separate session, so local variables in the script calling **sp_send_dbmail** are not available to the query.  
+ 
+   >[!NOTE]
+   > When using `@query` parameter, user that executes `sp_send_dbmail` must be SQL login or directly mapped to principal (login) of Azure AD or AD. If user is member of Azure AD group or AD group it will not be able to execute the query. This is due to Azure SQL Managed Instance impersonation and EXECUTE AS [limitations](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#logins-and-users).
   
 `[ @execute_query_database = ] 'execute_query_database'`
  Is the database context within which the stored procedure runs the query. The parameter is of type **sysname**, with a default of the current database. This parameter is only applicable if **\@query** is specified.  
@@ -185,13 +188,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  **sysmail_stop_sp** stops Database Mail by stopping the Service Broker objects that the external program uses. **sp_send_dbmail** still accepts mail when Database Mail is stopped using **sysmail_stop_sp**. To start Database Mail, use **sysmail_start_sp**.  
   
- When **\@profile** is not specified, **sp_send_dbmail** uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, **sp_send_dbmail** uses the default public profile. If there is no default private profile for the user and no default public profile, **sp_send_dbmail** returns an error.  
+ When **\@profile** isn't specified, **sp_send_dbmail** uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, **sp_send_dbmail** uses the default public profile. If there is no default private profile for the user and no default public profile, **sp_send_dbmail** returns an error.  
   
  **sp_send_dbmail** does not support e-mail messages with no content. To send an e-mail message, you must specify at least one of **\@body**, **\@query**, **\@file_attachments**, or **\@subject**. Otherwise, **sp_send_dbmail** returns an error.  
   
  Database Mail uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security context of the current user to control access to files. Therefore, users who are authenticated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication cannot attach files using **\@file_attachments**. Windows does not allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to provide credentials from a remote computer to another remote computer. Therefore, Database Mail may not be able to attach files from a network share in cases where the command is run from a computer other than the computer that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on.  
   
- If both **\@query** and **\@file_attachments** are specified and the file cannot be found, the query is still executed but the e-mail is not sent.  
+ If both **\@query** and **\@file_attachments** are specified and the file cannot be found, the query is still executed but the e-mail isn't sent.  
   
  When a query is specified, the result set is formatted as inline text. Binary data in the result is sent in hexadecimal format.  
   

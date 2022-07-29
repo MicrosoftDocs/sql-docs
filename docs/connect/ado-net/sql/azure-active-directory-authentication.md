@@ -258,7 +258,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 Besides using the Active Directory authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Active Directory authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider) abstract class. 
 
-During Active Directory authentication, the client application can define its own `ActiveDirectoryAuthencationProvider` class by either:
+During Active Directory authentication, the client application can define its own `ActiveDirectoryAuthenticationProvider` class by either:
 
 - Using a customized callback method.
 - Passing an application client ID to the MSAL library via SqlClient driver for fetching access tokens.

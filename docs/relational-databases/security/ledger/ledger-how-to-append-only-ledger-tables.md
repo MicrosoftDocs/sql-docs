@@ -21,7 +21,7 @@ For more information, see [Append-only ledger tables](ledger-append-only-ledger-
 
 ## Prerequisites
 
-- [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 ## Create an append-only ledger table
 
@@ -34,9 +34,9 @@ We'll create a `KeyCardEvents` table with the following schema.
 | Timestamp | datetime2 | The date and time the employee accessed the building |
 
 > [!IMPORTANT]
-> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](/sql/relational-databases/security/permissions-database-engine#asdbpermissions). 
+> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
 
-1. Use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
+1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 
    ```sql
    CREATE SCHEMA [AccessControl];
@@ -57,7 +57,7 @@ We'll create a `KeyCardEvents` table with the following schema.
    VALUES ('43869', 'Building42', '2020-05-02T19:58:47.1234567');
    ```
 
-1. View the contents of your KeyCardEvents table, and specify the [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns that are added to your [append-only ledger table](ledger-append-only-ledger-tables.md).
+1. View the contents of your KeyCardEvents table, and specify the [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns that are added to your [append-only ledger table](ledger-append-only-ledger-tables.md).
 
    ```sql
    SELECT *

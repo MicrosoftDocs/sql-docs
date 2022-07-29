@@ -56,7 +56,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  **binary(10)**  
   
 ## Remarks  
- To understand how the **sys.fn_cdc_map_time_lsn** can be used to map datetime ranges to LSN ranges, consider the following scenario. Assume that a consumer wants to extract change data on a daily basis. That is, the consumer wants only changes for a given day up to and including midnight. The lower bound of the time range would be up to but not including midnight of the previous day. The upper bound would be up to and including midnight of the given day. The following example shows how the function **sys.fn_cdc_map_time_to_lsn** can be used to systematically map this time-based range into the LSN-based range needed by the change data capture enumeration functions to return all changes within that range.  
+ To understand how the **sys.fn_cdc_map_time_to_lsn** can be used to map datetime ranges to LSN ranges, consider the following scenario. Assume that a consumer wants to extract change data on a daily basis. That is, the consumer wants only changes for a given day up to and including midnight. The lower bound of the time range would be up to but not including midnight of the previous day. The upper bound would be up to and including midnight of the given day. The following example shows how the function **sys.fn_cdc_map_time_to_lsn** can be used to systematically map this time-based range into the LSN-based range needed by the change data capture enumeration functions to return all changes within that range.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
   
@@ -76,7 +76,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  Requires membership in the **public** role.  
   
 ## Examples  
- The following example uses the `sys.fn_cdc_map_time_lsn` function to determine whether there are any rows in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table with a **tran_end_time** value that is greater than or equal to midnight. This query can be used to determine, for example, whether the capture process has already processed the changes committed through midnight of the previous day, so that the extraction of change data for that day can proceed.  
+ The following example uses the `sys.fn_cdc_map_time_to_lsn` function to determine whether there are any rows in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table with a **tran_end_time** value that is greater than or equal to midnight. This query can be used to determine, for example, whether the capture process has already processed the changes committed through midnight of the previous day, so that the extraction of change data for that day can proceed.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

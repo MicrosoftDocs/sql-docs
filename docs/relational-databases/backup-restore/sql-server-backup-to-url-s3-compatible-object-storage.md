@@ -46,7 +46,7 @@ The maximum supported size of a single file is the result of *10,000 parts \* `M
 The S3 endpoint must have been configured as follows:
 
 - TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host.
-- Credentials created on the S3-complaint object storage with proper permissions to perform the operation. For all intent and purposes the user and password created on the storage layer will be called `Access Key ID` and `Secret Key ID`. You will need both to authenticate against the S3 endpoint.
+- Credentials created on the S3-compatible object storage with proper permissions to perform the operation. The user and password created on the storage layer are named the `Access Key ID` and `Secret Key ID`. You will need both to authenticate against the S3 endpoint.
 - At least one bucket has been configured. Buckets cannot be created or configured from [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Security

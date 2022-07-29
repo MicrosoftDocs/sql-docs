@@ -115,7 +115,8 @@ In a SharePoint mode deployment, browse to the document library, select the repo
 -   [Adding and Configuring the ReportViewer Controls](/previous-versions/ms252104(v=vs.140))  
   
 ## See Also  
- [Reports, and Report Definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+
  [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

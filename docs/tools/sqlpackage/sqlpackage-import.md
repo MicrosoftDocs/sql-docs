@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 12/27/2021
+ms.date: 7/29/2022
 ---
 
 # SqlPackage Import parameters and properties
@@ -20,7 +20,23 @@ The SqlPackage.exe Import action imports the schema and table data from a BACPAC
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage /Action:Import {parameters} {properties}
+```
+
+### Examples
+
+```bash
+# example import from Azure SQL Database using SQL authentication and a connection string
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example import using short form parameter names, skips schema validation
+SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac" /p:VerifyExtraction=False
+
+# example import using Azure Active Directory Service Principal
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Import action
@@ -36,7 +52,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/ModelFilePath:**|**/mfp**|{string}|Specifies the file path to override the model.xml in the source file. Use of this setting may result in deployment failure and/or unintended data loss. This setting is intended only for use when troubleshooting issues with publish, import, or script generation.|
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-import-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
-|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
+|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action from local storage. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage.exe Action. |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|Specifies if SQL encryption should be used for the target database connection. |
@@ -72,3 +88,4 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting Import/Export with SqlPackage](./troubleshooting-import-export-sqlpackage.md)

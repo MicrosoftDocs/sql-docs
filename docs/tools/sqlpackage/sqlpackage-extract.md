@@ -41,6 +41,10 @@ SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFi
 # example extract to create a schema-only .dacpac file connecting using Active Directory Service Principal
 SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example extract to create a .dacpac file with data connecting using SQL authentication
+SqlPackage /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=true /p:VerifyExtraction=true \
+    /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password}
 ```
 
 ## Parameters for the Extract action

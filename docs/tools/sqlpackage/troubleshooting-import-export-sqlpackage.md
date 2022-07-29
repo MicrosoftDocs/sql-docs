@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 5/5/2021
+ms.date: 7/29/2022
 ---
 
 # Troubleshooting Import/Export with SqlPackage
@@ -52,6 +52,18 @@ For imports that contain large tables or tables with many indexes, the use of `/
 As an alternative operation to obtain the database schema and data while skipping the schema validation, perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
 
 In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
+
+## Azure SQL Database
+
+The following tips are specific to running import or export against Azure SQL Database from an Azure virtual machine (VM):
+
+- use Business Critical or Premium tier database for best performance
+- use SSD storage on the VM and ensure there is enough room to unzip the bacpac
+- execute SqlPackage from a VM in the same region as the database
+- enable accelerated networking in the VM
+
+For more information on utilizing a PowerShell script to collect more information about an import operation, please see a [TechCommunity blog post](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-211-monitoring-sqlpackage-import-process/ba-p/3556382) on the topic.
+
 
 ## Next steps
 

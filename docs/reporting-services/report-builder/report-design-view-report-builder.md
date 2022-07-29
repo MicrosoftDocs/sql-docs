@@ -52,7 +52,9 @@ ms.author: maggies
   
 ##  <a name="RptDesignSurface"></a> The Report Design Surface  
  The Report Builder report design surface is the main work area for designing your reports. To place report items such as data regions, subreports, text boxes, images, rectangles, and lines in your report, you add them from the ribbon or the Report Part Gallery to the design surface. There, you can add groups, expressions, parameters, filters, actions, visibility, and formatting to your report items.  
-  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]  
+
  You can also change the following:  
   
 -   The report body properties, such as border and fill color, by right-clicking the white area of the design surface, outside any report items, and clicking **Body Properties**.  
@@ -109,6 +111,8 @@ ms.author: maggies
   
 > [!NOTE]  
 >  To view the Report Part Gallery, you need to be connected to a server.  
+>
+>Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
   
  You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)..  
   

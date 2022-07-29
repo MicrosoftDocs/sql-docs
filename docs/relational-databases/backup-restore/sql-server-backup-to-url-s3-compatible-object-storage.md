@@ -53,7 +53,7 @@ The S3 endpoint must have been configured as follows:
 
 ### Backup Permissions
 
-To connect SQL Server to an S3-compatible object storage two sets of permissions needs to be established, one on SQL Server and also on the storage layer.
+To connect SQL Server to an S3-compatible object storage, two sets of permissions need to be established, one on SQL Server and also on the storage layer.
 
 On SQL Server the user account that is used to issue BACKUP or RESTORE commands should be in the **db_backupoperator** database role with **Alter any credential** permissions.
 

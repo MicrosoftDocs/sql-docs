@@ -138,7 +138,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
 1. Create the SA password secret on kubernetes before deploying the SQL Server containers using the following command:
 
     ```bash
-    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+    kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
     ```
 
     Replace `MyC0m9l&xP@ssw0rd` with your own complex password.
@@ -187,11 +187,11 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
               value: "Y" 
             - name: MSSQL_ENABLE_HADR 
               value: "1" 
-            - name: SA_PASSWORD 
+            - name: MSSQL_SA_PASSWORD 
               valueFrom: 
                 secretKeyRef: 
                   name: mssql 
-                  key: SA_PASSWORD 
+                  key: MSSQL_SA_PASSWORD 
             volumeMounts: 
             - name: dxe 
               mountPath: "/etc/dh2i" 
@@ -246,11 +246,11 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
               value: "Y" 
             - name: MSSQL_ENABLE_HADR 
               value: "1" 
-            - name: SA_PASSWORD 
+            - name: MSSQL_SA_PASSWORD 
               valueFrom: 
                 secretKeyRef: 
                   name: mssql 
-                  key: SA_PASSWORD 
+                  key: MSSQL_SA_PASSWORD 
             volumeMounts: 
             - name: dxe 
               mountPath: "/etc/dh2i" 

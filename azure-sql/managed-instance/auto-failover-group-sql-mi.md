@@ -8,7 +8,7 @@ ms.custom: sql-db-mi-split
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: mathoma
 ms.date: 07/08/2022
 ---
 
@@ -24,7 +24,7 @@ The auto-failover groups feature allows you to manage the replication and failov
 To get started, review [Configure auto-failover group](auto-failover-group-configure-sql-mi.md). For an end-to-end experience, see the [Auto-failover group tutorial](failover-group-add-instance-tutorial.md).
 
 > [!NOTE]
-> This article covers auto-failover groups for Azure SQL Managed Instance. For Azure SQL Database, see [Auto-failover groups in SQL Database](../database/auto-failover-group-sql-db.md). 
+> This article covers auto-failover groups for Azure SQL Managed Instance. For Azure SQL Database, see [Auto-failover groups in SQL Database](../database/auto-failover-group-sql-db.md).
 
 ## Overview
 
@@ -73,7 +73,7 @@ There is some overlap of content in the following articles, be sure to make chan
 
 ## Failover group architecture
 
-The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like _master_ and _msdb_ will not be replicated.
+The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like `master` and `msdb` will not be replicated.
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using managed instance and auto-failover group:
 
@@ -163,7 +163,7 @@ If an outage occurs in the primary region, recent transactions may not be able t
 
 ## DNS update
 
-The DNS update of the read-write listener will happen immediately after the failover is initiated. This operation won't result in data loss. However, the process of switching database roles can take up to 5 minutes under normal conditions. Until it's completed, some databases in the new primary instance will still be read-only. If a failover is initiated using PowerShell, the operation to switch the primary replica role is synchronous. If it's initiated using the Azure portal, the UI will indicate completion status. If it's initiated using the REST API, use standard Azure Resource Manager’s polling mechanism to monitor for completion.
+The DNS update of the read-write listener will happen immediately after the failover is initiated. This operation won't result in data loss. However, the process of switching database roles can take up to 5 minutes under normal conditions. Until it's completed, some databases in the new primary instance will still be read-only. If a failover is initiated using PowerShell, the operation to switch the primary replica role is synchronous. If it's initiated using the Azure portal, the UI will indicate completion status. If it's initiated using the REST API, use standard Azure Resource Manager's polling mechanism to monitor for completion.
 
 > [!IMPORTANT]
 > Use manual planned failover to move the primary back to the original location once the outage that caused the geo-failover is mitigated.

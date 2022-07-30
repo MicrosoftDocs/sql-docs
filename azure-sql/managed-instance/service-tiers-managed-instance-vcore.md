@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
-ms.date: 06/02/2022
+ms.date: 07/30/2022
 ms.custom: ignite-fall-2021
 ---
 # vCore purchasing model - Azure SQL Managed Instance

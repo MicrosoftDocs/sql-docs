@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 4/14/2022
+ms.date: 07/30/2022
 ---
 
 # Active geo-replication

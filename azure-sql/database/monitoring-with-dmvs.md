@@ -634,14 +634,14 @@ For elastic pools, you can monitor individual databases in the pool with the tec
 
 ### Maximum concurrent requests
 
-To see the number of concurrent requests, run this Transact-SQL query on your database:
+To see the current number of concurrent requests, run this Transact-SQL query on your database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests R;
 ```
 
-To analyze the workload of a SQL Server database, modify this query to filter on the specific database you want to analyze. For example, if you have an on-premises database named MyDatabase, this Transact-SQL query returns the count of concurrent requests in that database:
+To analyze the workload of a database, modify this query to filter on the specific database you want to analyze. For example, if you have an on-premises database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]

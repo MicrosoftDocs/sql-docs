@@ -228,8 +228,6 @@
         href: load-from-csv-with-bcp.md
       - name: Application and database tuning guidance
         href: database/performance-guidance.md
-      - name: Use DMVs to monitor performance
-        href: database/monitoring-with-dmvs.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
       - name: In-memory OLTP
@@ -332,12 +330,6 @@
         href: database/design-first-database-tutorial.md
       - name: Design database using .NET
         href: database/design-first-database-csharp-tutorial.md
-    - name: Monitor with Azure Monitor
-      items:
-        - name: Azure Monitor for SQL Database
-          href: database/monitoring-sql-database-azure-monitor.md 
-        - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md        
     - name: Business continuity
       items: 
         - name: Add db to failover group 
@@ -386,6 +378,16 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
+    - name: Monitor & Tune
+      items:
+        - name: Identify query performance bottlenecks
+          href: database/identify-query-performance-issues.md
+        - name: Use DMVs to monitor performance
+          href: database/monitoring-with-dmvs.md
+        - name: Azure Monitor for SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
+        - name: Azure Monitor for SQL Database reference 
+          href: database/monitoring-sql-database-azure-monitor-reference.md              
     - name: Hyperscale
       items: 
       - name: Overview
@@ -401,9 +403,6 @@
       - name: FAQ
         displayName: Hyperscale frequently asked questions
         href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
-
-
-
     - name: Purchasing models
       items: 
       - name: Overview
@@ -1197,8 +1196,12 @@
           items:
           - name: Give users permission
             href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-    - name: Monitor with Azure Monitor
+    - name: Monitor & Tune
       items:
+        - name: Identify query performance bottlenecks
+          href: managed-instance/identify-query-performance-issues.md
+        - name: Use DMVs to monitor performance
+          href: managed-instance/monitoring-with-dmvs.md
         - name: Azure Monitor for SQL Managed Instance
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Azure Monitor for SQL Managed Instance reference 

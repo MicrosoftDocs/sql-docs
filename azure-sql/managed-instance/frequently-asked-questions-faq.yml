@@ -239,7 +239,7 @@ sections:
           
           ### Are Database Advisor and Query Performance Insight supported for SQL Managed Instance databases?
           
-          No, they are not supported. You can use [DMVs](../database/monitoring-with-dmvs.md) and [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?preserve-view=true&view=sql-server-ver15) together with [SQL Profiler](/sql/tools/sql-server-profiler/sql-server-profiler?preserve-view=true&view=sql-server-ver15) and [XEvents](/sql/relational-databases/extended-events/extended-events?preserve-view=true&view=sql-server-ver15) to monitor your databases.
+          No, they are not supported. You can use [DMVs](monitoring-with-dmvs.md) and [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?preserve-view=true&view=sql-server-ver15) together with [SQL Profiler](/sql/tools/sql-server-profiler/sql-server-profiler?preserve-view=true&view=sql-server-ver15) and [XEvents](/sql/relational-databases/extended-events/extended-events?preserve-view=true&view=sql-server-ver15) to monitor your databases.
           
           ### How can I monitor CPU usage on my managed instance?
           

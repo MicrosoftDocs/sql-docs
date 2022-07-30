@@ -1,10 +1,10 @@
 ---
 title: Monitor performance using DMVs
-titleSuffix: Azure SQL Database
-description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
+titleSuffix: Azure SQL Managed Instance
+description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Managed Instance.
 services:
   - "sql-database"
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: performance
 ms.custom:
   - "sqldbrb=2"
@@ -13,28 +13,24 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/29/2022
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-mi"
 ---
-# Monitoring Microsoft Azure SQL Database performance using dynamic management views
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+# Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](monitoring-with-dmvs.md)
-> * [Azure SQL Managed Instance](../managed-instance/monitoring-with-dmvs.md)
+> * [Azure SQL Database](../database/monitoring-with-dmvs.md)
+> * [Azure SQL Managed Instance](monitoring-with-dmvs.md)
 
-Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on.  This article provides information on how to detect common performance problems by using dynamic management views.
+Microsoft Azure SQL Managed Instance enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
 
-This article is about Azure SQL Database, see also [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
+This article is about Azure SQL Managed Instance, see also [Monitoring Microsoft Azure SQL Database performance using dynamic management views](../database/monitoring-with-dmvs.md).
 
 ## Permissions
 
-In Azure SQL Database, querying a dynamic management view requires **VIEW DATABASE STATE** permissions. The **VIEW DATABASE STATE** permission returns information about all objects within the current database. To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query:
+In Azure SQL Managed Instance, querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
 
-```sql
-GRANT VIEW DATABASE STATE TO database_user;
-```
-
-In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. In Azure SQL Database, they return information regarding your current logical database only.
+In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. 
 
 ## Identify CPU performance issues
 
@@ -97,8 +93,6 @@ ORDER BY total_cpu_millisec DESC;
 
 Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the database to work around the issue.
 
-For more information about handling CPU performance problems in Azure SQL Database, see [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md).
-
 ## Identify IO performance issues
 
 When identifying IO performance issues, the top wait types associated with IO issues are:
@@ -114,21 +108,6 @@ When identifying IO performance issues, the top wait types associated with IO is
 ### If the IO issue is occurring right now
 
 Use the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) or [sys.dm_os_waiting_tasks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) to see the `wait_type` and `wait_time`.
-
-#### Identify data and log IO usage
-
-Use the following query to identify data and log IO usage. If the data or log IO is above 80%, it means users have used the available IO for the Azure SQL Database service tier.
-
-```sql
-SELECT end_time, avg_data_io_percent, avg_log_write_percent
-FROM sys.dm_db_resource_stats
-ORDER BY end_time DESC;
-```
-
-If the IO limit has been reached, you have two options:
-
-- Option 1: Upgrade the compute size or service tier
-- Option 2: Identify and tune the queries consuming the most IO.
 
 #### View buffer-related IO using the Query Store
 
@@ -349,8 +328,6 @@ ORDER BY SUM(wait_time) DESC;
 
 ### Identify high memory-consuming statements
 
-If you encounter out of memory errors in Azure SQL Database, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
-
 Use the following query to identify high memory-consuming statements:
 
 ```sql
@@ -385,7 +362,7 @@ FROM cte
 ORDER BY SerialDesiredMemory DESC;
 ```
 
-### Identify the top 10 active memory grants
+### Identify the memory grants
 
 Use the following query to identify the top 10 active memory grants:
 
@@ -484,7 +461,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and managed instance and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 
@@ -501,17 +478,11 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;
 ```
 
-> [!NOTE]
-> When executing the `sys.dm_exec_requests` and `sys.dm_exec_sessions views`, if you have **VIEW DATABASE STATE** permission on the database, you see all executing sessions on the database; otherwise, you see only the current session.
-
 ## Monitor resource use
 
-You can monitor Azure SQL Database resource usage using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
+You can monitor resource usage using the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store), just as you would in SQL Server.
 
-You can also monitor usage using these views:
-
-- [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)
-- [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)
+You can also monitor usage using [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database).
 
 ### sys.dm_db_resource_stats
 
@@ -534,6 +505,22 @@ FROM sys.dm_db_resource_stats;
 
 For other queries, see the examples in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database).
 
+### sys.server_resource_stats
+
+You can use [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database) to return CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
+
+```sql
+DECLARE @s datetime;  
+DECLARE @e datetime;  
+SET @s= DateAdd(d,-7,GetUTCDate());  
+SET @e= GETUTCDATE();  
+SELECT resource_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization
+FROM sys.server_resource_stats
+WHERE start_time BETWEEN @s AND @e  
+GROUP BY resource_name  
+HAVING AVG(avg_cpu_percent) >= 80;
+```
+
 ### sys.resource_stats
 
 The [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view in the `master` database has additional information that can help you monitor the performance of your database at its specific service tier and compute size. The data is collected every 5 minutes and is maintained for approximately 14 days. This view is useful for a longer-term historical analysis of how your database uses resources.
@@ -548,9 +535,6 @@ Other application types might interpret the same graph differently. For example,
 
 The database engine exposes consumed resource information for each active database in the `sys.resource_stats` view of the `master` database in each server. The data in the table is aggregated for 5-minute intervals. With the Basic, Standard, and Premium service tiers, the data can take more than 5 minutes to appear in the table, so this data is more useful for historical analysis rather than near-real-time analysis. Query the `sys.resource_stats` view to see the recent history of a database and to validate whether the reservation you chose delivered the performance you want when needed.
 
-> [!NOTE]
-> On Azure SQL Database, you must be connected to the `master` database to query `sys.resource_stats` in the following examples.
-
 This example shows you how the data in this view is exposed:
 
 ```sql
@@ -564,7 +548,7 @@ ORDER BY start_time DESC;
 
 The next example shows you different ways that you can use the `sys.resource_stats` catalog view to get information about how your database uses resources:
 
-1. To look at the past week's resource use for the database userdb1, you can run this query:
+1. To look at the past week's resource use for the database `userdb1`, you can run this query:
 
     ```sql
     SELECT *
@@ -717,7 +701,9 @@ Slow or long-running queries can contribute to excessive resource consumption an
 
 In some cases, two or more queries may mutually block one another, resulting in a deadlock. 
 
-You can create an Extended Events trace a database in Azure SQL Database to capture deadlock events, then find related queries and their execution plans in Query Store. Learn more in [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md).
+You can create an Extended Events trace a database to capture deadlock events, then find related queries and their execution plans in Query Store. 
+
+For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) of the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 ### Monitoring query plans
 
@@ -751,7 +737,7 @@ ORDER BY highest_cpu_queries.total_worker_time DESC;
 
 ### Monitor with Azure Monitor
 
-Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Database. For more information, see [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md).
+Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Managed Instance. For more information, see [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md).
 
 ## See also
 
@@ -760,8 +746,7 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 
 ## Next steps
 
-- [Introduction to Azure SQL Database and Azure SQL Managed Instance](sql-database-paas-overview.md)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
-- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](performance-guidance.md)
-- [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md)
-- [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)
+- [Introduction to Azure SQL Database and Azure SQL Managed Instance](../database/sql-database-paas-overview.md)
+- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
+- [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
+- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)

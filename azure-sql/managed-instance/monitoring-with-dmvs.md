@@ -617,7 +617,7 @@ ORDER BY 2 DESC;
 
 ### Monitoring blocked queries
 
-Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](understand-resolve-blocking.md).
+Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).
 
 ### Monitoring deadlocks
 
@@ -625,7 +625,7 @@ In some cases, two or more queries may mutually block one another, resulting in 
 
 You can create an Extended Events trace a database to capture deadlock events, then find related queries and their execution plans in Query Store. 
 
-For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) of the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) in the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 ### Monitoring query plans
 
@@ -672,4 +672,4 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 - [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)
-- [sys.server_resource_stats (Azure SQL Managed Instance)](../../docs/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/docs/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)

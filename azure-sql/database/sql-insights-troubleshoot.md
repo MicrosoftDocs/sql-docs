@@ -14,7 +14,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Troubleshoot SQL Insights (preview)
-[!INCLUDE [sqldb-sqlmi](..\includes\appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 To troubleshoot data collection issues in SQL Insights (preview), check the status of the monitoring machine on the **Manage profile** tab. The statuses are:
 

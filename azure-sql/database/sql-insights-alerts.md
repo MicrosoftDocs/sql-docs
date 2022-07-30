@@ -14,7 +14,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Create alerts with SQL Insights (preview)
-[!INCLUDE [sqldb-sqlmi](..\includes\appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 SQL Insights (preview) includes a set of alert rule templates you can use to create [alert rules in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) for common SQL issues. The alert rules in SQL Insights (preview) are log alert rules based on performance data stored in the *InsightsMetrics* table in Azure Monitor Logs.  
 

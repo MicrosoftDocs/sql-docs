@@ -14,7 +14,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Enable SQL Insights (preview)
-[!INCLUDE [sqldb-sqlmi](..\includes\appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This article describes how to enable [SQL Insights (preview)](sql-insights-overview.md) to monitor your SQL deployments. Monitoring is performed from an Azure virtual machine that makes a connection to your SQL deployments and uses Dynamic Management Views (DMVs) to gather monitoring data. You can control what datasets are collected and the frequency of collection using a monitoring profile.
 

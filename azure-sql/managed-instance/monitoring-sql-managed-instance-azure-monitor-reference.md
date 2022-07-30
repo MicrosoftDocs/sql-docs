@@ -14,9 +14,9 @@ monikerRange: "= azuresql || = azuresql-mi"
 ---
 
 # Monitoring Azure SQL Managed Instance data reference
-[!INCLUDE [sqlmi](..\includes\appliesto-sqlmi.md)]
+[!INCLUDE [sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article contains reference for monitoring Azure SQL Managed Instance with Azure Monitor. See [Monitoring Azure SQL Managed Instance](monitoring-sql-mananaged-instance-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Managed Instance with Azure Monitor SQL Insights (preview).
+This article contains reference for monitoring Azure SQL Managed Instance with Azure Monitor. See [Monitoring Azure SQL Managed Instance](monitoring-sql-managed-instance-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Managed Instance with Azure Monitor SQL Insights (preview).
 
 ## Metrics
 
@@ -55,5 +55,5 @@ For more information on the schema of Activity Log entries, see [Activity Log sc
 ## Next steps
 
 - [Monitoring Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md)
-- [Monitoring Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
+- [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md)
 - [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource)

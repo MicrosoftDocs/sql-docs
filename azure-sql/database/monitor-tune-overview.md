@@ -164,4 +164,4 @@ Additionally, you can use [Extended Events](/sql/relational-databases/extended-e
 - For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
 - [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
 - [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
-- [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md)
+- [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

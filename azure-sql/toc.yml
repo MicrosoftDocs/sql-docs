@@ -232,10 +232,6 @@
         href: database/monitoring-with-dmvs.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
-      - name: Azure Monitor for SQL Database
-        href: database/monitoring-sql-database-azure-monitor.md 
-      - name: Azure Monitor for SQL Database reference 
-        href: database/monitoring-sql-database-azure-monitor-reference.md        
       - name: In-memory OLTP
         items:
         - name: Configure In-Memory OLTP
@@ -336,6 +332,12 @@
         href: database/design-first-database-tutorial.md
       - name: Design database using .NET
         href: database/design-first-database-csharp-tutorial.md
+    - name: Monitor with Azure Monitor
+      items:
+        - name: Azure Monitor for SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
+        - name: Azure Monitor for SQL Database reference 
+          href: database/monitoring-sql-database-azure-monitor-reference.md        
     - name: Business continuity
       items: 
         - name: Add db to failover group 
@@ -1195,7 +1197,12 @@
           items:
           - name: Give users permission
             href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-
+    - name: Monitor with Azure Monitor
+      items:
+        - name: Azure Monitor for SQL Managed Instance
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
+        - name: Azure Monitor for SQL Managed Instance reference 
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md        
     - name: Features
       items:
       - name: Linked servers

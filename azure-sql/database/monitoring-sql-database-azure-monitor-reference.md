@@ -5,14 +5,16 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.topic: conceptual
 ms.reviewer: mathoma, dfurman
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: performance
 ms.custom:
   - "subject-monitoring"
-ms.date: 03/14/2022
+ms.date: 07/29/2022
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Monitoring Azure SQL Database data reference
+[!INCLUDE [sqldb](..\includes\appliesto-sqldb.md)]
 
 This article contains reference for monitoring Azure SQL Database with Azure Monitor. See [Monitoring Azure SQL Database](monitoring-sql-database-azure-monitor.md) for details on collecting and analyzing monitoring data for Azure SQL Database with Azure Monitor SQL Insights (preview).
 
@@ -24,7 +26,6 @@ For data specific to Azure SQL Database, see [Data for Azure SQL Database](/azur
 
 For a complete list of metrics, see: 
 - [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases)
-- [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances)
 - [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools)
 
 ## Resource logs

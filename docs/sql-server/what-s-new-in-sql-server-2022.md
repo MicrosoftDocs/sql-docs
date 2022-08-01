@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 07/27/2022
+ms.date: 08/01/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -56,7 +56,7 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - Data virtualization: 
      - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
      - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
-- [Performance](#performance)
+- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
   - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization - Supportability
   - Degree of parallelism (DOP) feedback - Supportability
@@ -116,7 +116,7 @@ The following sections provide an overview of these features.
 |Support for PFX certificates, symmetric key enhancements, and other crypto improvements | New support for [certificate](../t-sql/statements/create-certificate-transact-sql.md) and key [backup](../t-sql/statements/backup-master-key-transact-sql.md) and [restore](../t-sql/statements/restore-master-key-transact-sql.md) integration scenarios with Azure Blob Storage service. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4. Additional improvements to enhance default cryptography in SQL Server to meet the evolving threat landscape, including but not limited to, system-generated certificates now have a default strength of RSA-3072.<br/><br/>Added [BACKUP SYMMETRIC KEY](../t-sql/statements/backup-symmetric-key-transact-sql.md) and [RESTORE SYMMETRIC KEY](../t-sql/statements/restore-symmetric-key-transact-sql.md).|
 |Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 and TLS 1.3 support](../relational-databases/security/networking/tds-8-and-tls-1-3.md):<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
 
-## Intelligent Performance
+## Performance
 
 | New feature or update | Details |
 |:---|:---|
@@ -128,7 +128,7 @@ The following sections provide an overview of these features.
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
 
-## Query Store and Intelligent Query Processing
+## Query Store and intelligent query processing
 
 | New feature or update | Details |
 |:---|:---|

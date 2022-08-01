@@ -154,7 +154,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Compute size (service objective) | HS_S_Gen5_2 | HS_S_Gen5_4 | HS_S_Gen5_6 | HS_S_Gen5_8 | HS_S_Gen5_10 | HS_S_Gen5_12 | HS_S_Gen5_14 |
 |--|--|--|--|--|--|--|--|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 8-Jan | 1.25-10 | 1.5-12 | 1.75-14 |
+| Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
 | Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
 | [Max RBPEX Size](hyperscale-architecture.md#compute) | N/A | N/A | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -179,8 +179,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Compute size (service objective) | HS_S_Gen5_16 | HS_S_Gen5_18 | HS_S_Gen5_20 | HS_S_Gen5_24 | HS_S_Gen5_32 | HS_S_Gen5_40 |
 |--|--|--|--|--|--|--|
 | Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| Min-max vCores | 16-Feb | 2.25-18 | 2.25-20 | 24-Mar | Apr-32 | May-40 |
-| Min-max memory (GB) | 6.00-48 | 6.75-54 | 7.5-60 | Sep-72 | Dec-96 | 15-120 |
+| Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 |
+| Min-max memory (GB) | 6.00-48 | 6.75-54 | 7.5-60 | 9-72 | 12-96 | 15-120 |
 | [Max RBPEX Size](hyperscale-architecture.md#compute) | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |

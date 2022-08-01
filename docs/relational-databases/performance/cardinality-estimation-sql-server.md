@@ -61,7 +61,7 @@ In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../inclu
 
 Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate updated assumptions and algorithms that work well on modern data warehousing and on OLTP workloads. From the CE 70 assumptions, the following model assumptions were changed starting with CE 120:
 
-- **Independence** becomes **Correlation:** The combination of the different column values are not necessarily independent. This may resemble more real-life data querying.
+- **Independence** becomes **Correlation:** The combination of the different column values is not necessarily independent. This may resemble more real-life data querying.
 - **Simple Containment** becomes **Base Containment:** Users might query for data that does not exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version

@@ -1,9 +1,9 @@
 ---
-title: "Query Store hints (preview) best practices"
+title: "Query Store hints best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
 ms.custom:
 - event-tier1-build-2022
-ms.date: 07/26/2022
+ms.date: 08/01/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -14,12 +14,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# Query Store hints (preview) best practices
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+# Query Store hints best practices
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-This article details best practices for using [Query Store hints (Preview)](query-store-hints.md). Query Store hints enable shaping query plan shapes without modifying application code.
-
-Query Store hints are a preview feature in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+This article details best practices for using [Query Store hints](query-store-hints.md). Query Store hints enable shaping query plan shapes without modifying application code.
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -59,7 +57,21 @@ Query Store hints override hard-coded statement-level hints and existing plan gu
 
 ### Consider a newer compatibility level
 
-Query Store hints can be a valuable method when a newer database compatibility level is not available to you due to vendor specification or larger testing delays, for example. When a higher compatibility level is available to a database, consider upgrading the database compatibility level to take advantage of the latest performance optimizations and features of SQL Server.
+Query Store hints can be a valuable method when a newer database compatibility level is not available to you due to vendor specification or larger testing delays, for example. When a higher compatibility level is available to a database, consider upgrading the database compatibility level of an individual query to take advantage of the latest performance optimizations and features of SQL Server.
+
+For example, if you have a [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] instance with a database in compatibility level 140, you can still use Query Store hints to run individual queries in compatibility level 160. You could use the following hint:
+
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_160''))';
+```
+
+For a complete tutorial, see [Query Store hints Examples](query-store-hints.md#examples).
+
+### Consider an older compatibility level after upgrade
+
+Another case where Query Store hints can help is where queries cannot be modified directly after a SQL Server instance migration or upgrade. Use Query Store hints to apply a prior compatibility level for a query until it can be rewritten or otherwise addressed to perform well in the latest compatibility level. Identify outlier queries that have regressed in a higher compatibility level using the [Query Store's regressed queries report](monitoring-performance-by-using-the-query-store.md#Regressed), using the [Query Tuning Advisor](upgrade-dbcompat-using-qta.md) tool during a migration, or other query-level application telemetry. For more information on the differences between compatibility levels, review the [Differences between compatibility levels](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-levels).
+
+After performance testing the new compatibility level and deploying Query Store hints in this way, you can upgrade the entire database's compatibility level while keeping key problematic queries on the prior compatibility level, without any code changes.
 
 ## Query Store hints considerations
 

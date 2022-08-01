@@ -61,7 +61,7 @@ In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../inclu
 
 Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate updated assumptions and algorithms that work well on modern data warehousing and on OLTP workloads. From the CE 70 assumptions, the following model assumptions were changed starting with CE 120:
 
-- **Independence** becomes **Correlation:** The combination of the different column values are not necessarily independent. This may resemble more real-life data querying.
+- **Independence** becomes **Correlation:** The combination of the different column values is not necessarily independent. This may resemble more real-life data querying.
 - **Simple Containment** becomes **Base Containment:** Users might query for data that does not exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version
@@ -252,7 +252,7 @@ OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 
 ### Set a Query Store hint
 
- Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature.
+ Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using [Query Store hints](query-store-hints.md).
 
 1. Identify the query in the [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) Query Store catalog views. For example, search for an executed query by text fragment:
 

@@ -36,6 +36,9 @@ To enable MSDTC transaction in SQL Server containers, you must set two new envir
 
 The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -57,6 +60,9 @@ docker run `
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 The following example shows how to use these environment variables to pull and run a single SQL Server 2019 container configured for MSDTC. This allows it to communicate with any application on any hosts.
+
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 docker run \

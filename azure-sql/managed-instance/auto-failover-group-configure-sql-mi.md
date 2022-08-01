@@ -247,7 +247,7 @@ You can create a failover group between SQL Managed Instances in two different s
 - Azure portal does not support creation of failover groups across different subscriptions. 
   
 > [!IMPORTANT]
-> For failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via the Azure portal from the primary SQL managed instance. Initiate it from the geo-secondary instance instead.
+> Azure portal does not support creation of failover groups across different subscriptions. For failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via the Azure portal from the primary SQL managed instance. Initiate it from the geo-secondary instance instead.
 
 ## Change the secondary region
 

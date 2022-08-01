@@ -33,7 +33,6 @@ ms.author: maghan
 sp_changedistpublisher [ @publisher = ] 'publisher'  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
-    [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
 ## Arguments  
@@ -46,9 +45,6 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 `[ @value = ] 'value'`
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`
- Is required for SQL Managed Instance, should match the access key for the Azure SQL Database storage volume. 
-
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
  
@@ -72,6 +68,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## Remarks  
  **sp_changedistpublisher** is used in all types of replication.  
+
+ If you are changing the **working_directory** property and the **storage_connection_string** property has to be updated, execute the stored procedure separately by updating the **working_directory** property followed by updating the **storage_connection_string** property or visa-versa.
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistpublisher**.  

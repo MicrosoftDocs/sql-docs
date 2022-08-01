@@ -1,7 +1,7 @@
 ---
 title: "Create a T-SQL Backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
-ms.date: "05/24/2022"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -64,7 +64,7 @@ The following sections show different T-SQL commands used to perform snapshot ba
 
 ```sql
 ALTER DATABASE testdb1
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
 
 BACKUP DATABASE testdb1
 TO DISK='d:\temp\db.bkm'
@@ -77,10 +77,10 @@ The databases presumably reside on the same underlying disk. In this example, yo
 
 ```sql
 ALTER DATABASE testdb1
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
 
 ALTER DATABASE testdb2
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
 
 BACKUP GROUP testdb1, testdb2
 TO DISK='d:\temp\db.bkm'
@@ -93,7 +93,7 @@ Record snapshot of all the user databases on the server into a single backup set
 
 ```sql
 ALTER SERVER CONFIGURATION
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
 
 BACKUP SERVER
 TO DISK='d:\temp\db.bkm'
@@ -106,7 +106,7 @@ Record snapshot of all the user databases on the server into a single backup set
 
 ```sql
 ALTER SERVER CONFIGURATION
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON {testdb1, testdb2}
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (GROUP=(testdb1, testdb2))
 
 BACKUP GROUP testdb1, testdb2
 TO DISK='d:\temp\db.bkm'
@@ -122,14 +122,14 @@ Since the differential bitmap is cleared prior to freeze, SUSPEND_FOR_SNAPSHOT_B
 
 ```sql
 ALTER DATABASE testdb1
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON (COPY_ONLY)
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (MODE=COPY_ONLY)
 
 BACKUP DATABASE testdb1
 TO DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FORMAT
 
 ALTER SERVER CONFIGURATION
-SET SUSPEND_FOR_SNAPSHOT_BACKUP ON (COPY_ONLY)
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (MODE=COPY_ONLY)
 
 BACKUP SERVER
 TO DISK='d:\temp\db.bkm'

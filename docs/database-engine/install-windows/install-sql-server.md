@@ -53,8 +53,7 @@ The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.m
 
 * **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft licensing page](https://www.microsoft.com/licensing/product-licensing/sql-server).
 * If you have a volume licensing agreement, for example an [Enterprise Agreement](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise), you can download software from the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/servicecenter/default.aspx).
-* [Free version - latest](https://www.microsoft.com/sql-server/sql-server-downloads).
-* [Free version - others](https://www.microsoft.com/evalcenter/evaluate-sql-server).
+* [Free versions](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 Other SQL Server components can be found here:
 

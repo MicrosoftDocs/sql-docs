@@ -21,7 +21,7 @@ dev_langs:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 ---
 # DROP TYPE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes an alias data type or a common language runtime (CLR) user-defined type from the current database.  
   

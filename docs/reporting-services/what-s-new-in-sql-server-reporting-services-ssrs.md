@@ -107,6 +107,8 @@ The [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] replaces Report Mana
 
 To create Mobile Reports, you need the [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)].
 
+[!INCLUDE [ssrs-mobile-report-deprecated](../includes/ssrs-mobile-report-deprecated.md)]
+
 For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
 ![Screenshot showing the SQL Server Reporting Services portal.](../reporting-services/media/ssrsportal.png "ssRSPortal")  

@@ -23,7 +23,7 @@ Character format is recommended when you bulk export data to a text file that is
 Character format uses the character data format for all columns. Storing information in character format is useful when the data is used with another program, such as a spreadsheet, or when the data needs to be copied into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from another database vendor such as Oracle.  
   
 > [!NOTE]
->  When you bulk transfer data between instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the data file contains Unicode character data but not any extended or DBCS characters, use the Unicode character format. For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
+>  When you bulk transfer data between instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the data file contains Unicode character data but not any extended or DBCS characters, use the Unicode character format. For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
 |In this Topic:|
 |---|

@@ -3,7 +3,7 @@ title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/03/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -14,6 +14,7 @@ dev_langs:
  - "TSQL"
 author: thesqlsith
 ms.author: derekw 
+ms.reviewer: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
@@ -21,11 +22,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the [intelligent query processing family of features](intelligent-query-processing.md). Optimized plan forcing, introduced with database compatibility level 160, reduces compilation overhead for repeating forced queries and requires the Query Store to be enabled and in "read write" mode. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 ## Optimized plan forcing implementation
 
-When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether an optimization replay script is created. This threshold is not documented.
+When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether an optimization replay script is created.
 
 After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the optimization replay script is eligible for persistence. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
 
@@ -156,3 +157,4 @@ Learn more about Query Store and optimized plan forcing in the following article
 - [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [Intelligent query processing in SQL databases](intelligent-query-processing.md)

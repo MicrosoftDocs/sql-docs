@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 4/18/2022
+ms.date: 7/29/2022
 ---
 
 # SqlPackage Export parameters and properties
@@ -20,7 +20,23 @@ The SqlPackage.exe Export action exports a connected database to a BACPAC file (
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage /Action:Export {parameters} {properties}
+```
+
+### Examples
+
+```bash
+# example export from Azure SQL Database using SQL authentication and a connection string
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example export using short form parameter names, skips schema validation
+SqlPackage /a:Export /ssn:"{yourserver}.database.windows.net,1433" /sdn:"AdventureWorksLT" /su:"sqladmin" \
+    /sp:"{your_password}" /tf:"C:\AdventureWorksLT.bacpac" /p:VerifyExtraction=False
+
+# example export using Azure Active Directory Service Principal
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Export action
@@ -69,3 +85,4 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting Import/Export with SqlPackage](./troubleshooting-import-export-sqlpackage.md)

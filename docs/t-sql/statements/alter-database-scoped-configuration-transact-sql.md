@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -55,6 +55,7 @@ Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsful
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
+- Enable or disable uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger.
 
 This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 
@@ -108,6 +109,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | OPTIMIZED_PLAN_FORCING = { ON | OFF }
     | DOP_FEEDBACK = { ON | OFF }
     | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+    | LEDGER_DIGEST_STORAGE_ENDPOINT = { <endpoint URL string> | OFF }
 }
 ```
 
@@ -129,7 +131,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 9000 }  
 }
 ```
 
@@ -429,17 +431,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 | 9000 } 
 
 **APPLIES TO**: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
 
-Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created. The compatibility level is preserved even after database pause/resume, backup/restore operations.
+Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations.
 
 | Compatibility Level |   Comments|  
 |-----------------------|--------------|
-|**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
+|**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine and is represented by `0` in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).  AUTO currently maps to Level 20 functionality. |
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
-|**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. |
+|**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
+|**9000**| Preview compatibility level. Preview features gated under this level are called out in feature-specific documentation. This level also includes abilities of highest non-9000 level.|
 
 EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF }
 
@@ -470,6 +473,12 @@ PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
+
+LEDGER_DIGEST_STORAGE_ENDPOINT = { &lt;endpoint URL string&gt; | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Enables or disables uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account or a ledger in Azure Confidential Ledger. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
 
 ## <a name="Permissions"></a> Permissions
 
@@ -669,6 +678,31 @@ This example sets the resumable index paused duration to 60 minutes.
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
 SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
+```
+
+### M. Enable and disable uploading ledger digests
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+This example enables uploading ledger digests to an Azure storage account.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net'
+```
+
+This example enables uploading ledger digests to a ledger in Azure Confidential Ledger.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://myledger.confidential-ledger.azure.com'
+```
+
+This example disables uploading ledger digests.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET LEDGER_DIGEST_STORAGE_ENDPOINT = OFF
 ```
 
 ## Additional Resources

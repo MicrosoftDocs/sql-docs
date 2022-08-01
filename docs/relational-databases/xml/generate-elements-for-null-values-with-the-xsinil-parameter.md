@@ -18,7 +18,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Generate elements for NULL values with the XSINIL parameter
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The **ELEMENTS** directive constructs XML in which each column value maps to an element in the XML. By default, if the column value is NULL, no element is added. But by specifying the optional **XSINIL** parameter on the ELEMENTS directive, you can request that an element is created for the NULL value. In this case, an element that has the **xsi:nil** attribute set to TRUE is returned for each NULL column value.
 

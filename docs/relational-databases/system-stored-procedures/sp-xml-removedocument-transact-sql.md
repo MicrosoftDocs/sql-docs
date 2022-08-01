@@ -20,7 +20,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # sp_xml_removedocument (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes the internal representation of the XML document specified by the document handle and invalidates the document handle.  
   

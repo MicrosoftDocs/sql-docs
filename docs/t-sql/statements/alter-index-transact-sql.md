@@ -411,7 +411,7 @@ For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLI
 > [!IMPORTANT]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 >  
->- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+>- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 >- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 >- [Editions and Supported Features for SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 

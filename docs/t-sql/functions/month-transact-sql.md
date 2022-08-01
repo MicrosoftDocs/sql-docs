@@ -37,7 +37,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 ## Syntax  
   
-```sqlsyntax  
+```syntaxsql  
 MONTH ( date )  
 ```  
   

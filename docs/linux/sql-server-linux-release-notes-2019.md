@@ -22,6 +22,8 @@ The following release notes apply to [!INCLUDE [sssql19-md](../includes/sssql19-
 
 [!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
 
+Support for SQL Server on Ubuntu 16.04 is limited. At the end of April 2021, Ubuntu 16.04 transitioned from its standard five-year maintenance window for long term support (LTS) releases, into extended security maintenance (ESM) support. For more details, see [Ubuntu 16.04 LTS transitions to Extended Security Maintenance (ESM) | Ubuntu](https://ubuntu.com/blog/ubuntu-16-04-lts-transitions-to-extended-security-maintenance-esm).
+
 ## Tools
 
 Most existing client tools that target SQL Server can seamlessly target SQL Server running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of SQL Server tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).

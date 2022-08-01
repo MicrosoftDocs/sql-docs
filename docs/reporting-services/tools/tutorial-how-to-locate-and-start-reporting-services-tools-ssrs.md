@@ -134,7 +134,7 @@ To get started on your first report, see [Create a Basic Table Report &#40;SSRS 
 
 [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) is a stand-alone application you can use to create paginated reports outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in previous versions of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or from the Microsoft Download Center.
 
-When your paginated report is ready, publish it to a report server or [save it to the Power BI service](/power-bi/paginated-reports-save-to-power-bi-service).\
+When your paginated report is ready, publish it to a report server or [save it to the Power BI service](/power-bi/paginated-reports-save-to-power-bi-service).
 [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.
 
 ### To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -153,7 +153,10 @@ When your paginated report is ready, publish it to a report server or [save it t
 
 ## <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]
 
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Use [SQL Server Mobile Report Publisher](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) to create mobile reports you can view in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal and in mobile devices such as iPads and iPhones.\
+
 You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or from the Microsoft Download Center.
 
 [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.

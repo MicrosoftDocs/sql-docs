@@ -32,6 +32,9 @@ This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on RHEL
 
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 #!/bin/bash -e
 

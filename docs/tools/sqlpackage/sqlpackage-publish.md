@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 7/29/2022
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables
@@ -20,11 +20,34 @@ The SqlPackage.exe publish operation incrementally updates the schema of a targe
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage /Action:Publish {parameters} {properties} {sqlcmd variables}
 ```
 
 > [!NOTE]
 > When a database with SQL authentication user credentials is extracted, the password is replaced with a different password of suitable complexity. It is assumed that after the dacpac is published that the user password is changed.
+
+### Examples
+
+```bash
+# example publish from Azure SQL Database using SQL authentication and a connection string
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example publish using short form parameter names, skips schema validation
+SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyExtraction=False
+
+# example publish using Azure Active Directory Service Principal
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example publish with 2 SQLCMD variables
+# as seen in a post deployment script for user passwords
+# https://github.com/Azure-Samples/app-sql-devops-demo-project/blob/main/sql/wwi-dw-ssdt/PostDeploymentScripts/AddUsers.sql
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" \
+    /v:ETLUserPassword="asecurestringaddedhere" /v:AppUserPassword="asecurestringaddedhere"
+```
 
 
 ## Parameters for the Publish action
@@ -51,7 +74,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Specifies if SQL encryption should be used for the source database connection. |
-|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action instead of a database. If this parameter is used, no other source parameter shall be valid. |
+|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action instead of a database from local storage. If this parameter is used, no other source parameter shall be valid. |
 |**/SourcePassword:**|**/sp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the source database. |
 |**/SourceServerName:**|**/ssn**|{string}|Defines the name of the server hosting the source database. |
 |**/SourceTimeout:**|**/st**|{int}|Specifies the timeout for establishing a connection to the source database in seconds. |

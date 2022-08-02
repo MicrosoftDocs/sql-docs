@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
-ms.date: 07/29/2022
+ms.date: 08/01/2022
 monikerRange: "=azuresql||=azuresql-db"
 ---
 
@@ -78,6 +78,8 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Force the plan by explicitly using the [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) query hint by rewriting the query and adding the hint in the query text. Or set a specific plan by using Query Store or by enabling [automatic tuning](automatic-tuning-overview.md).
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
+
+To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use [plan guides](../../docs/relational-databases/performance/plan-guides.md).
 
 For more information about resolving PSP problems, see these blog posts:
 

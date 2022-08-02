@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
-ms.date: 07/29/2022
+ms.date: 08/01/2022
 monikerRange: "=azuresql||=azuresql-mi"
 ---
 
-# Detectable types of query performance bottlenecks in Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+# Detectable types of query performance bottlenecks
+[!INCLUDE[appliesto-sqlserver-sqlmi](../includes/appliesto-sqlserver-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/identify-query-performance-issues.md)
@@ -34,7 +34,7 @@ You can use [SQL Server DMVs](monitoring-with-dmvs.md) to detect these types of 
 - Contention related to `tempdb` usage
 - Memory grant waits
 
-This article is about Azure SQL Managed Instance, see also [Detectable types of query performance bottlenecks in Azure SQL Database](../database/identify-query-performance-issues.md).
+This article is about SQL Server and Azure SQL Managed Instance, see also [Detectable types of query performance bottlenecks in Azure SQL Database](../database/identify-query-performance-issues.md). 
 
 ## Compilation problems resulting in a suboptimal query plan
 
@@ -64,7 +64,7 @@ For more information on parameter sniffing and query processing, see the [Query-
 
 Several workarounds can mitigate PSP problems. Each workaround has associated tradeoffs and drawbacks:
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query) query hint at each query execution. This workaround trades compilation time and increased CPU for better plan quality. The `RECOMPILE` option is often not possible for workloads that require a high throughput.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query) query hint at each query execution. This workaround trades compilation time and increased CPU for better plan quality. The `RECOMPILE` option is often not possible for workloads that require a high throughput. 
 - Use the [OPTION (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a good understanding of optimal parameter values and associated plan characteristics.
 - Use the [OPTION (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value and instead use the density vector average. You can also do this by capturing the incoming parameter values in local variables and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be *good enough*.
 - Disable parameter sniffing entirely by using the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query) query hint.
@@ -72,6 +72,8 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Force the plan by explicitly using the [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) query hint by rewriting the query and adding the hint in the query text. Or set a specific plan by using Query Store or by enabling [automatic tuning](../database/automatic-tuning-overview.md).
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
+
+To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use [plan guides](../../docs/relational-databases/performance/plan-guides.md).
 
 For more information about resolving PSP problems, see these blog posts:
 
@@ -142,9 +144,9 @@ A recompilation (or fresh compilation after cache eviction) can still result in 
 
 - **Changed database compatibility level or cardinality estimator version**: Changes to the database compatibility level can enable new strategies and features that might result in a different query execution plan. Beyond the database compatibility level, a disabled or enabled trace flag 4199 or a changed state of the database-scoped configuration QUERY_OPTIMIZER_HOTFIXES can also influence query execution plan choices at compile time. Trace flags 9481 (force legacy CE) and 2312 (force default CE) also affect the plan.
 
-## Resource limits issues
+## Resource limits issues in Azure SQL Managed Instance
 
-Slow query performance not related to suboptimal query plans and missing indexes are generally related to insufficient or overused resources. If the query plan is optimal, the query (and the database) might be hitting the resource limits for the database, elastic pool, or managed instance. An example might be excess log write throughput for the service level.
+Slow query performance not related to suboptimal query plans and missing indexes are generally related to insufficient or overused resources. If the query plan is optimal, the query (and the database) might be hitting the resource limits for the managed instance. An example might be excess log write throughput for the service level.
 
   - The [sys.dm_db_resource_stats](monitoring-with-dmvs.md#monitor-resource-use) DMV returns CPU, I/O, and memory consumption for the database. One row exists for every 15-second interval, even if there's no activity in the database. Historical data is maintained for one hour.
   - The [sys.server_resource_stats](monitoring-with-dmvs.md#monitor-resource-use) DMV returns CPU usage and storage data for an Azure SQL Managed Instance. The data is collected and aggregated in 15 second intervals.

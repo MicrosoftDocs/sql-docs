@@ -1,7 +1,7 @@
 ---
 title: Types of query performance issues
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Learn about types of query performance issues in Azure SQL Database and Azure SQL Managed Instance, and how to identify and resolve queries with these issues.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & SQL Server
+description: Learn about types of query performance issues, and how to identify and resolve queries with these issues.
 services: sql-database
 ms.service: sql-database
 ms.subservice: performance
@@ -15,13 +15,13 @@ ms.date: 07/29/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
-# Detectable types of query performance bottlenecks in Azure SQL Database and Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]
+# Detectable types of query performance bottlenecks
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi](includes/appliesto-sqlserver-sqldb-sqlmi.md)]
 
 This content is split into two articles:
 
 - [Detectable types of query performance bottlenecks in Azure SQL Database](database/identify-query-performance-issues.md)
-- [Detectable types of query performance bottlenecks in Azure SQL Managed Instance](managed-instance/identify-query-performance-issues.md)
+- [Detectable types of query performance bottlenecks in SQL Server and Azure SQL Managed Instance](managed-instance/identify-query-performance-issues.md)
 
 ## Next steps
 
@@ -39,7 +39,7 @@ More resources for Azure SQL Database:
 - [Resource limits for single databases using the DTU purchasing model](database/resource-limits-dtu-single-databases.md)
 - [Resource limits for elastic pools using the DTU purchasing model](database/resource-limits-dtu-elastic-pools.md)
 
-More resources for Azure SQL Managed Instance:
+More resources for SQL Server and Azure SQL Managed Instance:
 
 - [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)

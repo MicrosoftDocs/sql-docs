@@ -113,7 +113,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 
 \*\* All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default. 
 
-\*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription.
+\*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).
 
 ## Restoring a database from backup
 

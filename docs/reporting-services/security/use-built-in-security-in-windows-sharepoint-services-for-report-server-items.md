@@ -29,6 +29,8 @@ ms.author: maggies
 |.rsds|A shared data source file that specifies connection information to an external data source. It is used by report definitions (.rdl) and report model (.smdl) files. Report models always use .rsds files to get connection information to an underlying data source. Report definitions can use .rsds files, or connection information that is defined in data source properties on the report.|  
 |.rsc|A report part file that defines the layout and structure of a report item or data region. It is used to publish the report part to a server so the item can be re-used by other report authors from the Report Part Gallery.|  
 |.rsd|A shared dataset file that defines query syntax and properties for a dataset. Shared datasets can be shared, stored, processed, and cached external from a report.|  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
  Schedules, subscriptions, and report history are not securable items. You can set permissions on the site or library that determine whether a user can create or use schedules, subscriptions, and report history, but you cannot secure those items directly.  
   

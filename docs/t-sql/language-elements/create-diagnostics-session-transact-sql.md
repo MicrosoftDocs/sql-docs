@@ -1,8 +1,8 @@
 ---
 title: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
 description: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: ""
 ms.date: "03/04/2017"
 ms.prod: sql

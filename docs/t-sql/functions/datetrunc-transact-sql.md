@@ -268,17 +268,14 @@ SELECT 'Truncated to second', DATETRUNC(second, @d);
 The result set illustrates that the input date is the same as both the truncated values:
 
 ```output
-Input                -09-11 12:42:00
+Input                2009-09-11 12:42:00
 Truncated to minute  2009-09-11 12:42:00
 Truncated to second  2009-09-11 12:42:00
 ```
 
 Example 4: **datetime** precision
 
-**datetime** is only precise up to 3.33 milliseconds.
-
-  > [!IMPORTANT]  
-  > While truncating a **datetime** to a millisecond may yield results that are different than what the user expects. The truncated value is the same as the stored **datetime** value.
+**datetime** is only precise up to 3.33 milliseconds.  Therefore, truncating a **datetime** to a millisecond may yield results that are different than what the user expects. However, this truncated value is the same as the internally stored **datetime** value.
 
 ```sql
 DECLARE @d datetime = '2020-02-02 02:02:02.002';

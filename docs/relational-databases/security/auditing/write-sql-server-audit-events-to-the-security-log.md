@@ -84,7 +84,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 ##  <a name="secpolPermission"></a> To configure the audit object access setting in Windows using secpol  
   
-1.  If the operating system is earlier than [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] or Windows Server 2008, on the **Start** menu, click **Run**.  
+1.  If the operating system is earlier than [!INCLUDE[winvista](../../../includes/winvista-md.md)] or Windows Server 2008, on the **Start** menu, click **Run**.  
   
 2.  Type **secpol.msc** and then click **OK**. If the **User Access Control** dialog box appears, click **Continue**.  
   

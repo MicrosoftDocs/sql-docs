@@ -185,7 +185,7 @@ If you can't connect to the SQL Server instance running in your container, try t
     ```
     ::: zone-end
 
-- If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you're using the SA password associated with the data you're attaching to.
+- If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `MSSQL_SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you're using the SA password associated with the data you're attaching to.
 
 - Review the [SQL Server setup and error logs](#errorlogs).
 

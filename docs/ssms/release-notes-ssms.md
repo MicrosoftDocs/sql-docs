@@ -108,7 +108,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
 | Query Editor | Added a dialog to allow users to cancel the transaction count check if it takes longer than two seconds when closing the query editor window. |
-| Query Tuning Advisor | Updated user interface for improved accessibility. |
+| Query Tuning Assistant | Updated user interface for improved accessibility. |
 | Showplan | The Showplan XML schema has been updated to include new attributes related to the Query Store Hint feature. |
 
 #### Bug fixes in 18.12
@@ -415,7 +415,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Log Shipping Wizard | Fixed in issue where Log Shipping Wizard may throw an error "Can't show requested dialog" when clicking on Edit Job for Transaction Log Backup/Copy/Restore Setting Tab. |
 | Log Viewer | Addressed an issue where on some locales (e.g. Korean) some UI elements looked truncated/clipped. |
 | Maintenance Plans | Fixed an issue where SQL Server Management Studio 15.0.18338.0 can't explore "Expression" property in Maintenance plan. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/42009076). |
-| Query Tuning Advisor | Fixed an issue where an error message like "User doesn't have enough permissions." was displayed when trying to use the "New Database Upgrade Session" wizard on a database containing a dot in the name.  See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40286740). |
+| Query Tuning Assistant | Fixed an issue where an error message like "User doesn't have enough permissions." was displayed when trying to use the "New Database Upgrade Session" wizard on a database containing a dot in the name.  See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40286740). |
 | SMO/Scripting | Fixed script generation for DW databases where it only worked if the object explorer was connected to logical master instead of the user database. |
 | SSMS Setup | Fixed an issue where SSMS Setup wasn't properly executing the Post-Install Custom Action, thus not running `ssms.exe /setup`. This is believed to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
 | Vulnerability Assessment | Disabling menu options "Tasks -> Vulnerability Assessment" for Azure SQL databases and adding collapsible message tip for better user experience for Azure SQL VM users. |

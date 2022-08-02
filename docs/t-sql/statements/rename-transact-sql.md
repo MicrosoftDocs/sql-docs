@@ -1,8 +1,8 @@
 ---
 title: "RENAME (Transact-SQL)"
 description: RENAME (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: "WilliamDAssafMSFT"
 ms.date: "07/20/2021"
 ms.prod: sql

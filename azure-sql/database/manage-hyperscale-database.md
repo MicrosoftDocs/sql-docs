@@ -32,7 +32,7 @@ You will only experience a short period of downtime, generally a few minutes, du
 
 To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](auto-failover-group-sql-db.md) must be removed from the group first.
 
-Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. Geo-replication for Hyperscale is in preview with certain [limitations](active-geo-replication-overview.md).
+Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. 
 
 ### How to migrate a database to the Hyperscale service tier
 

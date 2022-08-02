@@ -138,7 +138,7 @@ NULL
 
 Avoid the following pattern for recursive use of variables and expressions:
 
-```sqlsyntax
+```syntaxsql
 SELECT @Var = <expression containing @Var>
 FROM
 ...

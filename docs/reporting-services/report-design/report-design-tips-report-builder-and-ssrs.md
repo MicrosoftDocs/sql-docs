@@ -50,6 +50,8 @@ ms.author: maggies
     3.  **Data regions.** Indicate the type of data region and what data it displays. Data region names are useful in the following scenarios:  
   
         1.  **Data region as a report part.** When report authors browse the Report Part Gallery, a descriptive name helps them find the report parts they are looking for.  
+
+        [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
         2.  **Data region as a data feed.** With appropriate permissions, a report reader can create an ATOM data feed from a data region.  
   

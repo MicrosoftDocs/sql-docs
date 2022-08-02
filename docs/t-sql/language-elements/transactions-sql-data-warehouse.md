@@ -1,8 +1,8 @@
 ---
 title: Transactions (Azure Synapse Analytics)
 description: A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back.
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer:
 ms.date: 03/14/2017
 ms.prod: sql

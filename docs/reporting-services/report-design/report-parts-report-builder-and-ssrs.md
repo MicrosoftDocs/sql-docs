@@ -15,7 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Report Parts (Report Builder and SSRS)
-  Report items such as tables, matrices, charts, and images can be published as *report parts*. Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. Report parts have an .rsc file extension.  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
+Report items such as tables, matrices, charts, and images can be published as *report parts*. Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. Report parts have an .rsc file extension.  
   
  With report parts, work groups can now take advantage of the different strengths and roles of their team members. For example, if you are responsible for creating charts, you can save your charts as separate parts that you and your coworkers can reuse in other reports. You can publish report parts on a report server or SharePoint site integrated with a report server. You can reuse them in multiple reports, and you can update them on the server.  
   

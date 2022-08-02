@@ -260,7 +260,7 @@ For the last scenario in larger databases, an optimization in the service create
 
 You can monitor total backup storage consumption for each backup type (full, differential, transaction log) over time, as described in [Monitor consumption](#monitor-consumption).
 
-### Monitoring costs
+### Monitor costs
 
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 

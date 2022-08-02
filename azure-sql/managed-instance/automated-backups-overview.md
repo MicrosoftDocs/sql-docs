@@ -111,9 +111,9 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 1 to 35 days. |  Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
-| **Creating a new database in the same region** | Supported | Supported | Supported |
-| **Creating a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
-| **Creating a new database in another subscription** |  Not supported  |  Not supported\*\*\* | Not supported\*\*\*  |
+| **Restoring a new database in the same region** | Supported | Supported | Supported |
+| **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
+| **Restoring a new database in another subscription** |  Not supported  |  Not supported\*\*\* | Not supported\*\*\*  |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
 | **Restoring via PowerShell** |Yes|Yes|Yes|
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
@@ -125,7 +125,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 
 \*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription.
 
-## Restoring a database from backup 
+## Restore a database from backup 
 
 To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can try backup configuration and restore operations by using the following examples.
 
@@ -246,7 +246,7 @@ For example, assume that a heavy write activity, such as index rebuild,  runs ju
 
 For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
 
-### Monitoring costs
+### Monitor costs
 
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 
@@ -272,7 +272,7 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
 
-## Using Azure Policy to enforce backup storage redundancy
+## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL managed instance by using Azure Policy. 
 

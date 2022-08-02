@@ -35,12 +35,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-Select one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version that you're working with.
+> [!NOTE]
+> Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
 
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-> [!NOTE]
-> Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement doesn't complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
 
 ## Select a product
 

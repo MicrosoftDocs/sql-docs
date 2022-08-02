@@ -110,14 +110,29 @@ In an ellipsoidal system, a polygon without an orientation has no meaning, or is
 
 The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
 
-<br/>
+
 
 **Counter-clockwise**
 
-:::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of 'left-hand rule' counter-clockwise orientation"::: 
+
+```sql
+DECLARE @square GEOGRAPHY;
+SET @square = GEOGRAPHY::STPolyFromText('POLYGON((0 20, 0 0, 20 0, 20 20, 0 20))', 4326);
+SELECT @square;
+```
+
+:::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of 'left-hand rule' counter-clockwise orientation":::
+
 
 **Clockwise**
- :::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of 'left-hand rule' clockwise orientation":::      |
+ 
+```sql
+DECLARE @square GEOGRAPHY;
+SET @square = GEOGRAPHY::STPolyFromText('POLYGON((0 20, 20 20, 20 0, 0 0, 0 20))', 4326);
+SELECT @square;
+```
+
+:::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of 'left-hand rule' clockwise orientation":::
 
 When the compatibility level is 100 or below in SQL Server then the geography data type has the following restrictions:
 

@@ -48,11 +48,12 @@ sp_recompile [ @objname = ] 'object'
    
  Proactive execution of this stored procedure is usually unnecessary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically recompiles stored procedures, triggers, and user-defined functions when it is advantageous. There are a variety of reasons the database engine may choose to recompile objects. Most commonly, automatic recompilation follows changes to the underlying cardinality estimate because of automatic or manual statistics updates.
  
- Recompiling a stored procedure with every execution is one of the less efficient ways to combat query plan issues caused by parameterization. The feature [Parameter Sensitive Plan optionation](../performance/parameter-sensitivity-plan-optimization.md) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] attempts to mitigate this problem automatically. In prior versions, instead of calling `sp_recompile` with each execution, consider:
+ Recompiling a stored procedure with every execution is one of the less efficient ways to combat query plan issues caused by parameterization. The feature [Parameter Sensitive Plan optimization](../performance/parameter-sensitivity-plan-optimization.md) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] attempts to mitigate this problem automatically. In prior versions, instead of calling `sp_recompile` with each execution, consider:
  
  - Append the [WITH RECOMPILE option](../stored-procedures/recompile-a-stored-procedure.md) to the query, requiring a code change.
  - Apply the `WITH RECOMPILE` option with a [plan guide](../performance/plan-guides.md).
  - Apply the `WITH RECOMPILE` option with a [Query Store hint](../performance/query-store-hints.md) without making code changes.
+ - For more issues and discussion on this topic, see [Resolving queries with parameter sensitive plan problems](/azure/azure-sql/managed-instance/identify-query-performance-issues#resolving-queries-with-suboptimal-query-execution-plans).
  
 ## Permissions  
  Requires ALTER permission on the specified object.  

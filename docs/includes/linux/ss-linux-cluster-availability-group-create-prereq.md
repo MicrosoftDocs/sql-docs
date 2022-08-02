@@ -56,9 +56,9 @@ Before you create the availability group, you need to:
 
 Install SQL Server. The following links point to SQL Server installation instructions for various distributions:
 
-- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
-- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
+- [Red Hat Enterprise Linux](../../linux/quickstart-install-connect-red-hat.md)
+- [SUSE Linux Enterprise Server](../../linux/quickstart-install-connect-suse.md)
+- [Ubuntu](../../linux/quickstart-install-connect-ubuntu.md)
 
 ## Enable Always On availability groups
 
@@ -78,7 +78,7 @@ ALTER EVENT SESSION AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-For more information about this XE session, see [Configure extended events for Always On availability groups](../database-engine/availability-groups/windows/always-on-extended-events.md).
+For more information about this XE session, see [Configure extended events for Always On availability groups](../../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## Create a certificate
 
@@ -169,4 +169,4 @@ The TCP port on the firewall must be open for the listener port.
 >  
 > For the SQL Server 2017 release, the only authentication method supported for the database mirroring endpoint is `CERTIFICATE`. The `WINDOWS` option will be enabled in a future release.
 
-For more information, see [The database mirroring endpoint (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).
+For more information, see [The database mirroring endpoint (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

@@ -272,7 +272,7 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
 
-## Using Azure Policy to enforce backup storage redundancy
+## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL managed instance by using Azure Policy. 
 

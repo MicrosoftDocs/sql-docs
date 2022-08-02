@@ -49,7 +49,7 @@ Azure SQL Database creates:
 
 - [Full backups](/sql/relational-databases/backup-restore/full-database-backups-sql-server) every week.
 - [Differential backups](/sql/relational-databases/backup-restore/differential-backups-sql-server) every 12 or 24 hours.
-- [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) every 10 minutes. 
+- [Transaction log backups](/sql/relational-databases/backup-restore/transaction-log-backups-sql-server) approximately every 10 minutes. 
 
 The exact frequency of transaction log backups is based on the compute size and the amount of database activity. When you restore a database, the service determines which full, differential, and transaction log backups need to be restored.
 

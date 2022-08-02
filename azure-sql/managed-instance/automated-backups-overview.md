@@ -125,7 +125,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 
 \*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription.
 
-## Restoring a database from backup 
+## Restore a database from backup 
 
 To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can try backup configuration and restore operations by using the following examples.
 

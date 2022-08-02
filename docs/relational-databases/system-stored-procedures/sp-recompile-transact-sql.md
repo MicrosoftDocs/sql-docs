@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
   
  The queries used by stored procedures, or triggers, and user-defined functions are optimized only when they are compiled. As indexes or other changes that affect statistics are made to the database, compiled stored procedures, triggers, and user-defined functions may lose efficiency. By recompiling stored procedures and triggers that act on a table, you can reoptimize the queries.  
    
- Proactive execution of this stored procedure is usually unnecessary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically recompiles stored procedures, triggers, and user-defined functions when it is advantageous to do this. There are a variety of reasons the database engine may choose to recompile objects. Most commonly, automatic recompilation follows changes to the underlying cardinality estimate because of automatic or manual statistics updates.
+ Proactive execution of this stored procedure is usually unnecessary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically recompiles stored procedures, triggers, and user-defined functions when it is advantageous. There are a variety of reasons the database engine may choose to recompile objects. Most commonly, automatic recompilation follows changes to the underlying cardinality estimate because of automatic or manual statistics updates.
  
  Recompiling a stored procedure with every execution is one of the less efficient ways to combat query plan issues caused by parameterization. The feature [Parameter Sensitive Plan optionation](../performance/parameter-sensitivity-plan-optimization.md) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] attempts to mitigate this problem automatically. In prior versions, instead of calling `sp_recompile` with each execution, consider:
  
@@ -58,7 +58,7 @@ sp_recompile [ @objname = ] 'object'
  Requires ALTER permission on the specified object.  
   
 ## Examples  
- The following example causes stored procedures, triggers, and user-defined functions that act on the `Customer` table to be recompiled the next time that they are run.  
+ The following example causes stored procedures, triggers, and user-defined functions that act on the `Sales.Customer` table to be recompiled the next time that they are run.  
   
 ```sql
 USE AdventureWorks2012;  

@@ -130,9 +130,9 @@ The following sections provide an overview of these features.
 
 ## Query Store and intelligent query processing
 
-The [intelligent query processing (IQP)](intelligent-query-processing.md) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
+The [intelligent query processing (IQP)](../relational-databases/performance/intelligent-query-processing.md) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
 
-:::image type="content" source="./media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
+:::image type="content" source="../relational-databases/performance/media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
 | New feature or update | Details |
 |:---|:---|

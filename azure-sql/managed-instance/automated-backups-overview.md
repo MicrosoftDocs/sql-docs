@@ -246,7 +246,7 @@ For example, assume that a heavy write activity, such as index rebuild,  runs ju
 
 For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large otherwise. This reduces the size of all differential backups until the following full backup.
 
-### Monitoring costs
+### Monitor costs
 
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 

@@ -14,7 +14,7 @@ ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-db"
 ---
-# Recover using automated database backups - Azure SQL Database
+# Restore a database from a backu in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 <!---
@@ -26,10 +26,9 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 > * [Azure SQL Database](recovery-using-backups.md)
 > * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md)
 
-This article provides steps to recover any database from a backup in Azure SQL Database, including Hyperscale databases. For Azure SQL Managed Instance, see [recovery using backup](../managed-instance/recovery-using-backups.md). 
+This article provides steps to recover any database from a backup in Azure SQL Database, including Hyperscale databases.
 
-
-Automatic backups protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery by using [automated database backups](automated-backups-overview.md). You can:
+Automatic backups help protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery through [automated database backups](automated-backups-overview.md):
 
 - Create a new database on the same server, recovered to a specified point in time within the retention period.
 - Create a database on the same server, recovered to the deletion time for a deleted database.
@@ -40,11 +39,9 @@ If you configured [backup long-term retention](long-term-retention-overview.md),
 
 > [!IMPORTANT]
 > - You can't overwrite an existing database during restore.
-> - Database restore operations do not restore the tags of the original database. 
+> - Database restore operations don't restore the tags of the original database. 
 
 When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost is incurred when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and service objective. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
-
-
 
 ## Recovery time
 
@@ -92,7 +89,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
 - **Data recovery**
 
-  If you plan to retrieve data from the restored database to recover from a user or application error, you need to write and execute a data recovery script that extracts data from the restored database and applies to the original database. Although the restore operation may take a long time to complete, the restoring database is visible in the database list throughout the restore process. If you delete the database during the restore, the restore operation will be canceled and you will not be charged for the database that did not complete the restore.
+  If you plan to retrieve data from the restored database to recover from a user or application error, you need to write and execute a data recovery script that extracts data from the restored database and applies to the original database. Although the restore operation might take a long time to complete, the restoring database is visible in the database list throughout the restore process. If you delete the database during the restore, the restore operation will be canceled and you will not be charged for the database that did not complete the restore.
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -184,7 +181,7 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 You restore deleted databases from the Azure portal, using the **Deleted databases** page for the server that hosted the deleted database.
 
 > [!TIP]
-> It may take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases programmatically. 
+> It might take several minutes for recently deleted databases to appear on the **Deleted databases** page in Azure portal, or when displaying deleted databases programmatically. 
 
 To recover a deleted database to the deletion time by using the Azure portal, open the server overview page, and select **Deleted databases**. Select a deleted database that you want to restore, and type the name for the new database that will be created with data restored from the backup.
 

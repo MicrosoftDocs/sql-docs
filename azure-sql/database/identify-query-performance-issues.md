@@ -79,7 +79,7 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
 
-To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use [plan guides](../../docs/relational-databases/performance/plan-guides.md).
+To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. 
 
 For more information about resolving PSP problems, see these blog posts:
 

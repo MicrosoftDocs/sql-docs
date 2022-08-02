@@ -15,7 +15,7 @@ ms.date: 08/01/2022
 monikerRange: "=azuresql||=azuresql-mi"
 ---
 
-# Detectable types of query performance bottlenecks
+# Detectable types of query performance bottlenecks in SQL Server and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlserver-sqlmi](../includes/appliesto-sqlserver-sqlmi.md)]
 
 > [!div class="op_single_selector"]
@@ -73,7 +73,7 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
 
-To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use [plan guides](../../docs/relational-databases/performance/plan-guides.md).
+To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before SQL Server 2022, use [plan guides](/sql/relational-databases/performance/plan-guides.md).
 
 For more information about resolving PSP problems, see these blog posts:
 

@@ -40,7 +40,7 @@ To change backup settings, see [Change settings](automated-backups-change-settin
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they help protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](long-term-retention-overview.md) for both single and pooled databases.
 
-For service tiers other than Hyperscale, Azure SQL Database uses SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage). The use of snapshots avoids long backup/restore times for larger databases when the traditional SQL Server backup technology is used. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
+For service tiers other than Hyperscale, Azure SQL Database uses SQL Server engine technology to back up and restore data. Hyperscale databases use backup and restore based on [storage snapshots](hyperscale-architecture.md#azure-storage). With traditional SQL Server backup technology, larger databases have long backup/restore times. With the use of snapshots, Hyperscale provides instant backup and fast restore capabilities irrespective of database size. To learn more, see [Hyperscale backups](hyperscale-automated-backups-overview.md). 
 
 
 ## Backup frequency
@@ -115,7 +115,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 
 \*\*\* The workaround is to restore to a new server and use Resource Move to move the server to another subscription, or use a [cross-subscription database copy](database-copy.md#copy-to-a-different-subscription).
 
-## Restoring a database from backup
+## Restore a database from backup
 
 To perform a restore, see [Restore a database from backups](recovery-using-backups.md). You can explore backup configuration and restore operations by using the following examples.
 
@@ -188,7 +188,7 @@ Differential backups can be configured to occur either once in 12 hours or once 
 
 You can specify your backup storage redundancy option for STR when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option. Backup copies made with the previous STR redundancy option are not moved or copied. They're left in the original storage account until the retention period expires, which can be 1 to 35 days.
 
-Except for Basic-tier databases, you can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
+Except for Basic databases, you can [change the backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) for each active database in the range of 1 to 35 days. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR might be older than the retention period. If you need to keep backups for longer than the maximum short-term retention period of 35 days, you can enable [long-term retention](long-term-retention-overview.md).
 
 If you delete a database, the system keeps backups in the same way that it would for an online database with its specific retention period. You can't change the backup retention period for a deleted database.
 
@@ -298,7 +298,7 @@ When you migrate your database from a DTU-based service tier to a vCore-based se
 
 [!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
-## Using Azure Policy to enforce backup storage redundancy
+## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL database by using Azure Policy. 
 

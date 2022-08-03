@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, wiassaf
-ms.date: 07/13/2022
+ms.date: 08/03/2022
 ---
 
 # Key differences between Machine Learning Services in Azure SQL Managed Instance and SQL Server

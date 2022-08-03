@@ -37,6 +37,14 @@ SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"Adventu
 # example import using Azure Active Directory Service Principal
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example import connecting using Azure Active Directory username and password
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example import connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Import action
@@ -80,7 +88,7 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
 |**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This property should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This property should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This property should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|

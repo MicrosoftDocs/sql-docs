@@ -124,8 +124,6 @@ The following table lists common and recommended alert rules for Azure SQL Manag
 | Average CPU percentage | Greater than | Average | 80 | Whenever the average CPU utilization percentage is greater than 80% | 
 | Resource Health | Current Resource Status | NA | Degraded or Unavailable | Detect resources outages, whether they be Azure initiated or user initiated |
 
-\* Alerting on deadlocks may be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
-
 ## Next steps
 
 - See [Monitoring Azure SQL Managed Instance data reference](monitoring-sql-managed-instance-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created by Azure SQL Managed Instance.

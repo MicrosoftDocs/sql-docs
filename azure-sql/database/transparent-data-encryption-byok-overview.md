@@ -161,7 +161,8 @@ When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys
 
 ### Geo-replication considerations when configuring automated rotation of the TDE Protector
 
-To avoid issues while establishing or during geo-replication, when automatic rotation of the TDE Protector is enabled on the primary or secondary server, it's important to follow these rules when configuring geo-replication:
+To avoid issues while establishing or during geo-replication, when automatic rotation of the TDE protector is enabled on the primary or secondary server, it's important to follow these rules when configuring geo-replication:
+
 
 - Both the primary and secondary servers must have Get, wrapKey and unwrapKey permissions to the primary server's key vault (key vault having primary server's TDE Protector key)
 
@@ -172,7 +173,6 @@ To avoid issues while establishing or during geo-replication, when automatic rot
 
 > [!IMPORTANT]
 > When enabling automated key rotation with geo-replication for HyperScale databases, the primary server's TDE Protector key must be explicitly added to the secondary server. Merely providing secondary server's identity access to the primary server's key vault is not sufficient in this case. 
-
 ## Inaccessible TDE protector
 
 When TDE is configured to use a customer-managed key, continuous access to the TDE protector is required for the database to stay online. If the server loses access to the customer-managed TDE protector in AKV, in up to 10 minutes a database will start denying all connections with the corresponding error message and change its state to *Inaccessible*. The only action allowed on a database in the Inaccessible state is deleting it.

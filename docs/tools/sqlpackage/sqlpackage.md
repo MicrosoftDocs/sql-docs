@@ -45,6 +45,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### Usage examples
 
+Further examples are available on the individual action pages.
+
 **Generate a comparison between databases by using .dacpac files with a SQL script output**
 
 Start by creating a .dacpac file of your latest database changes:
@@ -248,7 +250,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |ImportContributorPaths=(STRING)| | | | x | | |
 |IncludeCompositeObjects=(BOOLEAN)| | x | | | x | x |
 |IncludeTransactionalScripts=(BOOLEAN)| | x | | | x | x |
-|LongRunningCommandTimeout=(INT32)| x | x | x | x | x | x |
+|LongRunningCommandTimeout=(INT32 '0')| x | x | x | x | x | x |
 |NoAlterStatementsToChangeClrTypes=(BOOLEAN)| | x | | | x | x |
 |PopulateFilesOnFileGroups=(BOOLEAN 'True')| | x | | | x | x |
 |RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')| | | | x | | |

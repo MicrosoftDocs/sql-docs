@@ -2,7 +2,7 @@
 title: List of bugs fixed
 description: This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ""
-ms.date: 06/30/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -18,6 +18,14 @@ manager: kenvh
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 18.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix intermittent issue with polling for first successful connection when multiple IP addresses are resolved.
+- Fix intermittent hang when using SQLBulkOperations in async mode.
+- Fix connecting with Strict and non-Strict encryption modes simultaneously
+- Fix missing dependency in Debian package.
+- Fix issue with idle connection resiliency when Kerberos auth was used.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 18.0 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -50,7 +58,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix issue with NVDA not reading connection test results in DSN configuration UI
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-
+b
 - Fix issue with 404 Not Found errors when using Managed Service Identity authentication
 - Fix for intermittent Encryption Not Supported errors under high multithreaded loads
 - Fix for intermittent crash under high multithreaded loads

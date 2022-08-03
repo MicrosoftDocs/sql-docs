@@ -2,7 +2,7 @@
 title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
 ms.custom: ""
-ms.date: 06/30/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -36,6 +36,29 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## 18.1
+
+(TODO:UPDATE LINKS)![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2200731)  
+(TODO:UPDATE LINKS)![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2200732)  
+
+Version number: 18.1.1.1  
+Released: August 8, 2022  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+(TODO:UPDATE LINKS)For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40a)  
+(TODO:UPDATE LINKS)For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| IpAddressPreference option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| RetryExec option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| VBS-NONE enclave attestation protocol | New enclave attestation option to not attest the enclave. See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) |
+| Wildcard matching of HostnameInCertificate | Now able to use wildcard for specifying hostname, if different from default value found in Addr/Address/Server. |
+| ServerCertificate option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. See [Using Azure Active Directory](../using-azure-active-directory.md) for more information. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.10
 

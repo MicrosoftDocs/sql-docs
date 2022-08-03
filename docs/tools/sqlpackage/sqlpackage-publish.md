@@ -230,3 +230,4 @@ The following table describes the format of the option that you can use to overr
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

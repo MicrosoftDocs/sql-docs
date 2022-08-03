@@ -118,3 +118,4 @@ SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" /UniversalAu
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

@@ -96,4 +96,4 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAut
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting Import/Export with SqlPackage](./troubleshooting-import-export-sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

@@ -4,9 +4,9 @@ description: "Most Service Broker applications follow the same basic steps to re
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -54,45 +54,45 @@ For simplicity, the script produces a result set for each message. If an error o
 ```sql
     USE AdventureWorks2008R2 ;
     GO
-    
+
     -- Process all conversation groups.
-    
+
     WHILE (1 = 1)
     BEGIN
-    
+
     DECLARE @conversation_handle UNIQUEIDENTIFIER,
             @conversation_group_id UNIQUEIDENTIFIER,
             @message_body XML,
             @message_type_name NVARCHAR(128);
-    
-    
+
+
     -- Begin a transaction, one per conversation group.
-    
+
     BEGIN TRANSACTION ;
-    
+
     -- Get next conversation group.
-    
+
     WAITFOR(
        GET CONVERSATION GROUP @conversation_group_id FROM MyServiceQueue),
        TIMEOUT 500 ;
 
     -- Restore the state for this conversation group here
-    
+
     -- If there are no more conversation groups, break.
-    
+
     IF @conversation_group_id IS NULL
     BEGIN
         ROLLBACK TRANSACTION ;
         BREAK ;
     END ;
-    
+
         -- Process all messages in the conversation group.
-    
+
         WHILE 1 = 1
         BEGIN
-    
+
             -- Get the next message.
-    
+
             RECEIVE
                TOP(1)
                @conversation_handle = conversation_handle,
@@ -104,27 +104,27 @@ For simplicity, the script produces a result set for each message. If an error o
               END
            FROM MyServiceQueue
            WHERE conversation_group_id = @conversation_group_id;
-    
+
            -- If there is no message, or there is an error
            -- reading from the queue, break.
-    
+
            IF @@ROWCOUNT = 0 OR @@ERROR <> 0
                BREAK;
-    
+
            -- Process the message. In this case, the program ends the conversation
            -- for Error and EndDialog messages. For all other messages, the program
            -- produces a result set with information about the message.
-    
+
            SELECT @conversation_handle,
                   @message_type_name,
                   @message_body ;
-    
+
            -- If the message is an end dialog message or an error,
            -- end the conversation. Notice that other conversations
            -- in the same conversation group may still have messages
            -- to process. Therefore, the program does not break after
            -- ending the conversation.
-    
+
            IF @message_type_name =
                   'https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog'
               OR @message_type_name =
@@ -132,11 +132,11 @@ For simplicity, the script produces a result set for each message. If an error o
            BEGIN
               END CONVERSATION @conversation_handle ;
            END ;
-    
+
         END ; -- Process all messages in conversation group.
-    
+
        COMMIT TRANSACTION ;
-    
+
     END ; -- Process all conversation groups.
 ```
 

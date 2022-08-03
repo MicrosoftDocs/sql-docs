@@ -1,19 +1,15 @@
 ---
+title: "ADO MD Properties"
 description: "ADO MD Properties"
-title: "ADO MD Properties | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO MD, properties"
-  - "properties [ADO MD]"
-ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD, properties"
+  - "properties [ADO MD]"
 ---
 # ADO MD Properties
 

@@ -22,18 +22,18 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLE_PRIVILEGES (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each table privilege that is granted to or granted by the current user in the current database.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA**.*view_name*.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**GRANTOR**|**nvarchar(**128**)**|Privilege grantor.|  
 |**GRANTEE**|**nvarchar(**128**)**|Privilege grantee.|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> <strong>\*\* Important \*\*</strong>  only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **Important:** The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |**TABLE_NAME**|**sysname**|Table name.|  
 |**PRIVILEGE_TYPE**|**varchar(**10**)**|Type of privilege.|  
 |**IS_GRANTABLE**|**varchar(**3**)**|Specifies whether the grantee can grant permissions to others.|  

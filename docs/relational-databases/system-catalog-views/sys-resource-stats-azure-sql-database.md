@@ -1,37 +1,32 @@
 ---
-description: "sys.resource_stats returns CPU usage and storage data for an Azure SQL Database. "
 title: "sys.resource_stats (Azure SQL Database)"
-ms.custom: ""
-ms.date: "03/09/2022"
+description: sys.resource_stats returns CPU usage and storage data for an Azure SQL Database.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
+ms.date: "4/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
-f1_keywords: 
-  - resource_stats
-  - sys.resource_stats
-  - sys.resource_stats_TSQL
-  - resource_stats_TSQL
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "resource_stats"
+  - "sys.resource_stats"
+  - "sys.resource_stats_TSQL"
+  - "resource_stats_TSQL"
+helpviewer_keywords:
   - "sys.resource_stats"
   - "resource_stats"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure](../../includes/applies-to-version/asdb.md)]
 
-  Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
-  
- The `sys.resource_stats` view has different definitions depending on the version of the Azure SQL Database Server that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.  
- 
+Returns CPU usage and storage data for a database in Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
+
 > [!NOTE]
 > This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md).
 
- The following table describes the columns available in a v12 server:  
-  
 |Columns|Data Type|Description|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|UTC time indicating the start of the five-minute reporting interval.|  
@@ -72,20 +67,22 @@ monikerRange: "=azuresqldb-current"
 
 ## Examples  
 
- On Azure SQL Database, you must be connected to the `master` database to query `sys.resource_stats` in the following examples.
+You must be connected to the `master` database on the [logical server](/azure/azure-sql/database/logical-servers) to query `sys.resource_stats`.
 
- The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  
+The following example returns all databases that are averaging at least 80% of CPU utilization over the last one week.  
   
 ```sql  
 DECLARE @s datetime;  
 DECLARE @e datetime;  
 SET @s= DateAdd(d,-7,GetUTCDate());  
 SET @e= GETUTCDATE();  
-SELECT database_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+
+SELECT database_name, AVG(avg_cpu_percent) AS Average_CPU_Utilization   
 FROM sys.resource_stats   
 WHERE start_time BETWEEN @s AND @e  
 GROUP BY database_name  
 HAVING AVG(avg_cpu_percent) >= 80;
+GO
 ```  
     
 ## See also  
@@ -96,5 +93,9 @@ HAVING AVG(avg_cpu_percent) >= 80;
 
 ## Next steps
 
- - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
- - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
+Learn more about related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
+- [sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)](sys-resource-usage-azure-sql-database.md)
+- [sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)

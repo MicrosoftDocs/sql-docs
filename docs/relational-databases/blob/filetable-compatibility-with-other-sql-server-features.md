@@ -18,8 +18,8 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="alwayson"></a> AlwaysOn Availability Groups and FileTables  
- When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group:  
+##  <a name="alwayson"></a> Always On Availability Groups and FileTables  
+ When the database that contains FILESTREAM or FileTable data belongs to an Always On availability group:  
   
 -   FileTable functionality is partially supported by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
   

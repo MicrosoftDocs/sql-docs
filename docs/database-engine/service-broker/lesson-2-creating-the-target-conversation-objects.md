@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 2: Creating the Target Conversation Objects'
 description: "In this lesson, you will learn to build all the objects that enable a database to be the target of a conversation from another database."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -21,6 +21,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 ### Switch to the TargetDB database
 
 - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database.
+
   ```sql
         USE TargetDB;
         GO
@@ -58,7 +59,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
     ```sql
         CREATE QUEUE TargetQueue2DB;
-        
+
         CREATE SERVICE [//TgtDB/2DBSample/TargetService]
                ON QUEUE TargetQueue2DB
                ([//BothDB/2DBSample/SimpleContract]);
@@ -67,7 +68,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ## Next Steps
 
-You have successfully configured **TargetDB** to support a conversation between it and the **InitiatorDB**. Next, you will configure the **InitiatorDB** to initiate a conversation to the **TargetDB**. See [Lesson 3: Creating the Initiator Conversation Objects](lesson-3-creating-the-initiator-conversation-objects.md).
+You have successfully configured **TargetDB** to support a conversation between it and the **InitiatorDB**. Next, you will configure the **InitiatorDB** to initiate a conversation to the **TargetDB**. For more information, see [Lesson 3: Creating the Initiator Conversation Objects](lesson-3-creating-the-initiator-conversation-objects.md).
 
 ## See also
 

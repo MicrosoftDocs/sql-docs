@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)'
 description: "SQL Server uses dialog security for any conversation to a service for which a remote service binding exists."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -16,7 +16,7 @@ ms.date: "03/30/2022"
 
 SQL Server uses dialog security for any conversation to a service for which a remote service binding exists. If the database that hosts the target service does not contain a user that corresponds to the user that created the dialog, the dialog uses anonymous security.
 
-> [!NOTE]  
+> [!NOTE]
 > Only install certificates from trusted sources.
 
 ## To make sure that an initiating service uses dialog security
@@ -38,44 +38,44 @@ This example configures anonymous dialog security for conversations between the 
 ```sql
     USE AdventureWorks2008R2 ;
     GO
-    
+
     -- Given a certificate for a remote user for the remote service
     -- SupplierOrders, create a remote service binding for
     -- the service.  The remote user will be granted permission
-    -- to send messages to the local service OrderParts. 
-    -- This example assumes that the certificate for the service 
+    -- to send messages to the local service OrderParts.
+    -- This example assumes that the certificate for the service
     -- is saved in the file'C:\Certificates\SupplierOrders.cer' and that
     -- the initiating service already exists.
-    
-    
+
+
     -- Create a user without a login.
-    
+
     CREATE USER [SupplierOrdersUser]
         WITHOUT LOGIN ;
     GO
-    
+
     -- Install a certificate for the owner of the service
     -- in the remote database. The certificate is
     -- provided by the owner of the remote service. The
     -- user for the remote service owns the certificate.
-    
+
     CREATE CERTIFICATE [SupplierOrdersCertificate]
         AUTHORIZATION [SupplierOrdersUser]
         FROM FILE='C:\Certificates\SupplierOrders.cer' ;
     GO
-    
+
     -- Create the remote service binding. Notice
     -- that the user specified in the binding
     -- does not own the binding itself.
-    
+
     -- Creating this binding specifies that messages from
     -- this database are secured using the certificate for
     -- the [SupplierOrdersUser] user.
-    
+
     -- Since anonymous is ON, the credentials for the user
     -- that begins the conversation are not used for the
     -- conversation.
-    
+
     CREATE REMOTE SERVICE BINDING [SupplierOrdersBinding]
         TO SERVICE 'SupplierOrders'
         WITH USER = [SupplierOrdersUser],

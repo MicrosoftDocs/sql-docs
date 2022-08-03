@@ -497,7 +497,7 @@ The account specified during setup is provisioned in the [!INCLUDE[ssDE](../../i
 
 This section describes the changes made during upgrade from a previous version of SQL Server.
 
-- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] requires a supported [operating system](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#operating-system-support). Any previous version of SQL Server running on a lower operating system version must have the operating system upgraded before upgrading SQL Server.
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] requires a supported [operating system](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md#operating-system-support). Any previous version of SQL Server running on a lower operating system version must have the operating system upgraded before upgrading SQL Server.
 - During upgrade of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] setup configures the SQL Server instance in the following way:
 
   - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] runs with the security context of the per-service SID. The per-service SID is granted access to the file folders of the SQL Server instance (such as DATA), and the SQL Server registry keys.

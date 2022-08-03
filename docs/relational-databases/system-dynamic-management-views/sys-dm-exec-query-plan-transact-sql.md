@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_exec_query_plan (Transact-SQL)"
-title: "sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_plan (Transact-SQL)"
+description: sys.dm_exec_query_plan (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_query_plan_TSQL"
   - "sys.dm_exec_query_plan"
   - "dm_exec_query_plan"
   - "sys.dm_exec_query_plan_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_plan dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
   

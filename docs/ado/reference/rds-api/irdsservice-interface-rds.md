@@ -1,19 +1,15 @@
 ---
+title: "IRDSService Interface (RDS)"
 description: "IRDSService Interface (RDS)"
-title: "IRDSService Interface (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "IRDSService interface [ADO]"
-ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "IRDSService interface [ADO]"
+apitype: "COM"
 ---
 # IRDSService Interface (RDS)
 Exposes the [InvokeService (RDS)](./invokeservice-rds.md) method, which is used to return a pointer to the requested interface on a more capable version of the object.  

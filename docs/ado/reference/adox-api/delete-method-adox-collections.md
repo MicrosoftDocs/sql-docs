@@ -1,15 +1,13 @@
 ---
+title: "Delete Method (ADOX Collections)"
 description: "Delete Method (ADOX Collections)"
-title: "Delete Method (ADOX Collections) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Views::Delete"
   - "Groups::Delete"
   - "Indexes::raw_Delete"
@@ -26,11 +24,9 @@ f1_keywords:
   - "Groups::raw_Delete"
   - "Tables::raw_Delete"
   - "Columns::Delete"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "delete method [ADOX]"
-ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Delete Method (ADOX Collections)
 Removes an object from a collection.  

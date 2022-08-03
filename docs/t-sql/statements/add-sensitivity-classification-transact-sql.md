@@ -1,30 +1,28 @@
 ---
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
+description: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
+author: Madhumitatripathy
+ms.author: matripathy
+ms.reviewer: vanto
+ms.date: 04/19/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-author: DavidTrigano
-ms.author: datrigan
-ms.reviewer: vanto
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
-dev_langs: 
-  - "TSQL"
 helpviewer_keywords:
   - "ADD SENSITIVITY CLASSIFICATION statement"
   - "add labels"
-  - "adding labels"
   - "adding labels"
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
   - "data classification"
   - "rank"
-ms.custom: ""
-ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-linux-ver15||>=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -98,7 +96,7 @@ Is an identifier based on a predefined set of values which define sensitivity ra
 
 ## Permissions
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission CONTROL, or by the server permission CONTROL SERVER.
 
 ## Examples  
 

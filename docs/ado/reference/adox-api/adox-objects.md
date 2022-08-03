@@ -1,19 +1,15 @@
 ---
+title: "ADOX Objects"
 description: "ADOX Objects"
-title: "ADOX Objects | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "objects [ADOX]"
-  - "ADOX, objects"
-ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "objects [ADOX]"
+  - "ADOX, objects"
 ---
 # ADOX Objects
 ## ADOX Object Summary  

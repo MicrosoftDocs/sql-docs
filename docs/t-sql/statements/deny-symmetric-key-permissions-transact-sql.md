@@ -1,28 +1,26 @@
 ---
-description: "DENY Symmetric Key Permissions (Transact-SQL)"
-title: "DENY Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Symmetric Key Permissions (Transact-SQL)"
+description: DENY Symmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "denying permissions [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], permissions"
   - "permissions [SQL Server], symmetric keys"
   - "DENY statement, symmetric keys"
   - "encryption [SQL Server], symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
-author: VanMSFT
-ms.author: vanto
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a symmetric key.  
   

@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_database_mappings (Transact-SQL)"
-title: "sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_database_mappings (Transact-SQL)"
+description: sys.pdw_database_mappings (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016"
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -1,28 +1,27 @@
 ---
-description: "sysarticles (Transact-SQL)"
-title: "sysarticles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysarticles (Transact-SQL)"
+description: sysarticles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysarticles"
   - "sysarticles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysarticles system table"
-ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
+
 # sysarticles (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains a row for each article defined in the local database. This table is stored in the published database.  
+Contains a row for each article defined in the local database. This table is stored in the published database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

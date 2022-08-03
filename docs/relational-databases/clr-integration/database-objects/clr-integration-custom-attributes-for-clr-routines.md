@@ -1,13 +1,13 @@
 ---
-title: "Custom Attributes for CLR Routines | Microsoft Docs"
+title: "Custom Attributes for CLR Routines"
 description: Custom attributes can be applied to CLR routines, user-defined types, and user-defined aggregates that are registered in Microsoft SQL Server.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "routines [CLR integration]"
   - "SqlFacet attribute"
   - "SqlTrigger attribute"
@@ -20,8 +20,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], attributes"
   - "SqlUserDefinedTypeAttribute attribute"
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-author: rothja
-ms.author: jroth
 ---
 # CLR Integration Custom Attributes for CLR Routines
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

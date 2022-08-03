@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.mysql.synchronizeadaptivetarget.f1"
 ---
 # Loading Converted Database Objects into SQL Server (MySQLToSQL)
 After you have converted MySQL Databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
@@ -49,7 +51,7 @@ To use SSMA to create SQL Server or Azure SQL Database objects, you select the o
   
     -   A cross sign means no action will be taken.  
   
-    -   Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
+    -   Select the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
 To save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  

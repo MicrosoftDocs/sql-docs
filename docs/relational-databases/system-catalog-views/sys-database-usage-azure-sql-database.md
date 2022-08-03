@@ -1,49 +1,47 @@
 ---
-description: "sys.database_usage (Azure SQL Database)"
-title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+title: "sys.database_usage (Azure SQL Database)"
+description: sys.database_usage (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_usage"
   - "database_usage_TSQL"
   - "sys.database_usage_TSQL"
   - "sys.database_usage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
+dev_langs:
+  - "TSQL"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  **Note: This applies only to Azure SQL Database V11.**  
-  
- Lists the number, type, and duration of databases on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+>[!IMPORTANT]
+> This view is unused and is preserved for backwards compatibility.
   
  The **sys.database_usage** view contains the following columns.  
   
 |Column Name|Description|  
 |-----------------|-----------------|  
-|time|The date when the usage events occurred.|  
-|sku|The type of service tier for the database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
-|quantity|The maximum number of databases of an SKU type that existed during that day.|  
-  
-## Permissions  
- Read-only access to this view is available to all users with permissions to connect to the **master** database.  
-  
-## Remarks  
- The **sys.database_usage** view returns one row for each day of your subscription.  
-  
-## See Also  
- [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Azure SQL Database](/previous-versions/azure/ee621788(v=azure.100))  
-  
+|time|This column is unused and is preserved for backwards compatibility.|  
+|sku|This column is unused and is preserved for backwards compatibility.|  
+|quantity|This column is unused and is preserved for backwards compatibility.|  
+ 
+## See also
+
+- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
+- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
+
+## Next steps
+
+Learn more about Azure SQL Database in the following articles:
+
+- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
+- [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)

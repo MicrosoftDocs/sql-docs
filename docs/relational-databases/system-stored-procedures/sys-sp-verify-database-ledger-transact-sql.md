@@ -1,8 +1,9 @@
 ---
 description: "sys.sp_verify_database_ledger (Transact-SQL)"
 title: "sys.sp_verify_database_ledger (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -11,12 +12,12 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # sys.sp_verify_database_ledger (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Verifies the database ledger and the table ledgers. For each row in the sys.database_ledger view, the stored procedure:
 
@@ -29,7 +30,7 @@ Verifies the database ledger and the table ledgers. For each row in the sys.data
 
 In addition, the stored procedure verifies all non-clustered indexes are consistent with the specified ledger table. If no ledger table is specified, it verifies all non-clustered indexes for each existing ledger table referenced in the table_hashes column in any row of sys.database_ledger.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
@@ -55,7 +56,7 @@ The name of the table that you want to verify.
 
 ## Result sets
 
-None.
+1 row with 1 column called: last_verified_block_id
 
 ## Permissions
 
@@ -63,11 +64,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](../system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](../system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](../system-catalog-views/sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](../system-catalog-views/sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_generate_database_ledger_digest (Transact-SQL)](sys-sp-generate-database-ledger-digest-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+- [Database Verification](../security/ledger/ledger-database-verification.md)
+- [Verify a ledger table to detect tampering](../security/ledger/ledger-verify-database.md)
+- [Ledger Overview](../security/ledger/ledger-overview.md)

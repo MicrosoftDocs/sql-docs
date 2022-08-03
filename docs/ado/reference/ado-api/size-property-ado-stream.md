@@ -1,21 +1,17 @@
 ---
+title: "Size Property (ADO Stream)"
 description: "Size Property (ADO Stream)"
-title: "Size Property (ADO Stream) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::Size"
-helpviewer_keywords: 
-  - "Size property [ADO Stream]"
-ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::Size"
+helpviewer_keywords:
+  - "Size property [ADO Stream]"
+apitype: "COM"
 ---
 # Size Property (ADO Stream)
 Indicates the size of the stream in number of bytes.  

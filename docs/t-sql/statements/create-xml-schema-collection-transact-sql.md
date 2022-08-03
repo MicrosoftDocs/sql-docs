@@ -1,34 +1,32 @@
 ---
-description: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
-title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
+description: CREATE XML SCHEMA COLLECTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE XML SCHEMA COLLECTION"
   - "CREATE_XML_SCHEMA_COLLECTION_TSQL"
   - "CREATE XML SCHEMA"
   - "CREATE_XML_SCHEMA_TSQL"
   - "COLLECTION"
   - "COLLECTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE XML SCHEMA COLLECTION statement"
   - "importing schema components"
   - "schema collections [SQL Server], creating"
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
+dev_langs:
+  - "TSQL"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Imports the schema components into a database.  
   

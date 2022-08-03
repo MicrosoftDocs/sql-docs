@@ -1,26 +1,25 @@
 ---
+title: "GETANSINULL (Transact-SQL)"
 description: "GETANSINULL (Transact-SQL)"
-title: "GETANSINULL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "GETANSINULL"
   - "GETANSINULL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "null values [SQL Server], default"
   - "GETANSINULL function"
   - "default nullability"
   - "database nullability [SQL Server]"
-ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

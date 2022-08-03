@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "buffer manager, SQL Server"
   - "buffer pool, SQL Server"
   - "resource monitor, SQL Server"
-ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-author: LitKnd
-ms.author: kendralittle
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Management Architecture Guide
@@ -60,12 +59,11 @@ All SQL Server editions support conventional memory on 64-bit platform. The SQL 
 
 ### Address Windows Extensions (AWE) memory
 
-By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) and the Locked Pages in Memory privilege required by AWE, you can
-keep most of SQL Server process memory "locked": it continues to stay in physical RAM in the case of low virtual memory conditions. This happens in both 32-bit and 64-bit AWE allocations. The locking of memory occurs because AWE memory doesn't go through the Virtual Memory Manager in Windows, which controls paging of memory. The AWE memory allocation API requires the Locked Pages in Memory (SeLockMemoryPrivilege) privilege; see [AllocateUserPhysicalPages notes](/windows/win32/api/memoryapi/nf-memoryapi-allocateuserphysicalpages#remarks). Therefore, the main benefit of using the AWE API is to keep the majority of the memory resident in RAM in case of memory pressure on the system. For information on how to allow SQL Server to use AWE, see [Enable the Lock Pages in Memory Option](../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md).
+By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) and the Locked Pages in Memory privilege required by AWE, you can keep most of SQL Server process memory "locked": it continues to stay in physical RAM in the case of low virtual memory conditions. This happens in both 32-bit and 64-bit AWE allocations. The locking of memory occurs because AWE memory doesn't go through the Virtual Memory Manager in Windows, which controls paging of memory. The AWE memory allocation API requires the Locked Pages in Memory (SeLockMemoryPrivilege) privilege; see [AllocateUserPhysicalPages notes](/windows/win32/api/memoryapi/nf-memoryapi-allocateuserphysicalpages#remarks). Therefore, the main benefit of using the AWE API is to keep the majority of the memory resident in RAM in case of memory pressure on the system. For information on how to allow SQL Server to use AWE, see [Enable the Lock Pages in Memory Option](../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md).
 
-If the lock-pages-in-memory privilege (LPIM) is granted (on 32-bit or 64-bit systems), we strongly recommend that you set max server memory to a specific value, rather than leaving the default. For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Locked Pages in Memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
+If the lock-pages-in-memory privilege (LPIM) is granted (on 32-bit or 64-bit systems), we strongly recommend that you set max server memory to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB). For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Locked Pages in Memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
-If the Locked pages in memory privilege is not enabled, SQL Sever will switch to using conventional memory and in cases of OS memory exhaustion, error 17890 may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+If the Locked pages in memory privilege is not enabled, SQL Server will switch to using conventional memory and in cases of OS memory exhaustion, error 17890 may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
@@ -101,7 +99,7 @@ As soon as this allocation is performed, the *Resource Monitor* background task 
 
 This behavior is typically observed during the following operations: 
 -  Large Columnstore index queries.
--  Large [Batch Mode on Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) queries.
+-  Large [Batch Mode on Rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore) queries.
 -  Columnstore index (re)builds, which use large volumes of memory to perform Hash and Sort operations.
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.
@@ -138,15 +136,15 @@ The following query returns information about currently allocated memory:
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
-	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
-	locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
-	virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
-	virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
-	virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
-	page_fault_count AS sql_page_fault_count,
-	memory_utilization_percentage AS sql_memory_utilization_percentage, 
-	process_physical_memory_low AS sql_process_physical_memory_low, 
-	process_virtual_memory_low AS sql_process_virtual_memory_low
+    large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
+    locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
+    virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
+    virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
+    virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
+    page_fault_count AS sql_page_fault_count,
+    memory_utilization_percentage AS sql_memory_utilization_percentage, 
+    process_physical_memory_low AS sql_process_physical_memory_low, 
+    process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
  
@@ -297,7 +295,7 @@ Memory brokers monitor the demand consumption of memory by each component and th
 For more information about memory brokers, see [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
 
 ### Error Detection  
-Database pages can use one of two optional mechanisms that help insure the integrity of the page from the time it is written to disk until it is read again: torn page protection and checksum protection. These mechanisms allow an independent method of verifying the correctness of not only the data storage, but hardware components such as controllers, drivers, cables, and even the operating system. The protection is added to the page just before writing it to disk, and verified after it is read from disk.
+Database pages can use one of two optional mechanisms that help ensure the integrity of the page from the time it is written to disk until it is read again: torn page protection and checksum protection. These mechanisms allow an independent method of verifying the correctness of not only the data storage, but hardware components such as controllers, drivers, cables, and even the operating system. The protection is added to the page just before writing it to disk, and verified after it is read from disk.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824. 
 
@@ -333,10 +331,11 @@ However, the use of mutexes can lead to contention if many threads are allocatin
 
 Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] can dynamically detect contention on a specific CMemThread object and promote the object to a per-node or a per-CPU based implementation. Once promoted, the PMO remains promoted until the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is restarted. CMemThread contention can be detected by the presence of high CMEMTHREAD waits in the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV, and by observing the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV columns *contention_factor*, *partition_type*, *exclusive_allocations_count*, and *waiting_tasks_count*.
 
-## See Also
-[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
-[Reading Pages](../relational-databases/reading-pages.md)   
-[Writing Pages](../relational-databases/writing-pages.md)   
-[How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
-[Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
-[Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)
+## Next steps
+
+ - [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ - [Reading Pages](../relational-databases/reading-pages.md)   
+ - [Writing Pages](../relational-databases/writing-pages.md)   
+ - [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+ - [Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
+ - [Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

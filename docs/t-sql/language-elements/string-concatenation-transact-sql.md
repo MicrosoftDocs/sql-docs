@@ -1,25 +1,25 @@
 ---
 title: "+ (String Concatenation) (Transact-SQL)"
 description: "+ (String Concatenation) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "concatenation"
   - "string"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "concatenation [SQL Server]"
   - "string concatenation operators"
   - "+ (string concatenation)"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "12/06/2016"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # + (String Concatenation) (Transact-SQL)

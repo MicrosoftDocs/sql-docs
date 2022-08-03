@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], enabling"
   - "log shipping [SQL Server], configuring"
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: LitKnd
-ms.author: kendralittle
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Configure Log Shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

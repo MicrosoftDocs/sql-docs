@@ -22,9 +22,9 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns the minimum version on the client that is valid for use in obtaining change tracking information from the specified table, when you are using the [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) function.  
+  Returns the minimum version on the client that is valid for use in obtaining change tracking information from the specified table, when you're using the [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) function.  
     
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,18 +51,18 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 -   When the background cleanup task ran to remove change tracking information older than the retention period specified for the database.  
   
--   If the table was truncated. This removes all change tracking information that is associated with the table.  
+-   If the table was truncated, this removes all change tracking information that is associated with the table.  
   
  The function returns NULL if any one of the following conditions is true:  
   
--   Change tracking is not enabled for the database.  
+-   Change tracking isn't enabled for the database.  
   
--   The specified table object ID is not valid for the current database.  
+-   The specified table object ID isn't valid for the current database.  
   
 -   Insufficient permission to the table specified by the object ID.  
   
 ## Examples  
- The following example determines whether a specified version is a valid version. The example obtains the minimum valid version of the `dbo.Employees` table, and then compares this to the value of the `@last_sync_version` variable. If the value of `@last_sync_version` is lower than the value of `@min_valid_version`, the list of changed rows will not be valid.  
+ The following example determines whether a specified version is a valid version. The example obtains the minimum valid version of the `dbo.Employees` table, and then compares this to the value of the `@last_sync_version` variable. If the value of `@last_sync_version` is lower than the value of `@min_valid_version`, the list of changed rows won't be valid.  
   
 > [!NOTE]  
 >  You would usually obtain the value from a table or other location where you stored the last version number that was used to synchronize data.  
@@ -81,7 +81,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## See Also  
+## See also  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   

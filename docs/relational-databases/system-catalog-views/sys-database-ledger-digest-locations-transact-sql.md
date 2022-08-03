@@ -1,25 +1,24 @@
 ---
-description: "sys.database_ledger_digest_locations (Transact-SQL)"
-title: "sys.database_ledger_digest_locations (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.database_ledger_digest_locations (Transact-SQL)"
+description: sys.database_ledger_digest_locations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the current and the historical ledger digest storage endpoints for the ledger feature.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|
@@ -33,11 +32,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](sys-ledger-column-history-transact-sql.md)
-- [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).
+- [Digest Management](../security/ledger/ledger-digest-management.md)
+- [Configure automatic database digests](../security/ledger/ledger-how-to-enable-automatic-digest-storage.md)
+- [Ledger Overview](../security/ledger/ledger-overview.md)

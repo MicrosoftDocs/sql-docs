@@ -6,12 +6,12 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.date: 12/18/2019
-ms.topic: tutorial
 ms.prod: sql
-ms.custom: "seodec18"
 ms.technology: linux
-helpviewer_keywords: 
-  - "Linux, AAD authentication"
+ms.topic: tutorial
+ms.custom: "seodec18"
+helpviewer_keywords:
+  - "Linux, AD authentication"
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 

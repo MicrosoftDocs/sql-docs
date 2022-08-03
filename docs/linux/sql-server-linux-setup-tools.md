@@ -32,7 +32,7 @@ Install the tools for your platform:
 
 This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
-> [!Note]
+> [!Warning]
 > sqlcmd and bcp are available in mssql-tools for x64 architecture. An alternative for both arm64 and x64 environments is in preview across Linux, macOS, and Windows, [go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd).
 
 ## <a id="RHEL"><a/>Install tools on RHEL 8
@@ -203,6 +203,11 @@ brew install mssql-tools
 ## <a id="docker"></a> Docker
 
 If you [run SQL Server in a Docker container](quickstart-install-connect-docker.md), the SQL Server command-line tools are already included in the SQL Server Linux container image. If you attach to a running container with an interactive bash shell, you can run the tools locally.
+
+If you are creating a container with the SQL Server command-line tools, it is recommended to add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA and not interupt image creation.  An example final command as part of installation on an Ubuntu-based image is:
+```bash
+sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev
+```
 
 ## Offline installation
 

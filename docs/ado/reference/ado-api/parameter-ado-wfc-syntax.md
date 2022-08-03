@@ -1,19 +1,15 @@
 ---
+title: "Parameter (ADO - WFC Syntax)"
 description: "Parameter (ADO - WFC Syntax)"
-title: "Parameter (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "02/15/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Parameter collection [ADO], ADO/WFC syntax"
-ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
+ms.date: "02/15/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Parameter collection [ADO], ADO/WFC syntax"
+apitype: "COM"
 ---
 # Parameter (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

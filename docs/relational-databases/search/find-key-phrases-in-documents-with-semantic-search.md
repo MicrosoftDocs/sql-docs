@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], key phrase queries"
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---

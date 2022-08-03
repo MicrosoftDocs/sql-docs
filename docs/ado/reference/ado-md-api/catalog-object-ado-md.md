@@ -1,39 +1,39 @@
 ---
+title: "Catalog Object (ADO MD)"
 description: "Catalog Object (ADO MD)"
-title: "Catalog Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Catalog"
-helpviewer_keywords: 
-  - "Catalog object [ADO MD]"
-ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Catalog object [ADO MD]"
+helpviewer_keywords:
+  - "Catalog object [ADO MD]"
+apitype: "COM"
 ---
+
 # Catalog Object (ADO MD)
-Contains multidimensional schema information (that is, cubes and underlying dimensions, hierarchies, levels, and members) specific to a multidimensional data provider (MDP).  
+
+Contains multidimensional schema information (that is, cubes and underlying dimensions, hierarchies, levels, and members) specific to a multidimensional data provider (MDP).
   
-## Remarks  
- With the collections and properties of a **Catalog** object, you can do the following:  
+## Remarks
+
+With the collections and properties of a **Catalog** object, you can do the following:
   
--   Open the catalog by setting the [ActiveConnection](./activeconnection-property-ado-md.md) property to a standard ADO [Connection](../ado-api/connection-object-ado.md) object or to a valid connection string.  
+- Open the catalog by setting the [ActiveConnection](./activeconnection-property-ado-md.md) property to a standard ADO [Connection](../ado-api/connection-object-ado.md) object or to a valid connection string.
   
--   Identify the **Catalog** with the [Name](./name-property-ado-md.md) property.  
+- Identify the **Catalog** with the [Name](./name-property-ado-md.md) property.
   
--   Iterate through the cubes in a catalog using the [CubeDefs](./cubedefs-collection-ado-md.md) collection.  
+- Iterate through the cubes in a catalog using the [CubeDefs](./cubedefs-collection-ado-md.md) collection.
   
- This section contains the following topic.  
+This section contains the following topic.  
   
--   [Properties, Methods, and Events](./catalog-object-properties-methods-and-events-ado-md.md)  
+- [Properties, Methods, and Events](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## See Also  
- [Catalog Example (VB)](./catalog-example-vb.md)   
- [Connection Object (ADO)](../ado-api/connection-object-ado.md)   
- [CubeDefs Collection (ADO MD)](./cubedefs-collection-ado-md.md)
+
+- [Catalog Example (VB)](./catalog-example-vb.md)
+- [Connection Object (ADO)](../ado-api/connection-object-ado.md)
+- [CubeDefs Collection (ADO MD)](./cubedefs-collection-ado-md.md)

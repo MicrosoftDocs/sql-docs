@@ -1,25 +1,23 @@
 ---
-description: "Schemas Catalog Views - sys.schemas"
-title: "sys.schemas (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.schemas (Transact-SQL)"
+description: Schemas Catalog Views - sys.schemas
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "schemas_TSQL"
   - "sys.schemas_TSQL"
   - "schemas"
   - "sys.schemas"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.schemas catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schemas Catalog Views - sys.schemas

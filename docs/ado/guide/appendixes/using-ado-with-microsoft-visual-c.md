@@ -1,20 +1,16 @@
 ---
+title: "Using ADO with Microsoft Visual C++"
 description: "Using ADO with Microsoft Visual C++"
-title: "Using ADO with Microsoft Visual C++ | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO, using with Visual C++"
-ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ADO, using with Visual C++"
+dev_langs:
+  - "C++"
 ---
 # Using ADO with Microsoft Visual C++
 For information about using ADO with Visual C++, see the following sections:  

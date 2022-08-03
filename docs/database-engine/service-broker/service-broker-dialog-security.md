@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Dialog Security
 description: "Dialog security provides encryption, remote authentication, and remote authorization for a specific conversation."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -20,7 +20,7 @@ Dialog security provides encryption, remote authentication, and remote authoriza
 
 Service Broker dialog security lets your application use authentication, authorization, or encryption for an individual dialog conversation (or dialog). By default, all dialog conversations use dialog security. When you begin a dialog, you can explicitly allow a dialog to proceed without dialog security by including the ENCRYPTION = OFF clause on the BEGIN DIALOG CONVERSATION statement. However, if a remote service binding exists for the service that the conversation targets, the dialog uses security even when ENCRYPTION = OFF.
 
-For a dialog that uses security, Service Broker encrypts all messages sent outside a SQL Server instance. Messages that remain within a SQL Server instance are never encrypted. In dialog security, only the database that hosts the initiating service and the database that hosts the target service need to have access to the certificates used for security. That is, an instance that performs message forwarding is not required to have the capability to decrypt the messages that the instance forwards.
+For a dialog that uses security, Service Broker encrypts all messages sent outside a SQL Server instance. Messages that remain within a SQL Server instance are never encrypted. In dialog security, only the database that hosts the initiating service and the database that hosts the target service need to have access to the certificates used for security. That is, an instance that performs message forwarding is not required to have the capability to decrypt the messages that the instance forward.
 
 Service Broker provides two types of dialog security, full security and anonymous security. For conversations that use dialog security, Service Broker provides remote authorization to map the remote side of the conversation to a local user.
 
@@ -72,7 +72,7 @@ For a conversation that uses anonymous security, the connection runs as a member
 
 For a conversation that uses full security, the connection on each side of the conversation acts with the permissions of the user that is specified in the remote service binding. For example, if a remote service binding associates the service name **InventoryService** with the user **InventoryServiceRemoteUser**, SQL Server uses the security context for **InventoryServiceRemoteUser** to put messages for the **InventoryService** application on the queue for the destination service.
 
-For better security, the user that owns the private key for a service is typically a different user than the user specified for activation. A user that owns a private key only needs permission to add a message to the queue — that is, SEND permission for the service that uses the queue. In contrast, the user that is specified for activation has the permissions that are required to accomplish the requested work and send a response. In the preceding example, **InventoryServiceRemoteUser** does not require permissions to query the inventory table or send a return message. The user only needs permissions to send a message to the queue that **InventoryService** uses. Stored procedure activation occurs in a different session with the credentials that the queue specifies. No credentials need to be shared between the session that enqueues the message and the session that processes the message.
+For better security, the user that owns the private key for a service is typically a different user than the user specified for activation. A user that owns a private key only needs permission to add a message to the queue - that is, SEND permission for the service that uses the queue. In contrast, the user that is specified for activation has the permissions that are required to accomplish the requested work and send a response. In the preceding example, **InventoryServiceRemoteUser** does not require permissions to query the inventory table or send a return message. The user only needs permissions to send a message to the queue that **InventoryService** uses. Stored procedure activation occurs in a different session with the credentials that the queue specifies. No credentials need to be shared between the session that enqueues the message and the session that processes the message.
 
 ## Creating a Secure Dialog
 

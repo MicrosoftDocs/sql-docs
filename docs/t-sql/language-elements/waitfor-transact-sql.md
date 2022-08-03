@@ -1,19 +1,19 @@
 ---
+title: "WAITFOR (Transact-SQL)"
 description: "WAITFOR (Transact-SQL)"
-title: "WAITFOR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "WAITFOR"
   - "WAITFOR_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TIME option"
   - "delaying executions [SQL Server]"
   - "batches [SQL Server], execution times"
@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "transactions [SQL Server], execution times"
   - "WAITFOR statement"
   - "timing executions"
-ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

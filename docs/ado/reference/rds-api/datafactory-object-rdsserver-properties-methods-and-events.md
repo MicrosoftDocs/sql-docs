@@ -1,18 +1,14 @@
 ---
+title: "DataFactory Object (RDSServer) Properties, Methods, and Events"
 description: "DataFactory Object (RDSServer) Properties, Methods, and Events"
-title: "DataFactory Object (RDSServer) Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "DataFactory object [ADO], members"
-ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataFactory object [ADO], members"
 ---
 # DataFactory Object (RDSServer) Properties, Methods, and Events
 > [!IMPORTANT]

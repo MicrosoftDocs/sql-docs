@@ -2,7 +2,7 @@
 title: "SQL Server Connector maintenance & troubleshooting"
 description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
 ms.custom: seo-lt-2019
-ms.date: "08/25/2021"
+ms.date: "04/12/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -168,6 +168,13 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - login.microsoftonline.com/*:443
 - *.vault.azure.net/*:443
 
+Additionally, checking the certificate revocation list might create HTTP traffic on port 80. 
+
+
+ > [!NOTE]
+ > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place. 
+
+
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
   The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
@@ -192,17 +199,15 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 **How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
-![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![Azure AD change default directory helpsteps](../../../relational-databases/security/encryption/media/azure-ad-change-default-directory-helpsteps.png)
 
-1. Go to the Azure classic portal: [https://portal.azure.com/](https://portal.azure.com/)  
-2. On the left-hand menu, select **Settings**.
-3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
-4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.
-5. Make sure you are the global admin of the newly selected Active Directory. If you aren't the global admin, so might lose management permissions because you switched directories.
-6. Once the pop-up window closes, if you don't see any of your subscriptions, you may need to update the **Filter by Directory** filter in the **Subscriptions** filter in the top-right hand menu of the screen to see subscriptions using your newly updated Active Directory.
+1. Go to the [Azure portal](https://portal.azure.com/).
+2. On the upper-right corner of the page, select the settings icon, or your user profile.
+3. On the **Directories + subscriptions** page, select **All Directories** to see all the Azure Active Directories that you belong to.
+4. You can change your **Startup directory**, or switch to a different directory if you have multiple directories.
 
     > [!NOTE] 
-    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the AAD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
+    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the Azure AD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
 
 To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
   

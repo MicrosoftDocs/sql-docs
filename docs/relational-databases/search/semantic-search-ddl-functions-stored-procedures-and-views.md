@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---

@@ -1,11 +1,7 @@
 ---
+title: GeomFromGml (geometry Data Type)
 description: "GeomFromGml (geometry Data Type)"
-title: "GeomFromGml (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -15,11 +11,15 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "GeomFromGML (geometry Data Type)"
-ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic 
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/03/2017"
 ---
+
 # GeomFromGml (geometry Data Type)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).

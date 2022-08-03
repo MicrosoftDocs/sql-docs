@@ -1,26 +1,28 @@
 ---
-description: "The GREATEST logical functions returns the maximum value from a list of one or more expressions."
 title: "GREATEST (Transact-SQL)"
-ms.custom: ""
+description: "The GREATEST logical functions returns the maximum value from a list of one or more expressions."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: ""
 ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom:
+  - "event-tier1-build-2022"
+f1_keywords:
   - "GREATEST"
   - "GREATEST_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GREATEST function"
-author: jmsteen
-ms.author: josteen
-ms.reviewer: wiassaf
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest"
 ---
 # Logical Functions - GREATEST (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+
+[!INCLUDE [sqlserver-2022-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi-asa-svrless-poolonly.md)]
 
 
  This function returns the maximum value from a list of one or more expressions. 

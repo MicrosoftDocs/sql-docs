@@ -4,8 +4,8 @@
 title: "InputParameter function (sqlrutils) | Microsoft Docs" 
 description: " InputParameter: generates an InputParameter Object, that captures the information about the input parameters of the R function that is to be embedded into a SQL Server Stored Procesure. Those will become the input parameters of the stored procedure. Supported R types of the input parameters are POSIXct, numeric, character, integer, logical, and raw. " 
 keywords: "(sqlrutils), InputParameter" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

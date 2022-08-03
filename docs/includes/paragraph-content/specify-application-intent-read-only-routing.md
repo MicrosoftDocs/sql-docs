@@ -21,7 +21,7 @@ The `ApplicationIntent` keyword doesn't work with legacy read-only databases.
 
 When a connection chooses `ReadOnly`, the connection is assigned to any of the following special configurations that might exist for the database:
 
-- [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). A database can allow or disallow read workloads on the targeted Always On database. This choice is controlled by using the `ALLOW_CONNECTIONS` clause of the `PRIMARY_ROLE` and `SECONDARY_ROLE` Transact-SQL statements.
+- [Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). A database can allow or disallow read workloads on the targeted availability group database. This choice is controlled by using the `ALLOW_CONNECTIONS` clause of the `PRIMARY_ROLE` and `SECONDARY_ROLE` Transact-SQL statements.
 
 - [Geo-replication](/azure/sql-database/sql-database-geo-replication-overview)
 

@@ -1,12 +1,12 @@
-﻿---
+---
 title: Removing Poison Messages
 description: "A poison message is a message containing information that an application cannot successfully process."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -37,52 +37,52 @@ The following example shows how to inspect a message safely for the conversation
 ```sql
     use AdventureWorks2008R2 ;
     GO
-    
+
     -- Sample to show the content of a message, then return
     -- the message to the queue. This may be useful to determine
     -- whether a specific message cannot be processed due to the
     -- content of the message.
-    
+
     -- Every exit path from the transaction rolls back the transaction.
     -- This code is intended to inspect the message, not remove the
     -- message from the queue permanently. The transaction must roll
     -- back to return the message to the queue.
-    
+
     BEGIN TRANSACTION ;
-    
+
       -- To print the body, the code needs the message_body and
       -- the encoding_format.
-    
+
       DECLARE @messageBody VARBINARY(MAX),
               @validation NCHAR ;
-    
+
       -- Receive the message. The WAITFOR handles the case where
       -- an application is attempting to process the message when
       -- this batch is submitted. Replace the name of the queue and
       -- the conversation_handle value.
-    
+
       WAITFOR(
-        RECEIVE TOP(1) 
+        RECEIVE TOP(1)
                 @messageBody = message_body,
                 @validation = validation
           FROM dbo.ExpenseQueue
           WHERE conversation_handle =
                'e29059bb-9922-40f4-a575-66b2e4c70cf9'
       ), TIMEOUT 2000 ;
-    
+
       -- Roll back and exit if the message is not available
       -- in two seconds.
-    
+
       IF @@ROWCOUNT = 0
         BEGIN
           ROLLBACK TRANSACTION ;
           PRINT 'No message available.' ;
           RETURN ;
         END
-    
+
       -- Print the message based on the encoding format of
       -- the message body.
-    
+
       IF (@validation = 'E')
         BEGIN
           PRINT 'Empty message.' ;
@@ -96,7 +96,7 @@ The following example shows how to inspect a message safely for the conversation
           PRINT 'No validation -- binary message:'
           PRINT @messageBody ;
         END
-    
+
     ROLLBACK TRANSACTION
     GO
 ```
@@ -106,7 +106,7 @@ When you find a poison message, you end the conversation. The following example 
 ```sql
     -- End the conversation. Do this only if the message cannot be
     -- processed by the normal procedure.
-    
+
     END CONVERSATION 'e29059bb-9922-40f4-a575-66b2e4c70cf9'
         WITH ERROR = 127 DESCRIPTION = N'Unable to process message.' ;
     GO

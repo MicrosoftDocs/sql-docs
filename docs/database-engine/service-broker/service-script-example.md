@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Script Example
 description: "This Transact-SQL code sample defines a service that archives untyped XML documents."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -25,33 +25,33 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
     -- The contract script contains definitions that must be
     -- present for both the intiating service and the target
     -- service.
-    
+
     USE AdventureWorks2008R2;
     GO
-    
+
     -- Create messages for each broker-to-broker
     -- communication needed to complete the task.
-    
+
     -- Message for the initiator to send XML
     -- to be archived.
-    
+
     CREATE MESSAGE TYPE
         [//Adventure-Works.com/messages/ArchiveXML]
         VALIDATION = WELL_FORMED_XML ;
     GO
-    
+
     -- Message to return event archiving information.
-    
+
     CREATE MESSAGE TYPE
         [//Adventure-Works.com/messages/AcknowledgeArchiveXML]
         VALIDATION = WELL_FORMED_XML ;
     GO
-    
+
     -- Create a service contract to structure
-    -- an event archiving conversation, using 
+    -- an event archiving conversation, using
     -- the message types defined above.
-    
-    CREATE CONTRACT 
+
+    CREATE CONTRACT
         [//Adventure-Works.com/contracts/ArchiveXML/v1.0]
         (
             [//Adventure-Works.com/messages/ArchiveXML]
@@ -69,21 +69,21 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
     -- objects created by this script are only
     -- required in a database that hosts the target
     -- service.
-    
+
     USE AdventureWorks2008R2 ;
     GO
-    
-    -- Create the service queue that will receive 
+
+    -- Create the service queue that will receive
     -- messages for conversations that implement
     -- the ArchiveXML contract.
-    
+
     CREATE QUEUE ArchiveQueue ;
     GO
-    
-    -- Create the service object that exposes the 
-    -- ArchiveEvents service contract and maps 
+
+    -- Create the service object that exposes the
+    -- ArchiveEvents service contract and maps
     -- it to the ArchiveQueue service queue.
-    
+
     CREATE SERVICE [//Adventure-Works.com/ArchiveService]
         ON QUEUE ArchiveQueue
         ([//Adventure-Works.com/contracts/ArchiveXML/v1.0]) ;

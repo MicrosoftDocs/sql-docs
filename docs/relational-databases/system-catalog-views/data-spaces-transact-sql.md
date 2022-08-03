@@ -1,20 +1,18 @@
 ---
-description: "Data Spaces (Transact-SQL)"
-title: "Data Spaces (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Data Spaces (Transact-SQL)"
+description: Data Spaces (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data space catalog views [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Data Spaces (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

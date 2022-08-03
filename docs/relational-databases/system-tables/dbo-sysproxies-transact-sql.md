@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysproxies (Transact-SQL)"
-title: "dbo.sysproxies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysproxies (Transact-SQL)"
+description: dbo.sysproxies (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysproxies_TSQL"
   - "sysproxies_TSQL"
   - "dbo.sysproxies"
   - "sysproxies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysproxies system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

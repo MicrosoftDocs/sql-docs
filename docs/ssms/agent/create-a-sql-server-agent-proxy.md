@@ -1,38 +1,37 @@
 ---
-description: "Create a SQL Server Agent Proxy"
+description: "Create a SQL Server Agent Proxy in SQL Server Management Studio"
 title: "Create a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
-ms.date: "05/04/2017"
+ms.date: "05/03/2022"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], creating"
-ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
+monikerRange: ">= sql-server-2016"
 ---
-# Create a SQL Server Agent Proxy
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-
-> [!IMPORTANT]  
-> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+# Create a SQL Server Agent proxy
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to create a SQL Server Agent proxy in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account defines a security context in which a job step can run. Each proxy corresponds to a security credential. To set permissions for a particular job step, create a proxy that has the required permissions for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent subsystem, and then assign that proxy to the job step.  
+
+On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) or [SQL Agent job limitations in SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-limitations-in-sql-managed-instance) for details.
+
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
 -   You must create a credential before you create a proxy if one is not already available.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Access this computer from the network" permission (SeNetworkLogonRight) on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Access this computer from the network" permission (`SeNetworkLogonRight`) on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  For a list of proxy subsystems, see [sp_grant_proxy_to_subsystem](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md).
   
 -   Creation of a proxy does not change the permissions for the user that is specified in the credential for the proxy. For example, you can create a proxy for a user that does not have permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In this case, job steps that use that proxy are unable to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,17 +41,17 @@ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account 
   
 #### <a name="Permissions"></a>Permissions  
   
--   Only members of the **sysadmin** fixed server role have permission to create, modify, or delete proxy accounts. Users who are not members of the **sysadmin** fixed server role must be added to one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database to use proxies: **SQLAgentUserRole**, **SQLAgentReaderRole**, or **SQLAgentOperatorRole**.  
+-   Only members of the **sysadmin** fixed server role have permission to create, modify, or delete proxy accounts. Users who are not members of the **sysadmin** fixed server role must be added to one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the `msdb` database to use proxies: **SQLAgentUserRole**, **SQLAgentReaderRole**, or **SQLAgentOperatorRole**.  
   
 -   Requires **ALTER ANY CREDENTIAL** permission if creating a credential in addition to the proxy.  
   
-## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
+## <a name="SSMSProcedure"></a>Use SQL Server Management Studio (SSMS)
   
 #### To create a SQL Server Agent proxy  
   
-1.  In **Object Explorer**, click the plus sign to expand the server where you want to create a proxy on SQL Server Agent.  
+1.  In **Object Explorer**, select the plus sign to expand the server where you want to create a proxy on SQL Server Agent.  
   
-2.  Click the plus sign to expand **SQL Server Agent**.  
+2.  Select the plus sign to expand **SQL Server Agent**.  
   
 3.  Right-click the **Proxies** folder and select **New Proxy**.  
   
@@ -66,17 +65,17 @@ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account 
   
 8.  On the **Principals** page, add or remove logins or roles to grant or remove access to the proxy account.  
   
-9. When finished, click **OK**.  
+9. When finished, select **OK**.  
   
-## <a name="TsqlProcedure"></a>Using Transact-SQL  
+## <a name="TsqlProcedure"></a>Use Transact-SQL  
   
 #### To create a SQL Server Agent proxy  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  The following script creates a credential called `CatalogApplicationCredential`, creates proxy `Catalog application proxy` and assigns the credential `CatalogApplicationCredential` to it, and grants the proxy access to the ActiveX Scripting subsystem. Copy and paste the following example into the query window and select **Execute**. 
   
     ```  
     -- creates credential CatalogApplicationCredential  
@@ -101,10 +100,10 @@ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account 
     GO  
     ```  
   
-For more information, see:  
+## Next steps
   
 -   [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)  
-  
+
 -   [sp_add_proxy (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
-  
--   [sp_grant_proxy_to_subsystem (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+
+-   [sp_grant_proxy_to_subsystem (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)

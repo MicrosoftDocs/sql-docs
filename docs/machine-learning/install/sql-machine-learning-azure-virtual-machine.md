@@ -26,9 +26,9 @@ Follow these steps:
 
 ## Provision SQL Server virtual machine in Azure
 
-For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal). 
 
-The [Configure SQL server settings](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) step is where you add Machine Learning Services to your instance.
+The [Configure SQL server settings](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal#3-configure-sql-server-settings) step is where you add Machine Learning Services to your instance.
 
 <a name="firewall"></a>
 

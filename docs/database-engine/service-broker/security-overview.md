@@ -1,12 +1,12 @@
-﻿---
+---
 title: Security Overview (Service Broker)
 description: "Service Broker helps you write highly scalable database applications that are also secure and reliable."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,11 +18,11 @@ Service Broker helps you write highly scalable database applications that are al
 
 Service Broker security relies on certificates. The general approach is to use certificates to establish the credentials of a remote database, and then to map operations from the remote database to a local user. The permissions for the local user apply to any operation on behalf of the remote service. The certificate is shared between databases. No other information for the user is shared.
 
-Service Broker provides two distinct types of security — dialog security and transport security. Understanding these two types of security, and how they work together, will help you to design, deploy, and administer Service Broker applications.
+Service Broker provides two distinct types of security - dialog security and transport security. Understanding these two types of security, and how they work together, will help you to design, deploy, and administer Service Broker applications.
 
-- **Dialog security** — Encrypts messages in an individual dialog conversation and verifies the identities of participants in the dialog. Dialog security also provides remote authorization and message integrity checking. Dialog security establishes authenticated and encrypted communication between two services.
+- **Dialog security** - Encrypts messages in an individual dialog conversation and verifies the identities of participants in the dialog. Dialog security also provides remote authorization and message integrity checking. Dialog security establishes authenticated and encrypted communication between two services.
 
-- **Transport security** — Prevents unauthorized databases from sending Service Broker messages to databases in the local instance. Transport security establishes an authenticated network connection between two databases.
+- **Transport security** - Prevents unauthorized databases from sending Service Broker messages to databases in the local instance. Transport security establishes an authenticated network connection between two databases.
 
 Notice that the dialog protocol and the adjacent broker protocol are designed around passing messages between databases, rather than executing commands on a remote database. This style of communication allows Service Broker to provide services without requiring databases to share SQL Server logins or Windows security credentials.
 
@@ -32,7 +32,7 @@ For more information on certificates, see [CREATE CERTIFICATE (Transact-SQL)](..
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-In a sample business scenario, Adventure Works Cycles, a fictitious company, creates a Service Broker service for delivering parts orders to vendors. This service requires security for both Adventure Works and the vendors. Each vendor must be able to guarantee that only existing customers can submit orders. Adventure Works must be able to guarantee that only qualified vendors can receive orders. Messages between the AdventureWorks2008R2 database and a vendor must be encrypted so that no third party can read a message. To ensure the highest level of security possible, only qualified vendors may connect to the AdventureWorks2008R2 database.
+In a sample business scenario, Adventure Works Cycles, a fictitious company, creates a Service Broker service for delivering parts orders to vendors. This service requires security for both Adventure Works and the vendors. Each vendor must be able to guarantee that only existing customers can submit orders. Adventure Works must be able to guarantee that only qualified vendors can receive orders. Messages between the AdventureWorks2008R2 database and a vendor must be encrypted so that no third-party can read a message. To ensure the highest level of security possible, only qualified vendors may connect to the AdventureWorks2008R2 database.
 
 To satisfy the requirement that messages must be encrypted, Adventure Works and the vendors use Service Broker dialog security:
 

@@ -9,8 +9,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
-ms.custom: seo-dt-2019, seo-lt-2019
-
+ms.custom:
+- seo-dt-2019
+- seo-lt-2019
+- event-tier1-build-2022
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 
@@ -21,6 +23,15 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 ## Prerequisites
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+
+### SQL Server 2022 
+
+In SQL Server 2022 Preview, configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
+
+| External Data Source | From | To |
+| -------------------- | ---- | -- |
+| Azure Blob Storage   | wasb[s] | abs |
+| ADLS Gen 2           | abfs[s] | adls |
 
 ### Configure Azure blob storage connectivity
 
@@ -191,6 +202,8 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 ![PolyBase objects in SSMS](media/polybase-management.png)  
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 Explore more ways to use and monitor PolyBase in the following articles:
 

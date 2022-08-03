@@ -1,16 +1,15 @@
 ---
-description: "DBCC PDW_SHOWSPACEUSED (Transact-SQL)"
+description: "DBCC PDW_SHOWSPACEUSED Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in an Azure Synapse Analytics or Analytics Platform System (PDW) database."
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ""
-ms.date: "04/22/2021"
+ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
@@ -40,19 +39,23 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 
 ## Arguments
 
- `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
+#### `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
 The one, two, or three-part name of the table to be displayed. For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional. When no table name is specified, the information is displayed for the current database.  
 
-`WITH IGNORE_REPLICATED_TABLE_CACHE`
-An optional parameter to view the size of the table without the replicated table cache size included.  The size of the replicated table cache is variable depending on the service level objective.  For further details see: [What is a replicated table?](/azure/sql-data-warehouse/design-guidance-for-replicated-tables#what-is-a-replicated-table)
+#### `WITH IGNORE_REPLICATED_TABLE_CACHE`
+An optional parameter to view the size of the table without the replicated table cache size included.  The size of the replicated table cache is variable depending on the service level objective.  For more information, see [What is a replicated table?](/azure/sql-data-warehouse/design-guidance-for-replicated-tables#what-is-a-replicated-table)
   
 ## Permissions
 
 Requires VIEW SERVER STATE permission.
+
+## Remarks
+
+There are also DMVs to provide more customizable queries for table size. For more information, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).
   
 ## Result Sets
 
-This is the result set for all tables.  Before a cache is created for a replicated Synapse table, the DBCC result reflects the total size of the underlying round robin table from each distribution.  After the cache is created, the result reflects the total size of the round robin tables and the cache.   
+The following is the result set for all tables.  Before a cache is created for a replicated Synapse table, the DBCC result reflects the total size of the underlying round robin table from each distribution.  After the cache is created, the result reflects the total size of the round robin tables and the cache.   
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  
@@ -62,7 +65,7 @@ This is the result set for all tables.  Before a cache is created for a replicat
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
 |pdw_node_id|int|Compute node that is being used for the data.|  
   
-This is the result set for one table.
+The following is the result set for one table.
   
 |Column|Data Type|Description|Range|  
 |------------|---------------|-----------------|-----------|  
@@ -75,8 +78,10 @@ This is the result set for one table.
 |distribution_id|int|Distribution that is used for reporting the space usage.|For Parallel Data Warehouse, its value is -1 for replicated tables.|  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+
 ### A. DBCC PDW_SHOWSPACEUSED Basic Syntax  
-The following examples show multiple ways to display the number of rows, disk space reserved, and disk space used by the FactInternetSales table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+
+The following examples using the `AdventureWorks` sample database show multiple ways to display the number of rows, disk space reserved, and disk space used by the `FactInternetSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
   
 ```sql
 -- Uses AdventureWorks  
@@ -89,7 +94,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 ### B. Show the disk space used by all tables in the current database  
 
- The following example shows the disk space reserved and used by all user tables and system tables in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
+ The following example using the `AdventureWorks` sample database shows the disk space reserved and used by all user tables and system tables in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -97,7 +102,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
 
-## See also
+## Next steps
 
 - [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 - [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
+- [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).

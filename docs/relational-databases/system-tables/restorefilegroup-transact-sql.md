@@ -1,24 +1,22 @@
 ---
-description: "restorefilegroup (Transact-SQL)"
-title: "restorefilegroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "restorefilegroup (Transact-SQL)"
+description: restorefilegroup (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "restorefilegroup_TSQL"
   - "restorefilegroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filegroups [SQL Server], restorefilegroup system table"
   - "restorefilegroup system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: LitKnd
-ms.author: kendralittle
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

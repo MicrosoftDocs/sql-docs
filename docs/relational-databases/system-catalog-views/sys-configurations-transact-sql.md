@@ -1,25 +1,23 @@
 ---
-description: "sys.configurations (Transact-SQL)"
-title: "sys.configurations (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.configurations (Transact-SQL)"
+description: sys.configurations (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.configurations_TSQL"
   - "configurations"
   - "sys.configurations"
   - "configurations_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.configurations catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

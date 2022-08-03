@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Programming Concepts
 description: "Service Broker introduces concepts that are unique to developing a Service Broker application."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 Service Broker introduces concepts that are unique to developing a Service Broker application. Understanding these concepts will help you build applications that take full advantage of Service Broker capabilities.
 
 ## In This Section
+
 - [Transactional Messaging](transactional-messaging.md)  
     Explains how Service Broker messaging works with SQL Server transactions.
 

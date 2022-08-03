@@ -1,27 +1,25 @@
 ---
-description: "CREATE SERVICE (Transact-SQL)"
-title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SERVICE (Transact-SQL)"
+description: CREATE SERVICE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_SERVICE_TSQL"
   - "SERVICE"
   - "CREATE SERVICE"
   - "SERVICE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "services [Service Broker], creating"
   - "CREATE SERVICE statement"
   - "contracts [Service Broker], service creation"
+dev_langs:
+  - "TSQL"
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

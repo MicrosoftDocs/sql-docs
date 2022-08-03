@@ -1,23 +1,21 @@
 ---
-description: "IHpublisherconstraints (Transact-SQL)"
-title: "IHpublisherconstraints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHpublisherconstraints (Transact-SQL)"
+description: IHpublisherconstraints (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHpublisherconstraints"
   - "IHpublisherconstraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHpublisherconstraints system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,16 @@
 ---
+title: "Comparison Operators (Transact-SQL)"
 description: "Comparison Operators (Transact-SQL)"
-title: "Comparison Operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "expressions [SQL Server], testing"
   - "operators [Transact-SQL], comparison"
   - "testing expressions"
@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "Boolean expressions"
   - "comparing expressions"
   - "comparison operators [SQL Server]"
-ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Comparison Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'How to: Configure Permissions for a Local Service (Transact-SQL)'
 description: "SQL Server enforces SEND permission for each service and RECEIVE permissions for each queue."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -33,17 +33,17 @@ This example configures permissions to allow BrokerApplicationUser to send messa
 ```sql
     USE AdventureWorks2008R2 ;
     GO
-    
+
     -- This example sets permissions for a service
     -- program that sends messages to the Ordering service
     -- and receives messages from the StoreFrontQueue queue.
-    
+
     -- Grant SEND permission on the service to the owner
     -- of the initiating service.
     GRANT SEND ON SERVICE::[Ordering]
     TO [BrokerApplicationUser] ;
     GO
-    
+
     -- Grant RECEIVE permission on the queue.
     GRANT RECEIVE ON [StoreFrontQueue]
     TO [BrokerApplicationUser] ;

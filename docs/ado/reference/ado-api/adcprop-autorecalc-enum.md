@@ -1,21 +1,17 @@
 ---
+title: "ADCPROP_AUTORECALC_ENUM"
 description: "ADCPROP_AUTORECALC_ENUM"
-title: "ADCPROP_AUTORECALC_ENUM | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ADCPROP_AUTORECALC_ENUM"
-helpviewer_keywords: 
-  - "ADCPROP_AUTORECALC_ENUM [ADO]"
-ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ADCPROP_AUTORECALC_ENUM"
+helpviewer_keywords:
+  - "ADCPROP_AUTORECALC_ENUM [ADO]"
+apitype: "COM"
 ---
 # ADCPROP_AUTORECALC_ENUM
 Specifies when the [MSDataShape](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provider re-calculates aggregate and calculated columns in a hierarchical Recordset.  

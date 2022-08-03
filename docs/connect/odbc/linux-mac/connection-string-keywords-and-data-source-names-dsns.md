@@ -119,7 +119,7 @@ By default, encrypted connections always verify the server's certificate. Howeve
 Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```
 
-In strict encryption mode, the certificate is always verified. As an optional alternative to standard certificate verification, the `ServerCertificate` keyword (v18.1+) can be used to specify the path to a certificate file to match against the SQL Server certificate. This option is only available when using strict encryption. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the `ServerCertificate` provided is an exact match.<br/><br/>
+In strict encryption mode, the certificate is always verified. As an option to standard certificate validation, the `ServerCertificate` keyword (v18.1+) can be used to specify the path to a certificate file to match against the SQL Server certificate. This option is only available when using strict encryption. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the `ServerCertificate` provided is an exact match.<br/><br/>
 TLS on Linux and macOS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  

@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 ms.date: 07/26/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
-# Release notes for SQL Server Data Tools (SSDT) in VS2019
+# SQL Server Data Tools extension for Visual Studio 2019
 
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
@@ -28,6 +28,9 @@ More information is available in release notes.**
   - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
 
 ## Common Issues
+
+- **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
+
 - In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
   - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
   - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)

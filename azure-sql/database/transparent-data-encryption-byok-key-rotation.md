@@ -24,11 +24,11 @@ This article describes key rotation for a [server](logical-servers.md) using a T
 
 This article discusses both automated and manual methods to rotate the TDE protector on the server.
 
-## Important considerations when rotating the TDE Protector
+## Important considerations when rotating the TDE protector
 
 - When the TDE protector is changed/rotated, old backups of the database, including backed-up log files, aren't updated to use the latest TDE protector. To restore a backup encrypted with a TDE protector from Key Vault, make sure that the key material is available to the target server. Therefore, we recommend that you keep all the old versions of the TDE protector in Azure Key Vault (AKV), so database backups can be restored.
 - Even when switching from customer managed key (CMK) to service-managed key, keep all previously used keys in AKV. This ensures database backups, including backed-up log files, can be restored with the TDE protectors stored in AKV. 
-- Apart from old backups, transaction log files might also require access to the older TDE Protector. To determine if there are any remaining logs that still require the older key, after performing key rotation, use the [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) dynamic management view (DMV). This DMV returns information on the virtual log file (VLF) of the transaction log along with its encryption key thumbprint of the VLF.
+- Apart from old backups, transaction log files might also require access to the older TDE protector. To determine if there are any remaining logs that still require the older key, after performing key rotation, use the [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) dynamic management view (DMV). This DMV returns information on the virtual log file (VLF) of the transaction log along with its encryption key thumbprint of the VLF.
 - Older keys need to be kept in AKV and available to the server based on the backup retention period configured as back of backup retention policies on the database. This helps ensure any Long Term Retention (LTR) backups on the server can still be restored using the older keys.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ With manual key rotation, when a new key version is generated in key vault (eith
 Using the Azure portal:
 
 1. Browse to the **Transparent data encryption** menu for an existing server.
-2. Select the **Customer-managed key** option and select the key vault and key to be used as the new TDE Protector.
+2. Select the **Customer-managed key** option and select the key vault and key to be used as the new TDE protector.
 3. Select **Save**.
 
 :::image type="content" source="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png" lightbox="media/transparent-data-encryption-byok-key-rotation/manually-rotate-key.png" alt-text="Screenshot of manually rotate key configuration for Transparent data encryption.":::

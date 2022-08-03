@@ -111,6 +111,8 @@ az sql server tde-key set --server-key-type AzureKeyVault
                           [--server] <logicalServerName>
 ```
 
+---
+
 ## Manual key rotation
 
 Manual key rotation uses the following commands to add a new key, which could be under a new key name or even another key vault. Using this approach supports adding the same key to different key vaults to support high-availability and geo-dr scenarios. Manual key rotation can also be done using the Azure portal.

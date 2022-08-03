@@ -132,10 +132,6 @@ WITH (
       | 'org.apache.hadoop.io.compress.GzipCodec'      }  
     ]);  
 ```
-
-> [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
 ---
   
 ## Arguments  

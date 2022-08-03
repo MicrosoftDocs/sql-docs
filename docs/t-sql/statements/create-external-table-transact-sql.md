@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -39,6 +39,9 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure SQL Managed Instance](create-external-table-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -170,7 +173,7 @@ This example shows how the three REJECT options interact with each other. For ex
 
 #### REJECTED_ROW_LOCATION = *Directory Location*   
 Introduced in SQL Server 2019 CU6. Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP and for external tables using DELIMITEDTEXT FORMAT_TYPE. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage--1) and [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format `YearMonthDay -HourMinuteSecond` (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP and for external tables using DELIMITEDTEXT FORMAT_TYPE. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage--1) and [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
@@ -659,7 +662,10 @@ Learn more about related concepts in the following articles:
         [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* SQL Database \*_** &nbsp;
+        **_\* Azure SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure SQL Managed Instance](create-external-table-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -835,7 +841,10 @@ Learn more about external tables in Azure SQL Database in the following articles
         [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+        [Azure SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure SQL Managed Instance](create-external-table-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -924,7 +933,7 @@ Specifies the folder or the file path and file name for the actual data in Azure
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
 ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
 
@@ -984,7 +993,7 @@ This example shows how the three REJECT options interact with each other. For ex
 #### REJECTED_ROW_LOCATION = *Directory Location*
 
 Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format `YearMonthDay -HourMinuteSecond` (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
@@ -1127,7 +1136,10 @@ Learn more about external tables and related concepts in the following articles:
         [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+        [Azure SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure SQL Managed Instance](create-external-table-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -1195,7 +1207,7 @@ In Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-exter
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
 ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
 
@@ -1366,5 +1378,282 @@ Learn more about external tables in Analytics Platform System in the following a
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+
+:::row:::
+    :::column:::
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* Azure SQL Managed Instance \*_** &nbsp;        
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+    :::column-end:::
+
+:::row-end:::
+
+&nbsp;
+
+## Overview: Azure SQL Managed Instance
+
+Use an external table to:
+
+- Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
+- Import and store data from Hadoop or Azure blob storage.
+- Import and store data from Azure Data Lake Store.
+
+See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
+
+<!-- For more guidance and examples on using external tables with Azure Synapse, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables). -->
+
+## Syntax
+
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
+    ( <column_definition> [ ,...n ] )  
+    WITH (
+        LOCATION = 'hdfs_folder_or_filepath',  
+        DATA_SOURCE = external_data_source_name,  
+        FILE_FORMAT = external_file_format_name  
+        [ , <reject_options> [ ,...n ] ]  
+    )  
+[;]  
+
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
+    [ NULL | NOT NULL ]
+  
+<reject_options> ::=  
+{  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
+}  
+```
+
+## Arguments
+
+#### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
+The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored when external tables are created.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
+
+#### \<column_definition> [ ,...*n* ]
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+
+> [!NOTE]
+> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
+
+The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
+
+#### LOCATION = '*folder_or_filepath*'
+Specifies the folder or the file path and file name for the actual data in Azure Data Lake, Hadoop, or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source. The [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
+
+If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
+
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
+
+![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+
+#### DATA_SOURCE = *external_data_source_name*
+Specifies the name of the external data source that contains the location of the external data. This location is in Azure Data Lake. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+#### FILE_FORMAT = *external_file_format_name*
+Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+#### TABLE_OPTIONS
+
+Specifies the set of options that describe how to read the underlying files. Currently, the only option that is available is `{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}` that instructs the external table to ignore the updates that are made on the underlying files, even if this might cause some inconsistent read operations. Use this option only in special cases where you have frequently appended files. This option is available in serverless SQL pool for CSV format.
+
+#### Reject Options
+You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
+
+When you don't specify or change reject values, PolyBase uses default values. This information about the reject parameters is stored as additional metadata when you create an external table with CREATE EXTERNAL TABLE statement. When a future SELECT statement or SELECT INTO SELECT statement selects data from the external table, PolyBase will use the reject options to determine the number or percentage of rows that can be rejected before the actual query fails. The query will return (partial) results until the reject threshold is exceeded. It then fails with the appropriate error message.
+
+#### REJECT_TYPE = **value** | percentage
+Clarifies whether the REJECT_VALUE option is specified as a literal value or a percentage.
+
+#### value
+REJECT_VALUE is a literal value, not a percentage. The PolyBase query will fail when the number of rejected rows exceeds *reject_value*.
+
+For example, if REJECT_VALUE = 5 and REJECT_TYPE = value, the PolyBase SELECT query will fail after five rows have been rejected.
+
+#### percentage
+REJECT_VALUE is a percentage, not a literal value. A PolyBase query will fail when the *percentage* of failed rows exceeds *reject_value*. The percentage of failed rows is calculated at intervals.
+
+#### REJECT_VALUE = *reject_value*
+Specifies the value or the percentage of rows that can be rejected before the query fails.
+
+For REJECT_TYPE = value, *reject_value* must be an integer between 0 and 2,147,483,647.
+
+For REJECT_TYPE = percentage, *reject_value* must be a float between 0 and 100.
+
+#### REJECT_SAMPLE_VALUE = *reject_sample_value*
+This attribute is required when you specify REJECT_TYPE = percentage. It determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows.
+
+The *reject_sample_value* parameter must be an integer between 0 and 2,147,483,647.
+
+For example, if REJECT_SAMPLE_VALUE = 1000, PolyBase will calculate the percentage of failed rows after it has attempted to import 1000 rows from the external data file. If the percentage of failed rows is less than *reject_value*, PolyBase will attempt to retrieve another 1000 rows. It continues to recalculate the percentage of failed rows after it attempts to import each additional 1000 rows.
+
+> [!NOTE]
+> Since PolyBase computes the percentage of failed rows at intervals, the actual percentage of failed rows can exceed *reject_value*.
+
+Example:
+
+This example shows how the three REJECT options interact with each other. For example, if REJECT_TYPE = percentage, REJECT_VALUE = 30, and REJECT_SAMPLE_VALUE = 100, the following scenario could occur:
+
+- PolyBase attempts to retrieve the first 100 rows; 25 fail and 75 succeed.
+- Percent of failed rows is calculated as 25%, which is less than the reject value of 30%. As a result, PolyBase will continue retrieving data from the external data source.
+- PolyBase attempts to load the next 100 rows; this time 25 rows succeed and 75 rows fail.
+- Percent of failed rows is recalculated as 50%. The percentage of failed rows has exceeded the 30% reject value.
+- The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Notice that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.
+
+#### REJECTED_ROW_LOCATION = *Directory Location*
+
+Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format `YearMonthDay -HourMinuteSecond` (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
+
+The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
+
+## Permissions
+
+Requires these user permissions:
+
+- **CREATE TABLE**
+- **ALTER ANY SCHEMA**
+- **ALTER ANY EXTERNAL DATA SOURCE**
+- **ALTER ANY EXTERNAL FILE FORMAT**
+
+> [!NOTE]
+> CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
+
+Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
+
+> [!IMPORTANT]
+> The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+
+## Error handling
+
+While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.
+
+## General remarks
+
+In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.
+
+In contrast, in the import scenario, such as SELECT INTO FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source as permanent data in the SQL table. The new table is created during query execution when PolyBase retrieves the external data.
+
+PolyBase can push some of the query computation to Hadoop to improve query performance. This action is called predicate pushdown. To enable it, specify the Hadoop resource manager location option in [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+You can create many external tables that reference the same or different external data sources.
+
+## Limitations and restrictions
+
+Since the data for an external table is not under the direct management control of Azure Synapse, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+
+You can create multiple external tables that each reference different external data sources.
+
+Only these Data Definition Language (DDL) statements are allowed on external tables:
+
+- CREATE TABLE and DROP TABLE
+- CREATE STATISTICS and DROP STATISTICS
+- CREATE VIEW and DROP VIEW
+
+Constructs and operations not supported:
+
+- The DEFAULT constraint on external table columns
+- Data Manipulation Language (DML) operations of delete, insert, and update
+
+### Query limitations
+
+It is recommended to not exceed no more than 30k files per folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur or performance may degrade.
+
+### Table width limitations
+
+PolyBase in Azure Data Warehouse has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
+
+### Data type limitations
+
+The following data types cannot be used in PolyBase external tables:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Any user-defined type
+
+## Locking
+
+Shared lock on the SCHEMARESOLUTION object.
+
+## Examples
+
+### A. Importing Data from ADLS Gen 2 
+
+For more examples, see [Create external data source](create-external-data-source-transact-sql.md).
+
+```sql
+
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2. 
+CREATE DATABASE SCOPED CREDENTIAL ADLUser
+WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
+SECRET = '<KEY>' ;
+
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH (TYPE = HADOOP,
+      LOCATION = 'abfss://data@pbasetr.azuredatalakestore.net'
+)
+
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH
+(
+    FORMAT_TYPE = DELIMITEDTEXT
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
+      )
+)
+
+CREATE EXTERNAL TABLE [dbo].[DimProduct_external]
+( [ProductKey] [int] NOT NULL,
+  [ProductLabel] nvarchar NULL,
+  [ProductName] nvarchar NULL )
+WITH
+(
+    LOCATION='/DimProduct/' ,
+    DATA_SOURCE = AzureDataLakeStore ,
+    FILE_FORMAT = TextFileFormat ,
+    REJECT_TYPE = VALUE ,
+    REJECT_VALUE = 0
+) ;
+
+CREATE TABLE [dbo].[DimProduct]
+WITH (DISTRIBUTION = HASH([ProductKey] ) )
+AS SELECT * FROM
+[dbo].[DimProduct_external] ;
+```
+
+## Next steps
+
+Learn more about external tables and related concepts in the following articles:
+
+- [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
+- [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 
 ::: moniker-end

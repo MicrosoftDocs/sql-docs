@@ -44,7 +44,7 @@ For more information about managing Python and R packages, see:
 
 ### Manage packages via sqlmlutils
 
-You can install binary packages with `sqlmlutils`, if you can build locally to produce binary package as output. For examples, see [Install R packages with sqlmlutils](/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server.md) or [Install Python packages with sqlmlutils](/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server.md).
+You can install binary packages with `sqlmlutils`, if you can build locally to produce a binary package as output. For examples, see [Install R packages with sqlmlutils](/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server.md) or [Install Python packages with sqlmlutils](/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server.md).
 
 For a **miniCRAN** binary package approach, you can also install using sqlmlutils. For more information, see [Add packages offline](/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server.md#add-the-package-offline).
 

@@ -490,7 +490,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific database or elastic pool and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 
@@ -512,7 +512,7 @@ WHERE c.session_id = @@SPID;
 
 ## Monitor resource use
 
-You can monitor Azure SQL Database resource usage using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
+You can monitor Azure SQL Database resource usage at query level by using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
 
 You can also monitor usage using these views:
 

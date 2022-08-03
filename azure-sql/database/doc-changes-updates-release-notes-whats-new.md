@@ -70,6 +70,13 @@ The following table lists the features of Azure SQL Database that have transitio
 
 Learn about significant changes to the Azure SQL Database documentation.
 
+### August 2022
+
+| Changes | Details |
+| --- | --- |
+| **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your auto-failover group across subscriptions. To learn more, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db#create-failover-group). |
+
+
 ### June 2022
 
 | Changes | Details |

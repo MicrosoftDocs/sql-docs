@@ -47,5 +47,5 @@ This view has the following relationship cardinalities.
 Learn more about related concepts in the following articles:
 
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitoring Microsoft Azure SQL Database performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events overview (SQL Server and Azure SQL Managed Instance)](../extended-events/extended-events.md)

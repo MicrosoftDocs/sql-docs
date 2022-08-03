@@ -200,7 +200,9 @@ Specifies the format of the external data.
 
 ### [Delta table](#tab/delta)
  N/A
+ 
 ---  
+
 
 ### Delimited text format options
 

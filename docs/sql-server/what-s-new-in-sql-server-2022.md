@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/01/2022
+ms.date: 08/02/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -129,6 +129,10 @@ The following sections provide an overview of these features.
 | Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
 
 ## Query Store and intelligent query processing
+
+The [intelligent query processing (IQP)](../relational-databases/performance/intelligent-query-processing.md) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
+
+:::image type="content" source="../relational-databases/performance/media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
 | New feature or update | Details |
 |:---|:---|

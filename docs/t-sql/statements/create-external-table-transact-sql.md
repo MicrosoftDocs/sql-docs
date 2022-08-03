@@ -1475,7 +1475,7 @@ Specifies the name of the external file format object that stores the file type 
 
 #### TABLE_OPTIONS
 
-Specifies the set of options that describe how to read the underlying files. Currently, the only option that is available is `{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}` that instructs the external table to ignore the updates that are made on the underlying files, even if this might cause some inconsistent read operations. Use this option only in special cases where you have frequently appended files. This option is available in serverless SQL pool for CSV format.
+Specifies the set of options that describe how to read the underlying files. Currently, the only option that is available is `{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}` that instructs the external table to ignore the updates that are made on the underlying files, even if this might cause some inconsistent read operations. Use this option only in special cases where you have frequently appended files. 
 
 #### Reject Options
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
@@ -1560,7 +1560,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and restrictions
 
-Since the data for an external table is not under the direct management control of Azure Synapse, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is not under the direct management control of Azure SQL Managed Instance, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 

@@ -226,6 +226,12 @@ GO
 
 Create a new schema, and an inline table-valued function. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
 
+It should be noted that the returned VALUE in the column (here, `1`) is not semantically important, nor is the column name, only the rows returned.
+
+For instance, the `tvf_securitypredicate` predicate could have returned 0 for each row, in a column named `HelloWorld`, and as long as the source rows themselves are filtered by the `WHERE` clause, the filter operates in the same manner.
+
+Thus only the functionality of the `WHERE` clause and the rows it returns is semantically significant to the filter.
+
 ```sql
 CREATE SCHEMA Security;  
 GO  

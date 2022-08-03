@@ -28,10 +28,18 @@ This article is about Azure SQL Database, see also [Monitoring Microsoft Azure S
 
 ## Permissions
 
-In Azure SQL Database, querying a dynamic management view requires **VIEW DATABASE STATE** permissions. The **VIEW DATABASE STATE** permission returns information about all objects within the current database. To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query:
+In Azure SQL Database, depending on the compute size and deployment option, querying a DMV may require either VIEW DATABASE STATE or VIEW SERVER STATE permission. The latter permission may be granted via membership in the `##MS_ServerStateReader##` server role. 
+
+To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query as an example:
 
 ```sql
 GRANT VIEW DATABASE STATE TO database_user;
+```
+
+To grant membership to the `##MS_ServerStateReader##` server role to a login in the [Azure SQL Database logical server](logical-servers.md), connect to the `master` database then run the following query as an example:
+
+```sql
+ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [login];
 ```
 
 In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. In Azure SQL Database, they return information regarding your current logical database only.
@@ -639,7 +647,7 @@ SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests R;
 ```
 
-To analyze the workload of a database, modify this query to filter on the specific database you want to analyze. For example, if you have an on-premises database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
+To analyze the workload of a database, modify this query to filter on the specific database you want to analyze. For example, if you have a database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
@@ -741,6 +749,7 @@ CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
 ORDER BY highest_cpu_queries.total_worker_time DESC;
 ```
 
+<!--
 ## Other monitoring options
 
 ### Monitor with SQL Insights (preview)
@@ -750,6 +759,7 @@ ORDER BY highest_cpu_queries.total_worker_time DESC;
 ### Monitor with Azure Monitor
 
 Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Database. For more information, see [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md).
+-->
 
 ## See also
 

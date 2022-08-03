@@ -231,7 +231,7 @@ Enter the connection string in the form:
 
 Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the managed instance. If using managed instance [public endpoint](/azure/azure-sql/managed-instance/public-endpoint-configure), replace port 1433 with 3342.
 
-To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single secondary replica. Collected data will be tagged to reflect Primary or Secondary. 
+To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single high-availability (HA) secondary replica for a given primary database. Collected data will be tagged to reflect Primary or Secondary. 
 
 #### SQL Server 
 The TCP/IP protocol must be enabled for the SQL Server instance you want to monitor. TCP connections from the monitoring machine to the IP address and port used by the SQL Server instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path.

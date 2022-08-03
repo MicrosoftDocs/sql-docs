@@ -482,7 +482,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific database or elastic pool and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 

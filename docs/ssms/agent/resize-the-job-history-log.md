@@ -30,7 +30,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 
 This article describes how to set size limits for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history logs by using SQL Server Management Studio.
 
-This feature doesn't work for [!INCLUDE[sqlonlinux_md](../../includes/sqlonlinux_md.md)].
+This feature doesn't work for [!INCLUDE[sqlonlinux-md](../../includes/sqlonlinux-md.md)].
 
 ## Security
 

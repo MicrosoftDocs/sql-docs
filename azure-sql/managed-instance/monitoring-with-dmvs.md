@@ -12,7 +12,7 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/29/2022
+ms.date: 08/03/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
@@ -29,6 +29,10 @@ This article is about Azure SQL Managed Instance, see also [Monitoring Microsoft
 ## Permissions
 
 In Azure SQL Managed Instance, querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
+
+```sql
+GRANT VIEW SERVER STATE TO database_user;
+```
 
 In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. 
 
@@ -263,31 +267,30 @@ SELECT DB_NAME(dtr.database_id) 'database_name',
        transaction_state,
        is_user_transaction,
        sess.open_transaction_count,
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   txt.text,
-                                                                   (req.statement_start_offset / 2) + 1,
-                                                                   ((CASE req.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(txt.text)
-                                                                         ELSE
-                                                                             req.statement_end_offset
-                                                                     END - req.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    txt.text,
+                                                    (req.statement_start_offset / 2) + 1,
+                                                    ((CASE req.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(txt.text)
+                                                            ELSE
+                                                                req.statement_end_offset
+                                                        END - req.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) Running_stmt_text,
        recenttxt.text 'MostRecentSQLText'
 FROM sys.dm_tran_active_transactions AS atr
@@ -383,31 +386,30 @@ SELECT TOP 10
        wait_type,
        r.command,
        OBJECT_NAME(txt.objectid, txt.dbid) 'Object_Name',
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   text,
-                                                                   (r.statement_start_offset / 2) + 1,
-                                                                   ((CASE r.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(text)
-                                                                         ELSE
-                                                                             r.statement_end_offset
-                                                                     END - r.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    text,
+                                                    (r.statement_start_offset / 2) + 1,
+                                                    ((CASE r.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(text)
+                                                            ELSE
+                                                                r.statement_end_offset
+                                                        END - r.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) stmt_text,
        mg.dop,                                               --Degree of parallelism
        mg.request_time,                                      --Date and time when this query requested the memory grant.
@@ -659,7 +661,7 @@ ORDER BY highest_cpu_queries.total_worker_time DESC;
 
 ### Monitor with Azure Monitor
 
-Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Managed Instance. For more information, see [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md).
+Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Managed Instance. For more information, see [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md). Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. For more monitoring options, see [Monitoring and performance tuning in Azure SQL Managed Instance and Azure SQL Database](../database/monitor-tune-overview.md).
 
 ## See also
 

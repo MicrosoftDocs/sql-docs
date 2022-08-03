@@ -38,13 +38,13 @@ For a reference of resource log types collected for Azure SQL Managed Instance, 
 
 This section refers to all of the Azure Monitor Logs tables relevant to Azure SQL Managed Instance and available for query by Log Analytics, which can be queried with KQL.
 
-Tables for all resources types are referenced here, for example, [Azure Monitor tables for SQL Managed Instances](/azure/azure-monitor/reference/tables/tables-resourcetype#sql-managed-instances).
+Tables for all resources types are referenced here, for example, [Azure Monitor tables for Azure SQL Managed Instances](/azure/azure-monitor/reference/tables/tables-resourcetype#sql-managed-instances).
 
 |Resource Type | Notes |
 |-------|-----|
 | [AzureActivity](/azure/azure-monitor/reference/tables/azureactivity) | Entries from the Azure Activity log that provides insight into any subscription-level or management group level events that have occurred in Azure. |
-| [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics) | Azure Diagnostics reveals diagnostic data of specific resources and features for numerous Azure products including SQL databases, SQL elastic pools, and SQL managed instances. For more information, see [Diagnostics metrics](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#basic-metrics).|
-| [AzureMetrics](/azure/azure-monitor/reference/tables/azuremetrics) | Metric data emitted by Azure services that measure their health and performance. Activity from Azure products including SQL databases, SQL elastic pools, and SQL managed instances.|
+| [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics) | Azure Diagnostics reveals diagnostic data of specific resources and features for numerous Azure products including Azure SQL databases, elastic pools, and managed instances. For more information, see [Diagnostics metrics](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#basic-metrics).|
+| [AzureMetrics](/azure/azure-monitor/reference/tables/azuremetrics) | Metric data emitted by Azure services that measure their health and performance. Activity from Azure products including Azure SQL databases, elastic pools, and managed instances.|
 
 ## Activity log
 

@@ -12,7 +12,7 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/29/2022
+ms.date: 08/03/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Database performance using dynamic management views
@@ -284,31 +284,30 @@ SELECT DB_NAME(dtr.database_id) 'database_name',
        transaction_state,
        is_user_transaction,
        sess.open_transaction_count,
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   txt.text,
-                                                                   (req.statement_start_offset / 2) + 1,
-                                                                   ((CASE req.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(txt.text)
-                                                                         ELSE
-                                                                             req.statement_end_offset
-                                                                     END - req.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    txt.text,
+                                                    (req.statement_start_offset / 2) + 1,
+                                                    ((CASE req.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(txt.text)
+                                                            ELSE
+                                                                req.statement_end_offset
+                                                        END - req.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) Running_stmt_text,
        recenttxt.text 'MostRecentSQLText'
 FROM sys.dm_tran_active_transactions AS atr
@@ -404,31 +403,30 @@ SELECT TOP 10
        wait_type,
        r.command,
        OBJECT_NAME(txt.objectid, txt.dbid) 'Object_Name',
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   text,
-                                                                   (r.statement_start_offset / 2) + 1,
-                                                                   ((CASE r.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(text)
-                                                                         ELSE
-                                                                             r.statement_end_offset
-                                                                     END - r.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    text,
+                                                    (r.statement_start_offset / 2) + 1,
+                                                    ((CASE r.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(text)
+                                                            ELSE
+                                                                r.statement_end_offset
+                                                        END - r.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) stmt_text,
        mg.dop,                                               --Degree of parallelism
        mg.request_time,                                      --Date and time when this query requested the memory grant.

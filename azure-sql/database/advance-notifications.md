@@ -25,7 +25,7 @@ Notifications can be configured so you can get texts, emails, Azure push notific
 > [!NOTE]
 > While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in public preview for Azure SQL Database and Azure SQL Managed Instance.
 
-## Create an advance notification
+## Configure an advance notification
 
 Advance notifications are available for Azure SQL databases that have their maintenance window configured. 
 

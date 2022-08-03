@@ -59444,6 +59444,11 @@
       "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
       "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-import-export-sqlpackage",
+      "redirect_document_id": false
     }
   ]
 }

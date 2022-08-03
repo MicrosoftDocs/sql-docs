@@ -79,7 +79,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 ### Sample Kusto queries
 
 > [!IMPORTANT]
-> When you select **Logs** from the Monitoring menu of an Azure SQL database, Log Analytics is opened with the query scope set to the current database. This means that log queries will only include data from that resource. If you want to run a query that includes data from other databases or data from other Azure services, select **Logs** from the **Azure Monitor** menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
+> Selecting **Logs** from the Monitoring menu of a database opens Log Analytics with the query scope set to the current database. This means that log queries will only include data from that resource. If you want to run a query that includes data from other databases or data from other Azure services, select **Logs** from the **Azure Monitor** menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
 
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).

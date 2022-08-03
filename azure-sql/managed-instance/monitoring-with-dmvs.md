@@ -23,7 +23,7 @@ monikerRange: "= azuresql || = azuresql-mi"
 > * [Azure SQL Database](../database/monitoring-with-dmvs.md)
 > * [Azure SQL Managed Instance](monitoring-with-dmvs.md)
 
-Microsoft Azure SQL Managed Instance enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
+Microsoft Azure SQL Managed Instance enables a subset of dynamic management views (DMVs) to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
 
 This article is about Azure SQL Managed Instance, see also [Monitoring Microsoft Azure SQL Database performance using dynamic management views](../database/monitoring-with-dmvs.md).
 
@@ -75,7 +75,7 @@ GO
 
 ### The CPU issue occurred in the past
 
-If the issue occurred in the past and you want to do root cause analysis, use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store). Users with database access can use T-SQL to query Query Store data. Query Store default configurations use a granularity of 1 hour. Use the following query to look at activity for high CPU consuming queries. This query returns the top 15 CPU consuming queries. Remember to change `rsi.start_time >= DATEADD(hour, -2, GETUTCDATE()`:
+If the issue occurred in the past and you want to do a root cause analysis, use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store). Users with database access can use T-SQL to query Query Store data. Query Store default configurations use a granularity of 1 hour. Use the following query to look at activity for high CPU consuming queries. This query returns the top 15 CPU consuming queries. Remember to change `rsi.start_time >= DATEADD(hour, -2, GETUTCDATE()`:
 
 ```sql
 -- Top 15 CPU consuming queries by query hash
@@ -96,7 +96,7 @@ WHERE OD.RN<=15
 ORDER BY total_cpu_millisec DESC;
 ```
 
-Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the database to work around the issue.
+Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the managed instance to work around the issue.
 
 ## Identify IO performance issues
 
@@ -466,7 +466,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and managed instance and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific managed instance and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 
@@ -553,7 +553,7 @@ SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests R;
 ```
 
-To analyze the workload of an individual database, modify this query to filter on the specific database you want to analyze. For example, if you have an on-premises database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
+To analyze the workload of an individual database, modify this query to filter on the specific database you want to analyze. For example, if you have a database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
@@ -658,7 +658,7 @@ ORDER BY highest_cpu_queries.total_worker_time DESC;
 
 ### Monitor with SQL Insights (preview)
 
-[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring Azure SQL managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
+[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring instances of Azure SQL Managed Instance, databases in Azure SQL Database, and SQL Server on Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
 
 ### Monitor with Azure Monitor
 

@@ -73,7 +73,7 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
 
-To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before SQL Server 2022, use [plan guides](/sql/relational-databases/performance/plan-guides.md).
+To apply [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before SQL Server 2022, use [plan guides](/sql/relational-databases/performance/plan-guides.md).
 
 For more information about resolving PSP problems, see these blog posts:
 
@@ -174,7 +174,7 @@ It's not always easy to identify a workload volume change that's driving a CPU p
 
 - **An increase or decrease in the number of requests**: This scenario is the most obvious measure of a workload. The number of queries doesn't always correspond to more resource utilization. However, this metric is still a significant signal, assuming other factors are unchanged.
 
-- **Parallelism**: Excessive parallelism can worsen cause other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/docs/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+- **Parallelism**: Excessive parallelism can worsen other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/docs/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ## Waiting-related problems
 
@@ -198,7 +198,7 @@ Once you have eliminated a suboptimal plan and *Waiting-related* problems that a
 These methods are commonly used to show the top categories of wait types:
 
 - Use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) to find wait statistics for each query over time. In Query Store, wait types are combined into wait categories. You can find the mapping of wait categories to wait types in [sys.query_store_wait_stats](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table).
-- Use [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) to return information about all the waits encountered by threads that executed during a query operation. You can use this aggregated view to diagnose performance problems with the Azure SQL Managed Instance. Queries can be waiting on resources, queue waits, or external waits.
+- Use [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) to return information about all the waits encountered by threads that executed during a query operation. You can use this aggregated view to diagnose performance problems with the Azure SQL Managed Instance or SQL Server instance. Queries can be waiting on resources, queue waits, or external waits.
 - Use [sys.dm_os_waiting_tasks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) to return information about the queue of tasks that are waiting on some resource.
 
 In high-CPU scenarios, Query Store and wait statistics might not reflect CPU usage if:

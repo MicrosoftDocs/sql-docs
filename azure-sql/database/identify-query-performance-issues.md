@@ -80,7 +80,7 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
 
-To apply a [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. 
+To apply [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. 
 
 For more information about resolving PSP problems, see these blog posts:
 
@@ -187,7 +187,7 @@ It's not always easy to identify a workload volume change that's driving a CPU p
 
 Use Intelligent Insights to detect [workload increases](intelligent-insights-troubleshoot-performance.md#workload-increase) and [plan regressions](intelligent-insights-troubleshoot-performance.md#plan-regression).
 
-- **Parallelism**: Excessive parallelism can worsen cause other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism in Azure SQL Database, see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](configure-max-degree-of-parallelism.md).
+- **Parallelism**: Excessive parallelism can worsen other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism in Azure SQL Database, see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](configure-max-degree-of-parallelism.md).
 
 ## Waiting-related problems
 

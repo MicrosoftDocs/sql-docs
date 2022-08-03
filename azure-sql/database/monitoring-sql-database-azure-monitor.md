@@ -58,7 +58,7 @@ See [Create diagnostic setting to collect platform logs and metrics in Azure](/a
 
 ## Analyzing metrics
 
-You can analyze metrics for Azure SQL Managed Instance alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
+You can analyze metrics for Azure SQL Database alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
 
 For a list of the platform metrics collected for Azure SQL Database, see [Monitoring Azure SQL Database data reference metrics](monitoring-sql-database-azure-monitor-reference.md#metrics)  
 
@@ -84,7 +84,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Following are queries that you can use to help you monitor your database.  You may see different options available depending on your purchase model.
+Use the following queries to monitor your database. You may see different options available depending on your purchase model.
 
 Example A: **Log_write_percent** from the past hour
 
@@ -135,7 +135,7 @@ Azure Monitor alerts proactively notify you when important conditions are found 
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 
-You can also configure alerts with Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](/azure/azure-sql/database/scripts/monitor-and-scale-database-powershell).
+You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](/azure/azure-sql/database/scripts/monitor-and-scale-database-powershell).
 
 The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
 

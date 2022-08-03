@@ -248,7 +248,7 @@ Enter the connection string in the form:
 
 Use the IP address that the SQL Server instance listens on.
 
-If your SQL Server instance is configured to listen on a non-default port, replace 1433 with that port number in the connection string. If you're using Azure SQL virtual machine, you can see which port to use on the **Security** page for the resource.
+If your SQL Server instance is configured to listen on a non-default port, replace 1433 with that port number in the connection string. If you're using SQL Server on Azure Virtual Machine, you can see which port to use on the **Security** page for the resource.
 
 :::image type="content" source="media/sql-insights-enable/sql-vm-security.png" alt-text="A screenshot of the SQL virtual machine Security page in the Azure portal. The SQL virtual machine security page has a Security & networking section with a Port field." lightbox="media/sql-insights-enable/sql-vm-security.png":::
 

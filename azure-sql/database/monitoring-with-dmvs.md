@@ -37,7 +37,7 @@ To grant the **VIEW DATABASE STATE** permission to a specific database user, run
 GRANT VIEW DATABASE STATE TO database_user;
 ```
 
-To grant membership to the `##MS_ServerStateReader##` server role to a login in the [Azure SQL Database logical server](logical-servers.md), connect to the `master` database then run the following query as an example:
+To grant membership to the `##MS_ServerStateReader##` server role to a login for the [logical server in Azure](logical-servers.md), connect to the `master` database then run the following query as an example:
 
 ```sql
 ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [login];
@@ -513,7 +513,7 @@ WHERE c.session_id = @@SPID;
 
 ## Monitor resource use
 
-You can monitor Azure SQL Database resource usage at query level by using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
+You can monitor Azure SQL Database resource usage at the query level by using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
 
 You can also monitor usage using these views:
 

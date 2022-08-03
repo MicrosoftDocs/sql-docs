@@ -32,7 +32,7 @@ View your Azure Monitor metrics for all connected resources by going to the Azur
 
 Some services in Azure have a focused, pre-built monitoring dashboard in the Azure portal that can be enabled to provide a starting point for monitoring your service. These special dashboards are called "insights" and are not enabled by default. For more on using Azure Monitor SQL Insights for all products in the [Azure SQL family](index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview). 
 
-After creating a monitoring profile, you can configure your Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Managed Instance, Azure SQL Managed Instance, and SQL Server on Azure VMs.
+After creating a monitoring profile, you can configure your Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Managed Instance and SQL Server on Azure Virtual Machine.
 
 ## Monitoring data 
 
@@ -46,7 +46,7 @@ Platform metrics and the Activity log are collected and stored automatically, bu
 
 Resource Logs are not collected and stored until you create a diagnostic setting and route them to one or more locations. Resource logs were previously referred to as diagnostic logs.
 
-Diagnostic settings available for managed instance databases include:
+Diagnostic settings available for databases in your Azure SQL Managed Instance include:
 - **log**: `SQL Insights`, `Query Store Runtime Statistics`, `Query Store Wait Statistics`, and `Errors`
 
 Diagnostic settings available for managed instances include:
@@ -57,7 +57,7 @@ Diagnostic settings available for managed instances include:
 
 For more information on the resource logs and diagnostics available, see [Diagnostic telemetry for export](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#diagnostic-telemetry-for-export). 
 
-See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, CLI, or PowerShell. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Managed Instance are listed in [Azure SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md#resource-logs).
+See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, Azure PowerShell or the Azure CLI. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Managed Instance are listed in [Azure SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md#resource-logs).
 
 ## Analyzing metrics
 
@@ -82,12 +82,12 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 ### Sample Kusto queries
 
 > [!IMPORTANT]
-> When you select **Logs** from the Monitoring menu of an Azure SQL Managed Instance, Log Analytics is opened with the query scope set to the current Azure SQL managed instance. If you want to run a query that includes data from managed databases or data from other Azure services, select **Select scope** from the query menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
+> When you select **Logs** from the Monitoring menu of an Azure SQL Managed Instance, Log Analytics is opened with the query scope set to the current Azure SQL Managed Instance. If you want to run a query that includes data from databases or data from other Azure services, select **Select scope** from the query menu. See [Log query scope and time range in Azure Monitor Log Analytics](/azure/azure-monitor/logs/scope) for details.
 
 > [!NOTE]
 > After creating a diagnostic setting for a resource, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Following are some sample queries that you can use to help you monitor your Azure SQL managed instance. 
+Use the following sample queries to help you monitor your Azure SQL Managed Instance:
 
 Example A: Display all managed instances with `avg_cpu` utilization over 95%. 
 
@@ -113,7 +113,7 @@ AzureDiagnostics
 
 ## Alerts
 
-Azure Monitor alerts proactively notify you when important conditions are found in your monitoring data. These metrics in Azure Monitor are always collected. They allow you to identify and address issues in your Azure SQL managed instance before your customers notice them. You can set alerts on [metrics](/azure/azure-monitor/alerts/alerts-metric-overview), [logs](/azure/azure-monitor/alerts/alerts-unified-log), and the [activity log](/azure/azure-monitor/alerts/activity-log-alerts).
+Azure Monitor alerts proactively notify you when important conditions are found in your monitoring data. These metrics in Azure Monitor are always collected. They allow you to identify and address issues in your Azure SQL Managed Instance before your customers notice them. You can set alerts on [metrics](/azure/azure-monitor/alerts/alerts-metric-overview), [logs](/azure/azure-monitor/alerts/alerts-unified-log), and the [activity log](/azure/azure-monitor/alerts/activity-log-alerts).
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 

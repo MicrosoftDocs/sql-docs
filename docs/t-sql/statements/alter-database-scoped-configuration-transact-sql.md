@@ -35,6 +35,9 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 
 This command enables several database configuration settings at the **individual database** level. 
 
+> [!IMPORTANT]
+> Different `DATABASE SCOPED CONFIGURATION` options are supported in different versions of SQL Server or Azure services (Azure SQL, Azure Managed Instance, Synapse dedicated or serverless pools). This page describes **all** `DATABASE SCOPED CONFIGURATION` options, but you need to identify is an option supported in the version or service that you are using. Versions where the `DATABASE SCOPED CONFIGURATION` options are available are described in the text below. Make sure that you use the syntax that is available in the version of service that you are using.
+
 Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
 
 - Clear procedure cache.

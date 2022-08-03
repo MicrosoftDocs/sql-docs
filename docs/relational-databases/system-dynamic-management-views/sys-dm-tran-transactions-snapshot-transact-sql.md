@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_tran_transactions_snapshot (Transact-SQL)"
-title: "sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_transactions_snapshot (Transact-SQL)"
+description: sys.dm_tran_transactions_snapshot (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_transactions_snapshot"
   - "dm_tran_transactions_snapshot"
   - "sys.dm_tran_transactions_snapshot_TSQL"
   - "dm_tran_transactions_snapshot_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_transactions_snapshot dynamic management view"
-ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
+ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a virtual table for the **sequence_number** of transactions that are active when each snapshot transaction starts. The information that is returned by this view can you help you do the following:  
   

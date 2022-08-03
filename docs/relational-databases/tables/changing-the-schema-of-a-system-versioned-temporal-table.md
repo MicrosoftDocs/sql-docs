@@ -2,19 +2,17 @@
 description: "Changing the Schema of a System-Versioned Temporal Table"
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2016"
+ms.date: 04/21/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: panant
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing the schema of a system-versioned temporal table
-
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -44,10 +42,10 @@ ALTER TABLE dbo.Department
 Use ALTER COLUMN <period_column> DROP HIDDEN to clear IsHidden flag */
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysStartTime ADD HIDDEN;
+    ALTER COLUMN ValidFrom ADD HIDDEN;
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysEndTime ADD HIDDEN;
+    ALTER COLUMN ValidTo ADD HIDDEN;
 ```
 
 ### Important remarks
@@ -55,8 +53,7 @@ ALTER TABLE dbo.Department
 - **CONTROL** permission on current and history tables is required to change schema of temporal table.
 - During an **ALTER TABLE** operation, the system holds a schema lock on both tables.
 - Specified schema change is propagated to history table appropriately (depending on type of change).
-- If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).
-- Adding varchar(max), nvarchar(max), varbinary(max) or XML columns with defaults will be an update data operation on all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- Adding **varchar(max)**, **nvarchar(max)**, **varbinary(max)** or XML columns with defaults will be an update data operation on all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - If row size after column addition exceeds the row size limit, new columns cannot be added online.
 - Once you extend a table with a new NOT NULL column, consider dropping default constraint on the history table as all columns in that table are automatically populated by the system.
 - Online option (**WITH (ONLINE = ON**) has no effect on **ALTER TABLE ALTER COLUMN** in case of system-versioned temporal table. ALTER column is not performed as online regardless of which value was specified for ONLINE option.
@@ -68,6 +65,7 @@ ALTER TABLE dbo.Department
   - Adding a **SPARSE** column or changing existing column to be **SPARSE** when the history table is set to **DATA_COMPRESSION = PAGE** or **DATA_COMPRESSION = ROW**, which is the default for the history table.
   - Adding a **COLUMN_SET**
   - Adding a **ROWGUIDCOL** column or changing existing column to be **ROWGUIDCOL**
+  - Altering a **NULL** column to **NOT NULL** if the column contains null values in the current or history table
 
 The following example demonstrates changing the schema where setting **SYSTEM_VERSIONING = OFF** is still required (adding **IDENTITY** column). This example disables the data consistency check. This check is unnecessary when the schema change is made within a transaction as no concurrent data changes can occur.
 
@@ -82,13 +80,13 @@ The following example demonstrates changing the schema where setting **SYSTEM_VE
             SYSTEM_VERSIONING = ON
            ( HISTORY_TABLE = [dbo].[CompanyLocationHistory])
          );
-    COMMIT ;
+    COMMIT;
 ```
 
 ## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
+- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
 - [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)

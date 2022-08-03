@@ -19,7 +19,7 @@ ms.custom:
   
 > [!NOTE] 
 > You can install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows 10 machine when you use the Developer edition that now supports [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
->>For more information on operating system support for different editions, [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
+>>For more information on operating system support for different editions, [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md).
 
 For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
@@ -295,4 +295,3 @@ For more information about the settings on the Web Configuration page, see [Web 
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  

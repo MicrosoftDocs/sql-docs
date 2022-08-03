@@ -1,15 +1,12 @@
 ---
 title: "Security documentation for SQL Server & Azure SQL Database"
 description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
-ms.custom: seo-lt-2019
-ms.date: "09/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
-  - "Security [SQL Server]"
 helpviewer_keywords: 
   - "SQL Server, security"
   - "security [SQL Server]"
@@ -18,12 +15,16 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
+ms.custom: seo-lt-2019
+ms.date: "09/27/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Security for SQL Server Database Engine and Azure SQL Database
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Legend**  
   
@@ -88,7 +89,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
  [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
- [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-ver15.md)  
+ [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-2019.md)  
  [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
 [!INCLUDE[get-help-security](../../includes/get-help-security.md)]

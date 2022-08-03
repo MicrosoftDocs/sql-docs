@@ -3,16 +3,17 @@ title: Manage big data cluster access in Active Directory mode
 description: Manage access to the big data cluster
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/09/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Manage big data cluster access in Active Directory mode
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes how to add new Active Directory groups with *bdcUser* roles in addition to the ones provided during deployment through the *clusterUsers* configuration setting.
 

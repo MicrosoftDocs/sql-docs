@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Installing SSMA Components on SQL Server (DB2ToSQL)
 In this version of SSMA there is no need for a separate install on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of the SSMA extension pack, which supports data migration, and DB2 providers to enable server-to-server connectivity.  

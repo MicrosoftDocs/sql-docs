@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "crawls [full-text search]"
   - "max full-text crawl range option"
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # max full-text crawl range Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

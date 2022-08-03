@@ -1,29 +1,27 @@
 ---
 title: sys.dm_exec_describe_first_result_set (Transact-SQL)
-description: "sys.dm_exec_describe_first_result_set (Transact-SQL)"
+description: sys.dm_exec_describe_first_result_set (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_describe_first_result_set"
   - "sys.dm_exec_describe_first_result_set_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_describe_first_result_set catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: ""
-ms.date: "06/10/2016"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # sys.dm_exec_describe_first_result_set (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This dynamic management function takes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement as a parameter and describes the metadata of the first result set for the statement.  
   

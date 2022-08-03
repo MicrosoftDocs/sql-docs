@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "minimal configuration [SQL Server]"
   - "starting SQL Server, minimal configuration"
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Start SQL Server with Minimal Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

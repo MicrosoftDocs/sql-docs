@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "starting Server service"
   - "SQL Server, running"
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Run SQL Server With or Without a Network
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

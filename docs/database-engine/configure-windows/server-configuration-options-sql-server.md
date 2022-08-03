@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: ""
 ms.date: 05/14/2021

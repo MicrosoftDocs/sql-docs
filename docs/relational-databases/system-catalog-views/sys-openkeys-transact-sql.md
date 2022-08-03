@@ -1,29 +1,28 @@
 ---
-description: "sys.openkeys (Transact-SQL)"
-title: "sys.openkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.openkeys (Transact-SQL)"
+description: sys.openkeys (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "openkeys_TSQL"
   - "sys.openkeys_TSQL"
   - "openkeys"
   - "sys.openkeys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.openkeys catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.openkeys (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
 
   This catalog view returns information about encryption keys that are open in the current session.  
   

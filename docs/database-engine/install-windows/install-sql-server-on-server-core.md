@@ -8,8 +8,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server on Server Core

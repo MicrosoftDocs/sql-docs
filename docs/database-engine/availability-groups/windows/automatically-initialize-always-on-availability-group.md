@@ -2,9 +2,9 @@
 title: "Initialize an availability group using automatic seeding"
 description: "Use automatic seeding to automatically create secondary replicas for every database in an Always On availability group without having to manually back up and restore."
 ms.custom: seo-lt-2019
-ms.date: "03/26/2018"
+ms.date: 04/11/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
@@ -12,20 +12,21 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use automatic seeding to initialize an Always On availability group
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding, SQL Server automatically creates the secondary replicas for every database in the group. You no longer have to manually back up and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
 
 For background information, see [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md).
- 
+
 ## Prerequisites
 
 In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different paths, however Microsoft recommends using the same paths when all replicas are hosted on the same platform (for example either Windows or Linux). Cross-platform availability groups have different paths for the replicas. For details, see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
 
 Availability group seeding communicates over the database mirroring endpoint. Open inbound firewall rules to the mirroring endpoint port on each server.
 
-Databases in an availability group must be in full recovery model. The database needs to have a current full backup and transaction log backup. These backup files are not used for automatic seeding, but they are required before including the database in an availability group. 
- 
+Databases in an availability group must be in full recovery model. The database needs to have a current full backup and transaction log backup. These backup files are not used for automatic seeding, but they are required before including the database in an availability group.
+
 ## Create availability group with automatic seeding
 
 To create an availability group with automatic seeding, set `SEEDING_MODE=AUTOMATIC`. 
@@ -65,7 +66,7 @@ The following example creates an availability group on a two-node Windows Server
             SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
             SEEDING_MODE = AUTOMATIC);
     GO
-    ``` 
+    ```
 
 1. Join the secondary server instance to the availability group and grant create database permission to the availability group. Update the following script, replace the values in angle brackets `<>` for your environment, and run it on the secondary replica instance of SQL Server: 
  
@@ -103,7 +104,6 @@ ALTER AVAILABILITY GROUP [<availability_group_name>]
 GO
 ```
 
-
 ## Enable automatic seeding on an existing availability group
 
 You can set automatic seeding on an existing database. The following command changes an availability group to use automatic seeding. Run the following command on the primary replica.
@@ -130,14 +130,13 @@ GO
 
 The preceding script cancels any replicas that are currently seeding, and prevents SQL Server from automatically initializing any replicas in this availability group. It does not stop synchronization for any replicas that are already initialized. 
 
-
 ## Monitor automatic seeding availability group
 
 ### Use system dynamic management views to monitor seeding
 
 The following system views show the status of SQL Server automatic seeding.
 
-**sys.dm_hadr_automatic_seeding** 
+#### sys.dm_hadr_automatic_seeding
 
 On the primary replica, query `sys.dm_hadr_automatic_seeding` to check the status of the automatic seeding process. The view returns one row for each seeding process. For example:
 
@@ -150,8 +149,8 @@ SELECT start_time,
     failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
- 
-**sys.dm_hadr_physical_seeding_stats** 
+
+#### sys.dm_hadr_physical_seeding_stats
 
 On the primary replica, query `sys.dm_hadr_physical_seeding_stats` DMV to see the physical statistics for each seeding process that is currently running. The following query returns rows when seeding is running:
 
@@ -159,11 +158,11 @@ On the primary replica, query `sys.dm_hadr_physical_seeding_stats` DMV to see th
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
-The two columns *total_disk_io_wait_time_ms* and the *total_network_wait_time_ms* can be used to determinte performance bottleneck in the Automatic seeding process. The two columns are also present in the *hadr_physical_seeding_progress* extended event.
+The two columns *total_disk_io_wait_time_ms* and the *total_network_wait_time_ms* can be used to determine performance bottleneck in the Automatic seeding process. The two columns are also present in the *hadr_physical_seeding_progress* extended event.
 
-**total_disk_io_wait_time_ms** represents the time spent by the backup/restore thread while waiting on the disk. This value is cummulative since the start of the seeding operation. If the disks are not ready for reading or writing the backup stream, the backup/restore thread transitions into a sleep state and wakes up every one second to check if the disk is ready.
-		
-**total_network_wait_time_ms** is interpreted diffrently for the Primary and the Secondary replica. At the primary replica this counter represents the network flow control time. On the secondary replica this represents the time the restore thread is waiting for a message to be availabile for writing to the disk.
+- **total_disk_io_wait_time_ms** represents the time spent by the backup/restore thread while waiting on the disk. This value is cumulative since the start of the seeding operation. If the disks are not ready for reading or writing the backup stream, the backup/restore thread transitions into a sleep state and wakes up every one second to check if the disk is ready.
+
+- **total_network_wait_time_ms** is interpreted differently for the Primary and the Secondary replica. At the primary replica this counter represents the network flow control time. On the secondary replica this represents the time the restore thread is waiting for a message to be available for writing to the disk.
 
 ### Diagnose database initialization using automatic seeding in the error log
 
@@ -207,8 +206,7 @@ ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
 GO 
 ```
 
-
-The following table lists extended events related to automatic seeding: 
+The following table lists extended events related to automatic seeding:
 
 | Name | Description|
 |------------ |---------------| 
@@ -229,7 +227,7 @@ The following table lists extended events related to automatic seeding:
 
 ### Other troubleshooting considerations
 
-**Monitor when automatic seeding**
+#### Monitor when automatic seeding
 
 Query `sys.dm_hadr_physical_seeding_stats` for currently running automatic seeding processes. The view returns one row for each database. For example:
 
@@ -248,8 +246,7 @@ SELECT local_database_name,
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
-**Troubleshoot why a database fails to appear in an availability group configured for automatic seeding**
-
+#### Troubleshoot why a database fails to appear in an availability group configured for automatic seeding
 
 When a database fails to appear as part of an availability group with automatic seeding enabled, the automatic seeding likely failed. This prevents addition of the database to the availability group on either the primary and secondary replica. Query `sys.dm_hadr_automatic_seeding` on both the primary and secondary replicas. For example, run the following query to identify failure state of automatic seeding.
 
@@ -270,14 +267,12 @@ SQL Server uses a fixed number of threads for automatic seeding. On the primary 
 
 Set trace flag 9567 on the primary replica to enable compression of the data stream during automatic seeding. This can significantly reduce the transfer time of automatic seeding, however it also increases the CPU usage. For more information, see [Tune compression for availability group](../../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md). 
 
-
 ## When not to use automatic seeding
 
 In some scenarios automatic seeding may not be optimal for initializing a secondary replica. During automatic seeding, SQL Server performs a backup over the network for initialization. This process can be slow if databases are very large, or the secondary replica is remote. The transaction log for these databases cannot be truncated during the backup process, so a prolonged initialization process on a busy database can result in significant transaction log growth.
 Before adding a database to an availability group with automatic seeding, evaluate the database size, load, and site distance between replicas.
 
-## Resources
+## See also
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
-
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
+- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
+- [Monitor and troubleshoot availability groups](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)

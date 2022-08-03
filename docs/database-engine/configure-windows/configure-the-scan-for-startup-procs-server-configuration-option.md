@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "scan for startup procs option"
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the scan for startup procs Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

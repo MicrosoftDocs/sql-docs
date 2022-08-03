@@ -1,30 +1,28 @@
 ---
+title: "+ (Addition) (Transact-SQL)"
 description: "+ (Addition) (Transact-SQL)"
-title: "+ (Addition) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "add"
-  - "+"
-  - "+_TSQL"
   - "+ (Add)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+  - "+_TSQL"
+helpviewer_keywords:
   - "addition (+)"
   - "adding numbers"
   - "+ (add)"
   - "plus sign (+)"
   - "add operator (+)"
-ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # + (Addition) (Transact-SQL)

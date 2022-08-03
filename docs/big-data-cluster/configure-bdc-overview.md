@@ -6,15 +6,18 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Configure a SQL Server Big Data Cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
-Configuration management enables administrators to ensure their Big Data Cluster is always prepared for their workload needs. With this functionality, cluster administrators can alter or tune various parts of the Big Data Cluster at deployment time or post-deployment and get deeper insight into the configurations running in their BDC. 
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
+Configuration management enables administrators to ensure their big data cluster is always prepared for their workload needs. With this functionality, cluster administrators can alter or tune various parts of the big data cluster at deployment time or post-deployment and get deeper insight into the configurations running in their big data cluster. 
 
 Configuration management allows an administrator to enable SQL Agent, define the baseline resources for their organization's Spark jobs, or even see what settings are configurable at each scope. At deployment time, configurations can be configured through the deployment `bdc.json` file and post-deployment through azdata CLI.
 

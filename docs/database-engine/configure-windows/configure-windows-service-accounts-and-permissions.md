@@ -5,18 +5,18 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: contperf-fy20q4
-ms.date: 05/14/2021
+ms.date: 03/14/2022
 ---
 
 # Configure Windows Service Accounts and Permissions
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Each service in SQL Server represents a process or a set of processes to manage authentication of SQL Server operations with Windows. This topic describes the default configuration of services in this release of SQL Server, and configuration options for SQL Server services that you can set during and after SQL Server installation. This topic helps advanced users understand the details of the service accounts.
+Each service in SQL Server represents a process or a set of processes to manage authentication of SQL Server operations with Windows. This article describes the default configuration of services in this release of SQL Server, and configuration options for SQL Server services that you can set during and after SQL Server installation. This article helps advanced users understand the details of the service accounts.
 
 Most services and their properties can be configured by using SQL Server Configuration Manager. Here are the paths to the last four versions when Windows is installed on the C drive.
 
@@ -69,7 +69,7 @@ Startup accounts used to start and run SQL Server can be [domain user accounts](
   > [!NOTE]
   > For SQL Server Failover Cluster Instance for SQL Server 2016 and later, [domain user accounts](#Domain_User) or [Group-Managed Service Accounts](#GMSA) can be used as startup accounts for SQL Server.
 
-This section describes the accounts that can be configured to start SQL Server services, the default values used by SQL Server Setup, the concept of per-service SID's, the startup options, and configuring the firewall.
+This section describes the accounts that can be configured to start SQL Server services, the default values used by SQL Server Setup, the concept of per-service SIDs, the startup options, and configuring the firewall.
 
 - [Default Service Accounts](#Default_Accts)
 - [Automatic Startup](#Auto_Start)
@@ -128,7 +128,7 @@ Managed service accounts, group-managed service accounts, and virtual accounts a
 
 - <a name="MSA"></a> **Managed Service Accounts**
 
-  A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You can't use an MSA to log into a computer, but a computer can use an MSA to start a Windows service. An MSA has the ability to register a Service Principal Name (SPN) within Active Directory when given read and write servicePrincipalName permissions. An MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying an MSA, leave the password blank. Because an MSA is assigned to a single computer, it can't be used on different nodes of a Windows cluster.
+  A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You can't use an MSA to sign into a computer, but a computer can use an MSA to start a Windows service. An MSA has the ability to register a Service Principal Name (SPN) within Active Directory when given read and write servicePrincipalName permissions. An MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying an MSA, leave the password blank. Because an MSA is assigned to a single computer, it can't be used on different nodes of a Windows cluster.
 
   > [!NOTE]
   > The MSA must be created in the Active Directory by the domain administrator before SQL Server setup can use it for SQL Server services.
@@ -137,9 +137,9 @@ Managed service accounts, group-managed service accounts, and virtual accounts a
 
   A Group-Managed Service Account (gMSA) is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group-managed service account password without restarting services. You can configure SQL Server services to use a group-managed service account principal. Beginning with SQL Server 2014, SQL Server supports group-managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.
 
-  To use a gMSA for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.
+  To use a gMSA for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can sign in without disruption immediately after a password change.
 
-  For more information, see [Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11))
+  For more information, see [Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) for Windows Server 2016 and later. For previous versions of Windows Server, see [Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
 
   > [!NOTE]
   > The gMSA must be created in the Active Directory by the domain administrator before SQL Server setup can use it for SQL Server services.
@@ -203,7 +203,7 @@ In most cases, when initially installed, the [!INCLUDE[ssDE](../../includes/ssde
 
 ## <a name="Serv_Perm"></a> Service Permissions
 
-This section describes the permissions that SQL Server Setup configures for the per-service SID's of the SQL Server services.
+This section describes the permissions that SQL Server Setup configures for the per-service SIDs of the SQL Server services.
 
 - [Service Configuration and Access Control](#Serv_SID)
 - [Windows Privileges and Rights](#Windows)
@@ -245,7 +245,7 @@ The following table shows permissions that SQL Server Setup requests for the per
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance and named instance: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doesn't have a separate process for a named instance.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> Permission to write to application event log.<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Impersonate a client after authentication** (SeImpersonatePrivilege)|
 |**Full-text search:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\MSSQLFDLauncher**. Named instance: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)|
 |**SQL Server Browser:**<br /><br /> (All rights are granted to a local Windows group. Default or named instance: **SQLServer2005SQLBrowserUser**_$ComputerName_. SQL Server Browser doesn't have a separate process for a named instance.)|**Log on as a service** (SeServiceLogonRight)|
-|**SQL Server VSS Writer:**<br /><br /> (All rights are granted to the per-service SID. Default or named instance: **NT Service\SQLWriter**. SQL Server VSS Writer doesn't have a separate process for a named instance.)|The SQLWriter service runs under the LOCAL SYSTEM account which has all the required permissions. SQL Server setup doesn't check or grant permissions for this service.|
+|**SQL Server VSS Writer:**<br /><br /> (All rights are granted to the per-service SID. Default or named instance: **NT Service\SQLWriter**. SQL Server VSS Writer doesn't have a separate process for a named instance.)|The SQLWriter service runs under the LOCAL SYSTEM account that has all the required permissions. SQL Server setup doesn't check or grant permissions for this service.|
 |**SQL Server Distributed Replay Controller:**|**Log on as a service** (SeServiceLogonRight)|
 |**SQL Server Distributed Replay Client:**|**Log on as a service** (SeServiceLogonRight)|
 |**PolyBase Engine and DMS**| **Log on as a service** (SeServiceLogonRight)|
@@ -497,16 +497,16 @@ The account specified during setup is provisioned in the [!INCLUDE[ssDE](../../i
 
 This section describes the changes made during upgrade from a previous version of SQL Server.
 
-- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] requires a supported [operating system](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#operating-system-support). Any previous version of SQL Server running on a lower operating system version must have the operating system upgraded before upgrading SQL Server.
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] requires a supported [operating system](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md#operating-system-support). Any previous version of SQL Server running on a lower operating system version must have the operating system upgraded before upgrading SQL Server.
 - During upgrade of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] setup configures the SQL Server instance in the following way:
 
   - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] runs with the security context of the per-service SID. The per-service SID is granted access to the file folders of the SQL Server instance (such as DATA), and the SQL Server registry keys.
   - The per-service SID of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a member of the **sysadmin** fixed server role.
-  - The per-service SID's are added to the local SQL Server Windows groups, unless SQL Server is a Failover Cluster Instance.
+  - The per-service SIDs are added to the local SQL Server Windows groups, unless SQL Server is a Failover Cluster Instance.
   - The SQL Server resources remain provisioned to the local SQL Server Windows groups.
-  - The local Windows group for services is renamed from **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ to **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_. File locations for migrated databases has Access Control Entries (ACE) for the local Windows groups. The file locations for new databases has ACE's for the per-service SID.
+  - The local Windows group for services is renamed from **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ to **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_. File locations for migrated databases has Access Control Entries (ACE) for the local Windows groups. The file locations for new databases has ACEs for the per-service SID.
 
-- During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Server Setup preserves the ACE's for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.
+- During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Server Setup preserves the ACEs for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.
 - For a SQL Server Failover Cluster Instance, the ACE for the domain account configured for the service are retained.
 
 ## <a name="Appendix"></a> Appendix

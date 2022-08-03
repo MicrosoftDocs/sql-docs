@@ -56,7 +56,7 @@ This topic describes how the following features interact with change data captur
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
--   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or Managed Instance editions. Error message 934 is displayed:  
+-   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or SQL Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or SQL Managed Instance editions. Error message 934 is displayed:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports change data capture.`  
   
@@ -68,27 +68,27 @@ This topic describes how the following features interact with change data captur
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
  
 ##  <a name="Serverless"></a> Serverless databases  
-  If a serverless database enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
+  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
   
 ## <a name="AlwaysOn"></a> Availability groups 
  
  When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
 
-##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database (Preview)
+## <a name="FailoverAzureSQLDB"></a> Failover (local & GeoDR) in Azure SQL Database 
+ 
+In case of local as well as GeoDR failover scenarios, if the database is enabled for change data capture (CDC), capture and cleanup happen automatically on the new primary, following the failover. 
 
-Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
+##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
 
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
+If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
 
-##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database (Preview)
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [limitations](./about-change-data-capture-sql-server.md?#limitations).
 
-If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
+##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 
-Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work. 
+If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another Azure AD user will be able to enable/disable change data capture on the same database. 
 
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work. 
 
 
 ## See Also  

@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_exec_dms_workers (Transact-SQL)"
-title: "sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_dms_workers (Transact-SQL)"
+description: sys.dm_exec_dms_workers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.DM_EXEC_DMS_WORKERS_TSQL"
   - "DM_EXEC_DMS_WORKERS_TSQL"
   - "DM_EXEC_DMS_WORKERS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
   - "dm_exec_dms_workers management view"
   - "sys.dm_exec_dms_workers management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_workers (Transact-SQL)

@@ -1,22 +1,23 @@
 ---
+title: "STRING_AGG (Transact-SQL)"
 description: "STRING_AGG (Transact-SQL)"
-title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2021"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+ms.date: "01/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "STRING_AGG"
   - "STRING_AGG_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STRING_AGG function"
-ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
 
@@ -24,7 +25,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||>=sq
 
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
-Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
+Concatenates the values of string expressions and places separator values between them. The separator isn't added at the end of string. 
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +60,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
   
 ## Return Types
 
-Return type is depends on first argument (expression). If input argument is string type (`NVARCHAR`, `VARCHAR`), result type will be same as input type. The following table lists automatic conversions:  
+Return type depends on first argument (expression). If input argument is string type (`NVARCHAR`, `VARCHAR`), result type will be same as input type. The following table lists automatic conversions:  
 
 |Input expression type |Result | 
 |-------|-------|
@@ -79,16 +80,22 @@ Null values are ignored and the corresponding separator is not added. To return 
 
 `STRING_AGG` is available in any compatibility level.
 
+> [!Note]
+> `<order_clause>` is available with database compatibility level 110 and above.
+
 ## Examples
+
+Most of the examples in this article reference the [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 ### A. Generate list of names separated in new lines
 
 The following example produces a list of names in a single result cell, separated with carriage returns.
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2019
 GO
 SELECT STRING_AGG (CONVERT(NVARCHAR(max),FirstName), CHAR(13)) AS csv 
-FROM Person.Person;  
+FROM Person.Person;
+GO
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
@@ -96,7 +103,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL` values found in `name` cells are not returned in result.   
+`NULL` values found in `name` cells aren't returned in the result.   
 
 > [!NOTE]  
 > If using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.       
@@ -106,10 +113,11 @@ FROM Person.Person;
 
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2019
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), ISNULL(FirstName,'N/A')), ',') AS csv 
-FROM Person.Person; 
+FROM Person.Person;
+GO
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -124,10 +132,11 @@ FROM Person.Person;
 ### C. Generate comma-separated values
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2019
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), CONCAT(FirstName, ' ', LastName, '(', ModifiedDate, ')')), CHAR(13)) AS names 
-FROM Person.Person; 
+FROM Person.Person;
+GO
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
@@ -143,7 +152,7 @@ FROM Person.Person;
 
 ### D. Return news articles with related tags
 
-Article and their tags are separated into different tables. Developer wants to return one row per each article with all associated tags. Using following query:
+Imagine a database where articles and their tags are separated into different tables. A developer wants to return one row per each article with all associated tags. The following query achieves this result:
 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
@@ -151,6 +160,7 @@ FROM dbo.Article AS a
 LEFT JOIN dbo.ArticleTag AS t
     ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
+GO
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -169,7 +179,7 @@ GROUP BY a.articleId, title;
 The following query finds the email addresses of employees and groups them by city:
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2019
 GO
 
 SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') AS emails 
@@ -177,6 +187,7 @@ FROM Person.BusinessEntityAddress AS BEA
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
 GROUP BY City;
+GO
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -200,17 +211,18 @@ GROUP BY City;
 Emails returned in the emails column can be directly used to send emails to group of people working in some particular cities. 
 
 ### F. Generate a sorted list of emails per towns   
-Similar to previous example, the following query finds the email addresses of employees, groups them by city, and sorts the emails alphabetically:   
+Similar to the previous example, the following query finds the email addresses of employees, groups them by city, and sorts the emails alphabetically:
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2019
 GO
 
-SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
+SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS Emails 
 FROM Person.BusinessEntityAddress AS BEA  
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
 GROUP BY City;
+GO
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -218,7 +230,7 @@ GROUP BY City;
 > [!NOTE]
 > Results are shown trimmed.
 
-|City |emails |
+|City |Emails |
 |--- |--- |
 |Barstow|kristen4@adventure-works.com
 |Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com
@@ -231,17 +243,13 @@ GROUP BY City;
 |Berkshire|barbara41@adventure-works.com;brenda4@adventure-works.com;carrie14@adventure-works.com;...|
 |Berks|adriana6@adventure-works.com;alisha13@adventure-works.com;arthur19@adventure-works.com;...|
 
-## See also
- 
- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## Next steps
 
+Learn more about Transact-SQL functions in the following articles:
+ 
+- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+- [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

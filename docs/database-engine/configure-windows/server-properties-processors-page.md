@@ -8,8 +8,8 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.processor.f1"
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: drskwier, matteot
 ms.custom: ""
 ms.date: 12/17/2020

@@ -1,20 +1,20 @@
 ---
-title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
+title: "CAST and CONVERT (Transact-SQL)"
 description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CAST_TSQL"
   - "CONVERT_TSQL"
   - "CAST"
   - "CONVERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CAST function"
   - "automatic data type conversion"
   - "varbinary data type"
@@ -31,10 +31,9 @@ helpviewer_keywords:
   - "converting data types [SQL Server], conversion functions"
   - "time zones [SQL Server]"
   - "roundtrip conversions"
-ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # CAST and CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +42,7 @@ These functions convert an expression of one data type to another.
 
 ## Syntax  
   
-```sqlsyntax 
+```syntaxsql 
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   

@@ -2,18 +2,20 @@
 title: Generate code for data wrangling tasks
 titleSuffix: Azure Data Studio
 description: This article describes how to use the PROSE Code Accelerator in Azure Data Studio to automatically generate code for common data wrangling tasks.
-author: dphansen 
-ms.author: davidph
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf
 ms.date: 10/12/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
+ms.topic: conceptual
 ---
 
 # Data Wrangling using PROSE Code Accelerator
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 PROSE Code Accelerator generates readable Python code for your data wrangling tasks. 
 You can mix the generated code with your hand-written code while working in a notebook within Azure Data Studio.

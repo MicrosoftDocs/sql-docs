@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syslanguages system table"
   - "sys.syslanguages compatibility view"
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syslanguages (Transact-SQL)

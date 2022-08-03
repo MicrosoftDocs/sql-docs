@@ -1,25 +1,23 @@
 ---
 title: sys.database_query_store_options (Transact-SQL)
 description: sys.database_query_store_options (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "1/8/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "DATABASE_QUERY_STORE_OPTIONS_TSQL"
   - "DATABASE_QUERY_STORE_OPTIONS"
   - "SYS.DATABASE_QUERY_STORE_OPTIONS_TSQL"
   - "SYS.DATABASE_QUERY_STORE_OPTIONS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_query_store_options catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: ""
-ms.date: "1/8/2021"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # sys.database_query_store_options (Transact-SQL)

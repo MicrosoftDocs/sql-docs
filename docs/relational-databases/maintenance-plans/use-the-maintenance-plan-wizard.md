@@ -1,14 +1,14 @@
 ---
-title: "Use the Maintenance Plan Wizard | Microsoft Docs"
+title: "Use the Maintenance Plan Wizard"
 description: Learn how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in SQL Server.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.maintwiz.integrity.f1"
   - "sql13.ag.maintwiz.order.f1"
   - "sql13.ag.maintwiz.report.f1"
@@ -28,13 +28,11 @@ f1_keywords:
   - "sql13.ag.maintwiz.histcleanup.f1"
   - "sql13.ag.maintwiz.backuplog.f1"
   - "sql13.ag.maintwiz.backupdiff.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard, starting"
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use the Maintenance Plan Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -476,7 +474,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the location of the file that will contain the report.  
   
      **E-mail report** check box  
-     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
+     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
   
      **Agent operator**  
      Specify the recipient of the e-mail.  

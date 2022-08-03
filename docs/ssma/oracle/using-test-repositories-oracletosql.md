@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Test Cases Repository"
   - "Test Results Repository"
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Using Test Repositories (OracleToSQL)

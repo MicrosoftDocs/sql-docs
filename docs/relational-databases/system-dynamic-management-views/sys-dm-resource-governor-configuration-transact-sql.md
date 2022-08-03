@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_resource_governor_configuration (Transact-SQL)"
-title: "sys.dm_resource_governor_configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_configuration (Transact-SQL)"
+description: sys.dm_resource_governor_configuration (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_resource_governor_configuration_TSQL"
   - "dm_resource_governor_configuration"
   - "sys.dm_resource_governor_configuration"
   - "sys.dm_resource_governor_configuration_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_resource_governor_configuration dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

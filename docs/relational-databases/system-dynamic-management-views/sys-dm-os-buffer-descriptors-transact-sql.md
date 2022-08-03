@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_os_buffer_descriptors (Transact-SQL)"
-title: "sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_buffer_descriptors (Transact-SQL)"
+description: sys.dm_os_buffer_descriptors (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_buffer_descriptors_TSQL"
   - "dm_os_buffer_descriptors_TSQL"
   - "sys.dm_os_buffer_descriptors"
   - "dm_os_buffer_descriptors"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_buffer_descriptors dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]

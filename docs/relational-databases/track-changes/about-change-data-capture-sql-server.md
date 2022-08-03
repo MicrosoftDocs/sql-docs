@@ -1,10 +1,10 @@
 ---
-description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview)"
+description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database"
 title: "What is change data capture (CDC)?"
 ms.custom:
   - seo-dt-2019
   - intro-overview
-ms.date: "01/14/2019"
+ms.date: "03/04/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: "vanto"
@@ -21,25 +21,22 @@ ms.author: mikeray
 # What is change data capture (CDC)?
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in SQL Server and Azure SQL Managed Instance, but is currently in preview for Azure SQL Database. 
+In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in Azure SQL Database, SQL Server, and Azure SQL Managed Instance.
 
-## Overview 
+## Overview
 
 Change data capture (CDC) uses the SQL Server agent to record insert, update, and delete activity that applies to a table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  
   
 A good example of a data consumer that this technology targets is an extraction, transformation, and loading (ETL) application. An ETL application incrementally loads change data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source tables to a data warehouse or data mart. Although the representation of the source tables within the data warehouse must reflect changes in the source tables, an end-to-end technology that refreshes a replica of the source is not appropriate. Instead, you need a reliable stream of change data that is structured so that consumers can apply it to dissimilar target representations of the data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change data capture provides this technology.  
 
-To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
-
-## CDC & Azure SQL Database (Preview) 
-
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
+## CDC & Azure SQL Database
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
-### Performance Considerations
+To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
+
+### Performance considerations
 
 The performance impact from enabling change data capture on Azure SQL Database is similar to the performance impact of enabling CDC for SQL Server or Azure SQL Managed Instance. Below are some of the aspects that influence performance impact of enabling CDC: 
 
@@ -48,21 +45,23 @@ The performance impact from enabling change data capture on Azure SQL Database i
 - Space available in the source database, since CDC artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database 
 - Whether the database is single or pooled. For databases in elastic pools, in addition to considering the number of tables that have CDC enabled, pay attention to the number of databases those tables belong to. Databases in a pool share resources among them (such as disk space), so enabling CDC on multiple databases runs the risk of reaching the max size of the elastic pool disk size. Monitor resources such as CPU, memory and log throughput. 
 
-To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance:
+To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
 
-- Consider increasing the number of vCores or shift to a higher database tier to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
+- Consider increasing the number of vCores or shift to a higher database tier (e.g. Hyperscale) to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
 
 - Monitor space utilization closely and test your workload thoroughly before enabling CDC on databases in production.
 
+- Monitor log generation rate. To learn more [here](/azure/azure-sql/database/resource-limits-logical-server#resource-consumption-by-user-workloads-and-internal-processes). 
+
 - Scan/cleanup are part of user workload (user’s resources are used). Performance impact can be substantial since entire rows are added to change tables and for updates operations pre-image is also included.  
 
-- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase.
+- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase. Learn more about resource management in dense Elastic Pools [here](/azure/azure-sql/database/elastic-pool-resource-management). 
 
 - Cleanup – based on the customer's workload, it may be advised to keep the retention period smaller than the default of 3 days, to ensure that the cleanup catches up with all changes in change table. In general, it is good to keep the retention low and track the database size.  
 
 - No Service Level Agreement (SLA) provided for when changes will be populated to the change tables. Sub-second latency is also not supported.
     
-## Data Flow  
+## Data flow  
 
  The following illustration shows the principal data flow for change data capture.  
   
@@ -71,6 +70,7 @@ To provide more specific performance optimization guidance to customers, more de
  The source of change data for change data capture is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log. The log serves as input to the capture process. This reads the log and adds information about changes to the tracked table's associated change table. Functions are provided to enumerate the changes that appear in the change tables over a specified range, returning the information in the form of a filtered result set. The filtered result set is typically used by an application process to update a representation of the source in some external environment.  
   
 ## Capture instance
+
  Before changes to any individual tables within a database can be tracked, change data capture must be explicitly enabled for the database. This is done by using the stored procedure [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). When the database is enabled, source tables can be identified as tracked tables by using the stored procedure [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). When a table is enabled for change data capture, an associated capture instance is created to support the dissemination of the change data in the source table. The capture instance consists of a change table and up to two query functions. Metadata that describes the configuration details of the capture instance is retained in the change data capture metadata tables **cdc.change_tables**, **cdc.index_columns**, and **cdc.captured_columns**. This information can be retrieved by using the stored procedure [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  All objects that are associated with a capture instance are created in the change data capture schema of the enabled database. The requirements for the capture instance name is that it be a valid object name, and that it be unique across the database capture instances. By default, the name is \<*schema name*\_*table name*> of the source table. Its associated change table is named by appending **_CT** to the capture instance name. The function that is used to query for all changes is named by prepending **fn_cdc_get_all_changes_** to the capture instance name. If the capture instance is configured to support **net changes**, the **net_changes** query function is also created and named by prepending **fn_cdc_get_net_changes\_** to the capture instance name.  
@@ -154,14 +154,11 @@ Although it is common for the database validity interval and the validity interv
 > [!NOTE]  
 >  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
-## CDC and cleanup in Azure SQL Database (Preview)
+## CDC cleanup in Azure SQL Database
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand using the [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) and [sp_cdc_cleanup_change_tables](../system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql.md) procedures.
 
 Azure SQL Database includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
-
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
  
 ## Collation differences
 
@@ -208,20 +205,50 @@ Change data capture cannot be enabled on tables with a clustered columnstore ind
 **Partition switching with variables**   
 Using variables with partition switching on databases or tables with change data capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-**Availability of CDC in Azure SQL Databases (Preview)**
-CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
+**Availability of CDC in Azure SQL Databases**  
+CDC can only be enabled on databases tiers S3 and above. Sub-core (Basic, S0, S1, S2) Azure SQL Databases are not supported for CDC.
 
-**Capture and Cleanup Customization on Azure SQL Databases (Preview)**
+Dbcopy from database tiers above S3 having CDC enabled to a sub-core SLO presently retains the CDC artifacts, but CDC artifacts may be removed in the future.
+
+**Capture and Cleanup Customization on Azure SQL Databases**   
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
-**ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
-DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
+**Computed columns**  
+CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of `NULL`. This behavior is intended, and not a bug.
 
-**Computed columns**
-CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
+**Point-in-time restore (PITR)**  
+If you enable CDC on your database as an Microsoft Azure Active Directory (Azure AD) user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
 
-## See Also  
+**Microsoft Azure Active Directory (Azure AD)**  
+If you create a database in Azure SQL Database as an Microsoft Azure Active Directory (Azure AD) user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another Azure AD user will be able to enable/disable CDC on the same database.
+
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
+
+**Aggressive log truncation**  
+While enabling change data capture (CDC) on your Azure SQL Database, please be aware that aggressive log truncation is disabled (the CDC scan uses the database transaction log).
+
+Enabling change data capture (CDC) on a database disables aggressive log truncation behavior. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log getting full and the database going into read-only mode.
+
+**CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
+When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
+
+**Enabling CDC fails on restored Azure SQL DB created with Microsoft Azure Active Directory (Azure AD)**  
+Enabling CDC will fail if you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and don't enable CDC, then restore the database and enable CDC on the restored database.
+
+To resolve this issue, follow these steps: 
+
+- Login as Azure AD admin of the server
+- Run ALTER AUTHORIZATION command on the database: 
+
+```sql
+ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_name>];
+
+EXEC sys.sp_cdc_enable_db
+```
+
+## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
+[Temporal Tables](../../relational-databases/tables/temporal-tables.md)

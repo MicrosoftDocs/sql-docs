@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "assemblies [CLR integration], verifying can run"
   - "clr enabled option"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # clr enabled Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

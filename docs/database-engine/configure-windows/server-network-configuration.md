@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ports [SQL Server], changing"
   - "server configuration [SQL Server]"
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Server Network Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

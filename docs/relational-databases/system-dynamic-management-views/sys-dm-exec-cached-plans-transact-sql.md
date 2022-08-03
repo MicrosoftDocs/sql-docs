@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_exec_cached_plans (Transact-SQL)"
-title: "sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_cached_plans (Transact-SQL)"
+description: sys.dm_exec_cached_plans (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_cached_plans"
   - "dm_exec_cached_plans"
   - "dm_exec_cached_plans_TSQL"
   - "sys.dm_exec_cached_plans_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_cached_plans dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

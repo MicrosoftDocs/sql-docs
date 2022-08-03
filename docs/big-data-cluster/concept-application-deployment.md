@@ -2,22 +2,24 @@
 title: Introducing application deployment in SQL Server Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how application deployment provides interfaces to create, manage, and run applications on a SQL Server 2019 Big Data Cluster.
-author: cloudmelon 
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 04/12/2021
-ms.topic: conceptual
 ms.prod: sql
-dev_langs: 
-- "yaml"
-- "console"
 ms.technology: big-data-cluster
+ms.topic: conceptual
+dev_langs:
+  - "yaml"
+  - "console"
+ms.metadata: seo-lt-2019
 ---
 
 # Introducing app deployment in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Application deployment enables the deployment of applications on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] by providing interfaces to create, manage, and run applications. Applications deployed on a Big Data Cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
 

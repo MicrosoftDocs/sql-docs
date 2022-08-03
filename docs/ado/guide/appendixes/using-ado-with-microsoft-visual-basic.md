@@ -1,21 +1,17 @@
 ---
+title: "Using ADO with Microsoft Visual Basic"
 description: "Using ADO with Microsoft Visual Basic and Visual Basic for Applications"
-title: "Using ADO with Microsoft Visual Basic | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-dev_langs:
-  - "VB"
 helpviewer_keywords:
   - "ADO, Visual Basic"
   - "Visual Basic [ADO]"
-ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # Using ADO with Microsoft Visual Basic and Visual Basic for Applications
 Setting up an ADO project and writing ADO code is similar whether you use Visual Basic or Visual Basic for Applications. This topic addresses using ADO with both Visual Basic and Visual Basic for Applications and notes any differences.

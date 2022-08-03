@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_query_profiles (Transact-SQL)"
-title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_profiles (Transact-SQL)"
+description: sys.dm_exec_query_profiles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_query_profiles_TSQL"
   - "sys.dm_exec_query_profiles_TSQL"
   - "dm_exec_query_profiles"
   - "sys.dm_exec_query_profiles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_profiles dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)

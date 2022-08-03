@@ -2,7 +2,7 @@
 title: "Execute a User-Defined Function and Process Return Code (OLE DB) | Microsoft Docs"
 description: See how to run user-defined function and print a return code using OLE DB Driver for SQL Server. This example can use any existing database.
 ms.custom: ""
-ms.date: "06/23/2021"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -118,6 +118,7 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
     CComBSTR server(L"(local)");
     CComBSTR database(L"oledbtest");
     CComBSTR auth(L"SSPI");
+    CComBSTR encrypt(L"Mandatory");
     DBPROP InitProperties1[nInitProps1] = {};
     DBPROP InitProperties2[nInitProps2] = {};
     DBPROPSET rgInitPropSet[nPropSets] = {};
@@ -151,8 +152,8 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
     // Data should be encrypted before sending it over the network
     VariantInit(&InitProperties2[0].vValue);
     InitProperties2[0].dwPropertyID = SSPROP_INIT_ENCRYPT;
-    InitProperties2[0].vValue.vt = VT_BOOL;
-    InitProperties2[0].vValue.boolVal = VARIANT_TRUE;
+    InitProperties2[0].vValue.vt = VT_BSTR;
+    InitProperties2[0].vValue.bstrVal = encrypt;
     InitProperties2[0].dwOptions = DBPROPOPTIONS_REQUIRED;
     InitProperties2[0].colid = DB_NULLID;
 

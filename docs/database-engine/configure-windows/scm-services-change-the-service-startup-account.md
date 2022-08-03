@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "startup accounts [SQL Server]"
   - "changing startup accounts for services"
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SCM Services - Change the Service Startup Account
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

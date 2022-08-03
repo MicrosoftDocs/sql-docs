@@ -1,22 +1,23 @@
 ---
+title: "OPENJSON (Transact-SQL)"
 description: "OPENJSON (Transact-SQL)"
-title: "OPENJSON (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/03/2020
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.date: 04/13/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "OPENJSON"
   - "OPENJSON_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OPENJSON rowset function"
   - "JSON, importing"
   - "JSON, converting from"
-ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # OPENJSON (Transact-SQL)
 
@@ -32,8 +33,6 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
 > You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->
-> Compatibility level 120 may be the default even in a new Azure SQL Database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -132,6 +131,35 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 When **OPENJSON** parses a JSON array, the function returns the indexes of the elements in the JSON text as keys.
 
 The comparison used to match path steps with the properties of the JSON expression is case-sensitive and collation-unaware (that is, a BIN2 comparison). 
+
+#### Array element identity
+
+the `OPENROWSET` function in the serverless SQL pool in Azure Synapse Analytics can automatically  generate the identity of each row that is returned as a result. The identity column is specified using the expression `$.sql:identity()` in the JSON path after the column definition. The column with this value in the JSON path expression will generate a unique 0-based number for each element in the JSON array that the function parses. The identity value represents the position/index of the array element.
+
+```sql
+DECLARE @array VARCHAR(MAX);
+SET @array = '[{"month":"Jan", "temp":10},{"month":"Feb", "temp":12},{"month":"Mar", "temp":15},
+               {"month":"Apr", "temp":17},{"month":"May", "temp":23},{"month":"Jun", "temp":27}
+              ]';
+
+SELECT * FROM OPENJSON(@array)
+        WITH (  month VARCHAR(3),
+                temp int,
+                month_id tinyint '$.sql:identity()') as months
+```
+
+**Results**
+
+| month	| temp	| month_id |
+| --- | --- | --- |
+| Jan	| 10	| 0 |
+| Feb	| 12	| 1 |
+| Mar	| 15	| 2 |
+| Apr	| 17	| 3 |
+| May	| 23	| 4 |
+| Jun	| 27	| 5 |
+
+The identity is available only in the serverless SQL pool in Synapse Analytics.
 
 ### *with_clause*
 

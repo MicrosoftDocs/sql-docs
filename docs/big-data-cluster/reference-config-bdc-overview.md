@@ -6,13 +6,15 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 # SQL Server Big Data Clusters Configuration Properties
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Big Data Clusters configuration settings can be defined at the following scopes: `cluster`, `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope. Below is a list of available settings for each component of BDC at the various scopes. You can also view configurable settings for your BDC using azdata.
 

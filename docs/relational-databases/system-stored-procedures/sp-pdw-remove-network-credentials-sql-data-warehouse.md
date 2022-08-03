@@ -9,8 +9,8 @@ ms.prod: sql
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---

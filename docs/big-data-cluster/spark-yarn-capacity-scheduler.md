@@ -1,18 +1,20 @@
 ---
 title: Spark workload management using the YARN capacity scheduler
 description: This article provides guidelines for Spark workload management using YARN on SQL Server Big Data Clusters
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 11/02/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Spark workload management using the YARN capacity scheduler
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Introduction
 

@@ -4,7 +4,7 @@ description: This tutorial shows how to create and configure availability groups
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 06/28/2018
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -589,9 +589,10 @@ The AG resource that is created is a special kind of resource called a clone. Th
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s --master meta notify=true
     ```
 
-    >[!NOTE]
-    >On RHEL 7.7, you may encounter a warning with the use of --master. To avoid this, use
-    >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
+    > [!NOTE]
+    > On RHEL 7.7 and Ubuntu 18.04, and later versions, you may encounter a warning with the use of --master, or an error like `sqlag_monitor_0 on ag1 'not configured' (6): call=6, status=complete, exitreason='Resource must be configured with notify=true'`. To avoid this, use:
+    > 
+    > `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

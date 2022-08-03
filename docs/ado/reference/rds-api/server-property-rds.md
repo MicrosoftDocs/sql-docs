@@ -1,21 +1,17 @@
 ---
+title: "Server Property (RDS)"
 description: "Server Property (RDS)"
-title: "Server Property (RDS) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RDS::IBindMgr21::Server"
-helpviewer_keywords: 
-  - "Server property [RDS]"
-ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RDS::IBindMgr21::Server"
+helpviewer_keywords:
+  - "Server property [RDS]"
+apitype: "COM"
 ---
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  

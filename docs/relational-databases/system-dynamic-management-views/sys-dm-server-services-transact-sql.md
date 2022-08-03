@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_server_services (Transact-SQL)"
-title: "sys.dm_server_services (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_server_services (Transact-SQL)"
+description: sys.dm_server_services (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/07/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_server_services"
   - "sys.dm_server_services"
   - "sys.dm_server_services_TSQL"
   - "dm_server_services_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_server_services dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

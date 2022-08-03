@@ -2,13 +2,13 @@
 title: Machine Learning on SQL Server Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Machine Learning guide for SQL Server Big Data Clusters.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
+ms.topic: conceptual
 ---
 
 # Machine Learning guide for SQL Server Big Data Clusters
@@ -16,6 +16,8 @@ ms.technology: machine-learning-bdc
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article explains how to use [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] for Machine Learning Scenarios.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Introduction to Machine Learning in SQL Server Big Data Clusters
 

@@ -1,19 +1,15 @@
 ---
-description: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL)"
-title: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 03/25/2019
-ms.reviewer: ""
+title: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL)"
+description: DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
+author: Madhumitatripathy
+ms.author: matripathy
+ms.date: 04/19/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
-ms.author: giladm
-author: giladmit
 f1_keywords:
   - "DROP SENSITIVITY CLASSIFICATION"
   - "DROP_SENSITIVITY_CLASSIFICATION"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "DROP SENSITIVITY CLASSIFICATION statement"
   - "dropping labels"
@@ -24,7 +20,9 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
-monikerRange: " >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -58,7 +56,7 @@ Is the name of the database column from which to remove the classification. Curr
 
 ## Permissions  
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission CONTROL, or by the server permission CONTROL SERVER.
 
 
 ## Examples  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - "file database"
 - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 
 # SQL Server Express LocalDB
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) targeted to developers. It is available on SQL Server Express with Advanced Services.
+Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2019.md) targeted to developers. It is available on SQL Server Express with Advanced Services.
 
 LocalDB installation copies a minimal set of files necessary to start the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE[tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -61,8 +61,6 @@ The `SqlLocalDB` utility can create new instances of LocalDB, start and stop an 
 The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and cannot be changed. Database-level, column-level, and expression-level collations are supported normally. Contained databases follow the metadata and `tempdb` collations rules defined by [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).
 
 ### Restrictions
-
-- LocalDB cannot be patched beyond Service Packs. CUs and Security Updates cannot be applied manually and will not be applied via Windows Update, Windows Update for Business, or other methods.
 
 - LocalDB cannot be managed remotely via SQL Management Studio.
 

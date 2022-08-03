@@ -233,4 +233,4 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
-[Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)

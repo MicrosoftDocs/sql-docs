@@ -1,22 +1,18 @@
 ---
+title: "GetObjectOwner Method (ADOX)"
 description: "GetObjectOwner Method (ADOX)"
-title: "GetObjectOwner Method (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Catalog::raw_GetObjectOwner"
-  - "_Catalog::GetObjectOwner"
-helpviewer_keywords: 
-  - "GetObjectOwner method [ADOX]"
-ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Catalog::raw_GetObjectOwner"
+  - "_Catalog::GetObjectOwner"
+helpviewer_keywords:
+  - "GetObjectOwner method [ADOX]"
+apitype: "COM"
 ---
 # GetObjectOwner Method (ADOX)
 Returns the owner of an object in a [Catalog](./catalog-object-adox.md).  

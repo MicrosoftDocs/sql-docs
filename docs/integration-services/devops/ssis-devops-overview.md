@@ -56,7 +56,9 @@ Path of a separate folder to save build results, which can be published as build
 
 ### Limitations and known issues
 
-- SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
+- SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline:
+    - for Microsoft-hosted agents, you must choose an available image that includes Visual Studio and SQL Server Integration Services extension, for example, **windows-2019**. Details refer to [Microsoft-hosted agents documentation](/azure/devops/pipelines/agents/hosted) for softwares included in available images.
+    - for self-hosted agents, install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
 - To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
 
@@ -166,13 +168,12 @@ SSIS Deploy task currently doesn't support the following scenarios:
 - Configuring the environment in the SSIS catalog.
 - Deploying ISPAC to Azure SQL Server or Azure SQL Managed Instance, which allow only multifactor authentication.
 - Deploying packages to MSDB or SSIS Package Store.
-- Uploading to an on-premises DevOps server might result in the error "The extension package size exceeds the maximum package size". To resolve the error, first complete the following steps. If the error persists, please contact Azure DevOps support. 
-  1. Get the publisher name of the extension you want to increase the size limit for. The publisher name typically is on the left side of the `.` character in the URL of the extension's item details page in Azure Marketplace. For example, if the extension’s item details page is `https://marketplace.visualstudio.com/items?itemName=tylermurry.pr-auto-comment`, the publisher name is `tylermurry`.
+- If you install the SSIS DevOps Tools extension in Azure DevOps Server, you might see the message "The extension package size exceeds the maximum package size." To resolve the issue, complete the following steps: 
   1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
-  1. Run this query by replacing `<publisherName>` with the publisher name from step 1:  
-     `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\<publisherName>\','MaxPackageSizeMB\',50)`  
-     Change `50` to a higher number if the extension is larger than 50 MBs.
+  1. Run the query `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`. Change `50` to a higher number if the extension is larger than 50 MBs.
   1. After you run the query, restart Internet Information Services. Try again to upload the extension.
+  1. If the error persists, please contact Azure DevOps support. 
+
 
 ## SSIS Deploy task version 1.* 
 

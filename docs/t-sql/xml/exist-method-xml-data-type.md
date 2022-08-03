@@ -1,10 +1,7 @@
 ---
-description: "exist() Method (xml Data Type)"
 title: exist() Method (xml Data Type)
-ms.custom: ""
-ms.date: "07/26/2017"
+description: "exist() Method (xml Data Type)"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 dev_langs: 
@@ -12,20 +9,24 @@ dev_langs:
 helpviewer_keywords: 
   - "exist() method"
   - "exist method"
-ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # exist() Method (xml Data Type)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns a **bit** that represents one of the following conditions:  
+Returns a **bit** that represents one of the following conditions:  
   
--   1, representing True, if the XQuery expression in a query returns a nonempty result. That is, it returns at least one XML node.  
+- 1, representing True, if the XQuery expression in a query returns a nonempty result. That is, it returns at least one XML node.  
   
--   0, representing False, if it returns an empty result.  
+- 0, representing False, if it returns an empty result.  
   
--   NULL if the **xml** data type instance against which the query was executed contains NULL.  
+- NULL if the **xml** data type instance against which the query was executed contains NULL.  
   
 ## Syntax  
   

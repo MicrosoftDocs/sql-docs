@@ -2,7 +2,7 @@
 title: "OLE DB Driver for SQL Server Features"
 description: "Learn about features supported by the OLE DB Driver for SQL Server like database mirroring, asynchronous operation, Azure Active Directory, and others."
 ms.custom: ""
-ms.date: "05/31/2021"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -58,8 +58,8 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
  Discusses how OLE DB Driver for SQL Server supports bulk copy operations that allow the transfer of large amounts of data into or out of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table or view.  
   
- [Using Encryption Without Validation](../../oledb/features/using-encryption-without-validation.md)  
- Discusses how to use OLE DB Driver for SQL Server to encrypt data sent to the server without validating the certificate.  
+ [Encryption and certificate validation](../../oledb/features/encryption-and-certificate-validation.md)  
+ Discusses how to use OLE DB Driver for SQL Server to encrypt data sent to the server with or without validating the certificate.  
   
  [Table-Valued Parameters &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)  
  Discusses OLE DB Driver for SQL Server support for the table-valued parameters.  

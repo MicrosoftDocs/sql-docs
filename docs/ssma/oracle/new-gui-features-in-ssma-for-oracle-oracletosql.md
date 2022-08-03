@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  
@@ -48,7 +48,7 @@ You can set/remove a bookmark in the following ways:
   
 -   Use button Toggle Bookmark on top of source or target SQL window  
   
--   Click on the grey area on the left of the SQL window  
+-   Select the grey area on the left of the SQL window  
   
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   

@@ -1,20 +1,16 @@
 ---
-title: "Immediate Mode | Microsoft Docs"
+title: "Immediate Mode"
 description: Describes immediate mode, which is in effect when the LockType property is set to adLockOptimistic or adLockPessimistic.
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data updates [ADO], immediate mode"
   - "immediate mode [ADO]"
   - "updating data [ADO], immediate mode"
-ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: rothja
-ms.author: jroth
 ---
 # Immediate Mode
 Immediate mode is in effect when the **LockType** property is set to **adLockOptimistic** or **adLockPessimistic**. In immediate mode, changes to a record are propagated to the data source as soon as you declare the work on a row complete by calling the **Update** method.  

@@ -1,19 +1,21 @@
 ---
-title: Use Spark Machine Learning | Microsoft Docs
+title: Use Spark Machine Learning
 titleSuffix: SQL Server Big Data Clusters
 description: Introducing Spark Machine Learning on SQL Server Big Data Clusters.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
+ms.topic: conceptual
 ---
 
 # Introducing Spark Machine Learning on SQL Server Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article explains how to effectively use Spark for Machine Learning on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 

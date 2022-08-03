@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # New GUI Features in SSMA for MySQL (MySQLToSQL)
 This chapter describes new features of SSMA User Interface  
@@ -47,7 +47,7 @@ You can set/remove a bookmark in the following ways:
   
 -   Use button Toggle Bookmark on top of source or target SQL window  
   
--   Click on the grey area on the left of the SQL window  
+-   Select the grey area on the left of the SQL window  
   
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   

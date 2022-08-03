@@ -6,14 +6,16 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 03/23/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Apache Spark & Apache Hadoop (HDFS) configuration properties
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Big Data Clusters supports deployment time and post-deployment time configuration of Apache Spark and Hadoop components at the service and resource scopes. Big Data Clusters uses the same default configuration values as the respective open source project for most settings. The settings that we do change are listed below along with a description and their default value. Other than the gateway resource, there is no difference between settings that are configurable at the service scope and the resource scope.
 

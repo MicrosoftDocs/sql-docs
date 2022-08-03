@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_db_xtp_object_stats (Transact-SQL)"
-title: "sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
+title: "sys.dm_db_xtp_object_stats (Transact-SQL)"
+description: sys.dm_db_xtp_object_stats reports the number rows affected by operations on each of the  In-Memory OLTP objects since the last database restart.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_object_stats_TSQL"
   - "sys.dm_db_xtp_object_stats"
   - "dm_db_xtp_object_stats"
   - "sys.dm_db_xtp_object_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_object_stats dynamic management view"
-ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_object_stats (Transact-SQL)
@@ -27,13 +24,13 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
   Reports the number rows affected by operations on each of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects since the last database restart. Statistics are updated when the operation executes, regardless of whether the transaction commits or was rolled back.  
   
- sys.dm_db_xtp_object_stats can help you identify which memory-optimized tables are changing the most. You may decide to remove unused or rarely used indexes on the table, as each index affects performance. If there are hash indexes, you should periodically re-evaluate the bucket-count. For more information, see [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/).  
+ The `sys.dm_db_xtp_object_stats` system dynamic management view can help you identify which memory-optimized tables are changing the most. You may decide to remove unused or rarely used indexes on the table, as each index affects performance. If there are hash indexes, you should periodically re-evaluate the bucket-count. For more information, see [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/).  
   
- sys.dm_db_xtp_object_stats can help you identify which memory-optimized tables incur write-write conflicts, which can affect the performance of your application. For example, if you have transaction retry logic, the same statement may need to be executed more than once. Also, you can use this information to identify the tables (and therefore business logic) that require write-write error handling.  
+ Use `sys.dm_db_xtp_object_stats` to identify which memory-optimized tables incur write-write conflicts, which can affect the performance of your application. For example, if you have transaction retry logic, the same statement may need to be executed more than once. Also, you can use this information to identify the tables (and therefore business logic) that require write-write error handling.  
   
  The view contains a row for each memory optimized table in the database.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,5 +45,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the current database.  
   
-## See Also  
- [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## See also
+
+- [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
+- [Memory-Optimized Table Dynamic Management Views](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+
+## Next steps 
+
+- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

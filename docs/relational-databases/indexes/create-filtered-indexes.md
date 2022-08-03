@@ -1,22 +1,19 @@
 ---
-description: "Create filtered indexes"
 title: "Create filtered indexes"
-ms.custom: ""
-ms.date: "01/15/2022"
+description: A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "03/24/2022"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filtered indexes [SQL Server], about filtered indexes"
   - "designing indexes [SQL Server], filtered"
   - "filtered indexes [SQL Server]"
   - "nonclustered indexes [SQL Server], filtered"
   - "indexes [SQL Server], filtered"
-ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create filtered indexes
@@ -38,11 +35,17 @@ Filtered indexes can provide the following advantages over full-table indexes:
 1. Reduced index storage costs.
 
     Creating a filtered index can reduce disk storage for nonclustered indexes when a full-table index is not necessary. You can replace a full-table nonclustered index with multiple filtered indexes without significantly increasing the storage requirements.
+    
 ##  <a name="Design"></a> Design considerations
   
-When a column only has a small number of relevant values for queries, you can create a filtered index on the subset of values. For example, when the values in a column are mostly NULL and the query selects only from the non-NULL values, you can create a filtered index for the non-NULL data rows. The resulting index will be smaller and cost less to maintain than a full-table nonclustered index defined on the same key columns.  
-  
-When a table has heterogeneous data rows, you can create a filtered index for one or more categories of data. This can improve the performance of queries on these data rows by narrowing the focus of a query to a specific area of the table. Again, the resulting index will be smaller and cost less to maintain than a full-table nonclustered index.  
+When a column only has a small number of relevant values for queries, you can create a filtered index on the subset of values.  The resulting index will be smaller and cost less to maintain than a full-table nonclustered index defined on the same key columns.  
+
+For example, consider a filtered index in the following data scenarios. In each case, the WHERE clause of the filtered index should be a subset of the WHERE clause of an queries to benefit from the filtered index.
+
+
+- When the values in a column are mostly NULL and the query selects only from the non-NULL values. You can create a filtered index for the non-NULL data rows.
+- When rows in a table are marked as processed by a recurring workflow or queue process. Over time, the majority of rows in the table will be marked as processed. A filtered index on rows that are not yet processed would benefit the recurring query that looks for rows that are not yet processed.
+- When a table has heterogeneous data rows. You can create a filtered index for one or more categories of data. This can improve the performance of queries on these data rows by narrowing the focus of a query to a specific area of the table. Again, the resulting index will be smaller and cost less to maintain than a full-table nonclustered index.  
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
@@ -59,7 +62,7 @@ When a table has heterogeneous data rows, you can create a filtered index for on
     -   Online index rebuilds. You can rebuild filtered indexes while they are available for queries. Online index rebuilds are not supported for indexed views. For more information, see the REBUILD option for [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
     -   Non-unique indexes. Filtered indexes can be non-unique, whereas indexed views must be unique.  
-  
+    
 -   Filtered indexes are defined on one table and only support simple [comparison operators](../../t-sql/language-elements/comparison-operators-transact-sql.md). If you need a filter expression that references multiple tables or has complex logic, you should create a view. Filtered indexes do not support `LIKE` operators. 
   
 -   A column in the filtered index expression does not need to be a key or included column in the filtered index definition if the filtered index expression is equivalent to the query predicate and the query does not return the column in the filtered index expression with the query results.  
@@ -73,10 +76,13 @@ When a table has heterogeneous data rows, you can create a filtered index for on
 -   If the comparison operator specified in the filtered index expression of the filtered index results in an implicit or explicit data conversion, an error will occur if the conversion occurs on the left side of a comparison operator. A solution is to write the filtered index expression with the data conversion operator (CAST or CONVERT) on the right side of the comparison operator.  
 
 - Review the required SET options for filtered index creation in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) syntax
+
+- Filters cannot be applied to primary key or unique constraints, but can be applied to indexes with the UNIQUE property. 
   
 ## Permissions  
 
-Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles. To modify the filtered index expression, use CREATE INDEX WITH DROP_EXISTING. 
+Requires ALTER permission on the table or view. The user must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles. To modify the filtered index expression, use `CREATE INDEX WITH DROP_EXISTING`. 
+
 ##  <a name="SSMSProcedure"></a> Create a filtered index with SSMS 
   
 1. In Object Explorer, select the plus sign to expand the database that contains the table on which you want to create a filtered index.  
@@ -91,7 +97,7 @@ Requires ALTER permission on the table or view. User must be a member of the **s
   
 1. Under **Index key columns**, select **Add...**.  
   
-1. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+1. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
   
 1. Select **OK**.  
   
@@ -101,6 +107,8 @@ Requires ALTER permission on the table or view. User must be a member of the **s
 
 ##  <a name="TsqlProcedure"></a> Create a filtered index with Transact-SQL
   
+This example uses the `AdventureWorks2019` database, available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).  
+
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 1. On the Standard bar, select **New Query**.  

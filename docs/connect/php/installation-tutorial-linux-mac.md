@@ -1,7 +1,7 @@
 ---
 title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
-ms.date: 01/24/2022
+ms.date: 03/01/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom:
@@ -41,7 +41,7 @@ apt-get install php8.1 php8.1-dev php8.1-xml -y --allow-unauthenticated
 
 ### Step 2. Install prerequisites (Ubuntu)
 
-Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the optional `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu)
 
@@ -100,7 +100,7 @@ systemctl status php8.1-fpm
 
 ### Step 2. Install prerequisites (Ubuntu with PHP-FPM)
 
-Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the optional `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu with PHP-FPM)
 
@@ -204,7 +204,7 @@ dnf install php-pdo php-pear php-devel
 
 ### Step 2. Install prerequisites (Red Hat)
 
-Install the ODBC driver for Red Hat 7 or 8 by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the optional `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for Red Hat 7 or 8 by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Red Hat)
 
@@ -263,7 +263,7 @@ apt-get install -y php8.1 php8.1-dev php8.1-xml php8.1-intl
 
 ### Step 2. Install prerequisites (Debian)
 
-Install the ODBC driver for Debian by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  Make sure to also install the optional `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for Debian by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
 You may also need to generate the correct locale to get PHP output to display correctly in a browser. For example, for the en_US UTF-8 locale, run the following commands:
 
@@ -328,7 +328,7 @@ zypper -n install php8 php8-pdo php8-devel php8-openssl
 
 ### Step 2. Install prerequisites (Suse)
 
-Install the ODBC driver for Suse by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the optional `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for Suse by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server (Suse)
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "sp_configure"
   - "show advanced options option"
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # show advanced options Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

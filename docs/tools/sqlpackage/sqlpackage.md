@@ -5,16 +5,15 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 6/1/2022
 ---
 
 # SqlPackage.exe
 
-**SqlPackage.exe** is a command-line utility that automates the following database development tasks:  
+**SqlPackage.exe** is a command-line utility that automates the following database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs:  
   
 - [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
 
@@ -40,51 +39,65 @@ The **SqlPackage.exe** command line tool allows you to specify these actions alo
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```cmd
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
 ### Usage examples
 
+Further examples are available on the individual action pages.
+
 **Generate a comparison between databases by using .dacpac files with a SQL script output**
 
 Start by creating a .dacpac file of your latest database changes:
 
-```
+```cmd
 sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
- ```
- 
+```
+
 Create a .dacpac file of your database target (that has no changes):
 
- ```
- sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
- ```
+```cmd
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+```
 
 Create a SQL script that generates the differences of two .dacpac files:
 
-```
+```cmd
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
 ```
+
+
+## Support
+
+ The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
+
+### Supported SQL offerings
+
+SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
+
+
+
 
 ## Version
 
 Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
 
-```
+```cmd
 sqlpackage.exe /Version
- ```
+```
 
 ## Help
 
-You can display sqlpackage usage information by using `/?` or `/help:True`.
+You can display SqlPackage usage information by using `/?` or `/help:True`.
 
-```
+```cmd
 sqlpackage.exe /?
 ```
 
 For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
 
-```
+```cmd
 sqlpackage.exe /Action:Publish /?
 ```
 
@@ -95,8 +108,8 @@ Commands that return the following exit codes:
 - 0 = success
 - non-zero = failure
 
-
 ## Parameters
+
 Some parameters are shared between the SqlPackage actions. Below is a table summarizing the parameters, for more information click into the specific action pages.
 
 | Parameter | Short Form | [Extract](sqlpackage-extract.md#parameters-for-the-extract-action) | [Publish](sqlpackage-publish.md#parameters-for-the-publish-action) | [Export](sqlpackage-export.md#parameters-for-the-export-action) | [Import](sqlpackage-import.md#parameters-for-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-parameters) | [DriftReport](sqlpackage-deploy-drift-report.md#driftreport-action-parameters) | [Script](sqlpackage-script.md#parameters-for-the-script-action) |
@@ -137,6 +150,7 @@ Some parameters are shared between the SqlPackage actions. Below is a table summ
 |**/Variables:**|**/v**| | | | | x | | x |
 
 ## Properties
+
 Some properties are shared between the SqlPackage actions.  Below is a table summarizing the properties, for more information click into the specific action pages.
 
 | Property | [Extract](sqlpackage-extract.md#properties-specific-to-the-extract-action) | [Publish](sqlpackage-publish.md#properties-specific-to-the-publish-action) | [Export](sqlpackage-export.md#properties-specific-to-the-export-action) | [Import](sqlpackage-import.md#properties-specific-to-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-properties) | [Script](sqlpackage-script.md#properties-specific-to-the-script-action) |
@@ -158,7 +172,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |CommandTimeout=(INT32 '60')| x | x | x | x | x | x |
 |CommentOutSetVarDeclarations=(BOOLEAN)| | x | | | x | x |
 |CompareUsingTargetCollation=(BOOLEAN)| | x | | | x | x |
-|CompressionOption=(ENUM 'Normal')| x | | x | | | | |
+|CompressionOption=(ENUM 'Normal')| x | | x | | | |
 |CreateNewDatabase=(BOOLEAN)| | x | | | x | x |
 |DacApplicationDescription=(STRING)| x | | | | | |
 |DacApplicationName=(STRING)| x | | | | | |
@@ -236,7 +250,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |ImportContributorPaths=(STRING)| | | | x | | |
 |IncludeCompositeObjects=(BOOLEAN)| | x | | | x | x |
 |IncludeTransactionalScripts=(BOOLEAN)| | x | | | x | x |
-|LongRunningCommandTimeout=(INT32)| x | x | x | x | x | x |
+|LongRunningCommandTimeout=(INT32 '0')| x | x | x | x | x | x |
 |NoAlterStatementsToChangeClrTypes=(BOOLEAN)| | x | | | x | x |
 |PopulateFilesOnFileGroups=(BOOLEAN 'True')| | x | | | x | x |
 |RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')| | | | x | | |
@@ -260,6 +274,9 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |VerifyExtraction=(BOOLEAN)| x | | | | | |
 |VerifyFullTextDocumentTypesSupported=(BOOLEAN)| | | x | | | |
 
+## SqlPackage and database users
+
+[Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.
 
 ## Next steps
 

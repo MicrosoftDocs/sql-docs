@@ -15,14 +15,14 @@ helpviewer_keywords:
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Search Document Properties with Search Property Lists
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The content of document properties was previously indistinguishable from the content of the document body. This limitation restricted full-text queries to generic searches on whole documents. Now, however, you can configure a full-text index to support property-scoped searching on particular properties, such as Author and Title, for supported document types in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** binary data column. This form of searching is known as *property searching*.  
   
  The associated [filter](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) determines whether property searching is possible on a specific type of document. For some document types, the associated IFilter extracts some or all of the properties defined for that type of document, as well as the content of the document body. You can configure a full-text index to support property searching only on properties that are extracted by an IFilter during full-text indexing. Among IFilters that extract a number of document properties are the IFilters for Microsoft Office document types (such as .docx, .xlsx, and .pptx). On the other hand, the XML IFilter does not emit properties.  

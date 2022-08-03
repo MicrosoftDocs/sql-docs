@@ -1,22 +1,21 @@
 ---
 title: "sys.columns (Transact-SQL)"
-description: "sys.columns (Transact-SQL)"
+description: sys.columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.columns_TSQL"
   - "sys.columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.columns catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/05/2021"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -67,8 +66,8 @@ Returns a row for each column of an object that has columns, such as views or ta
 |rule_object_id|**int**|ID of the stand-alone rule bound to the column by using sys.sp_bindrule.<br /><br /> 0 = No stand-alone rule. For column-level CHECK constraints, see [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = Column is a sparse column. For more information, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = Column is a column set. For more information, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).|  
-|generated_always_type|**tinyint**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 7, 8, 9, 10 only applies to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifies when the column value is generated (will always be 0 for columns in system tables):<br /><br /> 0 = NOT_APPLICABLE<br /> 1 = AS_ROW_START<br /> 2 = AS_ROW_END<br />7 = AS_TRANSACTION_ID_START<br />8 = AS_TRANSACTION_ID_END<br />9 = AS_SEQUENCE_NUMBER_START<br />10 = AS_SEQUENCE_NUMBER_END<br /><br /> For more information, see [Temporal Tables &#40;Relational databases&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textual description of `generated_always_type`'s value (always NOT_APPLICABLE for columns in system tables) <br /><br /> NOT_APPLICABLE<br /> AS_ROW_START<br /> AS_ROW_END<br /><br />**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br />AS_TRANSACTION_ID_START<br />AS_TRANSACTION_ID_END<br />AS_SEQUENCE_NUMBER_START<br />AS_SEQUENCE_NUMBER_END|  
+|generated_always_type|**tinyint**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 5, 6, 7, 8 only applies to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifies when the column value is generated (will always be 0 for columns in system tables):<br /><br /> 0 = NOT_APPLICABLE<br /> 1 = AS_ROW_START<br /> 2 = AS_ROW_END<br />5 = AS_TRANSACTION_ID_START<br />6 = AS_TRANSACTION_ID_END<br />7 = AS_SEQUENCE_NUMBER_START<br />8 = AS_SEQUENCE_NUMBER_END<br /><br /> For more information, see [Temporal Tables &#40;Relational databases&#41;](../../relational-databases/tables/temporal-tables.md).|  
+|generated_always_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textual description of `generated_always_type`'s value (always NOT_APPLICABLE for columns in system tables) <br /><br /> NOT_APPLICABLE<br /> AS_ROW_START<br /> AS_ROW_END<br /><br />**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br />AS_TRANSACTION_ID_START<br />AS_TRANSACTION_ID_END<br />AS_SEQUENCE_NUMBER_START<br />AS_SEQUENCE_NUMBER_END|  
 |encryption_type|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Encryption type:<br /><br /> 1 = Deterministic encryption<br /><br /> 2 = Randomized encryption|  
 |encryption_type_desc|**nvarchar(64)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Encryption type description:<br /><br /> RANDOMIZED<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Name of encryption algorithm.<br /><br /> Only AEAD_AES_256_CBC_HMAC_SHA_512 is supported.|  
@@ -78,9 +77,10 @@ Returns a row for each column of an object that has columns, such as views or ta
 |is_masked|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is masked by a dynamic data masking:<br /><br /> 0 = regular, not-masked column<br /><br /> 1 = column is masked|  
 |graph_type |**int** |Internal column with a set of values. The values are between 1-8 for graph columns and `NULL` for others.  |
 |graph_type_desc |**nvarchar(60)**  |internal column with a set of values |
-|is_data_deletion_filter_column|**bit**|**Applies to**: Azure SQL Database Edge. Indicates if the column is the data retention filter column for the table.|
-|ledger_view_column_type|**tinyint**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).|
-|ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
+|is_data_deletion_filter_column|**bit**|**Applies to**: Azure SQL Edge. Indicates if the column is the data retention filter column for the table.|
+|ledger_view_column_type|**tinyint**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
+|ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
+|is_dropped_ledger_table_column|**bit**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates a ledger table column that has been dropped.|
 
 ## Permissions  
 

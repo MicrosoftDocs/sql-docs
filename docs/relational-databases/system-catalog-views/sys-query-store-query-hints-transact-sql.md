@@ -1,31 +1,30 @@
 ---
-description: "sys.query_store_query_hints (Transact-SQL)"
 title: "sys.query_store_query_hints (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/09/2021"
+description: The sys.query_store_query_hints system catalog view returns Query Store hints.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "SYS.QUERY_STORE_QUERY_HINTS"
   - "QUERY_STORE_QUERY_HINTS"
   - "SYS.QUERY_STORE_QUERY_HINTS_TSQL"
   - "QUERY_STORE_QUERY_HINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_store_query_hints catalog view"
   - "query_store_query_hints catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.query_store_query_hints (Transact-SQL)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
- Contains query hints from the [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature.
+ Returns query hints from [Query Store hints](../../relational-databases/performance/query-store-hints.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +48,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 
 ### View Query Store hints
 
-The following example returns existing Query Store hints for query_id 39:
+The following example returns existing Query Store hints for `query_id` 39:
 
 ```sql
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
@@ -57,7 +56,7 @@ FROM sys.query_store_query_hints
 WHERE query_id = 39;
 ```
   
-## See Also  
+## Next steps
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)  
 - [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)   
 - [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md) 

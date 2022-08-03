@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)"
-title: "sys.dm_hadr_availability_replica_cluster_states (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)"
+description: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_hadr_availability_replica_cluster_states_TSQL"
   - "dm_hadr_availability_replica_cluster_states"
   - "sys.dm_hadr_availability_replica_cluster_states"
   - "dm_hadr_availability_replica_cluster_states_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_availability_replica_cluster_states dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

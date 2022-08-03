@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_trace_getinfo function"
   - "fn_trace_getinfo function"
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

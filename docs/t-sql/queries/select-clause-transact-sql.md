@@ -29,7 +29,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -71,7 +71,7 @@ SELECT [ ALL | DISTINCT ]
   
  For backward compatibility, using the TOP *expression* without parentheses in SELECT statements is supported, but we do not recommend it. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
-\< select_list >
+\<select_list>
  The columns to be selected for the result set. The select list is a series of expressions separated by commas. The maximum number of expressions that can be specified in the select list is 4096.  
   
  \*  
@@ -128,7 +128,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *column_ alias*  
+ *column_alias*  
  Is an alternative name to replace the column name in the query result set. For example, an alias such as Quantity, or Quantity to Date, or Qty can be specified for a column named quantity.  
   
  Aliases are used also to specify names for the results of expressions, for example:  

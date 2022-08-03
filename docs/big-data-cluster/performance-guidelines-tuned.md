@@ -3,16 +3,17 @@ title: Performance best practices for SQL Server Big Data Clusters
 description: This article provides performance best practices and guidelines for running SQL Server Big Data Clusters on Kubernetes
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 06/30/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Performance best practices and configuration guidelines for SQL Server Big Data Clusters
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article provides best practices and recommendations to maximize performance for applications that target services running within a big data cluster.
 

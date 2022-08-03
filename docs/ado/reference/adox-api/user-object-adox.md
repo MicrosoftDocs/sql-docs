@@ -1,21 +1,16 @@
 ---
+title: "User Object (ADOX)"
 description: "User Object (ADOX)"
-title: "User Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "User"
-helpviewer_keywords: 
-  - "User object [ADOX]"
-ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "User object [ADOX]"
+apitype: "COM"
 ---
 # User Object (ADOX)
 Represents a user account that has access permissions within a secured database.  

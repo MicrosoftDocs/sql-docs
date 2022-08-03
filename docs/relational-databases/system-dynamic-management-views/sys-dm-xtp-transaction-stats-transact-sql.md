@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_xtp_transaction_stats (Transact-SQL)"
 title: "sys.dm_xtp_transaction_stats (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_xtp_transaction_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/12/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xtp_transaction_stats_TSQL"
   - "dm_xtp_transaction_stats"
   - "sys.dm_xtp_transaction_stats_TSQL"
   - "sys.dm_xtp_transaction_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_transaction_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports statistics about transactions that have run since the server started.  
   

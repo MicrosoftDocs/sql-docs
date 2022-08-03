@@ -1,25 +1,23 @@
 ---
-description: "sys.masked_columns (Transact-SQL)"
-title: "sys.masked_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.masked_columns (Transact-SQL)"
+description: sys.masked_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sys.masked_columns"
   - "masked_columns_tsql"
   - "sys.masked_columns_tsql"
   - "masked_columns"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.masked_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.masked_columns (Transact-SQL)

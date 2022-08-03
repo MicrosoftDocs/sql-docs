@@ -10,7 +10,9 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
+  - "quorum [SQL Server], Always On and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
@@ -82,6 +84,9 @@ ms.author: mathoma
 5.  **Recover availability group database replicas as needed.** Non-availability group databases should recover and come back online on their own as part of the regular SQL Server startup process.  
   
      You can minimize potential data loss and recovery time for the availability group replicas by bringing them back online in this sequence:  primary replica, synchronous secondary replicas, asynchronous secondary replicas.  
+     
+   > [!NOTE]
+   > After using forced quorum it is necessary to perform a forced failover with possible data loss to bring the availability group back online. For more information, review [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
   
 6.  **Repair or replace failed components and re-validate cluster.** Now that you have recovered from the initial disaster and quorum failure, you should repair or replace the failed nodes and adjust related WSFC and Always On configurations accordingly.  This can include dropping availability group replicas, evicting nodes from the cluster, or flattening and re-installing software on a node.  
   
@@ -108,7 +113,7 @@ ms.author: mathoma
   
 -   [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
+-   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> Related Content  
   

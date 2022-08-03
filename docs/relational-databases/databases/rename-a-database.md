@@ -12,7 +12,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
+ms.date: "04/06/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database
@@ -31,6 +31,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   - In SQL Server, you can set a database in single user mode to close any open connections. For more information, see [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - In Azure SQL Database, you must make sure no other users have an open connection to the database to be renamed.
 - Renaming a database does not change the physical name of the database files on disk, or the logical names of the files. For more information, see [Database Files and Filegroups](database-files-and-filegroups.md#logical-and-physical-file-names).
+- It's not possible to rename an Azure SQL database configured in an [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) relationship.
+
 
 ## Permissions
 

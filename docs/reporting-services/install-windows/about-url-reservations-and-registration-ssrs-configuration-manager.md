@@ -75,7 +75,7 @@ ms.author: maggies
   
 -   [!INCLUDE[win7](../../includes/win7-md.md)]  
   
--   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
+-   [!INCLUDE[winvista](../../includes/winvista-md.md)]  
   
 |Instance Type|Application|Default URL|Actual URL reservation in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
@@ -97,7 +97,7 @@ ms.author: maggies
   
  The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See also  
  [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

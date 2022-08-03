@@ -1,14 +1,14 @@
 ---
-description: "Index Properties F1 Help"
-title: "Index Properties F1 Help | Microsoft Docs"
-ms.custom: ""
+title: "Index Properties F1 Help"
+description: Index Properties F1 Help
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.indexproperties.filter.f1"
   - "sql13.swb.indexproperties.partitions.f1"
   - "sql13.swb.indexproperties.general.f1"
@@ -17,12 +17,11 @@ f1_keywords:
   - "sql13.swb.indexproperties.options.f1"
   - "sql13.swb.indexproperties.spatial.f1"
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index Properties F1 Help
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
+
 
   The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.  
   

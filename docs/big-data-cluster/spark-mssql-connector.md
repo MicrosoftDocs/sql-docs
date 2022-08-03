@@ -4,14 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use the Apache Spark Connector for SQL Server and Azure SQL to read and write to SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 11/04/2019
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Use the Apache Spark Connector for SQL Server and Azure SQL
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 The [Apache Spark Connector for SQL Server and Azure SQL](https://github.com/microsoft/sql-spark-connector) is a high-performance connector that enables you to use transactional data in big data analytics and persists results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs. The connector uses SQL Server bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [Using bulk copy with the JDBC driver]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 

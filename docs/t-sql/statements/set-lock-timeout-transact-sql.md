@@ -1,30 +1,28 @@
 ---
-description: "SET LOCK_TIMEOUT (Transact-SQL)"
-title: "SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET LOCK_TIMEOUT (Transact-SQL)"
+description: SET LOCK_TIMEOUT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "LOCK_TIMEOUT_TSQL"
   - "SET_LOCK_TIMEOUT_TSQL"
   - "SET LOCK_TIMEOUT"
   - "LOCK_TIMEOUT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "timeout options [SQL Server], locks"
   - "releasing locks"
   - "LOCK_TIMEOUT option"
   - "SET LOCK_TIMEOUT statement"
   - "locking [SQL Server], time-outs"
   - "wait time for lock releases [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "Uninstall existing instance"
 description: This article describes how to uninstall a stand-alone instance of SQL Server, which also prepares the system so that you can reinstall SQL Server.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "03/04/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this article, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -114,10 +114,8 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 
 If the removal process fails, review the [SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause. 
 
-The KB article [How to identify SQL Server setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) can assist in the investigation. Though it is for SQL Server 2008, the methodology described is applicable to every version of SQL Server. 
-
   
-## See Also  
+## See also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

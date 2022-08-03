@@ -1,25 +1,23 @@
 ---
-description: "sys.spatial_indexes (Transact-SQL)"
-title: "sys.spatial_indexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.spatial_indexes (Transact-SQL)"
+description: sys.spatial_indexes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.spatial_indexes_TSQL"
   - "spatial_indexes"
   - "spatial_indexes_TSQL"
   - "sys.spatial_indexes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.spatial_indexes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.spatial_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

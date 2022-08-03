@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_altsyncpartners (Transact-SQL)"
-title: "MSmerge_altsyncpartners (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_altsyncpartners (Transact-SQL)"
+description: MSmerge_altsyncpartners (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_altsyncpartners_TSQL"
   - "MSmerge_altsyncpartners"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_altsyncpartners system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_altsyncpartners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,17 @@
 ---
+title: "Attributes and Name Properties Example (VB)"
 description: "Attributes and Name Properties Example (VB)"
-title: "Attributes and Name Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Attributes property [ADO], Visual Basic example"
-  - "Name property [ADO], Visual Basic example"
-ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Attributes property [ADO], Visual Basic example"
+  - "Name property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Attributes and Name Properties Example (VB)
 This example displays the value of the [Attributes](./attributes-property-ado.md) property for [Connection](./connection-object-ado.md), [Field](./field-object.md), and [Property](./property-object-ado.md) objects. It uses the [Name](./name-property-ado.md) property to display the name of each **Field** and **Property** object.  

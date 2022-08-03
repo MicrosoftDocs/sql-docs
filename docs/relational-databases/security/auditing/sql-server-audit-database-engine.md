@@ -1,41 +1,41 @@
 ---
-title: "SQL Server Audit (Database Engine) | Microsoft Docs"
+title: "SQL Server Audit (Database Engine)"
 description: Learn about server audits for the SQL Server Database Engine or an individual database. Server audits contain server and database audit specifications.
-ms.custom: ""
-ms.date: "01/01/2020"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
-  - "audit"
 helpviewer_keywords: 
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: davidtrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: vanto
+ms.custom: ""
+ms.date: "03/23/2022"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)
+
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  *Auditing* an instance of the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] or an individual database involves tracking and logging events that occur on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.  
+*Auditing* an instance of the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] or an individual database involves tracking and logging events that occur on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
- There are several levels of auditing for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], depending on government or standards requirements for your installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit provides the tools and processes you must have to enable, store, and view audits on various server and database objects.  
+There are several levels of auditing for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], depending on government or standards requirements for your installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit provides the tools and processes you must have to enable, store, and view audits on various server and database objects.  
   
- You can record server audit action groups per-instance, and either database audit action groups or database audit actions per database. The audit event will occur every time that the auditable action is encountered.  
+You can record server audit action groups per-instance, and either database audit action groups or database audit actions per database. The audit event will occur every time that the auditable action is encountered.  
   
- All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
->  This     topic applies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  For [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Get started with SQL database auditing](/azure/azure-sql/database/auditing-overview).  
+> This topic applies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  For [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Get started with SQL database auditing](/azure/azure-sql/database/auditing-overview).  
   
 ## SQL Server Audit Components  
- An *audit* is the combination of several elements into a single package for a specific group of server actions or database actions. The components of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit combine to produce an output that is called an audit, just as a report definition combined with graphics and data elements produces a report.  
+
+An *audit* is the combination of several elements into a single package for a specific group of server actions or database actions. The components of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit combine to produce an output that is called an audit, just as a report definition combined with graphics and data elements produces a report.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit uses *Extended Events* to help create an audit. For more information about Extended Events, see [Extended Events](../../../relational-databases/extended-events/extended-events.md).  
   
@@ -64,7 +64,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 > [!IMPORTANT]  
 >  Any authenticated user can read and write to the Windows Application event log. The Application event log requires lower permissions than the Windows Security event log and is less secure than the Windows Security event log.  
   
- Writing to the Windows Security log requires the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to be added to the **Generate security audits** policy. By default, the Local System, Local Service, and Network Service are part of this policy. This setting can be configured by using the security policy snap-in (secpol.msc). Additionally, the **Audit object access** security policy must be enabled for both **Success** and **Failure**. This setting can be configured by using the security policy snap-in (secpol.msc). In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] or Windows Server 2008 (and higher), you can set the more granular **application generated** policy from the command line by using the audit policy program (**AuditPol.exe)**. For more information about the steps to enable writing to the Windows Security log, see [Write SQL Server Audit Events to the Security Log](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). For more information about the Auditpol.exe program, see Knowledge Base article 921469, [How to use Group Policy to configure detailed security auditing](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/921469). The Windows event logs are global to the Windows operating system. For more information about the Windows event logs, see [Event Viewer Overview](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10)). If you need more precise permissions on the audit, use the binary file target.  
+ Writing to the Windows Security log requires the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to be added to the **Generate security audits** policy. By default, the Local System, Local Service, and Network Service are part of this policy. This setting can be configured by using the security policy snap-in (secpol.msc). Additionally, the **Audit object access** security policy must be enabled for both **Success** and **Failure**. This setting can be configured by using the security policy snap-in (secpol.msc). In [!INCLUDE[winvista](../../../includes/winvista-md.md)] or Windows Server 2008 (and higher), you can set the more granular **application generated** policy from the command line by using the audit policy program (**AuditPol.exe)**. For more information about the steps to enable writing to the Windows Security log, see [Write SQL Server Audit Events to the Security Log](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). For more information about the Auditpol.exe program, see Knowledge Base article 921469, [How to use Group Policy to configure detailed security auditing](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/921469). The Windows event logs are global to the Windows operating system. For more information about the Windows event logs, see [Event Viewer Overview](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10)). If you need more precise permissions on the audit, use the binary file target.  
   
  When you are saving audit information to a file, to help prevent tampering, you can restrict access to the file location in the following ways:  
   

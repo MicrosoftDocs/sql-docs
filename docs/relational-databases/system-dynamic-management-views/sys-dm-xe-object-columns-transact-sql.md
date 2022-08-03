@@ -1,30 +1,28 @@
 ---
-description: "sys.dm_xe_object_columns (Transact-SQL)"
-title: "sys.dm_xe_object_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
+title: "sys.dm_xe_object_columns (Transact-SQL)"
+description: sys.dm_xe_object_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "3/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_xe_object_columns"
   - "sys.dm_xe_object_columns_TSQL"
   - "dm_xe_object_columns_TSQL"
   - "dm_xe_object_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_object_columns dynamic management view"
   - "extended events [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_xe_object_columns (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns the schema information for all the objects.  
+Returns the schema information for all the objects.
   
 > [!NOTE]  
 >  Event objects expose fixed schemas for both read-only and read-write data.  
@@ -44,17 +42,24 @@ ms.author: wiassaf
 |description|**nvarchar(3072)**|The description of this object column. Is nullable.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+
+Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship Cardinalities  
+### Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
-  
+## Next steps
 
+Learn more about related concepts in the following articles:
+
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
+- [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
+- [Extended events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)

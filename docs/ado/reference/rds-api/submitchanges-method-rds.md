@@ -1,19 +1,15 @@
 ---
+title: "SubmitChanges Method (RDS)"
 description: "SubmitChanges Method (RDS)"
-title: "SubmitChanges Method (RDS) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "SubmitChanges method [ADO]"
-ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SubmitChanges method [ADO]"
+apitype: "COM"
 ---
 # SubmitChanges Method (RDS)
 Submits pending changes of the locally cached and updatable [Recordset](../ado-api/recordset-object-ado.md) to the data source specified in the [Connect](./connect-property-rds.md) property or the [URL](./url-property-rds.md) property.  

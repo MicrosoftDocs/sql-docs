@@ -4,16 +4,18 @@ titleSuffix: SQL Server Big Data Clusters
 description: Spark Library Management
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 12/01/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Spark library management
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article provides guidance on how to import and install packages for a Spark session through session and notebook configurations.
 

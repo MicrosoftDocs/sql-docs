@@ -1,12 +1,13 @@
 ---
 title: Upgrade SQL Server to SQL Server 2019
 description: Step-by-step guidance for modernizing your data assets
-ms.date: 10/05/2021
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: migration-guide
 ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: randolphwest
 ---
 
 # Upgrade SQL Server to SQL Server
@@ -121,7 +122,7 @@ To use DMA to create an assessment, complete the following steps.
    1. Review the compatibility issues by analyzing the affected object and its details for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
    1. Review feature recommendations across the **Performance**, **Storage**, and **Security** areas.
 
-      Feature recommendations cover various features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
+      Feature recommendations cover various features such as In-Memory OLTP and Columnstore, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
 1. Review assessment results.
    1. After all database assessments are complete, select **Export report** to export the results to either a JSON or CSV file for analyzing the data at your own convenience.
  
@@ -215,7 +216,7 @@ environment.
 
 [Backup overview of SQL Server.](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
 
-[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-version-15.md)
+[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-2019.md)
 
 ### Migrate schema and data
 

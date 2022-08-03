@@ -1,7 +1,7 @@
 ---
 title: Known issues for the ODBC driver on Linux and macOS
 description: "Learn about known issues with the Microsoft ODBC Driver for SQL Server on Linux and macOS and steps for troubleshooting connectivity issues."
-ms.date: 02/15/2022
+ms.date: 02/17/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
@@ -20,7 +20,7 @@ This article contains a list of known issues with the Microsoft ODBC Driver 13, 
 
 ## Known issues
 
-Additional issues will be posted on the [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers).  
+Additional issues will be posted on the [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/sql-server-blog/bg-p/SQLServer/label-name/SQLServerDrivers).  
 
 - Due to system library limitations, Alpine Linux supports fewer character encodings and locales. For example, `en_US.UTF-8` isn't available. For more information, see [`musl libc` - functional differences from `glibc`](https://wiki.musl-libc.org/functional-differences-from-glibc.html).
 
@@ -70,7 +70,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 There's more than one driver manager installed and your application is using the wrong one, or the driver manager wasn't built correctly.
 
 Some macOS users encounter the following error with driver version 17.8 or older:\
-(This error has been resolved in driver version 18.0+)
+(This error has been resolved in driver version 17.9+)
 
 ```text
 [08001][Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: [OpenSSL library could not be loaded, make sure OpenSSL 1.0 or 1.1 is installed]

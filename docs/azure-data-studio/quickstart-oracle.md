@@ -3,9 +3,9 @@ title: "Quickstart: Connect and explore Oracle databases"
 description: Do a quickstart in which you use Azure Data Studio to connect to Oracle database and explore the objects.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: "nahk-ivanov"
-ms.author: "alexiva"
-ms.reviewer: "maghan"
+author: tdoshin
+ms.author: timioshin
+ms.reviewer: maghan
 ms.topic: "quickstart"
 ms.custom:
 ms.date: 10/4/2021
@@ -14,6 +14,9 @@ ms.date: 10/4/2021
 # Quickstart: Use Azure Data Studio to connect and explore Oracle databases
 
 This quickstart shows how to use Azure Data Studio to connect to Oracle database and explore existing database objects.
+
+> [!NOTE]
+> Currently extension provides a read-only view of the database objects. Running queries is not supported.
 
 ## Prerequisites
 
@@ -33,6 +36,10 @@ To complete this quickstart, you need Azure Data Studio and access to Oracle dat
 3. In the connection dialog, select **Oracle** as **Connection type** and fill in the following fields:
 
    - **Data source:** Enter server name, for example, `localhost:1521`. **Data source** can be defined in three different ways: _Easy Connect_/_Easy Connect Plus_, _TNS Alias_ or _Connect Descriptor_. For more information on the format of each method, please refer to the Oracle documentation on **Data Source** attribute of the ODP.NET connection string.
+
+     > [!NOTE]
+     > In order to use _TNS Alias_ as a data source, make sure that `ORACLE_HOME` environment variable is set and _TNSNAMES.ORA_ file is located in the `<ORACLE_HOME>/network/admin` folder.
+
    - **User Id:** User name for the Oracle database
    - **Password:** Password for the Oracle database
    - **Server Group:** \<Default\>

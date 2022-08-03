@@ -4,8 +4,8 @@
 title: "rxNeuralNet function (MicrosoftML) " 
 description: " Neural networks for regression modeling and for Binary and multi-class classification. " 
 keywords: "(MicrosoftML), rxNeuralNet, classification, dnn, models, network, neural, regression" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

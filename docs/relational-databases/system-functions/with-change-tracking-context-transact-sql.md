@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "WITH CHANGE_TRACKING_CONTEXT"
   - "change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT"
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)

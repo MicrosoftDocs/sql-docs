@@ -1,29 +1,27 @@
 ---
-description: "RESTORE SERVICE MASTER KEY (Transact-SQL)"
-title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE SERVICE MASTER KEY (Transact-SQL)"
+description: RESTORE SERVICE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "RESTORE SERVICE MASTER KEY"
   - "RESTORE_SERVICE_MASTER_KEY_TSQL"
   - "LOAD SERVICE MASTER KEY"
   - "LOAD_SERVICE_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "importing Service Master Keys"
   - "copying Service Master Keys"
   - "service master key [SQL Server], importing"
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-author: VanMSFT
-ms.author: vanto
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

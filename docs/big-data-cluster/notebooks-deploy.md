@@ -2,21 +2,22 @@
 title: "Deploy: Azure Data Studio notebook"
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use the code and documentation in a notebook from Azure Data Studio to deploy a SQL Server Big Data Cluster.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
+ms.metadata: seo-lt-2019
 ---
 
 # Deploy SQL Server big data cluster with Azure Data Studio notebook
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 SQL Server provides an extension for Azure Data Studio that includes deployment notebooks. A deployment notebook includes documentation and code that you can use in Azure Data Studio to create a SQL Server big data cluster.
 

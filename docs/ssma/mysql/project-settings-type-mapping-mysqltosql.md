@@ -8,8 +8,10 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.mysql.projectsettingtypemapping.f1"
 ---
 # Project Settings (Type Mapping) (MySQLToSQL)
 The Type Mapping project settings let you set default type mappings for the SSMA project.  

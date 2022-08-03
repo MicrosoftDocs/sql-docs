@@ -10,9 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Customizing Project Settings"
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.workplacedialog.f1"
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  
@@ -34,7 +36,7 @@ SSMA contains several settings for converting and loading database objects, migr
   
 1.  On the **Tools** menu, click **Default Project Settings**.  
   
-2.  Select the project type in **Migration Target Version** drop down for which settings are required to be viewed or changed and then Click **General** tab.  
+2.  Select the project type in **Migration Target Version** drop-down for which settings are required to be viewed or changed and then Click **General** tab.  
   
 3.  In the left pane, click **Conversion**.  
   
@@ -89,11 +91,11 @@ When you save a project, SSMA retains the project settings, and optionally the d
   
 -   On the **File** menu, click **Save Project**.  
   
-    If schemas in the project have changed or have not been converted, SSMA will prompt you to load and save metadata. Loading and saving metadata will let you work offline. It also lets you send a complete project file to other people, such as technical support personnel. If you are prompted to save metadata, do the following:  
+    If schemas in the project have changed or have not been converted, SSMA will prompt you to load and save metadata. Loading and saving metadata will let you work offline. It also lets you send a complete project file to other people, such as technical support personnel. If you're prompted to save metadata, do the following:  
   
     1.  For each schema that shows a status of **Metadata missing**, select the check box next to the database name.  
   
-        Saving metadata might take several minutes. If you do not want to save metadata yet, do not select any check boxes.  
+        Saving metadata might take several minutes. If you don't want to save metadata yet, don't select any check boxes.  
   
     2.  Click the **Save** button.  
   

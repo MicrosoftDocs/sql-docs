@@ -5,16 +5,18 @@ description: Use a notebook from Azure Data Studio to manage and troubleshoot SQ
 author: yualan
 ms.author: alanyu
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 07/16/2021
-ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: how-to
+ms.metadata: seo-lt-2019
 ---
 
 # Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook provides documentation and code that you can use in Azure Data Studio to manage SQL Server 2019 Big Data Clusters.
 

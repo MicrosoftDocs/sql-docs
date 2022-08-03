@@ -39,7 +39,7 @@ The list of error numbers that are categorized as transient faults is available 
   
 ## Step 2: Create and run sample application  
   
-This sample assumes .NET Framework 4.5.1 or later is installed.  The C# code sample consists of one file named Program.cs. Its code is provided in the next section.  
+This sample assumes .NET Framework 4.6.2 or later is installed.  The C# code sample consists of one file named Program.cs. Its code is provided in the next section.  
   
 ### Step 2.a: Capture and compile the code sample  
   
@@ -50,6 +50,7 @@ You can compile the sample with the following steps:
     - Name the project **RetryAdo2**.  
 2. Open the Solution Explorer pane.  
     - See the name of your project.  
+    - On your project, [add a NuGet dependency](/nuget/quickstart/install-and-use-a-package-in-visual-studio) on the Microsoft.Data.SqlClient package.
     - See the name of the Program.cs file.  
 3. Open the Program.cs file.  
 4. Entirely replace the contents of the Program.cs file with the code in the following code block.  
@@ -59,7 +60,7 @@ You can compile the sample with the following steps:
   
 Paste this code into your **Program.cs** file.  
   
-Then you must edit the strings for server name, password, and so on. You can find these strings in the method named **GetSqlConnectionStringBuilder**.  
+Then you must edit the strings for server name, password, and so on. You can find these strings in the method named **GetSqlConnectionString**.  
   
 NOTE: The connection string for server name is geared toward Azure SQL Database, because it includes the four character prefix of **tcp:**. But you can adjust the server string to connect to your Microsoft SQL Server.  
   
@@ -201,7 +202,6 @@ SELECT TOP 3
 	
 	  sqlConnectionSB.UserID = "MyLogin";  // "@yourservername"  as suffix sometimes.  
 	  sqlConnectionSB.Password = "MyPassword";  
-	  sqlConnectionSB.IntegratedSecurity = false;  
 	
 	  // Adjust these values if you like. (ADO.NET 4.5.1 or later.)  
 	  sqlConnectionSB.ConnectRetryCount = 3;  
@@ -300,7 +300,7 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
 4. Watch the console report success on a subsequent retry.  
   
   
-###  Step 2.d: Temporarily misspell the server name  
+###  Step 3.d: Temporarily misspell the server name  
   
 1. Temporarily add 40615 as another error number to **TransientErrorNumbers**, and recompile.  
 2. Set a breakpoint on the line: `new QC.SqlConnectionStringBuilder()`.  

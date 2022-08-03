@@ -1,23 +1,21 @@
 ---
-description: "sysmergesubscriptions (Transact-SQL)"
-title: "sysmergesubscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergesubscriptions (Transact-SQL)"
+description: sysmergesubscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergesubscriptions_TSQL"
   - "sysmergesubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergesubscriptions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

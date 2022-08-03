@@ -1,20 +1,16 @@
 ---
+title: "Indexes Append Method Example (VB)"
 description: "Indexes Append Method Example (VB)"
-title: "Indexes Append Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Append method [ADOX]"
+dev_langs:
+  - "VB"
 ---
 # Indexes Append Method Example (VB)
 The following code demonstrates how to create a new index. The index is on two columns in the table.  

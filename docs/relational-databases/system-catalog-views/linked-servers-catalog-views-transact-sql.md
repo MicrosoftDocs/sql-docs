@@ -1,21 +1,19 @@
 ---
-description: "Linked Servers Catalog Views (Transact-SQL)"
-title: "Linked Servers Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Linked Servers Catalog Views (Transact-SQL)"
+description: Linked Servers Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "linked servers [SQL Server], catalog views"
   - "catalog views [SQL Server], linked servers"
+dev_langs:
+  - "TSQL"
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Linked Servers Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

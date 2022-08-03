@@ -1,18 +1,14 @@
 ---
+title: "Levels Collection Properties, Methods, and Events"
 description: "Levels Collection Properties, Methods, and Events"
-title: "Levels Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Levels collection [ADO MD], members"
-ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Levels collection [ADO MD], members"
 ---
 # Levels Collection Properties, Methods, and Events
 ## Properties  

@@ -1,18 +1,14 @@
 ---
+title: "Cell Object Properties, Methods, and Events"
 description: "Cell Object Properties, Methods, and Events"
-title: "Cell Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Cell object [ADO MD], members"
-ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Cell object [ADO MD], members"
 ---
 # Cell Object Properties, Methods, and Events
 ## Properties/Collections  

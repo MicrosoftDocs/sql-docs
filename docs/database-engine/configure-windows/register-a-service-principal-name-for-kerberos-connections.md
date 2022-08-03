@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Server Principal Names"
   - "SPNs [SQL Server]"
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 08/12/2020
@@ -144,20 +144,20 @@ For more information on the Setspn tool, required permissions and examples on ho
 The following example illustrates the syntax used to manually register an SPN for a TCP/IP connection using a domain user account:  
 
 ```
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
+setspn -S MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```
 
 > [!NOTE]
 > If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance using a domain user account, use:  
 
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+setspn -S MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
 ```  
   
 For a named instance, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
+setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Client Connections  

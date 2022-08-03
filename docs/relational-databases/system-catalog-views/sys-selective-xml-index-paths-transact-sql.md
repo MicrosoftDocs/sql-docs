@@ -1,34 +1,31 @@
 ---
-description: "sys.selective_xml_index_paths (Transact-SQL)"
-title: "sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.selective_xml_index_paths (Transact-SQL)"
+description: sys.selective_xml_index_paths (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
-  - "xml_schema_attributes_TSQL"
-  - "xml_schema_attributes"
-  - "sys.xml_schema_attributes_TSQL"
-  - "sys.xml_schema_attributes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "xml_schema_index_TSQL"
+  - "xml_schema_index"
+helpviewer_keywords:
   - "sys.xml_schema_attributes catalog view"
-ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.selective_xml_index_paths (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Available beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, each row in sys.selective_xml_index_paths represents one promoted path for particular selective xml index.  
+Available beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, each row in sys.selective_xml_index_paths represents one promoted path for particular selective xml index.  
   
- If you create a selective xml index on xmlcol of table T using following statement,  
+If you create a selective xml index on xmlcol of table T using following statement,  
   
-```  
+```sql  
 CREATE SELECTIVE XML INDEX sxi1 ON T(xmlcol)   
 FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',  
       path2 = '/a/b/d' AS XQUERY 'xs:double'  
@@ -37,7 +34,6 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
   
  There will be two new rows in sys.selective_xml_index_paths corresponding to the index sxi1.  
 
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of table with XML column.|  

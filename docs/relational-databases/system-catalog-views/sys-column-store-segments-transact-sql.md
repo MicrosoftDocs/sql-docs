@@ -1,25 +1,22 @@
 ---
-description: "sys.column_store_segments (Transact-SQL)"
-title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/24/2020"
+title: "sys.column_store_segments (Transact-SQL)"
+description: "sys.column_store_segments returns one row for each column segment in a columnstore index. There is one column segment per column per rowgroup."
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "column_store_segments"
   - "sys.column_store_segments_TSQL"
   - "sys.column_store_segments"
   - "column_store_segments_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_store_segments catalog view"
-ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,23 +36,30 @@ Returns one row for each column segment in a columnstore index. There is one col
 |**base_id**|**bigint**|Base value ID if encoding type 1 is being used. If encoding type 1 is not being used, base_id is set to -1.|  
 |**magnitude**|**float**|Magnitude if encoding type 1 is being used. If encoding type 1 is not being used, magnitude is set to -1.|  
 |**primary_dictionary_id**|**int**|A value of 0 represents the global dictionary. A value of -1 indicates that there is no global dictionary created for this column.|  
-|**secondary_dictionary_id**|**int**|A non-zero value points to the local dictionary for this column in the current segment (i.e. the rowgroup). A value of -1 indicates that there is no local dictionary for this segment.|  
+|**secondary_dictionary_id**|**int**|A non-zero value points to the local dictionary for this column in the current segment (for example, the rowgroup). A value of -1 indicates that there is no local dictionary for this segment.|  
 |**min_data_id**|**bigint**|Minimum data ID in the column segment.|  
 |**max_data_id**|**bigint**|Maximum data ID in the column segment.|  
 |**null_value**|**bigint**|Value used to represent nulls.|  
 |**on_disk_size**|**bigint**|Size of segment in bytes.|  
-  
+|**collation_id**|**int** |**Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** and later.<BR>Current collation when the segment was created. Maps to an internal id. **Currently internal only and not for development.** |
+|**min_deep_data**|**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** and later.<BR>Min value used for string and other data types used for segment elimination.<sup>1</sup> |
+|**max_deep_data** |**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**  and later.<BR>Min value used for string and other data types used for segment elimination.<sup>1</sup> |
+
+<sup>1</sup> After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), `min_deep_data` and `max_deep_data` will be `NULL` until after the columnstore index is rebuilt for the first time using a REBUILD or DROP/CREATE. After a rebuild, the segments that contain data types that can benefit from string min/max segment elimination will contain data.
+
 ## Remarks  
 The columnstore segment encoding type is selected by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses value-based encoding. If data is mostly not distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
+
+Columnstore segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. Segment elimination does not apply to LOB data types such as the (max) data type lengths.
  
 ## Permissions  
- All columns require at least `VIEW DEFINITION` permission on the table. The following columns return null unless the user also has `SELECT` permission: `has_nulls`, `base_id`, `magnitude`, `min_data_id`, `max_data_id`, and `null_value`.  
+ All columns require at least `VIEW DEFINITION` permission on the table. The following columns return `NULL` unless the user also has `SELECT` permission: `has_nulls`, `base_id`, `magnitude`, `min_data_id`, `max_data_id`, and `null_value`.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## Examples
 
-### The following query returns information about segments of a columnstore index.  
+The following query returns information about segments of a columnstore index.  
   
 ```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
@@ -70,7 +74,8 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;
 GO  
 ```  
 
-## See Also  
+## Next steps
+
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   

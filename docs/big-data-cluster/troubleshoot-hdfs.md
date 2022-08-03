@@ -1,17 +1,19 @@
 ---
-title: Troubleshoot HDFS 
+title: Troubleshoot HDFS
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot HDFS in SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 12/16/2021
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Troubleshoot HDFS
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article contains troubleshooting scenarios for HDFS errors in SQL Server 2019 Big Data Clusters.
 

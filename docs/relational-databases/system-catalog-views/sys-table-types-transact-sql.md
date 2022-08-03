@@ -1,32 +1,30 @@
 ---
-description: "sys.table_types (Transact-SQL)"
-title: "sys.table_types (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.table_types (Transact-SQL)"
+description: sys.table_types (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "table_types_TSQL"
   - "sys.table_types"
   - "sys.table_types_TSQL"
   - "table_types"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table types [SQL Server]"
   - "table-valued parameters, sys.table_types"
   - "sys.table_types"
   - "UDTT"
+dev_langs:
+  - "TSQL"
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.table_types (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Displays properties of user-defined table types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A table type is a type from which table variables or table-valued parameters could be declared. Each table type has a **type_table_object_id** that is a foreign key into the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view. You can use this ID column to query various catalog views, in a way that is similar to an **object_id** column of a regular table, to discover the structure of the table type such as its columns and constraints.    
  

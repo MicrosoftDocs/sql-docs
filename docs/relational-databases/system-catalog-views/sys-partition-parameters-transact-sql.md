@@ -1,25 +1,23 @@
 ---
-description: "sys.partition_parameters (Transact-SQL)"
-title: "sys.partition_parameters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.partition_parameters (Transact-SQL)"
+description: sys.partition_parameters (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "partition_parameters_TSQL"
   - "partition_parameters"
   - "sys.partition_parameters_TSQL"
   - "sys.partition_parameters"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.partition_parameters catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_parameters (Transact-SQL)

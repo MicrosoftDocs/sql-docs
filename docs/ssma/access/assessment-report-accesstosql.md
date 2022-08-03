@@ -11,8 +11,10 @@ helpviewer_keywords:
   - "Assessment Report dialog box"
   - "Conversion Report dialog box"
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.access.assessmentreport.f1"
 ---
 # Assessment Report (AccessToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

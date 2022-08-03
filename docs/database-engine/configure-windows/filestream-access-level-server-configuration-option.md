@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], access level"
   - "filestream access level"
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # filestream access level Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

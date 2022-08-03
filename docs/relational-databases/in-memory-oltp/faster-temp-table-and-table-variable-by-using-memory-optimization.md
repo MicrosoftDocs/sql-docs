@@ -1,20 +1,19 @@
 ---
 title: "Memory optimization for faster temp table and table variables"
 description: Learn about converting temporary tables, table variables, or table-valued parameters to memory-optimized tables and table variables to improve performance.
-ms.custom: seo-dt-2019
+author: kevin-farlee
+ms.author: kfarlee
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-author: kevin-farlee
-ms.author: kfarlee
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   
 If you use temporary tables, table variables, or table-valued parameters, consider conversions of them to leverage memory-optimized tables and table variables to improve performance. The code changes are usually minimal.  
@@ -57,7 +56,7 @@ In-Memory OLTP provides the following objects that can be used for memory-optimi
   
 ## B. Scenario: Replace global tempdb &#x23;&#x23;table  
   
-Replacing a global temporary table with a memory-optimized SCHEMA_ONLY table is fairly straightforward. The biggest change is to create the table at deployment time, not at runtime. Creation of memory-optimized tables takes longer than creation of traditional tables, due to the compile-time optimizations. Creating and dropping memory-optimized tables as part of the online workload would impact the performance of the workload, as well as the performance of redo on AlwaysOn secondaries and database recovery.
+Replacing a global temporary table with a memory-optimized SCHEMA_ONLY table is fairly straightforward. The biggest change is to create the table at deployment time, not at runtime. Creation of memory-optimized tables takes longer than creation of traditional tables, due to the compile-time optimizations. Creating and dropping memory-optimized tables as part of the online workload would impact the performance of the workload, as well as the performance of redo on Always On Availability Group secondaries and database recovery.
 
 Suppose you have the following global temporary table.  
   

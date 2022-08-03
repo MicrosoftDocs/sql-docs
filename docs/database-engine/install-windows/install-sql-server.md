@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server installation guide
@@ -36,7 +36,7 @@ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[s
     - [[!INCLUDE[ss2019](../../includes/sssql19-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
     - [[!INCLUDE[ss2017](../../includes/sssql17-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
     - [[!INCLUDE[ss2016](../../includes/sssql16-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
+    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 *  **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), as well as system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
 
@@ -53,8 +53,7 @@ The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.m
 
 * **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft licensing page](https://www.microsoft.com/licensing/product-licensing/sql-server).
 * If you have a volume licensing agreement, for example an [Enterprise Agreement](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise), you can download software from the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/servicecenter/default.aspx).
-* [Free version - latest](https://www.microsoft.com/sql-server/sql-server-downloads).
-* [Free version - others](https://www.microsoft.com/evalcenter/evaluate-sql-server).
+* [Free versions](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 Other SQL Server components can be found here:
 
@@ -100,7 +99,7 @@ Other SQL Server components can be found here:
 |-----------|-----------------|  
 |[SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|Install and configure the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[SQL Server Replication](../../database-engine/install-windows/install-sql-server-replication.md)|Install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication.|  
-|[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists articles to install the Distributed Replay feature.|  
+|[Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)|Lists articles to install the Distributed Replay feature.|  
 |[SQL Server Management Tools with SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|Install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools.|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components.|  
   

@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_cluster (Transact-SQL)"
-title: "sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_cluster (Transact-SQL)"
+description: sys.dm_hadr_cluster (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/31/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_hadr_cluster"
   - "dm_hadr_cluster_HADR"
   - "sys.dm_hadr_cluster_TSQL"
   - "dm_hadr_cluster"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
+dev_langs:
+  - "TSQL"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

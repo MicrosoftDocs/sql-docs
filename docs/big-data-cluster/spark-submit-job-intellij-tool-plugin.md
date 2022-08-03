@@ -5,16 +5,18 @@ description: Learn how to submit Spark jobs on SQL Server Big Data Clusters in A
 author: jejiang
 ms.author: jejiang
 ms.reviewer: wiassaf
-ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 

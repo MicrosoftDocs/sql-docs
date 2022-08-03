@@ -1,36 +1,33 @@
 ---
-title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs"
-description: Returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
-ms.custom: ""
-ms.date: "03/20/2017"
+title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL)"
+description: sys.dm_db_xtp_checkpoint_stats returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_checkpoint_stats"
   - "dm_db_xtp_checkpoint_stats_TSQL"
   - "sys.dm_db_xtp_checkpoint_stats"
   - "sys.dm_db_xtp_checkpoint_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_stats dynamic management view"
-ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns statistics about the In-Memory OLTP checkpoint operations in the current database. If the database has no In-Memory OLTP objects, returns an empty result set.  
+  Returns statistics about the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint operations in the current database. If the database has no [!INCLUDE[hek_2](../../includes/hek-2-md.md)]P objects, returns an empty result set.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
-```  
-USE In_Memory_db_name
+```sql  
+USE [In_Memory_db_name]
 SELECT * FROM sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
@@ -68,7 +65,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |time_since_last_close_in_ms|**bigint**|Time since last close of the checkpoint.|  
 |current_checkpoint_id|**bigint**|Currently new segments are being assigned to this checkpoint. The checkpoint system is a pipeline. The current checkpoint is the one which segments from the log are being assigned to. Once it's reached a limit, the checkpoint is released by the controller and a new one created as current.|  
 |current_checkpoint_segment_count|**bigint**|Count of segments in the current checkpoint.|  
-|recovery_lsn_candidate|**bigint**|**Internally Only**. Candidate to be picked as recoverylsn when current_checkpoint_id closes.|  
+|recovery_lsn_candidate|**bigint**|**Internally Only**. Candidate to be picked as recoverylsn when `current_checkpoint_id` closes.|  
 |outstanding_checkpoint_count|**bigint**|Number of checkpoints in the pipeline waiting to be closed.|  
 |closing_checkpoint_id|**bigint**|ID of the closing checkpoint.<br /><br /> Serializers are working in parallel, so once they're finished then the checkpoint is a candidate to be closed by close thread. But the close thread can only close one at a time and it must be in order, so the closing checkpoint is the one that the close thread is working on.|  
 |recovery_checkpoint_id|**bigint**|ID of the checkpoint to be used in recovery.|  
@@ -86,22 +83,28 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |log_to_process_in_bytes|**bigint**|The number of log bytes between the thread's current log sequence number (LSN) and the end-of-log.|  
 |total_log_blocks_processed|**bigint**|Total number of log blocks processed since server startup.|  
 |total_log_records_processed|**bigint**|Total number of log records processed since server startup.|  
-|xtp_log_records_processed|**bigint**|Total number of In-Memory OLTP log records processed since server startup.|  
+|xtp_log_records_processed|**bigint**|Total number of [!INCLUDE[hek_2](../../includes/hek-2-md.md)] log records processed since server startup.|  
 |total_wait_time_in_ms|**bigint**|Cumulative wait time in ms.|  
 |waits_for_io|**bigint**|Number of waits for log IO.|  
 |io_wait_time_in_ms|**bigint**|Cumulative time spent waiting on log IO.|  
 |waits_for_new_log|**bigint**|Number of waits for new log to be generated.|  
 |new_log_wait_time_in_ms|**bigint**|Cumulative time spend waiting on new log.|  
-|log_generated_since_last_checkpoint_in_bytes|**bigint**|Amount of log generated since the last In-Memory OLTP checkpoint.|  
-|ms_since_last_checkpoint|**bigint**|Amount of time in milliseconds since the last In-Memory OLTP checkpoint.|  
-|checkpoint_lsn|**numeric (38)**|The recovery log sequence number (LSN) associated with the last completed In-Memory OLTP checkpoint.|  
+|log_generated_since_last_checkpoint_in_bytes|**bigint**|Amount of log generated since the last [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint.|  
+|ms_since_last_checkpoint|**bigint**|Amount of time in milliseconds since the last [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint.|  
+|checkpoint_lsn|**numeric (38)**|The recovery log sequence number (LSN) associated with the last completed [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint.|  
 |current_lsn|**numeric (38)**|The LSN of the log record that is currently processing.|  
 |end_of_log_lsn|**numeric (38)**|The LSN of the end of the log.|  
-|task_address|**varbinary(8)**|The address of the SOS_Task. Join to sys.dm_os_tasks to find additional information.|  
+|task_address|**varbinary(8)**|The address of the SOS_Task. Join to `sys.dm_os_tasks` to find additional information.|  
   
 ## Permissions  
  Requires `VIEW DATABASE STATE` permission on the server.  
   
-## See Also  
- [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
+## See also
+
+- [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
+- [Memory-Optimized Table Dynamic Management Views](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+
+## Next steps 
+
+- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

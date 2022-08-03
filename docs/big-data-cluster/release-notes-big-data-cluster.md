@@ -1,25 +1,28 @@
 ---
 title: SQL Server 2019 Big Data Clusters platform release notes
 titleSuffix: SQL Server 2019 Big Data Clusters
-description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
+description: This article describes the latest updates and known issues for SQL Server Big Data Clusters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
-ms.date: 01/31/2022
-ms.topic: conceptual
+ms.reviewer: hudequei
+ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
-# SQL Server Big Data Clusters platform release notes
+# SQL Server 2019 Big Data Clusters platform release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]. This article is broken into sections for each release describing the cumulative update (CU) changes. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
+> [!IMPORTANT]
+> The Microsoft SQL Server 2019 Big Data Clusters add-on will be retired. Support for SQL Server 2019 Big Data Clusters will end on January 14, 2025. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters) and [Big data options on the Microsoft SQL Server platform](../big-data-cluster/big-data-options.md). 
+
+The following release notes apply to [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release describing the CU changes. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
 
 ## Tested configurations
 
-[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] is a fully containerized solution orchestrated by Kubernetes. Starting with CU12, each release of SQL Server 2019 Big Data Clusters is tested against a fixed configuration of components. The configuration is evaluated with each release and adjustments are made to stay in-line with the ecosystem as Kubernetes continues to evolve.
+[!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] is a fully containerized solution orchestrated by Kubernetes. Starting with CU12, each release of SQL Server Big Data Clusters is tested against a fixed configuration of components. The configuration is evaluated with each release and adjustments are made to stay in-line with the ecosystem as Kubernetes continues to evolve.
 
    > [!IMPORTANT]
    > Kubernetes is a fast paced ecosystem. It is key to keep your platform updated in order to be secure, and to be on a tested configuration for SQL Server Big Data Clusters.
@@ -31,6 +34,8 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU16 GDR | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
+| CU16 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
@@ -46,14 +51,16 @@ Restrictions:
 Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
 
 ## Release history
 
-The following table lists the release history for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
+The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
+| Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) |  15.0.4236.7  | 20.3.12   | June 14 2022 |
+| [CU16](release-notes-cumulative-update-16.md) |  15.0.4223.1  | 20.3.11   | May 2 2022 |
 | [CU15](release-notes-cumulative-update-15.md) |  15.0.4198.2  | 20.3.10   | Jan 27 2022 |
 | [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | Nov 22 2021 |
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | Sept 9 2021 |
@@ -71,7 +78,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 | [CU1](release-notes-cumulative-updates-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | Jan 7 2020 |
 | [GDR1](release-notes-cumulative-updates-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | Nov 4 2019 |
 
-<sup>1</sup> CU7 is not available for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
+<sup>1</sup> CU7 is not available for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
 
 <sup>2</sup> [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
@@ -120,7 +127,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
-- **Issue and customer effect**: When using PolyBase in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:     
+- **Issue and customer effect**: When using PolyBase in [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:     
 
 > `Msg 105082, Level 16, State 1, Line 1`
 > `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
@@ -133,7 +140,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: Affects existing clusters, when a failed upgrade to CU9 results in a rollback or user issues a downgrade to an older release.
 
-- **Issue and customer effect**: The software version used for Elastic Search was upgraded with CU9 and the new version is not backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback will be permanently lost. If you issue a downgrade to older version of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data will be restored.
+- **Issue and customer effect**: The software version used for Elastic Search was upgraded with CU9 and the new version is not backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback will be permanently lost. If you issue a downgrade to older version of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data will be restored.
 
 - **Workaround**: If needed, you can troubleshoot using logs collected using `azdata bdc debug copy-logs` command.
 
@@ -212,7 +219,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -253,7 +260,7 @@ Upgrading using different repositories for current and target builds is not supp
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-   This error is more likely to occur when you upgrade [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] in Azure Kubernetes Service (AKS).
+   This error is more likely to occur when you upgrade [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] in Azure Kubernetes Service (AKS).
 
 - **Workaround**: Increase the timeout for the upgrade. 
 
@@ -356,4 +363,4 @@ Upgrading using different repositories for current and target builds is not supp
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)
+For more information about [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)], see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

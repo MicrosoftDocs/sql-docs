@@ -1,24 +1,22 @@
 ---
-description: "syscollector_execution_stats (Transact-SQL)"
-title: "syscollector_execution_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syscollector_execution_stats (Transact-SQL)"
+description: syscollector_execution_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syscollector_execution_stats"
   - "syscollector_execution_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syscollector_execution_stats view"
   - "data collector view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,7 +1,7 @@
 ---
 description: "DMX Tutorials (Analysis Services - Data Mining)"
 title: "DMX Tutorials (Analysis Services - Data Mining) | Microsoft Docs"
-ms.date: 06/07/2018
+ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx

@@ -4,18 +4,18 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to install tools used with SQL Server 2019 big data cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 12/13/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-installation
+ms.topic: conceptual
+ms.custom: intro-installation
 ---
 
 # Install SQL Server 2019 big data tools
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes the client tools that should be installed for creating, managing, and using [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows or Linux.
 

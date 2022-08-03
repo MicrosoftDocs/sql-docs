@@ -1,24 +1,21 @@
 ---
-description: "Database Mirroring - sys.dm_db_mirroring_connections"
-title: "sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+title: "sys.dm_db_mirroring_connections (Transact-SQL)"
+description: Database Mirroring - sys.dm_db_mirroring_connections returns a row for each connection established for database mirroring.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/03/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_mirroring_connections"
   - "dm_db_mirroring_connections"
   - "sys.dm_db_mirroring_connections_TSQL"
   - "dm_db_mirroring_connections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_mirroring_connections dynamic management view"
-ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # Database Mirroring - sys.dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,17 +55,16 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## Physical Joins  
- ![join for sys.join_dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-db-mirroring-connections.gif "join for sys.join_dm_db_mirroring_connections")  
+## Physical joins  
+
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-db-mirroring-connections.svg" alt-text="Diagram of physical joins for sys.join_dm_db_mirroring_connections.":::
   
-## Relationship Cardinalities  
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-|**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|One-to-one|  
+|`dm_db_mirroring_connections.connection_id`|`dm_exec_connections.connection_id`|One-to-one|  
   
-## See Also  
+## Next steps
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
-  
-  
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)

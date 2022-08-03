@@ -4,14 +4,16 @@ titleSuffix: SQL Server Big Data Cluster
 description: Fix behavior - clients fail to Authenticate when endpoints DNS entries are configures as CNAME pointing to an alias name.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 05/01/2020
-ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Symptom: AD mode login fails - untrusted domain (Big Data Clusters)
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 On a SQL Server Big Data Cluster in Active Directory mode, a connection attempt may fail and the connection attempt returns the following error:
 

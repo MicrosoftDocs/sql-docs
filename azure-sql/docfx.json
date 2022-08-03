@@ -1,0 +1,128 @@
+{
+  "build": {
+    "content": [
+      {
+        "group": "gr-azure-sql",
+        "src": "./",
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "group": "gr-azure-sql",
+        "src": "./",
+        "files": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
+          "**/*.png",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/azure-docs",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
+      "extendBreadcrumb": true,
+      "layout": "Conceptual",
+      "uhfHeaderId": "Azure",
+      "contributors_to_exclude": [
+        "hexiaokai",
+        "openpublishingbuild",
+        "sudeepku",
+        "saldana",
+        "iRaindrop"
+      ],
+      "searchScope": [
+        "azure sql"
+      ],
+      "brand": "azure",
+      "toc_preview": true,
+      "titleSuffix": "Azure SQL",
+      "recommendations": true,
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "Azure.azure-documents",
+          "folder_relative_path_in_docset": "articles/azure-sql/"
+        }
+      }
+    },
+    "fileMetadata": {
+      "breadcrumb_path": {
+        "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
+      },
+      "feedback_product_url": {
+        "articles/azure-sql/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+        "articles/azure-sql/database/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+        "articles/azure-sql/virtual-machines/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+        "articles/azure-sql/managed-instance/**/*.md": "https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84"
+      },
+      "titleSuffix": {
+        "migration-guides/database/**/*.md": "Azure SQL Database",
+        "migration-guides/managed-instance/**/*.md": "Azure SQL Managed Instance",
+        "migration-guides/virtual-machines/**/*.md": "SQL Server on Azure VMs",
+        "database/**/*.md": "Azure SQL Database",
+        "managed-instance/**/*.md": "Azure SQL Managed Instance",
+        "virtual-machines/**/*.md": "SQL Server on Azure VMs",
+        ".": "Azure SQL"
+      },
+      "monikerRange": {
+        "./*.md": "= azuresql || = azuresql-db || = azuresql-mi || = azuresql-vm",
+        "./*.yml": "= azuresql || = azuresql-db || = azuresql-mi || = azuresql-vm",
+        "migration-guides/database/**/*.md": "= azuresql || = azuresql-db ",
+        "migration-guides/database/**/*.yml": "= azuresql || = azuresql-db ",
+        "migration-guides/managed-instance/**/*.md": "= azuresql  || = azuresql-mi ",
+        "migration-guides/managed-instance/**/*.yml": "= azuresql  || = azuresql-mi ",
+        "migration-guides/virtual-machines/**/*.md": "= azuresql || = azuresql-vm",
+        "migration-guides/virtual-machines/**/*.yml": "= azuresql || = azuresql-vm",
+        "database/**/*.md": "= azuresql || = azuresql-db ",
+        "database/**/*.yml": "= azuresql || = azuresql-db ",        
+        "managed-instance/**/*.md": "= azuresql || = azuresql-mi ",
+        "managed-instance/**/*.yml": "= azuresql || = azuresql-mi ",
+        "virtual-machines/**/*.md": "= azuresql  || = azuresql-vm",
+        "virtual-machines/**/*.yml": "= azuresql  || = azuresql-vm"
+      }
+    },
+    "template": [],
+    "dest": "azure-sql",
+    "groups": {
+      "gr-azure-sql": {
+        "moniker_range": "= azuresql|| azuresql-db || azuresql-mi || azuresql-vm ",
+        "dest": "azure-sql"
+      }
+    },
+    "rules": {
+      "sensitive-language-sl": {
+        "exclude": [
+          "virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
+          "virtual-machines/linux/rhel-high-availability-listener-tutorial.md"
+        ]
+      }
+    }
+  }
+}

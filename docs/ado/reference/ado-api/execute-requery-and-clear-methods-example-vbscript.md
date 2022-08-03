@@ -1,22 +1,18 @@
 ---
+title: "Execute, Requery, and Clear Methods Example (VBScript)"
 description: "Execute, Requery, and Clear Methods Example (VBScript)"
-title: "Execute, Requery, and Clear Methods Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Execute method [ADO], VBScript example"
   - "Clear method [ADO], VBScript example"
   - "Requery method [ADO], VBScript example"
-ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # Execute, Requery, and Clear Methods Example (VBScript)
 This example demonstrates the **Execute** method when run from both a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. It also uses the [Requery](../../../ado/reference/ado-api/requery-method.md) method to retrieve current data in a [recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and the [Clear](../../../ado/reference/ado-api/clear-method-ado.md) method to clear the contents of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. The ExecuteCommand and PrintOutput procedures are required for this procedure to run.  

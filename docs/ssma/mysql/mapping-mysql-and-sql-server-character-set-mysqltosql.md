@@ -8,8 +8,10 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.mysql.charsetmappingpanel.f1"
 ---
 # Mapping MySQL and SQL Server Character Set (MySQLToSQL)
 Character set (Charset) can be specified for MySQL character data types, expressions and literals.  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "security [SQL Server], services"
   - "services [SQL Server], WMI"
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Security Requirements for Managing Services
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

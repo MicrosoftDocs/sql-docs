@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_exec_session_wait_stats (Transact-SQL)"
-title: "sys.dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_session_wait_stats (Transact-SQL)"
+description: sys.dm_exec_session_wait_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/24/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_session_wait_stats"
   - "sys.dm_exec_session_wait_stats_tsql"
   - "dm_exec_session_wait_stats"
   - "dm_exec_session_wait_stats_tsql"
-dev_langs: 
-  - "TSQL" 
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_session_wait_stats"
+dev_langs:
+  - "TSQL"
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)
 

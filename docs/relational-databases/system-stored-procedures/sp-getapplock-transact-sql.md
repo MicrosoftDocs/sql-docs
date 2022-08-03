@@ -22,7 +22,7 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_getapplock (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Places a lock on an application resource.  
   
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **varchar(32)**. The value can be **Transaction** (the default) or **Session**. When the *lock_owner* value is **Transaction**, by default or specified explicitly, sp_getapplock must be executed from within a transaction.  
   
  [ @LockTimeout= ] '*value*'  
- Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. To indicate that a lock request should return a Return Code of -1 instead of wait for the lock when the request cannot be granted immediately, specify 0.  
+ Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. A value of -1 (default) indicates no time-out period (that is, wait forever). To indicate that a lock request should return a Return Code of -1 instead of wait for the lock when the request cannot be granted immediately, specify 0.  
   
  [ @DbPrincipal= ] '*database_principal*'  
  Is the user, role, or application role that has permissions to an object in a database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role to call the function successfully. The default is public.  
@@ -80,7 +80,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 -   The database ID of the database containing the lock resource.  
   
--   The database principle specified in the @DbPrincipal parameter.  
+-   The database principal specified in the @DbPrincipal parameter.  
   
 -   The lock name specified in the @Resource parameter.  
   

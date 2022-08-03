@@ -1,13 +1,13 @@
 ---
 title: "Emulating Records and Collections via CLR UDT"
 description: "Covers how the SQL Server Migration Assistant (SSMA) for Oracle uses the SQL Server Common Language Runtime (CLR) User-Defined Data Types (UDT) to emulate Oracle Records and Collections."
-author: nahk-ivanov
+author: cpichuka
 ms.prod: sql
 ms.technology: ssma
 ms.devlang: "sql"
 ms.topic: "article"
 ms.date: "1/22/2020"
-ms.author: "alexiva"
+ms.author: cpichuka
 ---
 
 # Emulating Records and Collections via CLR UDT

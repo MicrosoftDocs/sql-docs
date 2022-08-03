@@ -1,18 +1,14 @@
 ---
+title: "Properties Collection Properties, Methods, and Events"
 description: "Properties Collection Properties, Methods, and Events"
-title: "Properties Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Properties collection [ADO], members"
-ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Properties collection [ADO], members"
 ---
 # Properties Collection Properties, Methods, and Events
 ## Properties  

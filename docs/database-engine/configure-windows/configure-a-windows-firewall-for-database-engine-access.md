@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "firewall systems, [Database Engine]"
   - "security [SQL Server], firewalls"
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure a Windows Firewall for Database Engine Access
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.author: maghan
 ###  <a name="Security"></a> Security  
  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager
+##  <a name="SSMSProcedure"></a> Using Windows Defender Firewall with Advanced Security
   
- The following procedures configure the Windows Firewall by using the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in. The Windows Firewall with Advanced Security only configures the current profile. For more information about the Windows Firewall with Advanced Security, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ The following procedures configure the Windows Firewall by using the Windows Defender Firewall with Advanced Security Microsoft Management Console (MMC) snap-in. The Windows Defender Firewall with Advanced Security only configures the current profile. For more information about the Windows Defender Firewall with Advanced Security, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
 #### To open a port in the Windows firewall for TCP access  
   

@@ -2,19 +2,21 @@
 title: Common scenario working with Big Data Clusters with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
 description: Common scenario working with BDC withJupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Common notebooks for SQL Server Big Data Clusters
 
 This article lists notebooks for SQL Server Big Data Clusters. The executable notebooks (.ipynb) are designed for SQL Server 2019 to assist with common scenarios in big data clusters.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
 

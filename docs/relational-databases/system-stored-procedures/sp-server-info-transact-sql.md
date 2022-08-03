@@ -21,7 +21,7 @@ ms.author: maghan
 ---
 # sp_server_info (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a list of attribute names and matching values for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database gateway, or the underlying data source.  
   

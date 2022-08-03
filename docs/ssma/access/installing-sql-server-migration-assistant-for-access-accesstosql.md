@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "uninstalling SSMA"
   - "upgrading SSMA"
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)

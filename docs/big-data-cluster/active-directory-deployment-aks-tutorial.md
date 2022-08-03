@@ -2,20 +2,21 @@
 title: Deploy in Active Directory on Azure Kubernetes Services (AKS) - tutorial
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 
 # Tutorial: Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
 This article explains how to deploy a SQL Server big data cluster in the Active Directory authentication mode with a reference architecture. The reference architecture extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 

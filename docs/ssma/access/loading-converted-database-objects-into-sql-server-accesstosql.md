@@ -28,8 +28,11 @@ helpviewer_keywords:
   - "uploading objects into SQL Azure"
   - "uploading objects into SQL Server"
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.access.synchronizecommittarget.f1"
+
 ---
 # Loading Converted Database Objects into SQL Server (AccessToSQL)
 After you have converted Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
@@ -69,7 +72,7 @@ To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
     -   A cross sign means no action will be taken.  
   
-    Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
+    Select the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
 If you want to save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or you want to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  

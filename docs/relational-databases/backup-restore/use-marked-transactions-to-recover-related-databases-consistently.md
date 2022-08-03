@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "BEGIN TRAN...WITH MARK statement"
   - "two-phase commit"
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
 

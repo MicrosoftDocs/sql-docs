@@ -1,25 +1,23 @@
 ---
-description: "sys.trace_event_bindings (Transact-SQL)"
-title: "sys.trace_event_bindings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trace_event_bindings (Transact-SQL)"
+description: sys.trace_event_bindings (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.trace_event_bindings_TSQL"
   - "trace_event_bindings"
   - "sys.trace_event_bindings"
   - "trace_event_bindings_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trace_event_bindings catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

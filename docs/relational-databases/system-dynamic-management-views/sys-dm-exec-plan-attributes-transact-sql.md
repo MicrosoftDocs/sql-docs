@@ -1,23 +1,21 @@
 ---
-description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_plan_attributes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/24/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_plan_attributes_TSQL"
   - "dm_exec_plan_attributes_TSQL"
   - "dm_exec_plan_attributes"
   - "sys.dm_exec_plan_attributes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_plan_attributes dynamic management function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

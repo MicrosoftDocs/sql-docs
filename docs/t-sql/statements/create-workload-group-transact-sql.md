@@ -1,24 +1,22 @@
 ---
-description: "CREATE WORKLOAD GROUP (Transact-SQL)"
 title: "CREATE WORKLOAD GROUP (Transact-SQL)"
-ms.custom: ""
+description: CREATE WORKLOAD GROUP (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/04/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WORKLOAD GROUP"
   - "WORKLOAD_GROUP_TSQL"
   - "CREATE WORKLOAD GROUP"
   - "CREATE_WORKLOAD_GROUP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)

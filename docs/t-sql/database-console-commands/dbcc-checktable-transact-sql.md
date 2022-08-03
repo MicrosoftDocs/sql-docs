@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)
@@ -179,7 +179,7 @@ Parallel checking can be disabled by using trace flag 2528. For more information
 > During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error. 
 
 > [!NOTE]
-> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the RDBMS Manageability section of [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-version-15.md#RDBMSM). 
+> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the RDBMS Manageability section of [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-2019.md#RDBMSM). 
 
     
 ## Understanding DBCC Error Messages    
@@ -258,4 +258,3 @@ DBCC CHECKTABLE ('Production.Product',@indid);
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)     
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
-  

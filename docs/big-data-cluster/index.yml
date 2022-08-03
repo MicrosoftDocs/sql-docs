@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Big Data Clusters
-summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight, and empower our users as they quench their thirst for data driven insights.
+summary: SQL Server 2019 Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight, and empower our users as they quench their thirst for data driven insights. The Microsoft SQL Server 2019 Big Data Clusters add-on will be retired. Support for SQL Server 2019 Big Data Clusters will end on January 14, 2025.
 
 metadata:
   title: Big Data Clusters - Learn how to manage, deploy, and use
@@ -11,7 +11,7 @@ metadata:
   ms.technology: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.date: 09/07/2021
+  ms.date: 02/22/2022
   ms.prod: sql
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -22,12 +22,16 @@ landingContent:
   # Card (Get started)
   - title: About Big Data Clusters
     linkLists:
+      - linkListType: architecture
+        links:
+          - text: Big data options on the Microsoft SQL Server platform
+            url: big-data-options.md
       - linkListType: overview
         links:
           - text: Introducing Big Data Clusters
             url: big-data-cluster-overview.md
           - text: Big Data Clusters FAQ
-            url: big-data-cluster-faq.yml
+            url: big-data-cluster-faq.yml         
       - linkListType: whats-new
         links:
           - text: What's new

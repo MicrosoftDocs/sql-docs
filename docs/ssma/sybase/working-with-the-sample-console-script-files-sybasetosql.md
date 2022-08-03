@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Sample Console Script Files"
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Working with the Sample Console Script Files (SybaseToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

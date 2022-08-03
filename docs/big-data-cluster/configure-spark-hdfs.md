@@ -6,12 +6,14 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mikeray
 ms.date: 08/04/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Configure Apache Spark and Apache Hadoop in Big Data Clusters
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile at deployment time.
 

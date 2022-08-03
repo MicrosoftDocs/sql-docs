@@ -3,8 +3,8 @@ title: Extension for Oracle
 description: Learn how to install the Azure Data Studio extension for Oracle, which enables you to connect to Oracle databases.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: nahk-ivanov
-ms.author: "alexiva"
+author: tdoshin
+ms.author: timioshin
 ms.reviewer: "maghan"
 ms.topic: conceptual
 ms.custom:
@@ -21,6 +21,9 @@ The Azure Data Studio functionality available for Oracle includes:
 - [Keyboard shortcuts](../keyboard-shortcuts.md)
 - [Source control integration](../source-control.md)
 - [Workspace & user settings](../settings.md)
+
+> [!NOTE]
+> Currently extension provides a read-only view of the database objects. Running queries is not supported.
 
 ## Install the Extension for Oracle
 

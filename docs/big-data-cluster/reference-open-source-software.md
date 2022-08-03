@@ -4,16 +4,18 @@ titleSuffix: SQL Server Big Data Clusters
 description: Identify open-source software and version used in SQL Server Big Data Clusters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Open-source software reference
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 A SQL Server Big Data Cluster includes some containers that are developed by open-source projects. This article identifies specific projects, and versions of these containers.
 

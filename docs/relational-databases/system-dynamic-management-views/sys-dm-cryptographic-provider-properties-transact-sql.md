@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_cryptographic_provider_properties (Transact-SQL)"
-title: "sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_cryptographic_provider_properties (Transact-SQL)"
+description: sys.dm_cryptographic_provider_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_cryptographic_provider_properties_TSQL"
   - "sys.dm_cryptographic_provider_properties"
   - "sys.dm_cryptographic_provider_properties_TSQL"
   - "dm_cryptographic_provider_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cryptographic_provider_properties dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

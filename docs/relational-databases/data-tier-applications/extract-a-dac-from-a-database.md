@@ -22,7 +22,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Extract a DAC From a Database
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Use either the **Extract Data-tier Application Wizard** or a Windows PowerShell script to extract a data-tier application (DAC) package from an existing SQL Server database. The extraction process creates a DAC package file that contains definitions of the database objects and their related instance-level elements. For example, a DAC package file contains the database tables, stored procedures, views, and users, along with the logins that map to the database users.  
   
  
@@ -111,9 +111,10 @@ Select the reference data that you want to include in your data-tier application
  ###  <a name="BuildPackage"></a> Build package page  
  Use this page to monitor the progress of the wizard as it extracts the data-tier application (DAC).  
   
- **Action** - During the **Create and save DAC package file** action, the wizard extracts a DAC from your SQL Server database. Then, a DAC package is created in memory and saved to the location you specified. Click on the links in the **Result** column to see the outcome of the corresponding step.  
+ **Action** - During the **Create and save DAC package file** action, the wizard extracts a DAC from your SQL Server database. Then, a DAC package is created in memory and saved to the location you specified. Select the links in the **Result** column to see the outcome of the corresponding step.  
   
- **Save Report** - Click to save the results of the wizard's progress to a file.  
+ **Save Report** - Select to save the results of the wizard's progress to a file.  
+
   
  **Finish** - Click to close the wizard after processing has completed, or if an error occurs.  
    

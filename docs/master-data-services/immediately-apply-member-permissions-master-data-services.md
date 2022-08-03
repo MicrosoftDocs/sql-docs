@@ -1,5 +1,6 @@
 ---
-title: Immediately Apply Member Permissions
+title: Immediately apply member permissions
+description: "Explaines how to apply member permissions immediately for Master Data Services"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: chugugrace 
 ms.author: lle
 ---
-# Immediately Apply Member Permissions (Master Data Services)
+# Immediately apply member permissions (Master Data Services)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
@@ -45,7 +46,7 @@ ms.author: lle
   
 4.  Run the query.  
   
-## See Also  
+## See also  
  [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   

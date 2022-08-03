@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_exec_compute_pools (Transact-SQL)"
-title: "sys.dm_exec_compute_pools (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_compute_pools (Transact-SQL)"
+description: sys.dm_exec_compute_pools (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, big-data-clusters"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_compute_pools"
   - "dm_exec_compute_pools_TSQL"
   - "dm_exec_compute_pools"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_compute_pools dynamic management view"
-ms.assetid: 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_exec_compute_pools (Transact-SQL)

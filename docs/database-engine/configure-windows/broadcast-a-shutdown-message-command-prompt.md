@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "default instances [SQL Server], broadcasting shutdown messages"
   - "stopping SQL Server"
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Broadcast a Shutdown Message (Command Prompt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

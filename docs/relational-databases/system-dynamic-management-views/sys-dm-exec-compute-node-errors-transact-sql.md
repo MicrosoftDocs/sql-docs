@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_exec_compute_node_errors (Transact-SQL)"
-title: "sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_compute_node_errors (Transact-SQL)"
+description: sys.dm_exec_compute_node_errors (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL"
   - "DM_EXEC_COMPUTE_NODE_ERRORS"
   - "DM_EXEC_COMPUTE_NODE_ERRORS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, views"
   - "dm_exec_compute_node_errors"
   - "sys.dm_exec_compute_node_errors management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_errors (Transact-SQL)

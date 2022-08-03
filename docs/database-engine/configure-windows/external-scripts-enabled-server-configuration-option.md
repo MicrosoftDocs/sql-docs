@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "external scripts enabled option"
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-author: dphansen
-ms.author: davidph
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # External Scripts Enabled server configuration option

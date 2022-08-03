@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_sys_memory (Transact-SQL)"
-title: "sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_sys_memory (Transact-SQL)"
+description: sys.dm_os_sys_memory (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_sys_memory"
   - "sys.dm_os_sys_memory_TSQL"
   - "sys.dm_os_sys_memory"
   - "dm_os_sys_memory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_sys_memory dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_memory (Transact-SQL)

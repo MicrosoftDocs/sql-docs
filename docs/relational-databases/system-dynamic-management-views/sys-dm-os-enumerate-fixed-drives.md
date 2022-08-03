@@ -1,22 +1,20 @@
 ---
-description: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
-title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
+description: sys.dm_os_enumerate_fixed_drives (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/18/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_enumerate_fixed_drives"
   - "sys.dm_os_enumerate_fixed_drives_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_enumerate_fixed_drives dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 

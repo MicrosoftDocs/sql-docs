@@ -4,16 +4,19 @@ titleSuffix: SQL Server Big Data Clusters
 description: Upgrade to a Configuration Management Enabled Big Data Cluster
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rahul.ajmera
+ms.reviewer: rahul.ajmera, hudequei
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Upgrading to a Configuration Management Enabled Cluster (CU8 or lower to CU9+)
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Starting in CU9, Big Data Clusters includes a configuration management feature that enables administrators to alter or tune various parts of the Big Data Cluster post-deployment and get deeper insights into the configurations running in their BDC. Prior to CU9, Big Data Cluster configurations were generally only modifiable at deployment time, with a workaround to configure some SQL configurations through a custom `mssql-custom.conf` file. This workaround has now been resolved and these settings are configurable through the configuration management feature.
 
 ## Migrating SQL configurations in mssql-custom.conf to the configuration management system

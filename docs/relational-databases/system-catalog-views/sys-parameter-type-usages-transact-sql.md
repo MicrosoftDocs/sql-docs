@@ -1,25 +1,23 @@
 ---
-description: "sys.parameter_type_usages (Transact-SQL)"
-title: "sys.parameter_type_usages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.parameter_type_usages (Transact-SQL)"
+description: sys.parameter_type_usages (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.parameter_type_usages"
   - "sys.parameter_type_usages_TSQL"
   - "parameter_type_usages_TSQL"
   - "parameter_type_usages"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.parameter_type_usages catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

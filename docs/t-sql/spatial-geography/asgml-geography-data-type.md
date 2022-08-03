@@ -1,32 +1,31 @@
 ---
+title: "AsGml (geography Data Type)"
 description: "AsGml (geography Data Type)"
-title: "AsGml (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
   - "AsGml_(geography_Data_Type)_TSQL"
-  - "AsGml"
-  - "AsGml_TSQL"
-  - "AsGml (geography Data Type)"
+  - "AsGml_(geography Data Type)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "AsGml method"
-ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic 
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/14/2017"
 ---
-#  AsGml - geography Data Type
+
+# AsGml - geography Data Type
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns the Geography Markup Language (GML) representation of a **geography** instance.  
+Returns the Geography Markup Language (GML) representation of a **geography** instance.  
   
- For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## Syntax  
   

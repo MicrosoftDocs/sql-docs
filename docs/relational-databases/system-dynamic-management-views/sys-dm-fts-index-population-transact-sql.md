@@ -1,29 +1,26 @@
 ---
-description: "sys.dm_fts_index_population (Transact-SQL)"
-title: "sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2017"
+title: "sys.dm_fts_index_population (Transact-SQL)"
+description: sys.dm_fts_index_population returns information about the full-text index and semantic key phrase populations currently in progress in SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_fts_index_population"
   - "dm_fts_index_population"
   - "sys.dm_fts_index_population_TSQL"
   - "dm_fts_index_population_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_index_population dynamic management view"
-ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b 
-author: pmasl 
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns information about the full-text index and semantic key phrase populations currently in progress in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -58,18 +55,18 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
-## Physical Joins  
- ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Significant joins of this dynamic management view")  
+## Physical joins  
+
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.svg" alt-text="Diagram of physical joins for sys.dm_fts_index_population.":::
   
-## Relationship Cardinalities  
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|One-to-one|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|One-to-one|  
-|dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|Many-to-one|  
+|`dm_fts_active_catalogs.database_id`|`dm_fts_index_population.database_id`|One-to-one|  
+|`dm_fts_active_catalogs.catalog_id`|`dm_fts_index_population.catalog_id`|One-to-one|  
+|`dm_fts_population_ranges.parent_memory_address`|`dm_fts_index_population.memory_address`|Many-to-one|  
   
-## See Also  
+## Next steps
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
-  
+ [Full-Text Search and Semantic Search Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)

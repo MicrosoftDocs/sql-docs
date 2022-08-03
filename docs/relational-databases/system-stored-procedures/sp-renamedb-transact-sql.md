@@ -1,8 +1,8 @@
 ---
 description: "sp_renamedb (Transact-SQL)"
-title: "sp_renamedb (Transact-SQL) | Microsoft Docs"
+title: "sp_renamedb (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/06/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_renamedb"
-ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: markingmyname
 ms.author: maghan
 ---
@@ -31,8 +30,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'  
 ```  
   
@@ -45,6 +43,11 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
   
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
+ 
+## Remarks
+
+It's not possible to rename an Azure SQL database configured in an [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) relationship.
+
   
 ## Permissions  
  Requires membership in the **sysadmin** or **dbcreator** fixed server roles.  
@@ -52,7 +55,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## Examples  
  The following example creates the `Accounting` database and then changes the name of the database to `Financial`. The `sys.databases` catalog view is then queried to verify the new name of the database.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Accounting;  
@@ -65,12 +68,13 @@ WHERE name = N'Financial';
 GO  
 ```  
   
-## See Also  
- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## Next steps
+
+- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

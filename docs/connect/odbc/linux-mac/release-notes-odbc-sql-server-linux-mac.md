@@ -2,7 +2,7 @@
 title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -31,6 +31,15 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.10, June 2022
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 22.04, Red Hat 9 |
+| TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 18.0, February 2022
 
 | New item | Details |
@@ -40,6 +49,15 @@ GeneMi.  2019/04/03.
 | Ability to send long types as max types | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](../windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](../windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.9, February 2022
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Debian 11, Ubuntu 21.10, macOS 12 |
+| Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

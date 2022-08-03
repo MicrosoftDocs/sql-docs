@@ -2,7 +2,7 @@
 title: Using Azure Active Directory
 description: Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
 ms.custom: ""
-ms.date: 12/14/2021
+ms.date: 02/18/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -63,21 +63,7 @@ For more information about the new keywords/properties, see the following pages:
 
 ## Encryption and certificate validation
 
-This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication or Access Token connection string keywords (or their corresponding properties).
-
-### Encryption
-
-To improve security, when the new connection properties/keywords are used, the driver overrides the default encryption value by setting it to `yes`. Overriding happens at data source object initialization time. If encryption is set before initialization by any means, the value is respected and not overridden.
-
-> [!NOTE]
-> In ADO applications and in applications that obtain the `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value of `no`. As a result, the new authentication properties/keywords respect this setting and the encryption value **isn't** overridden. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
-
-### Certificate validation
-
-To improve security, the new connection properties/keywords respect the `TrustServerCertificate` setting (and its corresponding connection string keywords/properties) **independently of the client encryption setting**. As a result, server certificate is validated by default.
-
-> [!NOTE]
-> Certificate validation can also be controlled through the `Value` field of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` registry entry. Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
+See [Encryption and certificate validation](encryption-and-certificate-validation.md#major-version-18-with-new-authentication-methods) for more information.
 
 ## GUI additions
 
@@ -93,75 +79,75 @@ This section shows examples of new and existing connection string keywords to be
 ### SQL authentication
 - Using `IDataInitialize::GetDataSource`:
     - New:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=SqlPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=SqlPassword**;User ID=[username];Password=[password];Use Encryption for Data=Mandatory
     - Deprecated:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     - New:
-        > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];Encrypt=yes
+        > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];Encrypt=Mandatory
     - Deprecated:
-        > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=yes
+        > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=Mandatory
 
 ### Integrated Windows authentication using Security Support Provider Interface (SSPI)
 
 - Using `IDataInitialize::GetDataSource`:
     - New:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=Mandatory
     - Deprecated:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Integrated Security=SSPI**;Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Integrated Security=SSPI**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     - New:
-        > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=Mandatory
     - Deprecated:
-        > Server=[server];Database=[database];**Trusted_Connection=yes**;Encrypt=yes
+        > Server=[server];Database=[database];**Trusted_Connection=yes**;Encrypt=Mandatory
 
 ### Azure Active Directory username and password authentication
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
+    > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=Mandatory
 
 ### Azure Active Directory integrated authentication
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=Mandatory
 
 ### Azure Active Directory authentication using an access token
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
 
 ### Azure Active Directory interactive authentication
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryInteractive**;User ID=[username];Use Encryption for Data=true
+    > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryInteractive**;User ID=[username];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=Mandatory
 
 ### Azure Active Directory Managed Identity authentication
 
 - Using `IDataInitialize::GetDataSource`:
     - User-assigned managed identity:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;User ID=[Object ID];Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;User ID=[Object ID];Use Encryption for Data=Mandatory
     - System-assigned managed identity:
-        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;Use Encryption for Data=true
+        > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     - User-assigned managed identity:
-        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=yes
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=Mandatory
     - System-assigned managed identity:
-        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=yes
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=Mandatory
 
 ### Azure Active Directory service principal authentication
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
+    > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=Mandatory
 
 ## Code samples
 
@@ -185,8 +171,8 @@ int main()
     CoInitialize(nullptr);
 
     // Construct the connection string.
-    std::wstring connString = L"Provider=MSOLEDBSQL;Data Source=" + std::wstring(azureServer) + L";Initial Catalog=" + 
-                              std::wstring(azureDatabase) + L";Access Token=" + accessToken + L";Use Encryption for Data=true;";
+    std::wstring connString = L"Provider=MSOLEDBSQL19;Data Source=" + std::wstring(azureServer) + L";Initial Catalog=" + 
+                              std::wstring(azureDatabase) + L";Access Token=" + accessToken + L";Use Encryption for Data=Mandatory;";
     hr = CoCreateInstance(CLSID_MSDAINITIALIZE, nullptr, CLSCTX_INPROC_SERVER, 
                           IID_IDataInitialize, reinterpret_cast<LPVOID*>(&pIDataInitialize));
     if (FAILED(hr))
@@ -239,8 +225,8 @@ int main()
     CoInitialize(nullptr);
 
     // Construct the connection string.
-    std::wstring connString = L"Provider=MSOLEDBSQL;Data Source=" + std::wstring(azureServer) + L";Initial Catalog=" + 
-                              std::wstring(azureDatabase) + L";Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true;";
+    std::wstring connString = L"Provider=MSOLEDBSQL19;Data Source=" + std::wstring(azureServer) + L";Initial Catalog=" + 
+                              std::wstring(azureDatabase) + L";Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=Mandatory;";
 
     hr = CoCreateInstance(CLSID_MSDAINITIALIZE, nullptr, CLSCTX_INPROC_SERVER, 
                           IID_IDataInitialize, reinterpret_cast<LPVOID*>(&pIDataInitialize));

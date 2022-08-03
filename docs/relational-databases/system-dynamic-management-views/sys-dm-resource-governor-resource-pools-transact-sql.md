@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_resource_governor_resource_pools (Transact-SQL)"
-title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_resource_pools (Transact-SQL)"
+description: sys.dm_resource_governor_resource_pools (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_resource_pools_TSQL"
   - "dm_resource_governor_resource_pools_TSQL"
   - "sys.dm_resource_governor_resource_pools"
   - "dm_resource_governor_resource_pools"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pools dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_resource_governor_resource_pools (Transact-SQL)

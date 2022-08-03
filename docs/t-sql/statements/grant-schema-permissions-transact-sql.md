@@ -1,23 +1,21 @@
 ---
-description: "GRANT Schema Permissions (Transact-SQL)"
-title: "GRANT Schema Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Schema Permissions (Transact-SQL)"
+description: GRANT Schema Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schemas [SQL Server], permissions"
   - "permissions [SQL Server], schemas"
   - "GRANT statement, schemas"
   - "granting permissions [SQL Server], schemas"
+dev_langs:
+  - "TSQL"
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Schema Permissions (Transact-SQL)

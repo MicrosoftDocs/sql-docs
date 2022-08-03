@@ -1,19 +1,15 @@
 ---
+title: "DataControl Error Codes"
 description: "DataControl Object Error Codes"
-title: "DataControl Error Codes | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "errors [ADO], DataControl"
   - "DataControl errors [ADO]"
-ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-author: rothja
-ms.author: jroth
 ---
 # DataControl Object Error Codes
 The following table lists the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object error codes. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.

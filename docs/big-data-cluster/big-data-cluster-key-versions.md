@@ -2,16 +2,20 @@
 title: Key Versions
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how key versions are used for SQL BDC key management and key rotation for HDFS and SQL Server keys.
-ms.date: 06/14/2021
-author: Danibunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.topic: conceptual
+ms.date: 06/14/2021
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article provides details of how key versions are used in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management and key rotation for HDFS and SQL Server keys. The article includes details about how the versions can [incorporate customer's keys](#customer-provided-key). 
 

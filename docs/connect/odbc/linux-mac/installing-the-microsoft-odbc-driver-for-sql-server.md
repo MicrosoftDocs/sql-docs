@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
-ms.date: 02/17/2022
+ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -45,7 +45,7 @@ curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
 gpg --verify msodbcsql18_18.0.1.1-1_amd64.sig msodbcsql18_18.0.1.1-1_amd64.apk
-gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools_18.0.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools18_18.0.1.1-1_amd64.apk
 
 
 #Install the package(s)
@@ -201,22 +201,23 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.9.1.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.9.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.9.1.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.9.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.9.1.1-1_amd64.sig msodbcsql17_17.9.1.1-1_amd64.apk
-gpg --verify mssql-tools_17.9.1.1-1_amd64.sig mssql-tools_17.9.1.1-1_amd64.apk
+gpg --verify msodbcsql17_17.10.1.1-1_amd64.sig msodbcsql17_17.10.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.10.1.1-1_amd64.sig mssql-tools_17.10.1.1-1_amd64.apk
+
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.9.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.9.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.10.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ```
 
 > [!NOTE]

@@ -4,17 +4,18 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster deployments.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
-ms.metadata: seo-lt-2019
 ms.date: 07/02/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Configure Azure Kubernetes Service for SQL Server big data cluster deployments
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
@@ -144,7 +145,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks#az_aks_get_credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster

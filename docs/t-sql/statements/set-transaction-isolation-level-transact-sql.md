@@ -1,32 +1,30 @@
 ---
-description: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"
-title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"
+description: SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "LEVEL"
   - "LEVEL_TSQL"
   - "SET TRANSACTION ISOLATION LEVEL"
   - "ISOLATION"
   - "ISOLATION_TSQL"
   - "SET_TRANSACTION_ISOLATION_LEVEL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET TRANSACTION ISOLATION LEVEL statement"
   - "row versioning [SQL Server], isolation levels"
   - "TRANSACTION ISOLATION LEVEL option"
   - "isolation levels [SQL Server], setting"
   - "locking [SQL Server], isolation levels"
   - "transactions [SQL Server], isolation levels"
+dev_langs:
+  - "TSQL"
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)

@@ -1,8 +1,9 @@
 ---
 description: "Develop applications using Always Encrypted with secure enclaves"
 title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/15/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -25,11 +26,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 - You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 - Your application must use a SQL client driver version that supports secure enclaves. See the below sections for more details.
 
-- You need to configure an attestation protocol and an attestation URL for a database connection. The details for how you configure the attestation protocol and the attestation URL depend on the client driver, you are using.
+- You need to configure an attestation protocol and an attestation URL for a database connection. The details for how you configure the attestation protocol and the attestation URL depend on the client driver you're using.
 
 ## Client drivers for Always Encrypted with secure enclaves
 

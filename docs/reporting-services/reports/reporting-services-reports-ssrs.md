@@ -31,6 +31,8 @@ ms.author: maggies
 -   Define a report once and display it in a variety of ways. You can export the report to multiple file formats, or deliver the report to subscribers as e-mail or to a shared file. You can create multiple linked reports that apply separate parameter sets to the same report definition.  
   
 -   Use report parts, shared data sources, shared queries, and subreports to define data visualizations for re-use.  
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   Manage report data sources separately from the report definition. For example, you can change from a test data source to a production data source without changing the report.  
   
@@ -121,7 +123,7 @@ ms.author: maggies
   
 -   **Browser.**  Use the Report Server Web Service or SharePoint site to view published reports. On a SharePoint site, you can also configure a Web part to view published reports. For more information, see the following articles:
 
-     - [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+     - [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
      - [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
      - [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)
   

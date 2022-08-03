@@ -2,17 +2,19 @@
 title: "Run jobs: Spark & Hive Tools for VS Code"
 titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Submit Spark jobs on SQL Server big data cluster in Visual Studio Code
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Learn how to use Spark & Hive Tools for Visual Studio Code to create and submit PySpark scripts for Apache Spark, first we'll describe how to install the Spark & Hive tools in Visual Studio Code and then we'll walk through how to submit jobs to Spark.  
 

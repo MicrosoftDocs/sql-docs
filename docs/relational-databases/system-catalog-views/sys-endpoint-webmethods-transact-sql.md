@@ -1,27 +1,25 @@
 ---
-description: "sys.endpoint_webmethods (Transact-SQL)"
-title: "sys.endpoint_webmethods (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.endpoint_webmethods (Transact-SQL)"
+description: sys.endpoint_webmethods (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.endpoint_webmethods_TSQL"
   - "sys.endpoint_webmethods"
   - "endpoint_webmethods_TSQL"
   - "sys.http_soap_methods_TSQL"
   - "endpoint_webmethods"
   - "sys.http_soap_methods"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.endpoint_webmethods catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

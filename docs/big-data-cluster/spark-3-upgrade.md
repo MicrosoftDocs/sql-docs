@@ -2,18 +2,20 @@
 title: Spark 3 upgrade guide
 titleSuffix: SQL Server Big Data Clusters
 description: Spark 3 upgrade guide
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # SQL Server Big Data Clusters Spark 3 upgrade guide
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12 to CU13, and above.
 

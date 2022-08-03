@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

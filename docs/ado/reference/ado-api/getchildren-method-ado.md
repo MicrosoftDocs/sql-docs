@@ -1,22 +1,18 @@
 ---
+title: "GetChildren Method (ADO)"
 description: "GetChildren Method (ADO)"
-title: "GetChildren Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Record::raw_GetChildren"
-  - "_Record::GetChildren"
-helpviewer_keywords: 
-  - "GetChildren method [ADO]"
-ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Record::raw_GetChildren"
+  - "_Record::GetChildren"
+helpviewer_keywords:
+  - "GetChildren method [ADO]"
+apitype: "COM"
 ---
 # GetChildren Method (ADO)
 Returns a [Recordset](./recordset-object-ado.md) whose rows represent the children of a collection [Record](./record-object-ado.md).  

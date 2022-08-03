@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - sqlfreshmay19
   - intro-overview
-ms.date: "10/20/2020"
+ms.date: 7/11/2022
 ---
 
 # What is Azure Data Studio?
@@ -91,7 +91,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Azure Resource Explorer|Preview||
 |Generate Scripts Wizard||Yes|
 |Object Properties||Yes|
-|Table Designer||Yes|
+|Table Designer|Preview|Yes|
 
 ### Query Editor
 
@@ -162,12 +162,17 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |SQL Projects|Preview||
 |Schema Compare|Yes||
 
+## SQL Tools Service
+
+Azure Data Studio uses the [SqlToolsService](https://github.com/microsoft/sqltoolsservice) as the SQL API layer to the application.  SQL Tools Service is .NET-based and is open source under the MIT license. For SQL connectivity, SQL Tools Service uses [Microsoft.Data.SqlClient](https://github.com/dotnet/SqlClient) as the SQL driver.
+
 ## Next steps
 
 - [Download and Install Azure Data Studio](./download-azure-data-studio.md)
 - [Azure Data Studio FAQ](faq.yml)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
+- [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

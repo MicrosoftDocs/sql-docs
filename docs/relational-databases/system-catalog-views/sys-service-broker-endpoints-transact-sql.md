@@ -1,25 +1,23 @@
 ---
-description: "sys.service_broker_endpoints (Transact-SQL)"
-title: "sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.service_broker_endpoints (Transact-SQL)"
+description: sys.service_broker_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.service_broker_endpoints_TSQL"
   - "service_broker_endpoints"
   - "service_broker_endpoints_TSQL"
   - "sys.service_broker_endpoints"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.service_broker_endpoints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

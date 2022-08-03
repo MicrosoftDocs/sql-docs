@@ -20,7 +20,7 @@ This article describes performance tools provided by R packages to get informati
 
 ## Using RPROF
 
-[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) is a function included in the base package [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), which is loaded by default. 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) is a function included in the base package [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/PkgUtils), which is loaded by default. 
 
 In general, the *rprof* function works by writing out the call stack to a file, at specified intervals. You can then use the [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) function to process the output file. One advantage of *rprof* is that it performs sampling, thus lessening the performance load from monitoring.
 
@@ -60,5 +60,5 @@ The documentation for Microsoft R Open, which is installed by default, includes 
 
 + For more information about optimizing R scripts in SQL Server, see [Performance tuning and data optimization for R](r-and-data-optimization-r-services.md).
 + For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).
-+ For more information on the utils package, see [The R Utils Package](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
++ For more information on the utils package, see [The R Utils Package](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/PkgUtils).
 + For in-depth discussions of R programming, see ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).

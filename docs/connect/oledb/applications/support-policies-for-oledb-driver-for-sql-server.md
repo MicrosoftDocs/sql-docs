@@ -41,7 +41,7 @@ The following table lists which operating systems are supported by OLE DB Driver
 | Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|---|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.6|   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|   |Yes|Yes|Yes|Yes|Yes|Yes|
 |18.4|   |Yes|Yes|Yes|Yes|Yes|Yes|
 |18.3|   |Yes|Yes|Yes|Yes|Yes|Yes|
@@ -62,8 +62,8 @@ ADO applications can use the OLE DB Driver for SQL Server, but if they do so the
 
 ## OLE DB support policies  
 
-Applications can use the OLE DB provider (SQLOLEDB) included with the Windows operating system. However, that is in maintenance mode and no longer updated. Use the OLE DB Driver for SQL Server (MSOLEDBSQL) instead.
+Applications can use the OLE DB provider (SQLOLEDB) included with the Windows operating system. However, that is in maintenance mode and no longer updated. Use the OLE DB Driver for SQL Server (MSOLEDBSQL19 or MSOLEDBSQL) instead.
 
 ## See also  
 
-[Building applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)
+[Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

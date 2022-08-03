@@ -2,18 +2,20 @@
 title: SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide
 titleSuffix: SQL Server Big Data Clusters
 description: This article shows how to use SQL Server TDE Encryption at Rest feature of BDC
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 06/14/2021
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: tutorial
 ---
 
 # SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This guide demonstrates how to use encryption at rest capabilities of [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] to encrypt databases.
 

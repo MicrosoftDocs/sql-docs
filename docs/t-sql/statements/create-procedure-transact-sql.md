@@ -1,14 +1,14 @@
 ---
-description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
-ms.custom: ""
+description: CREATE PROCEDURE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PROC"
   - "PROCEDURE"
   - "CREATE PROCEDURE"
@@ -17,9 +17,7 @@ f1_keywords:
   - "CREATE PROC"
   - "PROC_TSQL"
   - "CREATE_PROCEDURE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameters [SQL Server], stored procedures"
   - "table-valued parameters"
   - "SET statement, stored procedures"
@@ -43,8 +41,8 @@ helpviewer_keywords:
   - "size [SQL Server], stored procedures"
   - "automatic stored procedure execution"
   - "creating stored procedures"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

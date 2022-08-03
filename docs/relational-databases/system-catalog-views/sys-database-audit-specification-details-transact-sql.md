@@ -1,25 +1,23 @@
 ---
-description: "sys.database_audit_specification_details (Transact-SQL)"
-title: "sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/05/2016"
+title: "sys.database_audit_specification_details (Transact-SQL)"
+description: sys.database_audit_specification_details (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_audit_specification_details"
   - "sys.database_audit_specification_details_TSQL"
   - "sys.database_audit_specification_details"
   - "database_audit_specification_details_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_audit_specification_details catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

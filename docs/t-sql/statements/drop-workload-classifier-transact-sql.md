@@ -1,24 +1,23 @@
 ---
-description: "DROP WORKLOAD Classifier (Transact-SQL)"
-title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP WORKLOAD Classifier (Transact-SQL)"
+description: DROP WORKLOAD Classifier (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "wiassaf"
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WORKLOAD CLASSIFIER"
   - "WORKLOAD_CLASSIFIER_TSQL"
   - "DROP_WORKLOAD_CLASSIFIER_TSQL"
   - "DROP WORKLOAD GROUP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP WORKLOAD CLASSIFIER statement"
-author: ronortloff
-ms.author: rortloff
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL)

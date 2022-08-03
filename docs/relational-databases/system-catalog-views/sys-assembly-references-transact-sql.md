@@ -1,25 +1,23 @@
 ---
-description: "sys.assembly_references (Transact-SQL)"
-title: "sys.assembly_references (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.assembly_references (Transact-SQL)"
+description: sys.assembly_references (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "assembly_references"
   - "sys.assembly_references_TSQL"
   - "assembly_references_TSQL"
   - "sys.assembly_references"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.assembly_references catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

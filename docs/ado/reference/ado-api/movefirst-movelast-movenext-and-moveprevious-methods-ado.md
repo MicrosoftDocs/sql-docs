@@ -1,15 +1,13 @@
 ---
+title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)"
 description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)"
-title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset15::MoveLast"
   - "Recordset15::MoveNext"
   - "Recordset15::raw_MoveNext"
@@ -18,14 +16,12 @@ f1_keywords:
   - "Recordset15::raw_MoveLast"
   - "Recordset15::MovePrevious"
   - "Recordset15::raw_MoveFirst"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MoveNext method [ADO]"
   - "MoveLast method [ADO]"
   - "MoveFirst method [ADO]"
   - "MovePrevious method [ADO]"
-ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)
 Moves to the first, last, next, or previous record in a specified [Recordset](./recordset-object-ado.md) object and makes that record the current record.  

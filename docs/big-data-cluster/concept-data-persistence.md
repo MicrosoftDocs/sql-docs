@@ -4,16 +4,17 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how persistent volumes provide a plug-in model for storage in Kubernetes. Also learn how data persistence works in a SQL Server 2019 Big Data Cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Data persistence in Kubernetes with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 [Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. In this model, the way that storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports [various kinds of storage solutions](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), including Azure disks and files, Network File System (NFS), and local storage.
 

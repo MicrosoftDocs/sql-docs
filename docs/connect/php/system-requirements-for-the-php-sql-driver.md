@@ -2,7 +2,7 @@
 title: System requirements
 description: The Microsoft Drivers for PHP for SQL Server support a wide range of PHP versions, operating systems, and SQL Server versions.
 ms.custom: ""
-ms.date: 01/20/2022
+ms.date: 02/17/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -43,7 +43,8 @@ If you're downloading the Windows version of the driver on a 64-bit version of W
 
 |PHP driver version &#8594;<br />&#8595; ODBC driver version|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC Driver 17+ |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|ODBC Driver 18  |Yes|   |   |   |   |   |   |   |   |
+|ODBC Driver 17  |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |ODBC Driver 13.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |ODBC Driver 13  |   |   |   |   |   |   |   |Yes|   |
 |ODBC Driver 11  |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|

@@ -1,18 +1,17 @@
 ---
-description: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
-ms.custom: seo-dt-2019
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

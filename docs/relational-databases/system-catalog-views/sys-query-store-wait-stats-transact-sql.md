@@ -1,23 +1,23 @@
 ---
-description: "sys.query_store_wait_stats (Transact-SQL)"
 title: "sys.query_store_wait_stats (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/11/2021"
+description: sys.query_store_wait_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.query_store_wait_stats"
   - "query_store_wait_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+  - "sys.query_store_wait_stats_TSQL"
+helpviewer_keywords:
   - "query_store_wait_stats catalog view"
   - "sys.query_store_wait_stats catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
@@ -41,6 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 |**min_query_wait_time_ms**|**bigint**|Minimum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**max_query_wait_time_ms**|**bigint**|Maximum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` duration standard deviation for the query plan within the aggregation interval and wait category (reported in milliseconds).|
+|**replica_group_id**|**bigint**|Identifies the replica set number for this replica.<BR/><BR/>**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|
 
 ## Wait categories mapping table
 
@@ -79,7 +80,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
  Requires the `VIEW DATABASE STATE` permission.  
   
-## See Also
+## Next steps
+
+Learn more about Query Store in the following articles:
 
 - [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)

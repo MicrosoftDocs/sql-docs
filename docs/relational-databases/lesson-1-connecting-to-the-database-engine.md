@@ -65,23 +65,24 @@ The sample databases and samples aren't included with [!INCLUDE[ssNoVersion](../
 
 At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] was being installed. Perform the following step while logged into Windows as an administrator.
 
-1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], on the **File** menu, select **Connect Object Explorer**. 
+1. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], on the **File** menu, select **Connect Object Explorer**. 
 - The **Connect to Server** dialog box opens. The **Server type** box displays the type of component that was last used.  
 
-2.  Select **Database Engine**.
+2. Select **Database Engine**.
 
 ![Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out.](../relational-databases/media/object-explorer.png)
 
-3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (unnamed) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named `PracticeComputer`. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication, you cannot change the user name. 
+3. In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (unnamed) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named `PracticeComputer`. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication, you cannot change the user name.
 
 ![Screenshot of the Connect to Server dialog box with the Server name text box called out.](../relational-databases/media/connect-to-server.png)
 
-4.  Select **Connect**.
+4. Select **Connect**.
 
 > [!NOTE]
-> This tutorial assumes you are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
+> This tutorial assumes you are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
 
-## <a name="additional"></a>Authorizing extra connections  
+## <a name="additional"></a>Authorizing extra connections
+
 Now that you've connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and are independent of your Windows credentials. Extra login options include Azure Active Directory logins, which you can find out more information by following the article, [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview). 
 
 Use Windows Authentication whenever possible.
@@ -107,4 +108,5 @@ Use Windows Authentication whenever possible.
 > This is basic information to get you started. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a rich security environment, and security is obviously an important aspect of database operations.  
 
 ## Next Lesson  
+
 [Lesson 2: Connecting from Another Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    

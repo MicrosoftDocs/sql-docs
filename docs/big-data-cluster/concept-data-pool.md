@@ -4,16 +4,17 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn the role of SQL Server data pools in a SQL Server Big Data Cluster, as well as the architecture and functionality of a SQL data pool.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Introducing the data pool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes the role of *SQL Server data pools* in a SQL Server big data cluster. The following sections describe the architecture, functionality, and usage scenarios of a data pool.
 

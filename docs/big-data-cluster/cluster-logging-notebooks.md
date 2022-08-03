@@ -2,19 +2,21 @@
 title: Gathering and analyzing logs with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
 description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Gathering and analyzing logs in Big Data Clusters by using notebooks
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging big data clusters.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
 
@@ -38,13 +40,13 @@ This section contains a set of notebooks useful for getting logs from a SQL Serv
 
 
 
-## Analyse logs from Big Data Clusters
+## Analyze logs from Big Data Clusters
 
 A set of notebooks to gather and analyze logs from a SQL Server big data cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
 
 |Name|Description |
 |---|---|
-|TSG030 - SQL Server errorlog files|Get SQL Server errorlog files and analyze log entries and suggest further relevant troubleshooting guides. |
+|TSG030 - SQL Server error log files|Get SQL Server error log files and analyze log entries and suggest further relevant troubleshooting guides. |
 |TSG031 - SQL Server PolyBase logs|Get SQL Server PolyBase logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG034 - Livy logs|Get Livy logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG035 - Spark History logs|Get Spark History logs and analyze log entries and suggest further relevant troubleshooting guides.|

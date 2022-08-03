@@ -67,15 +67,13 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 
 **Applies to:**
 
-[DELETE](../statements/delete-transact-sql.md)
+- [DELETE](../statements/delete-transact-sql.md)
+- [INSERT](../statements/insert-transact-sql.md)
+- [SELECT](../queries/select-transact-sql.md)
+- [UPDATE](../queries/update-transact-sql.md)
+- [MERGE](../statements/merge-transact-sql.md)
 
-[INSERT](../statements/insert-transact-sql.md)
-
-[SELECT](../queries/select-transact-sql.md)
-
-[UPDATE](../queries/update-transact-sql.md)
-
-[MERGE](../statements/merge-transact-sql.md)
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -175,7 +173,7 @@ Specifies all join operations are performed by LOOP JOIN, MERGE JOIN, or HASH JO
 
 If you specify a join hint in the same query's FROM clause for a specific table pair, this join hint takes precedence in the joining of the two tables. The query hints, though, must still be honored. The join hint for the pair of tables may only restrict the selection of allowed join methods in the query hint. For more information, see [Join Hints &#40;Transact-SQL&#41;](../queries/hints-transact-sql-join.md).
 
-#### DISABLE_OPTIMIZED_PLAN_FORC
+#### DISABLE_OPTIMIZED_PLAN_FORCING
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
@@ -226,7 +224,7 @@ Specifying KEEP PLAN makes sure a query won't be recompiled as frequently when t
 
 #### KEEPFIXED PLAN
 
-Forces the Query Optimizer not to recompile a query because of changes in statistics. Specifying KEEPFIXED PLAN makes sure that a query recompiles only if the schema of the underlying tables changes or if `sp_recompile` runs against those tables.
+Forces the Query Optimizer not to recompile a query because of changes in statistics. Specifying KEEPFIXED PLAN makes sure that a query recompiles only if the schema of the underlying tables changes, or if `sp_recompile` runs against those tables.
 
 #### IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
 
@@ -269,7 +267,7 @@ For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb, and tempdb contention can occur if there are many concurrent queries running with the spool operations.
+Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses `tempdb`, and `tempdb` contention can occur if there are many concurrent queries running with the spool operations.
 
 #### OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = <literal_constant> } [ , *...n* ] )
 
@@ -281,8 +279,8 @@ Is the name of a local variable used in a query, to which a value may be assigne
 *UNKNOWN*  
 Specifies that the Query Optimizer uses statistical data instead of the initial value to determine the value for a local variable during query optimization.
 
-*literal_constant*  
-Is a literal constant value to be assigned *@variable_name* for use with the OPTIMIZE FOR query hint. *literal_constant* is used only during query optimization, and not as the value of *@variable_name* during query execution. *literal_constant* can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of *literal_constant* must be implicitly convertible to the data type that *@variable_name* references in the query.
+*<literal_constant>*  
+Is a literal constant value to be assigned *@variable_name* for use with the OPTIMIZE FOR query hint. *<literal_constant>* is used only during query optimization, and not as the value of *@variable_name* during query execution. *<literal_constant>* can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of *<literal_constant>* must be implicitly convertible to the data type that *@variable_name* references in the query.
 
 OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior. Also use OPTIMIZE FOR when you create plan guides. For more information, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).
 
@@ -290,7 +288,7 @@ OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior
 
 Instructs the Query Optimizer to use the average selectivity of the predicate across all column values instead of using the runtime parameter value when the query is compiled and optimized.
 
-If you use OPTIMIZE FOR @variable_name = *literal_constant* and OPTIMIZE FOR UNKNOWN in the same query hint, the Query Optimizer will use the *literal_constant* specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.
+If you use `OPTIMIZE FOR @variable_name = <literal_constant>` and `OPTIMIZE FOR UNKNOWN` in the same query hint, the Query Optimizer will use the *literal_constant* specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.
 
 #### PARAMETERIZATION { SIMPLE | FORCED }
 
@@ -307,7 +305,7 @@ SIMPLE instructs the Query Optimizer to attempt simple parameterization. FORCED 
 
 This option lets you enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags. For more information, see [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-Using this option will not return any error or warning if an unsupported trace flag number is used. If the specified trace flag is not one that affects a query execution plan, the option will be silently ignored.
+Using this option won't return any error or warning if an unsupported trace flag number is used. If the specified trace flag isn't one that affects a query execution plan, the option will be silently ignored.
 
 To use more than one trace flag in a query, specify one QUERYTRACEON hint for each different trace flag number.
 
@@ -412,7 +410,7 @@ The list of all supported USE HINT names can be queried using the dynamic manage
 
 #### <a id="use-plan"></a> USE PLAN N'*<xml_plan>*'
 
-Forces the Query Optimizer to use an existing query plan for a query that is specified by '*<xml_plan>*'. USE PLAN cannot be specified with INSERT, UPDATE, MERGE, or DELETE statements.
+Forces the Query Optimizer to use an existing query plan for a query that is specified by '*<xml_plan>*'. USE PLAN can't be specified with INSERT, UPDATE, MERGE, or DELETE statements.
 
 The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by USE PLAN, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
 
@@ -439,11 +437,11 @@ Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query h
 
 ## Remarks
 
-Query hints cannot be specified in an INSERT statement, except when a SELECT clause is used inside the statement.
+Query hints can't be specified in an INSERT statement, except when a SELECT clause is used inside the statement.
 
 Query hints can be specified only in the top-level query, not in subqueries. When a table hint is specified as a query hint, the hint can be specified in the top-level query or in a subquery. However, the value specified for *<exposed_object_name>* in the TABLE HINT clause must match exactly the exposed name in the query or subquery.
 
-## Specifye Table Hints as Query Hints
+## Specify table hints as query hints
 
 We recommend using the INDEX, FORCESCAN, or FORCESEEK table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). Plan guides are useful when you can't modify the original query, for example, because it's a third-party application. The query hint specified in the plan guide is added to the query before it's compiled and optimized. For ad-hoc queries, use the TABLE HINT clause only when testing plan guide statements. For all other ad-hoc queries, we recommend specifying these hints only as table hints.
 
@@ -460,7 +458,7 @@ You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a
 
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K.
 
-## Specifye hints with Query Store hints
+## Specify hints with Query Store hints
 
 You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store hints](../../relational-databases/performance/query-store-hints.md) feature. Use the [sys.sp_query_store_set_hints](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query. See Example N.
 
@@ -747,11 +745,9 @@ EXEC sys.sp_query_store_set_hints @query_id= 39,
     @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
 ```
 
-## See also
+## Next steps
 
 - [Hints (Transact-SQL)](hints-transact-sql.md)
-- [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)
-- [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)
-- [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 - [Query Store hints](../../relational-databases/performance/query-store-hints.md)
+- [Plan guides](../../relational-databases/performance/plan-guides.md)
+- [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

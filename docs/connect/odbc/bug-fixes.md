@@ -58,7 +58,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix issue with NVDA not reading connection test results in DSN configuration UI
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-b
+
 - Fix issue with 404 Not Found errors when using Managed Service Identity authentication
 - Fix for intermittent Encryption Not Supported errors under high multithreaded loads
 - Fix for intermittent crash under high multithreaded loads

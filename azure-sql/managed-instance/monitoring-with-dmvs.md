@@ -6,7 +6,8 @@ services:
   - "sql-database"
 ms.service: sql-managed-instance
 ms.subservice: performance
-ms.custom:
+ms.custom: 
+  - "azure-sql-split"
   - "sqldbrb=2"
 ms.topic: how-to
 author: WilliamDAssafMSFT

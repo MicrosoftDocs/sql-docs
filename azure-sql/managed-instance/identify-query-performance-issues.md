@@ -5,7 +5,7 @@ description: Learn about types of query performance issues in Azure SQL Managed 
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: performance
-ms.custom: 
+ms.custom: azure-sql-split
 ms.devlang: 
 ms.topic: troubleshooting
 author: NikaKinska

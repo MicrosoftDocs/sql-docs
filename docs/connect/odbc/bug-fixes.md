@@ -23,9 +23,9 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 - Fix intermittent issue with polling for first successful connection when multiple IP addresses are resolved.
 - Fix intermittent hang when using SQLBulkOperations in async mode.
-- Fix connecting with Strict and non-Strict encryption modes simultaneously
+- Fix connecting with Strict and non-Strict encryption modes simultaneously.
 - Fix missing dependency in Debian package.
-- Fix issue with idle connection resiliency when Kerberos auth was used.
+- Fix issue with idle connection resiliency when Kerberos authentication is used.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 18.0 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

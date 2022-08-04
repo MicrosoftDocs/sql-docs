@@ -24,13 +24,17 @@ The name of the update package can vary and may include a language, edition, and
  
 - Update a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and all shared components, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: You can specify the instance either by using the InstanceName parameter or the InstanceID parameter. To update a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must specify the InstanceID parameter.
 
-    ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
-    ```
-    or 
-    ```
+   ```console
+   <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
+   ```
+
+    or
+
+    ```console
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>
     ```
+
+   [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
 
 - Setup can integrate the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time. You can prepare an installation of database engine instance to include product update: 
 

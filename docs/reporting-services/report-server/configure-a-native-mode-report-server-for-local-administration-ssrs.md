@@ -26,7 +26,7 @@ ms.author: maggies
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
--   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
+-   [!INCLUDE[winblue_server_2](../../includes/winserver2012r2-md.md)]  
   
 -   [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]  
   

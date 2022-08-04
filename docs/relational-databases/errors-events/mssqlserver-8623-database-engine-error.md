@@ -25,15 +25,15 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|OPTIMIZER_NOPLAN_ERR|  
-|Message Text|The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you have received this message in error, contact Customer Support Services for more information.|  
+|Message Text|The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you've received this message in error, contact Customer Support Services for more information.|  
   
 ## Explanation  
-The Query Optimizer is unable to generate a query plan due to either running out of resources or the query being too complex, 2 different states can be returned for this error
+The Query Optimizer is unable to generate a query plan due to either running out of resources or the query being too complex, two different states can be returned for this error
 
 - State 1 - The query timed out due to the plan being too complex
 - State 2 - The query ran out of resources - Memory
 
-  
-## User Action  
-Simplify the query by breaking the query into multiple queries along the largest dimension. First remove any query elements that are not really necessary, then try adding a temp table and splitting the query in two. Merely moving a part of the query to a subquery, function, or common table expression is insufficient because they get recombined by the Transact-SQL compiler. Try adding hints to force a plan earlier e.g. OPTION (FORCE ORDER).
-  
+
+## User Action
+
+Simplify the query by breaking the query into multiple queries along the largest dimension. First, remove any query elements that aren't necessary, then try adding a temp table and splitting the query in two. Note that if you move a part of the query to a subquery, function, or a common table expression that isn't sufficient because they get recombined into a single query by the compiler. You can also, try adding hints to force a plan earlier, for example OPTION (FORCE ORDER).

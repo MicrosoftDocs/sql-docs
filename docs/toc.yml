@@ -8876,8 +8876,6 @@ items:
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
     items:
-    - name: SSIS Projects extension for VS2019 troubleshooting guide
-      href: ssdt/release-notes-ssdt-2019.md
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
@@ -9064,6 +9062,8 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: SSIS Projects extension for VS2019 troubleshooting guide
+      href: ssdt/release-notes-ssdt-2019.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS

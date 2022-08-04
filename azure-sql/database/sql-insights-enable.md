@@ -206,7 +206,7 @@ TCP connections from the monitoring machine to the IP address and port used by t
 Enter the connection string in the form:
 
 ```
-sqlAzureConnections": [
+"sqlAzureConnections": [
    "Server=mysqlserver1.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;",
    "Server=mysqlserver2.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;"
 ]

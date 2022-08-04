@@ -22,6 +22,7 @@ You can migrate SQL Server databases running on-premises or on:
 - SQL Server on Azure Virtual Machines.  
 - Amazon Web Services (AWS) Elastic Compute Cloud (EC2). 
 - Compute Engine in Google Cloud Platform (GCP).  
+- Amazon RDS
 - Cloud SQL for SQL Server in GCP. 
 
 For other migration guides, see [Database Migration](/data-migration). 

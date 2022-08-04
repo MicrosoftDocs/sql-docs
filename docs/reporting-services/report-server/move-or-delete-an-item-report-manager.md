@@ -44,11 +44,11 @@ ms.author: maggies
   
 4.  In the drop-down menu, click **Move**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  For **Location**, specify the folder you want to move the item to. You can type the fully qualified folder name or use the tree control to navigate to the folder.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
  Alternatively, you can navigate to the object you want to move, click **Properties**, and then click **Move** at the top of the page.  
   
@@ -65,7 +65,7 @@ ms.author: maggies
   
 4.  In the drop-down menu, click **Delete**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## See Also  
  [Contents Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   

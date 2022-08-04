@@ -36,7 +36,7 @@ The following file formats are supported:
 
 - JSON - Applies to Azure SQL Edge only. For information on using OPENROWSET to import JSON data in other platforms, see [Import JSON documents into SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) or [Query JSON files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
  
-- Delta Table - Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- Delta - Applies to the [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
  
 ## Syntax
 
@@ -119,21 +119,19 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
 ### [Delta table](#tab/delta)
 ```syntaxsql
--- Create an external file format for delta table files.
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
          FORMAT_TYPE = DELTA  
+         -- DATA_COMPRESSION is available only in SQL Server
      [ , DATA_COMPRESSION = {  
         'org.apache.hadoop.io.compress.SnappyCodec'  
       | 'org.apache.hadoop.io.compress.GzipCodec'      }  
     ]);  
 ```
-
-> [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
 ---
   
 ## Arguments  
@@ -141,7 +139,7 @@ WITH (
 Specifies a name for the external file format.
  
 ### FORMAT_TYPE 
-`FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]`
+`FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT | DELTA ]`
 
 Specifies the format of the external data.
   
@@ -165,6 +163,10 @@ Specifies the format of the external data.
    
 - JSON
   Specifies a JSON format. Applies to Azure SQL Edge only. 
+
+- DELTA
+  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] 
+
 
 ### DATA\_COMPRESSION
  `DATA_COMPRESSION = *data_compression_method*`  
@@ -198,7 +200,9 @@ Specifies the format of the external data.
 
 ### [Delta table](#tab/delta)
  N/A
+ 
 ---  
+
 
 ### Delimited text format options
 
@@ -425,7 +429,6 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-
 <a id="e-create-a-delimited-text-file-skipping-header-row-azure-synapse-analytics-only"></a>
 ### E. Create a Delimited Text File Skipping Header Row 
 **Applies To:** Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later

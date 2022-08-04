@@ -100,7 +100,7 @@ ms.author: mathoma
   
 7.  In the **Restore options** panel, select **Overwrite the existing database (WITH REPLACE)**. The restore operation overwrites any existing databases and their related files, even if another database or file already exists with the same name.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

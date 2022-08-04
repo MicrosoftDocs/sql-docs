@@ -98,7 +98,7 @@ ms.author: maggies
   
      For more information about linking spatial and analytical data, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="FilterAnalyticalData"></a> To filter analytical data for the layer  
   
@@ -133,7 +133,7 @@ ms.author: maggies
     > [!NOTE]  
     >  If you do not know the name of the field and you browsed to an ESRI Shapefile, use the **Link to ESRI shape file option** instead of this option.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ##  <a name="ESRI"></a> To specify an ESRI Shapefile as a source of spatial data  
   
@@ -148,7 +148,7 @@ ms.author: maggies
     > [!NOTE]  
     >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see [Upload a File or Report](../reports/upload-a-file-or-report-report-manager.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="DatasetField"></a> To specify a report dataset field as a source of spatial data  
   
@@ -162,7 +162,7 @@ ms.author: maggies
   
 5.  In **Spatial field name**, click the name of the field in the dataset that contains spatial data.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ##  <a name="TileLayer"></a> To add a tile layer  
   
@@ -198,7 +198,7 @@ ms.author: maggies
   
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**. Zero (0) % transparency means that the layer is opaque. 100% transparency means that you will not see the layer in the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="TileTransparency"></a> To change the transparency of a tile layer  
   
@@ -210,7 +210,7 @@ ms.author: maggies
   
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="Secure"></a> To specify a secure connection for a tile layer  
   

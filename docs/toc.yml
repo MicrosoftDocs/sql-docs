@@ -11357,6 +11357,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-8601-database-engine-error.md
         - name: 8621
           href: relational-databases/errors-events/mssqlserver-8621-database-engine-error.md
+        - name: 8623
+          href: relational-databases/errors-events/mssqlserver-8623-database-engine-error.md  
         - name: 8630
           href: relational-databases/errors-events/mssqlserver-8630-database-engine-error.md
         - name: 8632

@@ -46,7 +46,7 @@ ms.author: maggies
   
 4.  In the **Select bookmark** box, type or select a bookmark or an expression that evaluates to a bookmark. Using the previous example, type **BikePhoto** to create a link to the image in your report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  (Optional) The text is not automatically formatted like a link. For text, it is helpful to change the color and effect of the text to indicate that the text is a link. For example, change the color to blue and the effect to underline in the **Font** section in the Home tab of the Ribbon.  
   

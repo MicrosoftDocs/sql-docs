@@ -76,7 +76,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 6.  In the **Select Users, Computers, or Groups** dialog box, either type the name of the user account, such as **domain1\user1** and then click **OK**, or click **Advanced** and search for the account.  
   
-7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Close the Security Policy tool.  
   
@@ -94,7 +94,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 5.  On the **Local Security Setting** tab, in the **Audit these attempts** area, select both **Success** and **Failure**.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Close the Security Policy tool.  
   

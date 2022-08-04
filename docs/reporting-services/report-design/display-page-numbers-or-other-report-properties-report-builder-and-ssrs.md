@@ -57,7 +57,7 @@ ms.author: maggies
   
      The expression is now  ="Page "&Globals!PageNumber  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## To add total number of pages after the page number  
   
@@ -69,7 +69,7 @@ ms.author: maggies
   
      The expression is now ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
 
 
 ## See also  

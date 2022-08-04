@@ -1,5 +1,5 @@
 ---
-title: Release notes for SQL Server Data Tools (SSDT) in VS2019
+title: SSIS Projects extension for VS2019 troubleshooting guide
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ ms.custom: seo-lt-2019
 ms.date: 07/26/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
-# SSIS Projects extension for Visual Studio 2019
+# SSIS Projects extension for VS2019 troubleshooting guide
 
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
 > [!IMPORTANT]
-> You can download the [SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects), the [SSAS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects), and the [SSRS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) 2019 and later VSIX files from the [Visual Studio Marketplace](<https://marketplace.visualstudio.com/>).
+> You can download the [SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects) in VS marketplace.
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
@@ -30,6 +30,7 @@ More information is available in release notes.**
 - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
 
 ## Common Issues
+
 - **If you met error during installation, you can check the logs under %temp%\SsdtisSetup.** Also, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.

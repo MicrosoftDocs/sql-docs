@@ -32,7 +32,7 @@ This article provides examples to modify [automated backup](automated-backups-ov
 > * [Azure SQL Managed Instance](automated-backups-change-settings.md)
 
 
-## Change the short-term retention policy
+## Change short-term retention policy
 
 You can change the default point-in-time recovery (PITR) backup retention period and the differential backup frequency by using the Azure portal, PowerShell, or the REST API. The following examples illustrate how to change the PITR retention to 28 days and the differential backups to a 24-hour interval.
 

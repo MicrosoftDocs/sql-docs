@@ -81,7 +81,7 @@ Backup storage consumption for a Hyperscale database depends on the retention pe
 - Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.
 - Use locally redundant or zone-redundant backup storage when geo-restore capability is unnecessary (for example, dev/test environments). 
 
-## Backup storage cost
+## Backup storage costs
 
 Hyperscale backup storage cost depends on the choice of region and backup storage redundancy. It also depends on the workload type. 
 

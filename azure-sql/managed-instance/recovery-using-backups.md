@@ -123,7 +123,7 @@ To restore a database in SQL Managed Instance, see [Restore-AzSqlInstanceDatabas
 
 ---
 
-## Restore of a deleted database
+## Deleted database restore
 
 You can restore a deleted database to the deletion time, or an earlier point in time, on the same managed instance. You restore a deleted database by creating a new database from the backup.
 

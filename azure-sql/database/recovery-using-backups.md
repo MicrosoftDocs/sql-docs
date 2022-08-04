@@ -139,7 +139,7 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure CLI, Azure PowerShell, and the REST API. For more details, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure CLI, Azure PowerShell, and the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -174,7 +174,7 @@ To restore a database by using the REST API:
 
 ---
 
-## Restore of a deleted database
+## Deleted database restore
 
 You can restore a deleted database to the deletion time, or an earlier point in time, on the same server.
 

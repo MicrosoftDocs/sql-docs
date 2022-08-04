@@ -1,18 +1,15 @@
 ---
-title: "Create a Format File (SQL Server) | Microsoft Docs"
+title: "Create a Format File (SQL Server)"
 description: When you bulk import or export a SQL Server table, a format file allows writing data files with little editing or reading data files from other programs.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "format files [SQL Server], creating"
-ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Format File (SQL Server)

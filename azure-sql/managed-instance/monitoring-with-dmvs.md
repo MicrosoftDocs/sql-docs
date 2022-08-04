@@ -1,10 +1,10 @@
 ---
 title: Monitor performance using DMVs
-titleSuffix: Azure SQL Database
-description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
+titleSuffix: Azure SQL Managed Instance
+description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Managed Instance.
 services:
   - "sql-database"
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: performance
 ms.custom: 
   - "azure-sql-split"
@@ -14,36 +14,28 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/03/2022
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-mi"
 ---
-# Monitoring Microsoft Azure SQL Database performance using dynamic management views
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+# Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](monitoring-with-dmvs.md)
-> * [Azure SQL Managed Instance](../managed-instance/monitoring-with-dmvs.md)
+> * [Azure SQL Database](../database/monitoring-with-dmvs.md)
+> * [Azure SQL Managed Instance](monitoring-with-dmvs.md)
 
-Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on.  This article provides information on how to detect common performance problems by using dynamic management views.
+Microsoft Azure SQL Managed Instance enables a subset of dynamic management views (DMVs) to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
 
-This article is about Azure SQL Database, see also [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
+This article is about Azure SQL Managed Instance, see also [Monitoring Microsoft Azure SQL Database performance using dynamic management views](../database/monitoring-with-dmvs.md).
 
 ## Permissions
 
-In Azure SQL Database, depending on the compute size and deployment option, querying a DMV may require either VIEW DATABASE STATE or VIEW SERVER STATE permission. The latter permission may be granted via membership in the `##MS_ServerStateReader##` server role. 
-
-To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query as an example:
+In Azure SQL Managed Instance, querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
 
 ```sql
-GRANT VIEW DATABASE STATE TO database_user;
+GRANT VIEW SERVER STATE TO database_user;
 ```
 
-To grant membership to the `##MS_ServerStateReader##` server role to a login for the [logical server in Azure](logical-servers.md), connect to the `master` database then run the following query as an example:
-
-```sql
-ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [login];
-```
-
-In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. In Azure SQL Database, they return information regarding your current logical database only.
+In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. 
 
 ## Identify CPU performance issues
 
@@ -83,7 +75,7 @@ GO
 
 ### The CPU issue occurred in the past
 
-If the issue occurred in the past and you want to do root cause analysis, use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store). Users with database access can use T-SQL to query Query Store data. Query Store default configurations use a granularity of 1 hour. Use the following query to look at activity for high CPU consuming queries. This query returns the top 15 CPU consuming queries. Remember to change `rsi.start_time >= DATEADD(hour, -2, GETUTCDATE()`:
+If the issue occurred in the past and you want to do a root cause analysis, use [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store). Users with database access can use T-SQL to query Query Store data. Query Store default configurations use a granularity of 1 hour. Use the following query to look at activity for high CPU consuming queries. This query returns the top 15 CPU consuming queries. Remember to change `rsi.start_time >= DATEADD(hour, -2, GETUTCDATE()`:
 
 ```sql
 -- Top 15 CPU consuming queries by query hash
@@ -104,9 +96,7 @@ WHERE OD.RN<=15
 ORDER BY total_cpu_millisec DESC;
 ```
 
-Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the database to work around the issue.
-
-For more information about handling CPU performance problems in Azure SQL Database, see [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md).
+Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the managed instance to work around the issue.
 
 ## Identify IO performance issues
 
@@ -123,21 +113,6 @@ When identifying IO performance issues, the top wait types associated with IO is
 ### If the IO issue is occurring right now
 
 Use the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) or [sys.dm_os_waiting_tasks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) to see the `wait_type` and `wait_time`.
-
-#### Identify data and log IO usage
-
-Use the following query to identify data and log IO usage. If the data or log IO is above 80%, it means users have used the available IO for the Azure SQL Database service tier.
-
-```sql
-SELECT end_time, avg_data_io_percent, avg_log_write_percent
-FROM sys.dm_db_resource_stats
-ORDER BY end_time DESC;
-```
-
-If the IO limit has been reached, you have two options:
-
-- Option 1: Upgrade the compute size or service tier
-- Option 2: Identify and tune the queries consuming the most IO.
 
 #### View buffer-related IO using the Query Store
 
@@ -357,7 +332,7 @@ ORDER BY SUM(wait_time) DESC;
 
 ### Identify high memory-consuming statements
 
-If you encounter out of memory errors in Azure SQL Database, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
+If you encounter out of memory errors, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
 
 Use the following query to identify high memory-consuming statements:
 
@@ -393,7 +368,7 @@ FROM cte
 ORDER BY SerialDesiredMemory DESC;
 ```
 
-### Identify the top 10 active memory grants
+### Identify the memory grants
 
 Use the following query to identify the top 10 active memory grants:
 
@@ -491,7 +466,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific database or elastic pool and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific managed instance and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 
@@ -508,17 +483,11 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;
 ```
 
-> [!NOTE]
-> When executing the `sys.dm_exec_requests` and `sys.dm_exec_sessions views`, if you have **VIEW DATABASE STATE** permission on the database, you see all executing sessions on the database; otherwise, you see only the current session.
-
 ## Monitor resource use
 
-You can monitor Azure SQL Database resource usage at the query level by using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
+You can monitor resource usage using the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store), just as you would in SQL Server.
 
-You can also monitor usage using these views:
-
-- [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)
-- [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)
+You can also monitor usage using [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database).
 
 ### sys.dm_db_resource_stats
 
@@ -541,103 +510,39 @@ FROM sys.dm_db_resource_stats;
 
 For other queries, see the examples in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database).
 
-### sys.resource_stats
+### sys.server_resource_stats
 
-The [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view in the `master` database has additional information that can help you monitor the performance of your database at its specific service tier and compute size. The data is collected every 5 minutes and is maintained for approximately 14 days. This view is useful for a longer-term historical analysis of how your database uses resources.
+You can use [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database) to return CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
 
-The following graph shows the CPU resource use for a Premium database with the P2 compute size for each hour in a week. This graph starts on a Monday, shows five work days, and then shows a weekend, when much less happens on the application.
+The examples show you different ways that you can use the `sys.server_resource_stats` catalog view to get information about how your instance uses resources.
 
-![Database resource use](./media/monitoring-with-dmvs/sql_db_resource_utilization.png)
-
-From the data, this database currently has a peak CPU load of just over 50 percent CPU use relative to the P2 compute size (midday on Tuesday). If CPU is the dominant factor in the application's resource profile, then you might decide that P2 is the right compute size to guarantee that the workload always fits. If you expect an application to grow over time, it's a good idea to have an extra resource buffer so that the application doesn't ever reach the performance-level limit. If you increase the compute size, you can help avoid customer-visible errors that might occur when a database doesn't have enough power to process requests effectively, especially in latency-sensitive environments. An example is a database that supports an application that paints webpages based on the results of database calls.
-
-Other application types might interpret the same graph differently. For example, if an application tries to process payroll data each day and has the same chart, this kind of "batch job" model might do fine at a P1 compute size. The P1 compute size has 100 DTUs compared to 200 DTUs at the P2 compute size. The P1 compute size provides half the performance of the P2 compute size. So, 50 percent of CPU use in P2 equals 100 percent CPU use in P1. If the application does not have timeouts, it might not matter if a job takes 2 hours or 2.5 hours to finish, if it gets done today. An application in this category probably can use a P1 compute size. You can take advantage of the fact that there are periods of time during the day when resource use is lower, so that any "big peak" might spill over into one of the troughs later in the day. The P1 compute size might be good for that kind of application (and save money), as long as the jobs can finish on time each day.
-
-The database engine exposes consumed resource information for each active database in the `sys.resource_stats` view of the `master` database in each server. The data in the table is aggregated for 5-minute intervals. With the Basic, Standard, and Premium service tiers, the data can take more than 5 minutes to appear in the table, so this data is more useful for historical analysis rather than near-real-time analysis. Query the `sys.resource_stats` view to see the recent history of a database and to validate whether the reservation you chose delivered the performance you want when needed.
-
-> [!NOTE]
-> On Azure SQL Database, you must be connected to the `master` database to query `sys.resource_stats` in the following examples.
-
-This example shows you how the data in this view is exposed:
-
-```sql
-SELECT TOP 10 *
-FROM sys.resource_stats
-WHERE database_name = 'resource1'
-ORDER BY start_time DESC;
-```
-
-![The sys.resource_stats catalog view](./media/monitoring-with-dmvs/sys_resource_stats.png)
-
-The next example shows you different ways that you can use the `sys.resource_stats` catalog view to get information about how your database uses resources:
-
-1. To look at the past week's resource use for the database userdb1, you can run this query:
+1. The following example returns the average CPU usage over the last seven days:
 
     ```sql
-    SELECT *
-    FROM sys.resource_stats
-    WHERE database_name = 'userdb1' AND
-        start_time > DATEADD(day, -7, GETDATE())
-    ORDER BY start_time DESC;
+    DECLARE @s datetime;  
+    DECLARE @e datetime;  
+    SET @s= DateAdd(d,-7,GetUTCDate());  
+    SET @e= GETUTCDATE();  
+    SELECT AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+    FROM sys.server_resource_stats   
+    WHERE start_time BETWEEN @s AND @e;
+    GO
     ```
 
-2. To evaluate how well your workload fits the compute size, you need to drill down into each aspect of the resource metrics: CPU, reads, writes, number of workers, and number of sessions. Here's a revised query using `sys.resource_stats` to report the average and maximum values of these resource metrics:
+2. The following example returns the average storage space used by your instance per day, to allow for growth trending analysis:
 
     ```sql
-    SELECT
-        avg(avg_cpu_percent) AS 'Average CPU use in percent',
-        max(avg_cpu_percent) AS 'Maximum CPU use in percent',
-        avg(avg_data_io_percent) AS 'Average physical data IO use in percent',
-        max(avg_data_io_percent) AS 'Maximum physical data IO use in percent',
-        avg(avg_log_write_percent) AS 'Average log write use in percent',
-        max(avg_log_write_percent) AS 'Maximum log write use in percent',
-        avg(max_session_percent) AS 'Average % of sessions',
-        max(max_session_percent) AS 'Maximum % of sessions',
-        avg(max_worker_percent) AS 'Average % of workers',
-        max(max_worker_percent) AS 'Maximum % of workers'
-    FROM sys.resource_stats
-    WHERE database_name = 'userdb1' AND start_time > DATEADD(day, -7, GETDATE());
+    DECLARE @s datetime;  
+    DECLARE @e datetime;  
+    SET @s= DateAdd(d,-7,GetUTCDate());  
+    SET @e= GETUTCDATE();  
+    SELECT Day = convert(date, start_time), AVG(storage_space_used_mb) AS Average_Space_Used_mb
+    FROM sys.server_resource_stats   
+    WHERE start_time BETWEEN @s AND @e
+    GROUP BY convert(date, start_time)
+    ORDER BY convert(date, start_time);
+    GO
     ```
-
-3. With this information about the average and maximum values of each resource metric, you can assess how well your workload fits into the compute size you chose. Usually, average values from `sys.resource_stats` give you a good baseline to use against the target size. It should be your primary measurement stick. For an example, you might be using the Standard service tier with S2 compute size. The average use percentages for CPU and IO reads and writes are below 40 percent, the average number of workers is below 50, and the average number of sessions is below 200. Your workload might fit into the S1 compute size. It's easy to see whether your database fits in the worker and session limits. To see whether a database fits into a lower compute size with regard to CPU, reads, and writes, divide the DTU number of the lower compute size by the DTU number of your current compute size, and then multiply the result by 100:
-
-    `S1 DTU / S2 DTU * 100 = 20 / 50 * 100 = 40`
-
-    The result is the relative performance difference between the two compute sizes in percentage. If your resource use doesn't exceed this amount, your workload might fit into the lower compute size. However, you need to look at all ranges of resource use values, and determine, by percentage, how often your database workload would fit into the lower compute size. The following query outputs the fit percentage per resource dimension, based on the threshold of 40 percent that we calculated in this example:
-
-   ```sql
-    SELECT
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
-        100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 40 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
-    FROM sys.resource_stats
-    WHERE database_name = 'sample' AND start_time > DATEADD(day, -7, GETDATE());
-    ```
-
-    Based on your database service tier, you can decide whether your workload fits into the lower compute size. If your database workload objective is 99.9 percent and the preceding query returns values greater than 99.9 percent for all three resource dimensions, your workload likely fits into the lower compute size.
-
-    Looking at the fit percentage also gives you insight into whether you should move to the next higher compute size to meet your objective. For example, the CPU usage for a sample database over the past week:
-
-   | Average CPU percent | Maximum CPU percent |
-   | --- | --- |
-   | 24.5 |100.00 |
-
-    The average CPU is about a quarter of the limit of the compute size, which would fit well into the compute size of the database. But, the maximum value shows that the database reaches the limit of the compute size. Do you need to move to the next higher compute size? Look at how many times your workload reaches 100 percent, and then compare it to your database workload objective.
-
-    ```sql
-     SELECT
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_cpu_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'CPU Fit Percent',
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_log_write_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Log Write Fit Percent',
-         100*((COUNT(database_name) - SUM(CASE WHEN avg_data_io_percent >= 100 THEN 1 ELSE 0 END) * 1.0) / COUNT(database_name)) AS 'Physical Data IO Fit Percent'
-     FROM sys.resource_stats
-     WHERE database_name = 'sample' AND start_time > DATEADD(day, -7, GETDATE());
-    ```
-
-    If this query returns a value less than 99.9 percent for any of the three resource dimensions, consider either moving to the next higher compute size or use application-tuning techniques to reduce the load on the database.
-
-4. This exercise also considers your projected workload increase in the future.
-
-For elastic pools, you can monitor individual databases in the pool with the techniques described in this section. But you can also monitor the pool as a whole. For information, see [Monitor and manage an elastic pool](elastic-pool-overview.md).
 
 ### Maximum concurrent requests
 
@@ -648,7 +553,7 @@ SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests R;
 ```
 
-To analyze the workload of a database, modify this query to filter on the specific database you want to analyze. For example, if you have a database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
+To analyze the workload of an individual database, modify this query to filter on the specific database you want to analyze. For example, if you have a database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
@@ -664,9 +569,6 @@ This is just a snapshot at a single point in time. To get a better understanding
 You can analyze your user and application patterns to get an idea of the frequency of logins. You also can run real-world loads in a test environment to make sure that you're not hitting this or other limits we discuss in this article. There isn't a single query or dynamic management view (DMV) that can show you concurrent login counts or history.
 
 If multiple clients use the same connection string, the service authenticates each login. If 10 users simultaneously connect to a database by using the same username and password, there would be 10 concurrent logins. This limit applies only to the duration of the login and authentication. If the same 10 users connect to the database sequentially, the number of concurrent logins would never be greater than 1.
-
-> [!NOTE]
-> Currently, this limit does not apply to databases in elastic pools.
 
 ### Maximum sessions
 
@@ -718,13 +620,15 @@ ORDER BY 2 DESC;
 
 ### Monitoring blocked queries
 
-Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](understand-resolve-blocking.md).
+Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).
 
 ### Monitoring deadlocks
 
 In some cases, two or more queries may mutually block one another, resulting in a deadlock. 
 
-You can create an Extended Events trace a database in Azure SQL Database to capture deadlock events, then find related queries and their execution plans in Query Store. Learn more in [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md).
+You can create an Extended Events trace a database to capture deadlock events, then find related queries and their execution plans in Query Store. 
+
+For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) in the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 ### Monitoring query plans
 
@@ -750,17 +654,15 @@ CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
 ORDER BY highest_cpu_queries.total_worker_time DESC;
 ```
 
-<!--
 ## Other monitoring options
 
 ### Monitor with SQL Insights (preview)
 
-[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring Azure SQL managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
+[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring instances of Azure SQL Managed Instance, databases in Azure SQL Database, and SQL Server on Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
 
 ### Monitor with Azure Monitor
 
-Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Database. For more information, see [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md).
--->
+Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Managed Instance. For more information, see [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md). Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. For more monitoring options, see [Monitoring and performance tuning in Azure SQL Managed Instance and Azure SQL Database](../database/monitor-tune-overview.md).
 
 ## See also
 
@@ -769,8 +671,8 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 
 ## Next steps
 
-- [Introduction to Azure SQL Database and Azure SQL Managed Instance](sql-database-paas-overview.md)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
-- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](performance-guidance.md)
-- [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md)
-- [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)
+- [Introduction to Azure SQL Database and Azure SQL Managed Instance](../database/sql-database-paas-overview.md)
+- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
+- [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
+- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/docs/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)

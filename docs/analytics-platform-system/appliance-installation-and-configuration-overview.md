@@ -1,12 +1,12 @@
 ---
 title: Appliance install and configure for APS
 description: As an Analytics Platform System appliance administrator, learn about the initial steps to set up and get started using your new appliance.
-author: ronortloff
+author: WilliamDAssafMSFT
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
 ms.date: 06/23/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.reviewer: martinle
 ms.custom:
 - seo-dt-2019

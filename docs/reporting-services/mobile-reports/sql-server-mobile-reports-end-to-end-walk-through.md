@@ -1,7 +1,7 @@
 ---
 title: "SQL Server mobile reports: End-to-end walk-through"
 description: Learn to create mobile reports on SQL Server Mobile Report Publisher, save reports on the Reporting Services web portal, & view reports in Power BI mobile apps.
-ms.date: 12/07/2018
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # SQL Server mobile reports: End-to-end walk-through
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Walk through creating mobile reports for any screen size with [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] on the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal, and viewing them in the Power BI mobile apps.
 
 Create mobile reports on a design surface with adjustable grid rows and columns, and flexible mobile report elements. Connect to a variety of on-premises data sources, or upload Excel workbooks to create mobile reports. Then save your reports to a [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] web portal and view them in a browser, or in the Power BI mobile apps.  

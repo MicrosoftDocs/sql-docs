@@ -23,7 +23,7 @@ ms.author: maggies
  To quickly get started with matrices, see [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
->  You can publish lists separately from a report as report parts. Read more about [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  You can publish lists separately from a report as report parts. Read more about [Report Parts (Report Builder and SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
   
 ##  <a name="AddingMatrix"></a> Adding a Matrix to Your Report  
  Add a matrix to the design surface from the Insert tab on the ribbon. You have the option to add a matrix by using the Table or Matrix Wizard, which includes creating a data source connection and dataset, and configuring the matrix or adding a matrix based on the matrix template.  

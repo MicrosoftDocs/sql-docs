@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 06/15/2022
+ms.date: 07/27/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,37 +19,42 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### June 2022
+### July 2022
 
-Azure Data Studio 1.37.0 is the latest general availability (GA) release.
+Azure Data Studio 1.38.0 is the latest general availability (GA) release.
 
-- Release number: 1.37.0
-- Release date: June 15, 2022
+- Release number: 1.38.0
+- Release date: July 27, 2022
 
-#### What's new in 1.37.0
-
-| New Item | Details |
-|----------|---------|
-| Backup & Restore | Backup & Restore to URL is now available in preview for Azure SQL Managed Instances. |
-| Table Designer | Added support for computed columns in Table Designer. |
-| Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |
-| Table Designer | Table Designer is now supported in the SQL Database Projects extension for editing tables in the SQL project. |
-| Query Plan Viewer | Plan comparison is now available and includes visual indicators in the Properties pane for easier identification of differences. |
-| Query Plan Viewer | Added a toolbar button to toggle the display for actual execution plans. |
-| Query Plan Viewer | Larger query plans will now display additional precision for operator cost. |
-| MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
-
-#### Bug fixes in 1.37.0
+#### What's new in 1.38.0
 
 | New Item | Details |
 |----------|---------|
-| Table Designer | Fixed issue that caused app to not prompt user to save before closing. |
-| Table Designer | Fixed issue that returned empty data set upon attempting to edit the first cell of a new row. |
-| Table Designer | Improved resize to fit experience when zooming in on user interface as well as tab behavior issues. |
+| VS Code merges to 1.62 | This release includes updates to VS Code from the three previous VS Code releases. Read [their release notes](https://code.visualstudio.com/updates/v1_62) to learn more. |
+| Table Designer | New column added to Table Designer for easier access to additional actions specific to individual rows. |
+| Query Plan Viewer | The Top Operations pane view now includes clickable links to operations in each of its rows to show the runtime statistics which can be used to evaluate estimated and actual rows when analyzing a plan. |
+| Query Plan Viewer | Improved UI on selected operation node in the Execution Plan. |
+| Query Plan Viewer | The keyboard command **CTRL + M** no longer executes queries. It now just enables or disables the actual execution plan creation when a query is executed. |
+| Query Plan Viewer | Plan labels are now updated in the Properties window when plans are compared and the orientation is toggled from horizontal to vertical, and back. |
+| Query Plan Viewer | Updates were made to the Command Palette. All execution plan commands are prefixed with "Execution Plan", so that they are easier to find and use. |
+| Query Plan Viewer | A collapse/expand functionality is now available at the operator level to allow users to hide or display sections of the plan during analysis. |
+| Query History | The Query History extension was refactored to be fully implemented in an extension. This makes the history view behave like all other extension views and also allows for searching and filtering in the view by selecting the view and typing in your search text. |
+
+#### Bug fixes in 1.38.0
+
+| New Item | Details |
+|----------|---------|
+| Table Designer | Error found in edit data tab when switching back to previously selected column when adding a new row. To fix this, editing the table is now disabled while new rows are being added and only reenabled afterwards. |
+| Query Editor | Fixed coloring issues for new T-SQL functions in the Query Editor. |
 | Query Plan Viewer | Fixed bug that caused custom zoom level spinner to allow values outside valid range. |
-| Schema Compare | Fixed issue with indexes not being added correctly when updating project from database. |
-| Notebooks | Fixed inconsistencies with notebook cell behavior and toolbars. |
-| Notebooks | Fixed issues with keyboard navigation. |
+| Dashboard | Fixed issue that caused incorrect displaying of insight widgets on the dashboard. |
+| Notebooks | Fixed issue where keyboard shortcuts and toolbar buttons were not working when first creating a Split View markdown cell. |
+| Notebooks | Fixed issue where cell languages were not being set correctly when opening an ADS .NET Interactive notebook in VS Code. |
+| Notebooks | Fixed issue where notebook was being opened as empty when exporting a SQL query as a notebook. |
+| Notebooks | Disables install and uninstall buttons in Manage Packages dialog while a package is being installed or uninstalled. |
+| Notebooks | Fixed issue where cell toolbar buttons were not refreshing when converting cell type. |
+| Notebooks | Fixed issue where notebook was not opening if a cell contains an unsupported output type. |
+| Schema Compare | Fixed issue where views and stored procedures were not correctly recognized by schema compare after applying changes. |
 
 ## Azure Data Studio feedback
 
@@ -59,6 +64,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
+| [June 2022](#june-2022) | 1.37.0 | June 15, 2022 |N/A|
 | [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
 | [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
@@ -98,6 +104,33 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!NOTE]
 > All previous versions of Azure Data Studio are not supported.
+
+### June 2022
+
+### What's new in 1.37.0
+
+| New Item | Details |
+|----------|---------|
+| Backup & Restore | Backup & Restore to URL is now available in preview for Azure SQL Managed Instances. |
+| Table Designer | Added support for computed columns in Table Designer. |
+| Table Designer | Can now specify where to add new columns and columns can now be re-arranged by mouse dragging. |
+| Table Designer | Table Designer is now supported in the SQL Database Projects extension for editing tables in the SQL project. |
+| Query Plan Viewer | Plan comparison is now available and includes visual indicators in the Properties pane for easier identification of differences. |
+| Query Plan Viewer | Added a toolbar button to toggle the display for actual execution plans. |
+| Query Plan Viewer | Larger query plans will now display additional precision for operator cost. |
+| MongoDB Extension for Azure Cosmos DB (Preview) | This extension introduces support for access to Mongo resources for Cosmos DB. |
+
+### Bug fixes in 1.37.0
+
+| New Item | Details |
+|----------|---------|
+| Table Designer | Fixed issue that caused app to not prompt user to save before closing. |
+| Table Designer | Fixed issue that returned empty data set upon attempting to edit the first cell of a new row. |
+| Table Designer | Improved resize to fit experience when zooming in on user interface as well as tab behavior issues. |
+| Query Plan Viewer | Fixed bug that caused custom zoom level spinner to allow values outside valid range. |
+| Schema Compare | Fixed issue with indexes not being added correctly when updating project from database. |
+| Notebooks | Fixed inconsistencies with notebook cell behavior and toolbars. |
+| Notebooks | Fixed issues with keyboard navigation. |
 
 ### May 2022 (hotfix)
 

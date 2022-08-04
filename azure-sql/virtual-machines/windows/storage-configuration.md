@@ -29,7 +29,7 @@ SQL Server VMs deployed through marketplace images automatically follow default 
 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
 
-* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo) or registered with the [SQL IaaS extension]().
+* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo).
 * Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
 * Uses [premium SSDs](/azure/virtual-machines/disks-types).
 

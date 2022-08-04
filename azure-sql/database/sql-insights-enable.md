@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: 
-ms.date: 07/29/2022
+ms.date: 08/03/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -209,8 +209,9 @@ TCP connections from the monitoring machine to the IP address and port used by t
 Enter the connection string in the form:
 
 ```json
-sqlAzureConnections": [
-   "Server=mysqlserver.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;" 
+"sqlAzureConnections": [
+   "Server=mysqlserver1.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;",
+   "Server=mysqlserver2.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;"
 ]
 ```
 
@@ -225,7 +226,8 @@ Enter the connection string in the form:
 
 ```json
 "sqlManagedInstanceConnections": [
-   "Server= mysqlserver.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;" 
+   "Server= mysqlserver1.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;",
+   "Server= mysqlserver2.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;" 
 ] 
 ```
 
@@ -242,7 +244,8 @@ Enter the connection string in the form:
 
 ```json
 "sqlVmConnections": [
-   "Server=SQLServerInstanceIPAddress;Port=1433;User Id=$username;Password=$password;" 
+   "Server=SQLServerInstanceIPAddress1;Port=1433;User Id=$username;Password=$password;",
+   "Server=SQLServerInstanceIPAddress2;Port=1433;User Id=$username;Password=$password;"
 ] 
 ```
 

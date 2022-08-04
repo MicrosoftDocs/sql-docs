@@ -33,7 +33,7 @@ For Column and Scatter chart types in paginated reports, the chart automatically
   
     -   **Disabled** Bar, column, and scatter charts will have no side margins.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

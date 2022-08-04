@@ -39,8 +39,8 @@ GeneMi (and CraigG).  2019/03/30.
 
 ## 18.1
 
-(TODO:UPDATE LINKS)![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2200731)  
-(TODO:UPDATE LINKS)![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2200732)  
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2202930)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2203124)  
 
 Version number: 18.1.1.1  
 Released: August 8, 2022  

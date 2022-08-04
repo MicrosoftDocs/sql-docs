@@ -56,9 +56,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  
  ### Support Lifecycle exception
  
-Limited support is provided for the SQL Native Client 11.0 that gets installed by SQL Server 2012 through 2019 until the SQL Server respective end-of-support lifecycles. This support exception applies to SNAC 11 when installed and used by SQL Server components only (e.g. SQL Server Engine Linked Servers). Do not remove the SQL Native Client provider that gets installed by SQL Server on the system.  The support exception only covers critical security fixes and does not include enhancements or fixes to SQL Native Client 11.0. 
+Limited support is provided for the SQL Native Client 11.0 that gets installed by SQL Server 2012 through 2019 until the SQL Server respective end-of-support lifecycles. This support exception only applies to the SNAC 11 driver that is installed and used by SQL Server components (e.g. SQL Server Engine Linked Servers). This means the driver is supported on Windows versions where SQL Server 2012 through SQL Server 2019 are supported. Do not remove the SQL Native Client provider that gets installed by SQL Server on the system. The support exception only covers critical security fixes and does not include enhancements or fixes to SQL Native Client 11.0.
 
 This support exception does not cover using SQL Native Client 11.0 as a driver for database applications to connect to SQL Server. Any applications using SNAC 11.0 must be updated to use newer versions (see [Download ODBC Driver for SQL Server - ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) and [Download Microsoft OLE DB Driver for SQL Server - OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server)). 
+
 
 
 

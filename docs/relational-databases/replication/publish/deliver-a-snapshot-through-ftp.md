@@ -64,7 +64,7 @@ By default, snapshots are stored in folders defined as Universal Naming Conventi
 For more information about modifying the snapshot folder location properties, see [Snapshot options](../snapshot-options.md).
   
 
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  The option to make snapshot files available on an FTP server can be set and these FTP settings can be modified programmatically using replication stored procedures. The procedure used depends on the type of publication. FTP snapshot delivery is only used with pull subscriptions.  

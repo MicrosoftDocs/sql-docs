@@ -58,7 +58,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
 
 ### To configure an alert for a threshold in Replication Monitor  
   
@@ -76,7 +76,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Close**.  
   

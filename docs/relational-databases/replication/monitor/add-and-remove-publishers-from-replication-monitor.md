@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### To add an Oracle Publisher  
   
@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### To add one or more Publishers that use the same Distributor  
   
@@ -71,7 +71,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which Publishers should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### To modify settings for the Publisher and Publisher Groups  
   
@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To move a Publisher from one group to another, select the Publisher in the **Start monitoring the following Publisher(s)** grid, and then select the new group in the **Show this Publisher(s) in the following group** list.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To remove a Publisher from Replication Monitor  
   

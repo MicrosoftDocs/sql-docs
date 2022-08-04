@@ -44,7 +44,7 @@ ms.author: maggies
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ### To add a filter to an embedded dataset or a shared dataset instance  
   
@@ -66,7 +66,7 @@ ms.author: maggies
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ## See Also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   

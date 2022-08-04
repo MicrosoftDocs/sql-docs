@@ -85,7 +85,7 @@ ms.author: mathoma
   
 2.  The Installation Wizard starts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To create a new cluster installation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], select **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation** on the installation page.  
   
-3.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+3.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 4.  To continue, select **Next**.  
   
@@ -186,7 +186,7 @@ ms.author: mathoma
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 20. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -200,7 +200,7 @@ ms.author: mathoma
   
 22. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 23. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -237,7 +237,7 @@ ms.author: mathoma
   
 3.  After the prerequisites are installed, the Installation Wizard starts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To prepare the node for clustering, move to the **Advanced** page and then select **Advanced cluster preparation**.  
   
-4.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+4.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 5.  On the Setup Support Files page select **Install** to install the Setup support files.  
   
@@ -325,7 +325,7 @@ ms.author: mathoma
   
 1.  After preparing all the nodes as described in the [prepare step](#prepare), run Setup on one of the prepared nodes, preferably the one that owns the shared disk. On the **Advanced** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center, select **Advanced cluster completion**.  
   
-2.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+2.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 3.  On the Setup Support Files page, select **Install** to install the Setup support files.  
   
@@ -369,7 +369,7 @@ ms.author: mathoma
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 13. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -379,7 +379,7 @@ ms.author: mathoma
   
 14. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**.. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 15. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   

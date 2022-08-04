@@ -57,7 +57,7 @@ To change the PITR backup retention period or the differential backup frequency 
 
 ### [Azure CLI](#tab/azure-cli)
 
-Prepare your environment for the Azure CLI.
+Prepare your environment for the Azure CLI:
 
 [!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 

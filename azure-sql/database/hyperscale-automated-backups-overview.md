@@ -67,7 +67,7 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 
 1. Go to the Hyperscale database for which you want to monitor backup and data storage metrics.
 2. In the **Monitoring** section, select the **Metrics** page.
-3. From the **Metric** drop-down list, select the **Data backup storage**, **Data storage size**, and **Log backup storage** metrics with an appropriate aggregation rule. 
+3. From the **Metric** dropdown list, select the **Data backup storage**, **Data storage size**, and **Log backup storage** metrics with an appropriate aggregation rule. 
 
 :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal that shows selections for viewing Hyperscale backup storage consumption.":::
 
@@ -111,9 +111,11 @@ To understand backup storage costs:
 1. Filter for the time period and service you're interested in by following these steps: 
 
    1. Add a filter for **Service name**.
-   1. Choose **sql-database** from the drop-down list.
+   1. Choose **sql-database** from the dropdown list.
    1. Add another filter for **Meter**. 
-   1. To monitor PITR backup costs, select **Data Stored - Backup - RA** from the drop-down list. 
+   1. To monitor backup costs for point-in-time recovery, select **Data Stored - Backup - RA** from the dropdown list.
+
+The following screenshot shows an example cost analysis.    
 
 :::image type="content" source="./media/hyperscale-automated-backups-overview/monitor-hyperscale-backup-costs.png" alt-text="Screenshot of the Azure portal that shows Hyperscale Backup storage costs.":::
 

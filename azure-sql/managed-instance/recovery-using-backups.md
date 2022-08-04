@@ -167,9 +167,8 @@ There's a delay between when a backup is taken and when it's geo-replicated to a
 
 From the Azure portal, you create a new managed instance and select an available geo-restore backup. The newly created database contains the geo-restored backup data.
 
-To geo-restore a database from the Azure portal to an existing managed instance in a region of your choice, follow these steps:
+To geo-restore a database from the Azure portal to an existing managed instance in a region of your choice, select the managed instance. Then follow these steps:
 
-1. Select a managed instance on which you want a database to be restored.
 1. Select **New database**.
 2. Enter a database name.
 3. Under **Use existing data**, select **Backup**.

@@ -59,7 +59,7 @@ To change the PITR backup retention period or the differential backup frequency 
 
 ### [Azure CLI](#tab/azure-cli)
 
-Prepare your environment for the Azure CLI.
+Prepare your environment for the Azure CLI:
 
 [!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 
@@ -133,7 +133,7 @@ For more information, see [Backup retention REST API](/rest/api/sql/backupshortt
 
 ## Configure backup storage redundancy
 
-You can configure backup storage redundancy for databases in Azure SQL Database when you create your database. You can change the storage redundancy after the database is already created. 
+You can configure backup storage redundancy for databases in Azure SQL Database when you create your database. You can also change the storage redundancy after the database is already created. 
 
 Backup storage redundancy changes made to existing databases apply to future backups only. The default value is geo-redundant storage. For differences in pricing between locally redundant, zone-redundant, and geo-redundant backup storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). 
 
@@ -260,9 +260,7 @@ This example copies a Hyperscale database to a new database by using Gen5 hardwa
 New-AzSqlDatabaseCopy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "HSSourceDB" -CopyResourceGroupName "DestResourceGroup" -CopyServerName "DestServer" -CopyDatabaseName "HSDestDB" -Vcore 2 -ComputeGeneration "Gen5" -ComputeModel Provisioned -BackupStorageRedundancy Zone
 ```
 
-For syntax details, see [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-azsqldatabasecopy). 
-
-For an overview of database copy, see [Copy a transactionally consistent copy of a database in Azure SQL Database](database-copy.md).
+For syntax details, see [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-azsqldatabasecopy). For an overview of database copy, see [Copy a transactionally consistent copy of a database in Azure SQL Database](database-copy.md).
 
 > [!NOTE]
 > To use the `-BackupStorageRedundancy` parameter with database restore, database copy, or create secondary operations, use Azure PowerShell version Az.Sql 2.11.0 or later. 

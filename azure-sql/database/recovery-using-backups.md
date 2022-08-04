@@ -41,7 +41,9 @@ If you configured [long-term retention](long-term-retention-overview.md), you ca
 > - You can't overwrite an existing database during restore.
 > - Database restore operations don't restore the tags of the original database. 
 
-When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost happens when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and service objective. For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
+When you're using the Standard or Premium service tier in the DTU purchasing model, your database restore might incur an extra storage cost. The extra cost happens when the maximum size of the restored database is greater than the amount of storage included with the target database's service tier and service objective. 
+
+For pricing details of extra storage, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/). If the actual amount of used space is less than the amount of storage included, you can avoid this extra cost by setting the maximum database size to the included amount.
 
 ## Recovery time
 
@@ -139,7 +141,7 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure CLI, Azure PowerShell, and the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)
 

@@ -70,7 +70,7 @@ ms.author: mathoma
   
 3.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup support files are required, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs them. If you are instructed to restart your computer, restart before you continue.  
   
-4.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+4.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**.
   
 5.  On the Product Key page, enter the PID key for the new version edition that matches the edition of the old product version. For example, to upgrade an Enterprise failover cluster, you must supply a PID key for [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Click **Next** to continue. Be aware that the PID key that you use for a failover cluster upgrade must be consistent across all failover cluster nodes in the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   

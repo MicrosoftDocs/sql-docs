@@ -820,7 +820,7 @@ catch (SQLException e) {
 
 ### Query parameter metadata caching
 
-To reduce the number of round trips to the database, the Microsoft JDBC Driver for SQL Server can cache encryption-related information for query parameters. As of version 11.2.0, encryption-related information for parameters returned from [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) calls will be cached by the driver if the associated SQL Server process does not use secure enclaves. For caching with the use of secure enclaves, the server must support re-establishing of the enclave session in cases where the session is no longer valid.
+To reduce the number of round trips to the database, the Microsoft JDBC Driver for SQL Server can cache encryption-related information for query parameters. As of version 11.2.0, encryption-related information for parameters returned from [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) calls will be cached by the driver if the associated SQL Server process doesn't use secure enclaves. For caching with the use of secure enclaves, the server must support re-establishing of the enclave session in cases where the session is no longer valid.
 
 ### Column encryption key caching
 
@@ -849,7 +849,7 @@ With `SQLServerBulkCopy`, you can copy data that is already encrypted and stored
 - Set the `allowEncryptedValueModifications` option. For more information, see [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 > [!NOTE]
-> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
+> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server doesn't check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
 
 ## See also
 

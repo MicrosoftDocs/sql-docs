@@ -63,7 +63,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Change | Details |
 | :---------- | :----------- |
-| TDS 8.0 support by adding "strict" option to encrypt connection property | **BREAKING CHANGE** Encrypt connection property is now type string. |
+| TDS 8.0 support by adding "strict" option to encrypt connection property | **BREAKING CHANGE** Encrypt connection property is now of type string. |
 | Added check for negotiated ALPN | Checks to make sure to Application-Layer Protocol is successfully negotiated. |
 | Added an option for enclaveAttestationProtocol | Added option for `NONE` protocol so that secure enclaves can be used without attestation. |
 | Allow serverName to be re-ordered in connection string | Validate that the serverName field of the connection string does not have an equal sign. |

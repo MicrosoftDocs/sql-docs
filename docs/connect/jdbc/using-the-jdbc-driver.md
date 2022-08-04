@@ -95,11 +95,11 @@ The **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdb
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-11.2.0.jre18.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 11.2 for SQL Server\sqljdbc_11.2\enu\mssql-jdbc-11.2.0.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre11.jar`
 
@@ -117,11 +117,11 @@ The **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre17.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 10.2 for SQL Server\sqljdbc_10.2\enu\mssql-jdbc-10.2.0.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_10.2/enu/mssql-jdbc-10.2.0.jre11.jar`
 
@@ -140,11 +140,11 @@ The **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jd
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.4.1.jre16.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.4 for SQL Server\sqljdbc_9.4\enu\mssql-jdbc-9.4.1.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.4/enu/mssql-jdbc-9.4.1.jre11.jar`
 
@@ -162,11 +162,11 @@ The **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jd
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre15.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.2 for SQL Server\sqljdbc_9.2\enu\mssql-jdbc-9.2.1.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.2/enu/mssql-jdbc-9.2.1.jre11.jar`
 
@@ -185,11 +185,11 @@ The **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, or **mssql-jd
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre14.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.1.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.1.jre11.jar`
 
@@ -208,11 +208,11 @@ The **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, or **mssql-jd
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre13.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.2.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre11.jar`
 
@@ -230,11 +230,11 @@ The **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jd
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre12.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.4 for SQL Server\sqljdbc_7.4\enu\mssql-jdbc-7.4.1.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.4/enu/mssql-jdbc-7.4.1.jre11.jar`
 
@@ -250,11 +250,11 @@ The **mssql-jdbc-7.2.2.jre8.jar** or **mssql-jdbc-7.2.2.jre11.jar** files are in
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre11.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.2.jre11.jar`
 
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
 
@@ -270,11 +270,11 @@ The **mssql-jdbc-7.0.0.jre8.jar** or **mssql-jdbc-7.0.0.jre10.jar** files are in
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.0 for SQL Server\sqljdbc_7.0\enu\mssql-jdbc-7.0.0.jre10.jar`  
   
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
@@ -292,11 +292,11 @@ The **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar, or **mssql-jdbc-
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
   
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
@@ -312,11 +312,11 @@ The **mssql-jdbc-6.2.2.jre7.jar** or **mssql-jdbc-6.2.2.jre8.jar** files are ins
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
@@ -336,11 +336,11 @@ The sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar, or sqljdbc42.jar file ar
 \<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
-The following snippet is an example of the CLASSPATH statement that is used for a Windows application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.0 for SQL Server\sqljdbc_4.2\enu\sqljdbc42.jar`  
   
-The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:  
+The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_4.2/enu/sqljdbc42.jar`  
   

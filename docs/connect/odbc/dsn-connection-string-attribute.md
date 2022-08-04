@@ -42,7 +42,7 @@ The following table lists the available keywords and the attributes for each pla
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0+) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
 | [HostnameInCertificate](dsn-connection-string-attribute.md#hostnameincertificate) (v18.0+) | | LMW |
-| [IpAddressPreference](dsn-connection-string-attribute.md#IpAddressPreference ) (v18.1+) | | LMW |
+| [IpAddressPreference](dsn-connection-string-attribute.md#ipaddresspreference) (v18.1+) | | LMW |
 | [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8)| | LMW |
 | [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -122,7 +122,6 @@ The following table lists the available keywords and the attributes for each pla
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 | [ClientCertificate](dsn-connection-string-attribute.md#clientcertificate) | | LMW |
 | [ClientKey](dsn-connection-string-attribute.md#clientkey) | | LMW |
-
 
 Here are some connection string keywords and connection attributes, which aren't documented in [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), and [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
@@ -253,24 +252,22 @@ Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
 |No|(Default) Replication login won't be used. |
 |Yes| Triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
 
-### RetryExec (v18.1+)
+### RetryExec
 
-Automatically re-executes specific ODBC function calls based on configurable conditions. This feature can be enabled through the connection string using the **RetryExec** keyword, along with a list of retry rules. Each retry rule has three colon separated components: an error match, retry policy, and a query match.
+Configurable retry logic is available starting in version 18.1. It automatically re-executes specific ODBC function calls based on configurable conditions. This feature can be enabled through the connection string using the **RetryExec** keyword, along with a list of retry rules. Each retry rule has three colon separated components: an error match, retry policy, and a query match.
 
 The query match determines the retry rule to be used for a given execution, and is matched with the incoming command text (SQLExecDirect) or the prepared command text in the statement object (SQLExecute). If more than one rule matches, the first matching one in the list is used. This allows rules to be listed in order of increasing generality. If no rule matches, then no retry is applied.
 
 When the execution results in an error, and there is an applicable retry rule, its error match is used to determine if the execution should be retried.
 
-The value of the RetryExec keyword is a list of semicolon seperated retry rules. <br>
+The value of the RetryExec keyword is a list of semicolon seperated retry rules.  
 `RetryExec={rule1;rule2}`
 
 A retry rule is as follows: `<errormatch>:<retrypolicy>:<querymatch>`
 
-**Error Match:** A comma seperated list of error codes. For example specifying **1000,2000** would be the error codes you want to retry. <br>
+**Error Match:** A comma seperated list of error codes. For example, specifying **1000,2000** would be the error codes you want to retry.
 
-**Retry Policy:** Specifies the delay until the next retry. The first parameter would be the number of retries while the second would be the delay.
-For example **3,10+7** would be 3 tries starting at 10 and each following retry would increment by 7 seconds. Note that if +7 isn't specified, then
-each following retry is exponentially doubled.
+**Retry Policy:** Specifies the delay until the next retry. The first parameter would be the number of retries while the second would be the delay. For example **3,10+7** would be 3 tries starting at 10 and each following retry would increment by 7 seconds. Note that if +7 isn't specified, then each following retry is exponentially doubled.
 
 **Query Match:** Specifies the query you want to match with. If nothing is specified, then it applies to all queries. Specifying **SELECT** would mean for all queries that start with select.
 
@@ -300,7 +297,6 @@ The above 3 rules can be specified together in the connection string as follows:
 
 Note that the most general (match-all) rule has been placed at the end, to allow the two more specific rules before it to match their respective queries.
 
-
 ## ClientCertificate
 
 Specifies the certificate to be used for authentication. The options are:
@@ -328,15 +324,13 @@ In case if private key file is password protected then password keyword is requi
 
 Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
 
-### IpAddressPreference (v18.1+)
+### IpAddressPreference
 
-Allows the user to specify what type of IP Address they want to prioritize connecting with. WIth the possible options being "IpAddress= [ IPv4First | IPv6First | UsePlatformDefault]." UsePlatformDefault connects with the first successful address found. Not specifying or using a previous version of the driver will default to
-IPv4First.
+Available starting with version 18.1, this option allows the user to specify the type of IP Address they want to prioritize for connections. The possible options are "IpAddress= [ IPv4First | IPv6First | UsePlatformDefault]." UsePlatformDefault connects to addresses in the order they are provided by the system call to resolve the server name. The default value is IPv4First, which corresponds to the behavior in previous versions.
 
+### ServerCertificate
 
-### ServerCertificate (v18.1+)
-
-When using the strict encryption mode, the **ServerCertificate** keyword can be used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
+Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 

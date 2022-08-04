@@ -67,8 +67,6 @@ Beginning with version 17.4, the driver supports Always Encrypted with secure en
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
   - If you do not require attestation, `<attestation-protocol>` should be `VBS-NONE`. (Version 18.1+)
 
-> [!NOTE]
-> Using `VBS-NONE` does not attest the enclave, which decreases security. Use this option only if you understand and accept the risks of not attesting the enclave.
 
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 

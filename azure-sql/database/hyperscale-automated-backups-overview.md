@@ -33,12 +33,12 @@ Storage and compute separation enables Hyperscale to push down backup and restor
 
 Backup and restore operations for Hyperscale databases are fast regardless of data size, because they use storage snapshots. Backup is virtually instantaneous. 
 
-A database can be restored to any point in time within its backup retention period by:
+You can restore a database to any point in time within its backup retention period by:
 
 1. Reverting to applicable file snapshots.
 1. Applying transaction logs to make the restored database transactionally consistent. 
 
-As such, restore is not a size-of-data operation. Restore of a Hyperscale database within the same Azure region finishes within minutes instead of hours or days, even for multi-terabyte databases. 
+As such, restore is not a size-of-data operation. Restore of a Hyperscale database within the same Azure region finishes in minutes instead of hours or days, even for multi-terabyte databases. 
 
 Creation of new databases by restoring an existing backup or copying the database also takes advantage of compute and storage separation in Hyperscale. Creating copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when you use the same storage type.
 
@@ -67,10 +67,9 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 
 1. Go to the Hyperscale database for which you want to monitor backup and data storage metrics.
 2. In the **Monitoring** section, select the **Metrics** page.
+3. From the **Metric** drop-down list, select the **Data backup storage**, **Data storage size**, and **Log backup storage** metrics with an appropriate aggregation rule. 
 
-   :::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal tht shows Hyperscale backup storage consumption.":::
-
-3. From the **Metric** drop-down list, select the **Data backup Storage**, **Data storage size**, and **Log Backup Storage** metrics with an appropriate aggregation rule. 
+:::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal that shows selections for viewing Hyperscale backup storage consumption.":::
 
 ### Reduce backup storage consumption
 
@@ -120,31 +119,35 @@ To understand backup storage costs:
 
 ## Data and backup storage redundancy
 
-Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy. 
+Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS). The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy. 
 
-Consider storage redundancy carefully when you create a Hyperscale database, because backup storage redundancy for Hyperscale databases can only be set during database creation. You can't modify this setting after the resource is provisioned. Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [database copy](database-copy.md).
+Consider backup storage redundancy carefully when you create a Hyperscale database, because you can set it only during database creation. You can't modify this setting after the resource is provisioned. 
+
+Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [database copy](database-copy.md).
 
 > [!WARNING]
-> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use local or zone redundant storage. 
+> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
 > - Zone-redundant storage is currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
 ## Restore a Hyperscale database to a different region
 
-If you need to restore a Hyperscale database in Azure SQL Database to a region other than the one it's currently hosted in, as part of a disaster recovery operation or drill, relocation, or any other reason, the primary method is to do a geo-restore of the database. This involves exactly the same steps as what you would use to restore any other database in SQL Database to a different region:
+You might need to restore a Hyperscale database in Azure SQL Database to a region other than the one where it's currently hosted. Common reasons include a disaster recovery operation or drill, or a relocation. The primary method is to do a geo-restore of the database. You use the same steps that you would use to restore any other database in SQL Database to a different region:
 
-1. Create a [server](logical-servers.md) in the target region if you don't already have an appropriate server there.  This server should be owned by the same subscription as the original (source) server.
+1. Create a [server](logical-servers.md) in the target region if you don't already have an appropriate server there. This server should be owned by the same subscription as the original (source) server.
 2. Follow the instructions in the [geo-restore](./recovery-using-backups.md#geo-restore) section of the page on restoring a database in Azure SQL Database from automatic backups.
 
 > [!NOTE]
-> Because the source and target are in separate regions, the database can't share snapshot storage with the source database as in non-geo restores, which finish quickly regardless of database size. 
+> Because the source and target are in separate regions, the database can't share snapshot storage with the source database as it does in non-geo restores. Non-geo restores finish quickly regardless of database size. 
 >
-> In the case of a geo-restore of a Hyperscale database, it will be a size-of-data operation, even if the target is in the paired region of the geo-replicated storage. Therefore, a geo-restore will take a significantly longer time compared to a point-in-time restore in the same region. If the target is in the paired region, data transfer will be within a region, which will be significantly faster than a cross-region data transfer. But it will still be a size-of-data operation.
+> A geo-restore of a Hyperscale database is a size-of-data operation, even if the target is in the paired region of the geo-replicated storage. Therefore, a geo-restore will take a significantly longer time compared to a point-in-time restore in the same region.
+>
+> If the target is in the paired region, data transfer will be within a region. That transfer will be significantly faster than a cross-region data transfer. But it will still be a size-of-data operation.
 
-If you prefer, you can copy the database to a different region as well. This is the method to use if geo-restore is not available because it is not supported with the selected storage redundancy type. Learn about [Database Copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
+If you prefer, you can copy the database to a different region. Use this method if geo-restore is not available because it's not supported with the selected storage redundancy type. For details, see [Database copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
 
 ## Next steps
 
-- Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- Database backups are an essential part of any business continuity and disaster recovery strategy because they help protect your data from accidental corruption or deletion. To learn about the other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using the Azure portal, see [Manage long-term backup retention by using the Azure portal](long-term-backup-retention-configure.md).
 - For information about how to configure, manage, and restore from long-term retention of automated backups in Azure Blob Storage by using PowerShell, see [Manage long-term backup retention by using PowerShell](long-term-backup-retention-configure.md). 
 - Get more information about how to [restore a database to a point in time by using the Azure portal](recovery-using-backups.md).

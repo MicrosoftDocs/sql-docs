@@ -45,7 +45,7 @@ ms.author: mathoma
 ## Prerequisites  
  Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to your desired version of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to your desired version of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winserver2003-md](../../../includes/winserver2003-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   

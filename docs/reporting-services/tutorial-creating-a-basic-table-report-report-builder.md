@@ -279,7 +279,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>6. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
   
 ### To save the report on a report server  
   

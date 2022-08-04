@@ -375,7 +375,6 @@ To test the connection, follow these steps:
 
 > [!NOTE]
 > - While connecting to availability group on different subnets, setting `MultiSubnetFailover=true` provides faster detection of and connection to the current primary replica. See [Connecting with MultiSubnetFailover](/dotnet/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery#connecting-with-multisubnetfailover)
-> - Setting `MultiSubnetFailover=True` isn't required with .NET Framework 4.6.1 or later versions.
 
 ## Next steps
 

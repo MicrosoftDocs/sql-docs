@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 04/14/2022
+ms.date: 07/29/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance
@@ -70,7 +70,7 @@ In the Azure portal, Azure SQL Database and Azure SQL Managed Instance provide m
 
 ### Azure SQL Database and Azure SQL Managed Instance resource monitoring
 
-You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is reaching 100% of processor, memory, or IO resources. High DTU or processor percentage, as well as high IO percentage, indicates that your workload might need more CPU or IO resources. It might also indicate queries that need to be optimized.
+You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is approaching the limits of CPU, memory, IO, or storage resources. High DTU, CPU or IO utilization may indicate that your workload needs more resources. It might also indicate that queries need to be optimized. See [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases), [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) and [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances) for supported metrics in Azure SQL Database and Azure SQL Managed Instance.
 
   ![Resource metrics](./media/monitor-tune-overview/resource-metrics.png)
 
@@ -163,3 +163,5 @@ Additionally, you can use [Extended Events](/sql/relational-databases/extended-e
 - For more information about intelligent performance recommendations for single and pooled databases, see [Database advisor performance recommendations](database-advisor-implement-performance-recommendations.md).
 - For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
 - [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
+- [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
+- [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

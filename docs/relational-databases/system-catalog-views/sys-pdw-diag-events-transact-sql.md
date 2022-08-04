@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_diag_events (Transact-SQL)"
 description: sys.pdw_diag_events (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.technology: system-objects

@@ -57,13 +57,13 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
 
    ```bash
-   $ cd ~
-   $ mkdir sqlpackage
-   $ unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
-   $ echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
-   $ chmod a+x ~/sqlpackage/sqlpackage
-   $ source ~/.bashrc
-   $ sqlpackage
+   cd ~
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
+   source ~/.bashrc
+   sqlpackage
    ```
 
    > [!NOTE]
@@ -72,26 +72,26 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    **Debian:**
 
    ```bash
-   $ sudo apt-get install libunwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:**
 
    ```bash
-   $ yum install libunwind
-   $ yum install libicu
+   yum install libunwind
+   yum install libicu
    ```
 
    **Ubuntu:**
 
    ```bash
-   $ sudo apt-get install libunwind8
+   sudo apt-get install libunwind8
 
    # install the libicu library based on the Ubuntu version
-   $ sudo apt-get install libicu55      # for 16.x
-   $ sudo apt-get install libicu57      # for 17.x
-   $ sudo apt-get install libicu60      # for 18.x
-   $ sudo apt-get install libicu66      # for 20.x
+   sudo apt-get install libicu55      # for 16.x
+   sudo apt-get install libicu57      # for 17.x
+   sudo apt-get install libicu60      # for 18.x
+   sudo apt-get install libicu66      # for 20.x
    ```
 
 ## macOS (.NET Core)
@@ -100,12 +100,12 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
 
    ```bash
-   $ mkdir sqlpackage
-   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage
-   $ chmod +x ~/sqlpackage/sqlpackage
-   $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
-   $ source ~/.bash_profile
-   $ sqlpackage
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage
+   chmod +x ~/sqlpackage/sqlpackage
+   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
+   source ~/.bash_profile
+   sqlpackage
    ```
 
    > [!NOTE]
@@ -113,12 +113,12 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
    **Before executing SqlPackage:**
    ```bash
-   $ sudo spctl --master-disable
+   sudo spctl --master-disable
    ```
 
    **After executing SqlPackage:**
    ```bash
-   $ sudo spctl --master-enable
+   sudo spctl --master-enable
    ```
 
 ## Windows (.NET Core)

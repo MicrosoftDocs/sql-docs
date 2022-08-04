@@ -1,12 +1,12 @@
 ---
 title: System databases
 description: Learn about system databases, which are databases that SQL Server PDW uses to manage users, databases, and temporary data.
-author: ronortloff 
+author: WilliamDAssafMSFT 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 05/06/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.reviewer: martinle
 ms.custom:
  - seo-dt-2019

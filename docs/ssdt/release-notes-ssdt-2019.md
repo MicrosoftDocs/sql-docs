@@ -31,7 +31,7 @@ More information is available in release notes.**
 
 ## Common Issues
 
-- **If you met error during installation, you can check the logs under %temp%\SsdtisSetup.** Also, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+- **If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.** Also, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
 

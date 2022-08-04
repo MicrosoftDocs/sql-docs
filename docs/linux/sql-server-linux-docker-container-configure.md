@@ -464,7 +464,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 - [Dockerfile example with Full-Text Search](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-agent-fts-ha-tools/Dockerfile)
 - [Dockerfile example for RHEL 7 and SQL Server 2019](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel7-sql2019)
 - [Dockerfile example for RHEL 8 and SQL Server 2017](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel8-sql2017)
-- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, Polybase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
+- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, PolyBase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 

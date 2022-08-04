@@ -55,7 +55,7 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
   - Data virtualization: 
      - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
-     - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
+     - Delta table format support for PolyBase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
 - [Intelligent query performance features](#query-store-and-intelligent-query-processing)
   - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization - Supportability

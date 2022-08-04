@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: 
-ms.date: 06/15/2022
+ms.date: 07/29/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
@@ -14,6 +14,8 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Monitor your SQL deployments with SQL Insights (preview)
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
 
 SQL Insights (preview) is a comprehensive solution for monitoring any product in the [Azure SQL family](/azure/azure-sql/index). SQL Insights uses [dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs) to expose the data that you need to monitor health, diagnose problems, and tune performance.  
 
@@ -27,7 +29,7 @@ There is no direct cost for SQL Insights (preview). All costs are incurred by th
 
 ### Virtual machines
 
-For virtual machines, you're charged based on the pricing published on the [virtual machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/linux/). The number of virtual machines that you need will vary based on the number of connection strings you want to monitor. We recommend allocating one virtual machine of size Standard_B2s for every 100 connection strings. See [Azure virtual machine requirements](sql-insights-enable.md#azure-virtual-machine-requirements) for more details.
+For virtual machines, you're charged based on the pricing published on the [virtual machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/linux/). The number of virtual machines that you need will vary based on the number of connection strings you want to monitor. We recommend allocating one virtual machine of size Standard_B2s for every 100 connection strings. For more information, see [Azure virtual machine requirements](sql-insights-enable.md#azure-virtual-machine-requirements).
 
 ### Log Analytics workspaces
 
@@ -59,11 +61,11 @@ SQL Insights (preview) has no support or has limited support for the following:
 
 ## Regional availability
 
-SQL Insights (preview) is available in all Azure regions where Azure Monitor is [available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor), with the exception of Azure government and national clouds.
+SQL Insights (preview) is available in all Azure regions where Azure Monitor is [available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor), with the exception of Azure Government and national clouds.
 
 ## Open SQL Insights
 
-To open SQL Insights:
+To open SQL Insights (preview):
 
 1. In the Azure portal, go to the **Azure Monitor** menu.
 1. In the **Insights** section, select **SQL (preview)**. 
@@ -94,46 +96,46 @@ The tables have the following columns:
 
 | Friendly name | Configuration name | Namespace | DMVs | Enabled by default | Default collection frequency |
 |:---|:---|:---|:---|:---|:---|
-| DB wait stats | AzureSQLDBWaitStats | sqlserver_azuredb_waitstats | sys.dm_db_wait_stats | No | Not applicable |
-| DBO wait stats | AzureSQLDBOsWaitstats | sqlserver_waitstats |sys.dm_os_wait_stats | Yes | 60 seconds |
-| Memory clerks | AzureSQLDBMemoryClerks | sqlserver_memory_clerks | sys.dm_os_memory_clerks | Yes | 60 seconds |
-| Database I/O | AzureSQLDBDatabaseIO | sqlserver_database_io | sys.dm_io_virtual_file_stats<br>sys.database_files<br>tempdb.sys.database_files | Yes | 60 seconds |
-| Server properties | AzureSQLDBServerProperties | sqlserver_server_properties | sys.dm_os_job_object<br>sys.database_files<br>sys.[databases]<br>sys.[database_service_objectives] | Yes | 60 seconds |
-| Performance counters | AzureSQLDBPerformanceCounters | sqlserver_performance | sys.dm_os_performance_counters<br>sys.databases | Yes | 60 seconds |
-| Resource stats | AzureSQLDBResourceStats | sqlserver_azure_db_resource_stats | sys.dm_db_resource_stats | Yes | 60 seconds |
-| Resource governance | AzureSQLDBResourceGovernance | sqlserver_db_resource_governance | sys.dm_user_db_resource_governance | Yes | 60 seconds |
-| Requests | AzureSQLDBRequests | sqlserver_requests | sys.dm_exec_sessions<br>sys.dm_exec_requests<br>sys.dm_exec_sql_text | No | Not applicable |
-| Schedulers| AzureSQLDBSchedulers | sqlserver_schedulers | sys.dm_os_schedulers | No | Not applicable  |
+| DB wait stats | `AzureSQLDBWaitStats` | `sqlserver_azuredb_waitstats` | `sys.dm_db_wait_stats` | No | Not applicable |
+| DBO wait stats | `AzureSQLDBOsWaitstats` | `sqlserver_waitstats` |`sys.dm_os_wait_stats` | Yes | 60 seconds |
+| Memory clerks | `AzureSQLDBMemoryClerks` | `sqlserver_memory_clerks` | `sys.dm_os_memory_clerks` | Yes | 60 seconds |
+| Database I/O | `AzureSQLDBDatabaseIO` | `sqlserver_database_io` | `sys.dm_io_virtual_file_stats`<br>`sys.database_files`<br>`tempdb.sys.database_files` | Yes | 60 seconds |
+| Server properties | `AzureSQLDBServerProperties` | `sqlserver_server_properties` | `sys.dm_os_job_object`<br>`sys.database_files`<br>`sys.databases`<br>`sys.database_service_objectives` | Yes | 60 seconds |
+| Performance counters | `AzureSQLDBPerformanceCounters` | `sqlserver_performance` | `sys.dm_os_performance_counters`<br>`sys.databases` | Yes | 60 seconds |
+| Resource stats | `AzureSQLDBResourceStats` | `sqlserver_azure_db_resource_stats` | `sys.dm_db_resource_stats` | Yes | 60 seconds |
+| Resource governance | `AzureSQLDBResourceGovernance` | `sqlserver_db_resource_governance` | `sys.dm_user_db_resource_governance` | Yes | 60 seconds |
+| Requests | `AzureSQLDBRequests` | `sqlserver_requests` | `sys.dm_exec_sessions`<br>`sys.dm_exec_requests`<br>`sys.dm_exec_sql_text` | No | Not applicable |
+| Schedulers| `AzureSQLDBSchedulers` | `sqlserver_schedulers` | `sys.dm_os_schedulers` | No | Not applicable  |
 
 ### Data for Azure SQL Managed Instance 
 
 | Friendly name | Configuration name | Namespace | DMVs | Enabled by default | Default collection frequency |
 |:---|:---|:---|:---|:---|:---|
-| Wait stats | AzureSQLMIOsWaitstats | sqlserver_waitstats | sys.dm_os_wait_stats | Yes | 60 seconds |
-| Memory clerks | AzureSQLMIMemoryClerks | sqlserver_memory_clerks | sys.dm_os_memory_clerks | Yes | 60 seconds |
-| Database I/O | AzureSQLMIDatabaseIO | sqlserver_database_io | sys.dm_io_virtual_file_stats<br>sys.master_files | Yes | 60 seconds |
-| Server properties | AzureSQLMIServerProperties | sqlserver_server_properties | sys.server_resource_stats | Yes | 60 seconds |
-| Performance counters | AzureSQLMIPerformanceCounters | sqlserver_performance | sys.dm_os_performance_counters<br>sys.databases| Yes | 60 seconds |
-| Resource stats | AzureSQLMIResourceStats | sqlserver_azure_db_resource_stats | sys.server_resource_stats | Yes | 60 seconds |
-| Resource governance | AzureSQLMIResourceGovernance | sqlserver_instance_resource_governance | sys.dm_instance_resource_governance | Yes | 60 seconds |
-| Requests | AzureSQLMIRequests | sqlserver_requests | sys.dm_exec_sessions<br>sys.dm_exec_requests<br>sys.dm_exec_sql_text | No | NA |
-| Schedulers | AzureSQLMISchedulers | sqlserver_schedulers | sys.dm_os_schedulers | No | Not applicable |
+| Wait stats | `AzureSQLMIOsWaitstats` | `sqlserver_waitstats` | `sys.dm_os_wait_stats` | Yes | 60 seconds |
+| Memory clerks | `AzureSQLMIMemoryClerks` | `sqlserver_memory_clerks` | `sys.dm_os_memory_clerks` | Yes | 60 seconds |
+| Database I/O | `AzureSQLMIDatabaseIO` | `sqlserver_database_io` | `sys.dm_io_virtual_file_stats`<br>`sys.master_files` | Yes | 60 seconds |
+| Server properties | `AzureSQLMIServerProperties` | `sqlserver_server_properties` | `sys.server_resource_stats` | Yes | 60 seconds |
+| Performance counters | `AzureSQLMIPerformanceCounters` | `sqlserver_performance` | `sys.dm_os_performance_counters`<br>`sys.databases`| Yes | 60 seconds |
+| Resource stats | `AzureSQLMIResourceStats` | `sqlserver_azure_db_resource_stats` | `sys.server_resource_stats` | Yes | 60 seconds |
+| Resource governance | `AzureSQLMIResourceGovernance` | `sqlserver_instance_resource_governance` | `sys.dm_instance_resource_governance` | Yes | 60 seconds |
+| Requests | `AzureSQLMIRequests` | `sqlserver_requests` | `sys.dm_exec_sessions`<br>`sys.dm_exec_requests`<br>`sys.dm_exec_sql_text` | No | NA |
+| Schedulers | `AzureSQLMISchedulers` | `sqlserver_schedulers` | `sys.dm_os_schedulers` | No | Not applicable |
 
 ### Data for SQL Server
 
 | Friendly name | Configuration name | Namespace | DMVs | Enabled by default | Default collection frequency |
 |:---|:---|:---|:---|:---|:---|
-| Wait stats | SQLServerWaitStatsCategorized | sqlserver_waitstats | sys.dm_os_wait_stats | Yes | 60 seconds | 
-| Memory clerks | SQLServerMemoryClerks | sqlserver_memory_clerks | sys.dm_os_memory_clerks | Yes | 60 seconds |
-| Database I/O | SQLServerDatabaseIO | sqlserver_database_io | sys.dm_io_virtual_file_stats<br>sys.master_files | Yes | 60 seconds |
-| Server properties | SQLServerProperties | sqlserver_server_properties | sys.dm_os_sys_info | Yes | 60 seconds |
-| Performance counters | SQLServerPerformanceCounters | sqlserver_performance | sys.dm_os_performance_counters | Yes | 60 seconds |
-| Volume space | SQLServerVolumeSpace | sqlserver_volume_space | sys.master_files | Yes | 60 seconds |
-| SQL Server CPU | SQLServerCpu | sqlserver_cpu | sys.dm_os_ring_buffers | Yes | 60 seconds |
-| Schedulers | SQLServerSchedulers | sqlserver_schedulers | sys.dm_os_schedulers | No | Not applicable |
-| Requests | SQLServerRequests | sqlserver_requests | sys.dm_exec_sessions<br>sys.dm_exec_requests<br>sys.dm_exec_sql_text | No | Not applicable |
-| Availability replica states | SQLServerAvailabilityReplicaStates | sqlserver_hadr_replica_states | sys.dm_hadr_availability_replica_states<br>sys.availability_replicas<br>sys.availability_groups<br>sys.dm_hadr_availability_group_states | No | 60 seconds |
-| Availability database replicas | SQLServerDatabaseReplicaStates | sqlserver_hadr_dbreplica_states | sys.dm_hadr_database_replica_states<br>sys.availability_replicas | No | 60 seconds |
+| Wait stats | `SQLServerWaitStatsCategorized` | `sqlserver_waitstats` | `sys.dm_os_wait_stats` | Yes | 60 seconds | 
+| Memory clerks | `SQLServerMemoryClerks` | `sqlserver_memory_clerks` | `sys.dm_os_memory_clerks` | Yes | 60 seconds |
+| Database I/O | `SQLServerDatabaseIO` | `sqlserver_database_io` | `sys.dm_io_virtual_file_stats`<br>`sys.master_files` | Yes | 60 seconds |
+| Server properties | `SQLServerProperties` | `sqlserver_server_properties` | `sys.dm_os_sys_info` | Yes | 60 seconds |
+| Performance counters | `SQLServerPerformanceCounters` | `sqlserver_performance` | `sys.dm_os_performance_counters` | Yes | 60 seconds |
+| Volume space | `SQLServerVolumeSpace` | `sqlserver_volume_space` | `sys.master_files` | Yes | 60 seconds |
+| SQL Server CPU | `SQLServerCpu` | `sqlserver_cpu` | `sys.dm_os_ring_buffers` | Yes | 60 seconds |
+| Schedulers | `SQLServerSchedulers` | `sqlserver_schedulers` | `sys.dm_os_schedulers` | No | Not applicable |
+| Requests | `SQLServerRequests` | `sqlserver_requests` | `sys.dm_exec_sessions`<br>`sys.dm_exec_requests`<br>`sys.dm_exec_sql_text` | No | Not applicable |
+| Availability replica states | `SQLServerAvailabilityReplicaStates` | `sqlserver_hadr_replica_states` | `sys.dm_hadr_availability_replica_states`<br>`sys.availability_replicas`<br>`sys.availability_groups`<br>`sys.dm_hadr_availability_group_states` | No | 60 seconds |
+| Availability database replicas | `SQLServerDatabaseReplicaStates` | `sqlserver_hadr_dbreplica_states` | `sys.dm_hadr_database_replica_states`<br>`sys.availability_replicas` | No | 60 seconds |
 
 ## Next steps
 

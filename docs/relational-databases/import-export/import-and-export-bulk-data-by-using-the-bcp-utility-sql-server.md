@@ -1,21 +1,19 @@
 ---
 title: "Import & export bulk data with bcp"
 description: Use bcp to export data from anywhere in a SQL Server database that SELECT works. Bulk export data from a table or from a query and bulk import from a file.
+author: markingmyname
+ms.author: maghan
+ms.date: "09/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk exporting [SQL Server], bcp utility"
   - "bulk importing [SQL Server], bcp utility"
   - "bcp utility [SQL Server], about bcp utility"
-ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.date: "09/28/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 
 # Import and export bulk data using bcp (SQL Server)

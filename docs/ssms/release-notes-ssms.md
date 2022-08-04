@@ -1001,7 +1001,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
-| Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |
+| Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the PolyBase/Scale-out Group node (when connected to a compute node). |
 | Object explorer | Fixed an issue where the *Disabled* menu item was still enabled, even after disabling a given Index. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37735375) for more details. |
 | Reports | Correcting report to display GrantedQueryMemory in KB (SQL Performance   Dashboard report). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37167289) for more details. |
 | Reports | Improved the tracing of the log block in Always-On scenarios. |

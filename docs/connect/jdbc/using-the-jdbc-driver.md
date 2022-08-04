@@ -2,7 +2,7 @@
 title: "Using the JDBC driver | Microsoft Docs"
 description: "This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 08/04/2022
+ms.date: 08/08/2022
 
 ms.prod: sql
 ms.prod_service: connectivity

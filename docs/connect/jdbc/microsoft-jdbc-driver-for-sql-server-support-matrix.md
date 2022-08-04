@@ -2,7 +2,7 @@
 title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 08/04/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -59,7 +59,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|11.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|11.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |10.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 | 9.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 | 9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
@@ -94,7 +94,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
 |[11.2](release-notes-for-the-jdbc-driver.md#112)|1.8, 11, 17, 18|4.2, 4.3 (partially)|
-|[10.2](release-notes-for-the-jdbc-driver.md102)|1.8, 11, 17|4.2, 4.3 (partially)|
+|[10.2](release-notes-for-the-jdbc-driver.md#102)|1.8, 11, 17|4.2, 4.3 (partially)|
 |[9.4](release-notes-for-the-jdbc-driver.md#94)|1.8, 11, 16|4.2, 4.3 (partially)|
 |[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8, 11, 15|4.2, 4.3 (partially)|
 |[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (partially)|

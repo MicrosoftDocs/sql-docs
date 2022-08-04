@@ -2,7 +2,7 @@
 title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 ms.custom: ""
-ms.date: 08/04/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -18,15 +18,15 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ## <a id="112"></a> 11.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
 
 Release number: 11.2.0  
 Released: August 4, 2022
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x40a)
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x40a)
 
 ### 11.2 Compliance
 
@@ -54,8 +54,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Feature | Details |
 | :---------- | :----------- |
 | Java 18 support | The driver is now compatible with Java Development Kit (JDK) version 18.0 in addition to JDK 17.0, 11.0 and 1.8. |
-| Added Configurable IPv6 Support | The IP address preference for the client application can now be set between IPv4 and IPv6. |
-| Added support for prepare method selection | Added new connection string property prepareMethod to toggle between use of sp_prepare and sp_prepexec. |
+| Added Configurable IPv6 Support | The IP address preference for the client application can now be set between IPv4 and IPv6. Use the new `ipaddresspreference` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
+| Added support for prepare method selection | Added new connection string property prepareMethod to toggle between use of sp_prepare and sp_prepexec. Use the new `prepareMethod` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
 | Cache parameter metadata calls | Encryption-related information for parameterized queries can now be cached. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
@@ -65,7 +65,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | TDS 8.0 support by adding "strict" option to encrypt connection property | **BREAKING CHANGE** Encrypt connection property is now type string. |
 | Added check for negotiated ALPN | Checks to make sure to Application-Layer Protocol is successfully negotiated. |
-| Added an option for enclaveAttestationProtcol | Added option for `NONE` protocol, to be used in environemnents where attestation is not possible. |
+| Added an option for enclaveAttestationProtocol | Added option for `NONE` protocol so that secure enclaves can be used without attestation. |
 | Allow serverName to be re-ordered in connection string | Validate that the serverName field of the connection string does not have an equal sign. |
 | `msal4j` dependency is now explicit | Added an explicit dependency for `msal4j` (was a transitive dependency in previous releases). |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`. |
@@ -75,10 +75,10 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| Managed Identity Retry interval|  Fixed Managed Identity retry interval to exponential backoff properly [GitHub Issue #1765](https://github.com/microsoft/mssql-jdbc/issues/1765) |
-| Exception is not thrown as expected when the session is killed in SQL database | Added check for DONE_ERROR status token which may occur from a killed session on the server [GitHub Issue #1846](https://github.com/microsoft/mssql-jdbc/issues/1846) |
-| Assertion fails when canceling "insert into" statement | Fixed issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849) |
-| Establishing multiple connections in parallel can throw an IndexOutOfBoundsException | Fixed race condition with addressList which may result in IndexOutOfBoundsException when establishing multiple connections [GitHub Issue #1852](https://github.com/microsoft/mssql-jdbc/issues/1852) |
+| Managed Identity Retry interval|  Fixed Managed Identity retry interval to properly back off exponentially [GitHub Issue #1765](https://github.com/microsoft/mssql-jdbc/issues/1765). |
+| Exception is not thrown as expected when the session is killed in SQL database | Added check for DONE_ERROR status token which may occur from a killed session on the server [GitHub Issue #1846](https://github.com/microsoft/mssql-jdbc/issues/1846). |
+| Assertion fails when canceling "insert into" statement | Fixed issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849). |
+| Establishing multiple connections in parallel can throw an IndexOutOfBoundsException | Fixed race condition with addressList which may result in IndexOutOfBoundsException when establishing multiple connections [GitHub Issue #1852](https://github.com/microsoft/mssql-jdbc/issues/1852). |
 | &nbsp; | &nbsp; |
 
 ## Previous releases

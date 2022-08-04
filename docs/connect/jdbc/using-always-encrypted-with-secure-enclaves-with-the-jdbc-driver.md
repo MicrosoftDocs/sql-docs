@@ -2,7 +2,7 @@
 description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/04/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel

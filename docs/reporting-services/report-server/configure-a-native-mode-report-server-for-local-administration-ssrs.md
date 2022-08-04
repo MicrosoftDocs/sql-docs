@@ -26,13 +26,13 @@ ms.author: maggies
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
--   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
+-   [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)]  
   
 -   [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]  
   
 -   [!INCLUDE[win8](../../includes/win8-md.md)]  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)]  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   

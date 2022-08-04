@@ -21,7 +21,7 @@ ms.author: mathoma
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
 
   
- Upgrading the Windows Server operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
+ Upgrading the Windows Server operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
   
  Support details are as follows:  
   

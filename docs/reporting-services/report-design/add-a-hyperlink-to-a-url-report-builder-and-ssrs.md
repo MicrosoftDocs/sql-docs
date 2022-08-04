@@ -51,7 +51,7 @@ Try adding hyperlinks with sample data in [Tutorial: Format Text &#40;Report Bui
   
    See [Add a Drillthrough Action on a Report](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md) for more information. 
    
-6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6. Select **OK**.
    
 ## ... add a bookmark
 
@@ -65,7 +65,7 @@ You can link to bookmarks to a location in the current report. To link to a book
    
    See [Add a Bookmark to a Report](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md) for more information.
    
-3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Select **OK**.
 
 ## ... add a hyperlink 
   
@@ -77,7 +77,7 @@ You can link to bookmarks to a location in the current report. To link to a book
     
     For an item published to a report server configured in SharePoint integrated mode, use a fully qualified URL. For example, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
 
 ## After you add a hyperlink
   

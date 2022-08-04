@@ -56,7 +56,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
 9. Click **Credentials**. Enter the credentials that you need to access the external data source.  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. Select **OK**.
   
     You are back on the **Choose a connection to a data source** page.  
   
@@ -64,7 +64,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
     The message "Connection created successfully" appears.  
   
-12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+12. Select **OK**.
   
 13. Click **Next**.  
   
@@ -280,7 +280,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## <a name="Save"></a>9. Save the Report  
 Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  

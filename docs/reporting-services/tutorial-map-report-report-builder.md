@@ -213,7 +213,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 23. On the **General** tab, select **Bottom** for **Placement**.
 
-24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+24. Select **OK**.
   
 24. Click **Run** to preview the report.  
 
@@ -300,7 +300,7 @@ In this section, you add a map layer that displays a Bing Maps tile background.
 
     ![Screenshot showing the Bing Maps aerial Tile Layer added to the report builder map.](../reporting-services/media/report-builder-map-bing-aerial.png)
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## <a name="Transparent"></a>5. Make a Layer Transparent  
 In this section, to let the items on one layer show through another layer, you adjust the order and transparency of the layers for the effect that you want. You start with the first layer you created, PolygonLayer1. 
@@ -311,7 +311,7 @@ In this section, to let the items on one layer show through another layer, you a
   
 4.  On the **Visibility** tab, under **Transparency (percent)**, type **30**.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
      The design surface displays the counties as semi-transparent.  
 
@@ -341,7 +341,7 @@ To vary the county shapes by color based on analytical data, you first need to a
 
     ![Screenshot showing the Analytical data tab in the Map Polygon Layer Properties dialog box.](../reporting-services/media/report-builder-map-county-colors.png)
   
-9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. Select **OK**.
   
 10. Preview the report.  
 
@@ -386,7 +386,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you will show the color ranges only in the color scale.  
   
-14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+14. Select **OK**.
 
 15. Preview the report.
 
@@ -438,7 +438,7 @@ You can set the default display options for all map elements on a layer. Color r
   
 6.  In **Color**, select **Light Steel Blue**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Preview the report.  
   
@@ -479,7 +479,7 @@ To represent a new store that has not yet been built, in this section you specif
 
     ![Screenshot showing the Change font, size, and color options section of the Map Embedded Point Properties dialog box.](../reporting-services/media/report-builder-map-custom-point-font.png)
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Preview the report.  
   
@@ -498,7 +498,7 @@ In this section, you learn to change the map center, and another way to change t
 
 4. Set **Zoom level (percent)** to **125**.
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click the map, and drag to center it where you want it.  
   

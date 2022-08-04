@@ -58,6 +58,8 @@ Specify the UpdateEnabled, and UpdateSource parameters to include the latest pro
 ```  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ###  <a name="bkmk_alreadyInstall"></a> Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] After It Has Been Installed  
 On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including General Distribution Releases (GDRs), and Service Packs (SPs). Individual Cumulative updates and security updates should be adopted on a case-by-case, "as-needed" basis. Evaluate the update; if it's needed, then apply it.  

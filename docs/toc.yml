@@ -8876,12 +8876,12 @@ items:
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
     items:
+    - name: SSIS Projects extension for VS2019 troubleshooting guide
+      href: ssdt/release-notes-ssdt-2019.md
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Release notes for SSDT in VS2019
-      href: ssdt/release-notes-ssdt-2019.md
     - name: Release notes for SSDT in VS2017
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI

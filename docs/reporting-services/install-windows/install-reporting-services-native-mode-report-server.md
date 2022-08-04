@@ -119,7 +119,7 @@ The following list describes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
 
     - Install Rules
 
-2. On the **Setup Role** page, Select **SQL Server Feature Installation**.
+2. On the **Setup Role** page, select **SQL Server Feature Installation**.
 
     ![SQL Server Feature Installation for setup role](../../reporting-services/install-windows/media/rs-setuprole.png "SQL Server Feature Installation for setup role")
 
@@ -150,7 +150,7 @@ The following list describes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
     > [!NOTE]
     > **Install and Configure** will not be available unless the database feature is also selected to be installed.
 
-9. Feature Configuration Rules: verify the rules passed. The setup wizard automatically advances to the **Ready to install** if the rules all pass.\
+9. Feature Configuration Rules: verify the rules passed. The setup wizard automatically advances to the **Ready to install** if the rules all pass.
 Specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the rules verify a report server catalog and temp catalog database do not already exist.
 
 10. On the **ready to install** page, note the path to the configuration file as you can refer to it at a later time for a good summary of the servers initial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration including the components installed, service accounts and administrators.

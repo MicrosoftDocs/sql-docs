@@ -76,7 +76,7 @@ If there are multiple files per table, put each set of files into different dire
 
 **Example:**  
 
-```sqlsyntax
+```syntaxsql
 Create External Table foo
 (col1 int)WITH (LOCATION='/bar/foobar.txt',DATA_SOURCE…); OR
 Create External Table foo
@@ -102,7 +102,7 @@ Interrogation of DWEngine Server log shows the following error:
 Microsoft.SqlServer.DataWarehouse.Common.ErrorHandling.MppSqlException: EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect: Error [com.microsoft.polybase.client.KerberosSecureLogin] occurred while accessing external file.' ---> Microsoft.SqlServer.DataWarehouse.DataMovement.Common.ExternalAccess.HdfsAccessException: Java exception raised on call to HdfsBridge_Connect: Error [com.microsoft.polybase.client.KerberosSecureLogin] occurred while accessing external file.
 
 **Possible Reason:**  
-Kerberos is not enabled in Hadoop Cluster, but Kerberos security is enabled in core-site.xml, yarn-site.xml, or the hdfs-site.xml located by default under Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf. In Linux, the files are by default located in /var/opt/mssql/binn/polybase/hadoop/conf/.
+Kerberos is not enabled in Hadoop Cluster, but Kerberos security is enabled in core-site.xml, yarn-site.xml, or the hdfs-site.xml located by default under Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf. In Linux, the files are by default located in /var/opt/mssql/binn/polybase/hadoop/conf/.
 
 **Possible Solution:**  
 Comment out the Kerberos security information from the above mentioned files.

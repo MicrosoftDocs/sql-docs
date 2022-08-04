@@ -1,12 +1,12 @@
 ---
 title: Acquire and configure backup server
 description: Learn how to configure a non-appliance Windows system as a backup server for use with Analytics Platform System and Parallel Data Warehouse. 
-author: ronortloff
+author: WilliamDAssafMSFT
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
 ms.date: 06/23/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.reviewer: martinle
 ms.custom:
 - seo-dt-2019

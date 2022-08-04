@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 ---
 # REVOKE Schema Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a schema.  
   

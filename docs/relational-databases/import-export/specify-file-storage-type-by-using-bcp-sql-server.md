@@ -1,23 +1,21 @@
 ---
 title: "Specify file storage type with bcp"
 description: Use bcp to export data to a file as its database table type, in its character representation, or as a data type that supports implicit conversion.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bcp utility [SQL Server], file storage types"
   - "importing data, file storage types"
   - "native data format [SQL Server]"
   - "file storage types [SQL Server]"
   - "data formats [SQL Server], file storage types"
-ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Specify file storage type using bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

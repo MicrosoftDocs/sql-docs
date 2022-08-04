@@ -1,20 +1,18 @@
 ---
 title: "Use native format to import & export data"
 description: In SQL Server import or export, native format maintains the native data types of a database for high-speed data transfer of data between SQL Server tables.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "native data format [SQL Server]"
   - "data formats [SQL Server], native"
-ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Use native format to import or export data (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

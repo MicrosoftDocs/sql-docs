@@ -207,8 +207,11 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
 Run your SQL Server container, and mount the correct AD configuration files that were previously created as shown below:
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>" \
 -p 5433:1433 --name sql1 \
 -v /container/sql1:/var/opt/mssql \
 -v /container/sql1/krb5.conf:/etc/krb5.conf \
@@ -221,7 +224,7 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
 Our example would contain the following commands:
 
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
 -v /container/sql1:/var/opt/mssql/ \
 -v /container/sql1/krb5.conf:/etc/krb5.conf \
 --dns-search contoso.com \

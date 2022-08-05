@@ -24,7 +24,7 @@ A database is implicitly enabled for replication when a member of the **sysadmin
   
 1.  On the **Publication Databases** page of the **Publisher Properties - \<Publisher>** dialog box, select the **Transactional** and/or **Merge** check box for each database you want to replicate. Select **Transactional** to enable the database for snapshot replication.  
   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
   
 ## Using Transact-SQL (T-SQL)

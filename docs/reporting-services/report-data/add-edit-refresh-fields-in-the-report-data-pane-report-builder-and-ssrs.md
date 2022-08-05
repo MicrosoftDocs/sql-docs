@@ -40,7 +40,7 @@ ms.author: maggies
   
 4.  In the **Field Source** text box, type the name of an existing field on the data source.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To add a calculated field  
   
@@ -58,7 +58,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The expression for a calculated field cannot contain aggregates or references to report items.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To edit a query field or a dataset field  
   
@@ -68,7 +68,7 @@ ms.author: maggies
   
 3.  Change the name of the field or the value of the field.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To delete a query field or a calculated field  
   

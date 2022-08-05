@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Publisher Settings** dialog box, set the **Auto refresh** and **Refresh rate** options. The **Auto refresh** setting affects the main window in Replication Monitor. The **Refresh rate** setting also affects any detail windows that are set to refresh automatically (changes to the setting only affect the detail windows opened after the change).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
 
 ### To specify that a detail window should automatically refresh  
   

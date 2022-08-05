@@ -104,7 +104,7 @@ SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'
 SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
       ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
       ,FORMAT( @d, 'D', 'de-de' ) 'German'  
-      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese (Simplified PRC)';  
+      ,FORMAT( @d, 'D', 'zh-cn' ) 'Simplified Chinese (PRC)';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -145,7 +145,7 @@ Date        Custom Number
   
 ```sql  
 SELECT TOP(5) CurrencyRateID, EndOfDayRate  
-            ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
+            ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Numeric Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
             ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'  
 FROM Sales.CurrencyRate  

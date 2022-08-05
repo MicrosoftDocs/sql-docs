@@ -63,7 +63,6 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |Ubuntu Linux 16.04             |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Ubuntu Linux 18.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
 |Ubuntu Linux 20.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
-|Ubuntu Linux 21.10             |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
 |Ubuntu Linux 22.04             |Yes |    |Yes |    |    |    |    |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only

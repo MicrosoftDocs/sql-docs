@@ -62,6 +62,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Requires **ALTER ANY ROLE** permission on the database, **ALTER** permission on the role, or membership in **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+
+> [!NOTE]
+> The two procedures in this section only apply to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].
   
 #### To add a member to a fixed server role  
   

@@ -49,7 +49,7 @@ Servers in SQL Database and Azure Synapse support the following three options fo
 We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you will need to meet the additional requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises then you may need to work with your network admin to allow network traffic through your corporate firewall.
 
 > [!IMPORTANT]
-> Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy)
+> Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy).
 
 ## Connectivity from within Azure
 

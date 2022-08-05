@@ -99,12 +99,12 @@ DECLARE @d DATE = '11/22/2020';
 SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'  
       ,FORMAT( @d, 'd', 'en-gb' ) 'Great Britain English'  
       ,FORMAT( @d, 'd', 'de-de' ) 'German'  
-      ,FORMAT( @d, 'd', 'zh-cn' ) 'Simplified Chinese (PRC)';  
+      ,FORMAT( @d, 'd', 'zh-cn' ) 'Chinese Simplified (PRC)';  
   
 SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
       ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
       ,FORMAT( @d, 'D', 'de-de' ) 'German'  
-      ,FORMAT( @d, 'D', 'zh-cn' ) 'Simplified Chinese (PRC)';  
+      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese Simplified (PRC)';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

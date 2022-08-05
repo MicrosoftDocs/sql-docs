@@ -19,7 +19,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
-Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
+Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
 
 ## [Create a Basic Table Report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

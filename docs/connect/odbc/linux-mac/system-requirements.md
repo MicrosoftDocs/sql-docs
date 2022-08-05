@@ -41,13 +41,11 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |Apple macOS 12.0 (Monterey)    |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
 |Alpine Linux 3.11              |    |    |    |    |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
 |Alpine Linux 3.12              |    |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
-
 |Alpine Linux 3.13              |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Alpine Linux 3.14              |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Alpine Linux 3.15              |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Debian Linux 8                 |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Debian Linux 9                 |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-
 |Debian Linux 10                |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |Debian Linux 11                |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
 |Oracle Linux 7                 |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |

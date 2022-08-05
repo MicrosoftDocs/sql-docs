@@ -28,7 +28,7 @@ ms.author: maggies
   
 -   [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)]  
   
--   [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]  
+-   [!INCLUDE[win81](../../includes/win81-md.md)]  
   
 -   [!INCLUDE[win8](../../includes/win8-md.md)]  
   

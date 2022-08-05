@@ -63,7 +63,7 @@ When connecting in an environment that has unique domain/forest topography, you 
 
 ### Support for SQL aliases
 
-Users can configure Aliases by using the SQL Server Configuration Manager. These are stored in the Windows registry and are already supported when targeting .NET Framework. This release brings support for aliases when targeting .NET or .NET Core on Windows.
+Users can configure Aliases by using the SQL Server Configuration Manager. These aliases are stored in the Windows registry and are already supported when targeting .NET Framework. This release brings support for aliases when targeting .NET or .NET Core on Windows.
 
 ### SQL Data Source Enumerator support
 
@@ -163,13 +163,13 @@ In scenarios where client encryption libraries were disabled or unavailable, it 
 
 ### App Context Switch for using System default protocols
 
-TLS 1.3 is not supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
+TLS 1.3 isn't supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
 
  `Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols`
 
 ### Enable optimized parameter binding
 
-Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names will not be sent to the SQL server when the command is executed.
+Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names won't be sent to the SQL server when the command is executed.
 
 ```cs
 public class SqlCommand
@@ -346,7 +346,7 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
 
 ### Event tracing improvements in SNI.dll
 
-`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like xperf or perfview will be sufficient. For more information, see [Event tracing support in Native SNI](enable-eventsource-tracing.md#event-tracing-support-in-native-sni).
+`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like `xperf` or `perfview` will be sufficient. For more information, see [Event tracing support in Native SNI](enable-eventsource-tracing.md#event-tracing-support-in-native-sni).
 
 ### Enabling row version null behavior
 
@@ -391,7 +391,7 @@ public class SqlCommand
 }
 ```
 
-The static API on `SqlConnection`, i.e. `SqlConnection.RegisterColumnEncryptionKeyStoreProviders` to register custom master key store providers globally continues to be supported. The column encryption key cache maintained globally only applies to globally registered providers.
+The static API on `SqlConnection`, `SqlConnection.RegisterColumnEncryptionKeyStoreProviders`, used to register custom master key store providers globally, continues to be supported. The column encryption key cache maintained globally only applies to globally registered providers.
 
 #### Column master key store provider registration precedence
 
@@ -399,17 +399,17 @@ The built-in column master key store providers that are available for the Window
 
 Custom master key store providers can be registered with the driver at three different layers. The global level is as it currently is. The new per-connection and per-command level registrations will be empty initially and can be set more than once.
 
-The precedence of the three registrations are as follows:
+The precedences of the three registrations are as follows:
 
-- The per-command registration will be checked if it is not empty.
-- If the per-command registration is empty, the per-connection registration will be checked if it is not empty.
+- The per-command registration will be checked if it isn't empty.
+- If the per-command registration is empty, the per-connection registration will be checked if it isn't empty.
 - If the per-connection registration is empty, the global registration will be checked.
 
-Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider isn't found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
 
 #### Column encryption key cache precedence
 
-The column encryption keys (CEKs) for custom key store providers registered using the new instance-level APIs will not be cached by the driver. The key store providers need to implement their own cache to gain performance. This local cache of column encryption keys implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver at the global level.
+The column encryption keys (CEKs) for custom key store providers registered using the new instance-level APIs won't be cached by the driver. The key store providers need to implement their own cache to gain performance. This local cache of column encryption keys implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver at the global level.
 
 A new API has also been introduced on the `SqlColumnEncryptionKeyStoreProvider` base class to set the cache time to live:
 
@@ -428,7 +428,7 @@ public abstract class SqlColumnEncryptionKeyStoreProvider
 A new connection property `IPAddressPreference` is introduced to specify the IP address family preference to the driver when establishing TCP connections. If `Transparent Network IP Resolution` (in .NET Framework) or `Multi Subnet Failover` is set to `true`, this setting has no effect. Below are the three accepted values for this property:
 
 - **IPv4First**
-  - This is the default preference value. The driver will use resolved IPv4 addresses first. If none of them can be connected to successfully, it will try resolved IPv6 addresses.
+  - This value is the default. The driver will use resolved IPv4 addresses first. If none of them can be connected to successfully, it will try resolved IPv6 addresses.
 
 - **IPv6First**
   - The driver will use resolved IPv6 addresses first. If none of them can be connected to successfully, it will try resolved IPv4 addresses.

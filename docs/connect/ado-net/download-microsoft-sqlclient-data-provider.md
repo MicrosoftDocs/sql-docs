@@ -14,7 +14,7 @@ ms.author: v-davidengel
 ---
 # Download Microsoft SqlClient Data Provider for SQL Server
 
-The Microsoft.Data.SqlClient library is distributed as a NuGet package. Simply add a NuGet reference to Microsoft.Data.SqlClient. NuGet packages are easily consumed directly from a .NET project without the need to manually download anything. If you use Visual Studio for development, see [Install and use a package](/nuget/quickstart/install-and-use-a-package-in-visual-studio). For other ways to consume a NuGet package, see the [NuGet documentation](/nuget).
+The Microsoft.Data.SqlClient library is distributed as a NuGet package. Add a NuGet reference to Microsoft.Data.SqlClient. NuGet packages are easily consumed directly from a .NET project without the need to manually download anything. If you use Visual Studio for development, see [Install and use a package](/nuget/quickstart/install-and-use-a-package-in-visual-studio). For other ways to consume a NuGet package, see the [NuGet documentation](/nuget).
 
 ## Downloading the driver
 

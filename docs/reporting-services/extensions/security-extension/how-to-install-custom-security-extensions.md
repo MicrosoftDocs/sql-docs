@@ -63,10 +63,10 @@ You should use a validation key specific for you deployment, there are several t
 
 **\ReportServer\rsReportServer.config**
 
-Add under `<configuration>`.
+Add under `<Configuration>`. Note the difference in case from the `<system.web>` entries in previous versions.
 
 ```
-<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+<MachineKey ValidationKey="[YOUR KEY]" DecryptionKey=="[YOUR KEY]" Validation="AES" Decryption="AES" />
 ```
 
 ### SQL Server Reporting Services 2016
@@ -95,10 +95,10 @@ This is available as of the June 2017 (Build 14.0.600.301) release.
 
 **\ReportServer\rsReportServer.config**
 
-Add under `<configuration>`.
+Add under `<Configuration>`. Note the difference in case from the `<system.web>` entries above.
 
 ```
-<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+<MachineKey ValidationKey="[YOUR KEY]" DecryptionKey=="[YOUR KEY]" Validation="AES" Decryption="AES" />
 ```
 
 ## Configure Passthrough cookies

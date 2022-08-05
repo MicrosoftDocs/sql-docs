@@ -107,9 +107,9 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | Backup properties | PITR | Geo-restore | LTR |
 |---|---|---|---|
 | **Types of SQL backup** | Full, differential, log. | Replicated copies of PITR backups. | Only the full backups. |
-| **Recovery point objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
+| **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  | One week (or user's policy).|
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
-| **Retention** | 1 to 35 days. |  Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
+| **Retention** | 1 to 35 days. | Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
 | **Azure storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
@@ -251,11 +251,11 @@ For the last scenario in larger databases, an optimization in the service create
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 
 1. Add a filter for **Service name**.
-2. In the drop-down list, select **sql managed instance** for a managed instance.
+2. In the dropdown list, select **sql managed instance** for a managed instance.
 3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the drop-down list, select **managed instance pitr backup storage**. Meters will show up only if backup storage consumption exists.
+4. To monitor PITR backup costs, in the dropdown list, select **managed instance pitr backup storage**. Meters will show up only if backup storage consumption exists.
 
-   To monitor LTR backup costs, in the drop-down list, select **sql managed instance - ltr backup storage**. Meters will show up only if backup storage consumption exists.
+   To monitor LTR backup costs, in the dropdown list, select **sql managed instance - ltr backup storage**. Meters will show up only if backup storage consumption exists.
 
 The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
 

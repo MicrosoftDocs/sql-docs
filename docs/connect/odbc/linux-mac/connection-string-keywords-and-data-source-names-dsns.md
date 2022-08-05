@@ -2,7 +2,7 @@
 title: Connecting from Linux or macOS
 description: Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -111,7 +111,7 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 | Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 | Yes | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 
-When using connection encryption, the name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a SQL Server TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string.
+When using connection encryption, the name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a SQL Server TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string. The `HostnameInCertificate` keyword (v18.0+) can be used to specify an alternate name used to match against the names in the TLS/SSL certificate. When the keyword is specified, the SQL Server TLS/SSL certificate must match either one of the server name, or the `HostnameInCertificate`.
 
 By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, and aren't using strict encryption mode, you can add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
@@ -119,20 +119,22 @@ By default, encrypted connections always verify the server's certificate. Howeve
 Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```
 
-In strict encryption mode, the certificate is always verified. <br/><br/>
+In strict encryption mode, the certificate is always verified. As an option to standard certificate validation, the `ServerCertificate` keyword (v18.1+) can be used to specify the path to a certificate file to match against the SQL Server certificate. This option is only available when using strict encryption. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the `ServerCertificate` provided is an exact match.<br/><br/>
 TLS on Linux and macOS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 10|1.1.1|/etc/ssl/certs|
+|Debian 10, 11|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
 |OS X 10.11, macOS|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 9|3.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|Ubuntu 22.04|3.0.2|/etc/ssl/certs|
 |Ubuntu 20.04, 21.04, 21.10 |1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|

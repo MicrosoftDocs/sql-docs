@@ -24,7 +24,7 @@ Compatibility indicates that a driver was tested for compatibility against exist
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
 |----|---|---|---|---|---|---|---|---|---|---|---|
-|18.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|18.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |18.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.10|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.9|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |

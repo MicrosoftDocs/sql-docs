@@ -91,12 +91,22 @@ For more information on working with user instances, see [SQL Server Express Use
 
 The `TrustServerCertificate` keyword is valid only when connecting to a SQL Server instance with a valid certificate. When `TrustServerCertificate` is set to `true`, the transport layer will use TLS/SSL to encrypt the channel and bypass walking the certificate chain to validate trust.
 
+This setting is ignored when `Encrypt` is set to `Strict`. The server certificate is always validated in `Strict` mode.
+
 ```csharp  
 "TrustServerCertificate=true;"
 ```  
 
 > [!NOTE]
 > If `TrustServerCertificate` is set to `true` and encryption is turned on, the encryption level specified on the server will be used even if `Encrypt` is set to `false` in the connection string. The connection will fail otherwise.
+
+## HostNameInCertificate
+
+Starting in version 5.0 of Microsoft.Data.SqlClient, HostNameInCertificate is a new connection option. When validating server certificates, the driver ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name being connected to. In some cases, like DNS aliases, the server name might not match the CN or SAN. The HostNameInCertificate value can be used to specify a different, expected CN or SAN in the server certificate.
+
+```csharp
+"HostNameInCertificate=myserver.example.com"
+```
 
 ### Enable encryption
 
@@ -108,9 +118,13 @@ The following table describes all cases.
 
 | Encrypt connection string/attribute | Trust Server Certificate connection string/attribute | Result |
 |--|--|--|
-| No | Ignored | No encryption occurs. |
-| Yes | No | Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails. |
-| Yes | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| No/Optional | Ignored | No encryption occurs. |
+| Yes/Mandatory | No | Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails. |
+| Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| Strict<sup>1</sup> | Ignored | Encryption always occurs and must use a verifiable server certificate, otherwise the connection attempt fails. |
+
+<sup>1</sup> Strict encryption is only available starting with Microsoft.Data.SqlClient version 5.0.
 
 For more information, see [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 

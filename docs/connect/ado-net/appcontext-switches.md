@@ -28,6 +28,8 @@ Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 is not supported by the driv
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols", true);
 ```
 
+Starting with version 5.0, TLS 1.3 is supported in TDS 8 connections without having to use the above switch. TDS 8 is enabled when `Encrypt` is set to `Strict`.
+
 ## Enabling decimal truncation behavior
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]

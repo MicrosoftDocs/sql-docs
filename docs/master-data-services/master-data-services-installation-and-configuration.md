@@ -64,7 +64,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
 ## <a name="InstallIIS"></a> Installing and Configuring IIS
   
-1.  In [!INCLUDE[winblue_server_2](../includes/winserver2012r2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
+1.  In [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
   
      ![Icon for the Server Manager in Windows Server 2012 taskbar](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
   
@@ -82,14 +82,14 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2_md](../includes/winserver2012r2-md.md)].
+9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2_md](../includes/winserver2012r2-md.md)].
   
     |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. In the left-hand pane, click **Web Server Role (IIS)** and then click **Role Services**.
-11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2](../includes/winserver2012r2-md.md)].
+11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)].
 
     > [!WARNING]  
     >  Do not install the WebDAV Publishing role service. WebDAV Publishing is not compatible with [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

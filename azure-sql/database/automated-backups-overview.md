@@ -94,12 +94,12 @@ You can use automatically created backups in the following scenarios:
 
 This table summarizes the capabilities and features of [point-in-time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention](long-term-retention-overview.md).
 
-| **Backup property** | PITR | Geo-restore | LTR |
+| Backup property | PITR | Geo-restore | LTR |
 |---|---|---|---|
 | **Types of SQL backup** | Full, differential, log. | Replicated copies of PITR backups. | Only the full backups. |
-| **Recovery point objective (RPO)** |  10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  |  One week (or user's policy).|
+| **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  | One week (or user's policy).|
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
-| **Retention** | 7 days by default, configurable up to 35 days. |  Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
+| **Retention** | 7 days by default, configurable up to 35 days. | Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
 | **Azure Storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |

@@ -31,8 +31,8 @@ When you view a published report in Report Manager, you might see an error messa
   
 To view the call stack, log on to the report server by using the local administrator credentials, right-click the Report Manager page, and then click **View Source**. The call stack provides detailed context for the error message.  
   
-## Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to Verify Queries and Credentials  
-You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to validate complex queries before you include them in your report.   
+## Use [!INCLUDE[ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] to Verify Queries and Credentials  
+You can use [!INCLUDE[ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] to validate complex queries before you include them in your report.   
   
 For more information, see [Database Engine query editor](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) and [Manage Objects by using Object Explorer](../../ssms/object/manage-objects-by-using-object-explorer.md).  
   

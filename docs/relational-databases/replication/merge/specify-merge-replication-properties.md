@@ -83,13 +83,13 @@ On the **Articles** page of the New Publication Wizard select a table, and then 
 2.  Click **Article Properties**, and then click **Set Properties of Highlighted Table Article** or **Set Properties of All Table Articles**.    
 3.  On the **Article Properties - \<Article>** or **Article Properties - \<ArticleType>** page, click the **Resolver** tab.    
 4.  Select **Allow Subscriber to resolve conflicts interactively during on-demand synchronization**.    
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
+5.  Select **OK**.
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
 #### Specify that a subscription should use interactive conflict resolution  
   
 1.  In the **Subscription Properties - \<Subscriber>: \<SubscriptionDatabase>** dialog box, specify a value of **True** for the **Resolve conflicts interactively** option. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ###  Use Transact-SQL  
  You can programmatically specify that a Subscriber will use this graphical interface to resolve article conflicts when a pull subscription to a merge publication is created. Only conflicts in articles that support this option will be displayed in the Interactive Resolver.  

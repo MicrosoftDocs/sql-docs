@@ -65,9 +65,9 @@ ms.author: maggies
   
  URL reservations include a port number. The following operating systems will allow multiple Web applications to share a port:  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)] R2  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)]  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   

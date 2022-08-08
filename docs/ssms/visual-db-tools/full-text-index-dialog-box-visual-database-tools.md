@@ -22,7 +22,7 @@ This dialog box allows you to create a full-text index, for full-text searches o
 To create a full-text index, you must first create a full-text catalog for the database using an outside tool, such as SQL Server Management Studio or Enterprise Manager.
 
 > [!NOTE]  
-> Full-text index functionality is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Full-text index functionality is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ## Options
 
@@ -109,7 +109,7 @@ Displays the type of the current or most recent crawl: Full, Incremental, Update
 
 Displays a list of all of the names of columns in this database that have unique single-column indexes. These columns can be used to create a full-text index.
 
-## See also
+## Next steps
 
 - [Use the Full-Text Indexing Wizard](../../relational-databases/search/use-the-full-text-indexing-wizard.md)  
 - [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  

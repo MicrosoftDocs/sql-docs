@@ -78,7 +78,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
   
 9. A user-defined server role can be a member of another server role. On the **Memberships** page, select a check box to make the current user-defined server role a member of a selected server role.  
   
-10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -29,7 +29,7 @@ SQL Server VMs deployed through marketplace images automatically follow default 
 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
 
-* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo) or registered with the [SQL IaaS extension]().
+* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo).
 * Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
 * Uses [premium SSDs](/azure/virtual-machines/disks-types).
 
@@ -74,7 +74,7 @@ Based on your choices, Azure performs the following storage configuration tasks 
 * Associates the storage pool with a new drive on the virtual machine.
 * Optimizes this new drive based on your specified workload type (Data warehousing, Transactional processing, or General).
 
-For a full walkthrough of how to create a SQL Server VM in the Azure portal, see [the provisioning tutorial](/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal).
+For a full walkthrough of how to create a SQL Server VM in the Azure portal, see [the provisioning tutorial](./create-sql-vm-portal.md).
 
 
 
@@ -110,9 +110,7 @@ You can modify the disk settings for the drives that were configured during the 
 
 ![Configure Storage for Existing SQL Server VM](./media/storage-configuration/sql-vm-storage-extend-drive.png)
 
-You can also configure the settings for tempdb directly from the portal. Select **Configure** to open the tempdb settings page, where you can add more data files: 
-
-![Configure tempdb settings for Existing SQL Server VM](./media/storage-configuration/tempdb-customization.png)
+You can also configure the settings for tempdb directly from the Azure portal, such as the number of data files, their intial size, and the autogrowth ratio. See [configure tempdb](manage-sql-vm-portal.md#storage) to learn more. 
 
 
 
@@ -256,4 +254,3 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 ## Next steps
 
 For other topics related to running SQL Server in Azure VMs, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md).
-

@@ -64,7 +64,7 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 1. Find the file **yarn-site.xml** in the installation path of SQL Server. Typically, the path is:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf\  
    ```  
 
 1. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
@@ -224,6 +224,8 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 ![PolyBase objects in SSMS](media/polybase-management.png)  
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 Explore more ways to use and monitor PolyBase in the following articles:
 

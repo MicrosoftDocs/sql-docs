@@ -264,7 +264,7 @@ Use DNS name to reroute connections to the active Name Node. In order to do this
 
 ## Log file locations
 
-In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\PolyBase\.
 
 In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
 

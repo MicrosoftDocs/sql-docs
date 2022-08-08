@@ -1,7 +1,7 @@
 ---
 title: "Access external data: ODBC generic types - PolyBase"
 description: PolyBase in SQL Server allows you to connect to compatible data sources through the ODBC connector. Install the ODBC driver and create external tables.
-ms.date: 07/16/2020
+ms.date: 07/01/2022
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -15,9 +15,9 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources using the ODBC connector.
+PolyBase starting in SQL Server 2019 allows you to connect to ODBC-compatible data sources using the ODBC connector.
 
-This article demonstrate how to create configuring connectivity using an ODBC data source. The guidance provided uses one specific ODBC driver as an example. Check with your ODBC provider for specific examples. Reference the ODBC driver documentation for your data source to determine the appropriate connection string options. The examples in this article may not apply to any specific ODBC driver.
+This article demonstrates how to create configuring connectivity using an ODBC data source. The guidance provided uses one specific ODBC driver as an example. Check with your ODBC provider for specific examples. Reference the ODBC driver documentation for your data source to determine the appropriate connection string options. The examples in this article may not apply to any specific ODBC driver.
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ The following Transact-SQL commands are used in this section:
     
 ## Create an external table
 
-Once you have created the dependent objects you can create an external tables using T-SQL. 
+Once you have created the dependent objects, you can create an external table using T-SQL. 
 
 The following Transact-SQL commands are used in this section:
 * [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
@@ -128,3 +128,5 @@ The following Transact-SQL commands are used in this section:
 ## Next steps
 
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).

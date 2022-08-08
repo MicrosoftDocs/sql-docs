@@ -35,10 +35,10 @@ This quickstart uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) t
 
 1. Create an SA password in the Kubernetes cluster. Kubernetes can manage sensitive configuration information, like passwords as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-2. To create a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`, run the following command. Remember to pick your own complex password:
+2. To create a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `MSSQL_SA_PASSWORD`, run the following command. Remember to pick your own complex password:
 
    ```console
-   kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+   kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```
 
 ## Create storage
@@ -153,11 +153,11 @@ You will create a manifest to describe the container, based on the SQL Server [m
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
-                 key: SA_PASSWORD
+                 key: MSSQL_SA_PASSWORD
            volumeMounts:
            - name: mssqldb
              mountPath: /var/opt/mssql
@@ -186,13 +186,13 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
    - `persistentVolumeClaim`: This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This tutorial uses `mssql-data`.
 
-   - `name: SA_PASSWORD`: Configures the container image to set the SA password, as defined in this section.
+   - `name: MSSQL_SA_PASSWORD`: Configures the container image to set the SA password, as defined in this section.
 
      ```yaml
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD
+         key: MSSQL_SA_PASSWORD
      ```
 
      When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password.

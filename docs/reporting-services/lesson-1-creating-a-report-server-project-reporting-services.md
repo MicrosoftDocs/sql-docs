@@ -17,6 +17,9 @@ In this lesson, you create a *report server project* and a *report definition (.
 
 > [!NOTE]
 > [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts.
+>
+> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+
 
 When you create reports with Report Designer, it creates a report server project that contains the report files and other resource files used by the report(s).
 

@@ -5,7 +5,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -21,7 +21,7 @@ ms.technology: linux
 This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
 
 > [!TIP]  
-> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.0 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
+> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.1 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
 
 For other deployment scenarios, see:
 
@@ -40,24 +40,19 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Supported version(s) | Get |
-|-----|-----|----- |
-| **Red Hat Enterprise Linux** | 7.7 - 7.9, 8.0 - 8.5  | [Get RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
-| **SUSE Linux Enterprise Server** | v12 SP3 - SP5 | [Get SLES v12](https://www.suse.com/products/server) |
-| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |
+[!INCLUDE [linux-supported-platforms-2017](../includes/linux/linux-supported-platforms-2017.md)]
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
 
-[!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](../includes/linux/linux-supported-platforms-2019.md)]
 
 ::: moniker-end
 

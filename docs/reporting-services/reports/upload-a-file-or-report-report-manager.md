@@ -31,11 +31,11 @@ The web portal of the report server provides an upload feature so that you can a
   
 4.  Browse to the file you want to upload. You can upload a report definition file, an image, a document, or any file that you want to make available on the report server.  
   
-5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
+5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: \' \" \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
   
 6.  If you want to replace an existing item with the new item, select **Overwrite item if it exists**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ## See Also   
 [Create, Modify, and Delete Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)

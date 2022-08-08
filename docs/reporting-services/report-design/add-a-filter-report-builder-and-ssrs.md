@@ -50,7 +50,7 @@ Add a filter to a dataset, data region, or group to a paginated report when you 
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ## Set a filter on a Tablix row or column group  
   
@@ -74,7 +74,7 @@ Add a filter to a dataset, data region, or group to a paginated report when you 
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ## Set a filter on a Chart category group  
   
@@ -98,7 +98,7 @@ Add a filter to a dataset, data region, or group to a paginated report when you 
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ## Set a filter on a Chart series group  
   
@@ -122,7 +122,7 @@ Add a filter to a dataset, data region, or group to a paginated report when you 
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ## See also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   

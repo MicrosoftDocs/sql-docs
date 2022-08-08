@@ -26,13 +26,13 @@ ms.author: maggies
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
--   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
+-   [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)]  
   
--   [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]  
+-   [!INCLUDE[win81](../../includes/win81-md.md)]  
   
 -   [!INCLUDE[win8](../../includes/win8-md.md)]  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)]  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   
@@ -114,7 +114,7 @@ ms.author: maggies
     >[!TIP]  
     >**Note:** If you do not see the **Site Settings** option, close and reopen your browser and browse to web portal with administrative privileges.  
   
-3.  On the Site settings page, Select **Security** and then select **Add group or user**.  
+3.  On the Site settings page, select **Security** and then select **Add group or user**.  
   
 4.  In the **Group or user name** field, type your Windows user account in this format: `<domain>\<user>`.  
 

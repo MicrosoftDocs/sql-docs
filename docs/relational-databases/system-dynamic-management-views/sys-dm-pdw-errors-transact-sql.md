@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_pdw_errors (Transact-SQL)"
 description: sys.dm_pdw_errors (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse

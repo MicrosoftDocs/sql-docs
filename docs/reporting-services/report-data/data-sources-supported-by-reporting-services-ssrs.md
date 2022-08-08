@@ -23,7 +23,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Data Sources Supported by Reporting Services (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit).  
   
  When you deploy [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a set of data processing extensions are automatically installed and registered on both the report authoring client and on the report server to provide access to a variety of data source types. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs the following data source types:  
   
@@ -134,7 +134,7 @@ ms.author: maggies
  For more information about data processing extensions supported by Report Builder, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
- The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based platforms.  
+ The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and x64-based platforms.  
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], the query designer associated with this data extension is the Visual Database Tool Designer. If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is used for a query. For more information, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -213,7 +213,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="ODBC"></a> ODBC Data Processing Extension  
- When you select data source type **ODBC**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] platforms. Use this extension to connect to and retrieve data from any data source that has an ODBC provider.  
+ When you select data source type **ODBC**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. This data processing extension is natively compiled for and runs on x86 and x64 platforms. Use this extension to connect to and retrieve data from any data source that has an ODBC provider.  
   
 > [!NOTE]  
 >  Although a data provider may support previewing a report on your report authoring client, not all ODBC data providers are designed to support reports published on a report server.  

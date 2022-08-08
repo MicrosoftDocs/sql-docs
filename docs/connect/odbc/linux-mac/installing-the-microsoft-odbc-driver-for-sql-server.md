@@ -150,7 +150,7 @@ sudo zypper install -y unixODBC-devel
 ### <a id="ubuntu18"></a> Ubuntu
 
 ```bash
-if ! [[ "18.04 20.04 21.04 22.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
@@ -323,7 +323,7 @@ sudo zypper install -y unixODBC-devel
 ### <a id="ubuntu17"></a> Ubuntu
 
 ```bash
-if ! [[ "16.04 18.04 20.04 21.04 21.10" == *"$(lsb_release -rs)"* ]];
+if ! [[ "16.04 18.04 20.04 22.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;

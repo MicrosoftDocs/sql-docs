@@ -18,13 +18,15 @@ helpviewer_keywords:
 
 Under certain circumstances, you may have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option** `-m`. For example, you may want to change server configuration options or recover a damaged `master` database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
 
+For restoring a `master` database on Linux in single-user mode, see [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md).
+
 Starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode enables any member of the computer's local Administrators group to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role. For more information, see [Connect to SQL Server when system administrators are locked out](connect-to-sql-server-when-system-administrators-are-locked-out.md).
 
 When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, note the following:
 
 - Only one user can connect to the server.
 
-- The CHECKPOINT process is not executed. By default, it is executed automatically at startup.
+- The CHECKPOINT process isn't executed. By default, it is executed automatically at startup.
 
 > [!NOTE]  
 > Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service before connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode; otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service uses the connection, thereby blocking it.
@@ -36,10 +38,10 @@ When you use the `-m` option with `SQLCMD` or [!INCLUDE[ssManStudio](../../inclu
 > [!NOTE]  
 > On Linux, `SQLCMD` must be capitalized as shown.
 
-For example, `-m"SQLCMD"` limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program. Use this option when you are starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.
+For example, `-m"SQLCMD"` limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program. Use this option when you're starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.
 
 > [!IMPORTANT]  
-> Do not use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
+> Don't use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
 
 The following example starts the SQL Server instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
 
@@ -71,6 +73,7 @@ To get around the problem use the following procedure:
 
 ## See also
 
+- [Restore the master database on Linux in single-user mode](../../linux/sql-server-linux-restore-master-database-in-single-user-mode.md)
 - [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)
 - [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)
 - [sqlcmd Utility](../../tools/sqlcmd-utility.md)

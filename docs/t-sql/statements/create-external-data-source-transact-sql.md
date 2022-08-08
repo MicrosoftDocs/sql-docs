@@ -2472,7 +2472,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
     [ [ , ] CREDENTIAL = <credential_name> ]
-    [ [ , ] TYPE = { BLOB_STORAGE | DANIMIR } ]
+    [ [ , ] TYPE = { BLOB_STORAGE | RDBMS } ]
   )
 [ ; ]
 ```

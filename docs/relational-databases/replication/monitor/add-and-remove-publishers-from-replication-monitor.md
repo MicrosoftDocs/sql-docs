@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
 
  > [!NOTE]
  > If you are having issues resolving connections from Replication Monitor to your availability groups, check the following: 

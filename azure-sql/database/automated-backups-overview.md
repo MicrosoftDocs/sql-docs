@@ -19,7 +19,6 @@ ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-db "
 ---
 # Automated backups - Azure SQL Database
-
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]

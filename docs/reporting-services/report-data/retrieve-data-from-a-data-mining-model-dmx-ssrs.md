@@ -53,7 +53,7 @@ ms.author: maggies
     > [!NOTE]  
     >  To test the data source connection, click **Edit**. In the **Connection Properties** dialog box, click **Test Connection**. If the test is successful, you will see the information message "Test connection succeeded." If the test fails, you will see a warning message with more information about why the test was not successful.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
      The data source appears in the Report Data pane.  
   
@@ -71,7 +71,7 @@ ms.author: maggies
   
 5.  After you create and run your query to see sample results, click **OK**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   

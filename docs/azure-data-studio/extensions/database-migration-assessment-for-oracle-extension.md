@@ -131,7 +131,7 @@ You can download the report for offline viewing by selecting download combined r
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-downlaod-report.png" alt-text="download assessment report":::
 
-You can also cancel an ongoing assessment and move assessments to another directory.
+You can also cancel an ongoing assessment, delete an assessment and move assessments to another directory.
 
 ## Change Assessment Directory
 
@@ -142,18 +142,6 @@ You can also cancel an ongoing assessment and move assessments to another direct
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screen capture shows the Change assessment path":::
 
 ## Troubleshoot
-
-### Delete assessment
-
-1. Go to the assessment directory. The assessment directory path is shown in the  Oracle Assessment:Assessment Path settings under the manage extension.
-    Default Assessment Path
-    - Windows -  C:\Users\\<username\>\\.dmaoracle
-    - Linux  - ~/home/\<username\>/.dmaoracle/
-    - Mac  - /Users/\<username\>/.dmaoracle/
-
-2. For each Oracle server, there will be separate folder inside .dmaoracle
-3. Traverse through the folder and identify the folder matching the assessment name.
-4. Delete the particular folder.
 
 ### Logging
 

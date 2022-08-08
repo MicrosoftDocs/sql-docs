@@ -63,7 +63,7 @@ Custom reports run by using the permissions of the current user. To prevent a ma
   
 Both the user and the account that is used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service require read access to the file system folder that contains the report files.  
   
-Any valid [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] command can be embedded in a report, but the command will not be executed.  
+Any valid [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] command can be embedded in a report, but the command will not be executed.  
   
 > [!CAUTION]  
 > Any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be embedded in and executed from a report. Running a report under a high-privileged user account makes it possible for any of these embedded instructions to execute without challenge.  

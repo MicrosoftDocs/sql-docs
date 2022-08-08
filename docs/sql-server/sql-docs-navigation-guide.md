@@ -58,8 +58,6 @@ You can use the [version filter](versioning-system-monikers-ui-sql-server.md) to
 
 ![SQL Docs version filter](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecting **All SQL** \> **Hide nothing** ensures that all content is visible, and that nothing is hidden by the version filter. The **Hide nothing** option may reveal content relevant to several different versions of SQL Server within the same article, which might be contradictory, unclear, or confusing. As such the [**Hide nothing** option is not recommended for routine use](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
-
 ## Breadcrumbs
 
 Breadcrumbs can be found below the header and above the table of contents, and indicate where the current article is located in the table of contents.  Not only does this help set the context to what type of content you're reading, but it also allows you to navigate back up the table of contents tree:

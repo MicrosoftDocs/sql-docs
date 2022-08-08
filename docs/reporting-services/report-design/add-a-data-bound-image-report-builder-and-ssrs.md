@@ -38,7 +38,7 @@ Adding a data-bound image to a page header or page footer requires additional st
   
 8.  In **Use this MIME type**, select the MIME type, or file format, of the image-for example, bmp.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
      An image placeholder appears on the report design surface.  
   

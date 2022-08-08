@@ -48,7 +48,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  > If you are having issues resolving connections from Replication Monitor to your availability groups, check the following: 
  > -  You have properly set up redirection through [sp_redirect_publisher](../../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md). There should only be one record per publication and database, which should reference the original primary publisher in MSRedirected_Publishers.
  > - Verify that you did **not** add the listener as a Publisher on the Distributor. You can verify this by running [sp_helpdistpublisher](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md) on the Distributor instance. 
- > Ensure the value you are passing as the Publisher for Replication Monitor is the value stored in [distribution..MSRedirected_Publishers](../../../relational-databases/system-tables/msredirected-publishers.md). For example, if the listener for your Publisher availability group uses a custom port, and redirection was configured with the custom port, then you need to include the port when you configure the Publisher in Replication Monitor. However, if your listener uses a custom port and you used an alias to configure redirection to the listener, then you will need to recreate the alias on the client that is launching Replication Monitor. Passing the port is the recommended method over relying on aliases. 
+ > - Ensure the value you are passing as the Publisher for Replication Monitor is the value stored in [distribution..MSRedirected_Publishers](../../../relational-databases/system-tables/msredirected-publishers.md). For example, if the listener for your Publisher availability group uses a custom port, and redirection was configured with the custom port, then you need to include the port when you configure the Publisher in Replication Monitor. However, if your listener uses a custom port and you used an alias to configure redirection to the listener, then you will need to recreate the alias on the client that is launching Replication Monitor. Passing the port is the recommended method over relying on aliases. 
+
   
 ### To add an Oracle Publisher  
   
@@ -66,7 +67,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### To add one or more Publishers that use the same Distributor  
   
@@ -84,7 +85,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  Select the group under which Publishers should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### To modify settings for the Publisher and Publisher Groups  
   
@@ -96,7 +97,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To move a Publisher from one group to another, select the Publisher in the **Start monitoring the following Publisher(s)** grid, and then select the new group in the **Show this Publisher(s) in the following group** list.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To remove a Publisher from Replication Monitor  
   

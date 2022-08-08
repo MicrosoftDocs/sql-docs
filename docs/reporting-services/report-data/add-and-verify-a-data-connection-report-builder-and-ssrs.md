@@ -38,7 +38,7 @@ For more information, see [Create data connection strings - Report Builder & SSR
 
 4. Select the shared data source and then click **Open**.
 
-5. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5. Select **OK**.
 
 The data source appears in the Report Data pane.
 
@@ -48,7 +48,7 @@ The data source appears in the Report Data pane.
 
 2. Click **Test Connection**.
 
-3. If the connection is successful, the following message appears: "Connection created successfully". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. If the connection is successful, the following message appears: "Connection created successfully". Select **OK**.
 
 4. If the connection is not successful, the following message appears: "Unable to connect to the data source."  
 
@@ -56,7 +56,7 @@ The data source appears in the Report Data pane.
 
     For more information, see [Specify Credentials in Report Builder](./specify-credential-and-connection-information-for-report-data-sources.md).
 
-6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6. Select **OK**.
 
 ## See also
 

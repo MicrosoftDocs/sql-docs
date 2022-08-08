@@ -1,8 +1,8 @@
 ---
 title: "sys.internal_partitions (Transact-SQL)"
 description: sys.internal_partitions (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

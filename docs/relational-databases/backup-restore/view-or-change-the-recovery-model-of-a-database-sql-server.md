@@ -64,7 +64,7 @@ ms.author: mathoma
   
 6.  Optionally, to change the recovery model select a different model list. The choices are **Full**, **Bulk-logged**, or **Simple**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

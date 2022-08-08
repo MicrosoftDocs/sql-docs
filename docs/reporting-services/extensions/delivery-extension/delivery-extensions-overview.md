@@ -42,7 +42,7 @@ Reporting Services delivery extension architecture
   
 -   A deployment computer with a report server installed.  
   
--   A development computer with [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)] or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities, specifically subscription and delivery.  
   

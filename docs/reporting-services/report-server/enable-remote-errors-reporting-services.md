@@ -67,7 +67,7 @@ ms.author: maggies
   
 4.  In the **Security** section, in **EnableRemoteErrors**, select **True**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="bkmk_script"></a> Enable remote errors through script (Native Mode)  
   

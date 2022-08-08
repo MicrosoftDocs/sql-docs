@@ -17,6 +17,8 @@ ms.author: v-davidengel
 
 Connection resiliency allows a broken idle connection to be reestablished, within limitations. If an initial connection fails, connection resiliency also allows the driver to automatically try to reconnect. Only SQL Server 2014 and later and Azure SQL Database support reconnecting a broken idle connection. This feature is available starting with Microsoft JDBC Driver 10.2.0 for SQL Server.
 
+## Connection retry
+
 There are two aspects to connection resiliency. The first is the ability to transparently retry an initial database connection. The second is the ability to transparently restore an existing, idle connection. A typical idle connection might be a connection sitting in a connection pool. An "idle" connection is generally one that has been idle for at least 30 seconds. These connections often can be closed by the server or by network devices between the client and server.
 
 The JDBC driver has two connection options that control connection resiliency behavior. These options can be added to the connection string or set via data source properties.
@@ -27,6 +29,8 @@ The JDBC driver has two connection options that control connection resiliency be
 | `connectRetryInterval` | Integer between 1 and 60 (inclusive) | 10 | The time, in seconds, between connection retry attempts. The driver will attempt to reconnect immediately upon detecting a broken idle connection, and will then wait `connectRetryInterval` seconds before trying again. This keyword is ignored if `connectRetryCount` is 0. |
 
 If the product of `connectRetryCount` multiplied by `connectRetryInterval` is larger than `loginTimeout`, then the driver will stop attempting to connect once `loginTimeout` is reached. Otherwise, it will continue to try to reconnect until `connectRetryCount` is reached.
+
+## Connection recovery
 
 To detect broken idle connections, the driver relies on TCP keepalive packets at the socket level. On Linux and Java 11+, the driver automatically enables keepalive packets at a 30-second interval (`KeepAliveTime`) with a 1-second delay between retries when a failure occurs (`KeepAliveInterval`).
 

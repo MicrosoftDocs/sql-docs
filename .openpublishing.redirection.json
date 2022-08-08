@@ -58816,6 +58816,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
+      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/stretch-database/index.md",
       "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
       "redirect_document_id": false
@@ -59433,6 +59438,16 @@
     {
       "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
       "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
+      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
       "redirect_document_id": false
     }
   ]

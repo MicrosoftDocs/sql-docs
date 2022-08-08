@@ -55,7 +55,7 @@ ms.author: "mathoma"
   
          Select the option that matches how data will be shared among Subscribers: **A row from this table will go to multiple subscriptions** or **A row from this table will go to only one subscription**. If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
      The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you will be notified and will be able to edit the filter statement.  
   
@@ -69,7 +69,7 @@ ms.author: "mathoma"
   
 2.  In the **Edit Filter** or **Edit Join** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To delete a filter that was automatically generated  
   

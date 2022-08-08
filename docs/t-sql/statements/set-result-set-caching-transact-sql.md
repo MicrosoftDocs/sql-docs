@@ -42,6 +42,9 @@ Enables result set caching for the current client session.  Result set caching c
 **OFF**   
 Disable result set caching for the current client session.
 
+> [!NOTE]
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](/sql/t-sql/functions/decryptbykey-transact-sql). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](/sql/t-sql/statements/set-result-set-caching-transact-sql) or [database-level](/sql/t-sql/statements/alter-database-transact-sql-set-options)) at the time of execution.
+
 ## Examples
 
 Query the result_cache_hit column in [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) with a query's request_id to see if this query was executed with a result cache hit or miss.

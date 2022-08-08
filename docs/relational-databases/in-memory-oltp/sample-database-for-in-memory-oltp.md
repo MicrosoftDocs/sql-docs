@@ -754,4 +754,4 @@ ORDER BY state, file_type;
 
 - [In-Memory OLTP &#40;In-Memory Optimization&#41; overview and usage scenarios](./overview-and-usage-scenarios.md)
 - Create a memory-optimized filegroup: [The Memory Optimized Filegroup](the-memory-optimized-filegroup.md)
-- [Script to enable [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
+- [Script to enable [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

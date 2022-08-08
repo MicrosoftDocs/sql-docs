@@ -65,6 +65,8 @@ If you modify the above policy and set W=0 (no weekly backups), Azure only retai
 > The timing of individual LTR backups is controlled by Azure. You cannot manually create an LTR backup or control the timing of the backup creation. After configuring an LTR policy, it  may take up to 7 days before the first LTR backup will show up on the list of available backups.  
 > 
 > If you delete a server or a managed instance, all databases on that server or managed instance are also deleted and can't be recovered. You can't restore a deleted server or managed instance. However, if you had configured LTR for a database or managed instance, LTR backups are not deleted, and they can be used to restore databases on a different server or managed instance in the same subscription, to a point in time when an LTR backup was taken.
+> 
+> It is recommended to conduct drills periodically to verify the LTR backups are taken as per the configured schedule and to verify the restored databases contain data as expected.  
 
 
 ## Geo-replication and long-term backup retention

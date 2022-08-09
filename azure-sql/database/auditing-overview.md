@@ -42,6 +42,7 @@ You can use SQL Database auditing to:
 ### Auditing limitations
 
 - **Premium storage** with **BlockBlobStorage** is supported.
+- **User managed identity** authentication type for enabling auditing to **storage** is not yet supported.
 - **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.

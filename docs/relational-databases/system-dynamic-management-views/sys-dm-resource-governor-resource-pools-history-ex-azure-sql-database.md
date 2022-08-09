@@ -1,9 +1,9 @@
 ---
 title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
-description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+description: "Each row in sys.dm_resource_governor_resource_pools_history_ex represents a periodic snapshot of resource pool statistics in Azure SQL Database."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "01/05/2021"
+ms.date: 08/09/2022
 ms.prod: sql
 ms.prod_service: sql-database
 ms.technology: system-objects
@@ -104,16 +104,19 @@ Users can access this dynamic management view to monitor near real time resour
 
 ## Examples
 
-The following example returns  maximum log rate data and consumption at each snapshot by user pool  
+The following example returns maximum log rate data and consumption at each snapshot by user pool:
 
 ```sql
-select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
+SELECT snapshot_time, name, max_log_rate_kb, delta_log_bytes_used 
+FROM sys.dm_resource_governor_resource_pools_history_ex 
+WHERE name LIKE 'UserPool%' 
+ORDER BY snapshot_time DESC;
 ```
 
-The following example returns similar info  as sys.elastic_pool_resource_stats without having to connect to Logical Master
+The following example returns similar info as `sys.elastic_pool_resource_stats` without having to connect to Azure SQL logical server's `master` database:
 
 ```sql
-select snapshot_time, name, cap_vcores_used_percent,
+SELECT snapshot_time, name, cap_vcores_used_percent,
   avg_data_io_percent,  
   avg_log_write_percent,
   avg_storage_percent,
@@ -121,11 +124,15 @@ select snapshot_time, name, cap_vcores_used_percent,
   max_data_space_kb,
   max_worker_percent,
   max_session_percent
-    from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
+FROM sys.dm_resource_governor_resource_pools_history_ex 
+WHERE name LIKE 'UserPool%' 
+ORDER BY snapshot_time DESC;
 ```
 
-## See Also
+## Next steps
 
 - [Translation log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Elastic pool DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
 - [Elastic pool vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [sys.database_usage (Azure SQL Database)](../system-catalog-views/sys-database-usage-azure-sql-database.md)
+- [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)

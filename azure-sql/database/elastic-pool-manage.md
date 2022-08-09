@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.date: 08/09/2022
 ms.custom:
   - "seoapril2019 sqldbrb=1"
   - "devx-track-azurecli"
@@ -84,7 +84,7 @@ To create and move databases within existing elastic pools or to return informat
 
 > [!IMPORTANT]
 > You cannot create, update, or delete an Azure SQL Database elastic pool using Transact-SQL. You can add or remove databases from an elastic pool, and you can use DMVs to return information about existing elastic pools.
->
+
 
 | Command | Description |
 | --- | --- |
@@ -92,6 +92,7 @@ To create and move databases within existing elastic pools or to return informat
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) |Move a database into, out of, or between elastic pools.|
 |[DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
 |[sys.elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for all the elastic pools on a server. For each elastic pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool.|
+|[sys.dm_elastic_pool_resource_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-dm-elastic-pool-resource-stats-azure-sql-database)|Returns resource usage statistics for the current database in an elastic pool. There is one row for each 20 second reporting window (three rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by the current database in the pool.|
 |[sys.database_service_objectives (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for a database in SQL Database or Azure Synapse Analytics. If logged on to the master database in a server, returns information on all databases. For Azure Synapse Analytics, you must be connected to the master database.|
 
 ## REST API

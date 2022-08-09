@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: sys.elastic_pool_resource_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
+ms.date: 08/09/2022
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 monikerRange: "=azuresqldb-current"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
@@ -39,11 +38,16 @@ Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/d
 |**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
 |**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
+|**max_xtp_storage_percent**|**decimal(5,2)**| |
+|**avg_login_rate_percent**|**decimal(5,2)**| |
+|**avg_instance_cpu_percent**|**decimal(5,2)**| |
+|**avg_instance_memory_percent**|**decimal(5,2)**| |
+|**elastic_pool_cpu_limit**|**decimal(5,2)**| |
 |**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management)|  
   
 ## Remarks
 
- This view exists in the master database of the [logical server](/azure/azure-sql/database/logical-servers). You must be connected to the master database to query **sys.elastic_pool_resource_stats**.  
+ This view exists in the `master` database of the [logical server](/azure/azure-sql/database/logical-servers). You must be connected to the `master` database to query `sys.elastic_pool_resource_stats`.  
   
 ## Permissions
 

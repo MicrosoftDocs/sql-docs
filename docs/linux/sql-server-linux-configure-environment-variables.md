@@ -41,7 +41,7 @@ You can use several different environment variables to configure SQL Server 2019
 | Environment variable | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
-| **MSSQL_SA_PASSWORD** | Configure the SA user password. |
+| **MSSQL_SA_PASSWORD** | Configure the SA user password.<br /><br /> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
 | **MSSQL_COLLATION** | Sets the default collation for SQL Server. This overrides the default mapping of language ID (LCID) to collation. |
@@ -65,7 +65,7 @@ You can use several different environment variables to configure SQL Server 2019
 | Environment variable | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
-| **MSSQL_SA_PASSWORD** | Configure the SA user password. |
+| **MSSQL_SA_PASSWORD** | Configure the SA user password.<br /><br /> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
 | **MSSQL_COLLATION** | Sets the default collation for SQL Server. This overrides the default mapping of language ID (LCID) to collation. |

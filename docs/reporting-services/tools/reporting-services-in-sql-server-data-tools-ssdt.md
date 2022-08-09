@@ -17,7 +17,9 @@ ms.author: maggies
 
 # Reporting Services in SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
  This topic describes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] solutions, projects, project templates, and configurations used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and the views, menus, toolbars, and shortcuts that you can use in Report Designer.  
   

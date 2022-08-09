@@ -57,7 +57,7 @@ The steps to create an AG on Linux servers for high availability are different f
    * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
 
-[!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
+[!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the AG
 
@@ -210,7 +210,7 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-[!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
+[!INCLUDE [Create Post](../includes/linux/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
 >After you create the AG, you must configure integration with a cluster technology like Pacemaker for high availability. For a read-scale configuration using AGs, starting with [!INCLUDE [SQL Server version](../includes/sssql17-md.md)], setting up a cluster is not required.

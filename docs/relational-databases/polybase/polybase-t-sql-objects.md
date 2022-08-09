@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Transact-SQL reference"
 description: "Use PolyBase to query your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
-ms.date: 07/01/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: tutorial
@@ -42,6 +42,7 @@ For more information and tutorials on creating various external data sources, se
 - [S3-compatible object storage](polybase-configure-s3-compatible.md)
 - [ODBC generic types](polybase-configure-odbc-generic.md)
 - [CSV](virtualize-csv.md)
+- [Delta table](virtualize-delta.md)
 
 ## Prerequisites  
 
@@ -781,6 +782,84 @@ WITH
     LOCATION = '/2022/call_center.csv',
     DATA_SOURCE = Blob_CSV
     ,FILE_FORMAT = csv_ff
+)
+GO
+```
+
+## Create external table for delta table
+
+Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
+
+For more information and examples, see [Virtualize delta table with PolyBase](virtualize-delta.md).
+
+#### 1. Create a master key and database scoped credential
+
+Create a database master key on the database if one does not already exist. This is required to encrypt the credential secret.  
+
+```sql
+  -- Create a database master key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+```
+
+Then, create a database scoped credential. For this example, the delta table resides on Azure Data Lake Storage Gen2. For more information, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+
+```sql
+   -- IDENTITY: user name for external source.  
+   -- SECRET: password for external source.
+
+   CREATE DATABASE SCOPED CREDENTIAL delta_storage_dsc   
+   WITH IDENTITY = 'SHARED ACCESS SIGNATURE', 
+   SECRET = '<SAS Token>';  
+```
+
+#### 2. Create external data source
+
+
+Database scoped credential will be used for the external data source. In this example, the delta table resides in Azure Data Lake Storage Gen2, so use prefix `adls` and the `SHARED ACCESS SIGNATURE` identity method. For more information about the connectors and prefixes, including new settings for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md?view=sql-server-ver16&preserve-view=true#location--prefixpathport-3).
+
+```sql
+CREATE EXTERNAL DATA SOURCE Delta_ED
+WITH
+(
+ LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
+,CREDENTIAL = delta_storage_dsc 
+);
+```
+
+For example, if your storage account is named `delta_lake_sample` and the container is named `sink`, the code would be:
+
+```sql
+CREATE EXTERNAL DATA SOURCE Delta_ED
+WITH
+(
+ LOCATION = 'abs://sink@delta_lake_sample.dfs.core.windows.net'
+,CREDENTIAL = delta_storage_dsc
+)
+```
+
+#### 3. Create external file format
+
+To define the file's formatting, an external file format is required. External file formats are also recommended due to reusability. For more information, see [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+
+```sql
+CREATE EXTERNAL FILE FORMAT DeltaTableFormat WITH(FORMAT_TYPE = DELTA);
+```
+
+#### 4. Create external table
+
+The delta table files are located at `/delta/Delta_yob/` and the external data source for this example, is an S3-compatible object storage, previously configured under the data source `s3_eds`. PolyBase can use the as LOCATION the delta table folder or the absolute file itself, which would be located at `delta/Delta_yob/_delta_log/00000000000000000000.json`.
+
+```sql
+-- Create External Table using delta
+CREATE EXTERNAL TABLE extCall_Center_delta 
+(      id int, 
+       name VARCHAR(200),
+       dob date
+)WITH 
+(     LOCATION = '/delta/Delta_yob/'
+    , FILE_FORMAT = DeltaTableFormat
+    , DATA_SOURCE = s3_eds
 )
 GO
 ```

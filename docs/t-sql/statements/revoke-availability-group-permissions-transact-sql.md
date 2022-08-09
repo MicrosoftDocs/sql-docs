@@ -20,7 +20,7 @@ dev_langs:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on an Always On availability group. 
   

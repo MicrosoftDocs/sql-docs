@@ -10,8 +10,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---

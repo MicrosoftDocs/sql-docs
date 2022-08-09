@@ -5,14 +5,17 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: 
-ms.date: 06/15/2022
+ms.date: 08/03/2022
 services:
   - "sql-database"
 ms.service: sql-db-mi
+ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Enable SQL Insights (preview)
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
 This article describes how to enable [SQL Insights (preview)](sql-insights-overview.md) to monitor your SQL deployments. Monitoring is performed from an Azure virtual machine that makes a connection to your SQL deployments and uses Dynamic Management Views (DMVs) to gather monitoring data. You can control what datasets are collected and the frequency of collection using a monitoring profile.
 
 > [!NOTE]
@@ -164,7 +167,7 @@ If you have these permissions, a new Key Vault access policy will be automatical
 ## Create SQL monitoring profile
 Open SQL Insights (preview) by selecting **SQL (preview)** from the **Insights** section of the **Azure Monitor** menu in the Azure portal. Select **Create new profile**. 
 
-:::image type="content" source="media/sql-insights-enable/create-new-profile.png" alt-text="Screenshot of the Azure Monitor page in Azure Portal. The create new profile button is highlighted." lightbox="media/sql-insights-enable/create-new-profile.png":::
+:::image type="content" source="media/sql-insights-enable/create-new-profile.png" alt-text="Screenshot of the Azure Monitor page in Azure portal. The create new profile button is highlighted." lightbox="media/sql-insights-enable/create-new-profile.png":::
 
 The profile will store the information that you want to collect from your SQL systems.  It has specific settings for: 
 
@@ -205,9 +208,10 @@ TCP connections from the monitoring machine to the IP address and port used by t
 
 Enter the connection string in the form:
 
-```
-sqlAzureConnections": [
-   "Server=mysqlserver.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;" 
+```json
+"sqlAzureConnections": [
+   "Server=mysqlserver1.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;",
+   "Server=mysqlserver2.database.windows.net;Port=1433;Database=mydatabase;User Id=$username;Password=$password;"
 ]
 ```
 
@@ -220,14 +224,16 @@ TCP connections from the monitoring machine to the IP address and port used by t
 
 Enter the connection string in the form:
 
-```
+```json
 "sqlManagedInstanceConnections": [
-   "Server= mysqlserver.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;" 
+   "Server= mysqlserver1.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;",
+   "Server= mysqlserver2.<dns_zone>.database.windows.net;Port=1433;User Id=$username;Password=$password;" 
 ] 
 ```
+
 Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the managed instance. If using managed instance [public endpoint](/azure/azure-sql/managed-instance/public-endpoint-configure), replace port 1433 with 3342.
 
-To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single secondary. Collected data will be tagged to reflect Primary or Secondary. 
+To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single high-availability (HA) secondary replica for a given primary database. Collected data will be tagged to reflect Primary or Secondary. 
 
 #### SQL Server 
 The TCP/IP protocol must be enabled for the SQL Server instance you want to monitor. TCP connections from the monitoring machine to the IP address and port used by the SQL Server instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path.
@@ -236,17 +242,18 @@ If you want to monitor SQL Server configured for high availability (using either
 
 Enter the connection string in the form:
 
-```
+```json
 "sqlVmConnections": [
-   "Server=SQLServerInstanceIPAddress;Port=1433;User Id=$username;Password=$password;" 
+   "Server=SQLServerInstanceIPAddress1;Port=1433;User Id=$username;Password=$password;",
+   "Server=SQLServerInstanceIPAddress2;Port=1433;User Id=$username;Password=$password;"
 ] 
 ```
 
 Use the IP address that the SQL Server instance listens on.
 
-If your SQL Server instance is configured to listen on a non-default port, replace 1433 with that port number in the connection string. If you're using Azure SQL virtual machine, you can see which port to use on the **Security** page for the resource.
+If your SQL Server instance is configured to listen on a non-default port, replace 1433 with that port number in the connection string. If you're using SQL Server on Azure Virtual Machine, you can see which port to use on the **Security** page for the resource.
 
-:::image type="content" source="media/sql-insights-enable/sql-vm-security.png" alt-text="A screenshot of the SQL virtual machine Security page in the Azure Portal. The SQL virtual machine security page has a Security & networking section with a Port field." lightbox="media/sql-insights-enable/sql-vm-security.png":::
+:::image type="content" source="media/sql-insights-enable/sql-vm-security.png" alt-text="A screenshot of the SQL virtual machine Security page in the Azure portal. The SQL virtual machine security page has a Security & networking section with a Port field." lightbox="media/sql-insights-enable/sql-vm-security.png":::
 
 For any SQL Server instance, you can determine all IP addresses and ports it is listening on by connecting to the instance and executing the following T-SQL query, as long as there is at least one TCP connection to the instance:
 

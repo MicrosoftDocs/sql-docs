@@ -183,14 +183,14 @@ Msg 3013, Level 16, State 1, Line 20
 BACKUP DATABASE is terminating abnormally.
 ```
 
-To get past this problem the following predefined location must be created `/usr/local/share/ca-certificates/mssql-ca-certificates`
+To get past this problem the following predefined location must be created `/var/opt/mssql/security/ca-certificates`
 where the self-signed certificates, or certificates not shipped with PAL, should be placed by the user. SQL Server will read the certificates from the folder during startup and add them to the PAL trust store.
 
 Up to 50 files can be stored in this location, if the folder is not created, when SQL Server is started, the SQL Server error log will show:
 
 ```
 2022-02-05 00:32:10.86 Server      Installing Client TLS certificates to the store.
-2022-02-05 00:32:10.88 Server      Error searching first file in /usr/local/share/ca-certificates/mssql-ca-certificates: 3(The system cannot find the path specified.)
+2022-02-05 00:32:10.88 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
 ```
 
 ## Next steps

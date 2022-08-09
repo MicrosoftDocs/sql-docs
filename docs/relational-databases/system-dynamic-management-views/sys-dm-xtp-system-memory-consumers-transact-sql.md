@@ -23,7 +23,7 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
+Reports system level memory consumers for [!INCLUDE[inmemory](../../includes/inmemory-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
 
 ```sql
 SELECT * 

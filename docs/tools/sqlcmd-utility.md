@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "GO command"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.custom: seo-lt-2019
-ms.date: 02/02/2022
+ms.date: 07/28/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -33,6 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!NOTE]  
 > For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
@@ -496,17 +497,17 @@ We recommend that you use a [strong password](../relational-databases/security/s
  **-Y** _fixed_length_type_display_width_  
  Sets the **sqlcmd** scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`. The default is 0 (unlimited). Limits the number of characters that are returned for the following data types:  
   
-- **char(** _n_ **)**, where 1<=n<=8000  
+- **char(*n*)**, where 1 <= n <= 8000  
   
-- **nchar(n** _n_ **)**, where 1<=n<=4000  
+- **nchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varchar(n** _n_ **)**, where 1<=n<=8000  
+- **varchar(*n*)**, where 1 <= *n* <= 8000  
   
-- **nvarchar(n** _n_ **)**, where 1<=n<=4000  
+- **nvarchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varbinary(n** _n_ **)**, where 1<=n\<=4000  
+- **varbinary(*n*)**, where 1 <= *n* <= 4000  
   
-- **variant**  
+- **sql_variant**  
   
  **Error Reporting Options**  
   **-b**  

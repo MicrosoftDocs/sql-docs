@@ -102,6 +102,8 @@ ms.author: maggies
  Shared datasets are dissimilar to published report parts in the following way:  
   
 -   Unlike published report parts, changes in the shared dataset definition on a report server do not trigger update notifications when the report is opened in a report authoring client. When you run the report, the data from the current shared dataset definition on the report server is used.  
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
  Shared datasets are similar to subscriptions in the following ways:  
   

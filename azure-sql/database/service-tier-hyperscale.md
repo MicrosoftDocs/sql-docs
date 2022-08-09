@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/25/2022
+ms.date: 08/09/2022
 ---
 
 # Hyperscale service tier

@@ -81,7 +81,7 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logical name of the file.|  
 |PhysicalName|**nvarchar(260)**|Physical or operating-system name of the file.|  
-|Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[hek_2](../../includes/hek-2-md.md)] container|  
+|Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[inmemory](../../includes/inmemory-md.md)] container|  
 |FileGroupName|**nvarchar(128)** NULL|Name of the filegroup that contains the file.|  
 |Size|**numeric(20,0)**|Current size in bytes.|  
 |MaxSize|**numeric(20,0)**|Maximum allowed size in bytes.|  

@@ -28,7 +28,7 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 ## Operating system support
 
-Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems. The ARM64 architecture on macOS is supported starting with version 17.8. The ARM64 architecture on Red Hat 8, 9, Debian 11, and Ubuntu 18.04, 20.04, 22.04 are supported starting with version 18.1.
+Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems. The ARM64 architecture on macOS is supported starting with version 17.8. The ARM64 architecture on Red Hat 8, 9, Debian 11, and Ubuntu 20.04, 22.04 are supported starting with version 18.1.
 
 |Driver version&nbsp;&#8594;<br />&#8595; Operating System     |18.1|18.0|17.10|17.9|17.8|17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|----|----|----|----|----|----|---|

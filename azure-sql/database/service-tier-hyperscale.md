@@ -141,14 +141,6 @@ If you need to restore a Hyperscale database in Azure SQL Database to a region o
 
 Learn more in [restoring a Hyperscale database to a different region](hyperscale-automated-backups-overview.md#restore-a-hyperscale-database-to-a-different-region).
 
-## <a name=regions></a>Available regions
-
-The Azure SQL Database Hyperscale tier is enabled in the vast majority of Azure regions. If you want to create a Hyperscale database in a region where Hyperscale isn't enabled by default, you can send an onboarding request via Azure portal. For instructions, see [Request quota increases for Azure SQL Database](quota-increase-request.md). When submitting your request, use the following guidelines:
-
-- Use the [Region access](quota-increase-request.md#region) SQL Database quota type.
-- In the description, add the compute SKU/total cores including high-availability and named replicas, and indicate that you're requesting Hyperscale capacity.
-- Also specify a projection of the total size of all databases over time in TB.
-
 ## Known limitations
 
 These are the current limitations of the Hyperscale service tier.  We're actively working to remove as many of these limitations as possible.

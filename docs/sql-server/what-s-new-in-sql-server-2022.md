@@ -45,6 +45,27 @@ This release:
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
+## Release candidate
+
+This is release candidate (RC) 0.
+
+SQL Server 2022 RC 0 (16.0.xxx.x) includes updates to the following features:
+
+- [Analytics](#analytics)
+  - Data virtualization 
+- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
+  - Degree of parallelism feedback resume
+  - Hybrid buffer pool with direct write
+  - Query store hints
+- [Management](#management)
+  - Link to Azure SQL Managed Instance for disaster recovery
+  - Snapshot backups
+- [Language](#language)
+  - APPROX_PERCENTILE_DISC()
+  - APPROX_PERCENTILE_CONT()
+  - TRIM scalar function extensions
+
+<!--
 ## Community technology preview release
 
 This release is community technology preview (CTP) 2.1. 
@@ -79,6 +100,7 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
      - BIT_COUNT()
      - GET_BIT()
      - SET_BIT()
+-->
 
 For details, see the feature descriptions in the sections below.
 
@@ -217,6 +239,10 @@ TOTAL_EXECUTION_CPU_TIME_MS = 100
 ## SQL Server Analysis Services
 
 This release introduces new features and improvements for performance, resource governance, and client support. For specific updates, see [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services).
+
+## SQL Server Reporting Services
+
+This release introduces new features and improvements for accessibility, security, reliability, and bug fixes. For specific updates, see [What's new in SQL Server Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## See also
 

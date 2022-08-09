@@ -172,7 +172,7 @@ These environment variables can be set to configure some aspects of Azure Active
 `SQLCMDCLIENTID` - set this environment variable to the identifier of an application registered in your Azure Active Directory, which is authorized to authenticate to Azure SQL Database. Applies to `ActiveDirectoryInteractive` and `ActiveDirectoryPassword` methods.
 
 ## Next steps
-- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-mssqldb)
+- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd)
 - [Run on Docker](../linux/quickstart-install-connect-docker.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

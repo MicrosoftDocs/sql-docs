@@ -14,7 +14,7 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To create memory-optimized tables, you must first create a memory-optimized filegroup. The memory-optimized filegroup holds one or more containers. Each container contains data files or delta files or both.  
   
- Even though data rows from `SCHEMA_ONLY` tables are not persisted and the metadata for memory-optimized tables and natively compiled stored procedures is stored in the traditional catalogs, the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine still requires a memory-optimized filegroup for `SCHEMA_ONLY` memory-optimized tables to provide a uniform experience for databases with memory-optimized tables.  
+ Even though data rows from `SCHEMA_ONLY` tables are not persisted and the metadata for memory-optimized tables and natively compiled stored procedures is stored in the traditional catalogs, the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine still requires a memory-optimized filegroup for `SCHEMA_ONLY` memory-optimized tables to provide a uniform experience for databases with memory-optimized tables.  
   
  The memory-optimized filegroup is based on filestream filegroup, with the following differences:  
   
@@ -30,7 +30,7 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
--   You do not need to enable filestream ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) to create a memory-optimized filegroup. The mapping to filestream is done by the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine.  
+-   You do not need to enable filestream ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) to create a memory-optimized filegroup. The mapping to filestream is done by the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine.  
   
 -   You can add new containers to a memory-optimized filegroup. You may need a new container to expand the storage needed for durable memory-optimized table and also to distribute IO across multiple containers.  
   

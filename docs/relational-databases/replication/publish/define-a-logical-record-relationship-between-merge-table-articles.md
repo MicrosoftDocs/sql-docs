@@ -72,7 +72,7 @@ ms.author: "mathoma"
   
     2.  In the **Edit Join** dialog box, clear the check box **Logical Record**.  
   
-    3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    3.  Select **OK**.
   
      To delete the logical record relationship and join filter associated with it:  
   

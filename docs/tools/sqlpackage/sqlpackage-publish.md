@@ -41,6 +41,14 @@ SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"Advent
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
+# example publish connecting using Azure Active Directory username and password
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example publish connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication=True \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
 # example publish with 2 SQLCMD variables
 # as seen in a post deployment script for user passwords
 # https://github.com/Azure-Samples/app-sql-devops-demo-project/blob/main/sql/wwi-dw-ssdt/PostDeploymentScripts/AddUsers.sql
@@ -189,7 +197,7 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Include all composite elements with the same database as part of a single publish operation.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Specifies whether transactional statements should be used where possible when you publish to a database.|
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
-|**/p:**|LongRunningCommandTimeout=(INT32)|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
@@ -222,3 +230,4 @@ The following table describes the format of the option that you can use to overr
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

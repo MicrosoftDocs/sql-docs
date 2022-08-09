@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/01/2022
+ms.date: 08/02/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -55,7 +55,7 @@ SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
   - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
   - Data virtualization: 
      - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
-     - Delta table format support for Polybase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
+     - Delta table format support for PolyBase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
 - [Intelligent query performance features](#query-store-and-intelligent-query-processing)
   - Query Store enabled by default for new databases
   - Parameter sensitive plan optimization - Supportability
@@ -129,6 +129,10 @@ The following sections provide an overview of these features.
 | Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
 
 ## Query Store and intelligent query processing
+
+The [intelligent query processing (IQP)](../relational-databases/performance/intelligent-query-processing.md) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
+
+:::image type="content" source="../relational-databases/performance/media/iqp-feature-family.svg" alt-text="A diagram of the Intelligent Query Processing family of features and when they were first introduced to SQL Server.":::
 
 | New feature or update | Details |
 |:---|:---|

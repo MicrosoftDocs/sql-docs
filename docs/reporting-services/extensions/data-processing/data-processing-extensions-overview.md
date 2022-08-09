@@ -65,7 +65,7 @@ The step-by-step process flow of a data extension that is called by the report s
   
 -   A deployment computer with Report Designer or a report server installed.  
   
--   A development computer with [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../../includes/vsprvs2005-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities.  
   

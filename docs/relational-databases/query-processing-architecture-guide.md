@@ -1058,7 +1058,12 @@ Parameter values are sniffed during compilation or recompilation for the followi
 - Queries submitted via `sp_executesql`
 - Prepared queries
 
-For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/azure-sql/identify-query-performance-issues#parameter-sensitivity).
+For more information on troubleshooting bad parameter sniffing issues, see:
+- [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)
+- [Parameters and Execution Plan Reuse](#parameters-and-execution-plan-reuse)
+- [Parameter Sensitive Plan optimization](performance/parameter-sensitivity-plan-optimization.md)
+- [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues#parameter-sensitivity)
+- [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues#parameter-sensitivity)
 
 > [!NOTE]
 > For queries using the `RECOMPILE` hint, both parameter values and current values of local variables are sniffed. The values sniffed (of parameters and local variables) are those that exist at the place in the batch just before the statement with the `RECOMPILE` hint. In particular, for parameters, the values that came along with the batch invocation call aren't sniffed.

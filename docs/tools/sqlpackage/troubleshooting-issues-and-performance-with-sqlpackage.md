@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting Import/Export with SqlPackage
-description: Learn how to troubleshoot import and export with SqlPackage.exe.
+title: Troubleshooting issues and performance with SqlPackage
+description: Learn how to troubleshoot with SqlPackage.exe.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,9 +12,9 @@ ms.reviewer: "maghan"
 ms.date: 7/29/2022
 ---
 
-# Troubleshooting Import/Export with SqlPackage
+# Troubleshooting issues and performance with SqlPackage
 
-In some scenarios, import or export operations take longer than expected or fail to complete.  The following are some frequently suggested tactics to troubleshoot import and export operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage Import or Export operations.
+In some scenarios, SqlPackage operations take longer than expected or fail to complete.  This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
 
 ## Overall strategy
 As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-core) of SqlPackage.exe.
@@ -22,6 +22,11 @@ As general guideline, better performance can be obtained via the [.NET Core vers
 1. [Download](sqlpackage-download.md#windows-net-core) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
 2. Unzip archive as directed on the download page.
 3. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
+
+It is important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
+
+### Substitute SqlPackage.exe for the Import/Export Service
+If you have attempted to use the Import/Export Service to import or export your database, you may be interested in using SqlPackage.exe to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
 ```bash
@@ -35,7 +40,26 @@ For Export, an example command is:
 
 Alternative to username and password, [Universal Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview) can be used to authenticate via Azure AD with MFA.  Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`.
 
-For issues related to timeouts, the properties `CommandTimeout` and `LongRunningCommandTimeout` can be used to tune the connection between SqlPackage.exe and the SQL instance.
+## Common issues
+
+### Timeout errors
+
+For issues related to timeouts, the following properties can be used to tune the connection between SqlPackage.exe and the SQL instance:
+
+- `/p:CommandTimeout=`: Specifies the command timeout in seconds when a query is executed. Default: 60
+- `/p:DatabaseLockTimeout=`: Specifies the database lock timeout in seconds.  -1 can be used to wait indefinitely, default: 60
+- `/p:LongRunningCommandTimeout=`: Specifies the long running command timeout in seconds.  The default value, 0, is used to wait indefinitely.
+
+### Client resource consumption
+
+For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement may be large and is relative to the full size of the data to be exported.  Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
+
+The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage.exe may be significant.
+
+
+### Low server resource consumption
+
+By default, SqlPackage sets the maximum server parallelism to 8.  If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter may improve performance.
 
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
@@ -49,9 +73,13 @@ Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage.exe Import](sqlpackage-import.md) operation.
 
 ## Export action tips
-As an alternative operation to obtain the database schema and data while skipping the schema validation, perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
+A common cause of performance degradation during export is unresolved object references, which causes SqlPackage to attempt to resolve the object multiple times. For example, a view is defined that references a table and the table no longer exists in the database. If unresolved references appear in the export log, consider correcting the schema of the database to improve the export performance.
 
 In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
+
+During an export process the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` may improve the export process speed while compressing the output bacpac file less.
+
+To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=True`.
 
 ## Azure SQL Database
 
@@ -66,6 +94,6 @@ For more information on utilizing a PowerShell script to collect more informatio
 
 
 ## Next steps
-
+- [SqlPackage overview](sqlpackage.md)
 - Learn more about [SqlPackage Import](sqlpackage-import.md)
 - Learn more about [SqlPackage Export](sqlpackage-export.md)

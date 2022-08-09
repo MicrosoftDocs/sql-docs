@@ -38,7 +38,7 @@ The Schema Compare extension provides the following features:
 
 To install the Schema Compare extension, follow these steps: 
 
-1. In Azure Data Studio, Select the Extensions Icon to view available extensions.
+1. In Azure Data Studio, select the Extensions Icon to view available extensions.
 
     :::image type="content" source="media/schema-compare-extension/schema-compare-marketplace-search.png" alt-text="Screenshot of the Azure Data Studio GUI, marketplace search.":::
 

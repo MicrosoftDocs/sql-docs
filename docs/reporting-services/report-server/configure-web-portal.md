@@ -46,7 +46,7 @@ By default, the web portal URL consists of a unique virtual directory name, plus
 
 4. Click **Apply**.
 
-5. If you're using [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] or Windows Server 2008, additional steps might be required before you can use the web portal. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+5. If you're using [!INCLUDE[winvista](../../includes/winvista-md.md)] or Windows Server 2008, additional steps might be required before you can use the web portal. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 ## Configure the web portal to use a specific report server URL
 

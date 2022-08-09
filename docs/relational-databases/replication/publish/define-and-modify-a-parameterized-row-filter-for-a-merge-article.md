@@ -81,7 +81,7 @@ ms.author: "mathoma"
   
      If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -91,7 +91,7 @@ ms.author: "mathoma"
   
 2.  In the **Edit Filter** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To delete a parameterized row filter  
   

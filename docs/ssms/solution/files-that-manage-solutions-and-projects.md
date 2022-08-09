@@ -26,7 +26,7 @@ ms.author: "maghan"
 
 
 ## Management Studio Solution Files  
-SQL Server Management Studio uses different file types than [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. This means you cannot open a SQL Server Management Studio solution in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or in Visual Studio. SQL Server Management Studio solution files allow Solution Explorer to display a graphical interface for managing your files.  
+SQL Server Management Studio uses different file types than [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. This means you cannot open a SQL Server Management Studio solution in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or in Visual Studio. SQL Server Management Studio solution files allow Solution Explorer to display a graphical interface for managing your files.  
    
 |Extension|File type|Description|Created by|  
 |-------------|-------------|---------------|--------------|  

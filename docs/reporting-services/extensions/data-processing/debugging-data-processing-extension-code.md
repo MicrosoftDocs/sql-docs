@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Debugging Data Processing Extension Code
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your data processing extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
+  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your data processing extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
   
 #### To debug your data processing extension code  
   
-1.  Launch [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)], and open your data processing extension project.  
+1.  Launch [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)], and open your data processing extension project.  
   
 2.  Build the project, and deploy your data processing extension assembly and the accompanying .pdb file to the Report Designer. For more information about deployment, see [How to: Deploy a Data Processing Extension to Report Designer](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md).  
   

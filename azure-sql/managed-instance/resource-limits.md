@@ -30,13 +30,13 @@ This article provides an overview of the technical characteristics and resource 
 SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware configurations.
 
 > [!NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**. We are introducing two new hardware configurations in limited preview: **premium-series** and **memory optimized premium-series**.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)**. We are introducing the **memory optimized premium-series** hardware configuration in limited preview.
 
 For information on previously available hardware, see [Previously available hardware](#previously-available-hardware) later in this article.
 
 Hardware configurations have different characteristics, as described in the following table:
 
-|    | **Standard-series (Gen5)** | **Premium-series (preview)** | **Memory optimized premium-series (preview)** | 
+|    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series (preview)** | 
 |:-- |:-- |:-- |:-- |
 | **CPU** |  Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors |
 | **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |
@@ -49,47 +49,10 @@ Hardware configurations have different characteristics, as described in the foll
 >[!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional support for premium-series hardware (preview)
+### Regional support for memory optimized premium-series hardware (preview)
 
-Support for the premium-series hardware (public preview) is currently available only in these specific regions: <br>
-
-| Region | **Premium-series** | **Memory optimized premium-series** | 
-|:--- |:--- |:--- |
-| Australia Central | Yes | | 
-| Australia East | Yes | Yes | 
-| Australia Southeast | Yes | Yes | 
-| Brazil South | Yes | Yes |
-| Canada Central | Yes | Yes | 
-| Canada East | Yes | | 
-| Central US | Yes | Yes | 
-| East Asia | Yes | | 
-| East US | Yes | Yes | 
-| East US 2 | Yes | Yes | 
-| France Central | Yes | Yes | 
-| France South | Yes | | 
-| Germany West Central | Yes | Yes | 
-| India Central | Yes | Yes | 
-| Japan East | Yes | Yes | 
-| Japan West | Yes | | 
-| Korea Central | Yes | | 
-| North Central US | Yes | Yes | 
-| North Europe | Yes | Yes | 
-| Norway East | Yes | | 
-| South Africa North | Yes | | 
-| South Africa West | Yes | | 
-| South Central US | Yes | Yes | 
-| Southeast Asia | Yes |  | 
-| Sweden Central | Yes | Yes | 
-| Switzerland North | Yes | | 
-| Switzerland West | Yes | | 
-| UAE North | Yes | | 
-| UK South | Yes | Yes | 
-| UK West | Yes | | 
-| West Central US | Yes | | 
-| West Europe | Yes | Yes | 
-| West US | Yes | Yes |  
-| West US 2 | Yes | Yes | 
-| West US 3 | Yes | Yes | 
+Support for the memory optimized premium-series hardware (preview) is currently available only in these specific regions:
+Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East US, East US 2, France Central, Germany West Central, India Central, Japan East, North Central US, North Europe, South Central US, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
 
 ### In-memory OLTP available space
 

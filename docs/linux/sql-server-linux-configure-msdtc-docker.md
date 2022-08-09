@@ -36,9 +36,12 @@ To enable MSDTC transaction in SQL Server containers, you must set two new envir
 
 The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 docker run \
-   -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2017-latest
@@ -46,7 +49,7 @@ docker run \
 
 ```PowerShell
 docker run `
-   -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
    -d mcr.microsoft.com/mssql/server:2017-latest
@@ -58,9 +61,12 @@ docker run `
 
 The following example shows how to use these environment variables to pull and run a single SQL Server 2019 container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 docker run \
-   -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-20.04
@@ -68,7 +74,7 @@ docker run \
 
 ```PowerShell
 docker run `
-   -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
    -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-20.04
@@ -114,7 +120,7 @@ For more information about routing ports, see [Configure port routing](sql-serve
 If you're deploying SQL Server containers on a Kubernetes platform, see the example YAML deployment manifest below. In this example, the Kubernetes platform is Azure Kubernetes Service (AKS). Before running the sample deployment YAML script, create the necessary secret to store the `sa` password. A typical command is as shown below:
 
 ```bash
-kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
 ```
 
 You'll notice the following points in the manifest file:
@@ -177,11 +183,11 @@ spec:
        value: "13500"
      - name: MSSQL_DTC_TCP_PORT
        value: "51000"
-     - name: SA_PASSWORD
+     - name: MSSQL_SA_PASSWORD
        valueFrom:
          secretKeyRef:
           name: mssql
-          key: SA_PASSWORD
+          key: MSSQL_SA_PASSWORD
      volumeMounts:
      - name: mssql
        mountPath: "/var/opt/mssql"

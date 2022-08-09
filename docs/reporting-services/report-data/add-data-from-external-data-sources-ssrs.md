@@ -21,7 +21,9 @@ ms.date: 03/17/2017
  To retrieve data for a report dataset requires multiple layers of data access software. The following list provides a simple description of how reports work with data access technologies:  
   
 -   **Application and user interface** The Report Builder application that you use to create a data source, add a reference to a shared data source, add a shared dataset, or add a report part that includes the data sources and datasets that it depends on..  
-  
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
 -   **Report definition elements** Data sources and datasets are part of the report definition. After a report is published to a report server, shared data sources and shared datasets are managed independently from the report definition.  
   
     -   **Data source and Shared data source** Part of a report definition that includes the information about the type of data processing extension, the connection information, and the authentication.  

@@ -1,22 +1,18 @@
 ---
+title: "Depth Property (ADO MD)"
 description: "Depth Property (ADO MD)"
-title: "Depth Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Level::Depth"
-  - "Depth"
-helpviewer_keywords: 
-  - "Depth property [ADO MD]"
-ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Level::Depth"
+  - "Depth"
+helpviewer_keywords:
+  - "Depth property [ADO MD]"
+apitype: "COM"
 ---
 # Depth Property (ADO MD)
 Indicates the number of levels between the [Level](./level-object-ado-md.md) and the root of the hierarchy.  

@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Enter a value in the **Store replication performance history at least** box.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  

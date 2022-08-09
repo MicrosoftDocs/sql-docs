@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 5/24/2022
+ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -111,17 +111,19 @@ In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder i
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
 ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
 
-To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` with SqlBinRoot the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
 #### DATA_SOURCE = *external_data_source_name*
 Specifies the name of the external data source that contains the location of the external data. This location is a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 #### FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+External file formats can be re-used by multiple similar external files.
 
 #### Reject Options
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
@@ -500,7 +502,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format. Note this may be case sensitive in the Oracle database.
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -515,7 +517,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='.mySchema.customer',
+    LOCATION='DB1.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
 ```

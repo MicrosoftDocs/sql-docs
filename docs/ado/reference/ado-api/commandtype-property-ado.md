@@ -1,21 +1,17 @@
 ---
+title: "CommandType Property (ADO)"
 description: "CommandType Property (ADO)"
-title: "CommandType Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Command15::CommandType"
-helpviewer_keywords: 
-  - "CommandType property [ADO]"
-ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Command15::CommandType"
+helpviewer_keywords:
+  - "CommandType property [ADO]"
+apitype: "COM"
 ---
 # CommandType Property (ADO)
 Indicates the type of a [Command](./command-object-ado.md) object.  

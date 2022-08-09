@@ -42,7 +42,7 @@ These functions convert an expression of one data type to another.
 
 ## Syntax  
   
-```sqlsyntax 
+```syntaxsql 
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   

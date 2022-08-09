@@ -13,7 +13,7 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 1/19/2022
+ms.date: 6/14/2022
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 
@@ -23,7 +23,7 @@ Azure SQL Database provides several methods for creating a copy of an existing [
 
 ## Overview
 
-A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy, service tier and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same or a different service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are  managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
+A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
 
 ## Database Copy for Azure SQL Hyperscale
 
@@ -117,7 +117,7 @@ Database1 can be a single or pooled database. Copying between different tier poo
    -- Execute on the master database to start copying
    CREATE DATABASE Database2
    AS COPY OF Database1
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool1 ));
    ```
 
 ### Copy to a different server
@@ -138,7 +138,7 @@ Similarly, the below command copies Database1 on server1 to a new database named
 
 ```sql
 -- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
-CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool2 ) );
 ```
 
 ### Copy to a different subscription

@@ -39,7 +39,7 @@ The primary migration methods are:
 
 For best data transfer performance, migrate the database files into the Azure VM using a compressed backup file.
 
-To minimize downtime during the database migration process, use either the AlwaysOn option or the transactional replication option.
+To minimize downtime during the database migration process, use either the Always On option or the transactional replication option.
 
 If it isn't possible to use the above methods, manually migrate your database. Generally, you start with a database backup, follow it with a copy of the database backup into Azure, and then restore the database. You can also copy the database files themselves into Azure and then attach them. There are several methods by which you can accomplish this manual process of migrating a database into an Azure VM.
 

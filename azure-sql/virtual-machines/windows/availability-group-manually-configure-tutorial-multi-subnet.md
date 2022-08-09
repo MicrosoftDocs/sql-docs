@@ -191,9 +191,9 @@ To enable the availability group feature, follow these steps:
 1. Launch the RDP file to the first SQL Server VM (such as **SQL-VM-1**) with a domain account that is a member of sysadmin fixed server role, such as the **CORP\Install** domain account created in the [prerequisites document](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md)
 1. From the **Start** screen of one your SQL Server VMs, launch **SQL Server Configuration Manager**.
 1. In the browser tree, highlight **SQL Server Services**, right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
-1. Select the **AlwaysOn High Availability** tab, then check the box to **Enable AlwaysOn availability groups**:
+1. Select the **Always On High Availability** tab, then check the box to **Enable Always On availability groups**:
 
-    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/08-enable-always-on.png" alt-text="Enable AlwaysOn availability groups":::
+    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/08-enable-always-on.png" alt-text="Enable Always On availability groups":::
 
 1. Select **Apply**. Select **OK** in the pop-up dialog.
 1. Restart the SQL Server service.
@@ -375,7 +375,6 @@ To test the connection, follow these steps:
 
 > [!NOTE]
 > - While connecting to availability group on different subnets, setting `MultiSubnetFailover=true` provides faster detection of and connection to the current primary replica. See [Connecting with MultiSubnetFailover](/dotnet/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery#connecting-with-multisubnetfailover)
-> - Setting `MultiSubnetFailover=True` isn't required with .NET Framework 4.6.1 or later versions.
 
 ## Next steps
 

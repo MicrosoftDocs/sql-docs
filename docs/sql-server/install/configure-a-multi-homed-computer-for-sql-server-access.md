@@ -51,7 +51,7 @@ ms.author: randolphwest
   
 #### To determine the IP addresses available on the computer  
   
-1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type **cmd** and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type **cmd** and then select **OK**.
   
 2.  In the Command Prompt window, type **ipconfig,** and then press ENTER to list the IP addresses available on this computer.  
   
@@ -124,7 +124,7 @@ ms.author: randolphwest
   
 4.  In the **IP Address** dialog box, select **This IP address or subnet**, and then type one of the IP addresses that you want to configure.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  In the **Remote IP address** area, select **These IP addresses**, and then click **Add**.  
   

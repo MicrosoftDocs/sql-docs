@@ -42,13 +42,14 @@ When you want to summarize data in a visual format in a paginated report, use a 
   
 1.  Create a report and define a dataset. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-2.  On the **Insert** tab, click **Chart**, and then click **Insert Chart**.  
+2.  On the **Insert** tab, select **Chart**, and then select **Insert Chart**.  
+
   
-3.  Click on the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
+3.  Select the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
   
      The **Select Chart Type** dialog box appears.  
   
-4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select the type of chart you want to add. Select **OK**.
   
 5.  Click the chart to display the **Chart Data** pane.  
   
@@ -56,7 +57,7 @@ When you want to summarize data in a visual format in a paginated report, use a 
   
 7.  Add a grouping field to the **Category Groups** area. When you add this field to the **Category Groups** area, a grouping field is automatically created for you. Each group represents a data point in your series.  
   
-8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. Select **OK**.
   
 9. On the **Home** tab, click **Run** to see the rendered report.  
   

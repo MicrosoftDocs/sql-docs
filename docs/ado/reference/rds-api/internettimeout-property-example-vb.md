@@ -1,20 +1,16 @@
 ---
+title: "InternetTimeout Property Example (VB)"
 description: "InternetTimeout Property Example (VB)"
-title: "InternetTimeout Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "InternetTimeout property [ADO], Visual Basic example"
-ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "InternetTimeout property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # InternetTimeout Property Example (VB)
 > [!IMPORTANT]

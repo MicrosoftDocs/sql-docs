@@ -1,21 +1,17 @@
 ---
+title: "Update Method"
 description: "Update Method"
-title: "Update Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::Update"
-helpviewer_keywords: 
-  - "Update method [ADO]"
-ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::Update"
+helpviewer_keywords:
+  - "Update method [ADO]"
+apitype: "COM"
 ---
 # Update Method
 Saves any changes you make to the current row of a [Recordset](./recordset-object-ado.md) object, or the [Fields](./fields-collection-ado.md) collection of a [Record](./record-object-ado.md) object.  

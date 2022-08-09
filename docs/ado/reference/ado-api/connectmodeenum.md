@@ -1,21 +1,17 @@
 ---
+title: "ConnectModeEnum"
 description: "ConnectModeEnum"
-title: "ConnectModeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "ConnectModeEnum"
-helpviewer_keywords: 
-  - "ConnectModeEnum enumeration [ADO]"
-ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "ConnectModeEnum"
+helpviewer_keywords:
+  - "ConnectModeEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # ConnectModeEnum
 Specifies the available permissions for modifying data in a [Connection](./connection-object-ado.md), opening a [Record](./record-object-ado.md), or specifying values for the [Mode](./mode-property-ado.md) property of the **Record** and [Stream](./stream-object-ado.md) objects.  

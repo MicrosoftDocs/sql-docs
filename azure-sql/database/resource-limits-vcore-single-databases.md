@@ -12,7 +12,7 @@ ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/25/2022
+ms.date: 07/18/2022
 ---
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -69,7 +69,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>2</sup>|154|307|307|307|461|
 |Tempdb max data size (GB)|32|64|128|192|256|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>3</sup>|320|640|1280|1920|2560|
 |Max log rate (MBps)|4.5|9|18|27|36|
 |Max concurrent workers|75|150|300|450|600|
@@ -99,7 +100,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|461|461|461|922|
 |Tempdb max data size (GB)|320|384|448|512|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|3200|3840|4480|5120|
 |Max log rate (MBps)|45|50|50|50|
 |Max concurrent workers|750|900|1050|1200|
@@ -127,7 +129,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|922|922|1024|1024|1024|
 |Tempdb max data size (GB)|576|640|768|1024|1280|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|5760|6400|7680|10240|12800|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|1350|1500|1800|2400|3000|
@@ -137,73 +140,17 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|N/A|N/A|N/A|N/A|N/A|
 |Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
 
+
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-
-## Hyperscale - provisioned compute - Gen4
-
-### Gen4 hardware (part 1)
-
-|Compute size (service objective)|HS_Gen4_1|HS_Gen4_2|HS_Gen4_3|HS_Gen4_4|HS_Gen4_5|HS_Gen4_6|
-|:--- | --: |--: |--: |---: | --: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|1|2|3|4|5|6|
-|Memory (GB)|7|14|21|28|35|42|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |100|
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|32|64|96|128|160|192|
-|Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
-|Max local SSD IOPS <sup>1</sup>|4000 |8000 |12000 |16000 |20000 |24000 |
-|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
-|Max concurrent workers|200|400|600|800|1000|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
-
-
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
-
-### Gen4 hardware (part 2)
-
-|Compute size (service objective)|HS_Gen4_7|HS_Gen4_8|HS_Gen4_9|HS_Gen4_10|HS_Gen4_16|HS_Gen4_24|
-|:--- | ---: |--: |--: | --: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (TB)|100 |100 |100 |100 |100 |100 |
-|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|224|256|288|320|512|768|
-|Storage type| [Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
-|Max local SSD IOPS <sup>1</sup>|28000 |32000 |36000 |40000 |64000 |76800 |
-|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
-|Max concurrent workers|1400|1600|1800|2000|3200|4800|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
-
-
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
 ## Hyperscale - provisioned compute - Gen5
 
 ### Gen5 hardware (part 1)
 
 |Compute size (service objective)|HS_Gen5_2|HS_Gen5_4|HS_Gen5_6|HS_Gen5_8|HS_Gen5_10|HS_Gen5_12|HS_Gen5_14|
-|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|:--- | --: |--: |--: |--: |---: | --: |--: |
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
@@ -212,11 +159,13 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |100|
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
-|Tempdb max data size (GB)|64|128|192|256|320|384|448|
-|Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
+|`Tempdb` max data size (GB)|64|128|192|256|320|384|448|
 |Max local SSD IOPS <sup>1</sup>|8000 |16000 |24000 |32000 |40000 |48000 |56000 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -226,6 +175,12 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+
 
 ### Gen5 hardware (part 2)
 
@@ -240,10 +195,12 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data size (TB)|100 |100 |100 |100 |100 |100 |100 |
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|512|576|640|768|1024|1280|2560|
-|Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|64000 |72000 |80000 |96000 |128000 |160000 |204800 |
 |Max log rate (MBps)|100 |100 |100 |100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
@@ -251,19 +208,16 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
 
-
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
-#### Notes
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
-**Note 1**: Hyperscale is a multi-tiered architecture with separate compute and storage components: [Hyperscale Service Tier Architecture](service-tier-hyperscale.md#distributed-functions-architecture)
-
-**Note 2**: Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
 ## Hyperscale - provisioned compute - DC-series
 
 |Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|
-|:--- | --: |--: |--: |--: |---: | 
+|:--- | --: |--: |--: |--: |
 |Hardware|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
@@ -273,10 +227,12 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data size (TB)|100 |100 |100 |100 |
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|64|128|192|256|
-|Storage type| [Note 1](#notes) |[Note 1](#notes)|[Note 1](#notes) |[Note 1](#notes) |
 |Max local SSD IOPS <sup>1</sup>|14000|28000|42000|44800|
 |Max log rate (MBps)|100 |100 |100 |100 |
-|IO latency (approximate)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|[Note 2](#notes)|
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|160|320|480|640|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
@@ -284,73 +240,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Read Scale-out|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|
 
-
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
-### Notes
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
-**Note 1**: Hyperscale is a multi-tiered architecture with separate compute and storage components: [Hyperscale Service Tier Architecture](service-tier-hyperscale.md#distributed-functions-architecture)
-
-**Note 2**: Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers.
-
-## General purpose - provisioned compute - Gen4
-
-> [!IMPORTANT]
-> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
-
-### Gen4 hardware (part 1)
-
-|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
-|:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|1|2|3|4|5|6|
-|Memory (GB)|7|14|21|28|35|42|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|1024|1024|1536|1536|1536|3072|
-|Max log size (GB) <sup>1</sup>|307|307|461|461|461|922|
-|Tempdb max data size (GB)|32|64|96|128|160|192|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
-|Max data IOPS <sup>2</sup>|320|640|960|1280|1600|1920|
-|Max log rate (MBps)|4.5|9|13.5|18|22.5|27|
-|Max concurrent workers|200|400|600|800|1000|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|1|1|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-### Gen4 hardware (part 2)
-
-|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
-|:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|3072|3072|3072|3072|4096|4096|
-|Max log size (GB) <sup>1</sup>|922|922|922|922|1229|1229|
-|Tempdb max data size (GB)|224|256|288|320|512|768|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)
-|Max data IOPS <sup>2</sup>|2240|2560|2880|3200|5120|7680|
-|Max log rate (MBps)|31.5|36|40.5|45|50|50|
-|Max concurrent workers|1400|1600|1800|2000|3200|4800|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|1|1|
-|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
 ## General purpose - provisioned compute - Gen5
 
@@ -367,7 +261,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|307|307|461|461|461|922|922|
 |Tempdb max data size (GB)|64|128|192|256|320|384|384|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|3200|3840|4480|
 |Max log rate (MBps)|9|18|27|36|45|50|50|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
@@ -394,7 +289,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|922|922|922|1024|1024|1024|1024|
 |Tempdb max data size (GB)|512|576|640|768|1024|1280|2560|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|5120|5760|6400|7680|10240|12800|12800|
 |Max log rate (MBps)|50|50|50|50|50|50|50|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
@@ -423,7 +319,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|336|336|336|336|512|
 |Tempdb max data size (GB)|37|46|56|65|74|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|2560|3200|3840|4480|5120|
 |Max log rate (MBps)|36|45|50|50|50|
 |Max concurrent workers|400|500|600|700|800|
@@ -451,7 +348,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|512|512|512|1024|1024|1024|
 |Tempdb max data size (GB)|83|93|111|148|167|333|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|5760|6400|7680|10240|11520|12800|
 |Max log rate (MBps)|50|50|50|50|50|50|
 |Max concurrent workers|900|1000|1200|1600|1800|3600|
@@ -479,7 +377,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log size (GB) <sup>1</sup>|307|461|922|922|
 |Tempdb max data size (GB)|64|128|192|256|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|IO latency (approximate)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|5-7 ms (write)<br>5-10 ms (read)|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|
 |Max log rate (MBps)|9|18|27|36|
 |Max concurrent workers|160|320|480|640|
@@ -493,70 +392,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-## Business Critical - provisioned compute - Gen4
-
-> [!IMPORTANT]
-> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
-
-### Gen4 hardware (part 1)
-
-|Compute size (service objective)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|1|2|3|4|5|6|
-|Memory (GB)|7|14|21|28|35|42|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|1|2|3|4|5|6|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Max data size (GB)|1024|1024|1024|1024|1024|1024|
-|Max log size (GB) <sup>1</sup>|307|307|307|307|307|307|
-|Tempdb max data size (GB)|32|64|96|128|160|192|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
-|Max data IOPS <sup>2</sup>|4,000|8,000|12,000|16,000|20,000|24,000|
-|Max log rate (MBps)|8|16|24|32|40|48|
-|Max concurrent workers|200|400|600|800|1000|1200|
-|Max concurrent logins|200|400|600|800|1000|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|4|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-### Gen4 hardware (part 2)
-
-|Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
-|:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
-|vCores|7|8|9|10|16|24|
-|Memory (GB)|49|56|63|70|112|159.5|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|7|8|9.5|11|20|36|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Max data size (GB)|1024|1024|1024|1024|1024|1024|
-|Max log size (GB) <sup>1</sup>|307|307|307|307|307|307|
-|Tempdb max data size (GB)|224|256|288|320|512|768|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
-|Max data IOPS <sup>2</sup>|28,000|32,000|36,000|40,000|64,000|76,800|
-|Max log rate (MBps)|56|64|64|64|64|64|
-|Max concurrent workers|1400|1600|1800|2000|3200|4800|
-|Max concurrent logins|1400|1600|1800|2000|3200|4800|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|4|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-## Business Critical - provisioned compute - Gen5
+## Business critical - provisioned compute - Gen5
 
 ### Gen5 hardware (part 1)
 
@@ -572,7 +408,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Tempdb max data size (GB)|64|128|192|256|320|384|448|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829|
 |Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS <sup>2</sup>|8000|16,000|24,000|32,000|40,000|48,000|56,000|
 |Max log rate (MBps)|24|48|72|96|96|96|96|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
@@ -601,7 +438,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Tempdb max data size (GB)|512|576|640|768|1024|1280|2560|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829|
 |Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS <sup>2</sup>|64,000|72,000|80,000|96,000|128,000|160,000|204,800|
 |Max log rate (MBps)|96|96|96|96|96|96|96|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
@@ -618,6 +456,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ## Business Critical - provisioned compute - M-series
 
+For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
+
 ### M-series hardware (part 1)
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
@@ -632,7 +472,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Tempdb max data size (GB)|256|320|384|448|512|576|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|13836|13836|13836|13836|13836|13836|
 |Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS <sup>2</sup>|12,499|15,624|18,748|21,873|24,998|28,123|
 |Max log rate (MBps)|48|60|72|84|96|108|
 |Max concurrent workers|800|1,000|1,200|1,400|1,600|1,800|
@@ -661,7 +502,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Tempdb max data size (GB)|640|768|1024|2048|4096|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|13836|13836|13836|13836|13836|
 |Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS <sup>2</sup>|31,248|37,497|49,996|99,993|160,000|
 |Max log rate (MBps)|120|144|192|264|264|
 |Max concurrent workers|2,000|2,400|3,200|6,400|12,800|
@@ -690,7 +532,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Tempdb max data size (GB)|64|128|192|256|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1406|1406|1406|1406|
 |Storage type|Local SSD|Local SSD|Local SSD|Local SSD|
-|IO latency (approximate)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|1-2 ms (write)<br>1-2 ms (read)|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS <sup>2</sup>|14000|28000|42000|44800|
 |Max log rate (MBps)|24|48|72|96|
 |Max concurrent workers|200|400|600|800|
@@ -704,6 +547,209 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+
+## Previously available hardware
+
+This section includes details on previously available hardware.
+
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+## Hyperscale - provisioned compute - Gen4
+
+### Gen4 hardware (part 1)
+
+|Compute size (service objective)|HS_Gen4_1|HS_Gen4_2|HS_Gen4_3|HS_Gen4_4|HS_Gen4_5|HS_Gen4_6|
+|:--- | --: |--: |--: |---: | --: |--: |
+|hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|1|2|3|4|5|6|
+|Memory (GB)|7|14|21|28|35|42|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |100|
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|32|64|96|128|160|192|
+|Max local SSD IOPS <sup>1</sup>|4000 |8000 |12000 |16000 |20000 |24000 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|200|400|600|800|1000|1200|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+
+### Gen4 hardware (part 2)
+
+|Compute size (service objective)|HS_Gen4_7|HS_Gen4_8|HS_Gen4_9|HS_Gen4_10|HS_Gen4_16|HS_Gen4_24|
+|:--- | ---: |--: |--: | --: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|7|8|9|10|16|24|
+|Memory (GB)|49|56|63|70|112|159.5|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|224|256|288|320|512|768|
+|Max local SSD IOPS <sup>1</sup>|28000 |32000 |36000 |40000 |64000 |76800 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |100 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|1400|1600|1800|2000|3200|4800|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
+
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are approximate and representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+
+## General purpose - provisioned compute - Gen4
+
+> [!IMPORTANT]
+> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
+
+### Gen4 hardware (part 1)
+
+|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|1|2|3|4|5|6|
+|Memory (GB)|7|14|21|28|35|42|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|1024|1024|1536|1536|1536|3072|
+|Max log size (GB) <sup>1</sup>|307|307|461|461|461|922|
+|Tempdb max data size (GB)|32|64|96|128|160|192|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|320|640|960|1280|1600|1920|
+|Max log rate (MBps)|4.5|9|13.5|18|22.5|27|
+|Max concurrent workers|200|400|600|800|1000|1200|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+### Gen4 hardware (part 2)
+
+|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|7|8|9|10|16|24|
+|Memory (GB)|49|56|63|70|112|159.5|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|3072|3072|3072|3072|4096|4096|
+|Max log size (GB) <sup>1</sup>|922|922|922|922|1229|1229|
+|Tempdb max data size (GB)|224|256|288|320|512|768|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|2240|2560|2880|3200|5120|7680|
+|Max log rate (MBps)|31.5|36|40.5|45|50|50|
+|Max concurrent workers|1400|1600|1800|2000|3200|4800|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|1|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+## Business critical - provisioned compute - Gen4
+
+> [!IMPORTANT]
+> New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
+
+### Gen4 hardware (part 1)
+
+|Compute size (service objective)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|1|2|3|4|5|6|
+|Memory (GB)|7|14|21|28|35|42|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|1|2|3|4|5|6|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Max data size (GB)|1024|1024|1024|1024|1024|1024|
+|Max log size (GB) <sup>1</sup>|307|307|307|307|307|307|
+|Tempdb max data size (GB)|32|64|96|128|160|192|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Max data IOPS <sup>2</sup>|4,000|8,000|12,000|16,000|20,000|24,000|
+|Max log rate (MBps)|8|16|24|32|40|48|
+|Max concurrent workers|200|400|600|800|1000|1200|
+|Max concurrent logins|200|400|600|800|1000|1200|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|4|4|4|4|4|4|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+### Gen4 hardware (part 2)
+
+|Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|vCores|7|8|9|10|16|24|
+|Memory (GB)|49|56|63|70|112|159.5|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|7|8|9.5|11|20|36|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
+|Max data size (GB)|1024|1024|1024|1024|1024|1024|
+|Max log size (GB) <sup>1</sup>|307|307|307|307|307|307|
+|Tempdb max data size (GB)|224|256|288|320|512|768|
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|1356|1356|1356|1356|1356|1356|
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Max data IOPS <sup>2</sup>|28,000|32,000|36,000|40,000|64,000|76,800|
+|Max log rate (MBps)|56|64|64|64|64|64|
+|Max concurrent workers|1400|1600|1800|2000|3200|4800|
+|Max concurrent logins|1400|1600|1800|2000|3200|4800|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|4|4|4|4|4|4|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
 
 ## Next steps
 

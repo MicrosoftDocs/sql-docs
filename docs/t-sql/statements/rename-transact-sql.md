@@ -1,8 +1,8 @@
 ---
 title: "RENAME (Transact-SQL)"
 description: RENAME (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: "WilliamDAssafMSFT"
 ms.date: "07/20/2021"
 ms.prod: sql
@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 
 > [!NOTE]

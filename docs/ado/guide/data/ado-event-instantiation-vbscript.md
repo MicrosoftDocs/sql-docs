@@ -1,18 +1,14 @@
 ---
+title: "ADO Event Instantiation: VBScript"
 description: "ADO Event Instantiation: VBScript"
-title: "ADO Event Instantiation: VBScript | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "VB"
-ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+dev_langs:
+  - "VB"
 ---
 # ADO Event Instantiation: VBScript
 Microsoft Visual Basic Scripting Edition does not support ADO events.

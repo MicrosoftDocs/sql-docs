@@ -72,22 +72,26 @@ You can enable or disable preview features anytime in your Settings.
 ### First-party extensions in preview
 
 * Admin Pack for SQL Server
+* Azure Monitor Logs
+* Azure SQL Edge Deployment
 * Azure Synapse Analytics Insights
 * Central Management Servers
+* Cosmos
 * Database Administration Tool Extensions for Windows
+* Database Migration Assessment for Oracle
 * Kusto
-* Language packs
+* Machine Learning
+* Managed Instance Dashboard
+* Oracle
 * PostgreSQL
 * PowerShell
 * Query History
 * SandDance for Azure Data Studio
 * Server Reports
 * SQL Assessment
+* SQL Database Projects
 * SQL Server Agent
 * SQL Server Profiler
-* Machine Learning
-* Managed Instance Dashboard
-* Visual Studio IntelliCode
 * whoisactive
 
 ## Next steps

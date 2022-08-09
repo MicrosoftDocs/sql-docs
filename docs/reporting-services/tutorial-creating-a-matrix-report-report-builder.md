@@ -258,7 +258,7 @@ The corner area is in the upper left corner of the matrix. Depending on the numb
   
 6.  On the **Border** tab > **Presets** > **None**.
   
-9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. Select **OK**.
   
 10. Click **Run** to preview your report.  
   

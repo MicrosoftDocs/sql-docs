@@ -3,7 +3,7 @@ title: "Server-level roles | Microsoft Docs"
 description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "07/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)
   
- SQL Server 2019 and previous versions provided nine fixed server roles. SQL Server 2022 comes with seven additional server roles, which have the prefix `##MS_` and the suffix `##` to distinguish from other regular user-created principals and custom server roles. The permissions that are granted to the fixed server roles (except **public**) can't be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
+ SQL Server 2019 and previous versions provided nine fixed server roles. SQL Server 2022 comes with 10 additional server roles, which have the prefix `##MS_` and the suffix `##` to distinguish from other regular user-created principals and custom server roles. The permissions that are granted to the fixed server roles (except **public**) can't be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
   
  The fixed server roles that don't start with the `##MS_` prefix are provided for convenience and backward compatibility. Assign more specific permissions whenever possible or use the new server roles.
 
@@ -66,15 +66,18 @@ The following table shows the fixed server-level roles and their capabilities.
 The following table shows additional fixed server-level roles that are introduced with SQL Server 2022 and their capabilities.
 
 > [!NOTE]
-> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics.
+> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics. **##MS_PerformanceDefinitionReader##**, **##MS_ServerPerformanceStateReader##**, and **##MS_ServerSecurityStateReader##** is introduced in SQL Server 2022 CTP 2.1, and are not available in Azure SQL Database.
 
-|Built-in server-level role |Description |
+|Fixed server-level role |Description |
 |------------------------------|-----------------|  
 |**##MS_DatabaseConnector##**|Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to. <br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role.|
 |**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own.|
+|**##MS_PerformanceDefinitionReader##**|Members of the **##MS_PerformanceDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY PERFORMANCE DEFINITION**, and respectively has **VIEW PERFORMANCE DEFINITION** permission on any database on which the member of this role has a user account. This is a subset of what the **##MS_DefinitionReader##** server role has access to.|
+|**##MS_SecurityDefinitionReader##**|Members of the **##MS_SecurityDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY SECURITY DEFINITION**, and respectively has **VIEW SECURITY DEFINITION** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_DefinitionReader##** server role has access to.|
 |**##MS_DefinitionReader##**|Members of the **##MS_DefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY DEFINITION**, and respectively has **VIEW DEFINITION** permission on any database on which the member of this role has a user account.|
 |**##MS_LoginManager##**|Members of the **##MS_LoginManager##** fixed server role can create and delete logins.|
-|**##MS_SecurityDefinitionReader##**|Members of the **##MS_SecurityDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY SECURITY DEFINITION**, and respectively has **VIEW SECURITY DEFINITION** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_DefinitionReader##** server role has access to.|
+|**##MS_ServerPerformanceStateReader##**|Members of the **##MS_ServerPerformanceStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER PERFORMANCE STATE**, and respectively has **VIEW DATABASE PERFORMANCE STATE** permission on any database on which the member of this role has a user account. This is a subset of what the **##MS_ServerStateReader##** server role has access to.|
+|**##MS_ServerSecurityStateReader##**|Members of the **##MS_ServerSecurityStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER SECURITY STATE**, and respectively has **VIEW DATABASE SECURITY STATE** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_ServerStateReader##** server role has access to.|
 |**##MS_ServerStateReader##**|Members of the **##MS_ServerStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER STATE**, and respectively has **VIEW DATABASE STATE** permission on any database on which the member of this role has a user account.|
 |**##MS_ServerStateManager##**|Members of the **##MS_ServerStateManager##** fixed server role have the same permissions as the **##MS_ServerStateReader##** role. Also, it holds the **ALTER SERVER STATE** permission, which allows access to several management operations, such as: `DBCC FREEPROCCACHE`, `DBCC FREESYSTEMCACHE ('ALL')`, `DBCC SQLPERF()`|
 
@@ -83,15 +86,18 @@ The following table shows additional fixed server-level roles that are introduce
 
 ### Permissions of new fixed server roles in SQL Server 2022
 
-Each built-in server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
+Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
 
 |Fixed server-level role  | Server-level permissions | Database-level permissions |
 |---|---|---|
 |**##MS_DatabaseConnector##**|CONNECT ANY DATABASE |CONNECT |
 |**##MS_DatabaseManager##**|CREATE ANY DATABASE<br />ALTER ANY DATABASE | ALTER|
-|**##MS_DefinitionReader##**|VIEW ANY DATABASE<br />VIEW ANY DEFINITION<br />VIEW ANY SECURITY DEFINITION| VIEW DEFINITION<br />VIEW SECURITY DEFINITION|
-|**##MS_LoginManager##**|CREATE LOGIN<br />ALTER ANY LOGIN | N/A |
+|**##MS_PerformanceDefinitionReader##**|VIEW ANY PERFORMANCE DEFINITION|VIEW PERFORMANCE DEFINITION |
 |**##MS_SecurityDefinitionReader##**| VIEW ANY SECURITY DEFINITION | VIEW SECURITY DEFINITION |
+|**##MS_DefinitionReader##**|VIEW ANY DATABASE<br />VIEW ANY DEFINITION<br />VIEW ANY PERFORMANCE DEFINITION<br />VIEW ANY SECURITY DEFINITION| VIEW DEFINITION<br />VIEW PERFORMANCE DEFINITION<br />VIEW SECURITY DEFINITION|
+|**##MS_LoginManager##**|CREATE LOGIN<br />ALTER ANY LOGIN | N/A |
+|**##MS_ServerPerformanceStateReader##**|VIEW SERVER PERFORMANCE STATE|VIEW DATABASE PERFORMANCE STATE |
+|**##MS_ServerSecurityStateReader##**|VIEW SERVER SECURITY STATE|VIEW DATABASE SECURITY STATE|
 |**##MS_ServerStateReader##**|VIEW SERVER STATE<br />VIEW SERVER PERFORMANCE STATE<br />VIEW SERVER SECURITY STATE | VIEW DATABASE STATE<br />VIEW DATABASE PERFORMANCE STATE<br />VIEW DATABASE SECURITY STATE |
 |**##MS_ServerStateManager##**| ALTER SERVER STATE<br />VIEW SERVER STATE<br />VIEW SERVER PERFORMANCE STATE<br />VIEW SERVER SECURITY STATE | VIEW DATABASE STATE<br />VIEW DATABASE PERFORMANCE STATE<br />VIEW DATABASE SECURITY STATE |
 

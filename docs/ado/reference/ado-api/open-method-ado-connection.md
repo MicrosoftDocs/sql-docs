@@ -1,23 +1,19 @@
 ---
+title: "Open Method (ADO Connection)"
 description: "Open Method (ADO Connection)"
-title: "Open Method (ADO Connection) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::raw_Open"
   - "Connection15::Open"
   - "_Connection::Open"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Open method [ADO]"
-ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Open Method (ADO Connection)
 Opens a connection to a data source.  

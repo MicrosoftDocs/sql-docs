@@ -19,13 +19,13 @@ ms.author: maggies
   
  In some scenarios, report parameters can be used to launch script injection attacks when rendering reports to HTML. For more information about securing reports, see [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md).  
   
- For more information about browsers, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ For more information about browsers, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="RenderingMHTML"></a> Rendering in MHTML  
- The HTML rendering extension can also render reports in MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML extends HTML to embed encoded objects, such as images, in the HTML document. Using the MHTML rendering extension, you can embed resources such as images, documents, or other binary files as MIME structures within the report HTML, into a single file. MHTML reports are also useful for embedding within e-mail messages because all resources are included with the report. Although it is actually the HTML rendering extension that renders MHTML, this functionality may also be referred to as the MHTML rendering extension.  
+ The HTML rendering extension can also render reports in MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML extends HTML to embed encoded objects, such as images, in the HTML document. Using the MHTML rendering extension, you can embed resources such as images, documents, or other binary files as MIME structures within the report HTML, into a single file. MHTML reports are also useful for embedding within e-mail messages because all resources are included with the report. Although it's actually the HTML rendering extension that renders MHTML, this functionality may also be referred to as the MHTML rendering extension.  
   
   
 ##  <a name="BrowserSupport"></a> Browser Support  
@@ -37,13 +37,13 @@ ms.author: maggies
   
 -   Safari 3.0 and later  
   
- Due to cross browser considerations, the rendered report may vary slightly from browser to browser. For example, the text box contains a property called WritingMode. This property is not supported in Firefox.  
+ Due to cross browser considerations, the rendered report may vary slightly from browser to browser. For example, the text box contains a property called WritingMode. This property isn't supported in Firefox.  
   
   
 ##  <a name="HTMLSpecificRenderingRules"></a> HTML-Specific Rendering Rules  
  The following HTML-specific rules are applied when rendering:  
   
--   The renderer builds an HTML table structure to contain all of the items in each **ReportItems** collection, if there is more than one.  
+-   The renderer builds an HTML table structure to contain all of the items in each **ReportItems** collection, if there's more than one.  
   
 -   Every item within the table structure occupies a single cell.  
   
@@ -55,17 +55,17 @@ ms.author: maggies
   
 -   All other rows and columns are allowed to grow depending on the size of each report item.  
   
--   All coordinates and report item sizes are converted to millimeters. All other sizes, including style properties, retain their original units. Size and position differences smaller than .2mm are treated as 0mm.  
+-   All coordinates and report item sizes are converted to millimeters. All other sizes, including style properties, retain their original units. Size and position differences smaller than .2 mm are treated as 0 mm.  
   
   
 ##  <a name="Interactivity"></a> Interactivity  
  Some interactive elements are supported in HTML. The following is a description of specific behaviors.  
   
 ### Show and Hide  
- A report item whose visibility can be toggled is rendered with a +/- toggle image and is clickable. When the item is clicked, a call back to the server takes place in order to re-render the output with the changed show or hide state.  
+ A report item whose visibility can be toggled is rendered with a +/- toggle image and is clickable. When the item is clicked, a callback to the server takes place in order to re-render the output with the changed show or hide state.  
   
 ### Document Map  
- Document map labels are rendered and can be navigated to by using the document map in the viewer control. For omitted data region headers, labels are rendered on the first child cell. If there is no child cell present, the label is rendered on the child that precedes it.  
+ Document map labels are rendered and can be navigated to by using the document map in the viewer control. For omitted data region headers, labels are rendered on the first child cell. If there's no child cell present, the label is rendered on the child that precedes it.  
   
 ### Bookmarks  
  Bookmark links are rendered and appear as hyperlinks. Bookmark targets are rendered and can be navigated to by clicking the bookmark links. When a bookmark link is clicked, the report goes to the first occurrence of the target bookmark label and, when possible, the browser is scrolled so that the bookmark link is at the top of the window. HTML anchor (\<a>) tags are used to mark bookmark targets.  
@@ -82,7 +82,7 @@ ms.author: maggies
  Additional search and find functionality is provided by the ReportViewer Web Forms control.  
   
 ##  <a name="FontsOnClient"></a> Fonts on the Client Computer
- When a custom font is used within the report, the computer that is used to view the report (the client computer) must have the custom font installed for the report to display correctly. If the font is not installed on the client computer, the report will display a system default font instead of the custom font.
+ When a custom font is used within the report, the computer that is used to view the report (the client computer) must have the custom font installed for the report to display correctly. If the font isn't installed on the client computer, the report will display a system default font instead of the custom font.
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  
  You can change some default settings for this renderer, including which mode to render in, by changing the device information settings. For more information, see [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  

@@ -1,19 +1,15 @@
 ---
+title: "ObjectProxy (ADO - WFC Syntax)"
 description: "ObjectProxy (ADO - WFC Syntax)"
-title: "ObjectProxy (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "ObjectProxy collection [ADO]"
-ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ObjectProxy collection [ADO]"
+apitype: "COM"
 ---
 # ObjectProxy (ADO - WFC Syntax)
 An **ObjectProxy** object represents a server, and is returned by the **createObject** method of the [DataSpace](../rds-api/dataspace-object-rds.md) object. The ObjectProxy class has one method, **call**, which can invoke a method on the server and return an object resulting from that invocation.  

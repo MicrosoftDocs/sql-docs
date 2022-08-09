@@ -135,7 +135,7 @@ When attempting to access the assembly specified in \<client_assembly_specifier>
   
  Besides the previous checks that are performed when CREATE ASSEMBLY executes, there are additional checks that are performed at execution time of the code in the assembly:  
   
--   Calling certain [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that require a specific Code Access Permission may fail if the permission set of the assembly does not include that permission.  
+-   Calling certain [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that require a specific Code Access Permission may fail if the permission set of the assembly does not include that permission.  
   
 -   For SAFE and EXTERNAL_ACCESS assemblies, any attempt to call [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that are annotated with certain HostProtectionAttributes will fail.  
   

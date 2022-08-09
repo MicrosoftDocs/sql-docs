@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "GO command"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.custom: seo-lt-2019
-ms.date: 02/02/2022
+ms.date: 07/28/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -33,6 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!NOTE]  
 > For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
@@ -151,7 +152,7 @@ sqlcmd
    -U login_id  
    -v var = "value"
    -V error_severity_level
-   -w column_width
+   -w screen_width
    -W (remove trailing spaces)
    -x (disable variable substitution)
    -X[1] (disable commands, startup script, environment variables, optional exit)
@@ -462,7 +463,7 @@ We recommend that you use a [strong password](../relational-databases/security/s
  **-s** _col_separator_  
  Specifies the column-separator character. The default is a blank space. This option sets the **sqlcmd** scripting variable SQLCMDCOLSEP. To use characters that have special meaning to the operating system such as the ampersand (&), or semicolon (;), enclose the character in quotation marks ("). The column separator can be any 8-bit character.  
   
- **-w** _column_width_  
+ **-w** _screen_width_  
  Specifies the screen width for output. This option sets the **sqlcmd** scripting variable SQLCMDCOLWIDTH. The column width must be a number greater than 8 and less than 65536. If the specified column width does not fall into that range, **sqlcmd** generates an error message. The default width is 80 characters. When an output line exceeds the specified column width, it wraps on to the next line.  
   
  **-W**  
@@ -496,17 +497,17 @@ We recommend that you use a [strong password](../relational-databases/security/s
  **-Y** _fixed_length_type_display_width_  
  Sets the **sqlcmd** scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`. The default is 0 (unlimited). Limits the number of characters that are returned for the following data types:  
   
-- **char(** _n_ **)**, where 1<=n<=8000  
+- **char(*n*)**, where 1 <= n <= 8000  
   
-- **nchar(n** _n_ **)**, where 1<=n<=4000  
+- **nchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varchar(n** _n_ **)**, where 1<=n<=8000  
+- **varchar(*n*)**, where 1 <= *n* <= 8000  
   
-- **nvarchar(n** _n_ **)**, where 1<=n<=4000  
+- **nvarchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varbinary(n** _n_ **)**, where 1<=n\<=4000  
+- **varbinary(*n*)**, where 1 <= *n* <= 4000  
   
-- **variant**  
+- **sql_variant**  
   
  **Error Reporting Options**  
   **-b**  

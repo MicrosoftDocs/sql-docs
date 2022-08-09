@@ -18,7 +18,7 @@ dev_langs:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 ---
 # DENY Type Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 

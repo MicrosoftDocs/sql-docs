@@ -474,7 +474,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the location of the file that will contain the report.  
   
      **E-mail report** check box  
-     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
+     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
   
      **Agent operator**  
      Specify the recipient of the e-mail.  

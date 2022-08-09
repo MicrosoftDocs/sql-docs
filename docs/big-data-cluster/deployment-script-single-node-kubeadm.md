@@ -5,13 +5,12 @@ description: Use a bash deployment script to deploy a SQL Server 2019 big data c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
+ms.metadata: seo-lt-2019
 ---
 
 # Deploy with a bash script to a single node kubeadm cluster

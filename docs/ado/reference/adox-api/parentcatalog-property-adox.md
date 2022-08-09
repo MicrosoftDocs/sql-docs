@@ -1,15 +1,13 @@
 ---
+title: "ParentCatalog Property (ADOX)"
 description: "ParentCatalog Property (ADOX)"
-title: "ParentCatalog Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_User::get_ParentCatalog"
   - "_Column::ParentCatalog"
   - "_Table::put_ParentCatalog"
@@ -36,11 +34,9 @@ f1_keywords:
   - "_User::PutRefParentCatalog"
   - "_Group::GetParentCatalog"
   - "_Group::PutRefParentCatalog"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ParentCatalog property [ADOX]"
-ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # ParentCatalog Property (ADOX)
 Specifies the parent catalog of a Table, User, or Column object to provide access to provider-specific properties.  

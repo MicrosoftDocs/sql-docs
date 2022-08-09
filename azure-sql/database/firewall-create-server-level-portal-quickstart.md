@@ -1,77 +1,76 @@
 ---
-title: Create a server-level firewall rule
-description: Create an server-level firewall rule
-services:
-  - "sql-database"
+title: Create an Azure portal server-level firewall rule
+description: Learn how to create a server-level firewall rule with Azure portal
+services: sql-database
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-  - "sqldbrb=1"
-  - "mode-ui"
 ms.topic: quickstart
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 02/11/2019
+ms.reviewer: kendralittle, mathoma, vanto
+ms.date: 07/14/2022
+ms.custom: kr2b-contr-experiment
 ---
-# Quickstart: Create a server-level firewall rule using the Azure portal
+# Quickstart: Create a server-level firewall rule in Azure portal
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This quickstart walks through how to create a [server-level firewall rule](firewall-configure.md) in Azure SQL Database using the Azure portal to enable you to connect to [logical SQL servers](logical-servers.md), single databases, and elastic pools and their databases. A firewall rule is required to connect from other Azure resources and from on-premises resources. Server-level firewall rules do not apply to Azure SQL Managed Instance.
+This quickstart describes how to create a [server-level firewall rule](firewall-configure.md) in Azure SQL Database. Firewall rules can give access to [logical SQL servers](logical-servers.md), single databases, and elastic pools and their databases. Firewall rules are also needed to connect on-premises and other Azure resources to databases. Server-level firewall rules do not apply to Azure SQL Managed Instance.
 
 ## Prerequisites
 
-This quickstart uses the resources created in [Create a single database using the Azure portal](single-database-create-quickstart.md) as its starting point.
+We will use the resources developed in [Create a single database using the Azure portal](single-database-create-quickstart.md) as a starting point for this tutorial.
 
-## Sign in to the Azure portal
+## Sign in to Azure portal
 
-Sign in to the [Azure portal](https://portal.azure.com/).
+Sign in to [Azure portal](https://portal.azure.com/).
 
-## Create a server-level IP firewall rule
+## Create a server-level IP-based firewall rule
 
- SQL Database creates a firewall at the  server level for single and pooled databases. This firewall prevents client applications from connecting to the server or any of its databases unless you create an IP firewall rule to open the firewall. For a connection from an IP address outside Azure, create a firewall rule for a specific IP address or range of addresses that you want to be able to connect from. For more information about server-level and database-level IP firewall rules, see [Server-level and database-level IP firewall rules](firewall-configure.md).
+ Azure SQL Database creates a firewall at the server level for single and pooled databases. This firewall blocks connections from IP addresses that do not have permission. To connect to an Azure SQL database from an IP address outside of Azure, you need to create a firewall rule. You can use rules to open a firewall for a specific IP address or for a range of IP addresses. For more information about server-level and database-level firewall rules, see [Server-level and database-level IP-based firewall rules](firewall-configure.md).
 
 > [!NOTE]
-> Azure SQL Database communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. If so, you can't connect to your server unless your IT department opens port 1433.
+> Azure SQL Database communicates over port 1433. When you connect from within a corporate network, outbound traffic over port 1433 may not be permitted by your network firewall. This means your IT department needs to open port 1433 for you to connect to your server.
 > [!IMPORTANT]
 > A firewall rule of 0.0.0.0 enables all Azure services to pass through the server-level firewall rule and attempt to connect to a database through the server.
 
-Follow these steps to create a server-level IP firewall rule for your client's IP address and enable external connectivity through the Azure SQL Database firewall for your IP address only.
+We'll use the following steps to create a server-level IP-based, firewall rule for a specific, client IP address. This enables external connectivity for that IP address through the Azure SQL Database firewall.
 
-1. After the [database](#prerequisites) deployment completes, select **SQL databases** from the left-hand menu and then choose **mySampleDatabase** on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified server name (such as **mynewserver-20170824.database.windows.net**) and provides options for further configuration.
+1. After the [database](#prerequisites) deployment completes, select **SQL databases** from the left-hand menu and then select **mySampleDatabase** on the **SQL databases** page. The overview page for your database opens. It displays the fully qualified server name (such as **mydocssampleserver.database.windows.net**) and provides options for further configuration. You can also find the firewall settings by navigating directly to your server, and selecting **Networking** under **Security**. 
 
-2. Copy this fully qualified server name to use when connecting to your server and its databases in other quickstarts.
+2. Copy the fully qualified server name. You will use it when you connect to your server and its databases in other quickstarts. Select **Set server firewall** on the toolbar. 
 
-   ![server name](./media/firewall-create-server-level-portal-quickstart/server-name.png)
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-name.png" alt-text="A screenshot that shows where to copy your server name, and how to set server firewall on the toolbar." lightbox="./media/firewall-create-server-level-portal-quickstart/server-name.png":::
 
-3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
+3. Set **Public network access** to **Selected networks** to reveal the virtual networks and firewall rules. When set to **Disabled**, virtual networks and firewall rule settings are hidden. 
 
-   ![server-level IP firewall rule](./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png)
+   :::image type="content" source="./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png" alt-text="A screenshot that shows configuration of a server-level IP firewall rule." lightbox="./media/firewall-create-server-level-portal-quickstart/server-firewall-rule.png":::
 
-4. Choose **Add client IP** on the toolbar to add your current IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+4. Choose **Add your client IP** to add your current IP address to a new, server-level, firewall rule. This rule can open Port 1433 for a single IP address or for a range of IP addresses. You can also configure firewall settings by choosing **Add a firewall rule**. 
 
    > [!IMPORTANT]
-   > By default, access through the Azure SQL Database firewall is disabled for all Azure services. Choose **ON** on this page if you want to enable access for all Azure services.
+   > By default, access through the Azure SQL Database firewall is disabled for all Azure services. Choose **ON** on this page to enable access for all Azure services.
    >
 
-5. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
+5. Select **Save**. Port 1433 is now open on the server and a server-level IP-based, firewall rule is created for your current IP address.
 
-6. Close the **Firewall settings** page.
+6. Close the **Networking** page.
 
-Using SQL Server Management Studio or another tool of your choice, you can now connect to the server and its databases from this IP address using the server admin account created previously.
+   Open SQL Server Management Studio or another tool of your choice. Use the server admin account you created earlier to connect to the server and its databases from your IP address.
+
+7. Save the resources from this quickstart to complete additional SQL database tutorials.
 
 ## Clean up resources
 
-Save these resources if you want to go to [Next steps](#next-steps) and learn how to connect and query your database using a number of different methods. If, however, you want to delete the resources that you created in this quickstart, use the following steps.
+Use the following steps to delete the resources that you created during this quickstart:
 
-1. From the left-hand menu in the Azure portal, select **Resource groups** and then select **myResourceGroup**.
+1. From the left-hand menu in Azure portal, select **Resource groups** and then select **myResourceGroup**.
 2. On your resource group page, select **Delete**, type **myResourceGroup** in the text box, and then select **Delete**.
 
 ## Next steps
 
-- Now that you have a database, you can [connect and query](connect-query-content-reference-guide.md) using one of your favorite tools or languages, including
+- Learn how to [connect and query](connect-query-content-reference-guide.md) your database using your favorite tools or languages, including:
   - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
   - [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
-- To learn how to design your first database, create tables, and insert data, see one of these tutorials:
+- Learn how to design your first database, create tables, and insert data, see one of these tutorials:
   - [Design your first single database in Azure SQL Database using SSMS](design-first-database-tutorial.md)
   - [Design a single database in Azure SQL Database and connect with C# and ADO.NET](design-first-database-csharp-tutorial.md)

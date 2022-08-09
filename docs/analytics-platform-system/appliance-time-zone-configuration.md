@@ -1,12 +1,12 @@
 ---
 title: Configure time zone
 description: The Time Zone page enables you to set the time zone for all nodes on your Analytics Platform System appliance. 
-author: ronortloff 
+author: WilliamDAssafMSFT 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
 ms.date: 05/06/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.custom:
  - seo-dt-2019
  - kr2b-contr-experiment

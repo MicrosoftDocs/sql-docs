@@ -60,11 +60,11 @@ The following procedure compares the schema of a database project with a connect
   
     When the comparison is complete, the structural differences between the project and the database appear in the **Results** pane in the upper part of the window. By default, the comparison results group all the differences are grouped by action (such as Delete, Change, or Add). The **Results** pane displays a row for each database object that differs between the database definitions. Each row identifies the object in the source or target schema (or both) and the action that will be taken on the target schema to make the target object the same as the source object.  If an object has been refactored and either renamed or moved to a new schema, the source and target names are different and the source name appears in bold font to highlight the difference.  
   
-    By default the results list hides objects that are the same in both schemas or that are not supported for update (for example, built-in objects).  You can click on the appropriate filter buttons in the tool bar to show these objects.  
+    By default the results list hides objects that are the same in both schemas or that are not supported for update (for example, built-in objects).  You can select the appropriate filter buttons in the tool bar to show these objects.  
   
-    To change the grouping preference, click the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
+    To change the grouping preference, select the **Group Results** dropdown list in the toolbar.  Select **Type** to group the results by object type (for example, by tables, views, or stored procedures).  
   
-7.  Find the `Products` table in the `Tables` group. Click on the row and notice that the source and target definitions of the table appear in the **Object Definitions** pane with the differences highlighted. You can also expand the `Products` table row in the **Results** pane to inspect the specific elements in the table that are different.  
+7.  Find the `Products` table in the `Tables` group. Select the row and notice that the source and target definitions of the table appear in the **Object Definitions** pane with the differences highlighted. You can also expand the `Products` table row in the **Results** pane to inspect the specific elements in the table that are different.  
   
 8.  By default all differences are included in the scope of the Update Target action. You can exclude differences that you do not want to synchronize. To do so, uncheck the in the **Action** column in the center of each row. Alternatively, right-click a row in the Schema pane, and select **Exclude**. Notice that the row is immediately grayed out. When it is time to update the target database, this row will not be considered for any pending changes.  
   

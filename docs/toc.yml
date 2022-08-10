@@ -8880,8 +8880,6 @@ items:
       href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Release notes for SSDT in VS2019
-      href: ssdt/release-notes-ssdt-2019.md
     - name: Release notes for SSDT in VS2017
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
@@ -9064,6 +9062,8 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: SSIS Projects extension for VS2019 troubleshooting guide
+      href: ssdt/release-notes-ssdt-2019.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS
@@ -10335,8 +10335,8 @@ items:
       href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
-    - name: Troubleshooting Import/Export
-      href: tools/sqlpackage/troubleshooting-import-export-sqlpackage.md
+    - name: Troubleshooting SqlPackage
+      href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10791,6 +10791,8 @@ items:
     items:
     - name: Troubleshoot
       href: linux/sql-server-linux-troubleshooting-guide.md
+    - name: Restore the master database
+      href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
     - name: DBA Stack Exchange >>
@@ -11357,6 +11359,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-8601-database-engine-error.md
         - name: 8621
           href: relational-databases/errors-events/mssqlserver-8621-database-engine-error.md
+        - name: 8623
+          href: relational-databases/errors-events/mssqlserver-8623-database-engine-error.md  
         - name: 8630
           href: relational-databases/errors-events/mssqlserver-8630-database-engine-error.md
         - name: 8632
@@ -13748,7 +13752,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
       - name: sp_help_spatial_geography_index_xml
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram (Trasnact-SQL)
+      - name: sp_help_spatial_geometry_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md

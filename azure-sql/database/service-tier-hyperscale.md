@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/25/2022
+ms.date: 08/09/2022
 ---
 
 # Hyperscale service tier
@@ -140,14 +140,6 @@ Back up and restore operations for Hyperscale databases are file-snapshot based.
 If you need to restore a Hyperscale database in Azure SQL Database to a region other than the one it's currently hosted in, as part of a disaster recovery operation or drill, relocation, or any other reason, the primary method is to do a geo-restore of the database. Geo-restore is only available when geo-redundant storage (RA-GRS) has been chosen for storage redundancy.
 
 Learn more in [restoring a Hyperscale database to a different region](hyperscale-automated-backups-overview.md#restore-a-hyperscale-database-to-a-different-region).
-
-## <a name=regions></a>Available regions
-
-The Azure SQL Database Hyperscale tier is enabled in the vast majority of Azure regions. If you want to create a Hyperscale database in a region where Hyperscale isn't enabled by default, you can send an onboarding request via Azure portal. For instructions, see [Request quota increases for Azure SQL Database](quota-increase-request.md). When submitting your request, use the following guidelines:
-
-- Use the [Region access](quota-increase-request.md#region) SQL Database quota type.
-- In the description, add the compute SKU/total cores including high-availability and named replicas, and indicate that you're requesting Hyperscale capacity.
-- Also specify a projection of the total size of all databases over time in TB.
 
 ## Known limitations
 

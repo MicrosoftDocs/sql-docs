@@ -42,6 +42,7 @@ You can use SQL Database auditing to:
 ### Auditing limitations
 
 - **Premium storage** with **BlockBlobStorage** is supported.
+- **User managed identity** authentication type for enabling auditing to **storage** is not yet supported.
 - **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
@@ -201,7 +202,7 @@ If you chose to write audit logs to an Azure storage account, there are several 
   - You can view specific dates by clicking **Filter** at the top of the **Audit records** page.
   - You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
 
-       ![Screenshot that shows the options for viewing the audit records.]( ./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
+       ![Screenshot that shows the options for viewing the audit records.](./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
 
 - Use the system function **sys.fn_get_audit_file** (T-SQL) to return the audit log data in tabular format. For more information on using this function, see [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).
 

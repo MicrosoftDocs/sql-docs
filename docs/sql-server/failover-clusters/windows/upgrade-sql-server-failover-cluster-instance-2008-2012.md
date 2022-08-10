@@ -18,7 +18,7 @@ ms.author: mathoma
 
 # Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], and [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] prevent Windows Server failover clusters from performing in-place operating system upgrades, capping the allowed version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for a cluster. Once the cluster is upgraded to at least [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], the cluster can remain up-to-date.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], and [!INCLUDE[winserver2012-md](../../../includes/winserver2012-md.md)] prevent Windows Server failover clusters from performing in-place operating system upgrades, capping the allowed version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for a cluster. Once the cluster is upgraded to at least [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)], the cluster can remain up-to-date.
 
 ## Prerequisites
 

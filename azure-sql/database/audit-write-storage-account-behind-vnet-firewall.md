@@ -37,9 +37,15 @@ For audit to write to a storage account behind a VNet or firewall, the following
 > [!div class="checklist"]
 >
 > * A general-purpose v2 storage account. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade). For more information, see [Types of storage accounts](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+> * The premium storage with BlockBlobStorage is supported
 > * The storage account must be on the same tenant and at the same location as the [logical SQL server](logical-servers.md) (it's OK to be on different subscriptions).
 > * The Azure Storage account requires `Allow trusted Microsoft services to access this storage account`. Set this on the Storage Account **Firewalls and Virtual networks**.
 > * You must have `Microsoft.Authorization/roleAssignments/write` permission on the selected storage account. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
+
+> [!NOTE]
+> When Auditing to stoarge account is already enabled on a server / db, and if the target storage account is moved behind a firewall, we lose write access to 
+the storage account and audit logs stop getting written to it.To make auditing work we have to resave the audit settings from portal. 
+   
 
 ## Configure in Azure portal
 

@@ -315,7 +315,7 @@ If you accidentally close the command prompt, you can start a new command prompt
  
 1.  Press Ctrl+Shift+Esc to display Task Manager.  
 2.  On the **Applications** tab, click **New Task**.  
-3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then select **OK**.  
   
 ## See also  
  [Install SQL Server Using a Configuration File](./install-sql-server-using-a-configuration-file.md)   

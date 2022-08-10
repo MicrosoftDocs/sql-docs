@@ -24,7 +24,7 @@ This article describes how to configure the time zone for [!INCLUDE [ssnoversion
 - the `TZ` environment variable, if set;
 - the `/etc/localtime` symbolic link, if it exists;
 - the value `/etc/timezone`, if the file exists;
-- the `ZONE=` attribute from `/etc/sysconfig/clock`, if they exist
+- the `ZONE=` attribute from `/etc/sysconfig/clock`, if they exist.
 
 The resulting Linux time zone is then mapped to a corresponding Windows time zone via a fixed mapping table (see [Time zone mapping](#time-zone-mapping)).
 

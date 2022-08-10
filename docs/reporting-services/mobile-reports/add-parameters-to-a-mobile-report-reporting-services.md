@@ -21,7 +21,7 @@ To create a mobile report with parameters, you start with a shared dataset with 
 
 After you add parameters to a mobile report, you create a URL to [open the report with query string parameters](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
-1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] web portal, select **New** > **Mobile Report**.  
+1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, select **New** > **Mobile Report**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      

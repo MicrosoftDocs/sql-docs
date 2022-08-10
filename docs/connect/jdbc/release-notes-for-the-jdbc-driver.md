@@ -905,7 +905,7 @@ The driver supports JDK version 7.0 in addition to JDK 6.0 and 5.0.
 
 ## Itanium not supported for JDBC Driver applications
 
-Microsoft JDBC Driver for SQL Server applications aren't supported to run on an Itanium computer.
+Microsoft JDBC Driver for SQL Server isn't supported on Itanium computers.
 
 ## See also
 

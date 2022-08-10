@@ -32,7 +32,7 @@ The resulting Linux time zone is then mapped to a corresponding Windows time zon
 
 The Windows time zone is derived from the Linux `tz` timezone using the following mapping.
 
-Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. For instance, if `TZ` is set to `America/Knox_IN` and the `/usr/share/zoneinfo/America/Knox_IN` entry is a symbolic link to `/usr/share/zoneinfo/America/Indiana/Knox`, the Windows time zone will be resolved to `Central Standard Time` via the `America/Indiana/Know` mapping entry.
+Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. For instance, if `TZ` is set to `America/Knox_IN` and the `/usr/share/zoneinfo/America/Knox_IN` entry is a symbolic link to `/usr/share/zoneinfo/America/Indiana/Knox`, the Windows time zone will be resolved to `Central Standard Time` via the `America/Indiana/Knox` mapping entry.
 
 ::: moniker range=">=sql-server-ver16"
 

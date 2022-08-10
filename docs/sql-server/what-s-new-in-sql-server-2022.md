@@ -49,7 +49,7 @@ After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit 
 
 This is release candidate (RC) 0.
 
-SQL Server 2022 RC 0 (16.0.xxx.x) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
 
 - [Analytics](#analytics)
   - Data virtualization 

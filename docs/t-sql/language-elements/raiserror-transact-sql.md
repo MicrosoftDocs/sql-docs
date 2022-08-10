@@ -126,8 +126,10 @@ To convert a value to the [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**
 
 Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *\@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.
 
-*severity*
-Is the user-defined [severity level](../../relational-databases/errors-events/database-engine-error-severities.md) associated with this message. When using *msg_id* to raise a user-defined message created using `sp_addmessage`, the severity specified on `RAISERROR` overrides the severity specified in `sp_addmessage`.
+#### *severity*
+
+The user-defined [severity level](../../relational-databases/errors-events/database-engine-error-severities.md) associated with this message. When using *msg_id* to raise a user-defined message created using `sp_addmessage`, the severity specified on `RAISERROR` overrides the severity specified in `sp_addmessage`.
+
 For severity levels from 19 through 25, the WITH LOG option is required. Severity levels less than 0 are interpreted as 0. Severity levels greater than 25 are interpreted as 25.
 
 > [!CAUTION]

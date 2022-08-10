@@ -41,7 +41,6 @@ You can use SQL Database auditing to:
 
 ### Auditing limitations
 
-- **Premium storage** with **BlockBlobStorage** is supported.
 - **User managed identity** authentication type for enabling auditing to **storage** is not yet supported.
 - **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
@@ -74,6 +73,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 #### Remarks
 
+- **Premium storage** with **BlockBlobStorage** is supported. Standard storage is supported. However, for audit to write to a storage account behind a VNet or firewall, you must have a **general-purpose v2 storage account**. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade). For more information, see [Types of storage accounts](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 - Audit logs are written to **Append Blobs** in an Azure Blob storage on your Azure subscription
 - Audit logs are in .xel format and can be opened by using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 - To configure an immutable log store for the server or database-level audit events, follow the [instructions provided by Azure Storage](/azure/storage/blobs/immutable-time-based-retention-policy-overview#allow-protected-append-blobs-writes). Make sure you have selected **Allow additional appends** when you configure the immutable blob storage.

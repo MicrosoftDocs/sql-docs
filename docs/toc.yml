@@ -10791,6 +10791,8 @@ items:
     items:
     - name: Troubleshoot
       href: linux/sql-server-linux-troubleshooting-guide.md
+    - name: Restore the master database
+      href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
     - name: DBA Stack Exchange >>
@@ -13750,7 +13752,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
       - name: sp_help_spatial_geography_index_xml
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram (Trasnact-SQL)
+      - name: sp_help_spatial_geometry_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md

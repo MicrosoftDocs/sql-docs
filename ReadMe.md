@@ -13,14 +13,14 @@ For more information, see the [Code of Conduct FAQ](https://opensource.microsoft
 
 # Microsoft SQL Server Technical Documentation
 
-You've found the GitHub repository that houses the source for the SQL Server technical documentation published on [https://docs.microsoft.com](https://docs.microsoft.com).
+You've found the GitHub repository that houses the source for [SQL Server technical documentation](https://docs.microsoft.com/sql).
 
 ## Contribute to documentation
 
 Anyone can submit changes to the SQL Server documentation. For more information, see [How to contribute to SQL Server Documentation](https://aka.ms/editsqldocs).
 
 ### Minor corrections
-Minor corrections or clarifications that you submit for documentation and code examples in this repo are covered by the [docs.microsoft.com - Terms of Use](https://docs.microsoft.com/legal/termsofuse).
+Minor corrections or clarifications that you submit for documentation and code examples in this repo are covered by the [Terms of Use](https://docs.microsoft.com/legal/termsofuse).
 
 ### Larger submissions
 If you submit a pull request with new content or significant changes to documentation or code examples and you are not an employee of Microsoft, we'll send a comment in GitHub asking you to submit an online Contribution License Agreement (CLA). We will need you to complete the online form before we can accept your pull request.

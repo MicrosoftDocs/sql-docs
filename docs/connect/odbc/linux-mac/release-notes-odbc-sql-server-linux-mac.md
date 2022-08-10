@@ -35,7 +35,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
-| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, RedHat 8 and 9, Ubuntu 18.04, 20.04, 22.04 |
+| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, RedHat 8 and 9, Ubuntu 20.04, 22.04 |
 | IpAddressPreference option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | RetryExec option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | VBS-NONE enclave attestation protocol | New enclave attestation option to not attest the enclave. See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) |

@@ -140,4 +140,4 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 [weka_sheet]: https://www.weka.io/wp-content/uploads/files/2020/03/WekaFS-DS-W01R14DS201808.pdf
 [weka_webs]:  https://weka.io
 
-[Azure block blobs]: (https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
+[Azure block blobs]: /rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs

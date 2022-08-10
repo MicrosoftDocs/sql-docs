@@ -83,7 +83,7 @@ For more information about service principal names (SPNs), see:
 
 ## Security risks
 
-The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a weak cryptographic scheme and is vulnerable to attacks. NTLM has been replaced by Kerberos, which much more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
+The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a weak cryptographic scheme and is vulnerable to attacks. NTLM has been replaced by Kerberos, which is much more secure and recommended. NTLM authentication should only be used in a secure, trusted environment or when Kerberos can't be used.
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It's also recommended to enable Extended Protection, or use TLS Encryption for increased security.
 

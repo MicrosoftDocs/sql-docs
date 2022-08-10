@@ -29,25 +29,25 @@ If you would like to view the SQL Server documentation on an offline system, you
 
 If you'd like to create a PDF, select the **Download PDF** link found at the bottom of every table of contents.
 
-
 ![Download PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## TOC symbols 
+## TOC symbols
 
-Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken to technical documentation with a different table of contents. 
+Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken to technical documentation with a different table of contents.
 
 ![Single carrots in toc](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-Entries in the TOC that have a `>>` indicate that you will be taken away from docs.microsoft.com. 
+Entries in the TOC marked with **>>** indicate that you will be taken to a different website.
 
 ![TOC navigation markers](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the "Welcome to SQL Server >" entry found at the top of each of these table of contents. 
+If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the **Welcome to SQL Server >** entry found at the top of each of these table of contents.
 
 ![Navigate back to SQL toc](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## TOC search 
-On docs.microsoft.com, you can search the content in the table of contents by using the filter search box at the top: 
+## TOC search
+
+You can search the entries in the table of contents using the filter search box at the top:
 
 ![Use filter box](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
 

@@ -134,7 +134,7 @@ In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kube
 * WATCH: [Big Data Clusters in a Nutshell](https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-in-a-Nutshell)
 * WATCH: [Introduction to Big Data Cluster on SQL Server 2019 | Virtualization, Kubernetes, and Containers](https://www.youtube.com/watch?v=q7mxWcYqBMM)
 
-Related technologies Microsoft Learn:
+Learn modules for related technologies:
 
 * [Introduction to Kubernetes](/learn/modules/intro-to-kubernetes/)
 * [Distributed file systems](/learn/modules/cmu-case-study-distributed-file-systems/)

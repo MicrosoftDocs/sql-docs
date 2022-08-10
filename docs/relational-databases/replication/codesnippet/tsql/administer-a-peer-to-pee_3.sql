@@ -9,7 +9,7 @@ USE AdventureWorks2012
 EXEC sp_addarticle 
   @publication = @publication,
   @article = @newtable,
-  @source_table = @newtable,
+  @source_object = @newtable,
   @destination_table = @newtable,
   @force_invalidate_snapshot = 0;
 GO

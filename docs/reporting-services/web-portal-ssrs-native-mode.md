@@ -29,7 +29,7 @@ You can use the web portal to perform the following tasks:
 - Create shared schedules and shared data sources to make schedules and data source connections more manageable.
 - Create data-driven subscriptions that role out reports to a large recipient list.
 - Create linked reports to reuse and repurpose an existing report in different ways.
-- Download common tools such as Report Builder and Mobile Report Publisher.
+- Download common tools such as Report Builder.
 - [Create KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
 - Send feedback or make feature requests.
 

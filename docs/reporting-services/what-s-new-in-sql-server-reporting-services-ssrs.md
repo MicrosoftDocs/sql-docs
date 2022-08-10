@@ -25,7 +25,7 @@ For information about Power BI Report Server, see [What's new in Power BI Report
 
 ## SQL Server 2022 Reporting Services
 
-This release introduces the new SQL Server 2022 Reporting Services (SSRS). In this new release of SSRS, we've done a lot of accessibility work to make sure we're empowering people to achieve more. The release includes enhanced Windows Narrator support, security enhancements, performance improvements, bug fixes, and reliability updates.
+This release introduces the new SQL Server 2022 Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we've done a lot of accessibility work to make sure we're empowering people to achieve more. The release includes enhanced Windows Narrator support for the new Windows OS (Operating Systems) and Windows Server, security enhancements, browser performance improvements with Angular, accessibility bug fixes, support for SQL Server 2022 instances report server catalog and reliability updates.
 
 ### Updated web portal
 

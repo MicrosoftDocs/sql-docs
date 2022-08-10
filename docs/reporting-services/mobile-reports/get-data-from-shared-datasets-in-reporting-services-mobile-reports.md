@@ -19,7 +19,7 @@ Besides [loading data from Excel files](../../reporting-services/mobile-reports/
   
 After shared data sources and shared datasets are configured on the  Reporting Services server, you can use them in mobile reports you create in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   
   
-After you've connected to a [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] server from the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], connecting a mobile report to a shared dataset is straightforward.   
+After you've connected to a [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion-md.md)] server from the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], connecting a mobile report to a shared dataset is straightforward.   
   
 1. On the **Data** tab, select **Add Data**.  
   
@@ -34,7 +34,7 @@ After you've connected to a [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion
     ![SSMRP_ConnectToServer](../../reporting-services/mobile-reports/media/ssmrp-connecttoserver.png)  
       
   
-4. When you select the [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] server, you see the available datasets in folders. Select a dataset to import the data into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
+4. When you select the [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion-md.md)] server, you see the available datasets in folders. Select a dataset to import the data into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
    ![SS_MRP_ServerData](../../reporting-services/mobile-reports/media/ss-mrp-serverdata.png)  
   

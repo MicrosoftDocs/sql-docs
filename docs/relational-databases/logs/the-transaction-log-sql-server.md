@@ -83,6 +83,7 @@ To avoid running out of space, unless log truncation is delayed for some reason,
   
 - Under the simple recovery model, after a checkpoint.  
 - Under the full recovery model or bulk-logged recovery model, if a checkpoint has occurred since the previous backup, truncation occurs after a log backup (unless it is a copy-only log backup).  
+- When you first create a database using the FULL recovery model, the transaction log will be reused as needed (similar to a SIMPLE recovery database), up until the time you create a full database backup.
   
  For more information, see [Factors that can delay log truncation](#FactorsThatDelayTruncation), later in this topic.  
   

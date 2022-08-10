@@ -31,7 +31,7 @@ Use  Management Studio to:
   
 - Register servers.  
   
-- Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], SSAS, [!INCLUDE[ssRS](../includes/ssrs.md)],  [!INCLUDE[ssIS](../includes/ssis_md.md)] or Azure SQL Database.  
+- Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], SSAS, [!INCLUDE[ssRS](../includes/ssrs.md)],  [!INCLUDE[ssIS](../includes/ssis-md.md)] or Azure SQL Database.  
   
 - Configure server properties.  
   

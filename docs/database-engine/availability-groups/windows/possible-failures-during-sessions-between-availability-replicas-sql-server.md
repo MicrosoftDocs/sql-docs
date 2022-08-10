@@ -64,7 +64,7 @@ Physical, operating system, or [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 -   A Windows-based server is rebooted.  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the primary replica, while a private network interface card handles traffic among the server instances that are hosting the replicas of an availability group. In this case, failure of the public network adapter would prevent clients from accessing the databases.  
+>  [!INCLUDE[sshadr](../../../includes/sshadr-md.md)] does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the primary replica, while a private network interface card handles traffic among the server instances that are hosting the replicas of an availability group. In this case, failure of the public network adapter would prevent clients from accessing the databases.  
   
 ## Failures Due to Soft Errors  
  Conditions that might cause session timeouts include (but are not limited to) the following:  

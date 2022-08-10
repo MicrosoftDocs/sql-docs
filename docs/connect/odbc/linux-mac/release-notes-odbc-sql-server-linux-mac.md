@@ -262,7 +262,7 @@ Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platfo
 
 The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11 Service Pack 2. For more information, see [System Requirements](system-requirements.md).  
 
-The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
 The ODBC driver on Linux supports connections to Azure SQL Database.
 

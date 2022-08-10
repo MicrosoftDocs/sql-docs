@@ -49,7 +49,7 @@ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**,
   
 The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file.
 
-Your choice will determines the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Your choice will determine the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Setting the classpath
 

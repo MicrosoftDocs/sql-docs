@@ -101,7 +101,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  The DATA_TYPE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |user-defined type larger than 8 kB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  

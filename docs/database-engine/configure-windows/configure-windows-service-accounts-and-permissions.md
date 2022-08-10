@@ -467,7 +467,7 @@ The per-service SID (sometimes also called service security principal (SID)) of 
 
 The per-service SID of the SQL Server Agent service is provisioned as a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login. The per-service SID login is a member of the **sysadmin** fixed server role.
 
-#### <a id="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] and SQL failover cluster instance and privileges
+#### <a id="Hadron"></a> [!INCLUDE[sshadr](../../includes/sshadr-md.md)] and SQL failover cluster instance and privileges
 
 When installing the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] or SQL failover cluster instance (SQL FCI), **LOCAL SYSTEM** is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The **LOCAL SYSTEM** login is granted the **ALTER ANY AVAILABILITY GROUP** permission (for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]) and the **VIEW SERVER STATE** permission (for SQL FCI).
 

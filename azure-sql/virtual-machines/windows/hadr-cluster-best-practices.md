@@ -61,8 +61,22 @@ For your SQL Server availability group or failover cluster instance, consider th
    - Use a unique DNN port in the connection string when connecting to the DNN listener for an availability group. 
 - Use a database mirroring connection string for a basic availability group to bypass the need for a load balancer or DNN. 
 - Validate the sector size of your VHDs before deploying your high availability solution to avoid having misaligned I/Os. See [KB3009974](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c) to learn more. 
-- If the SQL Server database engine, Always On availability group listener, or failover cluster instance health probe are configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other systems from being dynamically assigned the same port. The following example creates an exclusion for port 59999:   
+- If the SQL Server database engine, Always On availability group listener, failover cluster instance health probe, database mirroring endpoint, cluster core IP resource, or any other SQL resource is configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other system process from being dynamically assigned the same port. The following example creates an exclusion for port 59999: 
 `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
+It is necessary for the port to be excluded not being used when the exclusion is configured, otherwise, the execution will fail with a message like “The process cannot access the file because it is being used by another process.”
+To confirm if the exclusions have been configured, we can check by using: `netsh int ipv4 show excludedportrange tcp`  
+By setting this exclusion for the AG role IP probe port, we could prevent an **Event ID: 1069** with status 10048, from Windows Failover cluster events, this is identified with event detail: 
+```
+Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
+```
+An Event ID: 1069 with status 10048, can be identified from cluster logs with events like: 
+```
+Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
+IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**
+```
+Status [**10048**]( win32/desktop-src/WinSock/windows-sockets-error-codes-2.md) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
+This can be caused by an internal process taking the same port defined as probe port, remember that probe port is used to check the status of a backend pool instance from the Azure Load Balancer. 
+If the **health probe fails** to get a response from a backend instance, then **no new connections will be sent to that backend instance** until the health probe succeeds again.
 
 ## VM availability settings
 

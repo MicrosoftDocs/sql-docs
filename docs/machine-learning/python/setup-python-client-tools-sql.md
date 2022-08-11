@@ -3,7 +3,7 @@ title: Set up a Python data science client
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/09/2022
+ms.date: 08/11/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -41,9 +41,13 @@ SSMS is a separate download, useful for creating and running stored procedures o
 
 ## 1 - Install Python packages
 
-Local workstations must have the same Python package versions as those on SQL Server, including the base Anaconda 4.2.0 with Python 3.5.2 distribution, and Microsoft-specific packages.
+Local workstations must have the same Python package versions as those on SQL Server, including the base [Anaconda 4.2.0](https://anaconda.org/conda-forge/opencv/files?version=4.2.0) with [Python 3.5.2 distribution](https://www.python.org/downloads/release/python-352/), and Microsoft-specific packages.
 
-An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
+An installation script adds three Microsoft-specific libraries to the Python client. The script installs: 
+
+- [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. 
+- [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. 
+- [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) which applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
 1. Download an installation script.
 
@@ -65,7 +69,7 @@ If you omit the install folder, the default is `%ProgramFiles%\Microsoft\PyForML
 Installation takes some time to complete. You can monitor progress in the PowerShell window. When setup is finished, you have a complete set of packages. 
 
 > [!Tip] 
-> We recommend the [Python for Windows FAQ](https://docs.python.org/3/faq/windows.html) for general purppose information on running Python programs on Windows.
+> We recommend the [Python for Windows FAQ](https://docs.python.org/3/faq/windows.html) for general purpose information on running Python programs on Windows.
 
 ## 2 - Locate executables
 

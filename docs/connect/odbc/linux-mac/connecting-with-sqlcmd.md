@@ -96,7 +96,7 @@ Specify the number of seconds before a `sqlcmd` login times out when you try to 
 Control which error messages are sent to stdout.
 
 **-M** *multisubnet_failover*  
-Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** isn't specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
+Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** isn't specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
 
 > [!NOTE]
 > **-M** isn't supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this article.

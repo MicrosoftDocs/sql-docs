@@ -85,7 +85,7 @@ To learn how to configure long-term retention or restore a database from backup 
 To learn how to configure long-term retention or restore a database from backup for SQL Managed Instance using the Azure portal or PowerShell, see [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md).
 
 > [!NOTE]
-> If you are using LTR backups to meet compliance requirements, it is recommended to conduct periodic drills to verify if the LTR backups are taken and retained as per the configured schedule and to verify if the backups restore the database to intended state.  
+> If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in expected database state.
 
 ## Next steps
 

@@ -186,7 +186,7 @@ az sql db update \
 
 Carefully consider the configuration option for `--backup-storage-redundancy` when you're creating a Hyperscale database. The storage redundancy can be specified only during the database creation process for Hyperscale databases. You can't update it later. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy. Learn more in [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). 
 
-Existing [Hyperscale](service-tier-general-purpose.md) databases can migrate to different storage redundancy through [active geo-replication](active-geo-replication-overview.md), which causes minimal downtime. Alternatively, you can migrate to a different storage redundancy by using [database copy](database-copy.md) or point-in-time restore. This example creates a database in the Hyperscale service tier with zone redundancy:
+Existing [Hyperscale](service-tier-hyperscale.md) databases can migrate to different storage redundancy through [active geo-replication](active-geo-replication-overview.md), which causes minimal downtime. Alternatively, you can migrate to a different storage redundancy by using [database copy](database-copy.md) or point-in-time restore. This example creates a database in the Hyperscale service tier with zone redundancy:
 
 ```azurecli
 az sql db create \

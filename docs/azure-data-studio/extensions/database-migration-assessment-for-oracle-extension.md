@@ -191,7 +191,7 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
     Possible Solution:
 
-    a. Check if the port Oracle is running on isn't blocked by firewall rules.
+    a. Check if the port Oracle is running on is blocked by firewall rules.
 
     b. Perform tnsping and see if the Service ID gets resolved.
 
@@ -218,7 +218,7 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
        •  Locate the VSIX file of v1.4.1 saved locally and click Install.
 
-        :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-vsix.png" alt-text="Screen capture shows selecting local vsix":::
+        :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-vsix.png" alt-text="Screen capture shows selecting local vsix.":::
 
         • Close and reopen the Azure data studio.
 

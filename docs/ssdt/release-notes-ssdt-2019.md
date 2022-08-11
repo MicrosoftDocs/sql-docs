@@ -30,9 +30,6 @@ More information is available in release notes.**
 - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
 
 ## Common Issues
-
-- **If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.** Also, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
-
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
 
 - SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
@@ -58,4 +55,21 @@ More information is available in release notes.**
     2. CDC source component in target SQL Server 2022 can’t do preview.
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
+
+ ## Download issues
+ 
+If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
+Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
+- If the error is "The file {filefullpath} already exists." 
+   1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
+      ```
+      rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
+      ```
+   2. Repair the vs2019 
+   3. Restart and start ssdt setup install again
+- If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
+    - Kill msiexec.exe process and relaunch. 
+ - If it is not above error in ISVsix.log, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 

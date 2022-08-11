@@ -319,7 +319,7 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 > [!NOTE]
 > From here, you can connect to the restored database using SQL Server Management Studio to perform needed tasks, such as to extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name. See [point in time restore](recovery-using-backups.md#point-in-time-restore).
 >
-> If you are using LTR backups to meet compliance requirements, it is recommended to conduct periodic drills to verify if the LTR backups are taken and retained as per the configured schedule and to verify if the backups restore the database to intended state.
+> If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in expected database state.
 ---
 
 ## Limitations

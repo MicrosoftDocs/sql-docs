@@ -80,6 +80,11 @@ You can run uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 233
+
+**Bugfixes**
+- In a newly created Teradata Connection Manager, some required connection string properties like `DRIVER` are not populated by default.
+
 ### Rev. 225
 
 **New Features**

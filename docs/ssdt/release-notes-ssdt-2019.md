@@ -63,9 +63,9 @@ Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationSe
 - If the error is "The file {filefullpath} already exists." 
    1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
       ```
-      	    rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
-	    rm %idepath%\IDE\PublicAssemblies\SSIS\* 
-	    rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
+      rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
       ```
    2. Repair the vs2019 
    3. Restart and start ssdt setup install again

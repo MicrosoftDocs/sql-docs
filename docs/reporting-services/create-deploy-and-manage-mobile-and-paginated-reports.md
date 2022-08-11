@@ -37,7 +37,7 @@ SQL Server Reporting Services offers an updated suite of products:
 
 * **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
 * **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
-::: moniker range<="sql-server-ver15”
+::: moniker range="<=sql-server-ver15"
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
 ::: moniker-end
 
@@ -64,7 +64,8 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 * You can export to new formats such as PowerPoint. Reporting Services visualizations in PowerPoint are live and editable, not just screenshots.
 * You can create a hybrid Power BI/Reporting Services experience:  Rather than recreating your on-premises Reporting Services reports in Power BI, you can pin visuals from those reports to your Power BI dashboards. Then you can monitor everything in one place on your Power BI dashboard.
 
-::: moniker range<="sql-server-ver15”
+::: moniker range="<=sql-server-ver15"
+
 ## Mobile reports
 
 ![Image of mobile reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-mobile-reports.png)
@@ -96,6 +97,7 @@ The content on the web portal is organized by type:
 ::: moniker range="<=sql-server-ver15"
 * mobile reports 
 ::: moniker-end
+
 You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able to manage and administer SSRS content.
 
 And you can still schedule report processing, access reports on demand, and subscribe to published reports in the new web portal.

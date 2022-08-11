@@ -4,7 +4,7 @@ ms.date: 08/06/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
@@ -14,7 +14,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, mobile reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
+The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
 
 ![Screenshot showing SQL Server Reporting Services Portal.](../reporting-services/media/ssrsportal.png)
 
@@ -70,13 +70,15 @@ To start the web portal from a browser, follow these steps:
 The web portal will group items into different categories. The available categories are the following.
 
 - KPIs
-- Mobile Reports
 - Paginated Reports
 - Power BI Desktop Reports
 - Excel Workbooks
 - Datasets
 - Data Sources
 - Resources
+::: moniker range="<=sql-server-ver15"
+- Mobile Reports
+::: moniker-end
 
 You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.
 

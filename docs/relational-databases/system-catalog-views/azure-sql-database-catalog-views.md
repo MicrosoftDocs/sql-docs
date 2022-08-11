@@ -28,7 +28,6 @@ The following catalog views are available in this section.
 
         [sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 
-        [sys.dm_elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md)
     :::column-end:::
     :::column:::
         [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)

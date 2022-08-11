@@ -53,7 +53,7 @@ Default short-term retention (STR) of backups for Hyperscale databases is 7 days
 
 There are no traditional full, differential, and transaction log backups for Hyperscale databases. Instead, regular storage snapshots of data files are taken. 
 
-The generated transaction log is retained as is for the configured retention period. At restore time, relevant transaction log records are applied to the restored storage snapshot. The result is a transactionally consistent database without any data loss as of the specified point in time within the retention period. 
+The generated transaction logs are retained as is for the configured retention period. At restore time, relevant transaction log records are applied to the restored storage snapshot. The result is a transactionally consistent database without any data loss as of the specified point in time within the retention period. 
 
 ## Monitor backup storage consumption
 
@@ -133,7 +133,7 @@ Use [active geo-replication](active-geo-replication-overview.md) to update backu
 
 ## Restore a Hyperscale database to a different region
 
-You might need to restore a Hyperscale database in Azure SQL Database to a region other than the one where it's currently hosted. Common reasons include a disaster recovery operation or drill, or a relocation. The primary method is to do a geo-restore of the database. You use the same steps that you would use to restore any other database in SQL Database to a different region:
+You might need to restore your Azure SQL Hyperscale database to a region that's different from the current region. Common reasons include a disaster recovery operation or drill, or a relocation. The primary method is to do a geo-restore of the database. You use the same steps that you would use to restore any other database in SQL Database to a different region:
 
 1. Create a [server](logical-servers.md) in the target region if you don't already have an appropriate server there. This server should be owned by the same subscription as the original (source) server.
 2. Follow the instructions in the [geo-restore](./recovery-using-backups.md#geo-restore) section of the page on restoring a database in Azure SQL Database from automatic backups.

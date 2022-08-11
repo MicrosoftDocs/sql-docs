@@ -70,8 +70,8 @@ SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier 
 | Azure SQL DB | Limitation with MSAL caching, which may require reauthentication when signing into Azure. | Reauthenticate if prompted. |
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Ledger | Importing a bacpac or dacpac created from a database with the LEDGER = ON option, into a new database on-premises, fails due to the LEDGER property not being set. | Use backup and restore to create a new database on-premises with the LEDGER property enabled. |
-| Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | This will be available in a later preview, use SSMS 18.11.1 to view or edit Maintenance Plans. |
-| SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, will generate an error message which includes “The 'MSOLEDBSQL19' provider is not registered on the local machine. (MsDtsSrvr)” | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16) and [Microsoft ODBC Driver 18 for SQL Server (x64)](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) if using SSIS; this will be resolved in a later preview of SSMS 19. |
+| Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | Use SSMS 18.11.1 to view or edit Maintenance Plans. |
+| SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, will generate an error message which includes “The 'MSOLEDBSQL19' provider is not registered on the local machine. (MsDtsSrvr)” | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](../connect/oledb/download-oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver 18 for SQL Server (x64)](../connect/odbc/download-odbc-driver-for-sql-server.md) if using SSIS; this will be resolved in a later preview of SSMS 19. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
 
@@ -81,7 +81,7 @@ Download previous SSMS previews by selecting the download link in the related se
 
 | SSMS version | Build number | Release date |
 |--------------|--------------|--------------|
-| [19.0 Preview 2](#19P2) | 16.0.19056.0 | May 24, 2022 |
+| [19.0 Preview 2](#190-preview-2-1) | 16.0.19056.0 | May 24, 2022 |
 
 ### 19.0 Preview 2
 

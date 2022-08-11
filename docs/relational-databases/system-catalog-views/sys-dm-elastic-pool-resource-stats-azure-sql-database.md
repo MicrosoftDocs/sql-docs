@@ -38,37 +38,37 @@ The `sys.dm_elastic_pool_resource_stats` system catalog view is similar to [sys.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**end_time**|**datetime**|UTC time indicating the end of the 15 second reporting interval.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Average compute utilization in percentage of the limit of the pool.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the pool.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Average write resource utilization in percentage of the limit of the pool.|  
-|**avg_storage_percent**|**decimal(5,2)**|Average storage utilization in percentage of the storage limit of the pool.|  
-|**max_worker_percent**|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|  
-|**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
-|**avg_instance_memory_percent**|**decimal(5,2)**| |
+|**end_time**|**datetime**|UTC time indicating the end of the reporting interval.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Average CPU utilization as a percentage of pool limit.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Average IOPS utilization as a percentage of pool limit.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Average log write throughput utilization as a percentage of pool limit.|  
+|**avg_storage_percent**|**decimal(5,2)**| Not supported and may be removed in a future update. Use **used_storage_percent**. |  
+|**max_worker_percent**|**decimal(5,2)**|Maximum concurrent workers as a percentage of pool limit.|  
+|**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions as a percentage of pool limit.|  
+|**avg_instance_memory_percent**|**decimal(5,2)**| Average consumption of memory by the database engine instance hosting the pool, as a percentage of instance limit. |
 |**avg_instance_cpu_percent**|**decimal(5,2)**| |
-|**avg_edtu_percent**|**decimal(5,2)**| |
-|**instance_vcores**|**decimal(5,2)**| |
-|**used_storage_mb**|**bigint**||
-|**allocated_storage_mb**|**bigint**||
-|**storage_limit_mb**|**bigint**||
-|**used_storage_percent**|**decimal(5,2)**||
-|**allocated_storage_percent**|**decimal(5,2)**||
+|**avg_edtu_percent**|**decimal(5,2)**| For DTU elastic pools, average eDTU utilization as a percentage of pool limit. |
+|**instance_vcores**|**decimal(5,2)**| The number of vCores provisioned for the database engine instance hosting the pool. |
+|**used_storage_mb**|**bigint**| The amount of used storage in all databases in the pool, in megabytes. |
+|**allocated_storage_mb**|**bigint**| The amount of storage allocated for all data files in all databases in the pool, in megabytes. |
+|**storage_limit_mb**|**bigint**| The maximum data size limit of the pool, in megabytes. |
+|**used_storage_percent**|**decimal(5,2)**| Used data storage utilization in all databases in the pool, as a percentage of pool storage limit (maximum data size). |
+|**allocated_storage_percent**|**decimal(5,2)**| The amount of storage allocated for all data files in all databases in the pool, as a percentage of pool storage limit (maximum data size). |
   
 ## Remarks
 
- This view exists in each user database database of the [logical server](/azure/azure-sql/database/logical-servers). You must be connected to the desired user database to query `sys.dm_elastic_pool_resource_stats`.  
+The system catalog view `sys.dm_elastic_pool_resource_stats` exists in every database, including single databases. You must be connected to a user database in an elastic pool to obtain elastic pool resource utilization data from this view. 
   
 ## Permissions
 
-Requires membership in the **dbmanager** role.  
+This view requires VIEW SERVER STATE permission.
   
 ## Examples
 
-The following example returns resource utilization data ordered by the most recent time for the current database in an elastic database pool.
+The following example returns resource utilization data ordered by the most recent time for the elastic pool containing the current database.
   
 ```sql
-SELECT end_time, avg_cpu_percent, avg_data_io_percent, avg_log_write_percent, avg_storage_percent, max_worker_percent, max_session_percent
+SELECT end_time, avg_cpu_percent, avg_data_io_percent, avg_log_write_percent, max_worker_percent, max_session_percent
 , avg_instance_memory_percent, avg_instance_cpu_percent, avg_edtu_percent, instance_vcores
 , used_storage_mb, allocated_storage_mb, storage_limit_mb, used_storage_percent, allocated_storage_percent
 FROM sys.dm_elastic_pool_resource_stats

@@ -39,7 +39,7 @@ Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/d
 |**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
 |**max_xtp_storage_percent**|**decimal(5,2)**|Maximum storage utilization for In-Memory OLTP as a percentage of pool limit at the end of the reporting interval. This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations on memory-optimized tables. <BR /><BR />Returns 0 if In-Memory OLTP is not used in the database.|
-|**avg_login_rate_percent**|**decimal(5,2)**| |
+|**avg_login_rate_percent**|**decimal(5,2)**| Identified for informational purposes only. Not supported. Future compatibility is not guaranteed. |
 |**avg_instance_cpu_percent**|**decimal(5,2)**| Average CPU usage for the database as a percentage of the pool limit at the end of the reporting interval. Includes CPU utilization by both user and internal workloads.|
 |**avg_instance_memory_percent**|**decimal(5,2)**|Average database memory usage as a percentage of the pool limit at the end of the reporting interval. |
 |**elastic_pool_cpu_limit**|**decimal(5,2)**| Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|

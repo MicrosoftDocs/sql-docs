@@ -26,8 +26,6 @@ The following catalog views are available in this section.
 
         [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)
 
-        [sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)
-
         [sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 
         [sys.dm_elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md)

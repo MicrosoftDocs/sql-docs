@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |avg_data_io_percent|**decimal (5,2)**|Average data I/O utilization in percentage of the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5,2)**|Average transaction log writes (in MBps) as percentage of the service tier limit.|  
 |avg_memory_usage_percent|**decimal (5,2)**|Average memory utilization in percentage of the limit of the service tier.<br /><br /> This includes memory used for  buffer pool pages and storage of In-Memory OLTP objects.|  
-|xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|  
+|xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP as a percentage of pool limit at the end of the reporting interval. This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations on memory-optimized tables. <BR /><BR />Returns 0 if In-Memory OLTP is not used in the database.|  
 |max_worker_percent|**decimal (5,2)**|Maximum concurrent workers (requests) in percentage of the limit of the database's service tier.|  
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database's service tier.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. For databases using the vCore-based model, this column is `NULL`.|
@@ -40,7 +40,6 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |avg_instance_memory_percent|**decimal (5,2)**|Average memory usage for the SQL Server instance hosting the database, as measured by the operating system. Includes memory utilization by both user and internal workloads.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |replica_role|**int**|Represents the current replica's role with 0 as primary, 1 as secondary, and 2 as forwarder (geo-secondary's primary). You will see "1" when connected with ReadOnly intent to all readable secondaries. If connecting to a geo-secondary without specifying ReadOnly intent, you should see "2" (connecting to the forwarder).|
-|||
   
 > [!TIP]  
 > For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models), [Manually tune query performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance), and [SQL Database resource limits and resource governance](/azure/sql-database/sql-database-resource-limits-database-server).

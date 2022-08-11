@@ -75,23 +75,10 @@ FROM sys.dm_elastic_pool_resource_stats
 ORDER BY end_time DESC;  
 ```
 
-The following example calculates the average DTU percentage consumption for a given pool. Replace `<your pool name>` with the name of your pool before running the query:
-
-```sql
-SELECT 
-    end_time,
-    (SELECT Max(v)
-        FROM (VALUES (avg_cpu_percent), (avg_data_io_percent), (avg_log_write_percent)) AS value(v)
-        ) AS [avg_DTU_percent]
-FROM sys.dm_elastic_pool_resource_stats
-ORDER BY end_time DESC;
-```
-
 ## Next steps
 
 Learn more about elastic pools and related concepts in the following articles:
 
-- [sys.database_usage (Azure SQL Database)](sys-database-usage-azure-sql-database.md)
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 - [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)

@@ -45,7 +45,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**active_memgrant_count**|bigint|The current count of memory grants. Is not nullable.|
 |**active_memgrant_kb**|bigint|The sum, in kilobytes (KB), of current memory grants. Is not nullable.|
 |**used_memgrant_kb**|bigint|The current total used (stolen) memory from memory grants. Is not nullable.|
-|**delta_memgrant_timeout_count**|int|count of memory grant time-outs in this resource pool in this period. Is not nullable.|
+|**delta_memgrant_timeout_count**|int|The count of memory grant time-outs in this resource pool in this period. Is not nullable.|
 |**delta_memgrant_waiter_count**|int|The count of queries currently pending on memory grants. Is not nullable.|
 |**delta_out_of_memory_count**|int|The number of failed memory allocations in the pool since last snapshot. Is not nullable.|
 |**delta_read_io_queued**|int|The total read IOs enqueued since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
@@ -89,7 +89,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL Database|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
-|||
+
 
 ## Permissions
 
@@ -109,30 +109,15 @@ The following example returns maximum log rate data and consumption at each sn
 ```sql
 SELECT snapshot_time, name, max_log_rate_kb, delta_log_bytes_used 
 FROM sys.dm_resource_governor_resource_pools_history_ex 
-WHERE name LIKE 'UserPool%' 
+WHERE name LIKE 'SloSharedPool1' 
 ORDER BY snapshot_time DESC;
 ```
 
-The following example returns similar info as `sys.elastic_pool_resource_stats` without having to connect to Azure SQL logical server's `master` database:
-
-```sql
-SELECT snapshot_time, name, cap_vcores_used_percent,
-  avg_data_io_percent,  
-  avg_log_write_percent,
-  avg_storage_percent,
-  avg_allocated_storage_percent,
-  max_data_space_kb,
-  max_worker_percent,
-  max_session_percent
-FROM sys.dm_resource_governor_resource_pools_history_ex 
-WHERE name LIKE 'UserPool%' 
-ORDER BY snapshot_time DESC;
-```
 
 ## Next steps
 
 - [Translation log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Elastic pool DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
 - [Elastic pool vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
-- [sys.database_usage (Azure SQL Database)](../system-catalog-views/sys-database-usage-azure-sql-database.md)
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
+- [sys.dm_elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md)

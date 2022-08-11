@@ -10,7 +10,7 @@ ms.custom:
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 05/26/2022
+ms.date: 08/11/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS) 19 (Preview)
@@ -23,13 +23,67 @@ This article provides details about updates, improvements, and bug fixes for the
 
 [!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
-## Current SSMS release
+## Current SSMS preview release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
 
-SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier preview version of SSMS, see [previous SSMS previews](release-notes-ssms-19.md#previous-ssms-previews).
 
-### 19.0
+### 19.0 Preview 3
+
+- Release number: 19.0 Preview 3
+- Build number: 16.0.19061.0
+- Release date: August 11, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x40a)
+
+#### What's new in 19.0 Preview 3
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.38. |
+| Object Explorer | Dropped Columns folder now exists under the Columns folder for Ledger tables which have been altered to remove one or more columns. |
+| Scripting | Compatibility level defaults to 160 when scripting. |
+| Showplan | Added support for Hyperscale Optimized Query Processing. |
+| SNAC Removal | All references to SNAC have been removed from SSMS in compliance with its upcoming end of life. |
+
+
+#### Bug fixes in 19.0 Preview 3
+
+> [!Note]
+> Fixes from SSMS 18.12 and the next SSMS release are included in SSMS 19.0 Preview 3.
+
+| New Item | Details |
+|----------|---------|
+| Accessibility | Fixed accessibility issue when navigating in the data classification window. |
+| Analysis Services | Connection to Analysis Services is now available. |
+| Copy Database Wizard | Fixed the log provider type error which occurred when copying a database using The SQL Management Object method. | 
+| Replication | Fixed error “Merge publications cannot be created from this database until the compatibility level is set to 70 or higher.” when using the publication wizard to create a new merge publication. |
+| SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
+| SSIS | The “Schedule…” menu item is now visible in the Azure SSIS Catalog. |
+| XEvents | Fixed issue where reading target data for event sessions with the same beginning text caused data from the incorrect event session to appear in the viewer. |
+
+#### Known issues 19.0 Preview 3
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Azure SQL DB | Limitation with MSAL caching, which may require reauthentication when signing into Azure. | Reauthenticate if prompted. |
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| Ledger | Importing a bacpac or dacpac created from a database with the LEDGER = ON option, into a new database on-premises, fails due to the LEDGER property not being set. | Use backup and restore to create a new database on-premises with the LEDGER property enabled. |
+| Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | This will be available in a later preview, use SSMS 18.11.1 to view or edit Maintenance Plans. |
+| SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, will generate an error message which includes “The 'MSOLEDBSQL19' provider is not registered on the local machine. (MsDtsSrvr)” | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](https://docs.microsoft.com/en-us/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16) and [Microsoft ODBC Driver 18 for SQL Server (x64)](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) if using SSIS; this will be resolved in a later preview of SSMS 19. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
+
+## Previous SSMS previews
+
+Download previous SSMS previews by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [19.0 Preview 2](#19P2) | 16.0.19056.0 | May 24, 2022 |
+
+### 19.0 Preview 2
 
 - Release number: 19.0 Preview 2
 - Build number: 16.0.19056.0

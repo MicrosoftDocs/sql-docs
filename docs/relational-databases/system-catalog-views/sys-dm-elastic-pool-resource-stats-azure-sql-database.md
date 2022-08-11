@@ -23,7 +23,18 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Returns resource usage statistics for the current database in an [elastic pool](/azure/azure-sql/database/elastic-pool-overview) in an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). There is one row for each 20 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by the current database. This data is retained for 128 samples, or roughly 42 minutes.
+Returns resource usage statistics for the [elastic pool](/azure/azure-sql/database/elastic-pool-overview) containing the current database on an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool.
+
+The `sys.dm_elastic_pool_resource_stats` system catalog view is similar to [sys.elastic_pool_resource_stats](sys-elastic-pool-resource-stats-azure-sql-database.md), with the following differences:
+
+|sys.elastic_pool_resource_stats|sys.dm_elastic_pool_resource_stats|
+|---|---|
+| Available in the `master` database | Available in any user database in an elastic pool |
+| Provides data for all elastic pools on a logical server | Provides data for the elastic pool containing the current database |
+| Populated asynchronously and may appear with a few minutes delay | Populated in real time. A new row is added every few seconds. |
+| Retains data for 14 days | Retains data for approximately 40 minutes |
+| Intended for historical monitoring and trend analysis | Intended for real-time monitoring and troubleshooting |
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

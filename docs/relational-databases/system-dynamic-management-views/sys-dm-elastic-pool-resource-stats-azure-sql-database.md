@@ -24,15 +24,15 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Returns resource usage statistics for the [elastic pool](/azure/azure-sql/database/elastic-pool-overview) containing the current database on an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool.
+Returns resource usage statistics for the [elastic pool](/azure/azure-sql/database/elastic-pool-overview) containing the current database on an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool. The view returns the same data in any database in the same elastic pool.
 
-The `sys.dm_elastic_pool_resource_stats` system catalog view is similar to [sys.elastic_pool_resource_stats](sys-elastic-pool-resource-stats-azure-sql-database.md), with the following differences:
+The `sys.dm_elastic_pool_resource_stats` dynamic management view is similar to [sys.elastic_pool_resource_stats](sys-elastic-pool-resource-stats-azure-sql-database.md), with the following differences:
 
 |sys.elastic_pool_resource_stats|sys.dm_elastic_pool_resource_stats|
 |---|---|
 | Available in the `master` database | Available in any user database in an elastic pool |
 | Provides data for all elastic pools on a logical server | Provides data for the elastic pool containing the current database |
-| Populated asynchronously and may appear with a few minutes delay | Populated in real time. A new row is added every few seconds. |
+| Populated asynchronously, data may appear with a few minutes delay | Populated in real time. A new row is added every few seconds. |
 | Retains data for 14 days | Retains data for approximately 40 minutes |
 | Intended for historical monitoring and trend analysis | Intended for real-time monitoring and troubleshooting |
 
@@ -58,7 +58,7 @@ The `sys.dm_elastic_pool_resource_stats` system catalog view is similar to [sys.
   
 ## Remarks
 
-The system catalog view `sys.dm_elastic_pool_resource_stats` exists in every database, including single databases. You must be connected to a user database in an elastic pool to obtain elastic pool resource utilization data from this view. 
+The dynamic management view `sys.dm_elastic_pool_resource_stats` exists in every database, including single databases. You must be connected to a user database in an elastic pool to obtain elastic pool resource utilization data from this view. 
   
 ## Permissions
 

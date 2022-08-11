@@ -39,7 +39,7 @@ public java.sql.ResultSet getCatalogs()
  This getCatalogs method is specified by the getCatalogs method in the java.sql.DatabaseMetaData interface.  
   
 > [!NOTE]  
->  On Azure SQL Database, you should connect to the `master` database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the `sys.databases` view to get the catalogs. In Azure SQL Database, you should connect to the `master` database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the `sys.databases` view to get the catalogs.
+>  On Azure SQL Database, you should connect to the `master` database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the `sys.databases` view to get the catalogs. 
   
  The result set returned by the getCatalogs method will contain the following information:  
   

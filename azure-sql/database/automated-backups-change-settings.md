@@ -31,7 +31,7 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 > * [Azure SQL Managed Instance](../managed-instance/automated-backups-change-settings.md)
 
 
-This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Database, such as the short-term retention (STR) policy and the backup storage redundancy option that's used for backups. 
+This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Database, such as the short-term retention policy and the backup storage redundancy option that's used for backups. 
 
 ## Change short-term retention policy
 
@@ -43,7 +43,7 @@ You can change the default point-in-time recovery (PITR) backup retention period
 > If you increase the current retention period, you don't immediately gain the ability to restore to older points in time within the new retention period. You gain that ability over time, as the system starts to retain backups for longer periods.
 
 > [!NOTE]
-> - These APIs will affect only the PITR retention period. If you configured long-term retention (LTR) for your database, it won't be affected. For information about how to change LTR periods, see [Long-term retention](long-term-retention-overview.md).
+> - These APIs will affect only the PITR retention period. If you configured long-term retention for your database, it won't be affected. For information about how to change long-term retention periods, see [Long-term retention](long-term-retention-overview.md).
 > - Hyperscale databases don't support configuring the differential backup frequency because differential backups don't apply to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)

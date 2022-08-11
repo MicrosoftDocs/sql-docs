@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: sys.elastic_pool_resource_stats (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/09/2022
+ms.date: 08/11/2022
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.topic: "reference"
@@ -23,12 +23,12 @@ monikerRange: "=azuresqldb-current"
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). For each elastic pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool. This data is retained for 14 days. 
+Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). For each elastic pool, there is one row for each 15-second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool. This data is retained for 14 days. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**start_time**|**datetime2**|UTC time indicating the start of the 15 second reporting interval.|  
-|**end_time**|**datetime2**|UTC time indicating the end of the 15 second reporting interval.|  
+|**start_time**|**datetime2**|UTC time indicating the start of the 15-second reporting interval.|  
+|**end_time**|**datetime2**|UTC time indicating the end of the 15-second reporting interval.|  
 |**elastic_pool_name**|**nvarchar(128)**|Name of the elastic database pool.|  
 |**avg_cpu_percent**|**decimal(5,2)**|Average compute utilization in percentage of the limit of the pool.|  
 |**avg_data_io_percent**|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the pool.|  
@@ -43,7 +43,7 @@ Returns resource usage statistics for all the [elastic pools](/azure/azure-sql/d
 |**avg_instance_cpu_percent**|**decimal(5,2)**| Average CPU usage for the database as a percentage of the pool limit at the end of the reporting interval. Includes CPU utilization by both user and internal workloads.|
 |**avg_instance_memory_percent**|**decimal(5,2)**|Average database memory usage as a percentage of the pool limit at the end of the reporting interval. |
 |**elastic_pool_cpu_limit**|**decimal(5,2)**| Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information, visit [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management).|  
   
 ## Remarks
 

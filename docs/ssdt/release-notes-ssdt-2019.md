@@ -60,14 +60,16 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
  
 If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
 Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
- - If the error is "The file {filefullpath} already exists." 
-    1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
-	    rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
+- If the error is "The file {filefullpath} already exists." 
+   1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
+      ```
+      	    rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
 	    rm %idepath%\IDE\PublicAssemblies\SSIS\* 
 	    rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
-	  2. Repair the vs2019 
-    3. Restart and start ssdt setup install again.
- - If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
+      ```
+   2. Repair the vs2019 
+   3. Restart and start ssdt setup install again
+- If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
     - Kill msiexec.exe process and relaunch. 
  - If it is not above error in ISVsix.log, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 

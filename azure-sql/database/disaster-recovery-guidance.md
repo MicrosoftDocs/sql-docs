@@ -110,6 +110,9 @@ For more information about database alert rules, see [Receive Alert Notification
 
 If auditing is required to access your database, you need to enable Auditing after the database recovery. For more information, see [Database auditing](./auditing-overview.md).
 
+> [!NOTE]
+> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify if the geo-restore operation restores the database to intended state.
+
 ## Next steps
 
 - To learn about Azure SQL Database automated backups, see [SQL Database automated backups](automated-backups-overview.md)

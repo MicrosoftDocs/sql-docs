@@ -33,7 +33,7 @@ Once you have followed the below steps, your database will be migrated into Azur
 
 ## Steps
 
-1. Provision a new Azure SQL Database in the [serverless compute tier](serverless-tier-overview.md?view=azuresql).
+1. Provision a new Azure SQL Database in the [serverless compute tier](serverless-tier-overview.md?view=azuresql&preserve-view=true).
 
     ![Screenshot of the Azure portal showing provisioning example for Azure SQL Database Serverless](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/provision-serverless.png)
 
@@ -50,7 +50,7 @@ Once you have followed the below steps, your database will be migrated into Azur
 4. Download and install the [self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory) on your local Windows server. The easiest way to do this is the **Option 1: Express setup** install option, as detailed in the documentation. If you opt for a manual install, you will need to provide the application with an authentication key, which can be located in your Azure Data Factory instance by:
 
     - Start up the Azure Data Factory UI via the **Author and Monitor** link from the service in the Azure portal.
-    - Select the **Author** tab (Blue pencil) on the menu. For more information, see [Visual authoring in Azure Data Factory](azure/data-factory/author-visually?tabs=data-factory).
+    - Select the **Author** tab (Blue pencil) on the menu. For more information, see [Visual authoring in Azure Data Factory](/azure/data-factory/author-visually?tabs=data-factory).
     - Select **Connections** (bottom left), then **Integration runtimes**.
     - Add a new **Self-Hosted Integration Runtime**, give it a name, select **Option 2**.
 

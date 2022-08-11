@@ -16,7 +16,7 @@ adobe-target: true
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-To view the release notes for SSMS 19 Preview 2, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
+To view the release notes for SSMS 19 Preview 3, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

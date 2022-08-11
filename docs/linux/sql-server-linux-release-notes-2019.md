@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 08/04/2022
+ms.date: 08/11/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -32,7 +32,7 @@ The following table lists the release history for [!INCLUDE [sssql19-md](../incl
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
-| [CU17](#cu17)             | 15.0.4249.2   | 2022-08-04   |
+| [CU17](#cu17)             | 15.0.4249.2   | 2022-08-11   |
 | [CU16-GDR](#cu16-GDR)     | 15.0.4236.7   | 2022-06-14   |
 | [CU16](#cu16)             | 15.0.4223.1   | 2022-05-16   |
 | [CU15](#cu15)             | 15.0.4198.2   | 2022-01-27   |

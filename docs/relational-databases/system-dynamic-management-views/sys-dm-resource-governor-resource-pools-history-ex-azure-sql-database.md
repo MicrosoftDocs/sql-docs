@@ -54,7 +54,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**delta_read_io_throttled**|int|The total read IOs throttled since snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_read_bytes**|bigint|The total number of bytes read since last snapshot. Is not nullable.|
 |**delta_read_io_stall_ms**|int|Total time (in milliseconds) between read IO arrival and completion since last snapshot. Is not nullable.|
-|**delta_read_io_stall_queued_ms**|int|Total time (in milliseconds) between read IO arrival and issue since last snapshot. Is nullable. Null if the resource pool is not governed for IO. Non-zero `delta_read_io_stall_queued_ms` means IO is being affected by the resource governor.|
+|**delta_read_io_stall_queued_ms**|int|Total time (in milliseconds) between read IO arrival and issue since last snapshot. Is nullable. Null if the resource pool is not governed for IO. Non-zero `delta_read_io_stall_queued_ms` means IOs are being delayed by resource governance.|
 |**delta_write_io_queued**|int|The total write IOs enqueued since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_write_io_issued**|int|The total write IOs issued since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_write_io_completed**|int|The total write IOs completed since last snapshot. Is not nullable.|

@@ -111,7 +111,7 @@ For more information about database alert rules, see [Receive Alert Notification
 If auditing is required to access your database, you need to enable Auditing after the database recovery. For more information, see [Database auditing](./auditing-overview.md).
 
 > [!NOTE]
-> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify if the geo-restore operation restores the database to intended state.
+> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify application tolerance to any loss of recent data modifications, as well as all operational aspects of the recovery procedure.
 
 ## Next steps
 

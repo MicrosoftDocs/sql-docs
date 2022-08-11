@@ -109,6 +109,7 @@ The interface section is broken down into the following groupings.
 |KPI|Controls the colors for a good (1), neutral (0), neutral (-1) and none.|  
 
 ::: moniker range="<=sql-server-ver15"
+
 The first time you connect to a server with the Mobile Report Publisher, that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
   
 ![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  

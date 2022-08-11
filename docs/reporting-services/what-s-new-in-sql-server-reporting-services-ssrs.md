@@ -21,7 +21,7 @@ Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnov
 
 For information about Power BI Report Server, see [What's new in Power BI Report Server?](/power-bi/report-server/whats-new)
 
-::: moniker range="sql-server-ver16"
+::: moniker range="=sql-server-ver16"
 
 ## SQL Server 2022 Reporting Services
 

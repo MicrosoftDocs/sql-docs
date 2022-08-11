@@ -29,15 +29,17 @@ SQL Server Reporting Services (SSRS) provides a set of on-premises tools and ser
 
 ![SQL Server Reporting Services all together](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services all together")
 
-## Create, deploy, and manage mobile and paginated reports
+## Create, deploy, and manage reports
 
 The SSRS solution flexibly delivers the right information to the right users. Users can consume the reports via a web browser, on their mobile device, or via email.
 
 SQL Server Reporting Services offers an updated suite of products:
 
 * **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
-* **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
 * **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
+::: moniker range<="sql-server-ver15”
+* **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
+::: moniker-end
 
 Read on for more about each.
 
@@ -62,6 +64,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 * You can export to new formats such as PowerPoint. Reporting Services visualizations in PowerPoint are live and editable, not just screenshots.
 * You can create a hybrid Power BI/Reporting Services experience:  Rather than recreating your on-premises Reporting Services reports in Power BI, you can pin visuals from those reports to your Power BI dashboards. Then you can monitor everything in one place on your Power BI dashboard.
 
+::: moniker range<="sql-server-ver15”
 ## Mobile reports
 
 ![Image of mobile reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-mobile-reports.png)
@@ -73,6 +76,7 @@ What you need with these widely different screen form factors is a responsive la
 You create these mobile reports in the new [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Then in the native [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) for Windows, iOS, Android, and HTML5, you can access the data you have in Power BI, the cloud, or SSRS.
 
 As you create visualizations, Mobile Report Publisher automatically generates sample data. This feature allows you to see how the visualization will look with your data, and what kind of data works well in each visualization.
+::: moniker-end
 
 ## Web portal
 
@@ -85,12 +89,13 @@ The new web portal is a complete rewrite of Report Manager. Now it's a single-pa
 The content on the web portal is organized by type:
 
 * paginated reports
-* mobile reports 
 * KPIs
 * Excel workbooks
 * shared datasets
 * shared data sources
-
+::: moniker range="<=sql-server-ver15"
+* mobile reports 
+::: moniker-end
 You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able to manage and administer SSRS content.
 
 And you can still schedule report processing, access reports on demand, and subscribe to published reports in the new web portal.

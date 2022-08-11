@@ -107,14 +107,15 @@ The interface section is broken down into the following groupings.
 |Neutral Tertiary|Site settings backgrounds.|  
 |Danger/Warning/Success messages|Colors for those messages.|  
 |KPI|Controls the colors for a good (1), neutral (0), neutral (-1) and none.|  
-|||
 
+::: moniker range="<=sql-server-ver15"
 The first time you connect to a server with the Mobile Report Publisher, that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
   
 ![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
-  
+::: moniker-end 
+ 
 ### Using a logo
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  

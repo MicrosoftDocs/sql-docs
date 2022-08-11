@@ -108,7 +108,9 @@ Enter a search term, and see everything you can access. The results are categori
 
 ## See also
 
+::: moniker range="<=sql-server-ver15"
 [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+::: moniker-end
 [Configure a URL (Report Server Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  

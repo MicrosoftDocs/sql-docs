@@ -61,7 +61,7 @@ SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier 
 | Replication | Fixed error “Merge publications cannot be created from this database until the compatibility level is set to 70 or higher.” when using the publication wizard to create a new merge publication. |
 | SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
 | SSIS | The “Schedule…” menu item is now visible in the Azure SSIS Catalog. |
-| XEvents | Fixed issue where reading target data for event sessions with the same beginning text caused data from the incorrect event session to appear in the viewer. |
+| XEvents | Fixed an issue where reading target data for event sessions whose name overlaps with another session name caused data from the incorrect event session to appear in the viewer. |
 
 #### Known issues 19.0 Preview 3
 

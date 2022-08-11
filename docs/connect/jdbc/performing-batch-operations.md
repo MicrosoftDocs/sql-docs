@@ -25,7 +25,7 @@ The executeBatch method returns an array of **int** values that correspond to th
 > [!NOTE]
 > If you do not have to use update counts, you can first issue a SET NOCOUNT ON statement to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will reduce network traffic and additionally enhance the performance of your application.
 
-As an example, create the following table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
+As an example, create the following table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database:
 
 ```sql
 CREATE TABLE TestTable
@@ -34,7 +34,7 @@ CREATE TABLE TestTable
     Col3 int);
 ```
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.
 
 ```java
 public static void executeBatchUpdate(Connection con) {

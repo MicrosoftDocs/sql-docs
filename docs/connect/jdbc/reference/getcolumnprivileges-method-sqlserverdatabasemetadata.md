@@ -75,7 +75,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 >  For more information about the data returned by the getColumnPrivileges method, see "sp_column_privileges (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getColumnPrivileges method to return the access rights for the FirstName column in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getColumnPrivileges method to return the access rights for the FirstName column in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 public static void executeGetColumnPrivileges(Connection con) {  

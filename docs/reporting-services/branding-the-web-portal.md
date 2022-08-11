@@ -91,7 +91,7 @@ The processed output would look up the **\@primaryButtonBg** LESS variable and s
 
 All of the primary buttons would be rendered dark green with white text.  
   
-The colors.json file, for Reporting Services, has two main categories which items are grouped.  
+The colors.json file, for Reporting Services, has two main categories in which items are grouped.  
   
 - **Interface**: includes items that are specific to the Reporting Services web portal.  
 - **Theme**: includes items that are specific to mobile reports that you create.  
@@ -113,7 +113,7 @@ The first time you connect to a server with the Mobile Report Publisher, that ha
   
 ![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
+You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
 ::: moniker-end 
  
 ### Using a logo

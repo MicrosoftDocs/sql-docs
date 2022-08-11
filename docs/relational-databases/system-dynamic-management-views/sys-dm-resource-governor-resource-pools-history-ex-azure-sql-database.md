@@ -109,7 +109,7 @@ The following example returns maximum log rate data and consumption at each sn
 ```sql
 SELECT snapshot_time, name, max_log_rate_kb, delta_log_bytes_used 
 FROM sys.dm_resource_governor_resource_pools_history_ex 
-WHERE name LIKE 'UserPool%' 
+WHERE name LIKE 'SloSharedPool1' 
 ORDER BY snapshot_time DESC;
 ```
 

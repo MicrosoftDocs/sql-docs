@@ -32,7 +32,7 @@ ms.author: maggies
   
         -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Click the expression (**fx**) button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. Select **OK**.
   
         -   Click **Edit** to open the **Connection Properties** dialog box for the data source type you chose in step 2.  
   
@@ -58,7 +58,7 @@ ms.author: maggies
   
         -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Click the expression (**fx**) button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. Select **OK**.
   
         -   Click **Build** to open the **Connection Properties** dialog box for the data source type that you chose in step 2.  
   
@@ -68,7 +68,7 @@ ms.author: maggies
   
      Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported. For more information, see [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
      The data source appears in the Report Data pane.  
   

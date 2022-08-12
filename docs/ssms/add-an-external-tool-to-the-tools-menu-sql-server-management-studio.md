@@ -21,7 +21,7 @@ ms.date: "01/19/2017"
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-You can launch any Microsoft Windows or Microsoft [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from SQL Server Management Studio. External applications can be added to, and run from, the **Tools** menu.  
+You can launch any Microsoft Windows or Microsoft [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] application from SQL Server Management Studio. External applications can be added to, and run from, the **Tools** menu.  
   
 ## To add an external tool to the Tools menu  
 

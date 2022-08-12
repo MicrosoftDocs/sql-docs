@@ -70,7 +70,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 >  For more information about the data returned by the getVersionColumns method, see "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getVersionColumns method to return information about the columns that are automatically updated in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getVersionColumns method to return information about the columns that are automatically updated in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  

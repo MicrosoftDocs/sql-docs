@@ -69,7 +69,7 @@ ms.author: "mathoma"
   
      If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -91,7 +91,7 @@ ms.author: "mathoma"
   
      For more information about these options and how they relate to the options available in the **Add Filter** and **Edit Filter** dialog boxes, see the "Setting 'partition options'" section of [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -103,13 +103,13 @@ ms.author: "mathoma"
   
     -   A snapshot has not yet been generated for the publication. In this case, the option displays a value of **Set automatically when a snapshot is created**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To set Optimize Synchronization  
   
 1.  On the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box, select a value of `True` for the **Optimize Synchronization** option.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  For definitions of the filtering options for `@keep_partition_changes` and `@use_partition_groups`, see [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  

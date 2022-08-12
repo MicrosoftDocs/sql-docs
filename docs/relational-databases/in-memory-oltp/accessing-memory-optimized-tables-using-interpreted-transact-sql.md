@@ -41,7 +41,7 @@ However, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs ar
   
 ## Table Hints
 
-For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). The SNAPSHOT was added to support [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). The SNAPSHOT was added to support [!INCLUDE[inmemory](../../includes/inmemory-md.md)].  
   
 The following table hints are not supported when accessing a memory-optimized table using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 

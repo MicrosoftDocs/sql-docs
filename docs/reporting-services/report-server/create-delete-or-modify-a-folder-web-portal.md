@@ -40,7 +40,7 @@ ms.author: maggies
   
 3.  In the drop-down menu, click **Delete**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## To modify or delete a folder  
   

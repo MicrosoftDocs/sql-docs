@@ -126,11 +126,7 @@ WITH (
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
          FORMAT_TYPE = DELTA  
-         -- DATA_COMPRESSION is available only in SQL Server
-     [ , DATA_COMPRESSION = {  
-        'org.apache.hadoop.io.compress.SnappyCodec'  
-      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
-    ]);  
+      );  
 ```
 ---
   
@@ -461,14 +457,13 @@ WITH (
 
 ### G. Create a Delta table external file format
 
-This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If DATA_COMPRESSION isn't specified, the default is no compression. For more information, see [Virtualize delta table file with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
+This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Virtualize delta table file with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
 ```sql
 CREATE EXTERNAL FILE FORMAT DeltaFileFormat
 WITH(
-    FORMAT_TYPE = DELTA,
-  DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-);
+    FORMAT_TYPE = DELTA
+    );
 ```
 
 ## Next steps 

@@ -145,8 +145,8 @@ You cannot specify any other column options such as data types, collation, or nu
 - **ADMINISTER BULK OPERATIONS**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage 
-- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], **Write** permission to read and write to the external location.
+- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage.
+- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], it is also required to set proper permissions on the external location.**Write** permission to output the data to the location and **Read** permission to access it.
 
   > [!IMPORTANT]
  >  The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, so it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged and must be granted only to trusted principals in the system.

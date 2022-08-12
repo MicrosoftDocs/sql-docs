@@ -73,10 +73,11 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 
 1. A single backup file can be up to 200,000 MiB per URL (with `MAXTRANSFERSIZE` set to 20 MB).
 2. Backups can be striped across a maximum of 64 URLs.
-3. Mirroring is supported.
+3. Mirroring is supported, but only across URLs, Mirroring using both URL and DISK is not supported.
 4. Compression is supported and recommended.
 5. Encryption is supported.
 6. Restore from URL with S3-compatible object storage has no size limitation.
+7. When restoring a database the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
 7. URLs can be specified either in virtual host or path style format.
 8. `WITH CREDENTIAL` is supported.
 9. `REGION` is supported and the default value is `us-east-1` .
@@ -98,7 +99,7 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 | MAXTRANSFERSIZE | Y | From 5 MB (5,242,880 Bytes) to 20 MB (20,971,520 Bytes), default value is 10 MB (10,485,760 Bytes)|
 | MEDIADESCRIPTION | Y |  |
 | MEDIANAME | Y |  |
-| MIRROR TO | Y |  |
+| MIRROR TO | Y | Only works with another URL, MIRROR with URL and DISK is not supported |
 | NAME | Y |  |
 | NOFORMAT/FORMAT |  Y |  |
 | NOINIT/INIT | N | Appending is not supported. To overwrite a backup use `WITH FORMAT`. |

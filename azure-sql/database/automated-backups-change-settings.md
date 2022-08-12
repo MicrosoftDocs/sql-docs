@@ -146,7 +146,7 @@ In the Azure portal, you can choose a backup storage redundancy option when you 
 
 When you're creating your database, choose the backup storage redundancy option on the **Basics** tab. 
 
-:::image type="content" source="./media/automated-backups-overview/sql-database-backup-storage-redundancy.png" alt-text="Screenshot of the Azure portal, where you can change backup storage redundancy from the Basics tab when you create your SQL database.":::
+:::image type="content" source="./media/automated-backups-overview/sql-database-backup-storage-redundancy.png" alt-text="Screenshot of the Azure portal, where you can change backup storage redundancy from the Basics tab when you create your database.":::
 
 For existing databases, go to your database in the [Azure portal](https://portal.azure.com). Select **Compute & storage** under **Settings**, and then choose your desired option for backup storage redundancy. 
 

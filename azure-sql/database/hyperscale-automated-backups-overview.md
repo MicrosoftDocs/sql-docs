@@ -44,7 +44,7 @@ Creation of new databases by restoring an existing backup or copying the databas
 
 ## Backup retention
 
-Default short-term retention of backups for Hyperscale databases is 7 days. Long-term retention policies aren't currently supported.
+Default short-term retention of backups for Hyperscale databases is 7 days. Long-term retention (LTR) policies aren't currently supported.
 
 > [!NOTE]
 > Short-term retention of backups in the range of 1 to 35 days for Hyperscale databases is now in preview. 

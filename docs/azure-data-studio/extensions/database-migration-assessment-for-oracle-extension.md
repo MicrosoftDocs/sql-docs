@@ -18,7 +18,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 ## Pre-requisites
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
-- [Azure Data Studio version 1.35  or above](../download-azure-data-studio.md).
+- [Azure Data Studio version 1.37  or above](../download-azure-data-studio.md).
 - Oracle user should have CONNECT and SELECT ANY DICTIONARY privileges assigned.
 
 ## Install Azure Data Studio extension

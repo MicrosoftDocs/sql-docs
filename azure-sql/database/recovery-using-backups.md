@@ -164,6 +164,8 @@ To restore a database by using PowerShell, use the following cmdlets:
 | [Get-AzSqlDatabaseGeoBackup](/powershell/module/az.sql/get-azsqldatabasegeobackup) |Gets a geo-redundant backup of a database. |
 | [Restore-AzSqlDatabase -FromLongTermRetentionBackup](/powershell/module/az.sql/restore-azsqldatabase) |Restores a database from long-term backup. You can use this cmdlet to restore a standalone or pooled database. |
 
+For more information, see [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase).
+
 
 ### [Rest API](#tab/rest-api)
 

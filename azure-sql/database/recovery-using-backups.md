@@ -180,7 +180,7 @@ To restore a database by using the REST API:
 
 ## Deleted database restore
 
-You can restore a deleted database to the deletion time, or an earlier point in time, on the same server.
+You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.
 
 > [!IMPORTANT]
 > If you delete a server, all its databases are also deleted and can't be recovered. You can't restore a deleted server.
@@ -222,6 +222,8 @@ To restore a database by using the REST API:
 ---
 
 ## Geo-restore
+
+You can use geo-restore to restore a deleted database by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.
 
 > [!IMPORTANT]
 > - Geo-restore is available only for databases configured with geo-redundant [backup storage](automated-backups-overview.md#backup-storage-redundancy). If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).

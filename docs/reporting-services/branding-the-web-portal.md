@@ -20,13 +20,13 @@ You can alter the appearance of the web portal by branding it to your business. 
 
 ## Creating the brand package
   
-A brand package for Reporting Services consists of three items and is packaged as a zip file.   
+A brand package for Reporting Services consists of three items and is packaged as a zip file.
   
 - colors.json  
 - metadata.xml  
 - logo.png (optional)  
   
-The files must have the names listed above. Package the files above into a zip file. The zip file can be named however you like.  
+The files must have the names listed above. Package these files into a zip file. The zip file can be named however you like.  
   
 ### metadata.xml
   
@@ -71,7 +71,7 @@ The LESS stylesheet contains blocks that reference some predefined LESS variable
 }  
 ```
   
-While this resembles CSS syntax, the color values, prefixed with the @symbol, are unique to LESS. They are variables whose values are set by the json file.  
+While this resembles CSS syntax, the color values, prefixed with the @symbol, are unique to LESS. They're variables whose values are set by the json file.  
   
 For example, if the colors.json file had the following values.  
 
@@ -110,7 +110,7 @@ The interface section is broken down into the following groupings.
 
 ::: moniker range="<=sql-server-ver15"
 
-The first time you connect to a server with the Mobile Report Publisher, that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
+The first time you connect to a server with the Mobile Report Publisher that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
   
 ![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
@@ -137,11 +137,11 @@ To add, download, or remove a brand package, you can do the following.
   
     ![Screenshot of the Site Settings page with the Branding option selected.](../reporting-services/media/ssrsbranding.png) 
   
-**Currently installed brand package** will either display the name of the package that has been uploaded, or it will display None.  
+**Currently installed brand package** either displays the name of the package that has been uploaded, or it displays None.  
   
-**Upload brand package** will prompt you to select a zip file from a local folder and then apply the package to the web portal. You will see it take effect immediately.  
+**Upload brand package** prompts you to select a zip file from a local folder and then apply the package to the web portal. You see it take effect immediately.  
   
-You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
+You can also **Download** or **Remove** the package. Removing the package resets the web portal to the default brand immediately.  
   
 ## metadata.xml example
 

@@ -1,7 +1,7 @@
 ---
 title: "What is SQL Server Reporting Services | Microsoft Docs"
-description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
-ms.date: 05/06/2019
+description: "Learn about tools and services for Reporting Services reports on premises."
+ms.date: 08/12/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -23,20 +23,20 @@ ms.custom:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started).
+Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
-SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage mobile and paginated reports.
+SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage paginated reports.
 
-![SQL Server Reporting Services all together](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services all together")
+![Screenshot showing SQL Server 2022 Reporting Services report.](../reporting-services/media/report-server-2022-coho-winery.png "Screenshot showing SQL Server 2022 Reporting Services report.")
 
 ## Create, deploy, and manage reports
 
-The SSRS solution flexibly delivers the right information to the right users. Users can consume the reports via a web browser, on their mobile device, or via email.
+The SSRS solution flexibly delivers the right information to the right users. Users can consume the reports in a web browser on their computer or mobile device, or via email.
 
 SQL Server Reporting Services offers an updated suite of products:
 
 * **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
-* **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
+* **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
 ::: moniker range="<=sql-server-ver15"
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
 ::: moniker-end
@@ -45,11 +45,7 @@ Read on for more about each.
 
 ### What's new in Reporting Services
 
-These sources will keep you up to date on new features in SQL Server Reporting Services.
-
-* [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [SQL Server Reporting Services Team Blog](/archive/blogs/sqlrsteamblog/)
-* The [Guy in a Cube YouTube channel](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
+See [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) to keep up to date on new features in SQL Server Reporting Services.
 
 ## Paginated reports
 
@@ -81,9 +77,9 @@ As you create visualizations, Mobile Report Publisher automatically generates sa
 
 ## Web portal
 
-![Image of the web portal laptop.](../reporting-services/media/ssrs-web-portal.png)
+![Screenshot showing the web portal.](../reporting-services/media/report-server-2022-web-portal.png)
 
-For end users of native-mode Reporting Services, the front door is a modern web portal you can view in most browsers. You can access all your Reporting Services mobile, paginated reports, and KPIs in the new portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report.
+For end users of Reporting Services, the front door is a modern web portal you can view in most browsers. You can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report.
 
 The new web portal is a complete rewrite of Report Manager. Now it's a single-page, standards-based HTML5 app, which modern browsers are optimized for: Microsoft Edge, Internet Explorer 10 and 11, Chrome, Firefox, Safari, and all the major browsers.
 
@@ -95,7 +91,7 @@ The content on the web portal is organized by type:
 * shared datasets
 * shared data sources
 ::: moniker range="<=sql-server-ver15"
-* mobile reports 
+* Mobile reports 
 ::: moniker-end
 
 You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able to manage and administer SSRS content.

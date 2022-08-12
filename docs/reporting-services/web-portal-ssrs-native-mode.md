@@ -1,6 +1,6 @@
 ---
 title: "The web portal of a report server (Native Mode) | Microsoft Docs"
-ms.date: 08/06/2021
+ms.date: 08/12/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -16,7 +16,7 @@ ms.author: maggies
 
 The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
 
-![Screenshot showing SQL Server Reporting Services Portal.](../reporting-services/media/ssrsportal.png)
+![Screenshot showing SQL Server Reporting Services web portal.](../reporting-services/media/web-portal-report-server-2022.png)
 
 ## What is the web portal
 
@@ -70,14 +70,14 @@ To start the web portal from a browser, follow these steps:
 The web portal will group items into different categories. The available categories are the following.
 
 - KPIs
-- Paginated Reports
-- Power BI Desktop Reports
-- Excel Workbooks
+- Paginated reports
+- Power BI Desktop reports
+- Excel workbooks
 - Datasets
-- Data Sources
+- Data sources
 - Resources
 ::: moniker range="<=sql-server-ver15"
-- Mobile Reports
+- Mobile reports
 ::: moniker-end
 
 You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.

@@ -15,7 +15,9 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ---
+
 # Availability replica is disconnected within an Always On availability group
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
@@ -26,20 +28,22 @@ ms.author: mathoma
 - **Facet**: Availability replica  
   
 ## Description  
- This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  
+
+This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  
   
-## Possible Causes  
+## Possible Causes
+
  The secondary replica isn't connected to the primary replica. The connected state is DISCONNECTED. This issue can be caused by the following:  
   
--   The connection port might be in conflict with another application.  
+- The connection port might be in conflict with another application.  
   
--   The encryption type or algorithm is mismatched.  
+- The encryption type or algorithm is mismatched.  
   
--   The connection endpoint has been deleted or hasn't been started.  
+- The connection endpoint has been deleted or hasn't been started.  
   
--   There are network/connectivity issues or Ports are blocked at the firewall.  
+- There are network/connectivity issues or Ports are blocked at the firewall.  
 
--   Service/startup account isn't a domain user and  isn't able to connect to the DC and to the remote node and port (for example, 5022) 
+- Service/startup account isn't a domain user and  isn't able to connect to the DC and to the remote node and port (for example, 5022) 
  
 ## Possible Solutions  
 
@@ -47,7 +51,8 @@ Check the database mirroring endpoint configuration for the instances of the pri
 
 The following are possible solutions for this issue:  
  
--  The connection port might be in conflict with another application.
+- The connection port might be in conflict with another application.
+
    Run the following commands to diagnose port issue:
    
    ```PowerShell  
@@ -61,69 +66,68 @@ The following are possible solutions for this issue:
    Get-NetTCPConnection -LocalPort $port
    Get-Process -Id (Get-NetTCPConnection -LocalPort $port).OwningProcess |Select-Object Name, ProductVersion, Path, Id
    ```
-  
--	The encryption type or algorithm is mismatched. 
-	
-	Run this on both servers and compare the encryption and make sure both are same:
 
-    ```PowerShell
-    $server_name = "server_instance"  #replace with your instance
-    sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
-    ```
+- The encryption type or algorithm is mismatched.
 
-
--	The connection endpoint has been deleted or hasn't been started.
-	
-	Run the following command if the mirroring endpoint exits and is started.
-	
-    ```PowerShell
-    $server_name = "…."
-    Sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
-    ```
-
-	Run the below command if you suspect that endpoint is not responding to connections or is not running. 
-  
-     ```SQL
-     ALTER ENDPOINT hadr_endpoint   
-	   STATE = stopped
-
-     ALTER ENDPOINT hadr_endpoint   
-     STATE = started
-     ```
-
--	There are network /connectivity issues or Ports are blocked at the firewall
-
-	Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:
-
-    ```PowerShell
-    $computer = $env:computername
-    $port = "5022"                 # replace with the port from your database_mirroring_endpoints.
-    Test-NetConnection -ComputerName $computer -Port $port 
-    ```
-
--	Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (for example, 5022) 
-
-	To test whether the service account can connect to the remote node, follow these steps. The steps assume that you are not logged in with the service account:
-
-   1.	Start-> Windows PowerShell->right-click on the icon
-   2.	Select More->Run as Different User -> Use a different account
-   3.	Type the service account name and password 
-   4.	Once Windows PowerShell opens, type the following command to verify you've logged in with the service account
-   
-   ```PowerShell	
-   whoami
-   ```
-	
-   5.	Then you can test the connection to the remote node. For example:
+   Run this on both servers and compare the encryption and make sure both are same:
 
    ```PowerShell
-   $computer = "remote_node" # Replace with Naode name as per your environment.
-   $port = "5022"            # Replace with the port from your database_mirroring_endpoints.        
-   Test-NetConnection -ComputerName $computer -Port 5022
+   $server_name = "server_instance"  #replace with your instance
+   sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
    ```
+
+- The connection endpoint has been deleted or hasn't been started.
+	
+   Run the following command if the mirroring endpoint exits and is started.
+	
+   ```PowerShell
+   $server_name = "…."
+   Sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
+   ```
+
+   Run the below command if you suspect that endpoint is not responding to connections or is not running. 
   
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+   ```SQL
+   ALTER ENDPOINT hadr_endpoint   
+   STATE = stopped
+
+   ALTER ENDPOINT hadr_endpoint   
+   STATE = started
+   ```
+
+- There are network /connectivity issues or Ports are blocked at the firewall
+
+   Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:
+
+   ```PowerShell
+   $computer = $env:computername
+   $port = "5022"                 # replace with the port from your database_mirroring_endpoints.
+   Test-NetConnection -ComputerName $computer -Port $port 
+   ```
+
+- Service/startup account is not a domain user and  is not able to connect to the DC and to the remote node and port (for example, 5022) 
+
+   To test whether the service account can connect to the remote node, follow these steps. The steps assume that you are not logged in with the service account:
+
+   1. Select **Start** > **Windows PowerShell** > right-click the icon.
+   1. Select **More** > **Run as Different User** > **Use a different account**.
+   1. Type the service account name and password.
+   1. After Windows PowerShell opens, type the following command to verify you've logged in with the service account:
+   
+      ```PowerShell	
+      whoami
+      ```
+	
+   1. Then you can test the connection to the remote node. For example:
+
+      ```PowerShell
+      $computer = "remote_node" # Replace with Naode name as per your environment.
+      $port = "5022"            # Replace with the port from your database_mirroring_endpoints.        
+      Test-NetConnection -ComputerName $computer -Port 5022
+      ```
+  
+## See also  
+- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+- [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

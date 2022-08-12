@@ -37,7 +37,7 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 
 Cross-region and cross-subscription point-in-time restore for SQL Managed Instance isn't currently supported. 
 
-If you configured [long-term retention](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
+If you configured [long-term retention](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 
 > [!IMPORTANT]
 > You can't overwrite an existing database during restore.

@@ -132,7 +132,7 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 
 ### [Azure portal](#tab/azure-portal)
 
-To recover a managed database by using the Azure portal, open the managed instance's overview page and select **Deleted databases**. Select a deleted database that you want to restore. Then enter the name for the new database that will be created with data restored from the backup.
+To recover a database by using the Azure portal, open the managed instance's overview page and select **Deleted databases**. Select a deleted database that you want to restore. Then enter the name for the new database that will be created with data restored from the backup.
 
 :::image type="content" source="../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of selections for restoring a deleted database in Azure SQL Managed Instance.":::
 

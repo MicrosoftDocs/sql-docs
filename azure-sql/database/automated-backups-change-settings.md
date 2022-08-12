@@ -63,7 +63,7 @@ Prepare your environment for the Azure CLI:
 
 [!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 
-Change the PITR backup retention and differential backup frequency for active Azure SQL databases by using the following example:
+Change the PITR backup retention and differential backup frequency for active databases by using the following example:
 
 ```azurecli
 # Set new PITR differential backup frequency on an active individual database

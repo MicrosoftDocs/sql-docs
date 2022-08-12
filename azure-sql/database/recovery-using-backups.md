@@ -283,6 +283,8 @@ For business-critical applications that require large databases and must ensure 
 For more information about business continuity choices, see [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
 
+> [!NOTE]
+> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify application tolerance to any loss of recent data modifications, as well as all operational aspects of the recovery procedure. 
 
 ## Next steps
 

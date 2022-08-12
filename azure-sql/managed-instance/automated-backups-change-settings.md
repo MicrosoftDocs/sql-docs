@@ -60,7 +60,7 @@ Prepare your environment for the Azure CLI:
 
 [!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 
-Use the following example to change the PITR backup retention of a *single active* database in a SQL managed instance:
+Use the following example to change the PITR backup retention of a *single active* database in a managed instance:
 
 ```azurecli
 # Set a new PITR backup retention period on an active individual database

@@ -2472,7 +2472,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
     [ [ , ] CREDENTIAL = <credential_name> ]
-    [ [ , ] TYPE = { BLOB_STORAGE | RDBMS } ]
+    [ [ , ] TYPE = { BLOB_STORAGE } ]
   )
 [ ; ]
 ```
@@ -2518,50 +2518,6 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
 - Use `BLOB_STORAGE` when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
-
-#### TYPE = *[ RDBMS ]*
-
-To create an external data source to reference an RDBMS, specifies the SQL Database server name of the remote database in SQL Database.
-
-```sql
--- Execute on Managed Instance, in the context of the database used
--- Select database on Managed Instance on which to create external table
-USE [<MIdatabase>]
-
--- Store credentials of the remote server on Managed Instance
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential
-WITH
-  IDENTITY = '<username>' ,
-  SECRET = '<password>' ;
-
--- Create linked server connection between Managed Instance and external SQL Server
-CREATE EXTERNAL DATA SOURCE RemoteReferenceData
-WITH
-  ( TYPE = RDBMS ,
-    LOCATION = 'tcp:<server_name>.database.windows.net' , -- remote server FQDN
-    DATABASE_NAME = '<remoteDatabase>' , -- remote database name
-    CREDENTIAL = SQL_Credential
-  ) ;
-```
-
-Once the link has been created, use the following sample to create an external table. Structure will depend on the remote table layout. Data structure of the remote table must match in the syntax.
-  
-```sql
--- Execute on Managed Instance, in the context of the database used
--- Select database on Managed Instance on which to create external table
-USE [<MIdatabase>]
-  
--- Connect external table on Managed Instance with Azure SQL Database
-CREATE EXTERNAL TABLE RemoteDBtable
-(TimeTable datetime2) -- Example depends on the remote DB table structure. Must ensure data structure matches the remote database.
-WITH
-(
-DATA_SOURCE = RemoteReferenceData
-);
-```
-
-For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)][remote_eq_tutorial].
   
 ## Permissions
 

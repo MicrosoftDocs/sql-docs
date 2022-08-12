@@ -36,11 +36,11 @@ The code file for this sample is named SqlXmlDataType.java, and it can be found 
 
 To run this sample application, you must set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application throws the "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
-You also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database to run this sample application.
+You also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database to run this sample application.
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database and then calls the createSampleTables method.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and then calls the createSampleTables method.
 
 The createSampleTables method drops the test tables, TestTable1, and TestTable2, if they exist. Then, it inserts two rows into TestTable1.
 

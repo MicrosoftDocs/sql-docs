@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current"
 
 Returns resource usage statistics for the [elastic pool](/azure/azure-sql/database/elastic-pool-overview) containing the current database on an Azure SQL Database [logical server](/azure/azure-sql/database/logical-servers). This includes CPU, Data IO, Log IO, storage consumption and concurrent request/session utilization by the pool. The view returns the same data in any database in the same elastic pool.
 
-The `sys.dm_elastic_pool_resource_stats` dynamic management view is similar to [sys.elastic_pool_resource_stats](sys-elastic-pool-resource-stats-azure-sql-database.md), with the following differences:
+The `sys.dm_elastic_pool_resource_stats` dynamic management view is similar to [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md), with the following differences:
 
 |sys.elastic_pool_resource_stats|sys.dm_elastic_pool_resource_stats|
 |---|---|
@@ -80,8 +80,8 @@ ORDER BY end_time DESC;
 
 Learn more about elastic pools and related concepts in the following articles:
 
-- [sys.elastic_pool_resource_stats (Azure SQL Database)](sys-elastic-pool-resource-stats-azure-sql-database.md)
+- [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/ys-elastic-pool-resource-stats-azure-sql-database.md)
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
-- [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)
+- [sys.resource_stats (Azure SQL Database)](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
 - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

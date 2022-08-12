@@ -80,7 +80,7 @@ ORDER BY end_time DESC;
 
 Learn more about elastic pools and related concepts in the following articles:
 
-- [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/ys-elastic-pool-resource-stats-azure-sql-database.md)
+- [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [Elastic pools help you manage and scale multiple databases in Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 - [sys.resource_stats (Azure SQL Database)](../system-catalog-views/sys-resource-stats-azure-sql-database.md)
 - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

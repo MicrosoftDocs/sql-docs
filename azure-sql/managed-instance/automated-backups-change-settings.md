@@ -163,7 +163,7 @@ Configure backup storage redundancy for SQL Managed Instance by using the Azure 
 
 ### [Azure portal](#tab/azure-portal)
 
-In the Azure portal, during an instance creation, the default option for the backup storage redundancy is geo-redundancy. To change it:
+In the Azure portal, during instance creation, the default option for the backup storage redundancy is geo-redundancy. To change it:
 
 1. Go to the **Basics** tab and select **Configure Managed Instance**.
 

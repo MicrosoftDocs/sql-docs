@@ -72,7 +72,7 @@ az sql midb short-term-retention-policy set \
     --retention-days 1 \
 ```
 
-Use the following example to change the PITR backup retention for *all active* databases in a SQL managed instance:
+Use the following example to change the PITR backup retention for *all active* databases in a managed instance:
 
 ```azurecli
 # Set a new PITR backup retention period for all active databases

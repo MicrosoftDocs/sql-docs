@@ -31,7 +31,7 @@ This release introduces the new SQL Server 2022 Reporting Services (SSRS). We co
 
 The web portal received a face lift.
 
-:::image type="content" source="media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-web-portal-2022.png" alt-text="Screenshot showing new updated SQL Server 2022 Reporting Services web portal.":::
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot showing new updated SQL Server 2022 Reporting Services web portal.":::
 
 ### Deprecated features
 

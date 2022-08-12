@@ -199,7 +199,7 @@ az sql db create \
 
 For more information, see [az sql db create](/cli/azure/sql/db#az-sql-db-create) and [az sql db update](/cli/azure/sql/db#az-sql-db-update).
 
-You can't update the backup storage redundancy of a Hyperscale database directly. However, you can change it by using [the database copy command](database-copy.md) with the `--backup-storage-redundancy` parameter. This example copies a Hyperscale database to a new database by using Gen5 hardware and two vCores. The new database has the backup redundancy set to `Zone`.
+You can't update the backup storage redundancy of a Hyperscale database directly. However, you can change it by using [the database copy command](database-copy.md) with the `--backup-storage-redundancy` parameter. This example copies a Hyperscale database to a new database that uses Gen5 hardware and two vCores. The new database has the backup redundancy set to `Zone`.
 
 ```azurecli
 az sql db copy \

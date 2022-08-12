@@ -86,7 +86,7 @@ az sql midb short-term-retention-policy set \
 
 ### [PowerShell](#tab/powershell)
 
-To change the PITR backup retention for a *single active* database in a SQL managed instance, use the following PowerShell example:
+To change the PITR backup retention for a *single active* database in a managed instance, use the following PowerShell example:
 
 ```powershell
 # Set a new PITR backup retention period on an active individual database

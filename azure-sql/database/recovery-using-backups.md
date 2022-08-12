@@ -35,7 +35,7 @@ This article provides steps to recover any database from a backup in Azure SQL D
 - Create a new database on any server in the same region, recovered to the time of a recent backup.
 - Create a new database on any server in any other region, recovered to the point of the most recent replicated backups. 
 
-If you configured [long-term retention](long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
+If you configured [long-term retention (LTR)](long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any server.
 
 > [!IMPORTANT]
 > - You can't overwrite an existing database during restore.

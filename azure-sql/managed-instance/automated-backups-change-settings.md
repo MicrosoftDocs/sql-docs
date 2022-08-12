@@ -157,7 +157,9 @@ For more information, see [Backup retention REST API](/rest/api/sql/backupshortt
 
 ---
 
-### Configure backup storage redundancy 
+## Configure backup storage redundancy 
+
+Configure backup storage redundancy for SQL Managed Instance by using the Azure portal, the Azure CLI, and Azure PowerShell. 
 
 ### [Azure portal](#tab/azure-portal)
 

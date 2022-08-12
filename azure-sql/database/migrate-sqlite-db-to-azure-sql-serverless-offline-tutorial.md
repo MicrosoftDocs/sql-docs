@@ -29,7 +29,7 @@ Once you have followed the below steps, your database will be migrated into Azur
 - SQLite2 or SQLite3 database that you wish to migrate
 - A Windows environment
   - If you do not have a local Windows environment, you can use a Windows VM in Azure for the migration. Move and make your SQLite database file available on the VM using Azure Files and Storage Explorer.
-- Review [prerequesities for Azure Data Factory self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#prerequisites)
+- Review [prerequisites for Azure Data Factory self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#prerequisites)
 
 ## Steps
 

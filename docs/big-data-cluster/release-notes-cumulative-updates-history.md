@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 06/14/2022
+ms.date: 08/11/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -18,6 +18,14 @@ ms.topic: conceptual
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 For the latest release notes, see [SQL Server 2019 Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
+## <a id="cu17"></a> CU17 (August 2022)
+
+Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters. Updated to Kubernetes version 1.23.1.
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4236.7| 2019-CU17-ubuntu-20.04| [KB 5016394](https://support.microsoft.com/help/5016394) |
 
 ## <a id="cu16"></a> CU16 GDR (June 2022)
 

@@ -79,7 +79,7 @@ az sql db str-policy set \
 
 ### [PowerShell](#tab/powershell)
 
-To change the PITR backup retention and differential backup frequency for active Azure SQL databases, use the following PowerShell example:
+To change the PITR backup retention and differential backup frequency for active databases, use the following PowerShell example:
 
 ```powershell
 # Set a new PITR backup retention period on an active individual database

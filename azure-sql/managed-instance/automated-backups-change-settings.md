@@ -110,7 +110,7 @@ To change the PITR backup retention for a *single deleted* database in a managed
 Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName resourceGroup -InstanceName testserver -DatabaseName testDatabase | Set-AzSqlInstanceDatabaseBackupShortTermRetentionPolicy -RetentionDays 0
 ```
 
-To change the PITR backup retention for *all deleted* databases in a SQL managed instance, use the following PowerShell example:
+To change the PITR backup retention for *all deleted* databases in a managed instance, use the following PowerShell example:
 
 ```powershell
 # Set a new PITR backup retention for all deleted databases

@@ -174,7 +174,7 @@ Supported subscription types can contain a limited number of resources per regio
 
 The following table shows the **default regional limits** for supported subscription types (default limits can be extended using support request described below):
 
-|Subscription type| Max number of SQL Managed Instance subnets | Max number of vCore units* |
+|Subscription type| Default limit for SQL Managed Instance subnets | Default limit for vCore units* |
 | :---| :--- | :--- |
 |CSP |16 (30 in some regions**)|960 (1440 in some regions**)|
 |EA|16 (30 in some regions**)|960 (1440 in some regions**)|

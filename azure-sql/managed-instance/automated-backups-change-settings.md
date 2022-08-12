@@ -183,7 +183,7 @@ Use the **Notification** pane of the Azure portal to view the status of the chan
 
 ### [Azure CLI](#tab/azure-cli)
 
-To change the backup storage redundancy after you create a SQL managed instance by using the Azure CLI, specify the `-BackupStorageRedundancy` parameter with the `az sql mi update` cmdlet. View the [update mi backup storage redundancy](/cli/azure/sql/mi#az-sql-mi-update-examples) example. 
+To change the backup storage redundancy after you create a managed instance by using the Azure CLI, specify the `-BackupStorageRedundancy` parameter with the `az sql mi update` cmdlet. View the [update mi backup storage redundancy](/cli/azure/sql/mi#az-sql-mi-update-examples) example. 
 
 Possible values for `-BackupStorageRedundancy` are `Geo` for geo-redundant, `Zone` for zone-redundant, `Local` for locally redundant, and `GeoZone` for geo-zone redundant backup storage. 
 

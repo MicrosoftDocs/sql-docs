@@ -113,10 +113,7 @@ You can use all [!INCLUDE[tsql](../includes/tsql-md.md)] statements in an explic
         Full-text system stored procedures
     :::column-end:::
 :::row-end:::  
-:::row:::
-    :::column:::
-        CREATE DATABASE
-    :::column-end:::
+:::row:::   
     :::column:::
         DROP FULLTEXT CATALOG
     :::column-end:::

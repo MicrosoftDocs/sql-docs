@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "11/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: "andreas.wolter"
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -88,6 +88,20 @@ ms.author: wiassaf
 -   Renaming the database or primary filegroup.  
 -   Setting the database to OFFLINE.  
 -   Setting the primary filegroup to READ_ONLY.  
+
+## Recommendations  
+When you work with the **msdb** database, consider the following recommendations:  
+  
+- Always have a current backup of the **msdb** database available.  
+- Back up the **msdb** database as soon as possible after the following operations:  
+  
+  - Creating, modifying, or deleting any jobs, alerts, proxies or maintenance plans 
+  - Adding, changing or deleting database mail profiles  
+  - Adding, modifying or deleting Policy based management policies
+  
+- Do not create user objects in **msdb**. If you do, **msdb** must be backed up more frequently.  
+- Treat the **msdb** database as highly sensitive and do not grant access to anyone without a proper need. Especially keep in mind, that SQL Server Agent jobs are often owned by members of the sysadmin-role and therefore make sure that code that is executed cannot be tampered with. 
+- Audit any changes to objects in **msdb** 
   
 ## Related Content  
 - [System Databases](../../relational-databases/databases/system-databases.md)  

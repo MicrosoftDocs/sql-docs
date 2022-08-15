@@ -14,8 +14,8 @@ ms.subservice: high-availability
 ms.devlang:
   - "PowerShell"
 ms.topic: how-to
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, amagarwa, maboja, vanto
 ms.date: 05/14/2019
 ---

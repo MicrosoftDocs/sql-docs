@@ -208,7 +208,7 @@ Creating a new database or moving an existing database into a serverless compute
 
    |Parameter|Value choices|Default value|
    |---|---|---|---|
-   |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen55).|0.5 vCores|
+   |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
    |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
 
 

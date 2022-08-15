@@ -201,14 +201,14 @@ If using [customer managed transparent data encryption](transparent-data-encrypt
 
 Creating a new database or moving an existing database into a serverless compute tier follows the same pattern as creating a new database in provisioned compute tier and involves the following two steps.
 
-1. Specify the service objective. The service objective prescribes the service tier, hardware configuration, and max vCores. For service objective options, see [serverless resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---standard-series-gen5)
+1. Specify the service objective. The service objective prescribes the service tier, hardware configuration, and max vCores. For service objective options, see [serverless resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5)
 
 
-2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters.
+2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters. 
 
    |Parameter|Value choices|Default value|
    |---|---|---|---|
-   |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---standard-series-gen5).|0.5 vCores|
+   |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen55).|0.5 vCores|
    |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
 
 
@@ -341,7 +341,7 @@ az sql db show --name $databasename --resource-group $resourcegroupname --server
 
 ## Resource limits
 
-For resource limits, see [serverless compute tier](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---standard-series-gen5).
+For resource limits, see [serverless compute tier](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).
 
 ## Billing
 
@@ -401,4 +401,4 @@ The serverless compute tier is available worldwide except the following regions:
 ## Next steps
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
-- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---standard-series-gen5).
+- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).

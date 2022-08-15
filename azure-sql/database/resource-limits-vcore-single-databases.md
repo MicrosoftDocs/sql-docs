@@ -38,7 +38,7 @@ You can set the service tier, compute size (service objective), and storage amou
 * [Azure CLI](single-database-manage.md#azure-cli)
 * [REST API](single-database-manage.md#rest-api)
 
-> ![NOTE]
+> [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
 ## <a id="general-purpose---serverless-compute---gen5"></a>General purpose - serverless compute - standard-series (Gen5)

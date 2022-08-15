@@ -38,7 +38,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 To download the latest general availability (GA) version of SSMS, visit [Download SSMS](download-sql-server-management-studio-ssms.md).
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19 (Preview)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19 (Preview)](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
 
 SSMS 19 Preview 3 is the latest preview.
 

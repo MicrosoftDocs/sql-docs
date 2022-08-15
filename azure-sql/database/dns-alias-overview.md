@@ -8,8 +8,8 @@ ms.subservice: high-availability
 ms.custom:
   - "seo-lt-2019 sqldbrb=1"
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 07/11/2022
 ---

@@ -46,8 +46,6 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 > [!NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
-## General purpose - provisioned compute - Gen4
-
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
 /database/resource-limits-vcore-single-databases.md
@@ -317,8 +315,6 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ## Business Critical - provisioned compute - M-series
 
-## Business Critical - provisioned compute - M-series
-
 For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
 
 ### M-series hardware (part 1)
@@ -463,8 +459,6 @@ This section includes details on previously available hardware.
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
-## General purpose - provisioned compute - Gen4
-
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
 /database/resource-limits-vcore-single-databases.md
@@ -476,7 +470,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 /managed-instance/resource-limits.md
 --->
 
-### General purpose service tier: Generation 4 compute platform (part 1)
+#### General purpose service tier: Generation 4 compute platform (part 1)
 
 |Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
 |:--- | --: |--: |--: |--: |--: |--: |
@@ -511,7 +505,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### General purpose service tier: Generation 4 compute platform (part 2)
+#### General purpose service tier: Generation 4 compute platform (part 2)
 
 |Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
@@ -546,12 +540,12 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-## Business critical - provisioned compute - Gen4
+### Business critical - provisioned compute - Gen4
 
 > [!IMPORTANT]
 > New Gen4 databases are no longer supported in the Australia East or Brazil South regions.
 
-### Business critical service tier: Generation 4 compute platform (part 1)
+#### Business critical service tier: Generation 4 compute platform (part 1)
 
 |Compute size (service objective)|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
@@ -587,7 +581,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
-### Business critical service tier: Generation 4 compute platform (part 2)
+#### Business critical service tier: Generation 4 compute platform (part 2)
 
 |Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |

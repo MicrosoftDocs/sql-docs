@@ -41,7 +41,7 @@ You can set the service tier, compute size (service objective), and storage amou
 > ![NOTE]
 > The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
-## <a id="general-purpose---serverless-compute---gen5"> </a> General purpose - serverless compute - standard-series (Gen5)
+## <a id="general-purpose---serverless-compute---gen5"></a>General purpose - serverless compute - standard-series (Gen5)
 
 <!---
 vCore resource limits are listed in the following articles, please be sure to update all of them: 
@@ -56,7 +56,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 The [serverless compute tier](serverless-tier-overview.md) is currently available on standard-series (Gen5) hardware only.
 
-### <a id="gen5-hardware-part-1-1"></a> Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-1"></a>Standard-series (Gen5) compute generation (part 1)
 
 |Compute size (service objective)|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:--- | --: |--: |--: |--: |--: |
@@ -87,7 +87,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-1"></a> Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-1"></a>Standard-series (Gen5) compute generation (part 2)
 
 
 |Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
@@ -117,7 +117,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-3-1"></a> Standard-series (Gen5) compute generation (part 3)
+### <a id="gen5-hardware-part-3-1"></a>Standard-series (Gen5) compute generation (part 3)
 
 |Compute size (service objective)|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
 |:--- | --: |--: |--: |--: |--:|
@@ -147,9 +147,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-## <a id="hyperscale---provisioned-compute---gen5"> </a> Hyperscale - provisioned compute - standard-series (Gen5)
+## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-2"></a> Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-2"></a>Standard-series (Gen5) compute generation (part 1)
 
 
 |Compute size (service objective)|HS_Gen5_2|HS_Gen5_4|HS_Gen5_6|HS_Gen5_8|HS_Gen5_10|HS_Gen5_12|HS_Gen5_14|
@@ -183,7 +183,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-### <a id="gen5-hardware-part-2-2"></a> Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-2"></a>Standard-series (Gen5) compute generation (part 2)
 
 
 |Compute size (service objective)|HS_Gen5_16|HS_Gen5_18|HS_Gen5_20|HS_Gen5_24|HS_Gen5_32|HS_Gen5_40|HS_Gen5_80|
@@ -248,9 +248,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-## <a id="general-purpose---provisioned-compute---gen5"> </a> General purpose - provisioned compute - standard-series (Gen5)
+## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-3"></a> Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-3"></a>Standard-series (Gen5) compute generation (part 1)
 
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
@@ -279,7 +279,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-3"></a> Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-3"></a>Standard-series (Gen5) compute generation (part 2)
 
 |Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
@@ -396,9 +396,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 
-## <a id="business-critical---provisioned-compute---gen5"> </a> Business critical - provisioned compute - standard-series (Gen5)
+## <a id="business-critical---provisioned-compute---gen5"></a>Business critical - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-4"></a> Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-4"></a>Standard-series (Gen5) compute generation (part 1)
 
 
 |Compute size (service objective)|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
@@ -429,7 +429,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-4"></a> Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-4"></a>Standard-series (Gen5) compute generation (part 2)
 
 |Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:--- | --: |--: |--: |--: |---: | --: |--: |

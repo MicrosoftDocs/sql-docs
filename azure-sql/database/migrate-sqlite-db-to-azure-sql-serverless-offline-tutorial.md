@@ -108,4 +108,4 @@ Once you have followed the below steps, your database will be migrated into Azur
 ## Next steps
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
-- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---standard-series-gen5).
+- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#--general-purpose---serverless-compute---standard-series-gen5).

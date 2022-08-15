@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 Big Data Clusters CU17 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 16 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 17 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
@@ -15,12 +15,12 @@ ms.topic: conceptual
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 16 (CU17).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 17 (CU17).
 
 ## CU17 changes and new capabilities
 
    > [!WARNING]
-   > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+   > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
 For detailed SQL Server engine changes, check the [official SQL Server 2019 CU17 knowledge base article KB5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).

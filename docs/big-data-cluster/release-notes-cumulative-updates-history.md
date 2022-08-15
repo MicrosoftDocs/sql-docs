@@ -64,7 +64,7 @@ Cumulative Update 14 (CU14) release for SQL Server Big Data Clusters.
 |15.0.4188.2|[2019-CU14-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 14](release-notes-cumulative-update-14.md) |
 
 > [!WARNING]
-   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
 
 ## <a id="cu13"></a> CU13 (September 2021)
 

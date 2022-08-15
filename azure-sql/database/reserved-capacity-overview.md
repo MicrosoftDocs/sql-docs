@@ -9,8 +9,8 @@ ms.subservice: service-overview
 ms.custom:
   - "sqldbrb=2"
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

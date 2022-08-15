@@ -10,8 +10,8 @@ ms.custom:
   - "devx-track-azurecli"
   - "azure-sql-split"
 ms.topic: how-to
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/01/2022
 zone_pivot_groups: azure-sql-deployment-option-single-elastic

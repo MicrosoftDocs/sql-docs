@@ -28,7 +28,7 @@ BIT_COUNT takes one parameter and returns the number of bits set to 1 in that pa
 
 ## Syntax
 
-```sqlsyntax
+```syntaxsql
 BIT_COUNT ( expression_value )
 ```
 

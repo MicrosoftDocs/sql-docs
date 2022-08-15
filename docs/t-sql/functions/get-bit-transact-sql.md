@@ -28,7 +28,7 @@ GET_BIT takes two parameters and returns the bit in *expression_value* that is i
 
 ## Syntax
 
-```sqlsyntax
+```syntaxsql
 GET_BIT ( expression_value, bit_offset )
 ```
 

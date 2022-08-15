@@ -28,7 +28,7 @@ SET_BIT returns *expression_value* offset by the bit defined by *bit_offset*. Th
 
 ## Syntax
 
-```sqlsyntax
+```syntaxsql
 SET_BIT ( expression_value, bit_offset ) 
 SET_BIT ( expression_value, bit_offset, bit_value )
 ```

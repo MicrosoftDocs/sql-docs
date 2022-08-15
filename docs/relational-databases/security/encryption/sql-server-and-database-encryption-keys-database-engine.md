@@ -32,7 +32,7 @@ The Service Master Key can only be opened by the Windows service account under w
 
 ### Database master key
   
- The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using a symmetric key. To enable the automatic decryption of the database master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
+ The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using an asymmetric key. To enable the automatic decryption of the database master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
   
  The copy of the DMK stored in the **master** system database is silently updated whenever the DMK is changed. However, this default can be changed by using the **DROP ENCRYPTION BY SERVICE MASTER KEY** option of the **ALTER MASTER KEY** statement. A DMK that is not encrypted by the service master key must be opened by using the **OPEN MASTER KEY** statement and a password.  
   

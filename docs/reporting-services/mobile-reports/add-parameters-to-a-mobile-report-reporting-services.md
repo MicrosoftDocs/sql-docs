@@ -1,7 +1,7 @@
 ---
 title: "Add parameters to a mobile report | Reporting Services | Microsoft Docs"
 description: Reporting Services mobile report can have parameters, so report readers can filter your reports. Such a report can also be the target of a drillthrough.
-ms.date: 07/30/2018
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,13 +12,16 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add parameters to a mobile report | Reporting Services
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 You can create a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report with parameters, so you and your report readers can filter your reports. A report with parameters can also be the target of a [drillthrough from a source report](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
 
 To create a mobile report with parameters, you start with a shared dataset with at least one parameter. Read about [creating parameters in a shared dataset](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md). Mobile reports don't support null value(s) for default parameters, so make sure your parameters have default values other than null.
 
 After you add parameters to a mobile report, you create a URL to [open the report with query string parameters](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
-1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] web portal, select **New** > **Mobile Report**.  
+1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, select **New** > **Mobile Report**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      

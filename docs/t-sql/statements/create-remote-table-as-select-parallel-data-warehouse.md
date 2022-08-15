@@ -1,8 +1,8 @@
 ---
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
 description: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf
 ms.date: 08/10/2017
 ms.prod: sql

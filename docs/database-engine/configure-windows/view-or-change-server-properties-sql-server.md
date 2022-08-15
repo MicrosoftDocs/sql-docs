@@ -93,9 +93,7 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 3.  Copy and paste the following example into the query window and select **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option, its value (`value`), and whether the option is an advanced option (`is_advanced`).  
   
-    ```wmimof  
-    USE AdventureWorks2012;   
-    GO  
+    ```sql   
     SELECT name, description, value, is_advanced  
     FROM sys.configurations;   
     GO  
@@ -111,8 +109,6 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
 3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to change a server property. The example changes the value of the `fill factor` option to `100`. The server must be restarted before the change can take effect.  
   
 ```sql  
-Use AdventureWorks2012;  
-GO  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

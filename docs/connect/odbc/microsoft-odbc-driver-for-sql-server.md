@@ -2,7 +2,7 @@
 title: Microsoft ODBC Driver for SQL Server
 description: The Microsoft ODBC Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard ODBC APIs.
 ms.custom: ""
-ms.date: 07/23/2021
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -30,7 +30,7 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download ODBC driver](download-odbc-driver-for-sql-server.md)
 
 ## Documentation
 

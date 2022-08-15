@@ -55,28 +55,36 @@ When you restore a database, the service determines which full, differential, an
 
 By default, Azure SQL Managed Instance stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages impacting backup storage in the primary region and allows you to restore your instance to a different region in the event of a disaster. 
 
-The storage redundancy mechanism stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. To ensure your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention used for long-term backups (LTR). To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
+The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. Those events might include transient hardware failures, network or power outages, or massive natural disasters. 
 
-Backup storage redundancy can be configured when you create your instance, and can be updated at a later time at the instance level; the changes made to an existing instance apply to all databases on the instance, but for future backups only. After the backup storage redundancy of an existing instance is updated, it may take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy are applicable to short-term backups only - long-term retention policies inherit the redundancy option of short-term backups at the time the policy is created and the redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
+To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 
-The option to configure backup storage redundancy provides flexibility to choose one of the following storage redundancies for backups:
+You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. 
 
-- **Locally-redundant (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but isn't recommended for applications requiring high availability or durability.
+Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+You can choose one of the following storage redundancies for backups:
 
-- **Zone-redundant (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. Currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
+- **Locally-redundant (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but we don't recommend it for applications that require high availability or durability.
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.png" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+
+- **Zone-redundant (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
  
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.png" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
 
-- **Geo-redundant (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region using LRS, then copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. The result is three synchronous copies in the primary region, and three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
+- **Geo-redundant (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
+
+  The result is:
+  
+  - Three synchronous copies in the primary region.
+  - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously.
  
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.png" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
-- **Geo-zone-redundant (GZRS)**:  Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region and is also replicated to a secondary geographic region for protection from regional disasters, where you also have three synchronous copies that were copied over from the primary region to the secondary region asynchronously. 
+- **Geo-zone-redundant (GZRS)**:  Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS account is copied across three Azure availability zones in the primary region. The data is also replicated to a secondary geographic region for protection from regional disasters. In that region, you also have three synchronous copies that were copied over from the primary region to the secondary region asynchronously. 
 
-   :::image type="content" source="media/automated-backups-overview/multi-paired-gzrs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
-
+   :::image type="content" source="media/automated-backups-overview/multi-paired-gzrs.png" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
 
 > [!WARNING]

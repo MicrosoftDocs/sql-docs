@@ -18,14 +18,14 @@ ms.author: mathoma
 
 # Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], and [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] prevent Windows Server failover clusters from performing in-place operating system upgrades, capping the allowed version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for a cluster. Once the cluster is upgraded to at least [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], the cluster can remain up-to-date.
+[!INCLUDE[winserver2008-md](../../../includes/winserver2008-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], and [!INCLUDE[winserver2012-md](../../../includes/winserver2012-md.md)] prevent Windows Server failover clusters from performing in-place operating system upgrades, capping the allowed version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for a cluster. Once the cluster is upgraded to at least [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)], the cluster can remain up-to-date.
 
 ## Prerequisites
 
 -   Prior to performing any of the migration strategies, a parallel Windows Server failover cluster with Windows Server 2016/2012 R2 must be prepared. All nodes comprising [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances (FCIs) must be joined to the Windows cluster with the parallel FCIs installed. Any standalone machines **must not** be joined to the Windows Server failover cluster prior to migration. User databases should be synchronized on the new environment prior to migration.
 -   All destination instances must be running the same version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as their parallel instance in the original environment, with the same instance names and IDs, and installed with the same features. Installation paths and directory structure should be identical on the destination machines. This does not include FCI virtual network names, which must be different prior to migration. Any features enabled by the original instance (Always On, FILESTREAM, etc.) should be enabled on the destination instance.
 
--   The parallel cluster should have no [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] installed prior to migration.
+-   The parallel cluster should have no [!INCLUDE[sshadr-md](../../../includes/sshadr-md.md)] installed prior to migration.
 
 -   Downtime when migrating a cluster that uses strictly Availability Groups (with or without SQL FCIs) can be greatly limited by using Distributed Availability Groups, but this does require that all instances run [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] RTM (or above) versions.
 
@@ -40,7 +40,7 @@ ms.author: mathoma
 
 ## Migration scenarios
 
-The proper migration strategy depends on certain parameters of the original [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster topology, namely the usage of [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] and SQL failover cluster instances. The chosen strategy also depends on the requirements of the destination environment. If the new environment requires that each machine or SQL FCI maintains the original virtual network name (VNN), or if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] topology depends on the new instances inheriting all the system objects of the original instances, we must choose a strategy that migrates these.
+The proper migration strategy depends on certain parameters of the original [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster topology, namely the usage of [!INCLUDE[sshadr-md](../../../includes/sshadr-md.md)] and SQL failover cluster instances. The chosen strategy also depends on the requirements of the destination environment. If the new environment requires that each machine or SQL FCI maintains the original virtual network name (VNN), or if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] topology depends on the new instances inheriting all the system objects of the original instances, we must choose a strategy that migrates these.
 
 |                                   | Requires all server objects and VNNS | Requires all server objects and VNNS | Does not require server objects/VNNS\* | Does not require server objects/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
@@ -239,7 +239,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
 ## Specific concerns for individual features
 
-### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
+### [!INCLUDE[sshadr-md](../../../includes/sshadr-md.md)]
 
 -   **Database mirroring endpoint**
 

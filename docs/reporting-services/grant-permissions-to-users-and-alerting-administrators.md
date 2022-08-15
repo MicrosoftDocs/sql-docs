@@ -46,7 +46,7 @@ To learn more about SharePoint permissions, see [User permissions and permission
   
     -   If you selected **Grant users permissions directly**, select a permission level.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 ## See Also
 

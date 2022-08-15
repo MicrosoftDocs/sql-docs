@@ -25,7 +25,7 @@ ms.author: "mathoma"
  For an overview of the entire configuration process, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
+>  Make sure that your application uses only [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
   
  To use Web synchronization, you must configure IIS by completing the following steps. Each step is described in detail in this topic.  
   

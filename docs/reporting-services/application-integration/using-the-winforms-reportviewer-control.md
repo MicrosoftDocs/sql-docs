@@ -161,7 +161,7 @@ End Class
      If Solution Explorer is not visible, you can open it from the **View** menu by selecting **Solution Explorer**.  
   
     > [!NOTE]  
-    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)].  
   
 6.  After the report has been renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   

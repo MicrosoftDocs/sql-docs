@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Troubleshoot  Reporting Services Report Issues
-This topic helps you troubleshoot problems with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report design, previewing a report, publishing a report to a report server in native mode or SharePoint mode, viewing a report on the report server, or exporting a report to a different file format.  
+This topic helps you troubleshoot problems with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report design, previewing a report, publishing a report to a report server in native mode or SharePoint mode, viewing a report on the report server, or exporting a report to a different file format.  
 ## Monitor Report Servers  
 You can use system and database tools to monitor report server activity. You can also view report server trace log files, or query the report server execution log for detailed information about specific reports. If you are using Performance Monitor, you can add performance counters for the Report Server Web service and Windows service to identity bottlenecks in on-demand or scheduled processing.  
 For more information, see [Monitoring Report Server Performance](../report-server/monitoring-report-server-performance.md).  
   
   
 ## View the Report Server Logs  
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] records many internal and external events to log files that record data about specific reports, debugging information, HTTP requests and responses, and report server events. You can also create performance logs and select performance counters that specify which data to collect. The default directory for log files for a default installation is `<drive>\Program Files\Microsoft SQL Server\MSRS130.MSSQLSERVER\Reporting Services\LogFiles`.   
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] records many internal and external events to log files that record data about specific reports, debugging information, HTTP requests and responses, and report server events. You can also create performance logs and select performance counters that specify which data to collect. The default directory for log files for a default installation is `<drive>\Program Files\Microsoft SQL Server\MSRS130.MSSQLSERVER\Reporting Services\LogFiles`.   
   
 For more information, see [Reporting Services log files and sources](../report-server/reporting-services-log-files-and-sources.md).  
   
@@ -31,8 +31,8 @@ When you view a published report in Report Manager, you might see an error messa
   
 To view the call stack, log on to the report server by using the local administrator credentials, right-click the Report Manager page, and then click **View Source**. The call stack provides detailed context for the error message.  
   
-## Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to Verify Queries and Credentials  
-You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to validate complex queries before you include them in your report.   
+## Use [!INCLUDE[ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] to Verify Queries and Credentials  
+You can use [!INCLUDE[ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] to validate complex queries before you include them in your report.   
   
 For more information, see [Database Engine query editor](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) and [Manage Objects by using Object Explorer](../../ssms/object/manage-objects-by-using-object-explorer.md).  
   

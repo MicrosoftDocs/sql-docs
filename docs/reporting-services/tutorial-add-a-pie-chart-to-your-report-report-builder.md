@@ -118,7 +118,7 @@ On each slice of the pie, you can display a percentage for this slice compared t
     > [!NOTE]  
     > **Number Format** in the **Series Label Properties** dialog box has no effect when you format percentages. This formats the labels as percentages, but does not calculate the percentage of the pie that each slice represents.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Click **Run** to preview the report.  
   

@@ -38,20 +38,22 @@ It is recommended that you enable HTTPS in Reporting Services if you enable basi
   
 If you need to use a self-signed certificate for development or evaluation purposes, you can export the certificate from the report server and install it on the mobile device. Please refer to your device documentation on how to install it on that device.  
   
-For more information on enabling TLS, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
-  
+For more information on enabling TLS, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).
+
 <a name="firewall"/>
-  
-## Review firewall settings  
+
+## Review firewall settings
 It is recommended that you review your firewall settings to ensure that all devices can connect successfully to Reporting Services.   
-  
+
 For more information on how to configure the Windows Firewall, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
-  
-## See also  
-  
+
+## See also
+
 [Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+
+
   
   
   

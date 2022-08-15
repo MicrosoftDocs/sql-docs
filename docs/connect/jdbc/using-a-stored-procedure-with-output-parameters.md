@@ -35,7 +35,7 @@ When you pass a value to the registerOutParameter method for an OUT parameter, y
 > [!NOTE]  
 > The JDBC driver does not support the use of CURSOR, SQLVARIANT, TABLE, and TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types as OUT parameters.
 
-As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
+As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database:
 
 ```sql
 CREATE PROCEDURE GetImmediateManager  
@@ -51,7 +51,7 @@ END
 
 This stored procedure returns a single OUT parameter (managerID), which is an integer, based on the specified IN parameter (employeeID), which is also an integer. The value that is returned in the OUT parameter is the ManagerID based on the EmployeeID that is contained in the HumanResources.Employee table.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the GetImmediateManager stored procedure:
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the GetImmediateManager stored procedure:
 
 ```java
 public static void executeStoredProcedure(Connection con) throws SQLException {  

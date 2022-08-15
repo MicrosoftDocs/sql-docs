@@ -166,7 +166,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |datetimeoffset|-9|-155|  
   
 ## Example  
- The following example demonstrates how to use the getColumns method to return information for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getColumns method to return information for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 import java.sql.*;  

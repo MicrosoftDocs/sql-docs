@@ -47,8 +47,8 @@ The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an 
 
 ## Download the latest version of bcp Utility
 
-**[![Download bcp for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
-<br>**[![Download bcp for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 

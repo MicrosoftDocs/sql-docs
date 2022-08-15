@@ -21,7 +21,7 @@ For the latest release notes, see [SQL Server 2019 Big Data Clusters platform re
 
 ## <a id="cu17"></a> CU17 (August 2022)
 
-Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters. Updated to Kubernetes version 1.23.1.
+Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters, [KB 5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
@@ -29,7 +29,7 @@ Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters. Updat
 
 ## <a id="cu16"></a> CU16 GDR (June 2022)
 
-Cumulative Update 16 (CU16) GDR release for SQL Server 2019 Big Data Clusters, [KB 5016394](https://support.microsoft.com/en-us/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
+Cumulative Update 16 (CU16) GDR release for SQL Server 2019 Big Data Clusters
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |

@@ -88,7 +88,9 @@ You can choose one of the following storage redundancies for backups:
 
 
 > [!WARNING]
-> [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
+> - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
+> - The storage redundancy diagrams all show regions with multiple availability zones (multi-az). However, there are some regions which provide only a single availability zone and do not support ZRS or GZRS. 
+
 
 ## Backup usage
 

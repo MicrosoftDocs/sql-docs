@@ -1,26 +1,24 @@
 ---
-description: "sys.query_context_settings (Transact-SQL)"
-title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.query_context_settings (Transact-SQL)"
+description: sys.query_context_settings (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/29/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "QUERY_CONTEXT_SETTINGS_TSQL"
   - "SYS.QUERY_CONTEXT_SETTINGS_TSQL"
   - "SYS.QUERY_CONTEXT_SETTINGS"
   - "QUERY_CONTEXT_SETTINGS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_context_settings catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_context_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

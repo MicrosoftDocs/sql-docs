@@ -1,15 +1,15 @@
 ---
 title: Import or export an Azure SQL Database using Private link
 description: Import or export an Azure SQL Database using Private Link without allowing Azure services to access the server.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: migration
-ms.custom: sqldbrb=1
-ms.devlang:
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: how-to
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: 
 ms.date: 2/16/2022
 ---
 # Import or export an Azure SQL Database using Private Link without allowing Azure services to access the server

@@ -1,16 +1,18 @@
 ---
-title: Virtual network endpoints and rules for databases in Azure SQL Database
-description: "Mark a subnet as a virtual network service endpoint. Then add the endpoint as a virtual network rule to the ACL for your database. Your database then accepts communication from all virtual machines and other nodes on the subnet."
-services: sql-database
+title: Virtual network endpoints and rules for databases 
+description: Mark a subnet as a virtual network service endpoint. Then add the endpoint as a virtual network rule to the ACL for your database. Your database then accepts communication from all virtual machines and other nodes on the subnet.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
-ms.custom: sqldbrb=1, subject-rbac-steps
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "subject-rbac-steps"
 ms.topic: how-to
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, vanto, genemi, mathoma
-ms.date: 12/06/2021
+ms.reviewer: wiassaf, vanto, genemi, mathoma
+ms.date: 07/14/2021
 ---
 # Use virtual network service endpoints and rules for servers in Azure SQL Database
 
@@ -140,7 +142,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
     | Assign access to | User, group, or service principal |
     | Members | Server or workspace hosting your dedicated SQL pool that you've registered with Azure AD |
 
-    ![Screenshot that shows Add role assignment page in Azure portal.](../includes/role-based-access-control/media/add-role-assignment-page.png)
+    :::image type="content" source="../includes/role-based-access-control/media/add-role-assignment-page.png" alt-text="Screenshot that shows Add role assignment page in Azure portal.":::
 
    > [!NOTE]
    > Only members with Owner privilege on the storage account can perform this step. For various Azure built-in roles, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
@@ -179,7 +181,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 
 Azure SQL auditing can write SQL audit logs to your own storage account. If this storage account uses the virtual network service endpoints feature, see how to [write audit to a storage account behind VNet and firewall](./audit-write-storage-account-behind-vnet-firewall.md).
 
-## Add a virtual network firewall rule to your Azure SQL server
+## Add a virtual network firewall rule to your server
 
 Long ago, before this feature was enhanced, you were required to turn on virtual network service endpoints before you could implement a live virtual network rule in the firewall. The endpoints related a given virtual network subnet to a database in SQL Database. As of January 2018, you can circumvent this requirement by setting the **IgnoreMissingVNetServiceEndpoint** flag. Now, you can add a virtual network firewall rule to your server without turning on virtual network service endpoints.
 
@@ -214,18 +216,10 @@ You must already have a subnet that's tagged with the particular virtual network
 
 1. Sign in to the [Azure portal][http-azure-portal-link-ref-477t].
 
-1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Firewalls and virtual networks**.
+1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Networking**.
+1. Under the **Public access** tab, ensure **Public network access** is set to **Select networks**, otherwise the **Virtual networks** settings are hidden. Select **+ Add existing virtual network** in the **Virtual networks** section.
 
-    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Azure SQL logical server properties, Firewalls and Virtual Networks highlighted" lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
-
-1. Set **Allow Azure services and resources to access this server** to **No**.
-
-    > [!IMPORTANT]
-    > If you leave the control set to **ON**, your server accepts communication from any subnet inside the Azure boundary. That is communication that originates from one of the IP addresses that's recognized as those within ranges defined for Azure datacenters. Leaving the control set to **ON** might be excessive access from a security point of view. The Microsoft Azure Virtual Network service endpoint feature in coordination with the virtual network rules feature of SQL Database together can reduce your security surface area.
-
-1. Select **+ Add existing virtual network** in the **Virtual networks** section.
-
-    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png" alt-text="Screenshot that shows selecting + Add existing (subnet endpoint, as a SQL rule)." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Screenshot that shows logical server properties for Networking." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
 
 1. In the new **Create/Update** pane, fill in the boxes with the names of your Azure resources.
 
@@ -234,11 +228,18 @@ You must already have a subnet that's tagged with the particular virtual network
 
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png" alt-text="Screenshot that shows filling in boxes for the new rule." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png":::
 
-1. Select the **OK** button near the bottom of the pane.
-
 1. See the resulting virtual network rule on the **Firewall** pane.
 
+
     :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png" alt-text="Screenshot that shows the new rule on the Firewall pane." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png":::
+
+1. Set **Allow Azure services and resources to access this server** to **No**.
+
+    > [!IMPORTANT]
+    > If you leave **Allow Azure services and resources to access this server** checked, your server accepts communication from any subnet inside the Azure boundary. That is communication that originates from one of the IP addresses that's recognized as those within ranges defined for Azure datacenters. Leaving the control enabled might be excessive access from a security point of view. The Microsoft Azure Virtual Network service endpoint feature in coordination with the virtual network rules feature of SQL Database together can reduce your security surface area.
+
+1. Select the **OK** button near the bottom of the pane.
+
 
 > [!NOTE]
 > The following statuses or states apply to the rules:

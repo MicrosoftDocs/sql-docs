@@ -1,19 +1,15 @@
 ---
+title: "Operation of Parameterized Commands"
 description: "Operation of Parameterized Commands"
-title: "Operation of Parameterized Commands | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data shaping [ADO], parameterized commands"
-  - "parameterized commands [ADO]"
-ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data shaping [ADO], parameterized commands"
+  - "parameterized commands [ADO]"
 ---
 # Operation of Parameterized Commands
 If you are working with a large child **Recordset**, especially compared to the size of the parent **Recordset**, but need to access only a few child chapters, you might find it more efficient to use a parameterized command.  

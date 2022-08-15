@@ -1,22 +1,18 @@
 ---
+title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)"
 description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)"
-title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MoveLast method [RDS]"
   - "MovePrevious method [RDS]"
   - "MoveFirst method [RDS]"
   - "MoveNext method [RDS]"
-ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)
 Moves to the first, last, next, or previous record in a specified [Recordset](../ado-api/recordset-object-ado.md) object.  

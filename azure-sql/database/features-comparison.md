@@ -1,18 +1,17 @@
 ---
-title: Compare the database engine features of SQL Database and SQL Managed Instance 
-titleSuffix: Azure SQL Database & SQL Managed Instance 
+title: Compare the database engine features of SQL Database and SQL Managed Instance
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: This article compares the database engine features of Azure SQL Database and Azure SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: service-overview
-ms.custom: 
-ms.devlang: 
 ms.topic: conceptual
 author: danimir
 ms.author: danil
-ms.reviewer: kendralittle, bonova, mathoma, danil
+ms.reviewer: wiassaf, bonova, mathoma, danil
 ms.date: 12/14/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Features comparison: Azure SQL Database and Azure SQL Managed Instance
@@ -76,7 +75,7 @@ The following table lists the major features of SQL Server and provides informat
 | [Functions](/sql/t-sql/functions/functions) | Most - see individual functions | Yes - see [Stored procedures, functions, triggers differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#stored-procedures-functions-and-triggers) |
 | [In-memory optimization](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization) | Yes in [Premium and Business Critical service tiers](../in-memory-oltp-overview.md).</br> Limited support for non-persistent In-Memory OLTP objects such as memory-optimized table variables in [Hyperscale service tier](service-tier-hyperscale.md).| Yes in [Business Critical service tier](../managed-instance/sql-managed-instance-paas-overview.md) |
 | [Language elements](/sql/t-sql/language-elements/language-elements-transact-sql) | Most - see individual elements |  Yes - see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
-| [Ledger](ledger-overview.md) | Yes | No |
+| [Ledger](/sql/relational-databases/security/ledger/ledger-overview) | Yes | No |
 | [Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) | No - see [Elastic query](elastic-query-horizontal-partitioning.md) | Yes. Only to [SQL Server and SQL Database](../managed-instance/transact-sql-tsql-differences-sql-server.md#linked-servers) without distributed transactions. |
 | [Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) that read from files (CSV, Excel)| No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) as an alternative for CSV format. | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) as an alternative for CSV format. Track these requests on [SQL Managed Instance feedback item](https://feedback.azure.com/d365community/idea/db80cf6e-3425-ec11-b6e6-000d3a4f0f84)|
 | [Log shipping](/sql/database-engine/log-shipping/about-log-shipping-sql-server) | [High availability](high-availability-sla.md) is included with every database. Disaster recovery is discussed in [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md). | Natively built in as a part of [Azure Data Migration Service (DMS)](/azure/dms/tutorial-sql-server-to-managed-instance) migration process. Natively built for custom data migration projects as an external [Log Replay Service (LRS)](../managed-instance/log-replay-service-migrate.md).<br /> Not available as High availability solution, because other [High availability](high-availability-sla.md) methods are included with every database and it is not recommended to use Log-shipping as HA alternative. Disaster recovery is discussed in [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md). Not available as a replication mechanism between databases - use secondary replicas on [Business Critical tier](service-tier-business-critical.md), [auto-failover groups](auto-failover-group-sql-db.md), or [transactional replication](../managed-instance/replication-transactional-overview.md) as the alternatives. |

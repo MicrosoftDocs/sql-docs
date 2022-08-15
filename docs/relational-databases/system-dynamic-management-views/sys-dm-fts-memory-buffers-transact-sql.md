@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_fts_memory_buffers returns information about memory buffers belonging to a specific memory pool that are used as part of a full-text crawl or a full-text crawl range.  "
 title: "sys.dm_fts_memory_buffers (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_fts_memory_buffers returns information about memory buffers belonging to a specific memory pool that are used as part of a full-text crawl or a full-text crawl range.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 06/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_fts_memory_buffers"
   - "dm_fts_memory_buffers_TSQL"
   - "dm_fts_memory_buffers"
   - "sys.dm_fts_memory_buffers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_memory_buffers dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_memory_buffers (Transact-SQL)
@@ -27,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Returns information about memory buffers belonging to a specific memory pool that are used as part of a full-text crawl or a full-text crawl range.  
   
 > [!NOTE]
-> The following column will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `row_count`. Avoid using this column in new development work, and plan to modify applications that currently use it.  
+> The following column will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `row_count`. Avoid using this column in new development work, and plan to modify applications that currently use it.  
 
   
 |Column|Data type|Description|  

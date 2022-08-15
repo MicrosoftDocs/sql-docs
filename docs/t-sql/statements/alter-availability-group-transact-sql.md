@@ -1,28 +1,26 @@
 ---
-description: "ALTER AVAILABILITY GROUP (Transact-SQL)"
-title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AVAILABILITY GROUP (Transact-SQL)"
+description: ALTER AVAILABILITY GROUP (Transact-SQL)
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "01/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_AVAILABILITY_GROUP_TSQL"
   - "ALTER_AVAILABILITY_TSQL"
   - "ALTER AVAILABILITY GROUP"
   - "ALTER AVAILABILITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "ALTER AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
+dev_langs:
+  - "TSQL"
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

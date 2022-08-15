@@ -1,16 +1,17 @@
 ---
 title: "CREATE DATABASE (Transact-SQL)"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-ms.custom:
-- references_regions
-- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/01/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom:
+  - "references_regions"
+  - "event-tier1-build-2022"
+f1_keywords:
   - "DATABASE_TSQL"
   - "DATABASE"
   - "CONTAINMENT_TSQL"
@@ -19,9 +20,7 @@ f1_keywords:
   - "CONTAINS_FILESTREAM_TSQL"
   - "CONTAINS FILESTREAM"
   - "CONTAINMENT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "snapshots [SQL Server database snapshots], creating"
   - "databases [SQL Server], creating"
   - "model database [SQL Server], database creation"
@@ -35,8 +34,8 @@ helpviewer_keywords:
   - "database creation [SQL Server], CREATE DATABASE statement"
   - "moving databases"
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
 ---
 # CREATE DATABASE
@@ -285,7 +284,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
 #### **LEDGER = {ON | OFF}**
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### CREATE DATABASE ... FOR ATTACH [ WITH \< attach_database_option > ]
 
@@ -1026,7 +1025,7 @@ Specifies how the point-in-time restore and long-term retention backups for a da
 
 #### LEDGER = {ON | OFF}
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.

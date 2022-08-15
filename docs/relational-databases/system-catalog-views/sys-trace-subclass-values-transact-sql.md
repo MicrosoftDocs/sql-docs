@@ -1,25 +1,23 @@
 ---
-description: "sys.trace_subclass_values (Transact-SQL)"
-title: "sys.trace_subclass_values (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trace_subclass_values (Transact-SQL)"
+description: sys.trace_subclass_values (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.trace_subclass_values"
   - "trace_subclass_values_TSQL"
   - "sys.trace_subclass_values_TSQL"
   - "trace_subclass_values"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trace_subclass_values catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

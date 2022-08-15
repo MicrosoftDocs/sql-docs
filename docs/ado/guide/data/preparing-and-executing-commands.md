@@ -1,18 +1,14 @@
 ---
+title: "Preparing and Executing Commands"
 description: "Preparing and Executing Commands"
-title: "Preparing and Executing Commands | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Command object [ADO], preparing and executing commands"
-ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Command object [ADO], preparing and executing commands"
 ---
 # Preparing and Executing Commands
 Commands are instructions issued to a provider to perform some operations against the underlying data source. An SQL statement, for example, is a command to the Microsoft SQL Data Provider. In ADO, commands are typically represented by **Command** objects, although simple commands can also be issued through **Connection** or **Recordset** objects.  

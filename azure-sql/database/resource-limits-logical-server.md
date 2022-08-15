@@ -1,15 +1,14 @@
 ---
 title: Resource management in Azure SQL Database
 description: This article provides an overview of resource management in Azure SQL Database with information about what happens when resource limits are reached.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom:
-ms.devlang: 
 ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/31/2022
 ---
 

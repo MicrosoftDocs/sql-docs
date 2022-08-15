@@ -1,14 +1,16 @@
 ---
 title: Migrate from DTU to vCore
 description: Migrate a database in Azure SQL Database from the DTU model to the vCore model. Migrating to vCore is similar to upgrading or downgrading between the standard and premium tiers.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - "sqldbrb=1"
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, moslake
+ms.reviewer: wiassaf, mathoma, moslake
 ms.date: 05/10/2022
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
@@ -175,13 +177,13 @@ The following table provides guidance for specific migration scenarios:
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
 |Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Premium|Business critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Standard|Business critical|Upgrade|Must migrate secondary first|
-|Business critical|Standard|Downgrade|Must migrate primary first|
+|Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|Business Critical|Upgrade|Must migrate secondary first|
+|Business Critical|Standard|Downgrade|Must migrate primary first|
 |Premium|General purpose|Downgrade|Must migrate primary first|
 |General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business critical|Upgrade|Must migrate secondary first|
+|Business Critical|General purpose|Downgrade|Must migrate primary first|
+|General purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

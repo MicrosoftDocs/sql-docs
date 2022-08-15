@@ -1,15 +1,19 @@
 ---
 title: IP firewall rules
 description: Configure server-level IP firewall rules for a database in Azure SQL Database or Azure Synapse Analytics firewall. Manage access and configure database-level IP firewall rules for SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/09/2022
 ---
 # Azure SQL Database and Azure Synapse IP firewall rules
@@ -123,7 +127,7 @@ You create the first server-level firewall setting by using the [Azure portal](h
 To improve performance, server-level IP firewall rules are temporarily cached at the database level. To refresh the cache, see [DBCC FLUSHAUTHCACHE](/sql/t-sql/database-console-commands/dbcc-flushauthcache-transact-sql).
 
 > [!TIP]
-> You can use [Database Auditing](/azure/azure-sql/database/auditing-overview) to audit server-level and database-level firewall changes.
+> You can use [Database Auditing](./auditing-overview.md) to audit server-level and database-level firewall changes.
 
 ### Use the Azure portal to manage server-level IP firewall rules
 

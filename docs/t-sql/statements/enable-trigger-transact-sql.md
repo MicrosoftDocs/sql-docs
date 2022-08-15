@@ -1,31 +1,29 @@
 ---
-description: "ENABLE TRIGGER (Transact-SQL)"
-title: "ENABLE TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ENABLE TRIGGER (Transact-SQL)"
+description: ENABLE TRIGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ENABLE TRIGGER"
   - "ENABLE_TSQL"
   - "ENABLE_TRIGGER_TSQL"
   - "ENABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DDL triggers, enabling"
   - "triggers [SQL Server], enabling"
   - "DML triggers, enabling"
   - "ENABLE TRIGGER statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Enables a DML, DDL, or logon trigger.  
   

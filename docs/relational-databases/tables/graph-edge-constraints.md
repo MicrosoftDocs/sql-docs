@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 ---
 # Edge constraints
 
-[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
@@ -82,15 +82,15 @@ Cascading actions on an edge constraint let users define the actions that the da
 The database engine raises an error when you try to delete a node that has connecting edge(s).
 
 *CASCADE*
-When a node is delete from the database, connecting edge(s) are deleted.
+When a node is deleted from the database, connecting edge(s) are deleted.
 
 ## Working with edge constraints
 
-You can define a edge constraint in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. An edge constraint can be defined on a graph edge table only. To create, delete, or modify an edge constraint, you must have **ALTER** permission on the table.
+You can define an edge constraint in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. An edge constraint can be defined on a graph edge table only. To create, delete, or modify an edge constraint, you must have **ALTER** permission on the table.
 
 ### Create edge constraints
 
-The following examples show you how to create an edge constraints on new or existing tables
+The following examples show you how to create an edge constraint on new or existing tables.
 
 #### To create an edge constraint on a new edge table
 
@@ -156,7 +156,7 @@ The following example uses ALTER TABLE to add an edge constraint to the **bought
 -- CREATE node and edge tables
 CREATE TABLE Customer
    (
-      ID INTEGER PRIMARY KEY,
+      ID INTEGER PRIMARY KEY
       , CustomerName VARCHAR(100)
    )
    AS NODE;

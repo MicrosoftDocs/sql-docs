@@ -1,21 +1,17 @@
 ---
+title: "Examining Data"
 description: "Examining Data"
-title: "Examining Data | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "retrieving data [ADO]"
   - "examining data [ADO]"
   - "data retrieval [ADO]"
   - "ADO, examining data"
-ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-author: rothja
-ms.author: jroth
 ---
 # Examining Data
 The [Getting Data](./getting-data.md) section explained how to retrieve data from a data source as one or more **Recordset** objects. This section will discuss **Recordset** in more detail, including how to navigate through the **Recordset** and view its data.  

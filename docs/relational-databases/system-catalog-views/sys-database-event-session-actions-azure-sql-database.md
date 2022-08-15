@@ -1,19 +1,17 @@
 ---
-description: "sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.database_event_session_actions"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.custom: ""
+description: sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)
@@ -49,5 +47,5 @@ This view has the following relationship cardinalities.
 Learn more about related concepts in the following articles:
 
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitoring Microsoft Azure SQL Database performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events overview (SQL Server and Azure SQL Managed Instance)](../extended-events/extended-events.md)

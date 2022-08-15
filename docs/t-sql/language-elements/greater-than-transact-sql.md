@@ -11,11 +11,7 @@ ms.technology: t-sql
 ms.topic: reference
 ms.custom: ""
 f1_keywords:
-  - "Greater"
-  - "Than"
-  - "> (Greater Than)"
   - ">_TSQL"
-  - "Greater Than"
   - ">"
 helpviewer_keywords:
   - "greater than operator (>)"

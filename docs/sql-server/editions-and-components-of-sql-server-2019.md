@@ -2,7 +2,7 @@
 description: "Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
 title: "Editions and supported features of SQL Server 2019"
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -33,7 +33,7 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">= sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ---
 # Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
@@ -57,7 +57,7 @@ For the latest release notes and what's new information, see the following:
 * [[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
 * [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
 
@@ -195,7 +195,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
 |In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
-|Stretch database|Yes|Yes|Yes|Yes|Yes|
+|Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|
 |Data compression|Yes|Yes|Yes|Yes|Yes|

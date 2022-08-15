@@ -2,17 +2,22 @@
 title: Use .NET Core to connect and query a database
 description: This topic shows you how to use .NET Core to create a program that connects to a database in Azure SQL Database, or Azure SQL Managed Instance, and queries it using Transact-SQL statements.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: sqldbrb=2, devx-track-csharp, mode-other
-ms.devlang: csharp
+ms.custom:
+  - "sqldbrb=2"
+  - "devx-track-csharp"
+  - "mode-other"
+ms.devlang:
+  - "csharp"
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/29/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use .NET Core (C#) to query a database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]
@@ -20,7 +25,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 In this quickstart, you'll use [.NET Core](https://dotnet.microsoft.com) and C# code to connect to a database. You'll then run a Transact-SQL statement to query data.
 
 > [!TIP]
-> The following Microsoft Learn module helps you learn for free how to [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/)
+> This free Learn module shows you how to [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/)
 
 ## Prerequisites
 

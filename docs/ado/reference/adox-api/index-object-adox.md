@@ -1,21 +1,16 @@
 ---
+title: "Index Object (ADOX)"
 description: "Index Object (ADOX)"
-title: "Index Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Index"
-helpviewer_keywords: 
-  - "Index object [ADOX]"
-ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "Index object [ADOX]"
+apitype: "COM"
 ---
 # Index Object (ADOX)
 Represents an index from a database table.  

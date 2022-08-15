@@ -1,17 +1,20 @@
 ---
 title: Import a BACPAC file to create a database in Azure SQL Database
 description: Create a new database in Azure SQL Database or Azure SQL Managed Instance from a BACPAC file.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: backup-restore
-ms.custom: sqldbrb=1, devx-track-azurepowershell, mode-api
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "mode-api"
 ms.topic: quickstart
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 10/29/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Import a BACPAC file to a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -26,6 +29,7 @@ You can import a SQL Server database into Azure SQL Database or SQL Managed Inst
 
 > [!NOTE]
 > [Import and Export using Private Link](database-import-export-private-link.md) is in preview.
+> Import functionality on Azure SQL Hyperscale databases is now in preview.
 
 ## Using Azure portal
 

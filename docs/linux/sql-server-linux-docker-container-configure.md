@@ -42,6 +42,9 @@ The first option is to mount a directory on your host as a data volume in your c
 > [!NOTE]
 > SQL Server 2019 containers automatically start up as non-root, while SQL Server 2017 containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
@@ -169,7 +172,7 @@ Virtual Device Interface (VDI) backup and restore operations are now supported i
 1.	When deploying SQL Server containers, use the `--shm-size` option. To begin, set the sizing to 1 GB, as shown in the sample command below:
 
    ```bash
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Mystr0ngP@ssw0rd!" --shm-size 1g  -p 1433:1433 --name sql19 --hostname sql19 -d mcr.microsoft.com/mssql/server:2019-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Mystr0ngP@ssw0rd!" --shm-size 1g  -p 1433:1433 --name sql19 --hostname sql19 -d mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    The option `--shm-size` allows you to configure the size of the shared memory directory (`/dev/shm`) inside the container, which is set to 64 MB by default. This default size of the shared memory is insufficient to support VDI backups. We recommend that you configure this to a minimum of 1 GB when you deploy SQL Server containers and want to support VDI backups.
@@ -241,7 +244,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 
 ## <a id="tz"></a> Configure the time zone
 
-To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable. To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
+To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable (see [Configure the time zone on Linux](sql-server-linux-configure-time-zone.md) for more information). To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
 
 ```command
 tzselect
@@ -274,7 +277,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'A_PASSWORD=<YourStrong!Passw0rd>' \
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
 -p 1433:1433 --name sql1 `
 -e "TZ=America/Los_Angeles" `
 -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -283,7 +286,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
 -p 1433:1433 --name sql1 ^
 -e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -413,19 +416,19 @@ Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker 
 
 ::: zone pivot="cs1-bash"
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
@@ -436,19 +439,19 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 
 ::: zone pivot="cs1-bash"
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
@@ -461,7 +464,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 - [Dockerfile example with Full-Text Search](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-agent-fts-ha-tools/Dockerfile)
 - [Dockerfile example for RHEL 7 and SQL Server 2019](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel7-sql2019)
 - [Dockerfile example for RHEL 8 and SQL Server 2017](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel8-sql2017)
-- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, Polybase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
+- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, PolyBase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 

@@ -47,7 +47,7 @@ To install the Azure SQL migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Azure SQL migration extension":::
 
-6. You can connect to the SQL Server instance in Azure Data Studio. Right-select the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
+6. You can connect to the SQL Server instance in Azure Data Studio. Right-click the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.png" alt-text="Landing page":::
 

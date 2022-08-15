@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_sql_requests (Transact-SQL)"
-title: "sys.dm_pdw_sql_requests (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_sql_requests (Transact-SQL)"
+description: sys.dm_pdw_sql_requests (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

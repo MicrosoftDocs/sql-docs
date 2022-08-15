@@ -1,15 +1,18 @@
 ---
 title: "Tutorial: Add an elastic pool to a failover group"
-description: Add an Azure SQL Database elastic pool to a failover group using the Azure portal, PowerShell, or Azure CLI.  
-services: sql-database
+description: Add an Azure SQL Database elastic pool to a failover group using the Azure portal, PowerShell, or Azure CLI.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: seo-lt-2019 sqldbrb=1, devx-track-azurecli
+ms.custom:
+  - "seo-lt-2019 sqldbrb=1"
+  - "devx-track-azurecli"
 ms.topic: tutorial
 author: rajeshsetlem
 ms.author: rsetlem
-ms.reviewer: kendralittle, mathoma
-ms.date: 01/26/2022 
+ms.reviewer: wiassaf, mathoma
+ms.date: 01/26/2022
 ---
 # Tutorial: Add an Azure SQL Database elastic pool to a failover group
 

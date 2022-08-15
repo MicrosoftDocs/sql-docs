@@ -1,27 +1,25 @@
 ---
-description: "GRANT Full-Text Permissions (Transact-SQL)"
-title: "GRANT Full-Text Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Full-Text Permissions (Transact-SQL)"
+description: GRANT Full-Text Permissions (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], full-text"
   - "full-text search [SQL Server], permissions"
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
   - "GRANT statement, full-text permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on a full-text catalog or full-text stoplist.  
   

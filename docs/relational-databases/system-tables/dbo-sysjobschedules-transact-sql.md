@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysjobschedules (Transact-SQL)"
-title: "dbo.sysjobschedules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysjobschedules (Transact-SQL)"
+description: dbo.sysjobschedules (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysjobschedules"
   - "dbo.sysjobschedules"
   - "dbo.sysjobschedules_TSQL"
   - "sysjobschedules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysjobschedules system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-author: rothja
-ms.author: jroth
 ---
 # dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

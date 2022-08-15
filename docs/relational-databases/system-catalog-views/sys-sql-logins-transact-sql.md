@@ -1,25 +1,23 @@
 ---
-description: "sys.sql_logins (Transact-SQL)"
-title: "sys.sql_logins (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.sql_logins (Transact-SQL)"
+description: sys.sql_logins (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sql_logins_TSQL"
   - "sql_logins_TSQL"
   - "sys.sql_logins"
   - "sql_logins"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sql_logins catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_logins (Transact-SQL)

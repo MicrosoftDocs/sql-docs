@@ -16,13 +16,13 @@ helpviewer_keywords:
   - "hierarchyid [Database Engine]"
   - "hierarchical queries [SQL Server], using hierarchyid data type"
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-author: rothja
-ms.author: jroth
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hierarchical Data (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The built-in **hierarchyid** data type makes it easier to store and query hierarchical data. **hierarchyid** is optimized for representing trees, which are the most common type of hierarchical data.  
   
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Extremely compact  
   
-     The average number of bits that are required to represent a node in a tree with *n* nodes depends on the average fanout (the average number of children of a node). For small fanouts, (0-7) the size is about 6\*logA*n* bits, where A is the average fanout. A node in an organizational hierarchy of 100,000 people with an average fanout of 6 levels takes about 38 bits. This is rounded up to 40 bits, or 5 bytes, for storage.  
+     The average number of bits that are required to represent a node in a tree with *n* nodes depends on the average fanout (the average number of children of a node). For small fanouts (0-7), the size is about 6\*logA*n* bits, where A is the average fanout. A node in an organizational hierarchy of 100,000 people with an average fanout of 6 levels takes about 38 bits. This is rounded up to 40 bits, or 5 bytes, for storage.  
   
 -   Comparison is in depth-first order  
   
@@ -59,11 +59,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="limits"></a> Limitations of hierarchyid  
  The **hierarchyid** data type has the following limitations:  
   
--   A column of type **hierarchyid** does not automatically represent a tree. It is up to the application to generate and assign **hierarchyid** values in such a way that the desired relationship between rows is reflected in the values. Some applications might have a column of type **hierarchyid** that indicates the location in a hierarchy defined in another table.  
+-   A column of type **hierarchyid** doesn't automatically represent a tree. It is up to the application to generate and assign **hierarchyid** values in such a way that the desired relationship between rows is reflected in the values. Some applications might have a column of type **hierarchyid** that indicates the location in a hierarchy defined in another table.  
   
 -   It is up to the application to manage concurrency in generating and assigning **hierarchyid** values. There is no guarantee that **hierarchyid** values in a column are unique unless the application uses a unique key constraint or enforces uniqueness itself through its own logic.  
   
--   Hierarchical relationships represented by **hierarchyid** values are not enforced like a foreign key relationship. It is possible and sometimes appropriate to have a hierarchical relationship where A has a child B, and then A is deleted leaving B with a relationship to a nonexistent record. If this behavior is unacceptable, the application must query for descendants before deleting parents.  
+-   Hierarchical relationships represented by **hierarchyid** values aren't enforced like a foreign key relationship. It is possible and sometimes appropriate to have a hierarchical relationship where A has a child B, and then A is deleted leaving B with a relationship to a nonexistent record. If this behavior is unacceptable, the application must query for descendants before deleting parents.  
   
   
 ##  <a name="alternatives"></a> When to Use Alternatives to hierarchyid  
@@ -76,7 +76,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  **hierarchyid** is generally superior to these alternatives. However, there are specific situations detailed below where the alternatives are likely superior.  
   
 ### Parent/Child  
- When using the Parent/Child approach, each row contains a reference to the parent. The following table defines a typical table used to contain the parent and the child rows in a Parent/Child relationship:  
+ When you use the Parent/Child approach, each row contains a reference to the parent. The following table defines a typical table used to contain the parent and the child rows in a Parent/Child relationship:  
   
 ```sql
 USE AdventureWorks2012 ;  
@@ -105,7 +105,7 @@ GO
   
 -   The size of the key is critical. For the same number of nodes, a **hierarchyid** value is equal to or larger than an integer-family (**smallint**, **int**, **bigint**) value. This is only a reason to use Parent/Child in rare cases, because **hierarchyid** has significantly better locality of I/O and CPU complexity than the common table expressions required when you are using a Parent/Child structure.  
   
--   Queries rarely query across sections of the hierarchy. In other words, queries usually address only a single point in the hierarchy. In these cases co-location is not important. For example, Parent/Child is superior when the organization table is only used to process payroll for individual employees.  
+-   Queries rarely query across sections of the hierarchy. In other words, queries usually address only a single point in the hierarchy. In these cases co-location isn't important. For example, Parent/Child is superior when the organization table is only used to process payroll for individual employees.  
   
 -   Non-leaf subtrees move frequently and performance is very important. In a parent/child representation changing the location of a row in a hierarchy affects a single row. Changing the location of a row in a **hierarchyid** usage affects *n* rows, where *n* is number of nodes in the sub-tree being moved.  
   
@@ -131,7 +131,7 @@ GO
   
 -   Predicate searches are extremely limited and not performance critical.  
   
- For example, if an application tracks multiple organizations, always stores and retrieves the complete organizational hierarchy, and does not query into a single organization, a table of the following form might make sense:  
+ For example, if an application tracks multiple organizations, always stores and retrieves the complete organizational hierarchy, and doesn't query into a single organization, a table of the following form might make sense:  
   
 ```sql
 CREATE TABLE XMLOrg   
@@ -244,7 +244,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notice that the hierarchy has a valid structure, even though it is not internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
+ Notice that the hierarchy has a valid structure, even though it isn't internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
   
  Add another row and select the results.  
   
@@ -256,7 +256,7 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  This demonstrates more possible problems. Kyoto can be inserted as level `/1/3/1/` even though there is no parent level `/1/3/`. And both London and Kyoto have the same value for the **hierarchyid**. Again, users must decide if this type of hierarchy is appropriate for their use, and block values that are invalid for their usage.  
   
- Also, this table did not use the top of the hierarchy `'/'`. It was omitted because there is no common parent of all the continents. You can add one by adding the whole planet.  
+ Also, this table didn't use the top of the hierarchy `'/'`. It was omitted because there is no common parent of all the continents. You can add one by adding the whole planet.  
   
 ```sql
 INSERT SimpleDemo  
@@ -270,7 +270,7 @@ INSERT SimpleDemo
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Managing a Tree Using hierarchyid  
- Although a **hierarchyid** column does not necessarily represent a tree, an application can easily ensure that it does.  
+ Although a **hierarchyid** column doesn't necessarily represent a tree, an application can easily ensure that it does.  
   
 -   When generating new values, do one of the following:  
   
@@ -320,7 +320,7 @@ GO
   
   
 #### Example Using a Serializable Transaction  
- The **Org_BreadthFirst** index ensures that determining **\@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same id, and therefore **\@last_child** must be recomputed. The following code computes the new node value within a serializable transaction:  
+ The **Org_BreadthFirst** index ensures that determining **\@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same ID, and therefore **\@last_child** must be recomputed. The following code computes the new node value within a serializable transaction:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -375,7 +375,7 @@ EmployeeId LastChild EmployeeName
   
   
 ###  <a name="BKMK_EnforcingTrees"></a> Enforcing a tree  
- The above examples illustrate how an application can ensure that a tree is maintained. To enforce a tree by using constraints, a computed column that defines the parent of each node can be created with a foreign key constraint back to the primary key id.  
+ The above examples illustrate how an application can ensure that a tree is maintained. To enforce a tree by using constraints, a computed column that defines the parent of each node can be created with a foreign key constraint back to the primary key ID.  
   
 ```sql
 CREATE TABLE Org_T3  
@@ -389,7 +389,7 @@ CREATE TABLE Org_T3
 GO  
 ```  
   
- This method of enforcing a relationship is preferred when code that is not trusted to maintain the hierarchical tree has direct DML access to the table. However this method might reduce performance because the constraint must be checked on every DML operation.  
+ This method of enforcing a relationship is preferred when code that isn't trusted to maintain the hierarchical tree has direct DML access to the table. However this method might reduce performance because the constraint must be checked on every DML operation.  
   
   
 ###  <a name="findclr"></a> Finding Ancestors by Using the CLR  

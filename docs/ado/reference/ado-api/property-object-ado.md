@@ -1,21 +1,17 @@
 ---
+title: "Property Object (ADO)"
 description: "Property Object (ADO)"
-title: "Property Object (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Property"
-helpviewer_keywords: 
-  - "Property object [ADO]"
-ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Property"
+helpviewer_keywords:
+  - "Property object [ADO]"
+apitype: "COM"
 ---
 # Property Object (ADO)
 Represents a dynamic characteristic of an ADO object that is defined by the provider.  

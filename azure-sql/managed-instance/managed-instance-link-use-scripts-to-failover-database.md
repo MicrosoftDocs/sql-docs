@@ -11,27 +11,26 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 05/24/2022
+ms.date: 07/04/2022
 ---
 
-# Fail over (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
+# Failover (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts and a [Managed Instance link](managed-instance-link-feature-overview.md) to fail over (migrate) your database from SQL Server to SQL Managed Instance.
 
 > [!NOTE]
-> - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to fail over a database with the link. 
-> - The PowerShell scripts in this article make REST API calls on the SQL Managed Instance side. 
+> - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to failover a database with the link. 
 
 ## Prerequisites 
 
 To replicate your databases to SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
+- PowerShell module [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 ## Database failover 
@@ -40,7 +39,7 @@ Database failover from SQL Server to SQL Managed Instance breaks the link betwee
 
 To start migrating your database to SQL Managed Instance, first stop any application workloads on SQL Server during your maintenance hours. This enables SQL Managed Instance to catch up with database replication and migrate to Azure while mitigating data loss. 
 
-While the primary database is a part of an Always On availability group, you can't set it to read-only mode. You need to ensure that your applications aren't committing transactions to SQL Server.
+While the primary database is a part of an Always On availability group, you can't set it to read-only mode. You need to ensure that your applications aren't committing transactions to SQL Server prior to the failover.
 
 ## Switch the replication mode
 
@@ -50,72 +49,81 @@ Switching from async to sync mode requires a replication mode change on SQL Mana
 
 ### Switch replication mode (SQL Managed Instance)
 
-Use the following PowerShell script to call a REST API that changes the replication mode from asynchronous to synchronous on SQL Managed Instance. We suggest that you make the REST API call by using Azure Cloud Shell in the Azure portal. In the script, replace:
+Use PowerShell with the installed [Az.Sql module 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher. Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
 
-- `<YourSubscriptionID>` with your subscription ID. 
-- `<ManagedInstanceName>` with the name of your managed instance. 
-- `<DAGName>` with the name of the distributed availability group that you want to get the status for. 
+First, ensure that you're logged in to Azure and that you've selected the subscription where your managed instance is hosted. Selecting the proper subscription is especially important if you have more than one Azure subscription on your account. Replace:
+- `<SubscriptionID>` with your Azure subscription ID. 
 
 ```powershell
-# Run in Azure Cloud Shell
-# ====================================================================================
-# POWERSHELL SCRIPT TO SWITCH REPLICATION MODE SYNC-ASYNC ON MANAGED INSTANCE
-# USER CONFIGURABLE VALUES
-# (C) 2021-2022 SQL Managed Instance product group
-# ====================================================================================
+# Run in Azure Cloud Shell (select PowerShell console)
+
 # Enter your Azure subscription ID
 $SubscriptionID = "<SubscriptionID>"
-# Enter your managed instance name – for example, "sqlmi1"
-$ManagedInstanceName = "<ManagedInstanceName>"
-# Enter the distributed availability group name (the link name)
-$DAGName = "<DAGName>"
 
-# ====================================================================================
-# INVOKING THE API CALL -- THIS PART IS NOT USER CONFIGURABLE
-# ====================================================================================
-# Log in and select a subscription if needed
+# Login to Azure and select subscription ID
 if ((Get-AzContext ) -eq $null)
 {
     echo "Logging to Azure subscription"
     Login-AzAccount
 }
 Select-AzSubscription -SubscriptionName $SubscriptionID
-
-# Build a URI for the API call
-#
-$miRG = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
-$uriFull = "https://management.azure.com/subscriptions/" + $SubscriptionID + "/resourceGroups/" + $miRG+ "/providers/Microsoft.Sql/managedInstances/" + $ManagedInstanceName + "/distributedAvailabilityGroups/" + $DAGName + "?api-version=2021-05-01-preview"
-echo $uriFull
-
-# Build the API request body
-#
-
-$bodyFull = "{`"properties`":{`"ReplicationMode`":`"sync`"}}"
-
-echo $bodyFull 
-
-# Get an authentication token and build the header
-#
-$azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$currentAzureContext = Get-AzContext
-$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azProfile)    
-$token = $profileClient.AcquireAccessToken($currentAzureContext.Tenant.TenantId)
-$authToken = $token.AccessToken
-$headers = @{}
-$headers.Add("Authorization", "Bearer "+"$authToken")
-
-# Invoke the API call
-#
-echo "Invoking API call switch Async-Sync replication mode on Managed Instance"
-Invoke-WebRequest -Method PATCH -Headers $headers -Uri $uriFull -ContentType "application/json" -Body $bodyFull
 ```
+
+Ensure that you know the name of the link you would like to fail over. Use the below script in Azure Cloud Shell to list all active links on managed instance. Replace:
+- `<ManagedInstanceName>` with the short name of your managed instance. 
+ 
+```powershell
+# Run in Azure Cloud Shell
+# =============================================================================
+# POWERSHELL SCRIPT TO LIST ALL LINKS ON MANAGED INSTANCE
+# ===== Enter user variables here ====
+
+# Enter your managed instance name – for example, "sqlmi1"
+$ManagedInstanceName = "<ManagedInstanceName>"
+
+# ==== Do not customize the below ====
+
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
+
+# List all links on the specified managed instance
+Get-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName 
+```
+
+From the output of the above script, record the `Name` property of the link you'd like to fail over.
+
+Then, switch the replication mode from async to sync on managed instance for the link identified by running the below script in Azure Cloud Shell. Replace:
+- `<ManagedInstanceName>` with the short name of your managed instance. 
+- `<DAGName>` with the name of the link you found out on the previous step (the `Name` property from the previous step).
+
+```powershell
+# Run in Azure Cloud Shell
+# =============================================================================
+# POWERSHELL SCRIPT TO SWITCH LINK REPLICATION MODE (ASYNC\SYNC)
+# ===== Enter user variables here ====
+
+# Enter your managed instance name – for example, "sqlmi1"
+$ManagedInstanceName = "<ManagedInstanceName>"
+$LinkName = "<DAGName>"
+
+# ==== Do not customize the below ====
+
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
+
+# Update replication mode of the specified link
+Update-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $LinkName -ReplicationMode "Sync"
+```
+
+Executing the above command will indicate success by displaying summary of the operation, with the property `ReplicationMode` shown as `Sync`.
+
+In case you need to revert this operation, execute the above script to switch the replication mode, replacing the `Sync` string in the `-ReplicationMode` to `Async`.
 
 ### Switch replication mode (SQL Server)
 
 Use the following T-SQL script on SQL Server to change the replication mode of the distributed availability group on SQL Server from async to sync. Replace:
-
-- `<DAGName>` with the name of the distributed availability group.
-- `<AGName>` with the name of the availability group created on SQL Server. 
+- `<DAGName>` with the name of the distributed availability group (used to create the link).
+- `<AGName>` with the name of the availability group created on SQL Server (used to create the link). 
 - `<ManagedInstanceName>` with the name of your managed instance.
 
 ```sql
@@ -160,7 +168,8 @@ To complete the migration, confirm that replication has finished. For this, ensu
 
 Initially, it's expected that the SQL Server LSN will be higher than the SQL Managed Instance LSN. Network latency might cause SQL Managed Instance to lag somewhat behind the primary SQL Server instance. Because the workload has been stopped on SQL Server, you should expect the LSNs to match and stop changing after some time. 
 
-Use the following T-SQL query on SQL Server to read the LSN of the last recorded transaction log. Replace `<DatabaseName>` with your database name and look for the last hardened LSN number.
+Use the following T-SQL query on SQL Server to read the LSN of the last recorded transaction log. Replace:
+- `<DatabaseName>` with your database name and look for the last hardened LSN number.
 
 ```sql
 -- Run on SQL Server
@@ -206,64 +215,39 @@ WHERE
     -- AND drs.is_primary_replica = 1
 ```
 
-Verify once again that your workload is stopped on SQL Server. Check that LSNs on both SQL Server and SQL Managed Instance match, and that they remain matched and unchanged for some time. Stable LSNs on both instances indicate that the tail log has been replicated to SQL Managed Instance and the workload is effectively stopped.
+Alternatively, you could also use Azure Cloud Shell PowerShell command [Get-AzSqlInstanceLink](/powershell/module/az.sql/get-azsqlinstancelink) to fetch the `LastHardenedLsn` property for your link on the managed instance which will provide the same information as the above T-SQL query.
 
-## Start database fail over and migration to Azure
+Verify once again that your workload is stopped on SQL Server. Check that LSNs on both SQL Server and SQL Managed Instance match, and that they **remain matched** and unchanged for some time. Stable LSNs on both instances indicate that the tail log has been replicated to SQL Managed Instance and the workload is effectively stopped.
 
-Invoke a REST API call to fail over your database over the link and finalize your migration to Azure. The REST API call breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance.
+## Start database failover and migration to Azure
 
-Use the following API to start database fail over to Azure. Replace:
-
-- `<YourSubscriptionID>` with your Azure subscription ID.
-- `<RG>` with the resource group where your managed instance is deployed. 
+Run the below script in Azure Cloud Shell to finalize your migration to Azure. The script breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
-- `<DAGName>` with the name of the distributed availability group made on SQL Server.
+- `<DAGName>` with the name of the link you're failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command executed earlier above).
 
-```PowerShell
+```powershell
 # Run in Azure Cloud Shell
-# ====================================================================================
-# POWERSHELL SCRIPT TO FAIL OVER AND MIGRATE DATABASE WITH SQL MANAGED INSTANCE LINK
-# USER CONFIGURABLE VALUES
-# (C) 2021-2022 SQL Managed Instance product group
-# ====================================================================================
-# Enter your Azure subscription ID
-$SubscriptionID = "<SubscriptionID>"
+# =============================================================================
+# POWERSHELL SCRIPT TO FAILOVER AND MIGRATE DATABASE TO AZURE
+# ===== Enter user variables here ====
+
 # Enter your managed instance name – for example, "sqlmi1"
 $ManagedInstanceName = "<ManagedInstanceName>"
-# Enter the distributed availability group link name
-$DAGName = "<DAGName>"
+$LinkName = "<DAGName>"
 
-# ====================================================================================
-# INVOKING THE API CALL -- THIS PART IS NOT USER CONFIGURABLE.
-# ====================================================================================
-# Log in and select a subscription if needed
-if ((Get-AzContext ) -eq $null)
-{
-    echo "Logging to Azure subscription"
-    Login-AzAccount
-}
-Select-AzSubscription -SubscriptionName $SubscriptionID
+# ==== Do not customize the below ====
 
-# Build a URI for the API call
-#
-$miRG = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
-$uriFull = "https://management.azure.com/subscriptions/" + $SubscriptionID + "/resourceGroups/" + $miRG+ "/providers/Microsoft.Sql/managedInstances/" + $ManagedInstanceName + "/distributedAvailabilityGroups/" + $DAGName + "?api-version=2021-05-01-preview"
-echo $uriFull
+# Find out the resource group name
+$ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).ResourceGroupName
 
-# Get an authentication token and build the header
-#
-$azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$currentAzureContext = Get-AzContext
-$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azProfile)
-$token = $profileClient.AcquireAccessToken($currentAzureContext.Tenant.TenantId)
-$authToken = $token.AccessToken
-$headers = @{}
-$headers.Add("Authorization", "Bearer "+"$authToken")
-
-# Invoke the API call
-#
-Invoke-WebRequest -Method DELETE -Headers $headers -Uri $uriFull -ContentType "application/json"
+# Failover the specified link
+Remove-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $LinkName -Force
 ```
+
+On successful execution of the failover process, the link is dropped and no longer exists. The source SQL Server database and the target SQL Managed Instance database can both execute a read/write workload. They're completely independent. Repoint your application connection string to managed instance to complete the migration process.
+
+> [!IMPORTANT]
+> On successful failover, manually repoint your application(s) connection string to managed instance FQDN to continue running in Azure, and to complete the migration process.
 
 ## Clean up availability groups
 
@@ -271,8 +255,8 @@ After you break the link and migrate a database to Azure SQL Managed Instance, c
 
 In the following code, replace:
 
-- `<DAGName>` with the name of the distributed availability group on SQL Server. 
-- `<AGName>` with the name of the availability group on SQL Server.
+- `<DAGName>` with the name of the distributed availability group on SQL Server (used to create the link). 
+- `<AGName>` with the name of the availability group on SQL Server (used to create the link).
 
 ``` sql
 -- Run on SQL Server

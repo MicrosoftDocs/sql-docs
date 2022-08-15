@@ -1,14 +1,15 @@
 ---
 title: Best practices for Azure SQL Data Sync
-description: "Learn about best practices for configuring and running Azure SQL Data Sync."
+description: Learn about best practices for configuring and running Azure SQL Data Sync.
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: sqldbrb=1
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
-ms.date: 12/20/2018
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/19/2022
 ---
 # Best practices for Azure SQL Data Sync 
 
@@ -19,7 +20,7 @@ This article describes best practices for Azure SQL Data Sync.
 For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with Azure SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).
 
 > [!IMPORTANT]
-> Azure SQL Data Sync does **not** support Azure SQL Managed Instance at this time.
+> Azure SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## <a name="security-and-reliability"></a> Security and reliability
 
@@ -27,17 +28,29 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 
 -   Install the client agent by using the least privileged user account that has network service access.  
 -   Install the client agent on a computer that isn't the SQL Server computer.  
--   Don't register an on-premises database with more than one agent.    
-    -   Avoid this even if you are syncing different tables for different sync groups.  
+-   Don't register an on-premises database with more than one agent.
+    -   Avoid this even if you're syncing different tables for different sync groups.  
     -   Registering an on-premises database with multiple client agents poses challenges when you delete one of the sync groups.
 
 ### Database accounts with least required privileges
 
--   **For sync setup**. Create/Alter Table; Alter Database; Create Procedure; Select/ Alter Schema; Create User-Defined Type.
+-   **For sync setup**: 
+    - SQL Server permissions: CREATE/ALTER TABLE, ALTER DATABASE, CREATE PROCEDURE, SELECT/ALTER SCHEMA, CREATE TYPE. These permissions are included (along with other permissions) in the built-in database role `ddl_admin`.
+    - At the resource group level, membership in the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role is necessary. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal). Membership in broader roles like Contributor or Owner work too, if already assigned.
+    - Permissions at the subscription level should not be needed, but could provide a simplified (though not *least required*) way to provide necessary permissions for multiple Azure Data Sync implementations in a subscription. An original, deprecated API required these [Azure RBAC permissions](/azure/role-based-access-control/resource-provider-operations), but should no longer be in use.
+        - "Microsoft.Sql/locations/syncMemberOperationResults/read"
+        - "Microsoft.Sql/locations/syncAgentOperationResults/read"
+        - "Microsoft.Sql/locations/syncGroupOperationResults/read"
 
--   **For ongoing sync**. Select/ Insert/ Update/ Delete on tables that are selected for syncing, and on sync metadata and tracking tables; Execute permission on stored procedures created by the service; Execute permission on user-defined table types.
+-   **For ongoing sync**. 
+    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on user tables that are selected for syncing. EXECUTE permission on user-defined table types.
+    - SQL Server permissions: SELECT, INSERT, UPDATE, and DELETE permission on sync metadata and system-created tracking tables. EXECUTE permission on stored procedures created by the service.
+        - The `DataSync` schema is used for system-created objects in the hub and member databases. 
+        - The `dss` and `TaskHosting` schemas are used for system-created objects in the sync metadata database.
 
--   **For deprovisioning**. Alter on tables part of sync; Select/ Delete on sync metadata tables; Control on sync tracking tables, stored procedures, and user-defined types.
+-   **For deprovisioning**. 
+    - SQL Server permissions: ALTER on all tables part of sync; SELECT and DELETE on sync metadata tables; CONTROL on sync tracking tables, stored procedures, and user-defined types.
+    - For cleanup, remove system-created objects in the `DataSync`, `dss`, and `TaskHosting` schemas.
 
 Azure SQL Database supports only a single set of credentials. To accomplish these tasks within this constraint, consider the following options:
 
@@ -222,7 +235,7 @@ If you have a complex schema to sync, you may encounter an "operation timeout" d
 
 #### Solution
 
-To mitigate this issue, please scale up your sync metadata database to have a higher SKU, such as S3. 
+To mitigate this issue, consider scaling up your sync metadata database resources. 
 
 ## Next steps
 For more information about SQL Data Sync, see:

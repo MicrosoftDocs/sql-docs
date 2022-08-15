@@ -1,13 +1,14 @@
 ---
 title: How to manage a Hyperscale database
 description: How to manage a Hyperscale database, including migrating to Hyperscale, restoring to a different region, and reverse migration.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
 ---
 
@@ -31,11 +32,11 @@ You will only experience a short period of downtime, generally a few minutes, du
 
 To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](auto-failover-group-sql-db.md) must be removed from the group first.
 
-Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. Geo-replication for Hyperscale is in preview with certain [limitations](active-geo-replication-overview.md).
+Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. 
 
 ### How to migrate a database to the Hyperscale service tier
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen4) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
 
 Select the tab for your preferred tool to migrate your database:
 
@@ -43,7 +44,7 @@ Select the tab for your preferred tool to migrate your database:
 
 The Azure portal enables you to migrate to the Hyperscale service tier by modifying the pricing tier for your database.
 
-:::image type="content" source="media/manage-hyperscale-database/service-tier-dropdown-azure-sql-database-azure-portal.png" alt-text="Screenshot of the compute & storage panel of a database in Azure SQL Database. The service tier dropdown is expanded, displaying the option for the Hyperscale service tier." lightbox="media/manage-hyperscale-database/service-tier-dropdown-azure-sql-database-azure-portal.png":::
+:::image type="content" source="media/manage-hyperscale-database/service-tier-dropdown-azure-sql-database-azure-portal.png" alt-text="Screenshot of the compute + storage panel of a database in Azure SQL Database. The service tier dropdown is expanded, displaying the option for the Hyperscale service tier." lightbox="media/manage-hyperscale-database/service-tier-dropdown-azure-sql-database-azure-portal.png":::
 
 1. Navigate to the database you wish to migrate in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
@@ -59,7 +60,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to migrate an existing database in Azure SQL Database to the Hyperscale service tier. You must specify both the edition and service objective.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 
@@ -176,7 +177,7 @@ Select the tab for your preferred method to reverse migrate your database:
 
 The Azure portal enables you to reverse migrate to the General Purpose service tier by modifying the pricing tier for your database.
 
-:::image type="content" source="media/manage-hyperscale-database/reverse-migrate-hyperscale-service-compute-tier-pane.png" alt-text="Screenshot of the compute & storage panel of a Hyperscale database in Azure SQL Database." lightbox="media/manage-hyperscale-database/reverse-migrate-hyperscale-service-compute-tier-pane.png":::
+:::image type="content" source="media/manage-hyperscale-database/reverse-migrate-hyperscale-service-compute-tier-pane.png" alt-text="Screenshot of the compute + storage panel of a Hyperscale database in Azure SQL Database." lightbox="media/manage-hyperscale-database/reverse-migrate-hyperscale-service-compute-tier-pane.png":::
 
 1. Navigate to the database you wish to migrate in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
@@ -189,7 +190,7 @@ The Azure portal enables you to reverse migrate to the General Purpose service t
 
 # [Azure CLI](#tab/azure-cli)
 
-This code sample calls [az sql db update](/cli/azure/sql/db#az_sql_db_update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
+This code sample calls [az sql db update](/cli/azure/sql/db#az-sql-db-update) to reverse migrate an existing Hyperscale database to the General Purpose service tier. You must specify both the edition and service objective. You may select either `Provisioned` or `Serverless` for the target compute model.
 
 Replace `resourceGroupName`, `serverName`, `databaseName`, and `serviceObjective` with the appropriate values before running the following code sample:
 

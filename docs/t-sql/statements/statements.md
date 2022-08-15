@@ -1,19 +1,17 @@
 ---
 title: Transact-SQL statements
 description: Transact-SQL statements
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
-  - Alter_TSQL
-dev_langs: 
+  - "Alter_TSQL"
+dev_langs:
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: ""
-ms.date: 04/17/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

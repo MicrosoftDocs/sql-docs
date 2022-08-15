@@ -1,19 +1,16 @@
 ---
-description: "SET RESULT_SET_CACHING (Transact-SQL)"
 title: "SET RESULT_SET_CACHING (Transact-SQL)"
-ms.custom: ""
+description: SET RESULT_SET_CACHING (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
 ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: wiassaf
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
 dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-author: mstehrani
-ms.author: emtehran
 monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
@@ -44,6 +41,9 @@ Enables result set caching for the current client session.  Result set caching c
 
 **OFF**   
 Disable result set caching for the current client session.
+
+> [!NOTE]
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](/sql/t-sql/functions/decryptbykey-transact-sql). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](/sql/t-sql/statements/set-result-set-caching-transact-sql) or [database-level](/sql/t-sql/statements/alter-database-transact-sql-set-options)) at the time of execution.
 
 ## Examples
 

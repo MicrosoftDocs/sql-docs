@@ -38,7 +38,7 @@ ms.author: maggies
 
 Review the following list before adding users to a native mode report server.
 
-- You must be a member of the local Administrators group on the report server computer. If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] or Windows Server 2008, additional configuration is required before you can administer a report server locally. For more information, see [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+- You must be a member of the local Administrators group on the report server computer. If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on [!INCLUDE[winvista](../../includes/winvista-md.md)] or Windows Server 2008, additional configuration is required before you can administer a report server locally. For more information, see [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 - To delegate this task to other users, create role assignments that map user accounts to Content Manager and System Administrator roles. Users who have Content Manager and System Administrator permissions can add users to a report server.
 

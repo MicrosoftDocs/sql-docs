@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_threads (Transact-SQL)"
-title: "sys.dm_os_threads (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_threads (Transact-SQL)"
+description: sys.dm_os_threads (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_threads_TSQL"
   - "sys.dm_os_threads"
   - "dm_os_threads"
   - "sys.dm_os_threads_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_threads dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_threads (Transact-SQL)
@@ -76,7 +74,7 @@ Due to how the SQL engine works in Linux, some of this information doesn't match
  The following query is used to find workers, along with time used for execution, that are running threads not started by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  For conciseness, the following query uses an asterisk (`*`) in the `SELECT` statement. You should avoid using the asterisk (*), especially against catalog views, dynamic management views, and system table-valued functions. Future upgrades and releases of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may add columns and change the order of columns to these views and functions. These changes might break applications that expect a particular order and number of columns.  
+>  For conciseness, the following query uses an asterisk (`*`) in the `SELECT` statement. You should avoid using the asterisk (*), especially against catalog views, dynamic management views, and system table-valued functions. Future upgrades and releases of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may add columns and change the order of columns to these views and functions. These changes might break applications that expect a particular order and number of columns.  
   
 ```  
 SELECT *  

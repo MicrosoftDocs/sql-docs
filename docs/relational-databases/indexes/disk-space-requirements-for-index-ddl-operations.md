@@ -1,22 +1,20 @@
 ---
-description: "Disk Space Requirements for Index DDL Operations"
-title: "Disk Space Requirements for Index DDL Operations | Microsoft Docs"
-ms.custom: ""
+title: "Disk Space Requirements for Index DDL Operations"
+description: Disk Space Requirements for Index DDL Operations
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disk space [SQL Server], indexes"
   - "index disk space [SQL Server]"
   - "space [SQL Server], indexes"
   - "indexes [SQL Server], disk space requirements"
   - "temporary disk space [SQL Server]"
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Disk Space Requirements for Index DDL Operations
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

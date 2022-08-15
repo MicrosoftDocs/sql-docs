@@ -1,31 +1,29 @@
 ---
-description: "Reports system level memory consumers for In-Memory OLTP."
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: Reports system level memory consumers for In-Memory OLTP.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 04/27/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_xtp_system_memory_consumers"
   - "sys.dm_xtp_system_memory_consumers_TSQL"
   - "sys.dm_xtp_system_memory_consumers"
   - "dm_xtp_system_memory_consumers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_system_memory_consumers dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xtp_system_memory_consumers (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
+Reports system level memory consumers for [!INCLUDE[inmemory](../../includes/inmemory-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
 
 ```sql
 SELECT * 

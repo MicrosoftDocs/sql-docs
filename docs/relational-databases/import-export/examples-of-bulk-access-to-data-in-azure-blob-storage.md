@@ -1,22 +1,20 @@
 ---
 title: "Bulk access to data in Azure Blob storage"
 description: "Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk importing [SQL Server], from Azure blob storage"
   - "Azure blob storage, bulk import to SQL Server"
   - "BULK INSERT, Azure blob storage"
   - "OPENROWSET, Azure blob storage"
-ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk access to data in Azure Blob storage
 

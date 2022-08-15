@@ -31,7 +31,7 @@ ms.author: maggies
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To hide a page footer on the first or last page  
   
@@ -43,7 +43,7 @@ ms.author: maggies
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## See Also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

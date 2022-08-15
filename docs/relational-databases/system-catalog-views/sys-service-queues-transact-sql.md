@@ -1,25 +1,23 @@
 ---
-description: "sys.service_queues (Transact-SQL)"
-title: "sys.service_queues (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.service_queues (Transact-SQL)"
+description: sys.service_queues (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.service_queues"
   - "service_queues"
   - "service_queues_TSQL"
   - "sys.service_queues_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.service_queues catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.service_queues (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

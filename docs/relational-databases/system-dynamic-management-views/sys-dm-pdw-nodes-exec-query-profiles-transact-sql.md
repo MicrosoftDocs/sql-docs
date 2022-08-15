@@ -1,16 +1,15 @@
 ---
 title: "sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)"
 description: Dynamic management view that can be used to monitor real time data warehouse query progress while the query is in execution.
-ms.custom: ""
-ms.date: "10/14/2019"
-ms.prod: sql 
-ms.technology: data-warehouse
-ms.reviewer: wiassaf
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: jacinda-eng
 ms.author: jacindaeng
+ms.reviewer: wiassaf
+ms.date: "10/14/2019"
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 

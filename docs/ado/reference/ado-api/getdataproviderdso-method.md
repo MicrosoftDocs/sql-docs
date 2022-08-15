@@ -1,18 +1,14 @@
 ---
+title: "GetDataProviderDSO Method"
 description: "GetDataProviderDSO Method"
-title: "GetDataProviderDSO Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "GetDataProviderDSO Method [ADO]"
-ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "GetDataProviderDSO Method [ADO]"
 ---
 # GetDataProviderDSO Method
 Retrieves the underlying OLE DB Data Source object from the Shape provider.  

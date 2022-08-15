@@ -2,21 +2,21 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: wiassaf
 ms.date: 01/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
 ms.topic: language-reference
-f1_keywords: 
+f1_keywords:
   - "COPY_TSQL"
   - "COPY INTO"
   - "COPY"
   - "LOAD"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: wiassaf
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
@@ -130,7 +130,7 @@ Multiple file locations can only be specified from the same storage account and 
 - ORC: Specifies an Optimized Row Columnar (ORC) format.
 
 >[!NOTE]  
->The file type 'Delimited Text' in Polybase is replaced by the 'CSV' file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
+>The file type 'Delimited Text' in PolyBase is replaced by the 'CSV' file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
 
 #### *FILE_FORMAT = external_file_format_name*
 *FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).

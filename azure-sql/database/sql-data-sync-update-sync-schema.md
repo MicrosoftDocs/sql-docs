@@ -1,15 +1,16 @@
 ---
-title: Automate the replication of schema changes in SQL Data Sync 
+title: Automate the replication of schema changes in SQL Data Sync
 description: Learn how to automate the replication of schema changes in Azure SQL Data Sync.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: data sync
-ms.devlang: 
+ms.custom:
+  - "data sync"
 ms.topic: how-to
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 11/14/2018
 ---
 # Automate the replication of schema changes in Azure SQL Data Sync
@@ -226,6 +227,6 @@ For more info about SQL Data Sync, see:
 -   Data Sync Agent - [Data Sync Agent for Azure SQL Data Sync](sql-data-sync-agent-overview.md)
 -   Best practices - [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
 -   Monitor - [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)
--   Troubleshoot - [Troubleshoot issues with Azure SQL Data Sync]()
+-   Troubleshoot - [Troubleshoot issues with Azure SQL Data Sync](sql-data-sync-troubleshoot.md)
 -   Update the sync schema
     -   With PowerShell - [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)

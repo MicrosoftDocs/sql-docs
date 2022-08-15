@@ -85,7 +85,7 @@ Find more information about the difference between hardware configurations in [S
 SQL Managed Instance is available in two service tiers:
 
 - **General purpose**: Designed for applications with typical performance and I/O latency requirements.
-- **Business critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
+- **Business Critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
 
 Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](../database/high-availability-sla.md).
 
@@ -155,7 +155,7 @@ Migration of an encrypted database to SQL Managed Instance is supported via Azur
 
 ## Azure Active Directory integration
 
-SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure AD. Azure AD server principals (logins) (**public preview**) are an Azure cloud version of on-premises database logins that you are using in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
+SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure AD. Azure AD server principals (logins) are an Azure cloud version of on-premises database logins that you are using in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
 
 A new syntax is introduced to create Azure AD server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision an Azure Active Directory administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
 

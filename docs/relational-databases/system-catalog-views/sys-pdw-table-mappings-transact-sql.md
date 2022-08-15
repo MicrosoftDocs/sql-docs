@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_table_mappings (Transact-SQL)"
-title: "sys.pdw_table_mappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_table_mappings (Transact-SQL)"
+description: sys.pdw_table_mappings (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_table_mappings (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

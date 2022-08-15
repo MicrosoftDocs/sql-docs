@@ -1,18 +1,17 @@
 ---
-description: "See a reference for the system catalog view sys.pdw_health_components (Transact-SQL) for Analytics Platform System."
-title: "sys.pdw_health_components (Transact-SQL) | Microsoft Docs"
+title: "sys.pdw_health_components (Transact-SQL)"
+description: See a reference for the system catalog view sys.pdw_health_components (Transact-SQL) for Analytics Platform System.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: reference
-dev_langs: 
+ms.custom: kr2b-contr-experiment
+dev_langs:
   - "TSQL"
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016"
-ms.custom: kr2b-contr-experiment
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_components (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

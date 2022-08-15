@@ -1,25 +1,23 @@
 ---
-description: "ALTER FUNCTION (Transact-SQL)"
-title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER FUNCTION (Transact-SQL)"
+description: ALTER FUNCTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_FUNCTION_TSQL"
   - "ALTER FUNCTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER FUNCTION statement"
   - "modifying functions"
   - "functions [SQL Server], modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)

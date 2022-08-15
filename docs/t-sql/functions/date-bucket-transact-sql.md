@@ -33,7 +33,7 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions
 ## Syntax
 
 ```syntaxsql
-DATE_BUCKET (datepart, number, date, origin)
+DATE_BUCKET (datepart, number, date [, origin ] )
 ```
 
 ## Arguments

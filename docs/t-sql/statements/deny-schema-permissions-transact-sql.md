@@ -1,26 +1,24 @@
 ---
-description: "DENY Schema Permissions (Transact-SQL)"
-title: "DENY Schema Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Schema Permissions (Transact-SQL)"
+description: DENY Schema Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "denying permissions [SQL Server], schemas"
   - "schemas [SQL Server], permissions"
   - "permissions [SQL Server], schemas"
   - "DENY statement, schemas"
+dev_langs:
+  - "TSQL"
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-author: VanMSFT
-ms.author: vanto
 ---
 # DENY Schema Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Denies permissions on a schema.  
   

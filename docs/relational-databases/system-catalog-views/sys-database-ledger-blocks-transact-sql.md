@@ -1,18 +1,16 @@
 ---
-description: "sys.database_ledger_blocks (Transact-SQL)"
-title: "sys.database_ledger_blocks (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.database_ledger_blocks (Transact-SQL)"
+description: sys.database_ledger_blocks (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.database_ledger_blocks (Transact-SQL)
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
@@ -34,5 +32,5 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [What is the database ledger?](/sql/relational-databases/security/ledger/ledger-database-ledger)
-- [Ledger Overview](/sql/relational-databases/security/ledger/ledger-overview)
+- [What is the database ledger?](../security/ledger/ledger-database-ledger.md)
+- [Ledger Overview](../security/ledger/ledger-overview.md)

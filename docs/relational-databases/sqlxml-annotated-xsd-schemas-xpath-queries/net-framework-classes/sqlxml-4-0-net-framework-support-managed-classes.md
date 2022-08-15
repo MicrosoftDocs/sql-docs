@@ -1,14 +1,14 @@
 ---
 title: "SQLXML Managed Classes"
 description: Learn about Microsoft SQLXML Managed Classes that expose the functionality of SQLXML 4.0 inside the Microsoft .NET Framework.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - ".NET Framework [SQLXML], Managed Classes"
   - "SQL Server .NET Data Provider"
   - "Managed Classes [SQLXML], about managed classes"
@@ -21,8 +21,6 @@ helpviewer_keywords:
   - "data providers [SQLXML], SQLXML Managed Classes"
   - "SQLXML, Managed Classes"
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Managed Classes

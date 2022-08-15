@@ -1,33 +1,31 @@
 ---
-description: "CREATE SEQUENCE (Transact-SQL)"
 title: CREATE SEQUENCE (Transact-SQL)
-ms.custom: ""
+description: CREATE SEQUENCE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SEQUENCE"
   - "CREATE SEQUENCE"
   - "SEQUENCE_TSQL"
   - "CREATE_SEQUENCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE SEQUENCE statement"
   - "sequence number object, creating"
   - "sequence object"
   - "number, sequence"
+dev_langs:
+  - "TSQL"
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 
 # CREATE SEQUENCE (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a sequence object and specifies its properties. A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted. Sequences, unlike identity columns, are not associated with specific tables. Applications refer to a sequence object to retrieve its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values across multiple rows and tables.  
   

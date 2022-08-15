@@ -3,7 +3,7 @@ title: Backup and restore for SQL Server on Azure VMs | Microsoft Docs
 description: Describes backup and restore considerations for SQL Server databases running on Azure Virtual Machines.
 services: virtual-machines-windows
 documentationcenter: na
-author: rajeshsetlem
+author: adbadram
 editor: ''
 tags: azure-resource-management
 ms.assetid: 95a89072-0edf-49b5-88ed-584891c0e066
@@ -14,7 +14,7 @@ ms.topic: conceptual
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
 ms.date: 06/04/2018
-ms.author: rsetlem
+ms.author: adbadram
 ms.reviewer: mathoma
 ---
 # Backup and restore for SQL Server on Azure VMs
@@ -52,7 +52,7 @@ To restore a database, you must locate the required backup file(s) in the storag
 
 For more information on how to configure Automated Backup for SQL VMs, see one of the following articles:
 
-- **SQL Server 2016/2017**: [Automated Backup v2 for Azure Virtual Machines](automated-backup.md)
+- **SQL Server 2016 and later**: [Automated Backup v2 for Azure Virtual Machines](automated-backup.md)
 - **SQL Server 2014**: [Automated Backup for SQL Server 2014 Virtual Machines](automated-backup-sql-2014.md)
 
 ## <a id="azbackup"></a> Azure Backup for SQL VMs
@@ -101,8 +101,8 @@ Beginning with SQL Server 2012 SP1 CU2, you can back up and restore directly to 
 
 For more information, see the one of the following articles based on your version of SQL Server:
 
-- **SQL Server 2016/2017**: [SQL Server Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service)
-- **SQL Server 2014**: [SQL Server 2014 Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service?viewFallbackFrom=sql-server-2014)
+- **SQL Server 2016 and later**: [SQL Server Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service)
+- **SQL Server 2014**: [SQL Server 2014 Backup to URL](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url)
 - **SQL Server 2012**: [SQL Server 2012 Backup to URL](/previous-versions/sql/sql-server-2012/jj919148(v=sql.110))
 
 ### Managed Backup
@@ -114,7 +114,7 @@ Beginning in SQL Server 2016, Managed Backup got additional options for scheduli
 For more information, see one of the following articles based on your version of SQL Server:
 
 - [Managed Backup to Microsoft Azure for SQL Server 2016 and later](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure)
-- [Managed Backup to Microsoft Azure for SQL Server 2014](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure?viewFallbackFrom=sql-server-2014)
+- [Managed Backup to Microsoft Azure for SQL Server 2014](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure)
 
 ## Decision matrix
 
@@ -132,7 +132,7 @@ The following table summarizes the capabilities of each backup and restore optio
 | Long-term backup retention policy (months, years) |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
 | Built-in support for SQL Server Always On |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
 | Backup to Azure Storage account(s) | ![Green checkmark.](./media/backup-restore/yes.png)(automatic) | ![Green checkmark.](./media/backup-restore/yes.png)(automatic) | ![Green checkmark.](./media/backup-restore/yes.png)(customer managed) |
-| Management of storage and backup files | | ![Green checkmark.](./media/backup-restore/yes.png) |  |
+| Management of storage and backup files | | ![Green checkmark.](./media/backup-restore/yes.png) |   |
 | Backup to attached disks on the VM |   |   | ![Green checkmark.](./media/backup-restore/yes.png) |
 | Central customizable backup reports |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
 | Consolidated email alerts for failures |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |

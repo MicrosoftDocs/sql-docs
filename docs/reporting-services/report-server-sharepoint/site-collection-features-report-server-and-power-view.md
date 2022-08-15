@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   The Reporting Services site collection features are activated by default after you install the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Add-in for SharePoint products. In some situations, you need to manually activate the features.  
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Power View support is no longer available after SQL Server 2017.
 
  If you install the Reporting Services add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you need to manually activate the features. For example, if you have a site collection of **https://[my server name]/sites/[site collection name]** you need to manually activate the Reporting Services site collection features.  
   

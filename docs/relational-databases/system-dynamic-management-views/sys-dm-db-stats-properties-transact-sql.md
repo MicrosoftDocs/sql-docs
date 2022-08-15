@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_stats_properties (Transact-SQL)"
-title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_stats_properties (Transact-SQL)"
+description: sys.dm_db_stats_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_stats_properties_TSQL"
   - "sys.dm_db_stats_properties"
   - "dm_db_stats_properties_TSQL"
   - "dm_db_stats_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_stats_properties"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)

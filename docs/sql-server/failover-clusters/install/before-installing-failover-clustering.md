@@ -130,7 +130,7 @@ ms.author: mathoma
   
 -   To create a failover cluster, you must be a local administrator with permissions to log on as a service, and to act as part of the operating system on all nodes of the failover cluster instance.  
   
--   On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] services. For [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
+-   On [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] services. For [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
   
 -   Domain groups must be within the same domain as the machine accounts. For example, if the machine where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will be installed is in the SQLSVR domain which is a child of MYDOMAIN, you must specify a group in the SQLSVR domain. The SQLSVR domain may contain user accounts from MYDOMAIN.  
   

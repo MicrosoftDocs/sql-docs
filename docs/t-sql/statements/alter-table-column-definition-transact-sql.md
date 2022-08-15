@@ -1,26 +1,24 @@
 ---
-description: "ALTER TABLE column_definition (Transact-SQL)"
-title: "column_definition (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "column_definition (Transact-SQL)"
+description: ALTER TABLE column_definition (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "column_definition"
   - "column_definition_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column_definition"
   - "ALTER TABLE statement"
   - "column properties [SQL Server]"
   - "column definitions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
@@ -86,7 +84,7 @@ column_name <data_type>
   
  *type_name* can be:  
   
--   A [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type.  
+-   A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type.  
   
 -   An alias data type based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type. Alias data types must be created by using CREATE TYPE before they can be used in a table definition.  
   

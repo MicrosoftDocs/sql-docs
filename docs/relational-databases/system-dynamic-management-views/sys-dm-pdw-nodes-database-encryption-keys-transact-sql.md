@@ -1,18 +1,17 @@
 ---
-description: "sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)"
 title: "sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)"
-ms.custom: seo-dt-2019
+description: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

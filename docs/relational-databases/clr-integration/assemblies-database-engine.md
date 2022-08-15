@@ -1,25 +1,23 @@
 ---
-title: "Assemblies (Database Engine) | Microsoft Docs"
+title: "Assemblies (Database Engine)"
 description: A SQL Server instance can host assemblies that deploy functions, procedures, triggers, and user-defined aggregates and types written in a CLR language.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "assemblies [CLR integration]"
   - "assemblies [CLR integration], about assemblies"
   - "managed code [SQL Server], assemblies"
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-author: rothja
-ms.author: jroth
 ---
 # Assemblies (Database Engine)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The topics in this section provide information to help you understand, design, and implement assemblies.  
   
- Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  An assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
   

@@ -1,19 +1,17 @@
 ---
-description: "Maintenance Plans Node (Object Explorer)"
-title: "Maintenance Plans Node (Object Explorer) | Microsoft Docs"
-ms.custom: ""
+title: "Maintenance Plans Node (Object Explorer)"
+description: Maintenance Plans Node (Object Explorer)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.maintplanproperties.reporting.f1"
   - "sql13.swb.maint.maintplanproperties.completebackup.f1"
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Maintenance Plans Node (Object Explorer)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

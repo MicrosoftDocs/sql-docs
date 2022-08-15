@@ -127,7 +127,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
 For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+9. Select **OK**.
 
 ### B. Restore an earlier disk backup over an existing database
 The following example restores an earlier disk backup of `Sales` and overwrites the existing `Sales` database.
@@ -155,7 +155,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
     > [!NOTE]
     > Not checking this option may result in the following error message: "System.Data.SqlClient.SqlError: Exclusive access could not be obtained because the database is in use. (Microsoft.SqlServer.SmoExtended)"
     
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+10. Select **OK**.
 
 ### C.  Restore an earlier disk backup with a new database name where the original database still exists
 The following example restores an earlier disk backup of `Sales` and creates a new database called `SalesTest`.  The original database, `Sales`, still exists on the server.
@@ -172,7 +172,7 @@ The following example restores an earlier disk backup of `Sales` and creates a n
     > [!IMPORTANT]
     > Not unchecking this option will result in the existing database, `Sales`, to change to the restoring state.
 
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+9. Select **OK**.
 
     > [!NOTE]
     > If you receive the following error message:      
@@ -192,7 +192,7 @@ The following example restores a database to its state as of `1:23:17 PM` on `Ma
 8.  Change the **Timeline interval** to **Hour** in the drop-down box (optional).  
 9.  Move the slider to the desired time.
 10. Click **OK** to return to the General page.
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+11. Select **OK**.
 
 ### E.  Restore a backup from the Microsoft Azure storage service
 

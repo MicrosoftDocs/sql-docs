@@ -1,30 +1,28 @@
 ---
-description: "ALTER TRIGGER (Transact-SQL)"
-title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER TRIGGER (Transact-SQL)"
+description: ALTER TRIGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER TRIGGER"
   - "ALTER_TRIGGER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DDL triggers, modifying"
   - "triggers [SQL Server], modifying"
   - "modifying triggers"
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Modifies the definition of a DML, DDL, or logon trigger that was previously created by the CREATE TRIGGER statement. Triggers are created by using CREATE TRIGGER. They can be created directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or from methods of assemblies that are created in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) and uploaded to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about the parameters that are used in the ALTER TRIGGER statement, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   

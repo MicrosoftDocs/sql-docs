@@ -1,32 +1,30 @@
 ---
-description: "sys.dm_db_xtp_transactions reports the active transactions in the In-Memory OLTP database engine."
 title: "sys.dm_db_xtp_transactions (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_db_xtp_transactions reports the active transactions in the In-Memory OLTP database engine.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_xtp_transactions"
   - "sys.dm_db_xtp_transactions_TSQL"
   - "dm_db_xtp_transactions"
   - "dm_db_xtp_transactions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_transactions dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Reports the active transactions in the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database engine.  
+  Reports the active transactions in the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] database engine.  
   
- For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -78,5 +76,5 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

@@ -1,20 +1,16 @@
 ---
+title: "Type Property Example (Property) (VB)"
 description: "Type Property Example (Property) (VB)"
-title: "Type Property Example (Property) (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Type property [property] [ADO], Visual Basic example"
-ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Type property [property] [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Type Property Example (Property) (VB)
 This example demonstrates the [Type](./type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](./properties-collection-ado.md), [Fields](./fields-collection-ado.md), etc.  

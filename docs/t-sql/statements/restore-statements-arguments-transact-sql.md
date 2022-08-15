@@ -1,21 +1,19 @@
 ---
-description: "RESTORE Statements - Arguments that are described in the Syntax sections of the RESTORE T-SQL syntax."
 title: "RESTORE Arguments (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: RESTORE Statements - Arguments that are described in the Syntax sections of the RESTORE T-SQL syntax.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -218,6 +216,9 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
  **Supported by:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Specifies that the restore operation loads the information into the `msdb` history tables. The LOADHISTORY option loads information, for the single backup set being verified, about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups stored on the media set to the backup and restore history tables in the `msdb` database. For more information about history tables, see [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+ 
+Be aware that using LOADHISTORY for backups which already exist in the `msdb` history tables will add the same information with a new backup_set_id.  Further, if you use LOADHISTORY to recreate backup history in `msdb`, either on a different server or after it was deleted from the original server, it is recommended to run the restore commands for the backups in the order in which they were taken.  This ensures the LSN chain remains intact and the SSMS restore wizard will correctly read the backup history to generate the correct restore sequence.  Use of LOADHISTORY with backup history recreated out of order can result in an error when trying to restore (“Unable to create restore plan due to break in the LSN chain. (Microsoft.SqlServer.SmoExtended)”).
+
   
 ### \<general_WITH_options> [ ,...n ]  
  The following general WITH options are all supported in RESTORE DATABASE and RESTORE LOG statements. Some of these options are also supported by one or more auxiliary statements, as noted.  

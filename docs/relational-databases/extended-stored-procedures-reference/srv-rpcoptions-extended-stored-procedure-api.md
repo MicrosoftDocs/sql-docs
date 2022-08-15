@@ -1,26 +1,21 @@
 ---
-title: "srv_rpcoptions (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_rpcoptions (Extended Stored Procedure API)"
 description: Learn how srv_rpcoptions in the Extended Stored Procedure API returns run-time options for the current remote stored procedure.
-
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_rpcoptions"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_rpcoptions"
+apilocation: opends60.dll
+apiname: srv_rpcoptions
+apitype: "DLLExport"
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-author: rothja
-ms.author: jroth
 ---
 # srv_rpcoptions (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

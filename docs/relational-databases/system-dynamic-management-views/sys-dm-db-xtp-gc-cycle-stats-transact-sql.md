@@ -1,24 +1,22 @@
 ---
 title: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)"
-description: "sys.dm_db_xtp_gc_cycle_stats returns the current state of committed transactions that have deleted one or more rows for In-Memory OLTP tables."
-ms.custom: ""
+description: sys.dm_db_xtp_gc_cycle_stats returns the current state of committed transactions that have deleted one or more rows for In-Memory OLTP tables.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_gc_cycle_stats_TSQL"
   - "dm_db_xtp_gc_cycle_stats"
   - "sys.dm_db_xtp_gc_cycle_stats_TSQL"
   - "sys.dm_db_xtp_gc_cycle_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_gc_cycle_stats dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
@@ -34,7 +32,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
  When there is memory pressure, the garbage collection thread updates the oldest active transaction hint aggressively, which forces garbage collection.  
   
- For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
   
 |Column name|Type|Description|  
@@ -92,5 +90,5 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

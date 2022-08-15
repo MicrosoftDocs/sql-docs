@@ -41,7 +41,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 6. Select **Apply**.
 
 ## Destination  
-1.  In the Destination section, Select **Windows File Share** for the method of delivery.  
+1.  In the Destination section, select **Windows File Share** for the method of delivery.  
 
 ## Dataset
 1. click **Edit Dataset**.

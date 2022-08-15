@@ -1323,7 +1323,7 @@
         href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
-      - name: Monitor back up
+      - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
       - name: Auto-failover groups
         items: 

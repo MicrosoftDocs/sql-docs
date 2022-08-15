@@ -244,7 +244,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 
 ## <a id="tz"></a> Configure the time zone
 
-To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable. To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
+To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable (see [Configure the time zone on Linux](sql-server-linux-configure-time-zone.md) for more information). To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
 
 ```command
 tzselect

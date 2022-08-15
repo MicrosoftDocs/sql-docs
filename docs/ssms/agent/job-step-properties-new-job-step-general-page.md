@@ -205,10 +205,10 @@ Paste the contents of the Clipboard.
 ## Options for Integration Services Package Execution Job Steps  
   
 ### General Tab  
-Specify where the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) package is located and what authentication method to use. The following options are available when you select this tab.  
+Specify where the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) package is located and what authentication method to use. The following options are available when you select this tab.  
   
 **Package source**  
-Specify where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored. Choose one of the following:  
+Specify where the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package is stored. Choose one of the following:  
   
 -   **SQL Server**  
   
@@ -217,7 +217,7 @@ Specify where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored.
 -   **SSIS Package Store**  
   
 **Server**  
-Type the server name where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored. This option is only available when **SQL Server** or **SSIS Package Store** is specified for **Package Source**.  
+Type the server name where the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package is stored. This option is only available when **SQL Server** or **SSIS Package Store** is specified for **Package Source**.  
   
 **Use Windows Authentication**  
 Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication.  
@@ -232,10 +232,10 @@ Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use [!INCLUD
 Type the location of the package.  
   
 > [!IMPORTANT]  
-> For password-protected [!INCLUDE[ssIS](../../includes/ssis_md.md)] packages, click the **Configurations** tab to enter the password in the **Package Password** dialog box. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that executes the password-protected package will fail.  
+> For password-protected [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages, click the **Configurations** tab to enter the password in the **Package Password** dialog box. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that executes the password-protected package will fail.  
   
 ### Configurations Tab  
-Specify configuration options for the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package. The following options are available when this tab is selected.  
+Specify configuration options for the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. The following options are available when this tab is selected.  
   
 **Configuration files**  
 Lists the configuration files for the package.  

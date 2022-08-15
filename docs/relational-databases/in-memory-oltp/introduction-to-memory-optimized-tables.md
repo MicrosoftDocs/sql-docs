@@ -95,7 +95,7 @@ EXECUTE AS CALLER has a small (approximately10%) performance hit caused by permi
   
 ## Scenarios
 
-For a brief discussion of typical scenarios where [!INCLUDE[hek_1](../../includes/hek-1-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
+For a brief discussion of typical scenarios where [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
   
 ## See Also
 

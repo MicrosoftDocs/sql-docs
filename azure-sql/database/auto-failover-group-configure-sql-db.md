@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.custom:
   - "devx-track-azurecli"
-  - "sql-db-mi-split"
+  - "azure-sql-split"
 ms.topic: how-to
 author: emlisa
 ms.author: emlisa

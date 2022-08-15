@@ -7,6 +7,7 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.custom:
   - "references_regions"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman

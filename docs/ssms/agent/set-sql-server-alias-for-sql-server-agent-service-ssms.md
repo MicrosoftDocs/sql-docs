@@ -53,7 +53,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 #### To set a SQL Server Alias for the SQL Server Agent Service  
   
-1.  In the **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] and then expand that instance.  
+1.  In the **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, and then click **Properties**.  
   

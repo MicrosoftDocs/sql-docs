@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-![yes](../media/yes-icon.png)[!INCLUDE [ssnoversion-md](../ssnoversion-md.md)] (all supported versions) 
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [ssnoversion-md](../ssnoversion-md.md)] (all supported versions) 
 

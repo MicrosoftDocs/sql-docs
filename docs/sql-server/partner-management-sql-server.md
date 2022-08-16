@@ -33,7 +33,7 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--Website links -->
 
-[idera_website]: https://www.idera.com/productssolutions/sqlserver/sqlcompliancemanager
+[idera_website]: https://www.idera.com/products/sql-compliance-manager/
 
 <!--Get Started Links-->
 
@@ -46,10 +46,10 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--[idera_press]:-->
 
 <!--YouTube links-->
-[idera_youtube]: https://www.idera.com/resourcecentral/videos/overview-of-sql-compliance-manager
+[idera_youtube]: https://www.idera.com/products/sql-compliance-manager/
 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 
 <!--Supported Systems-->
-[idera_requirements]: https://www.idera.com/productssolutions/sqlserver/sqlcompliancemanager/systemrequirements
+[idera_requirements]: https://wiki.idera.com/display/SQLCM/Software+requirements

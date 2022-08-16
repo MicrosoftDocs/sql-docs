@@ -33,7 +33,7 @@ This topic explains how to define the CPU idle condition for your server in [!IN
   
 #### To set CPU idle time and duration  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, click **Properties**, and select the **Advanced** page.  
   

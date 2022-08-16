@@ -23,7 +23,7 @@ ms.author: maghan
 # sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Drops a database device or backup device from an instance of the [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], deleting the entry from **master.dbo.sysdevices**.  
+  Drops a database device or backup device from an instance of the [!INCLUDE[ssdenoversion-md](../../includes/ssdenoversion-md.md)], deleting the entry from **master.dbo.sysdevices**.  
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

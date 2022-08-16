@@ -35,7 +35,7 @@ The SSRS solution flexibly delivers the right information to the right users. Us
 
 SQL Server Reporting Services offers an updated suite of products:
 
-* **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
+* **Paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
 * **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
 ::: moniker range="<=sql-server-ver15"
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
@@ -51,7 +51,7 @@ See [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-s
 
 ![Image of paginated reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-paginated-reports.png)
 
-Reporting Services is associated with "traditional" paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
+Reporting Services is associated with paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
 That core BI workload still exists today, so we've modernized it. Now you can create modern-looking reports with updated new features, using Report Builder, or Report Designer in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 

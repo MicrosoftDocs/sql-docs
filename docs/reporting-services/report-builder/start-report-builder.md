@@ -1,5 +1,5 @@
 ---
-title: "Start Report Builder | Microsoft Docs"
+title: "Start Microsoft Report Builder | Microsoft Docs"
 description: Report Builder is a stand-alone report authoring environment. The first time you start it, Microsoft Download Center prompts you to download it.
 
 ms.date: 08/15/2022
@@ -19,9 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Start Report Builder
+# Start Microsoft Report Builder
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.  
 
 ::: moniker range=">=sql-server-2016 <=sql-server-2016"
 > [!NOTE]

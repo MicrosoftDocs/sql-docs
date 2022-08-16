@@ -15,7 +15,7 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app, installed on your computer by you or an administrator.  An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal, and manages folders and permissions to reports and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md). 
+Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app for authoring paginated reports, installed on your computer by you or an administrator.  An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal, and manages folders and permissions to reports and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md). 
 
 There are different ways to install Report Builder.
 
@@ -24,12 +24,12 @@ Your administrator can install Report Builder with [Microsoft Endpoint Configura
 And you can install it from several places:
 
 - The [Microsoft Download Center](#download).
-- The [web portal of a report server](#install-report builder-from-a-web-portal).
+- The [web portal of a report server](#install-report-builder-from--the--web-portal).
 - A [share](#install-report-builder-from-a-share).
-- The command line(#install-report-builder-from-the-command-line).
+- The [command line](#install-report-builder-from-the-command-line).
 
 > [!NOTE]
-> Want to install **Power BI Report Builder** instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center.
+> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center.
 
 ## System requirements
   

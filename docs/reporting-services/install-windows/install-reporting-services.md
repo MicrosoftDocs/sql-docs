@@ -22,8 +22,8 @@ Download and run the .exe file for [**SQL Server 2022 Reporting Services**](http
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15"
-Download **[SQL Server 2019 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
+::: moniker range="<=sql-server-ver15"
+Download [**SQL Server 2019 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ::: moniker-end
 

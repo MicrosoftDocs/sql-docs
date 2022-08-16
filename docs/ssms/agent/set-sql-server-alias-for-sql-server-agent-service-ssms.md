@@ -24,7 +24,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to set a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use to connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)] by using SQL Server Management Studio. By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over named pipes by using dynamic server names that require no additional client configuration. You need to configure a server connection alias only if you are not using the default network transport or if you are connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that listens on an alternate named pipe.  
+This topic describes how to set a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use to connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)] by using SQL Server Management Studio. By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] over named pipes by using dynamic server names that require no additional client configuration. You need to configure a server connection alias only if you are not using the default network transport or if you are connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that listens on an alternate named pipe.  
 
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -53,7 +53,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 #### To set a SQL Server Alias for the SQL Server Agent Service  
   
-1.  In the **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] and then expand that instance.  
+1.  In the **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, and then click **Properties**.  
   

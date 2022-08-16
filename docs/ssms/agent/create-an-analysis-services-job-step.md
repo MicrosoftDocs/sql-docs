@@ -63,7 +63,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 #### To create an Analysis Services command job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Create Jobs](../../ssms/agent/create-jobs.md).  
   
@@ -83,7 +83,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 #### To create an Analysis Services query job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Create Jobs](../../ssms/agent/create-jobs.md).  
   

@@ -21,7 +21,7 @@ ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Specifies the current data length in bytes of a variable-length column or a column that allows NULL values.  
   

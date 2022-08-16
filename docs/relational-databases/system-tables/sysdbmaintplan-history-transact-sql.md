@@ -22,7 +22,7 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 
   This table is stored in the **msdb** database.  
   
- [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
   
 |Column name|Data type|Description|  

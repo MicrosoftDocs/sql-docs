@@ -7,4 +7,4 @@ ms.author: mikeray
 ---
 ## Select a product
 
-In the following row, select the product name you're interested in, and only that product’s information is displayed.
+In the following row, select the product name you're interested in, and only that product's information is displayed.

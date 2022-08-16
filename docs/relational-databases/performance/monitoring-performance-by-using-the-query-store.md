@@ -427,7 +427,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 7 days.
 
 #### Delete ad-hoc queries
 

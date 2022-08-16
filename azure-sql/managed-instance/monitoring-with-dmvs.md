@@ -675,4 +675,4 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 - [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)
-- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/docs/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)

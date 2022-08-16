@@ -167,7 +167,7 @@ Create the failover group for your managed instances using PowerShell.
 
 ---
 
-## Set up free DR replica 
+## Set up license-free DR replica 
 
 You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To learn more, review [Free DR replica](auto-failover-group-sql-mi.md#save-on-costs-with-free-dr-replica). 
 

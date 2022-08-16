@@ -169,11 +169,11 @@ The DNS update of the read-write listener will happen immediately after the fail
 > Use manual planned failover to move the primary back to the original location once the outage that caused the geo-failover is mitigated.
   
 
-## Save on costs with a free DR replica
+## Save costs with a license-free DR replica
 
 You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To set this up, see [Configure free DR replica](auto-failover-group-configure-sql-mi.md#set-up-free-dr-replica). 
 
-As long as the secondary instance is not used for read-workloads, Microsoft provides you with a free number of vCores to match the primary instance. 
+As long as the secondary instance is not used for read-workloads, Microsoft provides you with a free number of vCores to match the primary instance. You're still charged for compute and storage used by the secondary instance. For detailed information, review the [SQL Server licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). 
 
 Auto-failover groups support only one replica - the replica must either be a readable replica, or designated as a DR-only replica. 
 
@@ -196,13 +196,12 @@ The following table describes the functional capabilities of a DR-only secondary
 |Functionality  |Description  |
 |---------|---------|
 |Limited read-workloads     | Once you designate your instance as DR-only, you are able to run only a limited number read-workloads on the secondary instance, such as DMVs, backups, and DBCC commands.      |
-|Planned failover |         |
-|Unplanned failover |         |
-|Removing failover group  |         |
-|Backup / restore|         |
-|Monitoring     |         |
-|RPO & RTO|         |
-
+|Planned failover | All planned failover scenarios including recovery drills, relocating databases to different regions, and returning databases to the primary are supported by the DR-only replica. When the secondary switches to the primary, it can then serve read and write queries, while the old primary / new secondary becomes the DR-only replica and should not be used for read workloads.     |
+|Unplanned failover | During an unplanned failover, once the secondary switches to the primary role, it can serve both read and write queries. After the outage is mitigated and the old primary reconnects, it becomes the new secondary DR-only replica and should not be used for read workloads.   |
+|Backup / restore| There is no difference in backup and restore behavior between a DR-only replica and a readable secondary managed instance.         |
+|Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the DR-only replica.         |
+|RPO & RTO| The DR-only replica provides the same RPO and RTO as a readable secondary replica.          |
+|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup?view=azps-8.2.0)), the DR-only replica becomes a read-write standalone instance and will now be charged the license price.      |
 
 
 

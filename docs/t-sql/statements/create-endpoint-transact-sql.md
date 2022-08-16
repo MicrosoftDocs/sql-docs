@@ -210,7 +210,7 @@ FOR DATABASE_MIRRORING (
  Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.  
   
 > [!NOTE]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
  If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins.  
   

@@ -234,7 +234,7 @@ The v2.1 release of Data Migration Assistant includes the following additions:
 The v2.0 release of Data Migration Assistant includes improved Stretch database feature recommendations to provide proper prioritized tables that maximize the storage savings.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../includes/ssnotedepfutureavoid-md.md)]
 
 ## Data Migration Assistant v1.0
 

@@ -18,7 +18,7 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the [Windows version of bcp](../../../tools/bcp-utility.md).
+The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the [Windows version of bcp](../../../tools/bcp-utility.md).
 
 - The field terminator is a tab ("\t").
 

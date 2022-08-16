@@ -17,7 +17,7 @@ ms.date: "01/19/2017"
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Use the **Options** dialog box to choose documentation sets and decide whether to display topics internally in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or externally in a separate window. To access this dialog box, click **Options** on the **Tools** menu, expand **Help** in the **Environment** node, and then click **General**.  
+Use the **Options** dialog box to choose documentation sets and decide whether to display topics internally in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or externally in a separate window. To access this dialog box, click **Options** on the **Tools** menu, expand **Help** in the **Environment** node, and then click **General**.  
   
 > [!NOTE]  
 > Changes made to the options on this page do not take effect until the environment is restarted.  

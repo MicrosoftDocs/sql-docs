@@ -38,7 +38,7 @@ public java.lang.String getIdentifierQuoteString()
 ## Remarks  
  This getIdentifierQuoteString method is specified by the getIdentifierQuoteString method in the java.sql.DatabaseMetaData interface.  
   
- When using the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, this method returns **double** quotation marks ("").  
+ When using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] JDBC Driver with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, this method returns **double** quotation marks ("").  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

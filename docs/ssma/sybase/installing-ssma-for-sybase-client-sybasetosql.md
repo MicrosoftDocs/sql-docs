@@ -26,8 +26,8 @@ SSMA is designed to work with SAP ASE 11.9.2 or later versions and all editions 
 Before you install SSMA, make sure that the computer meets the following requirements:
 
 - Windows 7 or later versions, or Windows Server 2008 or later versions.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - The Sybase OLE DB/ADO.Net/ODBC provider and connectivity to the SAP ASE database server that contains the databases you want to migrate. You can install providers from the SAP ASE product media. For information about connectivity, see [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
 - Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)/[Connecting to Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).
 - 4 GB RAM recommended.

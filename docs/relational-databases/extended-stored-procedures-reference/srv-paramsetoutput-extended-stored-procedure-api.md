@@ -22,7 +22,7 @@ ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Sets the value of a return parameter. This function supersedes the **srv_paramset** function.  
   

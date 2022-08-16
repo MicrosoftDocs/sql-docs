@@ -16,7 +16,7 @@ monikerRange: "= sql-server-ver16"
 
 [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate 0 (RC0).
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 0.
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -30,9 +30,9 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
-- In RC0, when you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting will not change the encryption and may cause errors.
+- In RC 0, when you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting will not change the encryption and may cause errors.
 
-- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 RC0 installation. For RC0, please install the two drivers from the provided links as necessary.
+- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 RC 0 installation. For RC 0, please install the two drivers from the provided links as necessary.
 
 ## Build number
 

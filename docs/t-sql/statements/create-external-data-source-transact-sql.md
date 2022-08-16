@@ -2452,7 +2452,7 @@ WITH
 
 ## Overview: Azure SQL Managed Instance
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asdbmi.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asmi.md)]
 
 Creates an external data source [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 

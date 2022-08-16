@@ -63,7 +63,7 @@ For more information on parameter sniffing and query processing, see the [Query-
 
 Several workarounds can mitigate PSP problems. Each workaround has associated tradeoffs and drawbacks:
 
-- A new feature introduced with SQL Server 2022 (16.x) is [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitivity-plan-optimization.md), which attempts to mitigate most suboptimal query plans caused by parameter sensitivity. This is enabled with database compatibility level 160.
+- A new feature introduced with SQL Server 2022 (16.x) is [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitivity-plan-optimization), which attempts to mitigate most suboptimal query plans caused by parameter sensitivity. This is enabled with database compatibility level 160.
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query) query hint at each query execution. This workaround trades compilation time and increased CPU for better plan quality. The `RECOMPILE` option is often not possible for workloads that require a high throughput. 
 - Use the [OPTION (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a good understanding of optimal parameter values and associated plan characteristics.
 - Use the [OPTION (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value and instead use the density vector average. You can also do this by capturing the incoming parameter values in local variables and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be *good enough*.
@@ -73,7 +73,7 @@ Several workarounds can mitigate PSP problems. Each workaround has associated tr
 - Replace the single procedure with a nested set of procedures that can each be used based on conditional logic and the associated parameter values.
 - Create dynamic string execution alternatives to a static procedure definition.
 
-To apply [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before SQL Server 2022, use [plan guides](/sql/relational-databases/performance/plan-guides.md).
+To apply [query hints](/sql/t-sql/queries/hints-transact-sql-query), modify the query, or use [Query Store hints](/sql/relational-databases/performance/query-store-hints) to apply the hint without making code changes. In versions of SQL Server before SQL Server 2022, use [plan guides](/sql/relational-databases/performance/plan-guides).
 
 For more information about resolving PSP problems, see these blog posts:
 
@@ -138,7 +138,7 @@ A recompilation (or fresh compilation after cache eviction) can still result in 
 
 - **Changed physical design**: For example, newly created indexes more effectively cover the requirements of a query. The new indexes might be used on a new compilation if the query optimizer decides that using that new index is more optimal than using the data structure that was originally selected for the first version of the query execution. Any physical changes to the referenced objects might result in a new plan choice at compile time.
 
-- **Server resource differences**: When a plan in one system differs from the plan in another system, resource availability, such as the number of available processors, can influence which plan gets generated. For example, if one system has more processors, a parallel plan might be chosen. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/docs/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+- **Server resource differences**: When a plan in one system differs from the plan in another system, resource availability, such as the number of available processors, can influence which plan gets generated. For example, if one system has more processors, a parallel plan might be chosen. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option).
 
 - **Different statistics**: The statistics associated with the referenced objects might have changed or might be materially different from the original system's statistics. If the statistics change and a recompilation happens, the query optimizer uses the statistics starting from when they changed. The revised statistics' data distributions and frequencies might differ from those of the original compilation. These changes are used to create cardinality estimates. (*Cardinality estimates* are the number of rows that are expected to flow through the logical query tree.) Changes to cardinality estimates might lead you to choose different physical operators and associated orders of operations. Even minor changes to statistics can result in a changed query execution plan.
 
@@ -174,7 +174,7 @@ It's not always easy to identify a workload volume change that's driving a CPU p
 
 - **An increase or decrease in the number of requests**: This scenario is the most obvious measure of a workload. The number of queries doesn't always correspond to more resource utilization. However, this metric is still a significant signal, assuming other factors are unchanged.
 
-- **Parallelism**: Excessive parallelism can worsen other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/docs/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+- **Parallelism**: Excessive parallelism can worsen other concurrent workload performance by starving other queries of CPU and worker thread resources. For more information on parallelism, see [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option).
 
 ## Waiting-related problems
 
@@ -216,9 +216,9 @@ DMVs that track Query Store and wait statistics show results for only successful
 
 ## Next steps
 
-- [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+- [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
-- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/docs/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)
 - [Overview of Azure SQL Managed Instance resource limits](resource-limits.md)

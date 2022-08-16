@@ -73,7 +73,7 @@ Connectivity between the virtual network subnets hosting primary and secondary i
     | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
 
 
-1. Select **Add** to configure the peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.
+1. Select **Add** to configure peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.
 
    ![Virtual network peering status on peerings page](./media/failover-group-add-instance-tutorial/vnet-peering-connected.png)
 
@@ -164,6 +164,32 @@ Create the failover group for your managed instances using PowerShell.
         -FailoverPolicy Automatic -GracePeriodWithDataLossHours 1
    $failoverGroup
    ```
+
+---
+
+## Set up free DR replica 
+
+You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To learn more, review [Free DR replica](auto-failover-group-sql-mi.md#save-on-costs-with-free-dr-replica). 
+
+You can use the Azure portal, and Azure PowerShell to configure your secondary managed instance as DR-only. 
+
+# [Portal](#tab/azure-portal)
+
+Use the Azure portal to configure your secondary instance as DR-only either while you're creating your failover group, or after your failover group is already deployed. 
+
+### New failover group
+
+### Existing failover group
+
+
+
+# [PowerShell](#tab/azure-powershell)
+
+Use the Azure PowerShell to configure your secondary instance as DR-only either while you're creating your failover group, or after your failover group is already deployed. 
+
+### New failover group
+
+### Existing failover group
 
 ---
 
@@ -275,6 +301,42 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 
 > [!IMPORTANT]
 > When the failover group is deleted, the DNS records for the listener endpoints are also deleted. At that point, there's a non-zero probability of somebody else creating a failover group with the same name. Because failover group names must be globally unique, this will prevent you from using the same name again. To minimize this risk, don't use generic failover group names.
+
+## Enable scenarios dependent on objects from the system databases
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
+System databases are **not** replicated to the secondary instance in a failover group. To enable scenarios that depend on objects from the system databases, make sure to create the same objects on the secondary instance and keep them synchronized with the primary instance. 
+
+For example, if you plan to use the same logins on the secondary instance, make sure to create them with the identical SID. 
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+``` 
+
+To learn more, see [Replication of logins and agent jobs](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/azure-sql-managed-instance-sync-agent-jobs-and-logins-in/ba-p/2860495). 
+
+## Synchronize instance properties and retention policies instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
+Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
+
+## Scaling instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md.. Please ensure changes are made to both documents. 
+-->
+
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+
+The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be re-seeded during an upgrade or downgrade process.
+
 
 ## Permissions
 

@@ -169,7 +169,53 @@ The DNS update of the read-write listener will happen immediately after the fail
 > Use manual planned failover to move the primary back to the original location once the outage that caused the geo-failover is mitigated.
   
 
+## Save on costs with a free DR replica
+
+You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To set this up, see [Configure free DR replica](auto-failover-group-configure-sql-mi.md#set-up-free-dr-replica). 
+
+As long as the secondary instance is not used for read-workloads, Microsoft provides you with a free number of vCores to match the primary instance. 
+
+Auto-failover groups support only one replica - the replica must either be a readable replica, or designated as a DR-only replica. 
+
+### Cost breakdown
+
+For replicas designated as DR-only, Microsoft provides you the same number of vCores as the primary instance without charging you SQL Server licensing costs for those vCores. 
+
+The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free which are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instances uses returned to their licensing pool. 
+
+For example, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you will get an extra 8 vCores for free in your license pool to use with other Azure SQL deployments. 
+
+However, if you have only have 8 AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration will not be charged for the vCores used by the secondary instances and will also see 8 vCores subtracted from their invoice. 
+
+
+### Functional capabilities 
+
+The following table describes the functional capabilities of a DR-only secondary managed instance:
+
+
+|Functionality  |Description  |
+|---------|---------|
+|Limited read-workloads     | Once you designate your instance as DR-only, you are able to run only a limited number read-workloads on the secondary instance, such as DMVs, backups, and DBCC commands.      |
+|Planned failover |         |
+|Unplanned failover |         |
+|Removing failover group  |         |
+|Backup / restore|         |
+|Monitoring     |         |
+|RPO & RTO|         |
+
+
+
+
+
+
+
+
+
 ## Enable scenarios dependent on objects from the system databases
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
 
 System databases are **not** replicated to the secondary instance in a failover group. To enable scenarios that depend on objects from the system databases, make sure to create the same objects on the secondary instance and keep them synchronized with the primary instance. 
 
@@ -184,9 +230,17 @@ To learn more, see [Replication of logins and agent jobs](https://techcommunity.
 
 ## Synchronize instance properties and retention policies instances
 
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
 Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
 
 ## Scaling instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
 
 You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
 

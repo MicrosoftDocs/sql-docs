@@ -24,7 +24,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
@@ -138,7 +138,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.11.1
 
-![download](media/download-icon.png) [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
 
 - Release number: 18.11.1
 - Build number: 15.0.18410.0
@@ -172,7 +172,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.11
 
-![download](media/download-icon.png) [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
 
 - Release number: 18.11
 - Build number: 15.0.18404.0
@@ -231,7 +231,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.10
 
-![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
 
 - Release number: 18.10
 - Build number: 15.0.18390.0
@@ -279,7 +279,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9.2
 
-![download](media/download-icon.png) [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
 
 - Release number: 18.9.2
 - Build number: 15.0.18386.0
@@ -328,7 +328,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9.1
 
-![download](media/download-icon.png) [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0
@@ -359,7 +359,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9
 
-![download](media/download-icon.png) [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
@@ -433,7 +433,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.8
 
-![download](media/download-icon.png) [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
 
 - Release number: 18.8
 - Build number: 15.0.18369.0
@@ -484,7 +484,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.7.1
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
 
 - Release number: 18.7.1
 - Build number: 15.0.18358.0
@@ -513,7 +513,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.7
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - Release number: 18.7
 - Build number: 15.0.18357.0
@@ -589,7 +589,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.6
 
-![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0
@@ -648,7 +648,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.5.1
 
-![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
 
 - Release number: 18.5.1
 - Build number: 15.0.18333.0
@@ -676,7 +676,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.5
 
-![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
 
 - Release number: 18.5
 - Build number: 15.0.18330.0
@@ -778,7 +778,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.4
 
-![download](media/download-icon.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
 
 - Release number: 18.4
 - Build number: 15.0.18206.0
@@ -833,7 +833,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.3.1
 
-![download](media/download-icon.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 - Release number: 18.3.1
 - Build number: 15.0.18183.0
@@ -887,7 +887,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.2
 
-![download](media/download-icon.png) [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 - Release number: 18.2
 - Build number: 15.0.18142.0
@@ -959,7 +959,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.1
 
-![download](media/download-icon.png) [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1
 - Build number: 15.0.18131.0
@@ -1029,7 +1029,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.0
 
-![download](media/download-icon.png) [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Release number: 18.0  
 - Build number: 15.0.18118.0  
@@ -1301,7 +1301,7 @@ Here are the deprecated and removed Features from SSMS version 18.0.
 
 ### 17.9.1
 
-![download](media/download-icon.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
@@ -1344,7 +1344,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ### 16.5.3
 
-![download](media/download-icon.png) [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - Release number: 16.5.3  
 - Build number: 13.0.16106.4  

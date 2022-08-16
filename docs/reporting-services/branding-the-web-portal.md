@@ -14,7 +14,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading stylesheet (CSS) knowledge to create it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
 
@@ -71,7 +71,7 @@ The LESS stylesheet contains blocks that reference some predefined LESS variable
 }  
 ```
   
-While this resembles CSS syntax, the color values, prefixed with the @symbol, are unique to LESS. They're variables whose values are set by the json file.  
+While this syntax resembles CSS, the color values prefixed with the @symbol are unique to LESS. They're variables whose values are set by the json file.  
   
 For example, if the colors.json file had the following values.  
 
@@ -121,11 +121,11 @@ You can then use that theme for any mobile reports that you create, even if they
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
-The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
+The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290 px x 60 px.  
    
 ## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
   
-To add, download, or remove a brand package, you can do the following.  
+Follow these steps to add, download, or remove a brand package.  
   
 1.  Select the **gear** in the upper right.  
   

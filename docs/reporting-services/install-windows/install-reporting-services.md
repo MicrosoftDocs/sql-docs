@@ -1,7 +1,7 @@
 ---
 description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 12/11/2020
+ms.date: 08/15/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
@@ -15,15 +15,20 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
+SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
+
+::: moniker range="=sql-server-ver16"
+Download and run the .exe file for [**SQL Server 2022 Reporting Services**](https://download.microsoft.com/download/8/3/2/832616ff-af64-42b5-a0b1-5eb07f71dec9/SQLServerReportingServices.exe) from the Microsoft Download Center.
+
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15"
-Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
+Download **[SQL Server 2019 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
-Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
+Download [**SQL Server 2017 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
 
 ::: moniker-end
 

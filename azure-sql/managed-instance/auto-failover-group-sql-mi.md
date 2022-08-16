@@ -181,11 +181,11 @@ Auto-failover groups support only one replica - the replica must either be a rea
 
 For replicas designated as DR-only, Microsoft provides you the same number of vCores as the primary instance without charging you SQL Server licensing costs for those vCores. 
 
-The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free which are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instances uses returned to their licensing pool. 
+The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free which are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instance uses returned to their licensing pool. 
 
 For example, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you will get an extra 8 vCores for free in your license pool to use with other Azure SQL deployments. 
 
-However, if you have only have 8 AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration will not be charged for the vCores used by the secondary instances and will also see 8 vCores subtracted from their invoice. 
+However, if you have only have 8 AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration will not be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice. 
 
 
 ### Functional capabilities 

@@ -1,1 +1,1 @@
-:::image type="icon" source="../ssms/media/download-icon.png"::: [Download ADO.NET](../connect/sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="media/download.svg" border="false"::: [Download ADO.NET](../connect/sql-connection-libraries.md#anchor-20-drivers-relational-access)

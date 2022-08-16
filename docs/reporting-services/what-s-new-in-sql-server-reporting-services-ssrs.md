@@ -49,7 +49,7 @@ When we mark a feature as deprecated, it means:
 
 ## SQL Server 2019 Reporting Services
 
-**Download** :::image type="icon" source="/analysis-services/analysis-services/media/download.png":::
+**Download** :::image type="icon" source="../includes/media/download.svg" border="false":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) is available for download from the Microsoft Download Center.
 
@@ -87,7 +87,7 @@ The newly released version of Report Builder is fully compatible with the 2016, 
 
 ## SQL Server 2017 Reporting Services
 
-**Download** :::image type="icon" source="/analysis-services/analysis-services/media/download.png":::
+**Download** :::image type="icon" source="../includes/media/download.svg" border="false":::
 
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 

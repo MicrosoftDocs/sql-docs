@@ -23,7 +23,7 @@ ms.date: 01/19/2017
 
 SQL Server Management Studio provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use Management Studioto connect to:  
 
-- An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
+- An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
 - [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
 

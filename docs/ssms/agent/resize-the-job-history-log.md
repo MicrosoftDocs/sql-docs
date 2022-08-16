@@ -40,7 +40,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 
 ### Resize the job history log based on raw size
 
-1. In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.
+1. In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.
 
 2. Right-click **SQL Server Agent**, and then select **Properties**.
 
@@ -52,7 +52,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 
 ### Resize the job history log based on time
 
-1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
 
 2. Right-click **SQL Server Agent**, and then select **Properties**.
 

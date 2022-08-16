@@ -6,5 +6,5 @@ ms.date: 05/24/2022
 ms.author: vanto
 ---
 
-![yes](../media/yes-icon.png)[!INCLUDE [sssql19-starting-md](../sssql19-starting-md.md)]
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [sssql19-starting-md](../sssql19-starting-md.md)]
 

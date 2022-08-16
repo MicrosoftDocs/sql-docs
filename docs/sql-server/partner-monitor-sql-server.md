@@ -74,7 +74,7 @@ To learn more about some of our other partners, see [High availability and disas
 [redgate_twitter]:https://twitter.com/redgate
 
 <!--Supported Systems-->
-[idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
+[idera_requirements]:https://wiki.idera.com/display/SQLDM/Product+requirements
 
 <!--LinkedIn-->
 [sentryone_linkedin]:https://www.linkedin.com/company/sentryone

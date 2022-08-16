@@ -60,7 +60,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 * We updated all the default styles and color palettes, so by default you create reports with a new minimalist modern style.
 * We updated the Parameter pane, so you can arrange parameters however you want.
 * You can export to new formats such as PowerPoint. Reporting Services visualizations in PowerPoint are live and editable, not just screenshots.
-* You can create a hybrid Power BI/Reporting Services experience:  Rather than recreating your on-premises Reporting Services reports in Power BI, you can pin visuals from those reports to your Power BI dashboards. Then you can monitor everything in one place on your Power BI dashboard.
+* You can create a hybrid Power BI/Reporting Services experience:  Rather than recreating your on-premises Reporting Services reports in Power BI, you can pin visuals from those reports to your Power BI dashboards. Then you can monitor everything in one place on your Power BI dashboard. Hello World!!!
 
 ## Mobile reports
 

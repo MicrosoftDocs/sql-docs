@@ -1,5 +1,5 @@
 ---
-title: How to set up Windows authentication for Azure Active Directory with the modern interactive flow (Preview)
+title: How to set up Windows authentication for Azure Active Directory with the modern interactive flow 
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows Authentication for Azure Active Directory with the modern interactive flow.
 services: sql-database
@@ -13,7 +13,7 @@ ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
 ---
 
-# How to set up Windows Authentication for Azure Active Directory with the modern interactive flow (Preview)
+# How to set up Windows Authentication for Azure Active Directory with the modern interactive flow 
 
 This article describes how to implement the modern interactive authentication flow to allow enlightened clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows to authenticate to Azure SQL Managed Instance using Windows Authentication. Clients must be joined to Azure Active Directory (Azure AD) or Hybrid Azure AD.
 

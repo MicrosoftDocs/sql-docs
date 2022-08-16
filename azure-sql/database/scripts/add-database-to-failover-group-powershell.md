@@ -11,8 +11,8 @@ ms.custom:
 ms.devlang:
   - "PowerShell"
 ms.topic: sample
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/16/2019
 ---

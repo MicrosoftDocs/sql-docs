@@ -7,7 +7,7 @@ services:
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
-ms.custom:  "azure-sql-split"
+ms.custom: "azure-sql-split"
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil

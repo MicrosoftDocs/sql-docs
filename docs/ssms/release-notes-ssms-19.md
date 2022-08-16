@@ -25,7 +25,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS preview release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
 
 SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier preview version of SSMS, see [previous SSMS previews](release-notes-ssms-19.md#previous-ssms-previews).
 

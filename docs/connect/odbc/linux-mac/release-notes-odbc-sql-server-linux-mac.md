@@ -16,7 +16,7 @@ manager: kenvh
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
 
 <!--
 Going forward, please use the new 2-column markdown table for each new H2 version section.

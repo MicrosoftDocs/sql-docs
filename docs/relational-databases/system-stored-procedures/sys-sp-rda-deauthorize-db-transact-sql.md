@@ -24,7 +24,7 @@ ms.author: maghan
   Removes the authenticated connection between a local Stretch-enabled database and the remote Azure database. Run **sp_rda_deauthorize_db**  when the remote database is unreachable or in an inconsistent state and you want to change query behavior for all Stretch-enabled tables in the database.  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

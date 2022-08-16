@@ -17,7 +17,7 @@ helpviewer_keywords:
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 To configure an existing database for Stretch Database, select **Tasks > Stretch > Enable** for a database in SQL Server Management Studio to open the **Enable Database for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database for a database.
 

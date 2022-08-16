@@ -4,7 +4,9 @@ description: Learn how to configure an auto-failover group for Azure SQL Managed
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: high-availability
-ms.custom: devx-track-azurecli, sql-db-mi-split
+ms.custom: 
+- devx-track-azurecli
+- "azure-sql-split"
 ms.topic: how-to
 ms.devlang: 
 author: MladjoA

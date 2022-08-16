@@ -54,7 +54,7 @@ Automatic plan correction is an automatic tuning feature that identifies **execu
 
 ### What is execution plan choice regression?
 
-The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) related issue. 
+The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion-md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) related issue. 
 
  ![Query execution plan choice regression](media/plan-choice-regression.png "Query execution plan choice regression") 
 

@@ -41,7 +41,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 ## <a name="SSMS"></a>Using SQL Server Management Studio  
 **To set the polling interval for target servers**  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Manage Target Servers**.  
   

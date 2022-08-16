@@ -16,7 +16,7 @@ ms.date: 2/17/2022
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The [Hyperscale service tier](service-tier-hyperscale.md) utilizes an architecture with highly scalable storage and compute performance tiers. This article describes the components that enable customers to quickly scale Hyperscale databases while benefiting from nearly instantaneous backups and highly scalable transaction logging.
+The [Hyperscale service tier](service-tier-hyperscale.md) utilizes an architecture with highly scalable and separate storage and compute tiers. This article describes the components that enable customers to quickly scale Hyperscale databases while benefiting from nearly instantaneous backups and highly scalable transaction logging.
 
 ## Hyperscale architecture overview
 
@@ -36,7 +36,7 @@ A Hyperscale database contains the following types of components: compute nodes,
 
 The compute node is where the relational engine lives. The compute node is where language, query, and transaction processing occur. All user interactions with a Hyperscale database happen through compute nodes.
 
-Compute nodes have SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is a non-covering data cache that minimizes the number of network round trips required to fetch a page of data.
+Compute nodes have local SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is an intelligent low latency data cache that minimizes the need to fetch data from remote page servers.
 
 Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. One or more secondary compute nodes act as hot standby nodes for failover purposes. Secondary compute nodes can serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable massive OLTP [read-scale out](read-scale-out.md) scenarios and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads.
 
@@ -44,9 +44,9 @@ The database engine running on Hyperscale compute nodes is the same as in other 
 
 ## Page server
 
-Page servers are systems representing a scaled-out storage engine. Each page server is responsible for a subset of the pages in the database. Nominally, each page server controls either up to 128 GB or up to 1 TB of data. Each page server also has a replica that is kept for redundancy and availability.
+Page servers are systems representing a scaled-out storage engine. Each page server is responsible for a subset of the pages in the database. Each page server also has a replica that is kept for redundancy and availability.
 
-The job of a page server is to serve database pages out to the compute nodes on demand, and to keep the pages updated as transactions update data. Page servers are kept up to date by playing transaction log records from the log service. 
+The job of a page server is to serve database pages out to the compute nodes on demand, and to keep the pages updated as transactions update data. Page servers are kept up to date by replaying transaction log records from the log service. 
 
 Page servers also maintain covering SSD-based caches to enhance performance. Long-term storage of data pages is kept in Azure Storage for durability.
 

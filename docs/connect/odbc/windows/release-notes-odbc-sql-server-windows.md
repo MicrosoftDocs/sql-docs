@@ -26,7 +26,7 @@ Going forward, all new additions to this article must use the 2-column format.
 
 Also, use the shorter ## H2 title format, which eliminates all the redundant constants, and appends the date-added.
 One beneift of shortness is the avoidance of the annoying wrapping of unnecessarily long H2 titles in the rightNav.
-- OLD H2:  ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
+- OLD H2:  ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
 - NEW H2:  ## 17.3, February 2019
 
 By the way, in GitHub, the file name is changing today 2019/03/30:

@@ -33,7 +33,7 @@ Projects can contain:
   
 One or more related projects can be combined in a solution. Solutions and projects can be managed by using the Solution Explorer pane in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-Solutions and projects can be integrated into a [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe (VSS) database or other third-party source control providers, for development change tracking and life-cycle management.  
+Solutions and projects can be integrated into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe (VSS) database or other third-party source control providers, for development change tracking and life-cycle management.  
   
 ## Solution Tasks  
   

@@ -63,7 +63,7 @@ Creates a relational index on a table or view. Also called a rowstore index beca
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently don't support unique constraints. Any examples referencing unique constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently don't support unique constraints. Any examples referencing unique constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -89,7 +89,7 @@ For information on index design guidelines, refer to the [SQL Server Index Desig
 
 **Key scenario:**
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], you can use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 For additional types of indexes, see:
 
@@ -101,7 +101,7 @@ For additional types of indexes, see:
 
 ## Syntax
 
-### Syntax for SQL Server and Azure SQL Database
+### Syntax for SQL Server, Azure SQL Managed Instance, and Azure SQL Database
 
 ```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
@@ -279,7 +279,7 @@ Specifies the non-key columns to be added to the leaf level of the nonclustered 
 
 Column names can't be repeated in the INCLUDE list and can't be used simultaneously as both key and non-key columns. Nonclustered indexes always contain the clustered index columns if a clustered index is defined on the table. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-All data types are allowed except **text**, **ntext**, and **image**. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], if any one of the specified non-key columns are **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types, the index can be built or rebuilt using the ONLINE option.
+All data types are allowed except **text**, **ntext**, and **image**. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], if any one of the specified non-key columns are **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types, the index can be built or rebuilt using the ONLINE option.
 
 Computed columns that are deterministic and either precise or imprecise can be included columns. Computed columns derived from **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** data types can be included in non-key columns as long as the computed column data types is allowable as an included column. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
@@ -446,7 +446,7 @@ In backward compatible syntax, `WITH STATISTICS_NORECOMPUTE` is equivalent to `W
 
 #### STATISTICS_INCREMENTAL = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.
 
@@ -513,7 +513,7 @@ For more information, see [How Online Index Operations Work](../../relational-da
 
 #### RESUMABLE = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Specifies whether an online index operation is resumable.
 
@@ -525,7 +525,7 @@ Index operation isn't resumable.
 
 #### MAX_DURATION = *time* [MINUTES] used with `RESUMABLE = ON` (requires `ONLINE = ON`)
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused.
 
@@ -557,7 +557,7 @@ Page locks are not used.
 
 #### OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is **OFF**. See the [Sequential Keys](#sequential-keys) section for more information.
 
@@ -598,7 +598,7 @@ For more information about compression, see [Data Compression](../../relational-
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
 
@@ -613,7 +613,7 @@ Index or specified partitions are not compressed.
 Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the index isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` or `XML_COMPRESSION` option applies to all partitions of a partitioned index.
 
 > [!NOTE]  
-> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -663,7 +663,7 @@ Creating a clustered index on a table (heap) or dropping and re-creating an exis
 
 ## Nonclustered indexes
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can create a nonclustered index on a table stored as a clustered columnstore index. If you first create a nonclustered index on a table stored as a heap or clustered index, the index will persist if you later convert the table to a clustered columnstore index. It is also not necessary to drop the nonclustered index when you rebuild the clustered columnstore index.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can create a nonclustered index on a table stored as a clustered columnstore index. If you first create a nonclustered index on a table stored as a heap or clustered index, the index will persist if you later convert the table to a clustered columnstore index. It is also not necessary to drop the nonclustered index when you rebuild the clustered columnstore index.
 
 Limitations and Restrictions:
 
@@ -829,7 +829,7 @@ The following functionality is disabled for resumable index create operations:
 
 ### <a name="resumable-indexes"></a>Resumable index operations
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 The following guidelines apply for resumable index operations:
 
@@ -881,7 +881,7 @@ When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level loc
 
 ## Sequential keys
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Last-page insert contention is a common performance problem that occurs when a large number of concurrent threads attempt to insert rows into an index with a sequential key. An index is considered sequential when the leading key column contains values that are always increasing (or decreasing), such as an identity column or a date that defaults to the current date/time. Because the keys being inserted are sequential, all new rows will be inserted at the end of the index structure - in other words, on the same page. This leads to contention for the page in memory which can be observed as several threads waiting on PAGELATCH_EX for the page in question.
 
@@ -940,7 +940,7 @@ To view information on existing indexes, you can query the [sys.indexes](../../r
 
 ## Version notes
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] doesn't support filegroup and filestream options.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] doesn't support filegroup and filestream options. [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)] doesn't support filestream options
 
 ## Examples: All versions. Uses the AdventureWorks database
 
@@ -1241,7 +1241,7 @@ GO
 
 ### N. Create, resume, pause, and abort resumable index operations
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1294,7 +1294,7 @@ CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORI
 
 Create, resume, pause, and abort resumable index operations
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssazuremi](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

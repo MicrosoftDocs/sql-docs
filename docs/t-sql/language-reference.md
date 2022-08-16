@@ -53,7 +53,7 @@ The T-SQL reference topics encompass multiple versions of SQL Server, starting w
 
 For example, this topic applies to all versions, and has the following label.
 
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Another example, the following label indicates a topic that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
 

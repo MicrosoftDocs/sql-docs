@@ -6,4 +6,4 @@ ms.date: 3/10/2021
 ms.author: v-tdzakhov
 ---
 
-![Yes](../media/yes-icon.png)[!INCLUDE [sqlonlinux-md](../sqlonlinux-md.md)]
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [sqlonlinux-md](../sqlonlinux-md.md)]

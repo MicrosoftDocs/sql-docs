@@ -52,7 +52,7 @@ Hardware configurations have different characteristics, as described in the foll
 ### Regional support for memory optimized premium-series hardware (preview)
 
 Support for the memory optimized premium-series hardware (preview) is currently available only in these specific regions:
-Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East US, East US 2, France Central, Germany West Central, India Central, Japan East, North Central US, North Europe, South Central US, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
+Australia East, Australia Southeast, Brazil South, Canada Central, Central India, Central US, East Asia, East US, East US 2, France Central, Germany West Central, Japan East, North Central US, North Europe, South Central US, Southeast Asia, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
 
 ### In-memory OLTP available space
 

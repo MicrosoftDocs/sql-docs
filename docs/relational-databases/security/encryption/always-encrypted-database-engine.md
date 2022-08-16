@@ -186,7 +186,7 @@ Always Encrypted isn't supported for the columns with the below characteristics.
 - Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../../includes/ssnotedepfuturedontuse-md.md)]
+  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../../includes/ssnotedepfutureavoid-md.md)]
 
 - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
 - Table-valued parameters targeting encrypted columns aren't supported.

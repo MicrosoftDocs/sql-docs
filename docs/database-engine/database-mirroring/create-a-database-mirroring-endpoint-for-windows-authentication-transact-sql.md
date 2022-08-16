@@ -37,7 +37,7 @@ ms.author: mikeray
  The authentication and encryption methods of the server instance are established by the system administrator.  
   
 > [!WARNING]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
  Requires `CREATE ENDPOINT` permission, or membership in the `sysadmin` fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -121,7 +121,7 @@ ms.author: mikeray
          AES RC4 specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the AES algorithm. RC4 AES specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the RC4 algorithm. If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins. Provide the same algorithm explicitly to avoid connection errors between different servers.
   
         > [!WARNING]  
-        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
     -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the role of the endpoint is ignored.  
   

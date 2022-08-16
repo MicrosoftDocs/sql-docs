@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SET FMTONLY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Returns only metadata to the client. Can be used to test the format of the response without actually running the query.  
 

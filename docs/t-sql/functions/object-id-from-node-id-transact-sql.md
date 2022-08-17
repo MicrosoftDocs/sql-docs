@@ -39,7 +39,9 @@ Returns the object_id for the graph table corresponding to the `node_id` supplie
 
 ## Remarks
 
-Due to the performance overhead of parsing and validating the supplied character representation (JSON) of nodes, you should only use OBJECT_ID_FROM_NODE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+- Due to the performance overhead of parsing and validating the supplied character representation (JSON) of nodes, you should only use OBJECT_ID_FROM_NODE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+- For OBJECT_ID_FROM_NODE_ID to return a value, the supplied character representation (JSON) of the node ID must be valid, and the named `schema.table` within the JSON, must be a valid node table. The graph ID within the character representation (JSON), need not exist in the node table - it can be any valid integer.
+- OBJECT_ID_FROM_NODE_ID is the only supported way to parse the character representation (JSON) of a node ID.
 
 ## Examples
 

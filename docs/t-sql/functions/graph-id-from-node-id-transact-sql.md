@@ -42,11 +42,10 @@ Returns the internal graph ID value, which is currently a `bigint`.
 
 ## Remarks
 
-Due to the performance overhead of parsing and validating the supplied character representation (JSON) of nodes, you should only use GRAPH_ID_FROM_NODE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
-
-For GRAPH_ID_FROM_NODE_ID to return a value, the supplied character representation (JSON) must be valid and the named _schema.table_ within the JSON, must be a valid node table. However, the actual graph ID returned by the function need not exist in the node table - it just needs to be a valid integer.
-
-Also, graph IDs are an implementation specific detail. The data type and behavior of graph IDs are subject to change. For example, you shouldn't assume that graph IDs in a given node table are sequential.
+- Due to the performance overhead of parsing and validating the supplied character representation (JSON) of nodes, you should only use GRAPH_ID_FROM_NODE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+- For GRAPH_ID_FROM_NODE_ID to return a value, the supplied character representation (JSON) must be valid and the named `schema.table` within the JSON, must be a valid node table.
+- If a graph ID is returned by the function, it is only guaranteed that it will be a valid integer. No checks are made whether the graph ID is actually present in the node table.
+- The data type and behavior of graph IDs are implementation specific details, and are subject to change. For example, you shouldn't assume that graph IDs in a given node table are sequential.
   
 ## Examples
 

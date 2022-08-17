@@ -62,7 +62,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[Conversion Functions](conversion-functions-transact-sql.md)|Support data type casting and converting.|  
 |[Cursor Functions](cursor-functions-transact-sql.md)|Return information about cursors.|  
 |[Date and Time Data Types and Functions](date-and-time-data-types-and-functions-transact-sql.md)|Perform operations on a date and time input values and return string, numeric, or date and time values.|  
-|[Graph Functions](graph-functions-transact-sql.md)|Perform operations to convert between integer values and graph internal node and edge IDs.|
+|[Graph Functions](graph-functions-transact-sql.md)|Perform operations to convert to and from character representations of graph node and edge IDs .|
 |[JSON Functions](json-functions-transact-sql.md)|Validate, query, or change JSON data.|  
 |[Logical Functions](logical-functions-choose-transact-sql.md)|Perform logical operations.|  
 |[Mathematical Functions](mathematical-functions-transact-sql.md)|Perform calculations based on input values provided as parameters to the functions, and return numeric values.|  

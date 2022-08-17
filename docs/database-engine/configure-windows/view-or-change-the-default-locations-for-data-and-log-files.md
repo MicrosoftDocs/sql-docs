@@ -29,7 +29,8 @@ ms.author: randolphwest
   
 3.  In **Database default locations**, view the current default locations for new data files and new log files. To change a default location, enter a new default pathname in the **Data** or **Log** field, or click the browse button to find and select a pathname.  
   
->**NOTE:** After changing the default locations, you must stop and start the SQL Server service to complete the change.  
+> [!NOTE]  
+> After changing the default locations, you must stop and start the SQL Server service to complete the change.  
   
 ## See also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   

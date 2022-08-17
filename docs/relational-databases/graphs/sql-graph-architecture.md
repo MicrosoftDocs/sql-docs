@@ -95,21 +95,21 @@ The implicit columns in a node table are:
 
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string>	|BIGINT	|1	|internal graph ID value column  |
-|$node_id_\<hex_string>	|NVARCHAR	|0	|External node `node_id` column  |
+|graph_id_\<hex_string>	|BIGINT	|1	|Internal graph ID value  |
+|$node_id_\<hex_string>	|NVARCHAR	|0	| External, character representation of the node ID  |
 
 The implicit columns in an edge table are:
 
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string>	|BIGINT	|1	|internal graph ID value column  |
-|$edge_id_\<hex_string>	|NVARCHAR	|0	|external `edge_id` column  |
-|from_obj_id_\<hex_string>	|INT	|1	|internal from node `object_id`  |
-|from_id_\<hex_string>	|BIGINT	|1	|Internal from node graph ID value  |
-|$from_id_\<hex_string>	|NVARCHAR	|0	|external from node `node_id`  |
-|to_obj_id_\<hex_string>	|INT	|1	|internal to node `object_id`  |
-|to_id_\<hex_string>	|BIGINT	|1	|Internal to node graph ID value  |
-|$to_id_\<hex_string>	|NVARCHAR	|0	|external to node `node_id`  |
+|graph_id_\<hex_string>	|BIGINT	|1	|Internal graph ID value  |
+|$edge_id_\<hex_string>	|NVARCHAR	|0	| character representation of the edge ID |
+|from_obj_id_\<hex_string>	|INT	|1	|Internal `object_id` value for the "from node" |
+|from_id_\<hex_string>	|BIGINT	|1	|Internal graph ID value for the "from node"  |
+|$from_id_\<hex_string>	|NVARCHAR	|0	| character representation of the "from node"  |
+|to_obj_id_\<hex_string>	|INT	|1	|Internal `object_id` for the "to node"  |
+|to_id_\<hex_string>	|BIGINT	|1	|Internal graph ID value for the "to node"  |
+|$to_id_\<hex_string>	|NVARCHAR	|0	| External, character representation of the "to node"  |
 
 ### <a name="SystemFunctions"></a>System Functions
 The following built-in functions allow users to interact with the pseudo-columns in graph tables. Detailed references are provided for each of these functions in the respective T-SQL function references.

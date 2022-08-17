@@ -70,15 +70,15 @@ Explore security anomalies and threats in Azure Security Center.
 
    :::image type="content" source="media/configure-advanced-data-security/security-heading-sql-server-arc.png" alt-text="Screenshot showing how to select security heading.":::
 
-1. Select on any of the recommendations to see the vulnerability details in **Security Center**.
+1. Select any of the recommendations to see the vulnerability details in **Security Center**.
 
    :::image type="content" source="media/configure-advanced-data-security/vulnerabilities-report.png" alt-text="Screenshot showing the Vulnerability report.":::
 
-1. Select on any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Select any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert.png" alt-text="Screenshot showing a brute force alert.":::
 
-1. Select on **Take action** to mitigate the alert.
+1. Select **Take action** to mitigate the alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Screenshot showing alert mitigation.":::
 

@@ -6639,6 +6639,8 @@ items:
       items:
       - name: Overview
         href: relational-databases/integrated-acceleration/overview.md
+      - name: Intel QuickAssist Technology (QAT)
+        href: relational-databases/integrated-acceleration/intel-quickassist.md
     - name: Maintenance plans
       items:
       - name: Overview

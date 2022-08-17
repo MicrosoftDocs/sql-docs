@@ -1,35 +1,33 @@
 ---
+title: "Literals (SSIS)"
 description: "Numeric, string, and Boolean literals"
-title: "Literals (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
+author: chugugrace
+ms.author: chugu
+ms.reviewer: randolphwest
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "string literals"
   - "numeric literals [Integration Services]"
   - "Boolean literals"
   - "expressions [Integration Services], literals"
   - "literals [Integration Services]"
   - "mapping literals [Integration Services]"
-ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: chugugrace
-ms.author: chugu
 ---
 # Numeric, string, and Boolean literals
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
- Expressions can include numeric, string, and Boolean literals. The expression evaluator supports a variety of numeric literals such as integers, decimals, and floating-point constants. The expression evaluator also supports the long and float suffixes, which specify how the expression evaluator handles values, and scientific notation in numeric literals.  
+ Expressions can include numeric, string, and Boolean literals. The expression evaluator supports various numeric literals such as integers, decimals, and floating-point constants. The expression evaluator also supports the long and float suffixes, which specify how the expression evaluator handles values, and scientific notation in numeric literals.  
   
 ## Numeric Literals  
- The expression evaluator supports integral and nonintegral numeric data types. It also supports lineage identifiers (the unique numeric identifiers for package elements). Lineage identifiers are numbers, but they cannot be used in mathematical operations.  
+ The expression evaluator supports integral and nonintegral numeric data types. It also supports lineage identifiers (the unique numeric identifiers for package elements). Lineage identifiers are numbers, but they can't be used in mathematical operations.  
   
- The expression evaluator supports suffixes, which you can use to indicate how the expression evaluator treats the numeric literal. For example, you can indicate the integer 37 be treated as a long integer data type by writing 37L or 37l.  
+ The expression evaluator supports suffixes, which you can use to indicate how the expression evaluator treats the numeric literal. For example, you can indicate the integer `37` is treated as a long integer data type by writing 37L or 37l.  
   
  The following table lists suffixes for numeric literals.  
   
@@ -98,19 +96,19 @@ ms.author: chugu
   
 |Escape sequence|Description|  
 |---------------------|-----------------|  
-|\a|Alert|  
-|\b|Backspace|  
-|\f|Form feed|  
-|\n|New line|  
-|\r|Carriage return|  
-|\t|Horizontal tab|  
-|\v|Vertical tab|  
-|\\"|Quotation mark|  
-|\\\|Backslash|  
-|\xhhhh|Unicode character in hexadecimal notation|  
+|`\a`|Alert|  
+|`\b`|Backspace|  
+|`\f`|Form feed|  
+|`\n`|New line|  
+|`\r`|Carriage return|  
+|`\t`|Horizontal tab|  
+|`\v`|Vertical tab|  
+|`\"`|Quotation mark|  
+|`\`|Backslash|  
+|`\xhhhh`|Unicode character in hexadecimal notation|  
   
 ## Boolean Literals  
- The expression evaluator supports the usual Boolean literals: **True** and **False**. The expression evaluator is not case-sensitive and any combination of uppercase and lowercase letters are permitted. For example, TRUE works just as well as True.  
+ The expression evaluator supports the usual Boolean literals: **True** and **False**. The expression evaluator isn't case-sensitive and any combination of uppercase and lowercase letters are permitted. For example, `TRUE` works as well as `True`.  
   
 > [!NOTE]  
 > In an expression, a Boolean literal must be delimited by spaces.  

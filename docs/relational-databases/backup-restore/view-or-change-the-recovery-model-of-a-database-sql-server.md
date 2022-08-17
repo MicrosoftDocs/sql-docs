@@ -1,14 +1,16 @@
 ---
 title: "Set database recovery model"
 description: Learn how to switch a SQL Server database from one recovery model to another by using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
-ms.date: "12/17/2019"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database backups [SQL Server], recovery models"
   - "recovery [SQL Server], recovery model"
   - "backing up databases [SQL Server], recovery models"
@@ -16,14 +18,11 @@ helpviewer_keywords:
   - "recovery models [SQL Server], viewing"
   - "database restores [SQL Server], recovery models"
   - "modifying database recovery models"
-ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MashaMSFT
-ms.author: mathoma
 ---
 # View or Change the Recovery Model of a Database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to view or change the database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+  This article describes how to view or change the database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
   A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
   
@@ -35,13 +34,13 @@ ms.author: mathoma
 
 -   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
--   Point-in-time recovery is not possible with bulk-logged model. Running transactions under the bulk-logged recovery model that require a transaction log restore can exposed them to data loss. To maximize data recoverability in a disaster-recovery scenario, switch to the bulk-logged recovery model only under the following conditions:  
+-   Point-in-time recovery isn't possible with bulk-logged model. Running transactions under the bulk-logged recovery model that require a transaction log restore, can expose them to data loss. To maximize data recoverability in a disaster-recovery scenario, switch to the bulk-logged recovery model only under the following conditions:  
   
     -   Users are currently not allowed in the database.  
   
-    -   All modifications made during bulk processing are recoverable without depending on taking a log backup; for example, by re-running the bulk processes.  
+    -   All modifications made during bulk processing are recoverable without depending on taking a log backup; for example, by rerunning the bulk processes.  
   
-     If you satisfy these two conditions, you will not be exposed to any data loss while restoring a transaction log that was backed up under the bulk-logged recovery model..  
+     If you satisfy these two conditions, you won't be exposed to any data loss while restoring a transaction log that was backed up under the bulk-logged recovery model.  
   
     > [!NOTE]  
     > If you switch to the full recovery model during a bulk operation, bulk operations logging changes from minimal logging to full logging, and vice versa.  
@@ -53,13 +52,13 @@ ms.author: mathoma
   
 #### To view or change the recovery model  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, select the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
-3.  Right-click the database, and then click **Properties**, which opens the **Database Properties** dialog box.  
+3.  Right-click the database, and then select **Properties**, which opens the **Database Properties** dialog box.  
   
-4.  In the **Select a page** pane, click **Options**.  
+4.  In the **Select a page** pane, select **Options**.  
   
 5.  The current recovery model is displayed in the **Recovery model** list box.  
   
@@ -73,9 +72,9 @@ ms.author: mathoma
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to query the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to learn the recovery model of the **model** database.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to query the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to learn the recovery model of the **model** database.  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -89,9 +88,9 @@ GO
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement.  
   
 ```sql  
 USE [master] ;  

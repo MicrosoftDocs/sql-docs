@@ -1,14 +1,15 @@
 ---
-title: "Backup Devices (SQL Server) | Microsoft Docs"
+title: "Backup Devices (SQL Server)"
 description: This article describes backup devices for a SQL Server database, including terminology and working with backup devices.
-ms.custom: ""
-ms.date: "08/12/2016"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tape backup devices, about tape backup devices"
   - "backup devices [SQL Server]"
   - "disk backup devices [SQL Server]"
@@ -23,9 +24,6 @@ helpviewer_keywords:
   - "physical devices [SQL Server]"
   - "backing up databases [SQL Server], backup devices"
   - "devices [SQL Server]"
-ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Backup Devices (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

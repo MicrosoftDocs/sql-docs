@@ -22,7 +22,7 @@ monikerRange: ">=sql-server-2016"
 
 This article explains how to install SQL Server with the Installation Wizard.
 
-The the installation experience depends on the version of SQL Server. Select your version.
+The installation experience depends on the version of SQL Server. Select your version.
 
 ::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
@@ -99,7 +99,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 
 Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by SQL Server 2016 and 2017. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries.
 
-This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
+This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
 
 ## Install SQL Server 2016 and 2017
 
@@ -126,7 +126,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation or to add features to an existing installation. To continue, select **Next**.
+1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation, or to add features to an existing installation. To continue, select **Next**.
 
 1. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -164,11 +164,11 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. Selecting to install the PolyBase feature will add the **PolyBase Configuration** page to the SQL Server setup, displayed after the **Instance Configuration** page. PolyBase requires the Oracle JRE 7 Update 51 (at least), and if this hasn't already been installed, your installation will be blocked. On the **PolyBase Configuration** page, you can choose to use the SQL Server as a standalone PolyBase-enabled instance, or you can use this SQL Server as part of a PolyBase scale-out group. If you choose to use the scale-out group, you will need to specify a port range of up to 6 or more ports.
 
-1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
+1. Use the **Server Configuration - Service Accounts** page to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
-     You can assign the same logon account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+     You can assign the same account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-     To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
+     To specify the same account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
 
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]
@@ -178,7 +178,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
-   The default installation setting is determined by the operating system (OS) locale. The server-level collation can either be changed during setup, or by changing the OS locale before installation. The default collation is set to the oldest available version that is associated with each specific locale. This is due to backwards compatibility reasons. Therefore, this is not always the recommended collation. To take full advantage of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, change the default installation settings to use Windows collations. For example, for the OS locale **English (United States)** (code page 1252), the default collation during setup is **SQL_Latin1_General_CP1_CI_AS** and can be changed to its closest Windows collation counterpart **Latin1_General_100_CI_AS_SC**.
+   The default installation setting is determined by the operating system (OS) locale. The server-level collation can either be changed during setup, or by changing the OS locale before installation. The default collation is set to the oldest available version that is associated with each specific locale. This is due to backwards compatibility reasons. Therefore, this isn't always the recommended collation. To take full advantage of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, change the default installation settings to use Windows collations. For example, for the OS locale **English (United States)** (code page 1252), the default collation during setup is **SQL_Latin1_General_CP1_CI_AS** and can be changed to its closest Windows collation counterpart **Latin1_General_100_CI_AS_SC**.
 
    For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -293,7 +293,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation or to add features to an existing installation. To continue, select **Next**.
+1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation, or to add features to an existing installation. To continue, select **Next**.
 
 1. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -333,11 +333,11 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
+1. Use the **Server Configuration - Service Accounts** page to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
-     You can assign the same logon account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+     You can assign the same account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-     To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
+     To specify the same account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
 
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]
@@ -474,7 +474,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. On the **Azure Extension for SQL Server** page, you can configure the Azure Arc SQL extension. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension as a service for integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and a service principal to authenticate the SQL Server instance to Azure. You also need to provide a set of additional parameters. However, if this option is selected and disabled (you can't un-select it), it means that the extension was already installed on your machine.
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and a service principal to authenticate the SQL Server instance to Azure. You also need to provide a set of additional parameters. However, if this option is selected and disabled (you can't unselect it), it means that the extension was already installed on your machine.
 
    You can sign in using an existing Azure account, or you can use the Azure service principal. If you sign in, you can choose the required parameters from drop-down lists.
 
@@ -490,7 +490,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
    > [!NOTE]  
    > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale.md#connect-multiple-instances). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
 
-1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation or to add features to an existing installation. To continue, select **Next**.
+1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation, or to add features to an existing installation. To continue, select **Next**.
 
 1. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -530,11 +530,11 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.m
 
 1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
+1. Use the **Server Configuration - Service Accounts** page to specify the accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
 
-     You can assign the same logon account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+     You can assign the same account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-     To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
+     To specify the same account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.
 
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]

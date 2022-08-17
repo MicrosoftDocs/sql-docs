@@ -101,7 +101,8 @@ helpviewer_keywords:
   
  For more information about this feature, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **NOTE:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) system table.  
+> [!NOTE]  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) system table.  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
@@ -151,7 +152,8 @@ helpviewer_keywords:
 ### Windows Management Instrumentation (WMI) Events  
  The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
   
-> **NOTE:** For more information, see [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> [!NOTE]  
+> For more information, see [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **To create a WMI alert using SQL Server Management Studio**  
   
@@ -171,7 +173,8 @@ helpviewer_keywords:
   
 ##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
-> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
  Extended stored procedures are programmed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Stored Procedure API. A member of the **sysadmin** fixed server role can register an extended stored procedure with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and grant permission to users to execute the procedure. Extended stored procedures can be added only to the **master** database.  
   
@@ -188,7 +191,8 @@ helpviewer_keywords:
   
  Additionally, if the [word breakers and stemmers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../relational-databases/search/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
-> **NOTE:** When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+> [!NOTE]  
+> When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
  For more information, see also:  
   
@@ -254,7 +258,8 @@ helpviewer_keywords:
   
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
-> **NOTE:** For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> [!NOTE]  
+> For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a> Permissions  
@@ -282,7 +287,8 @@ helpviewer_keywords:
 #### Server-Level Permissions for a Certificate or Asymmetric Key  
  Server-level permissions cannot be granted directly to a certificate or asymmetric key. Instead, server-level permissions are granted to a mapped login that is created exclusively for a specific certificate or asymmetric key. Therefore, each certificate or asymmetric key that requires server-level permissions, requires its own *certificate-mapped login* or *asymmetric key-mapped login*. To grant server-level permissions for a certificate or asymmetric key, grant the permissions to its mapped login.  
   
-> **NOTE:** A mapped login is used only for authorization of code signed with the corresponding certificate or asymmetric key. Mapped logins cannot be used for authentication.  
+> [!NOTE]  
+> A mapped login is used only for authorization of code signed with the corresponding certificate or asymmetric key. Mapped logins cannot be used for authentication.  
   
  The mapped login and its permissions both reside in **master**. If a certificate or asymmetric key resides in a database other than **master**, you must re-create it in **master** and map it to a login. If you move, copy, or restore the database to another server instance, you must re-create its certificate or asymmetric key in the **master** database of the destination server instance, map to a login, and grant the required server-level permissions to the login.  
   

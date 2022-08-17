@@ -48,7 +48,8 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
   
      In this part, you define the payload that is supported on the endpoint. The payload can be one of several supported types: [!INCLUDE[tsql](../../includes/tsql-md.md)], service broker, database mirroring. In this part, you also include language-specific information.  
   
-> **NOTE:** Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> [!NOTE]  
+> Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

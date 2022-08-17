@@ -28,7 +28,8 @@ ms.author: vanto
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
    
- > **IMPORTANT!!** Policies can affect how some features work. For example, change data capture and transactional replication both use the systranschemas table, which does not have an index. If you enable a policy that all tables must have an index, enforcing compliance of the policy will cause these features to fail.  
+ > [!IMPORTANT]  
+ > Policies can affect how some features work. For example, change data capture and transactional replication both use the systranschemas table, which does not have an index. If you enable a policy that all tables must have an index, enforcing compliance of the policy will cause these features to fail.  
   
  Use SQL Server management Studio to create and manage policies, to:
   
@@ -42,7 +43,8 @@ For example, as the database administrator, you may want to ensure that certain 
   
  For failed policies, Object Explorer indicates a critical health warning as a red icon next to the target and the nodes that are higher in the Object Explorer tree.  
   
-> **NOTE:** When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [Policy Evaluation Modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
+> [!NOTE]  
+> When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [Policy Evaluation Modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## Three Policy-Based Management components  
  Policy-Based Management has three components:  
@@ -57,7 +59,8 @@ For example, as the database administrator, you may want to ensure that certain 
   
     -   **On change: prevent**. This automated mode uses DDL triggers to prevent policy violations.  
   
-        > **IMPORTANT!** If the nested triggers server configuration option is disabled, **On change: prevent** will not work correctly. Policy-Based Management relies on DDL triggers to detect and roll back DDL operations that do not comply with policies that use this evaluation mode. Removing the Policy-Based Management DDL triggers or disabling nested triggers, will cause this evaluation mode to fail or perform unexpectedly.  
+        > [!IMPORTANT]  
+        > If the nested triggers server configuration option is disabled, **On change: prevent** will not work correctly. Policy-Based Management relies on DDL triggers to detect and roll back DDL operations that do not comply with policies that use this evaluation mode. Removing the Policy-Based Management DDL triggers or disabling nested triggers, will cause this evaluation mode to fail or perform unexpectedly.  
   
     -   **On change: log only**. This automated mode uses event notification to evaluate a policy when a relevant change is made.  
   

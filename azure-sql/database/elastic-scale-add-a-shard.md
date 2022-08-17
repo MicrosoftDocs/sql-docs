@@ -74,6 +74,7 @@ upd.Shard = shard2;
 sm.MarkMappingOnline(sm.UpdateMapping(sm.GetMappingForKey(25), upd));
 ```
 
-**Important**:  Use this technique only if you are certain that the range for the updated mapping is empty.  The preceding methods do not check data for the range being moved, so it is best to include checks in your code.  If rows exist in the range being moved, the actual data distribution will not match the updated shard map. Use the [split-merge tool](elastic-scale-overview-split-and-merge.md) to perform the operation instead in these cases.  
+> [!IMPORTANT]  
+> Use this technique only if you are certain that the range for the updated mapping is empty.  The preceding methods do not check data for the range being moved, so it is best to include checks in your code.  If rows exist in the range being moved, the actual data distribution will not match the updated shard map. Use the [split-merge tool](elastic-scale-overview-split-and-merge.md) to perform the operation instead in these cases.  
 
 [!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]

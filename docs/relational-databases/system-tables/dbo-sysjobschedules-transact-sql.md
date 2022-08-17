@@ -24,7 +24,8 @@ ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 
   Contains schedule information for jobs to be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
   
-> **NOTE:** The **sysjobschedules** table refreshes every 20 minutes, which may affect the values returned by the **sp_help_jobschedule** stored procedure.  
+> [!NOTE]  
+> The **sysjobschedules** table refreshes every 20 minutes, which may affect the values returned by the **sp_help_jobschedule** stored procedure.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

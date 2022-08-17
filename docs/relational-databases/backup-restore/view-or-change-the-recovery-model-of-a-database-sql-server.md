@@ -43,7 +43,8 @@ ms.author: mathoma
   
      If you satisfy these two conditions, you will not be exposed to any data loss while restoring a transaction log that was backed up under the bulk-logged recovery model..  
   
-**Note!** If you switch to the full recovery model during a bulk operation, bulk operations logging changes from minimal logging to full logging, and vice versa.  
+    > [!NOTE]  
+    > If you switch to the full recovery model during a bulk operation, bulk operations logging changes from minimal logging to full logging, and vice versa.  
   
 ###  <a name="Security"></a> Required permissions  
    Requires ALTER permission on the database.  
@@ -105,17 +106,20 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   After switching from the bulk-logged recovery model back to the full recovery model, back up the log.  
   
-        >**NOTE:** Your backup strategy remains the same: continue performing periodic database, log, and differential backups.  
+        > [!NOTE]  
+        > Your backup strategy remains the same: continue performing periodic database, log, and differential backups.  
   
 -   **After switching from the simple recovery model**  
   
     -   Immediately after switching to the full recovery model or bulk-logged recovery model, take a full or differential database backup to start the log chain.  
   
-        >**NOTE:** The switch to the full or bulk-logged recovery model takes effect only after the first data backup.  
+        > [!NOTE]  
+        > The switch to the full or bulk-logged recovery model takes effect only after the first data backup.  
   
     -   Schedule regular log backups, and update your restore plan accordingly.  
   
-        > **IMPORTANT!!!!** Back up your logs!! If you do not back up the log frequently enough, the transaction log can expand until it runs out of disk space!  
+        > [!IMPORTANT]  
+        > **Back up your logs**. If you do not back up the log frequently enough, the transaction log can expand until it runs out of disk space!  
   
 -   **After switching to the simple recovery model**  
   

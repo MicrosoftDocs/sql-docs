@@ -33,7 +33,8 @@ ms.author: mathoma
   
   This topic describes the format that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for backup media, the correspondence between backup media and backup devices, the organization of backups on backup media, and several considerations for media sets and media families. The topic also describes the steps initializing or formatting backup media before you use it for the first time or replace an old media set with a new media set, how to overwrite old backup sets in a media set, and how to append new backup sets to a media set.  
   
->**NOTE!** For more information on SQL Server backup to the Azure Blob storage service,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+> [!NOTE]  
+> For more information on SQL Server backup to the Azure Blob storage service,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Terms  
  **media set**  
@@ -53,7 +54,8 @@ ms.author: mathoma
   
  A media set is created on the backup media during a backup operation by formatting the backup media. For more information, see [Creating a New Media Set](#CreatingMediaSet), later in this topic. After formatting, each file or tape contains a media header for the media set and is ready to receive backup content. With the header in place, the backup operation proceeds to back up the specified data to the backup media on all of the backup devices specified for the operation.  
   
-> **NOTE!** Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> [!NOTE]  
+> Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -86,7 +88,8 @@ In a mirrored media set, each media family is mirrored. For example, if six back
   
 -   Whether the media description contains an MTF media label or a media description.  
   
-    >**NOTE!** All media that is used for a backup or restore operation use a standard backup format called [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format (MTF). MTF allows users to specify a tape label that contains a MTF-specific description. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves any MTF media label written by another application but does not write MTF media labels.  
+    > [!NOTE]  
+    > All media that is used for a backup or restore operation use a standard backup format called [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format (MTF). MTF allows users to specify a tape label that contains a MTF-specific description. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preserves any MTF media label written by another application but does not write MTF media labels.  
   
 -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format media label or the media description (in free-form text).  
   
@@ -130,7 +133,8 @@ WITH
    DIFFERENTIAL  
 ```  
   
-> **NOTE!** The NOINIT option is the default, but is included for clarity.  
+> [!NOTE]  
+> The NOINIT option is the default, but is included for clarity.  
   
  If the second backup operation succeeds, it writes a second backup set to the media set, with the following distribution of backup content:  
   
@@ -199,7 +203,8 @@ Appending, which is the default behavior of the BACKUP, can be explicitly specif
   
  Microsoft Windows backups and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they are not interoperable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup cannot back up Windows data.  
   
-> **IMPORTANT!** Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+> [!IMPORTANT]  
+> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
 ##  <a name="Overwriting"></a> Overwriting backup sets  

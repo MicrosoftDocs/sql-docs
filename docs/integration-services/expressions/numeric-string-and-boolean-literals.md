@@ -80,7 +80,8 @@ ms.author: chugu
     |L|DT_I8|  
     |UL|DT_UI8|  
   
-    > **IMPORTANT!!** If the long (L or l) suffix is absent, the expression evaluator maps signed values to the DT_I4 data type and unsigned values to the DT_UI4 data type even though the value overflows the data type.  
+    > [!IMPORTANT]  
+    > If the long (L or l) suffix is absent, the expression evaluator maps signed values to the DT_I4 data type and unsigned values to the DT_UI4 data type even though the value overflows the data type.  
   
 -   A numeric literal that includes an exponent is converted to either the DT_R4 or the DT_R8 data type. If the expression includes the long suffix, it is converted to DT_R8; if it includes the float suffix, it is converted to the DT_R4 data type.  
   
@@ -111,6 +112,7 @@ ms.author: chugu
 ## Boolean Literals  
  The expression evaluator supports the usual Boolean literals: **True** and **False**. The expression evaluator is not case-sensitive and any combination of uppercase and lowercase letters are permitted. For example, TRUE works just as well as True.  
   
-> **NOTE:** In an expression, a Boolean literal must be delimited by spaces.  
+> [!NOTE]  
+> In an expression, a Boolean literal must be delimited by spaces.  
   
   

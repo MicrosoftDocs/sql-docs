@@ -26,7 +26,8 @@ This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlpro
   
      The **Trace Properties** dialog box appears.  
   
-    > **NOTE:** The **Trace Properties** dialog box fails to appear, and the trace begins instead, if **Start tracing immediately after making connection** is selected. To turn off this setting, on the **Tools* *menu, click **Options**, and clear the Start tracing immediately after making connection check box.  
+    > [!NOTE]  
+    > The **Trace Properties** dialog box fails to appear, and the trace begins instead, if **Start tracing immediately after making connection** is selected. To turn off this setting, on the **Tools* *menu, click **Options**, and clear the Start tracing immediately after making connection check box.  
   
 2.  In the **Trace name** box, type a name for the trace.  
   

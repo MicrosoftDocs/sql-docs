@@ -111,8 +111,9 @@ ms.author: maggies
 2.  Select the gear icon on the top row the Home page and then **Site Settings** from the dropdown menu. 
   
     ![Gear icon](../media/ssrsgearmenu.png).
-    >[!TIP]  
-    >**Note:** If you do not see the **Site Settings** option, close and reopen your browser and browse to web portal with administrative privileges.  
+
+    > [!TIP]  
+    > If you do not see the **Site Settings** option, close and reopen your browser and browse to web portal with administrative privileges.  
   
 3.  On the Site settings page, select **Security** and then select **Add group or user**.  
   

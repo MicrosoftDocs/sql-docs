@@ -129,7 +129,8 @@ ms.author: chugu
 
         Failure to put in the security items will result in the job failing and an error message similar to the following: The job failed. A required privilege is not held by the client.
 
-        > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
+        > [!NOTE]  
+        > If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
 
         For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md).  
 
@@ -147,7 +148,8 @@ ms.author: chugu
   
     **The following tables describe the configuration options that are available for the job step depending on the package source you select.**  
   
-    > **IMPORTANT:** If the package is password-protected, when you click any of the tabs on the **General** page of the **New Job Step** dialog box, with the exception of the **Package** tab, you need to enter the password in the **Package Password** dialog box that appears. Otherwise the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job will fail to run the package.  
+    > [!IMPORTANT]  
+    > If the package is password-protected, when you click any of the tabs on the **General** page of the **New Job Step** dialog box, with the exception of the **Package** tab, you need to enter the password in the **Package Password** dialog box that appears. Otherwise the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job will fail to run the package.  
   
     **Package Source**: SSIS Catalog  
   

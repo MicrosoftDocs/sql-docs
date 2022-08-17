@@ -165,7 +165,8 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
  In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md).  
   
- **Important** The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
+ > [!IMPORTANT]  
+ > The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
   
  The account used for the SQL Server Replication Listener must have permissions as described in the Merge Agent Security topic, in the "Connect to the Publisher or Distributor" section.  
   

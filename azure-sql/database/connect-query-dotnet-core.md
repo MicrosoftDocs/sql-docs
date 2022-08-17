@@ -146,6 +146,7 @@ namespace sqltest
 
 - [Getting started with .NET on Windows/Linux/macOS using VS Code](/dotnet/core/tutorials/with-visual-studio-code).
 - Learn how to [connect to Azure SQL Database using Azure Data Studio on Windows/Linux/macOS](/sql/azure-data-studio/quickstart-sql-database).
+- Learn more about [developing with .NET and SQL](/sql/connect/ado-net/sql).
 - Learn how to [connect and query Azure SQL Database or Azure SQL Managed Instance, by using .NET in Visual Studio](connect-query-dotnet-visual-studio.md).
 - Learn how to [Design your first database with SSMS](design-first-database-tutorial.md).
 - For more information about .NET, see [.NET documentation](/dotnet/).

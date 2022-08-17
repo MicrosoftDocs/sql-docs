@@ -114,6 +114,7 @@ To complete this quickstart, you need:
 
 - Learn how to [connect and query a database in Azure SQL Database by using .NET from the command line](connect-query-dotnet-core.md) on Windows/Linux/macOS.  
 - Learn about [Getting started with .NET on Windows/Linux/macOS using VS Code](/dotnet/core/tutorials/with-visual-studio-code).
+- Learn more about [developing with .NET and SQL](/sql/connect/ado-net/sql).
 - Learn how to [Design your first database in Azure SQL Database by using SSMS](design-first-database-tutorial.md).
 - For more information about .NET, see [.NET documentation](/dotnet/).
 - Retry logic example: [Connect resiliently to Azure SQL with ADO.NET][step-4-connect-resiliently-to-sql-with-ado-net-a78n].

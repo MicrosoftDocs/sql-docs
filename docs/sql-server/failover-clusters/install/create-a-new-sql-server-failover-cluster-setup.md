@@ -158,7 +158,7 @@ ms.author: mathoma
   
 15. Use this page to specify Cluster Security Policy.  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
+    -   [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
     -   On [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
   
@@ -281,7 +281,7 @@ ms.author: mathoma
   
 13. Use this page to specify Cluster Security Policy.  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
+    -   [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
     -   On [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
   

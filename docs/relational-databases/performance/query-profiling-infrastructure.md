@@ -167,7 +167,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-## Query Profiling Infrastruture usage guidance
+## Query Profiling Infrastructure usage guidance
 The following table summarizes the actions to enable either standard profiling or lightweight profiling, both globally (at the server level) or in a single session. Also includes the earliest version for which the action is available. 
 
 |Scope|Standard Profiling|Lightweight Profiling|

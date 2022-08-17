@@ -127,7 +127,6 @@ landingContent:
       - linkListType: video
         links:
           - text: Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed
-            url: https://docs.microsoft.com/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
+            url: /shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
           - text: Learn how Lenovo reinforces trust using ledger in Azure SQL Database
             url: https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi
-

@@ -1,4 +1,4 @@
----sys.dm_server_accelerator_status
+---
 title: "sys.dm_server_accelerator_status (Transact-SQL)"
 description: sys.dm_server_accelerator_status (Transact-SQL)
 author: MikeRayMSFT
@@ -27,8 +27,8 @@ Use this view to identify the available accelerators, the current mode descripti
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|  
-|accelerator|**nvarchar(60)**|The short name of the accelerator.|
-|accelerator_desc|**nvarchar(60)**|The complete name of the accelerator.|
+|accelerator|**nvarchar(60)**|Available accelerator.|
+|accelerator_desc|**nvarchar(60)**|Description of available accelerators.|
 |mode_desc|**nvarchar(60)**|The description of the mode.|
 |mode_reason_desc|**nvarchar(60)**|The reason the mode is described that way|
 |accelerator_hardware_detected|**bit**|1: Hardware is detected. <br><br> 0: Hardware is not detected. |

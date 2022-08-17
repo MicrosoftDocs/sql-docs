@@ -22,7 +22,7 @@ This article explains integrated offloading and acceleration.
 
 Microsoft allows partners to develop and provide hardware and software validated solutions for integrated offloading and acceleration.
 
-At this time, [Intel QuickAssist Technology (QAT)](https://www.intel.com/content/www/developer/topic-technology/open/quick-assist-technology/overview.html) is the only validated solution for SQL Server.
+At this time, [Intel QuickAssist Technology (QAT)](https://www.intel.com/content/www/us/en/developer/topic-technology/open/quick-assist-technology/overview.html) is the only validated solution for SQL Server.
 
 ## Use case - Backup and restore operations
 

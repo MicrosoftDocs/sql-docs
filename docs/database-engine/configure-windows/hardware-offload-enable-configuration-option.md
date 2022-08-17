@@ -44,7 +44,9 @@ GO
 > [!NOTE]
 > If `hardware offload enabled` is disabled (`0`), all offloading and acceleration solutions are disabled.
   
-## See also  
+## Next steps
+
+[sys.dm_server_accelerator_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)
 
 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 

@@ -18,16 +18,16 @@ This article explains Intel QuickAssist Technology (QAT) for SQL Server and how 
 
 ## Edition specific capabilities
 
-SQL Server on Windows operating system supports Intel QAT accelerator.
+Intel QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
 - Enterprise Edition supports hardware offloading - requires an Intel QAT device. If no device is available, it falls back to software based compression.
 
 - Standard Edition supports software compression. Standard edition does not offload to hardware even if an Intel QAT device is available.
 
-- Express Edition allows you to restore backups compressed with Intel QAT, but uses the SQL Server compression algorithm (MS_XPRESS) to compress backups.
+- Express edition will allow Intel QAT compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm. 
 
 > [!NOTE]
-> To back up or restore databases with Intel QAT accelerated compression, you must install Intel QAT drivers.
+> QAT hardware is not required to successfully restore a previously compressed Intel QAT backup, regardless of the SQL Server edition. However, to back up or restore databases with Intel QAT accelerated compression, you must install Intel QAT drivers.
 
 ## Install drivers
 
@@ -62,7 +62,7 @@ For detailed instructions and examples, see [Enable integrated offloading and ac
 
 ## Service start - after configuration
 
-After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the The Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
 
 In the case of the Windows operating system, there is a complimentary software library to QATZip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATZip in the case of hardware failure, and a software-based option when the hardware is not available.
 
@@ -87,7 +87,7 @@ BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'
 WITH COMPRESSION (ALGORITHM = QAT_DEFLATE); 
 ```
 
-Either of the following statements use the default MS_XPRESSpress compression engine: 
+Either of the following statements use the default MS_XPRESS compression option: 
 
 ```sql
 BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'  
@@ -99,14 +99,15 @@ BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'
 WITH COMPRESSION; 
 ```
 
-The table below gives a summary of the BACKUP DATABASE with COMPRESSION options in SQL Server 2022. 
+The table below gives a summary of the BACKUP DATABASE with COMPRESSION options beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+
 
 |Backup command | Description |
 |:-------|:-------|
 |`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
-|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using MS_XPRESS compression algorithm.
-|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm. There is an argument for permitting use of DEFAULT or NATIVE as permitted options.|
-|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`|Backup with compression using the QATZip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.|
+|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using the default setting in `sp_configure`.
+|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm.|
+|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATZip library.|
 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
@@ -129,7 +130,7 @@ SQL Server backups compressed using QAT_DEFLATE support all T-SQL RESTORE operat
 Auxiliary RESTORE commands are also supported for all backup compression algorithms. Auxiliary RESTORE commands include RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE VERIFYONLY, and more.
 
 > [!NOTE]
-> If the server-scope configuration HARDWARE_OFFLOAD option is not enabled, and/or the Intel QAT drivers have not been installed, SQL Server returns an error instead of attempting to perform the restore.
+> If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel QAT drivers have not been installed, SQL Server returns error 17441 instead of attempting to perform the restore. For example: `Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`
 
 To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
 

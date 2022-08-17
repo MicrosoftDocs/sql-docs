@@ -39,7 +39,7 @@ By default, SQL Server does not compress backups. For information about how to c
 
 Before you can use integrated offloading and acceleration, you need to configure the instance of SQL Server. Before you complete this section, install the drivers for your accelerator.
 
-1. Set the server configuration option `hardware offload enabled` to `1`. By default, this setting is `0`. This setting is an advanced configuration option. To set this setting, run the following commands:
+1. Set the server configuration option `hardware offload enabled` to `1` to enable all SQL Server accelerators. By default, this setting is `0`. This setting is an advanced configuration option. To set this setting, run the following commands:
 
    ```sql
    sp_configure 'show advanced options', 1
@@ -51,6 +51,7 @@ Before you can use integrated offloading and acceleration, you need to configure
    RECONFIGURE
    GO
    ```
+Changing this configuration option requires a restart of SQL Server service to take effect.
 
    > [!NOTE]
    > If `hardware offload enabled` is disabled (`0`), all offloading and acceleration solutions are disabled.

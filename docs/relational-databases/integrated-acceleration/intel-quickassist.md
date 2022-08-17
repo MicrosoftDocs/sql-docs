@@ -60,7 +60,16 @@ After the drivers are installed, configure the server.
 
 For detailed instructions and examples, see [Enable integrated offloading and acceleration](overview.md#enable-integrated-offloading-and-acceleration).
 
-## Use offloading and acceleration for backup operation
+## Service start - after configuration
+
+After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the The Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+
+In the case of the Windows operating system, there is a complimentary software library to QATZip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATZip in the case of hardware failure, and a software-based option when the hardware is not available.
+
+> [!NOTE]
+> The unavailability of an Intel QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
+
+## Backup operation
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an ALGORITHM extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
 
@@ -102,14 +111,27 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
 
-## Service start - after configuration
+## Restore operations
 
-After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the The Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+The RESTORE command does not include a COMPRESSION option. The backup header metadata specifies if the database is compressed and therefore the storage engine can restore from the backup file(s) accordingly. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the backup metadata includes the compression algorithm.
 
-In the case of the Windows operating system, there is a complimentary software library to QATZip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATZip in the case of hardware failure, and a software-based option when the hardware is not available.
+Run RESTORE HEADERONLY on a backup without compression or a backup compressed with the default MS_XPRESS algorithm. The query returns `CompressionAlgorithm`. See [RESTORE Statements - HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
+
+Restore statements are the same, no matter what compression algorithm is used to back up a database.
+
+```sql
+RESTORE DATABASE <database> FROM DISK = '<path>\<file>.bak'  
+WITH RECOVERY; 
+```
+
+SQL Server backups compressed using QAT_DEFLATE support all T-SQL RESTORE operations. The RESTORE { DATABASE | LOG } statements for restoring and recovering databases from backups, support all recovery arguments, such as WITH MOVE, PARTIAL, STOPAT, KEEP REPLICATION, KEEP CDC and RESTRICTED_USER.  
+
+Auxiliary RESTORE commands are also supported for all backup compression algorithms. Auxiliary RESTORE commands include RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE VERIFYONLY, and more.
 
 > [!NOTE]
-> The unavailability of an Intel QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
+> If the server-scope configuration HARDWARE_OFFLOAD option is not enabled, and/or the Intel QAT drivers have not been installed, SQL Server returns an error instead of attempting to perform the restore.
+
+To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
 
 ## See also
 

@@ -87,8 +87,8 @@ SET HARDWARE_OFFLOAD OFF ( ACCELERATOR = QAT );
 
 Integrated offloading and acceleration requires Windows operating system. It is not available on Linux or containers.
 
-## See also
+## Next steps
 
-[hardware offload enable Configuration Option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+[Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
 
 [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)

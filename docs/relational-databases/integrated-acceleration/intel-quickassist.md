@@ -133,10 +133,10 @@ Auxiliary RESTORE commands are also supported for all backup compression algorit
 
 To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
 
-## See also
+## Next steps
 
 [Integrated offloading and acceleration](overview.md)
 
-[Hardware offload enable Configuration Option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+[Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
 
 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)

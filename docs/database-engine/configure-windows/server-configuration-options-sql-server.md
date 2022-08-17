@@ -109,7 +109,7 @@ The following table lists all available configuration options, the range of poss
 | [ft notify bandwidth (max)](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 100 |
 | [ft notify bandwidth (min)](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 0 |
 | [hadoop connectivity](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br />[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]. | 0 | 7 | 0 |
-| [hardware offload enable](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md) (A)<br /><br />[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]. | 0 | 1 | 0 |
+| [hardware offload enabled](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md) (A)<br /><br />[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]. | 0 | 1 | 0 |
 | [in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A) | 0 | 2 | 0 |
 | [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC) | 704 | 2147483647 | 0 |
 | [lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |

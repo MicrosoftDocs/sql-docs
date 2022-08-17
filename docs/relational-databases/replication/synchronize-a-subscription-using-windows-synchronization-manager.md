@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  Synchronization Manager allows you to use the Interactive Resolver for merge subscriptions. Typically, conflicts detected during synchronization are resolved automatically, but if interactive resolution is enabled, conflicts can be resolved by a user during synchronization. If a synchronization is performed outside of Windows Synchronization Manager (as a scheduled synchronization or an on demand synchronization in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Replication Monitor), conflicts are resolved automatically without user intervention, according to the resolver specified for the article.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] and [!INCLUDE[winvista](../../includes/winvista-md.md)], 64-bit versions of the Windows Synchronization Manager cannot detect 32-bit subscriptions.  
+>  Beginning with [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and [!INCLUDE[winvista](../../includes/winvista-md.md)], 64-bit versions of the Windows Synchronization Manager cannot detect 32-bit subscriptions.  
   
 ### To enable the synchronization of pull subscriptions with Windows Synchronization Manager  
   

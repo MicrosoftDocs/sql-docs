@@ -65,6 +65,6 @@ FROM Person;
 
 ## See also  
 
- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
- [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
+- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
+- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
+- [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)

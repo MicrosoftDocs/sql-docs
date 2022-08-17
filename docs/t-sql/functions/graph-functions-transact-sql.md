@@ -29,9 +29,9 @@ Use the functions described on the pages in this section to extract values from,
  
 ## See Also
 
- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
- [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
- [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
- [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)
+- [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
+- [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
+- [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/-bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
+- [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
+- [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)
  

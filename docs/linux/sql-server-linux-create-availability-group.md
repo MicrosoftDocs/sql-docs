@@ -315,19 +315,19 @@ This section covers how to use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanst
 
 This section shows how to create an AG with a cluster type of External using SSMS with the New Availability Group Wizard.
 
-1.  In SSMS, expand **Always On High Availability**, right click **Availability Groups**, and select **New Availability Group Wizard**.
+1.  In SSMS, expand **Always On High Availability**, right-click **Availability Groups**, and select **New Availability Group Wizard**.
 
-2.  On the Introduction dialog, click **Next**.
+2.  On the Introduction dialog, select **Next**.
 
-3.  In the Specify Availability Group Options dialog, enter a name for the availability group and select a cluster type of EXTERNAL or NONE in the dropdown. External should be used when Pacemaker will be deployed. None is for specialized scenarios, such as read scale out. Selecting the option for database level health detection is optional. For more information on this option, see [Availability group database level health detection failover option](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Click **Next**.
+3.  In the Specify Availability Group Options dialog, enter a name for the availability group and select a cluster type of EXTERNAL or NONE in the dropdown. External should be used when Pacemaker will be deployed. None is for specialized scenarios, such as read scale out. Selecting the option for database level health detection is optional. For more information on this option, see [Availability group database level health detection failover option](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Select **Next**.
 
     ![Create Availability Group 03](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  In the Select Databases dialog, select the database(s) that will participate in the AG. Each database must have a full backup before it can be added to an AG. Click **Next**.
+4.  In the Select Databases dialog, select the database(s) that will participate in the AG. Each database must have a full backup before it can be added to an AG. Select **Next**.
 
-5.  In the Specify Replicas dialog, click **Add Replica**.
+5.  In the Specify Replicas dialog, select **Add Replica**.
 
-6.  In the Connect to Server dialog, enter the name of the Linux instance of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] that will be the secondary replica, and the credentials to connect. Click **Connect**.
+6.  In the Connect to Server dialog, enter the name of the Linux instance of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] that will be the secondary replica, and the credentials to connect. Select **Connect**.
 
 7.  Repeat the previous two steps for the instance that will contain a configuration-only replica or another secondary replica.
 
@@ -341,7 +341,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
     ![Create Availability Group 05](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  If you want to alter the backup preferences, click on the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
+9.  If you want to alter the backup preferences, select the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary's IP address.
 
@@ -353,17 +353,17 @@ This section shows how to create an AG with a cluster type of External using SSM
 
     b.  Enter the URLs for the read-only replicas. These URLs are similar to the endpoints, except they use the port of the instance, not the endpoint.
 
-    c.  Select each URL and from the bottom, select the readable replicas. To multi-select, hold down SHIFT or click-drag.
+    c.  Select each URL and from the bottom, select the readable replicas. To multi-select, hold down SHIFT or select-drag.
 
-12. Click **Next**.
+12. Select **Next**.
 
-13. Choose how the secondary replica(s) will be initialized. The default is to use [automatic seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), which requires the same path on all servers participating in the AG. You can also have the wizard do a backup, copy, and restore (the second option); have it join if you have manually backed up, copied, and restored the database on the replica(s) (third option); or add the database later (last option). As with certificates, if you are manually making backups and copying them, permissions on the backup files needs to be set on the other replica(s). Click **Next**.
+13. Choose how the secondary replica(s) will be initialized. The default is to use [automatic seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), which requires the same path on all servers participating in the AG. You can also have the wizard do a backup, copy, and restore (the second option); have it join if you have manually backed up, copied, and restored the database on the replica(s) (third option); or add the database later (last option). As with certificates, if you are manually making backups and copying them, permissions on the backup files needs to be set on the other replica(s). Select **Next**.
 
-14. On the Validation dialog, if everything does not come back as Success, investigate. Some warnings are acceptable and not fatal, such as if you do not create a listener. Click **Next**.
+14. On the Validation dialog, if everything does not come back as Success, investigate. Some warnings are acceptable and not fatal, such as if you do not create a listener. Select **Next**.
 
-15. On the Summary dialog, click **Finish**. The process to create the AG will now begin.
+15. On the Summary dialog, select **Finish**. The process to create the AG will now begin.
 
-16. When the AG creation is complete, click **Close** on the Results. You can now see the AG on the replicas in the dynamic management views as well as under the Always On High Availability folder in SSMS.
+16. When the AG creation is complete, select **Close** on the Results. You can now see the AG on the replicas in the dynamic management views as well as under the Always On High Availability folder in SSMS.
 
 ### Use Transact-SQL
 

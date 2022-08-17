@@ -31,7 +31,7 @@ GRAPH_ID_FROM_EDGE_ID ( edge_id )
 ## Arguments
 
  *edge_id*
- Is the $edge_id pseudo-column in a graph edge table.
+ Is the character representation (JSON) of the $edge_id pseudo-column in a graph edge table.
 
 ## Return value
 
@@ -39,8 +39,12 @@ Returns the internal graph ID value, which is currently a `bigint`.
 
 ## Remarks  
 
-Graph IDs are an implementation specific detail. The data type and behavior of graph IDs are subject to change. For example, you shouldn't assume that graph IDs in a given edge table are sequential.
-  
+Due to the performance overhead of parsing and validating the supplied character representation (JSON) of edges, you should only use GRAPH_ID_FROM_EDGE_ID where absolutely needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+
+For GRAPH_ID_FROM_EDGE_ID to return a value, the supplied character JSON must be valid and the named _schema.table_ within the JSON, must be a valid edge table. However, the actual graph id returned by the function needn't exist - it just needs to be a valid integer.
+
+Also, graph IDs are an implementation specific detail. The data type and behavior of graph IDs are subject to change. For example, you shouldn't assume that graph IDs in a given edge table are sequential.
+
 ## Examples
 
 ### Example 1
@@ -71,4 +75,4 @@ FROM friendOf;
 - [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
 - [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)
 - [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md)
- 
+- [MATCH](../queries/match-sql-graph.md)

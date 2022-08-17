@@ -38,11 +38,13 @@ NODE_ID_FROM_PARTS ( object_id, graph_id )
 
 ## Return value
 
-Returns an NVARCHAR(1000) character representation of the node ID, provided the object_id supplied corresponds to a node table. In other cases, a NULL is returned.
+Returns an NVARCHAR(1000) character representation of the node ID. The return value can be NULL if any of the supplied parameters are invalid.
 
 ## Remarks  
 
-The character representation of the node ID is an implementation specific detail. NODE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID. NODE_ID_FROM_PARTS is typically useful in cases involving bulk insert of graph nodes into a node table.
+The character representation (JSON) of the node ID returned by NODE_ID_FROM_PARTS, is an implementation specific detail. NODE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID. NODE_ID_FROM_PARTS is useful in cases involving bulk insert of graph nodes into a node table.
+
+For NODE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must be for an existing node table. However, the `graph_id` parameter needn't correspond to an existing node in that node table. `graph_id` just needs to be a valid integer value. If any of these checks fail, NODE_ID_FROM_PARTS returns NULL.
   
 ## Examples
 

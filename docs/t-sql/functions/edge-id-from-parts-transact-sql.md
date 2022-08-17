@@ -64,7 +64,7 @@ FROM OPENROWSET (BULK 'person_likes_restaurant.csv', DATA_SOURCE = 'staging_data
 
 - [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
 - [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
-- [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/-bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
+- [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
 - [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md)
 - [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
 - [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)

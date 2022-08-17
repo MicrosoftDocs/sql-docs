@@ -5031,6 +5031,8 @@ items:
         href: database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md
       - name: filestream access level
         href: database-engine/configure-windows/filestream-access-level-server-configuration-option.md
+      - name: Enable hardware offload
+        href: database-engine/configure-windows/hardware-offload-enable-configuration-option.md
       - name: Configure the fill factor
         href: database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md
       - name: ft crawl bandwidth

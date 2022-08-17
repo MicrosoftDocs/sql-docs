@@ -3,7 +3,6 @@ title: Integrated offloading & acceleration
 description: Learn to leverage integrated solutions from third party providers to offload and accelerate workloads for an instance of SQL Server.
 ms.date: 08/16/2022
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: dplessMSFT 
 ms.technology: configuration
 ms.topic: conceptual
@@ -35,9 +34,9 @@ By default, SQL Server does not compress backups. For information about how to c
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Enterprise Edition supports hardware offloading - requires an Intel QAT device. If no device is available, it falls back to software based compression.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Standard Edition supports software compression - even if an Intel QAT device is available.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Standard Edition supports software compression. Standard edition does not offload to hardware even if an Intel QAT device is available.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Express Edition allows you to restore backups compressed with Intel QAT, but uses the SQL Server compression algorithm (MS_XPRESS) to compress back ups.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Express Edition allows you to restore backups compressed with Intel QAT, but uses the SQL Server compression algorithm (MS_XPRESS) to compress backups.
 
 > [!NOTE]
 > To back up or restore databases with Intel QAT accelerated compression, you must install Intel QAT drivers.

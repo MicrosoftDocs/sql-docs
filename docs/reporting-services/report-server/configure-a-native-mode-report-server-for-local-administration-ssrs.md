@@ -38,7 +38,7 @@ ms.author: maggies
   
 -   [!INCLUDE[win7](../../includes/win7-md.md)]  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]  
+-   [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)]  
   
  Because the noted operating systems limit permissions, members of the local Administrators group run most applications as if they are using the Standard User account.  
   

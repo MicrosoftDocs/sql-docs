@@ -1,5 +1,5 @@
 ---
-title: How to set up Windows Authentication for Azure Active Directory with the incoming trust-based flow (Preview)
+title: How to set up Windows Authentication for Azure Active Directory with the incoming trust-based flow 
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows authentication for Azure Active Directory with the incoming trust-based flow.
 services: sql-database
@@ -13,7 +13,7 @@ ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
 ---
 
-# How to set up Windows Authentication for Azure AD with the incoming trust-based flow (Preview)
+# How to set up Windows Authentication for Azure AD with the incoming trust-based flow 
 
 This article describes how to implement the incoming trust-based authentication flow to allow Active Directory (AD) joined clients running Windows 10, Windows Server 2012, or higher versions of Windows to authenticate to an Azure SQL Managed Instance using Windows Authentication. This article also shares steps to rotate a Kerberos Key for your Azure Active Directory (Azure AD) service account and Trusted Domain Object, and steps to remove a Trusted Domain Object and all Kerberos settings, if desired.
 

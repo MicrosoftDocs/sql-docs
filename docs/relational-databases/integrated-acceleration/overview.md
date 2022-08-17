@@ -68,3 +68,5 @@ Before you can use integrated offloading and acceleration, you need to configure
    ALTER SERVER CONFIGURATION   
    SET HARDWARE_OFFLOAD ON;  
    ```
+
+1. Restart the SQL Server instance. 

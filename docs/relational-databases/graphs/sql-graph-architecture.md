@@ -29,7 +29,7 @@ Users can create one graph per database. A graph is a collection of node and edg
 Figure 1: SQL Graph database architecture
 
 ## Node Table
-A node table represents an entity in a graph schema. Every time a node table is created, along with the user-defined columns, an implicit `$node_id` column is created, which uniquely identifies a given node in the database. The values in `$node_id` are automatically generated and are a combination of `object_id` of that node table and an internally generated bigint value. However, when the `$node_id` column is selected, a computed value in the form of a JSON string is displayed. Also, `$node_id` is a pseudo-column, that maps to an internal name with hex string in it. When you select `$node_id` from the table, the column name will appear as `$node_id_<hex_string>`.
+A node table represents an entity in a graph schema. Every time a node table is created, along with the user-defined columns, an implicit `$node_id` column is created, which uniquely identifies a given node in the database. The values in `$node_id` are automatically generated and are a combination of object ID for the graph table of that node table and an internally generated bigint value. However, when the `$node_id` column is selected, a computed value in the form of a JSON string is displayed. Also, `$node_id` is a pseudo-column, that maps to an internal name with hex string in it. When you select `$node_id` from the table, the column name will appear as `$node_id_<hex_string>`.
 
 > [!NOTE]
 > Using the pseudo-columns in queries is the only supported and recommended way of querying the internal `$node_id` column. You should not directly use the `$node_id_<hex_string>` columns in any queries.
@@ -61,7 +61,7 @@ Figure 2: Node and edge table representation
 Use these metadata views to see attributes of a node or edge table.
 
 ### sys.tables
-The following new, bit type, columns will be added to SYS.TABLES. If `is_node` is set to 1, that indicates that the table is a node table and if `is_edge` is set to 1, that indicates that the table is an edge table.
+The following `bit` columns in [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) can be used to identify graph tables. If `is_node` is set to 1, that indicates that the table is a node table and if `is_edge` is set to 1, that indicates that the table is an edge table.
 
 |Column Name |Data Type |Description |
 |--- |---|--- |
@@ -95,33 +95,33 @@ The implicit columns in a node table are:
 
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
+|graph_id_\<hex_string>	|BIGINT	|1	|internal graph ID value column  |
 |$node_id_\<hex_string>	|NVARCHAR	|0	|External node `node_id` column  |
 
 The implicit columns in an edge table are:
 
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
+|graph_id_\<hex_string>	|BIGINT	|1	|internal graph ID value column  |
 |$edge_id_\<hex_string>	|NVARCHAR	|0	|external `edge_id` column  |
 |from_obj_id_\<hex_string>	|INT	|1	|internal from node `object_id`  |
-|from_id_\<hex_string>	|BIGINT	|1	|Internal from node `graph_id`  |
+|from_id_\<hex_string>	|BIGINT	|1	|Internal from node graph ID value  |
 |$from_id_\<hex_string>	|NVARCHAR	|0	|external from node `node_id`  |
 |to_obj_id_\<hex_string>	|INT	|1	|internal to node `object_id`  |
-|to_id_\<hex_string>	|BIGINT	|1	|Internal to node `graph_id`  |
+|to_id_\<hex_string>	|BIGINT	|1	|Internal to node graph ID value  |
 |$to_id_\<hex_string>	|NVARCHAR	|0	|external to node `node_id`  |
 
 ### <a name="SystemFunctions"></a>System Functions
-The following built-in functions are added. These will help users extract information from the generated columns. Note that, these methods will not validate the input from the user. If the user specifies an invalid `sys.node_id` the method will extract the appropriate part and return it. For example, OBJECT_ID_FROM_NODE_ID will take a `$node_id` as input and will return the object_id of the table, this node belongs to.
+The following built-in functions allow users to interact with the pseudo-columns in graph tables. Detailed references are provided for each of these functions in the respective T-SQL function references.
 
 |Built-in	|Description  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID	|Extract the object_id from a `node_id`  |
-|GRAPH_ID_FROM_NODE_ID	|Extract the graph_id from a `node_id`  |
-|NODE_ID_FROM_PARTS	|Construct a node_id from an `object_id` and a `graph_id`  |
-|OBJECT_ID_FROM_EDGE_ID	|Extract `object_id` from `edge_id`  |
-|GRAPH_ID_FROM_EDGE_ID	|Extract identity from `edge_id`  |
-|EDGE_ID_FROM_PARTS	|Construct `edge_id` from `object_id` and identity  |
+| [OBJECT_ID_FROM_NODE_ID](../../t-sql/functions/object-id-from-node-id-transact-sql.md)	|Extract the object ID for the graph table from a `node_id`  |
+| [GRAPH_ID_FROM_NODE_ID](../../t-sql/functions/graph-id-from-node-id-transact-sql.md)	|Extract the graph ID value from a `node_id`  |
+| [NODE_ID_FROM_PARTS](../../t-sql/functions/node-id-from-parts-transact-sql.md)	|Construct a node_id from an object ID for the graph table and a graph ID value  |
+| [OBJECT_ID_FROM_EDGE_ID](../../t-sql/functions/object-id-from-edge-id-transact-sql.md)	|Extract object ID for the graph table from `edge_id`  |
+| [GRAPH_ID_FROM_EDGE_ID](../../t-sql/functions/graph-id-from-edge-id-transact-sql.md)	|Extract the graph ID value for a given `edge_id`  |
+| [EDGE_ID_FROM_PARTS](../../t-sql/functions/node-id-from-parts-transact-sql.md)	|Construct `edge_id` from object ID for the graph table and graph ID value  |
 
 ## Transact-SQL reference
 Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server and Azure SQL Database, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
@@ -151,7 +151,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 |MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|MATCH built-in is introduced to support pattern matching and traversal through the graph.  |
 
 ## Limitations and known issues
-There are certain limitations on node and edge tables in this release:
+There are certain limitations on node and edge tables:
 * Local or global temporary tables cannot be node or edge tables.
 * Table types and table variables cannot be declared as a node or edge table.
 * Node and edge tables cannot be created as system-versioned temporal tables.
@@ -160,4 +160,4 @@ There are certain limitations on node and edge tables in this release:
 * Cross database queries on graph objects are not supported.
 
 ## Next Steps
-To get started with the new syntax, see [SQL Graph Database - Sample](./sql-graph-sample.md)
+To get started with SQL Graph, see [SQL Graph Database - Sample](./sql-graph-sample.md)

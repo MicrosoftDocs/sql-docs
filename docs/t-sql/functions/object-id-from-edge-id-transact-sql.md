@@ -37,6 +37,10 @@ OBJECT_ID_FROM_EDGE_ID ( edge_id )
 
 Returns the object_id for the graph table corresponding to the `edge_id` supplied. object_id is an `int`. If an invalid `edge_id` is supplied, NULL is returned.
 
+## Remarks
+
+Due to the performance overhead of parsing and validating the supplied character representation (JSON) of edges, you should only use OBJECT_ID_FROM_EDGE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+
 ## Examples
 
 ### Example 1

@@ -44,7 +44,7 @@ Returns an NVARCHAR(1000) character representation of the edge ID. The return va
 
 The character representation (JSON) of the edge ID returned by EDGE_ID_FROM_PARTS, is an implementation specific detail. EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation (JSON) of the edge ID. EDGE_ID_FROM_PARTS is useful in cases involving bulk insert of graph nodes into a node table, and is used along with [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md).
 
-For EDGE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must be for an existing edge table. However, the `graph_id` parameter needn't correspond to an existing edge in that edge table. `graph_id` just needs to be a valid integer value. If any of these checks fail, EDGE_ID_FROM_PARTS returns NULL.
+For EDGE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must be for an existing edge table. However, the supplied `graph_id` need not exist in that edge table. `graph_id` just needs to be a valid integer value. If any of these checks fail, EDGE_ID_FROM_PARTS returns NULL.
   
 ## Examples
 

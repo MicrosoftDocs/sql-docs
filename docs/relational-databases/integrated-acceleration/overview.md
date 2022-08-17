@@ -62,6 +62,13 @@ Before you can use integrated offloading and acceleration, you need to configure
    SET HARDWARE_OFFLOAD ON ( ACCELERATOR = QAT );  
    ```
 
+   If your instance is Enterprise Edition, and you have hardware installed, but would prefer to only use software offloading, run the following configuration.
+
+   ```sql
+   ALTER SERVER CONFIGURATION
+   SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT, MODE = SOFTWARE)
+   ```
+
 1. Restart the SQL Server instance.
 
 ## Limitations

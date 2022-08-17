@@ -133,7 +133,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 <general_WITH_options> [ ,...n ]::=
 --Backup Set Options
    COPY_ONLY
- | [ COMPRESSION [ ALGORITHM = { MS_XPRESS | QAT_DEFLATE } ] | NO_COMPRESSION ]
+ | [ COMPRESSION [ ALGORITHM = { MS_XPRESS | accelerator_algorithm } ] | NO_COMPRESSION ]
  | DESCRIPTION = { 'text' | @text_variable }
  | NAME = { backup_set_name | @backup_set_name_var }
  | CREDENTIAL

@@ -39,6 +39,8 @@ SQL Server on Windows operating system supports Intel QAT accelerator.
 
 1. Follow the instructions from Intel to install the drivers on your server.
 
+1. Reboot the server after you install the drivers.
+
 ## Verify installed components
 
 If the drivers are installed, and the server-scope configuration option is enabled for SQL Server:

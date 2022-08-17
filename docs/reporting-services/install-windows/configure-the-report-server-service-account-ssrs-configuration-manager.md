@@ -68,7 +68,7 @@ ms.date: 08/17/2022
  For best results, specify an account that has network connection permissions, with access to network domain controllers and corporate SMTP servers or gateways. The following table summarizes the accounts and provides recommendations for using them.  
   
 > [!NOTE]  
-> Group Managed Service Accounts (gMSAs) are not supported as a report server service account.
+> [Group Managed Service Accounts (gMSAs)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) are not supported as a report server service account.
   
   
 |Account|Explanation|  

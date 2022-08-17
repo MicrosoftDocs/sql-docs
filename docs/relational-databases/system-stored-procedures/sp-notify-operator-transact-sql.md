@@ -51,7 +51,8 @@ sp_notify_operator
 `[ @name = ] 'name'`
  The name of the operator to send the message to. *name* is **nvarchar(128)**, with a default of NULL. One of *id* or *name* must be specified.  
   
-> **NOTE:** An e-mail address must be defined for the operator before they can receive messages.  
+> [!NOTE]  
+> An e-mail address must be defined for the operator before they can receive messages.  
   
 `[ @subject = ] 'subject'`
  The subject for the e-mail message. *subject* is **nvarchar(256)** with no default.  

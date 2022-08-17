@@ -1,10 +1,10 @@
 ---
 title: "Partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
-description: Partitioned tables and indexes
+description: "With partitioned tabled and indexes, the data can be divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup."
 author: VanMSFT
 ms.author: vanto
-ms.date: "4/22/2022"
+ms.date: "8/17/2022"
 ms.prod: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], architecture"
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
-ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioned tables and indexes
@@ -98,6 +97,7 @@ Find example code to create filegroups for SQL Server and Azure SQL Managed Inst
 The column of a table or index that a partition function uses to partition the table or index. The following considerations apply when selecting a partitioning column:
 
 - Computed columns that participate in a partition function must be explicitly created as PERSISTED.
+  - Since only one column can be used as the partition column, in some cases the concatenation of multiple columns with a computed column can be useful.
 - Columns of all data types that are valid for use as index key columns can be used as a partitioning column, except **timestamp**.
 - Columns of large object (LOB) data types, such as **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**, cannot be specified. 
 - Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.
@@ -124,7 +124,7 @@ When partitioning a unique nonclustered index, the index key must contain the pa
 
 ### Non-aligned index  
 
-An index partitioned differently from its corresponding table. That is, the index has a different [partition scheme](#partition-scheme) that places it on a separate [filegroup or set of filegroups](#filegroups) from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
+A non-aligned index is partitioned differently from its corresponding table. That is, the index has a different [partition scheme](#partition-scheme) that places it on a separate [filegroup or set of filegroups](#filegroups) from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
 
 - The base table has not been partitioned.  
 - The index key is unique and it does not contain the partitioning column of the table.  

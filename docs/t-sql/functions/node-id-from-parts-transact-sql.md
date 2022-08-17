@@ -48,7 +48,7 @@ The character representation of the node ID is an implementation specific detail
 
 ### Example 1
 
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage acount. It then uses NODE_ID_FROM_PARTS to create the appropriate character representation of $node_id for eventual (bulk) insert into the `Person` node table.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage account. It then uses NODE_ID_FROM_PARTS to create the appropriate character representation of $node_id for eventual (bulk) insert into the `Person` node table.
   
 ```sql
 INSERT INTO Person($node_id, ID, [name])

@@ -31,7 +31,7 @@ OBJECT_ID_FROM_NODE_ID ( node_id )
 ## Arguments
 
  *node_id*
- Is either the $node_id pseudo-column in a graph node table, or the $from_id pseudo-column for an graph edge table, or the $to_id column for an graph edge table.
+ Is either the $node_id pseudo-column in a graph node table, or the $from_id pseudo-column for a graph edge table, or the $to_id column for a graph edge table.
 
 ## Return value
 

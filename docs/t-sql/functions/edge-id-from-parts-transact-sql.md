@@ -42,13 +42,13 @@ Returns an NVARCHAR(1000) character representation of the edge ID, provided the 
 
 ## Remarks  
 
-The character representation of the edge ID is an implementation specific detail. EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID. EDGE_ID_FROM_PARTS is typically useful in cases involving bulk insert of graph nodes into a node table, and is usually used along with [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md).
+The character representation of the edge ID is an implementation specific detail. EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID. EDGE_ID_FROM_PARTS is useful in cases involving bulk insert of graph nodes into a node table, and is used along with [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md).
   
 ## Examples
 
 ### Example 1
 
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage acount. It then uses EDGE_ID_FROM_PARTS to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This data is then (bulk) inserted into the `likes` edge table. This approach can be very efficient to populate an edge table when the source data already has integers as natural or surrogate keys.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage account. It then uses EDGE_ID_FROM_PARTS to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This data is then (bulk) inserted into the `likes` edge table. This approach can be efficient to populate an edge table when the source data already has integers as natural or surrogate keys.
   
 ```sql
 INSERT INTO likes($edge_id, $from_id, $to_id, rating)

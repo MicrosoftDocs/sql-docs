@@ -16,7 +16,7 @@ ms.author: mikeray
 
 This article explains Intel QuickAssist Technology (QAT) for SQL Server and how to configure it on an instance of SQL Server. Intel QAT is an integrated offloading and acceleration solution. For background about these types of solutions, see [Integrated offloading and acceleration](overview.md).
 
-## SQL Server support for Intel QuickAssist Technology (QAT)
+## Edition specific capabilities
 
 SQL Server on Windows operating system supports Intel QAT accelerator.
 

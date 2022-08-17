@@ -133,7 +133,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 <general_WITH_options> [ ,...n ]::=
 --Backup Set Options
    COPY_ONLY
- | { COMPRESSION | NO_COMPRESSION }
+ | [ COMPRESSION [ ALGORITHM = { MS_XPRESS | QAT_DEFLATE } ] | NO_COMPRESSION ]
  | DESCRIPTION = { 'text' | @text_variable }
  | NAME = { backup_set_name | @backup_set_name_var }
  | CREDENTIAL
@@ -355,8 +355,9 @@ Copy-only backups should be used in situations in which a backup is taken for a 
 
 For more information, see [Copy-Only Backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-#### { COMPRESSION | NO_COMPRESSION }    
-In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
+#### <a name="compression"></a>[ COMPRESSION [ ALGORITHM = ( { MS_XPRESS | accelerator_algorithm } ) ] | NO_COMPRESSION ]
+ 
+Specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
 
 At installation, the default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
@@ -367,6 +368,12 @@ Explicitly enables backup compression.
 
 NO_COMPRESSION    
 Explicitly disables backup compression.
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`. `ALGORITHM` identifies a compression algorithm for the operation. The default is `MS_EXPRESS`. If you have configured [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/intel-quickassist.md), the following example completes the back up with the accelerator solution, with QATZip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.:
+
+```sql
+BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE) 
+```
 
 #### DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }    
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.

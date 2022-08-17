@@ -55,7 +55,7 @@ Before you can use integrated offloading and acceleration, you need to configure
    > [!NOTE]
    > If `hardware offload enabled` is disabled (`0`), all offloading and acceleration solutions are disabled.
 
-1. Set the server configuration. Run [ALTER SERVER CONFIGURATION](../../t-sql/statements/alter-server-configuration-transact-sql.md) to enable hardware acceleration.
+1. Configure the server to use hardware offload for a specific accelerator. Run [ALTER SERVER CONFIGURATION](../../t-sql/statements/alter-server-configuration-transact-sql.md) to enable hardware acceleration. The following example sets this configuration for Intel QAT.
 
    ```sql
    ALTER SERVER CONFIGURATION   
@@ -69,7 +69,19 @@ Before you can use integrated offloading and acceleration, you need to configure
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT, MODE = SOFTWARE)
    ```
 
-1. Restart the SQL Server instance.
+   > [!TIP]
+   > You might specify software mode for your accelerator if you have higher computing resources and prefer higher backup performance over protecting the host systems compute resources.
+
+1. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD...`.
+
+## Disable offloading and acceleration
+
+The following example disables hardware offloading and acceleration for an Intel QAT accelerator.
+
+```sql
+ALTER SERVER CONFIGURATION   
+SET HARDWARE_OFFLOAD OFF ( ACCELERATOR = QAT );  
+```
 
 ## Limitations
 

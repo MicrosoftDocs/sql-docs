@@ -43,12 +43,73 @@ SQL Server on Windows operating system supports Intel QAT accelerator.
 
 ## Verify installed components
 
-If the drivers are installed, and the server-scope configuration option is enabled for SQL Server:
+If the drivers are installed, the following files are available:
 
 - The `QATZip` library is available at `C:\Windows\system32\`.
 - The ISA-L libraries are available at `C:\Program Files\Intel\ISAL\*`.
 
 The paths above apply to both hardware and software-only deployment.
+
+## Configure server hardware offloading
+
+After the drivers are installed, configure the server.
+
+1. Set the server configuration option `hardware offload enabled` to `1`.
+1. Configure the server to use hardware offload.
+1. Restart the server.
+
+For detailed instructions and examples, see [Enable integrated offloading and acceleration](overview.md#enable-integrated-offloading-and-acceleration).
+
+## Use offloading and acceleration for backup operation
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an ALGORITHM extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
+
+The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel QAT for backup compression acceleration, the algorithm QAT_DEFLATE intiates an Intel QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
+
+> [!NOTE]
+> The standard compression algorithm is MS_EXPRESS and is default compression option.
+
+Use the ALGORITHM command to specify either of these two algorithms (MS_EXPRESS, QAT_DEFLATE) for backup compression.
+
+The example below performs backup compression using Intel QAT hardware acceleration.
+
+```sql
+BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'  
+WITH COMPRESSION (ALGORITHM = QAT_DEFLATE); 
+```
+
+Either of the following statements use the default MS_XPRESSpress compression engine: 
+
+```sql
+BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'  
+WITH COMPRESSION (ALGORITHM = MS_XPRESS); 
+```
+
+```sql
+BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'  
+WITH COMPRESSION; 
+```
+
+The table below gives a summary of the BACKUP DATABASE with COMPRESSION options in SQL Server 2022. 
+
+|Backup command | Description |
+|:-------|:-------|
+|`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
+|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using MS_XPRESS compression algorithm.
+|`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm. There is an argument for permitting use of DEFAULT or NATIVE as permitted options.|
+|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`|Backup with compression using the QATZip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.|
+
+> [!NOTE]
+> The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
+
+## Service start - after configuration
+
+After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the The Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+
+In the case of the Windows operating system, there is a complimentary software library to QATZip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATZip in the case of hardware failure, and a software-based option when the hardware is not available.
+
+> [!NOTE]
+> The unavailability of an Intel QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
 
 ## See also
 

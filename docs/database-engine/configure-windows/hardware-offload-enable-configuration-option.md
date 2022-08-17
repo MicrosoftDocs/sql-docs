@@ -1,6 +1,6 @@
 ---
 title: "hardware offload enable Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "hardware offload enable" option. '
+description: 'Learn about the "hardware offload enabled" option. '
 ms.custom: ""
 ms.date: "08/16/2022"
 ms.prod: sql

@@ -3,7 +3,7 @@ title: "Quickstart: Connect and query Managed Service for TimescaleDB on Azure"
 description: Do a quickstart in which you use Azure Data Studio to connect to Managed Service for TimescaleDB, and then use SQL statements to create and query a database.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: "Rajakavitha Kodhandapani"
+author: "Rajakavitha1"
 ms.topic: "quickstart"
 ms.custom:
   - intro-quickstart

@@ -40,7 +40,7 @@ landingContent:
           - text: Connect and query data in  PostgreSQL
             url: quickstart-postgres.md
           - text: Connect and query data in Managed Service for TimescaleDB on Azure
-            url: quickstart-postgres.md
+            url: quickstart-timescale.md
 
   - title: Azure Data Studio features
     linkLists:

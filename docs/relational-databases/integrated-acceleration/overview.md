@@ -68,4 +68,10 @@ Before you can use integrated offloading and acceleration, you need to configure
    SET HARDWARE_OFFLOAD ON;  
    ```
 
-1. Restart the SQL Server instance. 
+1. Restart the SQL Server instance.
+
+## See also
+
+[hardware offload enable Configuration Option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+
+[sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)

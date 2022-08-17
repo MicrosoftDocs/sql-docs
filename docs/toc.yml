@@ -13360,6 +13360,8 @@ items:
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
+      - name: sys.dm_server_accelerator_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md
       - name: sys.dm_server_memory_dumps
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services

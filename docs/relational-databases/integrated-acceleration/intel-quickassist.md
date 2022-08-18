@@ -20,9 +20,9 @@ This article explains Intel QuickAssist Technology (QAT) for SQL Server and how 
 
 Intel QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
-- Enterprise Edition supports hardware offloading - requires an Intel QAT device. If no device is available, it falls back to software based compression.
+- Enterprise edition supports hardware offloading - requires an Intel QAT device. If no device is available, it falls back to software based compression.
 
-- Standard Edition supports software compression. Standard edition does not offload to hardware even if an Intel QAT device is available.
+- Standard edition supports software compression. Standard edition does not offload to hardware even if an Intel QAT device is available.
 
 - Express edition will allow Intel QAT compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm. 
 
@@ -31,11 +31,9 @@ Intel QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../inc
 
 ## Install drivers
 
-1. Download the drivers.
+1. Download the drivers. 
 
-   Drivers are available at [Intel Quick Assist Technology landing page](https://developer.intel.com/quickassist).
-
-   At this time, the current driver is [1.8.0-0010](https://www.intel.com/content/www/us/en/download/19732/intel-quickassist-technology-driver-for-windows-hw-version-1-7.html).
+   The minimum QATzip accelerator library version supported is [1.8.0-0010](https://www.intel.com/content/www/us/en/download/19732/), but you should always install the latest version from Intel. Drivers are available at [Intel Quick Assist Technology landing page](https://developer.intel.com/quickassist).
 
 1. Follow the instructions from Intel to install the drivers on your server.
 
@@ -45,8 +43,8 @@ Intel QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../inc
 
 If the drivers are installed, the following files are available:
 
-- The `QATZip` library is available at `C:\Windows\system32\`.
-- The ISA-L libraries are available at `C:\Program Files\Intel\ISAL\*`.
+- The QATzip library is available at `C:\Windows\system32\`.
+- The ISA-L library installed with QATzip is available at `C:\Program Files\Intel\ISAL\*`.
 
 The paths above apply to both hardware and software-only deployment.
 
@@ -62,9 +60,9 @@ For detailed instructions and examples, see [Enable integrated offloading and ac
 
 ## Service start - after configuration
 
-After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the Intel QuickAssist Technology (QAT) accelerator, the user space library is QATZip. This library provides a number of features. The QATZip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the Intel QuickAssist Technology (QAT) accelerator, the user space library is QATzip. This library provides a number of features. The QATzip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
 
-In the case of the Windows operating system, there is a complimentary software library to QATZip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATZip in the case of hardware failure, and a software-based option when the hardware is not available.
+In the case of the Windows operating system, there is a complimentary software library to QATzip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATzip in the case of hardware failure, and a software-based option when the hardware is not available.
 
 > [!NOTE]
 > The unavailability of an Intel QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
@@ -106,7 +104,7 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 |`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION`|Backup using the default setting in `sp_configure`.
 |`BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = MS_XPRESS)` | Backup with compression using the MS_XPRESS algorithm.|
-|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATZip library.|
+|`BACKUP DATABASE <database_name> TO  DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE)`| Backup with compression using the QATzip library.|
 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.

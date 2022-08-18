@@ -28,13 +28,13 @@ ms.author: mathoma
   
 ## Explanation
 
-During a database startup SQL Server detects that a database has a large number of [virtual log files](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
+During a database startup, SQL Server detects that a database has a large number of [virtual log files](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
 
 - When you start an instance of SQL Server
 - Restore a database
 - Attach a database
 
-The 9017 informational message that resembles the following is logged in the SQL Server error log:
+The 9017 informational message that is similar to this example is logged in the SQL Server error log:
 
   `Database dbName has more than n virtual log files which is excessive. Too many virtual log files can cause long startup and backup times. Consider shrinking the log and using a different growth increment to reduce the number of virtual log files. Too many virtual log files can adversely affect the recovery time of the database.`
 
@@ -57,7 +57,7 @@ The SQL Server Database Engine internally divides each physical log file into se
 
 To resolve this problem, follow these steps:
 
-1. You can view the VLF acount and average size on your SQL Server by using this query. This will help you identify which databases to focus on:
+1. You can view the VLF count and average size on your SQL Server by using this query. The result will help you identify which databases to focus on:
 
    ```sql
    SELECT db.name, count(dbl.database_id) as Total_VLF_count, convert(decimal (10,2), avg(dbl.vlf_size_mb)) as Avg_VLF_Size_MB
@@ -67,7 +67,7 @@ To resolve this problem, follow these steps:
    ORDER BY Total_VLF_count DESC
    ```
 
-   See [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) for more information.
+   For more information, see [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql).
 
 1. Reduce your transaction log by using DBCC SHRINKDB/DBCC SHRINKFILE or by using SQL Server Management Studio.
 
@@ -75,7 +75,7 @@ To resolve this problem, follow these steps:
 
 1. Increase the FILEGROWTH parameter to a larger value than what is currently configured. This should be based on the activity of your database and how frequently your log file is growing.
 
-1. Additionally, you can review the following fix articles, depending on the version of SQL Server that you are currently running:
+1. Additionally, you can review the following fix articles, depending on the version of SQL Server that you're currently running:
 
 
   [FIX: It takes a long time to restore a database in SQL Server 2008 R2, SQL Server 2008, or SQL Server 2012](https://support.microsoft.com/topic/kb2653893-fix-it-takes-a-long-time-to-restore-a-database-in-sql-server-2008-r2-or-in-sql-server-2008-or-in-sql-2012-e7b381d3-c169-d385-75c4-f43df87029d6)

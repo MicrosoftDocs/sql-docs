@@ -94,7 +94,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
      
 4.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.    
     
-5.  In the **Restore to** box, leave the default as **To the last backup taken** or select on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on selecting a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
+5.  In the **Restore to** box, leave the default as **To the last backup taken** or select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on selecting a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
     
 6.  In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, you can change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected. For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).    
     
@@ -186,7 +186,7 @@ The following example restores a database to its state as of `1:23:17 PM` on `Ma
 3.  On the **General** page, select **Device** under the **Source** section.
 4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your full backup and all relevant transaction log backups.  Select **OK** after you have selected your disk backup files.
 5.  Select **OK** to return to the **General** page.
-6.  In the **Destination** section, select on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
+6.  In the **Destination** section, select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
 7.  Select **Specific date and time**.  
 8.  Change the **Timeline interval** to **Hour** in the drop-down box (optional).  
 9.  Move the slider to the desired time.

@@ -15,7 +15,8 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 # Setup Program
-> **NOTE:** Starting with Windows XP and Windows Server 2003, **ODBC is included in the Windows operation system**. You should only explicitly install ODBC on earlier versions of Windows.  
+> [!NOTE]  
+> Starting with Windows XP and Windows Server 2003, **ODBC is included in the Windows operation system**. You should only explicitly install ODBC on earlier versions of Windows.  
   
  The user runs the setup program to start the setup process. The setup program is written by the application or driver developer. In addition to installing ODBC components, it can install other software. For example, application developers might use the same setup program both to install ODBC components and to install their applications.  
   

@@ -36,21 +36,19 @@ EDGE_ID_FROM_PARTS ( object_id, graph_id )
 
 ## Return value
 
-Returns an NVARCHAR(1000) character representation (JSON) of the edge ID. The return value can be NULL if any of the supplied arguments are invalid.
+Returns an `nvarchar(1000)` character representation (JSON) of the edge ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
-- The character representation (JSON) of the edge ID returned by EDGE_ID_FROM_PARTS is an implementation specific detail, and is subject to change.
-- EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation (JSON) of the edge ID.
-- EDGE_ID_FROM_PARTS is useful in cases involving bulk insert of data into an edge table, when the source data has a suitable natural or surrogate key with an integer data type.
-- The value returned from EDGE_ID_FROM_PARTS can be used to populate the `$edge_id` column in an edge table.
-- For EDGE_ID_FROM_PARTS to return valid character representation (JSON) of an edge ID, the `object_id` parameter must correspond to an existing edge table. The `graph_id` parameter can be any valid integer, but it need not exist in that edge table. If any of these checks fail, EDGE_ID_FROM_PARTS returns NULL.
+- The character representation (JSON) of the edge ID returned by `EDGE_ID_FROM_PARTS` is an implementation specific detail, and is subject to change.
+- `EDGE_ID_FROM_PARTS` is the only supported way to construct a suitable character representation (JSON) of the edge ID.
+- `EDGE_ID_FROM_PARTS` is useful in cases involving bulk insert of data into an edge table, when the source data has a suitable natural or surrogate key with an integer data type.
+- The value returned from `EDGE_ID_FROM_PARTS` can be used to populate the `$edge_id` column in an edge table.
+- For `EDGE_ID_FROM_PARTS` to return valid character representation (JSON) of an edge ID, the `object_id` parameter must correspond to an existing edge table. The `graph_id` parameter can be any valid integer, but it need not exist in that edge table. If any of these checks fail, `EDGE_ID_FROM_PARTS` returns NULL.
   
 ## Examples
 
-### Example 1
-
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage account. It then uses EDGE_ID_FROM_PARTS to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This transformed data is then (bulk) inserted into the `likes` edge table.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage account. It then uses `EDGE_ID_FROM_PARTS` to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This transformed data is then (bulk) inserted into the `likes` edge table.
   
 ```sql
 INSERT INTO likes($edge_id, $from_id, $to_id, rating)

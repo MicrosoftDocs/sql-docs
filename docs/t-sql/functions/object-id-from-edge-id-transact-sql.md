@@ -38,13 +38,11 @@ Returns the object_id for the graph table corresponding to the `edge_id` supplie
 
 ## Remarks
 
-- Due to the performance overhead of parsing and validating the supplied character representation (JSON) of edges, you should only use OBJECT_ID_FROM_EDGE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
-- For OBJECT_ID_FROM_EDGE_ID to return a value, the supplied character representation (JSON) of the edge ID must be valid, and the named `schema.table` within the JSON, must be a valid edge table. The graph ID within the character representation (JSON), need not exist in the edge table - it can be any valid integer.
-- OBJECT_ID_FROM_EDGE_ID is the only supported way to parse the character representation (JSON) of an edge ID.
+- Due to the performance overhead of parsing and validating the supplied character representation (JSON) of edges, you should only use `OBJECT_ID_FROM_EDGE_ID` where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
+- For `OBJECT_ID_FROM_EDGE_ID` to return a value, the supplied character representation (JSON) of the edge ID must be valid, and the named `schema.table` within the JSON, must be a valid edge table. The graph ID within the character representation (JSON), need not exist in the edge table - it can be any valid integer.
+- `OBJECT_ID_FROM_EDGE_ID` is the only supported way to parse the character representation (JSON) of an edge ID.
 
 ## Examples
-
-### Example 1
 
 The following example returns the object_id for all the $edge_id nodes in the `likes` graph edge table. In the [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md), the values returned are constant and equal to the object_id of the `likes` table (978102525 in this example).
   
@@ -68,4 +66,5 @@ FROM likes;
 
 - [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
 - [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
-- [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)
+- [GRAPH_ID_FROM_EDGE__ID](./graph-id-from-edge-id-transact-sql.md)
+- [EDGE_ID_FROM_PARTS](./edge-id-from-parts-transact-sql.md)

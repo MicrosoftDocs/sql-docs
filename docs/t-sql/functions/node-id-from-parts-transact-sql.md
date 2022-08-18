@@ -36,21 +36,19 @@ NODE_ID_FROM_PARTS ( object_id, graph_id )
 
 ## Return value
 
-Returns an NVARCHAR(1000) character representation (JSON) of the node ID. The return value can be NULL if any of the supplied arguments are invalid.
+Returns an `nvarchar(1000)` character representation (JSON) of the node ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
-- The character representation (JSON) of the node ID returned by NODE_ID_FROM_PARTS is an implementation specific detail, and is subject to change.
-- NODE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID.
-- NODE_ID_FROM_PARTS is useful for bulk inserting of data into a graph table, when the source data has a suitable natural or surrogate key with an integer data type.
-- The value returned from NODE_ID_FROM_PARTS can be used to populate the `$node_id` column in a node table. It can also be used to populate the `$from_id` / `$to_id` columns in an edge table.
-- For NODE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must correspond to an existing node table. The `graph_id` parameter can be any valid integer, but it need not exist in that node table. If any of these checks fail, NODE_ID_FROM_PARTS returns NULL.
+- The character representation (JSON) of the node ID returned by `NODE_ID_FROM_PARTS` is an implementation specific detail, and is subject to change.
+- `NODE_ID_FROM_PARTS` is the only supported way to construct a suitable character representation of the node ID.
+- `NODE_ID_FROM_PARTS` is useful for bulk inserting of data into a graph table, when the source data has a suitable natural or surrogate key with an integer data type.
+- The value returned from `NODE_ID_FROM_PARTS` can be used to populate the `$node_id` column in a node table. It can also be used to populate the `$from_id` / `$to_id` columns in an edge table.
+- For `NODE_ID_FROM_PARTS` to return valid character representation (JSON) of a node ID, the `object_id` parameter must correspond to an existing node table. The `graph_id` parameter can be any valid integer, but it need not exist in that node table. If any of these checks fail, `NODE_ID_FROM_PARTS` returns NULL.
   
 ## Examples
 
-### Example 1
-
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage account. It then uses NODE_ID_FROM_PARTS to create the appropriate character representation of $node_id for eventual (bulk) insert into the `Person` node table. This transformed data is then (bulk) inserted into the `Person` node table.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage account. It then uses `NODE_ID_FROM_PARTS` to create the appropriate character representation of $node_id for eventual (bulk) insert into the `Person` node table. This transformed data is then (bulk) inserted into the `Person` node table.
   
 ```sql
 INSERT INTO Person($node_id, ID, [name])
@@ -64,5 +62,6 @@ FROM OPENROWSET (BULK 'person_0_0.csv', DATA_SOURCE = 'staging_data_source', FOR
 - [SQL Graph Architecture](../../relational-databases/graphs/sql-graph-architecture.md)  
 - [SQL Graph Database Sample](../../relational-databases/graphs/sql-graph-sample.md)
 - [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md)
+- [EDGE_ID_FROM_PARTS](./edge-id-from-parts-transact-sql.md)
 - [GRAPH_ID_FROM_EDGE_ID](./graph-id-from-edge-id-transact-sql.md)
 - [GRAPH_ID_FROM_NODE_ID](./graph-id-from-node-id-transact-sql.md)

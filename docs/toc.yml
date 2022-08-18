@@ -6416,7 +6416,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -11205,6 +11205,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3201
+          href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
           href: relational-databases/errors-events/mssqlserver-3260-database-engine-error.md
         - name: 3271

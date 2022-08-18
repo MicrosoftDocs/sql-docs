@@ -91,10 +91,10 @@ In this article, we'll describe how you can configure automatic generation and s
 ## Prerequisites
 
 - SQL Server 2022
-- [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)
 - An Azure Blob Storage
 - An Azure Storage container
-- A [SQL Server credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). For more information, see [Digest Management](ledger-digest-management.md).  
+- A [SQL Server credential](../authentication-access/credentials-database-engine.md). For more information, see [Digest Management](ledger-digest-management.md).  
 
 ## Enable database digest uploads using T-SQL
 
@@ -108,7 +108,7 @@ To enable uploading ledger digests, specify the endpoint of an Azure Blob storag
     SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net';
    ```
 
-For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql).
+For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).
 
 ::: zone-end
 

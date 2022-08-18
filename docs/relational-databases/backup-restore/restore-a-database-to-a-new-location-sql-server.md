@@ -78,7 +78,7 @@ helpviewer_keywords:
   
 4.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.  
   
-5.  In the **Restore to** box, leave the default as **To the last backup taken** or select on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. See [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md) for more information on designating a specific point in time.  
+5.  In the **Restore to** box, leave the default as **To the last backup taken** or select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. See [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md) for more information on designating a specific point in time.  
   
 6.  In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, you can change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected.  
   

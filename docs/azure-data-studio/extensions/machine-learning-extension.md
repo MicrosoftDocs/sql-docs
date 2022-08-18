@@ -65,9 +65,9 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Find the **Machine Learning** extension under **enabled** extensions.
 
-1. Select on the **Manage** icon.
+1. Select the **Manage** icon.
 
-1. Select on the **Extension Settings** icon.
+1. Select the **Extension Settings** icon.
 
 The extensions settings look like this:
 

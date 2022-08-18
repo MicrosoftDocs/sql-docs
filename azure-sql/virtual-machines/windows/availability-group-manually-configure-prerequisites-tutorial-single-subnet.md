@@ -241,7 +241,7 @@ Note the private IP address for this server.
 
 After you create the first domain controller and enable DNS on the first server, configure the virtual network to use this server for DNS.
 
-1. In the Azure portal, select on the virtual network.
+1. In the Azure portal, select the virtual network.
 
 2. Under **Settings**, select **DNS Server**.
 

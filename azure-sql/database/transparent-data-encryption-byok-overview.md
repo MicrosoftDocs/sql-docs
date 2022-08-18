@@ -167,8 +167,6 @@ To avoid issues while establishing or during geo-replication, when automatic rot
 
 - For an existing geo-replication setup, prior to enabling automated key rotation on the primary server, add the encryption key being used as TDE protector on the primary server to the secondary server. The secondary server requires access to the key in the same key vault being used with the primary server (and not another key with the same key material). Alternatively, before enabling automated key, ensure that the secondary [server's managed identity](transparent-data-encryption-byok-identity.md) (user-assigned or system-assigned) has required permissions on the primary server's key vault, and the system will attempt to add the key to the secondary server.  
 
-> [!IMPORTANT]
-> When enabling automated key rotation with geo-replication for HyperScale databases, the primary server's TDE protector key must be explicitly added to the secondary server. Merely providing secondary server's identity access to the primary server's key vault is not sufficient in this case.
 
 ## Inaccessible TDE protector
 

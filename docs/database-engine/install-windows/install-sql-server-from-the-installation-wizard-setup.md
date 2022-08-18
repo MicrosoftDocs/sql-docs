@@ -472,11 +472,11 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-1. On the **Azure Extension for SQL Server** page, you can configure the Azure Arc SQL extension. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension as a service for integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.
+1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure Arc. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and a service principal to authenticate the SQL Server instance to Azure. You also need to provide a set of additional parameters. However, if this option is selected and disabled (you can't unselect it), it means that the extension was already installed on your machine.
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. However, if this option is selected and disabled (you can't unselect it), it means that the extension was already installed on your machine.
 
-   You can sign in using an existing Azure account, or you can use the Azure service principal. If you sign in, you can choose the required parameters from drop-down lists.
+   To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/overview.md#required-permissions).
 
    The following information is required:
 

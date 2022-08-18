@@ -10550,6 +10550,8 @@ items:
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud

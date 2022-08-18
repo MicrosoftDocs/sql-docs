@@ -2,7 +2,7 @@
 title: "Backup compression (SQL Server) | Microsoft Docs"
 description: Learn about compression of SQL Server backups, including restrictions, performance trade-offs, Configuring backup compression, and the compression ratio.
 ms.custom: ""
-ms.date: 07/25/2022
+ms.date: 08/18/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "backups [SQL Server], compression"
   - "backing up [SQL Server], backup compression"
   - "backup compression [SQL Server]"
-ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MashaMSFT
 ms.author: mathoma
 ---
@@ -23,14 +22,14 @@ ms.author: mathoma
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes the compression of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  Backup compression is supported on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions: Enterprise, Standard, and Developer.  Every edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later can restore a compressed backup. 
+This article describes the compression of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  Backup compression is supported on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions: Enterprise, Standard, and Developer.  Every edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later can restore a compressed backup. 
  
   
 ##  <a name="Benefits"></a> Benefits  
   
 -   Because a compressed backup is smaller than an uncompressed backup of the same data, compressing a backup typically requires less device I/O and therefore usually increases backup speed significantly.  
   
-     For more information, see [Performance Impact of Compressing Backups](#PerfImpact), later in this topic.  
+     For more information, see [Performance Impact of Compressing Backups](#PerfImpact), later in this article.  
   
   
 ##  <a name="Restrictions"></a> Restrictions  

@@ -115,7 +115,7 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
  
 The SQL Server backup compression default behavior can be adjusted. You can change the server default configuration as well as other options. You can enable or disable hardware acceleration, you can enable backup compression as a default, and you can also change the default compression algorithm as by using `sp_configure`.  
 
-The status of these options are reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
+The status of these options is reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
 
 The `backup compression algorithm` configuration changes the backup compression algorithm default for backup compression. Changing this option will change the default algorithm when the algorithm is not specified on the `BACKUP .. WITH COMPRESSION` command. 
 
@@ -180,7 +180,7 @@ To restore an Intel QAT compressed backup, the correct assemblies must be loaded
 
 ### Backup history
 
-You can view the compression algorithm and history of all SQL Server backup and restore operations on a instance in [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md) system table. A new column was added to this system table for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], `compression_algorithm` which indicates `MS_EXPRESS` or `QAT_DEFLATE`, for example.
+You can view the compression algorithm and history of all SQL Server backup and restore operations on an instance in [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md) system table. A new column was added to this system table for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], `compression_algorithm` which indicates `MS_EXPRESS` or `QAT_DEFLATE`, for example.
 
 ## Next steps
 

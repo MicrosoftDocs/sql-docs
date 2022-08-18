@@ -52,7 +52,7 @@ If you use **SQL Server**, you have to create a shared access signature (SAS) ke
 
 - Create a container on the Azure Storage account, named **sqldbledgerdigests**.
 - Create a policy on a container with the *Read*, *Add*, *Create*, *Write*, and *List* permissions, and generate a shared access signature key.
-- For each container used for digest file storage, create a [SQL Server credential](/sql/relational-databases/security/authentication-access/credentials-database-engine) whose name matches the container path.
+- For each container used for digest file storage, create a [SQL Server credential](../authentication-access/credentials-database-engine.md) whose name matches the container path.
 
 The following example assumes that an Azure Storage container, a policy, and a SAS key have been created. This is needed by SQL Server to access the digest files in the container.
 

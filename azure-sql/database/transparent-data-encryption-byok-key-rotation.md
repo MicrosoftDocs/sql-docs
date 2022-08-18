@@ -68,7 +68,10 @@ For installation, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 Automatic rotation for the TDE protector can be enabled when configuring the TDE protector for the server, from the Azure portal or via the below PowerShell or the Azure CLI commands. Once enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, within 60 minutes the TDE protector on the server will be automatically rotated to the latest key version.
 
-Automatic rotation in a server or managed instance can be used with automatic key rotation in Azure Key Vault to enable end-to-end zero touch rotation for TDE keys.  
+Automatic rotation in a server or managed instance can be used with automatic key rotation in Azure Key Vault to enable end-to-end zero touch rotation for TDE keys.
+
+> [!NOTE]
+> If the server or managed instance has geo-replication configured, prior to enabling automatic rotation, additional guidelines need to be followed as described [here](transparent-data-encryption-byok-overview.md).  
 
 # [Portal](#tab/azure-portal)
 

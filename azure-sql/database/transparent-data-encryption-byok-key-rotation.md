@@ -14,7 +14,7 @@ ms.topic: how-to
 author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/03/2022
+ms.date: 08/18/2022
 ---
 # Rotate the Transparent data encryption (TDE) protector
 

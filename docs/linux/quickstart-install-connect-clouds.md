@@ -40,7 +40,7 @@ In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHE
 ## Digital Ocean
 
 1. Log in to the [control panel](https://cloud.digitalocean.com/login) and select **Create a droplet**
-1. Choose a Ubuntu 18.04 droplet with at least 2 GB of memory
+1. Choose an Ubuntu 18.04 droplet with at least 2 GB of memory
 1. Connect to the droplet with **ssh**
 1. Follow the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 1. Configure for remote connections:

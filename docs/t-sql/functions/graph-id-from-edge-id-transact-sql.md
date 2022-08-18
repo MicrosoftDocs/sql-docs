@@ -41,7 +41,7 @@ Returns the internal graph ID value, which is currently a `bigint`.
 
 - Due to the performance overhead of parsing and validating the supplied character representation (JSON) of edges, you should only use GRAPH_ID_FROM_EDGE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
 - For GRAPH_ID_FROM_EDGE_ID to return a value, the supplied character JSON must be valid and the named `schema.table` within the JSON, must be a valid edge table.
-- If a graph ID is returned by the function, it is only guaranteed that it will be a valid integer. No checks are made whether the graph ID is actually present in the edge table.
+- If a graph ID is returned by the function, it's only guaranteed that it will be a valid integer. No checks are made whether the graph ID is present in the edge table.
 - The data type and behavior of graph IDs are implementation specific details, and are subject to change. For example, you shouldn't assume that graph IDs in a given edge table are sequential.
 
 ## Examples

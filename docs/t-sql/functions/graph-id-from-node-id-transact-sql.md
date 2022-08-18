@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2017 || >= sql-server-linux
 # GRAPH_ID_FROM_NODE_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-Returns the internal graph ID value for a given graph node ID.
+Returns the internal graph ID for a given node ID.
 
 ## Syntax  
   
@@ -30,28 +30,27 @@ GRAPH_ID_FROM_NODE_ID ( node_id )
   
 ## Arguments
 
- *node_id*
- Is the character representation (JSON) of one of:
-- The $node_id pseudo-column in a graph node table.
-- The $from_id pseudo-column for a graph edge table.
-- The $to_id column for a graph edge table.
+ *node_id* is the character representation (JSON) for one of the below:
+- The `$node_id` pseudo-column for a node table.
+- The `$from_id` pseudo-column for an edge table.
+- The `$to_id` column for an edge table.
 
 ## Return value
 
-Returns the internal graph ID value, which is currently a `bigint`.
+Returns the internal graph ID, which is currently a `bigint`.
 
 ## Remarks
 
 - Due to the performance overhead of parsing and validating the supplied character representation (JSON) of nodes, you should only use GRAPH_ID_FROM_NODE_ID where needed. In most cases, [MATCH](../queries/match-sql-graph.md) should be sufficient for queries over graph tables.
 - For GRAPH_ID_FROM_NODE_ID to return a value, the supplied character representation (JSON) must be valid and the named `schema.table` within the JSON, must be a valid node table.
-- If a graph ID is returned by the function, it is only guaranteed that it will be a valid integer. No checks are made whether the graph ID is actually present in the node table.
+- If a graph ID is returned by the function, it's only guaranteed that it will be a valid integer. No checks are made whether the graph ID is present in the node table.
 - The data type and behavior of graph IDs are implementation specific details, and are subject to change. For example, you shouldn't assume that graph IDs in a given node table are sequential.
   
 ## Examples
 
 ### Example 1
 
-The following example returns the internal graph ID value for all nodes in the `Person` graph node table.
+The following example returns the internal graph ID for the nodes in the `Person` node table.
   
 ```sql
 SELECT GRAPH_ID_FROM_NODE_ID($node_id)

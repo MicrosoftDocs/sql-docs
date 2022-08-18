@@ -30,8 +30,7 @@ OBJECT_ID_FROM_EDGE_ID ( edge_id )
   
 ## Arguments
 
- *edge_id*
- Is the $edge_id pseudo-column in a graph edge table.
+ *edge_id* is the $edge_id pseudo-column in a graph edge table.
 
 ## Return value
 

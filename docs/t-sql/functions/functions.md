@@ -30,7 +30,7 @@ Learn about the categories of built-in functions you can use with SQL databases.
 
 Aggregate functions perform a calculation on a set of values and return a single value. They're allowed in the select list or the HAVING clause of a SELECT statement. You can use an aggregation in combination with the GROUP BY clause to calculate the aggregation on categories of rows. Use the OVER clause to calculate the aggregation on a specific range of value. The OVER clause can't follow the GROUPING or GROUPING_ID aggregations.
 
-All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
+All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
 ## Analytic functions
 

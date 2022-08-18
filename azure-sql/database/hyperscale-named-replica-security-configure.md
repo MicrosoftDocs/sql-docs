@@ -83,7 +83,7 @@ Once you have set up login authentication as described, you can use regular `GRA
 Remember that by default a newly created user has a minimal set of permissions granted (for example, it cannot access any user tables). If you want to allow `third-party-user` to read data in a table, you need to explicitly grant the `SELECT` permission:
 
 ```sql
-grant select on [Application].[Cities] to [third-party-user];
+GRANT SELECT ON [Application].[Cities] to [third-party-user];
 ```
 
 As an alternative to granting permissions individually on every table, you can add the user to the `db_datareaders` [database role](/sql/relational-databases/security/authentication-access/database-level-roles) to allow read access to all tables, or you can use [schemas](/sql/relational-databases/security/authentication-access/create-a-database-schema) to [allow access](/sql/t-sql/statements/grant-schema-permissions-transact-sql) to all existing and new tables in a schema.

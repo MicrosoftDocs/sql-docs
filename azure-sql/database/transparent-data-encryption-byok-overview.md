@@ -13,7 +13,7 @@ ms.topic: conceptual
 author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/03/2022
+ms.date: 08/18/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure SQL transparent data encryption with customer-managed key

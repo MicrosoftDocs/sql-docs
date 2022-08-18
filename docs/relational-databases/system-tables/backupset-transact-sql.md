@@ -3,7 +3,7 @@ title: "backupset (Transact-SQL)"
 description: backupset (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/07/2021"
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.technology: system-objects
@@ -17,8 +17,7 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
 dev_langs:
-  - "TSQL"
-ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
+  - "TSQL" 
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)
@@ -26,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
   Contains a row for each backup set. A *backup set* contains the backup from a single, successful backup operation. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY, and RESTORE VERIFYONLY statements operate on a single backup set within the media set on the specified backup device or devices.  
   
- This table is stored in the **msdb** database.  
+ This table is stored in the `msdb` database.  
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -89,17 +88,17 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**family_guid**|**uniqueidentifier**|Unique ID of the original database at creation. This value remains the same when the database is restored, even to a different name.|  
 |**differential_base_lsn**|**numeric(25,0)**|Base LSN for differential backups. For a single-based differential backup; changes with LSNs greater than or equal to **differential_base_lsn** are included in the differential backup.<br /><br /> For a multibased differential, the value is NULL, and the base LSN must be determined at the file level (see [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> For nondifferential backup types, the value is always NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|For a single-based differential backup, the value is the unique identifier of the differential base.<br /><br /> For multibased differentials, the value is NULL, and the differential base must be determined at the file level.<br /><br /> For nondifferential backup types, the value is NULL.|  
-|**compressed_backup_size**|**Numeric(20,0)**|Total Byte count of the backup stored on disk.<br /><br /> To calculate the compression ratio, use **compressed_backup_size** and **backup_size**.<br /><br /> During an **msdb** upgrade, this value is set to NULL. which indicates an uncompressed backup.|  
+|**compressed_backup_size**|**Numeric(20,0)**|Total Byte count of the backup stored on disk.<br /><br /> To calculate the compression ratio, use **compressed_backup_size** and **backup_size**.<br /><br /> During an `msdb` upgrade, this value is set to NULL. which indicates an uncompressed backup.|  
 |**key_algorithm**|**nvarchar(32)**|The encryption algorithm used to encrypt the backup. NO_Encryption value indicated that the backup was not encrypted.|  
 |**encryptor_thumbprint**|**varbinary(20)**|The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. In the case where the backup was not encrypted, this value is NULL.|  
-|**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or Asymmetric Key. . In the case where the backup was not encrypted, this value is NULL.|
+|**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or Asymmetric Key. In the case where the backup was not encrypted, this value is NULL.|
 |**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or asymmetric key. In the case where the backup was not encrypted, this value is NULL.|  
-|**last_valid_restore_time**|**datetime**|The latest point in time to which the backup can be restored. Introduced in SQL Server 2022. |
-|**compression_algorithm**|**nvarchar(32)**|The compression algorithm that was used when creating the SQL Server backup. Introduced in SQL Server 2022. |  
+|**last_valid_restore_time**|**datetime**|The latest point in time to which the backup can be restored. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. |
+|**compression_algorithm**|**nvarchar(32)**|The compression algorithm that was used when creating the SQL Server backup. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Default is `MS_XPRESS`. For more information, see [BACKUP COMPRESSION](../../t-sql/statements/backup-transact-sql.md#compression) and [Integrated offloading and acceleration](../integrated-acceleration/overview.md).|  
 
   
 ## Remarks
-- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the column of the **backupmediaset** table with the appropriate values from the media-set header.  
+- `RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY` populates the column of the `backupmediaset` table with the appropriate values from the media-set header.  
 - To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
 - For SQL Managed Instance, backupset table only shows the backup history for user-initiated [Copy-Only backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). The backupset table does not show backup history for automatic backups performed by the service. 
 
@@ -111,46 +110,49 @@ The following query returns successful backup information from the past two mont
   
 ```sql
 SELECT bs.database_name,
-	backuptype = CASE
-			WHEN bs.type = 'D'
-			AND bs.is_copy_only = 0 THEN 'Full Database'
-			WHEN bs.type = 'D'
-			AND bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
-			WHEN bs.type = 'I' THEN 'Differential database backup'
-			WHEN bs.type = 'L' THEN 'Transaction Log'
-			WHEN bs.type = 'F' THEN 'File or filegroup'
-			WHEN bs.type = 'G' THEN 'Differential file'
-			WHEN bs.type = 'P' THEN 'Partial'
-			WHEN bs.type = 'Q' THEN 'Differential partial'
-		END + ' Backup',
-	CASE bf.device_type
-			WHEN 2 THEN 'Disk'
-			WHEN 5 THEN 'Tape'
-			WHEN 7 THEN 'Virtual device'
-			WHEN 9 THEN 'Azure Storage'
-			WHEN 105 THEN 'A permanent backup device'
-			ELSE 'Other Device'
-		END AS DeviceType,
-	bms.software_name AS backup_software,
-	bs.recovery_model,
-	bs.compatibility_level,
-	BackupStartDate = bs.Backup_Start_Date,
-	BackupFinishDate = bs.Backup_Finish_Date,
-	LatestBackupLocation = bf.physical_device_name,
-	backup_size_mb = CONVERT(decimal(10, 2), bs.backup_size/1024./1024.),
-	compressed_backup_size_mb = CONVERT(decimal(10, 2), bs.compressed_backup_size/1024./1024.),
-	database_backup_lsn, -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on.
-	checkpoint_lsn,
-	begins_log_chain,
-	bms.is_password_protected
-FROM msdb.dbo.backupset bs
+          backuptype = CASE
+                                                                              WHEN bs.type = 'D'
+                                                                                                                                                                              AND bs.is_copy_only = 0 THEN 'Full Database'
+                                                                                                                                                                              WHEN bs.type = 'D'
+                                                                                                                                                                              AND bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
+                                                                                                                                                                              WHEN bs.type = 'I' THEN 'Differential database backup'
+                                                                                                                                                                              WHEN bs.type = 'L' THEN 'Transaction Log'
+                                                                                                                                                                              WHEN bs.type = 'F' THEN 'File or filegroup'
+                                                                                                                                                                              WHEN bs.type = 'G' THEN 'Differential file'
+                                                                                                                                                                              WHEN bs.type = 'P' THEN 'Partial'
+                                                                                                                                                                              WHEN bs.type = 'Q' THEN 'Differential partial'
+                                                                                                                                                                    END + ' Backup',
+                                                                                                          CASE bf.device_type
+                                                                              WHEN 2 THEN 'Disk'
+                                                                                                                                                                              WHEN 5 THEN 'Tape'
+                                                                                                                                                                              WHEN 7 THEN 'Virtual device'
+                                                                                                                                                                              WHEN 9 THEN 'Azure Storage'
+                                                                                                                                                                              WHEN 105 THEN 'A permanent backup device'
+                                                                                                                                                                              ELSE 'Other Device'
+                                                                                                                                                                    END AS DeviceType,
+                                                                                                          bms.software_name AS backup_software,
+                                                          bs.recovery_model,
+                                                          bs.compatibility_level,
+                                                          BackupStartDate = bs.Backup_Start_Date,
+                                                          BackupFinishDate = bs.Backup_Finish_Date,
+                                                          LatestBackupLocation = bf.physical_device_name,
+                                                          backup_size_mb = CONVERT(decimal(10, 2), bs.backup_size/1024./1024.),
+                                                          compressed_backup_size_mb = CONVERT(decimal(10, 2), bs.compressed_backup_size/1024./1024.),
+                                                          database_backup_lsn, -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on.
+                                                          checkpoint_lsn,
+                                                          begins_log_chain,
+                                                          bms.is_password_protected
+                                                 ROM msdb.dbo.backupset bs
 LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
 INNER JOIN msdb.dbo.backupmediaset bms ON bs.[media_set_id] = bms.[media_set_id]
 WHERE bs.backup_start_date > DATEADD(MONTH, -2, sysdatetime()) --only look at last two months
 ORDER BY bs.database_name ASC, bs.Backup_Start_Date DESC;
 ```
 
-## See Also  
+## Next steps
+
+ [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
+ [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
  [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
@@ -161,5 +163,4 @@ ORDER BY bs.database_name ASC, bs.Backup_Start_Date DESC;
  [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
-  
   

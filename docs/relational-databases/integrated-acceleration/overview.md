@@ -3,7 +3,7 @@ title: Integrated offloading & acceleration
 description: Learn to leverage integrated solutions from third party providers to offload and accelerate workloads for an instance of SQL Server.
 ms.date: 08/16/2022
 ms.prod: sql
-ms.reviewer: dplessMSFT 
+ms.reviewer: david.pless, wiassaf 
 ms.technology: configuration
 ms.topic: conceptual
 author: MikeRayMSFT

@@ -2,14 +2,14 @@
 title: "hardware offload enable Server Configuration Option | Microsoft Docs"
 description: 'Learn about the "hardware offload enabled" option. '
 ms.custom: ""
-ms.date: "08/16/2022"
+ms.date: 08/17/2022
 ms.prod: sql
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "hardware offload enable"
   - "HARDWARE_OFFLOAD"
-ms.reviewer: dplessMSFT 
+ms.reviewer: david.pless, wiassaf
 ms.technology: configuration
 ms.topic: conceptual
 author: MikeRayMSFT
@@ -24,7 +24,7 @@ The `hardware offload enabled` configuration option allows integrated offloading
 
 This is an advanced option.
 
-This option requires a restart.
+Changing option requires a restart.
 
 ## Example
 
@@ -40,6 +40,7 @@ GO
 RECONFIGURE
 GO
 ```
+
 
 > [!NOTE]
 > If `hardware offload enabled` is disabled (`0`), all offloading and acceleration solutions are disabled.

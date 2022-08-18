@@ -3,7 +3,7 @@ title: Configure Intel QuickAssist Technology (QAT) for SQL Server
 description: Describes how to configure Intel QuickAssist Technology (QAT) for an instance of SQL Server.
 ms.date: 08/16/2022
 ms.prod: sql
-ms.reviewer: dplessMSFT 
+ms.reviewer: david.pless, wiassaf 
 ms.technology: configuration
 ms.topic: conceptual
 author: MikeRayMSFT
@@ -71,14 +71,14 @@ In the case of the Windows operating system, there is a complimentary software l
 
 ## Backup operation
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an ALGORITHM extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an `ALGORITHM` extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
 
-The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel QAT for backup compression acceleration, the algorithm QAT_DEFLATE intiates an Intel QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
+The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel QAT for backup compression acceleration, the algorithm QAT_DEFLATE initiates an Intel QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
 
 > [!NOTE]
-> The standard compression algorithm is MS_EXPRESS and is default compression option.
+> The standard compression algorithm is MS_XPRESS and is default compression option.
 
-Use the ALGORITHM command to specify either of these two algorithms (MS_EXPRESS, QAT_DEFLATE) for backup compression.
+Use the ALGORITHM command to specify either of these two algorithms (`MS_XPRESS`, `QAT_DEFLATE`) for backup compression.
 
 The example below performs backup compression using Intel QAT hardware acceleration.
 
@@ -101,7 +101,6 @@ WITH COMPRESSION;
 
 The table below gives a summary of the BACKUP DATABASE with COMPRESSION options beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-
 |Backup command | Description |
 |:-------|:-------|
 |`BACKUP DATABASE <database_name> TO DISK` | Backup with no compression or with compression depending on default setting.|
@@ -111,6 +110,51 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 
 > [!NOTE]
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
+
+### Default configurations
+ 
+The SQL Server backup compression default behavior can be adjusted. You can change the server default configuration as well as other options. You can enable or disable hardware acceleration, you can enable backup compression as a default, and you can also change the default compression algorithm as by using `sp_configure`.  
+
+The status of these options are reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
+
+The `backup compression algorithm` configuration changes the backup compression algorithm default for backup compression. Changing this option will change the default algorithm when the algorithm is not specified on the `BACKUP .. WITH COMPRESSION` command. 
+
+You can view the current default settings for the backup compression in [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md), for example:
+
+```sql
+SELECT * FROM sys.configurations    
+WHERE name = 'backup compression algorithm'; 
+```
+
+```sql
+SELECT * FROM sys.configurations    
+WHERE name = 'backup compression default'; 
+```
+
+Changing this configuration is permitted through the [sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md) system stored procedure. For example: 
+
+```sql
+EXEC sp_configure 'backup compression default', 1;   
+RECONFIGURE; 
+``` 
+
+No restart of SQL Server is required for this change to take effect. 
+
+The 'configure backup compression algorithm' configuration sets the default compression algorithm. To set Intel QAT as the default compression algorithm for SQL Server, use the following script:
+
+```sql
+EXEC sp_configure 'backup compression algorithm', 'QAT_DEFLATE';   
+RECONFIGURE; 
+```
+
+To change the default compression algorithm back to the default, use the following script:
+
+```sql
+EXEC sp_configure 'backup compression algorithm', 'MS_XPRESS';   
+RECONFIGURE; 
+```
+
+No restart of SQL Server is required for this change to take effect. 
 
 ## Restore operations
 
@@ -134,10 +178,14 @@ Auxiliary RESTORE commands are also supported for all backup compression algorit
 
 To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
 
+### Backup history
+
+You can view the compression algorithm and history of all SQL Server backup and restore operations on a instance in [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md) system table. A new column was added to this system table for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], `compression_algorithm` which indicates `MS_EXPRESS` or `QAT_DEFLATE`, for example.
+
 ## Next steps
 
-[Integrated offloading and acceleration](overview.md)
-
-[Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
-
-[ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
+ - [Integrated offloading and acceleration](overview.md)
+ - [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+ - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
+ - [BACKUP COMPRESSION)](../../t-sql/statements/backup-transact-sql.md#compression)
+ - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

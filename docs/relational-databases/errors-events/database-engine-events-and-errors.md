@@ -4163,7 +4163,6 @@ ORDER BY message_id
 |    9014    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. THe log block version is higher than this server allows.    |
 |    9015    |    24    |    Yes    |    The log record at LSN %S_LSN is corrupted.    |
 |    9016    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. The log block could not be decrypted.    |
-|    [9017](mssqlserver-9017-database-engine-error.md)    |    10    |    No    |    Database %ls has more than %d virtual log files which is excessive. Too many virtual log files can cause long startup and backup times. Consider shrinking the log and using a different growth increment to reduce the number of virtual log files. |
 |    9100    |    23    |    Yes    |    Possible index corruption detected. Run DBCC CHECKDB.    |
 |    9101    |    16    |    No    |    auto statistics internal    |
 |    9104    |    16    |    No    |    auto statistics internal    |

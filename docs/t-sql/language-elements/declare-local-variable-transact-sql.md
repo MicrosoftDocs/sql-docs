@@ -3,7 +3,7 @@ title: "DECLARE @local_variable (Transact-SQL)"
 description: "Transact-SQL reference for using DECLARE to define local variables for use in a batch or procedure."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/05/2022
+ms.date: 08/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -226,7 +226,19 @@ A logical expression that returns TRUE or FALSE.
 
 #### \<index_option>
 
-Specifies one or more index options. For a complete description of these options, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+Specifies one or more index options. Indexes can't be created explicitly on table variables, and no statistics are kept on table variables. Starting with SQL [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], new syntax was introduced which allows you to create certain index types inline with the table definition. Using this new syntax, you can create indexes on table variables as part of the table definition. In some cases, performance may improve by using temporary tables instead, which provide full index support and statistics. 
+
+For a complete description of these options, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+
+## Table variables and row estimates
+
+Table variables don't have distribution statistics. In many cases, the optimizer will build a query plan on the assumption that the table variable has zero rows or one row. For more information, review [table data type - Limitations and restrictions](../data-types/table-transact-sql.md#limitations-and-restrictions).
+
+For this reason, you should be cautious about using a table variable if you expect a larger number of rows (greater than 100). Consider the following alternatives:
+
+ - Temp tables may be a better solution than table variables when it is possible for the rowcount to be larger (greater than 100). 
+ - For queries that join the table variable with other tables, use the RECOMPILE hint, which will cause the optimizer to use the correct cardinality for the table variable. 
+- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
 
 ## Remarks
 

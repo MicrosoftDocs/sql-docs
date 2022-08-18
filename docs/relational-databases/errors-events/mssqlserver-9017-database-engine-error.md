@@ -78,11 +78,11 @@ To resolve this problem, follow these steps:
 1. Additionally, you can review the following fix articles, depending on the version of SQL Server that you're currently running:
 
 
-  [FIX: It takes a long time to restore a database in SQL Server 2008 R2, SQL Server 2008, or SQL Server 2012](https://support.microsoft.com/topic/kb2653893-fix-it-takes-a-long-time-to-restore-a-database-in-sql-server-2008-r2-or-in-sql-server-2008-or-in-sql-2012-e7b381d3-c169-d385-75c4-f43df87029d6)
+   [FIX: It takes a long time to restore a database in SQL Server 2008 R2, SQL Server 2008, or SQL Server 2012](https://support.microsoft.com/topic/kb2653893-fix-it-takes-a-long-time-to-restore-a-database-in-sql-server-2008-r2-or-in-sql-server-2008-or-in-sql-2012-e7b381d3-c169-d385-75c4-f43df87029d6)
 
-  [FIX: Slow performance when you recover a database if there are many VLFs inside the transaction log in SQL Server 2005, SQL Server 2008, or SQL Server 2008 R2](https://support.microsoft.com/topic/kb2455009-fix-slow-performance-when-you-recover-a-database-if-there-are-many-vlfs-inside-the-transaction-log-in-sql-server-2005-in-sql-server-2008-or-in-sql-server-2008-r2-b6b6261a-4bfa-d4c6-868a-66696531d325)
+   [FIX: Slow performance when you recover a database if there are many VLFs inside the transaction log in SQL Server 2005, SQL Server 2008, or SQL Server 2008 R2](https://support.microsoft.com/topic/kb2455009-fix-slow-performance-when-you-recover-a-database-if-there-are-many-vlfs-inside-the-transaction-log-in-sql-server-2005-in-sql-server-2008-or-in-sql-server-2008-r2-b6b6261a-4bfa-d4c6-868a-66696531d325)
 
-  [FIX: Recovery takes longer than expected for a database in a SQL Server 2008 or SQL Server 2008 R2 environment](https://support.microsoft.com/topic/kb2524743-fix-recovery-takes-longer-than-expected-for-a-database-in-a-sql-server-2008-or-in-a-sql-server-2008-r2-environment-24be1262-2642-7e09-353d-f97cd632445a)
+   [FIX: Recovery takes longer than expected for a database in a SQL Server 2008 or SQL Server 2008 R2 environment](https://support.microsoft.com/topic/kb2524743-fix-recovery-takes-longer-than-expected-for-a-database-in-a-sql-server-2008-or-in-a-sql-server-2008-r2-environment-24be1262-2642-7e09-353d-f97cd632445a)
 
 
 > [!TIP]

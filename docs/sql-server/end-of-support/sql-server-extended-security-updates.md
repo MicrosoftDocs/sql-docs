@@ -187,6 +187,8 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
 
+NOTE: If you use Azure products such as Azure Dedicated Host, Azure VMWare Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set invoice number to: InvoiceNotNeeded.
+
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 
 1. Before you can add your SQL Server instances, you must agree to the terms of use and privacy policy.

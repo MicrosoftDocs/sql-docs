@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2017 || >= sql-server-linux
 # GRAPH_ID_FROM_EDGE_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-Returns the internal graph ID value for a given graph edge ID.
+Returns the internal graph ID for a given edge ID.
 
 ## Syntax  
   
@@ -30,12 +30,11 @@ GRAPH_ID_FROM_EDGE_ID ( edge_id )
   
 ## Arguments
 
- *edge_id*
- Is the character representation (JSON) of the $edge_id pseudo-column in a graph edge table.
+ *edge_id* is the character representation (JSON) of the `$edge_id` pseudo-column in an edge table.
 
 ## Return value
 
-Returns the internal graph ID value, which is currently a `bigint`.
+Returns the internal graph ID, which is a `bigint`.
 
 ## Remarks  
 
@@ -48,7 +47,7 @@ Returns the internal graph ID value, which is currently a `bigint`.
 
 ### Example 1
 
-The following example returns the internal graph ID value for all edges in the `friendOf` graph edge table.
+The following example returns the internal graph ID for the edges in the `friendOf` edge table.
   
 ```sql
 SELECT GRAPH_ID_FROM_EDGE_ID($edge_id)

@@ -37,7 +37,7 @@ GRAPH_ID_FROM_NODE_ID ( node_id )
 
 ## Return value
 
-Returns the internal graph ID, which is currently a `bigint`.
+Returns the internal graph ID, which is a `bigint`.
 
 ## Remarks
 

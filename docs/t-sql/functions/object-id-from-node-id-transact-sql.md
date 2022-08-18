@@ -30,8 +30,10 @@ OBJECT_ID_FROM_NODE_ID ( node_id )
   
 ## Arguments
 
- *node_id*
- Is either the $node_id pseudo-column in a graph node table, or the $from_id pseudo-column for a graph edge table, or the $to_id column for a graph edge table.
+ *node_id* is the character representation (JSON) for one of the below:
+- The `$node_id` pseudo-column for a node table.
+- The `$from_id` pseudo-column for an edge table.
+- The `$to_id` column for an edge table.
 
 ## Return value
 

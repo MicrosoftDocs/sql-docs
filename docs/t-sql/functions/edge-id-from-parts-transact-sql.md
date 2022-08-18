@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2017 || >= sql-server-linux
 # EDGE_ID_FROM_PARTS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
-Returns the character representation of the edge ID for a given an object ID and graph ID.
+Returns the character representation (JSON) of the edge ID for a given object ID and graph ID.
 
 ## Syntax  
   
@@ -30,26 +30,27 @@ EDGE_ID_FROM_PARTS ( object_id, graph_id )
   
 ## Arguments
 
- *object_id*
- Is an int representing the object ID of the corresponding graph edge table.
+ *object_id* is an `int` representing the object ID for the edge table.
 
- *graph_id*
- Is a bigint value for the graph ID for an edge.
+ *graph_id* is a `bigint` value for the graph ID for an edge.
 
 ## Return value
 
-Returns an NVARCHAR(1000) character representation of the edge ID. The return value can be NULL if any of the supplied parameters are invalid.
+Returns an NVARCHAR(1000) character representation (JSON) of the edge ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
-- The character representation (JSON) of the edge ID returned by EDGE_ID_FROM_PARTS, is an implementation specific detail. EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation (JSON) of the edge ID. EDGE_ID_FROM_PARTS is useful in cases involving bulk insert of graph nodes into an edge table.
-- For EDGE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must be for an existing edge table. However, the supplied `graph_id` need not exist in that edge table. `graph_id` can be any valid integer. If any of these checks fail, EDGE_ID_FROM_PARTS returns NULL.
+- The character representation (JSON) of the edge ID returned by EDGE_ID_FROM_PARTS is an implementation specific detail, and is subject to change.
+- EDGE_ID_FROM_PARTS is the only supported way to construct a suitable character representation (JSON) of the edge ID.
+- EDGE_ID_FROM_PARTS is useful in cases involving bulk insert of data into an edge table, when the source data has a suitable natural or surrogate key with an integer data type.
+- The value returned from EDGE_ID_FROM_PARTS can be used to populate the `$edge_id` column in an edge table.
+- For EDGE_ID_FROM_PARTS to return valid character representation (JSON) of an edge ID, the `object_id` parameter must correspond to an existing edge table. The `graph_id` parameter can be any valid integer, but it need not exist in that edge table. If any of these checks fail, EDGE_ID_FROM_PARTS returns NULL.
   
 ## Examples
 
 ### Example 1
 
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage account. It then uses EDGE_ID_FROM_PARTS to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This data is then (bulk) inserted into the `likes` edge table. This approach can be efficient to populate an edge table when the source data already has integers as natural or surrogate keys.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `dataset_key` and `rating` columns from a CSV file stored on an Azure Storage account. It then uses EDGE_ID_FROM_PARTS to create the character representation of $edge_id, using the `dataset_key` from the CSV file. It also uses [NODE_ID_FROM_PARTS](./node-id-from-parts-transact-sql.md) twice to create the appropriate character representations of $from_id (for the Person node table) and $to_id values (for the Restaurant node table) respectively. This transformed data is then (bulk) inserted into the `likes` edge table.
   
 ```sql
 INSERT INTO likes($edge_id, $from_id, $to_id, rating)

@@ -30,20 +30,20 @@ NODE_ID_FROM_PARTS ( object_id, graph_id )
   
 ## Arguments
 
- *object_id* is the object ID of the corresponding node table. object_id is int.
+ *object_id* is an `int` representing the object ID for the node table.
 
- *graph_id* is a bigint value for the graph ID for a node.
+ *graph_id* is a `bigint` value for the graph ID for a node.
 
 ## Return value
 
-Returns an NVARCHAR(1000) character representation (JSON) of the node ID. The return value can be NULL if any of the supplied parameters are invalid.
+Returns an NVARCHAR(1000) character representation (JSON) of the node ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
-- The character representation (JSON) of the node ID returned by NODE_ID_FROM_PARTS, is an implementation specific detail, and is subject to change.
+- The character representation (JSON) of the node ID returned by NODE_ID_FROM_PARTS is an implementation specific detail, and is subject to change.
 - NODE_ID_FROM_PARTS is the only supported way to construct a suitable character representation of the node ID.
 - NODE_ID_FROM_PARTS is useful for bulk inserting of data into a graph table, when the source data has a suitable natural or surrogate key with an integer data type.
-- The value returned from NODE_ID_FROM_PARTS can be used to populate the `$node_id` column (in the case of a node table), or the `$from_id` / `$to_id` columns (in the case of an edge table).
+- The value returned from NODE_ID_FROM_PARTS can be used to populate the `$node_id` column in a node table. It can also be used to populate the `$from_id` / `$to_id` columns in an edge table.
 - For NODE_ID_FROM_PARTS to return valid character representation (JSON) of a node ID, the `object_id` parameter must correspond to an existing node table. The `graph_id` parameter can be any valid integer, but it need not exist in that node table. If any of these checks fail, NODE_ID_FROM_PARTS returns NULL.
   
 ## Examples

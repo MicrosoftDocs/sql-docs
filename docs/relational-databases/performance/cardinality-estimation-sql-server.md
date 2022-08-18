@@ -312,7 +312,7 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
 
   - Parameterize the query and execute it by using `sp_executesql`, and pass the value of the variable as a parameter to the query.
 
-<a id="ce-feedback></a>
+<a id="ce-feedback"></a>
 ## Cardinality Estimation (CE) feedback
 
 [!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]

@@ -6416,7 +6416,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -10550,6 +10550,8 @@ items:
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud

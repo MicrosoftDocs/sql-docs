@@ -20,7 +20,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 1. If you haven't already installed Visual Studio on your Windows machine, [Download and Install Visual Studio](https://visualstudio.microsoft.com/downloads/). If you don't have a Visual Studio license, Visual Studio Community edition is a free, fully featured IDE for students, open-source, and individual developers.
 
-2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Click **Next**
+2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Select **Next**
 
 3. Select **Microsoft SQL Server Data Tools**, **Git for Windows**, and **GitHub Extension for Visual Studio** from the feature selection list.
 
@@ -40,17 +40,17 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 2. Select **Team Explorer** on the **View** menu. 
 
-3. Click **New** in **Local Git Repository** section on the **Connect** page.
+3. Select **New** in **Local Git Repository** section on the **Connect** page.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out."/>
 
 4. Click **Create**. After the local Git repository is created, double-click **SSDTRepo**.
 
-5. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
+5. Select **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out."/>
 
-6. Type in **TutorialDB** for the name and click **OK** to create a new database project.
+6. Type in **TutorialDB** for the name and select **OK** to create a new database project.
 
 ## Create a new table in the database project
 
@@ -80,7 +80,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 1. Open the database project menu on **TutorialDB** and select **Publish**.
 
-2. Click **Edit** to select your SQL Server instance on Linux.
+2. Select **Edit** to select your SQL Server instance on Linux.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog"/>
 
@@ -88,11 +88,11 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog"/>
 
-4. Click the **Publish** button on the publish dialog.
+4. Select the **Publish** button on the publish dialog.
 
 5. Check the publish status in the **Data Tools Operations** window.
 
-6. Click **View Results** or **View Script** to see details of the database publish result on your SQL Server on Linux.
+6. Select **View Results** or **View Script** to see details of the database publish result on your SQL Server on Linux.
 
    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result"/>
 

@@ -31,9 +31,9 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-1. Select on the plus sign next to the database that contains the function you wish to modify.
+1. Select the plus sign next to the database that contains the function you wish to modify.
 
-1. Select on the plus sign next to the **Programmability** folder.
+1. Select the plus sign next to the **Programmability** folder.
 
 1. Select the plus sign next to the folder that contains the function you wish to modify:
 

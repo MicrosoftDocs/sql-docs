@@ -187,5 +187,5 @@ You can view the compression algorithm and history of all SQL Server backup and 
  - [Integrated offloading and acceleration](overview.md)
  - [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
  - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
- - [BACKUP COMPRESSION)](../../t-sql/statements/backup-transact-sql.md#compression)
+ - [BACKUP COMPRESSION (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression)
  - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

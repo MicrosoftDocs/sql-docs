@@ -44,7 +44,7 @@ To complete this quickstart, you need Azure Data Studio, the PostgreSQL extensio
    | **User name** | tsdbadmin | The user name you want to log in with. |
    | **Password (SQL Login)** | *password* | The password for the account you are logging in with. |
    | **Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |
-   | **Database name** | defaultdb | The default database for Managed Service for TimescaleDB service is defaultdb. You can also specify the name of the databse to connect to. |
+   | **Database name** | defaultdb | The default database for Managed Service for TimescaleDB service is defaultdb. You can also specify the name of the database to connect to. |
    | **Server group** | \<Default\> | This option lets you assign this connection to a specific server group you create. |
    | **Name (optional)** | *leave blank* | This option lets you specify a friendly name for your server. |
 

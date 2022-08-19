@@ -95,7 +95,7 @@ The following are possible solutions for this issue:
    Sqlcmd -S $server_name -E -Q "ALTER ENDPOINT hadr_endpoint STATE = started"
   ```
   >[!WARNING]
-  >Running the command with `STATE = stopped` will stop your endpoint and interrupt Always On traffic flow.
+  >Running the command with `STATE = stopped` will stop your endpoint and temporarily interrupt Always On traffic flow.
   
   
    

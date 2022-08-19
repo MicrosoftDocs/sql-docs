@@ -11409,6 +11409,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-9003-database-engine-error.md
         - name: 9004
           href: relational-databases/errors-events/mssqlserver-9004-database-engine-error.md
+        - name: 9017
+          href: relational-databases/errors-events/mssqlserver-9017-database-engine-error.md  
         - name: 9524
           href: relational-databases/errors-events/mssqlserver-9524-database-engine-error.md
         - name: 9532

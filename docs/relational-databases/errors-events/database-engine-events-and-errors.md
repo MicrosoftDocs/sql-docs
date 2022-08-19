@@ -11,17 +11,20 @@ ms.topic: reference
 ---
 # Database engine errors
 
-The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. Where applicable, the error number is a link to further information.
+The table contains error message numbers and the description, which is the text of the error message from the `sys.messages` catalog view. Where applicable, the error number is a link to further information.
 
-This list is not exhaustive. For a full list of all errors, query the sys.messages catalog view with the following query:
+This list is not exhaustive. For a full list of all errors, query the `sys.messages` catalog view with the following query:
 
 ```sql
-SELECT message_id AS Error, severity AS Severity,
-[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
-text AS [Description]
+SELECT message_id AS Error,
+    severity AS Severity,
+    [Event Logged] = CASE is_event_logged
+        WHEN 0 THEN 'No' ELSE 'Yes'
+        END,
+    [text] AS [Description]
 FROM sys.messages
 WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English*/
-ORDER BY message_id
+ORDER BY message_id;
 ```
 
 ## Errors -2 to 999

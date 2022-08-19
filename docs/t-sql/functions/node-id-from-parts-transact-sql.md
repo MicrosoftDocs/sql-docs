@@ -30,13 +30,17 @@ NODE_ID_FROM_PARTS ( object_id, graph_id )
   
 ## Arguments
 
- *object_id* is an `int` representing the object ID for the node table.
+#### *object_id*
 
- *graph_id* is a `bigint` value for the graph ID for a node.
+An **int** representing the object ID for the node table.
+
+#### *graph_id*
+
+A **bigint** value for the graph ID for a node.
 
 ## Return value
 
-Returns an `nvarchar(1000)` character representation (JSON) of the node ID. The return value can be NULL if any of the supplied arguments are invalid.
+Returns an **nvarchar(1000)** character representation (JSON) of the node ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
@@ -48,12 +52,16 @@ Returns an `nvarchar(1000)` character representation (JSON) of the node ID. The 
   
 ## Examples
 
-The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage account. It then uses `NODE_ID_FROM_PARTS` to create the appropriate character representation of $node_id for eventual (bulk) insert into the `Person` node table. This transformed data is then (bulk) inserted into the `Person` node table.
+The following example uses the [OPENROWSET Bulk Rowset Provider](../../relational-databases/import-export/bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md) to retrieve the `ID` and `name` columns from a CSV file stored on an Azure Storage account. It then uses `NODE_ID_FROM_PARTS` to create the appropriate character representation of `$node_id` for eventual (bulk) insert into the `Person` node table. This transformed data is then (bulk) inserted into the `Person` node table.
   
 ```sql
 INSERT INTO Person($node_id, ID, [name])
 SELECT NODE_ID_FROM_PARTS(OBJECT_ID('Person'), ID) as node_id, ID, [name]
-FROM OPENROWSET (BULK 'person_0_0.csv', DATA_SOURCE = 'staging_data_source', FORMATFILE = 'format-files/person.xml', FORMATFILE_DATA_SOURCE = 'format_files_source', FIRSTROW = 2) AS staging_data;
+FROM OPENROWSET (BULK 'person_0_0.csv',
+    DATA_SOURCE = 'staging_data_source',
+    FORMATFILE = 'format-files/person.xml',
+    FORMATFILE_DATA_SOURCE = 'format_files_source',
+    FIRSTROW = 2) AS staging_data;
 ;
 ```  
 

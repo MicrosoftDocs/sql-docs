@@ -30,13 +30,17 @@ EDGE_ID_FROM_PARTS ( object_id, graph_id )
   
 ## Arguments
 
- *object_id* is an `int` representing the object ID for the edge table.
+#### *object_id* 
 
- *graph_id* is a `bigint` value for the graph ID for an edge.
+An **int** representing the object ID for the edge table.
+
+#### *graph_id*
+
+A **bigint** value for the graph ID for an edge.
 
 ## Return value
 
-Returns an `nvarchar(1000)` character representation (JSON) of the edge ID. The return value can be NULL if any of the supplied arguments are invalid.
+Returns an **nvarchar(1000)** character representation (JSON) of the edge ID. The return value can be NULL if any of the supplied arguments are invalid.
 
 ## Remarks  
 
@@ -56,7 +60,11 @@ SELECT EDGE_ID_FROM_PARTS(OBJECT_ID('likes'), dataset_key) as from_id
 , NODE_ID_FROM_PARTS(OBJECT_ID('Person'), ID) as from_id
 , NODE_ID_FROM_PARTS(OBJECT_ID('Restaurant'), ID) as to_id
 , rating
-FROM OPENROWSET (BULK 'person_likes_restaurant.csv', DATA_SOURCE = 'staging_data_source', FORMATFILE = 'format-files/likes.xml', FORMATFILE_DATA_SOURCE = 'format_files_source', FIRSTROW = 2) AS staging_data;
+FROM OPENROWSET (BULK 'person_likes_restaurant.csv',
+    DATA_SOURCE = 'staging_data_source',
+    FORMATFILE = 'format-files/likes.xml',
+    FORMATFILE_DATA_SOURCE = 'format_files_source',
+    FIRSTROW = 2) AS staging_data;
 ;
 ```  
 

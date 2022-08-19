@@ -30,14 +30,17 @@ GRAPH_ID_FROM_NODE_ID ( node_id )
   
 ## Arguments
 
- *node_id* is the character representation (JSON) for one of the below:
+#### *node_id*
+
+The character representation (JSON) for one of the below:
+
 - The `$node_id` pseudo-column for a node table.
 - The `$from_id` pseudo-column for an edge table.
 - The `$to_id` column for an edge table.
 
 ## Return value
 
-Returns the internal graph ID, which is a `bigint`.
+Returns the internal graph ID, which is a **bigint**.
 
 ## Remarks
 
@@ -55,15 +58,14 @@ SELECT GRAPH_ID_FROM_NODE_ID($node_id)
 FROM Person;
 ```  
 
-**Result**
+Here are the results:
 
-```
+```output
 ...
 1764
 1806
 19051
 ...
-
 ```
 
 ## See also  

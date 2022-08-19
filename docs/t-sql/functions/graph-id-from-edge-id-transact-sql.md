@@ -30,11 +30,13 @@ GRAPH_ID_FROM_EDGE_ID ( edge_id )
   
 ## Arguments
 
- *edge_id* is the character representation (JSON) of the `$edge_id` pseudo-column in an edge table.
+#### *edge_id*
+
+The character representation (JSON) of the `$edge_id` pseudo-column in an edge table.
 
 ## Return value
 
-Returns the internal graph ID, which is a `bigint`.
+Returns the internal graph ID, which is a **bigint**.
 
 ## Remarks  
 
@@ -52,9 +54,9 @@ SELECT GRAPH_ID_FROM_EDGE_ID($edge_id)
 FROM friendOf;
 ```  
 
-**Result**
+Here are the results:
 
-```
+```output
 ...
 25073
 98943
@@ -62,7 +64,6 @@ FROM friendOf;
 68781
 30354
 ...
-
 ```
 
 ## See also  

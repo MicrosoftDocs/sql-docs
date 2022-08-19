@@ -178,7 +178,7 @@ Test the connectivity to your DNN listener with these steps:
 ## Port considerations
 
 DNN listeners are designed to listen on all IP addresses, but on a specific, unique port. The DNS entry for the listener name should resolve to the addresses of all replicas in the availability group. This is done automatically with the PowerShell script provided in the [Create Script](#create-script) section. Since DNN listeners accept connections on all IP addresses, it is critical that the listener port be unique, and not in use by any other replica in the availability group. Since SQL Server listens on port 1433 by default, either directly or via the SQL Browser service, using port 1433 for the DNN listener is strongly discouraged. 
-In case the listener port chosen for the VNN listener is between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](https://docs.microsoft.com/en-us/windows/client-management/troubleshoot-tcpip-port-exhaust), add an exclusion for this. Doing so will prevent other systems from being dynamically assigned the same port. 
+In case the listener port chosen for the VNN listener is between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip-port-exhaust), add an exclusion for this. Doing so will prevent other systems from being dynamically assigned the same port. 
 `netsh int ipv4 add excludedportrange tcp startport=<Listener Port> numberofports=1 store=persistent`
 
 ## Next steps

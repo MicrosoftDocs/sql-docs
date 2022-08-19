@@ -41,7 +41,7 @@ SQL Server provides In-Memory features that can greatly improve the performance 
 ### Features for OLTP (Online Transactional Processing)  
   
   
-Systems which must processes large numbers of SQL INSERTs concurrently are excellent candidates for the OLTP features.  
+Systems that must process large numbers of SQL INSERTs concurrently are excellent candidates for the OLTP features.  
   
 - Our benchmarks show that speed improvements from 5 times to 20 times faster are achievable by adoption of the In-Memory features.  
   

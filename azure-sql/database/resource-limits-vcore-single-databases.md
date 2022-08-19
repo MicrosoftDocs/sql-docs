@@ -250,7 +250,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-3"></a>Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-3"></a>General purpose Standard-series (Gen5) compute generation (part 1)
 
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
@@ -279,29 +279,29 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-3"></a>Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute generation (part 2)
 
-|Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
-|:--- | --: |--: |--: |--: |---: | --: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|16|18|20|24|32|40|80|
-|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
-|Max log size (GB) <sup>1</sup>|922|922|922|1024|1024|1024|1024|
-|Tempdb max data size (GB)|512|576|640|768|1024|1280|2560|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
-|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|5120|5760|6400|7680|10240|12800|12800|
-|Max log rate (MBps)|50|50|50|50|50|50|50|
-|Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|1|1|1|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
+|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|vCores|16|18|20|24|32|40|80|128|
+|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2| |
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A| |
+|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096| |
+|Max log size (GB) <sup>1</sup>|922|922|922|1024|1024|1024|1024| |
+|Tempdb max data size (GB)|512|576|640|768|1024|1280|2560| |
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD| |
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms| |
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms| |
+|Max data IOPS <sup>2</sup>|5120|5760|6400|7680|10240|12800|12800| |
+|Max log rate (MBps)|50|50|50|50|50|50|50| |
+|Max concurrent workers|1600|1800|2000|2400|3200|4000|8000| |
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000| |
+|Number of replicas|1|1|1|1|1|1|1| |
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|N/A| |
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size| |
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
@@ -398,7 +398,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ## <a id="business-critical---provisioned-compute---gen5"></a>Business critical - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-4"></a>Standard-series (Gen5) compute generation (part 1)
+### <a id="gen5-hardware-part-1-4"></a>Business critical Standard-series (Gen5) compute generation (part 1)
 
 
 |Compute size (service objective)|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
@@ -429,31 +429,31 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-4"></a>Standard-series (Gen5) compute generation (part 2)
+### <a id="gen5-hardware-part-2-4"></a>Business criticalStandard-series (Gen5) compute generation (part 2)
 
-|Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
-|:--- | --: |--: |--: |--: |---: | --: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|16|18|20|24|32|40|80|
-|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|15.77|18.14|20.51|25.25|37.94|52.23|131.64|
-|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
-|Max log size (GB) <sup>1</sup>|922|922|922|1024|1024|1024|1024|
-|Tempdb max data size (GB)|512|576|640|768|1024|1280|2560|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Max data IOPS <sup>2</sup>|64,000|72,000|80,000|96,000|128,000|160,000|204,800|
-|Max log rate (MBps)|96|96|96|96|96|96|96|
-|Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
-|Max concurrent logins|1600|1800|2000|2400|3200|4000|8000|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|4|4|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
+|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|vCores|16|18|20|24|32|40|80|128|
+|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2| |
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|In-memory OLTP storage (GB)|15.77|18.14|20.51|25.25|37.94|52.23|131.64| |
+|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096| |
+|Max log size (GB) <sup>1</sup>|922|922|922|1024|1024|1024|1024| |
+|Tempdb max data size (GB)|512|576|640|768|1024|1280|2560| |
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829| |
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD| |
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms| |
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms| |
+|Max data IOPS <sup>2</sup>|64,000|72,000|80,000|96,000|128,000|160,000|204,800| |
+|Max log rate (MBps)|96|96|96|96|96|96|96| |
+|Max concurrent workers|1600|1800|2000|2400|3200|4000|8000| |
+|Max concurrent logins|1600|1800|2000|2400|3200|4000|8000| |
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000| |
+|Number of replicas|4|4|4|4|4|4|4| |
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size| |
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
@@ -636,7 +636,7 @@ This section includes details on previously available hardware.
 
 #### Gen4 hardware (part 1)
 
-|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
+|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|

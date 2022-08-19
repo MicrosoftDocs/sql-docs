@@ -99,30 +99,30 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ### General purpose service tier: Generation 5 compute platform (part 2)
 
-|Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
-|:--- | --: |--: |--: |--: |---: | --: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|16|18|20|24|32|40|80|
-|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
-|Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|500|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|2048|3072|3072|3072|4096|4096|4096|
-|Max log size (GB) <sup>2</sup>|614|922|922|922|1229|1229|1229|
-|TempDB max data size (GB)|512|576|640|768|1024|1280|2560|
-|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
-|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
-|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup> |6,400|7,200|8,000|9,600|12,800|16,000|16,000|
-|Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|62.5|62.5|
-|Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
-|Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...16, 24, 32, 40|0, 0.25, 0.5, 1...16, 24, 32, 40, 80|
-|Number of replicas|1|1|1|1|1|1|1|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
+|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|vCores|16|18|20|24|32|40|80|128|
+|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2| |
+|Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|500| |
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes| | 
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|N/A|N/A| |
+|Max data size (GB)|2048|3072|3072|3072|4096|4096|4096| |
+|Max log size (GB) <sup>2</sup>|614|922|922|922|1229|1229|1229| |
+|TempDB max data size (GB)|512|576|640|768|1024|1280|2560| |
+|Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage| |
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms| |
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms| |
+|Max data IOPS per pool <sup>3</sup> |6,400|7,200|8,000|9,600|12,800|16,000|16,000| |
+|Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|62.5|62.5| |
+|Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400| |
+|Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400| |
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000| |
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...16, 24, 32, 40|0, 0.25, 0.5, 1...16, 24, 32, 40, 80| |
+|Number of replicas|1|1|1|1|1|1|1| |
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|N/A|N/A| |
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size| |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
@@ -279,31 +279,31 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 ### Business Critical service tier: Generation 5 compute platform (part 2)
 
-|Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
-|:--- | --: |--: |--: |--: |---: | --: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|16|18|20|24|32|40|80|
-|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
-|Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|100|
-|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|15.77|18.14|20.51|25.25|37.94|52.23|131.68|
-|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
-|Max log size (GB) <sup>2</sup>|922|922|922|1229|1229|1229|1229|
-|TempDB max data size (GB)|512|576|640|768|1024|1280|2560|
-|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829|
-|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|
-|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
-|Max data IOPS per pool <sup>3</sup>|72,000|81,000|90,000|108,000|144,000|180,000|256,000|
-|Max log rate per pool (MBps)|120|120|120|120|120|120|120|
-|Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
-|Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
-|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...20, 24, 32, 40|0, 0.25, 0.5, 1...20, 24, 32, 40, 80|
-|Number of replicas|4|4|4|4|4|4|4|
-|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
+|:--- | --: |--: |--: |--: |---: | --: |--: |--: |
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|vCores|16|18|20|24|32|40|80|128|
+|Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2| |
+|Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|100| |
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|In-memory OLTP storage (GB)|15.77|18.14|20.51|25.25|37.94|52.23|131.68| |
+|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096| |
+|Max log size (GB) <sup>2</sup>|922|922|922|1229|1229|1229|1229| |
+|TempDB max data size (GB)|512|576|640|768|1024|1280|2560| |
+|[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|4829|4829|4829| |
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD|Local SSD| | 
+|Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms| |
+|Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms| |
+|Max data IOPS per pool <sup>3</sup>|72,000|81,000|90,000|108,000|144,000|180,000|256,000| |
+|Max log rate per pool (MBps)|120|120|120|120|120|120|120| |
+|Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400| |
+|Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400| |
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000| |
+|Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...20, 24, 32, 40|0, 0.25, 0.5, 1...20, 24, 32, 40, 80| |
+|Number of replicas|4|4|4|4|4|4|4| |
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes| |
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size| |
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
@@ -472,7 +472,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 #### General purpose service tier: Generation 4 compute platform (part 1)
 
-|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6
+|Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|

@@ -68,7 +68,7 @@ The following table shows resource limits for both Azure SQL Database and Azure 
 
 | **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 |:--|:--|:--|
-| **Compute size**| 1 - 80 vCores | 4, 8, 16, 24, 32, 40, 64, 80 vCores| 
+| **Compute size**| 1 - 128 vCores | 4, 8, 16, 24, 32, 40, 64, 80 vCores| 
 | **Storage type** | Remote storage | Remote storage| 
 | **Storage size** | 1 GB - 4 TB | 2 GB - 16 TB| 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md) | [24 GB per vCore](../managed-instance/resource-limits.md#service-tier-characteristics) |

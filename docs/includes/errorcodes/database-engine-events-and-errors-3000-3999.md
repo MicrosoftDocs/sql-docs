@@ -144,7 +144,7 @@ ms.topic: include
 |    3197    |    10    |    Yes    |    I/O is frozen on database %ls. No user action is required. However, if I/O is not resumed promptly, you could cancel the backup.    |
 |    3198    |    10    |    Yes    |    I/O was resumed on database %ls. No user action is required.    |
 |    3199    |    16    |    No    |    RESTORE requires MAXTRANSFERSIZE=%u but %u was specified.    |
-|    3201    |    16    |    No    |    Cannot open backup device '%ls'. Operating system error %ls.    |
+|    [3201](../../relational-databases/errors-events/mssqlserver-3201-database-engine-error.md)    |    16    |    No    |    Cannot open backup device '%ls'. Operating system error %ls.    |
 |    3202    |    16    |    No    |    Write on "%ls" failed: %ls    |
 |    3203    |    16    |    No    |    Read on "%ls" failed: %ls    |
 |    3204    |    16    |    No    |    The backup or restore was aborted.    |

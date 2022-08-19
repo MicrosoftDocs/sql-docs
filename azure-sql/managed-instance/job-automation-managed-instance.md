@@ -80,11 +80,9 @@ SQL Agent enables you to create different types of job steps, such as Transact-S
 
 [Transactional replication](../managed-instance/replication-transactional-overview.md) can replicate the changes from your tables into other databases in SQL Managed Instance, Azure SQL Database, or SQL Server. For information, see [Configure replication in Azure SQL Managed Instance](./replication-between-two-instances-configure-tutorial.md). 
 
-Other types of job steps are not currently supported in SQL Managed Instance, including:
+Other types of job steps are **not currently supported** in SQL Managed Instance, such as Merge replication, and Queue reader.
 
-- Merge replication job step is not supported.
-- Queue Reader is not supported.
-- Analysis Services are not supported
+
  
 ### SQL Agent job schedules
 
@@ -203,6 +201,17 @@ GRANT EXECUTE ON master.dbo.xp_sqlagent_enum_jobs TO [login_name];
 GRANT EXECUTE ON master.dbo.xp_sqlagent_is_starting TO [login_name];
 GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO [login_name];
 ```
+
+## Limitations
+
+The following SQL Agent jobs are not currently supported with SQL Managed Instance:
+
+- Merge replication job step
+- Queue Reader
+- Analysis Services
+- Running a script stored as a file on disk
+- Importing external modules, such as dbatools and dbachecks
+- PowerShell Core
 
 ## Learn more
 

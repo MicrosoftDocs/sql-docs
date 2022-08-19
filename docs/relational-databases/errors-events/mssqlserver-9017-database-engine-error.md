@@ -53,7 +53,7 @@ The SQL Server Database Engine internally divides each physical log file into se
 >[!NOTE]
 >In SQL Server 2012, although this message is logged when the database has 10,000 VLFs, the actual message that is reported in the error log incorrectly states "1000 VLF." The warning does occur after 10,000 VLFs. However, the message reports 1,000 VLFs. This issue is corrected in a later releases.
 
-## User Action
+## User action
 
 To resolve this problem, follow these steps:
 

@@ -89,7 +89,7 @@ You can export a paginated report to another file format, such as PowerPoint, Im
   
      **Note** If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.  
   
-##  <a name="RendererTypes"></a> Rendering Extension Types  
+##  <a name="RendererTypes"></a> Rendering extension types  
  There are three types of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering extensions:  
   
 -   **Data renderer extensions** Data rendering extensions strip all formatting and layout information from the report and display only the data. The resulting file can be used to import the raw report data into another file type, such as Excel, another database, an XML data message, or a custom application. Data renderers do not support page breaks.  
@@ -123,12 +123,12 @@ You can export a paginated report to another file format, such as PowerPoint, Im
   
 In addition, you can use the RenderFormat built-in global to conditionally apply different report layouts for different renderers. For more information, see [Built-in Globals and Users References](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
-##  <a name="GeneratingDataFeedsFromReport"></a> Generating Data Feeds From a Report  
+##  <a name="GeneratingDataFeedsFromReport"></a> Generating data feeds from a report  
  To generate data feeds from a report, run the report in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, and then click the **Generate Data Feed** icon on the web portal toolbar. You are prompted to choose whether to save or open the file. If you chose **Open**, the Atom service document opens in the application that is associated with the .atomsvc file extension. If you chose **Save**, the document is saved as an .atomsvc file. By default, the name of the file is the name of the report. You can change the name to one that is more meaningful.  
   
  You save the Atom service document to your computer. Later you can upload it to a report server or another server to make it available for others to use. For more information, see [Generating Data Feeds from Reports](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and [Generate Data Feeds from a Report](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Troubleshooting Exported Reports  
+##  <a name="Troubleshooting"></a> Troubleshooting exported reports  
  Sometimes your reports look different or do not work the way you want after you export them to a different format. This occurs because certain rules and limitations might apply to the renderer. You can address many limitations by considering them when you create the report. You might need to use a slightly different layout in your report, carefully align items within the report, confine report footers to a single line of text, and so forth.  
 
 ### Arabic numbers and dates
@@ -146,7 +146,7 @@ If your report contains Unicode text with Arabic numbers or dates in Arabic, the
  
 When you export a paginated report in PowerPoint format, if the report has an embedded or external image in the background, the image doesn't come up in the exported file. The same is true when you export to other formats like PDF. 
 
-##  <a name="OtherWaysExportingReports"></a> Other Ways of Exporting Reports  
+##  <a name="OtherWaysExportingReports"></a> Other ways of exporting reports  
  Exporting a report is an on-demand task that you perform when the report is open in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or Report Builder. If you want to automate an export operation (for example, to export a report to a shared folder as a specific file type on a recurring schedule), create a subscription that delivers the report to a shared folder. For more information, see [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  Reports previewed in the reporting tools or opened in a browser application such as the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal are always first rendered in HTML. You cannot specify a different rendering extension as the default for viewing. You can, however, create a subscription that produces a report in the rendering format you want for subsequent delivery to an e-mail inbox or shared folder. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) and [Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

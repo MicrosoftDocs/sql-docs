@@ -1,7 +1,7 @@
 ---
 description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
-ms.date: 05/16/2022
+ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -24,14 +24,14 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 16 [(KB 5011644)](https://support.microsoft.com/help/5011644)|4/18/2022 <br/>(Windows)<br/><br/>5/10/2022 <br/>(Big Data Clusters)<br/><br/>5/16/2022<br/>(Linux)|[SQL Server 2019 Installation](./install-sql-server.md)|
-|SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 29 [(KB 5010786)](https://support.microsoft.com/help/5010786)|3/30/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
-|SQL Server 2016|Azure Connect pack [(KB 5014242)](https://support.microsoft.com/help/5014242)|N/A|N/A|N/A|[Link - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview)|
-|SQL Server 2016|SP3 [(KB 5003279)](https://support.microsoft.com/help/5003279)|N/A|N/A|N/A|[SQL Server 2016 Installation](./install-sql-server.md)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 17 [(KB 5001092)](https://support.microsoft.com/kb/5001092)|3/29/2021|[SQL Server 2016 Installation](./install-sql-server.md)|
-|SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](./install-sql-server.md)|
+|SQL Server 2019|N/A|[KB 5014356](https://support.microsoft.com/help/5014356)|CU 17 </br> [(KB 5016394)](https://support.microsoft.com/help/5016394)|8/11/2022|[SQL Server 2019 Installation](./install-sql-server.md)|
+|SQL Server 2017|N/A|[KB 5014354](https://support.microsoft.com/help/5014354)|CU 30 </br> [(KB 5013756)](https://support.microsoft.com/help/5013756)|7/13/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
+|SQL Server 2016|Azure Connect pack [(KB 5014242)](https://support.microsoft.com/help/5014242)|[KB 5015371](https://support.microsoft.com/help/5015371)|N/A|N/A|[Link - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview)|
+|SQL Server 2016|SP3 [(KB 5003279)](https://support.microsoft.com/help/5003279)|[KB 5014355](https://support.microsoft.com/help/5014355)|N/A|N/A|[SQL Server 2016 Installation](./install-sql-server.md)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 5014365](https://support.microsoft.com/help/5014365)|CU 17 + GDR </br> [(KB 5014351)](https://support.microsoft.com/kb/5014351)|6/14/2022|[SQL Server 2016 Installation](./install-sql-server.md)|
+|SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR </br> [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|11/22/2017|[SQL Server 2016 Installation](./install-sql-server.md)|
-|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4583463](https://support.microsoft.com/help/4583463)|CU 4 [(KB 4583462)](https://support.microsoft.com/kb/4583462)|1/12/2021|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
+|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 5014165](https://support.microsoft.com/help/5014165)|CU 4 + GDR </br> [(KB 5014164)](https://support.microsoft.com/kb/5014164)|6/14/2022|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|SP2 [(KB 3171021)](https://support.microsoft.com/kb/3171021)|[KB 4505217](https://support.microsoft.com/help/4505217)|CU 18 [(KB 4500180)](https://support.microsoft.com/kb/4500180)|7/29/2019|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|SP1 [(KB 3058865)](https://support.microsoft.com/kb/3058865)|[KB 4032542](https://support.microsoft.com/help/4032542/description-of-the-security-update-for-sql-server-2014-service-pack-1) |CU 13 [(KB 4019099)](https://support.microsoft.com/help/4019099)|8/8/2017|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2014|N/A|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 14 [(KB 3158271)](https://support.microsoft.com/kb/3158271)|6/20/2016|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|

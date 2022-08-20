@@ -26,7 +26,7 @@ dev_langs:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Imports the schema components into a database.  
   

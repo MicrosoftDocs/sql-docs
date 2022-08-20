@@ -1,19 +1,15 @@
 ---
+title: "Using the Microsoft SDK for Java"
 description: "Using the Microsoft SDK for Java"
-title: "Using the Microsoft SDK for Java | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Java (Microsoft SDK for)"
-  - "Microsoft SDK for Java [ADO]"
-ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Java (Microsoft SDK for)"
+  - "Microsoft SDK for Java [ADO]"
 ---
 # Using the Microsoft SDK for Java
 

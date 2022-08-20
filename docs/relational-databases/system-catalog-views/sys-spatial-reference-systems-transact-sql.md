@@ -22,7 +22,7 @@ ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.spatial_reference_systems (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Lists the spatial reference systems (SRIDs) supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 

@@ -53,7 +53,7 @@ ms.author: maggies
   
 8.  Select the data source and **click OK**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 10. Click **Close**.  
   

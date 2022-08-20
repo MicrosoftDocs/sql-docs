@@ -1,18 +1,14 @@
 ---
+title: "Keys Collection Properties, Methods, and Events"
 description: "Keys Collection Properties, Methods, and Events"
-title: "Keys Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Keys collection [ADOX], members"
-ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Keys collection [ADOX], members"
 ---
 # Keys Collection Properties, Methods, and Events
 ## Properties  

@@ -3,7 +3,7 @@ title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "06/15/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -46,7 +46,7 @@ To adjust these options as your workload grows, see [Keep Query Store adjusted t
 
 | Configuration | Description | Default | Comment |
 | --- | --- | --- | --- |
-| MAX_STORAGE_SIZE_MB |Specifies the limit for the data space that Query Store can take inside the customer database |100 |Enforced for new databases |
+| MAX_STORAGE_SIZE_MB |Specifies the limit for the data space that Query Store can take inside the customer database |100 prior to SQL Server 2019<BR>1024 starting with SQL Server 2019 |Enforced for new databases |
 | INTERVAL_LENGTH_MINUTES |Defines size of time window during which collected runtime statistics for query plans are aggregated and persisted. Every active query plan has at most one row for a period of time defined with this configuration |60 |Enforced for new databases |
 | STALE_QUERY_THRESHOLD_DAYS |Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries |30 |Enforced for new databases and databases with previous default (367) |
 | SIZE_BASED_CLEANUP_MODE |Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit |AUTO |Enforced for all databases |
@@ -280,7 +280,7 @@ If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign 
 - Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.
 
 > [!TIP]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints (Preview)](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints (Preview)](query-store-hints.md).
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
 
 ## <a name="Verify"></a> Verify that Query Store collects query data continuously
 
@@ -501,7 +501,7 @@ WHERE is_forced_plan = 1;
 For a full list of reasons, see [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track and troubleshoot plan forcing failures.
 
 > [!TIP]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints (Preview)](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints (Preview)](query-store-hints.md).
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
 
 
 ## <a name="Renaming"></a> Avoid renaming databases for queries with forced plans

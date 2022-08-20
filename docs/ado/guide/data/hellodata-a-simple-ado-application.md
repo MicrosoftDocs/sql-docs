@@ -1,19 +1,15 @@
 ---
+title: "HelloData: A Simple ADO Application"
 description: "HelloData: A Simple ADO Application"
-title: "HelloData: A Simple ADO Application | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HelloData sample application [ADO]"
-  - "ADO, samples"
-ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "HelloData sample application [ADO]"
+  - "ADO, samples"
 ---
 # HelloData: A Simple ADO Application
 This simple application steps through each of the four major ADO operations: getting, examining, editing, and updating data. These operations are performed against the Northwind sample database included with Microsoft® SQL Server. To focus on the fundamentals of ADO and to prevent code clutter, error handling in the example is minimal.  

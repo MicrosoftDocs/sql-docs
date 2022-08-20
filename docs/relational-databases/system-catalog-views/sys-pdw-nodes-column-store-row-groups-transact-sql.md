@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse

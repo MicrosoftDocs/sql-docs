@@ -57,7 +57,7 @@ ms.author: "mathoma"
   
     2.  Accept the default schedule for refreshing snapshots, or click **Change** to specify a different schedule.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
 
 #### To delete a partition  
   
@@ -69,7 +69,7 @@ ms.author: "mathoma"
   
 1.  On the **Data Partitions** page, select **Automatically define a partition and generate a snapshot if needed when a new Subscriber tries to synchronize**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To generate a snapshot for a partition  
   

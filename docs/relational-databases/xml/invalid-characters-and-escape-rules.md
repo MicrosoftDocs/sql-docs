@@ -16,7 +16,7 @@ ms.author: mikeray
 ---
 # Invalid characters and escape rules
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
 This article describes how invalid XML characters are handled by the FOR XML clause, and lists the escape rules for characters that are invalid in XML names.
 

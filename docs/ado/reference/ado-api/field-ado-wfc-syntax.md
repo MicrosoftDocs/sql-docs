@@ -1,19 +1,15 @@
 ---
+title: "Field (ADO - WFC Syntax)"
 description: "Field (ADO - WFC Syntax)"
-title: "Field (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "02/15/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Field collection [ADO], ADO/WFC syntax"
-ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
+ms.date: "02/15/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Field collection [ADO], ADO/WFC syntax"
+apitype: "COM"
 ---
 # Field (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

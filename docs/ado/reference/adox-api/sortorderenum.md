@@ -1,21 +1,17 @@
 ---
+title: "SortOrderEnum"
 description: "SortOrderEnum"
-title: "SortOrderEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "SortOrderEnum"
-helpviewer_keywords: 
-  - "SortOrderEnum enumeration [ADOX]"
-ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "SortOrderEnum"
+helpviewer_keywords:
+  - "SortOrderEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # SortOrderEnum
 Specifies the sort sequence for an indexed column.  

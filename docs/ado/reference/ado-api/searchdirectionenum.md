@@ -1,21 +1,17 @@
 ---
+title: "SearchDirectionEnum"
 description: "SearchDirectionEnum"
-title: "SearchDirectionEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "SearchDirectionEnum"
-helpviewer_keywords: 
-  - "SearchDirectionEnum enumeration [ADO]"
-ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "SearchDirectionEnum"
+helpviewer_keywords:
+  - "SearchDirectionEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # SearchDirectionEnum
 Specifies the direction of a record search within a [Recordset](./recordset-object-ado.md).  

@@ -12,7 +12,7 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Memory-Optimized Tables
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Memory-optimized tables are created using [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -95,7 +95,7 @@ EXECUTE AS CALLER has a small (approximately10%) performance hit caused by permi
   
 ## Scenarios
 
-For a brief discussion of typical scenarios where [!INCLUDE[hek_1](../../includes/hek-1-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
+For a brief discussion of typical scenarios where [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
   
 ## See Also
 

@@ -82,7 +82,7 @@ DBCC CHECKDB has been enhanced to detect when page or row counts become negative
   
 ## Best Practices  
 We recommend the following:
--   Do not run DBCC UPDATEUSAGE routinely. Because DBCC UPDATEUSAGE can take some time to run on large tables or databases, it should not be used only unless you suspect incorrect values are being returned by sp_spaceused.
+-   Do not run DBCC UPDATEUSAGE routinely, as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains the metadata under most circumstances. DBCC UPDATEUSAGE should be run on an as-needed basis, for example, when you suspect incorrect values are being returned by sp_spaceused. DBCC UPDATEUSAGE can take some time to run on large tables or databases.
 -   Consider running DBCC UPDATEUSAGE routinely (for example, weekly) only if the database undergoes frequent Data Definition Language (DDL) modifications, such as CREATE, ALTER, or DROP statements.  
   
 ## Result Sets  

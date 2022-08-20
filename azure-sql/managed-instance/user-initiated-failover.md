@@ -131,7 +131,7 @@ To monitor the progress of user initiated failover for your BC instance, execute
 SELECT DISTINCT replication_endpoint_url, fabric_replica_role_desc FROM sys.dm_hadr_fabric_replica_states
 ```
 
-Before initiating the failover, your output will indicate the current primary replica on BC service tier containing one primary and three secondaries in the AlwaysOn Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
+Before initiating the failover, your output will indicate the current primary replica on BC service tier containing one primary and three secondaries in the Always On Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
 
 You will not be able to see the same output with GP service tier as the one above shown for BC. This is because GP service tier is based on a single node only. 
 You can use alternative T-SQL query showing the time SQL process started on the node for GP service tier instance:

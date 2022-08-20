@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 ---
 # DROP SEQUENCE (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a sequence object from the current database.  
   

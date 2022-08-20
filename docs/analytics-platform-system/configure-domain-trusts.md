@@ -1,12 +1,12 @@
 ---
 title: Configure domain trusts
 description: Learn how to configure Analytics Platform System to accept Windows authentication from a corporate domain and configure a DNS server to provide authentication.
-author: ronortloff 
+author: WilliamDAssafMSFT 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
 ms.date: 05/06/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.reviewer: murshedz
 ms.custom:
  - seo-dt-2019

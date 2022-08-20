@@ -1,19 +1,15 @@
 ---
+title: "ADOX Properties"
 description: "ADOX Properties"
-title: "ADOX Properties | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "properties [ADOX]"
-  - "ADOX, properties"
-ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "properties [ADOX]"
+  - "ADOX, properties"
 ---
 # ADOX Properties
 

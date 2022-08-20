@@ -1,21 +1,17 @@
 ---
+title: "CancelUpdate Method (ADO)"
 description: "CancelUpdate Method (ADO)"
-title: "CancelUpdate Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::CancelUpdate"
-helpviewer_keywords: 
-  - "CancelUpdate method [ADO]"
-ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::CancelUpdate"
+helpviewer_keywords:
+  - "CancelUpdate method [ADO]"
+apitype: "COM"
 ---
 # CancelUpdate Method (ADO)
 Cancels any changes made to the current or new row of a [Recordset](./recordset-object-ado.md) object, or the [Fields](./fields-collection-ado.md) collection of a [Record](./record-object-ado.md) object, before calling the [Update](./update-method.md) method.  

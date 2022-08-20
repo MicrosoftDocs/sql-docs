@@ -136,7 +136,9 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
 -   Use the function **Lookup** to look up values from name/value pairs in a different dataset.  
   
 ### Report parts
- A report part definition (.rsc) is a report server item that is an XML fragment of a report definition file. You create report parts by creating a report definition, and then selecting report items in the report to publish separately as report parts. Report parts include data regions, rectangles and their contained items, and images. You can save a report part with its dependent datasets and shared data source references so it can be reused in other reports. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+ A report part definition (.rsc) is a report server item that is an XML fragment of a report definition file. You create report parts by creating a report definition, and then selecting report items in the report to publish separately as report parts. Report parts include data regions, rectangles and their contained items, and images. You can save a report part with its dependent datasets and shared data source references so it can be reused in other reports. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).
+
+[!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
   
 ### Data alerts 
  A data alert is an item stored internally in an alerting database. A data alert definition includes which data to use from existing report data feeds, the conditions to be met, a schedule, and recipients for the alert. Data alerts are available only on reports published to a report server integrated with SharePoint Server. Data alerts are not available on a native report server installation. For more information, see [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md).  

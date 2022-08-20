@@ -1,14 +1,14 @@
 ---
 title: SQL Server 2019 Big Data Clusters platform release notes
 titleSuffix: SQL Server 2019 Big Data Clusters
-description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
+description: This article describes the latest updates and known issues for SQL Server Big Data Clusters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 05/03/2022
-ms.topic: conceptual
+ms.date: 08/15/2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # SQL Server 2019 Big Data Clusters platform release notes
@@ -34,6 +34,8 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU17 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
+| CU16 GDR | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU16 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
@@ -54,10 +56,12 @@ Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](.
 
 ## Release history
 
-The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
+The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. For more information, see [SQL Server 2019 Big Data Clusters cumulative updates history](release-notes-cumulative-updates-history.md).
 
 | Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU17](release-notes-cumulative-update-17.md) |  15.0.4249.2  | 20.3.12   | August 11 2022 |
+| CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) |  15.0.4236.7  | 20.3.12   | June 14 2022 |
 | [CU16](release-notes-cumulative-update-16.md) |  15.0.4223.1  | 20.3.11   | May 2 2022 |
 | [CU15](release-notes-cumulative-update-15.md) |  15.0.4198.2  | 20.3.10   | Jan 27 2022 |
 | [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | Nov 22 2021 |

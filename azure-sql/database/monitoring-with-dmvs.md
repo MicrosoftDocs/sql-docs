@@ -1,61 +1,49 @@
 ---
 title: Monitor performance using DMVs
-titleSuffix: Azure SQL Database & SQL Managed Instance
-description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database and Azure SQL Managed Instance.
+titleSuffix: Azure SQL Database
+description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
 services:
   - "sql-database"
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: performance
-ms.custom:
+ms.custom: 
+  - "azure-sql-split"
   - "sqldbrb=2"
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/11/2022
+ms.date: 08/03/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views
+# Monitoring Microsoft Azure SQL Database performance using dynamic management views
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Microsoft Azure SQL Database and Azure SQL Managed Instance enable a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](monitoring-with-dmvs.md)
+> * [Azure SQL Managed Instance](../managed-instance/monitoring-with-dmvs.md)
 
-Microsoft Azure SQL Database and Azure SQL Managed Instance partially support three categories of dynamic management views:
+Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on.  This article provides information on how to detect common performance problems by using dynamic management views.
 
-- Database-related dynamic management views.
-- Execution-related dynamic management views.
-- Transaction-related dynamic management views.
-
-For detailed information on dynamic management views, see [Dynamic Management Views and Functions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).
-
-## Monitor with SQL Insights (preview)
-
-[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring Azure SQL managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
-
+This article is about Azure SQL Database, see also [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](../managed-instance/monitoring-with-dmvs.md).
 
 ## Permissions
 
-In Azure SQL Database, querying a dynamic management view requires **VIEW DATABASE STATE** permissions. The **VIEW DATABASE STATE** permission returns information about all objects within the current database.
-To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query:
+In Azure SQL Database, depending on the compute size and deployment option, querying a DMV may require either VIEW DATABASE STATE or VIEW SERVER STATE permission. The latter permission may be granted via membership in the `##MS_ServerStateReader##` server role. 
+
+To grant the **VIEW DATABASE STATE** permission to a specific database user, run the following query as an example:
 
 ```sql
 GRANT VIEW DATABASE STATE TO database_user;
 ```
 
-In Azure SQL Managed Instance, querying a dynamic management view requires **VIEW SERVER STATE** permissions. For more information, see [System Dynamic Management Views](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views#required-permissions).
+To grant membership to the `##MS_ServerStateReader##` server role to a login for the [logical server in Azure](logical-servers.md), connect to the `master` database then run the following query as an example:
+
+```sql
+ALTER SERVER ROLE [##MS_ServerStateReader##] ADD MEMBER [login];
+```
 
 In an instance of SQL Server and in Azure SQL Managed Instance, dynamic management views return server state information. In Azure SQL Database, they return information regarding your current logical database only.
-
-This article contains a collection of DMV queries that you can execute using SQL Server Management Studio or Azure Data Studio to detect the following types of query performance issues:
-
-- [Identifying queries related to excessive CPU consumption](#identify-cpu-performance-issues)
-- [PAGELATCH_* and WRITE_LOG waits related to IO bottlenecks](#identify-io-performance-issues)
-- [PAGELATCH_* waits caused bytTempDB contention](#identify-tempdb-performance-issues)
-- [RESOURCE_SEMAHPORE waits caused by memory grant waiting issues](#identify-memory-grant-wait-performance-issues)
-- [Identifying database and object sizes](#calculating-database-and-objects-sizes)
-- [Retrieving information about active sessions](#monitoring-connections)
-- [Retrieve system-wide and database resource usage information](#monitor-resource-use)
-- [Retrieving query performance information](#monitoring-query-performance)
 
 ## Identify CPU performance issues
 
@@ -118,7 +106,7 @@ ORDER BY total_cpu_millisec DESC;
 
 Once you identify the problematic queries, it's time to tune those queries to reduce CPU utilization.  If you don't have time to tune the queries, you may also choose to upgrade the SLO of the database to work around the issue.
 
-For Azure SQL Database users, learn more about handling CPU performance problems in [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
+For more information about handling CPU performance problems in Azure SQL Database, see [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md).
 
 ## Identify IO performance issues
 
@@ -126,7 +114,7 @@ When identifying IO performance issues, the top wait types associated with IO is
 
 - `PAGEIOLATCH_*`
 
-  For data file IO issues (including `PAGEIOLATCH_SH`, `PAGEIOLATCH_EX`, `PAGEIOLATCH_UP`).  If the wait type name has **IO** in it, it points to an IO issue. If there is no **IO** in the page latch wait name, it points to a different type of problem (for example, tempdb contention).
+  For data file IO issues (including `PAGEIOLATCH_SH`, `PAGEIOLATCH_EX`, `PAGEIOLATCH_UP`).  If the wait type name has **IO** in it, it points to an IO issue. If there is no **IO** in the page latch wait name, it points to a different type of problem (for example, `tempdb` contention).
 
 - `WRITE_LOG`
 
@@ -138,7 +126,7 @@ Use the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-manageme
 
 #### Identify data and log IO usage
 
-Use the following query to identify data and log IO usage. If the data or log IO is above 80%, it means users have used the available IO for the SQL Database service tier.
+Use the following query to identify data and log IO usage. If the data or log IO is above 80%, it means users have used the available IO for the Azure SQL Database service tier.
 
 ```sql
 SELECT end_time, avg_data_io_percent, avg_log_write_percent
@@ -257,7 +245,7 @@ GO
 
 When identifying IO performance issues, the top wait types associated with `tempdb` issues is `PAGELATCH_*` (not `PAGEIOLATCH_*`). However, `PAGELATCH_*` waits do not always mean you have `tempdb` contention.  This wait may also mean that you have user-object data page contention due to concurrent requests targeting the same data page. To further confirm `tempdb` contention, use [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) to confirm that the wait_resource value begins with `2:x:y` where 2 is `tempdb` is the database ID, `x` is the file ID, and `y` is the page ID.  
 
-For tempdb contention, a common method is to reduce or rewrite application code that relies on `tempdb`.  Common `tempdb` usage areas include:
+For `tempdb` contention, a common method is to reduce or rewrite application code that relies on `tempdb`.  Common `tempdb` usage areas include:
 
 - Temp tables
 - Table variables
@@ -301,34 +289,34 @@ SELECT DB_NAME(dtr.database_id) 'database_name',
        atr.transaction_id,
        transaction_type,
        transaction_begin_time,
-       database_transaction_begin_time transaction_state,
+       database_transaction_begin_time, 
+       transaction_state,
        is_user_transaction,
        sess.open_transaction_count,
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   txt.text,
-                                                                   (req.statement_start_offset / 2) + 1,
-                                                                   ((CASE req.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(txt.text)
-                                                                         ELSE
-                                                                             req.statement_end_offset
-                                                                     END - req.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    txt.text,
+                                                    (req.statement_start_offset / 2) + 1,
+                                                    ((CASE req.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(txt.text)
+                                                            ELSE
+                                                                req.statement_end_offset
+                                                        END - req.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) Running_stmt_text,
        recenttxt.text 'MostRecentSQLText'
 FROM sys.dm_tran_active_transactions AS atr
@@ -350,11 +338,11 @@ ORDER BY start_time ASC;
 
 ## Identify memory grant wait performance issues
 
-If your top wait type is `RESOURCE_SEMAHPORE` and you don't have a high CPU usage issue, you may have a memory grant waiting issue.
+If your top wait type is `RESOURCE_SEMAPHORE` and you don't have a high CPU usage issue, you may have a memory grant waiting issue.
 
-### Determine if a `RESOURCE_SEMAHPORE` wait is a top wait
+### Determine if a `RESOURCE_SEMAPHORE` wait is a top wait
 
-Use the following query to determine if a `RESOURCE_SEMAHPORE` wait is a top wait
+Use the following query to determine if a `RESOURCE_SEMAPHORE` wait is a top wait
 
 ```sql
 SELECT wait_type,
@@ -368,6 +356,8 @@ ORDER BY SUM(wait_time) DESC;
 ```
 
 ### Identify high memory-consuming statements
+
+If you encounter out of memory errors in Azure SQL Database, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
 
 Use the following query to identify high memory-consuming statements:
 
@@ -403,8 +393,6 @@ FROM cte
 ORDER BY SerialDesiredMemory DESC;
 ```
 
-If you encounter out of memory errors in Azure SQL Database, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
-
 ### Identify the top 10 active memory grants
 
 Use the following query to identify the top 10 active memory grants:
@@ -424,31 +412,30 @@ SELECT TOP 10
        wait_type,
        r.command,
        OBJECT_NAME(txt.objectid, txt.dbid) 'Object_Name',
-       LTRIM(RTRIM(REPLACE(
-                              REPLACE(
-                                         SUBSTRING(
-                                                      SUBSTRING(
-                                                                   text,
-                                                                   (r.statement_start_offset / 2) + 1,
-                                                                   ((CASE r.statement_end_offset
-                                                                         WHEN -1 THEN
-                                                                             DATALENGTH(text)
-                                                                         ELSE
-                                                                             r.statement_end_offset
-                                                                     END - r.statement_start_offset
-                                                                    ) / 2
-                                                                   ) + 1
-                                                               ),
-                                                      1,
-                                                      1000
-                                                  ),
-                                         CHAR(10),
-                                         ' '
-                                     ),
-                              CHAR(13),
-                              ' '
-                          )
-                  )
+       TRIM(REPLACE(
+                REPLACE(
+                            SUBSTRING(
+                                        SUBSTRING(
+                                                    text,
+                                                    (r.statement_start_offset / 2) + 1,
+                                                    ((CASE r.statement_end_offset
+                                                            WHEN -1 THEN
+                                                                DATALENGTH(text)
+                                                            ELSE
+                                                                r.statement_end_offset
+                                                        END - r.statement_start_offset
+                                                    ) / 2
+                                                    ) + 1
+                                                ),
+                                        1,
+                                        1000
+                                    ),
+                            CHAR(10),
+                            ' '
+                        ),
+                CHAR(13),
+                ' '
+            )
             ) stmt_text,
        mg.dop,                                               --Degree of parallelism
        mg.request_time,                                      --Date and time when this query requested the memory grant.
@@ -504,7 +491,7 @@ GO
 
 ## Monitoring connections
 
-You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific server and managed instance and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
+You can use the [sys.dm_exec_connections](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql) view to retrieve information about the connections established to a specific database or elastic pool and the details of each connection. In addition, the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) view is helpful when retrieving information about all active user connections and internal tasks.
 
 The following query retrieves information on the current connection:
 
@@ -526,13 +513,12 @@ WHERE c.session_id = @@SPID;
 
 ## Monitor resource use
 
-You can monitor Azure SQL Database resource usage using [SQL Database Query Performance Insight](query-performance-insight-use.md). For Azure SQL Database and Azure SQL Managed Instance, you can monitor using [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
+You can monitor Azure SQL Database resource usage at the query level by using [SQL Database Query Performance Insight](query-performance-insight-use.md) in the Azure portal or the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store).
 
 You can also monitor usage using these views:
 
-- Azure SQL Database: [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)
-- Azure SQL Managed Instance: [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)
-- Both Azure SQL Database and Azure SQL Managed Instance: [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)
+- [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)
+- [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)
 
 ### sys.dm_db_resource_stats
 
@@ -554,22 +540,6 @@ FROM sys.dm_db_resource_stats;
 ```
 
 For other queries, see the examples in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database).
-
-### sys.server_resource_stats
-
-You can use [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database) to return CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
-
-```sql
-DECLARE @s datetime;  
-DECLARE @e datetime;  
-SET @s= DateAdd(d,-7,GetUTCDate());  
-SET @e= GETUTCDATE();  
-SELECT resource_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization
-FROM sys.server_resource_stats
-WHERE start_time BETWEEN @s AND @e  
-GROUP BY resource_name  
-HAVING AVG(avg_cpu_percent) >= 80;
-```
 
 ### sys.resource_stats
 
@@ -646,7 +616,7 @@ The next example shows you different ways that you can use the `sys.resource_sta
 
     Based on your database service tier, you can decide whether your workload fits into the lower compute size. If your database workload objective is 99.9 percent and the preceding query returns values greater than 99.9 percent for all three resource dimensions, your workload likely fits into the lower compute size.
 
-    Looking at the fit percentage also gives you insight into whether you should move to the next higher compute size to meet your objective. For example, userdb1 shows the following CPU use for the past week:
+    Looking at the fit percentage also gives you insight into whether you should move to the next higher compute size to meet your objective. For example, the CPU usage for a sample database over the past week:
 
    | Average CPU percent | Maximum CPU percent |
    | --- | --- |
@@ -671,14 +641,14 @@ For elastic pools, you can monitor individual databases in the pool with the tec
 
 ### Maximum concurrent requests
 
-To see the number of concurrent requests, run this Transact-SQL query on your database:
+To see the current number of concurrent requests, run this Transact-SQL query on your database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
 FROM sys.dm_exec_requests R;
 ```
 
-To analyze the workload of a SQL Server database, modify this query to filter on the specific database you want to analyze. For example, if you have an on-premises database named MyDatabase, this Transact-SQL query returns the count of concurrent requests in that database:
+To analyze the workload of a database, modify this query to filter on the specific database you want to analyze. For example, if you have a database named `MyDatabase`, this Transact-SQL query returns the count of concurrent requests in that database:
 
 ```sql
 SELECT COUNT(*) AS [Concurrent_Requests]
@@ -748,15 +718,13 @@ ORDER BY 2 DESC;
 
 ### Monitoring blocked queries
 
-Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](understand-resolve-blocking.md).
+Slow or long-running queries can contribute to excessive resource consumption and be the consequence of blocked queries. The cause of the blocking can be poor application design, bad query plans, the lack of useful indexes, and so on. You can use the sys.dm_tran_locks view to get information about the current locking activity in database. For example code, see [sys.dm_tran_locks](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql). For more information on troubleshooting blocking, see [Understand and resolve Azure SQL blocking problems](understand-resolve-blocking.md).
 
 ### Monitoring deadlocks
 
 In some cases, two or more queries may mutually block one another, resulting in a deadlock. 
 
 You can create an Extended Events trace a database in Azure SQL Database to capture deadlock events, then find related queries and their execution plans in Query Store. Learn more in [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md).
-
-For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) of the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 ### Monitoring query plans
 
@@ -781,6 +749,23 @@ ORDER BY qs.total_worker_time desc) AS highest_cpu_queries
 CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
 ORDER BY highest_cpu_queries.total_worker_time DESC;
 ```
+
+<!--
+## Other monitoring options
+
+### Monitor with SQL Insights (preview)
+
+[Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring Azure SQL managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL Insights (preview), see [Enable SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-enable).
+
+### Monitor with Azure Monitor
+
+Azure Monitor provides a variety of diagnostic data collection groups, metrics, and endpoints for monitoring Azure SQL Database. For more information, see [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md).
+-->
+
+## See also
+
+- [Dynamic Management Views and Functions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)
+- [System Dynamic Management Views](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views#required-permissions)
 
 ## Next steps
 

@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - sqlfreshmay19
   - intro-quickstart
-ms.date: 08/02/2019
+ms.date: 07/11/2022
 ---
 # Quickstart: Use Azure Data Studio to connect and query SQL Server
 
@@ -25,9 +25,9 @@ To complete this quickstart, you need Azure Data Studio, and access to SQL Serve
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 
-- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md)
-- [Linux - Download SQL Server 2017 Developer Edition](../linux/sql-server-linux-overview.md#install) - You only need to follow the steps up to *Create and Query Data*.
+- [Windows - Download SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- [macOS - Download SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux - Download SQL Server 2019 Developer Edition](../linux/sql-server-linux-overview.md#install) - You only need to follow the steps up to *Create and Query Data*.
 
 ## Connect to a SQL Server
 

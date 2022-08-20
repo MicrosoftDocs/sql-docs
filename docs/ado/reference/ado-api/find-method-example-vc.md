@@ -1,20 +1,16 @@
 ---
+title: "Find Method Example (VC++)"
 description: "Find Method Example (VC++)"
-title: "Find Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Find method [ADO], VC++ example"
-ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Find method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Find Method Example (VC++)
 This example uses the [Recordset](./recordset-object-ado.md) object's [Find](./find-method-ado.md) method to locate and count the number of business titles in the **Pubs** database. The example assumes the underlying provider does not support similar functionality.  

@@ -1,18 +1,14 @@
 ---
+title: "ADO MD Object Model"
 description: "ADO MD Object Model"
-title: "ADO MD Object Model | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO MD, object model"
-ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD, object model"
 ---
 # ADO MD Object Model
 This topic describes how objects are represented and related in ADO MD.  

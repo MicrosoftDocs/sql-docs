@@ -151,7 +151,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
        MemberID int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED, 
        Feedback varchar(100) MASKED WITH (FUNCTION = 'default()') NULL, 
        Rating int MASKED WITH (FUNCTION='default()'), 
-       Received_On datetime) 
+       Received_On datetime 
        );
    ```
 

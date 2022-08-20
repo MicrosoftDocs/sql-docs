@@ -36,7 +36,7 @@ The primary migration methods are:
 * Detach the data and log files, copy them to Azure Blob storage, and then attach them to SQL Server in the Azure VM from the URL.
 * Convert the on-premises physical machine to a Hyper-V VHD, upload it to Azure Blob storage, and then deploy it as new VM using uploaded VHD.
 * Ship the hard drive using the Windows Import/Export Service.
-* If you have an AlwaysOn Availability Group deployment on-premises, use the [Add Azure Replica Wizard](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability) to create a replica in Azure, failover, and point users to the Azure database instance.
+* If you have an Always On Availability Group deployment on-premises, use the [Add Azure Replica Wizard](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability) to create a replica in Azure, failover, and point users to the Azure database instance.
 * Use SQL Server [transactional replication](/sql/relational-databases/replication/transactional/transactional-replication) to configure the Azure SQL Server instance as a subscriber, disable replication, and point users to the Azure database instance.
 
 > [!TIP]
@@ -46,7 +46,7 @@ The primary migration methods are:
 
 For best data transfer performance, migrate the database files into the Azure VM using a compressed backup file.
 
-To minimize downtime during the database migration process, use either the AlwaysOn option or the transactional replication option.
+To minimize downtime during the database migration process, use either the Always On option or the transactional replication option.
 
 If it isn't possible to use the above methods, manually migrate your database. Generally, you start with a database backup, follow it with a copy of the database backup into Azure, and then restore the database. You can also copy the database files themselves into Azure and then attach them. There are several methods by which you can accomplish this manual process of migrating a database into an Azure VM.
 

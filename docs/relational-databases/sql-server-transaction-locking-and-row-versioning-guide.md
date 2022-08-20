@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-author: rothja
-ms.author: jroth
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -69,61 +69,20 @@ An explicit transaction is one in which you explicitly define both the start and
   
 You can use all [!INCLUDE[tsql](../includes/tsql-md.md)] statements in an explicit transaction, except for the following statements:  
   
-:::row:::
-    :::column:::
-        ALTER DATABASE
-    :::column-end:::
-    :::column:::
-        CREATE DATABASE
-    :::column-end:::
-    :::column:::
-        DROP FULLTEXT INDEX
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        ALTER FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        CREATE FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        RECONFIGURE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        ALTER FULLTEXT INDEX
-    :::column-end:::
-    :::column:::
-        CREATE FULLTEXT INDEX
-    :::column-end:::
-    :::column:::
-        RESTORE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        BACKUP
-    :::column-end:::
-    :::column:::
-        DROP DATABASE
-    :::column-end:::
-    :::column:::
-        Full-text system stored procedures
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE DATABASE
-    :::column-end:::
-    :::column:::
-        DROP FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        sp_dboption to set database options or any system procedure that modifies the master database inside explicit or implicit transactions.
-    :::column-end:::
-:::row-end:::
+- CREATE DATABASE
+- ALTER DATABASE
+- DROP DATABASE
+- CREATE FULLTEXT CATALOG
+- ALTER FULLTEXT CATALOG
+- DROP FULLTEXT CATALOG
+- DROP FULLTEXT INDEX
+- ALTER FULLTEXT INDEX
+- CREATE FULLTEXT INDEX
+- BACKUP
+- RESTORE
+- RECONFIGURE
+- Full-text system stored procedures
+- `sp_dboption` to set database options or any system procedure that modifies the `master` database inside explicit or implicit transactions.
 
 > [!NOTE]  
 > UPDATE STATISTICS can be used inside an explicit transaction. However, UPDATE STATISTICS commits independently of the enclosing transaction and cannot be rolled back.  
@@ -136,50 +95,18 @@ When a connection is operating in implicit transaction mode, the instance of the
   
 After implicit transaction mode has been set on for a connection, the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically starts a transaction when it first executes any of these statements:  
   
-:::row:::
-    :::column:::
-        ALTER TABLE
-    :::column-end:::
-    :::column:::
-        FETCH
-    :::column-end:::
-    :::column:::
-        REVOKE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE
-    :::column-end:::
-    :::column:::
-        GRANT
-    :::column-end:::
-    :::column:::
-        SELECT
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        DELETE
-    :::column-end:::
-    :::column:::
-        INSERT
-    :::column-end:::
-    :::column:::
-        TRUNCATE TABLE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        DROP
-    :::column-end:::
-    :::column:::
-        OPEN
-    :::column-end:::
-    :::column:::
-        UPDATE
-    :::column-end:::
-:::row-end:::
+- ALTER TABLE
+- CREATE
+- DELETE
+- DROP
+- FETCH
+- GRANT
+- INSERT
+- OPEN
+- REVOKE
+- SELECT
+- TRUNCATE TABLE
+- UPDATE
 
 -  **Batch-scoped Transactions**  
    Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

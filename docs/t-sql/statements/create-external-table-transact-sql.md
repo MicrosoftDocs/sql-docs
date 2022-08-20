@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 5/24/2022
+ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -72,7 +72,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     WITH (
         LOCATION = 'folder_or_filepath',
         DATA_SOURCE = external_data_source_name,
-        FILE_FORMAT = external_file_format_name
+        [ FILE_FORMAT = external_file_format_name ]
         [ , <reject_options> [ ,...n ] ]
     )
 [;]
@@ -111,17 +111,19 @@ In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder i
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
 ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
 
-To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` with SqlBinRoot the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
 #### DATA_SOURCE = *external_data_source_name*
 Specifies the name of the external data source that contains the location of the external data. This location is a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 #### FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+External file formats can be re-used by multiple similar external files.
 
 #### Reject Options
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
@@ -177,9 +179,6 @@ The SCHEMA_NAME clause provides the ability to map the external table definition
 
 #### OBJECT_NAME
 The OBJECT_NAME clause provides the ability to map the external table definition to a table with a different name on the remote database. Use this clause to disambiguate between object names that exist on both the local and remote databases.
-
-#### DISTRIBUTION
-Optional. This argument is only required for databases of type SHARD_MAP_MANAGER. This argument controls whether a table is treated as a sharded table or a replicated table. With **SHARDED** (*column name*) tables, the data from different tables don't overlap. **REPLICATED** specifies that tables have the same data on every shard. **ROUND_ROBIN** indicates that an application-specific method is used to distribute the data.
 
 ## Permissions
 
@@ -397,30 +396,7 @@ ON user.user_ip = ms.user_ip
 ;
 ```
 
-### G. Create an external table for a sharded data source
-
-This example remaps a remote DMV to an external table using the SCHEMA_NAME and OBJECT_NAME clauses.
-
-```sql
-CREATE EXTERNAL TABLE [dbo].[all_dm_exec_requests]([session_id] smallint NOT NULL,
-  [request_id] int NOT NULL,
-  [start_time] datetime NOT NULL,
-  [status] nvarchar(30) NOT NULL,
-  [command] nvarchar(32) NOT NULL,
-  [sql_handle] varbinary(64),
-  [statement_start_offset] int,
-  [statement_end_offset] int,
-  [cpu_time] int NOT NULL)
-WITH
-(
-  DATA_SOURCE = MyExtSrc,
-  SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',
-  DISTRIBUTION=ROUND_ROBIN
-);
-```
-
-### H. Create an external table for SQL Server
+### G. Create an external table for SQL Server
 
 Before you create a database scoped credential, the user database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) and [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -500,7 +476,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format. Note this may be case sensitive in the Oracle database.
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -515,7 +491,7 @@ Create a new external data source named `SQLServerInstance`, and external table 
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='.mySchema.customer',
+    LOCATION='DB1.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
 ```
@@ -729,9 +705,12 @@ The DATA_SOURCE clause defines the external data source (a shard map) that is us
 The SCHEMA_NAME and OBJECT_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be "dbo" and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view's or the DMV's name in the SCHEMA_NAME and/or OBJECT_NAME clauses. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 #### DISTRIBUTION
+
+Optional. This argument is only required for databases of type SHARD_MAP_MANAGER. This argument controls whether a table is treated as a sharded table or a replicated table. With **SHARDED** (*column name*) tables, the data from different tables don't overlap. **REPLICATED** specifies that tables have the same data on every shard. **ROUND_ROBIN** indicates that an application-specific method is used to distribute the data.
+
 The DISTRIBUTION clause specifies the data distribution used for this table. The query processor utilizes the information provided in the DISTRIBUTION clause to build the most efficient query plans.
 
-- SHARDED means data is horizontally partitioned across the databases. The partitioning key for the data distribution is the <sharding_column_name> parameter.
+- SHARDED means data is horizontally partitioned across the databases. The partitioning key for the data distribution is the `sharding_column_name` parameter.
 - REPLICATED means that identical copies of the table are present on each database. It is your responsibility to ensure that the replicas are identical across the databases.
 - ROUND_ROBIN means that the table is horizontally partitioned using an application-dependent distribution method.
 
@@ -815,6 +794,30 @@ CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
   [Company] [varchar](50) NOT NULL)
 WITH
 ( DATA_SOURCE = MyElasticDBQueryDataSrc)
+```
+
+
+### B. Create an external table for a sharded data source
+
+This example remaps a remote DMV to an external table using the SCHEMA_NAME and OBJECT_NAME clauses.
+
+```sql
+CREATE EXTERNAL TABLE [dbo].[all_dm_exec_requests]([session_id] smallint NOT NULL,
+  [request_id] int NOT NULL,
+  [start_time] datetime NOT NULL,
+  [status] nvarchar(30) NOT NULL,
+  [command] nvarchar(32) NOT NULL,
+  [sql_handle] varbinary(64),
+  [statement_start_offset] int,
+  [statement_end_offset] int,
+  [cpu_time] int NOT NULL)
+WITH
+(
+  DATA_SOURCE = MyExtSrc,
+  SCHEMA_NAME = 'sys',
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
+);
 ```
 
 ## Next steps

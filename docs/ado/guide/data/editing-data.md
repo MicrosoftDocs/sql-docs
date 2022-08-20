@@ -1,20 +1,16 @@
 ---
+title: "Editing Data"
 description: "Editing Data"
-title: "Editing Data | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADO, editing data"
   - "AdUseClient [ADO]"
   - "editing data [ADO]"
-ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-author: rothja
-ms.author: jroth
 ---
 # Editing Data
 We have explained how use ADO to connect to a data source, execute a command, get the results in a **Recordset** object, and navigate within the **Recordset**. This section focuses on the next fundamental ADO operation: editing data.  

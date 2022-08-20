@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
- The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.
+ The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.  Using go-sqlcmd in place of sqlcmd removes the ODBC driver dependency, increases options for Azure Active Directory authentication types, and adds [additional enhancements](#enhancements).
 
  **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd). As a CLI, go-sqlcmd is ideal for pipelines and edge applications as it has no additional dependencies and supports a wide variety of environment configurations. The capabilities of go-sqlcmd expand beyond the ODBC-based [sqlcmd](sqlcmd-utility.md) to incorporate a [vertical output format](#enhancements) and extensive [Azure Active Directory authentication](#azure-active-directory-authentication) options.
 
@@ -55,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     rpm --import https://packages.microsoft.com/keys/microsoft.asc
     ```
 
-2. Download the repository configuration file, where the `centos/8` segment may be `centos/8`, `fedora/32`, `opensuse/42.3`, `rhel/8`, or `sles/15`.
+2. Download the repository configuration file, where the `centos/8` segment may be `centos/8`, `fedora/32`, `opensuse/42.3`, `rhel/8`, or `sles/15`.  If the version of your OS may not directly correspond to one of those options, you can likely successfully use a repository configuration file from a version. For example, `centos/8` can be used in an environment running CentOS 7.
 
     ```bash
     curl -o /etc/yum.repos.d/packages-microsoft-com-prod.repo https://packages.microsoft.com/config/centos/8/prod.repo
@@ -172,7 +172,7 @@ These environment variables can be set to configure some aspects of Azure Active
 `SQLCMDCLIENTID` - set this environment variable to the identifier of an application registered in your Azure Active Directory, which is authorized to authenticate to Azure SQL Database. Applies to `ActiveDirectoryInteractive` and `ActiveDirectoryPassword` methods.
 
 ## Next steps
-- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-mssqldb)
+- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd)
 - [Run on Docker](../linux/quickstart-install-connect-docker.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

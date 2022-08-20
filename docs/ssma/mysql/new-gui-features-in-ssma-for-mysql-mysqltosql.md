@@ -47,7 +47,7 @@ You can set/remove a bookmark in the following ways:
   
 -   Use button Toggle Bookmark on top of source or target SQL window  
   
--   Click on the grey area on the left of the SQL window  
+-   Select the grey area on the left of the SQL window  
   
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   

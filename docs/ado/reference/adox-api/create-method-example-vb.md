@@ -1,20 +1,16 @@
 ---
+title: "Create Method Example (VB)"
 description: "Create Method Example (VB)"
-title: "Create Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Create method [ADOX], Visual Basic example"
-ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Create method [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Create Method Example (VB)
 The following code shows how to create a new Microsoft Jet database with the [Create](./create-method-adox.md) method.  

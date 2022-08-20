@@ -1,18 +1,14 @@
 ---
+title: "Dimension Object Properties, Methods, and Events"
 description: "Dimension Object Properties, Methods, and Events"
-title: "Dimension Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Dimension object [ADO MD], members"
-ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Dimension object [ADO MD], members"
 ---
 # Dimension Object Properties, Methods, and Events
 ## Properties/Collections  

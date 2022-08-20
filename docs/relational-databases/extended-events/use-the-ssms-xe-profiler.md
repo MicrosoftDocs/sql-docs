@@ -3,7 +3,7 @@ title: "Use the SSMS XEvent Profiler"
 description: The XEvent Profiler displays a live viewer of extended events. Learn why to use this profiler, key features, and how to get started viewing extended events.
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "genemi"
+ms.reviewer: mikeray
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

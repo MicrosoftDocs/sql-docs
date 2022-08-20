@@ -21,7 +21,7 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the maximum data length of a remote stored procedure call parameter. This function has been superseded by the **srv_paraminfo** function.  
   

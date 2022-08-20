@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports statistics about transactions that have run since the server started.  
   

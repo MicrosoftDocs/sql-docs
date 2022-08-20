@@ -1,11 +1,8 @@
 ---
-title: "Securing SQL Server | Microsoft Docs"
+title: Securing SQL Server
 description: Use these articles to create and implement an effective security plan in SQL Server. Learn about the platform, authentication, objects, and applications.
-ms.custom: ""
-ms.date: "06/21/2019"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
@@ -19,7 +16,11 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "06/21/2019"
 ---
+
 # Securing SQL Server
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

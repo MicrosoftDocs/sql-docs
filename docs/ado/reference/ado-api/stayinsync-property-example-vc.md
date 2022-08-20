@@ -1,20 +1,16 @@
 ---
+title: "StayInSync Property Example (VC++)"
 description: "StayInSync Property Example (VC++)"
-title: "StayInSync Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "StayInSync property [ADO], VC++ example"
-ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "StayInSync property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # StayInSync Property Example (VC++)
 This example demonstrates how the [StayInSync](./stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](./recordset-object-ado.md).  

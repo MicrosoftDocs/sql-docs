@@ -1,20 +1,16 @@
 ---
+title: "CancelUpdate Method Example (VBScript)"
 description: "CancelUpdate Method Example (VBScript)"
-title: "CancelUpdate Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CancelUpdate method [ADO], VBScript example"
-ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CancelUpdate method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # CancelUpdate Method Example (VBScript)
 > [!IMPORTANT]

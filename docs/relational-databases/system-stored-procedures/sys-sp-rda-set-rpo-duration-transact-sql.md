@@ -2,9 +2,9 @@
 title: "sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs"
 description: Learn about sys.sp_rda_set_rpo_duration. Use this stored procedure to set the number of hours of migrated data that SQL Server retains in a staging table.
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
@@ -24,6 +24,9 @@ ms.author: maghan
   Sets the number of hours of migrated data that SQL Server retains in a staging table to help ensure a full restore of the remote Azure database, if a point in time restore is necessary.    
     
  For more info, see [Stretch Database reduces the risk of data loss for your Azure data by retaining migrated rows temporarily](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO).  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
      

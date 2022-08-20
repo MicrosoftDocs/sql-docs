@@ -10,10 +10,10 @@ ms.technology: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
-  - "QUERY_STORE_QUERY"
-  - "SYS.QUERY_STORE_QUERY_TSQL"
-  - "SYS.QUERY_STORE_QUERY"
-  - "QUERY_STORE_QUERY_TSQL"
+  - "QUERY_STORE_INTERNAL_STATE"
+  - "SYS.QUERY_STORE_INTERNAL_STATE_TSQL"
+  - "SYS.QUERY_STORE_INTERNAL_STATE"
+  - "QUERY_STORE_INTERNAL_STATE_TSQL"
 helpviewer_keywords:
   - "query_store_query catalog view"
   - "sys.query_store_query catalog view"

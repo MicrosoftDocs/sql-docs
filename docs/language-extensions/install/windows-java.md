@@ -100,7 +100,7 @@ For local installations, you must run Setup as an administrator. If you install 
     
     If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
     
-    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/   sql-machine-learning-services-windows-install.md).
+    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
     
     :::image type="content" source="../media/windows-java/2019/sql-install-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
 

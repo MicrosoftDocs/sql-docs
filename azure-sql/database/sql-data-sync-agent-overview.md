@@ -19,7 +19,7 @@ ms.date: 12/20/2018
 Sync data with SQL Server databases by installing and configuring the Data Sync Agent for SQL Data Sync in Azure. For more info about SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance at this time.
+> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Download and install
 
@@ -70,7 +70,7 @@ To immediately invalidate or retire an agent, regenerate its key in the portal b
 If you want to run the local agent from a different computer than it is currently on, do the following things:
 
 1. Install the agent on desired computer.
-2. Log in to the SQL Data Sync portal and regenerate an agent key for the new agent.
+2. Sign in to the SQL Data Sync portal and regenerate an agent key for the new agent.
 3. Use the new agent's UI to submit the new agent key.
 4. Wait while the client agent downloads the list of on-premises databases that were registered earlier.
 5. Provide database credentials for all databases that display as unreachable. These databases must be reachable from the new computer on which the agent is installed.
@@ -81,7 +81,7 @@ In order to delete a Sync metadata database that has a Sync agent associated wit
 
 1. Select the Sync database. 
 2. Go to the **Sync to other databases** page.
-3. Select the Sync agent and click on **Delete**. 
+3. Select the Sync agent and select **Delete**. 
 
 ## <a name="agent-tshoot"></a> Troubleshoot Data Sync Agent issues
 
@@ -161,7 +161,7 @@ You discover that the agent isn't running on a computer that hosts SQL Server. W
   1. In the **Password** box, enter your password.
   1. In the **Confirm Password** box, reenter your password.
   1. Select **Apply**, and then select **OK**.
-  1. In the **Services** window, right-click the **SQL Data Sync Agent** service, and then click **Start**.
+  1. In the **Services** window, right-click the **SQL Data Sync Agent** service, and then select **Start**.
   1. Close the **Services** window.
 
 ### <a name="agent-key"></a> I can't submit the agent key
@@ -330,7 +330,7 @@ For more info about SQL Data Sync, see the following articles:
         -  [Use PowerShell to sync between a database in Azure SQL Database and a database in a SQL Server instance](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 -   Best practices - [Best practices for Azure SQL Data Sync](sql-data-sync-best-practices.md)
 -   Monitor - [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)
--   Troubleshoot - [Troubleshoot issues with Azure SQL Data Sync]sql-data-sync-troubleshoot.md)
+-   Troubleshoot - [Troubleshoot issues with Azure SQL Data Sync](sql-data-sync-troubleshoot.md)
 -   Update the sync schema
     -   With Transact-SQL - [Automate replication of schema changes with SQL Data Sync in Azure](sql-data-sync-update-sync-schema.md)
     -   With PowerShell - [Use PowerShell to update the sync schema in an existing sync group](scripts/update-sync-schema-in-sync-group.md)

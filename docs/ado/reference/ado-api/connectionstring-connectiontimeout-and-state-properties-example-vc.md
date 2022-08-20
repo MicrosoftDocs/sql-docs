@@ -1,22 +1,18 @@
 ---
+title: "Connection Properties Example (VC++)"
 description: "ConnectionString, ConnectionTimeout, and State Properties Example (VC++)"
-title: "Connection Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ConnectionString property [ADO], VC++ example"
   - "ConnectionTimeout property [ADO], VC++ example"
   - "State property [ADO], VC++ example"
-ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "C++"
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VC++)
 This example demonstrates different ways of using the [ConnectionString](./connectionstring-property-ado.md) property to open a [Connection](./connection-object-ado.md) object. It also uses the [ConnectionTimeout](./connectiontimeout-property-ado.md) property to set a connection timeout period, and the [State](./state-property-ado.md) property to check the state of the connections. The GetState function is required for this procedure to run.  

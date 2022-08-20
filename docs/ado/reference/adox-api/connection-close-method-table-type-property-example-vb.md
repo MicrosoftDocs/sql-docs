@@ -1,21 +1,17 @@
 ---
+title: "Connection Close Method, Table Type Property Example (VB)"
 description: "Connection Close Method, Table Type Property Example (VB)"
-title: "Connection Close Method, Table Type Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Close method [ADOX], Visual Basic example"
-  - "Type property [ADOX], Visual Basic example"
-ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Close method [ADOX], Visual Basic example"
+  - "Type property [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Connection Close Method, Table Type Property Example (VB)
 Setting the [ActiveConnection](./activeconnection-property-adox.md) property to **Nothing** should close the connection to the catalog. Associated collections will be empty. Any objects that were created from schema objects in the catalog will be orphaned. Any properties on those objects that have been cached will still be available, but an attempt to read properties that requires a call to the provider will fail.  

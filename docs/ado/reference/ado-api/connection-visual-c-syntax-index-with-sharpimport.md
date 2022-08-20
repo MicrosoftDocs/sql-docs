@@ -1,21 +1,17 @@
 ---
+title: "Connection (Visual C++ Syntax Index with #import)"
 description: "Connection (Visual C++ Syntax Index with #import)"
-title: "Connection (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Connection collection [ADO], Visual C++ syntax index with #import"
-ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Connection collection [ADO], Visual C++ syntax index with #import"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Connection (Visual C++ Syntax Index with #import)
 ## Methods  

@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login Change Property Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Login Change Property** event class occurs when you use the **sp_defaultdb** stored procedure, the **sp_defaultlanguage** stored procedure, or the ALTER LOGIN statement to modify a property of a login.  
   
 ## Audit Login Change Property Event Class Data Columns  

@@ -21,20 +21,20 @@ Both updatable ledger tables and [temporal tables](../../tables/temporal-tables.
 
 :::image type="content" source="media/ledger/ledger-table-architecture.png" alt-text="Diagram that shows ledger table architecture.":::
 
-You can create an updatable ledger table by specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql) statement.
+You can create an updatable ledger table by specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md) statement.
 > [!TIP]
 > `LEDGER = ON` is optional when creating updatable ledger tables in a ledger database. By default, each table is an updatable ledger table in a ledger database.
 
-For information on options available when you specify the `LEDGER` argument in your T-SQL statement, see [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql).
+For information on options available when you specify the `LEDGER` argument in your T-SQL statement, see [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md).
 
 > [!IMPORTANT]
 > After a ledger table is created, it can't be reverted to a table that isn't a ledger table. As a result, an attacker can't temporarily remove ledger capabilities on a ledger table, make changes, and then reenable ledger functionality. 
 
 ### Updatable ledger table schema
 
-An updatable ledger table needs to have the following [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. This data is useful for forensics purposes in understanding how data was inserted over time.
+An updatable ledger table needs to have the following [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. This data is useful for forensics purposes in understanding how data was inserted over time.
 
-If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true#x-creating-a-updatable-ledger-table).
+If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#y-creating-an-updatable-ledger-table).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |
@@ -57,12 +57,12 @@ For example, if you want to track transaction history for a banking scenario, th
 
 For an example of using the ledger view, see [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md).
 
-The ledger view's schema mirrors the columns defined in the updatable ledger and history table, but the [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns are different than those of the updatable ledger and history tables.
+The ledger view's schema mirrors the columns defined in the updatable ledger and history table, but the [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns are different than those of the updatable ledger and history tables.
 
 ### Ledger view schema
 
 > [!NOTE]
-> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true) statement. For more information, see [ledger view options](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true#ledger-view-options) and the corresponding examples in [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true).
+> The ledger view column names can be customized when you create the table by using the `<ledger_view_option>` parameter with the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current) statement. For more information, see [ledger view options](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current#ledger-view-option) and the corresponding examples in [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md?preserve-view=true&view=azuresqldb-current).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |

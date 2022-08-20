@@ -1,20 +1,16 @@
 ---
+title: "Source Property Example (VC++)"
 description: "Source Property Example (VC++)"
-title: "Source Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Source property [ADO], VC++ example"
-ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Source property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Source Property Example (VC++)
 This example demonstrates the [Source](./source-property-ado-recordset.md) property by opening three [Recordset](./recordset-object-ado.md) objects based on different data sources.  

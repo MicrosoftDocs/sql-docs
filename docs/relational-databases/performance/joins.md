@@ -58,7 +58,7 @@ Joins are expressed logically using the following [!INCLUDE[tsql](../../includes
 
 Specifying the join conditions in the `FROM` clause helps separate them from any other search conditions that may be specified in a `WHERE` clause, and is the recommended method for specifying joins. A simplified ISO `FROM` clause join syntax is:
 
-```
+```sql
 FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
@@ -257,7 +257,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140 or higher.
 - The query is a `SELECT` statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
-- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch mode on rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
+- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch mode on rowstore](./intelligent-query-processing-details.md#batch-mode-on-rowstore).
 - The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
 
 ### Adaptive threshold rows
@@ -367,5 +367,5 @@ The results do not make it easy to distinguish a NULL in the data from a NULL th
 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
-[Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[Adaptive Joins](../../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-adaptive-joins)    
 [FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

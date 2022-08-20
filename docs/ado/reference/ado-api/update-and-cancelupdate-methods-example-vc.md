@@ -1,21 +1,17 @@
 ---
+title: "Update and CancelUpdate Methods Example (VC++)"
 description: "Update and CancelUpdate Methods Example (VC++)"
-title: "Update and CancelUpdate Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CancelUpdate method [ADO]"
-  - "Update method [ADO], VC++ example"
-ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CancelUpdate method [ADO]"
+  - "Update method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Update and CancelUpdate Methods Example (VC++)
 This example demonstrates the [Update](./update-method.md) method in conjunction with the [CancelUpdate](./cancelupdate-method-ado.md) method.  

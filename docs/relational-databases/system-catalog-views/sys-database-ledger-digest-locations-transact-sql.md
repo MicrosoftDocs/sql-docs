@@ -32,6 +32,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [Digest Management](/sql/relational-databases/security/ledger/ledger-digest-management)
-- [Configure automatic database digests](/sql/relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage)
-- [Ledger Overview](/sql/relational-databases/security/ledger/ledger-overview)
+- [Digest Management](../security/ledger/ledger-digest-management.md)
+- [Configure automatic database digests](../security/ledger/ledger-how-to-enable-automatic-digest-storage.md)
+- [Ledger Overview](../security/ledger/ledger-overview.md)

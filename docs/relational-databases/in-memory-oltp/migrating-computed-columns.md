@@ -14,7 +14,7 @@ monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Computed columns are not supported in memory-optimized tables. However, you can simulate a computed column.
 

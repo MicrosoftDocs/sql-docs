@@ -1,8 +1,8 @@
 ---
 title: "DROP WORKLOAD Classifier (Transact-SQL)"
 description: DROP WORKLOAD Classifier (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: "wiassaf"
 ms.date: 11/04/2019
 ms.prod: sql

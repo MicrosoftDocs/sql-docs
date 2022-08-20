@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 ---
 # REVOKE Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions granted and denied on a symmetric key.  
    

@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 4/18/2022
+ms.date: 7/29/2022
 ---
 
 # SqlPackage Export parameters and properties
@@ -20,7 +20,31 @@ The SqlPackage.exe Export action exports a connected database to a BACPAC file (
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage /Action:Export {parameters} {properties}
+```
+
+### Examples
+
+```bash
+# example export from Azure SQL Database using SQL authentication and a connection string
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example export using short form parameter names, skips schema validation
+SqlPackage /a:Export /ssn:"{yourserver}.database.windows.net,1433" /sdn:"AdventureWorksLT" /su:"sqladmin" \
+    /sp:"{your_password}" /tf:"C:\AdventureWorksLT.bacpac" /p:VerifyExtraction=False
+
+# example export using Azure Active Directory Service Principal
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example export connecting using Azure Active Directory username and password
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example export connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Export action
@@ -58,7 +82,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|HashObjectNamesInLogs=(BOOLEAN)|Specifies whether to replace all object names in logs with a random hash value.|
 |**/p:**|IgnoreIndexesStatisticsOnEnclaveEnabledColumns=(BOOLEAN)|Specifies whether indexes or statistics on columns encrypted using randomized encryption and enclave-enabled column encryption keys should be ignored (not included in the generated bacpac). By default (false) any index or a statistic on a column encrypted using randomized encryption and an enclave-enabled column encryption key will block the export action.|
-|**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory} )| Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage. |
 |**/p:**|TableData=(STRING[])|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|This property is deprecated and use is not recommended. Specifies the version the target engine for Azure SQL Database is expected to be.|
@@ -69,3 +93,4 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

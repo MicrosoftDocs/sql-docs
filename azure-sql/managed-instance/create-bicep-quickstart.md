@@ -6,8 +6,8 @@ ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.custom: subject-armqs, devx-track-azurepowershell, mode-arm
 ms.topic: quickstart
-author: schaffererin
-ms.author: v-eschaffer
+author: niko-neugebauer
+ms.author: nneugebauer
 ms.date: 05/16/2022
 ---
 

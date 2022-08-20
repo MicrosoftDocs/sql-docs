@@ -26,7 +26,7 @@ The Microsoft ODBC Driver for SQL Server can be used to create new applications.
 | ------------- |---------------|
 | Microsoft ODBC Driver 18 for SQL Server | <ul><li>Support for TDS 8.0</li><li>Extensions to SQLGetData</li><li>Option to send `SQL_LONG_*` types as `(max)`-types</li></ul>  |
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted support for BCP API</li><li>New connection string attribute UseFMTONLY causes driver to use legacy metadata in special cases requiring temp tables</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>AlwaysOn Availability Groups (AG)</li></ul>   |
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>Always On Availability Groups (AG)</li></ul>   |
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Internationalized Domain Name (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Driver-Aware Connection Pooling</li><li>Connection Resiliency</li><li>Asynchronous execution (Polling Method)</li></ul> |
 

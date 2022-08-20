@@ -1,22 +1,18 @@
 ---
+title: "Value Property (ADO MD)"
 description: "Value Property (ADO MD)"
-title: "Value Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Value"
-  - "Cell::Value"
-helpviewer_keywords: 
-  - "Value property [ADO MD]"
-ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Value"
+  - "Cell::Value"
+helpviewer_keywords:
+  - "Value property [ADO MD]"
+apitype: "COM"
 ---
 # Value Property (ADO MD)
 Indicates the value of the current [cell](./cell-object-ado-md.md).  

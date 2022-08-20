@@ -4,7 +4,7 @@ description: "LAST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/09/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
 ms.technology: t-sql
@@ -21,7 +21,7 @@ dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
-# LAST_VALUE (Transact-SQL)
+# LAST_VALUE () (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge.md)]
 
@@ -33,7 +33,7 @@ Returns the last value in an ordered set of values.
 
 ```syntaxsql
 LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
-    OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )
+    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
 ```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

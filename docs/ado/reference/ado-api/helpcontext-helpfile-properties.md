@@ -1,27 +1,23 @@
 ---
+title: "HelpContext, HelpFile Properties"
 description: "HelpContext, HelpFile Properties"
-title: "HelpContext, HelpFile Properties | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Error::GetHelpContext"
   - "Error::GetHelpFile"
   - "Error::get_HelpFile"
   - "Error::get_HelpContext"
   - "Error::HelpContext"
   - "Error::HelpFile"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HelpContext property [ADO]"
   - "HelpFile property [ADO]"
-ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # HelpContext, HelpFile Properties
 Indicates the Help file and topic associated with an [Error](./error-object.md) object.  

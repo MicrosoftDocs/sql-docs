@@ -1,21 +1,17 @@
 ---
+title: "IsolationLevel and Mode Properties Example (VB)"
 description: "IsolationLevel and Mode Properties Example (VB)"
-title: "IsolationLevel and Mode Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Mode property [ADO], Visual Basic example"
-  - "IsolationLevel property [ADO], Visual Basic example"
-ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Mode property [ADO], Visual Basic example"
+  - "IsolationLevel property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # IsolationLevel and Mode Properties Example (VB)
 This example uses the [Mode](./mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](./isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  

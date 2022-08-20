@@ -1,20 +1,16 @@
 ---
+title: "NextRecordset Method Example (VB)"
 description: "NextRecordset Method Example (VB)"
-title: "NextRecordset Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "NextRecordset method [ADO], Visual Basic example"
-ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "NextRecordset method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # NextRecordset Method Example (VB)
 This example uses the [NextRecordset](./nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  

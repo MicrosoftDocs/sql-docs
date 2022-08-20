@@ -61,7 +61,7 @@ ms.author: chugu
         > [!NOTE]  
         >  Evaluating an expression does not assign the evaluation result to the property.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   

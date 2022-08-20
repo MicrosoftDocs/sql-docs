@@ -27,7 +27,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 - User accidentally deleted or updated a row in a table.
 - Malicious attacker succeeded to delete data or drop a database.
-- Earthquake caused a power outage and temporary disabled datacenter.
+- Earthquake caused a power outage and temporarily disabled datacenter or any other catastrophic natural disaster event.
 
 This overview describes the capabilities that SQL Database and SQL Managed Instance provide for business continuity and disaster recovery. Learn about options, recommendations, and tutorials for recovering from disruptive events that could cause data loss or cause your database and application to become unavailable. Learn what to do when a user or application error affects data integrity, an Azure region has an outage, or your application requires maintenance.
 

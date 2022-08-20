@@ -12,7 +12,7 @@ ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 1/20/2022
+ms.date: 7/22/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads
@@ -20,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 As part of [High Availability architecture](high-availability-sla.md#premium-and-business-critical-service-tier-locally-redundant-availability), each single database, elastic pool database, and managed instance in the Premium and Business Critical service tier is automatically provisioned with a primary read-write replica and several secondary read-only replicas. The secondary replicas are provisioned with the same compute size as the primary replica. The *read scale-out* feature allows you to offload read-only workloads using the compute capacity of one of the read-only replicas, instead of running them on the read-write replica. This way, some read-only workloads can be isolated from the read-write workloads, and will not affect their performance. The feature is intended for the applications that include logically separated read-only workloads, such as analytics. In the Premium and Business Critical service tiers, applications could gain performance benefits using this additional capacity at no extra cost.
 
-The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide independent scaling, access isolation, workload isolation, massive read scale-out, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica. 
+The *read scale-out* feature is also available in the Hyperscale service tier when at least one [secondary replica](service-tier-hyperscale-replicas.md) is added. Hyperscale secondary [named replicas](service-tier-hyperscale-replicas.md#named-replica) provide independent scaling, access isolation, workload isolation, support for a variety of read scale-out scenarios, and other benefits. Multiple secondary [HA replicas](service-tier-hyperscale-replicas.md#high-availability-replica) can be used for load-balancing read-only workloads that require more resources than available on one secondary HA replica. 
 
 The High Availability architecture of Basic, Standard, and General Purpose service tiers does not include any replicas. The *read scale-out* feature is not available in these service tiers. However, [geo-replicas](active-geo-replication-overview.md) can provide similar functionality in these service tiers.
 
@@ -58,6 +58,14 @@ For example, the following connection string connects the client to a read-only 
 ```sql
 Server=tcp:<server>.database.windows.net;Database=<mydatabase>;ApplicationIntent=ReadOnly;User ID=<myLogin>;Password=<myPassword>;Trusted_Connection=False; Encrypt=True;
 ```
+
+To connect to a read-only replica using SQL Server Management Studio (SSMS), select **Options**
+
+![SSMS Options](./media/read-scale-out/SSMS-Options.png)
+
+Select **Additional Connection Parameters** and enter `ApplicationIntent=ReadOnly` and then select **Connect**
+
+![SSMS Additional Parameters](./media/read-scale-out/SSMS-Additional-Connection-Parameters.png)
 
 Either of the following connection strings connects the client to a read-write replica (replacing the items in the angle brackets with the correct values for your environment and dropping the angle brackets):
 
@@ -108,7 +116,7 @@ An extended event session on a read-only replica that is based on a session defi
 
 ### Transaction isolation level on read-only replicas
 
-Queries that run on read-only replicas are always mapped to the [snapshot](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) transaction isolation level. Snapshot isolation uses row versioning to avoid blocking scenarios where readers block writers.
+Transactions on read-only replicas always use the snapshot [transaction isolation level](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#database-engine-isolation-levels), regardless of transaction isolation level of the session, and regardless of any query hints. Snapshot isolation uses row versioning to avoid blocking scenarios where readers block writers.
 
 In rare cases, if a snapshot isolation transaction accesses object metadata that has been modified in another concurrent transaction, it may receive error [3961](/sql/relational-databases/errors-events/mssqlserver-3961-database-engine-error), "Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation."
 

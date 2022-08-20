@@ -1,23 +1,19 @@
 ---
+title: "Refresh Method (RDS)"
 description: "Refresh Method (RDS)"
-title: "Refresh Method (RDS) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: 
 ms.prod: sql
-ms.prod_service: connectivity
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Refresh"
   - "RDS.DataControl::Refresh"
   - "DataControl::Refresh"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Refresh method [RDS]"
-ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Refresh Method (RDS)
 Requeries the data source specified in the [Connect](./connect-property-rds.md) property and updates the query results.  

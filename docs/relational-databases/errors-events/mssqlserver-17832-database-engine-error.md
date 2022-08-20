@@ -63,7 +63,7 @@ To resolve this problem, increase the **MaxTokenSize** value of the server compu
     > [!NOTE]  
     > Hexadecimal value ffff (decimal value 65535) is the maximum recommended token size. Providing this value would probably solve the problem, but could have negative computer-wide effects with regard to performance. We recommend that you establish the minimum **MaxTokenSize** value that allows for the largest token of any user in your organization and enter that value.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Close **Registry Editor**.  
   

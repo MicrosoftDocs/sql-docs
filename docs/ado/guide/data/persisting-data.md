@@ -1,21 +1,17 @@
 ---
+title: "Persisting Data"
 description: "Persisting Data"
-title: "Persisting Data | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "persisting data [ADO]"
   - "data updates [ADO], persisting data"
   - "data persistence [ADO]"
   - "updating data [ADO], persisting data"
-ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: rothja
-ms.author: jroth
 ---
 # Persisting Data
 Portable computing (for example, using laptops) has generated the need for applications that can run in both a connected and disconnected state. ADO has added support for this by giving the developer the ability to save a client cursor **Recordset** to disk and reload it later.  

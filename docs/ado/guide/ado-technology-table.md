@@ -1,18 +1,14 @@
 ---
+title: "ADO Technology Table"
 description: "Products and Technologies Table"
-title: "ADO Technology Table | Microsoft Docs"
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, technologies"
-ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-author: rothja
-ms.author: jroth
 ---
 # Products and Technologies Table
 The following table lists the Microsoft products, tools, and technologies discussed in the ADO Programmer's Guide. It provides links, wherever possible, to relevant topics in the guide.

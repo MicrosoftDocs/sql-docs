@@ -26,7 +26,7 @@ dev_langs:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a new full-text stoplist in the current database.  
   

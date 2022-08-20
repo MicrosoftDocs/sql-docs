@@ -1,21 +1,17 @@
 ---
+title: "Columns and Tables Append Methods, Name Property Example (VC++)"
 description: "Columns and Tables Append Methods, Name Property Example (VC++)"
-title: "Columns and Tables Append Methods, Name Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Name property [ADOX], VC++ example"
-  - "Append method [ADOX], VC++ example"
-ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Name property [ADOX], VC++ example"
+  - "Append method [ADOX], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Columns and Tables Append Methods, Name Property Example (VC++)
 The following code demonstrates how to create a new table.  

@@ -1,18 +1,14 @@
 ---
+title: "Appendix C: Programming with ADO"
 description: "Appendix C: Programming with ADO in Development Environments"
-title: "Appendix C: Programming with ADO | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programming"
-ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: rothja
-ms.author: jroth
 ---
 # Appendix C: Programming with ADO in Development Environments
 ADO is a COM automation interface component that can be used with many programming languages, including Microsoft Visual Basic, VBScript, JScript and Visual C++. A version of ADO is installed with each of these tools and other applications, such as Microsoft Office and Microsoft SQL Server.

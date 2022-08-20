@@ -9,7 +9,6 @@ ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.connecttoreplicas.f1"
-  - "sql13.swb.failoverwizard.progress.f1"
   - "sql13.swb.failoverwizard.selectnewprimary.f1"
   - "sql13.swb.failoverwizard.f1"
   - "sql13.swb.failoverwizard.confirmdataloss.f1"

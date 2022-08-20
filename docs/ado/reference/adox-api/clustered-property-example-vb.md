@@ -1,20 +1,16 @@
 ---
+title: "Clustered Property Example (VB)"
 description: "Clustered Property Example (VB)"
-title: "Clustered Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Clustered property [ADOX], Visual Basic example"
-ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Clustered property [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Clustered Property Example (VB)
 This example demonstrates the [Clustered](./clustered-property-adox.md) property of an [Index](./index-object-adox.md). Note that Microsoft Jet databases do not support clustered indexes, so this example will return **False** for the **Clustered** property of all indexes in the **Northwind** database.  

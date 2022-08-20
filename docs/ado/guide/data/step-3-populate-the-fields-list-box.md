@@ -1,16 +1,12 @@
 ---
+title: "Step 3: Populate the Fields List Box"
 description: "Step 3: Populate the Fields List Box"
-title: "Step 3: Populate the Fields List Box | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
 ---
 # Step 3: Populate the Fields List Box
 To populate the Fields list box, insert the following code into the Click event handler of `lstMain`:  

@@ -2,7 +2,7 @@
 title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 ms.custom: ""
-ms.date: 01/31/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,6 +22,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
 - `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional)
+- `com.microsoft.azure:msal4j`: Microsoft Authentication Library (MSAL) For Java. (optional)
 - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
 - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
 - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
@@ -129,6 +130,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with the Azure Key Vault provider
 
+- JDBC driver version 11.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.4.1), and Azure-identity(version 1.5.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 10.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.3.6), and Azure-identity(version 1.4.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.4.1 — Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity(version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.2.1 — Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
@@ -148,6 +150,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Azure Active Directory authentication
 
+- JDBC driver version 11.2.0 — Dependency versions: Azure-identity(version 1.5.0), and their dependencies.
 - JDBC driver version 10.2.0 — Dependency versions: Azure-identity(version 1.4.3), and their dependencies.
 - JDBC driver version 9.4.1 — Dependency versions: Azure-identity(version 1.3.3), and their dependencies.
 - JDBC driver version 9.2.1 — Dependency versions: Azure-identity(version 1.1.3), and their dependencies.

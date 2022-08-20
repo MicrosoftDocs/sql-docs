@@ -274,7 +274,7 @@ PRINT @info
 }
 ```  
   
- To avoid automatic escaping, provide *newValue* by using the JSON_QUERY function. JSON_MODIFY knows that the value returned by JSON_MODIFY is properly formatted JSON, so it doesn't escape the value.  
+ To avoid automatic escaping, provide *newValue* by using the JSON_QUERY function. JSON_MODIFY knows that the value returned by JSON_QUERY is properly formatted JSON, so it doesn't escape the value.  
   
  **Query**  
   

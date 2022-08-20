@@ -58,7 +58,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher**|**sysname**|Name of the Publisher.|  
 |**publisher_db**|**sysname**|Name of the Publisher database.|  
 |**subscriber**|**sysname**|Name of the Subscriber.|  
-|**subscription_db**|**sysname**|Name of the subscription database.|  
+|**subscriber_db**|**sysname**|Name of the subscription database.|  
 |**status**|**int**|Subscription status:<br /><br /> **0** = Inactive subscription<br /><br /> **1** = Active subscription<br /><br /> **2** = Deleted subscription<br /><br /> **3** = Detached subscription<br /><br /> **4** = Attached subscription<br /><br /> **5** = Subscription has been marked for reinitialization with upload<br /><br /> **6** = Attaching the subscription failed<br /><br /> **7** = Subscription restored from backup|  
 |**subscriber_type**|**int**|Type of Subscriber:<br /><br /> **1** = Global<br /><br /> **2** = Local<br /><br /> **3** = Anonymous|  
 |**subscription_type**|**int**|Type of subscription:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = Anonymous|  

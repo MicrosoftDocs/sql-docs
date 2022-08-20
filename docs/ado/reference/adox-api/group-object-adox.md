@@ -1,27 +1,24 @@
 ---
+title: "Group Object (ADOX)"
 description: "Group Object (ADOX)"
-title: "Group Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Group"
-helpviewer_keywords: 
-  - "group object [ADOX]"
-ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "group object [ADOX]"
+apitype: "COM"
 ---
 # Group Object (ADOX)
+
 Represents a group account that has access permissions within a secured database.  
   
 ## Remarks  
- The [Groups](./groups-collection-adox.md) collection of a [Catalog](./catalog-object-adox.md) represents all the catalog's group accounts. The **Groups** collection for a [User](./user-object-adox.md) represents only the group to which the user belongs.  
+
+The [Groups](./groups-collection-adox.md) collection of a [Catalog](./catalog-object-adox.md) represents all the catalog's group accounts. The **Groups** collection for a [User](./user-object-adox.md) represents only the group to which the user belongs.  
   
  With the properties, collections, and methods of a **Group** object, you can:  
   

@@ -13,7 +13,7 @@ ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/13/2022
 ---
-# Resources limits for elastic pools using the DTU purchasing model
+# Resource limits for elastic pools using the DTU purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article provides the detailed resource limits for databases in Azure SQL Database that are within an elastic pool using the DTU purchasing model.

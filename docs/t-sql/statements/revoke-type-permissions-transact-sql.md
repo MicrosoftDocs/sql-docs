@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 ---
 # REVOKE Type Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a type.  
   

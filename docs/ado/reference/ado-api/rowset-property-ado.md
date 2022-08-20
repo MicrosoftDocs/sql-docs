@@ -1,25 +1,21 @@
 ---
+title: "Rowset Property (ADO)"
 description: "Rowset Property (ADO)"
-title: "Rowset Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ADORecordsetConstruction::PutRowset"
   - "ADORecordsetConstruction::GetRowset"
   - "ADORecordsetConstruction::Rowset"
   - "ADORecordsetConstruction::put_Rowset"
   - "ADORecordsetConstruction::get_Rowset"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Rowset property [ADO]"
-ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Rowset Property (ADO)
 Gets or sets an OLE DB **Rowset** object from/on an **ADORecordsetConstruction** object. When you use put_Rowset, the rowset is turned into an ADO **Recordset** object.  

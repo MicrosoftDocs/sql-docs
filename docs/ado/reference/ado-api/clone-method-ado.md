@@ -1,22 +1,18 @@
 ---
+title: "Clone Method (ADO)"
 description: "Clone Method (ADO)"
-title: "Clone Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset20::Clone"
-  - "Recordset20::raw_Clone"
-helpviewer_keywords: 
-  - "Clone method [ADO]"
-ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset20::Clone"
+  - "Recordset20::raw_Clone"
+helpviewer_keywords:
+  - "Clone method [ADO]"
+apitype: "COM"
 ---
 # Clone Method (ADO)
 Creates a duplicate [Recordset](./recordset-object-ado.md) object from an existing **Recordset** object. Optionally, specifies that the clone be read-only.  

@@ -21,7 +21,7 @@ dev_langs:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions granted or denied on a database user, database role, or application role.  
   

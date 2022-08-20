@@ -57,6 +57,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 17
+          href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16
           href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
@@ -6414,7 +6416,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -7217,6 +7219,8 @@ items:
         href: relational-databases/performance/considerations-for-using-test-servers.md
       - name: Intelligent Query Processing
         href: relational-databases/performance/intelligent-query-processing.md
+      - name: Intelligent Query Processing details
+        href: relational-databases/performance/intelligent-query-processing-details.md
       - name: Parameter Sensitivity Plan Optimization
         href: relational-databases/performance/parameter-sensitivity-plan-optimization.md
       - name: Performance Center
@@ -7588,6 +7592,12 @@ items:
           href: relational-databases/polybase/polybase-configure-mongodb.md
         - name: S3-compliant object storage
           href: relational-databases/polybase/polybase-configure-s3-compatible.md
+        - name: Virtualize parquet file
+          href: relational-databases/polybase/polybase-virtualize-parquet-file.md       
+        - name: Virtualize CSV file in Azure Storage
+          href: relational-databases/polybase/virtualize-csv.md                           
+        - name: Virtualize delta table in Azure Storage
+          href: relational-databases/polybase/virtualize-delta.md                           
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups
@@ -7597,9 +7607,7 @@ items:
       - name: Data Virtualization Wizard
         items:
         - name: Virtualize data
-          href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize parquet file
-          href: relational-databases/polybase/polybase-virtualize-parquet-file.md          
+          href: relational-databases/polybase/data-virtualization.md   
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -8496,6 +8504,8 @@ items:
         href: relational-databases/security/ledger/ledger-digest-management.md?view=sql-server-ver16&preserve-view=true
       - name: Database verification
         href: relational-databases/security/ledger/ledger-database-verification.md?view=sql-server-ver16&preserve-view=true
+      - name: Monitor digest uploads
+        href: relational-databases/security/ledger/ledger-monitor-digest-uploads.md?view=sql-server-ver16&preserve-view=true
       - name: Recover ledger database after tampering
         href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
       - name: Ledger limitations
@@ -8526,6 +8536,8 @@ items:
       items: 
       - name: Set up Azure AD authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
+      - name: Set Azure AD admin automation
+        href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial.md
   - name: Reference
     items:
     - name: Permissions or Securables page
@@ -8662,16 +8674,11 @@ items:
     href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
     - name: Install
-      href: tools/distributed-replay/install-distributed-replay-overview.md
-      items:
-      - name: Requirements
-        href: tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
-        href: tools/distributed-replay/install-distributed-replay.md
-      - name: Complete the Post-Installation Steps
-        href: tools/distributed-replay/complete-the-post-installation-steps.md
-      - name: Modify the Controller & Client Services Accounts
-        href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+      href: tools/distributed-replay/install-distributed-replay.md
+    - name: Complete the Post-Installation Steps
+      href: tools/distributed-replay/complete-the-post-installation-steps.md
+    - name: Modify the Controller & Client Services Accounts
+      href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
     - name: Configure
       href: tools/distributed-replay/configure-distributed-replay.md
       items:
@@ -8875,7 +8882,7 @@ items:
       href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Release notes for SSDT
+    - name: Release notes for SSDT in VS2017
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
@@ -9057,6 +9064,8 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: SSIS Projects extension for VS2019 troubleshooting guide
+      href: ssdt/release-notes-ssdt-2019.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS
@@ -9359,8 +9368,6 @@ items:
               href: ssms/scripting/transact-sql-debugger-output-window.md
             - name: T-SQL Debugger - Watch Window
               href: ssms/scripting/transact-sql-debugger-watch-window.md
-            - name: T-SQL Debugger - QuickWatch Dialog Box
-              href: ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
           - name: Status Bar (Database Engine Query Editor)
             href: ssms/scripting/status-bar-database-engine-query-editor.md
           - name: View Spatial Data in Object Explorer
@@ -10330,8 +10337,8 @@ items:
       href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
-    - name: Troubleshooting Import/Export
-      href: tools/sqlpackage/troubleshooting-import-export-sqlpackage.md
+    - name: Troubleshooting SqlPackage
+      href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10464,9 +10471,15 @@ items:
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
   - name: Visual Studio Code 
-    items: 
-    - name: T-SQL scripts
+    items:
+    - name: Overview
+      href: tools/visual-studio-code/mssql-extensions.md
+    - name: Connect and Query Tutorial
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
+    - name: Query History
+      href: tools/visual-studio-code/mssql-query-history.md
+    - name: SQL Database Projects
+      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -10533,10 +10546,12 @@ items:
       href: linux/quickstart-install-connect-suse.md
     - name: Install & Connect - Ubuntu
       href: linux/quickstart-install-connect-ubuntu.md
-    - name: Run & Connect - Docker
+    - name: Run & Connect - Container
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
@@ -10616,6 +10631,8 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
+      - name: Configure the time zone
+        href: linux/sql-server-linux-configure-time-zone.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
@@ -10780,6 +10797,8 @@ items:
     items:
     - name: Troubleshoot
       href: linux/sql-server-linux-troubleshooting-guide.md
+    - name: Restore the master database
+      href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
     - name: DBA Stack Exchange >>
@@ -11188,6 +11207,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3201
+          href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
           href: relational-databases/errors-events/mssqlserver-3260-database-engine-error.md
         - name: 3271
@@ -11346,6 +11367,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-8601-database-engine-error.md
         - name: 8621
           href: relational-databases/errors-events/mssqlserver-8621-database-engine-error.md
+        - name: 8623
+          href: relational-databases/errors-events/mssqlserver-8623-database-engine-error.md  
         - name: 8630
           href: relational-databases/errors-events/mssqlserver-8630-database-engine-error.md
         - name: 8632
@@ -11386,6 +11409,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-9003-database-engine-error.md
         - name: 9004
           href: relational-databases/errors-events/mssqlserver-9004-database-engine-error.md
+        - name: 9017
+          href: relational-databases/errors-events/mssqlserver-9017-database-engine-error.md  
         - name: 9524
           href: relational-databases/errors-events/mssqlserver-9524-database-engine-error.md
         - name: 9532
@@ -13737,7 +13762,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
       - name: sp_help_spatial_geography_index_xml
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram (Trasnact-SQL)
+      - name: sp_help_spatial_geometry_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
@@ -16251,6 +16276,10 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_PERCENTILE_CONT
+          href: t-sql/functions/approx-percentile-cont-transact-sql.md
+        - name: APPROX_PERCENTILE_DISC
+          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG
@@ -16296,6 +16325,19 @@ items:
           href: t-sql/functions/percentile-disc-transact-sql.md
         - name: PERCENT_RANK
           href: t-sql/functions/percent-rank-transact-sql.md
+      - name: Bit manipulation
+        href: t-sql/functions/bit-manipulation-functions-overview.md
+        items:
+        - name: LEFT_SHIFT
+          href: t-sql/functions/left-shift-transact-sql.md
+        - name: RIGHT_SHIFT
+          href: t-sql/functions/right-shift-transact-sql.md
+        - name: BIT_COUNT
+          href: t-sql/functions/bit-count-transact-sql.md
+        - name: GET_BIT
+          href: t-sql/functions/get-bit-transact-sql.md
+        - name: SET_BIT
+          href: t-sql/functions/set-bit-transact-sql.md
       - name: Collation
         items:
         - name: Collation - COLLATIONPROPERTY
@@ -16454,6 +16496,8 @@ items:
           href: t-sql/functions/datetimefromparts-transact-sql.md
         - name: DATETIMEOFFSETFROMPARTS
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
+        - name: DATETTRUNC
+          href: t-sql/functions/datetrunc-transact-sql.md
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
         - name: EOMONTH
@@ -17228,6 +17272,8 @@ items:
           href: t-sql/queries/contains-transact-sql.md
         - name: FREETEXT
           href: t-sql/queries/freetext-transact-sql.md
+        - name: IS DISTINCT FROM
+          href: t-sql/queries/is-distinct-from-transact-sql.md
         - name: IS NULL
           href: t-sql/queries/is-null-transact-sql.md
     - name: Statements

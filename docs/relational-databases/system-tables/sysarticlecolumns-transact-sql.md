@@ -15,12 +15,13 @@ helpviewer_keywords:
   - "sysarticlecolumns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 ---
+
 # sysarticlecolumns (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **sysarticlecolumns** table contains one row for each table column that is published in a snapshot or transactional publication, and maps each column to its article. This table is stored in the publication database.  
+The **sysarticlecolumns** table contains one row for each table column that is published in a snapshot or transactional publication, and maps each column to its article. This table is stored in the publication database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

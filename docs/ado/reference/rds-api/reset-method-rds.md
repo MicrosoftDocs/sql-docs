@@ -1,19 +1,15 @@
 ---
+title: "Reset Method (RDS)"
 description: "Reset Method (RDS)"
-title: "Reset Method (RDS) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Reset method [ADO]"
-ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Reset method [ADO]"
+apitype: "COM"
 ---
 # Reset Method (RDS)
 Executes the sort or filter on a client-side **Recordset** based on the specified sort and filter properties.  

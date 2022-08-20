@@ -1,23 +1,19 @@
 ---
+title: "DateModified Property (ADOX)"
 description: "DateModified Property (ADOX)"
-title: "DateModified Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Table::get_DateModified"
   - "_Table::DateModified"
   - "_Table::GetDateModified"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DateModified property [ADOX]"
-ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # DateModified Property (ADOX)
 Indicates the date the object was last modified.  

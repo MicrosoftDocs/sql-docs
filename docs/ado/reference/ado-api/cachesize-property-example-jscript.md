@@ -1,20 +1,16 @@
 ---
+title: "CacheSize Property Example (JScript)"
 description: "CacheSize Property Example (JScript)"
-title: "CacheSize Property Example (JScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "CacheSize property [ADO], JScript example"
-ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CacheSize property [ADO], JScript example"
+dev_langs:
+  - "JScript"
 ---
 # CacheSize Property Example (JScript)
 This example uses the [CacheSize](./cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache. Cut and paste the following code to Notepad or another text editor, and save it as **CacheSizeJS.asp**.  

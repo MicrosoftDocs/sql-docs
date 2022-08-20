@@ -1,21 +1,17 @@
 ---
+title: "Stream (ADO for Visual C++ Syntax)"
 description: "Stream (ADO for Visual C++ Syntax)"
-title: "Stream (ADO for Visual C++ Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Stream collection [ADO]"
-ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Stream collection [ADO]"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Stream (ADO for Visual C++ Syntax)
 ## Methods  

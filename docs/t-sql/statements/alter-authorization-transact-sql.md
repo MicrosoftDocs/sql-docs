@@ -177,7 +177,7 @@ If the target entity is not a database and the entity is being transferred to a 
  Also, note the following:
 
 > [!IMPORTANT]
-> The only reliable way to find the owner of a object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
+> The only reliable way to find the owner of an object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
 
 ## Special Cases and Conditions
 

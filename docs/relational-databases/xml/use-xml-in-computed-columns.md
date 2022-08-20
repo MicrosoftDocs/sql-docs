@@ -1,18 +1,17 @@
 ---
 title: "Use XML in Computed Columns"
 description: View examples of how to use XML instances and XML columns with computed columns in SQL.
-ms.custom: ""
-ms.date: 05/05/2022
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 06/29/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "computed columns, XML"
   - "XML [SQL Server], computed columns"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use XML in computed columns
 
@@ -25,16 +24,19 @@ XML instances can appear as a source for a computed column, or as a type of comp
 In the following `CREATE TABLE` statement, an `xml` type column (`col2`) is computed from `col1`:
 
 ```sql
-CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) );
+CREATE TABLE T ( col1 varchar(max), col2 AS CAST(col1 AS xml) );
 ```
 
 The **xml** data type can also appear as a source in creating a computed column, as shown in the following `CREATE TABLE` statement:
 
 ```sql
-CREATE TABLE T (col1 xml, col2 as cast(col1 as varchar(1000) ));
+CREATE TABLE T ( col1 xml, col2 as cast(col1 as varchar(1000) ));
 ```
 
 You can create a computed column by extracting a value from an `xml` type column as shown in the following example. Because the **xml** data type methods can't be used directly in creating computed columns, the example first defines a function (`my_udf`) that returns a value from an XML instance. The function wraps the `value()` method of the `xml` type. The function name is then specified in the `CREATE TABLE` statement for the computed column.
+
+> [!NOTE]  
+> If you want to create a *persisted* computed column based on this function, the function itself must be *deterministic*. For more information, see [Deterministic and nondeterministic functions](../user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
 ```sql
 CREATE FUNCTION my_udf(@var xml) returns int
@@ -83,4 +85,3 @@ FROM T;
 ### See also
 
 - [Promote Frequently Used XML Values with Computed Columns](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)  
-Describes how to use property promotion with computed columns and property tables.|

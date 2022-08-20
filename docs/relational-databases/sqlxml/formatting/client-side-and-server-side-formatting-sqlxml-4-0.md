@@ -18,7 +18,8 @@ ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
   SQLXML provides two ways to format an XML document:  
   
 -   Server-side formatting  

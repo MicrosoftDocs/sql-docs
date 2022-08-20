@@ -34,7 +34,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">= sql-server-2017"
+monikerRange: ">= sql-server-2016"
 ---
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -56,7 +56,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server    
     
-> [![Download from Evaluation Center](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)**  
 
 <!---    
 > ![Azure Virtual Machine small](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -396,7 +396,7 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
 
-> [![Download SSMS](/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**  
   
 ## Next steps 
  [Product Specifications for SQL Server](./index.yml)   

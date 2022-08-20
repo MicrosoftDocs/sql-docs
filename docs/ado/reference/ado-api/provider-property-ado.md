@@ -1,25 +1,21 @@
 ---
+title: "Provider Property (ADO)"
 description: "Provider Property (ADO)"
-title: "Provider Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::get_Provider"
   - "Connection15::PutProvider"
   - "Connection15::put_Provider"
   - "Connection15::GetProvider"
   - "Connection15::Provider"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Provider property [ADO]"
-ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Provider Property (ADO)
 Indicates the name of the provider for a [Connection](./connection-object-ado.md) object.  

@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_table_distribution_properties (Transact-SQL)"
 description: sys.pdw_table_distribution_properties (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse

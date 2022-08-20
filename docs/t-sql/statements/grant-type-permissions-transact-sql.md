@@ -18,7 +18,7 @@ dev_langs:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 ---
 # GRANT Type Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on a type.  
   

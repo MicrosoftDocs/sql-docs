@@ -1,20 +1,17 @@
 ---
-title: "Non-XML Format Files (SQL Server) | Microsoft Docs"
+title: "Non-XML Format Files (SQL Server)"
 description: SQL Server 2019 supports non-XML format files and XML format files for bulk exporting and importing. Find out about non-XML format files and their benefits.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "non-XML format files"
   - "format files [SQL Server], non-XML format files"
   - "bulk importing [SQL Server], format files"
-ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Non-XML Format Files (SQL Server)

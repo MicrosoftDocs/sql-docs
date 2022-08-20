@@ -51,7 +51,7 @@ For date, time, and currencies, all formatting with localized data is done at th
 
 ## Collation support
 
-The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].
+The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].
 
 For more information on the collations, see [Collation and Unicode Support](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) and [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).
 

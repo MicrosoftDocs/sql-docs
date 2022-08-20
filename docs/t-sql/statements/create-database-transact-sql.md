@@ -284,7 +284,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
 #### **LEDGER = {ON | OFF}**
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### CREATE DATABASE ... FOR ATTACH [ WITH \< attach_database_option > ]
 
@@ -1025,7 +1025,7 @@ Specifies how the point-in-time restore and long-term retention backups for a da
 
 #### LEDGER = {ON | OFF}
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.

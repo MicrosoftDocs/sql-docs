@@ -16,7 +16,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Indexes
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 This topic describes how to create, populate, and manage full-text indexes in SQL Server.
   
 ## Prerequisite - Create a full-text catalog
@@ -73,7 +73,7 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
     |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more info, see [Populate Full-Text Indexes](populate-full-text-indexes.md).|
     |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Note: After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
+6.  Select **OK** to save any changes and exit the **Full-text index Properties** dialog box.  
   
 ##  <a name="props"></a> View the properties of indexed tables and columns  
  Several [!INCLUDE[tsql](../../includes/tsql-md.md)] functions such as OBJECTPROPERTYEX can be used to obtain the value of various full-text indexing properties. This information is useful for administering and troubleshooting full-text search.  

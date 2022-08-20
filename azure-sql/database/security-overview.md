@@ -87,7 +87,7 @@ SQL Database and SQL Managed Instance secure customer data by providing auditing
 
 ### SQL auditing in Azure Monitor logs and Event Hubs
 
-SQL Database and SQL Managed Instance auditing tracks database activities and helps maintain compliance with security standards by recording database events to an audit log in a customer-owned Azure storage account. Auditing allows users to monitor ongoing database activities, as well as analyze and investigate historical activity to identify potential threats or suspected abuse and security violations. For more information, see Get started with [SQL Database Auditing](/azure/azure-sql/database/auditing-overview).  
+SQL Database and SQL Managed Instance auditing tracks database activities and helps maintain compliance with security standards by recording database events to an audit log in a customer-owned Azure storage account. Auditing allows users to monitor ongoing database activities, as well as analyze and investigate historical activity to identify potential threats or suspected abuse and security violations. For more information, see Get started with [SQL Database Auditing](./auditing-overview.md).  
 
 ### Advanced Threat Protection
 
@@ -157,5 +157,5 @@ In addition to the above features and functionality that can help your applicati
 ## Next steps
 
 - For a discussion of the use of logins, user accounts, database roles, and permissions in SQL Database and SQL Managed Instance, see [Manage logins and user accounts](logins-create-manage.md).
-- For a discussion of database auditing, see [auditing](/azure/azure-sql/database/auditing-overview).
+- For a discussion of database auditing, see [auditing](./auditing-overview.md).
 - For a discussion of threat detection, see [threat detection](threat-detection-configure.md).

@@ -23,15 +23,15 @@ There are two main workflows you can use to contribute:
 |Workflow|Description|
 |---|---|
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
-| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
+| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions. |
 
-All public contributions are validated by the SQL content team for technical accuracy and consistency. 
+All public contributions are validated by the SQL content team for technical accuracy and consistency.
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](/contribute/#quick-edits-to-existing-documents). 
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, see the [contributor guide overview](/contribute/#quick-edits-to-existing-documents).
 
-The following steps summarize the process: 
+The following steps summarize the process:
 
 1. On the page you have feedback about, select the **Edit** link at the top right.
 1. On the next page, select the **Pencil** icon at the top right.
@@ -50,7 +50,7 @@ The following GIF demonstrates the end-to-end process for submitting changes in 
 
 ## <a id="tools"></a> Edit locally with tools
 
-Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.
+Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to Microsoft technical documentation.
 
 To contribute with this method, see the following articles:
 
@@ -90,7 +90,7 @@ Each SQL Server article contains an **applies-to** include file after the title.
 Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
 
 ```Markdown
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 This adds the following text at the top of the article:
@@ -101,13 +101,13 @@ To find the correct applies-to include file for your article, use the following 
 
 - For a list of commonly used includes, see [SQL Server version and applies-to include files](applies-to-includes.md).
 - Look at other articles that cover the same feature or a related task. If you edit that article, you can copy the Markdown for the applies-to include link (you can cancel the edit without submitting it).
-- Search the [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) directory for files containing the text "applies-to". You can use the **Find** button in github to quickly filter. Click on the file to see how it is rendered.
+- Search the [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) directory for files containing the text "applies-to". You can use the **Find** button in GitHub to quickly filter. Select the file to see how it is rendered.
 - Pay attention to the naming convention. If there are x's in the name, they are usually placeholders indicating the lack of support for a service. For example, **appliesto-xx-xxxx-asdw-xxx-md.md** indicates support for only Azure Synapse Analytics, because only **asdw** is spelled out, whereas the other fields have x's.
 - Some includes specify a version number, such as **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Only use these includes when you know the feature was introduced with a specific version of SQL Server.
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](/contribute/)
+- [Contributor guide](/contribute/)
 - [Microsoft Style Guide](/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
@@ -118,6 +118,6 @@ To find the correct applies-to include file for your article, use the following 
 
 Explore the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs) on GitHub.
 
-Find an article, submit a change, and help the SQL Server community. 
+Find an article, submit a change, and help the SQL Server community.
 
 Thank you!

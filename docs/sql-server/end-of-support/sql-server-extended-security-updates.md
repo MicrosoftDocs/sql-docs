@@ -1,12 +1,12 @@
 ---
 title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
-ms.date: 05/24/2022
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/06/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: rwestMSFT
-ms.author: randolphwest
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
@@ -15,6 +15,9 @@ monikerRange: ">=sql-server-2016"
 [!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
+
+> [!WARNING]  
+> Effective July 12, 2022, the SQL Registry portal will be retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
@@ -183,6 +186,9 @@ Now you can continue to the [Confirmation](#confirmation) section.
 ### Confirmation
 
 1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
+
+    > [!NOTE]
+    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 

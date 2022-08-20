@@ -26,11 +26,11 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 A SQL Server Reporting Services report server installed in SharePoint mode requires a version of SharePoint and the SQL Server Reporting Services add-in (rsSharePoint.msi) for SharePoint products, which you install on the SharePoint servers. This topic summarizes the supported combinations.
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add a report within a SharePoint site using SQL Server Reporting Services 2017 and later, use the [Report Viewer web part](../../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add a report within a SharePoint site using SQL Server Reporting Services 2017 and later, use the [Report Viewer web part](../../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md). Power View support is no longer available after SQL Server 2017.
 
 ## Supported combinations of SharePoint and Reporting Services components
 
- The following table summarizes the supported combinations of report server, the Reporting Services add-in for SharePoint products, and SharePoint products. Combinations that are not list in the following table are not supported
+ The following table summarizes the supported combinations of report server, the Reporting Services add-in for SharePoint products, and SharePoint products. Combinations that aren't list in the following table aren't supported
 
 ### Supported combinations
 
@@ -53,13 +53,13 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 |15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 SP2|SQL Server 2008 and SQL Server 2008 SP2|SharePoint 2007|
 
- *Exception: Power view integration is not supported.
+ *Exception: Power view integration isn't supported.
 
  For links to the add-in download pages, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
  **Additional considerations:**
 
-- Be sure to upgrade to upgrade all of the SharePoint servers within the farm. This includes the App and Web Front End servers.
+- Be sure to upgrade all of the SharePoint servers within the farm. This includes the App and Web Front End servers.
 
 - SharePoint 2016 support, including Power view integration, requires the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in version of SQL Server 2016 or later.
 
@@ -67,7 +67,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 
 - Power View was introduced in SQL Server 2012. Therefore, Power View integration with SharePoint 2010 requires the SQL Server 2012 or later of the add-in.
 
-- The SQL Server 2008 R2 Add-In is not supported by SQL Server 2012 (or later) report servers. The SharePoint 2010 prerequisite installer automatically installs the SQL Server 2008 R2 Add-In. It must be uninstalled before installing newer versions of the add-in. In place upgrade of the add-in is not supported.
+- The SQL Server 2008 R2 Add-In isn't supported by SQL Server 2012 (or later) report servers. The SharePoint 2010 prerequisite installer automatically installs the SQL Server 2008 R2 Add-In. It must be uninstalled before installing newer versions of the add-in. In place upgrade of the add-in isn't supported.
 
 - **Upgrade:** SharePoint 2010 with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-In installed, cannot be upgraded in-place to SharePoint 2013. SharePoint 2013 requires SQL Server 2012 SP1 or later of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in and report server. For more information on upgrade, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 

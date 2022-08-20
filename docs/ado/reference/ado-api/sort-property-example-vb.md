@@ -1,20 +1,16 @@
 ---
+title: "Sort Property Example (VB)"
 description: "Sort Property Example (VB)"
-title: "Sort Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Sort property [ADO], Visual Basic example"
-ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Sort property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Sort Property Example (VB)
 This example uses the [Recordset](./recordset-object-ado.md) object's [Sort](./sort-property.md) property to reorder the rows of a **Recordset** derived from the ***Authors*** table of the ***Pubs*** database. A secondary utility routine prints each row.  

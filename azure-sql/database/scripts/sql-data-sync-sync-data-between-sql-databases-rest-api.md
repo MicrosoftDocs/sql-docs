@@ -25,7 +25,7 @@ This REST API example configures SQL Data Sync to sync data between multiple dat
 For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](../sql-data-sync-data-sql-server-sql-database.md).
 
 > [!IMPORTANT]
-> SQL Data Sync does not support Azure SQL Managed Instance at this time.
+> SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Create sync group
 

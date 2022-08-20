@@ -15,7 +15,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Lesson 2: Create and Manage Data in a Hierarchical Table
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 In Lesson 1, you modified an existing table to use the **hierarchyid** data type, and populated the **hierarchyid** column with the representation of the existing data. In this lesson, you will start with a new table, and insert data by using the hierarchical methods. Then, you will query and manipulate the data by using the hierarchical methods. 
 
 ## Prerequisites  

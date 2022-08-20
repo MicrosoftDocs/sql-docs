@@ -1,24 +1,20 @@
 ---
+title: "Resync Method"
 description: "Resync Method"
-title: "Resync Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset20::raw_Resync"
   - "Fields::Resync"
   - "Recordset20::Resync"
   - "Fields::raw_Resync"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Resync method [ADO]"
-ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Resync Method
 Refreshes the data in the current [Recordset](./recordset-object-ado.md) object, or [Fields](./fields-collection-ado.md) collection of a [Record](./record-object-ado.md) object, from the underlying database.  

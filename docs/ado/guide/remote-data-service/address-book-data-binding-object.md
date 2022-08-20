@@ -1,19 +1,15 @@
 ---
+title: "Address Book Data-Binding Object"
 description: "Address Book Data-Binding Object"
-title: "Address Book Data-Binding Object | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS scenarios [ADO], data-binding object"
-  - "address book application scenario [ADO], data-binding object"
-ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS scenarios [ADO], data-binding object"
+  - "address book application scenario [ADO], data-binding object"
 ---
 # Address Book Data-Binding Object
 The Address Book application uses the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object to bind data from the SQL Server database to a visual object (in this case, a DHTML table) in the application's client HTML page. The event-driven VBScript program logic uses the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) to:  

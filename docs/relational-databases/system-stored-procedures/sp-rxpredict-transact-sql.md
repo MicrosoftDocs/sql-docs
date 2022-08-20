@@ -14,8 +14,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_rxPredict procedure"
-author: rothja
-ms.author: jroth
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: 
 # NOTE: sp_rxPredict is not supported on Linux.
 monikerRange: ">=sql-server-2016"

@@ -6,7 +6,7 @@ services:
 ms.service: sql-database
 ms.subservice: high-availability
 ms.custom:
-  - "sql-db-mi-split"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem

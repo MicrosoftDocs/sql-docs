@@ -20,7 +20,7 @@ dev_langs:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 ---
 # DENY XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on an XML schema collection.  
   

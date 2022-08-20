@@ -1,20 +1,16 @@
 ---
+title: "StayInSync Property Example (VB)"
 description: "StayInSync Property Example (VB)"
-title: "StayInSync Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "StayInSync property [ADO], Visual Basic example"
-ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "StayInSync property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # StayInSync Property Example (VB)
 This example demonstrates how the [StayInSync](./stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](./recordset-object-ado.md).  

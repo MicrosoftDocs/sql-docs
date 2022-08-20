@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_table_mappings (Transact-SQL)"
 description: sys.pdw_table_mappings (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.technology: data-warehouse

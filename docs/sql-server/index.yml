@@ -222,7 +222,7 @@ landingContent:
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: SQL Server Machine Learning (R & Python)
         url: ../machine-learning/index.yml
-      - text: Data virtualization with Polybase
+      - text: Data virtualization with PolyBase
         url: ../relational-databases/polybase/polybase-guide.md
 
   - title: Business Intelligence 

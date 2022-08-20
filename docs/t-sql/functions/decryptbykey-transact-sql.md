@@ -30,7 +30,8 @@ This function uses a symmetric key to decrypt data.
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]   
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> For dedicated SQL pools in Azure Synapse Analytics, result set caching should not be used in conjunction with DECRYPTBYKEY. If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](../statements/set-result-set-caching-transact-sql.md) or [database-level](../statements/alter-database-transact-sql-set-options.md)) at the time of execution.
   
 ## Syntax  
   
@@ -176,5 +177,4 @@ GO
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
   

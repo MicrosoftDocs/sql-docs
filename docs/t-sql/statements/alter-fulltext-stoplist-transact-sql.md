@@ -22,7 +22,7 @@ dev_langs:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 ---
 # ALTER FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Inserts or deletes a stop word in the default full-text stoplist of the current database.  
   

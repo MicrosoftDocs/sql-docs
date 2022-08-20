@@ -188,7 +188,7 @@ If the cluster resources and dependencies are correctly configured, you should b
 
 1. Start SQL Server Management Studio, and then connect to the primary replica.
 
-2. Go to **AlwaysOn High Availability** > **Availability Groups** > **Availability Group Listeners**.  
+2. Go to **Always On High Availability** > **Availability Groups** > **Availability Group Listeners**.  
 
     You should now see the listener name that you created in Failover Cluster Manager. 
 
@@ -294,7 +294,7 @@ If an availability group participates in a distributed availability group, the l
 
 1. On each server that participates in the distributed availability group, create an inbound rule on the distributed availability group listener TCP port. In many examples, documentation uses 5022. 
 
-1. In the Azure portal, select on the load balancer and select **Load balancing rules**, and then select **+Add**. 
+1. In the Azure portal, select the load balancer and select **Load balancing rules**, and then select **+Add**. 
 
 1. Create the load balancing rule with the following settings:
 

@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
 |Class|Function|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contains instance classes, utility classes, and enumerations that are used to programmatically manipulate [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contains instance classes, utility classes, and enumerations that are used to programmatically manipulate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contains the classes that are common to Replication Management Objects (RMO) and SMO, such as connection classes.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contains classes that represent the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contains classes that represent the WMI Provider.|  

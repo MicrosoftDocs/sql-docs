@@ -1,23 +1,19 @@
 ---
+title: "Version Property (ADO)"
 description: "Version Property (ADO)"
-title: "Version Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Connection15::GetVersion"
   - "Connection15::Version"
   - "Connection15::get_Version"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Version property [ADO]"
-ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Version Property (ADO)
 Indicates the ADO version number.  

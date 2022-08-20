@@ -1,15 +1,13 @@
 ---
+title: "Name Property (ADO MD)"
 description: "Name Property (ADO MD)"
-title: "Name Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Level::Name"
   - "CubeDef::Name"
   - "Member::Name"
@@ -18,11 +16,9 @@ f1_keywords:
   - "Name"
   - "Axis::Name"
   - "Hierarchy::Name"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Name property [ADO MD]"
-ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Name Property (ADO MD)
 Indicates the name of an object.  

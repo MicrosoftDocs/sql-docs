@@ -1,7 +1,7 @@
 ---
 description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: "05/24/2022"
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -83,8 +83,8 @@ The ADR recovery process has the same three phases as the current recovery proce
   
 - **Redo** phase
 
-  Broken into two sub-phases
-  - Sub-phase 1
+  Broken into two subphases
+  - Subphase 1
 
       Redo from SLOG (oldest uncommitted transaction up to last checkpoint). Redo is a fast operation as it only needs to process a few records from the SLOG.
 
@@ -156,10 +156,11 @@ There are several improvements to address persistent version store (PVS) storage
  
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. In SQL Server 2022 (16.x) Preview, the cleanup process has multiple threads, with one thread per SQL Server database. 
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. 
   
-  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have a fewer number of large databases.
-To enable trace flag 3515 for the instance, run the following command:
+  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have multiple large databases.
+
+  To enable trace flag 3515 for the instance, run the following command:
 
    ```sql
    DBCC TRACEON(3515, -1)
@@ -174,6 +175,10 @@ To enable trace flag 3515 for the instance, run the following command:
   EXEC sp_configure 'ADR Cleaner Thread Count', '4'
   RECONFIGURE WITH OVERRIDE; 
   ```
+
+- **New extended event**
+
+  A new extended event, `tx_mtvc2_sweep_stats`, has been added for telemetry on the ADR PVS multi-threaded version cleaner.
 
 ## Best practices and guidance
 

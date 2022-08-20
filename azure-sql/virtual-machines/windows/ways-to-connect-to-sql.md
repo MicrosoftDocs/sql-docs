@@ -96,7 +96,7 @@ You can change the connectivity settings for your SQL Server virtual machine in 
 
 2. Select your SQL Server VM.
 
-3. Under **Settings**, select **Security**.
+3. Under **Settings**, select **Security Configuration**.
 
 4. Change the **SQL connectivity level** to your required setting. You can optionally use this area to change the SQL Server port or the SQL authentication settings.
 

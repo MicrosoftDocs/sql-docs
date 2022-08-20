@@ -38,7 +38,7 @@ Azure SQL Database secures data by allowing you to:
 To learn more, see the [Azure SQL Database security overview](./security-overview.md) and [capabilities](security-overview.md) articles.
 
 > [!TIP]
-> The following Microsoft Learn module helps you learn for free about how to [Secure your database in Azure SQL Database](/learn/modules/secure-your-azure-sql-database/).
+> This free Learn module shows you how to [Secure your database in Azure SQL Database](/learn/modules/secure-your-azure-sql-database/).
 
 ## Prerequisites
 
@@ -229,7 +229,7 @@ To copy a secure connection string:
 
 ## Enable security features
 
-Azure SQL Database provides security features that are accessed using the Azure portal. These features are available for both the database and server, except for data masking, which is only available on the database. To learn more, see [Microsoft Defender for SQL](azure-defender-for-sql.md), [Auditing](/azure/azure-sql/database/auditing-overview), [Dynamic data masking](dynamic-data-masking-overview.md), and [Transparent data encryption](transparent-data-encryption-tde-overview.md).
+Azure SQL Database provides security features that are accessed using the Azure portal. These features are available for both the database and server, except for data masking, which is only available on the database. To learn more, see [Microsoft Defender for SQL](azure-defender-for-sql.md), [Auditing](./auditing-overview.md), [Dynamic data masking](dynamic-data-masking-overview.md), and [Transparent data encryption](transparent-data-encryption-tde-overview.md).
 
 ### Microsoft Defender for SQL
 
@@ -297,7 +297,7 @@ To enable auditing:
     ![Audit records](./media/secure-database-tutorial/audit-records.png)
 
 > [!IMPORTANT]
-> See [SQL Database auditing](/azure/azure-sql/database/auditing-overview) on how to further customize audit events using PowerShell or REST API.
+> See [SQL Database auditing](./auditing-overview.md) on how to further customize audit events using PowerShell or REST API.
 
 ### Dynamic data masking
 

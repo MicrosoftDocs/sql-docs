@@ -1,22 +1,18 @@
 ---
+title: "State Property (ADO MD)"
 description: "State Property (ADO MD)"
-title: "State Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "State"
-  - "Cellset::State"
-helpviewer_keywords: 
-  - "State property [ADO MD]"
-ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "State"
+  - "Cellset::State"
+helpviewer_keywords:
+  - "State property [ADO MD]"
+apitype: "COM"
 ---
 # State Property (ADO MD)
 Indicates the current state of the cellset.  

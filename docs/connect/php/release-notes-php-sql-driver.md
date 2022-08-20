@@ -2,7 +2,7 @@
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
 ms.custom: ""
-ms.date: 01/18/2022
+ms.date: 06/16/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -35,13 +35,25 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
 ## 5.10
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
-[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
-### Version information
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
+
+- Release number: 5.10.1
+- Released: June 14, 2022
+
+Fixed issues in 5.10.1:
+
+- Fixed User-Assigned Managed Identity (ActiveDirectoryMsi) Authentication when specifying UID
+- Removed block on ActiveDirectoryIntegrated authentication
+
+### Previous 5.10 releases
 
 - Release number: 5.10.0<sup>1</sup>
 - Released: January 31, 2022
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
 ### What's new in 5.10
 
@@ -63,7 +75,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.9
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### Version information
@@ -113,7 +125,7 @@ This release only applies to Linux and macOS.
 
 ## 5.8
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
 ### Version information
@@ -143,7 +155,7 @@ This release only applies to Linux and macOS.
 
 ## 5.6.1
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
 
 ### Version information
@@ -162,7 +174,7 @@ This release only applies to Linux and macOS.
 
 ## 5.6
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 
 ### Version information
@@ -189,7 +201,7 @@ This release only applies to Linux and macOS.
 
 ## 5.3
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 
 ### Version information
@@ -207,7 +219,7 @@ This release only applies to Linux and macOS.
 
 ## 5.2
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 
 ### Version information
@@ -232,7 +244,7 @@ This release only applies to Linux and macOS.
 
 ## 4.3
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
 ### Version information
@@ -254,7 +266,7 @@ This release only applies to Linux and macOS.
 
 ## 4.0
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### Version information
@@ -270,7 +282,7 @@ This release only applies to Linux and macOS.
 
 ## 3.2
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### Version information
@@ -286,7 +298,7 @@ This release only applies to Linux and macOS.
 
 ## 3.1
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143027)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143027)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### Version information
@@ -301,7 +313,7 @@ This release only applies to Linux and macOS.
 
 ## 3.0
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143026)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143026)  
 
 ### What's new in 3.0  
 

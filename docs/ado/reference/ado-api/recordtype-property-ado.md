@@ -1,23 +1,19 @@
 ---
+title: "RecordType Property (ADO)"
 description: "RecordType Property (ADO)"
-title: "RecordType Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Record::get_RecordType"
   - "_Record::RecordType"
   - "_Record::GetRecordType"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RecordType property [ADO]"
-ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # RecordType Property (ADO)
 Indicates the type of [Record](./record-object-ado.md) object.  

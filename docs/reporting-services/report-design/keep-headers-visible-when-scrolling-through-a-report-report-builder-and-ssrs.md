@@ -42,7 +42,7 @@ ms.author: maggies
   
 2.  On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To keep a static tablix member (row or column) visible while scrolling  
   

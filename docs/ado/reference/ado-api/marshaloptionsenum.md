@@ -1,21 +1,17 @@
 ---
+title: "MarshalOptionsEnum"
 description: "MarshalOptionsEnum"
-title: "MarshalOptionsEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "MarshalOptionsEnum"
-helpviewer_keywords: 
-  - "MarshalOptionsEnum enumeration [ADO]"
-ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "MarshalOptionsEnum"
+helpviewer_keywords:
+  - "MarshalOptionsEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # MarshalOptionsEnum
 Specifies which records should be returned to the server.  

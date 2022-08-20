@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_pdw_resource_waits (Transact-SQL)"
 description: sys.dm_pdw_resource_waits (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/26/2019"
 ms.prod: sql
 ms.technology: data-warehouse

@@ -6,5 +6,5 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 
-**APPLIES TO:** :::image type="icon" source="../media/applies-to/yes.png" border="false":::Azure SQL Database :::image type="icon" source="../media/applies-to/yes.png" border="false":::Azure Synapse Analytics (dedicated SQL pool (formerly SQL DW) only)
+[!INCLUDE [applies-md](applies-md.md)] :::image type="icon" source="../media/applies-to/yes-icon.svg" border="false"::: Azure SQL Database :::image type="icon" source="../media/applies-to/yes-icon.svg" border="false"::: Azure Synapse Analytics (dedicated SQL pool (formerly SQL DW) only)
 

@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/02/2022
+ms.date: 08/12/2022
 ---
 # Link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -20,6 +20,8 @@ The new link feature in Azure SQL Managed Instance connects your SQL Servers h
 
 After a disastrous event, you can continue running your read-only workloads on SQL Managed Instance in Azure. You can also choose to migrate one or more applications from SQL Server to SQL Managed Instance at the same time, at your own pace, and with the best possible minimum downtime compared to other solutions in Azure today.
 
+If you have product improvement suggestions, comments, or you want to report issues, the best way to contact our team is through [SQL Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
+
 ## Requirements
 
 To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.
@@ -27,7 +29,7 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |  Windows Server | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 In addition to the supported version, you'll need:
@@ -39,7 +41,7 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.11.1](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2019 and 2022. <BR>SQL Server 2016 is not supported in the current version of SSMS. |
+| [SSMS 18.12](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2016, 2019 and 2022. |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
@@ -96,11 +98,11 @@ There could exist up to 100 links from the same, or various SQL Server sources t
 
 ## Use the link feature
 
-To help you set up initial environment, we have prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
+To help you set up initial environment, we've prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
 
 - [Prepare environment for the link](managed-instance-link-preparation.md)
 
-Once you have ensured the pre-requirements have been met, you can create the link using the automated wizard in SSMS, or you can choose to set up the link manually using scripts. Create the link using one of the following instructions:
+Once you've ensured the pre-requirements have been met, you can create the link using the automated wizard in SSMS, or you can choose to set up the link manually using scripts. Create the link using one of the following instructions:
 
 * [Replicate database with link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md), or alternatively
 * [Replicate database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
@@ -109,7 +111,7 @@ Once the link has been created, ensure that you follow the best practices for ma
 
 * [Best practices with link feature for Azure SQL Managed Instance](managed-instance-link-best-practices.md)
 
-If and when you are ready to migrate a database to Azure with a minimum downtime, you can do this using an automated wizard in SSMS, or you can choose to do this manually with scripts. Migrate database to Azure link using one of the following instructions:
+If and when you're ready to migrate a database to Azure with a minimum downtime, you can do this using an automated wizard in SSMS, or you can choose to do this manually with scripts. Migrate database to Azure link using one of the following instructions:
 
 * [Failover database with link feature in SSMS](managed-instance-link-use-ssms-to-failover-database.md), or alternatively
 * [Failover (migrate) database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-failover-database.md)
@@ -129,10 +131,12 @@ Managed Instance link has a set of general limitations, and those are listed in 
   - File tables and file streams aren't supported for replication, as SQL Managed Instance doesn't support this.
   - Replicating Databases using Hekaton (In-Memory OLTP) isn't supported on SQL Managed Instance General Purpose service tier. Hekaton is only supported on SQL Managed Instance Business Critical service tier.
   - For the full list of differences between SQL Server and SQL Managed Instance, see [this article](./transact-sql-tsql-differences-sql-server.md).
-- If Change data capture (CDC), log shipping, or service broker is used with databases replicated on the SQL Server, the database is migrated to SQL Managed Instance, during fail over to Azure, clients will need to connect using the instance name of the current global primary replica. These settings should be manually reconfigured. 
+- If Change data capture (CDC), log shipping, or service broker is used with databases replicated on the SQL Server, the database is migrated to SQL Managed Instance, during failover to Azure, clients will need to connect using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 - If transactional replication is used with a database on SQL Server in the case of a migration scenario, during failover to Azure, transactional replication on SQL Managed Instance will fail and should be manually reconfigured. 
 - In case distributed transactions are used with database replicated from the SQL Server, and in case of migration scenario, on the cutover to the cloud, the DTC capabilities won't be transferred. There will be no possibility for migrated database to get involved in distributed transactions with SQL Server, as SQL Managed Instance doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other SQL Managed Instances, see [this article](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 - Managed Instance link can replicate database of any size if it fits into chosen storage size of target SQL Managed Instance.
+- Client Windows OS 10 and 11 cannot be used to host your SQL Server, as it will not be possible to enable Always On required for the link. SQL Server must be hosted on Windows Server 2012 or higher.
+- SQL Server 2008, 2012 and 2014 cannot be supported for the link feature, as SQL engines of these releases do not have built-in support for Distributed Availability Groups, required for the link. Upgrade to a newer version of SQL Server is required to be able to use the link.
 
 ### Preview limitations
 

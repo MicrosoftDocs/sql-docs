@@ -6,11 +6,10 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/21/2021
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 ---
 
 # How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

@@ -1,21 +1,17 @@
 ---
+title: "Key Object (ADOX)"
 description: "Key Object (ADOX)"
-title: "Key Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Key"
-helpviewer_keywords: 
-  - "Key object [ADOX]"
-ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Key"
+helpviewer_keywords:
+  - "Key object [ADOX]"
+apitype: "COM"
 ---
 # Key Object (ADOX)
 Represents a primary, foreign, or unique key field from a database table.  

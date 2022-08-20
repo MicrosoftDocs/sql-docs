@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 ---
 # DENY Full-Text Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a full-text catalog and full-text stoplists.  
   

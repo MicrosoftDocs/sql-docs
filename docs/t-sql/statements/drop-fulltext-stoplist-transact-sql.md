@@ -22,7 +22,7 @@ dev_langs:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Drops a full-text stoplist from the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

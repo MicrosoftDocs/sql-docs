@@ -19,7 +19,7 @@ This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in e
 
 ## SSMA v9.0
 
-The v8.9.0 release of SSMA for Oracle contains the following changes:
+The v9.0 release of SSMA for Oracle contains the following changes:
 
 * Add support for VARRAY and TABLE  user defined types at schema level
 * Add support for conversion for arguments, parameter and local declaration for user defined types

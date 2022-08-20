@@ -1,20 +1,16 @@
 ---
+title: "Clustered Property Example (VC++)"
 description: "Clustered Property Example (VC++)"
-title: "Clustered Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Clustered property [ADOX], VC++ example"
-ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Clustered property [ADOX], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Clustered Property Example (VC++)
 This example demonstrates the [Clustered](./clustered-property-adox.md) property of an [Index](./index-object-adox.md). Note that Microsoft Jet databases do not support clustered indexes, so this example will return **False** for the **Clustered** property of all indexes in the *Northwind* database.  

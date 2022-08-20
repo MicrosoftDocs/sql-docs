@@ -1,25 +1,21 @@
 ---
+title: "RowPosition Property (ADO)"
 description: "RowPosition Property (ADO)"
-title: "RowPosition Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ADORecordConstruction::put_RowPosition"
   - "ADORecordConstruction::PutRowPosition"
   - "ADORecordConstruction::GetRowPosition"
   - "ADORecordConstruction::RowPosition"
   - "ADORecordConstruction::get_RowPosition"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RowPosition property [ADO]"
-ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # RowPosition Property (ADO)
 Gets or sets an OLE DB **RowPosition** object from/on an **ADORecordsetConstruction** object. When you use **put_RowPosition** to set the **RowPosition** object, the resulting **Recordset** object uses the **RowPosition** object to determine the current row.  

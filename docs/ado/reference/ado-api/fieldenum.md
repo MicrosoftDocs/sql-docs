@@ -1,21 +1,17 @@
 ---
+title: "FieldEnum"
 description: "FieldEnum"
-title: "FieldEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "FieldEnum"
-helpviewer_keywords: 
-  - "FieldEnum enumeration [ADO]"
-ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "FieldEnum"
+helpviewer_keywords:
+  - "FieldEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # FieldEnum
 Specifies the special fields referenced in a [Record](./record-object-ado.md) object's [Fields](./fields-collection-ado.md) collection.  

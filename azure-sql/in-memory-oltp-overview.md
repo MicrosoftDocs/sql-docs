@@ -43,7 +43,7 @@ Both columnstore indexes and In-Memory OLTP have been part of the SQL Server pro
 
 Because of the more efficient query and transaction processing, in-memory technologies also help you to reduce cost. You typically don't need to upgrade the pricing tier of the database to achieve performance gains. In some cases, you might even be able reduce the pricing tier, while still seeing performance improvements with in-memory technologies.
 
-By using In-Memory OLTP, [Quorum Business Solutions was able to double their workload while improving DTUs by 70%](https://resources.quorumsoftware.com/case-studies/quorum-doubles-key-database-s-workload-while-lowering-dtu). For more information, see the blog post: [In-Memory OLTP](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+By using In-Memory OLTP, Quorum Business Solutions was able to double their workload while improving DTUs by 70%. For more information, see the blog post: [In-Memory OLTP](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
 
 > [!NOTE]  
 > In-memory technologies are available in the Premium and Business Critical tiers.

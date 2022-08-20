@@ -187,7 +187,7 @@ For more information on Sch-S and Sch-M locks, see [Transaction locking and row 
 ## Best Practices  
 Consider the following information when you plan to shrink a database:
 -   A shrink operation is most effective after an operation that creates unused space, such as a truncate table or a drop table operation.
-- Most databases require some free space to be available for regular day-to-day operations. If you shrink a database file repeatedly and notice that the database size grows again, this indicates that the free space is required for regular operations. In these cases, repeatedly shrinking the database file is a wasted operation. Autogrow events necessary to grow the database file a hinder performance.
+- Most databases require some free space to be available for regular day-to-day operations. If you shrink a database file repeatedly and notice that the database size grows again, this indicates that the free space is required for regular operations. In these cases, repeatedly shrinking the database file is a wasted operation. Autogrow events necessary to grow the database file hinder performance.
 -   A shrink operation doesn't preserve the fragmentation state of indexes in the database, and generally increases fragmentation to a degree. This result is another reason not to repeatedly shrink the database.  
 -   Unless you have a specific requirement, don't set the AUTO_SHRINK database option to ON.  
   

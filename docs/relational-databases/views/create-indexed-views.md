@@ -109,27 +109,56 @@ The following requirements must also be met, in addition to the SET options and 
 
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
-   | Transact-SQL elements | (continued) | (continued) |
-   | --------------------- | ----------- | ----------- |
-   |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
-   |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
-   |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
-   |**float**<sup>1</sup>, **text**, **ntext**, **image**, **XML**, or **filestream** columns|Subquery|`OVER` clause, which includes ranking or aggregate window functions|
-   |Full-text predicates (`CONTAINS`, `FREETEXT`)|`SUM` function that references a nullable expression|`ORDER BY`|
-   |CLR user-defined aggregate function|`TOP`|`CUBE`, `ROLLUP`, or `GROUPING SETS` operators|
-   |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
-   |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
-   |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|`STRING_AGG`||
+   | Transact-SQL function                                                         | Possible alternatives                                           |
+   |-------------------------------------------------------------------------------|-----------------------------------------------------------------|
+   | `COUNT`                                                                       | Use `COUNT_BIG`                                                 |
+   | ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML`) |                                                                 |
+   | Arithmetic mean `AVG`                                                         | Use `COUNT_BIG` and `SUM` as separate columns                   |
+   | Statistical aggregate functions (`STDEV`, `STDEVP`, `VAR`, and `VARP`)        |                                                                 |
+   | `SUM` function that references a nullable expression                          | Use `ISNULL` inside `SUM()` to make the expression non-nullable |
+   | Other aggregate functions (`MIN`, `MAX`, `CHECKSUM_AGG`, and `STRING_AGG`)    |                                                                 |
+   | User-defined aggregate functions (SQL CLR)                                    |                                                                 |
 
-   <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
-   > [!IMPORTANT]
-   > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
+   | `SELECT` clause  | Transact-SQL element                                                 | Possible alternative                       |
+   |------------------|----------------------------------------------------------------------|--------------------------------------------|
+   | `WITH cte AS`    | Common table expressions (CTE) `WITH`                                |                                            |
+   | `SELECT`         | Subqueries                                                           |                                            |
+   | `SELECT`         | `SELECT [<table>.]*`                                                 | Explicitly name columns                    |
+   | `SELECT`         | `SELECT DISTINCT`                                                    | Use `GROUP BY`                             |
+   | `SELECT`         | `SELECT TOP`                                                         |                                            |
+   | `SELECT`         | `OVER` clause, which includes ranking or aggregate window functions  |                                            |
+   | `FROM`           | `LEFT OUTER JOIN`                                                    |                                            |
+   | `FROM`           | `RIGHT OUTER JOIN`                                                   |                                            |
+   | `FROM`           | `FULL OUTER JOIN`                                                    |                                            |
+   | `FROM`           | `OUTER APPLY`                                                        |                                            |
+   | `FROM`           | `CROSS APPLY`                                                        |                                            |
+   | `FROM`           | Derived table expressions (i.e. using `SELECT` in the `FROM` clause) |                                            |
+   | `FROM`           | Self-joins                                                           |                                            |
+   | `FROM`           | Table variables                                                      |                                            |
+   | `FROM`           | Inline table-valued function                                         |                                            |
+   | `FROM`           | Multi-statement table-valued function                                |                                            |
+   | `FROM`           | `PIVOT`, `UNPIVOT`                                                   |                                            |
+   | `FROM`           | `TABLESAMPLE`                                                        |                                            |
+   | `FROM`           | `FOR SYSTEM_TIME`                                                    | Query the temporal history table directly  |
+   | `WHERE`          | Full-text predicates (`CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`) |                                 |
+   | `GROUP BY`       | `CUBE`, `ROLLUP`, or `GROUPING SETS` operators                       | Define separate indexed views for each combination of `GROUP BY` columns |
+   | `GROUP BY`       | `HAVING`                                                             |                                            |
+   | Set operators    | `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT`                          | Use `OR`, `AND NOT`, and `AND` in the `WHERE` clause respectively|
+   | `ORDER BY`       | `ORDER BY`                                                           |                                            |
+   | `ORDER BY`       | `OFFSET`                                                             |                                            |
+
+   | Source column type                                               |  Possible alternative                                                                  |
+   |------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+   | Deprecated large value column types `text`, `ntext`, and `image` | Migrate columns to `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` respectively. |
+   | `xml`, or `filestream` columns                                   |                                                                                        |
+   | `float` columns in index key                                     |                                                                                        |
+   | Sparse column sets                                               |                                                                                        |
+
 
 ## Datetime/smalldatetime recommendations
 
-When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
+When you refer to `datetime` and `smalldatetime` string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
 
 <a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 

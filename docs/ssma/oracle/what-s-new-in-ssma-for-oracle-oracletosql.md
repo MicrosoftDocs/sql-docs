@@ -22,6 +22,7 @@ The v9.1 release of SSMA for Oracle contains the following changes:
 
 * Support for at scale data migration from Oracle to SQL with integration of Azure Data factory
 * Add support for exclusion of system generated invisble column for conversion and data migration 
+* Improve get help experience
 
 ## SSMA v9.0
 

@@ -127,7 +127,7 @@ The following screenshot demonstrates all three steps:
 
 ## Lock pages in memory (LPIM)
 
-This Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
+Windows-based applications can use Windows AWE (Address Windowing Extensions) APIs to allocate and to map physical memory into the process address space. The LPIM Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  Memory that is allocated by using this method is locked down until the application explicitly frees it or exits.  The use of AWE APIs for memory management in 64-bit SQL Server is also frequently referred as "locked pages". Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
 
 To disable the **Lock pages in memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the *Lock pages in memory* user right for the account with privileges to run `sqlservr.exe` (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup account) startup account.
 
@@ -163,6 +163,23 @@ The following values of `sql_memory_model_desc` indicate the status of LPIM:
 - `CONVENTIONAL`. Lock pages in memory privilege isn't granted.
 - `LOCK_PAGES`. Lock pages in memory privilege is granted.
 - `LARGE_PAGES`. Lock pages in memory privilege is granted in Enterprise mode with Trace Flag 834 enabled. This is an advanced configuration and not recommended for most environments. For more information and important caveats, see [Trace Flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf834).
+
+Use the following methods to determine whether the SQL Server instance is using "locked pages": 
+
+- The output of the following TSQL query will indicate nonzero values for locked_page_allocations_kb: 
+
+```
+select osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
+from sys.dm_os_memory_nodes omn 
+inner join sys.dm_os_nodes osn on (omn.memory_node_id = osn.memory_node_id) 
+where osn.node_state_desc <> 'ONLINE DAC' 
+```
+
+- The current SQL Server error log will report the following message during server startup: 
+
+Using locked pages in the memory manager 
+
+- The "Memory Manager" section of the DBCC MEMORYSTATUS output will show a nonzero value for the "AWE Allocated" item.
 
 ## Multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

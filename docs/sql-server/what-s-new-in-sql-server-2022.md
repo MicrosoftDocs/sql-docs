@@ -10,7 +10,7 @@ ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/22/2022
+ms.date: 08/23/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -49,7 +49,7 @@ After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit 
 
 This is release candidate (RC) 0.
 
-SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
   - Data virtualization 

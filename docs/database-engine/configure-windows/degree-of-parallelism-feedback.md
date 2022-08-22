@@ -92,7 +92,7 @@ The following XEs are available for the feature:
 
 ## Next steps
 
-- [Configure the max degree of parallelism Server Configuration Option](../../../azure-sql/database/configure-max-degree-of-parallelism.md)
+- [Configure the max degree of parallelism Server Configuration Option](configure-the-max-degree-of-parallelism-server-configuration-option.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)

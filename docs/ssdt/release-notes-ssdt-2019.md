@@ -61,11 +61,11 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
 Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 
-   1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
-      ```
-      rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
-      rm %idepath%\IDE\PublicAssemblies\SSIS\* 
-      rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
+   1. ```
+      cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
+      rm CommonExtensions\Microsoft\SSIS\* 
+      rm PublicAssemblies\SSIS\* 
+      rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
       ```
    2. Repair the vs2019 
    3. Restart and start ssdt setup install again

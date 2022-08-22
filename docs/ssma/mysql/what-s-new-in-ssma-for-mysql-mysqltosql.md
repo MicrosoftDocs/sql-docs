@@ -24,6 +24,7 @@ The v9.1 release of SSMA for MySQL contains the following changes:
 ## SSMA v9.0
 
 The v9.0 release of SSMA for Mysql contains minor performance improvements, bug fixes and online help viewer support.
+
 ## SSMA v8.24
 
 The v8.24 release of SSMA for MySQL contains the following changes:

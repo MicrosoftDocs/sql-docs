@@ -15,6 +15,10 @@ ms.author: cpichuka
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+## SSMA v9.1
+
+The v9.1 release of SSMA for MySQL contains the following changes:
+ * Add support for at scale migration from Mysql to Azure SQL
 
 ## SSMA v9.0
 

@@ -63,7 +63,7 @@ By using [Address Windowing Extensions](/windows/win32/memory/address-windowing-
 
 If the lock-pages-in-memory privilege (LPIM) is granted (on 32-bit or 64-bit systems), we strongly recommend that you set max server memory to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB). For more information, see [Server Memory Server Configuration: Set options manually](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) and [Locked Pages in Memory (LPIM)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
-If the Locked pages in memory privilege is not enabled, SQL Server will switch to using conventional memory and in cases of OS memory exhaustion, error [17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error) may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+If the Locked pages in memory privilege is not enabled, SQL Server will switch to using conventional memory and in cases of OS memory exhaustion, error [17890](errors-events/mssqlserver-17890-database-engine-error.md) may be reported in the error log. The error resembles the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

@@ -50,7 +50,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
     :::image type="content" source="media/hyperscale-database-create-quickstart/create-database-select-hyperscale-service-tier.png" alt-text="Screenshot of the service and compute tier configuration page for a new database in Azure SQL Database. The Hyperscale service tier has been selected." lightbox="media/hyperscale-database-create-quickstart/create-database-select-hyperscale-service-tier.png":::
 
-1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Gen5** configuration.
+1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Standard-series (Gen5)** configuration.
 1. Select **OK** to confirm the hardware generation.
 1. Under **Save money**, review if you qualify to use Azure Hybrid Benefit for this database. If so, select **Yes** and then confirm you have the required license.
 1. Optionally, adjust the **vCores** slider if you would like to increase the number of vCores for your database. For this example, we will select 2 vCores.

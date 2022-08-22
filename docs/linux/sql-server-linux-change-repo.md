@@ -1,10 +1,10 @@
 ---
-title: Configure Linux repositories for SQL Server 2017 and 2019
-description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
+title: Configure repositories for installing and upgrading SQL Server on Linux
+description: Check and configure source repositories for SQL Server on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 07/18/2022
+ms.reviewer:
+ms.date: 08/22/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -15,33 +15,33 @@ zone_pivot_groups: ld2-linux-distribution
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ::: zone pivot="ld2-rhel"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **Red Hat (RHEL)**.
+This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Red Hat (RHEL)**.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **SUSE (SLES)**.
+This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **SUSE (SLES)**.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.
+This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.
 ::: zone-end
 
-> [!TIP]
-> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
+> [!TIP]  
+> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] is now available! To try it, use this article to configure the new `mssql-server-preview` repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositories
 
-When you install SQL Server on Linux, you must configure a Microsoft repository. This repository is used to acquire the database engine package, **mssql-server**, and related SQL Server packages. There are currently five main repositories:
+When you install SQL Server on Linux, you must configure a Microsoft repository. This repository is used to acquire the database engine package, **mssql-server**, and related SQL Server packages. There are currently three main repositories:
 
 | Repository | Name | Description |
 |---|---|---|
-| **2022 Preview** | **mssql-server-preview** | SQL Server 2022 Preview repository. |
-| **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) repository. |
-| **2017** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
+| **Preview** | `mssql-server-preview` | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] repository. |
+| **2019** | `mssql-server-2019` | [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Cumulative Update (CU) repository. |
+| **2017** | `mssql-server-2017` | [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Cumulative Update (CU) repository. |
 
-The Cumulative Update (CU) repository contains packages for the base SQL Server release, and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2019. They are released on a regular cadence. GDR updates are released in the same CU repository.
+The Cumulative Update (CU) repository contains packages for the base SQL Server release, and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. They are released on a regular cadence. GDR updates are released in the same CU repository.
 
-Each release contains the full SQL Server package and all previous updates for that repository. You can also [downgrade](sql-server-linux-setup.md#rollback) to any release within your major version (for example, 2017).
+Each release contains the full SQL Server package and all previous updates for that repository. You can also [downgrade](sql-server-linux-setup.md#rollback) to any release within your major version (for example, 2019).
 
 ## Configure repositories
 
@@ -63,21 +63,21 @@ Use the steps in the following sections to configure repositories on Ubuntu.
 ::: zone pivot="ld2-rhel"
 First verify whether you have already registered a SQL Server repository.
 
-1. View the files in the **/etc/yum.repos.d** directory with the following command:
+1. View the files in the `/etc/yum.repos.d` directory with the following command:
 
    ```bash
    sudo ls /etc/yum.repos.d
    ```
 
-2. Look for a file that configures the SQL Server directory, such as **mssql-server.repo**.
+1. Look for a file that configures the SQL Server directory, such as `mssql-server.repo`.
 
-3. Print out the contents of the file.
+1. Display the contents of the file using `cat`.
 
    ```bash
    sudo cat /etc/yum.repos.d/mssql-server.repo
    ```
 
-4. The **name** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
+1. The **name** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
 ::: zone-end
 
@@ -85,13 +85,13 @@ First verify whether you have already registered a SQL Server repository.
 ::: zone pivot="ld2-sles"
 First verify whether you have already registered a SQL Server repository.
 
-1. Use **zypper info** to get information about any previously configured repository.
+1. Use `zypper info` to get information about any previously configured repository.
 
    ```bash
    sudo zypper info mssql-server
    ```
 
-2. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
+1. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
 ::: zone-end
 
@@ -99,13 +99,13 @@ First verify whether you have already registered a SQL Server repository.
 ::: zone pivot="ld2-ubuntu"
 First verify whether you have already registered a SQL Server repository.
 
-1. View the contents of the **/etc/apt/sources.list** file.
+1. View the contents of the `/etc/apt/sources.list` file.
 
    ```bash
    sudo cat /etc/apt/sources.list
    ```
 
-2. Examine the package URL for mssql-server. You can identify it with the table in the [Repositories](#repositories) section of this article.
+1. Examine the package URL for mssql-server. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
 ::: zone-end
 
@@ -119,7 +119,7 @@ If necessary, remove the old repository with the following command.
 sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
-This command assumes that the file identified in the previous section was named **mssql-server.repo**.
+This command assumes that the file identified in the previous section was named `mssql-server.repo`.
 
 ::: zone-end
 
@@ -129,7 +129,7 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 |---|---|
-| **2022 Preview** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **Preview** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
 | **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
 | **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 
@@ -139,15 +139,15 @@ If necessary, remove the old repository. Use one of the following commands based
 ::: zone pivot="ld2-ubuntu"
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
-> [!NOTE]
+> [!NOTE]  
 >
-> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
-> - Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported.
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported.
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU3 and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, Ubuntu 18.04 is supported.
 > - If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
 
 | Repository | Command to remove |
 |---|---|
-| **2022 Preview** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-preview focal main'` |
+| **Preview** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-preview focal main'` |
 | **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019 focal main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017 bionic main'` |
 
@@ -159,10 +159,10 @@ If necessary, remove the old repository. Use one of the following commands based
 ::: zone pivot="ld2-rhel"
 Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
 
-> [!NOTE]
-> The following commands for SQL Server 2019 points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+> [!NOTE]  
+> The following commands for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
-> Starting with SQL Server 2017 CU20, RHEL 8 is supported.
+> Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, RHEL 8 is supported.
 >
 > If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.7, you will need to use the path `/rhel/7` to configure your repository.
 
@@ -190,10 +190,10 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 ::: zone pivot="ld2-ubuntu"
 Configure the new repository to use for SQL Server installations and upgrades.
 
-> [!NOTE]
+> [!NOTE]  
 >
-> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported
-> - Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported.
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported
+> - Starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU3 and [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU20, Ubuntu 18.04 is supported.
 > - The following commands points to the Ubuntu 18.04 repository. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
@@ -202,7 +202,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
    sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Use one of the following commands to configure the repository of your choice.
+1. Use one of the following commands to configure the repository of your choice.
 
    | Repository | Version | Command |
    |---|---|---|
@@ -210,7 +210,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
 
-3. Run **apt-get update**.
+1. Run `apt-get update`.
 
    ```bash
    sudo apt-get update
@@ -223,17 +223,17 @@ Configure the new repository to use for SQL Server installations and upgrades.
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 
 ::: zone pivot="ld2-rhel"
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > At this point, if you choose to use the [RHEL quickstart](quickstart-install-connect-red-hat.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > At this point, if you choose to use the [SLES quickstart](quickstart-install-connect-suse.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > At this point, if you choose to use the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials.
 ::: zone-end
 

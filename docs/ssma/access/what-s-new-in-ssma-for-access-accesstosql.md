@@ -17,7 +17,8 @@ This article lists SQL Server Migration Assistant (SSMA) for Access changes in e
 
 ## SSMA v9.1
 
-The v9.1 release of SSMA for Access contains minor performance improvements and bug fixes.
+The v9.1 release of SSMA for Access contains minor performance improvements,bug fixes and enhanced get help experience
+.
 
 ## SSMA v9.0
 

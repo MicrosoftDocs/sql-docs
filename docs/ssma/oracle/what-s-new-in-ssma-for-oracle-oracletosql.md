@@ -16,6 +16,12 @@ ms.author: cpichuka
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v9.1
+
+The v9.1 release of SSMA for Oracle contains the following changes:
+
+* Support for at scale data migration from Oracle to SQL with integration of Azure Data factory
+* Add support for exclusion of system generated invisble column for conversion and data migration 
 
 ## SSMA v9.0
 

@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/02/2022
+ms.date: 08/23/2022
 monikerRange: ">=sql-server-ver15"
 ---
 

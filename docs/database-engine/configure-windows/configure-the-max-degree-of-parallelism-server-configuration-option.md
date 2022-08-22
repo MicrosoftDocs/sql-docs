@@ -39,20 +39,20 @@ This topic describes how to configure the `max degree of parallelism` (MAXDOP) s
 
 - This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.
 
-- If the affinity mask option is not set to the default, it may restrict the number of processors available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems.
+- If the affinity mask option isn't set to the default, it may restrict the number of processors available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems.
   
-- Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this is not the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#recommendations) section in this page.
+- Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this isn't the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#recommendations) section in this page.
 
 - To suppress parallel plan generation, set `max degree of parallelism` to `1`. Set the value to a number from 1 to 32,767 to specify the maximum number of processor cores that can be used during a single query execution. If a value greater than the number of available processors is specified, the actual number of available processors is used. If the computer has only one processor, the `max degree of parallelism` value is ignored.
 
-- The max degree of parallelism limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker and one scheduler. For more information, see the *Scheduling parallel tasks* section in the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+- The max degree of parallelism limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker and one scheduler. For more information, see the *Scheduling parallel tasks* section in the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
   
 - You can override the max degree of parallelism server configuration value:
     - At the query level, using the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md) or [Query Store hint](../../relational-databases/performance/query-store-hints.md).
     - At the database level, using the **MAXDOP** [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
     - At the workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../../t-sql/statements/create-workload-group-transact-sql.md).
 
-- Index operations that create or rebuild an index, or that drop a clustered index, can be resource intensive. You can override the max degree of parallelism value for index operations by specifying the MAXDOP index option in the index statement. The MAXDOP value is applied to the statement at execution time and is not stored in the index metadata. For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
+- Index operations that create or rebuild an index, or that drop a clustered index, can be resource intensive. You can override the max degree of parallelism value for index operations by specifying the MAXDOP index option in the index statement. The MAXDOP value is applied to the statement at execution time and isn't stored in the index metadata. For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
   
 - In addition to queries and index operations, this option also controls the parallelism of DBCC CHECKTABLE, DBCC CHECKDB, and DBCC CHECKFILEGROUP. You can disable parallel execution plans for these statements by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -68,8 +68,8 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the foll
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
-|Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
+|Server with single NUMA node|Less than or equal to eight logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Greater than eight logical processors|Keep MAXDOP at 8|
 |Server with multiple NUMA nodes|Less than or equal to 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 16 logical processors per NUMA node|Keep MAXDOP at half the number of logical processors per NUMA node with a MAX value of 16|
   
@@ -81,10 +81,10 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
-|Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
-|Server with multiple NUMA nodes|Less than or equal to 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
-|Server with multiple NUMA nodes|Greater than 8 logical processors per NUMA node|Keep MAXDOP at 8|
+|Server with single NUMA node|Less than or equal to eight logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Greater than eight logical processors|Keep MAXDOP at 8|
+|Server with multiple NUMA nodes|Less than or equal to eight logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with multiple NUMA nodes|Greater than eight logical processors per NUMA node|Keep MAXDOP at 8|
   
 ###  <a name="Security"></a> Security  
   

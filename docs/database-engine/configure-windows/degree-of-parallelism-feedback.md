@@ -33,9 +33,9 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with SQL Server 2022) or higher.
 
-- Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. The DOP feedback does not recompile plans.
+- Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. The DOP feedback doesn't recompile plans.
 
-- Stable feedback is re-verified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
+- Stable feedback is reverified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 
 - To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` database scoped configuration.
 
@@ -47,7 +47,10 @@ DOP Feedback will identify parallelism inefficiencies for repeating queries, bas
 
 To assess query eligibility, the adjusted query elapsed time is measured over a few executions. The total elapsed time for each query is adjusted by ignoring Buffer Latch, Buffer IO, and Network IO waits which are external to the parallel query execution. The goal of the DOP Feedback feature is to increase overall concurrency and reduce waits significantly, even if it slightly increases query elapsed time.
 
-Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. Note that DOP Feedback doesn't recompile plans.
+Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression.
+
+> [!Note]
+> DOP Feedback doesn't recompile plans.
 
 ### DOP feedback considerations
 

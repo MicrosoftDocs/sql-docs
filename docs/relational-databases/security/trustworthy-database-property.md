@@ -12,9 +12,10 @@ helpviewer_keywords:
   - "TRUSTWORTHY database property"
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
-ms.author: vanto
+ms.author: v-jayaramanp
 ---
-# TRUSTWORTHY Database Property
+
+# TRUSTWORTHY database property
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is `OFF`, but can be set to `ON` by using the `ALTER DATABASE` statement. For example, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
@@ -61,9 +62,9 @@ INNER JOIN sys.server_principals p ON
 
 p.principal_id = m.member_principal_id 
 
-inner join sys.databases d on suser_sname(d.owner_sid) = p.name 
+inner join sys.databases d ON suser_sname(d.owner_sid) = p.name 
 
-WHERE is_trustworthy_on = 1 AND d.name NOT IN ('MSDB') and r.type = 'R' and r.name = N'sysadmin' 
+WHERE is_trustworthy_on = 1 AND d.name NOT IN ('MSDB') AND r.type = 'R' AND r.name = N'sysadmin' 
 ```
 
 You can run the following query to determine the `TRUSTWORTHY` property of the `MSDB` database:
@@ -82,11 +83,11 @@ If this query shows that the `TRUSTWORTHY` property is set to `OFF`, you can run
 ```sql
 ALTER DATABASE MSDB SET trustworthy ON 
 
-go 
+GO 
 ```
   
 ## Related content
 
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ - [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
+ - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)

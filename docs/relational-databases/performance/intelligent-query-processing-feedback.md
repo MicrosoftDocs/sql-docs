@@ -47,9 +47,9 @@ With memory grant feedback enabled, for the second execution, duration is **1 se
 
 ### Memory grant feedback sizing
 
-For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan. Plans with memory grants under 1 MB will not be recalculated for overages.
+For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan. Plans with memory grants under 1 MB won't be recalculated for overages.
 
-For an insufficiently-sized memory grant condition that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the `spilling_report_to_memory_grant_feedback` extended event. This event returns the node ID from the plan and spilled data size of that node.
+For an insufficiently sized memory grant condition that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the `spilling_report_to_memory_grant_feedback` extended event. This event returns the node ID from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
 
@@ -57,13 +57,13 @@ Different parameter values may also require different query plans in order to re
 
 For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The memory grant feedback feature is disabled after several repeated runs of the query and this can be observed by monitoring the `memory_grant_feedback_loop_disabled` extended event. This condition is mitigated with the [persistence and percentile mode for memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. The persistence feature of memory grant feedback requires the Query Store to be enabled in the database and set to "read write" mode.
 
-For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity).
+For more information about parameter sniffing and parameter sensitivity, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity).
 
 ### Memory grant feedback caching
 
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], changes were not captured in the Query Store.
+Feedback can be stored in the cached plan for a single execution. It's the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], changes weren't captured in the Query Store.
 
-Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced, and it is not stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the second and later consecutive executions can benefit from memory grant feedback.
+Feedback isn't persisted if the plan is evicted from cache. Feedback will also be lost if there's a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and doesn't cache it. Since it isn't cached, no memory grant feedback is produced, and it isn't stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the second and later consecutive executions can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
 
@@ -75,7 +75,7 @@ The actual memory granted honors the query memory limit determined by the resour
 
 ### Disabling batch mode memory grant feedback without changing the compatibility level
 
-Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the SQL statements below within the context of the applicable database:
 
 ```sql
 -- SQL Server 2017
@@ -87,7 +87,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 
 When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
-To re-enable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+To re-enable batch mode memory grant feedback for all query executions originating from the database, execute the SQL statements within the context of the applicable database:
 
 ```sql
 -- SQL Server 2017
@@ -113,9 +113,9 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.  
 
-To enable row mode memory grant feedback in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], enable database compatibility level 150 or higher for the database you are connected to when executing the query.
+To enable row mode memory grant feedback in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], enable database compatibility level 150 or higher for the database you're connected to when executing the query.
 
-Memory grant feedback does not require the Query Store, however, the persistence improvements introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
+Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
 
 Row mode memory grant feedback activity will be visible via the `memory_grant_updated_by_feedback` extended event.
 
@@ -128,15 +128,15 @@ Values surfaced in this attribute are as follows:
 
 | `IsMemoryGrantFeedbackAdjusted` Value | Description |
 |---|---|
-| No: First Execution | Memory grant feedback does not adjust memory for the first compile and associated execution.  |
-| No: Accurate Grant | If there is no spill to disk and the statement uses at least 50% of the granted memory, then memory grant feedback is not triggered. |
+| No: First Execution | Memory grant feedback doesn't adjust memory for the first compile and associated execution.  |
+| No: Accurate Grant | If there's no spill to disk and the statement uses at least 50% of the granted memory, then memory grant feedback isn't triggered. |
 | No: Feedback disabled | If memory grant feedback is continually triggered and fluctuates between memory-increase and memory-decrease operations, the database engine will disable memory grant feedback for the statement. |
 | Yes: Adjusting | Memory grant feedback has been applied and may be further adjusted for the next execution. |
 | Yes: Stable | Memory grant feedback has been applied and granted memory is now stable, meaning that what was last granted for the previous execution is what was granted for the current execution. |
 
 ### Disabling row mode memory grant feedback without changing the compatibility level
 
-Row mode memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable row mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+Row mode memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable row mode memory grant feedback for all query executions originating from the database, execute the SQL statements within the context of the applicable database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
@@ -164,9 +164,9 @@ This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
-Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be significantly out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we are always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
+Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be significantly out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we're always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
 
-:::image type="content" source="./media/memory-grant-feedback-without-percentile-and-persistence-mode.svg" alt-text="A graph of granted vs actual needed memory behavior in Memory Grant feedback without percentile and persistence mode memory grant feedback." :::
+:::image type="content" source="./media/memory-grant-feedback-without-percentile-and-persistence-mode.svg" alt-text="A graph of granted vs actual needed memory behavior in Memory Grant feedback without percentile and persistence mode memory grant feedback.":::
 
 As you can see, in this unusual but possible query behavior, the oscillation between the actual needed and granted memory amounts results in wasted and insufficient memory if the query execution itself alternates in terms of the amount of memory. In this scenario, memory grant feedback disables itself, recognizing it's doing more harm than good.
 
@@ -176,15 +176,15 @@ Using a percentile-based calculation over recent history of the query, instead o
 
 The query optimizer uses a high percentile of past memory grant sizing requirements for executions of the cached plan to calculate memory grant sizes, using data persisted in the Query Store. The percentile adjustment which will perform the memory grant adjustments is based on the recent history of executions. Over time, the memory grant given reduces spills and wasted memory.
 
-Persistence also applies to [DOP feedback](#dop-feedback) and [CE feedback](#ce-feedback), also detailed in this article.
+Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) and [CE feedback](#cardinality-estimation-ce-feedback), also detailed in this article.
 
 ### Before you enable memory grant feedback: persistence and percentile
 
-It is recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you are getting the intended benefit from the feature.
+It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 
 ### Enabling memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you are connected to when executing the query.
+To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query.
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
@@ -216,9 +216,12 @@ The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
 ### Considerations
 
-You can view your current settings by querying `sys.database_scoped_configurations`. Please note that this feature will not work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
+You can view your current settings by querying `sys.database_scoped_configurations`.
 
-Given feedback data is now persisted in the Query Store, there is some increase in the Query Store usage requirements.
+> [!Note]
+> That this feature won't work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
+
+Given feedback data is now persisted in the Query Store, there's some increase in the Query Store usage requirements.
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
@@ -288,7 +291,7 @@ Because no single set of CE models and assumptions can accommodate the vast arra
 
 Cardinality Estimation (CE) is how the Query Optimizer can estimate the total number of rows processed at each level of a query plan. Cardinality estimation in SQL Server is derived primarily from histograms created when indexes or statistics are created, either manually or automatically. Sometimes, SQL Server also uses constraint information and logical rewrites of queries to determine cardinality.
 
-Different versions of the Database Engine use different CE model assumptions based on how data is distributed and queried. See [versions of the CE](#versions-of-the-ce) for more information.
+Different versions of the Database Engine use different CE model assumptions based on how data is distributed and queried. For more information, see [versions of the CE](cardinality-estimation-sql-server.md#versions-of-the-ce).
 
 ### CE feedback implementation
 
@@ -329,7 +332,7 @@ GO
 
 When the database compatibility is set to 160, and default correlation is used, CE feedback will attempt to move the correlation to the correct direction one step at a time based on whether the estimated cardinality was underestimated or overestimated compared to the actual number of rows. Use full correlation if an actual number of rows is greater than the estimated cardinality. Use full independence if an actual number of rows is smaller than the estimated cardinality.
 
-See [versions of the CE](#versions-of-the-ce) for more information.
+For more information, see [versions of the CE](cardinality-estimation-sql-server.md#versions-of-the-ce).
 
 #### Join Containment
 
@@ -353,7 +356,7 @@ WHERE d.MonthNumberOfYear = 7 AND f.CurrencyKey = 3 AND f.AverageRate > 1;
 GO
 ```
 
-For more information, see [versions of the CE](#versions-of-the-ce).
+For more information, see [versions of the CE](cardinality-estimation-sql-server.md#versions-of-the-ce).
 
 #### Optimizer row goal
 
@@ -402,7 +405,7 @@ To allow CE feedback to override hard-coded query hints and Query Store user hin
 
 ### Feedback and Reporting Issues
 
-For feedback or questions, please email CEFfeedback@microsoft.com
+For feedback or questions, email CEFfeedback@microsoft.com
 
 ## Next steps
 

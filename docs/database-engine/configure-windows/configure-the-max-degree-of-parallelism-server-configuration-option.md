@@ -156,7 +156,7 @@ The setting takes effect immediately without restarting the server.
 
 ## Next steps
 
-- [Degree of Parallelism Feedback](degree-of-parallelism-feedback.md)
+- [Degree of Parallelism Feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)

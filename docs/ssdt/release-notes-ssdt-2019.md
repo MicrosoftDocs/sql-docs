@@ -57,9 +57,9 @@ More information is available in release notes.**
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 
  ## Download issues
- 
-If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
-Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
+If you installe successfully, but the solution shows "incompatible" and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project".
+
+If you get an error during installation, you can check the logs under %temp%\SsdtisSetup. Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 
    1. ```
       cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
@@ -68,7 +68,7 @@ Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationSe
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
       ```
    2. Repair the vs2019 
-   3. Restart and start ssdt setup install again
+   3. Restart and reinstall
 - If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
-    - Kill msiexec.exe process and relaunch. 
+    - Kill msiexec.exe process and relaunch your machine. 
  - If it is not above error in ISVsix.log, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.

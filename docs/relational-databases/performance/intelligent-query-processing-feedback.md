@@ -19,7 +19,9 @@ ms.custom:
 ms.date: 08/23/2022
 ---
 
-# Intelligent query processing feedback
+# Query processing feedback feature
+
+The query processing feedback features are part of the Intelligent query processing family of features.
 
 ## Batch mode memory grant feedback
 

@@ -168,7 +168,8 @@ Assume you have a couple of log files, a data file, and a database named `mydb`.
 
 For example, if you specify a _target\_percent_ of 25 for shrinking `mydb`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). As such, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves any data from the data file's last 2 MB to any free space in the data file's first 8 MB and then shrinks the file.
   
-Assume the data file of `mydb` contains 7 MB of data. Specifying a _target\_percent_ of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a _target\_percent_ of 40 doesn't shrink the data file because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] won't shrink a file to a target value greater than the current percentage of free space. 
+Assume the data file of `mydb` contains 7 MB of data. Specifying a _target\_percent_ of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a _target\_percent_ of 40 doesn't shrink the data file because not enough free space can be created in the current total size of the data file.
+
 
 You can think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Any _target\_percentage_ greater than 30 won't shrink the data file. It won't shrink because the percentage free you want plus the current percentage that the data file occupies is over 100 percent.
 

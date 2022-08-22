@@ -405,12 +405,14 @@ To allow CE feedback to override hard-coded query hints and Query Store user hin
 
 ### Feedback and Reporting Issues
 
-For feedback or questions, email CEFfeedback@microsoft.com
+For feedback or questions, email [CEFfeedback@microsoft.com](mailto:CEFfeedback@microsoft.com)
 
 ## Next steps
 
 - [Intelligent query processing](intelligent-query-processing.md)
+- [Intelligent query processing details](intelligent-query-processing-details.md)
 - [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+- [Cardinality Estimates](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)

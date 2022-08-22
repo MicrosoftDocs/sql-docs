@@ -137,6 +137,8 @@ GO
 
 The setting takes effect immediately without restarting the server.
 
+
+
 ## See also  
 
 - [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md)  

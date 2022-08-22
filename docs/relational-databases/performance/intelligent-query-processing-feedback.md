@@ -19,7 +19,7 @@ ms.custom:
 ms.date: 08/23/2022
 ---
 
-# Query Processing feedback
+# Intelligent query processing feedback
 
 ## Batch mode memory grant feedback
 

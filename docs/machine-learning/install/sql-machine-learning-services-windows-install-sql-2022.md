@@ -3,7 +3,7 @@ title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python, R, or Java scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/24/2022
+ms.date: 08/22/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -52,7 +52,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
 
-1. Start the setup wizard for SQL Server.
+1. Start the SQL Setup wizard for SQL Server.
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
@@ -139,16 +139,26 @@ If you encounter any installation errors during setup, check the summary log in 
 
 ## Install Python
 
-5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows, and install.
+5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows. Install using the following options:
+    1. Launch the Python Setup application and choose **Customize installation**. 
+    1. Verify the box is checked next to the option to **Install launcher for all users (recommended)**.
+    1. Select all **Optional Features** options.
+    1. On the **Advanced Options** page, accept the default options and select **Install**. Note the path under **Customize install location**, for example, `c:\Program Files\Python310`.
 
-6. Install the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924).
+6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
 
-7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
+    ```cmd
+    cd c:\Program Files\Python310\
+    python -m pip install C:\Users\%username%\Downloads\revoscalepy-10.0.0-py3-none-any.whl
+    ```
+
+7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example:  `cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.
 
     The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
-    .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
+    cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs
+    .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
     ```
 
 8. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:

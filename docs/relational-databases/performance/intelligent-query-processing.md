@@ -96,6 +96,7 @@ For complete details on all IQP features, including release notes and more in-de
 
 ## Next steps
 
+- [Query processing feedback](intelligent-query-processing-feedback.md)
 - [Parameter Sensitivity Plan Optimization](parameter-sensitivity-plan-optimization.md)
 - [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)
 - [Constant Folding and Expression Evaluation](../query-processing-architecture-guide.md#constant-folding-and-expression-evaluation)

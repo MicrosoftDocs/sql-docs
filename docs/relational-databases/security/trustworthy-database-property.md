@@ -21,6 +21,7 @@ ms.author: v-jayaramanp
   
 > [!NOTE]  
 > To set this option, you must be a member of the **sysadmin** fixed server role.  
+
 We recommend that you leave this setting set to `OFF` to mitigate certain threats that can exist as a result of attaching a database that contains one of the following objects:
   
 - Malicious assemblies with an `EXTERNAL_ACCESS` or `UNSAFE` permission setting. For more information, see [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md).  
@@ -31,7 +32,8 @@ We recommend that you leave this setting set to `OFF` to mitigate certain threat
   
  Because a database that is attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be immediately trusted, the database isn't allowed to access resources beyond the scope of the database until the database is explicitly marked trustworthy. Therefore, if you backup or detach a database that has the `TRUSTWORTHY` option `ON` and you attach or restore the database to the same or another SQL Server instance, the `TRUSTWORTHY` property will be set to `OFF` when attach or restore is completed. Also, modules that are designed to access resources outside the database, and assemblies with either the `EXTERNAL_ACCESS` and `UNSAFE` permission setting, have additional requirements to run successfully.  
 
-Note, by default, the `TRUSTWORTHY` setting is set to `ON` for the `MSDB` database. If you change this setting from its default value, it might result in unexpected behavior by SQL Server components that use the `MSDB` database.
+> [!NOTE]
+> By default, the `TRUSTWORTHY` setting is set to `ON` for the `MSDB` database. If you change this setting from its default value, it might result in unexpected behavior by SQL Server components that use the `MSDB` database.
 
 If the `TRUSTWORTHY` setting is set to `ON`, and if the owner of the database is a member of a group that has administrative credentials, such as the sysadmin group, the database owner might be able to create and run unsafe assemblies that can compromise the instance of the SQL Server.
 
@@ -91,3 +93,5 @@ GO
  - [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
+ 
+- [Extending Database Impersonation by Using EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))

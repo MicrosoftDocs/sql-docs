@@ -53,7 +53,7 @@ The following table provides a non-exhaustive summary of object storage provider
 | [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform      |
 | [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric       |
 | [MinIO][minio_webs]             | Multi-Cloud Object Storage    |
-| [NetApp][netapp_webs]           | StorageGRID ONTAP             |
+| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP          |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage        |
 | [Pure Storage][pure_webs]       | Pure FlashBlade               |
 | [Red Hat][redhat_webs]          | OpenShift Container Storage   |

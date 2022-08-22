@@ -566,7 +566,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - Stable feedback is re-verified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 
-For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing) and [Configure the MAXDOP server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#dop-feedback).
+For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing) and [Configure the MAXDOP server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ## Optimized plan forcing with Query Store
 

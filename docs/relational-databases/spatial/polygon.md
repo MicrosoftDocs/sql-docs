@@ -121,7 +121,7 @@ SET @square = GEOGRAPHY::STPolyFromText('POLYGON((0 20, 0 0, 20 0, 20 20, 0 20))
 SELECT @square;
 ```
 
-:::image type="content" source="media/LeftHandRuleSquareIllustration.png" alt-text="Visualization of 'left-hand rule' counter-clockwise orientation":::
+:::image type="content" source="media/left-hand-rule-square-illustration.png" alt-text="Visualization of 'left-hand rule' counter-clockwise orientation":::
 
 
 **Clockwise**
@@ -132,7 +132,7 @@ SET @square = GEOGRAPHY::STPolyFromText('POLYGON((0 20, 20 20, 20 0, 0 0, 0 20))
 SELECT @square;
 ```
 
-:::image type="content" source="media/LeftHandRuleInverseSquare.png" alt-text="Visualization of 'left-hand rule' clockwise orientation":::
+:::image type="content" source="media/left-hand-rule-inverse-square.png" alt-text="Visualization of 'left-hand rule' clockwise orientation":::
 
 When the compatibility level is 100 or below in SQL Server then the geography data type has the following restrictions:
 
@@ -205,5 +205,3 @@ The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given 
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)   
  [STIsValid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
-  
-  

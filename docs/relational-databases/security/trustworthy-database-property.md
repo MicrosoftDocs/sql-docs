@@ -16,11 +16,11 @@ ms.author: vanto
 ---
 # TRUSTWORTHY Database Property
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The TRUSTWORTHY database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the ALTER DATABASE statement. For example, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
+  The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is `OFF`, but can be set to `ON` by using the `ALTER DATABASE` statement. For example, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
 > [!NOTE]  
 > To set this option, you must be a member of the **sysadmin** fixed server role.  
-We recommend that you leave this setting set to OFF to mitigate certain threats that can exist as a result of attaching a database that contains one of the following objects:
+We recommend that you leave this setting set to `OFF` to mitigate certain threats that can exist as a result of attaching a database that contains one of the following objects:
   
 - Malicious assemblies with an `EXTERNAL_ACCESS` or `UNSAFE` permission setting. For more information, see [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
@@ -66,15 +66,15 @@ inner join sys.databases d on suser_sname(d.owner_sid) = p.name
 WHERE is_trustworthy_on = 1 AND d.name NOT IN ('MSDB') and r.type = 'R' and r.name = N'sysadmin' 
 ```
 
-You can run the following query to determine the `TRUSTWORTHY` property of the MSDB database:
+You can run the following query to determine the `TRUSTWORTHY` property of the `MSDB` database:
 
 ```sql
-select name, TrustWorthySetting = 
-case is_trustworthy_on hello 
-when 1 then 'TrustWorthy setting is ON for MSDB' 
+SELECT name, TrustWorthySetting = 
+CASE is_trustworthy_on hello 
+WHEN 1 then 'TrustWorthy setting is ON for MSDB' 
 ELSE 'TrustWorthy setting is OFF for MSDB' 
 END 
-from sys.databases where database_id = 4
+FROM sys.databases WHERE database_id = 4
 ```
 
 If this query shows that the `TRUSTWORTHY` property is set to `OFF`, you can run the following query to set the `TRUSTWORTHY` property to `ON`.
@@ -89,4 +89,4 @@ go
 
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)

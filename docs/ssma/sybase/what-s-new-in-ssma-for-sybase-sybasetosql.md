@@ -19,7 +19,7 @@ This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly S
 ## SSMA v9.1
 The v9.1 release of SSMA for SAP ASE contains the following changes:
 
- * Minor performance improvements and bug fixes  
+ * Minor performance improvements, bug fixes and enhanced get help experience  
 
 ## SSMA v9.0
 

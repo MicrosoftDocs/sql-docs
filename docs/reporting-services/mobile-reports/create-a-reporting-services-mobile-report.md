@@ -41,9 +41,12 @@ The first time you create a mobile report, you can install SQL Server Mobile Rep
   
 6. Select **Local Excel** or **Report Server**.  
   
-   >**Tips**: If you're adding data from Excel, make sure:  
-    >* You [prepare the Excel data](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) to work in your mobile report.  
-    >* You close the file first.  
+   > [!TIP]  
+   > If you're adding data from Excel, make sure:
+   >
+   > * You [prepare the Excel data](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) to work in your mobile report.  
+   > * You close the file first.
+
 7. Select the worksheets you want, and select **Import**.   
    You can add more than one worksheet from a workbook at a time.  
     

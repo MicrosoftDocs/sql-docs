@@ -20,9 +20,8 @@ The redistributable installer for Microsoft OLE DB Driver for SQL Server install
 
 Microsoft OLE DB Driver 19.0.0 for SQL Server is the latest general availability (GA) version. The Microsoft OLE DB Driver 19 for SQL Server will install side by side with Microsoft OLE DB Driver 18 for SQL Server.
 
-
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver 19 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2186934)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver 19 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2186855)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2186934)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2186855)**  
 
 ### Version information
 

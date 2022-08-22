@@ -38,7 +38,7 @@ public void setIntegratedSecurity(boolean enable)
  Set to "**true**" to indicate that Windows credentials will be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to authenticate the user of the application. If "**true**", the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will search the local computer credential cache for credentials that have already been provided at the computer or network logon. If "**false**", the username and password must be supplied.  
   
 > [!NOTE]  
->  This property is only supported on [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows operating systems.  
+>  This property is only supported on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating systems.  
   
  For more information about using integrated authentication, see [Building the Connection URL](../../../connect/jdbc/building-the-connection-url.md).  
   

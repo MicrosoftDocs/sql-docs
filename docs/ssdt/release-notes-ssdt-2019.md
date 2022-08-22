@@ -30,9 +30,6 @@ More information is available in release notes.**
 - Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
 
 ## Common Issues
-
-- **If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.** Also, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
-
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
 
 - SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
@@ -45,7 +42,7 @@ More information is available in release notes.**
 
 - Sometimes this product or Visual Studio Tools for Applications 2019 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2019 via control panel. We've reported this issue to VS team. Sorry for any inconvenience.
 
-- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
+- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
 
 ## Known issues
   **Version 4.1**
@@ -59,3 +56,19 @@ More information is available in release notes.**
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 
+ ## Download issues
+ 
+If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
+Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
+- If the error is "The file {filefullpath} already exists." 
+   1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
+      ```
+      rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\SSIS\* 
+      rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
+      ```
+   2. Repair the vs2019 
+   3. Restart and start ssdt setup install again
+- If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
+    - Kill msiexec.exe process and relaunch. 
+ - If it is not above error in ISVsix.log, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.

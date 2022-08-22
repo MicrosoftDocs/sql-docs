@@ -71,7 +71,8 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## Examples  
  The following example adds an e-mail notification for the specified alert (`Test Alert`).  
   
-> **NOTE:** This example assumes that `Test Alert` already exists and that `François Ajenstat` is a valid operator name.  
+> [!NOTE]  
+> This example assumes that `Test Alert` already exists and that `François Ajenstat` is a valid operator name.  
   
 ```  
 USE msdb ;  

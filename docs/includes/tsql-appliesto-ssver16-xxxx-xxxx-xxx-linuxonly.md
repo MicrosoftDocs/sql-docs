@@ -6,4 +6,4 @@ ms.date: 05/09/2022
 ms.author: randolphwest
 ---
 
-**Applies to:**:::image type="icon" source="media/yes-icon.png":::SQL Server 2022 Preview and later (Linux only) :::image type="icon" source="media/no-icon.png":::Azure SQL Database:::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics :::image type="icon" source="media/no-icon.png":::Analytics Platform System (PDW) 
+**Applies to:**:::image type="icon" source="media/yes-icon.svg"::: SQL Server 2022 Preview and later (Linux only) :::image type="content" source="media/no-icon.svg" alt-text="Not supported" border="false"::: Azure SQL Database:::image type="content" source="media/no-icon.svg" alt-text="Not supported" border="false"::: Azure Synapse Analytics :::image type="content" source="media/no-icon.svg" alt-text="Not supported" border="false"::: Analytics Platform System (PDW) 

@@ -169,7 +169,7 @@
       items:
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
-      - name: .NET Core
+      - name: .NET with Windows, Linux, and macOS
         href: database/connect-query-dotnet-core.md
       - name: Go
         href: database/connect-query-go.md
@@ -1323,7 +1323,7 @@
         href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
-      - name: Monitor back up
+      - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
       - name: Auto-failover groups
         items: 

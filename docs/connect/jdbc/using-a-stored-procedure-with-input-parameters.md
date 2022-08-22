@@ -30,7 +30,7 @@ When you construct the `call` escape sequence, specify the IN parameters by usin
 
 When you pass a value to the setter method, you must specify not only the actual value that will be used in the parameter, but also the ordinal placement of the parameter in the stored procedure. For example, if your stored procedure contains a single IN parameter, its ordinal value will be 1. If the stored procedure contains two parameters, the first ordinal value will be 1, and the second ordinal value will be 2.
 
-As an example of how to call a stored procedure that contains an IN parameter, use the uspGetEmployeeManagers stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. This stored procedure accepts a single input parameter named EmployeeID, which is an integer value, and it returns a recursive list of employees and their managers based on the specified EmployeeID. The Java code for calling this stored procedure is as follows:
+As an example of how to call a stored procedure that contains an IN parameter, use the uspGetEmployeeManagers stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. This stored procedure accepts a single input parameter named EmployeeID, which is an integer value, and it returns a recursive list of employees and their managers based on the specified EmployeeID. The Java code for calling this stored procedure is as follows:
 
 ```java
 public static void executeSprocInParams(Connection con) throws SQLException {  

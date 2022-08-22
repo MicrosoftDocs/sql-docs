@@ -93,7 +93,7 @@ The script pane will update to display the read-only Transact-SQL version of you
 
 #### Deleting columns
 
-To delete a column, simply select on the trash icon at the end of the column as highlighted below.
+To delete a column, simply select the trash icon at the end of the column as highlighted below.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-column.png" alt-text="Screenshot of Table Designer showing how to delete a column.":::
 

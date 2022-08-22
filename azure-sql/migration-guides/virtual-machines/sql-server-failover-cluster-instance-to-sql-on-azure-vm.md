@@ -296,7 +296,7 @@ After machines are replicated, they are ready for migration. To migrate your ser
     ![Replicating servers](media/sql-server-availability-group-to-sql-on-azure-vm/replicate-servers.png)
 
 1. To ensure that the migrated server is synchronized with the source server, stop the SQL Server resource (in **Failover Cluster Manager** > **Roles** > **Other resources**) while ensuring that the cluster disks are online.   
-1. In **Replicating machines** > select on server name > **Overview**, ensure that the last synchronized timestamp is after you have stopped SQL Server resource on the servers to be migrated before you move onto the next step. This should only take a few of minutes. 
+1. In **Replicating machines** > select server name > **Overview**, ensure that the last synchronized timestamp is after you have stopped SQL Server resource on the servers to be migrated before you move onto the next step. This should only take a few of minutes. 
 1. In **Replicating machines**, right-click the VM > **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **No** > **OK**.
    

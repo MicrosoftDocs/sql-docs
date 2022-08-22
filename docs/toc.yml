@@ -57,6 +57,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 17
+          href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16
           href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
@@ -6414,7 +6416,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -10548,6 +10550,8 @@ items:
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
@@ -10627,6 +10631,8 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
+      - name: Configure the time zone
+        href: linux/sql-server-linux-configure-time-zone.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
@@ -10791,6 +10797,8 @@ items:
     items:
     - name: Troubleshoot
       href: linux/sql-server-linux-troubleshooting-guide.md
+    - name: Restore the master database
+      href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
     - name: DBA Stack Exchange >>
@@ -11199,6 +11207,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3201
+          href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
           href: relational-databases/errors-events/mssqlserver-3260-database-engine-error.md
         - name: 3271
@@ -11399,6 +11409,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-9003-database-engine-error.md
         - name: 9004
           href: relational-databases/errors-events/mssqlserver-9004-database-engine-error.md
+        - name: 9017
+          href: relational-databases/errors-events/mssqlserver-9017-database-engine-error.md  
         - name: 9524
           href: relational-databases/errors-events/mssqlserver-9524-database-engine-error.md
         - name: 9532
@@ -13750,7 +13762,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
       - name: sp_help_spatial_geography_index_xml
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram (Trasnact-SQL)
+      - name: sp_help_spatial_geometry_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md

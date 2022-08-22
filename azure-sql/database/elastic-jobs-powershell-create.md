@@ -59,7 +59,7 @@ In addition to the **Az.Sql** module, this tutorial also requires the *SqlServer
 
 ## Create required resources
 
-Creating an Elastic Job agent requires a database (S0 or higher) for use as the [Job database](job-automation-overview.md#elastic-job-database).
+Creating an Elastic Job agent requires a database (S1 or higher) for use as the [Job database](job-automation-overview.md#elastic-job-database).
 
 The script below creates a new resource group, server, and database for use as the Job database. The second script creates a second server with two blank databases to execute jobs against.
 
@@ -95,7 +95,7 @@ $agentServer
 # create the job database
 Write-Output "Creating a blank database to be used as the Job Database..."
 $jobDatabaseName = "JobDatabase"
-$jobDatabase = New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $agentServerName -DatabaseName $jobDatabaseName -RequestedServiceObjectiveName "S0"
+$jobDatabase = New-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $agentServerName -DatabaseName $jobDatabaseName -RequestedServiceObjectiveName "S1"
 $jobDatabase
 ```
 

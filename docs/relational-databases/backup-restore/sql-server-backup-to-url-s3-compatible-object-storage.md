@@ -342,7 +342,7 @@ WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16
 <!-- Internal LInks -->
 
 <!-- Public Links -->
-[docs_backup_best]: (https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service)
-[MAXTRANSFERSIZE]: (https://docs.microsoft.com/sql/t-sql/statements/backup-transact-sql?view=sql-server-ver15#with-options)
+[docs_backup_best]: ./sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+[MAXTRANSFERSIZE]: ../../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15#with-options
 
-[Azure block blobs]: (https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
+[Azure block blobs]: /rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs

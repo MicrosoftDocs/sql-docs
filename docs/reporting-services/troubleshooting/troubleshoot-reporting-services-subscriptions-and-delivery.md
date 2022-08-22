@@ -15,7 +15,7 @@ ms.author: maggies
 # Troubleshoot Reporting Services Subscriptions and Delivery
   
     
-Use this topic to troubleshoot problems that you encounter when working with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report subscriptions, schedules, and delivery.  
+Use this topic to troubleshoot problems that you encounter when working with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report subscriptions, schedules, and delivery.  
 ## Log information
  
 The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription but if there is a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs. 

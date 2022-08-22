@@ -38,7 +38,8 @@ This topic provides an overview for using the [bcp utility](../../tools/bcp-util
   
  The **bcp** command provides switches that you use to specify the data type of the data file and other information. If these switches are not specified, the command prompts for formatting information, such as the type of data fields in a data file. The command then asks whether you want to create a format file that contains your interactive responses. If you want flexibility for future bulk-import or bulk-export operations, a format file is often useful. You can specify the format file on later **bcp** commands for equivalent data files. For more information, see [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
->**Note!!** The bcp utility is written by using the ODBC bulk-copy.
+> [!NOTE]  
+> The bcp utility is written by using the ODBC bulk-copy.
   
  For a description of the **bcp** command syntax, see [bcp Utility](../../tools/bcp-utility.md).  
   

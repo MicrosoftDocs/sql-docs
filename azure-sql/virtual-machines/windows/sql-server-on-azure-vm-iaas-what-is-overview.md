@@ -21,11 +21,11 @@ ms.author: mathoma
 > * [Windows](sql-server-on-azure-vm-iaas-what-is-overview.md)
 > * [Linux](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md)
 
-This article provides an overview of SQL Server on Azure Virtual Machines (VMs) on the Windows platform. 
+This article provides an overview of SQL Server on Azure Virtual Machines (VMs) on the Windows platform.
 
 If you're new to SQL Server on Azure VMs, check out the *SQL Server on Azure VM Overview* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
 
+> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
 
 ## Overview
 

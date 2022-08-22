@@ -20,7 +20,7 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Removes a user-defined server role.  
   

@@ -62,6 +62,10 @@ The following sections describe known issues with [!INCLUDE[sssql19-md](../sssql
 
 - User permission `ADMINISTER BULK OPERATIONS` is not supported on Linux at this time.
 
+- TDE-compressed backups that are made using [!INCLUDE [sssql19-md](../sssql19-md.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE [sssql19-md](../sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
+
+  Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE [sssql19-md](../sssql19-md.md)] can still be restored by using [!INCLUDE [sssql19-md](../sssql19-md.md)] CU 16 and later versions.
+
 ### <a id="networking"></a> Network
 
 Features that involve outbound TCP connections from the `sqlservr` process, such as linked servers, PolyBase, or availability groups, might not work if both the following conditions are met:

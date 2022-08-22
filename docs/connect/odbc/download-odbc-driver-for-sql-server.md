@@ -24,8 +24,8 @@ The redistributable installer for Microsoft ODBC Driver 18 for SQL Server instal
 
 Version 18.1.1.1 is the latest general availability (GA) version. The Microsoft ODBC Driver 18 for SQL Server will install side by side with Microsoft ODBC Driver 17 for SQL Server.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2202930)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2203124)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2202930)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2203124)**  
 
 
 ### Version information
@@ -50,8 +50,8 @@ Microsoft ODBC Driver 18.1.1.1 for SQL Server (x86):
 
 Version 17.10.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.1 upgrades it to 17.10.1.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2200731)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2200732)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2200731)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2200732)**  
 
 - Release number: 17.10.1.1
 - Released: June 30, 2022

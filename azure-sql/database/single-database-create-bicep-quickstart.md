@@ -10,8 +10,8 @@ ms.custom:
   - "devx-track-azurepowershell"
   - "mode-arm"
 ms.topic: quickstart
-author: schaffererin
-ms.author: v-eschaffer
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/16/2022
 ---
 

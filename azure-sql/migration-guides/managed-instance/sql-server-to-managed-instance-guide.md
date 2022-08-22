@@ -6,8 +6,8 @@ ms.subservice: migration-guide
 ms.custom: 
 ms.devlang: 
 ms.topic: how-to
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, danil, randolphwest
 ms.date: 04/11/2022
 ---
@@ -20,8 +20,7 @@ This guide helps you migrate your SQL Server instance to Azure SQL Managed Insta
 You can migrate SQL Server running on-premises or on: 
 
 - SQL Server on Virtual Machines  
-- Amazon Web Services (AWS) EC2 
-- Amazon Relational Database Service (AWS RDS) 
+- Amazon Web Services (AWS) EC2
 - Compute Engine (Google Cloud Platform - GCP)  
 - Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
 

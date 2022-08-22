@@ -81,7 +81,7 @@ In order to delete a Sync metadata database that has a Sync agent associated wit
 
 1. Select the Sync database. 
 2. Go to the **Sync to other databases** page.
-3. Select the Sync agent and select on **Delete**. 
+3. Select the Sync agent and select **Delete**. 
 
 ## <a name="agent-tshoot"></a> Troubleshoot Data Sync Agent issues
 

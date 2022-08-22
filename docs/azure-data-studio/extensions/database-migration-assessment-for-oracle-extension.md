@@ -18,7 +18,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 ## Pre-requisites
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
-- [Azure Data Studio version 1.35  or above](../download-azure-data-studio.md).
+- [Azure Data Studio version 1.37  or above](../download-azure-data-studio.md).
 - Oracle user should have CONNECT and SELECT ANY DICTIONARY privileges assigned.
 
 ## Install Azure Data Studio extension
@@ -145,13 +145,13 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 
 ### Logging
 
-The extension has the errors, warning and other diagnostic logging written in the default log directory. 
+The extension has the errors, warning and other diagnostic logging written in the default log directory.
 
 - Windows - C:\Users\\<username\>\\.dmaoracle\logs\
 - Linux  - ~/.dmaoracle/logs
 - Mac  - /Users/\<username\>/.dmaoracle/logs
 
-By default, the extension stores last 7 log files. 
+By default, the extension stores last 7 log files.
 
 To change the log directory, update LogDirectory property in the extension settings file.
 
@@ -163,14 +163,14 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
 ### Known issues
 
-- Error GE-1002 Path provided does not exist.
+- Path provided does not exist.
 
     Reason: Missing files or missing permission on the assessment folder.
 
    Possible Solution:
-   
+
     a. User has read and write permission on the assessment folder.
-    
+
     b. If there is a missing file or folder, delete the assessment and generate a new assessment.
 
 - Encountered connection timeout exception while interacting with Oracle.
@@ -178,14 +178,41 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
      Reason: Failed to Connect to Oracle Instance.
 
     Possible Solution:
-    
-    a. Check if the port Oracle is running on isn't blocked by firewall rules.
-    
+
+    a. Check if the port Oracle is running on is blocked by firewall rules.
+
     b. Perform tnsping and see if the Service ID gets resolved.
 
-- Feature Data Collection Warning
+- Unable to access Database Migration Assessment reports for Oracle after upgrading to version 1.5
 
-     Reason: Few features don't have the latest usage statistics available in the Oracle metadata store.
+    Reason: When Azure data studio Oracle extension is upgraded to latest version (version 1.5 and above), the assessment reports will be inaccessible.
+
+    Workaround:  Uninstall and install the prior version of Database migration assessment (v1.4.1)  to download the previously assessed reports. Please follow the steps below to use previous version of the extension
+
+    1. Pre-requisites
+
+        • Current assessment Directory: Path is given under Extension settings > Oracle Assessment: Assessment Path > Local path to store your assessments.
+
+        • Previous version build: Download the Previous build (version 1.4.1) on local system.
+
+    1. Troubleshooting steps
+
+        • Open the extensions manager in Azure Data Studio. You can select the extensions icon or select Extensions in the View menu.
+
+        • To Install, click on View and More Actions (3 dots) as shown below > Install from VSIX.
+     Screen capture shows view and More Actions to chose Install from vsix.
+
+        :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-install-from-vsix.png" alt-text="Screen capture shows Veiw and More Actions to chose Install from vsix":::
+
+       •  Locate the VSIX file of v1.4.1 saved locally and click Install.
+
+        :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-vsix.png" alt-text="Screen capture shows selecting local vsix.":::
+
+        • Close and reopen the Azure data studio.
+
+        Ensure to set the extension assessment directory same as noted in pre-requisites.
+
+        • Using this extension version v1.4.1, saved assessments reports can be accessed, downloaded and saved in HTML format.
 
 ## Next steps
 

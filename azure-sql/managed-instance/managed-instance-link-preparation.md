@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 07/06/2022
+ms.date: 08/12/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -56,7 +56,7 @@ Ensure that your SQL Server version has the appropriate servicing update install
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database

@@ -17,7 +17,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current Azure Data Studio release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
 ### July 2022
 

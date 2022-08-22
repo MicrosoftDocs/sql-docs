@@ -16,7 +16,7 @@ manager: kenvh
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
 
 <!--
 Going forward, please use the new 2-column markdown table for each new H2 version section.
@@ -35,7 +35,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
-| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, RedHat 8 and 9, Ubuntu 18.04, 20.04, 22.04 |
+| New distributions supported. | Ubuntu 22.04, Red Hat 9. ARM64 Linux platforms: Debian 11, RedHat 8 and 9, Ubuntu 20.04, 22.04 |
 | IpAddressPreference option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | RetryExec option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | VBS-NONE enclave attestation protocol | New enclave attestation option to not attest the enclave. See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) |
@@ -262,7 +262,7 @@ Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platfo
 
 The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11 Service Pack 2. For more information, see [System Requirements](system-requirements.md).  
 
-The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
 The ODBC driver on Linux supports connections to Azure SQL Database.
 

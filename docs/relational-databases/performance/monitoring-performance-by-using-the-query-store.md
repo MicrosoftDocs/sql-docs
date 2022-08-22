@@ -32,7 +32,7 @@ The Query Store feature provides you with insight on query plan choice and perfo
 ## <a name="Enabling"></a> Enable the Query Store
 
 - Query Store is enabled by default for new Azure SQL Database and Azure SQL Managed Instance databases.
-- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], we recommend enabling Query Store on new and existing databases.
+- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. It is enabled by default in the `READ_WRITE` mode for new databases starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], we recommend enabling Query Store on all databases.
 - Query Store is not enabled by default for new Azure Synapse Analytics databases. 
 
 ### Use the Query Store page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
@@ -427,7 +427,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 7 days.
 
 #### Delete ad-hoc queries
 

@@ -13,6 +13,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
 ms.custom:
   - "devx-track-azurepowershell"
+  - "azure-sql-split"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # vCore purchasing model overview - Azure SQL Database and Azure SQL Managed Instance 

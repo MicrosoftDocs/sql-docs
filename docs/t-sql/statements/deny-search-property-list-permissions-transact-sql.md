@@ -1,24 +1,23 @@
 ---
 title: "DENY Search Property List Permissions"
-description: Deny permissions on a search property list.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Deny permissions on a search property list.
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "full-text search [SQL Server], permissions"
   - "DENY statement, search property list permissions"
   - "denying permissions [SQL Server], search property lists"
   - "search property lists [SQL Server], permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Search Property List Permissions (Transact-SQL)

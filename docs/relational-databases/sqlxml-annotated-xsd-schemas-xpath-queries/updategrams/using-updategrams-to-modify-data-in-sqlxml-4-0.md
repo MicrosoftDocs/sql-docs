@@ -1,14 +1,14 @@
 ---
 title: "Using Updategrams to Modify Data in SQLXML 4.0"
 description: View information and examples about updategrams and how they are used for modifying data in SQLXML 4.0.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLXML, updategrams"
   - "data insertions [SQLXML]"
   - "data deletions [SQLXML]"
@@ -23,8 +23,6 @@ helpviewer_keywords:
   - "deleting data"
   - "inserting data"
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Updategrams to Modify Data in SQLXML 4.0

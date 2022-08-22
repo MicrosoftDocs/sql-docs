@@ -1,25 +1,23 @@
 ---
-description: "sys.function_order_columns (Transact-SQL)"
-title: "sys.function_order_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.function_order_columns (Transact-SQL)"
+description: sys.function_order_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "function_order_columns"
   - "sys.function_order_columns_TSQL"
   - "function_order_columns_TSQL"
   - "sys.function_order_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.function_order_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.database_principals (Transact-SQL)"
-title: "sys.database_principals (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_principals (Transact-SQL)"
+description: sys.database_principals (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/27/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_principals"
   - "database_principals_TSQL"
   - "sys.database_principals"
   - "sys.database_principals_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_principals catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_principals (Transact-SQL)

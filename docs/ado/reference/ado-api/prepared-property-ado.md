@@ -1,21 +1,17 @@
 ---
+title: "Prepared Property (ADO)"
 description: "Prepared Property (ADO)"
-title: "Prepared Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Command15::Prepared"
-helpviewer_keywords: 
-  - "Prepared property [ADO]"
-ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Command15::Prepared"
+helpviewer_keywords:
+  - "Prepared property [ADO]"
+apitype: "COM"
 ---
 # Prepared Property (ADO)
 Indicates whether to save a compiled version of a [Command](./command-object-ado.md) before execution.  

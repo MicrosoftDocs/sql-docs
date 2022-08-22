@@ -1,13 +1,15 @@
 ---
 title: "SQL Server XML Bulk Load Object Model (SQLXML)"
 description: Learn about the methods and properties of the SQLXMLBulkLoad object that is used for bulk loading XML in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "bulk load [SQLXML], object model"
   - "ErrorLogFile property"
   - "SGDropTables property"
@@ -29,9 +31,6 @@ helpviewer_keywords:
   - "Execute method"
   - "XML Bulk Load [SQLXML], object model"
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)

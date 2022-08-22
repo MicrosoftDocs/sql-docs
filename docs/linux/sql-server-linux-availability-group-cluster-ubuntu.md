@@ -193,7 +193,7 @@ sudo apt-get install mssql-server-ha
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SLES-Create-SQL-Login](../includes/linux/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Create availability group resource
 
@@ -203,7 +203,7 @@ To create the availability group resource, use `pcs resource create` command and
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s promotable notify=true
 ```
 
-[!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](../includes/linux/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 ## Create virtual IP resource
 

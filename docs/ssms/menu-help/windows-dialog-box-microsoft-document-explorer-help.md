@@ -26,7 +26,7 @@ Displays the names of document and tool windows, with the item currently active 
 Displays the full path for documents. Windows typically do not have a path.  
   
 **Activate**  
-Makes the document or tool window selected the active item in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Document Explorer.  
+Makes the document or tool window selected the active item in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Document Explorer.  
   
 **Save**  
 Saves the selected window. Not all windows can be saved.  

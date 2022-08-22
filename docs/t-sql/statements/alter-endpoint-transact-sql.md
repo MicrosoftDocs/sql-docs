@@ -1,25 +1,23 @@
 ---
-description: "ALTER ENDPOINT (Transact-SQL)"
-title: "ALTER ENDPOINT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER ENDPOINT (Transact-SQL)"
+description: ALTER ENDPOINT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER ENDPOINT"
   - "ALTER_ENDPOINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER ENDPOINT statement"
   - "modifying endpoints"
   - "endpoints [SQL Server], modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

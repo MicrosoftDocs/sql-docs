@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 08/21/2019
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: tutorial
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Transact-SQL

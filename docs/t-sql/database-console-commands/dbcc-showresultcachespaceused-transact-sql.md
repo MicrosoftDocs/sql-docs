@@ -5,13 +5,12 @@ ms.custom: ""
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuMSFT 
-ms.author: xiaoyul
+author: mstehrani
+ms.author: emtehran
 monikerRange: "= azure-sqldw-latest"
 ---
 

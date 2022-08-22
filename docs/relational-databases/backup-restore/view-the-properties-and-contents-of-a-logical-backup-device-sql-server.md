@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "viewing backup properties"
   - "database backups [SQL Server], properties"
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # View the Properties and Contents of a Logical Backup Device (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

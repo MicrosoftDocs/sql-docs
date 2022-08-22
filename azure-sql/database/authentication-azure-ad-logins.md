@@ -8,7 +8,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 03/14/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Azure Active Directory server principals

@@ -1,30 +1,35 @@
 ---
 title: View capacity utilization
-description: View capacity utilization in Analytics Platform System.
-author: charlesfeddersen 
+description: Learn how to view capacity utilization in Analytics Platform System by using the Admin Console and by using queries.
+author: WilliamDAssafMSFT 
 ms.prod: sql
 ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: charlesf
+ms.topic: how-to
+ms.date: 05/06/2022
+ms.author: wiassaf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.custom:
+ - seo-dt-2019
+ - kr2b-contr-experiment
 ---
 
 # View Capacity Utilization in Analytics Platform System
-This topic explains how to view capacity utilization in the SQL Server PDW appliance.  
+
+This article explains how to view capacity utilization in the SQL Server Parallel Data Warehouse (PDW) appliance.  
   
-## To View Capacity Utilization By Using Admin Console  
-To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for the PDW region.  
+## To View Capacity Utilization By Using Admin Console
+
+To view the space used, open the Admin Console, and select the **Storage** tab. There's a **Storage** tab for the PDW region.  
   
-![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![Screenshot shows P D W Admin Console Storage page.](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
-## To View Capacity Utilization By Using Queries  
+## To View Capacity Utilization By Using Queries
+
 To understand if a node is running low on space, the SQL Server PDW health monitoring system already monitors the free space for all volumes within each node.  
   
-If the free space within a volume drops below 30%, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  The alert remains until free space is made available.  
+If the free space within a volume drops below 30 percent, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  The alert remains until free space is made available.  
   
-If the free space within a volume drops under 10%, SQL Server PDW generates a **critical** alert. This is considered critical because queries could fail if they cause the database to expand.  
+If the free space within a volume drops under 10 percent, SQL Server PDW generates a **critical** alert. This situation is considered critical because queries could fail if they cause the database to expand.  
   
 To retrieve volume usage, see the following example.  
   
@@ -98,7 +103,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## See Also  
+## Next steps
+
+[Appliance Monitoring](appliance-monitoring.md)  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
-  

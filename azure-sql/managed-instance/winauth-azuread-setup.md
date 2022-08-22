@@ -1,5 +1,5 @@
 ---
-title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)
+title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos 
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows Authentication access to Azure SQL Managed Instance using Azure Active Directory and Kerberos.
 services: sql-database
@@ -14,7 +14,7 @@ ms.date: 03/01/2022
 ---
 
 
-# How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)
+# How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos 
 
 This article gives an overview of how to set up infrastructure and managed instances to implement [Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-overview.md).
 
@@ -59,6 +59,7 @@ The following prerequisites are required to implement the modern interactive aut
 |Clients must be joined to Azure AD or Hybrid Azure AD. |  You can determine if this prerequisite is met by running the [dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd): `dsregcmd.exe /status` |
 |Application must connect to the managed instance via an interactive session. | This supports applications such as SQL Server Management Studio (SSMS) and web applications, but won't work for applications that run as a service. |
 |Azure AD tenant. |         |
+|Azure subscription under the same Azure AD tenant you plan to use for authentication.|         |
 |Azure AD Connect installed. | Hybrid environments where identities exist both in Azure AD and AD. |
 
 

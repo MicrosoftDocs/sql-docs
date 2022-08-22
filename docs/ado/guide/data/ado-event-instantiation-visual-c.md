@@ -1,18 +1,14 @@
 ---
+title: "ADO Event Instantiation: Visual C++"
 description: "ADO Event Instantiation: Visual C++"
-title: "ADO Event Instantiation: Visual C++ | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "C++"
-ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+dev_langs:
+  - "C++"
 ---
 # ADO Event Instantiation: Visual C++
 This is a schematic description of how to instantiate ADO events in Microsoft® Visual C++®. See [ADO Events Model Example (VC++)](../../reference/ado-api/ado-events-model-example-vc.md) for a complete description.  

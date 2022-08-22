@@ -2,7 +2,7 @@
 title: "Load XML data"
 description: Learn several methods for transferring XML data into SQL Server databases.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "XML data [SQL Server], loading"
   - "loading XML data"
-ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -33,14 +32,14 @@ You can bulk load XML data into the server by using the bulk loading capabilitie
 
 ### Example: Load XML from files
 
-This example shows how to insert a row in table T. The value of the XML column is loaded from file C:\MyFile\xmlfile.xml as CLOB, and the integer column is supplied the value 10.
+This example shows how to insert a row in table T. The value of the XML column is loaded from file `C:\MyFile\xmlfile.xml` as CLOB, and the integer column is supplied the value 10.
 
 ```sql
 INSERT INTO T
 SELECT 10, xCol
 FROM    (SELECT *
     FROM OPENROWSET (BULK 'C:\MyFile\xmlfile.xml', SINGLE_CLOB)
- AS xCol) AS R(xCol);
+AS xCol) AS R(xCol);
 ```
 
 ## Text encoding
@@ -49,30 +48,30 @@ FROM    (SELECT *
 
 - If your text XML is in Unicode (UCS-2, UTF-16), you can assign it to an XML column, variable, or parameter  without any problems.
 
-- If the encoding is not Unicode and is implicit, because of the source code page, the string code page in the database should be the same as or compatible with the code points that you want to load. If required, use COLLATE. If no such server code page exists, you have to add an explicit XML declaration with the correct encoding.
+- If the encoding isn't Unicode and is implicit, because of the source code page, the string code page in the database should be the same as or compatible with the code points that you want to load. If necessary, use COLLATE. If no such server code page exists, you have to add an explicit XML declaration with the correct encoding.
 
 - To use an explicit encoding, use either the **varbinary()** type, which has no interaction with code pages, or use a string type of the appropriate code page. Then, assign the data to an XML column, variable, or parameter.
 
 ### Example: Explicitly specify an encoding
 
- Assume that you have an XML document, vcdoc, stored as **varchar(max)** that does not have an explicit XML declaration. The following statement adds an XML declaration with the encoding "iso8859-1", concatenates the XML document, casts the result to **varbinary(max)** so that the byte representation is preserved, and then finally casts it to XML. This enables the XML processor to parse the data according to the specified encoding "iso8859-1" and generate the corresponding UTF-16 representation for string values.
+Assume that you have an XML document, vcdoc, stored as **varchar(max)** that doesn't have an explicit XML declaration. The following statement adds an XML declaration with the encoding "iso8859-1", concatenates the XML document, casts the result to **varbinary(max)** so that the byte representation is preserved, and then finally casts it to XML. This enables the XML processor to parse the data according to the specified encoding "iso8859-1" and generate the corresponding UTF-16 representation for string values.
 
 ```sql
 SELECT CAST(
 CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
- AS XML);
+AS XML);
 ```
 
 ### String encoding incompatibilities
 
-If you copy and paste XML as a string literal into the Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you might experience [N]VARCHAR string encoding incompatibilities. This will depend on the encoding of your XML instance. In many cases, you may want to remove the XML declaration. For example:
+If you copy and paste XML as a string literal into the Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you might experience **[n]varchar** string encoding incompatibilities. This will depend on the encoding of your XML instance. In many cases, you may want to remove the XML declaration. For example:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
   <xsd:schema ...
 ```
 
-You should then include an N to make the XML instance an instance of Unicode. For example:
+You should then prefix the string with an `N` to make the XML instance an instance of Unicode. For example:
 
 ```sql
 -- Assign XML instance to a variable.

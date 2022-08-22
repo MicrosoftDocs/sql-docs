@@ -1,23 +1,21 @@
 ---
-description: "DROP RESOURCE POOL (Transact-SQL)"
-title: "DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP RESOURCE POOL (Transact-SQL)"
+description: DROP RESOURCE POOL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP RESOURCE POOL"
   - "DROP_RESOURCE_POOL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP RESOURCE POOL"
+dev_langs:
+  - "TSQL"
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

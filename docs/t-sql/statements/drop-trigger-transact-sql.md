@@ -1,19 +1,17 @@
 ---
-description: "DROP TRIGGER (Transact-SQL)"
-title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP TRIGGER (Transact-SQL)"
+description: DROP TRIGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP TRIGGER"
   - "DROP_TRIGGER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "renaming triggers"
   - "triggers [SQL Server], removing"
   - "DDL triggers, removing"
@@ -22,12 +20,12 @@ helpviewer_keywords:
   - "dropping triggers"
   - "removing triggers"
   - "DML triggers, removing"
+dev_langs:
+  - "TSQL"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes one or more DML or DDL triggers from the current database.  
   

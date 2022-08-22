@@ -1,21 +1,17 @@
 ---
+title: "RecordTypeEnum"
 description: "RecordTypeEnum"
-title: "RecordTypeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RecordTypeEnum"
-helpviewer_keywords: 
-  - "RecordTypeEnum enumeration [ADO]"
-ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RecordTypeEnum"
+helpviewer_keywords:
+  - "RecordTypeEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # RecordTypeEnum
 Specifies the type of [Record](./record-object-ado.md) object.  

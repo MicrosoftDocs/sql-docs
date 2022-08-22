@@ -3,7 +3,7 @@ title: Configure availability group listeners and load balancer (PowerShell)
 description: Configure Availability Group listeners on the Azure Resource Manager model, using an internal load balancer with one or more IP addresses.
 services: virtual-machines
 documentationcenter: na
-author: rajeshsetlem
+author: adbadram
 editor: monicar
 ms.assetid: 14b39cde-311c-4ddf-98f3-8694e01a7d3b
 ms.service: virtual-machines-sql
@@ -12,7 +12,7 @@ ms.topic: how-to
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
 ms.date: 11/10/2021
-ms.author: rsetlem
+ms.author: adbadram
 ms.custom: "seo-lt-2019, devx-track-azurepowershell"
 ms.reviewer: mathoma
 ---
@@ -35,7 +35,7 @@ To complete the steps in this article, your availability groups need to be alrea
 
 Related topics include:
 
-* [Configure AlwaysOn Availability Groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
+* [Configure Always On Availability Groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
 * [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps)
 
 [!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
@@ -195,7 +195,7 @@ $ILB | Add-AzLoadBalancerRuleConfig -Name $LBConfigRuleName -FrontendIpConfigura
 
 1. Launch SQL Server Management Studio and connect to the primary replica.
 
-1. Navigate to **AlwaysOn High Availability** > **Availability Groups** > **Availability Group Listeners**. 
+1. Navigate to **Always On High Availability** > **Availability Groups** > **Availability Group Listeners**. 
 
 1. You should now see the listener name that you created in Failover Cluster Manager. Right-click the listener name and select **Properties**.
 

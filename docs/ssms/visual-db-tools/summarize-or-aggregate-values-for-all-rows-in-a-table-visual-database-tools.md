@@ -37,7 +37,8 @@ FROM titles
   
 If you add a search condition, you can aggregate the subset of rows that meet that condition.  
 
-**Note!** You can also count all the rows in the table or the ones that meet a specific condition. For details, see [Count Rows in a Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
+> [!NOTE]  
+> You can also count all the rows in the table or the ones that meet a specific condition. For details, see [Count Rows in a Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
   
   
 When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  

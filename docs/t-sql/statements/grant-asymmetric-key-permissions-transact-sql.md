@@ -1,24 +1,22 @@
 ---
-description: "GRANT Asymmetric Key Permissions (Transact-SQL)"
-title: "GRANT Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Asymmetric Key Permissions (Transact-SQL)"
+description: GRANT Asymmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], asymmetric keys"
   - "permissions [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], permissions"
   - "GRANT statement, asymmetric keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.column_encryption_keys  (Transact-SQL)"
-title: "sys.column_encryption_keys  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.column_encryption_keys  (Transact-SQL)"
+description: sys.column_encryption_keys  (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.column_encryption_keys"
   - "column_encryption_keys_TSQL"
   - "sys.column_encryption_keys_TSQL"
   - "column_encryption_keys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_encryption_keys catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_keys  (Transact-SQL)

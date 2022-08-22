@@ -1,8 +1,9 @@
 ---
 title: "Run Transact-SQL statements using secure enclaves"
 description: "Run Data Definition Language (DDL) statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
-ms.custom: ""
-ms.date: 01/15/2021
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -39,15 +40,15 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
-  - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
-  - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. SQL Server 2022 and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
+  - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in SQL Server 2022 and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in SQL Server 2022 and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - Queries that insert, update, or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Operations on indexes and confidential DML queries using enclaves are only supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
 >
-> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], confidential queries using enclaves on character string columns (`char`, `nchar`) require a binary2 sort order (BIN2) collation configured for the column. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], using BIN2 or UTF-8 collations is required.
+> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later, confidential queries using enclaves on character string columns (`char`, `nchar`) require a binary2 sort order (BIN2) collation configured for the column. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], using BIN2 or UTF-8 collations is required.
 
 ### DBCC commands using secure enclaves
 
@@ -185,7 +186,7 @@ GO
 
 The below query sorts employee records based on the encrypted `Salary` column, retrieving 10 employees with the highest salaries.
 > [!NOTE]
-> Sorting encrypted columns is supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+> Sorting encrypted columns is supported in SQL Server 2022 and Azure SQL Database, but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

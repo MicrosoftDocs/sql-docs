@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "DBCC statement syntax information"
   - "DBCC HELP statement"
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC HELP (Transact-SQL)

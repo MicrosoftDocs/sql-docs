@@ -8,12 +8,12 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "XML [SQL Server]"
   - "XML [SQL Server], about XML"
-ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.custom: ""
-ms.date: 04/29/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/09/2022
 # monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # XML data (SQL Server)
@@ -32,7 +32,9 @@ ms.date: 04/29/2022
 
 - The OPENXML function, to retrieve XML data in relational format.
 
-## In this section
+- Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
+
+## Next steps
 
 - [XML Data Type and Columns &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)
 - [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)

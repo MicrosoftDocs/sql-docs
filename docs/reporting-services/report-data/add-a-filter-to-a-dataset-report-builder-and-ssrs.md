@@ -14,7 +14,9 @@ ms.author: maggies
 ---
 # Add a Filter to a Dataset (Report Builder and SSRS)
   Add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source. When you add a filter to a dataset, all report parts or data regions use only data that matches the filter conditions.  
-  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]  
+
  For a shared dataset, a filter that applies to all dependent items must be part of the shared dataset definition on the report server. A report or report part that contains an instance of a shared dataset can create an additional filter that applies only to the instance.  
   
  To add a filter, you must specify one or more conditions that are filter equations. A filter equation consists of an expression that identifies the data that you want to filter, an operator, and the value to compare to. The data types of the filtered data and the value must match. Filtering on aggregate values for a dataset is not supported.  
@@ -42,7 +44,7 @@ ms.author: maggies
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ### To add a filter to an embedded dataset or a shared dataset instance  
   
@@ -64,7 +66,7 @@ ms.author: maggies
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ## See Also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   

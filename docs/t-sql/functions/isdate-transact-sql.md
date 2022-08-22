@@ -1,18 +1,21 @@
 ---
-description: "ISDATE (Transact-SQL)"
 title: ISDATE (Transact-SQL)
+description: "ISDATE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ISDATETIME"
   - "ISDATE_TSQL"
   - "ISDATE"
   - "ISDATETIME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "date and time [SQL Server], ISDATE"
   - "validate dates times [SQL Server]"
@@ -25,13 +28,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
-ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 03/14/2017
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # ISDATE (Transact-SQL)

@@ -1,19 +1,19 @@
 ---
+title: "JSON Functions (Transact-SQL)"
 description: "JSON Functions (Transact-SQL)"
-title: "JSON Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom:
+  - "event-tier1-build-2022"
+helpviewer_keywords:
   - "JSON functions"
-ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON Functions (Transact-SQL)
 
@@ -27,6 +27,8 @@ Use the functions described on the pages in this section to validate or change J
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extracts a scalar value from a JSON string.|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|Extracts an object or an array from a JSON string.|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Updates the value of a property in a JSON string and returns the updated JSON string.|
+|[JSON_PATH_EXISTS](../../t-sql/functions/json-path-exists-transact-sql.md)|Tests whether a specified SQL/JSON path exists in the input JSON string.|
+
 
  For more info about the built-in support for JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
 

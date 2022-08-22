@@ -1,19 +1,19 @@
 ---
+title: "GETUTCDATE (Transact-SQL)"
 description: "GETUTCDATE (Transact-SQL)"
-title: "GETUTCDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "12/02/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "GETUTCDATE"
   - "GETUTCDATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], UTC time"
   - "dates [SQL Server], functions"
   - "UTC time [SQL Server]"
@@ -32,10 +32,9 @@ helpviewer_keywords:
   - "dates [SQL Server], current date and time"
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
-ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # GETUTCDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

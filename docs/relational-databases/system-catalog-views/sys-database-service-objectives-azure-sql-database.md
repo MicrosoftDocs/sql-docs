@@ -1,24 +1,23 @@
 ---
-description: "sys.database_service_objectives (Azure SQL Database)"
 title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database
+description: sys.database_service_objectives (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/21/2018"
 ms.service: sql-database
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.topic: conceptual
-dev_langs: 
+ms.custom: seo-dt-2019
+f1_keywords:
+  - "DATABASE_SERVICE_OBJECTIVES_TSQL"
+dev_langs:
   - "TSQL"
-keywords: 
+keywords:
   - "elastic pool"
   - "elastic pool, management"
-f1_keywords: 
-  - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: rwestMSFT
-ms.author: randolphwest
-ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 ---
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

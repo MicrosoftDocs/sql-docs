@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Support Policies for SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SNAC).  
   
 ## Server Support  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
@@ -56,9 +56,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  
  ### Support Lifecycle exception
  
-The SQL Native Client 11.0 provider is supported in SQL Server 2012 through 2019 until their respective end-of-support lifecycles, but only when used by SQL Server components. Do not remove the SQL Native Client provider that gets installed by SQL Server on the system. This support exception does not include enhancements or fixes to SQL Native Client 11.0, but it does cover critical security fixes.
+Limited support is provided for the SQL Native Client 11.0 that gets installed by SQL Server 2012 through 2019 until the SQL Server respective end-of-support lifecycles. This support exception only applies to the SNAC 11 driver that is installed and used by SQL Server components (e.g. SQL Server Engine Linked Servers). This means the driver is supported on Windows versions where SQL Server 2012 through SQL Server 2019 are supported. Do not remove the SQL Native Client provider that gets installed by SQL Server on the system. The support exception only covers critical security fixes and does not include enhancements or fixes to SQL Native Client 11.0.
+
+This support exception does not cover using SQL Native Client 11.0 as a driver for database applications to connect to SQL Server. Any applications using SNAC 11.0 must be updated to use newer versions (see [Download ODBC Driver for SQL Server - ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) and [Download Microsoft OLE DB Driver for SQL Server - OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md)). 
+
+
+
 
 ## See Also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
-  
   

@@ -1,21 +1,19 @@
 ---
-description: "Modify an Index"
-title: "Modify an Index | Microsoft Docs"
-ms.custom: ""
+title: "Modify an Index"
+description: Modify an Index
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexes [SQL Server], modifying"
   - "modifying indexes"
   - "index changes [SQL Server]"
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current || >= sql-server-2016"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Modify an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -1,19 +1,17 @@
 ---
-description: "CREATE FUNCTION (Azure Synapse Analytics)"
-title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE FUNCTION (Azure Synapse Analytics)"
+description: CREATE FUNCTION (Azure Synapse Analytics)
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/17/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

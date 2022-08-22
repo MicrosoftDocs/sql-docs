@@ -1,25 +1,21 @@
 ---
+title: "Attributes Property (ADOX)"
 description: "Attributes Property (ADOX)"
-title: "Attributes Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Column::put_Attributes"
   - "_Column::Attributes"
   - "_Column::PutAttributes"
   - "_Column::get_Attributes"
   - "_Column::GetAttributes"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Attributes property [ADOX]"
-ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Attributes Property (ADOX)
 Describes column characteristics.  

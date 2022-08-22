@@ -1,25 +1,23 @@
 ---
-description: "sys.numbered_procedures (Transact-SQL)"
-title: "sys.numbered_procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.numbered_procedures (Transact-SQL)"
+description: sys.numbered_procedures (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.numbered_procedures_TSQL"
   - "numbered_procedures"
   - "sys.numbered_procedures"
   - "numbered_procedures_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.numbered_procedures catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.numbered_procedures (Transact-SQL)

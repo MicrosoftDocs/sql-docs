@@ -1,29 +1,27 @@
 ---
-description: "sys.allocation_units (Transact-SQL)"
-title: "sys.allocation_units (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.allocation_units (Transact-SQL)"
+description: sys.allocation_units (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.allocation_units_TSQL"
   - "sys.allocation_units"
   - "allocation_units_TSQL"
   - "allocation_units"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.allocation_units catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.allocation_units (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contains a row for each allocation unit in the database.  
   

@@ -1,26 +1,25 @@
 ---
+title: "HOST_ID (Transact-SQL)"
 description: "HOST_ID (Transact-SQL)"
-title: "HOST_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "HOST_ID"
   - "HOST_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDs [SQL Server], workstations"
   - "HOST_ID function"
   - "workstation IDs [SQL Server]"
   - "identification numbers [SQL Server], workstations"
-ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # HOST_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,26 +1,23 @@
 ---
-description: "sys.dm_external_script_execution_stats"
-title: "sys.dm_external_script_execution_stats | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_external_script_execution_stats"
+description: sys.dm_external_script_execution_stats
+author: rwestMSFT
+ms.author: randolphwest
+manager: cgronlun
 ms.date: "06/25/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning
-  
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_external_script_execution_stats"
   - "sys.dm_external_script_execution_stats_TSQL"
   - "dm_external_script_execution_stats"
   - "dm_external_script_execution_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_external_script_execution_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-author: rothja
-ms.author: jroth
-manager: cgronlun
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_execution_stats

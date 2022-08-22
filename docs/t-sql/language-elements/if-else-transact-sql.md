@@ -1,26 +1,25 @@
 ---
-title: "IF...ELSE (Transact-SQL) | Microsoft Docs"
+title: "IF...ELSE (Transact-SQL)"
 description: "Transact-SQl language reference for IF-ELSE statements to provide control flow in Transact-SQL statements."
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IF_TSQL"
   - "IF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IF...ELSE keyword"
   - "ELSE (IF...ELSE) keyword"
   - "ELSE keyword"
   - "IF keyword"
-ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # IF...ELSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

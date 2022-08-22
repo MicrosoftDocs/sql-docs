@@ -1,15 +1,15 @@
 ---
 title: Enable event tracing in SqlClient
 description: Describes how to enable event tracing or logging in SqlClient by implementing an event listener and how to access the event data.
-ms.date: 03/31/2022
+ms.date: 06/01/2022
 dev_langs:
   - "csharp"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: johnnypham
-ms.author: v-jopha
+author: David-Engel
+ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ---
 # Enable event tracing in SqlClient

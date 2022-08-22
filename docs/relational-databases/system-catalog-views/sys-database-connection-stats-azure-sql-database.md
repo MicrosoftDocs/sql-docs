@@ -1,26 +1,25 @@
 ---
-description: "sys.database_connection_stats (Azure SQL Database)"
 title: "sys.database_connection_stats"
 titleSuffix: Azure SQL Database
+description: sys.database_connection_stats (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
   - "database_connection_stats_TSQL"
   - "sys.database_connection_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: rwestMSFT
-ms.author: randolphwest
-ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.database_connection_stats (Azure SQL Database)
 

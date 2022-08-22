@@ -1,26 +1,25 @@
 ---
+title: "COL_LENGTH (Transact-SQL)"
 description: "COL_LENGTH (Transact-SQL)"
-title: "COL_LENGTH (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "COL_LENGTH"
   - "COL_LENGTH_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "lengths [SQL Server], columns"
   - "COL_LENGTH function"
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
-ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

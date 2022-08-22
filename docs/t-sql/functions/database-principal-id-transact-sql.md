@@ -1,27 +1,26 @@
 ---
+title: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 description: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
-title: "DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "05/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "DATABASE_PRINCIPAL_ID_TSQL"
   - "DATABASE_PRINCIPAL_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "identification numbers [SQL Server], principals"
   - "principal ID numbers [SQL Server]"
   - "DATABASE_PRINCIPAL_ID function"
   - "IDs [SQL Server], principals"
-ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest"
 ---
 # DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

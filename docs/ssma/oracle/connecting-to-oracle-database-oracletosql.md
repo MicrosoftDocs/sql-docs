@@ -13,6 +13,8 @@ helpviewer_keywords:
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: cpichuka
+f1_keywords: 
+  - "ssma.oracle.connectoracleform.f1"
 ---
 
 # Connecting to Oracle Database (OracleToSQL)
@@ -144,7 +146,7 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
 
    To view the definitions of the color coding, click the **Legend** button.
 
-5. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+5. Select **OK**.
 
 ## Next steps
 

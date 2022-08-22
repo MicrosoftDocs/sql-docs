@@ -1,23 +1,21 @@
 ---
-description: "IHpublishers (Transact-SQL)"
-title: "IHpublishers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHpublishers (Transact-SQL)"
+description: IHpublishers (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHpublishers"
   - "IHpublishers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHpublishers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

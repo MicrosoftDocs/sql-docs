@@ -1,21 +1,15 @@
 ---
 title: "NULL Handling (SQLXML)"
-description: Learn how NULL attributes or elements can be specified in an SQLXML 4.0 updategram by using the updg:nullvalue attribute.
+description: "Learn how NULL attributes or elements can be specified in an SQLXML 4.0 updategram by using the updg:nullvalue attribute."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
-  - "updg:nullvalue attribute"
-  - "updategrams [SQLXML], null values"
-  - "nullvalue attribute"
-  - "null values [SQLXML]"
-ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: rothja
-ms.author: jroth
 ms.custom: "seo-lt-2019"
+ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NULL Handling (SQLXML 4.0)

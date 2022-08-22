@@ -1,18 +1,16 @@
 ---
-description: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
-title: "DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
+description: DROP EXTERNAL DATA SOURCE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL DATA SOURCE (Transact-SQL)

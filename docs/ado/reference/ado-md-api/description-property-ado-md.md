@@ -1,26 +1,22 @@
 ---
+title: "Description Property (ADO MD)"
 description: "Description Property (ADO MD)"
-title: "Description Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Member::Description"
   - "Level::Description"
   - "CubeDef::Description"
   - "Hierarchy::Description"
   - "Description"
   - "Dimension::Description"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Description property [ADO MD]"
-ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  

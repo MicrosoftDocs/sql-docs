@@ -1,12 +1,13 @@
 ---
 title: Create a Hyperscale database
 description: Create a Hyperscale database in Azure SQL Database using the Azure portal, Transact-SQL, PowerShell, or the Azure CLI.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 2/17/2022
 ---
@@ -174,9 +175,9 @@ You can create a resource group, server, and single database using Azure PowerSh
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account.
 
-To open the Cloud Shell, just select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
 
-When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a Bash environment, Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
+When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
 ### Set parameter values
 
@@ -276,7 +277,7 @@ Connect to the master database using [SQL Server Management Studio (SSMS)](/sql/
 
 When creating a Hyperscale database, carefully consider the setting for `BACKUP_STORAGE_REDUNDANCY`. Storage redundancy can only be specified during the database creation process for Hyperscale databases. You may choose locally redundant (preview), zone-redundant (preview), or geo-redundant storage. The selected storage redundancy option will be used for the lifetime of the database for both [data storage redundancy](hyperscale-architecture.md#azure-storage) and [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore. Allowed values for the `BackupStorageRedundancy` parameter are: `LOCAL`, `ZONE`, `GEO`.  Unless explicitly specified, databases will be configured to use geo-redundant backup storage.
 
-Run the following Transact-SQL command to create a new Hyperscale database with Gen 5 hardware, 2 vCores, and geo-redundant backup storage. You must specify both the edition and service objective in the `CREATE DATABASE` statement. Refer to the [resource limits](./resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen4) for a list of valid service objectives, such as `HS_Gen5_2`.
+Run the following Transact-SQL command to create a new Hyperscale database with Gen 5 hardware, 2 vCores, and geo-redundant backup storage. You must specify both the edition and service objective in the `CREATE DATABASE` statement. Refer to the [resource limits](./resource-limits-vcore-single-databases.md) for a list of valid service objectives, such as `HS_Gen5_2`.
 
 This example code creates an empty database. If you would like to create a database with sample data, use the Azure portal, Azure CLI, or PowerShell examples in this quickstart.
 
@@ -288,7 +289,7 @@ GO
 
 Refer to [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true) for more parameters and options.
 
-To add one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica) to your database, use the **Compute and storage** pane for the database in the Azure portal, the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell command, or the [az sql db update](/cli/azure/sql/db#az_sql_db_update) Azure CLI command.
+To add one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica) to your database, use the **Compute and storage** pane for the database in the Azure portal, the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell command, or the [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command.
 
 ---
 
@@ -315,9 +316,9 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
     ```sql
     CREATE TABLE dbo.TestTable(
-    	TestTableID int IDENTITY(1,1) NOT NULL,
-    	TestTime datetime NOT NULL,
-    	TestMessage nvarchar(4000) NOT NULL,
+        TestTableID int IDENTITY(1,1) NOT NULL,
+        TestTime datetime NOT NULL,
+        TestMessage nvarchar(4000) NOT NULL,
      CONSTRAINT PK_TestTable_TestTableID PRIMARY KEY CLUSTERED (TestTableID ASC)
     ) 
     GO
@@ -356,7 +357,7 @@ To delete **myResourceGroup** and all its resources using the Azure portal:
 
 # [Azure CLI](#tab/azure-cli)
 
-Use the following command to remove the resource group and all resources associated with it using the [az group delete](/cli/azure/vm/extension#az_vm_extension_set) command - unless you have an ongoing need for these resources. Some of these resources may take a while to create, and to delete.
+Use the following command to remove the resource group and all resources associated with it using the [az group delete](/cli/azure/vm/extension#az-vm-extension-set) command - unless you have an ongoing need for these resources. Some of these resources may take a while to create, and to delete.
 
 ```azurecli-interactive
 az group delete --name $resourceGroup

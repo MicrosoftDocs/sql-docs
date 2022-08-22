@@ -1,23 +1,21 @@
 ---
-description: "GRANT Endpoint Permissions (Transact-SQL)"
-title: "GRANT Endpoint Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Endpoint Permissions (Transact-SQL)"
+description: GRANT Endpoint Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "endpoints [SQL Server], permissions"
   - "granting permissions [SQL Server], endpoints"
   - "GRANT statement, endpoints"
   - "permissions [SQL Server], endpoints"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-author: VanMSFT
-ms.author: vanto
 ---
 # GRANT Endpoint Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

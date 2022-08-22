@@ -1,18 +1,14 @@
 ---
+title: "Parameter Object Properties, Methods, and Events"
 description: "Parameter Object Properties, Methods, and Events"
-title: "Parameter Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Parameter object [ADO], members"
-ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Parameter object [ADO], members"
 ---
 # Parameter Object Properties, Methods, and Events
 ## Properties/Collections  

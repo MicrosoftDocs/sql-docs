@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_server_registry (Transact-SQL)"
-title: "sys.dm_server_registry (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_server_registry (Transact-SQL)"
+description: sys.dm_server_registry (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_server_registry_TSQL"
   - "sys.dm_server_registry"
   - "dm_server_registry"
   - "sys.dm_server_registry_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_server_registry dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_server_registry (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

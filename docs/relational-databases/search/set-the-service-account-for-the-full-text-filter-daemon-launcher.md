@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account"
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"

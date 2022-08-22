@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_io_backup_tapes (Transact-SQL)"
-title: "sys.dm_io_backup_tapes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_io_backup_tapes (Transact-SQL)"
+description: sys.dm_io_backup_tapes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_io_backup_tapes"
   - "dm_io_backup_tapes_TSQL"
   - "sys.dm_io_backup_tapes_TSQL"
   - "dm_io_backup_tapes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_io_backup_tapes dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

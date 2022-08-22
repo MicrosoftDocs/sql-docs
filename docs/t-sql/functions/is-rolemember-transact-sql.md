@@ -1,26 +1,25 @@
 ---
+title: "IS_ROLEMEMBER (Transact-SQL)"
 description: "IS_ROLEMEMBER (Transact-SQL)"
-title: "IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
+ms.date: 06/06/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "IS_ROLEMEMBER"
   - "IS_ROLEMEMBER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "roles [SQL Server], members"
   - "IS_ROLEMEMBER function"
   - "members [SQL Server], verifying"
-ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,9 +73,11 @@ The **IS_ROLEMEMBER** function is not supported for an Azure AD administrator wh
   
  **IS_ROLEMEMBER** always returns 0 when a Windows group is used as the database principal argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified database role.  
   
- The User Account Control (UAC) found in [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] and Windows Server 2008 might also return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
+ The User Account Control (UAC) found in [!INCLUDE[winvista](../../includes/winvista-md.md)] and Windows Server 2008 might also return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user.  
   
  This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but is not a member of the role, this function will correctly report that the user is not a member of the **db_owner** role, even though the user has the same permissions.  
+ 
+ Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn't exist in Windows groups, **dbo** will always return 0 (or NULL if the role doesn't exist).  
   
 ## Related Functions  
  To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  

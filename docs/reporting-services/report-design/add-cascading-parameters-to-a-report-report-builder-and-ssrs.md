@@ -48,7 +48,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The order of query parameters the first time you run a query determines the order that they are created in the report. To change the order, see [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
  Next, you will create a dataset that provides the values for the independent parameter.  
   
@@ -72,7 +72,7 @@ ms.author: maggies
   
      Click **Run** (**!**). The result set shows the values that are available for this first parameter.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
  Next, you will set the properties of the first parameter to use this dataset to populate its available values at run-time.  
   
@@ -92,7 +92,7 @@ ms.author: maggies
   
 7.  In **Label** field, click the name of the field that provides the parameter label.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
  Next, you will create a dataset that provides the values for a dependent parameter.  
   
@@ -115,7 +115,7 @@ ms.author: maggies
   
      In the WHERE clause, Category is the name of a field from \<table> and @Category is a query parameter. This statement produces a list of subcategories for the category specified in @Category. At run time, this value will be filled in with the value that the user chooses for the report parameter that has the same name.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
  Next, you will set the properties of the second parameter to use this dataset to populate its available values at run time.  
   
@@ -135,7 +135,7 @@ ms.author: maggies
   
 7.  In **Label** field, click the name of the field that provides the parameter label.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## To test the cascading parameters  
   

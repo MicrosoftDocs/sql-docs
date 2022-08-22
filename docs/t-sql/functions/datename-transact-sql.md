@@ -1,19 +1,19 @@
 ---
+title: "DATENAME (Transact-SQL)"
 description: "DATENAME (Transact-SQL)"
-title: "DATENAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "DATENAME_TSQL"
   - "DATENAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "DATENAME function [SQL Server"
   - "functions [SQL Server], time"
@@ -22,10 +22,9 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATENAME"
   - "comparing dates times [SQL Server]"
   - "dates [SQL Server], dateparts"
-ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

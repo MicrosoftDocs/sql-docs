@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
-title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/05/2021"
 ms.prod: sql
 ms.prod_service: sql-database
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.resource_governor"
   - "sys.resource_governor_TSQL"
   - "resource_governor"
   - "resource_governor_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.resource_governor catalog view"
-ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)

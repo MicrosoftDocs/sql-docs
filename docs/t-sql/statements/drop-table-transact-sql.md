@@ -1,19 +1,18 @@
 ---
-description: "DROP TABLE (Transact-SQL)"
-title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP TABLE (Transact-SQL)"
+description: DROP TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "DROP_TABLE_TSQL"
   - "DROP TABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing indexes"
   - "table removal [SQL Server]"
   - "deleting indexes"
@@ -34,9 +33,9 @@ helpviewer_keywords:
   - "deleting data"
   - "dropping constraints"
   - "dropping permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP TABLE (Transact-SQL)
@@ -92,7 +91,10 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  Large tables and indexes that use more than 128 extents are dropped in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the table are marked for deallocation and locked until the transaction commits. In the physical phase, the IAM pages marked for deallocation are physically dropped in batches.  
   
- If you drop a table that contains a VARBINARY(MAX) column with the FILESTREAM attribute, any data stored in the file system will not be removed.  
+ If you drop a table that contains a VARBINARY(MAX) column with the FILESTREAM attribute, any data stored in the file system will not be removed.
+
+ When a ledger table is dropped, its dependent objects (the history table and the ledger view) are also dropped. A history table or a ledger view cannot be dropped directly. The system enforces a *soft-delete* semantics when dropping ledger tables and its dependent objects – they are not really dropped, but instead they are marked as dropped in system catalog views and renamed. For more information, see [Ledger considerations and limitations](../../relational-databases/security/ledger/ledger-limits.md).
+
   
 > [!IMPORTANT]  
 >  DROP TABLE and CREATE TABLE should not be executed on the same table in the same batch. Otherwise an unexpected error may occur.  

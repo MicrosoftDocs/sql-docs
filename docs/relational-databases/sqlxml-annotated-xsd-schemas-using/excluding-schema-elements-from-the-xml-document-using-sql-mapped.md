@@ -1,28 +1,20 @@
 ---
 title: "Exclude schema elements from XML Doc with sql:mapped"
-description: Learn how to use the sql:mapped annotation to create an element in the XSD schema that does not map to a database table (view) or column.
+description: "Learn how to use the sql:mapped annotation to create an element in the XSD schema that does not map to a database table (view) or column."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "element does not map [SQLXML]"
   - "annotated XSD schemas, excluding schema elements"
   - "mapped annotation"
   - "table mapping [SQLXML], excluding schema elements"
-  - "sql:mapped"
-  - "excluding schema elements"
-  - "element mapping [SQLXML], excluding schema elements"
-  - "column mapping [SQLXML]"
-  - "XSD schemas [SQLXML], excluding schema elements"
-  - "attribute mapping [SQLXML], excluding schema elements"
-  - "table/view mapping [SQLXML], excluding schema elements"
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped

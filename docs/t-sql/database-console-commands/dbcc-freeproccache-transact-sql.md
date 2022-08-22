@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

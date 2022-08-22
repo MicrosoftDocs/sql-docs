@@ -1,16 +1,20 @@
 ---
-title: "Azure CLI example: Add a database to a failover group" 
-description: Use this Azure CLI example script to create a database in Azure SQL Database, add it to an auto-failover group, and test failover. 
-services: sql-database
+title: "Azure CLI example: Add a database to a failover group"
+description: Use this Azure CLI example script to create a database in Azure SQL Database, add it to an auto-failover group, and test failover.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: sqldbrb=1, devx-track-azurecli
-ms.devlang: azurecli
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+ms.devlang:
+  - "azurecli"
 ms.topic: sample
-author: emlisa
-ms.author: emlisa
-ms.reviewer: kendralittle, mathoma
-ms.date: 01/26/2022 
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma
+ms.date: 01/26/2022
 ---
 
 # Add a database to a failover group using the Azure CLI

@@ -1,25 +1,23 @@
 ---
-description: "sys.transmission_queue (Transact-SQL)"
-title: "sys.transmission_queue (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.transmission_queue (Transact-SQL)"
+description: sys.transmission_queue (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "transmission_queue"
   - "sys.transmission_queue_TSQL"
   - "sys.transmission_queue"
   - "transmission_queue_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.transmission_queue catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

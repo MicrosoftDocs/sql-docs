@@ -1,23 +1,21 @@
 ---
-description: "MSarticles (Transact-SQL)"
-title: "MSarticles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSarticles (Transact-SQL)"
+description: MSarticles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSarticles"
   - "MSarticles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSarticles system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

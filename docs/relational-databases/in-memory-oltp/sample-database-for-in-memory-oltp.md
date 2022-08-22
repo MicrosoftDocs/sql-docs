@@ -1,15 +1,14 @@
 ---
 title: "Sample Database for In-Memory OLTP"
 description: Learn about the In-Memory OLTP feature and its performance benefits. This sample shows memory-optimized tables and natively compiled stored procedures.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf
 ms.date: 03/02/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: wiassaf
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
@@ -318,7 +317,7 @@ For more information:
   
  To open the RML Cmd Prompt, follow these instructions:  
   
- In Windows, open the start menu by selecting the Windows key, and type `rml`. Select on "RML Cmd Prompt", which will be in the list of search results.  
+ In Windows, open the start menu by selecting the Windows key, and type `rml`. Select "RML Cmd Prompt", which will be in the list of search results.  
   
  Ensure that the command prompt is located in the RML Utilities installation folder.  
   
@@ -755,4 +754,4 @@ ORDER BY state, file_type;
 
 - [In-Memory OLTP &#40;In-Memory Optimization&#41; overview and usage scenarios](./overview-and-usage-scenarios.md)
 - Create a memory-optimized filegroup: [The Memory Optimized Filegroup](the-memory-optimized-filegroup.md)
-- [Script to enable [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
+- [Script to enable [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

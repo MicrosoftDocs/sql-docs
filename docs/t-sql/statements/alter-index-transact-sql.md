@@ -1,18 +1,18 @@
 ---
-description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
-ms.custom: ""
-ms.date: 04/29/2022
+description: ALTER INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "indexes [SQL Server], reorganizing"
   - "ALTER INDEX statement"
@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "index rebuild [SQL Server]"
   - "index reorganize [SQL Server]"
-author: pmasl
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -97,7 +97,8 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
-}
+    | XML_COMPRESSION = { ON | OFF }
+        [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]}
 
 <single_partition_rebuild_index_option> ::=
 {
@@ -106,6 +107,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | RESUMABLE = { ON | OFF }
     | MAX_DURATION = <time> [MINUTES}
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }
+    | XML_COMPRESSION = { ON | OFF }
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }
 }
 
@@ -122,7 +124,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }
     | STATISTICS_NORECOMPUTE = { ON | OFF }
-    | COMPRESSION_DELAY= { 0 | delay [Minutes] }
+    | COMPRESSION_DELAY = { 0 | delay [Minutes] }
 }
 
 <resumable_index_option> ::=
@@ -159,11 +161,14 @@ ALTER INDEX { index_name | ALL }
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
+    | XML_COMPRESSION = { ON | OFF }
+        [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
 }
 
 <single_partition_rebuild_index_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
+    | XML_COMPRESSION = { ON | OFF }
 }
 
 ```
@@ -245,7 +250,7 @@ The partition number of a partitioned index that is to be rebuilt or reorganized
 
 **WITH (<single_partition_rebuild_index_option>)**
 
-`SORT_IN_TEMPDB`, `MAXDOP`, and `DATA_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = partition_number)`. XML indexes can't be specified in a single partition `REBUILD` operation.
+`SORT_IN_TEMPDB`, `MAXDOP`, `DATA_COMPRESSION`, and `XML_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = partition_number)`. XML indexes can't be specified in a single partition `REBUILD` operation.
 
 #### DISABLE
 
@@ -406,7 +411,7 @@ For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLI
 > [!IMPORTANT]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 >  
->- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+>- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 >- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 >- [Editions and Supported Features for SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 
@@ -542,9 +547,24 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+#### XML_COMPRESSION
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
+
+ON  
+Index or specified partitions are compressed by using XML compression.
+
+OFF  
+Index or specified partitions are not compressed.
+
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range\> } [,...n] )
 
-Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.
+Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned index.
+
+> [!NOTE]  
+> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -562,6 +582,17 @@ REBUILD WITH
 DATA_COMPRESSION = NONE ON PARTITIONS (1),
 DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
 DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+);
+```
+
+You can also specify the XML_COMPRESSION option more than once, for example:
+
+```sql
+REBUILD WITH
+(
+  XML_COMPRESSION = OFF ON PARTITIONS (1),
+  XML_COMPRESSION = ON ON PARTITIONS (2, 4, 6 TO 8),
+  XML_COMPRESSION = OFF ON PARTITIONS (3, 5)
 );
 ```
 
@@ -719,7 +750,7 @@ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY`
 
 In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table.
 
-The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Schema Stability (Sch-S) locks and Schema Modify (Sch-M) locks required for online index rebuilds and allows them to select one of three options. In all three cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
+The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Schema Stability (Sch-S) locks and Schema Modify (Sch-M) locks required for online index rebuilds and allows them to select one of two options. In either case, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
 
 `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.
 
@@ -727,7 +758,7 @@ MAX_DURATION = *time* [**MINUTES**]
 
 The wait time (an integer value specified in minutes) that the online index rebuild locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specified `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.
 
-ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]
+ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** ]
 
 NONE  
 Continue waiting for the lock with normal (regular) priority.
@@ -1145,9 +1176,23 @@ WITH (DATA_COMPRESSION = PAGE);
 GO
 ```
 
+### J. Change the setting of an index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+The following example rebuilds an index on a nonpartitioned rowstore table.
+
+```sql
+ALTER INDEX IX_INDEX1
+ON T1
+REBUILD
+WITH (XML_COMPRESSION = ON);
+GO
+```
+
 For more data compression examples, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-### J. Online resumable index rebuild
+### K. Online resumable index rebuild
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

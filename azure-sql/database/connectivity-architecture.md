@@ -1,17 +1,19 @@
 ---
-title: Azure SQL Database connectivity architecture 
+title: Azure SQL Database connectivity architecture
 description: This article explains the Azure SQL Database connectivity architecture for database connections from within Azure or from outside of Azure.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: fasttrack-edit, sqldbrb=1 
+ms.custom:
+  - "fasttrack-edit"
+  - "sqldbrb=1"
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.devlang: 
 ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, mathoma, vanto
-ms.date: 03/18/2022
+ms.reviewer: wiassaf, mathoma, vanto
+ms.date: 07/13/2022
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -39,12 +41,15 @@ Servers in SQL Database and Azure Synapse support the following three options fo
 - **Redirect (recommended):** Clients establish connections directly to the node hosting the database, leading to reduced latency and improved throughput. For connections to use this mode, clients need to:
   - Allow outbound communication from the client to all Azure SQL IP addresses in the region on ports in the range of 11000 to 11999. Use the Service Tags for SQL to make this easier to manage.  
   - Allow outbound communication from the client to Azure SQL Database gateway IP addresses on port 1433.
-
+  - When using the Redirect connection policy, refer to the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) for a list of your region's IP addresses to allow.
 - **Proxy:** In this mode, all connections are proxied via the Azure SQL Database gateways, leading to increased latency and reduced throughput. For connections to use this mode, clients need to allow outbound communication from the client to Azure SQL Database gateway IP addresses on port 1433.
-
+  - When using the Proxy connection policy, refer to the [Gateway IP addresses](#gateway-ip-addresses) list later in this article for your region's IP addresses to allow.
 - **Default:** This is the connection policy in effect on all servers after creation unless you explicitly alter the connection policy to either `Proxy` or `Redirect`. The default policy is`Redirect` for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and `Proxy`for all client connections originating outside (for example, connections from your local workstation).
 
 We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you will need to meet the additional requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises then you may need to work with your network admin to allow network traffic through your corporate firewall.
+
+> [!IMPORTANT]
+> Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy).
 
 ## Connectivity from within Azure
 
@@ -105,7 +110,7 @@ Periodically, we will retire Gateways using old hardware and migrate the traffic
 | South Africa West    | 102.133.24.0       | 102.133.25.32/29 |
 | South Central US     | 13.66.62.124, 104.214.16.32, 20.45.121.1, 20.49.88.1 | 20.45.121.32/29, 20.49.88.32/29, 20.49.89.32/29, 40.124.64.136/29 |
 | South East Asia      | 104.43.15.0, 40.78.232.3, 13.67.16.193 | 13.67.16.192/29, 23.98.80.192/29, 40.78.232.192/29|
-| Switzerland North    | 51.107.56.0, 51.107.57.0 | 51.107.56.32/29 |
+| Switzerland North    | 51.107.56.0, 51.107.57.0 | 51.107.56.32/29, 51.103.203.192/29, 20.208.19.192/29, 51.107.242.32/27 |
 | Switzerland West     | 51.107.152.0, 51.107.153.0 | 51.107.153.32/29 |
 | UAE Central          | 20.37.72.64        | 20.37.72.96/29, 20.37.73.96/29 |
 | UAE North            | 65.52.248.0        | 40.120.72.32/29, 65.52.248.32/29 |

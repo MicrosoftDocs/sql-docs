@@ -18,6 +18,8 @@
     href: quickstart-sql-database.md
   - name: Connect & query Azure Synapse Analytics
     href: quickstart-sql-dw.md
+  - name: Connect & query Azure Cosmos DB API for MongoDB
+    href: quickstart-azure-cosmos-db-mongodb.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
   - name: Connect & explore Oracle
@@ -46,6 +48,8 @@
       href: extensions/azure-sql-migration-extension.md
     - name: Azure Monitor Logs extension
       href: extensions/azure-monitor-logs-extension.md
+    - name: Azure Cosmos DB API for MongoDB extension
+      href: extensions/azure-cosmos-db-mongodb-extension.md
     - name: Database Migration Assessment for Oracle extension
       href: extensions/database-migration-assessment-for-oracle-extension.md
     - name: Database Schema Conversion Toolkit
@@ -86,6 +90,8 @@
         href: extensions/sql-database-project-extension-build.md
       - name: Build a Project from the Command Line
         href: extensions/sql-database-project-extension-build-from-command-line.md
+      - name: Use SDK-style projects
+        href: extensions/sql-database-project-extension-sdk-style-projects.md 
     - name: SQL Server Agent
       href: extensions/sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
@@ -122,6 +128,8 @@
     href: server-groups.md
   - name: Source control
     href: source-control.md
+  - name: Table designer
+    href: table-designer-azure-data-studio.md
 - name: How-to guides
   items:
   - name: Notebooks
@@ -158,6 +166,8 @@
       href: deploy-azure-sql-edge.md
     - name: Deploy SQL Server on Azure Virtual Machines
       href: deploy-azure-sql-server-vm.md
+    - name: Deploy SQL Server in a container
+      href: deploy-sql-container.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

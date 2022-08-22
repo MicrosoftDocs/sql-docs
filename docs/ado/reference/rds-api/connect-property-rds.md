@@ -1,19 +1,15 @@
 ---
+title: "Connect Property (RDS)"
 description: "Connect Property (RDS)"
-title: "Connect Property (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Connect property [ADO]"
-ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Connect property [ADO]"
+apitype: "COM"
 ---
 # Connect Property (RDS)
 Indicates the database name from which the query and update operations are run.  

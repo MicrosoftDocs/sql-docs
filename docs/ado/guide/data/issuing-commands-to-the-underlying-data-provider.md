@@ -1,20 +1,16 @@
 ---
+title: "Issuing Commands to the Underlying Data Provider"
 description: "Issuing Commands to the Underlying Data Provider"
-title: "Issuing Commands to the Underlying Data Provider | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "shape commands [ADO]"
   - "underlying providers [ADO]"
   - "data shaping [ADO], commands"
-ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-author: rothja
-ms.author: jroth
 ---
 # Issuing Commands to the Underlying Data Provider
 Any command that does not begin with SHAPE is passed through to the data provider. This is equivalent to issuing a shape command in the form "SHAPE {provider command}". These commands do *not* have to produce a **Recordset**. For instance, "SHAPE {DROP TABLE MyTable} is a perfectly valid shape command, assuming the data provider supports DROP TABLE.  

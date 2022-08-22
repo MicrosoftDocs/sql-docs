@@ -1,24 +1,22 @@
 ---
-description: "COLLATE (Transact-SQL)"
-title: "COLLATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "COLLATE (Transact-SQL)"
+description: COLLATE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "COLLATE"
   - "COLLATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collations [SQL Server], COLLATE clause"
   - "COLLATE clause"
+dev_langs:
+  - "TSQL"
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLLATE (Transact-SQL)

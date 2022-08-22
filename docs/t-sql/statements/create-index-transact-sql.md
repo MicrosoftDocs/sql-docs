@@ -1,20 +1,20 @@
 ---
-description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL)"
-ms.custom: ""
-ms.date: 04/29/2022
+description: CREATE INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE INDEX"
   - "INDEX"
   - "INDEX_TSQL"
   - "CREATE_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "CREATE XML INDEX statement"
   - "PRIMARY XML INDEX statement"
@@ -51,8 +51,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
-author: pmasl
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
@@ -138,6 +138,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE }
+     [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+     [ , ...n ] ) ]
+  | XML_COMPRESSION = { ON | OFF }
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
      [ , ...n ] ) ]
 }
@@ -483,7 +486,7 @@ In backward compatible syntax, `WITH DROP_EXISTING` is equivalent to `WITH DROP_
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is **OFF**.
 
 > [!IMPORTANT]  
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ON  
 Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created. A Sch-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE can't be set to ON when an index is being created on a local temporary table.
@@ -576,7 +579,7 @@ Uses the actual number of processors or fewer based on the current system worklo
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 #### DATA_COMPRESSION
 
@@ -593,9 +596,24 @@ Index or specified partitions are compressed by using page compression.
 
 For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+#### XML_COMPRESSION
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
+
+ON  
+Index or specified partitions are compressed by using XML compression.
+
+OFF  
+Index or specified partitions are not compressed.
+
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range> } [ ,...*n* ] )
 
-Specifies the partitions to which the `DATA_COMPRESSION` setting applies. If the index isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` option applies to all partitions of a partitioned index.
+Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the index isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` or `XML_COMPRESSION` option applies to all partitions of a partitioned index.
+
+> [!NOTE]  
+> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -613,6 +631,17 @@ REBUILD WITH
   DATA_COMPRESSION = NONE ON PARTITIONS (1),
   DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
   DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+);
+```
+
+You can also specify the `XML_COMPRESSION` option more than once, for example:
+
+```sql
+REBUILD WITH
+(
+  XML_COMPRESSION = OFF ON PARTITIONS (1),
+  XML_COMPRESSION = ON ON PARTITIONS (2, 4, 6 TO 8),
+  XML_COMPRESSION = OFF ON PARTITIONS (3, 5)
 );
 ```
 
@@ -880,6 +909,19 @@ The following restrictions apply to partitioned indexes:
 - The `ALTER INDEX <index> ... REBUILD WITH ...` syntax rebuilds all partitions of the index.
 
 To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.
+
+### XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Many of the same considerations for data compression applies to XML compression. You should also be aware of the following considerations:
+
+- When a list of partitions is specified, XML compression can be enabled on individual partitions. If the list of partitions isn't specified, all partitions are set to use XML compression. When a table or index is created, XML data compression is disabled unless otherwise specified. When a table is modified, the existing compression is preserved unless otherwise specified.
+- If you specify a list of partitions or a partition that is out of range, an error is generated.
+- When a clustered index is created on a heap, the clustered index inherits the XML compression state of the heap unless an alternative compression option is specified.
+- Changing the XML compression setting of a heap requires all nonclustered indexes on the table to be rebuilt so that they have pointers to the new row locations in the heap.
+- You can enable or disable XML compression online or offline. Enabling compression on a heap is single threaded for an online operation.
+- To determine the XML compression state of partitions in a partitioned table, query the `xml_compression` column of the `sys.partitions` catalog view.
 
 ## Permissions
 
@@ -1175,7 +1217,29 @@ CREATE CLUSTERED INDEX IX_PartTab2Col1
 GO
 ```
 
-### M. Create, resume, pause, and abort resumable index operations
+### M. Create an index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+The following example creates an index on a nonpartitioned table by using XML compression. At least one column in the index must be the **xml** data type.
+
+```sql
+CREATE NONCLUSTERED INDEX IX_INDEX_1
+  ON T1 (C2)
+  WITH (XML_COMPRESSION = ON);
+GO
+```
+
+The following example creates an index on a partitioned table by using XML compression on all partitions of the index.
+
+```sql
+CREATE CLUSTERED INDEX IX_PartTab2Col1
+  ON PartitionTable1 (Col1)
+  WITH (XML_COMPRESSION = ON);
+GO
+```
+
+### N. Create, resume, pause, and abort resumable index operations
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -1201,7 +1265,7 @@ ALTER INDEX test_idx1 ON test_table ABORT;
 ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
-### N. CREATE INDEX with different low priority lock options
+### O. CREATE INDEX with different low priority lock options
 
 The following examples use the `WAIT_AT_LOW_PRIORITY` option to specify different strategies for dealing with blocking.
 
@@ -1226,7 +1290,7 @@ CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORI
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### O. Basic syntax
+### P. Basic syntax
 
 Create, resume, pause, and abort resumable index operations
 
@@ -1251,7 +1315,7 @@ ALTER INDEX test_idx ON test_table RESUME;
 ALTER INDEX test_idx ON test_table ABORT;
 ```
 
-### P. Create a nonclustered index on a table in the current database
+### Q. Create a nonclustered index on a table in the current database
 
 The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table.
 
@@ -1260,7 +1324,7 @@ CREATE INDEX IX_ProductVendor_VendorID
   ON ProductVendor (VendorID);
 ```
 
-### Q. Create a clustered index on a table in another database
+### R. Create a clustered index on a table in another database
 
 The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
 
@@ -1269,7 +1333,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
 ```
 
-### R. Create an ordered clustered index on a table
+### S. Create an ordered clustered index on a table
 
 The following example creates an ordered clustered index on the `c1` and `c2` columns of the `T1` table in the `MyDB` database.
 
@@ -1278,7 +1342,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1
 ORDER (c1, c2);
 ```
 
-### S. Convert a CCI to an ordered clustered index on a table
+### T. Convert a CCI to an ordered clustered index on a table
 
 The following example converts the existing clustered columnstore index to an ordered clustered columnstore index called `MyOrderedCCI` on the `c1` and `c2` columns of the `T2` table in the `MyDB` database.
 

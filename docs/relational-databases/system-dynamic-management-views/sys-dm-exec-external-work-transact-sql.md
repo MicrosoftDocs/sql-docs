@@ -1,26 +1,24 @@
 ---
 title: "sys.dm_exec_external_work (Transact-SQL)"
-description: "sys.dm_exec_external_work (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_exec_external_work (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/20/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "DM_EXEC_EXTERNAL_WORK"
   - "DM_EXEC_EXTERNAL_WORK_TSQL"
   - "SYS.DM_EXEC_EXTERNAL_WORK_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_external_work management view"
   - "dm_exec_external_work management view"
   - "PolyBase,views"
   - "PolyBase"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_external_work (Transact-SQL)

@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_database_transactions (Transact-SQL)"
-title: "sys.dm_tran_database_transactions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_database_transactions (Transact-SQL)"
+description: sys.dm_tran_database_transactions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_database_transactions"
   - "sys.dm_tran_database_transactions_TSQL"
   - "dm_tran_database_transactions_TSQL"
   - "sys.dm_tran_database_transactions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_database_transactions dynamic management view"
-ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5 
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
+ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_database_transactions (Transact-SQL)

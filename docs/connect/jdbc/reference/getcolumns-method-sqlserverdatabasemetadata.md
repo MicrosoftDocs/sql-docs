@@ -97,11 +97,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 > [!NOTE]  
 >  For more information about the data returned by the getColumns method, see "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
- In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
+ In the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
   
  The DATA_TYPE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |user-defined type larger than 8 kB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -166,7 +166,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |datetimeoffset|-9|-155|  
   
 ## Example  
- The following example demonstrates how to use the getColumns method to return information for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getColumns method to return information for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 import java.sql.*;  

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "freeing unused cache entries"
   - "cleaning unused cache entries"
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
@@ -82,7 +82,7 @@ The following example illustrates how to clean caches that are dedicated to a sp
   
 ```sql
 -- Clean all the caches with entries specific to the resource pool named "default".  
-DBCC FREESYSTEMCACHE ('ALL', default);  
+DBCC FREESYSTEMCACHE ('ALL', [default]);  
 ```  
   
 ### B. Releasing entries from their respective caches after they become unused  

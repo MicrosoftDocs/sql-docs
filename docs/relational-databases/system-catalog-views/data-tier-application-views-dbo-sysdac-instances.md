@@ -1,26 +1,24 @@
 ---
-description: "Data-tier Application Views - dbo.sysdac_instances"
-title: "dbo.sysdac_instances (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysdac_instances (Transact-SQL)"
+description: Data-tier Application Views - dbo.sysdac_instances
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysdac_instances_TSQL"
   - "sysdac_instances"
   - "sysdac_instances_TSQL"
   - "dbo.sysdac_instances"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dbo.sysdac_instances"
   - "sysdac_instances"
+dev_langs:
+  - "TSQL"
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Data-tier Application Views - dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

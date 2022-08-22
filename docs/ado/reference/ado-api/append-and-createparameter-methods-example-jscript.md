@@ -1,21 +1,17 @@
 ---
+title: "Append and CreateParameter Methods Example (JScript)"
 description: "Append and CreateParameter Methods Example (JScript)"
-title: "Append and CreateParameter Methods Example (JScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "CreateParameter method [ADO], JScript example"
-  - "Append method [ADO], JScript example"
-ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CreateParameter method [ADO], JScript example"
+  - "Append method [ADO], JScript example"
+dev_langs:
+  - "JScript"
 ---
 # Append and CreateParameter Methods Example (JScript)
 This example uses the [Append](./append-method-ado.md) and [CreateParameter](./createparameter-method-ado.md) methods to execute a stored procedure with an input parameter. Cut and paste the following code to Notepad or another text editor, and save it as **AppendJS.asp**.  

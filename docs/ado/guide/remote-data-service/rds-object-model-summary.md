@@ -1,19 +1,15 @@
 ---
+title: "RDS Object Model Summary"
 description: "RDS Object Model Summary"
-title: "RDS Object Model Summary | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS objects [ADO], object model summary"
-  - "RDS object model [ADO]"
-ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS objects [ADO], object model summary"
+  - "RDS object model [ADO]"
 ---
 # RDS Object Model Summary
 > [!IMPORTANT]

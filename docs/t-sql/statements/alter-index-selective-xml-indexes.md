@@ -1,18 +1,16 @@
 ---
-description: "ALTER INDEX (Selective XML Indexes)"
-title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER INDEX (Selective XML Indexes)"
+description: ALTER INDEX (Selective XML Indexes)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER INDEX (Selective XML Indexes)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

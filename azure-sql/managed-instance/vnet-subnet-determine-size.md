@@ -44,8 +44,8 @@ Size your subnet according to your future needs for instance deployment and scal
 > [!IMPORTANT]
 > It's not possible to change the subnet address range if any resource exists in the subnet. Consider using bigger subnets rather than smaller ones to prevent issues in the future.
 
-GP = general purpose; 
-BC = business critical; 
+GP = General Purpose; 
+BC = Business Critical; 
 VC = virtual cluster
 
 | **Pricing tier** | **Azure usage** | **VC usage** | **Instance usage** | **Total** |

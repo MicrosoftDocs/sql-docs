@@ -1,20 +1,16 @@
 ---
+title: "Supports Method Example (VB)"
 description: "Supports Method Example (VB)"
-title: "Supports Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Supports method [ADO], Visual Basic example"
-ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Supports method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Supports Method Example (VB)
 This example uses the [Supports](./supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport procedure is required for this procedure to run.  

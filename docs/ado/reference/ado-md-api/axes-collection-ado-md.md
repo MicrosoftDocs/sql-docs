@@ -1,22 +1,18 @@
 ---
+title: "Axes Collection (ADO MD)"
 description: "Axes Collection (ADO MD)"
-title: "Axes Collection (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Axes"
-  - "Cellset::Axes"
-helpviewer_keywords: 
-  - "Axes collection [ADO MD]"
-ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Axes"
+  - "Cellset::Axes"
+helpviewer_keywords:
+  - "Axes collection [ADO MD]"
+apitype: "COM"
 ---
 # Axes Collection (ADO MD)
 Contains the [Axis](./axis-object-ado-md.md) objects that define a cellset.  

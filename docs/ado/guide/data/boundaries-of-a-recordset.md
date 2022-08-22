@@ -1,20 +1,16 @@
 ---
+title: "Boundaries of a Recordset"
 description: "Boundaries of a Recordset"
-title: "Boundaries of a Recordset | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EOF property [ADO], boundaries of a Recordset"
   - "Recordset object [ADO], boundaries of a Recordset"
   - "BOF property [ADO], boundaries of a Recordset"
-ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: rothja
-ms.author: jroth
 ---
 # Boundaries of a Recordset
 **Recordset** supports the **BOF** and **EOF** properties to delineate the beginning and end, respectively, of the dataset. You can think of **BOF** and **EOF** as "phantom" records that are positioned at the beginning and end of the **Recordset**. Counting **BOF** and **EOF**, our sample **Recordset** would now look like this:  

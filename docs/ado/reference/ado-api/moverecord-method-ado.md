@@ -1,22 +1,18 @@
 ---
+title: "MoveRecord Method (ADO)"
 description: "MoveRecord Method (ADO)"
-title: "MoveRecord Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Record::MoveRecord"
-  - "_Record::raw_MoveRecord"
-helpviewer_keywords: 
-  - "MoveRecord method [ADO]"
-ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Record::MoveRecord"
+  - "_Record::raw_MoveRecord"
+helpviewer_keywords:
+  - "MoveRecord method [ADO]"
+apitype: "COM"
 ---
 # MoveRecord Method (ADO)
 Moves the entity represented by a [Record](./record-object-ado.md) to another location.  

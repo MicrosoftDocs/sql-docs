@@ -1,31 +1,27 @@
 ---
-title: "srv_paramtype (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_paramtype (Extended Stored Procedure API)"
 description: Learn how srv_paramtype in the Extended Stored Procedure API returns the data type of a remote stored procedure call parameter.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_paramtype"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paramtype"
+apilocation: opends60.dll
+apiname: srv_paramtype
+apitype: "DLLExport"
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_paramtype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the data type of a remote stored procedure call parameter.  
   

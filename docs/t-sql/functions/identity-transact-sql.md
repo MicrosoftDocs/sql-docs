@@ -1,25 +1,24 @@
 ---
+title: "@@IDENTITY (Transact-SQL)"
 description: "@@IDENTITY (Transact-SQL)"
-title: "@@IDENTITY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@IDENTITY_TSQL"
   - "@@IDENTITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
   - "@@IDENTITY function"
-ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_model_groups (Transact-SQL)"
-title: "sys.xml_schema_model_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_model_groups (Transact-SQL)"
+description: sys.xml_schema_model_groups (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_model_groups"
   - "xml_schema_model_groups"
   - "sys.xml_schema_model_groups_TSQL"
   - "xml_schema_model_groups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_model_groups catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

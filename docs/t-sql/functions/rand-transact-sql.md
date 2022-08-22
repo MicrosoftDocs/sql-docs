@@ -1,26 +1,25 @@
 ---
+title: "RAND (Transact-SQL)"
 description: "RAND (Transact-SQL)"
-title: "RAND (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "RAND"
   - "RAND_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RAND function"
   - "values [SQL Server], random float"
   - "random float value"
-ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # RAND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

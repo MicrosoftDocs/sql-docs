@@ -1,23 +1,22 @@
 ---
+title: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
-title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "MIN_ACTIVE_ROWVERSION"
   - "MIN_ACTIVE_ROWVERSION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
-ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

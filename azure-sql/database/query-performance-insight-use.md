@@ -1,16 +1,17 @@
 ---
 title: Query Performance Insight
 description: Query performance monitoring identifies the most CPU-consuming and long-running queries for single and pooled databases in Azure SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: how-to
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: kendralittle, mathoma, wiassaf
-ms.date: 12/14/2021
+ms.reviewer: wiassaf, mathoma
+ms.date: 5/17/2022
 ---
 # Query Performance Insight for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -144,7 +145,7 @@ To view query details:
    > [!IMPORTANT]
    > Query Performance Insight does not capture any DDL queries. In some cases, it might not capture all ad hoc queries.
    > 
-   > In case your database is scope locked, query details blade will not be able to load.
+   > In case your database is scope locked with a read-only lock, query details blade will not be able to load.
    >
 
 ## Review top queries per duration

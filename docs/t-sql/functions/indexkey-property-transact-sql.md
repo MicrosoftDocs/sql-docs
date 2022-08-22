@@ -1,27 +1,26 @@
 ---
+title: "INDEXKEY_PROPERTY (Transact-SQL)"
 description: "INDEXKEY_PROPERTY (Transact-SQL)"
-title: "INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "INDEXKEY_PROPERTY_TSQL"
   - "INDEXKEY_PROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index keys [SQL Server]"
   - "INDEXKEY_PROPERTY function"
   - "viewing index keys"
   - "displaying index keys"
   - "keys [SQL Server], index"
-ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

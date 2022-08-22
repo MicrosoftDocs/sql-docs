@@ -1,25 +1,23 @@
 ---
-description: "sys.trigger_event_types (Transact-SQL)"
-title: "sys.trigger_event_types (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trigger_event_types (Transact-SQL)"
+description: sys.trigger_event_types (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "trigger_event_types_TSQL"
   - "sys.trigger_event_types_TSQL"
   - "sys.trigger_event_types"
   - "trigger_event_types"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trigger_event_types catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.trigger_event_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,18 @@
 ---
 title: Discontinued database engine functionality
-description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
-ms.custom: "seo-lt-2019"
-ms.date: 07/22/2020
+description: Learn which database engine functionality and features were discontinued in SQL Server.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom:
+  - seo-lt-2019
+  - event-tier1-build-2022
+helpviewer_keywords:
   - "VIA protocol"
   - "unsupported features [SQL Server]"
   - "SQL Mail"
@@ -32,17 +36,30 @@ helpviewer_keywords:
   - "DATABASEPROPERTY"
   - "FASTFIRSTROW hint"
   - "SET DISABLE_DEF_CNST_CHK"
-ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2016"
 ---
-# Discontinued database engine functionality in SQL Server
+# Discontinued Database Engine functionality in SQL Server
+
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
+This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].
 
-## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  
+## Discontinued features in [!INCLUDE[sssql22](../includes/sssql22-md.md)]
+
+- The following Machine Learning Services packages are no longer included with installation of SQL Server 2022. Instead, you can install any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
+
+    | **Language** | **Package** |
+    | :-- | :-- |
+    | Python | [microsoftml](../machine-learning/python/ref-py-microsoftml.md)|
+    | R | [olapR](../machine-learning/r/ref-r-olapr.md) |
+    | R | [sqlrutils](../machine-learning/r/ref-r-sqlrutils.md) |
+    | R | [MicrosoftML (R)](../machine-learning/r/ref-r-microsoftml.md) |
+
+- SQL Server Big Data Clusters will be retired. See information in [[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] overview](../big-data-cluster/big-data-cluster-overview.md).
+
+- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in SQL Server 2022. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
+
+## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]
 
 - The following database scoped configuration options are discontinued:
 
@@ -52,14 +69,14 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
 
 For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
->[!NOTE]
->No features were discontinued in [!INCLUDE[sssql14](../includes/sssql17-md.md)].
+> [!NOTE]  
+> No features were discontinued in [!INCLUDE[sssql14](../includes/sssql17-md.md)].
 
 ## Discontinued features in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]
 
-- [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
+- [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.
 
-- Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+- Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
 
@@ -69,11 +86,11 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - `precompute rank` Server configuration option was discontinued beginning with SQL Server 2008. The article has been removed from documentation.
 
-## Previous Versions
+## Previous versions
 
 - [Discontinued Database Engine Functionality in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
 
-### See also
+## See also
 
 - [Deprecated database engine features in SQL Server 2019](./deprecated-database-engine-features-in-sql-server-2019.md)
 - [Deprecated database engine features in SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)

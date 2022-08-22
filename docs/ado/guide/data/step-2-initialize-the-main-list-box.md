@@ -1,16 +1,12 @@
 ---
+title: "Step 2: Initialize the Main List Box"
 description: "Step 2: Initialize the Main List Box"
-title: "Step 2: Initialize the Main List Box | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
 ---
 # Step 2: Initialize the Main List Box
 To declare global Record and Recordset objects, insert the following code into the (General) (Declarations) for Form1:  

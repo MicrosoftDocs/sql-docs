@@ -1,21 +1,17 @@
 ---
+title: "CopyRecordOptionsEnum"
 description: "CopyRecordOptionsEnum"
-title: "CopyRecordOptionsEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CopyRecordOptionsEnum"
-helpviewer_keywords: 
-  - "CopyRecordOptionsEnum enumeration [ADO]"
-ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CopyRecordOptionsEnum"
+helpviewer_keywords:
+  - "CopyRecordOptionsEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # CopyRecordOptionsEnum
 Specifies the behavior of the [CopyRecord](./copyrecord-method-ado.md) method.  

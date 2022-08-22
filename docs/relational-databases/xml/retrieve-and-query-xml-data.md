@@ -2,7 +2,7 @@
 title: "Retrieve and query XML data"
 description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that aren't preserved when stored in databases.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "XML data [SQL Server], retrieving"
   - "XML instance retrieval"
-ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -63,7 +62,7 @@ SELECT @x;
 GO
 ```
 
- Both queries return = `<root a="1" />`.
+Both queries return = `<root a="1" />`.
 
 ### Namespace prefixes
 
@@ -85,7 +84,7 @@ The namespace prefix in the result may be different. For example:
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>
 ```
 
-## <a id="query"></a> Setting required query options
+## <a id="query"></a> Sett required query options
 
 When querying **xml** type columns or variables using **xml** data type methods, the following options must be set as shown.
 

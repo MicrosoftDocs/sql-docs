@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_memory_cache_entries (Transact-SQL)"
-title: "sys.dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_memory_cache_entries (Transact-SQL)"
+description: sys.dm_os_memory_cache_entries (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/18/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_memory_cache_entries"
   - "sys.dm_os_memory_cache_entries"
   - "dm_os_memory_cache_entries_TSQL"
   - "sys.dm_os_memory_cache_entries_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_memory_cache_entries dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]

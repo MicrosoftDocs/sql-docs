@@ -58,6 +58,8 @@ ms.date: 11/18/2019
 - **Datasets** Datasets can be published and managed independently from reports or the shared data sources that they depend on. You or the database owner can provide optimized queries for report authors to use. When you change the query, all reports that use the shared dataset use the updated query. You can enable dataset caching to improve performance. You can schedule query caching for a specific time or use a shared schedule.  
   
 - **Data used by report parts** Report parts can include the data that they depend on. For more information about report parts, see [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 - **Filter data** Report data can be filtered in the query or in the report. You can use datasets and query variables to create cascading parameters. With cascading parameters, users can narrow choices from thousands of selections to a more manageable number. You can filter data in a table or chart based on parameter values or other values that you specify.  
   

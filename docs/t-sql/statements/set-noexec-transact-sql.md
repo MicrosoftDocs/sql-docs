@@ -1,31 +1,29 @@
 ---
-description: "SET NOEXEC (Transact-SQL)"
-title: "SET NOEXEC (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET NOEXEC (Transact-SQL)"
+description: SET NOEXEC (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NOEXEC_TSQL"
   - "SET_NOEXEC_TSQL"
   - "SET NOEXEC"
   - "NOEXEC"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], compiling"
   - "SET NOEXEC statement"
   - "compiling queries [SQL Server]"
   - "NOEXEC option"
+dev_langs:
+  - "TSQL"
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SET NOEXEC (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compiles each query but does not execute it.  
   

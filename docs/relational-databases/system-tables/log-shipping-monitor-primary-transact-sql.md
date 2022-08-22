@@ -1,23 +1,21 @@
 ---
-description: "log_shipping_monitor_primary (Transact-SQL)"
-title: "log_shipping_monitor_primary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "log_shipping_monitor_primary (Transact-SQL)"
+description: log_shipping_monitor_primary (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "log_shipping_monitor_primary"
   - "log_shipping_monitor_primary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "log_shipping_monitor_primary system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: LitKnd
-ms.author: kendralittle
 ---
 # log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

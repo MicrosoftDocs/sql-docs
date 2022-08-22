@@ -1,18 +1,14 @@
 ---
+title: "Internet Server Error: Access Denied"
 description: "Internet Server Error: Access Denied"
-title: "Internet Server Error: Access Denied | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "access denied error in RDS [ADO]"
-ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "access denied error in RDS [ADO]"
 ---
 # Internet Server Error: Access Denied
 If you get this error, it usually means that Microsoft Internet Information Services (IIS) returned the following status:  

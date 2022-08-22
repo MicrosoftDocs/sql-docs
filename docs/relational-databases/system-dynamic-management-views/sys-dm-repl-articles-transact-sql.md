@@ -1,23 +1,22 @@
 ---
-description: "sys.dm_repl_articles (Transact-SQL)"
-title: "sys.dm_repl_articles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_repl_articles (Transact-SQL)"
+description: sys.dm_repl_articles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_repl_articles_TSQL"
   - "dm_repl_articles"
   - "dm_repl_articles_TSQL"
   - "sys.dm_repl_articles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_repl_articles dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

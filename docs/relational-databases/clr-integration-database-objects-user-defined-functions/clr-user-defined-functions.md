@@ -1,21 +1,19 @@
 ---
-title: "CLR User-Defined Functions | Microsoft Docs"
+title: "CLR User-Defined Functions"
 description: SQL Server CLR integration allows you to create user-defined scalar-valued, table-valued, and aggregate functions in any .NET Framework programming language.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "building database objects [CLR integration], user-defined functions"
   - "functions [CLR integration]"
   - "common language runtime [SQL Server], user-defined functions"
   - "database objects [CLR integration], user-defined functions"
   - "user-defined functions [CLR integration]"
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
-author: "rothja"
-ms.author: "jroth"
 ---
 # CLR User-Defined Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

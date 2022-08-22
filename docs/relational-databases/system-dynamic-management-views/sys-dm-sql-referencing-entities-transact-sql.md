@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_sql_referencing_entities (Transact-SQL)"
-title: "sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_sql_referencing_entities (Transact-SQL)"
+description: sys.dm_sql_referencing_entities (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_sql_referencing_entities"
   - "dm_sql_referencing_entities_TSQL"
   - "sys.dm_sql_referencing_entities_TSQL"
   - "dm_sql_referencing_entities"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_sql_referencing_entities dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each entity in the current database that references another user-defined entity by name. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, if a user-defined type (UDT) is specified as the referenced entity, this function returns each user-defined entity that reference that type by name in its definition. The function does not return entities in other databases that may reference the specified entity. This function must be executed in the context of the master database to return a server-level DDL trigger as a referencing entity.  
   

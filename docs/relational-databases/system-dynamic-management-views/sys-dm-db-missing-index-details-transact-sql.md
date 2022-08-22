@@ -1,29 +1,27 @@
 ---
-description: "The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes."
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
-ms.custom: ""
+description: The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/8/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_missing_index_details"
   - "dm_db_missing_index_details"
   - "sys.dm_db_missing_index_details_TSQL"
   - "dm_db_missing_index_details_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view"
   - "sys.dm_db_missing_index_details dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns detailed information about missing indexes. 
   
@@ -35,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**index_handle**|**int**|Identifies a particular missing index. The identifier is unique across the server. `index_handle` is the key of this table.|  
 |**database_id**|**smallint**|Identifies the database where the table with the missing index resides.|  
 |**object_id**|**int**|Identifies the table where the index is missing.|  
-|**equality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to equality predicates of the form:<br /><br /> *table.column* =*constant_value*|  
+|**equality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to equality predicates of the form:<br /><br /> *table.column* = *constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to inequality predicates, for example, predicates of the form:<br /><br /> *table.column* > *constant_value*<br /><br /> Any comparison operator other than "=" expresses inequality.|  
 |**included_columns**|**nvarchar(4000)**|Comma-separated list of columns needed as covering columns for the query. For more information about covering or included columns, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> For memory-optimized indexes (both hash and memory-optimized nonclustered), ignore `included_columns`. All columns of the table are included in every memory-optimized index.|  
 |**statement**|**nvarchar(4000)**|Name of the table where the index is missing.|  

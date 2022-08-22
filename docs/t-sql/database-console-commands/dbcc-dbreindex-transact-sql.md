@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC DBREINDEX (Transact-SQL)
@@ -29,7 +29,7 @@ ms.author: umajay
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

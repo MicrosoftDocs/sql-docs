@@ -1,26 +1,24 @@
 ---
-description: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
-title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
+description: DROP COLUMN ENCRYPTION KEY (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP COLUMN ENCRYPTION"
   - "DROP COLUMN ENCRYPTION KEY"
   - "DROP_COLUMN_ENCRYPTION_TSQL"
   - "DROP_COLUMN_ENCRYPTION_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP COLUMN ENCRYPTION KEY statement"
   - "column encryption key, drop"
+dev_langs:
+  - "TSQL"
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
-author: jaszymas
-ms.author: jaszymas
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 

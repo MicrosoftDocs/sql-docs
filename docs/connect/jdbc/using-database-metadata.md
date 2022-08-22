@@ -21,7 +21,7 @@ To query a database for information about what it supports, the [!INCLUDE[jdbcNo
 
 To create a SQLServerDatabaseMetaData object, you can use the [getMetaData](reference/getmetadata-method-sqlserverconnection.md) method of the [SQLServerConnection](reference/sqlserverconnection-class.md) class to get information about the database that it's connected to.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function. Then the getMetaData method of the SQLServerConnection class is used to return a SQLServerDatabaseMetadata object. Finally, various SQLServerDatabaseMetaData methods are used to display information about the driver, driver version, database name, and database version.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function. Then the getMetaData method of the SQLServerConnection class is used to return a SQLServerDatabaseMetadata object. Finally, various SQLServerDatabaseMetaData methods are used to display information about the driver, driver version, database name, and database version.
 
 [!code[JDBC#UsingDBMetaData1](codesnippet/Java/using-database-metadata_1.java)]
 

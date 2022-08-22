@@ -1,22 +1,18 @@
 ---
+title: "FormattedValue Property (ADO MD)"
 description: "FormattedValue Property (ADO MD)"
-title: "FormattedValue Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Cell::FormattedValue"
-  - "FormattedValue"
-helpviewer_keywords: 
-  - "FormattedValue property [ADO MD]"
-ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Cell::FormattedValue"
+  - "FormattedValue"
+helpviewer_keywords:
+  - "FormattedValue property [ADO MD]"
+apitype: "COM"
 ---
 # FormattedValue Property (ADO MD)
 Indicates the formatted display of a [cell](./cell-object-ado-md.md) value.  

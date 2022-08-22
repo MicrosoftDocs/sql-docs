@@ -1,19 +1,17 @@
 ---
-description: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
-title: "ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
+description: ALTER XML SCHEMA COLLECTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_XML_SCHEMA_COLLECTION_TSQL"
   - "ALTER XML SCHEMA COLLECTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema collections [SQL Server], altering"
   - "xml_schema_namespace function"
   - "adding schema components"
@@ -26,9 +24,9 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], altering"
   - "schema collections [SQL Server], modifying"
   - "multiple schema namespaces"
+dev_langs:
+  - "TSQL"
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

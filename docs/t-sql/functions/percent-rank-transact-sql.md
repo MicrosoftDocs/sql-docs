@@ -1,25 +1,24 @@
 ---
+title: "PERCENT_RANK (Transact-SQL)"
 description: "PERCENT_RANK (Transact-SQL)"
-title: "PERCENT_RANK (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "10/20/2015"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "PERCENT_RANK_TSQL"
   - "PERCENT_RANK"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PERCENT_RANK function"
   - "analytic functions, PERCENT_RANK"
-ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

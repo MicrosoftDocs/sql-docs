@@ -2,9 +2,9 @@
 title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
 description: Learn how to use sys.sp_rda_reconcile_batch to reconcile the batch ID in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
@@ -22,6 +22,9 @@ ms.author: maghan
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Reconciles the batch ID stored in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
  Typically you only have to run **sp_rda_reconcile_batch** if you have manually deleted the most recently migrated data from the remote table. When you manually delete remote data that includes the most recent batch, the batch IDs are out of sync and migration stops.  
  

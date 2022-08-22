@@ -1,23 +1,21 @@
 ---
-description: "MSsubscriber_schedule (Transact-SQL)"
-title: "MSsubscriber_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscriber_schedule (Transact-SQL)"
+description: MSsubscriber_schedule (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscriber_schedule"
   - "MSsubscriber_schedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscriber_schedule system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +23,7 @@ ms.author: kendralittle
   The **MSsubscriber_schedule** table contains default merge and transactional synchronization schedules for each Publisher/Subscriber pair. This table is stored in the distribution database.  
   
 > [!NOTE]
->  This system table has been deprecated and is being maintained to support earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  This system table has been deprecated and is being maintained to support earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

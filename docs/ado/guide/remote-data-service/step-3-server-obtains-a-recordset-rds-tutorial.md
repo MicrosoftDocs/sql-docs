@@ -1,18 +1,14 @@
 ---
+title: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
 description: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
-title: "Step 3: Server Obtains a Recordset (RDS Tutorial) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS tutorial [ADO], server obtains Recordset"
-ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS tutorial [ADO], server obtains Recordset"
 ---
 # Step 3: Server Obtains a Recordset (RDS Tutorial)
 The server program uses the connect string and command text to query the data source for the desired rows. ADO is typically used to retrieve this **Recordset**, although other Microsoft data access interfaces, such as OLE DB, could be used.  

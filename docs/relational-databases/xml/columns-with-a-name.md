@@ -2,7 +2,7 @@
 title: "Columns with a name"
 description: Learn about columns with a name in SQL queries and the specific conditions in which rowset columns with a name are mapped to the resulting XML.
 ms.custom: "fresh2019may"
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -10,13 +10,12 @@ ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "names [SQL Server], columns with"
-ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Columns with a name
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:
 
@@ -32,7 +31,7 @@ The following are the specific conditions in which rowset columns with a name ar
 
 ## Column name starts with an at sign (`@`)
 
- If the column name starts with an at sign (`@`) and doesn't contain a slash mark (`/`), an attribute of the `row` element that has the corresponding column value is created. For example, the following query returns a two-column (`@PmId, Name`) rowset. In the resulting XML, a `PmId` attribute is added to the corresponding `row` element and a value of `ProductModelID` is assigned to it.
+If the column name starts with an at sign (`@`) and doesn't contain a slash mark (`/`), an attribute of the `row` element that has the corresponding column value is created. For example, the following query returns a two-column (`@PmId, Name`) rowset. In the resulting XML, a `PmId` attribute is added to the corresponding `row` element and a value of `ProductModelID` is assigned to it.
 
 ```sql
 SELECT ProductModelID as "@PmId",
@@ -71,7 +70,7 @@ SELECT 2 + 2 as result
 for xml PATH;
 ```
 
- This is the result:
+This is the result:
 
 ```xml
 <row>
@@ -86,7 +85,7 @@ SELECT
   ProductModelID,
   Name,
   Instructions.query(
-    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+    'declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
      /MI:root/MI:Location
     ') as ManuWorkCenterInformation
 FROM Production.ProductModel
@@ -110,7 +109,7 @@ This is the result:
 
 ## Column name doesn't start with an at sign (`@`) and contains a slash mark (`/`)
 
-If the column name doesn't start with an at sign (`@`), but contains a slash mark (`/`), the column name indicates an XML hierarchy. For example, if the column name is "Name1/Name2/Name3.../Name***n***", each Name***i*** represents an element name that is nested in the current row element (for i = 1) or that is under the element that has the name Name***i-1***. If Name***n*** starts with `@`, it is mapped to an attribute of Name***n-1*** element.
+If the column name doesn't start with an at sign (`@`), but contains a slash mark (`/`), the column name indicates an XML hierarchy. For example, if the column name is "Name1/Name2/Name3.../Name***n***", each Name***i*** represents an element name that is nested in the current row element (for i = 1) or that is under the element that has the name Name***i-1***. If Name***n*** starts with `@`, it's mapped to an attribute of Name***n-1*** element.
 
 For example, the following query returns an employee ID and name that are represented as a complex element `EmpName` that contains a `First`, `Middle`, and `Last` name.
 
@@ -183,7 +182,7 @@ AND    E.EmployeeID = 1
 FOR XML PATH;
 ```
 
- This is the result:
+This is the result:
 
 ```xml
 <row EmpID="1">

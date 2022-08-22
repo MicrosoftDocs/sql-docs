@@ -1,16 +1,20 @@
 ---
 title: "Azure CLI example: Create a single database"
 description: Use this Azure CLI example script to create a single database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1, devx-track-azurecli
-ms.devlang: azurecli
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+ms.devlang:
+  - "azurecli"
 ms.topic: sample
-author: WilliamDAssafMSFT 
+author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
-ms.date: 01/26/2022 
+ms.reviewer: wiassaf, mathoma
+ms.date: 01/26/2022
 ---
 
 # Create a single database and configure a firewall rule using the Azure CLI

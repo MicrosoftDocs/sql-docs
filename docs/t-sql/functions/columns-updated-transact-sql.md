@@ -1,26 +1,25 @@
 ---
-description: "COLUMNS_UPDATED (Transact-SQL)"
 title: COLUMNS_UPDATED (Transact-SQL)
-ms.custom: ""
+description: "COLUMNS_UPDATED (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "COLUMNS_UPDATED_TSQL"
   - "COLUMNS_UPDATED"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "COLUMNS_UPDATED function"
   - "testing columns"
   - "column testing [SQL Server]"
   - "updated columns"
-ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 
 # COLUMNS_UPDATED (Transact-SQL)

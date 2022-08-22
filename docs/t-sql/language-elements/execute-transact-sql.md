@@ -1,21 +1,21 @@
 ---
+title: "EXECUTE (Transact-SQL)"
 description: "EXECUTE (Transact-SQL)"
-title: "EXECUTE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "EXEC"
   - "EXECUTE_TSQL"
   - "EXECUTE"
   - "EXEC_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "remote stored procedures [SQL Server]"
   - "command strings [SQL Server]"
   - "extended stored procedures [SQL Server], executing"
@@ -28,10 +28,9 @@ helpviewer_keywords:
   - "character strings [SQL Server], executing"
   - "switching execution context"
   - "EXECUTE statement"
-ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # EXECUTE (Transact-SQL)

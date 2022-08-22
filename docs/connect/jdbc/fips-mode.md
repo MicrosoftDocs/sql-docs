@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 03/21/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: genemi
+ms.reviewer: mikeray
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel

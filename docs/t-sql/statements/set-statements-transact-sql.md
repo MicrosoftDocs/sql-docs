@@ -1,19 +1,17 @@
 ---
-description: "SET Statements (Transact-SQL)"
-title: "SET Statements (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET Statements (Transact-SQL)"
+description: SET Statements (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET"
   - "SET_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ISO SET statements"
   - "queries [SQL Server], executing"
   - "dates [SQL Server], SET statements"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "SET statement"
   - "statistical information [SQL Server], SET statements"
   - "locking [SQL Server], SET statements"
+dev_langs:
+  - "TSQL"
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "=azure-sqldw-latest||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SET Statements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

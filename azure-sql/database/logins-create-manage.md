@@ -2,18 +2,24 @@
 title: Authorize server and database access using logins and user accounts
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn about how Azure SQL Database, SQL Managed Instance, and Azure Synapse authenticate users for access using logins and user accounts. Also learn how to grant database roles and explicit permissions to authorize logins and users to perform actions and query data.
-keywords: sql database security,database security management,login security,database security,database access
-services: sql-database
+keywords:
+  - "sql database security"
+  - "database security management"
+  - "login security"
+  - "database security"
+  - "database access"
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: security
-ms.custom: sqldbrb=3
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=3"
 ms.topic: conceptual
 author: AndreasWolter
 ms.author: anwolter
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 03/23/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

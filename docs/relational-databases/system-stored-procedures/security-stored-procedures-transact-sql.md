@@ -1,8 +1,9 @@
 ---
 description: "Security Stored Procedures (Transact-SQL)"
 title: "Security Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 05/25/2021
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -93,11 +94,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (Deprecated)
     :::column-end:::
     :::column:::
+        [sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) 
+        [sp_copy_data_in_batches](../../relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) 
     :::column-end:::
     :::column:::
         [sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (Deprecated)

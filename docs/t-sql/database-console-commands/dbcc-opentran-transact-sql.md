@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "checking open transactions"
   - "oldest transactions [SQL Server]"
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC OPENTRAN (Transact-SQL)

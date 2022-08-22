@@ -29,7 +29,7 @@ ms.author: maggies
 |^|Raises a number to the power of another number.|  
 |*|Multiplies two numbers.|  
 |/|Divides two numbers and returns a floating-point result.|  
-|\|Divides two numbers and returns an integer result.|  
+|\\|Divides two numbers and returns an integer result.|  
 |Mod|Returns the integer remainder of a division. For example, 7 Mod 5 = 2 because the remainder of 7 divided by 5 is 2.|  
 |+|Adds two numbers together.|  
 |-|Returns the difference between two numbers or indicates the negative value of a numeric term.|  

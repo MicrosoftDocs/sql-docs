@@ -1,17 +1,19 @@
 ---
 title: Azure Active Directory authentication
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: security
-ms.custom: azure-synapse, sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "azure-synapse"
+  - "sqldbrb=1"
 ms.topic: how-to
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/11/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Use Azure Active Directory authentication

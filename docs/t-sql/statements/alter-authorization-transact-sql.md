@@ -1,18 +1,16 @@
 ---
-description: "ALTER AUTHORIZATION (Transact-SQL)"
-title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AUTHORIZATION (Transact-SQL)"
+description: ALTER AUTHORIZATION (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AUTHORIZATION_TSQL"
   - "ALTER AUTHORIZATION"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "owners [SQL Server], transferring"
   - "modifying entity ownership"
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "transferring ownership"
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -179,7 +177,7 @@ If the target entity is not a database and the entity is being transferred to a 
  Also, note the following:
 
 > [!IMPORTANT]
-> The only reliable way to find the owner of a object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
+> The only reliable way to find the owner of an object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
 
 ## Special Cases and Conditions
 

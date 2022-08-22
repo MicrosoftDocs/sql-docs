@@ -1,26 +1,24 @@
 ---
-description: "CREATE TABLE (Transact-SQL) IDENTITY (Property)"
-title: "IDENTITY (Property) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IDENTITY (Property) (Transact-SQL)"
+description: CREATE TABLE (Transact-SQL) IDENTITY (Property)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IDENTITY_TSQL"
   - "IDENTITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDENTITY property"
   - "columns [SQL Server], creating"
   - "identity columns [SQL Server], IDENTITY property"
   - "autonumbers, identity numbers"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)

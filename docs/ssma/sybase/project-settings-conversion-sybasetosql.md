@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.sybase.projectsettingconversion.f1"
 ---
 
 # Project Settings (Conversion) (SybaseToSQL)

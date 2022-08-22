@@ -1,25 +1,23 @@
 ---
-description: "sys.assembly_files (Transact-SQL)"
-title: "sys.assembly_files (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.assembly_files (Transact-SQL)"
+description: sys.assembly_files (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.assembly_files"
   - "assembly_files_TSQL"
   - "assembly_files"
   - "sys.assembly_files_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.assembly_files catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.assembly_files (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

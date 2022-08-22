@@ -1,19 +1,17 @@
 ---
-description: "DENY (Transact-SQL)"
 title: DENY (Transact-SQL)
-ms.custom: ""
+description: DENY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DENY"
   - "DENY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema-level securables [SQL Server]"
   - "security [SQL Server], denying access"
   - "DENY statement"
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "principal security [SQL Server]"
   - "database-level securables [SQL Server]"
   - "denying permissions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

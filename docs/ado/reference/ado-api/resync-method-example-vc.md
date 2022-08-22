@@ -1,20 +1,16 @@
 ---
+title: "Resync Method Example (VC++)"
 description: "Resync Method Example (VC++)"
-title: "Resync Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resync method [ADO], VC++ example"
-ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Resync method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Resync Method Example (VC++)
 This example demonstrates using the [Resync](./resync-method.md) method to refresh data in a static recordset.  

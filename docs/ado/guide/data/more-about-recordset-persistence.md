@@ -1,21 +1,17 @@
 ---
+title: "More About Recordset Persistence"
 description: "More About Recordset Persistence"
-title: "More About Recordset Persistence | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "persisting data [ADO]"
   - "data updates [ADO], persisting data"
   - "data persistence [ADO]"
   - "updating data [ADO], persisting data"
-ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: rothja
-ms.author: jroth
 ---
 # More About Recordset Persistence
 The ADO Recordset object supports storing the contents of a **Recordset** object in a file by using its [Save](../../reference/ado-api/save-method.md) method. The persistently stored file may exist on a local drive, server, or as a URL on a Web site. Later, the file can be restored with either the [Open](../../reference/ado-api/open-method-ado-recordset.md) method of the **Recordset** object or the [Execute](../../reference/ado-api/execute-method-ado-connection.md) method of the [Connection](../../reference/ado-api/connection-object-ado.md) object.  

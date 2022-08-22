@@ -1,29 +1,27 @@
 ---
-description: "SET NUMERIC_ROUNDABORT (Transact-SQL)"
-title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET NUMERIC_ROUNDABORT (Transact-SQL)"
+description: SET NUMERIC_ROUNDABORT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NUMERIC_ROUNDABORT"
   - "SET_NUMERIC_ROUNDABORT_TSQL"
   - "SET NUMERIC_ROUNDABORT"
   - "NUMERIC_ROUNDABORT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rounding expressions"
   - "precision [SQL Server], rounded expressions"
   - "expressions [SQL Server], rounding"
   - "NUMERIC_ROUNDABORT"
   - "SET NUMERIC_ROUNDABORT statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NUMERIC_ROUNDABORT (Transact-SQL)

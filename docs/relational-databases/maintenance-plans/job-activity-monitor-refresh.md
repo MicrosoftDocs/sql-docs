@@ -1,18 +1,16 @@
 ---
-description: "Job Activity Monitor Refresh"
-title: "Job Activity Monitor Refresh | Microsoft Docs"
-ms.custom: ""
+title: "Job Activity Monitor Refresh"
+description: Job Activity Monitor Refresh
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.jobactivitymon.refresh.f1"
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Job Activity Monitor Refresh
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

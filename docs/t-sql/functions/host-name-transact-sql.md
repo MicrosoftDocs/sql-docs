@@ -1,24 +1,23 @@
 ---
+title: "HOST_NAME (Transact-SQL)"
 description: "HOST_NAME (Transact-SQL)"
-title: "HOST_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "09/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "HOST_NAME_TSQL"
   - "HOST_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HOST_NAME function"
   - "workstation names [SQL Server]"
-ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # HOST_NAME (Transact-SQL)
 

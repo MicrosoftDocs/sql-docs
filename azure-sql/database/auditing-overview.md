@@ -1,15 +1,18 @@
 ---
 title: Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.reviewer: kendralittle, vanto, mathoma
-ms.custom: azure-synapse, sqldbrb=1
+ms.reviewer: wiassaf, vanto, mathoma
+ms.custom:
+  - "azure-synapse"
+  - "sqldbrb=1"
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -20,7 +23,7 @@ Auditing also:
 
 - Helps you maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.
 
-- Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information about Azure programs that support standards compliance, see the [Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) where you can find the most current list of Azure SQL compliance certifications.
+- Enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance. For more information, see the [Microsoft Azure Trust Center](https://www.microsoft.com/trust-center/compliance/compliance-overview) where you can find the most current list of SQL Database compliance certifications.
 
 > [!NOTE]
 > For information on Azure SQL Managed Instance auditing, see the following article, [Get started with SQL Managed Instance auditing](../managed-instance/auditing-configure.md).
@@ -34,15 +37,14 @@ You can use SQL Database auditing to:
 - **Analyze** reports. You can find suspicious events, unusual activity, and trends.
 
 > [!IMPORTANT]
-> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance. During very high activity, or high network load, Azure SQL Database, Azure Synapse and Azure SQL Managed Instance allow operations to proceed and may not record some audited events.
+> Auditing for Azure SQL Database, Azure Synapse and Azure SQL Managed Instance is optimized for availability and performance of the database(s) or instance(s) that are being audited. During periods of very high activity or high network load, the auditing feature may allow transactions to proceed without recording all of the events marked for auditing.
 
 ### Auditing limitations
 
-- **Premium storage** is currently **not supported**.
-- **Hierarchical namespace** for **Azure Data Lake Storage Gen2 storage account** is currently **not supported**.
+- **User managed identity** authentication type for enabling auditing to **storage** is not currently supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
-- When you configure the auditing in Azure SQL Server or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - https://docs.microsoft.com/rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
+- When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - https://docs.microsoft.com/rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
 
 
 #### <a id="server-vs-database-level"></a>Define server-level vs. database-level auditing policy
@@ -70,16 +72,18 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 #### Remarks
 
+- **Premium storage** with **BlockBlobStorage** is supported. Standard storage is supported. However, for audit to write to a storage account behind a VNet or firewall, you must have a **general-purpose v2 storage account**. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade). For specific instructions see, [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md). For more information, see [Types of storage accounts](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+- **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Audit logs are written to **Append Blobs** in an Azure Blob storage on your Azure subscription
 - Audit logs are in .xel format and can be opened by using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 - To configure an immutable log store for the server or database-level audit events, follow the [instructions provided by Azure Storage](/azure/storage/blobs/immutable-time-based-retention-policy-overview#allow-protected-append-blobs-writes). Make sure you have selected **Allow additional appends** when you configure the immutable blob storage.
-- You can write audit logs to a an Azure Storage account behind a VNet or firewall. For specific instructions see, [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md).
+- You can write audit logs to an Azure Storage account behind a VNet or firewall. 
 - For details about the log format, hierarchy of the storage folder and naming conventions, see the [Blob Audit Log Format Reference](./audit-log-format.md).
 - Auditing on [Read-Only Replicas](read-scale-out.md) is automatically enabled. For further details about the hierarchy of the storage folders, naming conventions, and log format, see the [SQL Database Audit Log Format](audit-log-format.md).
 - When using Azure AD Authentication, failed logins records will *not* appear in the SQL audit log. To view failed login audit records, you need to visit the [Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins), which logs details of these events.
 - Logins are routed by the gateway to the specific instance where the database is located.  In the case of AAD logins, the credentials are verified before attempting to use that user to login into the requested database.  In the case of failure, the requested database is never accessed, so no auditing occurs.  In the case of SQL logins, the credentials are verified on the requested data, so in this case they can be audited.  Successful logins, which obviously reach the database, are audited in both cases.
 - After you've configured your auditing settings, you can turn on the new threat detection feature and configure emails to receive security alerts. When you use threat detection, you receive proactive alerts on anomalous database activities that can indicate potential security threats. For more information, see [Getting started with threat detection](threat-detection-overview.md).
-- After a database with auditing enabled is copied to another Azure SQL logical server, you may receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
+- After a database with auditing enabled is copied to another [logical server](logical-servers.md), you may receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
 
 ## <a id="setup-auditing"></a>Set up auditing for your server
 
@@ -112,7 +116,7 @@ The following section describes the configuration of auditing using the Azure po
 
 ### <a id="auditing-of-microsoft-support-operations"></a>Auditing of Microsoft Support operations
 
-Auditing of Microsoft Support operations for Azure SQL Server allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
+Auditing of Microsoft Support operations for your [logical server](logical-servers.md) allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
 
 To enable auditing of Microsoft Support operations navigate to **Auditing** under the Security heading in your Azure **SQL server** pane, and switch **Enable Auditing of Microsoft support operations** to **ON**.
 
@@ -132,6 +136,9 @@ You have the option of choosing a different storage destination for this auditin
 ### <a id="audit-storage-destination"></a>Audit to storage destination
 
 To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved, and then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
+
+> [!NOTE] 
+> If you are deploying from the Azure portal, be sure that the storage account is in the same region as your database and server. If you are deploying through other methods, the storage account can be in any region.
 
 - The default value for retention period is 0 (unlimited retention). You can change this value by moving the **Retention (Days)** slider in **Advanced properties** when configuring the storage account for auditing.
   - If you change retention period from 0 (unlimited retention) to any other value, please note that retention will only apply to logs written after retention value was changed (logs written during the period when retention was set to unlimited are preserved, even after retention is enabled).
@@ -195,7 +202,7 @@ If you chose to write audit logs to an Azure storage account, there are several 
   - You can view specific dates by clicking **Filter** at the top of the **Audit records** page.
   - You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
 
-       ![Screenshot that shows the options for viewing the audit records.]( ./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
+       ![Screenshot that shows the options for viewing the audit records.](./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
 
 - Use the system function **sys.fn_get_audit_file** (T-SQL) to return the audit log data in tabular format. For more information on using this function, see [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).
 

@@ -1,18 +1,14 @@
 ---
-description: "sys.sensitivity_classifications (Transact-SQL)"
-title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
+title: "sys.sensitivity_classifications (Transact-SQL)"
+description: sys.sensitivity_classifications (Transact-SQL)
+author: Madhumitatripathy
+ms.author: matripathy
 ms.date: 04/19/2022
-ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "reference"
-ms.custom: ""
-ms.author: matripathy
-author: Madhumitatripathy
 f1_keywords:
   - "sys.sensitivity_classifications "
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "sys.sensitivity_classifications statement"
   - "dropping labels"
@@ -23,7 +19,9 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "rank"
-monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

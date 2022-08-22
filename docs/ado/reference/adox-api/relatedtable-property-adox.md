@@ -1,25 +1,21 @@
 ---
+title: "RelatedTable Property (ADOX)"
 description: "RelatedTable Property (ADOX)"
-title: "RelatedTable Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Key::RelatedTable"
   - "_Key::put_RelatedTable"
   - "_Key::get_RelatedTable"
   - "_Key::GetRelatedTable"
   - "_Key::PutRelatedTable"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RelatedTable property [ADOX]"
-ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # RelatedTable Property (ADOX)
 Indicates the name of the related table.  

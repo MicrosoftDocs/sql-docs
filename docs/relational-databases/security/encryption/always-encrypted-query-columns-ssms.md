@@ -2,14 +2,13 @@
 title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
 description: Learn how to query columns in Always Encrypted using SQL Server Management Studio. Retrieve ciphertext or text values stored in encrypted columns.
 ms.custom: ""
-ms.date: 01/15/2021
+ms.date: 06/1/2022
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
-ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -35,7 +34,7 @@ Running SELECT queries that retrieve ciphertext of data stored in encrypted colu
 ### Example
 Assuming `SSN` is an encrypted column in the `Patients` table, the query shown below will retrieve binary ciphertext values, if Always Encrypted is disabled for the database connection.   
 
-![Screenshot of the SELECT [SSN] FROM [dbo].[Patients] query and the results of the query shown as binary ciphertext values.](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
+:::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png" alt-text="Screenshot of the SELECT [SSN] FROM [dbo].[Patients] query and the results of the query shown as binary ciphertext values." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png":::
  
 ## Retrieving plaintext values stored in encrypted columns    
 To retrieve values from an encrypted column as plaintext (to decrypt the values):   
@@ -46,7 +45,7 @@ To retrieve values from an encrypted column as plaintext (to decrypt the values)
 ### Example
 Assuming SSN is an encrypted `char(11)` column in the `Patients` table, the query, shown below, will return plaintext values, if Always Encrypted is enabled for the database connection and if you have access to the column master key configured for the `SSN` column.   
 
-![Screenshot of the SELECT [SSN] FROM [Clinic].[dbo].[Patients] query and the results of the query shown as plain text values.](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
+:::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png" alt-text="Screenshot of the SELECT [SSN] FROM [Clinic].[dbo].[Patients] query and the results of the query shown as plain text values." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png":::
  
 ## Sending plaintext values targeting encrypted columns       
 To execute a query that sends a value that targets an encrypted column, for example a query that inserts, updates or filters by a value stored in an encrypted column:
@@ -60,7 +59,7 @@ To execute a query that sends a value that targets an encrypted column, for exam
 ### Example
 Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column and return the value of the `LastName` column, providing Always Encrypted is enabled for the database connection,  Parameterization for Always Encrypted is enabled for the Query Editor window, and you have access to the column master key configured for the `SSN` column.   
 
-![Screenshot of the DECLARE @SSN CHAR(11) = '795-73-9838' SELECT [LastName] FROM [dbo].[Patients] WHERE [SSN] = @SSN query and the results of the query.](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
+:::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-patients.png" alt-text="Screenshot of the query using a variable for @SSN and the resulting row returned." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-patients.png":::
 
 ## Permissions for querying encrypted columns
 
@@ -180,11 +179,11 @@ If SQL Server Management Studio has attempted to parameterize a variable, but th
 
 The below screenshot shows an example of six variable declarations. SQL Server Management Studio successfully parameterized the first three variables. The last three variables didn't meet the pre-requisite conditions for parameterization, and therefore, SQL Server Management Studio didn't attempt to parameterize them (their declarations aren't marked in any way).
 
-![Screenshot showing an example of six variable declarations with three successfully parameterized and three failures and the associated warning messages.](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
- 
+:::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png" alt-text="Screenshot showing an example of six variable declarations with three successfully parameterized and three failures and the associated warning messages." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png":::
+
 Another example below, shows two variables that meet pre-requisite conditions for parameterization, but the parameterization attempt has failed because the variables are incorrectly initialized.    
  
-![Screenshot showing an example of two variable declarations that ultimately fail with the associated error messagess.](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
+ :::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-error.png" alt-text="Screenshot showing an example of two variable declarations that ultimately fail with the associated error messages." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-error.png":::
  
 > [!NOTE]
 > As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   

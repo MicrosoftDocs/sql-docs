@@ -1,15 +1,16 @@
 ---
 title: DTU benchmark
-description: Learn about the benchmark for the DTU-based purchasing model for Azure SQL Database.  
-services: sql-database
+description: Learn about the benchmark for the DTU-based purchasing model for Azure SQL Database.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: references_regions
-ms.devlang: 
+ms.custom:
+  - "references_regions"
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/29/2022
 ---
 # DTU benchmark 

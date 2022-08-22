@@ -4,7 +4,7 @@ description: "An overview of the Always On availability group listener and how i
 ms.custom:
   - seodec18
   - intro-overview
-ms.date: "02/27/2020"
+ms.date: "05/23/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -24,7 +24,7 @@ ms.author: mathoma
 # What is an availability group listener?  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-An availability group listener is a virtual network name (VNN) that clients can connect to in order to access a database in a primary or secondary replica of an Always On availability group. A listener allows a client to connect to a replica without having to know the physical instance name of the SQL Server. Since the listener routes traffic, the client connection string does not need to be modified after a failover occurs. 
+An availability group listener is a virtual network name (VNN) that clients can connect to in order to access a database in a primary or secondary replica of an Always On availability group. A listener allows a client to connect to a replica without having to know the physical instance name of the SQL Server. Since the listener routes traffic, the client connection string doesn't need to be modified after a failover occurs. 
 
 An availability group listener consists of a Domain Name System (DNS) listener name, listener port designation, and one or more IP addresses. Only the TCP protocol is supported by availability group listener.  The DNS name of the listener must be unique in the domain and in NetBIOS.  When you create a  listener, it becomes a resource in a cluster with an associated virtual network name (VNN), virtual IP (VIP), and availability group dependency. A client uses DNS to resolve the VNN into multiple IP addresses and then tries to connect to each address, until a connection request succeeds or until the connection requests time out.  
   
@@ -48,13 +48,52 @@ This article provides an overview of an availability group listener. You can als
  
   
 ##  <a name="SelectListenerPort"></a> Listener port 
- When configuring an availability group listener, you must designate a port.  You can configure the default port to 1433 in order to allow for simplicity of the client connection strings. If using 1433, you do not need to designate a port number in a connection string. Also, since each availability group listener will have a separate virtual network name, each availability group listener configured on a single WSFC can be configured to reference the same default port of 1433.  
-  
- You can also designate a non-standard listener port; however this means that you will also need to explicitly specify a target port in your connection string whenever connecting to the availability group listener.  You will also need to open permission on the firewall for the non-standard port.  
-  
- If you use the default port of 1433 for availability group listener VNNs, you will still need to ensure that no other services on the cluster node are using this port; otherwise this would cause a port conflict.  
-  
- If one of the instances of SQL Server is already listening on TCP port 1433 via the instance listener and there are no other services (including additional instances of SQL Server) on the computer listening on port 1433, this will not cause a port conflict with the availability group listener.  This is because the availability group listener can share the same TCP port inside the same service process.  However multiple instances of SQL Server (side-by-side) should not be configured to listen on the same port.  
+ When configuring an availability group listener, you must designate a port via SSMS.  You can configure the default port to 1433 in order to allow for simplicity of the client connection strings. This means, that if you use 1433, you don't need to include a port number in a connection string of your application. Also, since each availability group listener will have a separate virtual network name, each availability group listener configured on a single WSFC can be configured to reference the same default port of 1433.  
+
+ If you use the default port of 1433 for availability group listener VNNs, you'll still need to ensure that no other services on the cluster node are using this port; otherwise this would cause a port conflict. 
+
+ If one of the instances of SQL Server is already listening on TCP port 1433 via the instance listener and there are no other services (including additional instances of SQL Server) on the computer listening on port 1433, this won't cause a port conflict with the availability group listener.  This is because the availability group listener can share the same TCP port inside the same process.  However multiple instances of SQL Server (side-by-side) must not be configured to listen on the same port because one of them will fail to listen for connections.  
+
+ You can also designate a non-standard availability group listener port. However, you also need to explicitly use the target port in your application connection string when connecting to a listener.  You also need to open permission on the firewall for this port.  
+
+ You can connect to the listener using the name and port (if not 1433). The port can be either the listener port or the underlying SQL Server port that it's configured to listen on. 
+
+ The following examples demonstrate some of the functionality of the listener:
+ 
+ **Set up:**
+ - IP that SQL Server is listening on: 192.168.20.2
+ - Port that SQL Server is listening on: 50254
+ - Listener IP that was configured: 192.168.20.15
+ - Listener name was configured: aglistener19
+ - Listener port that was configured: 50123
+ 
+1. Connect to the listener via IP address and port. This connection is successful. 
+
+   ```console
+   sqlcmd -S 192.168.20.15,50123 
+   1> 
+   ```
+
+ 1. Connect to the listener by name only, no port. This connection will fail because a non-default port was used. You must specify that port. 
+
+    ```console
+    sqlcmd -S aglistener19 
+    ```
+
+ 1.	Connect to the listener by listener name and configured port. This connection is successful.
+
+    ```console
+    sqlcmd -S aglistener19,50123 
+    1> 
+    ```
+
+
+ 1. Finally, connect to the listener and the SQL Server port. Notice that in this case you're using the port SQL Server is listening on, not the listener port. This connection also succeeds.
+
+    ```console
+    sqlcmd -S aglistener19,50254
+    1> 
+    ```
   
   
 ##  <a name="CCBehaviorOnFailover"></a> Behavior of client connections on failover  

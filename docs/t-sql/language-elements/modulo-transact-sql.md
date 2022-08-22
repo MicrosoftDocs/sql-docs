@@ -1,31 +1,30 @@
 ---
+title: "% (Modulus) (Transact-SQL)"
 description: "% (Modulus) (Transact-SQL)"
-title: "% (Modulus) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "modulo"
   - "modulus"
   - "% (Modulo)"
   - "% (Modulus)"
   - "MOD_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "% (modulo operator)"
   - "% (modulus operator)"
   - "remainder of division operation"
   - "modulo operator (%)"
   - "modulus operator (%)"
-ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # % (Modulus) (Transact-SQL)

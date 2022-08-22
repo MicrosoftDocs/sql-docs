@@ -1,19 +1,19 @@
 ---
-description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/07/2022"
+description: MERGE (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "MERGE"
   - "MERGE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating data [SQL Server]"
   - "modifying data [SQL Server], MERGE statement"
   - "MERGE statement [SQL Server]"
@@ -22,24 +22,25 @@ helpviewer_keywords:
   - "table modifications [SQL Server], MERGE statement"
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
-author: XiaoyuMSFT
-ms.author: XiaoyuL
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||azure-sqldw-latest"
 ---
 # MERGE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table. 
+Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 > [!NOTE]
 > MERGE is currently in preview for Azure Synapse Analytics. 
 > Change the product version selector for important content on MERGE specific to Azure Synapse Analytics. To change document version to Azure Synapse Analytics: [Azure Synapse Analytics](merge-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
 ::: moniker-end
+
 ::: moniker range="=azure-sqldw-latest"
 > [!NOTE]
-> MERGE is currently in preview for Azure Synapse Analytics. 
+> MERGE is currently in preview for Azure Synapse Analytics. Preview features are meant for testing only and should not be used on production instances or production data. As a preview feature, MERGE is subject to undergo changes in behavior or functionality. Please also keep a copy of your test data if the data is important.
 ::: moniker-end
 
 **Performance Tip:** The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it doesn't exist, or updating a row if it matches. When simply updating one table based on the rows of another table, improve the performance and scalability with basic INSERT, UPDATE, and DELETE statements. For example:  
@@ -130,11 +131,13 @@ MERGE
 
 ## Arguments
 
-#### WITH \<common_table_expression>  
+#### WITH \<common_table_expression>
+
 Specifies the temporary named result set or view, also known as common table expression, that's defined within the scope of the MERGE statement. The result set derives from a simple query and is referenced by the MERGE statement. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-#### TOP ( *expression* ) [ PERCENT ]  
-Specifies the number or percentage of affected rows. *expression* can be either a number or a percentage of the rows. The rows referenced in the TOP expression are not arranged in any order. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+#### TOP (expression* ) [ PERCENT ]
+
+Specifies the number or percentage of affected rows. *expression* can be either a number or a percentage of the rows. The rows referenced in the TOP expression aren't arranged in any order. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 The TOP clause applies after the entire source table and the entire target table  join and the joined rows that don't qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value. The insert, update, or delete actions apply to the remaining joined rows in an unordered way. That is, there's no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows. Of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted, and so on.  
   
@@ -156,7 +159,7 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 Hints can be specified as a <merge_hint>. 
 
 ::: moniker range="=azure-sqldw-latest"
-Note that merge_hints are not supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 ::: moniker-end
   
 #### [ AS ] *table_alias*  
@@ -262,10 +265,10 @@ Specifies the graph match pattern. For more information about the arguments for 
 
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
-> - Using MERGE to update a distribution key column is not supported.
+> - Using MERGE to update a distribution key column is not supported. For a workaround, use `UPDATE FROM ... JOIN` statement to synchronize the two tables and update distribution key.
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
-> - Table value constructor cannot be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
+> - Table value constructor can't be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
 > - The support for tables with different distribution types is described in this table:
 >
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGET distribution table| Supported SOURCE distribution table|Comment|  
@@ -274,28 +277,21 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
 >|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types||  
 
+> [!TIP]
+> If you're using the distribution hash key as the JOIN column in MERGE and performing just an equality comparison, you can omit the distribution key from the list of columns in the `WHEN MATCHED THEN UPDATE SET` clause, as this is a redundant update.
+
 >[!IMPORTANT]
-> Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
->
 > In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen in 2 cases:
 > 
-> **Case 1**
-> - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
-> - The TARGET table of the MERGE has secondary indices or a UNIQUE constraint.
+>|Scenario|Comment|  
+>|---------------|-----------------|  
+>|**Case 1** <br> Using MERGE on a HASH distributed TARGET table that contains secondary indices or a UNIQUE constraint. | - Fixed in Synapse SQL version ***10.0.15563.0*** and higher. <br> - If ```SELECT @@VERSION``` returns a lower version than 10.0.15563.0, manually pause and resume the Synapse SQL pool to pick up this fix. <br> - Until the fix has been applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints. |
+>|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - Do not use MERGE to update distribution key columns as this is not supported. <br> - Ensure your Synapse SQL pool is on version ***10.0.15658.0*** and higher. |
 >
-> **Case 2**
-> - The MERGE T-SQL statement updated a distribution key column of a HASH distributed table.
->
-> **Case 1**: fixed in Synapse SQL version ***10.0.15563.0*** and higher.   
-> - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
-> - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
-> - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
->
-> **Case 2**: Microsoft is working on fixing this problem. This article will be updated when the fix is ready.
-> - Until further notice, avoid using the MERGE command to update distribution key columns in HASH distributed tables. 
-> - Use the scripts below to identify and repair any affected tables manually.
+> **Note that the updates in both scenarios do not repair tables already affected by previous MERGE execution.** Use scripts below to identify and repair any affected tables manually.
 >
 > To check which hash distributed tables in a database may be of concern (if used in the Cases above), run this statement
+>
 >```sql
 > -- Case 1
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
@@ -404,7 +400,7 @@ To improve the performance of the MERGE statement, we recommend the following in
 - Create indexes to facilitate the join between the source and target of the MERGE:
   - Create an index on the join columns in the source table that has keys covering the join logic to the target table. If possible, it should be unique. 
   - Also, create an index on the join columns in the target table. If possible, it should be a unique clustered index.
-  - These two indexes ensure that the data in the tables is sorted, and uniqueness aids performance of the comparison. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
+  - These two indexes ensure that the data in the tables is sorted, and uniqueness aids performance of the comparison. Query performance is improved because the query optimizer doesn't need to perform extra validation processing to locate and update duplicate rows and additional sort operations aren't necessary.
 - Avoid tables with any form of columnstore index as the target of MERGE statements. As with any UPDATEs, you may find performance better with columnstore indexes by updating a staged rowstore table, then performing a batched DELETE and INSERT, instead of an UPDATE or MERGE.
 
 ## Concurrency considerations for MERGE
@@ -413,20 +409,20 @@ In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDAT
 
 MERGE statements are a suitable replacement for discrete INSERT, UPDATE, and DELETE operations in (but not limited to) the following scenarios:
 
-- ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
+- ETL operations involving large row counts be executed during a time when other concurrent operations aren't* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
 - Complex operations involving small row counts and transactions unlikely to execute for extended duration.
 - Complex operations involving user tables where indexes can be designed to ensure optimal execution plans, avoiding table scans and lookups in favor of index scans or - ideally - index seeks.
 
 Other considerations for concurrency:
 
-- In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. HOLDLOCK is a synonym for the SERIALIZABLE transaction isolation level, which does not allow for other concurrent transactions to modify data that this transaction has read.  SERIALIZABLE is the safest isolation level but provides for the least concurrency with other transactions that retains locks on ranges of data to prevent phantom rows from being inserted or updated while reads are in progress. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md) and [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md).
+- In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. HOLDLOCK is a synonym for the SERIALIZABLE transaction isolation level, which doesn't allow for other concurrent transactions to modify data that this transaction has read.  SERIALIZABLE is the safest isolation level but provides for the least concurrency with other transactions that retains locks on ranges of data to prevent phantom rows from being inserted or updated while reads are in progress. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md) and [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md).
 
 ### JOIN best practices
 
 To improve the performance of the MERGE statement and ensure correct results are obtained, we recommend the following join guidelines:
 
 - Specify only search conditions in the ON <merge_search_condition> clause that determine the criteria for matching data in the source and target tables. That is, specify only columns from the target table that are compared to the corresponding columns of the source table. 
-- Do not include comparisons to other values such as a constant.
+- Don't include comparisons to other values such as a constant.
 
 To filter out rows from the source or target tables, use one of the following methods.
 
@@ -434,26 +430,26 @@ To filter out rows from the source or target tables, use one of the following me
 - Define a view on the source or target that returns the filtered rows and reference the view as the source or target table. If the view is defined on the target table, any actions against it must satisfy the conditions for updating views. For more information about updating data by using a view, see Modifying Data Through a View.
 - Use the `WITH <common table expression>` clause to filter out rows from the source or target tables. This method is similar to specifying additional search criteria in the ON clause and may produce incorrect results. We recommend that you avoid using this method or test thoroughly before implementing it.
 
-The join operation in the MERGE statement is optimized in the same way as a join in a SELECT statement. That is, when SQL Server processes joins, the query optimizer chooses the most efficient method (out of several possibilities) of processing the join. When the source and target are of similar size and the index guidelines described previously are applied to the source and target tables, a merge join operator is the most efficient query plan. This is because both tables are scanned once and there is no need to sort the data. When the source is smaller than the target table, a nested loops operator is preferable.
+The join operation in the MERGE statement is optimized in the same way as a join in a SELECT statement. That is, when SQL Server processes join, the query optimizer chooses the most efficient method (out of several possibilities) of processing the join. When the source and target are of similar size and the index guidelines described previously are applied to the source and target tables, a merge join operator is the most efficient query plan. This is because both tables are scanned once and there's no need to sort the data. When the source is smaller than the target table, a nested loops operator is preferable.
 
-You can force the use of a specific join by specifying the `OPTION (<query_hint>)` clause in the MERGE statement. We recommend that you do not use the hash join as a query hint for MERGE statements because this join type does not use indexes.
+You can force the use of a specific join by specifying the `OPTION (<query_hint>)` clause in the MERGE statement. We recommend that you don't use the hash join as a query hint for MERGE statements because this join type doesn't use indexes.
 
 ### Parameterization best practices
 
-If a SELECT, INSERT, UPDATE, or DELETE statement is executed without parameters, the SQL Server query optimizer may choose to parameterize the statement internally. This means that any literal values that are contained in the query are substituted with parameters. For example, the statement `INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)`, may be implemented internally as `INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)`. This process, called simple parameterization, increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans. Query performance may be improved because the frequency of query compilations and recompilations are reduced. The query optimizer does not apply the simple parameterization process to MERGE statements. Therefore, MERGE statements that contain literal values may not perform as well as individual INSERT, UPDATE, or DELETE statements because a new plan is compiled each time the MERGE statement is executed.
+If a SELECT, INSERT, UPDATE, or DELETE statement is executed without parameters, the SQL Server query optimizer may choose to parameterize the statement internally. This means that any literal values that are contained in the query are substituted with parameters. For example, the statement `INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)`, may be implemented internally as `INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)`. This process, called simple parameterization, increases the ability of the relational engine to match new SQL statements with existing, previously compiled execution plans. Query performance may be improved because the frequency of query compilations and recompilations are reduced. The query optimizer doesn't apply the simple parameterization process to MERGE statements. Therefore, MERGE statements that contain literal values may not perform and individual INSERT, UPDATE, or DELETE statements because a new plan is compiled each time the MERGE statement is executed.
 
 To improve query performance, we recommend the following parameterization guidelines:
 
-- Parameterize all literal values in the `ON <merge_search_condition>` clause and in the the `WHEN` clauses of the MERGE statement. For example, you can incorporate the MERGE statement into a stored procedure replacing the literal values with appropriate input parameters.
-- If you cannot parameterize the statement, create a plan guide of type `TEMPLATE` and specify the `PARAMETERIZATION FORCED` query hint in the plan guide. For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
-- If MERGE statements are executed frequently on the database, consider setting the PARAMETERIZATION option on the database to FORCED. Use caution when setting this option. The `PARAMETERIZATION` option is a database-level setting and affects how all queries against the database are processed. For more information, see [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam).
-- As an newer and easier alternative to plan guides, consider a similar strategy with Query Store hints. For more information, see [Query Store hints](../../relational-databases/performance/query-store-hints.md).
+- Parameterize all literal values in the `ON <merge_search_condition>` clause and in the `WHEN` clauses of the MERGE statement. For example, you can incorporate the MERGE statement into a stored procedure replacing the literal values with appropriate input parameters.
+- If you can't parameterize the statement, create a plan guide of type `TEMPLATE` and specify the `PARAMETERIZATION FORCED` query hint in the plan guide. For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
+- If MERGE statements are executed frequently on the database, consider setting the PARAMETERIZATION option on the database to FORCED. Use caution when setting this option. The `PARAMETERIZATION` option is a database-level setting and affects how all queries against the database are processed. For more information, see [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization).
+- As a newer and easier alternative to plan guides, consider a similar strategy with Query Store hints. For more information, see [Query Store hints](../../relational-databases/performance/query-store-hints.md).
 
 ### TOP Clause best practices
 
-In the MERGE statement, the TOP clause specifies the number or percentage of rows that are affected after the source table and the target table are joined, and after rows that do not qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value and the insert, update, or delete actions are applied to the remaining joined rows in an unordered fashion. That is, there is no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows; of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted and so on.
+In the MERGE statement, the TOP clause specifies the number or percentage of rows that are affected after the source table and the target table are joined, and after rows that don't qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value and the insert, update, or delete actions are applied to the remaining joined rows in an unordered fashion. That is, there's no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows; of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted and so on.
 
-It is common to use the TOP clause to perform data manipulation language (DML) operations on a large table in batches. When using the TOP clause in the MERGE statement for this purpose, it is important to understand the following implications.
+It's common to use the TOP clause to perform data manipulation language (DML) operations on a large table in batches. When using the TOP clause in the MERGE statement for this purpose, it's important to understand the following implications.
 
 - I/O performance may be affected.
 
@@ -461,11 +457,11 @@ It is common to use the TOP clause to perform data manipulation language (DML) o
 
 - Incorrect results can occur.
 
-  It is important to ensure that all successive batches target new rows or undesired behavior such as incorrectly inserting duplicate rows into the target table can occur. This can happen when the source table includes a row that was not in a target batch but was in the overall target table. To ensure correct results:
+  It's important to ensure that all successive batches target new rows or undesired behavior such as incorrectly inserting duplicate rows into the target table can occur. This can happen when the source table includes a row that wasn't in a target batch but was in the overall target table. To ensure correct results:
 
   - Use the ON clause to determine which source rows affect existing target rows and which are genuinely new.
   - Use an additional condition in the WHEN MATCHED clause to determine if the target row has already been updated by a previous batch.
-  - Use an additional condition in the WHEN MATCHED clause and SET logic to verify the same row cannot be updated twice. 
+  - Use an additional condition in the WHEN MATCHED clause and SET logic to verify the same row can't be updated twice. 
 
 Because the TOP clause is only applied after these clauses are applied, each execution either inserts one genuinely unmatched row or updates one existing row.
 
@@ -476,12 +472,12 @@ The MERGE statement can be used to efficiently bulk load data from a source data
 To improve the performance of the bulk merge process, we recommend the following guidelines:
 
 - Create a clustered index on the join columns in the target table. 
-- Disable other non-unique, nonclustered indexes on the target table for the duration of the bulk load MERGE, enable them afterwards. This is common and useful for nightly bulk data operations.
+- Disable other non-unique, nonclustered indexes on the target table during the bulk load MERGE, enable them afterwards. This is common and useful for nightly bulk data operations.
 - Use the ORDER and UNIQUE hints in the `OPENROWSET(BULK…)` clause to specify how the source data file is sorted.
 
-  By default, the bulk operation assumes the data file is unordered. Therefore, it is important that the source data is sorted according to the clustered index on the target table and that the ORDER hint is used to indicate the order so that the query optimizer can generate a more efficient query plan. Hints are validated at runtime; if the data stream does not conform to the specified hints, an error is raised.
+  By default, the bulk operation assumes the data file is unordered. Therefore, it's important that the source data is sorted according to the clustered index on the target table and that the ORDER hint is used to indicate the order so that the query optimizer can generate a more efficient query plan. Hints are validated at runtime; if the data stream doesn't conform to the specified hints, an error is raised.
 
-These guidelines ensure that the join keys are unique and the sort order of the data in the source file matches the target table. Query performance is improved because additional sort operations are not necessary and unnecessary data copies are not required.
+These guidelines ensure that the join keys are unique and the sort order of the data in the source file matches the target table. Query performance is improved because additional sort operations aren't necessary and unnecessary data copies aren't required.
 
 ### Measuring and diagnosing MERGE performance
 

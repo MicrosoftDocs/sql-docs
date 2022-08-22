@@ -1,25 +1,23 @@
 ---
-description: "sys.tcp_endpoints (Transact-SQL)"
-title: "sys.tcp_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.tcp_endpoints (Transact-SQL)"
+description: sys.tcp_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.tcp_endpoints"
   - "sys.tcp_endpoints_TSQL"
   - "tcp_endpoints"
   - "tcp_endpoints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.tcp_endpoints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

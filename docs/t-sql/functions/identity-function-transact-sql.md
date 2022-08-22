@@ -1,27 +1,26 @@
 ---
+title: "IDENTITY (Function) (Transact-SQL)"
 description: "IDENTITY (Function) (Transact-SQL)"
-title: "IDENTITY (Function) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "IDENTITY_TSQL"
   - "IDENTITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDENTITY function"
   - "SELECT statement [SQL Server], IDENTITY function"
   - "inserting identity columns"
   - "columns [SQL Server], creating"
   - "identity columns [SQL Server], IDENTITY function"
-ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # IDENTITY (Function) (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,18 +1,16 @@
 ---
-description: "DELETE (Transact-SQL)"
-title: "DELETE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DELETE (Transact-SQL)"
+description: DELETE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/19/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DELETE"
   - "DELETE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row removal [SQL Server]"
   - "DELETE statement [SQL Server], about DELETE statement"
   - "views [SQL Server], deleting rows"
@@ -22,9 +20,9 @@ helpviewer_keywords:
   - "deleting rows"
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
+dev_langs:
+  - "TSQL"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)

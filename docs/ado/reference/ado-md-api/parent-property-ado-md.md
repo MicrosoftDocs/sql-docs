@@ -1,22 +1,18 @@
 ---
+title: "Parent Property (ADO MD)"
 description: "Parent Property (ADO MD)"
-title: "Parent Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Parent"
-  - "Member::Parent"
-helpviewer_keywords: 
-  - "Parent property [ADO MD]"
-ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Parent"
+  - "Member::Parent"
+helpviewer_keywords:
+  - "Parent property [ADO MD]"
+apitype: "COM"
 ---
 # Parent Property (ADO MD)
 Indicates the member that is the parent of the current [member](./member-object-ado-md.md) in a hierarchy.  

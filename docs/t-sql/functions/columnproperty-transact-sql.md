@@ -1,25 +1,24 @@
 ---
+title: "COLUMNPROPERTY (Transact-SQL)"
 description: "COLUMNPROPERTY (Transact-SQL)"
-title: "COLUMNPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "COLUMNPROPERTY"
   - "COLUMNPROPERTY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column properties [SQL Server]"
   - "parameters [SQL Server], properties"
   - "COLUMNPROPERTY function"
-ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

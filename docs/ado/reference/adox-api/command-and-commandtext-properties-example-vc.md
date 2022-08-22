@@ -1,21 +1,17 @@
 ---
+title: "Command and CommandText Properties Example (VC++)"
 description: "Command and CommandText Properties Example (VC++)"
-title: "Command and CommandText Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CommandText property [ADOX], VC++ example"
-  - "Command property [ADOX], VC++ example"
-ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CommandText property [ADOX], VC++ example"
+  - "Command property [ADOX], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Command and CommandText Properties Example (VC++)
 The following code demonstrates how to use the [Command](./command-property-adox.md) property to update the text of a procedure.  

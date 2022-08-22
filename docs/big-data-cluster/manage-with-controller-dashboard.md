@@ -6,9 +6,9 @@ author: yualan
 ms.author: alanyu
 ms.reviewer: wiassaf
 ms.date: 11/04/2019
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Manage big data clusters for SQL Server controller dashboard

@@ -1,8 +1,9 @@
 ---
-title: "Monitor Performance By Using the Query Store"
-description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
-ms.custom: ""
-ms.date: 03/15/2022
+title: "Monitor performance by using the Query Store"
+description: Query Store provides insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. Query Store captures history of queries, plans, and runtime statistics.
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASA Dedicated Only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-dedicated-pool-only.md)]
 
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
+The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tune performance with the Query Store](tune-performance-with-the-query-store.md).
@@ -30,9 +31,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store featur
 
 ## <a name="Enabling"></a> Enable the Query Store
 
- Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
+- Query Store is enabled by default for new Azure SQL Database and Azure SQL Managed Instance databases.
+- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. It is enabled by default in the `READ_WRITE` mode for new databases starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], we recommend enabling Query Store on all databases.
+- Query Store is not enabled by default for new Azure Synapse Analytics databases. 
 
-### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### Use the Query Store page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Object Explorer, right-click a database, and then select **Properties**.
 
@@ -43,7 +46,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store featur
 
 3. In the **Operation Mode (Requested)** box, select **Read Write**.
 
-### Use Transact-SQL Statements
+### Use Transact-SQL statements
 
 Use the `ALTER DATABASE` statement to enable the query store for a given database. For example:
 
@@ -114,6 +117,75 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id;
 ```
 
+## Query Store for secondary replicas
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together.
+
+> [!NOTE]
+> **Replica set** or **replica group**: A replica set is defined as being all unnamed replicas that share a role (primary, secondary, geo secondary, geo primary), or as being an individual named replica.
+
+The data stored about queries can be analyzed as workloads on a replica set basis. Query Store for replicas provides the ability to monitor and adjust the performance of any unique, read-only workloads that might be executing against secondary replicas.
+
+### Enable Query Store for secondary replicas
+
+Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) set up and configured.
+
+> [!IMPORTANT]
+> **APPLIES TO**: SQL Server 2022 (16.x) CTP 2.x
+> 
+> You must enable the following set of trace flags before you can enable Query Store for secondary replicas: 12606, 12607, 12608, 12610, T12624. To enable these trace flags:
+> 1. Open the services management console (services.msc from the **Run** menu).
+> 1. Right-click on the **SQL Server** service for SQL Server 2022 CTP 2 and select **Properties**.
+> 1. If the service status is *Running*, select **Stop**. This will stop the installed instance.
+> 1. In the **Start parameters** box, add the values: `-T12606 -T12607 -T12608 -T12610 -T12624`
+> 1. Select **Start** to start the service.
+> 1. Select **OK**.
+
+Enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). The following example enables Query Store on the primary database, and then on secondary replicas. To execute this code, connect to the database on the primary replica.
+
+```sql
+ALTER DATABASE CURRENT SET QUERY_STORE = ON;
+GO
+
+ALTER DATABASE CURRENT  
+FOR SECONDARY SET QUERY_STORE = ON ( 
+        OPERATION_MODE = READ_WRITE 
+);
+GO
+```
+
+You can validate that Query Store is enabled on a secondary replica by connecting to the database on the secondary replica and executing the following Transact-SQL:
+
+```sql
+SELECT desired_state, desired_state_desc, actual_state, actual_state_desc, readonly_reason
+FROM sys.database_query_store_options;
+GO
+```
+
+The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of 8 indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
+
+desired_state | desired_state_desc | actual_state | actual_state_desc | readonly_reason
+--------------|--------------------|--------------|-------------------|-----------------
+2|READ_WRITE|2|READ_WRITE|8
+
+### Performance considerations for Query Store for secondary replicas
+
+The channel used by secondary replicas to send query information back to the primary replica is the same channel used to keep secondary replicas up to date. Data is stored in the same tables on the primary replica that Query Store uses for queries executed on the primary replica, which causes the size of Query Store to grow.
+
+Thus, when a system is under significant load, you may notice some slowdown because of the channel being overloaded. Further, the same adhoc query capture issues that exist for Query Store today will continue for workloads run on secondary replicas. Learn more about how to [Keep the most relevant data in Query Store](best-practice-with-the-query-store.md#keep-the-most-relevant-data-in-query-store).
+
+### Disable Query Store for secondary replicas
+
+To disable Query Store for secondary replicas, connect to the database on the primary replica and run the following code:
+
+```sql
+ALTER DATABASE CURRENT  
+FOR SECONDARY SET QUERY_STORE = OFF;
+GO
+```
+
 ## <a name="Regressed"></a> Use the Regressed Queries feature
 
 After enabling the Query Store, refresh the database portion of the Object Explorer pane to add the **Query Store** section.
@@ -158,7 +230,7 @@ Here are some examples how you can get more insights into your workload before a
 |High PAGEIOLATCH_SH waits per database|High Buffer IO waits in Query Store for specific queries|Find the queries with a high number of physical reads in Query Store. If they match the queries with high IO waits, consider introducing an index on the underlying entity, in order to do seeks instead of scans, and thus minimize the IO overhead of the queries.|
 |High SOS_SCHEDULER_YIELD waits per database|High CPU waits in Query Store for specific queries|Find the top CPU consuming queries in Query Store. Among them, identify the queries for which high CPU trend correlates with high CPU waits for the affected queries. Focus on optimizing those queries - there could be a plan regression, or perhaps a missing index.|
 
-## <a name="Options"></a> Configuration Options
+## <a name="Options"></a> Configuration options
 
 For the available options to configure Query Store parameters, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
@@ -169,11 +241,11 @@ For examples about setting configuration options using [!INCLUDE[tsql](../../inc
 > [!NOTE]
 > For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported. 
 
-## <a name="Related"></a> Related Views, Functions, and Procedures
+## <a name="Related"></a> Related views, functions, and procedures
 
 View and manage Query Store through [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by using the following views and procedures.
 
-### Query Store Functions
+### Query Store functions
 
 Functions help operations with the Query Store.
 
@@ -183,7 +255,7 @@ Functions help operations with the Query Store.
     :::column-end:::
 :::row-end:::
 
-### Query Store Catalog Views
+### Query Store catalog views
 
 Catalog views present information about the Query Store.
 
@@ -219,7 +291,13 @@ Catalog views present information about the Query Store.
         [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
     :::column-end:::
 :::row-end:::
-
+:::row:::
+    :::column:::
+        [sys.database_query_store_internal_state (Transact-SQL)](../system-catalog-views/sys-database-query-store-internal-state-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### Query Store stored procedures
 
@@ -251,17 +329,18 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
+        [sp_query_store_clear_message_queues (Transact-SQL)](../system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md)
     :::column-end:::
     :::column:::
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
 :::row-end:::
 
 <sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
-## <a name="Scenarios"></a> Key Usage Scenarios
+## <a name="Scenarios"></a> Query Store Maintenance
 
-### <a name="OptionMgmt"></a> Option Management
+### <a name="OptionMgmt"></a> Option management
 
 This section provides some guidelines on managing Query Store feature itself.
 
@@ -287,7 +366,7 @@ To find out detailed information about Query Store status, execute following in 
 SELECT * FROM sys.database_query_store_options;
 ```
 
-#### Configure Query Store interval
+#### Set the Query Store interval
 
 You can override interval for aggregating query runtime statistics (default is 60 minutes). New value for interval is exposed through `sys.database_query_store_options` view.
 
@@ -348,7 +427,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 7 days.
 
 #### Delete ad-hoc queries
 
@@ -402,7 +481,6 @@ For more information about diving into performance tuning with Query Store, see 
 
 Other performance topics:
 - [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)
-
 
 ## See also
 

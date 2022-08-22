@@ -1,25 +1,23 @@
 ---
-description: "ALTER SECURITY POLICY (Transact-SQL)"
-title: "ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SECURITY POLICY (Transact-SQL)"
+description: ALTER SECURITY POLICY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_SECURITY_POLICY_TSQL"
   - "ALTER SECURITY POLICY"
   - "ALTER_SECURITY_TSQL"
   - "ALTER SECURITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER SECURITY POLICY statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: VanMSFT
-ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
 

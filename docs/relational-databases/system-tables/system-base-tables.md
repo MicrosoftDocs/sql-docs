@@ -1,22 +1,20 @@
 ---
-description: "System Base Tables"
-title: "System Base Tables | Microsoft Docs"
-ms.custom: ""
+title: "System Base Tables"
+description: System Base Tables
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system base tables [SQL Server]"
   - "hobt [SQL Server]"
   - "base tables"
+dev_langs:
+  - "TSQL"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: LitKnd
-ms.author: kendralittle
 ---
 # System Base Tables
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

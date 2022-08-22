@@ -1,18 +1,14 @@
 ---
+title: "Basic RDS Programming Model"
 description: "Basic RDS Programming Model"
-title: "Basic RDS Programming Model | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS programming model [ADO]"
-ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS programming model [ADO]"
 ---
 # Basic RDS Programming Model
 > [!IMPORTANT]

@@ -1,20 +1,23 @@
 ---
 title: "Azure SQL Database: Manage long-term backup retention"
 description: Learn how to store and restore automated backups for Azure SQL Database in Azure storage (for up to 10 years) using the Azure portal, Azure CLI, and PowerShell.
-services: sql-database
-ms.service: sql-db-mi
+services:
+  - "sql-database"
+ms.service: sql-database
 ms.subservice: backup-restore
-ms.custom: devx-track-azurepowershell, devx-track-azurecli
+ms.custom:
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 ms.topic: how-to
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: kendralittle, mathoma
-ms.date: 12/16/2020
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/20/2022
+monikerRange: "= azuresql || = azuresql-db"
 ---
 
 # Manage Azure SQL Database long-term backup retention
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb.md)]
 
 With Azure SQL Database, you can set a [long-term backup retention](long-term-retention-overview.md) policy (LTR) to automatically retain backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups using the Azure portal, Azure CLI, or PowerShell. Long-term retention policies are also supported for [Azure SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md).
 
@@ -73,20 +76,21 @@ You can configure SQL Database to [retain automated backups](long-term-retention
 
 1. In the Azure portal, navigate to your server and then select **Backups**. Select the **Retention policies** tab to modify your backup retention settings.
 
-   ![retention policies experience](./media/long-term-backup-retention-configure/ltr-policies-tab.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-policies-tab.png" alt-text="Screenshot of the Azure portal showing the retention policies experience.":::
 
 2. On the Retention policies tab, select the database(s) on which you want to set or modify long-term backup retention policies. Unselected databases will not be affected.
 
-   ![select database to configure backup retention policies](./media/long-term-backup-retention-configure/ltr-policies-tab-configure.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-policies-tab-configure.png" alt-text="Screenshot of the Azure portal of the retention policies tab to configure backup retention policies.":::
 
 3. In the **Configure policies** pane, specify your desired retention period for weekly, monthly, or yearly backups. Choose a retention period of '0' to indicate that no long-term backup retention should be set.
 
-   ![configure policies pane](./media/long-term-backup-retention-configure/ltr-configure-policies.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-policies.png" alt-text="Screenshot of the Azure portal, the configure policies pane.":::
 
 4. Select **Apply** to apply the chosen retention settings to all selected databases.
 
 > [!IMPORTANT]
-> When you enable a long-term backup retention policy, it may take up to 7 days for the first backup to become visible and available to restore. For details of the LTR backup cadance, see [long-term backup retention](long-term-retention-overview.md).
+> When you enable a long-term backup retention policy, it may take up to 7 days for the first backup to become visible and available to restore. For details of the LTR backup cadence, see [long-term backup retention](long-term-retention-overview.md). 
+
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -145,23 +149,23 @@ View the backups that are retained for a specific database with an LTR policy, a
 
 1. In the Azure portal, navigate to your server and then select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the Available LTR backups column. A pane will appear with a list of the available LTR backups for the selected database.
 
-   ![available backups experience](./media/long-term-backup-retention-configure/ltr-available-backups-tab.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal, showing available backups.":::
 
 1. In the **Available LTR backups** pane that appears, review the available backups. You may select a backup to restore from or to delete.
 
-   ![view available LTR backups](./media/long-term-backup-retention-configure/ltr-available-backups-manage.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-manage.png" alt-text="Screenshot of the Azure portal where you can view available LTR backups.":::
 
 1. To restore from an available LTR backup, select the backup from which you want to restore, and then select **Restore**.
 
-   ![restore from available LTR backup](./media/long-term-backup-retention-configure/ltr-available-backups-restore.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-restore.png" alt-text="Screenshot of the Azure portal where you can restore from available LTR backup.":::
 
 1. Choose a name for your new database, then select **Review + Create** to review the details of your Restore. Select **Create** to restore your database from the chosen backup.
 
-   ![configure restore details](./media/long-term-backup-retention-configure/restore-ltr.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/restore-ltr.png" alt-text="Screenshot of the Azure portal where you can configure restore details.":::
 
 1. On the toolbar, select the notification icon to view the status of the restore job.
 
-   ![restore job progress](./media/long-term-backup-retention-configure/restore-job-progress-long-term.png)
+   :::image type="content" source="./media/long-term-backup-retention-configure/restore-job-progress-long-term.png" alt-text="Screenshot of the Azure portal that shows restore job progress.":::
 
 1. When the restore job is completed, open the **SQL databases** page to view the newly restored database.
 
@@ -314,7 +318,8 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 
 > [!NOTE]
 > From here, you can connect to the restored database using SQL Server Management Studio to perform needed tasks, such as to extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name. See [point in time restore](recovery-using-backups.md#point-in-time-restore).
-
+>
+> If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in expected database state.
 ---
 
 ## Limitations

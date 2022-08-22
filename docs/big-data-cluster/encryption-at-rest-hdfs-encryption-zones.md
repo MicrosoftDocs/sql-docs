@@ -1,41 +1,42 @@
 ---
-title: SQL Server Big Data Clusters HDFS encryption zones usage guide
+title: SQL Server Big Data Clusters HDFS encryption zones usage
 titleSuffix: SQL Server Big Data Clusters
-description: This article show how to use SQL Server HDFS encryption zones feature of BDC
+description: Learn how to use encryption at rest capabilities with the SQL Server HDFS encryption zones feature of Big Data Clusters and about key management tasks.
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 06/14/2021
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: tutorial
+ms.custom: kr2b-contr-experiment
 ---
 
-# HDFS Encryption Zones usage guide in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# HDFS encryption zones usage guide in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-This guide demonstrates how to use Encryption at Rest capabilities of SQL Server Big Data Clusters to encrypt HDFS folders using Encryption Zones. It also covers HDFS key management tasks.
+This article shows how to use the encryption at rest capabilities of SQL Server Big Data Clusters to encrypt HDFS folders using Encryption Zones. It also describes HDFS key management tasks.
 
-Note that there is a default encryption zone mounted at __```/securelake```__ ready to be used. It was created with a system generated 256-bit key named __securelakekey__. This key can be used to create additional encryption zones.
+A default encryption zone, at */securelake*, is ready to be used. It was created with a system generated 256-bit key named `securelakekey`. This key can be used to create other encryption zones.
 
 ## <a id="prereqs"></a> Prerequisites
 
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md) with [Active Directory](active-directory-prerequisites.md) Integration.
-- SQL Server Big Data Clusters user with Kubernetes administrative privileges (a member of the clusterAdmins role). For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
+- SQL Server Big Data Clusters user with Kubernetes administrative privileges, a member of the clusterAdmins role. For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
 - [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
 
 ## Create an encryption zone using the provided system managed key
 
-1. Create a HDFS folder
+1. Create your HDFS folder by using this [azdata](../azdata/reference/reference-azdata.md) command:
 
    ```console
-   azdata bdc hdfs mkdir -p /user/zone/folder
+   azdata bdc hdfs mkdir --path /user/zone/folder
    ```
 
-1. Issue the encryption zone create command to encrypt the folder using the __securelakekey__ key.
+1. Issue the encryption zone create command to encrypt the folder using the `securelakekey` key.
 
    ```console
    azdata bdc hdfs encryption-zone create --path /user/zone/folder --keyname securelakekey
@@ -43,14 +44,14 @@ Note that there is a default encryption zone mounted at __```/securelake```__ re
 
 ## Manage encryption zones when using external providers
 
-For more information on the way key versions are used on SQL Server Big Data Clusters encryption at rest, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for HDFS" contains an end-to-end example on how to manage encryption zones when using external key providers.
+For more information on the way key versions are used on SQL Server Big Data Clusters encryption at rest, see [Main key rotation for HDFS](big-data-cluster-key-versions.md#main-key-rotation-for-hdfs) for an end-to-end example of how to manage encryption zones when using external key providers.
 
 ## Create a custom new key and encryption zone
 
 1. Use the following pattern to create a 256-bit key.
 
    ```console
-   azdata bdc hdfs key create -n mydatalakekey
+   azdata bdc hdfs key create --name mydatalakekey
    ```
 
 1. Create and encrypt a new HDFS path using the user key.
@@ -61,13 +62,13 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 
 ## HDFS Key rotation and encryption zone re-encryption
 
-1. This creates a new version of the __securelakekey__ with new key material.
+1. This approach creates a new version of the `securelakekey` with new key material.
 
    ```console
-   azdata hdfs bdc key roll -n securelakekey
+   azdata hdfs bdc key roll --name securelakekey
    ```
 
-1. Re-encrypt the encryption zone associated with the key above
+1. Re-encrypt the encryption zone associated with the key above.
 
    ```console
    azdata bdc hdfs encryption-zone reencrypt --path /securelake --action start
@@ -75,44 +76,43 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 
 ## HDFS Key and encryption zone monitoring
 
-1. To monitor the status of a encryption zone re-encryption 
+- To monitor the status of an encryption zone re-encryption, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone status
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone status
+  ```
 
-1. To get the encryption information about a file in an encryption zone
+- To get the encryption information about a file in an encryption zone, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone get-file-encryption-info --path /securelake/data.csv
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone get-file-encryption-info --path /securelake/data.csv
+  ```
 
-1. Listing all encryption zones
+- To list all encryption zones, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone list
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone list
+  ```
 
-1. To list all the available keys for HDFS
+- To list all the available keys for HDFS, use this command:
 
-   ```console
-   azdata bdc hdfs key list
-   ```
+  ```console
+  azdata bdc hdfs key list
+  ```
 
-1. In order to create a custom key for HDFS encryption. Sizes possible are 128, 192 256. Default is 256
+- To create a custom key for HDFS encryption, use this command:
 
-   ```console
-   azdata hdfs key create --name key1 --size 256
-   ```
+  ```console
+  azdata hdfs key create --name key1 --size 256
+  ```
+
+  Possible sizes are 128, 192 256. The default is 256.
 
 ## Next steps
 
-Use azdata with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Use `azdata` with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
 To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
 
-## See also
-
-* [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
-* [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
-
+- [SQL Server Big Data Clusters Transparent Data Encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
+- [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)

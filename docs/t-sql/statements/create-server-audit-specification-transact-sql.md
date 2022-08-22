@@ -1,23 +1,21 @@
 ---
-description: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)"
-title: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CREATE_SERVER_AUDIT_SPECIFICATION_TSQL"
-  - "CREATE SERVER AUDIT SPECIFICATION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CREATE SERVER AUDIT SPECIFICATION statement"
-ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
+title: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)"
+description: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
+ms.prod: sql
+ms.prod_service: "sql-database"
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "CREATE_SERVER_AUDIT_SPECIFICATION_TSQL"
+  - "CREATE SERVER AUDIT SPECIFICATION"
+helpviewer_keywords:
+  - "CREATE SERVER AUDIT SPECIFICATION statement"
+dev_langs:
+  - "TSQL"
+ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

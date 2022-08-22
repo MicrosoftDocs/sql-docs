@@ -1,28 +1,26 @@
 ---
-description: "ALTER PROCEDURE (Transact-SQL)"
-title: "ALTER PROCEDURE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER PROCEDURE (Transact-SQL)"
+description: ALTER PROCEDURE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_PROCEDURE_TSQL"
   - "ALTER_PROC_TSQL"
   - "ALTER PROC"
   - "ALTER PROCEDURE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER PROCEDURE statement"
   - "stored procedure modifications [SQL Server]"
   - "modifying stored procedures"
   - "stored procedures [SQL Server], modifying"
+dev_langs:
+  - "TSQL"
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER PROCEDURE (Transact-SQL)

@@ -68,7 +68,7 @@ Create a document map to provides a set of clickable links or table of contents 
   
 4.  In the **Document map** list box, type or select an expression that matches the group expression.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Repeat steps 1-4 for every group that you want to appear in the document map.  
   

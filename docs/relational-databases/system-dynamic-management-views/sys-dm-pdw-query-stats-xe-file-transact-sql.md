@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_query_stats_xe_file (Transact-SQL)"
-title: "sys.dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
+title: "sys.dm_pdw_query_stats_xe_file (Transact-SQL)"
+description: sys.dm_pdw_query_stats_xe_file (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: ">= aps-pdw-2016"
+ms.date: "03/07/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_query_stats_xe_file (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

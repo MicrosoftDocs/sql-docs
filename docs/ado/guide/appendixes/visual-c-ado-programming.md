@@ -1,21 +1,17 @@
 ---
+title: "Visual C++ ADO Programming"
 description: "Visual C++ ADO Programming"
-title: "Visual C++ ADO Programming | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO, Visual C++"
-  - "Visual C++ [ADO]"
-ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ADO, Visual C++"
+  - "Visual C++ [ADO]"
+dev_langs:
+  - "C++"
 ---
 # Visual C++ ADO Programming
 The ADO API Reference describes the functionality of the ADO application programming interface (API) using a syntax similar to Microsoft Visual Basic. Though the intended audience is all users, ADO programmers employ diverse languages such as Visual Basic, Visual C++ (with and without the **#import** directive), and Visual J++ (with the ADO/WFC class package).  

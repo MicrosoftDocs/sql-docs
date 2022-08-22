@@ -6,9 +6,9 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 12/14/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # SQL Server Big Data Clusters runtime for Apache Spark Guide

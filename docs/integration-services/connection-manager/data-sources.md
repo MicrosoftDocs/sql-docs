@@ -23,7 +23,8 @@ ms.author: chugu
   
  A data source object is a reference to a connection, and at a minimum, it includes a connection string and a data source identifier. It can also include additional metadata such a description, a name, a user name, and a password.  
   
-> **NOTE:** You can add data sources only to projects that are configured to use the package deployment model. If a project is configured to use the project deployment model, you use connection managers created at the project level to share connections, in place of using data sources.  
+> [!NOTE]  
+> You can add data sources only to projects that are configured to use the package deployment model. If a project is configured to use the project deployment model, you use connection managers created at the project level to share connections, in place of using data sources.  
 >   
 >  For more information about the deployment models, see [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   

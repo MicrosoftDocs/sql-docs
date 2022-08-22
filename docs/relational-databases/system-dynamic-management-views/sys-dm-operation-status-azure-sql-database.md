@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_operation_status"
-title: "sys.dm_operation_status | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_operation_status"
+description: sys.dm_operation_status
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/05/2017"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_operation_status_TSQL"
   - "dm_operation_status"
   - "sys.dm_operation_status"
   - "sys.dm_operation_status_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_operation_status
 

@@ -336,7 +336,9 @@ Like there are storage and CPU recommendations, there are Network specific recom
             ethtool -l eth0
    ```
 
-5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings. Below is an example of Mellanox specific network infrastructure to help explain the configuration. Note that the commands will change based on the environment. Contact the NIC vendor for further guidance:
+5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings. 
+
+    Below is an example of Mellanox specific network infrastructure to help explain the configuration. For more information, see [​​Performance Tuning tools for Mellanox Network Adapters](https://support.mellanox.com/s/article/MLNX2-117-2523kn). Note that the commands will change based on the environment. Contact the NIC vendor for further guidance:
 
    ```bash
             #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
@@ -344,15 +346,15 @@ Like there are storage and CPU recommendations, there are Network specific recom
             #or
             irqbalance --oneshot
 
-            #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
-            tar -xvf mlnx_tuning_scripts.tar.gz
-            # be sure, common_irq_affinity.sh is executable. if not, 
-            # chmod +x common_irq_affinity.sh       
+            #download the Mellanox mlnx tools -- see https://support.mellanox.com/s/article/MLNX2-117-2523kn
+
+            #be sure, common_irq_affinity.sh is executable. if not, 
+            #chmod +x common_irq_affinity.sh       
 
             #display IRQ affinity for Mellanox NIC port; e.g eth0
             ./show_irq_affinity.sh eth0
 
-            #optimize for best throughput performance
+            #optimize for best throughput performance with a Mellanox tool
             ./mlnx_tune -p HIGH_THROUGHPUT
 
             #set hardware affinity to the NUMA node hosting physically the NIC and its port
@@ -380,7 +382,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
 - For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.
 
-- As multipath IO is often used for SQL Server deployments, the device mapper (DM) multipath target should also be configured to use the `blk-mq` infrastructure by enabling the **dm_mod.use_blk_mq=y** kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. Refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
+- As multipath IO is often used for SQL Server deployments, the device mapper (DM) multi-queue target should also be configured to use the `blk-mq` infrastructure by enabling the **dm_mod.use_blk_mq=y** kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. Refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
 
 #### Configure swapfile
 

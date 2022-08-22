@@ -1,33 +1,32 @@
 ---
-description: "sys.registered_search_properties (Transact-SQL)"
-title: "sys.registered_search_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.registered_search_properties (Transact-SQL)"
+description: sys.registered_search_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.registered_search_properties"
   - "registered_search_properties"
   - "sys.registered_search_properties_TSQL"
   - "registered_search_properties_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "search properties [SQL Server]"
   - "property searching [SQL Server], viewing registered properties"
   - "search property lists [SQL Server], viewing registered properties"
   - "sys.registered_search_properties catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.registered_search_properties (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contains a row for each search property contained by any search property list on the current database.  
   

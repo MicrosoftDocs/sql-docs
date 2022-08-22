@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_identity_range_allocations (Transact-SQL)"
-title: "MSmerge_identity_range_allocations (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_identity_range_allocations (Transact-SQL)"
+description: MSmerge_identity_range_allocations (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_identity_range_allocations"
   - "MSmerge_identity_range_allocations_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_identity_range_allocations system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

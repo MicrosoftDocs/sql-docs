@@ -1,17 +1,16 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
-description: "CREATE TABLE (Azure Synapse Analytics)"
+description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto, xiaoyul
+ms.date: 08/16/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/30/2021"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE (Azure Synapse Analytics)
 
@@ -63,6 +62,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) 
       | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
@@ -97,6 +97,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ```  
 
 <a name="Arguments"></a>
+
 ## Arguments
 
  *database_name*  
@@ -107,7 +108,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
  *table_name*  
  The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
-
 
  *column_name*  
  The name of a table column.
@@ -147,11 +147,21 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute).
+To understand how to choose the best distribution method and use distributed tables, see [Guidance for designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute). For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
+
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Currently in preview*) 
+Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+>[!NOTE]
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>     - To regain access to MCD tables, opt-in the preview again. 
+>     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is supported in [SSMS 19 Preview 3](../../ssms/download-sql-server-management-studio-ssms.md).
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
@@ -189,6 +199,9 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
 
+>[!NOTE]
+>Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
+
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 
 >[!NOTE]
@@ -212,7 +225,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 |`7`|27|7|  
   
  `datetime`  
- Stores date and time of day with 19 to 23 characters according to the Gregorian calendar. The date can contain year, month, and day. The time contains hour, minutes, seconds.As an option, you can display three digits for fractional seconds. The storage size is 8 bytes.  
+ Stores date and time of day with 19 to 23 characters according to the Gregorian calendar. The date can contain year, month, and day. The time contains hour, minutes, seconds. As an option, you can display three digits for fractional seconds. The storage size is 8 bytes.  
   
  `smalldatetime`  
  Stores a date and a time. Storage size is 4 bytes.  
@@ -467,9 +480,9 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Create a hash-distributed table
+### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns (preview)
 
- The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
+The following example creates the same table as the previous example. However, for this table, rows are distributed (on `id` and `zipCode` columns). The table is created with a clustered columnstore index, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```sql
 CREATE TABLE myTable
@@ -480,7 +493,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = HASH (id),   
+    DISTRIBUTION = HASH (id, zipCode), 
     CLUSTERED COLUMNSTORE INDEX  
   );  
 ```  
@@ -603,4 +616,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)

@@ -2,13 +2,12 @@
 title: "Selective XML Indexes (SXI)"
 description: Learn how to use selective XML indexes (SXI) to improve query performance, support faster indexing, and reduce the storage costs of XML indexes.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
-ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -42,7 +41,7 @@ Selective XML indexes provide the following benefits:
 
 1. No need to update applications to benefit from selective XML indexes.
 
-##  <a id="compare"></a> Selective XML indexes and primary XML indexes
+## <a id="compare"></a> Selective XML indexes and primary XML indexes
 
 > [!IMPORTANT]  
 > Create a selective XML index instead of an ordinary XML index in most cases for better performance and more efficient storage.
@@ -93,7 +92,7 @@ The preceding statement is a good example of the CREATE syntax that you use when
 
 1. Optional optimization hints.
 
- For more information about these elements, see [Related Tasks](#reltasks).
+For more information about these elements, see [Related Tasks](#reltasks).
 
 ## Supported Features, Prerequisites, and Limitations
 
@@ -172,7 +171,7 @@ Selective XML indexes use from one to four columns internally for every node pat
 
 #### Selective XML indexes are rebuilt when you CREATE or ALTER the index
 
- When you CREATE or ALTER a selective XML index, it is rebuilt in a single-threaded, offline mode. Frequently ALTER statements negatively affect the performance of queries over the indexed XML documents.
+When you CREATE or ALTER a selective XML index, it is rebuilt in a single-threaded, offline mode. Frequently ALTER statements negatively affect the performance of queries over the indexed XML documents.
 
 #### Other limitations
 
@@ -180,7 +179,7 @@ Selective XML indexes use from one to four columns internally for every node pat
 
 - Selective XML indexes and secondary selective XML indexes aren't supported in Database Tuning Advisor.
 
-## <a name="reltasks"></a> See also
+## <a id="reltasks"></a> See also
 
 - [Specify paths and optimization hints for selective XML indexes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).
 - [Create, alter, and drop selective XML indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)

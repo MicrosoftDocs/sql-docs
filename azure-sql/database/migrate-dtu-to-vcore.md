@@ -1,15 +1,17 @@
 ---
 title: Migrate from DTU to vCore
 description: Migrate a database in Azure SQL Database from the DTU model to the vCore model. Migrating to vCore is similar to upgrading or downgrading between the standard and premium tiers.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - "sqldbrb=1"
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, moslake
-ms.date: 04/06/2022
+ms.reviewer: wiassaf, mathoma, moslake
+ms.date: 05/10/2022
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -47,21 +49,25 @@ Execute this query in the context of the database to be migrated, rather than in
 WITH dtu_vcore_map AS
 (
 SELECT rg.slo_name,
-       DATABASEPROPERTYEX(DB_NAME(), 'Edition') AS dtu_service_tier,
-       CASE WHEN rg.slo_name LIKE '%SQLG4%' THEN 'Gen4'
-            WHEN rg.slo_name LIKE '%SQLGZ%' THEN 'Gen4'
-            WHEN rg.slo_name LIKE '%SQLG5%' THEN 'Gen5'
-            WHEN rg.slo_name LIKE '%SQLG6%' THEN 'Gen5'
-            WHEN rg.slo_name LIKE '%SQLG7%' THEN 'Gen5'
-       END AS dtu_hardware_gen,
+       CAST(DATABASEPROPERTYEX(DB_NAME(), 'Edition') AS nvarchar(40)) COLLATE DATABASE_DEFAULT AS dtu_service_tier,
+       CASE WHEN slo.slo_name LIKE '%SQLG4%' THEN 'Gen4'
+            WHEN slo.slo_name LIKE '%SQLGZ%' THEN 'Gen4'
+            WHEN slo.slo_name LIKE '%SQLG5%' THEN 'Gen5'
+            WHEN slo.slo_name LIKE '%SQLG6%' THEN 'Gen5'
+            WHEN slo.slo_name LIKE '%SQLG7%' THEN 'Gen5'
+            WHEN slo.slo_name LIKE '%GPGEN8%' THEN 'Gen5'
+       END COLLATE DATABASE_DEFAULT AS dtu_hardware_gen,
        s.scheduler_count * CAST(rg.instance_cap_cpu/100. AS decimal(3,2)) AS dtu_logical_cpus,
        CAST((jo.process_memory_limit_mb / s.scheduler_count) / 1024. AS decimal(4,2)) AS dtu_memory_per_core_gb
 FROM sys.dm_user_db_resource_governance AS rg
-CROSS JOIN (SELECT COUNT(1) AS scheduler_count FROM sys.dm_os_schedulers WHERE status = 'VISIBLE ONLINE') AS s
+CROSS JOIN (SELECT COUNT(1) AS scheduler_count FROM sys.dm_os_schedulers WHERE status COLLATE DATABASE_DEFAULT = 'VISIBLE ONLINE') AS s
 CROSS JOIN sys.dm_os_job_object AS jo
+CROSS APPLY (
+            SELECT UPPER(rg.slo_name) COLLATE DATABASE_DEFAULT AS slo_name
+            ) slo
 WHERE rg.dtu_limit > 0
       AND
-      DB_NAME() <> 'master'
+      DB_NAME() COLLATE DATABASE_DEFAULT <> 'master'
       AND
       rg.database_id = DB_ID()
 )
@@ -171,13 +177,13 @@ The following table provides guidance for specific migration scenarios:
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
 |Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Premium|Business critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Standard|Business critical|Upgrade|Must migrate secondary first|
-|Business critical|Standard|Downgrade|Must migrate primary first|
+|Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|Business Critical|Upgrade|Must migrate secondary first|
+|Business Critical|Standard|Downgrade|Must migrate primary first|
 |Premium|General purpose|Downgrade|Must migrate primary first|
 |General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business critical|Upgrade|Must migrate secondary first|
+|Business Critical|General purpose|Downgrade|Must migrate primary first|
+|General purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

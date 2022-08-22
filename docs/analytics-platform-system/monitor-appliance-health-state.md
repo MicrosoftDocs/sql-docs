@@ -1,34 +1,38 @@
 ---
 title: Monitor appliance health
-description: How to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views. 
-author: charlesfeddersen 
+description: Learn how to monitor an Analytics Platform System appliance by using the Admin Console, or by querying the Parallel Data Warehouse dynamic management views.
+author: WilliamDAssafMSFT 
 ms.prod: sql
 ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: charlesf
+ms.topic: how-to
+ms.date: 05/06/2022
+ms.author: wiassaf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.custom:
+ - seo-dt-2019
+ - kr2b-contr-experiment
 ---
 
 # Monitor Appliance Health State
-This article explains how to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views. 
+
+This article explains how to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views.
+
+A system administrator can use the Admin Console or Dynamic Management Views (DMVs) in the SQL Server Parallel Data Warehouse (PDW) to retrieve the full hierarchy of nodes, components, and software. The following diagram gives a high level understanding of the components that SQL Server PDW monitors.  
   
-## To Monitor the Appliance State  
-A system administrator can use the Admin Console or the SQL Server PDW Dynamic Management Views (DMVs) to retrieve the full hierarchy of nodes, components, and software. The following diagram gives a high level understanding of the components that SQL Server PDW monitors.  
+![Diagram shows how each nodes is related to groups and components.](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-![Monitoring overview](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
-  
-### Monitor Component Status By Using the Admin Console  
+## Monitor Component Status By Using the Admin Console
+
 To retrieve component status by using the Admin Console:  
   
-1.  Click on the **Appliance State** tab.  
+1. Select the **Appliance State** tab.  
   
-2.  On the Appliance State page, click on a specific node to view the node details.  
+1. On the Appliance State page, select a specific node to view the node details.  
   
-    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+   ![Screenshot shows the P D W Admin Console State.](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### Monitor Component Status By Using System Views  
+## Monitor Component Status By Using System Views
+
 To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
   
 ```sql  
@@ -64,19 +68,13 @@ ORDER BY
   
 Possible values returned for the Status property are:  
   
--   Ok  
-  
--   NonCritical  
-  
--   Critical  
-  
--   Unknown  
-  
--   Unsupported  
-  
--   Unreachable  
-  
--   Unrecoverable  
+- Ok  
+- NonCritical  
+- Critical  
+- Unknown  
+- Unsupported  
+- Unreachable  
+- Unrecoverable  
   
 To see all the properties for all components, remove the `WHERE  p.property_name = 'Status'` clause.  
   
@@ -85,7 +83,7 @@ The **[update_time]** column shows the last time the component was polled by the
 > [!CAUTION]  
 > Be sure to investigate the issue when a component has not been polled for 5 minutes or longer; there could be an alert that indicates an issue with the software heartbeats.  
   
-## See Also  
+## Next steps
+
+[Appliance Monitoring](appliance-monitoring.md)  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
-  

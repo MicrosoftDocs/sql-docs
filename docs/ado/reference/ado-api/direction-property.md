@@ -1,21 +1,17 @@
 ---
+title: "Direction Property"
 description: "Direction Property"
-title: "Direction Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Parameter::Direction"
-helpviewer_keywords: 
-  - "Direction property"
-ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Parameter::Direction"
+helpviewer_keywords:
+  - "Direction property"
+apitype: "COM"
 ---
 # Direction Property
 Indicates whether the [parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, an input and an output parameter, or if the parameter is the return value from a stored procedure.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "point in time recovery [SQL Server]"
   - "restoring databases [SQL Server], point in time"
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +86,7 @@ ms.author: kendralittle
   
 7.  In the **Restore to** section, click **Specific date and time**.  
   
-8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. Select **OK**.
   
     > [!NOTE]  
     >  Use the **Timeline Interval** box to change the amount of time displayed on the timeline.  

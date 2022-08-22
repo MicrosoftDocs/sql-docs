@@ -1,23 +1,21 @@
 ---
-description: "syspolicy_policy_categories (Transact-SQL)"
-title: "syspolicy_policy_categories (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syspolicy_policy_categories (Transact-SQL)"
+description: syspolicy_policy_categories (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syspolicy_policy_categories"
   - "syspolicy_policy_categories_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syspolicy_policy_groups view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
-author: VanMSFT
-ms.author: vanto
 ---
 # syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

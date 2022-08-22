@@ -23,7 +23,9 @@ ms.author: maggies
  This article is about adding report parameters to a paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] or Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also add report parameters to mobile reports in  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+>
+> However, SQL Server Mobile Report Publisher is deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
   
 ### To add or edit a report parameter  
   
@@ -49,7 +51,7 @@ ms.author: maggies
   
     -   To hide the parameter and protect it from being modified on the report server after the report is published, select **Internal**. The report parameter can then only be viewed in the report definition. For this option, you must set a default value or allow the parameter to accept a null value.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. Select **OK**.
   
 ### To delete a report parameter  
   

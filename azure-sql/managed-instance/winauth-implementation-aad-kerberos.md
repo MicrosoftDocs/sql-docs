@@ -1,5 +1,5 @@
 ---
-title: How Windows Authentication for Azure SQL Managed Instance is implemented with Azure AD and Kerberos (Preview)
+title: How Windows Authentication for Azure SQL Managed Instance is implemented with Azure AD and Kerberos 
 titleSuffix: Azure SQL Managed Instance
 description: Learn how Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory (Azure AD) and Kerberos.
 services: sql-database
@@ -13,7 +13,7 @@ ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
 ---
 
-# How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos (Preview)
+# How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos 
 
 [Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-overview.md) enables customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for security infrastructure modernization. To enable Windows Authentication for Azure Active Directory (Azure AD) principals, you will turn your Azure AD tenant into an independent Kerberos realm and create an incoming trust in the customer domain.
 

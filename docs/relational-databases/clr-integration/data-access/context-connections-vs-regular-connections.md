@@ -1,18 +1,16 @@
 ---
-title: "Regular vs. Context Connections | Microsoft Docs"
+title: "Regular vs. Context Connections"
 description: In SQL Server, sometimes you must use regular connections for Transact-SQL statements, but context connections offer performance and resource usage advantages.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-author: rothja
-ms.author: jroth
 ---
 # Context Connections vs. Regular Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

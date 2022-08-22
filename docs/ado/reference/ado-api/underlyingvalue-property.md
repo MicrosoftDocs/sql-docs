@@ -1,23 +1,19 @@
 ---
+title: "UnderlyingValue Property"
 description: "UnderlyingValue Property"
-title: "UnderlyingValue Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Field20::GetUnderlyingValue"
   - "Field20::get_UnderlyingValue"
   - "Field20::UnderlyingValue"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UnderlyingValue property"
-ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # UnderlyingValue Property
 Indicates the current value of a [Field](./field-object.md) object in the database.  

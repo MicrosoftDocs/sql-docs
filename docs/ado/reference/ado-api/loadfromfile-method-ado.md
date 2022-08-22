@@ -1,21 +1,17 @@
 ---
+title: "LoadFromFile Method (ADO)"
 description: "LoadFromFile Method (ADO)"
-title: "LoadFromFile Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::raw_LoadFromFile"
-helpviewer_keywords: 
-  - "LoadFromFile method [ADO]"
-ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::raw_LoadFromFile"
+helpviewer_keywords:
+  - "LoadFromFile method [ADO]"
+apitype: "COM"
 ---
 # LoadFromFile Method (ADO)
 Loads the contents of an existing file into a [Stream](./stream-object-ado.md).  

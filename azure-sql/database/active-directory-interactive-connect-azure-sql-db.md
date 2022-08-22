@@ -1,15 +1,18 @@
 ---
-title: ActiveDirectoryInteractive connects to SQL 
+title: ActiveDirectoryInteractive connects to SQL
 description: "C# Code example, with explanations, for connecting to Azure SQL Database by using SqlAuthenticationMethod.ActiveDirectoryInteractive mode."
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
-ms.custom: active directory, has-adal-ref, sqldbrb=1
-ms.devlang:
+ms.custom:
+  - "active directory"
+  - "has-adal-ref"
+  - "sqldbrb=1"
 ms.topic: conceptual
 author: GithubMirek
 ms.author: MirekS
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/06/2022
 ---
 # Connect to Azure SQL Database with Azure AD Multi-Factor Authentication

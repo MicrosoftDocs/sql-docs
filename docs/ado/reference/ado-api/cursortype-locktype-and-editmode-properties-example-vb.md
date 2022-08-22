@@ -1,22 +1,18 @@
 ---
+title: "CursorType, LockType, and EditMode Properties Example (VB)"
 description: "CursorType, LockType, and EditMode Properties Example (VB)"
-title: "CursorType, LockType, and EditMode Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EditMode property [ADO], Visual Basic example"
   - "CursorType property [ADO], Visual Basic example"
   - "LockType property [ADO], Visual Basic example"
-ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # CursorType, LockType, and EditMode Properties Example (VB)
 This example demonstrates setting the [CursorType](./cursortype-property-ado.md) and [LockType](./locktype-property-ado.md) properties before opening a [Recordset](./recordset-object-ado.md). It also shows the value of the [EditMode](./editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  

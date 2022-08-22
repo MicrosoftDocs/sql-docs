@@ -269,16 +269,15 @@ BETWEEN <window frame bound > AND <window frame bound >
   
  Is a positive integer literal (including 0) that specifies the number of rows or values to precede or follow the current row or value. This specification is valid only for ROWS.  
   
-## General Remarks  
+## Remarks  
  More than one window function can be used in a single query with a single FROM clause. The OVER clause for each function can differ in partitioning and ordering.  
   
  If PARTITION BY is not specified, the function treats all rows of the query result set as a single group. 
  
-### Important!
-
-If ROWS/RANGE is specified and \<window frame preceding> is used for \<window frame extent> (short syntax) then this specification is used for the window frame boundary starting point and CURRENT ROW is used for the boundary ending point. For example "ROWS 5 PRECEDING" is equal to "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+> [!IMPORTANT]  
+> If ROWS/RANGE is specified and `<window frame preceding>` is used for `<window frame extent>` (short syntax) then this specification is used for the window frame boundary starting point and CURRENT ROW is used for the boundary ending point. For example "ROWS 5 PRECEDING" is equal to "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
-> [!NOTE]
+> [!NOTE]  
 > If ORDER BY is not specified entire partition is used for a window frame. This applies only to functions that do not require ORDER BY clause. If ROWS/RANGE is not specified but ORDER BY is specified, RANGE UNBOUNDED PRECEDING AND CURRENT ROW is used as default for window frame. This applies only to functions that have can accept optional ROWS/RANGE specification. For example, ranking functions cannot accept ROWS/RANGE, therefore this window frame is not applied even though ORDER BY is present and ROWS/RANGE is not.  
     
 ## Limitations and Restrictions  
@@ -620,7 +619,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  The following example shows using the OVER clause with an aggregate function in a calculated value. Notice that the aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.  
   
 ```sql  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW2019
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
        OrderQuantity AS Qty,   

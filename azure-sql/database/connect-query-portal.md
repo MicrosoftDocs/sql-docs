@@ -1,89 +1,70 @@
 ---
-title: Query a SQL Database using the query editor in the Azure portal (preview)
-description: Learn how to use the Query Editor to run Transact-SQL (T-SQL) queries against a database in Azure SQL Database.
+title: Query SQL Database with query editor in the Azure portal
+description: Learn how to connect to an Azure SQL database and use the Azure portal query editor (preview) to run Transact-SQL (T-SQL) queries.
 titleSuffix: Azure SQL Database
 keywords: connect to sql database,query sql database, azure portal, portal, query editor
 services: sql-database
 ms.service: sql-database
 ms.subservice: development
-ms.custom: sqldbrb=1, contperf-fy21q3-portal, mode-ui
+ms.custom: sqldbrb=1, contperf-fy21q3-portal, mode-ui, kr2b-contr-experiment
 ms.topic: quickstart
-author: Ninarn
-ms.author: ninarn
-ms.reviewer: kendralittle, mathoma
-ms.date: 02/18/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+author: mbarickman
+ms.author: mbarickman
+ms.reviewer: wiassaf, mathoma
+ms.date: 06/21/2022
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
-# Quickstart: Use the Azure portal's query editor (preview) to query an Azure SQL Database
+# Quickstart: Use the Azure portal query editor (preview) to query Azure SQL Database
+
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The query editor is a tool in the Azure portal to run SQL queries against your database in Azure SQL Database or data warehouse in Azure Synapse Analytics.
-
-In this quickstart, you'll use the query editor to run Transact-SQL (T-SQL) queries against a database.
+Query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. In this quickstart, you connect to an Azure SQL database in the portal and use query editor to run Transact-SQL (T-SQL) queries.
 
 ## Prerequisites
 
-Completing this quickstart requires the AdventureWorksLT sample database. You may optionally wish to set an Azure Active Directory (Azure AD) admin for your [server](logical-servers.md).
+- The AdventureWorksLT sample Azure SQL database. If you don't have it, you can [create a database in Azure SQL Database](single-database-create-quickstart.md) that has the AdventureWorks sample data.
 
-### Create a database with sample data
+- A user account with permissions to connect to the database and query editor. You can either:
 
-If you don't have a working copy of the AdventureWorksLT sample database in SQL Database, the following quickstart helps you quickly create one:
+  - Have or set up a user that can connect to the database with SQL authentication.
+  - Set up an Azure Active Directory (Azure AD) administrator for the database's [SQL server](logical-servers.md).
 
-[Quickstart: Create a database in Azure SQL Database using the Azure portal, PowerShell, or Azure CLI](single-database-create-quickstart.md)
+    An Azure AD server administrator can use a single identity to sign in to the Azure portal and the SQL server and databases. To set up an Azure AD server admin:
 
-### Set an Azure Active Directory admin for the server (optional)
+    1. In the [Azure portal](https://portal.azure.com), on your Azure SQL database **Overview** page, select **Server name** under **Essentials** to navigate to the server for your database.
+    1. On the server page, select **Azure Active Directory** in the **Settings** section of the left menu.
+    1. On the **Azure Active Directory** page toolbar, select **Set admin**.
 
-Configuring an Azure Active Directory (Azure AD) administrator enables you to use a single identity to sign in to the Azure portal and your database. If you would like to use Azure AD to connect to query editor, follow the below steps.
+       :::image type="content" source="./media/connect-query-portal/select-active-directory.png" alt-text="Screenshot showing the Set admin selection.":::
 
-This process is optional, you can instead use SQL authentication to connect to the query editor.
+    1. On the **Azure Active Directory** form, search for and select the user or group you want to be the admin, and then select **Select**.
+    1. On the **Azure Active Directory** main page, select **Save**.
 
-> [!NOTE]
-> * Email accounts (for example, outlook.com, gmail.com, yahoo.com, and so on) aren't yet supported as Azure AD admins. Make sure to choose a user created either natively in the Azure AD or federated into the Azure AD.
-> * Azure AD admin sign in works with accounts that have 2-factor authentication enabled, but the query editor does not support 2-factor authentication.
+    > [!NOTE]
+    > - Email addresses like outlook.com or gmail.com aren't supported as Azure AD admins. The user must either be created natively in the Azure AD or federated into the Azure AD.
+    > - Azure AD admin sign-in works with accounts that have two-factor authentication enabled, but the query editor doesn't support two-factor authentication.
 
-1. In the Azure portal, navigate to your SQL database server.
+## Connect to the query editor
 
-2. On the **SQL server** menu, select **Active Directory admin**.
+1. On your SQL database **Overview** page in the [Azure portal](https://portal.azure.com), select **Query editor (preview)** from the left menu.
 
-3. On the SQL Server **Active Directory admin** page toolbar, select **Set admin**.
+   :::image type="content" source="./media/connect-query-portal/find-query-editor.png" alt-text="Screenshot that shows selecting query editor.":::
 
-    ![select active directory](./media/connect-query-portal/select-active-directory.png)
+1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL authentication or Azure AD.
 
-4. On the **Add admin** page, in the search box, enter a user or group to find, select it as an admin, and then choose the **Select** button.
+   - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
-5. Back in the SQL Server **Active Directory admin** page toolbar, select **Save**.
+     :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing sign-in with SQL authentication.":::
 
-## Use the SQL Query Editor
+   - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and select the database you want to query.
+## Query the database
 
-2. In the **SQL database** menu, select **Query editor (preview)**.
+On the **Query editor (preview)** page, run the following example queries against your AdventureWorksLT sample database.
 
-    ![find query editor](./media/connect-query-portal/find-query-editor.PNG)
+### Run a SELECT query
 
-### Establish a connection to the database
-
-Even though you're signed into the portal, you still need to provide credentials to access the database. You can connect using SQL authentication or Azure Active Directory to connect to your database.
-
-#### Connect using SQL Authentication
-
-1. In the **Login** page, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database. If you're not sure, use the login and password for the Server admin of the database's server.
-
-    ![sign in](./media/connect-query-portal/login-menu.png)
-
-2. Select **OK**.
-
-#### Connect using Azure Active Directory
-
-In the **Query editor (preview)**, look at the **Login** page at the **Active Directory authentication** section. Authentication will happen automatically, so if you are an Azure AD admin to the database you will see a message appear saying you have been signed in. Then select the **Continue as** *\<your user or group ID>* button. If the page indicates that you have not successfully logged in, you may need to refresh the page.
-
-### Query a database in SQL Database
-
-The following example queries should run successfully against the AdventureWorksLT sample database.
-
-#### Run a SELECT query
-
-1. Paste the following query into the query editor:
+1. To query for the top 20 products in the database, paste the following [SELECT](/sql/t-sql/queries/select-transact-sql) query into the query editor:
 
    ```sql
     SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
@@ -92,17 +73,17 @@ The following example queries should run successfully against the AdventureWorks
     ON pc.productcategoryid = p.productcategoryid;
    ```
 
-2. Select **Run** and then review the output in the **Results** pane.
+1. Select **Run**, and then review the output in the **Results** pane.
 
-   ![query editor results](./media/connect-query-portal/query-editor-results.png)
+   :::image type="content" source="./media/connect-query-portal/query-editor-results.png" alt-text="Screenshot showing query editor results for a SELECT query.":::
 
-3. Optionally, you can save the query as a .sql file, or export the returned data as a .json, .csv, or .xml file.
+1. Optionally, you can select **Save query** to save the query as an *.sql* file, or select **Export data as** to export the results as a *.json*, *.csv*, or *.xml* file.
 
-#### Run an INSERT query
+### Run an INSERT query
 
-Run the following [INSERT](/sql/t-sql/statements/insert-transact-sql/) T-SQL statement to add a new product in the `SalesLT.Product` table.
+To add a new product to the `SalesLT.Product` table, run the following [INSERT](/sql/t-sql/statements/insert-transact-sql/) T-SQL statement.
 
-1. Replace the previous query with this one.
+1. In the query editor, replace the previous query with the following query:
 
     ```sql
     INSERT INTO [SalesLT].[Product]
@@ -124,15 +105,13 @@ Run the following [INSERT](/sql/t-sql/statements/insert-transact-sql/) T-SQL sta
            ,GETDATE() );
    ```
 
+1. Select **Run** to add the new product. After the query runs, the **Messages** pane displays **Query succeeded: Affected rows: 1**.
 
-2. Select **Run**  to insert a new row in the `Product` table. The **Messages** pane displays **Query succeeded: Affected rows: 1**.
+### Run an UPDATE query
 
+Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statement to update the price of your new product.
 
-#### Run an UPDATE query
-
-Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statement to modify your new product.
-
-1. Replace the previous query with this one.
+1. In the query editor, replace the previous query with the following query:
 
    ```sql
    UPDATE [SalesLT].[Product]
@@ -140,95 +119,92 @@ Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql/) T-SQL statem
    WHERE Name = 'myNewProduct';
    ```
 
-2. Select **Run** to update the specified row in the `Product` table. The **Messages** pane displays **Query succeeded: Affected rows: 1**.
+1. Select **Run** to update the specified row in the `Product` table. The **Messages** pane displays **Query succeeded: Affected rows: 1**.
 
-#### Run a DELETE query
+### Run a DELETE query
 
 Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL statement to remove your new product.
 
-1. Replace the previous query with this one:
+1. In the query editor, replace the previous query with the following query:
 
    ```sql
    DELETE FROM [SalesLT].[Product]
    WHERE Name = 'myNewProduct';
    ```
 
-2. Select **Run** to delete the specified row in the `Product` table. The **Messages** pane displays **Query succeeded: Affected rows: 1**.
+1. Select **Run** to delete the specified row in the `Product` table. The **Messages** pane displays **Query succeeded: Affected rows: 1**.
 
+## Considerations and limitations
 
-## Troubleshooting
+The following considerations and limitations apply when connecting to and querying Azure SQL Database with the query editor.
 
-There are a few things to know when working with the query editor.
+### Query editor limitations
 
-### Configure local network settings
+- The query editor doesn't support connecting to the `master` database. To connect to the `master` database, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- The query editor can't connect to a [replica database](read-scale-out.md) with `ApplicationIntent=ReadOnly`. To connect in this way from a rich client, use SSMS and specify `ApplicationIntent=ReadOnly` on the **Additional Connection Parameters** tab in connection options. For more information, see [Connect to a read-only replica](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
+- The query editor has a 5-minute timeout for query execution. To run longer queries, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- The query editor only supports cylindrical projection for geography data types.
+- The query editor doesn't support IntelliSense for database tables and views, but supports autocomplete for names that have already been typed. For IntelliSense support, use [SSMS](connect-query-ssms.md), [Visual Studio Code](connect-query-vscode.md), or [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database).
+- Pressing **F5** refreshes the query editor page, and any query currently in the editor isn't saved.
 
-If you get one of the following errors in the query editor:
- - *Your local network settings might be preventing the Query Editor from issuing queries. Please click here for instructions on how to configure your network settings*
- - *A connection to the server could not be established. This might indicate an issue with your local firewall configuration or your network proxy settings*
+### Connection considerations
 
-These errors occur because the query editor uses port 443 and 1443 to communicate. You will need to ensure you have enabled outbound HTTPS traffic on these ports. The instructions below will walk you through how to do this, depending on your Operating System. You might need to work with your corporate IT to grant approval to open this connection on your local network.
+- For public connections to the query editor, you need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases.
 
-#### Steps for Windows
+  You don't need to add your IP address to the SQL server firewall rules if you have a Private Link connection set up on the server, and you connect to the server from within the private virtual network.
+  
+- Users need at least the role-based access control (RBAC) permission **Read access to the server and database** to use the query editor. Anyone with this level of access can access the query editor. Users who can't assign themselves as the Azure AD admin or access a SQL administrator account shouldn't access the query editor.
 
-1. Open **Windows Defender Firewall**.
-2. On the left-side menu, select **Advanced settings**.
-3. In **Windows Defender Firewall with Advanced Security**, select **Outbound rules** on the left-side menu.
-4. Select **New Rule...** on the right-side menu.
+### Connection error troubleshooting
 
-In the **New outbound rule wizard** follow these steps:
+- If you see the error message **The X-CSRF-Signature header could not be validated**, take the following actions to resolve the issue:
 
-1. Select **port** as the type of rule you want to create. Select **Next**.
-2. Select **TCP**.
-3. Select **Specific remote ports** and enter "443, 1443". Then select **Next**.
-4. Select "Allow the connection if it is secure".
-5. Select **Next** then select **Next** again.
-5. Keep "Domain", "Private", and "Public" all selected.
-6. Give the rule a name, for example "Access Azure SQL query editor" and optionally a description. Then select **Finish**.
+  - Verify that your computer's clock is set to the right time and time zone. You can try to match your computer's time zone with Azure by searching for the time zone for your database location, such as East US.
+  - If you're on a proxy network, make sure that the request header `X-CSRF-Signature` isn't being modified or dropped.
 
-#### Steps for Mac
-1. Open **System Preferences** (Apple menu > System Preferences).
-2. Select **Security & Privacy**.
-3. Select **Firewall**.
-4. If Firewall is off, select **Click the lock to make changes** at the bottom and select **Turn on Firewall**.
-4. Select **Firewall Options**.
-5. In the **Security & Privacy** window select this option: 'Automatically allow signed software to receive incoming connections'.
+- You might get one of the following errors in the query editor:
 
-#### Steps for Linux
-Run these commands to update iptables
-  ```
+  - **Your local network settings might be preventing the Query Editor from issuing queries. Please click here for instructions on how to configure your network settings.**
+  - **A connection to the server could not be established. This might indicate an issue with your local firewall configuration or your network proxy settings.**
+
+  These errors occur because the query editor is unable to communicate through ports 443 and 1443. You need to enable outbound HTTPS traffic on these ports. The following instructions walk you through this process, depending on your OS. Your corporate IT department might need to grant approval to open this connection on your local network.
+
+  **For Windows:**
+
+  1. Open **Windows Defender Firewall**.
+  1. On the left menu, select **Advanced settings**.
+  1. In **Windows Defender Firewall with Advanced Security**, select **Outbound rules** on the left menu.
+  1. Select **New Rule** on the right menu.
+  1. In the **New outbound rule wizard**, follow these steps:
+
+     1. Select **port** as the type of rule you want to create, and then select **Next**.
+     1. Select **TCP**.
+     1. Select **Specific remote ports**, enter *443, 1443*, and then select **Next**.
+     1. Select **Allow the connection if it is secure**, select **Next**, and then select **Next** again.
+     1. Keep **Domain**, **Private**, and **Public** selected.
+     1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
+
+  **For MacOS:**
+  1. On the Apple menu, open **System Preferences**.
+  1. Select **Security & Privacy**, and then select **Firewall**.
+  1. If **Firewall** is off, select **Click the lock to make changes** at the bottom, and select **Turn on Firewall**.
+  1. Select **Firewall Options**.
+  1. In the **Security & Privacy** window, select **Automatically allow signed software to receive incoming connections**.
+
+  **For Linux:**
+
+  Run these commands to update `iptables`:
+  ```bash
   sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
   sudo iptables -A OUTPUT -p tcp --dport 1443 -j ACCEPT
   ```
 
-### Connection considerations
-
-- For public connections to query editor, you  need to [add your outbound IP address to the server's allowed firewall rules](firewall-create-server-level-portal-quickstart.md) to access your databases and data warehouses.
-- If you have a Private Link connection set up on the server and you are connecting to query editor from an IP in the private Virtual Network, the Query Editor works without needing to add the Client IP address into the SQL database server firewall rules.
-- The most basic role-based access control (RBAC) permissions needed to use the query editor are 'Read access to the server and database'. Anyone with this level of access can access the query editor feature. To limit access to particular users, you must prevent them from being able to sign in to the query editor with Azure Active Directory or SQL authentication credentials. If they cannot assign themselves as the AAD admin for the server or access/add a SQL administrator account, they should not be able to use query editor.
-- If you see the error message "The X-CSRF-Signature header could not be validated", take the following action to resolve the issue:
-    - Verify that your computer's clock is set to the right time and time zone. You can also try to match your computer's time zone with Azure by searching for the time zone for the location of your instance, such as East US, Pacific, and so on.
-    - If you are on a proxy network, make sure that the request header “X-CSRF-Signature” is not being modified or dropped.
-
-
-## Limitations
-
-- Query editor doesn't support connecting to the `master` database. To connect to the `master` database, explore one or more clients in [Next steps](#next-steps).
-- Query editor cannot connect to a [replica database](read-scale-out.md) with `ApplicationIntent=ReadOnly`. To connect in this way from a rich client, you can connect using SQL Server Management Studio and specify `ApplicationIntent=ReadOnly` in the 'Additional Connection Parameters' [tab in connection options](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#ConnectToSecondary).
-- Query editor has a 5-minute timeout for query execution. To run longer queries, explore one or more clients in [Next steps](#next-steps).
-- Query editor only supports cylindrical projection for geography data types.
-- Query editor does not support IntelliSense for database tables and views, but does support autocomplete on names that have already been typed. For IntelliSense support, explore one or more clients in [Next steps](#next-steps).
-- Pressing **F5** refreshes the query editor page. Any query being worked on will be lost.
-
 ## Next steps
 
-You can query a database in Azure SQL Database with a variety of clients, including:
-
-- [Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md).
-- [Use Visual Studio Code to connect and query](connect-query-vscode.md).
-- [Use Azure Data Studio to connect and query Azure SQL database](/sql/azure-data-studio/quickstart-sql-database).
-
-Learn more about Azure SQL Database in the following articles:
-
-- [Learn more about the Transact-SQL (T-SQL) supported in Azure SQL Database](transact-sql-tsql-differences-sql-server.md).
-- [Azure SQL glossary of terms](../glossary-terms.md).
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
+- [Azure SQL glossary of terms](../glossary-terms.md)
+- [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
+- [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
+- [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
+

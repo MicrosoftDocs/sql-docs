@@ -1,30 +1,29 @@
 ---
-description: "Reports system level memory consumers for In-Memory OLTP."
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
-ms.custom: ""
+description: Reports system level memory consumers for In-Memory OLTP.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 04/27/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_xtp_system_memory_consumers"
   - "sys.dm_xtp_system_memory_consumers_TSQL"
   - "sys.dm_xtp_system_memory_consumers"
   - "dm_xtp_system_memory_consumers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_system_memory_consumers dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xtp_system_memory_consumers (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
+Reports system level memory consumers for [!INCLUDE[inmemory](../../includes/inmemory-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
 
 ```sql
 SELECT * 
@@ -42,8 +41,8 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../i
 |lookaside_id|**bigint**|The ID of the thread-local, lookaside memory provider.|
 |pagepool_id|**bigint**|The ID of the thread-local, page pool memory provider.|
 |allocated_bytes|**bigint**|Number of bytes reserved for this consumer.|
-|used_bytes|**bigint**|Bytes used by this consumer. Applies only to varheap memory consumers.|
-|allocation_count|**int**|Number of allocations.|
+|used_bytes|**bigint**|Bytes used by this consumer. Applies only to varheap memory consumers.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], applies to varheap and lookaside memory consumers.|
+|allocation_count|**int**|Number of allocations.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], the number of allocations from the system heap for lookaside memory consumers.|
 |partition_count|**int**|Internal use only.|
 |sizeclass_count|**int**|Internal use only.|
 |min_sizeclass|**int**|Internal use only.|

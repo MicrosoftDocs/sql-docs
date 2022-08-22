@@ -1,22 +1,18 @@
 ---
+title: "WriteText Method"
 description: "WriteText Method"
-title: "WriteText Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::raw_WriteText"
-  - "_Stream::WriteText"
-helpviewer_keywords: 
-  - "WriteText method [ADO]"
-ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::raw_WriteText"
+  - "_Stream::WriteText"
+helpviewer_keywords:
+  - "WriteText method [ADO]"
+apitype: "COM"
 ---
 # WriteText Method
 Writes a specified text string to a [Stream](./stream-object-ado.md) object.  

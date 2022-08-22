@@ -1,27 +1,25 @@
 ---
-description: "DROP VIEW (Transact-SQL)"
 title: "DROP VIEW (Transact-SQL)"
-ms.custom: ""
+description: DROP VIEW (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_VIEW_TSQL"
   - "DROP VIEW"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping views"
   - "DROP VIEW statement"
   - "deleting views"
   - "indexed views [SQL Server], removing"
   - "views [SQL Server], removing"
   - "removing views"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP VIEW (Transact-SQL)

@@ -1,14 +1,15 @@
 ---
 title: Run analytics queries
-description: "Cross-tenant analytics queries using data extracted from multiple Azure SQL Database databases in a multi-tenant app."
-services: sql-database
+description: Cross-tenant analytics queries using data extracted from multiple Azure SQL Database databases in a multi-tenant app.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scenario
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: tutorial
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 09/19/2018
 ---

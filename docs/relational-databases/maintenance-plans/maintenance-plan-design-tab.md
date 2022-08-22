@@ -1,21 +1,19 @@
 ---
 title: Maintenance Plan (Design Tab)
-description: "Maintenance Plan (Design Tab)"
-ms.custom: ""
+description: Maintenance Plan (Design Tab)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.maintplanproperties.optimizations.f1"
   - "sql13.swb.maint.planeditor.f1"
   - "sql13.swb.maint.subplaneditor.f1"
   - "Task.FileExtension"
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 
 # Maintenance Plan (Design Tab)

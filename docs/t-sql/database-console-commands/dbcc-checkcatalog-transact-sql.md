@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "integrity [SQL Server], catalogs"
   - "consistency [SQL Server], catalogs"
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC CHECKCATALOG (Transact-SQL)

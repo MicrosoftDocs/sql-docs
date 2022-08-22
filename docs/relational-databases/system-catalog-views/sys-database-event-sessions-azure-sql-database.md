@@ -1,18 +1,16 @@
 ---
-description: "sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.database_event_sessions"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.custom: ""
-ms.date: "4/18/2022"
-ms.service: sql-database
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
+description: sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+ms.date: "4/18/2022"
+ms.service: sql-database
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
+monikerRange: "=azuresqldb-current"
 ---
 # sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

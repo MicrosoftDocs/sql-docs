@@ -1,29 +1,28 @@
 ---
-description: "ERROR_STATE (Transact-SQL)"
 title: ERROR_STATE (Transact-SQL)
-ms.custom: ""
+description: "ERROR_STATE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ERROR_STATE_TSQL"
   - "ERROR_STATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "messages [SQL Server], state"
   - "ERROR_STATE function"
   - "errors [SQL Server], state"
   - "TRY...CATCH [SQL Server]"
   - "CATCH block"
   - "states [SQL Server], error numbers"
-ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # ERROR_STATE (Transact-SQL)

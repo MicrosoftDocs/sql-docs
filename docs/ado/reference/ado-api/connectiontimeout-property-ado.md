@@ -1,21 +1,17 @@
 ---
+title: "ConnectionTimeout Property (ADO)"
 description: "ConnectionTimeout Property (ADO)"
-title: "ConnectionTimeout Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Connection15::ConnectionTimeout"
-helpviewer_keywords: 
-  - "ConnectionTimeout property [ADO]"
-ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Connection15::ConnectionTimeout"
+helpviewer_keywords:
+  - "ConnectionTimeout property [ADO]"
+apitype: "COM"
 ---
 # ConnectionTimeout Property (ADO)
 Indicates how long to wait while establishing a connection before terminating the attempt and generating an error.  

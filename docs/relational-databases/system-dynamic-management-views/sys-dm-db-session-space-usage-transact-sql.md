@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_db_session_space_usage (Transact-SQL)"
-title: "sys.dm_db_session_space_usage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2015"
+title: "sys.dm_db_session_space_usage (Transact-SQL)"
+description: sys.dm_db_session_space_usage (Transact-SQL) returns the number of pages allocated and deallocated by each session for the tempdb system database
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_session_space_usage_TSQL"
   - "dm_db_session_space_usage"
   - "sys.dm_db_session_space_usage"
   - "sys.dm_db_session_space_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_session_space_usage dynamic management view"
-ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_session_space_usage (Transact-SQL)
@@ -31,8 +28,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >  This view is applicable only to the [tempdb database](../../relational-databases/databases/tempdb-database.md).  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_session_space_usage**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
-  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_db_session_space_usage`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Session ID.<br /><br /> **session_id** maps to **session_id** in [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).|  
@@ -59,7 +56,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
  For more information about the sessions, requests, and tasks, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md), [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), and [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).  
   
-## User Objects  
+## User objects  
  The following objects are included in the user object page counters:  
   
 -   User-defined tables and indexes  
@@ -74,8 +71,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   Tables returned in the table-valued functions  
   
-## Internal Objects  
- Internal objects are only in **tempdb**. The following objects are included in the internal object page counters:  
+## Internal objects  
+
+ Internal objects are only in `tempdb`. The following objects are included in the internal object page counters:  
   
 -   Work tables for cursor or spool operations and temporary large object (LOB) storage  
   
@@ -83,16 +81,18 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   Sort runs  
   
-## Physical Joins  
- ![Physical joins for sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "Physical joins for sys.dm_db_session_space_usage")  
-  
-## Relationship Cardinalities  
+## Physical joins  
+
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.svg" alt-text="Diagram of physical joins for sys.dm_db_session_space_usage.":::
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-|dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|One-to-one|  
+|`dm_db_session_space_usage`.`session_id`|`dm_exec_sessions`.`session_id`|One-to-one|  
   
-## See Also  
+## Next steps
+
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   

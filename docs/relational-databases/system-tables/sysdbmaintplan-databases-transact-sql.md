@@ -1,30 +1,28 @@
 ---
-description: "sysdbmaintplan_databases (Transact-SQL)"
-title: "sysdbmaintplan_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdbmaintplan_databases (Transact-SQL)"
+description: sysdbmaintplan_databases (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdbmaintplan_databases"
   - "sysdbmaintplan_databases_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdbmaintplan_databases system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysdbmaintplan_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This table is included to preserve existing information for instances upgraded from a previous version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions do not change the contents of this table. This table is stored in the **msdb** database.  
   
- [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

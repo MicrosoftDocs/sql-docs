@@ -1,14 +1,14 @@
 ---
-description: "GET CONVERSATION GROUP (Transact-SQL)"
-title: "GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GET CONVERSATION GROUP (Transact-SQL)"
+description: GET CONVERSATION GROUP (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GET"
   - "CONVERSATION_GROUP_TSQL"
   - "GET_TSQL"
@@ -17,14 +17,12 @@ f1_keywords:
   - "CONVERSATION GROUP"
   - "GET CONVERSATION"
   - "GET_CONVERSATION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GET CONVERSATION GROUP statement"
   - "conversations [Service Broker], groups"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "disk space [SQL Server], allocation consistency checks"
   - "space allocation [SQL Server], checking"
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 

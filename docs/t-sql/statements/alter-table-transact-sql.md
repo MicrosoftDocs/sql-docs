@@ -1,11 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL)
-description: "ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers."
+description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "WAIT_AT_LOW_PRIORITY"
   - "ABORT_AFTER_WAIT"
   - "ABORT_AFTER_WAIT_TSQL"
@@ -13,9 +18,7 @@ f1_keywords:
   - "ALTER TABLE"
   - "WAIT_AT_LOW_PRIORITY_TSQL"
   - "ALTER_COLUMN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], resizing"
   - "changing column size"
   - "MAXDOP index option, ALTER TABLE statement"
@@ -54,11 +57,8 @@ helpviewer_keywords:
   - "dropping columns"
   - "data retention policy"
   - "table changes [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "04/13/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -119,6 +119,17 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                    [ HIDDEN ] [ NOT NULL ][ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES] ,
                 start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
+                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+                  end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
+                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+                  start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
+                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+                  end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
+                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES]
         ]
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )
     | DROP
@@ -330,7 +341,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
      {
        NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])
        | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
-                    }
+     }
     | FOREIGN KEY
         ( column [ ,...n ] )
         REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
@@ -349,7 +360,6 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
   | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]
       [ ON filegroup_name | default ]
 }
-
 ```
 
 ## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
@@ -396,6 +406,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
+        [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
+    | XML_COMPRESSION = { ON | OFF }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
 }
 
@@ -549,6 +561,8 @@ ROWGUIDCOL doesn't enforce uniqueness of the values stored in the column and doe
 #### [ {ADD | DROP} PERSISTED ]  
 Specifies that the PERSISTED property is added to or dropped from the specified column. The column must be a computed column that's defined with a deterministic expression. For columns specified as PERSISTED, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] physically stores the computed values in the table and updates the values when any other columns on which the computed column depends are updated. By marking a computed column as PERSISTED, you can create indexes on computed columns defined on expressions that are deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
+`SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+
 Any computed column that's used as a partitioning column of a partitioned table must be explicitly marked PERSISTED.
 
 #### DROP NOT FOR REPLICATION  
@@ -634,6 +648,9 @@ As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or b
 
 #### DROP  
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system uses for system versioning.
+
+> [!NOTE]
+> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting sys.tables.dropped_ledger_table to 1. The ledger view of the dropped ledger table is also marked as dropped by setting sys.tables.dropped_ledger_view_column to 1. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (MSSQL_DroppedLedgerTable, MSSQL_DropedLedgerHistory, MSSQL_DroppedLedgerView) and appending a GUID to the original name.ing
 
 #### CONSTRAINT *constraint_name*  
 Specifies that *constraint_name* is removed from the table. Multiple constraints can be listed.
@@ -873,6 +890,18 @@ Applies only to columnstore tables, which are tables stored with a clustered col
 
 To rebuild multiple partitions at the same time, see [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md). If the table doesn't have a clustered index, changing the data compression rebuilds the heap and the nonclustered indexes. For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+#### XML_COMPRESSION
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
+
+ON  
+Columns using the **xml** data type are compressed.
+
+OFF  
+Columns using the **xml** data type are not compressed.
+
 #### ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 Specifies whether a single partition of the underlying tables and associated indexes is available for queries and data modification during the index operation. The default is OFF. You can run REBUILD as an ONLINE operation.
 
@@ -904,6 +933,9 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later).
 
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 **Enabling Stretch Database for a table**
 
@@ -989,6 +1021,15 @@ Requires **ALTER ANY CONNECTION** permission.
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Conditionally drops the column or constraint only if it already exists.
+
+#### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
+**Applies to**: SQL Server 2022 and later.
+
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
+
+**MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
+
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](../../relational-databases/security/resumable-add-table-constraints.md).
 
 ## Remarks
 
@@ -1339,6 +1380,16 @@ ALTER TABLE Customers ADD
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = MyCEK,
     ENCRYPTION_TYPE = RANDOMIZED,
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
+```
+
+#### K. Adding a primary key with resumerable operation
+
+Resumable `ALTER TABLE` operation for adding a primary key clustered on column (a) with `MAX_DURATION` of 240 minutes.
+
+```sql
+ALTER TABLE table1
+ADD CONSTRAINT PK_Constrain PRIMARY KEY CLUSTERED (a)
+WITH (ONLINE = ON, MAXDOP = 2, RESUMABLE = ON, MAX_DURATION = 240);
 ```
 
 ### <a name="Drop"></a>Dropping columns and constraints

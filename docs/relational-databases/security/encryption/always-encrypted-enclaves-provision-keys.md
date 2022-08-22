@@ -1,8 +1,9 @@
 ---
 description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/15/2021
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: "database-engine, sql-database"

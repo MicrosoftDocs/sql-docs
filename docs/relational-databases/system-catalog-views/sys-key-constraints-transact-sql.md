@@ -1,25 +1,23 @@
 ---
-description: "sys.key_constraints (Transact-SQL)"
-title: "sys.key_constraints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.key_constraints (Transact-SQL)"
+description: sys.key_constraints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.key_constraints"
   - "key_constraints"
   - "sys.key_constraints_TSQL"
   - "key_constraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.key_constraints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_constraints (Transact-SQL)

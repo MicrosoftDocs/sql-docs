@@ -1,21 +1,17 @@
 ---
+title: "Open and Close Methods Example (VB)"
 description: "Open and Close Methods Example (VB)"
-title: "Open and Close Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Close method [ADO], Visual Basic example"
-  - "Open method [ADO], Visual Basic example"
-ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Close method [ADO], Visual Basic example"
+  - "Open method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Open and Close Methods Example (VB)
 This example uses the **Open** and [Close](./close-method-ado.md) methods on both [Recordset](./recordset-object-ado.md) and [Connection](./connection-object-ado.md) objects that have been opened.  

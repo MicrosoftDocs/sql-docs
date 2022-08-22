@@ -1,25 +1,23 @@
 ---
-description: "CREATE RESOURCE POOL (Transact-SQL)"
-title: "CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE RESOURCE POOL (Transact-SQL)"
+description: CREATE RESOURCE POOL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE RESOURCE POOL"
   - "RESOURCE POOL"
   - "CREATE_RESOURCE_POOL_TSQL"
   - "RESOURCE_POOL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE RESOURCE POOL"
+dev_langs:
+  - "TSQL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

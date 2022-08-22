@@ -1,22 +1,18 @@
 ---
+title: "Append Method (ADOX Keys)"
 description: "Append Method (ADOX Keys)"
-title: "Append Method (ADOX Keys) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Keys::Append"
-  - "Keys::raw_Append"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Keys::Append"
+  - "Keys::raw_Append"
+helpviewer_keywords:
+  - "Append method [ADOX]"
+apitype: "COM"
 ---
 # Append Method (ADOX Keys)
 Adds a new [Key](./key-object-adox.md) object to the [Keys](./keys-collection-adox.md) collection.  

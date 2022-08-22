@@ -33,7 +33,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Examples (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic provides examples of using the [SELECT](../../t-sql/queries/select-transact-sql.md) statement.  
   

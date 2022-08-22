@@ -1,20 +1,19 @@
 ---
 title: "Compare disk-based to memory-optimized table storage"
 description: Learn to compare disk-based and memory-optimized table storage in the categories of DDL, structure, indexes, DML operation, and data fragmentation.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
   
 |Categories|Disk-based Table|Durable Memory-Optimized Table|  

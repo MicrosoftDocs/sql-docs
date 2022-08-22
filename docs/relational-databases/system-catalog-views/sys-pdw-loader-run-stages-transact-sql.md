@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_loader_run_stages (Transact-SQL)"
-title: "sys.pdw_loader_run_stages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_loader_run_stages (Transact-SQL)"
+description: sys.pdw_loader_run_stages (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016"
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_loader_run_stages (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

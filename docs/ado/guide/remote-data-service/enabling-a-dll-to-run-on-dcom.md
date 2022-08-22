@@ -1,20 +1,16 @@
 ---
+title: "Enabling a DLL to Run on DCOM"
 description: "Enabling a DLL to Run on DCOM"
-title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: 11/09/2018
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DLL on DCOM in RDS [ADO]"
   - "DCOM in RDS [ADO]"
   - "business objects in RDS [ADO]"
-ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-author: rothja
-ms.author: jroth
 ---
 # Enabling a DLL to Run on DCOM
 > [!IMPORTANT]

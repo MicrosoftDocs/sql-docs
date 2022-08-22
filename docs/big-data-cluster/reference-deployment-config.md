@@ -5,13 +5,12 @@ description: Learn about a JSON file that documents the structure of a SQL Serve
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 09/21/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: reference
+ms.custom: intro-deployment
+ms.metadata: seo-lt-2019
 ---
 
 # Deployment configuration file reference for big data clusters

@@ -22,7 +22,8 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 author: VanMSFT
 ms.author: vanto
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "10/24/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -38,6 +39,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
  [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
+
+ [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
@@ -309,4 +312,3 @@ ORDER BY OrderDateKey;
  [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
-

@@ -1,27 +1,25 @@
 ---
-description: "DROP REMOTE SERVICE BINDING (Transact-SQL)"
-title: "DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP REMOTE SERVICE BINDING (Transact-SQL)"
+description: DROP REMOTE SERVICE BINDING (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP REMOTE SERVICE BINDING"
   - "DROP_REMOTE_SERVICE_BINDING_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping remote service bindings"
   - "removing remote service bindings"
   - "deleting remote service bindings"
   - "remote service bindings [Service Broker], dropping"
   - "DROP REMOTE SERVICE BINDING statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

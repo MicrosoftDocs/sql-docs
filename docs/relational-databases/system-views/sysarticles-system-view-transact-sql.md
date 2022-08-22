@@ -15,14 +15,14 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sysarticles view"
-ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # sysarticles (System View) (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **sysarticles** view exposes article properties. This view is stored in the distribution database.  
+The **sysarticles** view exposes article properties. This view is stored in the distribution database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,27 +1,26 @@
 ---
-description: "sys.registered_search_property_lists (Transact-SQL)"
-title: "sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.registered_search_property_lists (Transact-SQL)"
+description: sys.registered_search_property_lists (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "registered_search_property_lists_TSQL"
   - "sys.registered_search_property_lists"
   - "registered_search_property_lists"
   - "sys.registered_search_property_lists_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "sys.registered_search_property_lists catalog view"
   - "search property lists [SQL Server], viewing"
+dev_langs:
+  - "TSQL"
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

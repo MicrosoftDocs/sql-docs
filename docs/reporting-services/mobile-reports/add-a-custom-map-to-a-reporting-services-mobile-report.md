@@ -1,7 +1,7 @@
 ---
 title: "Add a custom map to a Reporting Services mobile report | Microsoft Docs"
 description: You can add a custom map to a Reporting Services mobile report. This article describes how to load and connect data to a custom map.
-ms.date: 01/31/2020
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add a custom map to a Reporting Services mobile report
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Custom maps require two files:  
 * An .SHP file for shape geometries  
 * A .DBF file for metadata  

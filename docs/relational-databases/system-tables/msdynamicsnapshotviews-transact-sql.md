@@ -1,23 +1,21 @@
 ---
-description: "MSdynamicsnapshotviews (Transact-SQL)"
-title: "MSdynamicsnapshotviews (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdynamicsnapshotviews (Transact-SQL)"
+description: MSdynamicsnapshotviews (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdynamicsnapshotviews_TSQL"
   - "MSdynamicsnapshotviews"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdynamicsnapshotviews system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

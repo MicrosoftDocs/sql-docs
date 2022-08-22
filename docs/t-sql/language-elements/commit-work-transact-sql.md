@@ -1,28 +1,27 @@
 ---
-description: "COMMIT WORK (Transact-SQL)"
 title: COMMIT WORK (Transact-SQL)
-ms.custom: ""
+description: "COMMIT WORK (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "COMMIT_WORK_TSQL"
   - "WORK_TSQL"
   - "WORK"
   - "COMMIT WORK"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ending transactions [SQL Server]"
   - "transactions [SQL Server], ending"
   - "marking end of transactions [SQL Server]"
   - "COMMIT WORK statement"
-ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # COMMIT WORK (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

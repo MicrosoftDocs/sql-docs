@@ -2,13 +2,13 @@
 title: Machine Learning Services (Python, R)
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how you can run Python and R scripts on the master instance of a SQL Server Big Data Clusters with Machine Learning Services.
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf
 ms.date: 11/19/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
+ms.topic: conceptual
 ---
 
 # Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters

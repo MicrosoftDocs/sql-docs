@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 04/02/2022
+ms.date: 08/12/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -27,7 +27,7 @@ This article teaches you how to prepare your environment for a [Managed Instance
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [SQL Server 2019 Enterprise or Developer edition](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=EXE), starting with [CU15 (15.0.4198.2)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance
@@ -41,23 +41,27 @@ To prepare your SQL Server instance, you need to validate that:
 
 You'll need to restart SQL Server for these changes to take effect.
 
-### Install CU15 (or later)
-
-The link feature for SQL Managed Instance was introduced in CU15 of SQL Server 2019.
+### Install service updates
 
 To check your SQL Server version, run the following Transact-SQL (T-SQL) script on SQL Server: 
 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of the SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 ```
 
-If your SQL Server version is earlier than CU15 (15.0.4198.2), install [CU15](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) or the latest cumulative update. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
+
+| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+|---------|---------|---------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
-Create database master key in the master database by running the following T-SQL script on SQL Server:
+Create database master key in the master database, if not already present. Insert your password in place of `<strong_password>` in the script below, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
@@ -81,18 +85,24 @@ To confirm that the Always On availability groups feature is enabled, run the fo
 
 ```sql
 -- Run on SQL Server
--- Is Always On enabled on this SQL Server instance?
-declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
-select
-    @IsHadrEnabled as IsHadrEnabled,
-    case @IsHadrEnabled
-        when 0 then 'The Always On availability groups is disabled.'
-        when 1 then 'The Always On availability groups is enabled.'
-        else 'Unknown status.'
-    end as 'HadrStatus'
+-- Is Always On enabled on this SQL Server
+DECLARE @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
+SELECT
+    @IsHadrEnabled as 'Is HADR enabled',
+    CASE @IsHadrEnabled
+        WHEN 0 THEN 'Always On availability groups is DISABLED.'
+        WHEN 1 THEN 'Always On availability groups is ENABLED.'
+        ELSE 'Unknown status.'
+    END
+	as 'HADR status'
 ```
 
-If the availability groups feature isn't enabled, follow these steps to enable it: 
+The above query will display if Always On availability group is enabled, or not, on your SQL Server.
+
+>[!IMPORTANT]
+> For SQL Server 2016, if you need to enable Always On availability group, you will need to complete extra steps documented in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). These extra steps are not required for all higher SQL Server versions (2019-2022) supported by the link.
+
+If the availability groups feature isn't enabled, follow these steps to enable it, or otherwise skip to the next section: 
 
 1. Open SQL Server Configuration Manager. 
 1. Select **SQL Server Services** from the left pane. 
@@ -101,11 +111,14 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/sql-server-configuration-manager-sql-server-properties.png" alt-text="Screenshot that shows SQL Server Configuration Manager, with selections for opening properties for the service.":::
 
 1. Go to the **Always On Availability Groups** tab. 
-1. Select the **Always On Availability Groups** checkbox, and then select **OK**. 
+1. Select the **Enable Always On Availability Groups** checkbox, and then select **OK**. 
 
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
-1. Select **OK** in the dialog to restart the SQL Server service.
+    - If using **SQL Server 2016**, and if Enable Always On Availability Groups option is disabled with message `This computer is not a node in a failover cluster.`, follow extra steps described in [prepare SQL Server 2016 prerequisites](managed-instance-link-preparation-wsfc.md). Once you've completed these other steps, come back and retry this step again.
+
+1. Select **OK** in the dialog
+1. Restart the SQL Server service.
 
 ### Enable startup trace flags
 
@@ -145,33 +158,18 @@ After the restart, run the following T-SQL script on SQL Server to validate the 
 ```sql
 -- Run on SQL Server
 -- Shows the version and CU of SQL Server
-SELECT @@VERSION
+SELECT @@VERSION as 'SQL Server version'
 
 -- Shows if the Always On availability groups feature is enabled 
-SELECT SERVERPROPERTY ('IsHadrEnabled')
+SELECT SERVERPROPERTY ('IsHadrEnabled') as 'Is Always On enabled? (1 true, 0 false)'
 
 -- Lists all trace flags enabled on SQL Server
 DBCC TRACESTATUS
 ```
 
-Your SQL Server version should be 15.0.4198.2 or later, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
+Your SQL Server version should be one of the supported versions with service updates applied, the Always On availability groups feature should be enabled, and you should have the trace flags `-T1800` and `-T9567` enabled. The following screenshot is an example of the expected outcome for a SQL Server instance that has been properly configured: 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in S S M S.":::
-
-### Set up database recovery and backup
-
-All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server:
-
-```sql
--- Run on SQL Server
--- Set full recovery mode for all databases you want to replicate.
-ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
-GO
-
--- Execute backup for all databases you want to replicate.
-BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
-GO
-```
 
 ## Configure network connectivity
 
@@ -199,7 +197,17 @@ If your SQL Server instance is hosted outside Azure, establish a VPN connection 
 
 ### Network ports between the environments
 
-Port 5022 needs to allow inbound and outbound traffic between SQL Server and SQL Managed Instance. Port 5022 is the standard database mirroring endpoint port for availability groups. It can't be changed or customized. 
+Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the  environments:
+
+The Network Security Group (NSG) rules on the subnet hosting managed instance needs to allow:
+- Inbound traffic on port 5022 and port range 11000-11999 from the network hosting SQL Server
+
+Firewall on the network hosting SQL Server, and the host OS needs to allow:
+- Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
+
+Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
 
 The following table describes port actions for each environment: 
 
@@ -207,9 +215,9 @@ The following table describes port actions for each environment:
 |:---|:-----|
 |SQL Server (in Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. Create a network security group (NSG) rule in the virtual network that hosts the VM to allow communication on port 5022. |
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
-|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in the Azure portal to allow inbound and outbound traffic from the IP address of SQL Server on port 5022 to the virtual network that hosts SQL Managed Instance. |
+|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in Azure portal to allow inbound and outbound traffic from the IP address and the networking hosting SQL Server on port 5022 and port range 11000-11999. |
 
-Use the following PowerShell script on the Windows host of the SQL Server instance to open ports in the Windows firewall: 
+Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 
 ```powershell
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 inbound" -Direction inbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP
@@ -233,9 +241,8 @@ A successful test shows `TcpTestSucceeded : True`.
 :::image type="content" source="./media/managed-instance-link-preparation/powershell-output-tnc-command.png" alt-text="Screenshot that shows the output of the command for testing a network connection in PowerShell.":::
 
 If the response is unsuccessful, verify the following network settings:
-- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allow traffic to the entire *subnet IP range* of SQL Managed Instance. 
+- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
 - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
-
 
 ### Test the connection from SQL Managed Instance to SQL Server
 
@@ -272,64 +279,112 @@ tnc localhost -port 5022
 
 A successful test shows `TcpTestSucceeded : True`. You can then proceed to creating a SQL Agent job on the managed instance to try testing the SQL Server test endpoint on port 5022 from the managed instance.
 
-Next, create a SQL Agent job on the managed instance called `NetHelper` by using the public IP address or DNS name that can be resolved from the managed instance for `SQL_SERVER_ADDRESS`. Run the following T-SQL script on the managed instance: 
+Next, create a SQL Agent job on the managed instance called `NetHelper` by running the following T-SQL script on the managed instance. Replace:
+- `<SQL_SERVER_IP_ADDRESS>` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
--- Run on the managed instance
--- SQL_SERVER_ADDRESS should be a public IP address, or the DNS name that can be resolved from the SQL Managed Instance host machine.
-DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
+-- Run on managed instance
+-- SQL_SERVER_IP_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
+DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_IP_ADDRESS>' -- insert your SQL Server IP address in here
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
 
-EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper', 
-    @enabled=1, 
-    @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.', 
-    @category_name=N'[Uncategorized (Local)]', 
+IF EXISTS(select * from msdb.dbo.sysjobs where name = 'NetHelper') THROW 70000, 'Agent job NetHelper already exists. Please rename the job, or drop the existing job before creating it again.', 1
+-- To delete NetHelper job run: EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'
+
+EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
+    @enabled=1,
+    @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.',
+    @category_name=N'[Uncategorized (Local)]',
     @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
 
-EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'tnc step', 
-    @step_id=1, 
-    @os_run_priority=0, @subsystem=N'PowerShell', 
-    @command = @tncCommand, 
-    @database_name=N'master', 
+EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
+    @step_id=1,
+    @os_run_priority=0, @subsystem=N'PowerShell',
+    @command = @tncCommand,
+    @database_name=N'master',
     @flags=40
 
 EXEC msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
 
 EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 
-EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
+>[!TIP]
+> In case that you need to modify the IP address of your SQL Server for the connectivity probe from managed instance, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the script above.
 
-Run the SQL Agent job by running the following T-SQL command on the managed instance: 
+Then, create a stored procedure `ExecuteNetHelper` that will help run the job and obtain results from the network probe. Run the following T-SQL script on managed instance:
 
 ```sql
--- Run on the managed instance
-EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
+-- Run on managed instance
+IF EXISTS(SELECT * FROM sys.objects WHERE name = 'ExecuteNetHelper') 
+	THROW 70001, 'Stored procedure ExecuteNetHelper already exists. Rename or drop the existing procedure before creating it again.', 1
+GO
+CREATE PROCEDURE ExecuteNetHelper AS
+-- To delete the procedure run: DROP PROCEDURE ExecuteNetHelper
+BEGIN
+  -- Start the job.
+  DECLARE @NetHelperstartTimeUtc datetime = getutcdate()
+  DECLARE @stop_exec_date datetime = null
+  EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
+  
+  -- Wait for job to complete and then see the outcome.
+  WHILE (@stop_exec_date is null)
+  BEGIN
+  
+    -- Wait and see if the job has completed.
+    WAITFOR DELAY '00:00:01'
+    SELECT @stop_exec_date = sja.stop_execution_date
+    FROM msdb.dbo.sysjobs sj JOIN msdb.dbo.sysjobactivity sja ON sj.job_id = sja.job_id
+    WHERE sj.name = 'NetHelper'
+  
+    -- If job has completed, get the outcome of the network test.
+    IF (@stop_exec_date is not null)
+    BEGIN
+      SELECT 
+        sj.name JobName, sjsl.date_modified as 'Date executed', sjs.step_name as 'Step executed', sjsl.log as 'Connectivity status'
+      FROM
+        msdb.dbo.sysjobs sj
+        LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs ON sj.job_id = sjs.job_id
+        LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl ON sjs.step_uid = sjsl.step_uid
+      WHERE
+        sj.name = 'NetHelper'
+    END
+  
+    -- In case of operation timeout (90 seconds), print timeout message.
+    IF (datediff(second, @NetHelperstartTimeUtc, getutcdate()) > 90)
+    BEGIN
+  	SELECT 'NetHelper timed out during the network check. Please investigate SQL Agent logs for more information.'
+      BREAK;
+    END
+  END
+END
 ```
 
-Run the following query on the managed instance to show the log of the SQL Agent job: 
+Run the following query on managed instance to execute the stored procedure that will execute the NetHelper agent job and show the resulting log:
 
 ```sql
--- Run on the managed instance
-SELECT 
-    sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
-FROM
-    msdb.dbo.sysjobs sj
-    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs
-    ON sj.job_id = sjs.job_id
-    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl
-    ON sjs.step_uid = sjsl.step_uid
-WHERE
-    sj.name = 'NetHelper'
+-- Run on managed instance
+EXEC ExecuteNetHelper
+
 ```
 
-If the connection is successful, the log will show `True`. If the connection is unsuccessful, the log will show `False`. 
+If the connection was successful, the log will show `True`. If the connection was unsuccessful, the log will show `False`. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-output-tnchelper.png" alt-text="Screenshot that shows the expected output of the NetHelper SQL Agent job.":::
 
-Finally, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
+If the connection was unsuccessful, verify the following items: 
+
+- The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
+- An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
+- If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
+- SQL Server is running.
+- There exists test endpoint on SQL Server.
+
+After resolving issues, rerun NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
+
+Finally, after the network test has been successful, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
 
 ```sql
 -- Run on SQL Server
@@ -339,23 +394,16 @@ DROP CERTIFICATE TEST_CERT
 GO
 ```
 
-If the connection is unsuccessful, verify the following items: 
-
-- The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
-- An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
-- If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
-- SQL Server is running. 
-
 > [!CAUTION]
 > Proceed with the next steps only if you've validated network connectivity between your source and target environments. Otherwise, troubleshoot network connectivity issues before proceeding.
 
-## Migrate a certificate of a TDE-protected database
+## Migrate a certificate of a TDE-protected database (optional)
 
-If you're migrating a SQL Server database protected by Transparent Data Encryption to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
+If you're migrating a SQL Server database protected by Transparent Data Encryption (TDE) to a managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the managed instance before using the link. For detailed steps, see [Migrate a TDE certificate to a managed instance](tde-certificate-migrate.md).
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) v18.11.1 is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.11.1 or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
@@ -363,4 +411,4 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 ## Next steps
 
-After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 
+- After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 
@@ -33,7 +33,7 @@ ms.author: umajay
 Defragments indexes of the specified table or view.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

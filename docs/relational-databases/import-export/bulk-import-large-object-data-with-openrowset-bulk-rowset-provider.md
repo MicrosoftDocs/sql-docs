@@ -1,13 +1,15 @@
 ---
 title: "Bulk import large-object data with OPENROWSET bulk rowset provider"
 description: The SQL Server OPENROWSET Bulk Rowset Provider enables bulk import as large-object data. Supported types are varbinary(max), varchar(max), and nvarchar(max).
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "SINGLE_NCLOB option"
   - "bulk rowset providers [SQL Server]"
   - "bulk importing [SQL Server], data formats"
@@ -16,10 +18,6 @@ helpviewer_keywords:
   - "data formats [SQL Server], large-object data"
   - "large data, bulk imports"
   - "SINGLE_BLOB option"
-ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-author: MashaMSFT
-ms.author: mathoma
-ms.custom: "seo-lt-2019"
 ---
 # Bulk import large-object data with OPENROWSET Bulk Rowset Provider (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

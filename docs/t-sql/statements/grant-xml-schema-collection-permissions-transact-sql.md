@@ -1,24 +1,23 @@
 ---
 title: "GRANT XML Schema Collection Permissions"
-description: Grants permissions on an XML schema collection.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Grants permissions on an XML schema collection.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "GRANT statement, XML schema collections"
   - "XML schema collections [SQL Server], permissions"
   - "granting permissions [SQL Server], XML schema collections"
   - "schema collections [SQL Server], permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

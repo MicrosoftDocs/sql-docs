@@ -3,19 +3,25 @@ title: Install pre-trained models
 description: Add pre-trained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/12/2022
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install pre-trained machine learning models on SQL Server
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
+
+This article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. 
 
 This article explains how to use PowerShell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
+
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
 Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
 

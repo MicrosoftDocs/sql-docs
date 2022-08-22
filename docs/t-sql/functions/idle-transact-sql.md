@@ -1,27 +1,26 @@
 ---
+title: "@@IDLE (Transact-SQL)"
 description: "&#x40;&#x40;IDLE (Transact-SQL)"
-title: "@@IDLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@IDLE_TSQL"
   - "@@IDLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], idle"
   - "ticks [SQL Server]"
   - "@@IDLE function"
   - "status information [SQL Server], idle time"
   - "idle time [SQL Server]"
-ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

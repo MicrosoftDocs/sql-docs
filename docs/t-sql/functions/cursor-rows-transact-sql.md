@@ -1,26 +1,25 @@
 ---
+title: "@@CURSOR_ROWS (Transact-SQL)"
 description: "@@CURSOR_ROWS (Transact-SQL)"
-title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@CURSOR_ROWS"
   - "@@CURSOR_ROWS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@CURSOR_ROWS function"
   - "cursors [SQL Server], last-opened"
   - "last-opened cursor"
   - "asynchronous cursors [SQL Server]"
-ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

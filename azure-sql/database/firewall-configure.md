@@ -1,15 +1,19 @@
 ---
 title: IP firewall rules
 description: Configure server-level IP firewall rules for a database in Azure SQL Database or Azure Synapse Analytics firewall. Manage access and configure database-level IP firewall rules for SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: security
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/09/2022
 ---
 # Azure SQL Database and Azure Synapse IP firewall rules
@@ -31,9 +35,12 @@ Connection attempts from the internet and Azure must pass through the firewall b
 
 ### Server-level IP firewall rules
 
-These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. You can have a maximum of 128 server-level IP firewall rules for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
+These rules enable clients to access your entire server, that is, all the databases managed by the server. The rules are stored in the *master* database. The default value is up to 256 server-level IP firewall rules for a server. If you have the **Allow Azure Services and resources to access this server** setting enabled, this counts as a single firewall rule for the server.
   
 You can configure server-level IP firewall rules by using the Azure portal, PowerShell, or Transact-SQL statements.
+
+> [!NOTE]
+> The maximum number of server-level IP firewall rules is limited to 128 when configuring using the Azure portal.
 
 - To use the portal or PowerShell, you must be the subscription owner or a subscription contributor.
 - To use Transact-SQL, you must connect to the *master* database as the server-level principal login or as the Azure Active Directory administrator. (A server-level IP firewall rule must first be created by a user who has Azure-level permissions.)
@@ -47,7 +54,7 @@ Database-level IP firewall rules enable clients to access certain (secure) datab
   
 - You can only create and manage database-level IP firewall rules for master and user databases by using Transact-SQL statements and only after you configure the first server-level firewall.
 - If you specify an IP address range in the database-level IP firewall rule that's outside the range in the server-level IP firewall rule, only those clients that have IP addresses in the database-level range can access the database.
-- You can have a maximum of 128 database-level IP firewall rules for a database. For more information about configuring database-level IP firewall rules, see the example later in this article and see [sp_set_database_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database).
+- The default value is up to 256 database-level IP firewall rules for a database. For more information about configuring database-level IP firewall rules, see the example later in this article and see [sp_set_database_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database).
 
 ### Recommendations for how to set firewall rules
 
@@ -120,7 +127,7 @@ You create the first server-level firewall setting by using the [Azure portal](h
 To improve performance, server-level IP firewall rules are temporarily cached at the database level. To refresh the cache, see [DBCC FLUSHAUTHCACHE](/sql/t-sql/database-console-commands/dbcc-flushauthcache-transact-sql).
 
 > [!TIP]
-> You can use [Database Auditing](/azure/azure-sql/database/auditing-overview) to audit server-level and database-level firewall changes.
+> You can use [Database Auditing](./auditing-overview.md) to audit server-level and database-level firewall changes.
 
 ### Use the Azure portal to manage server-level IP firewall rules
 

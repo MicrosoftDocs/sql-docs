@@ -1,19 +1,17 @@
 ---
-description: "sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.database_event_session_targets"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.custom: ""
+description: sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)

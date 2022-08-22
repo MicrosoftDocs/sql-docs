@@ -1,22 +1,18 @@
 ---
+title: "Value Property (ADO)"
 description: "Value Property (ADO)"
-title: "Value Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "03/20/2018"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Field20::Value"
-  - "_Parameter::Value"
-helpviewer_keywords: 
-  - "Value property [ADO]"
-ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
+ms.date: "03/20/2018"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Field20::Value"
+  - "_Parameter::Value"
+helpviewer_keywords:
+  - "Value property [ADO]"
+apitype: "COM"
 ---
 # Value Property (ADO)
 

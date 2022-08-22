@@ -1,31 +1,27 @@
 ---
-title: "srv_willconvert (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_willconvert (Extended Stored Procedure API)"
 description: Learn how srv_willconvert determines whether a specific data type conversion is available within the ODS Library.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_willconvert"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_willconvert"
+apilocation: opends60.dll
+apiname: srv_willconvert
+apitype: "DLLExport"
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_willconvert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Determines whether a specific data type conversion is available within the ODS Library.  
   

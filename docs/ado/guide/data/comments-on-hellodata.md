@@ -1,18 +1,14 @@
 ---
+title: "Comments on HelloData"
 description: "Comments on HelloData"
-title: "Comments on HelloData | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "hellodata sample application [ADO]"
-ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "hellodata sample application [ADO]"
 ---
 # Comments on HelloData
 The HelloData application steps through the basic operations of a typical ADO application: getting, examining, editing, and updating data. When you start the application, click the first button, **Get Data**. This will run the **GetData** subroutine.  

@@ -1,16 +1,19 @@
 ---
 title: Configure streaming export of metrics and resource logs
 description: Learn how to configure streaming export of metrics and resource logs, including intelligent diagnostic analysis from Azure SQL Database and Azure SQL Managed Instance to the destination of your choice to store information about resource utilization and query execution statistics.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: seoapril2019, devx-track-azurepowershell
+ms.custom:
+  - "seoapril2019"
+  - "devx-track-azurepowershell"
 ms.topic: how-to
-author: dimitri-furman 
+author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 3/10/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Configure streaming export of Azure SQL Database and SQL Managed Instance diagnostic telemetry

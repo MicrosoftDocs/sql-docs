@@ -1,22 +1,16 @@
 ---
+title: "Open Method (ADO MD)"
 description: "Open Method (ADO MD)"
-title: "Open Method (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Open"
-  - "Cellset::Open"
-helpviewer_keywords: 
-  - "Open method [ADO MD]"
-ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "Open method [ADO MD]"
+apitype: "COM"
 ---
 # Open Method (ADO MD)
 Retrieves the results of a multidimensional query and returns the results to a [Cellset](./cellset-object-ado-md.md).  

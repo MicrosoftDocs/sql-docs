@@ -1,30 +1,29 @@
 ---
+title: "EVENTDATA (Transact-SQL)"
 description: "EVENTDATA (Transact-SQL)"
-title: "EVENTDATA (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "EVENTDATA"
   - "fn_event_data"
   - "EVENTDATA_TSQL"
   - "fn_event_data_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server instance event data [SQL Server]"
   - "event notifications [SQL Server], event status"
   - "events [SQL Server], status information"
   - "EVENTDATA function"
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
-ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

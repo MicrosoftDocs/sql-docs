@@ -2,10 +2,10 @@
 description: "System Stored Procedures (Transact-SQL)"
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2016"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -65,6 +65,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 > [!NOTE]  
 >  Unless specifically documented otherwise, all system stored procedures return a value of 0 to indicate success. To indicate failure, a nonzero value is returned.  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
 ## API System Stored Procedures  
  Users that run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] against ADO, OLE DB, and ODBC applications may notice these applications using system stored procedures that are not covered in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference. These stored procedures are used by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to implement the functionality of a database API. These stored procedures are just the mechanism the provider or driver uses to communicate user requests to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are intended only for the internal use of the provider or the driver. Calling them explicitly from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-based application is not supported.  

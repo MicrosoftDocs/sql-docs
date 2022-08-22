@@ -6,11 +6,10 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 
 # Tutorial: Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)

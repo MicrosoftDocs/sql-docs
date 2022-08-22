@@ -1,16 +1,17 @@
 ---
 title: DNS alias
 description: Your applications can connect to an alias for the name of the server for Azure SQL Database. Meanwhile, you can change the SQL Database the alias points to anytime, to facilitate testing and so on.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: high-availability
-ms.custom: seo-lt-2019 sqldbrb=1
-ms.devlang:
+ms.custom:
+  - "seo-lt-2019 sqldbrb=1"
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
-ms.reviewer: kendralittle, mathoma, vanto
-ms.date: 06/26/2019
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma, vanto
+ms.date: 07/11/2022
 ---
 # DNS alias for Azure SQL Database
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -18,6 +19,9 @@ ms.date: 06/26/2019
 Azure SQL Database has a Domain Name System (DNS) server. PowerShell and REST APIs accept [calls to create and manage DNS aliases](#anchor-powershell-code-62x) for your [logical SQL server](logical-servers.md) name.
 
 A *DNS alias* can be used in place of the server name. Client programs can use the alias in their connection strings. The DNS alias provides a translation layer that can redirect your client programs to different servers. This layer spares you the difficulties of having to find and edit all the clients and their connection strings.
+
+> [!NOTE]
+> In Azure Synapse Analytics, the Azure SQL logical server DNS alias is only supported for dedicated SQL Pool (formerly DW). For dedicated SQL pools in Azure Synapse workspaces, the DNS alias is not currently supported.
 
 Common uses for a DNS alias include the following cases:
 
@@ -102,7 +106,7 @@ Presently, a DNS alias has the following limitations:
 - _Table auditing is not supported:_ You cannot use a DNS alias on a server that has *table auditing* enabled on a database.
   - Table auditing is deprecated.
   - We recommend that you move to [Blob Auditing](auditing-overview.md).
-  - We recommend that you move to [Blob Auditing](/azure/azure-sql/database/auditing-overview).
+  - We recommend that you move to [Blob Auditing](./auditing-overview.md).
 - DNS alias is subject to [naming restrictions](/azure/azure-resource-manager/management/resource-name-rules).
 
 ## Related resources

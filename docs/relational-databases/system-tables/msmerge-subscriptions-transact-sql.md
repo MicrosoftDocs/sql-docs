@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_subscriptions (Transact-SQL)"
-title: "MSmerge_subscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_subscriptions (Transact-SQL)"
+description: MSmerge_subscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_subscriptions"
   - "MSmerge_subscriptions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_subscriptions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

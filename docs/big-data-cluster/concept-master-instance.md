@@ -4,11 +4,10 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server master instance in a SQL Server 2019 big data cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Introducing the master pool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

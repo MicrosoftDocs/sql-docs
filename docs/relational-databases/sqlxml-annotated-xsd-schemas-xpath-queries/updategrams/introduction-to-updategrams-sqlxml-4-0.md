@@ -1,13 +1,15 @@
 ---
 title: "Introduction to Updategrams (SQLXML)"
 description: Learn about SQLXML 4.0 updategrams that can be used to insert, update, or delete data in a database.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "explicit schema mapping [SQLXML]"
   - "updategrams [SQLXML], mapping schema specifying"
   - "namespaces [SQLXML]"
@@ -20,9 +22,6 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Updategrams (SQLXML 4.0)

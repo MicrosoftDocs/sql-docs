@@ -1,7 +1,9 @@
 ---
 title: "Set query parameterization behavior using plan guides"
 description: Learn about options for parameterization, where parameters are substituted for literal values in a query in SQL Server.
-ms.custom: seo-dt-2019
+ms.custom:
+- seo-dt-2019
+- event-tier1-build-2022
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -21,14 +23,14 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   When the PARAMETERIZATION database option is set to SIMPLE, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer may choose to parameterize the queries. This means that any literal values that are contained in a query are substituted with parameters. This process is referred to as simple parameterization. When SIMPLE parameterization is in effect, you cannot control which queries are parameterized and which queries are not. However, you can specify that all queries in a database be parameterized by setting the PARAMETERIZATION database option to FORCED. This process is referred to as forced parameterization.  
   
  You can override the parameterization behavior of a database by using plan guides in the following ways:  
   
--   When the PARAMETERIZATION database option is set to SIMPLE, you can specify that forced parameterization is attempted on a certain class of queries. You do this by creating a TEMPLATE plan guide on the parameterized form of the query, and specifying the PARAMETERIZATION FORCED query hint in the [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) stored procedure. You can consider this kind of plan guide as a way to enable forced parameterization only on a certain class of queries, instead of all queries. For more information on simple parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
+-   When the PARAMETERIZATION database option is set to SIMPLE, you can specify that forced parameterization is attempted on a certain class of queries. You do this by creating a TEMPLATE plan guide on the parameterized form of the query, and specifying the PARAMETERIZATION FORCED query hint in the [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) stored procedure. You can consider this kind of plan guide as a way to enable forced parameterization only on a certain class of queries, instead of all queries. For more information on simple parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization). 
   
--   When the PARAMETERIZATION database option is set to FORCED, you can specify that for a certain class of queries, only simple parameterization is attempted, not forced parameterization. You do this by creating a TEMPLATE plan guide on the force-parameterized form of the query, and specifying the PARAMETERIZATION SIMPLE query hint in **sp_create_plan_guide**.  For more information on forced parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ForcedParam). 
+-   When the PARAMETERIZATION database option is set to FORCED, you can specify that for a certain class of queries, only simple parameterization is attempted, not forced parameterization. You do this by creating a TEMPLATE plan guide on the force-parameterized form of the query, and specifying the PARAMETERIZATION SIMPLE query hint in **sp_create_plan_guide**.  For more information on forced parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization). 
   
  Consider the following query on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   

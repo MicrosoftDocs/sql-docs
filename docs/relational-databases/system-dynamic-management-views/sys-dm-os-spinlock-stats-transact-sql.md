@@ -1,32 +1,29 @@
 ---
-description: "sys.dm_os_spinlock_stats (Transact-SQL)"
 title: "sys.dm_os_spinlock_stats (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+author: "bluefooted"
+ms.author: "pamela"
+manager: amitban
+ms.reviewer: "wiassaf"
 ms.date: "02/10/2021"
 ms.prod: "sql-non-specified"
+ms.service:
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.suite: "sql"
 ms.technology: "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_spinlock_stats_TSQL"
   - "dm_os_spinlock_stats_TSQL"
   - "dm_os_spinlock_stats"
   - "sys.dm_os_spinlock_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_spinlock_stats dynamic management view"
-author: "bluefooted"
-ms.author: "pamela"
-ms.reviewer: "wiassaf"
-manager: amitban
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns information about all spinlock waits organized by type.  
   

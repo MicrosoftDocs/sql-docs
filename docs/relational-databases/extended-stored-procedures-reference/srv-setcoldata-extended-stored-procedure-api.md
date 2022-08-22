@@ -1,31 +1,27 @@
 ---
-title: "srv_setcoldata (Extended Stored Procedure API) | Microsoft Docs"
-description: Learn srv_setcoldata in the Extended Stored Procedure API specifies the current address for a column's data. 
-ms.custom: ""
+title: "srv_setcoldata (Extended Stored Procedure API)"
+description: Learn srv_setcoldata in the Extended Stored Procedure API specifies the current address for a column's data.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_setcoldata"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_setcoldata"
+apilocation: opends60.dll
+apiname: srv_setcoldata
+apitype: "DLLExport"
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_setcoldata (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Specifies the current address for a column's data.  
   

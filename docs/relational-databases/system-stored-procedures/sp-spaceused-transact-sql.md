@@ -1,11 +1,11 @@
 ---
-description: "sp_spaceused (Transact-SQL)"
-title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
+description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
+title: "sp_spaceused (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/14/2017"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -57,7 +57,10 @@ If *objname* is not specified, results are returned for the whole database.
   
 `[ @mode = ] 'mode'`
  Indicates the scope of the results. For a stretched table or database, the *mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
-  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
  The *mode* argument can have the following values:  
   
 |Value|Description|  
@@ -186,7 +189,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2016;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
 GO  
@@ -196,7 +199,7 @@ GO
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
 ```sql  
-USE AdventureWorks008R2;  
+USE AdventureWorks2016;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
 GO  

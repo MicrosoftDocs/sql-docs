@@ -1,18 +1,14 @@
 ---
+title: "IDSOShapeExtensions Interface"
 description: "IDSOShapeExtensions Interface"
-title: "IDSOShapeExtensions Interface | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "IDSOShapeExtensions interface [ADO]"
-ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "IDSOShapeExtensions interface [ADO]"
 ---
 # IDSOShapeExtensions Interface
 Gets the underlying OLE DB Data Source object for the SHAPE provider.  

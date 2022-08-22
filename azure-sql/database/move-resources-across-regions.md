@@ -2,17 +2,18 @@
 title: Move resources to new region
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to move your database or managed instance to another region.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: data-movement
-ms.custom: sqldbrb=2
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: how-to
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 06/25/2019
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Move resources to new region - Azure SQL Database & Azure SQL Managed Instance
@@ -37,7 +38,7 @@ This article provides a general workflow for moving resources to a different reg
 > This article applies to migrations within the Azure public cloud or within the same sovereign cloud.
 
 > [!NOTE]
-> To move Azure SQL databases and elastic pools to a different Azure region, you can also use Azure Resource Mover (in preview). Refer [this tutorial](/azure/resource-mover/tutorial-move-region-sql) for detailed steps to do the same.
+> To move Azure SQL databases and elastic pools to a different Azure region, you can also use Azure Resource Mover (Recommended). Refer [this tutorial](/azure/resource-mover/tutorial-move-region-sql) for detailed steps to do the same.
 
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
@@ -58,7 +59,7 @@ This article provides a general workflow for moving resources to a different reg
 1. If database-level audit is enabled, disable it and enable server-level auditing instead. After failover, database-level auditing will require the cross-region traffic, which isn't desired or possible after the move.
 1. For server-level audits, ensure that:
    - The storage container, Log Analytics, or event hub with the existing audit logs is moved to the target region.
-   - Auditing is configured on the target server. For more information, see [Get started with SQL Database auditing](/azure/azure-sql/database/auditing-overview).
+   - Auditing is configured on the target server. For more information, see [Get started with SQL Database auditing](./auditing-overview.md).
 1. If your instance has a long-term retention policy (LTR), the existing LTR backups will remain associated with the current server. Because the target server is different, you'll be able to access the older LTR backups in the source region by using the source server, even if the server is deleted.
 
       > [!NOTE]
@@ -109,7 +110,7 @@ Once the move completes, remove the resources in the source region to avoid unne
 1. If a database-level audit is enabled, disable it and enable server-level auditing instead. After failover, database-level auditing will require cross-region traffic, which is not desired, or possible after the move.
 1. For server-level audits, ensure that:
     - The storage container, Log Analytics, or event hub with the existing audit logs is moved to the target region.
-    - Audit configuration is configured at the target server. For more information, see [SQL Database auditing](/azure/azure-sql/database/auditing-overview).
+    - Audit configuration is configured at the target server. For more information, see [SQL Database auditing](./auditing-overview.md).
 1. If your instance has a long-term retention policy (LTR), the existing LTR backups will remain associated with the current server. Because the target server is different, you'll be able to access the older LTR backups in the source region using the source server, even if the server is deleted.
 
       > [!NOTE]

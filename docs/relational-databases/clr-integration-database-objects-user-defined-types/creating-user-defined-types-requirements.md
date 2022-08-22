@@ -1,13 +1,13 @@
 ---
-title: "User-Defined Type Requirements | Microsoft Docs"
-description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server. 
-ms.custom: ""
+title: "User-Defined Type Requirements"
+description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UDTs [CLR integration], requirements"
   - "serialization"
   - "Native serialization format [CLR integration]"
@@ -18,12 +18,10 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-author: rothja
-ms.author: jroth
 ---
 # Creating User-Defined Types - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  You must make several important design decisions when creating a user-defined type (UDT) to be installed in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For most UDTs, creating the UDT as a structure is recommended, although creating it as a class is also an option. The UDT definition must conform to the specifications for creating UDTs in order for it to be registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  You must make several important design decisions when creating a user-defined type (UDT) to be installed in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For most UDTs, creating the UDT as a structure is recommended, although creating it as a class is also an option. The UDT definition must conform to the specifications for creating UDTs in order for it to be registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Requirements for Implementing UDTs  
  To run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your UDT must implement the following requirements in the UDT definition:  

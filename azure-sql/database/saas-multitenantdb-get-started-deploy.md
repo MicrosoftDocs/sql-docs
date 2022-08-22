@@ -1,14 +1,15 @@
 ---
 title: Deploy a sharded multi-tenant database SaaS app
-description: "Deploy and explore the sharded Wingtip Tickets SaaS multi-tenant database application, that demonstrates SaaS patterns by using Azure SQL Database."
-services: sql-database
+description: Deploy and explore the sharded Wingtip Tickets SaaS multi-tenant database application, that demonstrates SaaS patterns by using Azure SQL Database.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: scenario
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: tutorial
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 10/16/2018
 ---

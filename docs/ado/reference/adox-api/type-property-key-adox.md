@@ -1,25 +1,21 @@
 ---
+title: "Type Property (Key) (ADOX)"
 description: "Type Property (Key) (ADOX)"
-title: "Type Property (Key) (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Key::GetType"
   - "_Key::get_Type"
   - "_Key::Type"
   - "_Key::PutType"
   - "_Key::put_Type"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Type property [ADOX]"
-ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Type Property (Key) (ADOX)
 Indicates the type of the key.  

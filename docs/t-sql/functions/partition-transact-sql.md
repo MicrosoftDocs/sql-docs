@@ -1,24 +1,23 @@
 ---
-description: "$PARTITION (Transact-SQL)"
 title: "$PARTITION (Transact-SQL)"
-ms.custom: ""
+description: "$PARTITION (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "$partition_TSQL"
   - "$partition"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
-ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # $PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,25 +1,21 @@
 ---
+title: "UniqueName Property (ADO MD)"
 description: "UniqueName Property (ADO MD)"
-title: "UniqueName Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Level::UniqueName"
   - "Member::UniqueName"
   - "Dimension::UniqueName"
   - "UniqueName"
   - "Hierarchy::UniqueName"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UniqueName property [ADO MD]"
-ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # UniqueName Property (ADO MD)
 Indicates an unambiguous name for the current object.  

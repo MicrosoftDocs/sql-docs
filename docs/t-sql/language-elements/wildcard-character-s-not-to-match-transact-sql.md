@@ -1,27 +1,26 @@
 ---
 title: "[^] Wildcard to exclude characters"
-description: "T-SQL wildcard for characters not to match"
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: "T-SQL wildcard for characters not to match"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "seo-lt-2019"
+f1_keywords:
   - "wildcard"
   - "[^]_TSQL"
   - "[^]"
   - "Not Match"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[^] (wildcard - character(s) not to match)"
-ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

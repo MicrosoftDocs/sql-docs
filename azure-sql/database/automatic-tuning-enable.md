@@ -1,16 +1,17 @@
 ---
 title: Enable automatic tuning
 description: You can enable automatic tuning on your database easily using the Azure portal.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: how-to
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: kendralittle, mathoma, wiassaf
-ms.date: 03/03/2021
+ms.reviewer: wiassaf, mathoma
+ms.date: 06/06/2022
 ---
 # Enable automatic tuning in the Azure portal to monitor queries and improve workload performance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -31,23 +32,13 @@ Automatic tuning can be enabled at the server or the database level through:
 
 ## Enable automatic tuning on server
 
-On the server level you can choose to inherit automatic tuning configuration from "Azure Defaults" or not to inherit the configuration. Azure defaults are FORCE_LAST_GOOD_PLAN is enabled, CREATE_INDEX is disabled, and DROP_INDEX is disabled.
-
-> [!IMPORTANT]
-> As of March, 2020 new Azure defaults for automatic tuning are as follows:
->
-> - FORCE_LAST_GOOD_PLAN = enabled, CREATE_INDEX = disabled, and DROP_INDEX = disabled.
-> - Existing servers with no automatic tuning preferences configured are automatically configured to INHERIT the Azure defaults. This applies to all customers currently having server settings for automatic tuning in an undefined state.
-> - New servers created will automatically be configured to INHERIT the Azure defaults (unlike earlier when automatic tuning configuration was in an undefined state upon new server creation).
+On the server level you can choose to inherit automatic tuning configuration from "Azure Defaults" or not to inherit the configuration. Azure defaults are FORCE_LAST_GOOD_PLAN enabled, CREATE_INDEX disabled, and DROP_INDEX disabled.
 
 ### Azure portal
 
 To enable automatic tuning on a [server](logical-servers.md) in Azure SQL Database, navigate to the server in the Azure portal and then select **Automatic tuning** in the menu.
 
 ![Screenshot shows Automatic tuning in the Azure portal, where you can apply options for a server.](./media/automatic-tuning-enable/server.png)
-
-> [!NOTE]
-> Please note that the **DROP_INDEX** option at this time is not compatible with applications using partition switching and index hints and should not be enabled in these cases. Dropping unused indexes is not supported for Premium and Business Critical service tiers.
 
 Select the automatic tuning options you want to enable and select **Apply**.
 
@@ -72,8 +63,6 @@ Individual automatic tuning settings can be separately configured for each datab
 
 ![Screenshot shows Automatic tuning in the Azure portal, where you can apply options for a single database.](./media/automatic-tuning-enable/database.png)
 
-Please note that DROP_INDEX option at this time is not compatible with applications using partition switching and index hints and should not be enabled in these cases.
-
 Once you have selected your desired configuration, click **Apply**.
 
 ### REST API
@@ -96,10 +85,10 @@ To configure individual automatic tuning options via T-SQL, connect to the datab
 ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = ON, DROP_INDEX = OFF)
 ```
 
-Setting the individual tuning option to ON will override any setting that database inherited and enable the tuning option. Setting it to OFF will also override any setting that database inherited and disable the tuning option. Automatic tuning option, for which DEFAULT is specified, will inherit the automatic tuning configuration from the server level settings.  
+Setting the individual tuning option to ON will override any setting that database inherited and enable the tuning option. Setting it to OFF will also override any setting that database inherited and disable the tuning option. Automatic tuning option for which DEFAULT is specified, will inherit the automatic tuning configuration from the server level settings.
 
 > [!IMPORTANT]
-> In the case of [active geo-replication](auto-failover-group-sql-db.md), Automatic tuning needs to be configured on the primary database only. Automatically applied tuning actions, such as for example index create or delete will be automatically replicated to the read-only secondary. Attempting to enable Automatic tuning via T-SQL on the read-only secondary will result in a failure as having a different tuning configuration on the read-only secondary is unsupported.
+> In the case of [active geo-replication](auto-failover-group-sql-db.md), Automatic tuning needs to be configured on the primary database only. Automatically applied tuning actions, such as for example index create or delete will be automatically replicated to geo-secondaries. Attempting to enable Automatic tuning via T-SQL on the read-only secondary will result in a failure as having a different tuning configuration on the read-only secondary is not supported.
 >
 
 To find out more abut T-SQL options to configure automatic tuning, see [ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azuresqldb-current&preserve-view=true).
@@ -111,10 +100,10 @@ To find out more abut T-SQL options to configure automatic tuning, see [ALTER DA
 In case of error messages that automated recommendation management has been disabled, or simply disabled by system, the most common causes are:
 - Query Store is not enabled, or
 - Query Store is in read-only mode for a specified database, or
-- Query Store stopped running because it used the allocated storage space.
+- Query Store stopped running because it ran out of allocated storage space.
 
 The following steps can be considered to rectify this issue:
-- Clean up the Query Store, or modify the data retention period to "auto" by using T-SQL. See how to [configure recommended retention and capture policy for Query Store](./query-performance-insight-use.md#recommended-retention-and-capture-policy).
+- Clean up the Query Store, or modify the data retention period to "auto" by using T-SQL, or increase Query Store maximum size. See how to [configure recommended retention and capture policy for Query Store](./query-performance-insight-use.md#recommended-retention-and-capture-policy).
 - Use SQL Server Management Studio (SSMS) and follow these steps:
   - Connect to the Azure SQL Database
   - Right click on the database
@@ -125,9 +114,11 @@ The following steps can be considered to rectify this issue:
 
 ### Permissions
 
-As automatic tuning is an Azure feature, to use it you will need to use Azure's built-in roles. Using SQL Authentication only will not be sufficient to use the feature from the Azure portal.
+For Azure SQL Database, managing Automatic tuning in Azure portal, or using PowerShell or REST API requires membership in Azure built-in RBAC roles.
 
-To use automatic tuning, the minimum required permission to grant to the user is Azure's built-in [SQL Database contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role. You can also consider using higher privilege roles such as SQL Server Contributor, SQL Managed Instance Contributor, Contributor, and Owner.
+To manage automatic tuning, the minimum required permission to grant to the user is membership in the [SQL Database contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role. You can also consider using higher privilege roles such as SQL Server Contributor, Contributor, and Owner.
+
+For permissions required to manage Automatic tuning with T-SQL, see [Permissions](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1) for **ALTER DATABASE**.
 
 ## Configure automatic tuning e-mail notifications
 

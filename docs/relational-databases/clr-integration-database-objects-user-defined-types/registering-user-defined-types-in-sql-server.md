@@ -1,15 +1,13 @@
 ---
-title: "Registering User-Defined Types in SQL Server | Microsoft Docs"
+title: "Registering User-Defined Types in SQL Server"
 description: You must register a UDT before you install it in SQL Server. You must register the assembly and create the type in the database where you wish to use it.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UDTs [CLR integration], maintaining"
   - "user-defined types [CLR integration], maintaining"
   - "dependencies [CLR integration]"
@@ -30,9 +28,9 @@ helpviewer_keywords:
   - "ALTER ASSEMBLY statement"
   - "UDTs [CLR integration], registering"
   - "ADD FILE clause"
+dev_langs:
+  - "TSQL"
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-author: rothja
-ms.author: jroth
 ---
 # Registering User-Defined Types in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

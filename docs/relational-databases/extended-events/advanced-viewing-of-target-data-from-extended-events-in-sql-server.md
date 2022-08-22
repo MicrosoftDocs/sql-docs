@@ -1,21 +1,20 @@
 ---
 title: "Advanced view of target data from Extended Events"
 description: Use the advanced features of SQL Server Management Studio to view target data from Extended Events in rich detail. You can view, export, and manipulate data.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
-ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-author: LitKnd
-ms.author: kendralittle
 ms.custom: seo-lt-2019
+ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
 This article illustrates how you can use the advanced features of SQL Server Management Studio (SSMS.exe) to view the target data from Extended Events in rich detail. The article explains how to:

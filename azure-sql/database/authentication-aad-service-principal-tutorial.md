@@ -6,9 +6,10 @@ ms.subservice: security
 ms.topic: tutorial
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 03/29/2022 
-ms.custom: devx-track-azurepowershell
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 03/29/2022
+ms.custom:
+  - "devx-track-azurepowershell"
 ---
 
 # Tutorial: Create Azure AD users using Azure AD applications

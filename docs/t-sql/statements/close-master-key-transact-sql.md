@@ -1,27 +1,25 @@
 ---
-description: "CLOSE MASTER KEY (Transact-SQL)"
-title: "CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CLOSE MASTER KEY (Transact-SQL)"
+description: CLOSE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CLOSE MASTER KEY"
   - "CLOSE_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], Database Master Key"
   - "CLOSE MASTER KEY statement"
   - "database master key [SQL Server], closing"
   - "cryptography [SQL Server], Database Master Key"
   - "closing Database Master Keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CLOSE MASTER KEY (Transact-SQL)

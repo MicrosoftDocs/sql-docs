@@ -1,25 +1,21 @@
 ---
-description: "sys.index_resumable_operations (Transact-SQL)"
-title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.index_resumable_operations (Transact-SQL)"
+description: sys.index_resumable_operations (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.index_resumable_operations_TSQL"
   - "sys.indexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.indexes"
   - "sys.index_resumable_operations"
-ms.assetid: 
-author: rwestMSFT
-ms.author: randolphwest
-
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.index_resumable_operations (Transact-SQL)

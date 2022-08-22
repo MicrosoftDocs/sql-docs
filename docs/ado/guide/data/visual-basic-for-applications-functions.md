@@ -1,21 +1,17 @@
 ---
+title: "Visual Basic for Applications functions"
 description: "Visual Basic for Applications functions"
-title: "Visual Basic for Applications functions | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic for applications functions [ADO]"
-  - "data shaping [ADO], Visual Basic for Applications functions"
-ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual Basic for applications functions [ADO]"
+  - "data shaping [ADO], Visual Basic for Applications functions"
+dev_langs:
+  - "VB"
 ---
 # Visual Basic for Applications functions
 The following Visual Basic for Applications functions can be used in data shaping CALC expressions:  

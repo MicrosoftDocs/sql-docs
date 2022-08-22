@@ -1,25 +1,24 @@
 ---
+title: "FULLTEXTCATALOGPROPERTY (Transact-SQL)"
 description: "FULLTEXTCATALOGPROPERTY (Transact-SQL)"
-title: "FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "FULLTEXTCATALOGPROPERTY_TSQL"
   - "FULLTEXTCATALOGPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text catalogs [SQL Server], properties"
   - "FULLTEXTCATALOGPROPERTY function"
   - "status information [SQL Server], full-text catalogs"
-ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

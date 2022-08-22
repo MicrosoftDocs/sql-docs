@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_auto_page_repair (Transact-SQL)"
-title: "sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_auto_page_repair (Transact-SQL)"
+description: sys.dm_hadr_auto_page_repair (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/05/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_auto_page_repair_TSQL"
   - "sys.dm_hadr_auto_page_repair"
   - "sys.dm_hadr_auto_page_repair_TSQL"
   - "dm_hadr_auto_page_repair"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "automatic page repair"
   - "sys.dm_hadr_auto_page_repair dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

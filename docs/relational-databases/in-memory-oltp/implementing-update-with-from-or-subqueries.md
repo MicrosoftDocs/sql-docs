@@ -1,21 +1,19 @@
 ---
-title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
+title: "Implementing UPDATE with FROM or Subqueries"
 description: Learn which syntax elements are supported on the Transact-SQL UPDATE statement in a natively compiled T-SQL module.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing UPDATE with FROM or Subqueries
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
 

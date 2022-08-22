@@ -1,24 +1,22 @@
 ---
-description: "Query Notifications - sys.dm_qn_subscriptions"
-title: "sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_qn_subscriptions (Transact-SQL)"
+description: Query Notifications - sys.dm_qn_subscriptions
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_qn_subscriptions"
   - "dm_qn_subscriptions_TSQL"
   - "sys.dm_qn_subscriptions"
   - "sys.dm_qn_subscriptions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_qn_subscriptions dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Query Notifications - sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

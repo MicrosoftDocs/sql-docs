@@ -1,26 +1,25 @@
 ---
+title: "UNICODE (Transact-SQL)"
 description: "UNICODE (Transact-SQL)"
-title: "UNICODE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "UNICODE"
   - "UNICODE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "first character of input expression [SQL Server]"
   - "UNICODE function"
   - "Unicode [SQL Server], UNICODE function"
-ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +49,7 @@ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier
 ## Examples  
   
 ### A. Using UNICODE and the NCHAR function  
- The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
+ The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the string `Åkergatan 24`, and to print the actual first character, `Å`.  
   
 ```sql  
 DECLARE @nstring NCHAR(12);  

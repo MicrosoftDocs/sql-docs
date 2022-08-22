@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_hadr_automatic_seeding (Transact-SQL)"
 title: "sys.dm_hadr_automatic_seeding (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_hadr_automatic_seeding (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/20/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_automatic_seeding_TSQL"
   - "sys.dm_hadr_automatic_seeding"
   - "sys.dm_hadr_automatic_seeding_TSQL"
   - "dm_hadr_automatic_seeding"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "automatic seeding"
   - "sys.dm_hadr_automatic_seeding dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: LitKnd
-ms.author: kendralittle
 ---
 # sys.dm_hadr_automatic_seeding (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

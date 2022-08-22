@@ -8,10 +8,10 @@ ms.subservice: high-availability
 ms.custom: sqldbrb=1, devx-track-azurepowershell
 ms.devlang: PowerShell
 ms.topic: sample
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: mathoma
-ms.date: 07/16/2019
+ms.date: 06/03/2022
 ---
 # Use PowerShell to add a managed instance to a failover group 
 

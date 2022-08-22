@@ -1,16 +1,15 @@
 ---
-description: "ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
-title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
-ms.custom:
+title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
+author: MikeRayMSFT
+ms.author: mikeray
+manager: cgronlun
+ms.reviewer: rothja
 ms.date: 03/15/2021
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: rothja
-manager: cgronlun
-dev_langs: 
+dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

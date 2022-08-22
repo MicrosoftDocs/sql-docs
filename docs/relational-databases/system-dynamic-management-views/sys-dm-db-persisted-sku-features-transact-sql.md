@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_persisted_sku_features (Transact-SQL)"
-title: "sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_persisted_sku_features (Transact-SQL)"
+description: sys.dm_db_persisted_sku_features (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/23/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_persisted_sku_features_TSQL"
   - "sys.dm_db_persisted_sku_features"
   - "dm_db_persisted_sku_features_TSQL"
   - "dm_db_persisted_sku_features"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "editions [SQL Server]"
   - "sys.dm_db_persisted_sku_features dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

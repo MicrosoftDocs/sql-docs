@@ -1,21 +1,17 @@
 ---
+title: "Recordset (ADO for Visual C++ Syntax)"
 description: "Recordset (ADO for Visual C++ Syntax)"
-title: "Recordset (ADO for Visual C++ Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Recordset collection [ADO], ADO for Visual C++ syntax"
-ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Recordset collection [ADO], ADO for Visual C++ syntax"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Recordset (ADO for Visual C++ Syntax)
 ## Methods  

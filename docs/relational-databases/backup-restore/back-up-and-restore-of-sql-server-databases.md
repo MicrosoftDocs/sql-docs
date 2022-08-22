@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], backups"
   - "databases [SQL Server], backups"
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Back Up and Restore of SQL Server Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -219,7 +219,8 @@ GO
 -   [Restore a Backup from a Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
 ## Creating backups  
-**Note!** For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
+> [!NOTE]  
+> For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
   
  ### Using SSMS   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

@@ -1,23 +1,21 @@
 ---
-description: "syspolicy_conditions (Transact-SQL)"
-title: "syspolicy_conditions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syspolicy_conditions (Transact-SQL)"
+description: syspolicy_conditions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syspolicy_conditions"
   - "syspolicy_conditions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syspolicy_conditions view"
+dev_langs:
+  - "TSQL"
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

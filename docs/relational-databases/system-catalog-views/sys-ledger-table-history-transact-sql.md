@@ -1,26 +1,25 @@
 ---
-description: "sys.ledger_table_history (Transact-SQL)"
-title: "sys.ledger_table_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.ledger_table_history (Transact-SQL)"
+description: sys.ledger_table_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 
 # sys.ledger_table_history (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically protected history of operations on ledger tables: creating ledger tables, renaming ledger tables or ledger views, and dropping ledger tables.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|
@@ -29,7 +28,7 @@ For more information on database ledger, see [Azure SQL Database ledger](/azure/
 |**table_name**|**sysname**|The name of the ledger table. If the operation has changed the table name, this column captures the new table name.|
 |**ledger_view_schema_name**|**sysname**|The name of the schema containing the ledger view for the ledger table. If the operation has changed the schema name, this column captures the new schema name.|
 |**ledger_view_name**|**sysname**|The name of the ledger view for the ledger table. If the operation has changed the view name, this column captures the new view name.|
-|**operation_type**|**tinyint**|The numeric value indicating the type of the operation<br/><br/>0 = CREATE – creating a ledger table.<br/>1 = DROP – dropping a ledger table.|
+|**operation_type**|**tinyint**|The numeric value indicating the type of the operation<br/><br/>0 = CREATE – creating a ledger table.<br/>1 = DROP – dropping a ledger table.<br/>2 = RENAME - renaming a ledger table. <br/>3 = RENAME_VIEW - renaming the ledger view for a ledger table.|
 |**operation_type_desc**|**nvarchar(60)**|Textual description of the value of operation_type.|
 |**transaction_id**|**bigint**|The transaction of the ID that included the operation on the ledger table. It identifies a row in [sys.database_ledger_transactions](sys-database-ledger-transactions-transact-sql.md).|
 |**sequence_number**|**bigint**|The sequence number of the operation within the transaction.|
@@ -45,7 +44,7 @@ Consider the following sequence of operations on ledger tables.
 1. A user creates a ledger table.
 
     ```sql
-    CREATE TABLE [HR].[Employees]
+    CREATE TABLE [Employees]
     (
         EmployeeID INT NOT NULL,
         Salary Money NOT NULL
@@ -54,10 +53,22 @@ Consider the following sequence of operations on ledger tables.
     GO
     ```
 
+1. A user renames the ledger table.
+
+    ```sql
+    EXEC sp_rename 'Employees', 'Employees_Copy';
+    ```
+
+1. A user renames the ledger view of the ledger table.
+
+    ```sql
+    EXEC sp_rename 'Employees_Ledger', 'Employees_Ledger_Copy';
+    ```
+
 1. A user drops the ledger table.
 
     ```sql
-    DROP TABLE [HR].[Employees];
+    DROP TABLE [Employees];
     ```
 
 The below query joins sys.ledger_table_history and sys.database_ledger_transactions to produce the history of changes on ledger tables, including the time of each and change and the name of the user who triggered it.
@@ -76,11 +87,5 @@ ON h.transaction_id = t.transaction_id
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+- [Ledger considerations and limitations](../security/ledger/ledger-limits.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

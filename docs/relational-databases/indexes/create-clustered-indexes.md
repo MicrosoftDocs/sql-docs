@@ -1,22 +1,20 @@
 ---
-description: "Create Clustered Indexes"
-title: "Create Clustered Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Create Clustered Indexes"
+description: Create Clustered Indexes
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index creation [SQL Server], clustered indexes"
   - "clustered indexes, creating"
   - "clustered indexes, PRIMARY KEY constraint"
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Clustered Indexes

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)

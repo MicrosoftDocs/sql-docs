@@ -1,30 +1,28 @@
 ---
-description: "DROP PARTITION FUNCTION (Transact-SQL)"
-title: "DROP PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP PARTITION FUNCTION (Transact-SQL)"
+description: DROP PARTITION FUNCTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP PARTITION FUNCTION"
   - "DROP_PARTITION_FUNCTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting partition functions"
   - "DROP PARTITION FUNCTION statement"
   - "partition functions [SQL Server], removing"
   - "dropping partition functions"
   - "removing partition functions"
+dev_langs:
+  - "TSQL"
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a partition function from the current database. Partition functions are created by using CREATE PARTITION FUNCTION and modified by using ALTER PARTITION FUNCTION.  
   

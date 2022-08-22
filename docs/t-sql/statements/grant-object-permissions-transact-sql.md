@@ -1,21 +1,19 @@
 ---
-description: "GRANT Object Permissions (Transact-SQL)"
-title: "GRANT Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Object Permissions (Transact-SQL)"
+description: GRANT Object Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], objects"
   - "GRANT statement, objects"
+dev_langs:
+  - "TSQL"
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Object Permissions (Transact-SQL)

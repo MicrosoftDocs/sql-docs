@@ -1,23 +1,22 @@
 ---
-description: "sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)"
-ms.custom: ""
+description: sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: "08/19/2021"
 ms.service: sql-database
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_resource_stats"
   - "sys.dm_db_resource_stats_TSQL"
   - "dm_db_resource_stats"
   - "dm_db_resource_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)

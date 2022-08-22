@@ -1,21 +1,17 @@
 ---
+title: "ParentURL Property (ADO)"
 description: "ParentURL Property (ADO)"
-title: "ParentURL Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Record::ParentURL"
-helpviewer_keywords: 
-  - "ParentURL property [ADO]"
-ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Record::ParentURL"
+helpviewer_keywords:
+  - "ParentURL property [ADO]"
+apitype: "COM"
 ---
 # ParentURL Property (ADO)
 Indicates an absolute URL string that points to the parent [Record](./record-object-ado.md) of the current **Record** object.  

@@ -1,23 +1,23 @@
 ---
+title: "TRY...CATCH (Transact-SQL)"
 description: "TRY...CATCH (Transact-SQL)"
-title: "TRY...CATCH (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "BEGIN_TRY_TSQL"
   - "BEGIN_CATCH_TSQL"
   - "TRY"
   - "BEGIN TRY"
   - "TRY_TSQL"
   - "BEGIN CATCH"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BEGIN CATCH statement"
   - "uncommittable transactions"
   - "errors [SQL Server], TRY...CATCH"
@@ -26,10 +26,9 @@ helpviewer_keywords:
   - "TRY...CATCH [SQL Server]"
   - "BEGIN TRY statement"
   - "CATCH block"
-ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # TRY...CATCH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

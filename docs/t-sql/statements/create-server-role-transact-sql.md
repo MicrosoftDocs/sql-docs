@@ -1,30 +1,28 @@
 ---
-description: "CREATE SERVER ROLE (Transact-SQL)"
-title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SERVER ROLE (Transact-SQL)"
+description: CREATE SERVER ROLE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SERVER_ROLE_TSQL"
   - "CREATE SERVER ROLE"
   - "SERVER ROLE"
   - "CREATE_SERVER_ROLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SERVER ROLE"
   - "SERVER ROLE, CREATE"
   - "CREATE SERVER ROLE statement"
   - "ROLE"
   - "user-defined server roles [SQL Server]"
   - "roles, server"
+dev_langs:
+  - "TSQL"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-author: VanMSFT
-ms.author: vanto
 ---
 # CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

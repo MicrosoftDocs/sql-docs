@@ -3843,62 +3843,6 @@
                 href: ../odbc/reference/develop-app/cstring-class.md
               - name: Creating and Terminating Threads
                 href: ../odbc/reference/develop-app/creating-and-terminating-threads.md
-        - name: Installing and Configuring the ODBC Software
-          href: ../odbc/reference/install/installing-and-configuring-the-odbc-software.md
-          items:
-          - name: Installing ODBC Components
-            href: ../odbc/reference/install/installing-odbc-components.md
-            items:
-            - name: Installation Components
-              href: ../odbc/reference/install/installation-components.md
-            - name: Usage Counting
-              href: ../odbc/reference/install/usage-counting.md
-          - name: Configuring Data Sources
-            href: ../odbc/reference/install/configuring-data-sources.md
-            items:
-            - name: Configuration Components
-              href: ../odbc/reference/install/configuration-components.md
-          - name: Installation and Configuration Components Reference
-            href: ../odbc/reference/install/installation-and-configuration-components-reference.md
-            items:
-            - name: Administration Program
-              href: ../odbc/reference/install/administration-program.md
-            - name: Setup Program
-              href: ../odbc/reference/install/setup-program.md
-            - name: Installer DLL
-              href: ../odbc/reference/install/installer-dll.md
-            - name: Driver Setup DLL
-              href: ../odbc/reference/install/driver-setup-dll.md
-            - name: Translator Setup DLLs
-              href: ../odbc/reference/install/translator-setup-dlls.md
-          - name: ODBC Header Files
-            href: ../odbc/reference/install/odbc-header-files.md
-          - name: Registry Entries for ODBC Components
-            href: ../odbc/reference/install/registry-entries-for-odbc-components.md
-            items:
-            - name: ODBC Core Subkey
-              href: ../odbc/reference/install/odbc-core-subkey.md
-            - name: ODBC Drivers Subkey
-              href: ../odbc/reference/install/odbc-drivers-subkey.md
-            - name: Driver Specification Subkeys
-              href: ../odbc/reference/install/driver-specification-subkeys.md
-            - name: Default Driver Subkey
-              href: ../odbc/reference/install/default-driver-subkey.md
-            - name: ODBC Translators Subkey
-              href: ../odbc/reference/install/odbc-translators-subkey.md
-            - name: Translator Specification Subkeys
-              href: ../odbc/reference/install/translator-specification-subkeys.md
-          - name: Registry Entries for Data Sources
-            href: ../odbc/reference/install/registry-entries-for-data-sources.md
-            items:
-            - name: ODBC Data Sources Subkey
-              href: ../odbc/reference/install/odbc-data-sources-subkey.md
-            - name: Data Source Specification Subkeys
-              href: ../odbc/reference/install/data-source-specification-subkeys.md
-            - name: Default Subkey
-              href: ../odbc/reference/install/default-subkey.md
-            - name: ODBC Subkey
-              href: ../odbc/reference/install/odbc-subkey.md
         - name: Developing an ODBC Driver
           href: ../odbc/reference/develop-driver/developing-an-odbc-driver.md
           items:
@@ -3913,6 +3857,62 @@
             items:
             - name: SQLAsyncNotificationCallback Function
               href: ../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md
+          - name: Installing and Configuring the ODBC Software
+            href: ../odbc/reference/install/installing-and-configuring-the-odbc-software.md
+            items:
+            - name: Installing ODBC Components
+              href: ../odbc/reference/install/installing-odbc-components.md
+              items:
+              - name: Installation Components
+                href: ../odbc/reference/install/installation-components.md
+              - name: Usage Counting
+                href: ../odbc/reference/install/usage-counting.md
+            - name: Configuring Data Sources
+              href: ../odbc/reference/install/configuring-data-sources.md
+              items:
+              - name: Configuration Components
+                href: ../odbc/reference/install/configuration-components.md
+            - name: Installation and Configuration Components Reference
+              href: ../odbc/reference/install/installation-and-configuration-components-reference.md
+              items:
+              - name: Administration Program
+                href: ../odbc/reference/install/administration-program.md
+              - name: Setup Program
+                href: ../odbc/reference/install/setup-program.md
+              - name: Installer DLL
+                href: ../odbc/reference/install/installer-dll.md
+              - name: Driver Setup DLL
+                href: ../odbc/reference/install/driver-setup-dll.md
+              - name: Translator Setup DLLs
+                href: ../odbc/reference/install/translator-setup-dlls.md
+            - name: ODBC Header Files
+              href: ../odbc/reference/install/odbc-header-files.md
+            - name: Registry Entries for ODBC Components
+              href: ../odbc/reference/install/registry-entries-for-odbc-components.md
+              items:
+              - name: ODBC Core Subkey
+                href: ../odbc/reference/install/odbc-core-subkey.md
+              - name: ODBC Drivers Subkey
+                href: ../odbc/reference/install/odbc-drivers-subkey.md
+              - name: Driver Specification Subkeys
+                href: ../odbc/reference/install/driver-specification-subkeys.md
+              - name: Default Driver Subkey
+                href: ../odbc/reference/install/default-driver-subkey.md
+              - name: ODBC Translators Subkey
+                href: ../odbc/reference/install/odbc-translators-subkey.md
+              - name: Translator Specification Subkeys
+                href: ../odbc/reference/install/translator-specification-subkeys.md
+            - name: Registry Entries for Data Sources
+              href: ../odbc/reference/install/registry-entries-for-data-sources.md
+              items:
+              - name: ODBC Data Sources Subkey
+                href: ../odbc/reference/install/odbc-data-sources-subkey.md
+              - name: Data Source Specification Subkeys
+                href: ../odbc/reference/install/data-source-specification-subkeys.md
+              - name: Default Subkey
+                href: ../odbc/reference/install/default-subkey.md
+              - name: ODBC Subkey
+                href: ../odbc/reference/install/odbc-subkey.md
         - name: API Reference
           href: ../odbc/reference/syntax/odbc-reference.md
           items:

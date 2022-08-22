@@ -1,14 +1,18 @@
 ---
 title: Get values for app authentication
 description: Create a service principal for accessing Azure SQL Database from code.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: development
-ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
 ---
 # Get the required values for authenticating an application to access Azure SQL Database from code

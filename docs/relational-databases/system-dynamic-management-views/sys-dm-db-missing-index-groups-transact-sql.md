@@ -1,30 +1,27 @@
 ---
-description: "The sys.dm_db_missing_index_groups dynamic management view returns information about indexes that are missing in a specific index group."
-
 title: "sys.dm_db_missing_index_groups (Transact-SQL)"
-ms.custom: ""
+description: The sys.dm_db_missing_index_groups dynamic management view returns information about indexes that are missing in a specific index group.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/8/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_missing_index_groups"
   - "sys.dm_db_missing_index_groups_TSQL"
   - "dm_db_missing_index_groups"
   - "dm_db_missing_index_groups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_missing_index_groups dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_groups (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This DMV returns information about indexes that are missing in a specific index group. 
 

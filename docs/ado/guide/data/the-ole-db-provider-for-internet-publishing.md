@@ -1,22 +1,18 @@
 ---
+title: "The OLE DB Provider for Internet Publishing"
 description: "The OLE DB Provider for Internet Publishing"
-title: "The OLE DB Provider for Internet Publishing | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB provider for Internet publishing [ADO]"
   - "ADO, Internet publishing"
   - "publishing to Internet [ADO]"
   - "Internet publishing [ADO]"
   - "providers [ADO], OLE DB provider for Internet publishing"
-ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: rothja
-ms.author: jroth
 ---
 # The OLE DB Provider for Internet Publishing
 The ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects can be used with the Microsoft OLE DB Provider for Internet Publishing (Internet Publishing Provider) to access and manipulate resources, such as Web folders or files served by Microsoft FrontPage. With ADO, you can specify the source of a **Record**, **Stream**, or [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to be a URL. You can then upload, download, move, copy, and delete resources, or directly manipulate resource properties.  

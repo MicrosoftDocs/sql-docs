@@ -1,23 +1,21 @@
 ---
-description: "MSreplication_objects (Transact-SQL)"
-title: "MSreplication_objects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSreplication_objects (Transact-SQL)"
+description: MSreplication_objects (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSreplication_objects"
   - "MSreplication_objects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSreplication_objects system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

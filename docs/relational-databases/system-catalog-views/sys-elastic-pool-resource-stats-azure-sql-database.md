@@ -1,26 +1,25 @@
 ---
-description: "sys.elastic_pool_resource_stats (Azure SQL Database)"
 title: "sys.elastic_pool_resource_stats"
 titleSuffix: Azure SQL Database
+description: sys.elastic_pool_resource_stats (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
   - "sys.elastic_pool_resource_stats catalog view"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.elastic_pool_resource_stats_TSQL"
   - "sys.elastic_pool_resource_stats"
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
+dev_langs:
+  - "TSQL"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: rwestMSFT
-ms.author: randolphwest
-ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]

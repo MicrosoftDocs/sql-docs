@@ -1,26 +1,24 @@
 ---
-description: "sys.internal_tables (Transact-SQL)"
-title: "sys.internal_tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.internal_tables (Transact-SQL)"
+description: sys.internal_tables (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.internal_tables"
   - "internal_tables"
   - "sys.internal_tables_TSQL"
   - "internal_tables_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "internal tables"
   - "sys.internal_tables catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,30 +1,28 @@
 ---
-description: "BACKUP SERVICE MASTER KEY (Transact-SQL)"
-title: "BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "BACKUP SERVICE MASTER KEY (Transact-SQL)"
+description: BACKUP SERVICE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "BACKUP SERVICE MASTER KEY"
   - "DUMP_SERVICE_MASTER_KEY_TSQL"
   - "DUMP SERVICE MASTER KEY"
   - "BACKUP_SERVICE_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backing up service master keys [SQL Server]"
   - "BACKUP SERVICE MASTER KEY statement"
   - "cryptography [SQL Server], Service Master Key"
   - "exporting Service Master Keys"
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], exporting"
+dev_langs:
+  - "TSQL"
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
-author: VanMSFT
-ms.author: vanto
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

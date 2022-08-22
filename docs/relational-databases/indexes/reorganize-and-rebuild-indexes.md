@@ -1,17 +1,18 @@
 ---
-title: "Maintaining indexes optimally to improve performance and reduce resource utilization | Microsoft Docs"
+title: "Maintaining indexes optimally to improve performance and reduce resource utilization"
 description: This article describes index maintenance concepts, and a recommended strategy to maintain indexes.
-ms.custom: ""
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "04/16/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.index.rebuild.f1"
   - "sql13.swb.indexproperties.fragmentation.f1"
   - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "large object defragmenting"
   - "indexes [SQL Server], reorganizing"
   - "index reorganization [SQL Server]"
@@ -27,8 +28,6 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-author: dimitri-furman
-ms.author: dfurman
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||>=aps-pdw-2016"
 ---
 # Optimize index maintenance to improve query performance and reduce resource consumption

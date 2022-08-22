@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], full differential backups"
   - "backing up databases [SQL Server], full differential backups"
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore a differential database backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -128,7 +128,7 @@ ms.author: kendralittle
   
 11. Optionally, use the **Files** page to restore the database to a new location. For help with moving a database, see [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md).  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

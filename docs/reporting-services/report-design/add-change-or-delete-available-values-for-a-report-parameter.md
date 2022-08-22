@@ -58,7 +58,7 @@ ms.author: maggies
   
          In **Label field**, choose the name of the field that provides the friendly names for the parameter. If there is no separate field for friendly names, choose the same field as you chose for the **Value** field.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
      When you preview the report, you see a drop-down list of available values for the parameter.  
   
@@ -70,7 +70,7 @@ ms.author: maggies
   
 3.  In **Select from one of the following options**, click **None**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      When you preview the report, you the drop-down list of available values for the parameter no longer appears.  
   

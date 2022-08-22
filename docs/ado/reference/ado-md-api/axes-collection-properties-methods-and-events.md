@@ -1,18 +1,14 @@
 ---
+title: "Axes Collection Properties, Methods, and Events"
 description: "Axes Collection Properties, Methods, and Events"
-title: "Axes Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Axes collection [ADO MD], members"
-ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Axes collection [ADO MD], members"
 ---
 # Axes Collection Properties, Methods, and Events
 ## Properties  

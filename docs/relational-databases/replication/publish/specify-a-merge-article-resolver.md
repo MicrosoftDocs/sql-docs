@@ -54,7 +54,7 @@ ms.author: "mathoma"
   
 5.  If the resolver requires input (such as a column name), specify it in the **Enter information needed by the resolver** text box.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Repeat this process for each article that requires a resolver.  
   

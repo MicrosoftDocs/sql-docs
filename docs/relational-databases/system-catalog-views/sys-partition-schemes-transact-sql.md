@@ -1,25 +1,23 @@
 ---
-description: "sys.partition_schemes (Transact-SQL)"
-title: "sys.partition_schemes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.partition_schemes (Transact-SQL)"
+description: sys.partition_schemes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "partition_schemes_TSQL"
   - "partition_schemes"
   - "sys.partition_schemes_TSQL"
   - "sys.partition_schemes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.partition_schemes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_schemes (Transact-SQL)

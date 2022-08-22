@@ -1,25 +1,23 @@
 ---
-description: "DENY Asymmetric Key Permissions (Transact-SQL)"
-title: "DENY Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Asymmetric Key Permissions (Transact-SQL)"
+description: DENY Asymmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "denying permissions [SQL Server], asymmetric keys"
   - "encryption [SQL Server], asymmetric keys"
   - "permissions [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], permissions"
   - "DENY statement, asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-author: VanMSFT
-ms.author: vanto
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

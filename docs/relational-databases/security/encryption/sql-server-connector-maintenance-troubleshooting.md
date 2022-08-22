@@ -168,6 +168,13 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - login.microsoftonline.com/*:443
 - *.vault.azure.net/*:443
 
+Additionally, checking the certificate revocation list might create HTTP traffic on port 80. 
+
+
+ > [!NOTE]
+ > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place. 
+
+
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
   The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 

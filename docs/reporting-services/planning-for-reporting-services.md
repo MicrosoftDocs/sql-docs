@@ -16,7 +16,7 @@ ms.author: maggies
   Use these topics to better understand [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Learn how to install and configure the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment to best fit your needs.  
   
  ![Small File Folder Icon](/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **General Reporting Services Feature Planning and Architecture**  
- [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+ [Browser Support for Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  [Plan for report design and report deployment | Reporting Services](./plan-for-report-design-and-report-deployment-reporting-services.md)  
   

@@ -3657,7 +3657,7 @@
     },
     {
       "source_path": "docs/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md",
-      "redirect_url": "https://docs.microsoft.com/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },
     {
@@ -41191,11 +41191,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/big-data-cluster/release-notes-cumulative-update-16.md",
-      "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/big-data-cluster/configure-cluster.md",
       "redirect_url": "/sql/big-data-cluster/configure-bdc-overview",
       "redirect_document_id": true
@@ -43632,7 +43627,7 @@
     },
     {
       "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart",
       "redirect_document_id": false
     },
     {
@@ -47917,7 +47912,7 @@
     },
     {
       "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal",
       "redirect_document_id": false
     },
     {
@@ -58821,6 +58816,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
+      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/stretch-database/index.md",
       "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
       "redirect_document_id": false
@@ -59369,6 +59369,87 @@
       "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
       "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-multiple-regions",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-audit.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-ledger.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-database-ledger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-access-acl-digest.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-limits.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-overview.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-verify-database.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-verify-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+      "redirect_url": "/sql/linux/quickstart-sql-server-containers-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/install-distributed-replay-overview.md",
+      "redirect_url": "/sql/tools/distributed-replay/install-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
+      "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
+      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
+      "redirect_document_id": false
     }
   ]
 }
+

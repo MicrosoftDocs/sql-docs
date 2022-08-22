@@ -1,19 +1,15 @@
 ---
+title: "Prompt Property-Dynamic (ADO)"
 description: "Prompt Property-Dynamic (ADO)"
-title: "Prompt Property-Dynamic (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Prompt property [ADO]"
-ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Prompt property [ADO]"
+apitype: "COM"
 ---
 # Prompt Property-Dynamic (ADO)
 Specifies whether the OLE DB provider should prompt the user for initialization information.  

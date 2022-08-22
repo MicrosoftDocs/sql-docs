@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 title: "sys.dm_tran_aborted_transactions (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_tran_aborted_transactions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_aborted_transactions"
   - "sys.dm_tran_aborted_transactions"
   - "sys.dm_tran_aborted_transactions_TSQL"
   - "dm_tran_aborted_transactions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_aborted_transactions dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_aborted_transactions (Transact-SQL)

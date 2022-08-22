@@ -1,22 +1,21 @@
 ---
 title: "Execute templates with SQL Queries (SQLXMLOLEDB)"
-description: View an example of a client-side ADO application using the SQLXMLOLEDB Provider to execute a server-side XML template containing an SQL query. 
+description: View an example of a client-side ADO application using the SQLXMLOLEDB Provider to execute a server-side XML template containing an SQL query.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "templates [SQLXML]"
   - "SQLXMLOLEDB Provider, executing template files"
   - "templates [SQLXML], SQL queries"
   - "XML templates [SQLXML]"
   - "SQL queries [SQLXML]"
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)

@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Open-source software reference

@@ -7,8 +7,9 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
-ms.custom: seo-lt-2019
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 
@@ -62,9 +63,9 @@ The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a serv
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
 | RLauncher.dll for the R language for Windows | [R extension](extension-r.md) | SQL Server 2016 and later |
-| Pythonlauncher.dll for Python 3.5 for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
+| Pythonlauncher.dll for Python language for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
 | RLauncher.so for the R language for Linux | [R extension](extension-r.md) | SQL Server 2019 and later |
-| Pythonlauncher.so for Python 3.5 for Linux | [Python extension](extension-python.md) | SQL Server 2019 and later |
+| Pythonlauncher.so for Python language for Linux | [Python extension](extension-python.md) | SQL Server 2019 and later |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 

@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, MashaMSFT
-ms.date: 03/08/2022
+ms.date: 06/16/2022
 ---
 
 # Data virtualization with Azure SQL Managed Instance (Preview)
@@ -82,6 +82,8 @@ When accessing a public location, add the file location when querying the extern
 
 
 ```sql
+-- Don't forget to enable data virtualization capabilities first, if this is the first time you are running this type of query  
+
 CREATE EXTERNAL DATA SOURCE DemoPublicExternalDataSource
 WITH (
 	LOCATION = 'abs://public@pandemicdatalake.blob.core.windows.net/curated/covid-19/bing_covid-19_data/latest'
@@ -93,6 +95,8 @@ When accessing a private location, include the file path and credential when que
 
 
 ```sql
+--Don't forget to enable data virtualization capabilities first, if this is the first time you are running this type of query  
+
 -- Step0 (optional): Create master key if it doesn't exist in the database:
 -- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Put Some Very Strong Password Here>'
 -- GO

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 
@@ -33,7 +33,7 @@ ms.author: umajay
 Displays fragmentation information for the data and indexes of the specified table or view.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

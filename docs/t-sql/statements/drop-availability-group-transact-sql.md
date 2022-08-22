@@ -1,26 +1,24 @@
 ---
-description: "DROP AVAILABILITY GROUP (Transact-SQL)"
-title: "DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP AVAILABILITY GROUP (Transact-SQL)"
+description: DROP AVAILABILITY GROUP (Transact-SQL)
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_AVAILABILITY_GROUP_TSQL"
   - "DROP AVAILABILITY GROUP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "DROP AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], dropping"
+dev_langs:
+  - "TSQL"
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 ---
 # DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

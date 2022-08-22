@@ -1,19 +1,19 @@
 ---
+title: "SUSER_NAME (Transact-SQL)"
 description: "SUSER_NAME (Transact-SQL)"
-title: "SUSER_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "12/12/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SUSER_NAME"
   - "SUSER_NAME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "security identification names [SQL Server]"
   - "logins [SQL Server], users"
   - "identification names for logins [SQL Server]"
@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "SUSER_NAME function"
   - "logins [SQL Server], names"
   - "names [SQL Server], logins"
-ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
-author: VanMSFT
-ms.author: vanto
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SUSER_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi-asa-svrless-poolonly.md)]

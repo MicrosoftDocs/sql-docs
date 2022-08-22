@@ -1,16 +1,14 @@
 ---
-description: "REVOKE Service Broker Permissions (Transact-SQL)"
-title: "REVOKE Service Broker Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Service Broker Permissions (Transact-SQL)"
+description: REVOKE Service Broker Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "routes [Service Broker], permissions"
   - "Service Broker, permissions"
   - "remote service bindings [Service Broker], permissions"
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
   - "services [Service Broker], permissions"
   - "REVOKE statement, Service Broker"
+dev_langs:
+  - "TSQL"
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-author: VanMSFT
-ms.author: vanto
 ---
 # REVOKE Service Broker Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,18 +2,23 @@
 title: Cloud business continuity - database recovery
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Learn how Azure SQL Database and SQL Managed Instance support cloud business continuity and database recovery and help keep mission-critical cloud applications running.
-keywords: business continuity,cloud business continuity,database disaster recovery,database recovery
-services: sql-database
+keywords:
+  - "business continuity"
+  - "cloud business continuity"
+  - "database disaster recovery"
+  - "database recovery"
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: high-availability
-ms.custom: sqldbrb=2
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=2"
 ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Overview of business continuity with Azure SQL Database & Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -22,7 +27,7 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 - User accidentally deleted or updated a row in a table.
 - Malicious attacker succeeded to delete data or drop a database.
-- Earthquake caused a power outage and temporary disabled datacenter.
+- Earthquake caused a power outage and temporarily disabled datacenter or any other catastrophic natural disaster event.
 
 This overview describes the capabilities that SQL Database and SQL Managed Instance provide for business continuity and disaster recovery. Learn about options, recommendations, and tutorials for recovering from disruptive events that could cause data loss or cause your database and application to become unavailable. Learn what to do when a user or application error affects data integrity, an Azure region has an outage, or your application requires maintenance.
 

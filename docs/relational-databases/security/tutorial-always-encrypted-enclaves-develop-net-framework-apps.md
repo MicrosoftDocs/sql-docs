@@ -1,8 +1,9 @@
 ---
 description: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves"
 title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/15/2021
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -26,11 +27,11 @@ Make sure you've completed one of the below tutorials before following the below
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 
-You will also need Visual Studio (version 2019 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.
+You'll also need Visual Studio (version 2019 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.
 
 ## Step 1: Set up your Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders). In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later. 
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders). In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later. 
 
 1. Open Visual Studio.
 
@@ -81,7 +82,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </SqlColumnEncryptionEnclaveProviders>
       ```
 
-      Here is a complete example of an app.config file for a simple console application.
+      Here's a complete example of an app.config file for a simple console application.
 
       ```xml
       <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +101,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </configuration>
       ```
 
-   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you are using the database from [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
+   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you're using the database from [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -110,7 +111,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </SqlColumnEncryptionEnclaveProviders>
       ```
 
-      Here is a complete example of an app.config file for a simple console application.
+      Here's a complete example of an app.config file for a simple console application.
 
       ```xml
       <?xml version="1.0" encoding="utf-8" ?>

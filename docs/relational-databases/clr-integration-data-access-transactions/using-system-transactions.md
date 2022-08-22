@@ -1,22 +1,20 @@
 ---
-title: "Using System.Transactions | Microsoft Docs"
+title: "Using System.Transactions"
 description: The System.Transactions namespace provides a transaction framework that is fully integrated with ADO.NET and SQL Server CLR integration.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TransactionScope class"
   - "Dispose method"
   - "System.Transactions namespace"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-author: rothja
-ms.author: jroth
 ---
 # Using System.Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

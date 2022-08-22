@@ -9,7 +9,7 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 monikerRange: ">= aps-pdw-2016"
 ---

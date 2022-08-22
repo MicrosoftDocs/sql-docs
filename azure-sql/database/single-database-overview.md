@@ -1,14 +1,15 @@
 ---
 title: What is a single database?
-description: Learn about the single database resource type in Azure SQL Database. 
-services: sql-database
+description: Learn about the single database resource type in Azure SQL Database.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/08/2019
 ---

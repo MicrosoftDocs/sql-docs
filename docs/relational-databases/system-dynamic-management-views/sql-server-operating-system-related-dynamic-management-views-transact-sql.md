@@ -1,22 +1,20 @@
 ---
-description: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL)"
-title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL)"
+description: SQL Server Operating System Related Dynamic Management Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/17/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "operating systems [SQL Server], dynamic management objects"
   - "SQL Operating System dynamic management objects [SQL Server]"
   - "SQL OS dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], SQL OS"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # SQL Server Operating System Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

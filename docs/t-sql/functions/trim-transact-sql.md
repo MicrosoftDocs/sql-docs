@@ -1,40 +1,42 @@
 ---
-description: "TRIM (Transact-SQL)"
-title: "TRIM (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2021"
+title: "TRIM (Transact-SQL)"
+description: "Removes the space character or other specified characters from the start and end of a string."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 08/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TRIM"
   - "TRIM_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TRIM function"
-ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azure-sqldw-latest || = azuresqldb-current || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)
 
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
-Removes the space character `char(32)` or other specified characters from the start and end of a string.  
+Removes the space character `char(32)` or other specified characters from the start and end of a string.
+
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
+Syntax for SQL Server and Azure SQL Database:
+
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
 ```
 
+Syntax for Azure Synapse Analytics:
+
 ```syntaxsql
--- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
 
@@ -42,13 +44,15 @@ TRIM ( string )
 
 ## Arguments
 
-characters
-Is a literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types aren't allowed.
+#### *characters*
 
-string
-Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
+A literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types aren't allowed.
 
-## Return Types
+#### *string*
+
+An expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
+
+## Return types
 
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from both sides. Returns `NULL` if input string is `NULL`.
 
@@ -58,7 +62,7 @@ By default, the `TRIM` function removes the space character from both the beginn
 
 ## Examples
 
-### A.  Removes the space character from both sides of string
+### A. Remove the space character from both sides of string
 
 The following example removes spaces from before and after the word `test`.
 
@@ -68,11 +72,11 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```
+```output
 test
 ```
 
-### B.  Removes specified characters from both sides of string
+### B. Remove specified characters from both sides of string
 
 The following example removes a trailing period and spaces from before `#` and after the word `test`.
 
@@ -81,16 +85,18 @@ SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```output
 #     test
+
 ```
 
-## See Also
+## See also
 
-- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
-- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
-- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
-- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
-- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
-- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
 - [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

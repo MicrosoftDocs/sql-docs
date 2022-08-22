@@ -1,25 +1,23 @@
 ---
-description: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL"
   - "ALTER_DATABASE_SCOPED_CREDENTIAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
+dev_langs:
+  - "TSQL"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.hash_indexes (Transact-SQL)"
-title: "sys.hash_indexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.hash_indexes (Transact-SQL)"
+description: sys.hash_indexes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.hash_indexes_TSQL"
   - "hash_indexes"
   - "sys.hash_indexes"
   - "hash_indexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.hash_indexes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.hash_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

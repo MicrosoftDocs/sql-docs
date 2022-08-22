@@ -1,25 +1,24 @@
 ---
+title: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
-title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ENCRYPTBYPASSPHRASE"
   - "ENCRYPTBYPASSPHRASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTBYPASSPHRASE function"
   - "encryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function"
-ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

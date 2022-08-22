@@ -228,7 +228,7 @@ This page summarizes the options that you have selected in this wizard. To chang
 
 Use this page to monitor the progress of the wizard as it occurs.
 
-**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, Select the value in the **Result** column to see the outcome of the corresponding step.
+**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, select the value in the **Result** column to see the outcome of the corresponding step.
 
 **Save Report** - Select to save the results of the wizard's progress to a file.
 

@@ -1,15 +1,15 @@
 ---
-title: Troubleshoot memory issues 
+title: Troubleshoot memory issues
 titleSuffix: Azure SQL Database
 description: Provides steps to investigate and troubleshoot out of memory issues in Azure SQL Database
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting
-ms.custom: 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 01/14/2022
 ---
 
@@ -98,7 +98,7 @@ WHERE mg.granted_memory_kb > 0
 ORDER BY mg.granted_memory_kb desc, mg.requested_memory_kb desc;
 ```
 
-You may decide to use the KILL statement to stop a currently executing query that is holding or waiting for a large memory grant. Use this statement carefully, especially when business critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql). 
+You may decide to use the KILL statement to stop a currently executing query that is holding or waiting for a large memory grant. Use this statement carefully, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql). 
 
 
 ### Use Query Store to investigate past query memory usage

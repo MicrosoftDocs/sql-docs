@@ -1,19 +1,19 @@
 ---
+title: "FILEGROUP_NAME (Transact-SQL)"
 description: "FILEGROUP_NAME (Transact-SQL)"
-title: "FILEGROUP_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "FILEGROUP_NAME_TSQL"
   - "FILEGROUP_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying filegroup names"
   - "identification numbers [SQL Server], filegroups"
   - "filegroups [SQL Server], IDs"
@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], names"
   - "names [SQL Server], filegroups"
   - "viewing filegroup names"
-ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,31 +1,27 @@
 ---
-title: "srv_convert (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_convert (Extended Stored Procedure API)"
 description: Learn how srv_convert in the Extended Stored Procedure API changes data from one data type to another.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_convert"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_convert"
+apilocation: opends60.dll
+apiname: srv_convert
+apitype: "DLLExport"
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_convert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Changes data from one data type to another.  
   

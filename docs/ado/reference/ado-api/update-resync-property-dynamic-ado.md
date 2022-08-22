@@ -1,19 +1,15 @@
 ---
+title: "Update Resync Property-Dynamic (ADO)"
 description: "Update Resync Property-Dynamic (ADO)"
-title: "Update Resync Property-Dynamic (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Update Resync property [ADO]"
-ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Update Resync property [ADO]"
+apitype: "COM"
 ---
 # Update Resync Property-Dynamic (ADO)
 Specifies whether the [UpdateBatch](./updatebatch-method.md) method is followed by an implicit [Resync](./resync-method.md) method operation, and if so, the scope of that operation.  

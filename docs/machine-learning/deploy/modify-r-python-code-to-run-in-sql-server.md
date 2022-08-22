@@ -3,12 +3,14 @@ title: "Modify R/Python code to run in SQL Server"
 description: Learn how to modify your R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 04/05/2021
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019, contperf-fy21q3 
+ms.custom:
+- seo-lt-2019
+- contperf-fy21q3
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Modify R/Python code to run in SQL Server (In-Database) instances
@@ -16,7 +18,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 
 This article provides high-level guidance on how to modify R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
 
-When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** or **MicrosoftML** packages, which support execution in different execution contexts with minimal changes.
+When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** packages, which support execution in different execution contexts with minimal changes. Note that **MicrosoftML** applies to SQL Server 2016, SQL Server 2017, and SQL Server 2019 and does not appear in SQL Server 2022.
 
 However, your code might require substantial changes if any of the following apply:
 
@@ -58,7 +60,7 @@ Take a look at the data types used in your R/Python code and do the following:
 
 + Make a checklist of possible data type issues.
 
-  All R/Python data types are supported by SQL Server machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
+  All R/Python data types are supported by SQL Server Machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
 
   NULL values are supported. However, R uses the `na` data construct to represent a missing value, which is similar to a null.
 

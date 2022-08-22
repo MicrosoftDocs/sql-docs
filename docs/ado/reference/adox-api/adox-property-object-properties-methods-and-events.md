@@ -1,18 +1,14 @@
 ---
+title: "ADOX Property Object Properties, Methods, and Events"
 description: "ADOX Property Object Properties, Methods, and Events"
-title: "ADOX Property Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Property object [ADOX], members"
-ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Property object [ADOX], members"
 ---
 # ADOX Property Object Properties, Methods, and Events
 ## Properties  

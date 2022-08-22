@@ -1,17 +1,16 @@
 ---
-description: "RENAME (Transact-SQL)"
-title: "RENAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RENAME (Transact-SQL)"
+description: RENAME (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "WilliamDAssafMSFT"
 ms.date: "07/20/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: "WilliamDAssafMSFT"
 ms.topic: reference
-author: ronortloff
-ms.author: rortloff
-dev_langs: 
+dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -19,11 +18,12 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 
 > [!NOTE]
-> Renaming a dedicated SQL pool in Azure Synapse Analytics is not currently supported.
+> Renaming standalone dedicated SQL pools (formerly SQL DW) is supported. Renaming a dedicated SQL pool in Azure Synapse Analytics isn't currently supported.
+
 
 ## Syntax
 
@@ -106,9 +106,9 @@ You can't rename a column that is used for the table's distribution. You also ca
 
 When renaming a database, all views that use the former database name will become invalid. This behavior applies to views both inside and outside the database. For example, if the Sales database is renamed, a view that contains `SELECT * FROM Sales.dbo.table1` will become invalid. To resolve this issue, you can either avoid using three-part names in views, or update the views to reference the new database name.
 
-When renaming a table, views are not updated to reference the new table name. Each view, inside or outside of the database, that references the former table name will become invalid. To resolve this issue, you can update each view to reference the new table name.
+When renaming a table, views aren't updated to reference the new table name. Each view, inside or outside of the database, that references the former table name will become invalid. To resolve this issue, you can update each view to reference the new table name.
 
-When renaming a column, views are not updated to reference the new column name. Views will keep showing the old column name until an alter view is performed. In certain cases, views can become invalid needing a drop and recreate.
+When renaming a column, views aren't updated to reference the new column name. Views will keep showing the old column name until an alter view is performed. In certain cases, views can become invalid needing a drop and recreate.
 
 ## Locking
 
@@ -128,7 +128,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ```
 
- When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views are not updated.
+ When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views aren't updated.
 
 ### B. Rename a table
 
@@ -143,7 +143,7 @@ RENAME OBJECT Customer TO Customer1;
 RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ```
 
-When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views are not updated.
+When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views aren't updated.
 
 ### C. Move a table to a different schema
 
@@ -159,7 +159,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You'll need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorRecompile Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **CursorRecompile** event class describes cursor recompile events that occur in application programming interface (API) cursors. Cursor recompile events occur when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recompiles a Transact-SQL cursor due to a schema change.  
   
  Include the **CursorRecompile** event class in traces that record the performance of cursors. When the **CursorRecompile** event class is included in a trace, the amount of overhead incurred depends on how frequently cursors are used against the database during the trace. If cursors are used extensively, the trace may significantly impede performance.  

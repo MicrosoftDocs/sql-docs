@@ -1,20 +1,20 @@
 ---
+title: "APPROX_COUNT_DISTINCT (Transact-SQL)"
 description: "APPROX_COUNT_DISTINCT (Transact-SQL)"
-title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "11/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "APPROX_COUNT_DISTINCT"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
 

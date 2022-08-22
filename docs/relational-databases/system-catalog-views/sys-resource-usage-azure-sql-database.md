@@ -1,26 +1,24 @@
 ---
-description: "sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.resource_usage"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.custom: ""
+description: sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.resource_usage_TSQL"
   - "resource_usage"
   - "sys.resource_usage"
   - "resource_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "resource_usage"
   - "sys.resource_usage"
+dev_langs:
+  - "TSQL"
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

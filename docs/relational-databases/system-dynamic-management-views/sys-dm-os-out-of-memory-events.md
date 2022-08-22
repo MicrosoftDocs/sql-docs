@@ -1,23 +1,21 @@
 ---
-description: "sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause."
 title: "sys.dm_os_out_of_memory_events"
-ms.custom: ""
+description: sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/10/2022"
 ms.service: sql-database
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_out_of_memory_events"
   - "sys.dm_os_out_of_memory_events_TSQL"
   - "dm_os_out_of_memory_events"
   - "dm_os_out_of_memory_events_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_out_of_memory_events"
   - "dm_os_out_of_memory_events"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: 
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_os_out_of_memory_events

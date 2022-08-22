@@ -69,7 +69,7 @@ ms.author: vanto
   
 6.  Select **Use Encryption Provider** to set the credential to be verified by an Extensible Key Management (EKM) Provider. For more information, see [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
-7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

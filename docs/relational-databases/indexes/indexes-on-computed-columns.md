@@ -1,26 +1,24 @@
 ---
-description: "Indexes on Computed Columns"
-title: "Indexes on Computed Columns | Microsoft Docs"
-ms.custom: ""
+title: "Indexes on Computed Columns"
+description: Indexes on Computed Columns
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "computed columns, index creation"
   - "index creation [SQL Server], computed columns"
   - "imprecise columns"
   - "persisted computed columns"
   - "precise [SQL Server]"
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Computed Columns
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
 
 You can define indexes on computed columns as long as the following requirements are met:  
   
@@ -29,6 +27,9 @@ You can define indexes on computed columns as long as the following requirements
 -   Precision requirements  
 -   Data type requirements  
 -   SET option requirements  
+
+> [!NOTE]
+> `SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
   
 #### Ownership Requirements
   

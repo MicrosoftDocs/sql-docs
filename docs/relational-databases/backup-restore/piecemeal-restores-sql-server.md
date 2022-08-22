@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "piecemeal restores [SQL Server]"
   - "restoring [SQL Server], piecemeal restore scenario"
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Piecemeal Restores (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.author: kendralittle
   
      Online piecemeal restores can involve deferred transactions. When only a subset of filegroups has been restored, transactions in the database that depend on online filegroups might become deferred. This is typical, because the whole database must be consistent. For more information, see [Deferred Transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
--   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] piecemeal restore scenario  
+-   [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] piecemeal restore scenario  
   
      For information on Piecemeal Restores of In-Memory OLTP databases see [Piecemeal Backup and Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

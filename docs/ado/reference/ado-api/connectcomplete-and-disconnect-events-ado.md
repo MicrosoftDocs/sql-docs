@@ -1,25 +1,21 @@
 ---
+title: "ConnectComplete and Disconnect Events (ADO)"
 description: "ConnectComplete and Disconnect Events (ADO)"
-title: "ConnectComplete and Disconnect Events (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Disconnect"
   - "Connection::ConnectComplete"
   - "ConnectComplete"
   - "Connection::Disconnect"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Disconnect event [ADO]"
   - "ConnectComplete event [ADO]"
-ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # ConnectComplete and Disconnect Events (ADO)
 The **ConnectComplete** event is called after a connection starts. The **Disconnect** event is called after a connection ends.  

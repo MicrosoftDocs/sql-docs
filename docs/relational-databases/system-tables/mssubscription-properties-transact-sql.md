@@ -1,23 +1,21 @@
 ---
-description: "MSsubscription_properties (Transact-SQL)"
-title: "MSsubscription_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscription_properties (Transact-SQL)"
+description: MSsubscription_properties (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscription_properties"
   - "MSsubscription_properties_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscription_properties system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

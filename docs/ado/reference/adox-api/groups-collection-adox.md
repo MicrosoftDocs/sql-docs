@@ -1,23 +1,19 @@
 ---
+title: "Groups Collection (ADOX)"
 description: "Groups Collection (ADOX)"
-title: "Groups Collection (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Groups"
   - "User::Groups"
   - "Catalog::Groups"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Groups collection [ADOX]"
-ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Groups Collection (ADOX)
 Contains all stored [Group](./group-object-adox.md) objects of a catalog or user.  

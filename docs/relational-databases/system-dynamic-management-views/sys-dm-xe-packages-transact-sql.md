@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_xe_packages (Transact-SQL)"
-title: "sys.dm_xe_packages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xe_packages (Transact-SQL)"
+description: sys.dm_xe_packages (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xe_packages_TSQL"
   - "sys.dm_xe_packages_TSQL"
   - "dm_xe_packages"
   - "sys.dm_xe_packages"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_packages dynamic management view"
   - "extended events [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

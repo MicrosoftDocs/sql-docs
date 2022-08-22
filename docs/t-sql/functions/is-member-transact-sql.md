@@ -1,19 +1,19 @@
 ---
+title: "IS_MEMBER (Transact-SQL)"
 description: "IS_MEMBER (Transact-SQL)"
-title: "IS_MEMBER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "IS_MEMBER"
   - "IS_MEMBER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database roles [SQL Server], members"
   - "current member status"
   - "roles [SQL Server], members"
@@ -24,10 +24,9 @@ helpviewer_keywords:
   - "verifying member status"
   - "groups [SQL Server], members"
   - "members [SQL Server], verifying"
-ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # IS_MEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

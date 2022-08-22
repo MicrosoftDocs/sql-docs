@@ -1,16 +1,13 @@
 ---
-title: "Retrieving UDT Data | Microsoft Docs"
+title: "Retrieving UDT Data"
 description: This article describes how to access UDTs in a SQL Server database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SqlDataReader object"
   - "ADO.NET [CLR integration]"
   - "binding UDTs [CLR integration]"
@@ -19,9 +16,10 @@ helpviewer_keywords:
   - "query parameters [CLR integration]"
   - "user-defined types [CLR integration], ADO.NET"
   - "bytes [CLR integration]"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-author: rothja
-ms.author: jroth
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

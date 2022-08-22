@@ -1,15 +1,17 @@
 ---
 title: Purchasing models
-titleSuffix: Azure SQL Database 
+titleSuffix: Azure SQL Database
 description: "Learn about the purchasing models that are available for Azure SQL Database: the vCore purchasing model and the DTU purchasing model."
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "sqldbrb=1"
+  - "azure-sql-split"
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/06/2022
 ---

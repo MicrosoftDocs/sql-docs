@@ -11,6 +11,10 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.globalsettingtester.f1"
+
+
 ---
 # Global Settings (Tester) (OracleToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  
@@ -38,10 +42,10 @@ This setting specifies how to save the internal auxiliary tables created during 
   
 4.  Ask User if Table Comparison Failed  
   
-The default option set is : **Always Delete**.  
+The default option set is: **Always Delete**.  
   
 **Perform data rollback**  
-This setting specifies whether to perform a rollback operation after the each test case is run. Default option set is **No**.  
+This setting specifies whether to perform a rollback operation after each test case is run. Default option set is **No**.  
   
 The following options are available for this setting:  
   

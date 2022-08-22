@@ -1,22 +1,18 @@
 ---
+title: "CubeDefs Collection (ADO MD)"
 description: "CubeDefs Collection (ADO MD)"
-title: "CubeDefs Collection (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CubeDefs"
-  - "Catalog::CubeDefs"
-helpviewer_keywords: 
-  - "CubeDefs collection [ADO MD]"
-ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CubeDefs"
+  - "Catalog::CubeDefs"
+helpviewer_keywords:
+  - "CubeDefs collection [ADO MD]"
+apitype: "COM"
 ---
 # CubeDefs Collection (ADO MD)
 Contains the [CubeDef](./cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  

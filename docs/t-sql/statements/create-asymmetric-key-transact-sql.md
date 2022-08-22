@@ -1,30 +1,28 @@
 ---
-description: "CREATE ASYMMETRIC KEY (Transact-SQL)"
-title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE ASYMMETRIC KEY (Transact-SQL)"
+description: CREATE ASYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ASYMMETRIC_KEY_TSQL"
   - "CREATE ASYMMETRIC KEY"
   - "CREATE_ASYMMETRIC_KEY_TSQL"
   - "ASYMMETRIC KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asymmetric keys [SQL Server], creating"
   - "encryption [SQL Server], asymmetric keys"
   - "CREATE ASYMMETRIC KEY statement"
   - "asymmetric keys [SQL Server]"
   - "cryptography [SQL Server], asymmetric keys"
+dev_langs:
+  - "TSQL"
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

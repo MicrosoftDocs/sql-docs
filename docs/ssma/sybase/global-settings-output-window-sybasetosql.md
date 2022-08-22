@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.sybase.globalsettingoutputwindow.f1"
 ---
 # Global Settings (Output Window)  (SybaseToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

@@ -1,24 +1,22 @@
 ---
 title: "sys.xml_schema_attributes (Transact-SQL)"
-description: "sys.xml_schema_attributes (Transact-SQL)"
+description: sys.xml_schema_attributes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "xml_schema_attributes_TSQL"
   - "xml_schema_attributes"
   - "sys.xml_schema_attributes_TSQL"
   - "sys.xml_schema_attributes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_attributes catalog view"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "06/10/2016"
+dev_langs:
+  - "TSQL"
 ---
 # sys.xml_schema_attributes (Transact-SQL)
 

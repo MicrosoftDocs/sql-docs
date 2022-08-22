@@ -1,22 +1,19 @@
 ---
-title: "Prerequisites for Minimal Logging in Bulk Import | Microsoft Docs"
+title: "Prerequisites for Minimal Logging in Bulk Import"
 description: In a simple recovery or bulk-logged recovery model, minimal logging of bulk-import operations reduces the possibility that an operation fills the log space.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "minimal logging [SQL Server]"
   - "logged bulk copy [SQL Server]"
   - "logs [SQL Server], minimal logging"
   - "minimally logged operations [SQL Server]"
   - "bulk importing [SQL Server], minimal logging"
-ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Prerequisites for Minimal Logging in Bulk Import
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

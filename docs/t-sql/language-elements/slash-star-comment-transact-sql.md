@@ -1,28 +1,27 @@
 ---
+title: "Slash Star (Block Comment) (Transact-SQL)"
 description: "Slash Star (Block Comment) (Transact-SQL)"
-title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "07/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "/*...*/_TSQL"
   - "Comment"
   - "/*...*/"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "nonexecuting text strings [SQL Server]"
   - "/*...*/ (comment)"
   - "remarks [SQL Server]"
   - "comments [SQL Server]"
-ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest ||>= aps-pdw-2016 "
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || = azure-sqldw-latest || >= aps-pdw-2016"
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)

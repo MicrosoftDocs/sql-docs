@@ -1,27 +1,25 @@
 ---
-description: "SET LANGUAGE (Transact-SQL)"
-title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET LANGUAGE (Transact-SQL)"
+description: SET LANGUAGE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/05/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_LANGUAGE_TSQL"
   - "SET LANGUAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "LANGUAGE option"
   - "languages [SQL Server], setting language"
   - "SET LANGUAGE statement"
   - "options [SQL Server], date"
   - "default languages"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)

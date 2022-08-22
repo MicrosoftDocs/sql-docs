@@ -1,21 +1,19 @@
 ---
-description: "REVOKE System Object Permissions (Transact-SQL)"
-title: "REVOKE System Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE System Object Permissions (Transact-SQL)"
+description: REVOKE System Object Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVOKE statement, system objects"
   - "permissions [SQL Server], system objects"
+dev_langs:
+  - "TSQL"
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
-author: VanMSFT
-ms.author: vanto
 ---
 # REVOKE System Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

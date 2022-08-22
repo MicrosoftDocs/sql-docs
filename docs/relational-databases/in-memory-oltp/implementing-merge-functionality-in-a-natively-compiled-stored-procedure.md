@@ -1,25 +1,24 @@
 ---
 title: "MERGE function - natively compiled stored procedure"
-description: Use this sample to learn how to simulate the Transact-SQL MERGE statement in a natively compiled module. 
-ms.custom: seo-dt-2019
+description: Use this sample to learn how to simulate the Transact-SQL MERGE statement in a natively compiled module.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   
-The Transact-SQL code sample in this section demonstrates how you can simulate the T-SQL MERGE statement in a natively compiled module. The sample uses a table variable with an identity column, iterates over the rows in the table variable, and for each row performs the update if the condition matches, and an insert if the condition does not match.
+The Transact-SQL code sample in this section demonstrates how you can simulate the T-SQL MERGE statement in a natively compiled module. The sample uses a table variable with an identity column, iterates over the rows in the table variable, and for each row performs the update if the condition matches, and an insert if the condition doesn't match.
   
-Here is the T-SQL MERGE statement that you wish was supported inside a native proc, and that the code sample simulates.  
+Here's the T-SQL MERGE statement that you wish was supported inside a native proc, and that the code sample simulates.  
 
 ```sql
 MERGE INTO dbo.Table1 t  
@@ -31,7 +30,7 @@ MERGE INTO dbo.Table1 t
         INSERT (Column1, Column2) VALUES (v.c1, v.c2);  
 ```
 
-Here is the T-SQL to achieve the workaround and simulate MERGE.  
+Here's the T-SQL to achieve the workaround and simulate MERGE.  
 
 ```sql
 DROP PROCEDURE IF EXISTS dbo.usp_merge1;  

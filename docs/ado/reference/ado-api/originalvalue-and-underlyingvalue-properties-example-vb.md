@@ -1,21 +1,17 @@
 ---
+title: "OriginalValue and UnderlyingValue Properties Example (VB)"
 description: "OriginalValue and UnderlyingValue Properties Example (VB)"
-title: "OriginalValue and UnderlyingValue Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "UnderlyingValue property [ADO], Visual Basic example"
-  - "OriginalValue property [ADO]"
-ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "UnderlyingValue property [ADO], Visual Basic example"
+  - "OriginalValue property [ADO]"
+dev_langs:
+  - "VB"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VB)
 This example demonstrates the [OriginalValue](./originalvalue-property-ado.md) and [UnderlyingValue](./underlyingvalue-property.md) properties by displaying a message if a record's underlying data has changed during a [Recordset](./recordset-object-ado.md) batch update.  

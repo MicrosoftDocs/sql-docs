@@ -42,7 +42,12 @@ To use the SQL best practices assessment feature, you must have the following pr
 
 ## Enable
 
-To enable SQL best practices assessments, follow these steps: 
+You can enable SQL best practices assessments using the Azure portal or the Azure CLI. 
+
+
+# [Azure portal](#tab/azure-portal)
+
+To enable SQL best practices assessments using the Azure portal, follow these steps: 
 
 1. Sign into the [Azure portal](https://portal.azure.com) and go to your [SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
 1. Select **SQL best practices assessments** under **Settings**. 
@@ -52,6 +57,24 @@ To enable SQL best practices assessments, follow these steps:
     1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time). 
 1. Select **Apply** to save your changes and deploy the Microsoft Monitoring Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
     
+# [Azure CLI](#tab/azure-cli)
+
+To enable the SQL best practices assessments feature using the Azure CLI, use the following command example:
+
+```azure-cli
+az sql vm update --enable-assessment true --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+```
+
+To disable the feature, use the following command: 
+
+```azure-cli
+# This will disable the feature including any set schedules
+az sql vm update --enable-assessment false -g "myRg" -n "myVM"
+```
+
+
+---
+
 
 ## Assess SQL Server VM
 
@@ -61,11 +84,55 @@ Assessments run:
 
 ### Run scheduled assessment
 
-If you set a schedule in the configuration blade, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten.  
+You can configure assessment on a schedule using the Azure portal and the Azure CLI. 
+
+# [Azure portal](#tab/azure-portal)
+
+If you set a schedule in the configuration blade, an assessment runs automatically at the specified date and time. Choose **Configuration** to modify your assessment schedule. Once you provide a new schedule, the previous schedule is overwritten. 
+
+# [Azure CLI](#tab/azure-cli)
+
+To enable the feature and set a schedule for assessment runs using the Azure CLI, use the following command examples: 
+
+```azure-cli
+# Schedule is set to every 2 weeks starting on Sunday at 11 pm (VM OS time)
+az sql vm update --assessment-weekly-interval 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+
+# To schedule assessment for 2nd Sunday of each month at 11 pm (VM OS time)
+az sql vm update --monthly-occurrence 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+ 
+# To schedule assessment for the last Sunday of each month at 11 pm (VM OS time)
+az sql vm update --monthly-occurrence -1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+
+```
+
+To disable the schedule, run the following command: 
+
+```azure-cli
+# This will disable an existing schedule, however the feature will remain enabled. You can still run on-demand assessments.
+az sql vm update --enable-assessment-schedule false -g "myRg" -n "myVM"
+```
+
+---
 
 ### Run on demand assessment
 
-After the SQL best practices assessment feature is enabled for your SQL Server VM, it's possible to run an assessment on demand. To do so, select **Run assessment** from the SQL best practices assessment blade of the [Azure portal SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) page.
+After the SQL best practices assessment feature is enabled for your SQL Server VM, it's possible to run an assessment on demand using the Azure portal, or the Azure CLI. 
+
+# [Azure portal](#tab/azure-portal)
+
+To run an on-demand assessment by using the Azure portal, select **Run assessment** from the SQL best practices assessment blade of the [Azure portal SQL Server VM resource](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) page.
+
+# [Azure CLI](#tab/azure-cli)
+
+To run an on-demand assessment by using the Azure CLI, using the following command:
+
+```azure-cli
+# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machine resource via Azure Portal
+az sql vm start-assessment -g "myRg" -n "myVM"
+```
+
+---
 
 
 ## View results
@@ -97,6 +164,41 @@ There are three charts on the **Trends** page to show changes over time: all iss
 
 If there are multiple runs in a single day, only the latest run is included in the graphs on the **Trends** page. 
 
+
+## Enable for all VMs in a subscription
+
+You can use the Azure CLI to enable the SQL best practices assessment feature on all SQL Server VMs within a subscription. To do so, use the following example script: 
+
+```azure-cli
+# This script is formatted for use with Az CLI on Windows PowerShell. You may need to update the script for use with Az CLI on other shells.
+# This script enables SQL best practices assessment feature for all SQL Servers on Azure VMs in a given subscription. It configures the VMs to use a Log Analytics workspace to upload assessment results. It sets a schedule to start an assessment run every Sunday at 11pm (local VM time).
+# Please note that if a VM is already associated with another Log Analytics workspace, it will give an error.
+ 
+$subscriptionId = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+# Resource Group where the Log Analytics workspace belongs
+$myWsRg = 'myWsRg'
+# Log Analytics workspace where assessment results will be stored
+$myWsName = 'myWsName'
+ 
+# Ensure in correct subscription
+az account set --subscription $subscriptionId
+ 
+$sqlvms = az sql vm list | ConvertFrom-Json 
+ 
+foreach ($sqlvm in $sqlvms)
+{
+  echo "Configuring feature on $($sqlvm.id)"
+  az sql vm update --assessment-weekly-interval 1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup -n $sqlvm.name
+  
+  # Alternatively you can use this command to only enable the feature without setting a schedule
+  # az sql vm update --enable-assessment true --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup -n $sqlvm.name  
+ 
+  # You can use this command to start an on-demand assessment on each VM
+  # az sql vm start-assessment -g $sqlvm.resourceGroup -n $sqlvm.name
+}
+
+```
+
 ## Known Issues
 
 You may encounter some of the following known issues when using SQL best practices assessments. 
@@ -115,6 +217,8 @@ If the assessment or uploading the results failed for some reason, the status of
 
 >[!TIP]
 >If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12) to use strong cryptography. 
+
+
 
 ## Next steps
 

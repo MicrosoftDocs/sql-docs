@@ -1,22 +1,18 @@
 ---
+title: "AbsolutePage, PageCount, and PageSize Properties Example (VC++)"
 description: "AbsolutePage, PageCount, and PageSize Properties Example (VC++)"
-title: "AbsolutePage, PageCount, and PageSize Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PageCount property [ADO], VC++ example"
   - "AbsolutePage property [ADO], VC++ example"
   - "PageSize property [ADO], VC++ example"
-ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "C++"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VC++)
 This example uses the [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md), and [PageSize](./pagesize-property-ado.md) properties to display names and hire dates from the ***Employee*** table, five records at a time.  

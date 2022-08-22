@@ -1,26 +1,26 @@
 ---
 title: CONTEXT_INFO (Transact-SQL)
 description: "CONTEXT_INFO (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CONTEXT_INFO_TSQL"
   - "CONTEXT_INFO"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONTEXT_INFO function"
   - "Multiple Active Result Sets"
   - "context information [SQL Server]"
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/24/2017"
+dev_langs:
+  - "TSQL"
 ---
 # CONTEXT_INFO (Transact-SQL)
 

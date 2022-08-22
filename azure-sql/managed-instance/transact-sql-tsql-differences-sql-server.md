@@ -9,7 +9,7 @@ ms.topic: reference
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 04/19/2022
+ms.date: 08/15/2022
 ms.custom: seoapril2019, sqldbrb=1
 ---
 
@@ -65,7 +65,7 @@ Limitations:
 - With a SQL Managed Instance, you can back up an instance database to a backup with up to 32 stripes, which is enough for databases up to 4 TB if backup compression is used.
 - You can't execute `BACKUP DATABASE ... WITH COPY_ONLY` on a database that's encrypted with service-managed Transparent Data Encryption (TDE). Service-managed TDE forces backups to be encrypted with an internal TDE key. The key can't be exported, so you can't restore the backup. Use automatic backups and point-in-time restore, or use [customer-managed (BYOK) TDE](../database/transparent-data-encryption-tde-overview.md#customer-managed-transparent-data-encryption---bring-your-own-key) instead. You also can disable encryption on the database.
 - Native backups taken on a SQL Managed Instance cannot be restored to a SQL Server. This is because SQL Managed Instance has higher internal database version compared to any version of SQL Server.
-- To backup or restore a database to/from an Azure storage, it is necessary to create a shared access signature (SAS) an URI that grants you restricted access rights to Azure Storage resources [Learn more on this](restore-sample-database-quickstart.md#restore-from-a-backup-file-using-t-sql). Using Access keys for these scenarios is not supported.
+- To back up or restore a database to/from an Azure storage, it is necessary to create a shared access signature (SAS) an URI that grants you restricted access rights to Azure Storage resources [Learn more on this](restore-sample-database-quickstart.md#use-t-sql-to-restore-from-a-backup-file). Using Access keys for these scenarios is not supported.
 - The maximum backup stripe size by using the `BACKUP` command in SQL Managed Instance is 195 GB, which is the maximum blob size. Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
 
     > [!TIP]
@@ -311,7 +311,7 @@ The following table types aren't supported:
 
 - [FILESTREAM](/sql/relational-databases/blob/filestream-sql-server)
 - [FILETABLE](/sql/relational-databases/blob/filetables-sql-server)
-- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except Polybase, in preview)
+- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except PolyBase)
 - [MEMORY_OPTIMIZED](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) (not supported only in General Purpose tier)
 
 For information about how to create and alter tables, see [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) and [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).
@@ -404,8 +404,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 
 ### PolyBase
 
-Work on enabling Polybase support in SQL Managed Instance is [in progress](https://feedback.azure.com/d365community/idea/ccc44856-3425-ec11-b6e6-000d3a4f0f84). In the meantime, as a workaround you can use linked servers to [a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/) or SQL Server to query data from files stored in Azure Data Lake or Azure Storage.   
-For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
+[Data virtualization with Azure SQL Managed Instance](data-virtualization-overview.md) enables you to execute Transact-SQL (T-SQL) queries against data from files stored in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. Parquet and delimited text (CSV) file formats are directly supported. The JSON file format is indirectly supported by specifying the CSV file format where queries return every document as a separate row. It's possible to parse rows further using `JSON_VALUE` and `OPENJSON`. For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
 
 ### Replication
 
@@ -487,7 +486,7 @@ Service broker is enabled by default and cannot be disabled. The following ALTER
   - `scan for startup procs`
 - The following [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) options are ignored and have no effect: 
   - `Ole Automation Procedures`
-- `sp_execute_external_scripts` isn't supported. See [sp_execute_external_scripts](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql#examples).
+- `sp_execute_external_scripts` is only supported for [Machine Learning Services for SQL MI](machine-learning-services-overview.md), otherwise **sp_execute_external_scripts** is not supported for SQL Managed Instance. See [sp_execute_external_scripts](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql#examples).
 - `xp_cmdshell` isn't supported. See [xp_cmdshell](/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql).
 - `Extended stored procedures` aren't supported, and this includes `sp_addextendedproc` and `sp_dropextendedproc`. This functionality won't be supported because it's on a deprecation path for SQL Server. For more information, see [Extended Stored Procedures](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming).
 - `sp_attach_db`, `sp_attach_single_file_db`, and `sp_detach_db` aren't supported. See [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql), [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql), and [sp_detach_db](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql).

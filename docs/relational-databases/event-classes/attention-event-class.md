@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Attention Event Class
 
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The **Attention** event class indicates that an attention event, such as cancel, client-interrupt requests, or broken client connections, has occurred. Cancel operations can also be seen as part of implementing data access driver time-outs.  
   

@@ -1,16 +1,16 @@
 ---
 title: Configure and customize SQL Server Docker containers
-description: Understand the different ways to customize SQL Server Docker Containers and how you can configure it based on your requirement
+description: Understand the different ways to customize SQL Server Docker Containers and how you can configure it based on your requirements.
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
-ms.custom: contperf-fy21q1
-ms.date: 04/21/2022
-ms.topic: troubleshooting
+ms.reviewer: vanto, randolphwest
+ms.date: 05/30/2022
 ms.prod: sql
 ms.technology: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
+ms.topic: troubleshooting
+ms.custom: contperf-fy21q1
 zone_pivot_groups: cs1-command-shell
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 ---
 # Configure and customize SQL Server Docker containers
 
@@ -41,6 +41,9 @@ The first option is to mount a directory on your host as a data volume in your c
 
 > [!NOTE]
 > SQL Server 2019 containers automatically start up as non-root, while SQL Server 2017 containers start as root by default. For more information on running SQL Server containers as non-root, see [Configure security](sql-server-linux-docker-container-security.md).
+
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -166,16 +169,16 @@ In addition to these container techniques, you can also use standard SQL Server 
 
 Virtual Device Interface (VDI) backup and restore operations are now supported in SQL Server container deployments beginning with CU15 for SQL Server 2019 and CU28 for SQL Server 2017. Follow the steps below to enable VDI-based backup or restores for SQL Server containers:
 
-1.	When deploying SQL Server containers, use the `--shm-size` option. To begin, set the sizing to 1 GB, as shown in the sample command below: 
+1.	When deploying SQL Server containers, use the `--shm-size` option. To begin, set the sizing to 1 GB, as shown in the sample command below:
 
    ```bash
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Mystr0ngP@ssw0rd!" --shm-size 1g  -p 1433:1433 --name sql19 --hostname sql19 -d mcr.microsoft.com/mssql/server:2019-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Mystr0ngP@ssw0rd!" --shm-size 1g  -p 1433:1433 --name sql19 --hostname sql19 -d mcr.microsoft.com/mssql/server:2019-latest
    ```
- 
+
    The option `--shm-size` allows you to configure the size of the shared memory directory (`/dev/shm`) inside the container, which is set to 64 MB by default. This default size of the shared memory is insufficient to support VDI backups. We recommend that you configure this to a minimum of 1 GB when you deploy SQL Server containers and want to support VDI backups.
- 
+
 2.	You must also enable the new parameter **memory.enablecontainersharedmemory** in **mssql.conf** inside the container. You can mount mssql.conf at the deployment of the container using the `-v` option as described in the [Persist your data](#persist) section, or after you have deployed the container by manually updating mssql.conf inside the container. Here's a sample mssql.conf file with the **memory.enablecontainersharedmemory** setting set to **true**.
- 
+
    ```output
    [memory]
    enablecontainersharedmemory = true
@@ -239,15 +242,15 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 ::: zone-end
 
-## <a id="tz"></a> Configure the timezone
+## <a id="tz"></a> Configure the time zone
 
-To run SQL Server in a Linux container with a specific timezone, configure the `TZ` environment variable. To find the right timezone value, run the `tzselect` command from a Linux bash prompt:
+To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable (see [Configure the time zone on Linux](sql-server-linux-configure-time-zone.md) for more information). To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
 
 ```command
 tzselect
 ```
 
-After selecting the timezone, `tzselect` displays output similar to the following:
+After selecting the time zone, `tzselect` displays output similar to the following:
 
 ```output
 The following information has been given:
@@ -258,7 +261,7 @@ The following information has been given:
 Therefore TZ='America/Los_Angeles' will be used.
 ```
 
-You can use this information to set the same environment variable in your Linux container. The following example shows how to run SQL Server in a container in the `Americas/Los_Angeles` timezone:
+You can use this information to set the same environment variable in your Linux container. The following example shows how to run SQL Server in a container in the `Americas/Los_Angeles` time zone:
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -274,7 +277,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'A_PASSWORD=<YourStrong!Passw0rd>' \
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
 -p 1433:1433 --name sql1 `
 -e "TZ=America/Los_Angeles" `
 -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -283,7 +286,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
 -p 1433:1433 --name sql1 ^
 -e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -323,6 +326,87 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 ::: moniker-end
 
+## Change the tempdb path
+
+It's a good practice to keep your `tempdb` database separate from your user databases.
+
+1. Connect to the SQL Server instance, and then run the following Transact-SQL (T-SQL) script. If there are more files associated with `tempdb`, you'll need to move them as well.
+
+   ```sql
+   ALTER DATABASE tempdb MODIFY FILE (
+      NAME = tempdev, FILENAME = '/var/opt/mssql/tempdb/tempdb.mdf'
+   );
+   GO
+
+   ALTER DATABASE tempdb MODIFY FILE (
+       NAME = templog, FILENAME = '/var/opt/mssql/tempdb/templog.ldf'
+   );
+   GO
+   ```
+
+1. Verify that the `tempdb` file location has been modified, using the following T-SQL script:
+
+   ```sql
+   SELECT *
+   FROM sys.sysaltfiles
+   WHERE dbid = 2;
+   ```
+
+1. You must restart the SQL Server container for these changes to take effect.
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   docker stop sql1
+   docker start sql1
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker stop sql1
+   docker start sql1
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   docker stop sql1
+   docker start sql1
+   ```
+   ::: zone-end
+
+1. Open an interactive `bash` session to connect to the container.
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+     docker exec -it sql1 bash
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+     docker exec -it sql1 bash
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+     docker exec -it sql1 bash
+   ```
+   ::: zone-end
+
+    Once connected to the interactive shell, run the following command to check the location of `tempdb`:
+
+    ```bash
+    ls /var/opt/mssql/tempdb/
+    ```
+
+    If the move was successful, you'll see similar output:
+
+    ```output
+    tempdb.mdf templog.ldf
+    ```
+
 ## <a id="changefilelocation"></a> Change the default file location
 
 Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container’s user has access to.
@@ -332,19 +416,19 @@ Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker 
 
 ::: zone pivot="cs1-bash"
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
@@ -355,19 +439,19 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 
 ::: zone pivot="cs1-bash"
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyStrongPassword' -e 'MSSQL_DATA_DIR=/my/file/path' -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ::: zone-end
 
@@ -380,7 +464,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 - [Dockerfile example with Full-Text Search](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-agent-fts-ha-tools/Dockerfile)
 - [Dockerfile example for RHEL 7 and SQL Server 2019](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel7-sql2019)
 - [Dockerfile example for RHEL 8 and SQL Server 2017](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel8-sql2017)
-- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, Polybase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
+- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, PolyBase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 

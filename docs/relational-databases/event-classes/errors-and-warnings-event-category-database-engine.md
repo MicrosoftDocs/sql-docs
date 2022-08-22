@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ms.custom: "seo-lt-2019"
 ---
 # Errors and Warnings Event Category (Database Engine)
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Errors and Warnings** event category contains general error and warning events.  
   
 ## In This Section  

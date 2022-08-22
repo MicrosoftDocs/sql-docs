@@ -10,8 +10,8 @@ metadata:
   ms.topic: faq
   author: dimitri-furman
   ms.author: dfurman
-  ms.reviewer: kendralittle, mathoma
-  ms.date: 04/28/2022
+  ms.reviewer: wiassaf, mathoma
+  ms.date: 08/09/2022
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -55,7 +55,7 @@ sections:
       - question: |
           What regions currently support Hyperscale?
         answer: |
-          The Hyperscale service tier is currently available in the regions listed under [Azure SQL Database Hyperscale Overview](service-tier-hyperscale.md#regions).
+          The Hyperscale service tier is available in all regions where Azure SQL Database is available.
           
       - question: |
           Can I create multiple Hyperscale databases per server?
@@ -80,8 +80,8 @@ sections:
           
             With Hyperscale, you can use three kinds of secondary replicas to cater for read scale-out, high availability, and geo-replication requirements. This includes:
             - Up to four [high-availability replicas](service-tier-hyperscale-replicas.md#high-availability-replica) having the same compute size as primary. These serve as hot-standbys to quickly fail over from the primary. You can also use them to offload read workloads from the primary.
-            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
-            - A [geo-replica](service-tier-hyperscale-replicas.md#geo-replica-in-preview) in a different Azure region to protect against regional outages and to enable geographic read scale-out.
+            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) having same or different compute size than primary, to cater to a variety of read scale-out scenarios.  
+            - A [geo-replica](service-tier-hyperscale-replicas.md#geo-replica) in a different Azure region to protect against regional outages and to enable geographic read scale-out.
           
   - name: Deep dive questions
     questions:
@@ -127,17 +127,17 @@ sections:
       - question: |
           Can I provision a compute replica with extra RAM for my memory-intensive workload?
         answer: |
-          For read workloads, you can create a [named replica](service-tier-hyperscale-replicas.md#named-replica-in-preview) with a higher compute size (more cores and memory) than the primary. For more information on available compute sizes, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
+          For read workloads, you can create a [named replica](service-tier-hyperscale-replicas.md#named-replica) with a higher compute size (more cores and memory) than the primary. For more information on available compute sizes, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
           
       - question: |
           Can I provision multiple compute replicas of different sizes?
         answer: |
-          For read workloads, this can be achieved using [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview).
+          For read workloads, this can be achieved using [named replicas](service-tier-hyperscale-replicas.md#named-replica).
 
       - question: |
           How many Read Scale-out replicas are supported?
         answer: |
-          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/createorupdate). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) for many read scale-out scenarios.
+          You can scale the number of HA secondary replicas between 0 and 4 using [Azure portal](https://portal.azure.com) or [REST API](/rest/api/sql/databases/createorupdate). Additionally, you can create up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica) for many read scale-out scenarios.
           
       - question: |
           For high availability, do I need to provision additional compute replicas?
@@ -146,7 +146,7 @@ sections:
           
           However, if there's only the primary replica, it may take a minute or two to create a new replica after failover, vs. seconds in case when an HA secondary replica is available. The new replica will have cold caches initially, which may result in higher storage latency and reduced query performance immediately after failover.
           
-          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica replicas. That way there is a hot-standby replica available that serves as a failover target.
+          For mission-critical apps that require high availability with minimal failover impact, you should provision at least one HA secondary replica. That way there is a hot-standby replica available that serves as a failover target.
           
   - name: Data size and storage questions
     questions:
@@ -171,7 +171,7 @@ sections:
 
       - question: |
           What is the smallest database size that Hyperscale supports?
-        answer: 40 GB. A Hyperscale database is created with a starting size of 10 GB. Then, it starts growing by 10 GB every 10 minutes, until it reaches the size of 40 GB. Each of these 10 GB chunks is allocated in a different page server in order to provide more IOPS and higher I/O parallelism. Because of this optimization, even if you choose initial database size smaller than 40 GB, the database will grow to at least 40 GB automatically.
+        answer: 10 GB. A Hyperscale database is created with a starting size of 10 GB and grows as needed in 10GB chunks. 
 
       - question: |
           In what increments does my database size grow?
@@ -314,7 +314,7 @@ sections:
       - question: |
           Can I set up geo-replication with a Hyperscale database?
         answer: |
-          Yes. [Geo-replication](active-geo-replication-overview.md) for Hyperscale databases is in public preview.
+          Yes. [Geo-replication](active-geo-replication-overview.md) can be set up for Hyperscale databases.
 
       - question: |
           Can I take a Hyperscale database backup and restore it to my on-premises server, or on SQL Server in a VM?
@@ -324,17 +324,17 @@ sections:
       - question: |
           Will I be charged for backup storage costs in Hyperscale?
         answer: |
-           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
+           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage consumed and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. To learn more, see [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How can I measure backup storage size in my Hyperscale database?
         answer: |
-          Details on how to measure backup storage size are captured in [Automated Backups](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
+          Details on how to measure backup storage size are captured in [Automated Backups](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
       - question: |
           How do I know what my backup bill will be?
         answer: |
-          To determine your backup storage bill, backup storage size is calculated periodically and multiplied by the backup storage rate and the number of hours since last calculation. To estimate your backup bill for a time period, multiply the billable backup storage size for every hour of the period by the backup storage rate, and add up all hourly amounts. To query relevant Azure Monitor metrics for multiple hourly intervals programmatically, use Azure Monitor [REST API](/azure-monitor/essentials/rest-api-walkthrough.md).
+          To determine your backup storage bill, backup storage size is calculated periodically and multiplied by the backup storage rate and the number of hours since last calculation. To estimate your backup bill for a time period, multiply the billable backup storage size for every hour of the period by the backup storage rate, and add up all hourly amounts. To query relevant Azure Monitor metrics for multiple hourly intervals programmatically, use Azure Monitor [REST API](/azure/azure-monitor/essentials/rest-api-walkthrough).
 
       - question: |
           How will my workload influence my backup storage costs?
@@ -344,7 +344,7 @@ sections:
       - question: |
           How can I minimize backup storage costs?
         answer: |
-          Details on how to minimize the backup storage costs are captured in [Automated Backups](automated-backups-overview.md#reduce-backup-storage-consumption).
+          Details on how to minimize the backup storage costs are captured in [Automated Backups](hyperscale-automated-backups-overview.md#reduce-backup-storage-consumption).
 
   - name: Performance questions
     questions:
@@ -428,14 +428,14 @@ sections:
           You can connect to these additional read-only compute replicas by setting the `ApplicationIntent` property in your connection string to `ReadOnly`. Any connections marked with `ReadOnly` are automatically routed to one of the HA secondary replicas, if they were added for your database. For details, see [Use read-only replicas to offload read-only query workloads](read-scale-out.md).
           
       - question: |
-          How do I validate if I have successfully connected to secondary compute replica using SSMS or other client tools?
+          How do I validate if I have successfully connected to secondary compute replica using SQL Server Management Studio (SSMS) or other client tools?
         answer: |
           You can execute the following T-SQL query: `SELECT DATABASEPROPERTYEX ('<database_name>', 'Updateability')`. The result is `READ_ONLY` if you are connected to a read-only secondary replica, and `READ_WRITE` if you are connected to the primary replica. Note that the database context must be set to the name of your database, not to the `master` database.
           
       - question: |
           Can I create a dedicated endpoint for an HA secondary replica?
         answer: |
-          No. You can only connect to HA secondary replicas by specifying `ApplicationIntent=ReadOnly`. However, you can use dedicated endpoints for [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview). 
+          No. You can only connect to HA secondary replicas by specifying `ApplicationIntent=ReadOnly`. However, you can use dedicated endpoints for [named replicas](service-tier-hyperscale-replicas.md#named-replica). 
 
       - question: |
           Does the system do intelligent load balancing of the read workload on HA secondary replicas?
@@ -445,22 +445,53 @@ sections:
       - question: |
           Can I scale up/down HA secondary replicas independently of the primary replica?
         answer: |
-          No. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
+          No. HA secondary replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) provide the ability to scale each replica independently.
 
       - question: |
           Do I get different `tempdb` sizing for my primary compute and my HA secondary replicas?
         answer: |
-          No. Your `tempdb` database is configured based on the provisioned compute size, your HA secondary replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
+          No. Your `tempdb` database is configured based on the provisioned compute size, your HA secondary replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
 
       - question: |
           Can I add indexes and views on my secondary compute replicas?
         answer: |
-          No. Hyperscale databases have shared storage, meaning that all compute replicas see the same tables, indexes, and other database objects. If you want additional indexes optimized for reads on secondary, you must add them on the primary.
+          No. Hyperscale databases have shared storage, meaning that all compute replicas see the same tables, indexes, and other database objects. If you want additional indexes optimized for reads on secondary, you must add them on the primary. You can still create temporary tables (table names prefixed with # or ##) on each secondary replica to store temporary data. Temporary tables are read-write.
 
       - question: |
           How much delay is there going to be between the primary and secondary compute replicas?
         answer: |
           Data latency from the time a transaction is committed on the primary to the time it is readable on a secondary depends on current log generation rate, transaction size, load on the replica, and other factors. Typical data latency for small transactions is in tens of milliseconds, however there is no upper bound on data latency. Data on a given secondary replica is always transactionally consistent, thus larger transactions take longer to propagate. However, at a given point in time data latency and database state may be different for different secondary replicas. Workloads that need to read committed data immediately should run on the primary replica.
+
+      - question: |
+          Can a named replica be used as a failover target?
+        answer: |
+          No, named replicas cannot be used as failover targets for the primary replica. Add HA replicas for that purpose.
+
+      - question: |
+          How can I distribute a read-only workload across my named replicas?
+        answer: |
+          Since every named replica may have a different service level objective and thus be used for different use cases, there is no built-in way to direct read-only traffic sent to the primary to a set of named replicas. For example, you may have eight named replicas, and you may want to direct OLTP workload only to named replicas 1 to 4, while all the Power BI analytical workloads will use named replicas 5 and 6 and the data science workload will use replicas 7 and 8. Depending on which tool or programming language you use, strategies to distribute such workload may vary. One example of creating a workload routing solution to allow a REST backend to scale out is here: [OLTP scale-out sample](https://github.com/Azure-Samples/azure-sql-db-named-replica-oltp-scaleout).
+
+      - question: |
+          Can a named replica be in a region different from the region of the primary replica?
+        answer: |
+          No, as named replicas use the same page servers of the primary replica, they must be in the same region.
+
+      - question: |
+          Can a named replica impact availability or performance of the primary replica?
+        answer: |
+          A named replica cannot impact the availability of the primary replica. Named replicas, under normal circumstances, are unlikely to impact the primary's performance, but it can happen if there are intensive workloads running. Just like an HA replica, a named replica is kept in sync with the primary via the transaction log service. If a named replica, for any reason, is not able to consume the transaction log fast enough, it will start asking the primary replica to slow down (throttle) its log generation, so that it can catch up. While this behavior will not impact the primary's availability, it may impact performance of write workloads on the primary. To avoid this situation, make sure that your named replicas have enough resource headroom – mainly CPU – to process transaction log without delay. For example, if the primary is processing numerous data changes, it is recommended to have named replicas with at least the same Service Level Objective as the primary, to avoid saturating CPU on the replicas and thus forcing the primary to slow down.
+
+      - question: |
+          What happens to named replicas if the primary replica is unavailable, for example because of planned maintenance?
+        answer: |
+          Named replicas will still be available for read-only access, as usual.
+
+      - question: |
+          How can I improve availability of named replicas?
+        answer: |
+          By default, named replicas do not have any HA replicas of their own. A failover of a named replica requires creating a new replica first, which typically takes about 1-2 minutes. However, named replicas can also benefit from higher availability and shorter failovers provided by HA replicas. To add HA replicas for a named replica, you can use the parameter `ha-replicas` with [AZ CLI](/cli/azure/sql/db/replica#az_sql_db_replica_create), or the parameter `HighAvailabilityReplicaCount` with [PowerShell](/powershell/module/az.sql/set-azsqldatabase), or the `highAvailabilityReplicaCount` property with [REST API](/rest/api/sql/2021-02-01-preview/databases/create-or-update). The number of HA replicas can be set during the creation of a named replica and can be changed – only via AZ CLI, PowerShell or REST API – anytime after the named replica has been created. Pricing of HA replicas for named replicas is the same of HA replicas for regular Hyperscale databases.
+    
 
 additionalContent: |
 

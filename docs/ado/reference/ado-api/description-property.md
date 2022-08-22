@@ -1,23 +1,19 @@
 ---
-title: "Description Property | Microsoft Docs"
+title: "Description Property"
 description: Learn about the description property of the Error object in ADO that returns a string value containing a description of the error.
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Error::Description"
   - "Error::GetDescription"
   - "Error::get_Description"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Description property"
-ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Description Property
 Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.  

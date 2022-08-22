@@ -1,23 +1,21 @@
 ---
-description: "MSsync_states (Transact-SQL)"
-title: "MSsync_states (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsync_states (Transact-SQL)"
+description: MSsync_states (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsync_states"
   - "MSsync_states_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsync_states system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

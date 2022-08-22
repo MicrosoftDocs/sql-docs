@@ -1,20 +1,16 @@
 ---
+title: "Version Property Example (VB)"
 description: "Version Property Example (VB)"
-title: "Version Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Version property [ADO], Visual Basic example"
-ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Version property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Version Property Example (VB)
 This example uses the [Version](./version-property-ado.md) property of a [Connection](./connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  

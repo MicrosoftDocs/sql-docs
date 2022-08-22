@@ -1,21 +1,17 @@
 ---
+title: "Columns and Tables Append Methods, Name Property Example (VB)"
 description: "Columns and Tables Append Methods, Name Property Example (VB)"
-title: "Columns and Tables Append Methods, Name Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Name property [ADOX], Visual Basic example"
-  - "Append method [ADOX], Visual Basic example"
-ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Name property [ADOX], Visual Basic example"
+  - "Append method [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Columns and Tables Append Methods, Name Property Example (VB)
 The following code demonstrates how to create a new table.  

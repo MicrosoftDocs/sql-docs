@@ -1,19 +1,18 @@
 ---
-description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/25/2021"
+description: DROP DATABASE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP DATABASE"
   - "DROP_DATABASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "snapshots [SQL Server database snapshots], deleting"
   - "removing databases"
   - "database snapshots [SQL Server], removing"
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "databases [SQL Server], dropping"
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE (Transact-SQL)
@@ -102,6 +101,9 @@ The DROP DATABASE statement must run in autocommit mode and is not allowed in an
 Any database snapshots on a database must be dropped before the database can be dropped.
 
 Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

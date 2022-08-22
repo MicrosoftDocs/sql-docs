@@ -1,7 +1,7 @@
 ---
 title: Download Microsoft SqlClient Data Provider for SQL Server
 description: Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.
-ms.date: 03/31/2022
+ms.date: 07/26/2022
 dev_langs:
   - "csharp"
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
@@ -14,7 +14,7 @@ ms.author: v-davidengel
 ---
 # Download Microsoft SqlClient Data Provider for SQL Server
 
-The Microsoft.Data.SqlClient library is distributed as a NuGet package. Simply add a NuGet reference to Microsoft.Data.SqlClient. NuGet packages are easily consumed directly from a .NET project without the need to manually download anything. If you use Visual Studio for development, see [Install and use a package](/nuget/quickstart/install-and-use-a-package-in-visual-studio). For other ways to consume a NuGet package, see the [NuGet documentation](/nuget).
+The Microsoft.Data.SqlClient library is distributed as a NuGet package. Add a NuGet reference to Microsoft.Data.SqlClient. NuGet packages are easily consumed directly from a .NET project without the need to manually download anything. If you use Visual Studio for development, see [Install and use a package](/nuget/quickstart/install-and-use-a-package-in-visual-studio). For other ways to consume a NuGet package, see the [NuGet documentation](/nuget).
 
 ## Downloading the driver
 
@@ -22,9 +22,11 @@ If you need to download the Microsoft.Data.SqlClient package for offline use, it
 
 ## Download stable versions of Microsoft SqlClient Data Provider for SQL Server
 
+* [5.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.0)
 * [4.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.1.0)
 * [4.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.1)
 * [4.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.0)
+* [3.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.1.0)
 * [3.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.0.1)
 * [3.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.0.0)
 * [2.1.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.4)

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
   - "checking database objects"
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: pmasl
+author: rwestMSFT
 ms.author: umajay
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)

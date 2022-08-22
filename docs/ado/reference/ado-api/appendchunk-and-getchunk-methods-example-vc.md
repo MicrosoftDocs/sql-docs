@@ -1,21 +1,17 @@
 ---
+title: "AppendChunk and GetChunk Methods Example (VC++)"
 description: "AppendChunk and GetChunk Methods Example (VC++)"
-title: "AppendChunk and GetChunk Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetChunk method [ADO], VC++ example"
-  - "AppendChunk method [ADO], VC++ example"
-ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "GetChunk method [ADO], VC++ example"
+  - "AppendChunk method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # AppendChunk and GetChunk Methods Example (VC++)
 This example uses the [AppendChunk](./appendchunk-method-ado.md) and [GetChunk](./getchunk-method-ado.md) methods to fill an image field with data from another record.  

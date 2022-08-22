@@ -1,30 +1,28 @@
 ---
-description: "ALTER DATABASE SET HADR (Transact-SQL)"
-title: "ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE SET HADR (Transact-SQL)"
+description: ALTER DATABASE SET HADR (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET HADR"
   - "SET_HADR_TSQL"
   - "HADR_TSQL"
   - "HADR"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER DATABASE statement, AlwaysOn Availability Group"
   - "ALTER DATABASE statement, Always On Availability Group"
   - "ALTER DATABASE statement, SET HADR options"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
+dev_langs:
+  - "TSQL"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

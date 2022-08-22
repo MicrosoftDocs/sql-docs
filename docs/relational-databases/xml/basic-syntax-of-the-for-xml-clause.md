@@ -2,29 +2,28 @@
 title: "Basic syntax of the FOR XML Clause"
 description: Learn the basic syntax of the FOR XML clause and how it is used to determine the shape of XML resulting from an SQL query.
 ms.custom: "fresh2019may"
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BINARY BASE64 directive"
   - "ROOT directive"
   - "FOR XML clause, BINARY BASE64 directive"
   - "FOR XML clause, syntax"
   - "FOR XML clause, ROOT directive"
-ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Basic syntax of the FOR XML clause
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The **XMLDATA** directive to the FOR XML option is **deprecated**. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 ## Syntax
@@ -34,27 +33,27 @@ Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](.
 ```syntaxsql
 [ FOR { BROWSE | <XML> } ]
 <XML> ::=
-XML 
-    { 
-      { RAW [ ('ElementName') ] | AUTO } 
-        [ 
-           <CommonDirectives> 
+XML
+    {
+      { RAW [ ('ElementName') ] | AUTO }
+        [
+           <CommonDirectives>
            [ , { XMLDATA | XMLSCHEMA [ ('TargetNameSpaceURI') ]} ]
-           [ , ELEMENTS [ XSINIL | ABSENT ] 
+           [ , ELEMENTS [ XSINIL | ABSENT ]
         ]
-      | EXPLICIT 
-        [ 
-           <CommonDirectives> 
-           [ , XMLDATA ] 
+      | EXPLICIT
+        [
+           <CommonDirectives>
+           [ , XMLDATA ]
         ]
-      | PATH [ ('ElementName') ] 
-        [ 
-           <CommonDirectives> 
+      | PATH [ ('ElementName') ]
+        [
+           <CommonDirectives>
            [ , ELEMENTS [ XSINIL | ABSENT ] ]
         ]
-     } 
+     }
 
- <CommonDirectives> ::= 
+<CommonDirectives> ::=
    [ , BINARY BASE64 ]
    [ , TYPE ]
    [ , ROOT [ ('RootName') ] ]
@@ -92,7 +91,7 @@ Returns an inline W3C XML Schema (XSD). You can optionally specify a target name
 
 #### ELEMENTS
 
-If the ELEMENTS option is specified, the columns are returned as subelements. Otherwise, they are mapped to XML attributes. This option is supported in RAW, AUTO, and PATH modes only. You can optionally specify XSINIL or ABSENT when you use this directive. XSINIL specifies that an element that has an **xsi:nil** attribute set to True be created for NULL column values. By default or when ABSENT is specified together with ELEMENTS, no elements are created for NULL values. For a working sample, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md) and [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).
+If the ELEMENTS option is specified, the columns are returned as subelements. Otherwise, they're mapped to XML attributes. This option is supported in RAW, AUTO, and PATH modes only. You can optionally specify XSINIL or ABSENT when you use this directive. XSINIL specifies that an element that has an **xsi:nil** attribute set to True be created for NULL column values. By default or when ABSENT is specified together with ELEMENTS, no elements are created for NULL values. For a working sample, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md) and [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).
 
 #### BINARY BASE64
 
@@ -104,7 +103,7 @@ Specifies that the query returns the results as the **xml** type. For more infor
 
 #### ROOT [('*RootName*')]
 
-Specifies that a single, top-level element be added to the resulting XML. You can optionally specify the root element name to generate. The default value is `<root>`.
+Specifies that a single, top-level element is added to the resulting XML. You can optionally specify the root element name to generate. The default value is `<root>`.
 
 ## See also
 

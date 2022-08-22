@@ -7,7 +7,7 @@ titleSuffix: Azure SQL Database and Azure Synapse Analytics
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 4/6/2022
 ---
 

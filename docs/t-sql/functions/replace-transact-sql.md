@@ -1,27 +1,26 @@
 ---
-title: "REPLACE (Transact-SQL) | Microsoft Docs"
+title: "REPLACE (Transact-SQL)"
 description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "REPLACE_TSQL"
   - "REPLACE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "first string expression [SQL Server]"
   - "replacing string expression"
   - "third string expressions [SQL Server]"
   - "second string expressions [SQL Server]"
   - "REPLACE function"
-ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # REPLACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -111,7 +110,7 @@ GO
   
 ```  
 ------------  
-Number of spaces in the sentence: 8  
+Number of spaces in the sentence: 7  
 
 (1 row(s) affected)  
 ```  

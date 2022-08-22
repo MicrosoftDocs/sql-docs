@@ -1,25 +1,24 @@
 ---
 title: Adding a shard using elastic database tools
 description: How to use Elastic Scale APIs to add new shards to a shard set.
-services: sql-database
+author: scoriani
+ms.author: scoriani
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 08/17/2022
 ms.service: sql-database
 ms.subservice: scale-out
-ms.custom: sqldbrb=1
-ms.devlang: 
 ms.topic: how-to
-author: scoriani 
-ms.author: scoriani
-ms.reviewer: kendralittle, mathoma
-ms.date: 01/03/2019
+ms.custom: "sqldbrb=1"
+services: "sql-database"
 ---
 # Adding a shard using Elastic Database tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 ## To add a shard for a new range or key
 
-Applications often need to add new shards to handle data that is expected from new keys or key ranges, for a shard map that already exists. For example, an application sharded by Tenant ID may need to provision a new shard for a new tenant, or data sharded monthly may need a new shard provisioned before the start of each new month.
+Applications often need to add new shards to handle data that is expected from new keys or key ranges, for a shard map that already exists. For example, an application sharded by Tenant ID may need to create a new shard for a new tenant, or data sharded monthly may need a new shard provisioned before the start of each new month.
 
-If the new range of key values is not already part of an existing mapping, it is simple to add the new shard and associate the new key or range to that shard.
+If the new range of key values isn't already part of an existing mapping, you can add the new shard and associate the new key or range to that shard.
 
 ### Example:  adding a shard and its range to an existing shard map
 
@@ -44,7 +43,7 @@ For the .NET version, you can also use PowerShell as an alternative to create a 
 
 ## To add a shard for an empty part of an existing range
 
-In some circumstances, you may have already mapped a range to a shard and partially filled it with data, but you now want upcoming data to be directed to a different shard. For example, you shard by day range and have already allocated 50 days to a shard, but on day 24, you want future data to land in a different shard. The elastic database [split-merge tool](elastic-scale-overview-split-and-merge.md) can perform this operation, but if data movement is not necessary (for example, data for the range of days [25, 50), that is, day 25 inclusive to 50 exclusive, does not yet exist) you can perform this entirely using the Shard Map Management APIs directly.
+In some circumstances, you may have already mapped a range to a shard and partially filled it with data, but you now want upcoming data to be directed to a different shard. For example, you can shard by day range and have already allocated 50 days to a shard, but on day 24, you want future data to land in a different shard. The elastic database [split-merge tool](elastic-scale-overview-split-and-merge.md) can perform this operation, but if data movement isn't necessary (for example, data for the range of days [25, 50), that is, day 25 inclusive to 50 exclusive, doesn't yet exist) you can perform this entirely using the Shard Map Management APIs directly.
 
 ### Example: splitting a range and assigning the empty portion to a newly added shard
 
@@ -73,6 +72,7 @@ upd.Shard = shard2;
 sm.MarkMappingOnline(sm.UpdateMapping(sm.GetMappingForKey(25), upd));
 ```
 
-**Important**:  Use this technique only if you are certain that the range for the updated mapping is empty.  The preceding methods do not check data for the range being moved, so it is best to include checks in your code.  If rows exist in the range being moved, the actual data distribution will not match the updated shard map. Use the [split-merge tool](elastic-scale-overview-split-and-merge.md) to perform the operation instead in these cases.  
+> [!IMPORTANT]  
+> Use this technique only if you are certain that the range for the updated mapping is empty.  The preceding methods do not check data for the range being moved, so it is best to include checks in your code.  If rows exist in the range being moved, the actual data distribution will not match the updated shard map. Use the [split-merge tool](elastic-scale-overview-split-and-merge.md) to perform the operation instead in these cases.  
 
 [!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]

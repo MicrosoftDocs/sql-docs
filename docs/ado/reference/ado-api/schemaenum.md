@@ -1,21 +1,17 @@
 ---
+title: "SchemaEnum"
 description: "SchemaEnum"
-title: "SchemaEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "SchemaEnum"
-helpviewer_keywords: 
-  - "SchemaEnum enumeration [ADO]"
-ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "SchemaEnum"
+helpviewer_keywords:
+  - "SchemaEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # SchemaEnum
 Specifies the type of schema **Recordset** that the [OpenSchema](./openschema-method.md) method retrieves.  

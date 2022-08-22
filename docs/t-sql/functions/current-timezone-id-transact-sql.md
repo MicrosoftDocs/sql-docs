@@ -1,19 +1,19 @@
 ---
+title: "CURRENT_TIMEZONE_ID (Transact-SQL)"
 description: "CURRENT_TIMEZONE_ID (Transact-SQL)"
-title: "CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: ""
 ms.date: "05/18/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CURRENT_TIMEZONE)ID"
   - "CURRENT_TIMEZONE_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current time zone id [SQL Server]"
   - "current timezoneid [SQL Server]"
   - "system time zone id[SQL Server]"
@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "timezoneid [SQL Server], functions"
   - "time zone id [SQL Server], functions"
   - "CURRENT_TIMEZONE_ID function [SQL Server]"
-author: MladjoA
-ms.author: mlandzic
-
+dev_langs:
+  - "TSQL"
 ---
 # CURRENT_TIMEZONE_ID (Transact-SQL)
 

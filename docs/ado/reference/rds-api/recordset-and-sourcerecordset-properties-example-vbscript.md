@@ -1,21 +1,17 @@
 ---
+title: "Recordset and SourceRecordset Properties Example (VBScript)"
 description: "Recordset and SourceRecordset Properties Example (VBScript)"
-title: "Recordset and SourceRecordset Properties Example (VBScript) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Source property [ADO], VBScript example"
-  - "Recordset property [ADO], VBScript example"
-ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Source property [ADO], VBScript example"
+  - "Recordset property [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Recordset and SourceRecordset Properties Example (VBScript)
 > [!IMPORTANT]

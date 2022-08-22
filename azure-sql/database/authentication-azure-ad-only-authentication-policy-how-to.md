@@ -7,9 +7,9 @@ ms.subservice: security
 ms.topic: how-to
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/22/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Using Azure Policy to enforce Azure Active Directory only authentication with Azure SQL

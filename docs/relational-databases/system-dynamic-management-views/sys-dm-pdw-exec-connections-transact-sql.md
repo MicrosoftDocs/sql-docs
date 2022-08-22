@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_exec_connections (Transact-SQL)"
-title: "sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_exec_connections (Transact-SQL)"
+description: sys.dm_pdw_exec_connections (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

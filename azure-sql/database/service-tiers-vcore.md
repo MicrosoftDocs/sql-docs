@@ -1,17 +1,20 @@
 ---
 title: vCore purchasing model
-titleSuffix: Azure SQL Database & SQL Managed Instance 
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database and Azure SQL Managed Instance.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
-ms.custom: devx-track-azurepowershell
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.custom:
+  - "devx-track-azurepowershell"
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # vCore purchasing model overview - Azure SQL Database and Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -34,7 +37,7 @@ In the case of Azure SQL Database, the vCore purchasing model provides higher co
 Two vCore service tiers are available in both Azure SQL Database and Azure SQL Managed Instance:
 
 - [General purpose](service-tier-general-purpose.md) is a budget-friendly tier designed for most workloads with common performance and availability requirements.
-- [Business critical](service-tier-business-critical.md) tier is designed for performance-sensitive workloads with strict availability requirements.
+- [Business Critical](service-tier-business-critical.md) tier is designed for performance-sensitive workloads with strict availability requirements.
 
 The [Hyperscale service tier](service-tier-Hyperscale.md) is also available for single databases in Azure SQL Database. This service tier is designed for most business workloads, providing highly scalable storage, read scale-out, fast scaling, and fast database restore capabilities.
 

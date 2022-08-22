@@ -1,7 +1,7 @@
 ---
 title: "Create a Reporting Services mobile report | Microsoft Docs"
 description: With SQL Server Mobile Report Publisher, create SQL Server Reporting Services mobile reports for any screen size with flexible mobile report elements.
-ms.date: 03/30/2017
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Create a Reporting Services mobile report
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 With SQL Server Mobile Report Publisher, you can quickly create SQL Server Reporting Services mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
   
 The first time you create a mobile report, you can install SQL Server Mobile Report Publisher, on your local machine from the Reporting Services web portal. Or you can install it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
@@ -38,9 +41,12 @@ The first time you create a mobile report, you can install SQL Server Mobile Rep
   
 6. Select **Local Excel** or **Report Server**.  
   
-   >**Tips**: If you're adding data from Excel, make sure:  
-    >* You [prepare the Excel data](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) to work in your mobile report.  
-    >* You close the file first.  
+   > [!TIP]  
+   > If you're adding data from Excel, make sure:
+   >
+   > * You [prepare the Excel data](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) to work in your mobile report.  
+   > * You close the file first.
+
 7. Select the worksheets you want, and select **Import**.   
    You can add more than one worksheet from a workbook at a time.  
     

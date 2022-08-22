@@ -1,25 +1,23 @@
 ---
-description: "CREATE WORKLOAD Classifier (Transact-SQL)"
-title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE WORKLOAD Classifier (Transact-SQL)"
+description: CREATE WORKLOAD Classifier (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "wiassaf"
 ms.date: 01/24/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WORKLOAD CLASSIFIER"
   - "WORKLOAD_CLASSIFIER_TSQL"
   - "CREATE WORKLOAD CLASSIFIER"
   - "CREATE_WORKLOAD_CLASSIFIER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE WORKLOAD CLASSIFIER statement"
-ms.assetid: 
-author: ronortloff
-ms.author: rortloff
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)

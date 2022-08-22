@@ -1,19 +1,17 @@
 ---
-description: "ALTER USER (Transact-SQL)"
-title: "ALTER USER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER USER (Transact-SQL)"
+description: ALTER USER (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_USER_TSQL"
   - "ALTER USER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying database users"
   - "ALTER USER statement"
   - "renaming databases"
@@ -22,9 +20,9 @@ helpviewer_keywords:
   - "names [SQL Server], database users"
   - "default schemas"
   - "modifying default schemas"
+dev_langs:
+  - "TSQL"
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER USER (Transact-SQL)
@@ -407,7 +405,7 @@ GO
 
 ```sql
 ALTER USER Philip
-WITHNAME = Philipe
+WITH NAME = Philipe
 , DEFAULT_SCHEMA = Development
 , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per';
 GO

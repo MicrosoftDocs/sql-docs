@@ -1,15 +1,17 @@
 ---
 title: DTU-based purchasing model
-description: Learn about the DTU-based purchasing model for Azure SQL Database and compare compute and storage sizes based on service tiers.  
-services: sql-database
+description: Learn about the DTU-based purchasing model for Azure SQL Database and compare compute and storage sizes based on service tiers.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: references_regions
-ms.devlang: 
+ms.custom:
+  - "references_regions"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
 ---
 # DTU-based purchasing model overview 
@@ -80,8 +82,6 @@ For example, a database can be moved to different hardware if it's scaled up or 
 If a database is moved to different hardware, workload performance can change. The DTU model guarantees that the throughput and response time of the [DTU benchmark](dtu-benchmark.md) workload will remain substantially identical as the database moves to a different hardware type, as long as its service objective (the number of DTUs) stays the same.
 
 However, across the wide spectrum of customer workloads running in Azure SQL Database, the impact of using different hardware for the same service objective can be more pronounced. Different workloads may benefit from different hardware configurations and features. Therefore, for workloads other than the [DTU benchmark](dtu-benchmark.md), it's possible to see performance differences if the database moves from one type of hardware to another.
-
-For example, an application that is sensitive to network latency can see better performance on Gen5 hardware vs. Gen4 due to the use of Accelerated Networking in Gen5, but an application using intensive read IO can see better performance on Gen4 hardware versus Gen5 due to a higher memory per core ratio on Gen4.
 
 Customers can use the [vCore](service-tiers-vcore.md) model to choose their preferred hardware configuration during database creation and scaling. In the vCore model, detailed resource limits of each service objective in each hardware configuration are documented for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md). For more information about hardware in the vCore model, see [Hardware configuration for SQL Database](./service-tiers-sql-database-vcore.md#hardware-configuration) or [Hardware configuration for SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md#hardware-configurations).
 

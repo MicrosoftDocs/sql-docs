@@ -1,21 +1,19 @@
 ---
-description: "Data Collector Views (Transact-SQL)"
-title: "Data Collector Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Data Collector Views (Transact-SQL)"
+description: Data Collector Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collector view"
   - "data collector [SQL Server], views"
+dev_langs:
+  - "TSQL"
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Data Collector Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

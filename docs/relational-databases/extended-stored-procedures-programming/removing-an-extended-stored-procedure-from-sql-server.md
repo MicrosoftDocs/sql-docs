@@ -1,28 +1,25 @@
 ---
-description: "Removing an Extended Stored Procedure from SQL Server"
 title: "Removing an Extended Stored Procedure"
+description: Removing an Extended Stored Procedure from SQL Server
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "deleting extended stored procedures"
   - "removing extended stored procedures"
   - "extended stored procedures [SQL Server], removing"
   - "dropping extended stored procedures"
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-author: LitKnd
-ms.author: kendralittle
-ms.custom: seo-dt-2019
 ---
 # Removing an Extended Stored Procedure from SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  To drop each extended stored procedure function in a user-defined extended stored procedure DLL, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator must run the **sp_dropextendedproc** system stored procedure, specifying the name of the function and the name of the DLL in which that function resides. For example, this command removes the function **xp_hello**, located in a DLL named xp_hello.dll, from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

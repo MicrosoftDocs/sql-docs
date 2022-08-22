@@ -1,18 +1,18 @@
 ---
+title: "CHECKPOINT (Transact-SQL)"
 description: "CHECKPOINT (Transact-SQL)"
-title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "07/27/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CHECKPOINT_TSQL"
   - "CHECKPOINT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [SQL Server], checkpoints"
   - "automatic checkpoints"
   - "writing dirty pages to disk"
@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "logs [SQL Server], checkpoints"
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
-ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

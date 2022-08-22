@@ -1,21 +1,19 @@
 ---
-description: "Log Shipping Tables (Transact-SQL)"
-title: "Log Shipping Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Log Shipping Tables (Transact-SQL)"
+description: Log Shipping Tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "log shipping [SQL Server], system tables"
   - "system tables [SQL Server], log shipping"
+dev_langs:
+  - "TSQL"
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: LitKnd
-ms.author: kendralittle
 ---
 # Log Shipping Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

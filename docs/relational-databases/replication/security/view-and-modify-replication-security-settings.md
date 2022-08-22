@@ -80,7 +80,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 4.  In the **Update Replication Passwords** dialog box, specify the account and the new password.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 #### To change security settings for the Snapshot Agent  
   
@@ -101,7 +101,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. See below for the procedure to change the context.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 #### To change security settings for the Log Reader Agent  
   
@@ -122,7 +122,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. Change the context using the next procedure.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Log Reader Agent for each published database. Changing the security settings for the agent on one publication affects the settings for all publications in the publication database.  
@@ -133,7 +133,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Agent Connection to the Publisher** section, specify the login and password used by the replication administrative user schema you configured. For more information, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To change security settings for the Distribution Agent for a push subscription  
   
@@ -145,7 +145,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Distribution Agent for a pull subscription  
   
@@ -157,7 +157,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Merge Agent for a push subscription  
   
@@ -167,7 +167,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Merge Agent for a pull subscription  
   
@@ -177,7 +177,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change the account under which the Queue Reader Agent runs  
   
@@ -191,7 +191,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Queue Reader Agent for each distribution database. Changing the security settings for the agent affects the settings for all publications at all Publishers that use this distribution database.  
@@ -202,7 +202,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Agent Connection to the Publisher** section, specify a value of **Impersonate the agent process account** or **SQL Server Authentication** for the **Agent Connection Mode** option. If you specify **SQL Server Authentication**, also enter values for **Login** and **Password**.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Queue Reader Agent for each distribution database. Changing the security settings for the agent affects the settings for all publications at all Publishers that use this distribution database.  
@@ -221,7 +221,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   **Use SQL Server Authentication with the following login and password**. Select this option if you have not defined a remote server or linked server between the Subscriber and the Publisher. Replication will create a linked server for you. The account you specify must already exist at the Publisher.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 > [!NOTE]  
 >  This procedure changes the method that replication triggers use to connect from the Subscriber to the Publisher when changes are made at the Subscriber. You can also change settings associated with the Distribution Agent for an immediate updating subscription. For more information, see the procedures earlier in this topic.  
@@ -232,11 +232,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, enter a strong password in the **Password** and **Confirm Password** text boxes.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 3.  On the **General** page of the **Publisher Properties - \<Publisher>** dialog box, enter a strong password in the **Password** and **Confirm Password** text boxes.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

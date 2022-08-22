@@ -62,7 +62,7 @@ Declares the application workload type when connecting to a server. Possible val
 
 ### Multi-subnet failover
 
-If your application is connecting to a high-availability, disaster recovery (AlwaysOn Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover.** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
+If your application is connecting to a high-availability, disaster recovery (Always On Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover.** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
 
 ### Transparent Network IP Resolution
 

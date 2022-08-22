@@ -1,19 +1,15 @@
 ---
+title: "DataSpace Object (RDS) Properties, Methods, and Events"
 description: "DataSpace Object (RDS) Properties, Methods, and Events"
-title: "DataSpace Object (RDS) Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "DataSpace object [RDS], members"
-ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataSpace object [RDS], members"
+apitype: "COM"
 ---
 # DataSpace Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

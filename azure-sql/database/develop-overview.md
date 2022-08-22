@@ -1,16 +1,18 @@
 ---
-title: Application Development Overview 
+title: Application Development Overview
 description: Learn about available connectivity libraries and best practices for applications connecting to SQL Database.
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 11/14/2019
-ms.custom: sqldbrb=2
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.custom:
+  - "sqldbrb=2"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Application development overview - SQL Database & SQL Managed Instance
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb-sqlmi.md)]

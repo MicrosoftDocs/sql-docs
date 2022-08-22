@@ -1,14 +1,14 @@
 ---
-title: HDFS distributed data copy | Microsoft Docs
+title: HDFS distributed data copy
 titleSuffix: SQL Server Big Data Clusters
 description: Use azdata distcp to perform data movement between SQL Server big data clusters.
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 12/01/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Use azdata distcp to perform data movement between SQL Server big data clusters

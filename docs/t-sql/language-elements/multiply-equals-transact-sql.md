@@ -1,28 +1,27 @@
 ---
+title: "*= (Multiplication Assignment) (Transact-SQL)"
 description: "*= (Multiplication Assignment) (Transact-SQL)"
-title: "*= (Multiplication Assignment) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "*=_TSQL"
   - "*="
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compound operators, *="
   - "assignment operators, *="
   - "augmented operators, *="
   - "*= (multiply equals)"
   - "*= (multiplication assignment)"
-ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # *= (Multiplication Assignment) (Transact-SQL)

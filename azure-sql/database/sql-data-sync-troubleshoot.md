@@ -1,16 +1,18 @@
 ---
 title: Troubleshoot SQL Data Sync
-description: "Learn how to identify, troubleshoot, and resolve common issues with SQL Data Sync in Azure."
-services: sql-database
+description: Learn how to identify, troubleshoot, and resolve common issues with SQL Data Sync in Azure.
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: data sync, sqldbrb=1
-ms.devlang: 
+ms.custom:
+  - "data sync"
+  - "sqldbrb=1"
 ms.topic: troubleshooting
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
-ms.date: 12/20/2018
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/15/2022
 ---
 # Troubleshoot issues with SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -20,7 +22,7 @@ This article describes how to troubleshoot known issues with SQL Data Sync in Az
 For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](sql-data-sync-data-sql-server-sql-database.md).
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance at this time.
+> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Sync issues
 
@@ -37,10 +39,12 @@ For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-pr
 - [I see this message: "Cannot insert the value NULL into the column \<column>. Column does not allow nulls." What does this mean, and how can I fix it?](#sync-nulls)
 
 - [How does Data Sync handle circular references? That is, when the same data is synced in multiple sync groups, and keeps changing as a result?](#sync-circ)
+ 
+- [Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"](#syncGroupOperationResults)
 
 ### <a name="sync-fails"></a> Sync fails in the portal UI for on-premises databases that are associated with the client agent
 
-Sync fails in the SQL Data Sync portal UI for on-premises databases that are associated with the client agent. On the local computer that's running the agent, you see System.IO.IOException errors in the Event Log. The errors say that the disk has insufficient space.
+Sync fails in the SQL Data Sync portal UI for on-premises databases that are associated with the client agent. On the local computer that's running the agent, you see `System.IO.IOException` errors in the Event Log. The errors say that the disk has insufficient space.
 
 - **Cause**. The drive has insufficient space.
 
@@ -77,9 +81,9 @@ Any of the following conditions might result in a sync group being stuck in the 
 
 ### <a name="sync-baddata"></a> I see erroneous data in my tables
 
-If tables that have the same name but which are from different database schemas are included in a sync, you see erroneous data in the tables after the sync.
+If tables that have the same name but are from different database schemas are included in a sync, you see erroneous data in the tables after the sync.
 
-- **Cause**. The SQL Data Sync provisioning process uses the same tracking tables for tables that have the same name but which are in different schemas. Because of this, changes from both tables are reflected in the same tracking table. This causes erroneous data changes during sync.
+- **Cause**. The SQL Data Sync provisioning process uses the same tracking tables for tables that have the same name but are in different schemas. Because of this, changes from both tables are reflected in the same tracking table. This causes erroneous data changes during sync.
 
 - **Resolution**. Ensure that the names of tables that are involved in a sync are different, even if the tables belong to different schemas in a database.
 
@@ -100,11 +104,13 @@ Your performance degrades significantly, possibly to the point where you can't e
 - **Resolution**. The best fix is prevention. Ensure that you don't have circular references in your sync groups. Any row that is synced by one sync group can't be synced by another sync group.
 
 ### <a name="sync-nulls"></a> I see this message: "Cannot insert the value NULL into the column \<column>. Column does not allow nulls." What does this mean, and how can I fix it? 
+
 This error message indicates that one of the two following issues has occurred:
 -  A table doesn't have a primary key. To fix this issue, add a primary key to all the tables that you're syncing.
 -  There's a WHERE clause in your CREATE INDEX statement. Data Sync doesn't handle this condition. To fix this issue, remove the WHERE clause or manually make the changes to all databases. 
  
 ### <a name="sync-circ"></a> How does Data Sync handle circular references? That is, when the same data is synced in multiple sync groups, and keeps changing as a result?
+
 Data Sync doesn't handle circular references. Be sure to avoid them. 
 
 ## Client agent issues
@@ -214,7 +220,7 @@ Your attempt to delete a sync group fails. Any of the following scenarios might 
 
 - **Resolution**. To avoid an **Out-of-Date** status for a sync group, examine the results of your sync jobs in the history viewer on a regular basis. Investigate and resolve any changes that fail to apply.
 
-  If a sync group's status is **Out-of-Date**, delete the sync group and then re-create it.
+  If a sync group's status is **Out-of-Date**, delete the sync group, and then re-create it.
 
 ### <a name="setup-delete2"></a> A sync group can't be deleted within three minutes of uninstalling or stopping the agent
 
@@ -232,6 +238,15 @@ You can't delete a sync group within three minutes of uninstalling or stopping t
 ### <a name="setup-restore"></a> What happens when I restore a lost or corrupted database?
 
 If you restore a lost or corrupted database from a backup, there might be a non-convergence of data in the sync groups to which the database belongs.
+
+### <a name="syncGroupOperationResults"></a> Error message "Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'"
+
+If you receive the error message `Sync0022 Customer does not have authorization to perform action 'syncGroupOperationResults/read'`, the account attempting the operation does not have sufficient subscription-level permissions. Add:
+ - "Microsoft.Sql/locations/syncMemberOperationResults/read"
+ - "Microsoft.Sql/locations/syncAgentOperationResults/read"
+ - "Microsoft.Sql/locations/syncGroupOperationResults/read"
+
+For more information, see [Resource provider operations RBAC](/azure/role-based-access-control/resource-provider-operations) and [SQL Data Sync Database accounts with least required privileges](sql-data-sync-best-practices.md#database-accounts-with-least-required-privileges).
 
 ## Next steps
 For more information about SQL Data Sync, see:

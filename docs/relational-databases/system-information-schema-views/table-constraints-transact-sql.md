@@ -22,19 +22,19 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLE_CONSTRAINTS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each table constraint in the current database. This information schema view returns information about the objects to which the current user has permissions.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA**.*view_name*.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Constraint qualifier.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> <strong>\*\* Important \*\*</strong>  only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> **Important:** The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |**CONSTRAINT_NAME**|**sysname**|Constraint name.|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> <strong>\*\* Important \*\*</strong>  only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **Important:** The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |**TABLE_NAME**|**sysname**|Table name.|  
 |**CONSTRAINT_TYPE**|**varchar(**11**)**|Type of constraint:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
 |**IS_DEFERRABLE**|**varchar(**2**)**|Specifies whether constraint checking is deferrable. Always returns NO.|  

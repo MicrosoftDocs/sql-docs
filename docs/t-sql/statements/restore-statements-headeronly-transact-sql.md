@@ -1,32 +1,30 @@
 ---
-description: "RESTORE Statements - HEADERONLY (Transact-SQL)"
-title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE HEADERONLY (Transact-SQL)"
+description: RESTORE Statements - HEADERONLY (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HEADERONLY"
   - "RESTORE HEADERONLY"
   - "RESTORE_HEADERONLY_TSQL"
   - "HEADERONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup sets [SQL Server], header information"
   - "headers [SQL Server]"
   - "RESTORE HEADERONLY statement"
   - "backup header information [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   Returns a result set containing all the backup header information for all backup sets on a particular backup device in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
@@ -83,7 +81,7 @@ FROM <backup_device>
 >  RESTORE HEADERONLY looks at all backup sets on the media. Therefore, producing this result set when using high-capacity tape drives can take some time. To get a quick look at the media without getting information about every backup set, use RESTORE LABELONLY or specify FILE **=** _backup_set_file_number_.  
 > 
 > [!NOTE]
->  Due to the nature of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format, it is possible for backup sets from other software programs to occupy space on the same media as [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets. The result set returned by RESTORE HEADERONLY includes a row for each of these other backup sets.  
+>  Due to the nature of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format, it is possible for backup sets from other software programs to occupy space on the same media as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets. The result set returned by RESTORE HEADERONLY includes a row for each of these other backup sets.  
   
 |Column name|Data type|Description for SQL Server backup sets|  
 |-----------------|---------------|--------------------------------------------|  

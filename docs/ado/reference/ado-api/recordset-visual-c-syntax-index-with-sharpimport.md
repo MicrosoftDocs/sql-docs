@@ -1,21 +1,17 @@
 ---
+title: "Recordset (Visual C++ Syntax Index with #import)"
 description: "Recordset (Visual C++ Syntax Index with #import)"
-title: "Recordset (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Recordset collection [ADO], Visual C++ syntax index with #import"
-ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Recordset collection [ADO], Visual C++ syntax index with #import"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Recordset (Visual C++ Syntax Index with #import)
 ## Methods  

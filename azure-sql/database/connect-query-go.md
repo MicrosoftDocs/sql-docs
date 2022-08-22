@@ -2,17 +2,21 @@
 title: Use Go to query
 description: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: sqldbrb=2, mode-api
-ms.devlang: golang
+ms.custom:
+  - "sqldbrb=2"
+  - "mode-api"
+ms.devlang:
+  - "golang"
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/05/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

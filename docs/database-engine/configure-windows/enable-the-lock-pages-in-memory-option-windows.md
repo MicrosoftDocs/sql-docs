@@ -1,8 +1,8 @@
 ---
-title: "Enable the Lock Pages in Memory Option (Windows) | Microsoft Docs"
+title: "Enable the Lock Pages in Memory Option (Windows)"
 description: 'Learn how to turn on the "Lock Pages in Memory" option. See how it can boost performance by keeping data in physical memory instead of paging it to disk.'
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -10,40 +10,35 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
-ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: rwestMSFT
 ms.author: randolphwest
 ---
 # Enable the Lock Pages in Memory Option (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  
   
 > [!NOTE]  
->  Locking pages in memory may boost performance when paging memory to disk is expected.  
+>  Locking pages in memory may boost performance when paging memory to disk is expected. For more information, see [Lock Pages in Memory (LPIM)](server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
   
- Use the Windows Group Policy tool (gpedit.msc) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
+ Use the Windows Group Policy tool (`gpedit.msc`) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
   
 ### To enable the lock pages in memory option  
   
-1.  On the **Start** menu, click **Run**. In the **Open** box, type **gpedit.msc**.  
+1. On the **Start** menu, select **Run**. In the **Open** box, type **gpedit.msc**. The **Group Policy** dialog box opens.  
+1. On the **Local Group Group Policy** console, expand **Computer Configuration**. 
+1. Expand **Windows Settings**. 
+1. Expand **Security Settings**.
+1. Expand **Local Policies**.  
+1. Select the **User Rights Assignment** folder. The policies will be displayed in the details pane.  
+1. In the pane, scroll to and double-click the **Lock pages in memory** policy.  
+1. In the **Local Security Policy Setting** dialog box, select **Add User or Group...*. Add the SQL Server Service account. To determine the service account for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], refer to the SQL Server Configuration Manager or query the `service_account` from `sys.dm_server_services`. For more information, see [sys.dm_server_services (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md).
+1. Select **OK**.
+1. Restart the instance for this setting to take effect.
   
-2.  On the **Local Group Policy Editor** console, expand **Computer Configuration**, and then expand **Windows Settings**.  
-  
-3.  Expand **Security Settings**, and then expand **Local Policies**.  
-  
-4.  Select the **User Rights Assignment** folder.  
-  
-     The policies will be displayed in the details pane.  
-  
-5.  In the pane, double-click **Lock pages in memory**.  
-  
-6.  In the **Local Security Setting - Lock pages in memory** dialog box, click **Add User or Group**.  
-  
-7.  In the **Select Users, Service Accounts, or Groups** dialog box, select the SQL Server Service account.  
-  
-8.  Restart the SQL Server Service for this setting to take effect.
-  
-## See Also  
- [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
+## Next steps
+
+- [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
+- [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md)
   
   

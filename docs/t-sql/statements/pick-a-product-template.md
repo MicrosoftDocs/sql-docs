@@ -1,20 +1,17 @@
 ---
-title: "Title (Transact-SQL) | Microsoft Docs"
-description: "Template article for Transact-SQL reference documentation"
-ROBOTS: NOINDEX 
-ms.custom: ""
+title: "Title (Transact-SQL)"
+description: Template article for Transact-SQL reference documentation
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+ROBOTS: NOINDEX
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # Title (Transact-SQL)
 

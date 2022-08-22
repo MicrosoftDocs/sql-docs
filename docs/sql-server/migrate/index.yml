@@ -97,11 +97,11 @@ landingContent:
       - text: Overview
         url: ../end-of-support/sql-server-end-of-support-overview.md
       - text: SQL Server 2008 & R2
-        url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
+        url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
       - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md
       - text: Free ESUs with Azure VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
+        url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
     - linkListType: download
       links: 
       - text: Extended security updates datasheet PDF

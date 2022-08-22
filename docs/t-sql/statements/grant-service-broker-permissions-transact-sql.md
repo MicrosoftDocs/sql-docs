@@ -1,16 +1,14 @@
 ---
-description: "GRANT Service Broker Permissions (Transact-SQL)"
-title: "GRANT Service Broker Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Service Broker Permissions (Transact-SQL)"
+description: GRANT Service Broker Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], Service Broker"
   - "routes [Service Broker], permissions"
   - "Service Broker, permissions"
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], permissions"
   - "message types [Service Broker], permissions"
   - "contracts [Service Broker], permissions"
+dev_langs:
+  - "TSQL"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-author: VanMSFT
-ms.author: vanto
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

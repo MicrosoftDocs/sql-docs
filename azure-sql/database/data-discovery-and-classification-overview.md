@@ -1,16 +1,17 @@
 ---
 title: Data Discovery & Classification
 description: Data Discovery & Classification for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
-services: sql-database
+services:
+  - "sql-database"
 ms.service: sql-db-mi
 ms.subservice: security
-ms.custom: sqldbrb=1
+ms.custom:
+  - "sqldbrb=1"
 titleSuffix: Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse
-ms.devlang: 
 ms.topic: conceptual
 author: Madhumitatripathy
 ms.author: matripathy
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 05/02/2022
 tags: azure-synapse
 ---
@@ -260,11 +261,11 @@ You can use the following SQL drivers to retrieve classification metadata:
 
 ## FAQ - Advanced classification capabilities
 
-**Question**: Will [Azure Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
-**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Azure Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
+**Question**: Will [Microsoft Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
+**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
 
 ## Next steps
 
 - Consider configuring [Azure SQL Auditing](../../azure-sql/database/auditing-overview.md) for monitoring and auditing access to your classified sensitive data.
 - For a presentation that includes data Discovery & Classification, see [Discovering, classifying, labeling & protecting SQL data | Data Exposed](https://www.youtube.com/watch?v=itVi9bkJUNc).
-- To classify your Azure SQL Databases and Azure Synapse Analytics with Azure Purview labels using T-SQL commands, see [Classify your Azure SQL data using Azure Purview labels](/azure/sql-database/scripts/sql-database-import-purview-labels).
+- To classify your Azure SQL Databases and Azure Synapse Analytics with Microsoft Purview labels using T-SQL commands, see [Classify your Azure SQL data using Microsoft Purview labels](/azure/sql-database/scripts/sql-database-import-purview-labels).

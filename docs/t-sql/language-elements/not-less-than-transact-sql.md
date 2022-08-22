@@ -1,24 +1,23 @@
 ---
 title: "!&lt; (Not Less Than) (Transact-SQL)"
 description: "!&lt; (Not Less Than) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "!<"
   - "!<_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "!< (not less than)"
   - "not less than operator (!<)"
-ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/13/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # !&lt; (Not Less Than) (Transact-SQL)

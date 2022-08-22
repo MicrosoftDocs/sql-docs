@@ -1,19 +1,17 @@
 ---
-description: "EXECUTE AS Clause (Transact-SQL)"
-title: "EXECUTE AS Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "EXECUTE AS Clause (Transact-SQL)"
+description: EXECUTE AS Clause (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AS"
   - "AS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permission sets [SQL Server]"
   - "queues [SQL Server]"
   - "stored procedures [SQL Server], executing"
@@ -23,12 +21,12 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
   - "functions [SQL Server], execution context"
+dev_langs:
+  - "TSQL"
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: VanMSFT
-ms.author: vanto
 ---
 # EXECUTE AS Clause (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can define the execution context of the following user-defined modules: functions (except inline table-valued functions), procedures, queues, and triggers.  
   

@@ -1,22 +1,20 @@
 ---
-title: "backupmediaset (Transact-SQL) | Microsoft Docs"
+title: "backupmediaset (Transact-SQL)"
 description: Reference for backupmediaset, which contains one row for each backup media set.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/07/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "backupmediaset"
   - "backupmediaset_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup media [SQL Server], backupmediaset system table"
   - "backupmediaset system table"
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # backupmediaset (Transact-SQL)
 

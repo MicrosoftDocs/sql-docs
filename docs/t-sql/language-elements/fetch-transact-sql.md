@@ -1,19 +1,19 @@
 ---
+title: "FETCH (Transact-SQL)"
 description: "FETCH (Transact-SQL)"
-title: "FETCH (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "FETCH"
   - "FETCH_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FETCH statement"
   - "cursors [SQL Server], fetching"
   - "Transact-SQL cursors, fetching and scrolling"
@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "fetching [SQL Server]"
   - "SCROLL option"
   - "row fetching [SQL Server]"
-ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # FETCH (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

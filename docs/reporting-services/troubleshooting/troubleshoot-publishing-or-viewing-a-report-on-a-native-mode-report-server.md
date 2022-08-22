@@ -33,11 +33,11 @@ Verify that the report server URL is the address of the report server (for examp
   
 \<report server name> Includes an Underscore (_)  
   
-If a report runs without errors, but toggle items do not work (for example, you click an expand icon (+) and nothing happens), check the name of the computer hosting the report server. If the computer name includes an underscore, toggle items do not work. This is a known issue. There is no workaround.   
+If a report runs without errors, but toggle items don't work (for example, you click an expand icon (+) and nothing happens), check the name of the computer hosting the report server. If the computer name includes an underscore, toggle items don't work. This is a known issue. There is no workaround.   
   
-To run reports with toggle items, you must use a computer that does not include underscore characters in its name.  
+To run reports with toggle items, you must use a computer that doesn't include underscore characters in its name.  
   
-## Images and charts do not load when I use Run As and a browser to run my report.  
+## Images and charts don't load when I use Run As and a browser to run my report.  
 When you run Report Manager under a different security context, you might not see all report items in a report.   
   
 ### Insufficient Permissions on Internet Temporary File Folders  
@@ -47,7 +47,7 @@ In some circumstances, when you use Report Manager to view published reports tha
 Verify that you have permission to access the folders that contain the cached files.   
     
 ## See Also  
-[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Troubleshoot Reporting Services Subscriptions and Delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  

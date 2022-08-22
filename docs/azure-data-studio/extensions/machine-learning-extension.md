@@ -65,9 +65,9 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Find the **Machine Learning** extension under **enabled** extensions.
 
-1. Select on the **Manage** icon.
+1. Select the **Manage** icon.
 
-1. Select on the **Extension Settings** icon.
+1. Select the **Extension Settings** icon.
 
 The extensions settings look like this:
 
@@ -98,7 +98,7 @@ To use the Machine Learning extension in Azure Data Studio, follow the steps bel
 
 1. Open the **Connections** viewlet in Azure Data Studio.
 
-1. Right Select on your server and select **Manage**.
+1. Right-click on your server and select **Manage**.
 
 1. Select **Machine Learning** in the left side menu under **General**.
 

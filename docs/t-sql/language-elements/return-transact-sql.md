@@ -1,19 +1,19 @@
 ---
+title: "RETURN (Transact-SQL)"
 description: "RETURN (Transact-SQL)"
-title: "RETURN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "RETURN_TSQL"
   - "RETURN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "unconditionally exiting program"
   - "stored procedures [SQL Server], exiting"
   - "batches [SQL Server], exiting"
@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "exiting queries [SQL Server]"
   - "exiting procedures [SQL Server]"
   - "RETURN statement"
-ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # RETURN (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -5,11 +5,11 @@ description: Monitoring cluster with Kibana Dashboard on SQL Server 2019 big dat
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 07/12/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Review cluster logs with Kibana Dashboard

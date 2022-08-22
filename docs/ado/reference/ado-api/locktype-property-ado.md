@@ -1,21 +1,17 @@
 ---
+title: "LockType Property (ADO)"
 description: "LockType Property (ADO)"
-title: "LockType Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::LockType"
-helpviewer_keywords: 
-  - "LockType property [ADO]"
-ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::LockType"
+helpviewer_keywords:
+  - "LockType property [ADO]"
+apitype: "COM"
 ---
 # LockType Property (ADO)
 Indicates the type of locks placed on records during editing.  

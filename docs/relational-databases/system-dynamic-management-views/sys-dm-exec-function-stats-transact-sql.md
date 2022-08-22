@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_function_stats (Transact-SQL)"
-title: "sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_function_stats (Transact-SQL)"
+description: sys.dm_exec_function_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_function_stats"
   - "sys.dm_exec_function_stats_tsql"
   - "dm_exec_function_stats"
   - "dm_exec_function_stats_tsql"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_function_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)

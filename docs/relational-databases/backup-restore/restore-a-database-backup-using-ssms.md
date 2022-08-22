@@ -1,32 +1,31 @@
 ---
-title: "Restore a Database Backup Using SSMS | Microsoft Docs"
+title: "Restore a Database Backup Using SSMS"
 description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
-ms.custom: "contperf-fy21q4-portal"
-ms.date: "05/12/2021"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: contperf-fy21q4-portal
+f1_keywords:
   - "sql13.swb.locatebackupfileazure.f1"
   - "sql13.swb.specifybackup.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full backups [SQL Server]"
   - "database restores [SQL Server], full backups"
   - "backing up databases [SQL Server], full backups"
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
-ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: LitKnd
-ms.author: kendralittle
 ---
 # Restore a Database Backup Using SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic explains how to restore a full database backup using SQL Server Management Studio.    
+  This article explains how to restore a full database backup using SQL Server Management Studio.    
        
-### Important!    
+## Limitations and restrictions
 Before you can restore a database under the full or bulk-logged recovery model, you may need to back up the active transaction log (known as [tail of the log](tail-log-backups-sql-server.md). For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
 When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
@@ -60,7 +59,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
     -   **Device**    
     
-         Click the browse (**...**) button to open the **Select backup devices** dialog box. 
+         Select the browse (**...**) button to open the **Select backup devices** dialog box. 
          
         -   **Select backup devices** dialog box  
         
@@ -86,7 +85,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
              **Backup media**   
              Lists the selected media.
     
-             After you add the devices you want to the **Backup media** list box, click **OK** to return to the **General** page.    
+             After you add the devices you want to the **Backup media** list box, select **OK** to return to the **General** page.    
     
          In the **Source: Device: Database** list box, select the name of the database that should be restored.    
     
@@ -95,11 +94,11 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
      
 4.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.    
     
-5.  In the **Restore to** box, leave the default as **To the last backup taken** or click on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on selecting a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
+5.  In the **Restore to** box, leave the default as **To the last backup taken** or select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on selecting a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
     
 6.  In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, you can change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected. For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).    
     
-7.  Optionally, click **Files** in the **Select a page** pane to access the **Files** dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the **Restore the database files as** grid. For more information about this grid, see [Restore Database &#40;Files Page&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
+7.  Optionally, select **Files** in the **Select a page** pane to access the **Files** dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the **Restore the database files as** grid. For more information about this grid, see [Restore Database &#40;Files Page&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. To view or select the advanced options, on the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:    
 
@@ -113,9 +112,9 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
    2. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
     
-     - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs cannot be restored. Select this option if you're restoring all of the necessary backups now.    
+     - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs can't be restored. Select this option if you're restoring all of the necessary backups now.    
     
-     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it's recovered.    
+     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Additional transaction logs can be restored. The database can't be used until it's recovered.    
     
      - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
     
@@ -127,7 +126,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
 For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+9. Select **OK**.
 
 ### B. Restore an earlier disk backup over an existing database
 The following example restores an earlier disk backup of `Sales` and overwrites the existing `Sales` database.
@@ -135,9 +134,9 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you,ve selected your disk backup file(s).
-5.  Click **OK** to return to the **General** page.
-6.  Click **Options** in the **Select a page** pane.
+4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you,ve selected your disk backup file(s).
+5.  Select **OK** to return to the **General** page.
+6.  Select **Options** in the **Select a page** pane.
 7.  Under the **Restore options** section, check **Overwrite the existing database (WITH REPLACE)**.
 
     > [!NOTE]
@@ -155,7 +154,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
     > [!NOTE]
     > Not checking this option may result in the following error message: "System.Data.SqlClient.SqlError: Exclusive access could not be obtained because the database is in use. (Microsoft.SqlServer.SmoExtended)"
     
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+10. Select **OK**.
 
 ### C.  Restore an earlier disk backup with a new database name where the original database still exists
 The following example restores an earlier disk backup of `Sales` and creates a new database called `SalesTest`.  The original database, `Sales`, still exists on the server.
@@ -163,16 +162,16 @@ The following example restores an earlier disk backup of `Sales` and creates a n
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you've selected your disk backup file(s).
-5.  Click **OK** to return to the **General** page.
+4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your backup. Select **OK** after you've selected your disk backup file(s).
+5.  Select **OK** to return to the **General** page.
 6.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.
-7.  Click **Options** in the **Select a page** pane.
+7.  Select **Options** in the **Select a page** pane.
 8.  Under the **Tail-log backup** section, uncheck "**Take tail-log backup before restore**".
 
     > [!IMPORTANT]
     > Not unchecking this option will result in the existing database, `Sales`, to change to the restoring state.
 
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+9. Select **OK**.
 
     > [!NOTE]
     > If you receive the following error message:      
@@ -180,19 +179,19 @@ The following example restores an earlier disk backup of `Sales` and creates a n
     > Then you likely did not enter the new database name from Step 6, above. Restore normally prevents accidentally overwriting a database with a different database. If the database specified in a `RESTORE` statement already exists on the current server and the specified database family GUID differs from the database family GUID recorded in the backup set, the database is not restored. This is an important safeguard.
 
 ### D.  Restore to a point in time
-The following example restores a database to its state as of `1:23:17 PM` on `May 30, 2016` and shows a restore operation that involves multiple log backups. The database does not currently exist on the server.
+The following example restores a database to its state as of `1:23:17 PM` on `May 30, 2016` and shows a restore operation that involves multiple log backups. The database doesn't currently exist on the server.
 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your full backup and all relevant transaction log backups.  Click **OK** after you have selected your disk backup files.
-5.  Click **OK** to return to the **General** page.
-6.  In the **Destination** section, click on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
+4.  Select the browse (**...**) button to open the **Select backup devices** dialog box. Select **Add** and navigate to your full backup and all relevant transaction log backups.  Select **OK** after you have selected your disk backup files.
+5.  Select **OK** to return to the **General** page.
+6.  In the **Destination** section, select **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
 7.  Select **Specific date and time**.  
 8.  Change the **Timeline interval** to **Hour** in the drop-down box (optional).  
 9.  Move the slider to the desired time.
-10. Click **OK** to return to the General page.
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
+10. Select **OK** to return to the General page.
+11. Select **OK**.
 
 ### E.  Restore a backup from the Microsoft Azure storage service
 
@@ -201,50 +200,50 @@ The two examples below perform a restore of `Sales` from a backup located in the
 1.	In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 2.	Right-click **Databases** and select **Restore Database...**.
 3.	On the **General** page, select **Device** under the **Source** section.
-4.	Click the browse (...) button to open the **Select backup devices** dialog box.    
+4.	Select the browse (...) button to open the **Select backup devices** dialog box.    
 5.	Select **URL** from the **Backup media type:** drop-down list.
-6.	Click **Add** and the **Select a Backup File Location** dialog box opens.
+6.	Select **Add** and the **Select a Backup File Location** dialog box opens.
 
 #### E1.   Restore a striped backup over an existing database and a shared access signature exists.
 A stored access policy has been created with read, write, delete, and list rights.  A shared access signature that is associated with the stored access policy was created for the container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  The steps are mostly the same if a SQL Server credential already exists.  The database `Sales` currently exists on the server.  The backup files are `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.  
 
 1.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
 1. Enter the shared access signature in the **Shared Access Signature:** rich-text box.
-1. Click **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
+1. Select **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
 1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
 1. Hold ctrl and select files `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.
-1. Click **OK**.
-1. Click **OK** to return to the **General** page.
-1. Click **Options** in the **Select a page** pane.
+1. Select **OK**.
+1. Select **OK** to return to the **General** page.
+1. Select **Options** in the **Select a page** pane.
 1. Under the **Restore** options section, check **Overwrite the existing database (WITH REPLACE)**.
 1. Under the **Tail-log backup** section, uncheck **Take tail-log backup before restore**.
 1. Under the **Server connections** section, check **Close existing connections to destination database**.
-1. Click **OK**.
+1. Select **OK**.
 
-#### E2.   A shared access signature does not exist
-In this example,, the `Sales` database doesn't currently exist on the server.
-1. Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
-1. Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
-1. Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
+#### E2.   A shared access signature doesn't exist
+In this example, the `Sales` database doesn't currently exist on the server.
+1. Select **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
+1. Complete the **Connect to a Microsoft Subscription** dialog box and then select **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
+1. Select **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
 1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-1. Select the backup file and then click **OK**.
-1. Click **OK** to return to the **General** page.
-1. Click **OK**.
+1. Select the backup file and then select **OK**.
+1. Select **OK** to return to the **General** page.
+1. Select **OK**.
 
 #### F.	Restore local backup to Microsoft Azure storage (URL)
-The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it cannot be created through the **Restore** task.  The `Sales` database doesn't currently exist on the server.
+The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it can't be created through the **Restore** task.  The `Sales` database doesn't currently exist on the server.
 1.	In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 2.	Right-click **Databases** and select **Restore Database...**.
 3.	On the **General** page, select **Device** under the **Source** section.
-4.	Click the browse (...) button to open the **Select backup devices** dialog box.  
+4.	Select the browse (...) button to open the **Select backup devices** dialog box.  
 5.	Select **File** from the **Backup media type:** drop-down list.
-6.	Click **Add** and the **Locate Backup File** dialog box opens.
-7.	Navigate to `E:\MSSQL\BAK`, select the backup file and then click **OK**.
-8.	Click **OK** to return to the **General** page.
-9.	Click **Files** in the **Select a page** pane.
+6.	Select **Add** and the **Locate Backup File** dialog box opens.
+7.	Navigate to `E:\MSSQL\BAK`, select the backup file and then select **OK**.
+8.	Select **OK** to return to the **General** page.
+9.	Select **Files** in the **Select a page** pane.
 10.	Check the box **Relocate all files to folder**.
 11.	Enter the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, in the text boxes for **Data file folder:** and **Log file folder:**.
-12.	Click **OK**.
+12.	Select **OK**.
 
 ## See Also    
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     

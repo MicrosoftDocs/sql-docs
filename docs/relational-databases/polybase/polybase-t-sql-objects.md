@@ -471,21 +471,21 @@ Then, create a database scoped credential. `IDENTITY` is the user name to authen
 
 Create the external data source to Oracle data source. 
 
-- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `sqlserver://servername` or `sqlserver://servername` or `sqlserver://servername:port`. Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `oracle://servername` or `oracle://servername:port`. Availed options for `LOCATION` prefixes may differ in different versions of Oracle. Please refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 - PUSHDOWN is ON by default for PolyBase in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specify whether computation should be pushed down to the source.
-- CONNECTION_OPTIONS should be specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later, as needed. Specifies additional options when connecting over ODBC to an external data source. To use multiple connection options, separate them by a semi-colon.
+- CONNECTION_OPTIONS such as impersonate user for curtailing user access
 - CREDENTIAL is the database scoped credential name created in the previous step.
 
 ```sql 
    -- LOCATION: Location string should be of format `<vendor>://<server>[:<port>]`.
    -- PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-   -- CONNECTION_OPTIONS: Specify driver location for PolyBase in SQL Server 2019 (15.x) and later.
    -- CREDENTIAL: the database scoped credential, created in the previous step.
      
    CREATE EXTERNAL DATA SOURCE external_data_source_name
    WITH ( 
    LOCATION = 'oracle://<server address>[:<port>]',
    -- PUSHDOWN = ON | OFF,
+   -- CONNECTION_OPTIONS = ImpersonateUser 
    CREDENTIAL = credential_name)
 ```
 

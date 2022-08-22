@@ -1,5 +1,5 @@
 ---
-title: Degree of Parallelism (DOP) Feedback
+title: Degree of parallelism (DOP) feedback
 description: Learn about the degree of parallelism (DOP) feedback.
 ms.prod: sql
 ms.prod_service: high-availability

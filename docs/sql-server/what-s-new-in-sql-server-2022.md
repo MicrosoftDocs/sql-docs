@@ -67,27 +67,18 @@ SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 <!--
 ## Community technology preview release
 
-This release is community technology preview (CTP) 2.1. 
+This is release candidate (RC) 0.
 
-SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
-  - Data virtualization: 
-     - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
-     - Delta table format support for PolyBase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
+  - Data virtualization 
 - [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Query Store enabled by default for new databases
-  - Parameter sensitive plan optimization - Supportability
-  - Degree of parallelism (DOP) feedback - Supportability
+  - Degree of parallelism feedback resume
+  - Query store hints
 - [Management](#management)
-  - Manage Azure Arc agent with SQL Server Configuration Manager
-  - Attach to Azure from setup - enabling Arc extension for SQL Server is now an opt-in feature
+  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
-- [Security](#security)
-  - Automation process to set up Azure AD administrator for SQL Server
-  - Ledger - automatic digest upload to Azure Storage
-  - 3 additional fixed server-level roles added
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()

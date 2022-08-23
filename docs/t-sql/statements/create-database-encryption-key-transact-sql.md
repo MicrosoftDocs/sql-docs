@@ -80,7 +80,9 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 Specifies the name of the asymmetric key used to encrypt the database encryption key. In order to encrypt the database encryption key with an asymmetric key, the asymmetric key must reside on an extensible key management provider.  
   
 ## Remarks  
-A database encryption key is required before a database can be encrypted by using *Transparent Database Encryption* (TDE). When a database is transparently encrypted, the whole database is encrypted at the file level, without any special code modifications. The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.  
+A database encryption key is required before a database can be encrypted by using *Transparent Database Encryption* (TDE). When a database is transparently encrypted, the whole database is encrypted at the file level, without any special code modifications. The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.
+
+Certificates or asymmetric keys used for TDE are limited to a private key size of 3072 bits.
   
 Database encryption statements are allowed only on user databases.  
   

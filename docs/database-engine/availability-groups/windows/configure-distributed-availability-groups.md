@@ -24,6 +24,8 @@ For a technical overview of distributed availability groups, see [Distributed av
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
 
+When setting up a listener, note that only VNN listeners are supported - DNN listeners are not supported. see [Feature interoperability with AG and DNN listener](availability-group-dnn-interoperability.md).
+
 #### Create an endpoint to listen to all IP addresses
 
 For example, the following script creates a listener endpoint on TCP port 5022 that listens on all IP addresses.  

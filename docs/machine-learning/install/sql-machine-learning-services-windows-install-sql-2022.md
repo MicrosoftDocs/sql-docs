@@ -3,7 +3,7 @@ title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python, R, or Java scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/22/2022
+ms.date: 08/23/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -77,6 +77,8 @@ If you encounter any installation errors during setup, check the summary log in 
     - [Install Python](#install-python)
     - [Install Java](#install-java)
 
+**Continue to the instructions to [install R](#install-r) or [install Python](#install-python).**
+
 ## Install R
 
 5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
@@ -96,19 +98,17 @@ If you encounter any installation errors during setup, check the summary log in 
    - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
    - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
 
-    The following sample scripts can be adapted for the installation:
-    
-    ```r
-    R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
-    R CMD INSTALL "c:\temp\RevoScaleR.zip"
+    Assuming you have installed version 4.2.0 of R in its default location, for example `C:\Program Files\R\R-4.2.0`, and downloaded the required packages in `C:\temp` directory, the following sample scripts can be adapted for the installation:
+
+    ```cmd
+    cd C:\Program Files\R\R-4.2.0\bin
+    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\CompatibilityAPI.zip"
+    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "c:\temp\RevoScaleR.zip"
     ```
 
-8. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
+8. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder depending on the installation, usually in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
-   - Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
-   - User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
-
-   The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+   The following script can be used to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
   ```cmd
   .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
@@ -142,8 +142,8 @@ If you encounter any installation errors during setup, check the summary log in 
 5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows. Install using the following options:
     1. Launch the Python Setup application and choose **Customize installation**. 
     1. Verify the box is checked next to the option to **Install launcher for all users (recommended)**.
-    1. Select all **Optional Features** options.
-    1. On the **Advanced Options** page, accept the default options and select **Install**. Note the path under **Customize install location**, for example, `c:\Program Files\Python310`.
+    1. Select all **Optional Features** options, or as desired.
+    1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. The path under **Customize install location** should not be in a user profile but should be for all users, for example: `C:\Program Files\Python310`.
 
 6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
 

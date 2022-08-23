@@ -16526,6 +16526,21 @@ items:
           href: t-sql/functions/todatetimeoffset-transact-sql.md
         - name: YEAR
           href: t-sql/functions/year-transact-sql.md
+      - name: Graph
+        href: t-sql/functions/graph-functions-transact-sql.md
+        items:
+        - name: EDGE_ID_FROM_PARTS
+          href: t-sql/functions/edge-id-from-parts-transact-sql.md
+        - name: GRAPH_ID_FROM_EDGE_ID
+          href: t-sql/functions/graph-id-from-edge-id-transact-sql.md
+        - name: GRAPH_ID_FROM_NODE_ID
+          href: t-sql/functions/graph-id-from-node-id-transact-sql.md
+        - name: NODE_ID_FROM_PARTS
+          href: t-sql/functions/node-id-from-parts-transact-sql.md
+        - name: OBJECT_ID_FROM_EDGE_ID
+          href: t-sql/functions/object-id-from-edge-id-transact-sql.md
+        - name: OBJECT_ID_FROM_NODE_ID
+          href: t-sql/functions/object-id-from-node-id-transact-sql.md
       - name: JSON
         href: t-sql/functions/json-functions-transact-sql.md
         items:

@@ -41,7 +41,7 @@ If the `TRUSTWORTHY` setting is set to `ON`, and if the owner of the database is
 
 In an Internet Service Provider (ISP) environment (for example, in a web-hosting service), each customer is permitted to manage their own database and is restricted from accessing system databases and other user databases. For example, the databases of two competing companies could be hosted by the same ISP and exist in the same instance of SQL Server. Dangerous code could be added to a user database when the database is attached to its original instance, and the code would be enabled on the ISP instance when the database is deployed. This situation makes controlling cross-database access crucial.
 
-If the same general entity owns and manages each database, it is still not a good practice to establish a trust relationship with a database unless an application-specific feature, such as a cross-database Service Broker communication, is turned on. A trust relationship between databases can be established by enabling cross-database ownership chaining or by marking a database as trusted by the instance using the `TRUSTWORTHY` property. The `trustworthy_on` column of the `sys.databases` catalog view indicates if a database has its `TRUSTWORTHY` property set.
+If the same general entity owns and manages each database, it is still not a good practice to establish a trust relationship with a database unless an application-specific feature, such as a cross-database Service Broker communication, is required. A trust relationship between databases can be established by enabling cross-database ownership chaining or by marking a database as trusted by the instance using the `TRUSTWORTHY` property. The `is_trustworthy_on` column of the `sys.databases` catalog view indicates if a database has its `TRUSTWORTHY` property set.
 
 The best practices for database ownership and trust include the following:
 
@@ -64,7 +64,7 @@ INNER JOIN sys.server_principals p ON
 
 p.principal_id = m.member_principal_id 
 
-inner join sys.databases d ON suser_sname(d.owner_sid) = p.name 
+INNER JOIN sys.databases d ON suser_sname(d.owner_sid) = p.name 
 
 WHERE is_trustworthy_on = 1 AND d.name NOT IN ('MSDB') AND r.type = 'R' AND r.name = N'sysadmin' 
 ```
@@ -74,7 +74,7 @@ You can run the following query to determine the `TRUSTWORTHY` property of the `
 ```sql
 SELECT name, TrustWorthySetting = 
 CASE is_trustworthy_on hello 
-WHEN 1 then 'TrustWorthy setting is ON for MSDB' 
+WHEN 1 THEN 'TrustWorthy setting is ON for MSDB' 
 ELSE 'TrustWorthy setting is OFF for MSDB' 
 END 
 FROM sys.databases WHERE database_id = 4
@@ -83,7 +83,7 @@ FROM sys.databases WHERE database_id = 4
 If this query shows that the `TRUSTWORTHY` property is set to `OFF`, you can run the following query to set the `TRUSTWORTHY` property to `ON`.
 
 ```sql
-ALTER DATABASE MSDB SET trustworthy ON 
+ALTER DATABASE MSDB SET TRUSTWORTHY ON 
 
 GO 
 ```

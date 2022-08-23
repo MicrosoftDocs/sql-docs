@@ -28,7 +28,7 @@ ms.author: mathoma
   
 ## Explanation
 
-During a database startup, SQL Server detects that a database has a large number of [virtual log files](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
+During a database startup, SQL Server detects that a database has a large number of [virtual log files](../sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
 
 - When you start an instance of SQL Server
 - Restore a database
@@ -67,11 +67,11 @@ To resolve this problem, follow these steps:
    ORDER BY Total_VLF_count DESC
    ```
 
-   For more information, see [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql).
+   For more information, see [sys.dm_db_log_info](../system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md).
 
 1. Reduce your transaction log by using DBCC SHRINKDB/DBCC SHRINKFILE or by using SQL Server Management Studio.
 
-1. Perform a one-time increase of the transaction log file size to a large value. This one-time increase is done to avoid frequent auto growths. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#AddOrEnlarge) 
+1. Perform a one-time increase of the transaction log file size to a large value. This one-time increase is done to avoid frequent auto growths. For more information, see [Manage the size of the transaction log file](../logs/manage-the-size-of-the-transaction-log-file.md#AddOrEnlarge).
 
 1. Increase the FILEGROWTH parameter to a larger value than what is currently configured. This should be based on the activity of your database and how frequently your log file is growing.
 

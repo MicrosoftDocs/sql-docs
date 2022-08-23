@@ -39,7 +39,7 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
+- On Azure Virtual Machines, images will be available soon.
 - For SQL Server 2022 Preview on Linux, packages are coming soon. For information about Community Technology Preview (CTP) packages, you can see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
@@ -51,47 +51,15 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Analytics](#analytics)
-  - Data virtualization 
-- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism feedback resume
-  - Query store hints
+- [Query Store](#query-store-and-intelligent-query-processing)
+  - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
   - Integrated acceleration
-  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
   - TRIM scalar function extensions
-
-<!--
-## Community technology preview release
-
-This is release candidate (RC) 0.
-
-SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
-
-- [Analytics](#analytics)
-  - Data virtualization 
-- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism feedback resume
-  - Query store hints
-- [Management](#management)
-  - Link to Azure SQL Managed Instance for disaster recovery
-  - Snapshot backups
-- [Language](#language)
-  - APPROX_PERCENTILE_DISC()
-  - APPROX_PERCENTILE_CONT()
-  - DATETRUNC()
-  - IS \[NOT\] DISTINCT FROM
-  - Bit manipulation functions:
-     - LEFT_SHIFT()
-     - RIGHT_SHIFT()
-     - BIT_COUNT()
-     - GET_BIT()
-     - SET_BIT()
--->
 
 For details, see the feature descriptions in the sections below.
 
@@ -153,7 +121,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in SQL Server 2022 Preview. Requires the Query Store to be enabled and in "Read write" mode. |
 | Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-details.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistance benefits memory grant feedback as well as the new DOP and CE feedback features.<br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
-| Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode.  See `DOP_FEEDBACK` in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+| Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode. <br/><br/> Beginning with RC 0, every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback. If the performance is not the same or better, we clear all DOP feedback and trigger a reanalysis of the query starting from the compiled DOP. <br/><br/> See `DOP_FEEDBACK` in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires the Query Store to be enabled and in "Read write" mode. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 

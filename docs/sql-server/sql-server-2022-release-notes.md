@@ -34,6 +34,8 @@ This section identifies known issues you may experience with this product:
 
 - In RC 0, Query Store for secondary replicas is available for preview. It is not available for use in production environments.
 
+- If you choose to add the Azure Arc extension feature to an existing instance, setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
+
 - Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 RC 0 installation. For RC 0, please install the two drivers from the provided links as necessary.
 
 ## Build number

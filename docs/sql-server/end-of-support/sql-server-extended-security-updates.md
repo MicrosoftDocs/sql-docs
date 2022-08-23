@@ -89,9 +89,7 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 
 If you migrate your workloads to an Azure service (see the [Overview](#overview) for more information), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the Azure service. You don't need Software Assurance to receive ESUs in Azure.
 
-Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the service is configured to use [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching).
-
-Azure services that have ***not* been configured for [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels or Windows Update. You don't need to install the SQL Server IaaS Agent extension to download ESU patches on an Azure SQL Virtual Machine.
 
 ### On-premises or hosted environments
 

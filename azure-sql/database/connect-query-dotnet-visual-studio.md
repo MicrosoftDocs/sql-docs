@@ -16,20 +16,20 @@ ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/10/2020
+ms.date: 08/17/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use .NET and C# in Visual Studio to connect to and query a database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This quickstart shows how to use the [.NET Framework](https://dotnet.microsoft.com) and C# code in Visual Studio to query a database in Azure SQL or Synapse SQL with Transact-SQL statements.
+This quickstart shows how to use the [.NET](https://dotnet.microsoft.com) and C# code in Visual Studio to query a database in Azure SQL or Synapse SQL with Transact-SQL statements.
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
-- [Visual Studio 2019](https://www.visualstudio.com/downloads/) Community, Professional, or Enterprise edition.
+- [Visual Studio 2022](https://www.visualstudio.com/downloads/) Community, Professional, or Enterprise edition.
 - A database where you can run a query.
 
   [!INCLUDE[create-configure-database](../includes/create-configure-database.md)]
@@ -38,9 +38,11 @@ To complete this quickstart, you need:
 
 1. In Visual Studio, create a new project. 
    
-1. In the **New Project** dialog, select the **Visual C#**, **Console App (.NET Framework)**.
+1. In the **New Project** dialog, select the **C# Console App**.
    
-1. Enter *sqltest* for the project name, and then select **OK**. The new project is created. 
+1. Enter *sqltest* for the project name, and then select **Next**.
+   
+1. Select a *(Long-term support)* Framework option, such as *.NET 6.0*, and then select **Create**. The new project is created.
    
 1. Select **Project** > **Manage NuGet Packages**. 
    
@@ -110,9 +112,10 @@ To complete this quickstart, you need:
 
 ## Next steps
 
-- Learn how to [connect and query a database in Azure SQL Database by using .NET Core](connect-query-dotnet-core.md) on Windows/Linux/macOS.  
-- Learn about [Getting started with .NET Core on Windows/Linux/macOS using the command line](/dotnet/core/tutorials/using-with-xplat-cli).
-- Learn how to [Design your first database in Azure SQL Database by using SSMS](design-first-database-tutorial.md) or [Design your first database in Azure SQL Database by using .NET](design-first-database-csharp-tutorial.md).
+- Learn how to [connect and query a database in Azure SQL Database by using .NET from the command line](connect-query-dotnet-core.md) on Windows/Linux/macOS.  
+- Learn about [Getting started with .NET on Windows/Linux/macOS using VS Code](/dotnet/core/tutorials/with-visual-studio-code).
+- Learn more about [developing with .NET and SQL](/sql/connect/ado-net/sql).
+- Learn how to [Design your first database in Azure SQL Database by using SSMS](design-first-database-tutorial.md).
 - For more information about .NET, see [.NET documentation](/dotnet/).
 - Retry logic example: [Connect resiliently to Azure SQL with ADO.NET][step-4-connect-resiliently-to-sql-with-ado-net-a78n].
 

@@ -71,7 +71,7 @@ ms.author: maggies
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]  
+-   [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)]  
   
 -   [!INCLUDE[win7](../../includes/win7-md.md)]  
   

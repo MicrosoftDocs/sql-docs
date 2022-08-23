@@ -135,7 +135,7 @@ Azure Monitor alerts proactively notify you when important conditions are found 
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 
-You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](/azure/azure-sql/database/scripts/monitor-and-scale-database-powershell).
+You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
 The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
 

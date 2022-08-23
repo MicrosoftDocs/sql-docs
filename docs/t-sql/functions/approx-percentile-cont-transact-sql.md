@@ -26,7 +26,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
-[Transact-SQL Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
+[Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
@@ -58,7 +58,7 @@ float(53)
 
 Any nulls in the data set are ignored.
 
-Approximate percentile functions use KLL sketch. The sketch is built by reading the stream of data. Due to the algorithm used, this function requires less memory than its non-approximate counterpart ([PERCENTILE_CONT](/sql/t-sql/functions/percentile-cont-transact-sql)).
+Approximate percentile functions use KLL sketch. The sketch is built by reading the stream of data. Due to the algorithm used, this function requires less memory than its non-approximate counterpart ([PERCENTILE_CONT](./percentile-cont-transact-sql.md)).
 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error.
 
@@ -69,7 +69,7 @@ This function provides rank-based error guarantees not value based. The function
 
 ## Compatibility support
 
-Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
+Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL).](../statements/alter-database-transact-sql-compatibility-level.md)
 
 ## Examples
 

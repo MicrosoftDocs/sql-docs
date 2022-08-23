@@ -54,7 +54,7 @@ while row:
   
 ## Insert a row  
   
-In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters. The parameters protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).
+In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters. The parameters protect your application from [SQL injection](../../../relational-databases/security/sql-injection.md).
 
 ```python
 #Sample insert query

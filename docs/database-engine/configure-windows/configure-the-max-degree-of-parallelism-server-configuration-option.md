@@ -168,7 +168,7 @@ Feedback information can be tracked using the `sys.query_store_plan_feedback` ca
 
 If a query has a query plan forced through Query Store, DOP feedback can still be used for that query.
 
-If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](/sql/relational-databases/performance/query-store-hints).
+If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hints](../../relational-databases/performance/query-store-hints.md).
 
 #### Extended events
 
@@ -183,13 +183,13 @@ The following XEs are available for the feature:
 
 ## See also  
 
-- [Intelligent query processing](/sql/relational-databases/performance/intelligent-query-processing)  
-- [Query Processing Architecture Guide](/sql/relational-databases/query-processing-architecture-guide)
-- [Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
-- [Query Store hints](/sql/relational-databases/performance/query-store-hints)
+- [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md)  
+- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
+- [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+- [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 - [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
-- [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
-- [USE HINT query hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint)
+- [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)
+- [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)
 - [Server Configuration Options (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

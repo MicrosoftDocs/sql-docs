@@ -53,7 +53,6 @@ SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Management](#management)
   - Integrated acceleration
-  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()

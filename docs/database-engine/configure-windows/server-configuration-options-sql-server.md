@@ -56,12 +56,12 @@ The sys.configurations catalog view can be used to determine the `config_value` 
 
 Options that require SQL Server to restart will initially show the changed value only in the `value` column. After restart, the new value will appear in both the `value` column and the `value_in_use` column.
 
-Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options `value` column, but not in the `value_in_use` column. After restarting the server, the new value appears in the `value_in_use` column.
+Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options `value` column, but not in the `value_in_use` column. When you restart the server, the new value appears in the `value_in_use` column.
 
 > [!NOTE]
 > The `config_value` in the result set of `sp_configure` is equivalent to the `sys.configurations.value` column. The `run_value` is equivalent to the `sys.configurations.value_in_use column`.
 
-Self-configuring options are those that SQL Server adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the **user connections** option.
+Self-configuring options are options that SQL Server adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the **user connections** option.
 
 The following query can be used to determine if any configured values have not been installed:
 
@@ -71,7 +71,7 @@ SELECT * FROM sys.configurations WHERE value != value_in_use`
 
 If the value is the change for the configuration option you made but the `value_in_use` is not the same, either the `RECONFIGURE` command wasn't run or has failed, or the server engine must be restarted.
 
-There are two configuration options where the `value` and `value_in_use` might not be the same and this is the expected behavior:
+There are two configuration options where the `value` and `value_in_use` might not be the same which is the expected behavior:
 
 - **max server memory (MB)** - The default configured value of `0` will display as `value_in_use = 2147483647`.
 

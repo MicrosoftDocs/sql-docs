@@ -24,7 +24,9 @@ For a technical overview of distributed availability groups, see [Distributed av
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
 
-When setting up a listener, note that only VNN listeners are supported - DNN listeners are not supported. see [Feature interoperability with AG and DNN listener](/azure/azure-sql/virtual-machines/windows/availability-group-dnn-interoperability).
+> [!NOTE]
+> Distributed Network Names (DNNs) are not currently supported with distributed availability groups. To learn more, see [Feature interoperability with AG and DNN listener](/azure/azure-sql/virtual-machines/windows/availability-group-dnn-interoperability). 
+
 
 #### Create an endpoint to listen to all IP addresses
 

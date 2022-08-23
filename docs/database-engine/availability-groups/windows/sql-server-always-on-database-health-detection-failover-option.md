@@ -19,7 +19,7 @@ ms.author: mathoma
 ---
 # Availability group database level health detection failover option
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database level health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group.
+Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database level health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. Examples that may trigger the health detection include database in suspect mode, database is offline, database in recovery (failed to recover). For more information see State column in [sys.databases](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=sql-server-ver15).
 
 The database level health detection is enabled for the availability group as a whole, therefore database level health detection monitors every database in the availability group. It cannot be enabled selectively for specific databases in the availability group.
 

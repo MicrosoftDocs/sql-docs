@@ -1,6 +1,6 @@
 ---
-title: Degree of parallelism (DOP) feedback
-description: Learn about the degree of parallelism (DOP) feedback.
+title: Query processing feedback features
+description: Learn about query processing feedback features, part of the Intelligent Query Processing (IQP) feature set.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
@@ -19,11 +19,22 @@ ms.custom:
 ms.date: 08/23/2022
 ---
 
-# Query processing feedback feature
+# Query processing feedback features
 
-The query processing feedback features are part of the Intelligent query processing family of features.
+This article contains in-depth descriptions of various intelligent query processing (IQP) feedback features. The query processing feedback features are part of the Intelligent query processing family of features.
 
-## Batch mode memory grant feedback
+The feedback features discussed in this article are:
+
+- [Memory Grant Feedback](#memory-grant-feedback)
+    - [Batch mode](#batch-mode-memory-grant-feedback)
+    - [Row mode](#row-mode-memory-grant-feedback)
+    - [Percentile and persistence mode](#percentile-and-persistence-mode-memory-grant-feedback)
+- [Degree of parallelism Feedback](#degree-of-parallelism-dop-feedback)
+- [Cardinality Estimation Feedback](#cardinality-estimation-ce-feedback)
+
+## Memory Grant Feedback
+
+### Batch mode memory grant feedback
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -47,13 +58,13 @@ With memory grant feedback enabled, for the second execution, duration is **1 se
 
 :::image type="content" source="./media/3_AQPGraphNoSpills.png" alt-text="A graph of granted vs spilled MBs of memory, indicating no spills." lightbox="./media/3_AQPGraphNoSpills.png":::
 
-### Memory grant feedback sizing
+#### Memory grant feedback sizing
 
 For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan. Plans with memory grants under 1 MB won't be recalculated for overages.
 
 For an insufficiently sized memory grant condition that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the `spilling_report_to_memory_grant_feedback` extended event. This event returns the node ID from the plan and spilled data size of that node.
 
-### Memory grant feedback and parameter sensitive scenarios
+#### Memory grant feedback and parameter sensitive scenarios
 
 Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive."
 
@@ -61,21 +72,21 @@ For parameter-sensitive plans, memory grant feedback will disable itself on a qu
 
 For more information about parameter sniffing and parameter sensitivity, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity).
 
-### Memory grant feedback caching
+#### Memory grant feedback caching
 
 Feedback can be stored in the cached plan for a single execution. It's the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], changes weren't captured in the Query Store.
 
 Feedback isn't persisted if the plan is evicted from cache. Feedback will also be lost if there's a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and doesn't cache it. Since it isn't cached, no memory grant feedback is produced, and it isn't stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the second and later consecutive executions can benefit from memory grant feedback.
 
-### Tracking memory grant feedback activity
+#### Tracking memory grant feedback activity
 
 You can track memory grant feedback events using the `memory_grant_updated_by_feedback` extended event. This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
 
-### Memory grant feedback, resource governor and query hints
+#### Memory grant feedback, resource governor and query hints
 
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.
 
-### Disabling batch mode memory grant feedback without changing the compatibility level
+#### Disabling batch mode memory grant feedback without changing the compatibility level
 
 Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the SQL statements below within the context of the applicable database:
 
@@ -109,7 +120,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-## Row mode memory grant feedback
+### Row mode memory grant feedback
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -136,7 +147,7 @@ Values surfaced in this attribute are as follows:
 | Yes: Adjusting | Memory grant feedback has been applied and may be further adjusted for the next execution. |
 | Yes: Stable | Memory grant feedback has been applied and granted memory is now stable, meaning that what was last granted for the previous execution is what was granted for the current execution. |
 
-### Disabling row mode memory grant feedback without changing the compatibility level
+#### Disabling row mode memory grant feedback without changing the compatibility level
 
 Row mode memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable row mode memory grant feedback for all query executions originating from the database, execute the SQL statements within the context of the applicable database:
 
@@ -160,7 +171,7 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-## Percentile and persistence mode memory grant feedback
+### Percentile and persistence mode memory grant feedback
 
 This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
@@ -180,11 +191,11 @@ The query optimizer uses a high percentile of past memory grant sizing requireme
 
 Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) and [CE feedback](#cardinality-estimation-ce-feedback), also detailed in this article.
 
-### Before you enable memory grant feedback: persistence and percentile
+#### Before you enable memory grant feedback: persistence and percentile
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 
-### Enabling memory grant feedback: persistence and percentile
+#### Enabling memory grant feedback: persistence and percentile
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query.
 
@@ -192,11 +203,11 @@ To enable memory grant feedback persistence and percentile, use database compati
 
 The Query Store must be enabled for every database where the persistence portion of this feature is used.
 
-#### How to identify if the feature is enabled, and disable it?
+##### How to identify if the feature is enabled, and disable it?
 
 Both of these features are enabled by default when the above instructions are followed. If you want to enable the trace flags but then disable or re-enable the feature, you can do this using a database scoped configuration.
 
-##### Percentile
+###### Percentile
 
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
@@ -204,7 +215,7 @@ To disable memory grant feedback percentile for all query executions originating
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
 
-##### Persistence
+###### Persistence
 
 To disable memory grant feedback persistence for all query executions originating from the database.
 
@@ -216,7 +227,7 @@ Disabling memory grant feedback persistence will also remove existing collected 
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
-### Considerations
+#### Considerations
 
 You can view your current settings by querying `sys.database_scoped_configurations`.
 

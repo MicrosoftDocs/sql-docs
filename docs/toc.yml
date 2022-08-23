@@ -7221,7 +7221,7 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
-      - name: Intelligent Query Processing feedback
+      - name: Query Processing feedback features
         href: relational-databases/performance/intelligent-query-processing-feedback.md
       - name: Parameter Sensitivity Plan Optimization
         href: relational-databases/performance/parameter-sensitivity-plan-optimization.md

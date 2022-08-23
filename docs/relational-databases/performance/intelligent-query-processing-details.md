@@ -349,6 +349,10 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
+## Memory Grant Feedback
+
+
+
 ## <a id="dop-feedback"></a> Degree of parallelism (DOP) feedback
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces a new feature to called DOP feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. 
@@ -365,15 +369,19 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - Stable feedback is re-verified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 
-For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing) and [DOP feedback](intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback).
+For more information, visit [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing) and [DOP feedback](intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback).
+
+## Cardinality Estimation (CE) feedback
+
+Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
+
+Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
+
+For complete information, visit [Cardinality estimation (CE) feedback](intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback).
 
 ## Optimized plan forcing with Query Store
 
 For complete information, see [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md).
-
-## CE feedback
-
-For complete information, see [Cardinality estimation (CE) feedback](intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback).
 
 ## See also
 

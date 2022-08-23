@@ -10,7 +10,7 @@ ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/22/2022
+ms.date: 08/23/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -49,7 +49,7 @@ After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit 
 
 This is release candidate (RC) 0.
 
-SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
   - Data virtualization 
@@ -67,27 +67,18 @@ SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
 <!--
 ## Community technology preview release
 
-This release is community technology preview (CTP) 2.1. 
+This is release candidate (RC) 0.
 
-SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
-  - Data virtualization: 
-     - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
-     - Delta table format support for PolyBase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
+  - Data virtualization 
 - [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Query Store enabled by default for new databases
-  - Parameter sensitive plan optimization - Supportability
-  - Degree of parallelism (DOP) feedback - Supportability
+  - Degree of parallelism feedback resume
+  - Query store hints
 - [Management](#management)
-  - Manage Azure Arc agent with SQL Server Configuration Manager
-  - Attach to Azure from setup - enabling Arc extension for SQL Server is now an opt-in feature
+  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
-- [Security](#security)
-  - Automation process to set up Azure AD administrator for SQL Server
-  - Ledger - automatic digest upload to Azure Storage
-  - 3 additional fixed server-level roles added
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
@@ -127,15 +118,15 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multicloud environments.
-|Microsoft Purview integration|Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Access provisioning by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-data-owner-policies-arc-sql-server) for details.|
-|Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](../relational-databases/security/ledger/ledger-overview.md).|
-|Azure Active Directory authentication| Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server.|
-|Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
-|New permissions & roles | Enable least privileged access for administrative tasks with new [built-in server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022).|
-|Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular).|
-|Support for PFX certificates, symmetric key enhancements, and other crypto improvements | New support for [certificate](../t-sql/statements/create-certificate-transact-sql.md) and key [backup](../t-sql/statements/backup-master-key-transact-sql.md) and [restore](../t-sql/statements/restore-master-key-transact-sql.md) integration scenarios with Azure Blob Storage service. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4. Additional improvements to enhance default cryptography in SQL Server to meet the evolving threat landscape, including but not limited to, system-generated certificates now have a default strength of RSA-3072.<br/><br/>Added [BACKUP SYMMETRIC KEY](../t-sql/statements/backup-symmetric-key-transact-sql.md) and [RESTORE SYMMETRIC KEY](../t-sql/statements/restore-symmetric-key-transact-sql.md).|
-|Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 and TLS 1.3 support](../relational-databases/security/networking/tds-8-and-tls-1-3.md):<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
+| Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multi-cloud environments.
+| Microsoft Purview integration | Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Provision access by data owner for SQL Server on Azure Arc-enabled servers (preview)](/azure/purview/how-to-policies-data-owner-arc-sql-server) for details. |
+| Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](../relational-databases/security/ledger/ledger-overview.md). |
+| Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server. |
+| Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+| New permissions & roles | Enable least privileged access for administrative tasks with new [built-in server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022). |
+|Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular). |
+|Support for PFX certificates, symmetric key enhancements, and other crypto improvements | New support for [certificate](../t-sql/statements/create-certificate-transact-sql.md) and key [backup](../t-sql/statements/backup-master-key-transact-sql.md) and [restore](../t-sql/statements/restore-master-key-transact-sql.md) integration scenarios with Azure Blob Storage service. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4. Additional improvements to enhance default cryptography in SQL Server to meet the evolving threat landscape, including but not limited to, system-generated certificates now have a default strength of RSA-3072.<br/><br/>Added [BACKUP SYMMETRIC KEY](../t-sql/statements/backup-symmetric-key-transact-sql.md) and [RESTORE SYMMETRIC KEY](../t-sql/statements/restore-symmetric-key-transact-sql.md). |
+| Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 and TLS 1.3 support](../relational-databases/security/networking/tds-8-and-tls-1-3.md):<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions. |
 
 ## Performance
 
@@ -183,7 +174,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-add-table-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
+| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](../relational-databases/security/resumable-add-table-constraints.md) operation. Resume such operation after maintenance windows, failovers, or system failures.
 | Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW ](../t-sql/queries/select-window-transact-sql.md).|
@@ -191,7 +182,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET ()](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES ()](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE ()](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE ()](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md)|
 | Aggregate functions | - [APPROX_PERCENTILE_CONT ()](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC ()](../t-sql/functions/approx-percentile-disc-transact-sql.md)
-| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
+| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)<br/>- [LTRIM ()](../t-sql/functions/ltrim-transact-sql.md)<br/>- [RTRIM ()](../t-sql/functions/rtrim-transact-sql.md)<br/>- [TRIM ()](../t-sql/functions/trim-transact-sql.md)|
 | [Bit manipulation functions](../t-sql/functions/bit-manipulation-functions-overview.md) |- [LEFT_SHIFT ()](../t-sql/functions/left-shift-transact-sql.md)<br/>- [RIGHT_SHIFT ()](../t-sql/functions/right-shift-transact-sql.md)<br/>- [BIT_COUNT ()](../t-sql/functions/bit-count-transact-sql.md)<br/>- [GET_BIT ()](../t-sql/functions/get-bit-transact-sql.md)<br/>- [SET_BIT ()](../t-sql/functions/set-bit-transact-sql.md)|
 
 ## Tools

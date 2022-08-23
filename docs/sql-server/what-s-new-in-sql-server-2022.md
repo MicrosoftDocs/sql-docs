@@ -6,11 +6,11 @@ ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/02/2022
+ms.date: 08/23/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -41,7 +41,7 @@ This release:
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
 - On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
 - For SQL Server 2022 Preview on Linux, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
-- Doesn't include support from Microsoft, except for select EAP customers.
+- Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
@@ -49,7 +49,7 @@ After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit 
 
 This is release candidate (RC) 0.
 
-SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
   - Data virtualization 
@@ -68,27 +68,18 @@ SQL Server 2022 RC 0 (16.0.900.3) includes updates to the following features:
 <!--
 ## Community technology preview release
 
-This release is community technology preview (CTP) 2.1. 
+This is release candidate (RC) 0.
 
-SQL Server 2022 CTP 2.1 (16.0.700.4) includes updates to the following features:
+SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
 - [Analytics](#analytics)
-  - Object storage integration (Data Lake Virtualization) - updated location for S3-compatible object storage certificate for SQL Server on Linux.
-  - Data virtualization: 
-     - [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] supports CREATE EXTERNAL TABLE AS SELECT, which allows SQL Server to create an external table and, in parallel, export data to a different location.
-     - Delta table format support for PolyBase. Allowing SQL Server to leverage delta table format for OPENROWSET, CREATE EXTERNAL TABLE and CREATE EXTERNAL TABLE AS SELECT operations.
+  - Data virtualization 
 - [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Query Store enabled by default for new databases
-  - Parameter sensitive plan optimization - Supportability
-  - Degree of parallelism (DOP) feedback - Supportability
+  - Degree of parallelism feedback resume
+  - Query store hints
 - [Management](#management)
-  - Manage Azure Arc agent with SQL Server Configuration Manager
-  - Attach to Azure from setup - enabling Arc extension for SQL Server is now an opt-in feature
+  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
-- [Security](#security)
-  - Automation process to set up Azure AD administrator for SQL Server
-  - Ledger - automatic digest upload to Azure Storage
-  - 3 additional fixed server-level roles added
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
@@ -129,7 +120,7 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 | Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multi-cloud environments.
-|Microsoft Purview integration|Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Access provisioning by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-data-owner-policies-arc-sql-server) for details.|
+|Microsoft Purview integration|Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Provision access by data owner for SQL Server on Azure Arc-enabled servers (preview)](/azure/purview/how-to-policies-data-owner-arc-sql-server) for details.|
 |Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](../relational-databases/security/ledger/ledger-overview.md).|
 |Azure Active Directory authentication| Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
@@ -172,7 +163,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 |:---|:---|
 | Integrated setup experience for the Azure extension for SQL Server | Install the Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
 | Manage Azure Arc SQL Extension | Use SQL Server Configuration Manager to manage Azure Arc SQL Extension service. See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
-| Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
+| Max server memory calculations | During setup, SQL Setup recommends a value for max server memory to align with documented recommendations. The underlying calculation is different in SQL Server 2022 to reflect recommended [server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 | Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
 | Shrink database WAIT_AT_LOW_PRIORITY | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. SQL Server 2022 Preview adds WAIT_AT_LOW_PRIORITY as an additional option for shrink operations (DBCC SHRINKDATABASE and DBCC SHRINKFILE). When you specify WAIT_AT_LOW_PRIORITY, new queries requiring Sch-S or Sch-M locks aren't blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [Shrink a database](../relational-databases/databases/shrink-a-database.md) and [Shrink a file](../relational-databases/databases/shrink-a-file.md).|
@@ -185,7 +176,7 @@ Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/ss
 
 | New feature or update | Details |
 |:---|:---|
-| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-add-table-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
+| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](../relational-databases/security/resumable-add-table-constraints.md) operation. Resume such operation after maintenance windows, failovers, or system failures.
 | Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW ](../t-sql/queries/select-window-transact-sql.md).|
@@ -193,7 +184,7 @@ Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/ss
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET ()](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES ()](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE ()](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE ()](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON ()](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS ()](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT ()](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY ()](../t-sql/functions/json-array-transact-sql.md)|
 | Aggregate functions | - [APPROX_PERCENTILE_CONT ()](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC ()](../t-sql/functions/approx-percentile-disc-transact-sql.md)
-| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)|
+| T-SQL functions |- [GREATEST ()](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST ()](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT ()](../t-sql/functions/string-split-transact-sql.md)<br/>- [DATETRUNC ()](../t-sql/functions/datetrunc-transact-sql.md)<br/>- [LTRIM ()](../t-sql/functions/ltrim-transact-sql.md)<br/>- [RTRIM ()](../t-sql/functions/rtrim-transact-sql.md)<br/>- [TRIM ()](../t-sql/functions/trim-transact-sql.md)|
 | [Bit manipulation functions](../t-sql/functions/bit-manipulation-functions-overview.md) |- [LEFT_SHIFT ()](../t-sql/functions/left-shift-transact-sql.md)<br/>- [RIGHT_SHIFT ()](../t-sql/functions/right-shift-transact-sql.md)<br/>- [BIT_COUNT ()](../t-sql/functions/bit-count-transact-sql.md)<br/>- [GET_BIT ()](../t-sql/functions/get-bit-transact-sql.md)<br/>- [SET_BIT ()](../t-sql/functions/set-bit-transact-sql.md)|
 
 ## Tools

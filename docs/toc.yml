@@ -6418,7 +6418,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -10563,6 +10563,8 @@ items:
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
@@ -11218,6 +11220,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3201
+          href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
           href: relational-databases/errors-events/mssqlserver-3260-database-engine-error.md
         - name: 3271
@@ -11418,6 +11422,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-9003-database-engine-error.md
         - name: 9004
           href: relational-databases/errors-events/mssqlserver-9004-database-engine-error.md
+        - name: 9017
+          href: relational-databases/errors-events/mssqlserver-9017-database-engine-error.md  
         - name: 9524
           href: relational-databases/errors-events/mssqlserver-9524-database-engine-error.md
         - name: 9532
@@ -16535,6 +16541,21 @@ items:
           href: t-sql/functions/todatetimeoffset-transact-sql.md
         - name: YEAR
           href: t-sql/functions/year-transact-sql.md
+      - name: Graph
+        href: t-sql/functions/graph-functions-transact-sql.md
+        items:
+        - name: EDGE_ID_FROM_PARTS
+          href: t-sql/functions/edge-id-from-parts-transact-sql.md
+        - name: GRAPH_ID_FROM_EDGE_ID
+          href: t-sql/functions/graph-id-from-edge-id-transact-sql.md
+        - name: GRAPH_ID_FROM_NODE_ID
+          href: t-sql/functions/graph-id-from-node-id-transact-sql.md
+        - name: NODE_ID_FROM_PARTS
+          href: t-sql/functions/node-id-from-parts-transact-sql.md
+        - name: OBJECT_ID_FROM_EDGE_ID
+          href: t-sql/functions/object-id-from-edge-id-transact-sql.md
+        - name: OBJECT_ID_FROM_NODE_ID
+          href: t-sql/functions/object-id-from-node-id-transact-sql.md
       - name: JSON
         href: t-sql/functions/json-functions-transact-sql.md
         items:

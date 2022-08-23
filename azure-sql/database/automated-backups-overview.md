@@ -69,11 +69,25 @@ You can configure backup storage redundancy when you create your database, and y
 You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive storage option, but we don't recommend it for applications that require resiliency to regional outages or a guarantee of high data durability.
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
-- **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+
+- **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
+
+  The result is:
+  
+  - Three synchronous copies in the primary region.
+  - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
+> - The storage redundancy diagrams all show regions with multiple availability zones (multi-az). However, there are some regions which provide only a single availability zone and do not support ZRS. 
 > - Backup storage redundancy for Hyperscale databases can be set only during creation. You can't modify this setting after the resource is provisioned. To update backup storage redundancy settings for an existing Hyperscale database with minimum downtime, use [active geo-replication](active-geo-replication-overview.md). Alternatively, you can use [database copy](database-copy.md). Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
 ## Backup usage

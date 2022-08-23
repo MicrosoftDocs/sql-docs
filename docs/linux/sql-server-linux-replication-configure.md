@@ -75,13 +75,13 @@ To configure the distributor:
 
 To create a publication and articles:
 
-1. In Object Explorer, click **Replication** > **Local Publications**> **New Publication...**.
+1. In Object Explorer, select **Replication** > **Local Publications**> **New Publication...**.
 
 1. Follow the instruction on the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
 
 ### Configure the subscription
 
-To configure the subscription in Object Explorer, click **Replication** > **Local Subscriptions**> **New subscriptions...**.
+To configure the subscription in Object Explorer, select **Replication** > **Local Subscriptions**> **New subscriptions...**.
 
 ### Monitor replication jobs
 

@@ -264,7 +264,7 @@ Microsoft SQL Server Migration Assistant for Oracle Tester (SSMA Tester) allows 
 
    For more information on test case settings, [Finishing test case preparation](/sql/ssma/oracle/finishing-test-case-preparation-oracletosql)
 
-1. Select on finish to create the test case.
+1. Select **Finish** to create the test case.
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-test-repo.png" alt-text="Screenshot that shows step to test repo.":::
 

@@ -441,7 +441,7 @@ if (!$newPerms)
     Write-Host "Warning: Unable to add permissions to key vault '$keyVaultName' for Arc's service principal's identity '$($arcServicePrincipal.id)'. Arc may not be able to configure Azure AD authentication"
 }
 
-# Create an AAD application
+# Create an Azure AD application
 #
 $application = ConvertFrom-StringArray (az ad app create --display-name $applicationName --only-show-errors)
 
@@ -459,7 +459,7 @@ az ad app permission add --id $application.id --api 00000003-0000-0000-c000-0000
 az ad app permission add --id $application.id --api 00000003-0000-0000-c000-000000000000 --api-permissions 5f8c59db-677d-491f-a6b8-5f174b11ec1d=Scope --only-show-errors # Delegated Group.Read.All
 az ad app permission add --id $application.id --api 00000003-0000-0000-c000-000000000000 --api-permissions a154be20-db9c-4678-8ab7-66f6cc099a59=Scope --only-show-errors # Delegated User.Read.All
 
-# Upload cert to AAD
+# Upload cert to Azure AD
 #
 $certUploadRes = ConvertFrom-StringArray (az ad app credential reset --id $application.id --cert $certSubjectName --keyvault $keyVaultName --append --only-show-errors)
 
@@ -564,7 +564,7 @@ Success
 If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up an Azure AD admin, you can use the following CLI script:
 
 ```azurecli
-# Setup AAD admin for user's existing key vault, certificate, and application  
+# Set up Azure AD admin for user's existing key vault, certificate, and application  
 # Requires input parameters indicated below
 
 # Connect statement

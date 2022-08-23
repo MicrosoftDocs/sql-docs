@@ -135,7 +135,7 @@ Before using Query Store for secondary replicas, you need to have an [Always On 
 > [!IMPORTANT]
 > **APPLIES TO**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 >
-> Query Store for secondary replicas is a preview feature. It is not intended for production deployments. See: [release notes](../../sql-server/sql-server-2022-release-notes.md).
+> Query Store for secondary replicas is a *preview* feature. It is not intended for production deployments. See: [release notes](../../sql-server/sql-server-2022-release-notes.md).
 >
 > You must enable trace flag 12606 before you can enable Query Store for secondary replicas. To enable the trace flags:
 >

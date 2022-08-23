@@ -143,7 +143,7 @@ If you encounter any installation errors during setup, check the summary log in 
     1. Launch the Python Setup application and choose **Customize installation**. 
     1. Verify the box is checked next to the option to **Install launcher for all users (recommended)**.
     1. Select all **Optional Features** options, or as desired.
-    1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. The path under **Customize install location** should not be in a user profile but should be for all users, for example: `C:\Program Files\Python310`.
+    1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
 6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
 

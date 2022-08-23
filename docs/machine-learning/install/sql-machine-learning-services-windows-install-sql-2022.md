@@ -103,7 +103,7 @@ If you encounter any installation errors during setup, check the summary log in 
     ```cmd
     cd C:\Program Files\R\R-4.2.0\bin
     R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\CompatibilityAPI.zip"
-    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "c:\temp\RevoScaleR.zip"
+    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\RevoScaleR.zip"
     ```
 
 8. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder depending on the installation, usually in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
@@ -148,11 +148,11 @@ If you encounter any installation errors during setup, check the summary log in 
 6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
 
     ```cmd
-    cd c:\Program Files\Python310\
+    cd C:\Program Files\Python310\
     python -m pip install C:\Users\%username%\Downloads\revoscalepy-10.0.0-py3-none-any.whl
     ```
 
-7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example:  `cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.
+7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example: `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.
 
     The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     

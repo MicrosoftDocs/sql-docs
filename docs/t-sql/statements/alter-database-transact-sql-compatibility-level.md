@@ -68,6 +68,10 @@ Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with
 > [!IMPORTANT]
 > The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
 
+## Best practices for upgrading database compatibility level
+
+For the recommended workflow for upgrading the compatibility level, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Additionally, for an assisted experience with upgrading the database compatibility level, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+
 ## Remarks
 
 For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the **model** database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database keeps its existing compatibility level, if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
@@ -82,7 +86,7 @@ The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-m
 For pre-existing databases running at lower compatibility levels, as long as the application doesn't need to use enhancements that are only available in a higher database compatibility level, it is a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) and some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).
 
 > [!NOTE]
-> If there are no user objects and dependencies, it is generally safe to upgrade to the default compatibility level. For more information, see [Recommendations - master Database](../../relational-databases/databases/master-database.md#recommendations).
+> If there are no user objects and dependencies, it is generally safe to upgrade to the default compatibility level. For more information, see [Recommendations - master database](../../relational-databases/databases/master-database.md#recommendations).
 
 Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.
 To view the current compatibility level of a database, query the `compatibility_level` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
@@ -116,10 +120,6 @@ Not all features that vary by compatibility level are supported on [!INCLUDE[ssS
 Database compatibility level is a valuable tool to help with database modernization by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded while keeping the same functional status for connecting applications by maintaining the same pre-upgrade database compatibility level. This means that it's possible to upgrade from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (such as [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (including Azure SQL Managed Instance) with no application changes (except for database connectivity). For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 As long as the application doesn't need to use enhancements that are only available in a higher database compatibility level, it is a valid approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and maintain the previous database compatibility level. For more information on using compatibility level for backward compatibility, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
-
-## Best practices for upgrading database compatibility level
-
-For the recommended workflow for upgrading the compatibility level, see [Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Additionally, for an assisted experience with upgrading the database compatibility level, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## Compatibility levels and stored procedures
 
@@ -463,6 +463,7 @@ SELECT @v;
 
 For more information on database compatibility levels and related concepts, see the following articles:
 
+- [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)
 - [Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)

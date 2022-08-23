@@ -21,13 +21,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
-## Important
-  - **Version 3.16 is the latest general availability (GA) version, which doesn't support target server version SqlServer2022. Download [SQL Server Integration Services Projects 3.16](https://ssis.gallerycdn.vsassets.io/extensions/ssis/sqlserverintegrationservicesprojects/3.16/1645603822968/Microsoft.DataTools.IntegrationServices.exe).
-More information is available in release notes.**
+## Offline installation
+Follow the below steps to install this product in an offline environment:
+1. Refer to the instructions in [Create an offline installation package of Visual Studio for local installation](/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019&preserve-view=true), and make sure the following prerequisites are included:
+    - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[16.0,)" DisplayName="C# and Visual Basic"
+    - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,)" DisplayName="Visual Studio core editor"
+    - Prerequisite Id="Microsoft.VisualStudio.Component.SQL.SSDT" Version="[16.0,)" DisplayName="SQL Server Data Tools"
+    - Prerequisite Id="Microsoft.Net.Component.4.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4 targeting pack"
+    - Prerequisite Id="Microsoft.Net.Component.4.5.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4.5 targeting pack"
+    - Prerequisite Id="Microsoft.Net.Component.4.7.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4.7 targeting pack"
 
-- **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
+1. Launch the installer of this product and perform the installation, or you can run the installer in quiet mode. Launch the installer with "/?" argument to get more details of the arguments list of the installer.
 
-- Since version 3.3, Power Query Source for SQL Server 2017 and Microsoft Oracle Connector for SQL Server 2019 have been excluded from the installation of this product. To continue using these two components, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017 and 2019](https://www.microsoft.com/download/details.aspx?id=100619), [Microsoft Oracle Connector for SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228)
+1. VS Community does not support offline activation. To use this product with VS Community, you must login to your Microsoft account occasionally in VS Community. If you want to use this product in a totally offline environment, we recommend you to install this product on VS Professional or Enterprise, which support offline activation via a product key.
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
@@ -48,7 +54,8 @@ More information is available in release notes.**
   **Version 4.1**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**
-
+    2. **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
+    
 **Version 4.0 preview:**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**
@@ -58,17 +65,18 @@ Workaround: Solution Explorer -> right click project ->properties->debugging->Ru
 
  ## Download issues
  
-If you get an error during installation, you can check the logs under %temp%\SsdtisSetup.
-Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
+If you install successfully, but the solution shows "incompatible" and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project".
+
+If you get an error during installation, you can check the logs under %temp%\SsdtisSetup. Usually, the detail error log is at the end of Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 
-   1. set idepath=”C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7”  (replace with your path)
-      ```
-      rm %idepath%\IDE\CommonExtensions\Microsoft\SSIS\* 
-      rm %idepath%\IDE\PublicAssemblies\SSIS\* 
-      rm %idepath%\IDE\PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\*
+   1. ```
+      cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
+      rm CommonExtensions\Microsoft\SSIS\* 
+      rm PublicAssemblies\SSIS\* 
+      rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
       ```
    2. Repair the vs2019 
-   3. Restart and start ssdt setup install again
+   3. Restart and reinstall
 - If the error is "Microsoft.VisualStudio.Setup.CanceledByPrecheckException: Pre-check verification failed with warning(s) :  AnotherInstallationRunning."
-    - Kill msiexec.exe process and relaunch. 
+    - Kill msiexec.exe process and relaunch your machine. 
  - If it is not above error in ISVsix.log, you can zip the folder and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.

@@ -51,7 +51,7 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Query Store](query-store-and-intelligent-query-processing)
+- [Query Store](#query-store-and-intelligent-query-processing)
   - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
   - Integrated acceleration

@@ -4,7 +4,7 @@ description: Learn about Azure Active Directory authentication support for SQL S
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/23/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -72,6 +72,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 - [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
 - [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
+- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
 
 ## Next steps
 

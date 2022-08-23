@@ -28,19 +28,21 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: ""
-ms.date: 05/14/2021
+ms.date: 08/23/2022
 ---
 
-# Server Configuration Options (SQL Server)
+# Server configuration options (SQL Server)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-You can manage and optimize SQL Server resources through configuration options by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the sp_configure system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through sp_configure. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
+You can manage and optimize SQL Server resources through configuration options by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the `sp_configure` system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through `sp_configure`. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
 > [!IMPORTANT]
 > **Advanced options should be changed only by an experienced database administrator or certified SQL Server technician.**
 
-## Categories of Configuration Options
+## Categories of configuration options
+
+If you don't see the effect of a configuration change, it may not be installed. Check to see that the `run_value` of the configuration option has changed.
 
 Configuration options take effect either:
 
@@ -50,13 +52,34 @@ Configuration options take effect either:
 
 - After performing the above actions and restarting the instance of SQL Server.
 
-Options that require SQL Server to restart will initially show the changed value only in the value column. After restart, the new value will appear in both the value column and the value_in_use column.
+The sys.configurations catalog view can be used to determine the `config_value` (the value column), the `run_value` (the `value_in_use` column), and whether the configuration option is dynamic (does not require a server engine restart or the `is_dynamic column`).
 
-Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options **value** column, but not in the **value_in_use** column. After restarting the server, the new value appears in the **value_in_use** column.
+Options that require SQL Server to restart will initially show the changed value only in the `value` column. After restart, the new value will appear in both the `value` column and the `value_in_use` column.
 
-Self-configuring options are those that SQL Server adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the user connections option.
+Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options `value` column, but not in the `value_in_use` column. After restarting the server, the new value appears in the `value_in_use` column.
 
-## Configuration Options Table
+> [!NOTE]
+> The `config_value` in the result set of `sp_configure` is equivalent to the `sys.configurations.value` column. The `run_value` is equivalent to the `sys.configurations.value_in_use column`.
+
+Self-configuring options are those that SQL Server adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the **user connections** option.
+
+The following query can be used to determine if any configured values have not been installed:
+
+```sql
+SELECT * FROM sys.configurations WHERE value != value_in_use`
+```
+
+If the value is the change for the configuration option you made but the `value_in_use` is not the same, either the `RECONFIGURE` command wasn't run or has failed, or the server engine must be restarted.
+
+There are two configuration options where the `value` and `value_in_use` might not be the same and this is the expected behavior:
+
+- **max server memory (MB)** - The default configured value of `0` will display as `value_in_use = 2147483647`.
+
+- `min server memory (MB)` - The default configured value of 0 might display how up as `value_in_use= 8` (32-bit) or 16 (64-bit). In some cases, the `value_in_use` will be `0`. In this situation, the "true" `value_in_use` is 8 (32-bit) or 16 (64-bit).
+
+The `is_dynamic` column can be used to determine if the configuration option requires a restart. The `is_dynamic=1` means that when the `RECONFIGURE` command is run, the new value will take effect immediately (in some cases the server engine might not evaluate the new value immediately but will do so in the normal course of its execution). The `is_dynamic=0` means the changed configuration value won't take effect until the server is restarted even though the `RECONFIGURE` command was run.
+
+## Configuration options table
 
 The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:
 

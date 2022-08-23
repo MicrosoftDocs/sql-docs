@@ -51,8 +51,6 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism feedback resume
 - [Management](#management)
   - Integrated acceleration
   - Link to Azure SQL Managed Instance for disaster recovery

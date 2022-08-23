@@ -22,23 +22,6 @@ Using [SQL Server Agent](/sql/ssms/agent/sql-server-agent) in SQL Server and [SQ
 > [!Note]
 > SQL Agent is not available in Azure SQL Database or Azure Synapse Analytics. Instead, we recommend [Job automation with Elastic Jobs](../database/job-automation-overview.md).
 
-### SQL Agent job limitations in SQL Managed Instance
-
-It is worth noting the differences between SQL Agent available in SQL Server and as part of SQL Managed Instance. For more on the supported feature differences between SQL Server and SQL Managed Instance, see [Azure SQL Managed Instance T-SQL differences from SQL Server](./transact-sql-tsql-differences-sql-server.md#sql-server-agent). 
-
-Some of the SQL Agent features that are available in SQL Server are not supported in SQL Managed Instance:
-
-- SQL Agent settings are read only. 
-    - The system stored procedure `sp_set_agent_properties` is not supported.
-- Enabling/disabling SQL Agent is currently not supported. SQL Agent is always running.
-- Notifications are partially supported:
-  - Pager is not supported.
-  - NetSend is not supported.
-  - Alerts are not supported.
-- Proxies are not supported.
-- Eventlog is not supported.
-- Job schedule trigger based on an idle CPU is not supported.
-
 ## When to use SQL Agent jobs 
 
 There are several scenarios when you could use SQL Agent jobs:
@@ -69,7 +52,7 @@ There are several key concepts in SQL Agent Jobs:
 - **Schedules** define when the job should be executed.
 - **Notifications** enable you to define rules that will be used to notify operators via email once the job completes.
 
-### SQL Agent job steps
+## Job steps
 
 SQL Agent Job steps are sequences of actions that SQL Agent should execute. Every step has the following step that should be executed if the step succeeds or fails, number of retries in a case of failure.
 
@@ -80,13 +63,11 @@ SQL Agent enables you to create different types of job steps, such as Transact-S
 
 [Transactional replication](../managed-instance/replication-transactional-overview.md) can replicate the changes from your tables into other databases in SQL Managed Instance, Azure SQL Database, or SQL Server. For information, see [Configure replication in Azure SQL Managed Instance](./replication-between-two-instances-configure-tutorial.md). 
 
-Other types of job steps are not currently supported in SQL Managed Instance, including:
+Other types of job steps are **not currently supported** in SQL Managed Instance, such as Merge replication, and Queue reader.
 
-- Merge replication job step is not supported.
-- Queue Reader is not supported.
-- Analysis Services are not supported
+
  
-### SQL Agent job schedules
+## Job schedules
 
 A schedule specifies when a job runs. More than one job can run on the same schedule, and more than one schedule can apply to the same job.
 
@@ -101,7 +82,7 @@ For more information on scheduling a SQL Agent job, see [Schedule a Job](/sql/ss
 > [!Note]
 > Azure SQL Managed Instance currently does not enable you to start a job when the CPU is idle.
 
-### SQL Agent job notifications
+## Job notifications
 
 SQL Agent jobs enable you to get notifications when the job finishes successfully or fails. You can receive notifications via email.
 
@@ -182,13 +163,13 @@ EXEC msdb.dbo.sp_update_job @job_name=N'Load data using SSIS',
     @notify_email_operator_name=N'AzureSQLTeam';
 ```
 
-### SQL Agent job history
+## Job history
 
 SQL Managed Instance currently doesn't allow you to change any SQL Agent properties because they are stored in the underlying registry values. This means options for adjusting the Agent retention policy for job history records are fixed at the default of 1000 total records and max 100 history records per job.
 
 For more information, see [View SQL Agent job history](/sql/ssms/agent/view-the-job-history).
 
-### SQL Agent fixed database role membership
+## Fixed database role membership
 
 If users linked to non-sysadmin logins are added to any of the three SQL Agent fixed database roles in the `msdb` system database, there exists an issue in which explicit EXECUTE permissions need to be granted to three system stored procedures in the master database. If this issue is encountered, the error message "The EXECUTE permission was denied on the object <object_name> (Microsoft SQL Server, Error: 229)" will be shown. 
 
@@ -203,6 +184,29 @@ GRANT EXECUTE ON master.dbo.xp_sqlagent_enum_jobs TO [login_name];
 GRANT EXECUTE ON master.dbo.xp_sqlagent_is_starting TO [login_name];
 GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO [login_name];
 ```
+
+## SQL Agent job limitations in SQL Managed Instance
+
+It is worth noting the differences between SQL Agent available in SQL Server and as part of SQL Managed Instance. For more on the supported feature differences between SQL Server and SQL Managed Instance, see [Azure SQL Managed Instance T-SQL differences from SQL Server](./transact-sql-tsql-differences-sql-server.md#sql-server-agent). 
+
+Some of the SQL Agent features that are available in SQL Server are not supported in SQL Managed Instance:
+
+- SQL Agent settings are read only. 
+    - The system stored procedure `sp_set_agent_properties` is not supported.
+- Enabling/disabling SQL Agent is currently not supported. SQL Agent is always running.
+- While notifications are partially supported, the following are not supported:
+  - Pager is not supported.
+  - NetSend is not supported.
+  - Alerts are not supported.
+- Proxies are not supported.
+- Eventlog is not supported.
+- Job schedule trigger based on an idle CPU is not supported.
+- Merge replication job steps are not supported.
+- Queue Reader is not supported. 
+- Analysis Services is not supported. 
+- Running a script stored as a file on disk is not supported. 
+- Importing external modules, such as dbatools and dbachecks, are not supported. 
+- PowerShell Core is not supported. 
 
 ## Learn more
 

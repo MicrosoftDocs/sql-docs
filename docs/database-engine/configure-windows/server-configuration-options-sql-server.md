@@ -50,7 +50,7 @@ Configuration options take effect either:
 
 - After performing the above actions and restarting the instance of SQL Server.
 
-You can use the `sys.configurations` catalog view can be used to determine the `config_value` (the `value` column), the `run_value` (the `value_in_use` column), and whether the configuration option requires a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] restart (the `is_dynamic` column).
+You can use the `sys.configurations` catalog view to determine the `config_value` (the `value` column) and the `run_value` (the `value_in_use` column), and whether the configuration option requires a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] restart (the `is_dynamic` column).
 
 If SQL Server needs to restart, options will initially show the changed value only in the `value` column. After restart, the new value will appear in both the `value` column and the `value_in_use` column.
 
@@ -61,7 +61,7 @@ Some options require a server restart before the new configuration value takes e
 
 Self-configuring options are options that SQL Server adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the **user connections** option.
 
-The following query can be used to determine if any configured values have not been installed:
+The following query can be used to determine if any configured values haven't been installed:
 
 ```sql
 SELECT *
@@ -69,7 +69,7 @@ FROM sys.configurations
 WHERE [value] <> [value_in_use];
 ```
 
-If the value is the change for the configuration option you made but the `value_in_use` is not the same, either the `RECONFIGURE` command wasn't run or has failed, or the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] must be restarted.
+If the value is the change for the configuration option you made but the `value_in_use` isn't the same, either the `RECONFIGURE` command wasn't run or has failed, or the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] must be restarted.
 
 There are two configuration options where the `value` and `value_in_use` might not be the same, which is the expected behavior:
 
@@ -77,7 +77,7 @@ There are two configuration options where the `value` and `value_in_use` might n
 
 - **min server memory (MB)** - The default configured value of `0` might display as `8` on 32-bit systems, or `16` on 64-bit systems,  in the `value_in_use` column. In some cases, if the `value_in_use` shows as `0`, the true `value_in_use` is `8` (32-bit) or `16` (64-bit).
 
-The `is_dynamic` column can be used to determine if the configuration option requires a restart. A value of `1` in the `is_dynamic` column means that, when the `RECONFIGURE` command is run, the new value will take effect immediately. In some cases the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might not evaluate the new value immediately but will do so in the normal course of its execution. A value of `0` in the `is_dynamic` column means that the changed configuration value won't take effect until the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is restarted, even though the `RECONFIGURE` command was run.
+The `is_dynamic` column can be used to determine if the configuration option requires a restart. A value of `1` in the `is_dynamic` column means that, when the `RECONFIGURE` command is run, the new value will take effect immediately. In some cases, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might not evaluate the new value immediately but will do so in the normal course of its execution. A value of `0` in the `is_dynamic` column means that the changed configuration value won't take effect until the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is restarted, even though the `RECONFIGURE` command was run.
 
 ## Configuration options
 

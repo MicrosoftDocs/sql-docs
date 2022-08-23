@@ -1,5 +1,5 @@
 ---
-title: "hardware offload enable Server Configuration Option | Microsoft Docs"
+title: "Hardware offload enable server configuration option | Microsoft Docs"
 description: 'Learn about the "hardware offload enabled" option. '
 ms.custom: ""
 ms.date: 08/17/2022
@@ -47,5 +47,5 @@ GO
 ## Next steps
 
  - [sys.dm_server_accelerator_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md)
- - [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+ - [Server configuration options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
  - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)

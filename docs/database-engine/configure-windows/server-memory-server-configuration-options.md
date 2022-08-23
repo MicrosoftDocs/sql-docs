@@ -127,7 +127,7 @@ The following screenshot demonstrates all three steps:
 
 ## Lock pages in memory (LPIM)
 
-Windows-based applications can use Windows AWE (Address Windowing Extensions) APIs to allocate and to map physical memory into the process address space. The LPIM Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  The memory allocated using AWE is locked until the application explicitly frees it or exits.  Using the AWE APIs for memory management in 64-bit SQL Server is also frequently referred to as "locked pages". Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
+Windows-based applications can use Windows AWE (Address Windowing Extensions) APIs to allocate and map physical memory into the process address space. The LPIM Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. The memory allocated using AWE is locked until the application explicitly frees it or exits. Using the AWE APIs for memory management in 64-bit SQL Server is also frequently referred to as "locked pages". Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
 
 To disable the **Lock pages in memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the *Lock pages in memory* user right for the account with privileges to run `sqlservr.exe` (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup account) startup account.
 
@@ -168,16 +168,14 @@ Use the following methods to determine whether the SQL Server instance is using 
 
 - The output of the following TSQL query will indicate nonzero values for `locked_page_allocations_kb`:
 
-```sql
-SELECT osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
-FROM sys.dm_os_memory_nodes omn 
-INNER JOIN sys.dm_os_nodes osn ON (omn.memory_node_id = osn.memory_node_id) 
-WHERE osn.node_state_desc <> 'ONLINE DAC' 
-```
+    ```sql
+    SELECT osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
+    FROM sys.dm_os_memory_nodes omn 
+    INNER JOIN sys.dm_os_nodes osn ON (omn.memory_node_id = osn.memory_node_id) 
+    WHERE osn.node_state_desc <> 'ONLINE DAC' 
+    ```
 
-- The current SQL Server error log will report the following message during server startup:
-
-  Using locked pages in the memory manager
+- The current SQL Server error log will report the error message, "Using locked pages in the memory manager" during server startup.
 
 - The "Memory Manager" section of the DBCC MEMORYSTATUS output will show a nonzero value for the "AWE Allocated" item.
 

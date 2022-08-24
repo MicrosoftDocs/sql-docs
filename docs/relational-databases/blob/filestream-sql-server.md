@@ -88,6 +88,10 @@ The Win32 streaming support works in the context of a [!INCLUDE[ssNoVersion](../
 
 Because file operations are transactional, you cannot delete or rename FILESTREAM files through the file system.  
 
+>[!WARNING]
+>The FILESTREAM container is a folder managed by SQL Server. Do not add or remove files in the FILESTREAM folder manually or through other applications
+
+
 **Statement Model**
 
 The FILESTREAM file system access models a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement by using file open and close. The statement starts when a file handle is opened and ends when the handle is closed. For example, when a write handle is closed, any possible AFTER trigger that is registered on the table fires as if an UPDATE statement is completed.

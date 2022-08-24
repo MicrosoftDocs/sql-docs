@@ -19,18 +19,13 @@ This article explains when and how to use the package0 targets for Extended Even
 - Its abilities in gathering and reporting the data sent by events.
 - Its parameters, except where the parameter is self-explanatory.
 
-
 #### XQuery example
-
 
 The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [XQuery in Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) to copy a string of XML into a relational rowset.
 
-
 ### Prerequisites
 
-
 - Be generally familiar with the basics of Extended Events, as described in [Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
-
 
 - Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details see:
     - [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -229,7 +224,6 @@ Of course, you can also manually use the SSMS UI to see the .xel data.
 
 #### Data stored in the event_file target
 
-
 Next is the report from SELECTing from `sys.fn_xe_file_target_read_file`, in SQL Server 2016.
 
 ```ouptut
@@ -238,12 +232,9 @@ module_guid                            package_guid                           ob
 D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
-
-
 <a name="h2_target_histogram"></a>
 
-## histogram target
-
+## Histogram target
 
 The **histogram** target is fancier than the event_counter target. The histogram can do the following:
 
@@ -251,7 +242,6 @@ The **histogram** target is fancier than the event_counter target. The histogram
 - Count occurrences of different types of items:
     - Event fields.
     - Actions.
-
 
 The **source_type** parameter is the key to controlling the histogram target:
 
@@ -263,7 +253,19 @@ The **source_type** parameter is the key to controlling the histogram target:
 The 'slots' parameter default is 256. If you assign another value, the value is rounded up to the next power of 2.
 
 - For example, slots=59 would be rounded up to =64.
+  
+> [!NOTE]
+> During an extended events session with histogram as the target, sometimes, you can see unexpected results. Some events might not appear at the same time when other events’ count show a higher value than they should.
 
+This is a side effect of the histogram target design. The histogram entity uses a hashing function to aggregate entities into buckets. Therefore, depending on the selection of the aggregation field, two objects might be stored in the same bucket, and both the objects are shown under the name of the one executed first.
+
+This can also happen when you use the `NO_EVENT_LOSS` parameter. Consider the following scenario:
+
+- You set up an Extended Events session, using histogram as the target and grouping by object_id, to collect stored procedures execution.
+- You execute the Stored Procedure A. 
+- Then, you execute Stored Procedure B.
+
+If both the Stored Procedures' object_id returns the same value for the hash function, the histogram will show Stored Procedure A being executed twice, and the Stored Procedure B will not appear.
 
 ### *Action* example for histogram
 
@@ -301,9 +303,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         );
 ```
 
-
  The following data was captured. The values under the **value** column were system_thread_id values. For instance, a total of 236 locks were taken under thread 6540.
-
 
 ```
 value   count
@@ -316,15 +316,11 @@ value   count
  2396      28
 ```
 
-
 #### SELECT to discover available actions
 
+The [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) `SELECT` statement can find the actions that the system has available for you to specify on your `CREATE EVENT SESSION` statement. In the `WHERE` clause, you would first edit the `o.name LIKE` filter to match the actions that interest you.
 
-The [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT statement can find the actions that the system has available for you to specify on your CREATE EVENT SESSION statement. In the WHERE clause, you would first edit the `o.name LIKE` filter to match the actions that interest you.
-
-
-Next is a sample rowset returned by the C.3 SELECT. The `system_thread_id` action is seen in the second row.
-
+Next is a sample rowset returned by the `C.3 SELECT`. The `system_thread_id` action is seen in the second row.
 
 ```
 Package-Name   Action-Name                 Action-Description
@@ -335,13 +331,9 @@ sqlserver      create_dump_all_threads     Create mini dump including all thread
 sqlserver      create_dump_single_thread   Create mini dump for the current thread
 ```
 
-
 ### Event *field* example for histogram
 
-
 The following example sets **source_type=0**. The value assigned to **source=** is an event field (not an action).
-
-
 
 ```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
@@ -357,10 +349,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
     WITH
     ( <....> );
 ```
-
-
 The following data was captured by the histogram target. The data shows that the database that is ID=5 experienced 7 checkpoint_begin events.
-
 
 ```
 value   count
@@ -370,15 +359,11 @@ value   count
 6       3
 ```
 
-
 #### SELECT to discover available fields on your chosen event
-
 
 The [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT statement shows event fields that you can choose from. You would first edit the `o.name LIKE` filter to be your chosen event name.
 
-
-The following rowset was returned by the C.4 SELECT. The rowset shows that `database_id` is the only one field on the `checkpoint_begin` event that can supply values for the histogram target.
-
+The following rowset was returned by the `C.4 SELECT`. The rowset shows that `database_id` is the only one field on the `checkpoint_begin` event that can supply values for the histogram target.
 
 ```
 Package-Name   Event-Name         Field-Name   Field-Description
@@ -386,24 +371,17 @@ Package-Name   Event-Name         Field-Name   Field-Description
 sqlserver      checkpoint_begin   database_id  NULL
 sqlserver      checkpoint_end     database_id  NULL
 ```
-
-
 <a name="h2_target_pair_matching"></a>
 
 ## pair_matching target
 
+The **pair_matching** target enables you to detect start events that occurs without a corresponding end event. For instance, it might be a problem when a lock_acquired event occurs but no matching lock_released event follows in a timely manner.
 
-The pair_matching target enables you to detect start events that occurs without a corresponding end event. For instance, it might be a problem when a lock_acquired event occurs but no matching lock_released event follows in a timely manner.
-
-
-The system does not automatically match start and end events. Instead, you explain the matching to the system in your CREATE EVENT SESSION statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
-
+The system does not automatically match start and end events. Instead, you explain the matching to the system in your `CREATE EVENT SESSION` statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
 
 #### Finding matchable fields for the start and end event pair
 
-
 By using the [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields), we see in the following rowset there are about 16 fields for the lock_acquired event. The rowset displayed here has been manually split to show which fields our example matched on. Some fields would be silly to try matching, such as on the `duration` of both events.
-
 
 ```
 Package-Name   Event-Name   Field-Name               Field-Description

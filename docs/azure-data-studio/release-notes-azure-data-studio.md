@@ -76,7 +76,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
 | [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
 | [February 2021](#february-2021) | 1.26.0 | February 18, 2021 | N/A |
-| [December 2020](#december-2020) | 1.27.0 | December 9, 2020 | [hotfix](#december-2020-hotfix) |
+| [December 2020](#december-2020) | 1.25.0 | December 9, 2020 | [hotfix](#december-2020-hotfix) |
 | [November 2020](#november-2020) | 1.24.0 | November 12, 2020 | N/A |
 | [October 2020](#october-2020) | 1.23.0 | October 14, 2020 | N/A |
 | [September 2020](#september-2020) | 1.22.0 | September 22, 2020 | [hotfix](#september-2020-hotfix) |

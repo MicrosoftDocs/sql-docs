@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "CREATE SERVER AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

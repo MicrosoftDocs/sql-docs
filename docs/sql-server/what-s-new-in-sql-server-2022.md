@@ -40,8 +40,8 @@ This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
 - On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For SQL Server 2022 Preview on Linux, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
-- Doesn't include support from Microsoft, except for select EAP customers.
+- For SQL Server 2022 Preview on Linux, packages are coming soon. For information about Community Technology Preview (CTP) packages, you can see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
@@ -51,46 +51,16 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Analytics](#analytics)
-  - Data virtualization 
-- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism feedback resume
-  - Query store hints
+- [Query Store](#query-store-and-intelligent-query-processing)
+  - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
-  - Link to Azure SQL Managed Instance for disaster recovery
   - Snapshot backups
+- [Platform](#platform)
+  - Integrated offloading & acceleration
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
   - TRIM scalar function extensions
-
-<!--
-## Community technology preview release
-
-This is release candidate (RC) 0.
-
-SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
-
-- [Analytics](#analytics)
-  - Data virtualization 
-- [Intelligent query performance features](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism feedback resume
-  - Query store hints
-- [Management](#management)
-  - Link to Azure SQL Managed Instance for disaster recovery
-  - Snapshot backups
-- [Language](#language)
-  - APPROX_PERCENTILE_DISC()
-  - APPROX_PERCENTILE_CONT()
-  - DATETRUNC()
-  - IS \[NOT\] DISTINCT FROM
-  - Bit manipulation functions:
-     - LEFT_SHIFT()
-     - RIGHT_SHIFT()
-     - BIT_COUNT()
-     - GET_BIT()
-     - SET_BIT()
--->
 
 For details, see the feature descriptions in the sections below.
 
@@ -137,8 +107,12 @@ The following sections provide an overview of these features.
 |Ordered clustered columnstore index | Ordered clustered columnstore index (CCI) sorts the existing data in memory before the index builder compresses the data into index segments. This has the potential of more efficient segment elimination, resulting in better performance as the number of segments to read from disk is reduced. For more information, see [CREATE COLUMNSTORE INDEX (Transact-SQL)](../t-sql/statements/create-columnstore-index-transact-sql.md) and [What's new in columnstore indexes](../relational-databases/indexes/columnstore-indexes-what-s-new.md).</br></br> Also available in Synapse Analytics. See [Query performance](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci#query-performance).|
 |Improved columnstore segment elimination | All columnstore indexes benefit from enhanced segment elimination by data type. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. This segment elimination applied to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. |
 | In-memory OLTP management | Improve memory management in large memory servers to reduce out-of-memory conditions. |
+<<<<<<< HEAD
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. | 
 | Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64 MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
+=======
+| Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
+>>>>>>> 3cab5f39fb0dc9ce7413d5b7fba7c07f03df9886
 
 ## Query Store and intelligent query processing
 
@@ -152,7 +126,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in SQL Server 2022 Preview. Requires the Query Store to be enabled and in "Read write" mode. |
 | Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistance benefits memory grant feedback as well as the new DOP and CE feedback features.<br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
-| Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode.  See `DOP_FEEDBACK` in [Degree of parallelism feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#dop-feedback-considerations). |
+| Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode. <br/><br/> Beginning with RC 0, every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback. If the performance is not the same or better, we clear all DOP feedback and trigger a reanalysis of the query starting from the compiled DOP. <br/><br/> See `DOP_FEEDBACK` in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires the Query Store to be enabled and in "Read write" mode. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 
@@ -169,6 +143,13 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
 | Asynchronous auto update statistics concurrency|Avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Backup and restore to S3-compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
+
+## Platform
+
+| New feature or update | Details |
+|:---|:---|
+|Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated offloading & acceleration](../relational-databases/integrated-acceleration/overview.md). |
+| Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. |
 
 ## Language
 

@@ -119,7 +119,7 @@ test
 
 ### B. Remove specified characters from both sides of string
 
-The following example removes a trailing period and spaces from before `#` and after the word `test`.
+The following example provides a list of possible characters to remove from a string.
 
 ```sql
 SELECT TRIM( '.,! ' FROM '     #     test    .') AS Result;
@@ -130,6 +130,8 @@ SELECT TRIM( '.,! ' FROM '     #     test    .') AS Result;
 ```output
 #     test
 ```
+
+In this example, only the trailing period and spaces from before `#` and after the word `test` were removed. The other characters were ignored because they didn't exist in the string.
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 

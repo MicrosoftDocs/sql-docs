@@ -1,8 +1,8 @@
 ---
 title: "DROP CONTRACT (Transact-SQL)"
 description: DROP CONTRACT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "DROP CONTRACT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 ---
 # DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,7 +3,7 @@ title: "RESTORE (Transact-SQL)"
 description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 05/10/2022
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
@@ -349,6 +349,17 @@ Restoring a damaged `master` database is performed using a special procedure. Fo
 Restoring a database clears the plan cache for the database being restored. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. 
 
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.
+
+### Integrated offloading and acceleration for backup compression and decompression
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. For more information, see [Backup COMPRESSION](backup-transact-sql.md#compression). 
+
+If you have configured [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/intel-quickassist.md), the following example completes the back up with the accelerator solution, with QATzip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.
+
+SQL Server backups compressed using QAT_DEFLATE will support all T-SQL RESTORE operations. The `RESTORE {DATABASE|LOG}` statements for restoring and recovering databases from backups, will support all recovery arguments, such as `WITH MOVE`, `PARTIAL`, `STOPAT`, `KEEP REPLICATION`, `KEEP CDC` and `RESTRICTED_USER`. Auxiliary RESTORE commands will also be supported for all backup compression algorithms. Auxiliary RESTORE commands include `RESTORE FILELISTONLY`, `RESTORE HEADERONLY`, `RESTORE VERIFYONLY`, and more. 
+
+To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. If the server-scope configuration HARDWARE_OFFLOAD option is not enabled or the Intel QAT drivers have not been installed, an error will be surfaced instead of attempting to perform the restore: `Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.` The [sys.dm_server_accelerator_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view can be used to verify the configuration state of integrated offload and acceleration solutions.  
+
 
 ### Restore from URL
 
@@ -730,7 +741,7 @@ RESTORE DATABASE Sales
  - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
  - [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
  - [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
- - [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+ - [BACKUP](../../t-sql/statements/backup-transact-sql.md)      
  - [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
  - [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
  - [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     

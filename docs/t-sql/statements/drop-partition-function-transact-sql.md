@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing partition functions"
 dev_langs:
   - "TSQL"
-ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

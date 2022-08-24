@@ -1,8 +1,8 @@
 ---
 title: "ALTER RESOURCE POOL (Transact-SQL)"
 description: ALTER RESOURCE POOL (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "ALTER RESOURCE POOL"
 dev_langs:
   - "TSQL"
-ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE CREDENTIAL (Transact-SQL)

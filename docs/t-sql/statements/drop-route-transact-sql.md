@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing routes"
 dev_langs:
   - "TSQL"
-ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 ---
 # DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

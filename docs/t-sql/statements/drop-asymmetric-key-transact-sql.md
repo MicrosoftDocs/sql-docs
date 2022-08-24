@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP ASYMMETRIC KEY (Transact-SQL)

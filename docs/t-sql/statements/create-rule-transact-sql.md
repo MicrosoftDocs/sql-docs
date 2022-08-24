@@ -1,8 +1,8 @@
 ---
 title: "CREATE RULE (Transact-SQL)"
 description: CREATE RULE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -27,7 +27,6 @@ helpviewer_keywords:
   - "rules [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 ---
 # CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

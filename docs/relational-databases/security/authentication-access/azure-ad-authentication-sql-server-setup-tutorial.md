@@ -33,7 +33,7 @@ In this tutorial, you learn how to:
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- SQL Server Azure Arc extension version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
+- Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 

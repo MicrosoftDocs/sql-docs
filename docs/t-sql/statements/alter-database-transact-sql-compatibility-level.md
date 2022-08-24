@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "db compat level"
 dev_langs:
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 07/11/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

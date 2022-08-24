@@ -73,7 +73,7 @@ You can still use a certificate that exceeds its expiration date to encrypt and 
 
 ### Encryption hierarchy
 
-The Windows Data Protection API (DPAPI) is at the root of encryption tree, secures the key hierarchy at the machine level, and is used to protect the service master key (SMK) for the database server instance. The SMK protects the database master key (DMK), which is stored at the user database level and which in turn protects certificates and asymmetric keys. These in turn protect symmetric keys, which protect the data. TDE uses a similar hierarchy down to the certificate. When you use TDE, the DMK and certificate must be stored in the master database. A new key, used only for TDE and referred to as the database encryption key (DEK), is created and stored in the user database.
+The Windows Data Protection API (DPAPI) is at the root of the encryption tree, secures the key hierarchy at the machine level, and is used to protect the service master key (SMK) for the database server instance. The SMK protects the database master key (DMK), which is stored at the user database level and protects certificates and asymmetric keys. These, in turn, protect symmetric keys, which protect the data. TDE uses a similar hierarchy down to the certificate. When you use TDE, the DMK and certificate must be stored in the master database. A new key, used only for TDE and referred to as the database encryption key (DEK), is created and stored in the user database.
 
 The following illustration shows the architecture of TDE encryption. Only the database-level items (the database encryption key and ALTER DATABASE portions) are user-configurable when you use TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
 
@@ -296,7 +296,7 @@ If a certificate is used to protect the database encryption key (DEK), [back up 
 
 ## TDE and Backups
 
-Certificates are commonly used in Transparent Data Encryption to protect the Database Encryption Key (DEK). The Certificate must be created in the master database. Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore from these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available.
+Certificates are commonly used in Transparent Data Encryption to protect the Database Encryption Key (DEK). The certificate must be created in the master database. Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore from these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you must maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available.
 
 ## Remove TDE
 

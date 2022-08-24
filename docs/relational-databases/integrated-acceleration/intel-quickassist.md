@@ -142,7 +142,7 @@ RECONFIGURE;
 To change the default compression algorithm back to the default, use the following script:
 
 ```sql
-EXEC sp_configure 'backup compression algorithm', 0;   
+EXEC sp_configure 'backup compression algorithm', 1;   
 RECONFIGURE; 
 ```
 

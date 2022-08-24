@@ -1,6 +1,6 @@
 ---
-title: Configure Intel QuickAssist Technology (QAT) for SQL Server
-description: Describes how to configure Intel QuickAssist Technology (QAT) for an instance of SQL Server.
+title: Configure Intel&reg; QuickAssist Technology (QAT) for SQL Server
+description: Describes how to configure Intel&reg; QuickAssist Technology (QAT) for an instance of SQL Server.
 ms.date: 08/16/2022
 ms.prod: sql
 ms.reviewer: david.pless, wiassaf 
@@ -10,32 +10,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 
-# Intel QuickAssist Technology (QAT) for SQL Server
+# Intel&reg; QuickAssist Technology for SQL Server
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article explains Intel QuickAssist Technology (QAT) for SQL Server and how to configure it on an instance of SQL Server. Intel QAT is an integrated offloading and acceleration solution. For background about these types of solutions, see [Integrated offloading and acceleration](overview.md).
+This article explains Intel&reg; QuickAssist Technology (QAT) for SQL Server and how to configure it on an instance of SQL Server. Intel&reg; QAT is an integrated offloading and acceleration solution. For background about these types of solutions, see [Integrated offloading and acceleration](overview.md).
 
 ## Edition specific capabilities
 
-Intel QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
+Intel&reg; QAT accelerator is supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
-- Enterprise edition supports hardware offloading - requires an Intel QAT device. If no device is available, it falls back to software based compression.
+- Enterprise edition supports hardware offloading - can use a physical device. If no device is available, it falls back to software based compression.
 
-- Standard edition supports software compression. Standard edition does not offload to hardware even if an Intel QAT device is available.
+- Standard edition supports software compression. Standard edition does not offload to hardware even if a device is available.
 
-- Express edition will allow Intel QAT compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm. 
+- Express edition allow Intel&reg; QAT compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm. 
 
 > [!NOTE]
-> QAT hardware is not required to successfully restore a previously compressed Intel QAT backup, regardless of the SQL Server edition. However, to back up or restore databases with Intel QAT accelerated compression, you must install Intel QAT drivers.
+> Hardware is not required to successfully restore a previously compressed Intel&reg; QAT backup, regardless of the SQL Server edition. However, to back up or restore databases with Intel&reg; QAT accelerated compression, you must install product drivers.
 
 ## Install drivers
 
 1. Download the drivers. 
 
-   The minimum QATzip accelerator library version supported is [1.8.0-0010](https://www.intel.com/content/www/us/en/download/19732/), but you should always install the latest version from Intel. Drivers are available at [Intel Quick Assist Technology landing page](https://developer.intel.com/quickassist).
+   The minimum QATzip accelerator library version supported is [1.8.0-0010](https://www.intel.com/content/www/us/en/download/19732/), but you should always install the latest version from the vendor. Drivers are available at [Intel&reg; Quick Assist Technology landing page](https://developer.intel.com/quickassist).
 
-1. Follow the instructions from Intel to install the drivers on your server.
+1. Follow the instructions from the vendor to install the drivers on your server.
 
 1. Reboot the server after you install the drivers.
 
@@ -60,25 +60,25 @@ For detailed instructions and examples, see [Enable integrated offloading and ac
 
 ## Service start - after configuration
 
-After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the Intel QuickAssist Technology (QAT) accelerator, the user space library is QATzip. This library provides a number of features. The QATzip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel QAT devices.
+After the feature is enabled, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they are available. For the Intel&reg; QAT accelerator, the user space library is QATzip. This library provides a number of features. The QATzip software library is a user space software API that can interface with the QAT kernel driver API. It is used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel&reg; QAT devices.
 
 In the case of the Windows operating system, there is a complimentary software library to QATzip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATzip in the case of hardware failure, and a software-based option when the hardware is not available.
 
 > [!NOTE]
-> The unavailability of an Intel QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
+> The unavailability of an Intel&reg; QAT hardware device doesn't prevent instances from performing backup or restore operations using the QAT_DEFLATE algorithm. If the physical device is not available, the software algorithm will be leveraged as a fallback solution.
 
 ## Backup operation
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an `ALGORITHM` extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
 
-The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel QAT for backup compression acceleration, the algorithm QAT_DEFLATE initiates an Intel QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
+The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel&reg; QAT for backup compression acceleration, the algorithm QAT_DEFLATE initiates an Intel&reg; QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
 
 > [!NOTE]
 > The standard compression algorithm is MS_XPRESS and is default compression option.
 
 Use the ALGORITHM command to specify either of these two algorithms (`MS_XPRESS`, `QAT_DEFLATE`) for backup compression.
 
-The example below performs backup compression using Intel QAT hardware acceleration.
+The example below performs backup compression using Intel&reg; QAT hardware acceleration.
 
 ```sql
 BACKUP DATABASE <database> TO DISK = '<path>\<file>.bak'  
@@ -138,7 +138,7 @@ RECONFIGURE;
 
 No restart of SQL Server is required for this change to take effect. 
 
-The 'configure backup compression algorithm' configuration sets the default compression algorithm. To set Intel QAT as the default compression algorithm for SQL Server, use the following script:
+The 'configure backup compression algorithm' configuration sets the default compression algorithm. To set Intel&reg; QAT as the default compression algorithm for SQL Server, use the following script:
 
 ```sql
 EXEC sp_configure 'backup compression algorithm', 'QAT_DEFLATE';   
@@ -172,9 +172,9 @@ SQL Server backups compressed using QAT_DEFLATE support all T-SQL RESTORE operat
 Auxiliary RESTORE commands are also supported for all backup compression algorithms. Auxiliary RESTORE commands include RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE VERIFYONLY, and more.
 
 > [!NOTE]
-> If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel QAT drivers have not been installed, SQL Server returns error 17441 instead of attempting to perform the restore. For example: `Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`
+> If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel&reg; QAT drivers have not been installed, SQL Server returns error 17441 instead of attempting to perform the restore. For example: `Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`
 
-To restore an Intel QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
+To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation.
 
 ### Backup history
 

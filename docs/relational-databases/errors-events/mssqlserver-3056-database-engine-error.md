@@ -28,18 +28,17 @@ ms.author: mathoma
   
 ## Explanation
 
-This error is raised if files exist under the FILESTREAM container (folder) that are not created by SQL Server. The backup operation will include that file, but this will cause an inconsisten state of the filestream components of the database. 
-
+Error 3056 is raised if files exist under the FILESTREAM container (folder) that aren't created by SQL Server. The backup operation will include that file, but this will cause an Inconsistent state of the filestream components of the database. 
 
 ## User Action  
 
-The error message includes the name of the unexpected file. Please investigate how this file ended up in this folder.
+The error message includes the name of the unexpected file. Please, investigate how this file ended up in this folder.
 
-  
+
 ### Run DBCC CHECKDB
 
-If you run DBCC CHECKDB it may report error [7908](mssqlserver-7908-database-engine-error.md) or [7906](mssqlserver-7906-database-engine-error.md), but cannot repair it.
+If you run DBCC CHECKDB it may report error [7908](mssqlserver-7908-database-engine-error.md) or [7906](mssqlserver-7906-database-engine-error.md), but can't repair it.
 
 ### Restore from Backup
 
-If the problem is not hardware related and a known clean backup is available, restore the database from the backup.  
+If the problem isn't hardware related and a known clean backup is available, restore the database from the backup.  

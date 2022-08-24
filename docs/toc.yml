@@ -10493,6 +10493,8 @@ items:
       href: tools/visual-studio-code/mssql-query-history.md
     - name: SQL Database Projects
       href: azure-data-studio/extensions/sql-database-project-extension.md
+    - name: SQL Bindings for Azure Functions
+      href: tools/visual-studio-code/create-azure-function-with-mssql.md
 - name: Tutorials
   items:
   - name: SQL Server

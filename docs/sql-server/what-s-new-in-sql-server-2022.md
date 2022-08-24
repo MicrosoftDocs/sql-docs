@@ -56,7 +56,7 @@ SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 - [Management](#management)
   - Snapshot backups
 - [Platform](#platform)
-  - Integrated acceleration & offloading
+  - Integrated offloading & acceleration
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()

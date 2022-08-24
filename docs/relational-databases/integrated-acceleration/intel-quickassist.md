@@ -141,14 +141,14 @@ No restart of SQL Server is required for this change to take effect.
 The 'configure backup compression algorithm' configuration sets the default compression algorithm. To set Intel&reg; QAT as the default compression algorithm for SQL Server, use the following script:
 
 ```sql
-EXEC sp_configure 'backup compression algorithm', 'QAT_DEFLATE';   
+EXEC sp_configure 'backup compression algorithm', 2;   
 RECONFIGURE; 
 ```
 
 To change the default compression algorithm back to the default, use the following script:
 
 ```sql
-EXEC sp_configure 'backup compression algorithm', 'MS_XPRESS';   
+EXEC sp_configure 'backup compression algorithm', 1;   
 RECONFIGURE; 
 ```
 

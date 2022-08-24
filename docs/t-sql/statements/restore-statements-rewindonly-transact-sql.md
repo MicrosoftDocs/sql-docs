@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "RESTORE REWINDONLY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

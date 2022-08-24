@@ -1,13 +1,13 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)"
 description: ALTER DATABASE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 12/09/2021
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "references_regions"
+ms.custom: references_regions
 f1_keywords:
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "autonumbers, identity numbers"
 dev_langs:
   - "TSQL"
-ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)

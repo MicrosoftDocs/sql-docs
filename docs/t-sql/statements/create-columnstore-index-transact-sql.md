@@ -1,7 +1,8 @@
 ---
-description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
-ms.custom: ""
+description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
+author: markingmyname
+ms.author: maghan
 ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -23,8 +24,6 @@ helpviewer_keywords:
   - "columnstore index, creating"
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

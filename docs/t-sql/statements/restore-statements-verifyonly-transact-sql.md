@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "checking backups"
 dev_langs:
   - "TSQL"
-ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)

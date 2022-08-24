@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "DROP XML SCHEMA COLLECTION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

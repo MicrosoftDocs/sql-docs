@@ -28,12 +28,14 @@ ms.author: mathoma
   
 ## Explanation
 
-Error 3056 is raised if files exist under the FILESTREAM container (folder) that aren't created by SQL Server. The backup operation will include that file, but this will cause an Inconsistent state of the filestream components of the database. 
+Error 3056 is raised if files exist under the FILESTREAM container (folder) that aren't created by SQL Server. The backup operation will include that file, but this will cause an inconsistent state of the filestream components in the database.
 
 ## User Action  
 
 The error message includes the name of the unexpected file. Please, investigate how this file ended up in this folder.
 
+>[!WARNING]
+>The FILESTREAM container is a folder managed by SQL Server. Do not add or remove files in the FILESTREAM folder
 
 ### Run DBCC CHECKDB
 

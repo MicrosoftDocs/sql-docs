@@ -55,7 +55,7 @@ SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
   - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
   - Integrated acceleration
-  - Snapshot backups
+  - Improved snapshot backup support
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()

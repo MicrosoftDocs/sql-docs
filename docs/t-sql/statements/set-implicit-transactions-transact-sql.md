@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "IMPLICIT_TRANSACTIONS option"
 dev_langs:
   - "TSQL"
-ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)

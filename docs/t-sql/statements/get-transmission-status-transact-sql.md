@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "GET_TRANSMISSION_STATUS statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

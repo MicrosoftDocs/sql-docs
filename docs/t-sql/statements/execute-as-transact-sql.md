@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "switching execution context"
 dev_langs:
   - "TSQL"
-ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)

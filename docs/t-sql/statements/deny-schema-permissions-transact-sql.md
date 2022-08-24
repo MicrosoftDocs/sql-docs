@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "DENY statement, schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 ---
 # DENY Schema Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 dev_langs:
   - "TSQL"
-ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 ---
 # DENY Endpoint Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

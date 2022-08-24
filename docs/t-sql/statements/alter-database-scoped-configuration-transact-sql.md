@@ -2,9 +2,9 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION"
 titleSuffix: SQL Server (Transact-SQL)
 description: Enable several database configuration settings at the individual database level.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: katsmith, jovanpop 
+author: markingmyname
+ms.author: maghan
+ms.reviewer: katsmith, jovanpop
 ms.date: 08/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

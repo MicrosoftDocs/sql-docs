@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "active transactions"
 dev_langs:
   - "TSQL"
-ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

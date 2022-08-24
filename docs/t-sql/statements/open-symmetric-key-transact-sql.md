@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "OPEN SYMMETRIC KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)

@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 04/25/2022
+ms.date: 08/19/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -46,6 +46,20 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2022 Reporting Services
+
+## 15.0.8264.8408, 2022/08/19
+*(Product Version: 15.0.1111.106)*
+
+Release Candidate 0 (RC0)
+
+- New portal experience with performance improvements using Angular.
+- Accessibility fixes to many parts of the Portal.
+- Security enhancements.
+- Bug fixes.
+- Deprecation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
+
+
 ## SQL Server 2019 Reporting Services
 
 ## 15.0.8115.18148, 2022/04/04 

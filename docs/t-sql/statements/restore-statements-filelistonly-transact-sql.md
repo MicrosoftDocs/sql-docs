@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "listing backed up files"
 dev_langs:
   - "TSQL"
-ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)

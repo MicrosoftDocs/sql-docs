@@ -1,8 +1,8 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL)"
 description: ALTER FUNCTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw, sql-database"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "functions [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)

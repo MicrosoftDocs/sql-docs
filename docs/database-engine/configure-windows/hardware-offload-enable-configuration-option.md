@@ -20,7 +20,7 @@ ms.author: mikeray
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-The `hardware offload enabled` configuration option allows integrated offloading and acceleration with validated solutions from partners. For more information, see [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md).
+The `hardware offload enabled` configuration option allows integrated acceleration and offloading with validated solutions from partners. For more information, see [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md).
 
 This is an advanced option.
 

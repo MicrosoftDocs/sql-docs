@@ -1,30 +1,26 @@
 ---
+title: "DBCC TRACESTATUS (Transact-SQL)"
 description: "DBCC TRACESTATUS (Transact-SQL)"
-title: "DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/17/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC_TRACESTATUS_TSQL"
   - "DBCC TRACESTATUS"
   - "TRACESTATUS_TSQL"
   - "TRACESTATUS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "global trace flags [SQL Server]"
   - "status information [SQL Server], trace flags"
   - "trace flags [SQL Server], status information"
   - "DBCC TRACESTATUS statement"
   - "session trace flags [SQL Server]"
   - "displaying trace flag status"
-ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

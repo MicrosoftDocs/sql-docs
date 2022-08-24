@@ -1,27 +1,23 @@
 ---
+title: "DBCC TRACEOFF (Transact-SQL)"
 description: "DBCC TRACEOFF (Transact-SQL)"
-title: "DBCC TRACEOFF (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/17/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "TRACEOFF_TSQL"
   - "TRACEOFF"
   - "DBCC TRACEOFF"
   - "DBCC_TRACEOFF_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "trace flags [SQL Server], disabling"
   - "DBCC TRACEOFF statement"
   - "disabling trace flags"
-ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC TRACEOFF (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

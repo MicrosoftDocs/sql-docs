@@ -1,21 +1,18 @@
 ---
+title: "DBCC CHECKFILEGROUP (Transact-SQL)"
 description: "DBCC CHECKFILEGROUP (Transact-SQL)"
-title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CHECKFILEGROUP_TSQL"
   - "DBCC_CHECKFILEGROUP_TSQL"
   - "DBCC CHECKFILEGROUP"
   - "CHECKFILEGROUP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC CHECKFILEGROUP statement"
   - "database objects [SQL Server], checking"
   - "allocation checks"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], consistency checks"
   - "table integrity checks [SQL Server]"
   - "checking database objects"
-ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

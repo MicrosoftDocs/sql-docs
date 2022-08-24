@@ -3,13 +3,10 @@ title: "OPENXML (Transact-SQL)"
 description: "OPENXML (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/20/2018"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENXML_TSQL"
   - "OPENXML"

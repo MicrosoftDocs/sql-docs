@@ -1,28 +1,24 @@
 ---
+title: "DBCC FREESESSIONCACHE (Transact-SQL)"
 description: "DBCC FREESESSIONCACHE (Transact-SQL)"
-title: "DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "FREESESSIONCACHE"
   - "FREESESSIONCACHE_TSQL"
   - "DBCC_FREESESSIONCACHE_TSQL"
   - "DBCC FREESESSIONCACHE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC FREESESSIONCACHE statement"
   - "distributed queries [SQL Server], cache"
   - "clearing distributed query cache"
   - "flushing distributed query cache"
-ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

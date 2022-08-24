@@ -1,28 +1,24 @@
 ---
+title: "DBCC DBREINDEX (Transact-SQL)"
 description: "DBCC DBREINDEX (Transact-SQL)"
-title: "DBCC DBREINDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC DBREINDEX"
   - "DBREINDEX_TSQL"
   - "DBREINDEX"
   - "DBCC_DBREINDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index rebuilding [SQL Server]"
   - "rebuilding indexes"
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
-ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

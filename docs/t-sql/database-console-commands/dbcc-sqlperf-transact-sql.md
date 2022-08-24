@@ -1,28 +1,24 @@
 ---
+title: "DBCC SQLPERF (Transact-SQL)"
 description: "DBCC SQLPERF (Transact-SQL)"
-title: "DBCC SQLPERF (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "01/07/2018"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "SQLPERF"
   - "DBCC_SQLPERF_TSQL"
   - "SQLPERF_TSQL"
   - "DBCC SQLPERF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statistical information [SQL Server], transaction logs"
   - "transaction logs [SQL Server], space usage"
   - "space [SQL Server], transaction logs"
   - "DBCC SQLPERF statement"
-ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

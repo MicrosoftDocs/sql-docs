@@ -1,18 +1,14 @@
 ---
+title: "Numeric types"
 description: "Numeric types"
-title: "Numeric types | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: c11686eb-80b9-444c-bf1b-36ebad653df1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Numeric types

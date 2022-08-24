@@ -1,14 +1,13 @@
 ---
+title: "DBCC dllname (FREE) (Transact-SQL)"
 description: "DBCC dllname (FREE) (Transact-SQL)"
-title: "DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "dbcc_dllname_(FREE)_TSQL"
   - "dllname"
   - "dbcc dllname (FREE)"
@@ -17,16 +16,13 @@ f1_keywords:
   - "FREE_TSQL"
   - "dllname_TSQL"
   - "dbcc dllname(FREE)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DLL unloading [SQL Server]"
   - "DBCC dllname (FREE)"
   - "freeing DLLs"
   - "unloading DLLs"
-ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC dllname (FREE) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

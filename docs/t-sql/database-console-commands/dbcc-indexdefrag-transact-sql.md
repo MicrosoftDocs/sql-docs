@@ -1,29 +1,25 @@
 ---
-description: "DBCC INDEXDEFRAG (Transact-SQL)"
 title: DBCC INDEXDEFRAG (Transact-SQL)
-ms.custom: ""
+description: "DBCC INDEXDEFRAG (Transact-SQL)"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "INDEXDEFRAG"
   - "DBCC INDEXDEFRAG"
   - "DBCC_INDEXDEFRAG_TSQL"
   - "INDEXDEFRAG_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "defragmenting indexes"
   - "DBCC INDEXDEFRAG statement"
   - "leaf level defragmenting"
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
-ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC INDEXDEFRAG (Transact-SQL)

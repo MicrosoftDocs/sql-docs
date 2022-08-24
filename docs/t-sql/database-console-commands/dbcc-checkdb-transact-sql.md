@@ -1,21 +1,18 @@
 ---
+title: "DBCC CHECKDB (Transact-SQL)"
 description: "DBCC CHECKDB (Transact-SQL)"
-title: "DBCC CHECKDB (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "12/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CHECKDB_TSQL"
   - "DBCC_CHECKDB_TSQL"
   - "DBCC CHECKDB"
   - "CHECKDB"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECKDB [DBCC statement]"
   - "database objects [SQL Server], checking"
   - "counting pages"
@@ -32,9 +29,8 @@ helpviewer_keywords:
   - "negative counts"
   - "checking database objects"
   - "page count accuracy [SQL Server]"
-ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC CHECKDB (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

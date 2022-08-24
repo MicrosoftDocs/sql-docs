@@ -1,29 +1,25 @@
 ---
+title: "DBCC CHECKCATALOG (Transact-SQL)"
 description: "DBCC CHECKCATALOG (Transact-SQL)"
-title: "DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC_CHECKCATALOG_TSQL"
   - "DBCC CHECKCATALOG"
   - "CHECKCATALOG_TSQL"
   - "CHECKCATALOG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalogs [SQL Server], consistency checks"
   - "checking catalog consistency"
   - "DBCC CHECKCATALOG statement"
   - "integrity [SQL Server], catalogs"
   - "consistency [SQL Server], catalogs"
-ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

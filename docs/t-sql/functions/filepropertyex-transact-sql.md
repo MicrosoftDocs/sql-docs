@@ -3,10 +3,8 @@ title: "FILEPROPERTYEX (Transact-SQL)"
 description: "FILEPROPERTYEX (Transact-SQL)"
 author: stevestein
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "07/23/2019"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:

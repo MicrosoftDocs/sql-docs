@@ -1,26 +1,21 @@
 ---
+title: "Data type precedence (Transact-SQL)"
 description: "Explains data type precedence for Transact-SQL"
-title: "Data type precedence (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/23/2017
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precedence [SQL Server]"
   - "data types [SQL Server], converting"
   - "data types [SQL Server], precedence"
   - "converting data types [SQL Server], precedence"
   - "precedence [SQL Server], data types"
-ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
-
 ---
 # Data type precedence (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

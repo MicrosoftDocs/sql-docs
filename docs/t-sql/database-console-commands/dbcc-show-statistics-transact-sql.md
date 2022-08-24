@@ -1,21 +1,18 @@
 ---
-description: "DBCC SHOW_STATISTICS (Transact-SQL) displays current query optimization statistics for a table or indexed view."
 title: "DBCC SHOW_STATISTICS (Transact-SQL)"
-ms.custom: ""
+description: "DBCC SHOW_STATISTICS (Transact-SQL) displays current query optimization statistics for a table or indexed view."
+author: rwestMSFT
+ms.author: umajay
 ms.date: "06/06/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "SHOW_STATISTICS_TSQL"
   - "DBCC SHOW_STATISTICS"
   - "SHOW_STATISTICS"
   - "DBCC_SHOW_STATISTICS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query optimization statistics [SQL Server], densities"
   - "histograms [SQL Server]"
   - "statistical information [SQL Server], viewing statistics objects"
@@ -30,8 +27,8 @@ helpviewer_keywords:
   - "statistical information [SQL Server], distribution"
   - "densities [SQL Server]"
   - "displaying distribution statistics"
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

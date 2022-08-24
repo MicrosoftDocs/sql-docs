@@ -1,30 +1,26 @@
 ---
-description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
-ms.custom: ""
+description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/5/2021"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DROPCLEANBUFFERS"
   - "DBCC_DROPCLEANBUFFERS_TSQL"
   - "DROPCLEANBUFFERS_TSQL"
   - "DBCC DROPCLEANBUFFERS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "clean buffers"
   - "cold buffer cache"
   - "buffer pools [SQL Server]"
   - "dropping buffers"
   - "removing buffers"
   - "DBCC DROPCLEANBUFFERS statement"
-ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

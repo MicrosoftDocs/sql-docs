@@ -1,26 +1,22 @@
 ---
+title: "DBCC TRACEON (Transact-SQL)"
 description: "DBCC TRACEON (Transact-SQL)"
-title: "DBCC TRACEON (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/17/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC_TRACEON_TSQL"
   - "TRACEON"
   - "DBCC TRACEON"
   - "TRACEON_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC TRACEON statement"
   - "trace flags [SQL Server], enabling"
-ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC TRACEON (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,21 +1,18 @@
 ---
-description: "DBCC UPDATEUSAGE (Transact-SQL)"
 title: DBCC UPDATEUSAGE (Transact-SQL)
-ms.custom: ""
+description: "DBCC UPDATEUSAGE (Transact-SQL)"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "UPDATEUSAGE"
   - "UPDATEUSAGE_TSQL"
   - "DBCC_UPDATEUSAGE_TSQL"
   - "DBCC UPDATEUSAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inaccurate page or row counts [SQL Server]"
   - "space [SQL Server], usage reports"
   - "updating space usage information"
@@ -31,9 +28,8 @@ helpviewer_keywords:
   - "counting rows"
   - "row count accuracy [SQL Server]"
   - "page count accuracy [SQL Server]"
-ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC UPDATEUSAGE (Transact-SQL)

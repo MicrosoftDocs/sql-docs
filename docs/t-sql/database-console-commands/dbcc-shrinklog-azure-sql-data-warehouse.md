@@ -1,16 +1,14 @@
 ---
-description: "DBCC SHRINKLOG (Parallel Data Warehouse)"
 title: DBCC SHRINKLOG (Parallel Data Warehouse)
-ms.custom: ""
-ms.date: "03/16/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "language-reference"
-dev_langs: 
-  - "TSQL"
+description: "DBCC SHRINKLOG (Parallel Data Warehouse)"
 author: rwestMSFT
 ms.author: umajay
+ms.date: "03/16/2018"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "language-reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016"
 ---
 

@@ -1,29 +1,25 @@
 ---
-description: "DBCC CHECKCONSTRAINTS (Transact-SQL)"
 title: DBCC CHECKCONSTRAINTS (Transact-SQL)
-ms.custom: ""
+description: "DBCC CHECKCONSTRAINTS (Transact-SQL)"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC CHECKCONSTRAINTS"
   - "DBCC_CHECKCONSTRAINTS_TSQL"
   - "CHECKCONSTRAINTS"
   - "CHECKCONSTRAINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC CHECKCONSTRAINTS statement"
   - "consistency [SQL Server], constraints"
   - "checking constraint consistency"
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
-ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC CHECKCONSTRAINTS (Transact-SQL)

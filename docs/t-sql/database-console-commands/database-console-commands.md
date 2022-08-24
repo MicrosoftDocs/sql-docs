@@ -1,18 +1,14 @@
 ---
-description: "Database Console Commands"
 title: Database Console Commands
-ms.custom: ""
+description: "Database Console Commands"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "language-reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-author: rwestMSFT
-ms.author: umajay
 ---
 
 # Database Console Commands

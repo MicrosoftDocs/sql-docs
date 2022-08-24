@@ -3,13 +3,10 @@ title: "FILE_IDEX (Transact-SQL)"
 description: "FILE_IDEX (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "FILE_IDEX"
   - "FILE_IDEX_TSQL"

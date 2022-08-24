@@ -1,21 +1,18 @@
 ---
+title: "DBCC CHECKTABLE (Transact-SQL)"
 description: "DBCC CHECKTABLE (Transact-SQL)"
-title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
+author: rwestMSFT
+ms.author: umajay
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CHECKTABLE_TSQL"
   - "DBCC_CHECKTABLE_TSQL"
   - "DBCC CHECKTABLE"
   - "CHECKTABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexed views [SQL Server], DBCC CHECKTABLE"
   - "page integrity checks [SQL Server]"
   - "consistency [SQL Server], tables"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "integrity [SQL Server]"
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
-ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

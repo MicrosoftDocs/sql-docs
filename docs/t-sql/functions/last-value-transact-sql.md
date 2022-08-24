@@ -6,11 +6,9 @@ ms.author: maghan
 ms.reviewer: kendalv, randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "LAST_VALUE"
   - "LAST_VALUE_TSQL"

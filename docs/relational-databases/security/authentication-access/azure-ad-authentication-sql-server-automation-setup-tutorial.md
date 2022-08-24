@@ -31,7 +31,7 @@ We'll also go over the updated functionality to set up an Azure AD admin for SQL
 
 - SQL Server 2022 CTP 2.1 or later is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- SQL Server Azure Arc extension version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
+- Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - An [Azure Key Vault](/azure/key-vault/general/quick-create-portal) is required.
 
@@ -775,12 +775,12 @@ if ($arcServicePrincipal -and ![string]::IsNullOrEmpty($arcServicePrincipal.Id))
     catch
     {
         Write-Error $_
-        Write-Host "Warning: Could not find the identity of the SQL Server Azure Arc extension and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
+        Write-Host "Warning: Could not find the identity of the Azure extension for SQL Server and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
     }
 }
 else
 {
-    Write-Host "Warning: Could not find the identity of the SQL Server Azure Arc extension and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
+    Write-Host "Warning: Could not find the identity of the Azure extension for SQL Server and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
 }
 
 # Create an Azure AD application

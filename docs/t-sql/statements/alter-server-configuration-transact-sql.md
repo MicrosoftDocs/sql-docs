@@ -1,8 +1,8 @@
 ---
 title: "ALTER SERVER CONFIGURATION (Transact-SQL)"
 description: ALTER SERVER CONFIGURATION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "setting process affinity"
 dev_langs:
   - "TSQL"
-ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

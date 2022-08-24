@@ -1,8 +1,8 @@
 ---
 title: "CREATE PARTITION FUNCTION (Transact-SQL)"
 description: CREATE PARTITION FUNCTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -25,7 +25,6 @@ helpviewer_keywords:
   - "CREATE PARTITION FUNCTION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

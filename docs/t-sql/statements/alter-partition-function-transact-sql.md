@@ -1,8 +1,8 @@
 ---
 title: "ALTER PARTITION FUNCTION (Transact-SQL)"
 description: ALTER PARTITION FUNCTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "4/5/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], merging"
 dev_langs:
   - "TSQL"
-ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
 

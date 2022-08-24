@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "trailing blanks"
 dev_langs:
   - "TSQL"
-ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_PADDING (Transact-SQL)

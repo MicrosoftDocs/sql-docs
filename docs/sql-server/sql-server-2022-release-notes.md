@@ -30,13 +30,15 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
-- In RC 0, when you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting will not change the encryption and may cause errors.
+- If you choose to add the Azure extension for SQL Server to an existing instance, Setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
 
-- In RC 0, Query Store for secondary replicas is available for preview. It is not available for use in production environments.
+- When you install Azure extension for SQL Server during setup, in some cases a timeout may occur. In this case, setup returns a timeout exception but setup should succeed and the extension should be installed.
 
-- If you choose to add the Azure Arc extension feature to an existing instance, setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
+- When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
 
-- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which are not packaged in SQL Server 2022 RC 0 installation. For RC 0, please install the two drivers from the provided links as necessary.
+- Query Store for secondary replicas is available for preview. It isn't available for use in production environments.
+
+- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which aren't packaged in SQL Server 2022 RC 0 installation. For RC 0, install the two drivers from the provided links as necessary.
 
 ## Build number
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Schema Permissions (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "TRUSTWORTHY Database Property | Microsoft Docs"
 description: Learn about the TRUSTWORTHY database property, which indicates whether the instance of SQL Server trusts the database and its contents. The default is OFF.
 ms.custom: ""
-ms.date: 08/23/2022
+ms.date: 08/24/2022
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -16,6 +16,7 @@ ms.author: vanto
 ---
 
 # TRUSTWORTHY database property
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The `TRUSTWORTHY` database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is `OFF`, but can be set to `ON` by using the `ALTER DATABASE` statement. For example, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
@@ -28,9 +29,9 @@ We recommend that you leave the `TRUSTWORTHY` database property to `OFF` to miti
   
 - Malicious modules that are defined to execute as high privileged users. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- Both situations require a specific degree of privilege and are protected by appropriate mechanisms when they are used in the context of a database that is already attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if the database is taken offline, if you have access to the database file you can potentially attach it to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of your choice and add malicious content to the database. When databases are detached and attached in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files that restrict access to the database files.  
+Both situations require a specific degree of privilege and are protected by appropriate mechanisms when they are used in the context of a database that is already attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if the database is taken offline, if you have access to the database file you can potentially attach it to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of your choice and add malicious content to the database. When databases are detached and attached in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files that restrict access to the database files.  
   
- Because a database that is attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be immediately trusted, the database isn't allowed to access resources beyond the scope of the database until the database is explicitly marked trustworthy. Therefore, if you back up or detach a database that has the `TRUSTWORTHY` option `ON` and you attach or restore the database to the same or another SQL Server instance, the `TRUSTWORTHY` property will be set to `OFF` when attach or restore is completed. Also, modules that are designed to access resources outside the database, and assemblies with either the `EXTERNAL_ACCESS` and `UNSAFE` permission setting, have additional requirements to run successfully.  
+Because a database that is attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't be immediately trusted, the database isn't allowed to access resources beyond the scope of the database until the database is explicitly marked trustworthy. Therefore, if you back up or detach a database that has the `TRUSTWORTHY` option `ON` and you attach or restore the database to the same or another SQL Server instance, the `TRUSTWORTHY` property will be set to `OFF` when attach or restore is completed. Also, modules that are designed to access resources outside the database, and assemblies with either the `EXTERNAL_ACCESS` and `UNSAFE` permission setting, have additional requirements to run successfully.  
 
 > [!NOTE]
 > By default, the `TRUSTWORTHY` setting is set to `ON` for the `MSDB` database. If you change this setting from its default value, it might result in unexpected behavior by SQL Server components that use the `MSDB` database.
@@ -84,14 +85,11 @@ If this query shows that the `TRUSTWORTHY` property is set to `OFF`, you can run
 
 ```sql
 ALTER DATABASE MSDB SET TRUSTWORTHY ON 
-
 GO 
 ```
   
 ## Related content
 
  - [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
- - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
- 
-- [Extending Database Impersonation by Using EXECUTE AS](/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))
+ - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+ - [Extending Database Impersonation by Using EXECUTE AS](/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))

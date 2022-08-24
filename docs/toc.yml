@@ -6640,7 +6640,7 @@ items:
       - name: Overview
         href: relational-databases/integrated-acceleration/overview.md
       - name: Use integrated acceleration and offloading solutions
-        href: relational-databases/integrated-acceleration/intel-quickassist.md
+        href: relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md
     - name: Maintenance plans
       items:
       - name: Overview

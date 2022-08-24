@@ -66,4 +66,4 @@ When you're finished, select the **Apply** button on the bottom of the **Securit
 
 ## Next steps
 
-For more information, 
+For more security information, review [Security considerations for SQL Server on Azure VMs](security-considerations-best-practices.md). 

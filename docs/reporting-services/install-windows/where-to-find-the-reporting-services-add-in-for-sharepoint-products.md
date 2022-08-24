@@ -22,7 +22,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 > [!IMPORTANT]  
 >  For a list of the supported combinations of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in, report server, and SharePoint, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Reporting Services Add-in for SharePoint Products  
+##  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Reporting Services Add-in for SharePoint Products  
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
 -   [Microsoft® SQL Server 2016 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=103442)  
@@ -33,7 +33,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
 -   From a command prompt installation, use the **RS_SHPWFE** option to install the add-in. For more information on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] command prompt installations, see [Install Reporting Services at the Command Prompt](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services Add-in for SharePoint Products  
+##  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services Add-in for SharePoint Products  
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
 -   [Microsoft® SQL Server 2014 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=57959)  
@@ -44,7 +44,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
 -   From a command prompt installation, use the **RS_SHPWFE** option to install the add-in. For more information on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] command prompt installations, see [Install Reporting Services at the Command Prompt](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services Add-in for SharePoint Products  
+##  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services Add-in for SharePoint Products  
  The [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version of the add-in and report server, add support for SharePoint Server 2013.  
   
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  

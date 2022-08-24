@@ -50,13 +50,7 @@ The paths above apply to both hardware and software-only deployment.
 
 ## Configure server hardware offloading
 
-After the drivers are installed, configure the server.
-
-1. Set the server configuration option `hardware offload enabled` to `1`.
-1. Configure the server to use hardware offload.
-1. Restart the server.
-
-For detailed instructions and examples, see [Enable integrated offloading and acceleration](overview.md#enable-integrated-offloading-and-acceleration).
+After the drivers are installed, configure the server. For detailed instructions and examples, see [Enable integrated offloading and acceleration](overview.md#enable-integrated-offloading-and-acceleration).
 
 ## Service start - after configuration
 
@@ -138,17 +132,17 @@ RECONFIGURE;
 
 No restart of SQL Server is required for this change to take effect. 
 
-The 'configure backup compression algorithm' configuration sets the default compression algorithm. To set Intel&reg; QAT as the default compression algorithm for SQL Server, use the following script:
+The `backup compression algorithm` configuration sets the default compression algorithm. To set Intel&reg; QAT as the default compression algorithm for SQL Server, use the following script:
 
 ```sql
-EXEC sp_configure 'backup compression algorithm', 'QAT_DEFLATE';   
+EXEC sp_configure 'backup compression algorithm', 2;   
 RECONFIGURE; 
 ```
 
 To change the default compression algorithm back to the default, use the following script:
 
 ```sql
-EXEC sp_configure 'backup compression algorithm', 'MS_XPRESS';   
+EXEC sp_configure 'backup compression algorithm', 0;   
 RECONFIGURE; 
 ```
 

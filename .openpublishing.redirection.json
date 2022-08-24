@@ -41282,7 +41282,7 @@
     },
     {
       "source_path": "docs/relational-databases/integrated-acceleration/intel-quickassist.md",
-      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md",
+      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading",
       "redirect_document_id": false
     },
     {

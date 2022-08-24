@@ -56,17 +56,11 @@ The following code sample can be used to obtain a list of databases that have th
 
 ```sql
 SELECT SUSER_SNAME(owner_sid) AS DBOWNER, d.name AS DATABASENAME 
-
 FROM sys.server_principals r 
-
 INNER JOIN sys.server_role_members m ON r.principal_id = m.role_principal_id 
-
 INNER JOIN sys.server_principals p ON 
-
 p.principal_id = m.member_principal_id 
-
 INNER JOIN sys.databases d ON suser_sname(d.owner_sid) = p.name 
-
 WHERE is_trustworthy_on = 1 AND d.name NOT IN ('MSDB') AND r.type = 'R' AND r.name = N'sysadmin' 
 ```
 

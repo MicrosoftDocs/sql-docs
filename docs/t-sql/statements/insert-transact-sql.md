@@ -29,7 +29,6 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)

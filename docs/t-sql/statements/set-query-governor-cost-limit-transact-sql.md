@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "overriding connection values"
 dev_langs:
   - "TSQL"
-ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

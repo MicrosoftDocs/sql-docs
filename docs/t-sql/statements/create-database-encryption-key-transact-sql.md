@@ -25,7 +25,6 @@ helpviewer_keywords:
   - "database encryption key, create"
 dev_langs:
   - "TSQL"
-ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

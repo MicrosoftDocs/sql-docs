@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE compatibility level (Transact-SQL)"
 description: ALTER DATABASE compatibility level (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 07/11/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

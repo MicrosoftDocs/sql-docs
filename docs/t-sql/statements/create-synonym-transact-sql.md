@@ -1,8 +1,8 @@
 ---
 title: CREATE SYNONYM (Transact-SQL)
 description: CREATE SYNONYM (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "02/01/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

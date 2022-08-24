@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], dropping"
 dev_langs:
   - "TSQL"
-ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 ---
 # DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], types"
 dev_langs:
   - "TSQL"
-ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 ---
 # DENY Type Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

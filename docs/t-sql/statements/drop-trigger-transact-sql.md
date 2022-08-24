@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "DML triggers, removing"
 dev_langs:
   - "TSQL"
-ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 ---
 # DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

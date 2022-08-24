@@ -1,8 +1,8 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL)
 description: CREATE ENDPOINT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -29,7 +29,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 dev_langs:
   - "TSQL"
-ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 ---
 
 # CREATE ENDPOINT (Transact-SQL)

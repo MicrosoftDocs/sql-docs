@@ -10,7 +10,6 @@ ms.technology: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE FUNCTION (Azure Synapse Analytics)

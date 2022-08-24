@@ -1,8 +1,8 @@
 ---
 title: CREATE STATISTICS (Transact-SQL)
 description: CREATE STATISTICS (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: "katsmith"
 ms.date: "05/24/2022"
 ms.prod: sql

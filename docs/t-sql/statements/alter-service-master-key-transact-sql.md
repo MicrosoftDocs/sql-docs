@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "service master key [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

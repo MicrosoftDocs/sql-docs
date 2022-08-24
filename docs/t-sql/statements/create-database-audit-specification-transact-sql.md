@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 f1_keywords:
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

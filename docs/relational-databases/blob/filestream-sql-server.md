@@ -89,7 +89,7 @@ The Win32 streaming support works in the context of a [!INCLUDE[ssNoVersion](../
 Because file operations are transactional, you cannot delete or rename FILESTREAM files through the file system.  
 
 >[!WARNING]
->The FILESTREAM container is a folder managed by SQL Server. Do not add or remove files in the FILESTREAM folder manually or through other applications
+>The FILESTREAM container is a folder managed by SQL Server. Do not add or remove files in the FILESTREAM folder manually or through other applications. If you do, this will result in backup and inconsistency errors. For more information see [MSSQLSERVER_3056](../errors-events/mssqlserver-3056-database-engine-error.md), [MSSQLSERVER_7908](../errors-events/mssqlserver-7908-database-engine-error.md), and [MSSQLSERVER_7906](../errors-events/mssqlserver-7906-database-engine-error.md). 
 
 
 **Statement Model**

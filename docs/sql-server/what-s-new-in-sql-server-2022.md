@@ -143,7 +143,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-|Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated offloading & acceleration](../relational-databases/integrated-acceleration/overview.md). |
+|Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated offloading & acceleration](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. |
 
 ## Language

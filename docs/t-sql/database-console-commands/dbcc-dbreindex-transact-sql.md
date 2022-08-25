@@ -2,7 +2,7 @@
 title: "DBCC DBREINDEX (Transact-SQL)"
 description: "DBCC DBREINDEX (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: t-sql

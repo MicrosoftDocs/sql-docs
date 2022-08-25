@@ -2,7 +2,7 @@
 title: DBCC SHOWCONTIG (Transact-SQL)
 description: "DBCC SHOWCONTIG (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.technology: t-sql

@@ -2,7 +2,7 @@
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "11/5/2021"
 ms.prod: sql
 ms.technology: t-sql

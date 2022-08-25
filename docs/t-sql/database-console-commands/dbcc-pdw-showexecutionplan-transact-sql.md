@@ -2,7 +2,7 @@
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 description: "DBCC PDW_SHOWEXECUTIONPLAN displays the execution plan for a query running on a specific Azure Synapse Analytics or Analytics Platform System (PDW) compute node or control node."
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: data-warehouse

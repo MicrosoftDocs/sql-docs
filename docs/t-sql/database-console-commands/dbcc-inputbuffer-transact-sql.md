@@ -2,7 +2,7 @@
 title: "DBCC INPUTBUFFER (Transact-SQL)"
 description: "DBCC INPUTBUFFER (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "04/04/2018"
 ms.prod: sql
 ms.technology: t-sql

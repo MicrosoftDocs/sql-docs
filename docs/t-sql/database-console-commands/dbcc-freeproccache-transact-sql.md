@@ -2,7 +2,7 @@
 title: "DBCC FREEPROCCACHE (Transact-SQL)"
 description: "DBCC FREEPROCCACHE (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "10/13/2017"
 ms.prod: sql
 ms.technology: t-sql

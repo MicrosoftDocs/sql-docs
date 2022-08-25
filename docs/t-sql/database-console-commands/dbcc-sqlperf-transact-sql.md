@@ -2,7 +2,7 @@
 title: "DBCC SQLPERF (Transact-SQL)"
 description: "DBCC SQLPERF (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "01/07/2018"
 ms.prod: sql
 ms.technology: t-sql

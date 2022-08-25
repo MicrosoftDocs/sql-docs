@@ -2,7 +2,7 @@
 title: "DBCC dllname (FREE) (Transact-SQL)"
 description: "DBCC dllname (FREE) (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: t-sql

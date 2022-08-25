@@ -2,7 +2,7 @@
 title: DBCC (Transact-SQL)
 description: "DBCC (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.technology: t-sql

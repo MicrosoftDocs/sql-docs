@@ -2,7 +2,7 @@
 title: "DBCC OUTPUTBUFFER (Transact-SQL)"
 description: "DBCC OUTPUTBUFFER (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: t-sql

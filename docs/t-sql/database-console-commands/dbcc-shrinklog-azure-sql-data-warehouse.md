@@ -2,7 +2,7 @@
 title: DBCC SHRINKLOG (Parallel Data Warehouse)
 description: "DBCC SHRINKLOG (Parallel Data Warehouse)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "03/16/2018"
 ms.prod: sql
 ms.technology: t-sql

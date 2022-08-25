@@ -2,7 +2,7 @@
 title: "DBCC TRACEOFF (Transact-SQL)"
 description: "DBCC TRACEOFF (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.technology: t-sql

@@ -2,7 +2,7 @@
 title: "DBCC SHOW_STATISTICS (Transact-SQL)"
 description: "DBCC SHOW_STATISTICS (Transact-SQL) displays current query optimization statistics for a table or indexed view."
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "06/06/2022"
 ms.prod: sql
 ms.technology: t-sql

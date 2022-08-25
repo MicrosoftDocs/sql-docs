@@ -2,7 +2,7 @@
 title: DBCC CHECKIDENT (Transact-SQL)
 description: "DBCC CHECKIDENT (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "03/07/2019"
 ms.prod: sql
 ms.technology: t-sql

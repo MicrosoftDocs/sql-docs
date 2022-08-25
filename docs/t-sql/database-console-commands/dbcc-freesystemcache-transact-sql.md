@@ -2,7 +2,7 @@
 title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "02/25/2020"
 ms.prod: sql
 ms.technology: t-sql

@@ -2,7 +2,7 @@
 title: "DBCC CHECKDB (Transact-SQL)"
 description: "DBCC CHECKDB (Transact-SQL)"
 author: rwestMSFT
-ms.author: umajay
+ms.author: randolphwest
 ms.date: "12/14/2017"
 ms.prod: sql
 ms.technology: t-sql

@@ -600,14 +600,36 @@ function ConvertFrom-StringArray {
 }
 
 $keyVault = ConvertFrom-StringArray (az keyvault show --name $keyVaultName)
+
+if (!$keyVault)
+{
+    Write-Error "Azure key vault '$keyVaultName' does not exist"
+    exit 1
+}
+
 $cert = ConvertFrom-StringArray (az keyvault certificate show --name $certSubjectName --vault-name $keyVaultName 2>$null)
+
+if (!$cert)
+{
+  Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certficate"
+    exit 1    
+}
+
 $secretId = $cert.sid
+
 if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
     if ($Matches[1])     {
         $secretId = $Matches[1]
     }
 }
+
 $application = ConvertFrom-StringArray (az ad app list --display-name $applicationName  --only-show-errors)
+
+if (!$application)
+{
+ Write-Error "Supplied application was not found in the subscription. Please specify an existing application"
+    exit 1    
+}
 
 # Create the settings object to write to the Arc extension
 #
@@ -1078,21 +1100,35 @@ $applicationName="<applicationName>" # Your existing application name
 $adminAccountName="<adminAccountName>"
 $adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
 $adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
-$keyVault = Get-AzKeyVault -VaultName $keyVaultName 
-$cert = Get-AzKeyVaultCertificate -VaultName $keyVaultName -Name $certSubjectName 
-$secretId = $cert.SecretId 
 
-if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") { 
+$keyVault = Get-AzKeyVault -VaultName $keyVaultName
+if (!$keyVault)
+{
+    Write-Error "Supplied key vault was not found in the subscription. Please specify an existing key vault"
+    exit 1
+}
 
-    if ($Matches[1])     { 
+$cert = Get-AzKeyVaultCertificate -VaultName $keyVaultName -Name $certSubjectName
+if (!$cert)
+{
+    Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certificate"
+    exit 1
+}
 
-        $secretId = $Matches[1] 
+$secretId = $cert.SecretId
 
-    } 
+if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
+    if ($Matches[1])     {
+        $secretId = $Matches[1]
+    }
+}
 
-} 
-
-$application = Get-AzADApplication -DisplayName $applicationName 
+$application = Get-AzADApplication -DisplayName $applicationName
+if (!$application)
+{
+    Write-Error "Supplied application was not found in the subscription. Please specify an existing application"
+    exit 1
+}
 
 # Create the settings object to write to the Arc extension
 #

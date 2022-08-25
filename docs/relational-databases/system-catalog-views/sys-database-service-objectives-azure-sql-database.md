@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: sys.database_service_objectives (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/21/2018"
+ms.date: 08/25/2022
 ms.service: sql-database
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.topic: conceptual
@@ -58,8 +58,9 @@ JOIN sys.database_service_objectives slo
 ON d.database_id = slo.database_id;  
 ```  
   
-## Next steps
+## See also
 
+ - [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
  - [sys.databases](sys-databases-transact-sql.md)
  - [sys.event_log](sys-event-log-azure-sql-database.md)
  - [sys.dm_operation_status](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -67,5 +68,7 @@ ON d.database_id = slo.database_id;
  - [sys.database_connection_stats](sys-database-connection-stats-azure-sql-database.md)
  - [sys.database_service_objectives](sys-database-service-objectives-azure-sql-database.md)
  - [sys.dm_user_db_resource_governance](../system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md)
- - [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
- - [Monitor Azure SQL Database with Azure Monitor](../../../azure-sql/database/monitoring-sql-database-azure-monitor.md)
+
+## Next steps
+
+ - [Monitor Azure SQL Database with Azure Monitor](/azure/azure-sql/database/monitoring-sql-database-azure-monitor.md)

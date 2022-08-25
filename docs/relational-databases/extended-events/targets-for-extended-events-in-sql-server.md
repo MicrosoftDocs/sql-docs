@@ -3,7 +3,7 @@ title: "Targets for Extended Events in SQL Server"
 description: This article explains package0 targets for Extended Events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/24/2022"
+ms.date: 08/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents
@@ -35,10 +35,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
     - The event data is captured as an XML string. Yet in this article the data is displayed in relational rows. SSMS was used to view the data, and then was copied and pasted into this article.
     - The alternative T-SQL technique for generating rowsets from XML is explained in the [ring_buffer section](#h2_target_ring_buffer). It involves XQuery.
 
-
-
 ## Parameters, actions, and fields
-
 
 In Transact-SQL, the [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) statement is central to Extended Events. To write the statement you often need a list and description of the following:
 
@@ -51,7 +48,6 @@ SELECT statements which return such lists from system views are available to cop
     - [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT fields for an event.
     - [C.6](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_6_parameters_targets) SELECT parameters for a target.
     - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT actions.
-
 
 You can see parameters, fields, and actions used in the context of an actual CREATE EVENT SESSION statement, at [this link](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective).
 
@@ -86,7 +82,6 @@ Unlike most other targets:
     - Synchronous is acceptable for the simple event_counter because the event_counter involves so little processing.
     - The database engine will disconnect from any target which is too slow and which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
 
-
 #### Example output captured by event_counter
 
 ```
@@ -114,15 +109,11 @@ CREATE EVENT SESSION [event_counter_1]
     );
 ```
 
-
-
 <a name="h2_target_event_file"></a>
 
 ## event_file target
 
-
 The **event_file** target writes event session output from buffer to a disk file:
-
 
 - You specify the *filename=* parameter on the ADD TARGET clause.
     - **.xel** must be the extension of the file.
@@ -137,12 +128,9 @@ The **event_file** target writes event session output from buffer to a disk file
 
 ::: moniker-end
 
-
 #### CREATE EVENT SESSION with **event_file** target
 
-
 Next is the CREATE EVENT SESSION that we used to test with. One of the ADD TARGET clauses specifies an event_file.
-
 
 ```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
@@ -203,7 +191,6 @@ SELECT f.*
             'C:\junk\locks_acq_rel_eventfile_22-*.xel',
             null, null, null)  AS f;
 ```
-
 
 For SQL Server **2014**, a SELECT similar to the following would report the data. After SQL Server 2014, the .xem files are no longer used.
 

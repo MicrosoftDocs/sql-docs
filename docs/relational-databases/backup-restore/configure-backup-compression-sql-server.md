@@ -18,7 +18,7 @@ ms.author: mathoma
 
 ## Use integrated acceleration and offloading
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], use [Integrated offloading and acceleration](../integrated-acceleration/overview.md) to compress backups with Intel QuickAssist Technology.
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], use [Integrated offloading and acceleration](../integrated-acceleration/overview.md) to compress backups with Intel&reg; QuickAssist Technology.
   
 ## Override the Backup Compression Default  
  You can change the backup compression behavior for an individual backup, backup job, or log shipping configuration.  

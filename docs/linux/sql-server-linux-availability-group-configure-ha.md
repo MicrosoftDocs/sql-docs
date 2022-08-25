@@ -57,8 +57,6 @@ The steps to create an AG on Linux servers for high availability are different f
    * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
 
-[!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
-
 ### Considerations for multiple Network Interfaces (NICs)
 
 When setting up high availability with servers using that has multiple NICs, follow these suggestions:
@@ -73,6 +71,8 @@ When setting up high availability with servers using that has multiple NICs, fol
    ```
    
    - The `<hostname` given in the `corosync.conf` file should be the same as the output given when doing a reverse lookup (`ping -a <ip_address>`), whether it's the FQDN or the shortname that is conigured in the host. Make sure the `hosts` file also represents the proper IP to name resolution.
+
+[!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the AG
 

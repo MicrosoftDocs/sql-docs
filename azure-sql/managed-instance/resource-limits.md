@@ -88,8 +88,8 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) | 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| 16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. |
-| Log write throughput limit (per instance) | 3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4 MB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) | 100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
+| Log write throughput limit (per instance) | 3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4 MiB/s per vCore<br/>Max 96 MiB/s |
+| Data throughput (approximate) | 100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
 | Storage IO latency (approximate) | 5-10 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions | 30000 | 30000 |
@@ -135,14 +135,14 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
 
-| **File size** | **>=0 and <=128 GiB** | **>128 and <= 512 GiB** | **>0.5 and <=1 TiB**    | **>1 and <=2 TiB**    | **>2 and <=4 TiB** | **>4 and <=8 TiB** |
+| **File size** | **>=0 and <=128 GB** | **>128 and <= 512 GB** | **>0.5 and <=1 TB**    | **>1 and <=2 TB**    | **>2 and <=4 TB** | **>4 and <=8 TB** |
 |:--|:--|:--|:--|:--|:--|:--|
 | IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 12,500   |
 | Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
 
 If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
 
-There is also an instance-level limit on the max log write throughput (see above for values, e.g.,  22 MB/s), so you may not be able to reach the max file throughout on the log file because you are hitting the instance throughput limit.
+There is also an instance-level limit on the max log write throughput (see above for values, e.g.,  22 MiB/s), so you may not be able to reach the max file throughout on the log file because you are hitting the instance throughput limit.
 
 ## Supported regions
 
@@ -248,8 +248,8 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | Max data file size |  Limited to currently available instance storage size (max 2 TB - 8 TB) and [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files). Use at least two data files for databases larger than 8 TB. |   Limited to currently available instance storage size (up to 1 TB - 4 TB). |
 | Max log file size |  Limited to 2 TB and currently available instance storage size. |  Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) |  Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)|  16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. | 
-| Log write throughput limit (per instance) |  3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) |  100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
+| Log write throughput limit (per instance) |  3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MiB/s per vCore<br/>Max 96 MB/s |
+| Data throughput (approximate) |  100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
 | Storage IO latency (approximate) |  5-10 ms |  1-2 ms |
 | In-memory OLTP |  Not supported |  Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions |  30000 |  30000 |

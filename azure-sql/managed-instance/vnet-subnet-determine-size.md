@@ -109,4 +109,4 @@ Example:
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).
 - Learn more about [connectivity architecture for SQL Managed Instance](connectivity-architecture-overview.md).
 - See how to [create a virtual network where you'll deploy SQL Managed Instance](virtual-network-subnet-create-arm-template.md).
-- For DNS issues, see [Configure a custom DNS](custom-dns-configure.md).
+- For DNS issues, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).

@@ -37,8 +37,8 @@ In this article you can find a content reference to various guides, scripts, and
   Verify network requirements and configure your existing virtual network and subnet to deploy SQL Managed Instance.
 - [Configure service endpoint policies for Azure Storage (Preview)](service-endpoint-policies-configure.md):
   Secure your subnet against erroneous or malicious data exfiltration into unauthorized Azure Storage accounts.
-- [Configure custom DNS](custom-dns-configure.md):
-  Configure custom DNS to grant external resource access to  custom domains from SQL Managed Instance via a linked server of db mail profiles. 
+- [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md):
+  Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, e.g. in scenarios involving Linked Server or Database Mail. 
 - [Find the management endpoint IP address](management-endpoint-find-ip-address.md): 
   Determine the public endpoint that SQL Managed Instance is using for management purposes. 
 - [Verify built-in firewall protection](management-endpoint-verify-built-in-firewall.md):

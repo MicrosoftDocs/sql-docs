@@ -12,7 +12,7 @@ ms.topic: how-to
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, genemi, mathoma
-ms.date: 07/14/2021
+ms.date: 08/24/2022
 ---
 # Use virtual network service endpoints and rules for servers in Azure SQL Database
 
@@ -106,16 +106,16 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 
 #### Prerequisites
 
-- Install Azure PowerShell by using [this guide](/powershell/azure/install-az-ps).
+- Install Azure PowerShell. For more information, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
 - If you have a general-purpose v1 or Azure Blob Storage account, you must first upgrade to general-purpose v2 by following the steps in [Upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade).
 - You must have **Allow trusted Microsoft services to access this storage account** turned on under the Azure Storage account **Firewalls and Virtual networks** settings menu. Enabling this configuration will allow PolyBase and the COPY statement to connect to the storage account by using strong authentication where network traffic remains on the Azure backbone. For more information, see [this guide](/azure/storage/common/storage-network-security#exceptions).
 
 > [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by SQL Database, but all future development is for the Az.Sql module. The AzureRM module will continue to receive bug fixes until at least December 2020. The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
+> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the `Az.Sql` module. The AzureRM module will continue to receive bug fixes until at least December 2020. The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
 
 #### Steps
 
-1. If you have a standalone dedicated SQL pool, register your SQL server with Azure AD by using PowerShell:
+1. If you have a standalone dedicated SQL pool (formerly SQL DW), register your SQL server with Azure AD by using PowerShell:
 
    ```powershell
    Connect-AzAccount

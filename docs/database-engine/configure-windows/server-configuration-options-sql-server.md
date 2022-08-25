@@ -4,7 +4,7 @@ description: Find out how to manage and optimize SQL Server resources. View avai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 08/24/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
@@ -79,7 +79,7 @@ There are two configuration options where the `value` and `value_in_use` might n
 
 The `is_dynamic` column can be used to determine if the configuration option requires a restart. A value of `1` in the `is_dynamic` column means that, when the `RECONFIGURE` command is run, the new value will take effect immediately. In some cases, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might not evaluate the new value immediately but will do so in the normal course of its execution. A value of `0` in the `is_dynamic` column means that the changed configuration value won't take effect until the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is restarted, even though the `RECONFIGURE` command was run.
 
-For a configuration option that isn't dynamic there is no way to tell if the `RECONFIGURE` command has been run to perform the first step of installing the configuration change. Before you restart SQL Server to install a configuration change, run the `RECONFIGURE` command to ensure all configuration changes will take effect after a SQL Server restart.
+For a configuration option that isn't dynamic there is no way to tell if the `RECONFIGURE` command has been run to apply the configuration change. Before you restart SQL Server to apply the configuration change, run the `RECONFIGURE` command to ensure all configuration changes will take effect when SQL Server next restarts.
 
 ## Configuration options
 

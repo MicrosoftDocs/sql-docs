@@ -192,6 +192,22 @@ CREATE TABLE T1(
 
 Sysadmin permissions are required to enable change data capture for SQL Server or Azure SQL Managed Instance. The db_owner role is required to enable change data capture for Azure SQL Database. 
 
+## General guidelines
+
+For Change data capture (CDC) to function properly, you shouldn't modify any CDC metadata such as CDC schema, CDC system stored procedures, default `cdc` user permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename `cdc` user.
+
+Any objects in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) with `is_ms_shipped` property set to `1` shouldn't be modified.
+
+```sql
+SELECT	name AS object_name   
+		,SCHEMA_NAME(schema_id) AS schema_name  
+		,type_desc  
+		,is_ms_shipped  
+FROM sys.objects 
+WHERE is_ms_shipped= 1
+
+```
+
 ## Limitations
 
 Change data capture has the following limitations: 
@@ -217,10 +233,10 @@ Configuring the frequency of the capture and the cleanup processes for CDC in Az
 CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of `NULL`. This behavior is intended, and not a bug.
 
 **Point-in-time restore (PITR)**  
-If you enable CDC on your database as an Microsoft Azure Active Directory (Azure AD) user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
+If you enable CDC on your database as a Microsoft Azure Active Directory (Azure AD) user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
 
 **Microsoft Azure Active Directory (Azure AD)**  
-If you create a database in Azure SQL Database as an Microsoft Azure Active Directory (Azure AD) user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another Azure AD user will be able to enable/disable CDC on the same database.
+If you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another Azure AD user will be able to enable/disable CDC on the same database.
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 

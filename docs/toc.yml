@@ -4993,7 +4993,9 @@ items:
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
         href: database-engine/configure-windows/backup-checksum-default.md
-      - name: View or Configure the backup compression default
+      - name: backup compression algorithm
+        href: database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md
+      - name: backup compression default
         href: database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
       - name: blocked process threshold
         href: database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md

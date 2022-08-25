@@ -66,12 +66,14 @@ The error message includes the name of the unexpected file. Investigate how this
 1. Then find the file identified in the error message (for example NO_USER_FILE_SHOULD_BE_HERE.txt), and make a copy of this file to a temporary directory as a backup.
 1. Once you ensure you have a copy, you can remove the file from the folder
 
-1. Take steps to understand why and how this file(s) got added in this system folder and take steps to prevent further occurrence.
-
+1. Take steps to understand why and how this file(s) got added in this system folder and take steps to prevent further occurrence
+   - ensure proper permissions are is in place for user access to this FILESTREAM folder(s)
+   - understand and ensure no applications are creating files in the FILESTREAM folder(s)
 
 1. Run a new DBCC CHECKDB and make sure it doesn’t raise any errors
 1. If there are any other CHECKDB errors including 7903,7904,7905,7907, then there has been corruption or tampering of SQL Server FILESTREAM folder  beyond the mere invalid addition of foreign files. This situation not repairable manually
-   - Check your hardware for issues and resolve them
+   - Check your hardware for any issues and resolve them
+   - Ensure your system is protected from malware. Note that FILESTREAM data files should be excluded from antivirus software scanning. See [Recommendations and guidelines for improving FILESTREAM performance](../blob/filestream-sql-server.md#recommendations-and-guidelines-for-improving-filestream-performance)
    - Then restore from healthy database backup
 
 ### Run DBCC CHECKDB

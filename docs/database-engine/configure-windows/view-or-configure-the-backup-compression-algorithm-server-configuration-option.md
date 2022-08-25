@@ -15,16 +15,18 @@ ms.author: mikeray
 
 # View or configure the backup compression algorithm Server Configuration Option
 
- [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-  This topic describes how to view or configure the **backup compression algorithm** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **backup compression algorithm** option determines which algorithm to use to set the backup.
+This topic describes how to view or configure the **backup compression algorithm** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **backup compression algorithm** option determines which algorithm to use to set the backup.
+
+The `backup compression algorithm` configuration option is required for you to implement [integrated acceleration and offloading solutions](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
-- This feature requires is available beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-- This feature leverage integrated acceleration and offloading. See [Use integrated acceleration and offloading solutions](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md) for details.
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+- Requires Windows Operating System
   
 ###  <a name="Security"></a> Security  
   
@@ -76,6 +78,3 @@ For more information, see [Server Configuration Options &#40;SQL Server&#41;](..
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
-  
-  
-

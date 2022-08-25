@@ -32,7 +32,7 @@ The feedback features discussed in this article are:
 - [Degree of parallelism Feedback](#degree-of-parallelism-dop-feedback)
 - [Cardinality Estimation Feedback](#cardinality-estimation-ce-feedback)
 
-## Memory Grant Feedback
+## Memory grant feedback
 
 ### Batch mode memory grant feedback
 
@@ -173,6 +173,8 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 ### Percentile and persistence mode memory grant feedback
 
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+
 This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
 Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
@@ -292,9 +294,9 @@ The following XEs are available for the feature:
 - `dop_feedback_reverted`: Occurs when a DOP feedback is reverted.  The event will fire when feedback validation fails on the first feedback provided.  The system will revert back to no feedback state.
 - `dop_feedback_analysis_stopped` : Occurs when the DOP feedback analysis is stopped for a query.
 
-## Cardinality Estimation (CE) feedback
+## Cardinality estimation (CE) feedback
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 

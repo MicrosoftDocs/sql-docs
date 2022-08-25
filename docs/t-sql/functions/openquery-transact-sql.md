@@ -3,13 +3,10 @@ title: "OPENQUERY (Transact-SQL)"
 description: "OPENQUERY (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENQUERY_TSQL"
   - "OPENQUERY"

@@ -1,26 +1,22 @@
 ---
+title: "binary and varbinary (Transact-SQL)"
 description: "binary and varbinary (Transact-SQL)"
-title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "binary_TSQL"
   - "varbinary_TSQL"
   - "binary"
   - "varbinary"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "varbinary data type"
   - "binary [SQL Server], about binary data type"
-ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

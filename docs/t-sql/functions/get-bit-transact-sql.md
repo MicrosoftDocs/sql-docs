@@ -6,7 +6,6 @@ ms.author: derekw
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:

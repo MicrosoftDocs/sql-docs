@@ -1,19 +1,16 @@
 ---
-description: "char and varchar (Transact-SQL)"
 title: char and varchar (Transact-SQL)
-ms.custom: ""
+description: "char and varchar (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/19/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "varchar"
   - "varchar_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fixed-length data types [SQL Server]"
   - "character data type"
   - "char data type"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "variable-length data types [SQL Server]"
   - "varchar data type"
   - "utf8"
-ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -7,7 +7,6 @@ ms.date: 08/16/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
 f1_keywords:
   - "OBJECT_ID_FROM_EDGE_ID"
 helpviewer_keywords:

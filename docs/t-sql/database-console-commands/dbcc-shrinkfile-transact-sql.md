@@ -1,21 +1,20 @@
 ---
-description: "DBCC SHRINKFILE shrinks the size of a database file."
 title: "DBCC SHRINKFILE (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: "DBCC SHRINKFILE shrinks the size of a database file."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay, dpless
 ms.date: "05/24/2022"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "SHRINKFILE"
   - "DBCC_SHRINKFILE_TSQL"
   - "DBCC SHRINKFILE"
   - "SHRINKFILE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data shrinking [SQL Server]"
   - "TRUNCATEONLY option"
   - "shrinking files"
@@ -27,9 +26,8 @@ helpviewer_keywords:
   - "logs [SQL Server], shrinking"
   - "reducing database size"
   - "DBCC SHRINKFILE statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: umajay, dpless
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
 ---
 # DBCC SHRINKFILE (Transact-SQL)

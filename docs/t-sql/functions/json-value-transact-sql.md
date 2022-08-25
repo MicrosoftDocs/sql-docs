@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"

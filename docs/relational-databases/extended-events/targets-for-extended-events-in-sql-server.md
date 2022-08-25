@@ -25,11 +25,10 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 
 ### Prerequisites
 
-- Be generally familiar with the basics of Extended Events, as described in [Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Be familiar with the basics of Extended Events, as described in [Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details see:
+- Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details, see:
     - [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
-
 
 - In SSMS.exe, know how to use the **Object Explorer** to right-click the target node under your event session, for [easy viewing of the output data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
     - The event data is captured as an XML string. Yet in this article the data is displayed in relational rows. SSMS was used to view the data, and then was copied and pasted into this article.
@@ -42,7 +41,7 @@ In Transact-SQL, the [CREATE EVENT SESSION](~/t-sql/statements/create-event-sess
 - The fields associated with your chosen event.
 - The parameters associated with your chosen target.
 
-SELECT statements which return such lists from system views are available to copy from the following article, in its section C:
+SELECT statements, which return such lists from system views are available to copy from the following article, in its section C:
 
 - [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
     - [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT fields for an event.
@@ -60,7 +59,6 @@ SQL Server Extended Events can inter-operate with Event Tracing for Windows (ETW
 
 - [Event Tracing for Windows Target](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
-
 
 This ETW target processes *synchronously* the data it receives, whereas most targets process *asynchronously*.
 
@@ -80,7 +78,7 @@ Unlike most other targets:
 - The event_counter has no parameters.
 - Unlike most targets, the event_counter target processes *synchronously* the data it receives.
     - Synchronous is acceptable for the simple event_counter because the event_counter involves so little processing.
-    - The database engine will disconnect from any target which is too slow and which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
+    - The database engine will disconnect from any target, which is too slow and which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
 
 #### Example output captured by event_counter
 
@@ -89,10 +87,7 @@ package_name   event_name         count
 ------------   ----------         -----
 sqlserver      checkpoint_begin   4
 ```
-
-
 Next is the CREATE EVENT SESSION that led to the previous results. For this test, on the EVENT...WHERE clause, the **package0.counter** field was used to cease the counting after the count climbed to 4.
-
 
 ```sql
 CREATE EVENT SESSION [event_counter_1]
@@ -179,7 +174,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 
 #### sys.fn_xe_file_target_read_file function
 
-The event_file target stores the data it receives in a binary format that is not human readable. Transact-SQL can report the contents of the .xel file by SELECTing from the [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function.
+The event_file target stores the data it receives in a binary format that's not human readable. Transact-SQL can report the contents of the .xel file by SELECTing from the [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function.
 
 For SQL Server **2016** and later, the following T-SQL SELECT reported the data. The *.xel suffix in the 
 
@@ -246,7 +241,7 @@ This is a side effect of the histogram target design. The histogram entity uses 
 This can also happen when you use the `NO_EVENT_LOSS` parameter. Consider the following scenario:
 
 - You set up an Extended Events session, using histogram as the target and grouping by object_id, to collect stored procedures execution.
-- You execute the Stored Procedure A. 
+- You execute the Stored Procedure A.
 - Then, you execute Stored Procedure B.
 
 If both the Stored Procedures' object_id returns the same value for the hash function, the histogram will show Stored Procedure A being executed twice, and the Stored Procedure B will not appear.
@@ -299,7 +294,7 @@ value   count
 
 #### SELECT to discover available actions
 
-The [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) `SELECT` statement can find the actions that the system has available for you to specify on your `CREATE EVENT SESSION` statement. In the `WHERE` clause, you would first edit the `o.name LIKE` filter to match the actions that interest you.
+The [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT statement can find the actions that the system has available for you to specify on your CREATE EVENT SESSION statement. In the `WHERE` clause, you would first edit the `o.name LIKE` filter to match the actions that interest you.
 
 Next is a sample rowset returned by the `C.3 SELECT`. The `system_thread_id` action is seen in the second row.
 
@@ -358,7 +353,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 The **pair_matching** target enables you to detect start events that occurs without a corresponding end event. For instance, it might be a problem when a lock_acquired event occurs but no matching lock_released event follows in a timely manner.
 
-The system doesn't automatically match start and end events. Instead, you explain the matching to the system in your `CREATE EVENT SESSION` statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
+The system doesn't automatically match start and end events. Instead, you explain the matching to the system in your CREATE EVENT SESSION statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
 
 #### Finding matchable fields for the start and end event pair
 
@@ -388,7 +383,7 @@ sqlserver   lock_acquired   resource_type            NULL
 
 ### Example of pair_matching
 
-The following `CREATE EVENT SESSION` statement specifies two events, and two targets. The **pair_matching** target specifies two sets of fields to match the events into pairs. The sequence of comma-delimited fields assigned to `begin_matching_columns=` and `end_matching_columns=` must be the same. No tabs or newlines are allowed between the fields mentioned in the comma-delimited value, although spaces are okay.
+The following CREATE EVENT SESSION statement specifies two events, and two targets. The **pair_matching** target specifies two sets of fields to match the events into pairs. The sequence of comma-delimited fields assigned to `begin_matching_columns=` and `end_matching_columns=` must be the same. No tabs or newlines are allowed between the fields mentioned in the comma-delimited value, although spaces are okay.
 
 To narrow the results, we first selected from `sys.objects` to find the `object_id` of our test table. We added a filter for that one ID to the `EVENT...WHERE` clause.
 
@@ -461,6 +456,7 @@ package_name   event_name      count
 sqlserver      lock_acquired   52
 sqlserver      lock_released   50
 ```
+
 The **pair_matching** target provided the following output. As suggested by the **event_counter** output, we do indeed see two lock_acquired rows. The fact that we see these rows at all means these two lock_acquired events are unpaired.
 
 ```
@@ -469,7 +465,8 @@ package_name   event_name      timestamp                     database_name   dur
 sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0          S      370100359   Transaction  370100359    3            0            [INDEX_OPERATION]      OBJECT          34126
 sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0          IX     370100359   Transaction  370100359    0            0                                   OBJECT          34126
 ```
-The rows for the unpaired lock_acquired events could include the T-SQL text, or `sqlserver.sql_text`, that took the locks. But we did not want to bloat the display.
+
+The rows for the unpaired lock_acquired events could include the T-SQL text, or `sqlserver.sql_text`, that took the locks. But we didn't want to bloat the display.
 
 <a name="h2_target_ring_buffer"></a>
 
@@ -477,14 +474,11 @@ The rows for the unpaired lock_acquired events could include the T-SQL text, or 
 
 The **ring_buffer** target is handy for quick and simple event testing. When you stop the event session, the stored output is discarded.
 
-In this ring_buffer section we also show how you can use the Transact-SQL implementation of XQuery to copy the XML contents of the ring_buffer into a more readable relational rowset.
-
+In this ring_buffer section, we also show how you can use the Transact-SQL implementation of XQuery to copy the XML contents of the ring_buffer into a more readable relational rowset.
 
 #### CREATE EVENT SESSION with ring_buffer
 
-
 There is nothing special about this CREATE EVENT SESSION statement, which uses the ring_buffer target.
-
 
 ```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
@@ -513,9 +507,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     );
 ```
 
-
 ### XML output received for lock_acquired by ring_buffer
-
 
 When retrieved by a SELECT statement, the content is in the form of a string of XML. The XML string that was stored by the ring_buffer target in our testing, is shown next. However, for brevity of the following XML display, all but two `<event>` elements have been erased. Further, within each `<event>`, a handful of extraneous `<data>` elements have been deleted.
 
@@ -595,9 +587,7 @@ When retrieved by a SELECT statement, the content is in the form of a string of 
 </RingBufferTarget>
 ```
 
-
 To see the preceding XML, you can issue the following SELECT while the event session is active. The active XML data is retrieved from the system view `sys.dm_xe_session_targets`.
-
 
 ```sql
 SELECT
@@ -624,12 +614,9 @@ SELECT
 SELECT * FROM #XmlAsTable;
 ```
 
-
 ### XQuery to see the XML as a rowset
 
-
 To see the preceding XML as a relational rowset, continue from the preceding SELECT statement by issuing the following T-SQL. The commented lines explain each use of XQuery.
-
 
 ```sql
 SELECT
@@ -681,12 +668,9 @@ SELECT
 - C.A. causes processing to repeat for every individual &#x3c;event&#x3e; element which has its name= attribute equal to "lock_acquired".
 - This applies to the XML returned by the preceding FROM clause.
 
-
 #### Output from XQuery SELECT
 
-
-Next is the rowset generated by the preceding T-SQL which includes XQuery.
-
+Next is the rowset generated by the preceding T-SQL, which includes XQuery.
 
 ```
 OccurredDtTm              Mode    DatabaseName
@@ -694,8 +678,6 @@ OccurredDtTm              Mode    DatabaseName
 2016-08-05 23:59:53.987   SCH_S   InMemTest2
 2016-08-05 23:59:56.013   SCH_S   InMemTest2
 ```
-
-
 
 ## XEvent .NET namespaces and C&#x23;
 
@@ -705,17 +687,13 @@ Package0 has two more targets, but they cannot be used in Transact-SQL:
 - compressed_history
 - event_stream
 
-
-One way we know those two targets cannot be used in T-SQL is that their non-null values in the column *sys.dm_xe_objects.capabilities* do not include the bit 0x1.
-
+One way we know those two targets can't be used in T-SQL is that their non-null values in the column *sys.dm_xe_objects.capabilities* don't include the bit 0x1.
 
 The event_stream target can be used in .NET programs written in languages like C#. C# and other .NET developers can access an event stream through a .NET Framework class, such as in namespace `Microsoft.SqlServer.XEvents.Linq`.
 
-If encountered, error **25726** means the event stream filled up with data faster than the client could consume the data. This caused the database engine to disconnect from the event stream to avoid slowing the performance of the server.
-
+If encountered, error **25726** means the event stream filled up with data faster than the client could consume the data. This causes the database engine to disconnect from the event stream to avoid slowing the performance of the server.
 
 ### XEvent namespaces
-
 
 - [Microsoft.SqlServer.Management.XEvent Namespace](/dotnet/api/microsoft.sqlserver.management.xevent)
 

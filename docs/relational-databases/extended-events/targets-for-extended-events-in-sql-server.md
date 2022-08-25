@@ -3,7 +3,7 @@ title: "Targets for Extended Events in SQL Server"
 description: This article explains package0 targets for Extended Events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/24/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents

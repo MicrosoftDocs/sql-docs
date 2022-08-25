@@ -107,7 +107,7 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
 
 ## Migrating data at scale (Preview)
 
-When large data size needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premise or external Oracle data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data to Azure SQL PaaS or SQL VM.
+When large data size needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the Azure data factory pipeline and the scalability of cloud to migrate on-premises or external Oracle data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data to Azure SQL PaaS or SQL VM.
 
 1. For large offline migration, click on Migrate data at scale. 
 
@@ -117,7 +117,7 @@ When large data size needs to be migrated within a short duration, at scale offl
 
 1. The next step in the migrate workflow is to provide the data source credentials followed by  the target SQL credentials.
 
-1. For this migration, either you can use existing Azure resources -  resource group and the data factory name  or click new to create a resource group and azure data factory for migration.
+1. For this migration, either you can use existing Azure resources -  resource group and the data factory name  or click new to create a resource group and Azure data factory for migration.
 
 1. In order to migrate an external data source,  an integration runtime is required. Either click new and follow the steps to create the integration runtime or use an existing integration service. To create an integration service, a gateway installation needs to be configured and a key needs to be supplied to configure integration runtime.
 

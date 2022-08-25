@@ -377,7 +377,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 The **pair_matching** target enables you to detect start events that occurs without a corresponding end event. For instance, it might be a problem when a lock_acquired event occurs but no matching lock_released event follows in a timely manner.
 
-The system does not automatically match start and end events. Instead, you explain the matching to the system in your `CREATE EVENT SESSION` statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
+The system doesn't automatically match start and end events. Instead, you explain the matching to the system in your `CREATE EVENT SESSION` statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
 
 #### Finding matchable fields for the start and end event pair
 
@@ -405,14 +405,11 @@ sqlserver   lock_acquired   resource_description     The description of the lock
 sqlserver   lock_acquired   resource_type            NULL
 ```
 
-
 ### Example of pair_matching
 
+The following `CREATE EVENT SESSION` statement specifies two events, and two targets. The **pair_matching** target specifies two sets of fields to match the events into pairs. The sequence of comma-delimited fields assigned to `begin_matching_columns=` and `end_matching_columns=` must be the same. No tabs or newlines are allowed between the fields mentioned in the comma-delimited value, although spaces are okay.
 
-The following CREATE EVENT SESSION statement specifies two events, and two targets. The pair_matching target specifies two sets of fields to match the events into pairs. The sequence of comma-delimited fields assigned to `begin_matching_columns=` and `end_matching_columns=` must be the same. No tabs or newlines are allowed between the fields mentioned in the comma-delimited value, although spaces are okay.
-
-To narrow the results, we first SELECTed from `sys.objects` to find the `object_id` of our test table. We added a filter for that one ID to the `EVENT...WHERE` clause.
-
+To narrow the results, we first selected from `sys.objects` to find the `object_id` of our test table. We added a filter for that one ID to the `EVENT...WHERE` clause.
 
 ```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
@@ -468,7 +465,6 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     );
 ```
 
-
 To test the event session, we purposely prevented to acquired locks from being released. We did this with the following T-SQL steps:
 
 1. BEGIN TRANSACTION.
@@ -478,17 +474,13 @@ To test the event session, we purposely prevented to acquired locks from being r
 
 The simple **event_counter** target provided the following output rows. Because 52-50=2, the output implies we will see 2 unpaired lock_acquired events when we examine the output from the pair-matching target.
 
-
 ```
 package_name   event_name      count
 ------------   ----------      -----
 sqlserver      lock_acquired   52
 sqlserver      lock_released   50
 ```
-
-
-The **pair_matching** target provided the following output. As suggested by the **event_counter** output, we do indeed see 2 lock_acquired rows. The fact that we see these rows at all means these two lock_acquired events are unpaired.
-
+The **pair_matching** target provided the following output. As suggested by the **event_counter** output, we do indeed see two lock_acquired rows. The fact that we see these rows at all means these two lock_acquired events are unpaired.
 
 ```
 package_name   event_name      timestamp                     database_name   duration   mode   object_id   owner_type   resource_0   resource_1   resource_2   resource_description   resource_type   transaction_id
@@ -496,17 +488,13 @@ package_name   event_name      timestamp                     database_name   dur
 sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0          S      370100359   Transaction  370100359    3            0            [INDEX_OPERATION]      OBJECT          34126
 sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0          IX     370100359   Transaction  370100359    0            0                                   OBJECT          34126
 ```
-
-
 The rows for the unpaired lock_acquired events could include the T-SQL text, or `sqlserver.sql_text`, that took the locks. But we did not want to bloat the display.
-
 
 <a name="h2_target_ring_buffer"></a>
 
 ## ring_buffer target
 
-
-The ring_buffer target is handy for quick and simple event testing. When you stop the event session, the stored output is discarded.
+The **ring_buffer** target is handy for quick and simple event testing. When you stop the event session, the stored output is discarded.
 
 In this ring_buffer section we also show how you can use the Transact-SQL implementation of XQuery to copy the XML contents of the ring_buffer into a more readable relational rowset.
 

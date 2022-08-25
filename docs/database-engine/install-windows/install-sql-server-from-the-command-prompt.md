@@ -128,6 +128,8 @@ Regardless of the installation method, you are required to confirm acceptance of
 
 The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).
 
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
+
 > [!NOTE]
 > Depending on how you received the software (for example, through Microsoft volume licensing), your use of the software may be subject to additional terms and conditions.
 
@@ -170,8 +172,8 @@ Use the parameters in the following table to develop command-line scripts for in
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] component|Parameter|Description|
 |-----------------------------------------|---------------|-----------------|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the installation workflow.<br /><br /> Supported values: **Install**.|
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).  |
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md). |
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with SQL Server 2022, read the Microsoft SQL Server Software License Terms at [aka.ms/sql2022prerelease](https://aka.ms/sql2022prerelease).|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python Setup Control|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R Setup Control|/IACCEPTROPENLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Microsoft R Open package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
@@ -205,7 +207,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for SQL Server Agent service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for the SQL Server Agent service.<br /><br /> Supported values:<br /><br /> **Automatic**<br /><br /> **Disabled**<br /><br /> **Manual**|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] backup files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Optional**|Specifies the collation setting for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Default value: **Latin1_General_CI_AS**|
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Optional**|Specifies the collation setting for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Default value: **Latin1_General_CI_AS** <br /> **Note:** Only Windows collation is supported. Using SQL collation may result in unexpected behavior.|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|
@@ -705,6 +707,8 @@ Run the following command at the command prompt to prepare a named instance:
 ```
 setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name>" /Features=AS,SQL /INDICATEPROGRESS /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /IACCEPTSQLSERVERLICENSETERMS
 ```
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
 
 #### Complete failover cluster parameters
 

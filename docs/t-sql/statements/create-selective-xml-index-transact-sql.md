@@ -1,8 +1,8 @@
 ---
 title: "CREATE SELECTIVE XML INDEX (Transact-SQL)"
 description: CREATE SELECTIVE XML INDEX (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.technology: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

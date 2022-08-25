@@ -1,8 +1,8 @@
 ---
 title: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
 description: CREATE FULLTEXT STOPLIST (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 dev_langs:
   - "TSQL"
-ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

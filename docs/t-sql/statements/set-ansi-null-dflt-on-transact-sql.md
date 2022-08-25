@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "overriding default nullability"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULL_DFLT_ON (Transact-SQL)

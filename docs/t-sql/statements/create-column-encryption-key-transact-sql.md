@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "CREATE COLUMN ENCRYPTION KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 

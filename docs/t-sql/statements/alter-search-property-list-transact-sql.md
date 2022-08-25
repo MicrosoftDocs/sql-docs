@@ -1,8 +1,8 @@
 ---
 title: "ALTER SEARCH PROPERTY LIST (Transact-SQL)"
 description: ALTER SEARCH PROPERTY LIST (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "ALTER SEARCH PROPERTY LIST statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

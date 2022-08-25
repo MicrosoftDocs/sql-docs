@@ -57,6 +57,19 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
     /v:ETLUserPassword="asecurestringaddedhere" /v:AppUserPassword="asecurestringaddedhere"
 ```
 
+```powershell
+# example publish connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+```
+
 
 ## Parameters for the Publish action
 

@@ -7,7 +7,7 @@ ms.topic: tutorial
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/29/2022
+ms.date: 08/24/2022
 ms.custom:
   - "devx-track-azurepowershell"
 ---
@@ -183,6 +183,9 @@ For more information on how to create an Azure AD application, see the article [
 ## Create the service principal user in Azure SQL Database
 
 Once a service principal is created in Azure AD, create the user in SQL Database. You'll need to connect to your SQL Database with a valid login with permissions to create users in the database.
+
+> [!IMPORTANT]
+> Only Azure AD users can create other Azure AD users in Azure SQL Database. Any SQL user with SQL authentication, including a server admin cannot create an Azure AD user. The Azure AD admin is the only user who can initially create Azure AD users in SQL Database. After the Azure AD admin has created other users, any Azure AD user with proper permissions can create other Azure AD users.
 
 1. Create the user *AppSP* in the SQL Database using the following T-SQL command:
 

@@ -126,7 +126,7 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 # [The Azure CLI](#tab/azure-cli)
 
-The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application.
+The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-the-azure-cli).
 
 > [!NOTE]
 > The certificates created for the Azure AD setup are not rotated automatically.
@@ -704,7 +704,7 @@ Write-Output "Success"
 
 # [PowerShell](#tab/azure-powershell)
 
-The PowerShell script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application.
+The PowerShell script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-powershell).
 
 > [!NOTE]
 > The certificates created for the Azure AD setup are not rotated automatically.

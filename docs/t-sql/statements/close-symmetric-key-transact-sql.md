@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)

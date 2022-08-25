@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 ---
 # REVOKE Schema Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

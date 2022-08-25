@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "names [SQL Server], database roles"
 dev_langs:
   - "TSQL"
-ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER ROLE (Transact-SQL)

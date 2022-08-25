@@ -3,13 +3,10 @@ title: "CURRENT_TIMEZONE_ID (Transact-SQL)"
 description: "CURRENT_TIMEZONE_ID (Transact-SQL)"
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: ""
 ms.date: "05/18/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CURRENT_TIMEZONE)ID"
   - "CURRENT_TIMEZONE_ID_TSQL"

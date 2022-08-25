@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory authentication tha
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 08/23/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial
@@ -31,7 +31,7 @@ We'll also go over the updated functionality to set up an Azure AD admin for SQL
 
 - SQL Server 2022 CTP 2.1 or later is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- SQL Server Azure Arc extension version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
+- Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - An [Azure Key Vault](/azure/key-vault/general/quick-create-portal) is required.
 
@@ -479,7 +479,7 @@ if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
     }
 }
 
-# Create the settings object to write to the Arc extension
+# Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName
@@ -537,12 +537,12 @@ $settingsString = (ConvertTo-Json $extension.properties.Settings).replace("`"", 
 
 # Push settings to Arc
 #
-Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+Write-Host "Writing Azure AD setting to Azure extension for SQL Server. This may take several minutes..."
 $updateRes = az connectedmachine extension update --machine-name $machineName --name "WindowsAgent.SqlServer" --resource-group $resourceGroupName --settings $settingsString
 
 if (!$updateRes)
 {
-    Write-Error "Failed to update SQL Arc Extension with Azure AD settings"
+    Write-Error "Failed to update Azure extension for SQL Server with Azure AD settings"
     exit 1
 }
 
@@ -955,15 +955,15 @@ if ($arcServicePrincipal -and ![string]::IsNullOrEmpty($arcServicePrincipal.Id))
     catch
     {
         Write-Error $_
-        Write-Host "Warning: Could not find the identity of the SQL Server Azure Arc extension and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
+        Write-Host "Warning: Could not find the identity of the Azure extension for SQL Server and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
     }
 }
 else
 {
-    Write-Host "Warning: Could not find the identity of the SQL Server Azure Arc extension and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
+    Write-Host "Warning: Could not find the identity of the Azure extension for SQL Server and thus, could not add permissions for the Arc process to read from AKV. Ensure the Arc identity has the required permissions to read from AKV."
 }
 
-# Create an AAD application
+# Create an Azure AD application
 #
 $application = New-AzADApplication -DisplayName $applicationName
 
@@ -981,7 +981,7 @@ Add-AzADAppPermission -ObjectId $application.Id -ApiId 00000003-0000-0000-c000-0
 Add-AzADAppPermission -ObjectId $application.Id -ApiId 00000003-0000-0000-c000-000000000000 -PermissionId 5f8c59db-677d-491f-a6b8-5f174b11ec1d # Delegated Group.Read.All
 Add-AzADAppPermission -ObjectId $application.Id -ApiId 00000003-0000-0000-c000-000000000000 -PermissionId a154be20-db9c-4678-8ab7-66f6cc099a59 # Delegated User.Read.All
 
-# Upload cert to AAD
+# Upload cert to Azure AD
 #
 try
 {
@@ -1005,7 +1005,7 @@ if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
     }
 }
 
-# Create the settings object to write to the Arc extension
+# Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName

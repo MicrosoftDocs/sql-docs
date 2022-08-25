@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "deleting user-defined functions"
 dev_langs:
   - "TSQL"
-ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP FUNCTION (Transact-SQL)

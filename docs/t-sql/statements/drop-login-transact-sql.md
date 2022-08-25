@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "dropping login accounts"
 dev_langs:
   - "TSQL"
-ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP LOGIN (Transact-SQL)

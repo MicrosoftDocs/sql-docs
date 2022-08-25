@@ -1,17 +1,15 @@
 ---
-description: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)"
 title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)"
-ms.custom: seo-dt-2019
+description: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)"
+author: XiaoyuMSFT
+ms.author: xiaoyul
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: "language-reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
-author: XiaoyuMSFT 
-ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest"
 ---
 

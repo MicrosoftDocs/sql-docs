@@ -35,7 +35,7 @@ If your Windows Server Active Directory is federated with Azure AD, users can au
 
 ## Connect SQL Server to Azure with Azure AD
 
-For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [SQL Server Azure Arc extension](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
+For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [Azure extension for SQL Server](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
 
 To get started, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 

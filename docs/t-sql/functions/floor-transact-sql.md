@@ -3,13 +3,10 @@ title: "FLOOR (Transact-SQL)"
 description: "FLOOR (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "FLOOR_TSQL"
   - "FLOOR"

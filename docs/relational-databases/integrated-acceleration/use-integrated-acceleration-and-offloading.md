@@ -152,7 +152,7 @@ SELECT * FROM sys.configurations
 WHERE name = 'backup compression default'; 
 ```
 
-Changing this configuration is permitted through the [sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md) system stored procedure. For example: 
+To change these configuration settings, use [sp_configure (Transact-SQL)](../system-stored-procedures/sp-configure-transact-sql.md) system stored procedure. For example:
 
 ```sql
 EXEC sp_configure 'backup compression default', 1;   
@@ -175,7 +175,7 @@ EXEC sp_configure 'backup compression algorithm', 1;
 RECONFIGURE; 
 ```
 
-No restart of SQL Server is required for this change to take effect. 
+No restart of SQL Server is required for this change to take effect.
 
 ## Restore operations
 
@@ -219,3 +219,5 @@ In the case of the Windows operating system, there is a complimentary software l
  - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
  - [BACKUP COMPRESSION (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression)
  - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+ - [View or configure the backup compression algorithm Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md)
+ - [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)

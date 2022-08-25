@@ -1,7 +1,7 @@
 ---
 title: "FILEPROPERTYEX (Transact-SQL)"
 description: "FILEPROPERTYEX (Transact-SQL)"
-author: stevestein
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 ms.date: "07/23/2019"

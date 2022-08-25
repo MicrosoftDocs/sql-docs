@@ -189,9 +189,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     );
 ```
 
-
 #### sys.fn_xe_file_target_read_file function
-
 
 The event_file target stores the data it receives in a binary format that is not human readable. Transact-SQL can report the contents of the .xel file by SELECTing from the [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function.
 
@@ -249,7 +247,6 @@ The **source_type** parameter is the key to controlling the histogram target:
 - **source_type=1** - Means collect data for *actions*.
     - 1 is the default.
 
-
 The 'slots' parameter default is 256. If you assign another value, the value is rounded up to the next power of 2.
 
 - For example, slots=59 would be rounded up to =64.
@@ -269,15 +266,12 @@ If both the Stored Procedures' object_id returns the same value for the hash fun
 
 ### *Action* example for histogram
 
-
 On its TARGET...SET clause, the following Transact-SQL CREATE EVENT SESSION statement specifies the target parameter assignment of **source_type=1**. The 1 means the histogram target tracks an action.
 
 In the present example, the EVENT...ACTION clause offer happens to offer only one action for the target to choose, namely `sqlos.system_thread_id`. On the TARGET...SET clause, we see the assignment `source=N'sqlos.system_thread_id'` assignment.
 
 > [!NOTE]
 > It is not possible to add more than one target of the same type (including the histogram target) per event session. It is also not possible to have more than one source (action / event field) per histogram target. Therefore, a new event session is required to track any additional action (or event) fields in a new histogram target.
-
-
 
 ```sql
 CREATE EVENT SESSION [histogram_lockacquired]

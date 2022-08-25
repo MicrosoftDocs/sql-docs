@@ -37,11 +37,11 @@ Error 3056 is raised if files exist under the FILESTREAM container (folder) that
 
 The error message includes the name of the unexpected file. Investigate how this file ended up in this folder.
 
-1. Terminate your backup cycling and ensure previous backups for this database aren't overwritten or lost before you fix this error
-1. Run a full DBCC CHECKB  against the database for which the backup failed with error 3056 as soon as possible. Don't use with **physical_only**
+1. Terminate your backups and ensure previous backups for this database aren't overwritten or lost
+1. Run a full DBCC CHECKB against the database for which the backup failed with error 3056. Don't use with **physical_only**
 1. Review the DBCC CHECKB output thoroughly; errors might be detected during different phases and be hundreds of lines apart for the same objects 
    - The last lines of CHECKDB output will give a summary count of errors. Be sure you've located the individual message for each of the counted errors
-   - Do you find an error similar to this one: `CHECKDB found 1 allocation errors and 1 consistency errors in database 'AG_Filestream'.`
+   - Do you find an error similar to this one at the bottom: `CHECKDB found 1 allocation errors and 1 consistency errors in database 'AG_Filestream'.`
 1. If the only error(s) reported are [7908](mssqlserver-7908-database-engine-error.md) or [7906](mssqlserver-7906-database-engine-error.md), then you can locate the actual files reported in the error. The errors may look like this for example:
 
    ```output 

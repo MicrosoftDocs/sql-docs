@@ -74,7 +74,9 @@ The adjusted memory grant shows up in the actual (post-execution) plan via the `
 
 You can see this property in the root operator of the graphical showplan or in the showplan XML output:
 
+```xml
 <MemoryGrantInfo SerialRequiredMemory="1024" SerialDesiredMemory="10336" RequiredMemory="1024" DesiredMemory="10336" RequestedMemory="10336" GrantWaitTime="0" GrantedMemory="10336" MaxUsedMemory="9920" MaxQueryMemory="725864" />
+```
 
 To have your workloads automatically eligible for this improvement, enable compatibility level 140 for the database.
 

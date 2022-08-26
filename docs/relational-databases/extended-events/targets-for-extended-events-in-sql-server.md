@@ -3,7 +3,7 @@ title: "Targets for Extended Events in SQL Server"
 description: This article explains package0 targets for Extended Events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/25/2022
+ms.date: 08/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents
@@ -27,7 +27,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 
 - Be familiar with the basics of Extended Events, as described in [Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details, see:
+- Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS). For details, see:
     - [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 - In SSMS.exe, know how to use the **Object Explorer** to right-click the target node under your event session, for [easy viewing of the output data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
@@ -78,7 +78,7 @@ Unlike most other targets:
 - The event_counter has no parameters.
 - Unlike most targets, the event_counter target processes *synchronously* the data it receives.
     - Synchronous is acceptable for the simple event_counter because the event_counter involves so little processing.
-    - The database engine will disconnect from any target, which is too slow and which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
+    - The database engine will disconnect from any target that is too slow and, which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
 
 #### Example output captured by event_counter
 

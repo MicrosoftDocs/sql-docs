@@ -3,13 +3,10 @@ title: "LOGINPROPERTY (Transact-SQL)"
 description: "LOGINPROPERTY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"

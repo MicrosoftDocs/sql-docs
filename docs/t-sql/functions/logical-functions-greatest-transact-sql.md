@@ -3,14 +3,11 @@ title: "GREATEST (Transact-SQL)"
 description: "The GREATEST logical functions returns the maximum value from a list of one or more expressions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
 ms.date: "03/11/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "GREATEST"
   - "GREATEST_TSQL"

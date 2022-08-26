@@ -1,29 +1,25 @@
 ---
+title: "DBCC INPUTBUFFER (Transact-SQL)"
 description: "DBCC INPUTBUFFER (Transact-SQL)"
-title: "DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/04/2018"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC INPUTBUFFER"
   - "INPUTBUFFER"
   - "DBCC_INPUTBUFFER_TSQL"
   - "INPUTBUFFER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "input buffers [SQL Server]"
   - "last statement from client"
   - "displaying last statement sent"
   - "statements [SQL Server], last statement"
   - "DBCC INPUTBUFFER statement"
-ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

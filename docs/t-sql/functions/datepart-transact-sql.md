@@ -1,6 +1,10 @@
 ---
 title: "DATEPART (Transact-SQL)"
 description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: "derekw"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -20,10 +24,6 @@ helpviewer_keywords:
   - "dates [SQL Server], dateparts"
 dev_langs:
   - "TSQL"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: "derekw"
-ms.date: 07/25/2022
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 

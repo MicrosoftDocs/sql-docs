@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 03/14/2022
+ms.date: 08/24/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -124,6 +124,8 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Az
 - When permissions are altered for an Azure AD login with existing open connections to an Azure SQL Database, permissions aren't effective until the user reconnects. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This applies to server role membership change using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement. 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported.
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Azure AD groups.
+- The current scripting command in SQL Server Management Studio and in Azure Data Studio for Azure AD users with logins does not generate a correct T-SQL syntax for a user creation with a login. Instead, the script generates a T-SQL syntax for a contained Azure AD user without a login in the virtual `master` database.
+- To distinguish between the Azure AD contained user without a login in the virtual `master` database and an Azure AD user created from a login in the virtual `master` database, view the `SID` in **sys.database_principals**, and check for the `AADE` suffix appended in the `SID` column for a user created with a login.
 
 ## Next steps
 

@@ -182,7 +182,7 @@ The following operations are disallowed during initial database encryption, key 
 
 - Transitioning a database or filegroup into a READ ONLY state
 
-The following operations are disallowed during the CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY, and ALTER DATABASE...SET ENCRYPTION statements:
+The following operations are disallowed during the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, and `ALTER DATABASE...SET ENCRYPTION` statements:
 
 - Dropping a file from a filegroup in a database
 
@@ -202,7 +202,7 @@ The following operations are disallowed during the CREATE DATABASE ENCRYPTION KE
 
 - Creating a snapshot
 
-The following operations or conditions prevent the CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY, and ALTER DATABASE...SET ENCRYPTION statements:
+The following operations or conditions prevent the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, and `ALTER DATABASE...SET ENCRYPTION` statements:
 
 - A database is read-only or has read-only filegroups.
 
@@ -327,9 +327,9 @@ The backup of the certificate and database master key is needed when the databas
 
 It's also important to remember that the certificate used to protect the Database Encryption Key should never be dropped from the Master database. Doing so will cause the encrypted database to become inaccessible.
 
-A Warning message like the following one is raised after executing the "Create Database Encryption Key" if the certificate used in the command hasn't been backed up already.
+A Warning message like the following one is raised after executing the `Create Database Encryption Key` if the certificate used in the command hasn't been backed up already.
 
-Warning: The certificate used for encrypting the database encryption key hasn't been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key, or you won't be able to open the database.
+> The certificate used for encrypting the database encryption key hasn't been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key, or you won't be able to open the database.
 
 The following query can be used to identify the certificates used in TDE that haven't been backed up from the time it was created.
 
@@ -341,7 +341,7 @@ FROM sys.certificates c
     ON c.thumbprint = dek.encryptor_thumbprint
 ```
 
-If the Column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](/sql/t-sql/statements/backup-certificate-transact-sql) in SQL Server Books Online.
+If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](/sql/t-sql/statements/backup-certificate-transact-sql) in SQL Server Books Online.
 
 ## See also
 

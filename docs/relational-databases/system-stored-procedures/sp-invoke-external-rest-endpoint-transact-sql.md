@@ -2,7 +2,7 @@
 description: "sp_invoke_external_rest_endpoint (Transact-SQL)"
 title: "sp_invoke_external_rest_endpoint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 2022-08-26
+ms.date: 8/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

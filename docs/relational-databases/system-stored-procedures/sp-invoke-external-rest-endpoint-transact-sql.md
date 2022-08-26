@@ -22,9 +22,12 @@ monikerRange: "=azuresqldb-current"
 ---
 # sp_invoke_external_rest_endpoint (Transact-SQL)
 
+[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+
 The **sp_invoke_external_rest_endpoint** stored procedure invokes a HTTPS REST endpoint provided as an input argument to the procedure. 
 
-
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
 ## Syntax  
   
 ```  

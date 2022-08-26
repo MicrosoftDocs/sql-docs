@@ -214,7 +214,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 ```
 <a name="h2_target_histogram"></a>
 
-## Histogram target
+## histogram target
 
 The **histogram** target is fancier than the event_counter target. The histogram can do the following:
 

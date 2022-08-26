@@ -201,7 +201,7 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-### Percentile and persistence mode memory grant feedback
+### Percentile and persistence mode memory grant feedback 
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 

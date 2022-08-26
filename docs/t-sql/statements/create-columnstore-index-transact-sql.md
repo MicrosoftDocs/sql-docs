@@ -719,7 +719,7 @@ AS SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey FROM DimProduct
 Look up the name of the clustered index automatically created for the new table in the system metadata, using `sys.indexes`. For example:
 
 ```sql
-SELECT i.object_id, i.name, t.object_id, t.name   
+SELECT i.object_id, i.name, t.object_id, t.name, i.type_desc
 FROM sys.indexes i   
 INNER JOIN sys.tables t ON i.object_id = t.object_id
 WHERE i.type_desc = 'CLUSTERED'

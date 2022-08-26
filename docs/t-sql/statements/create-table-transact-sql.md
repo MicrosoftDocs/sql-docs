@@ -105,7 +105,7 @@ column_name <data_type>
     [ IDENTITY [ ( seed , increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] ]
-    [ NULL | NOT NULL ]
+    [ [ CONSTRAINT constraint_name ] {NULL | NOT NULL} ]
     [ ROWGUIDCOL ]
     [ ENCRYPTED WITH
         ( COLUMN_ENCRYPTION_KEY = key_name ,

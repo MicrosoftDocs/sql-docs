@@ -154,7 +154,7 @@ Although it is common for the database validity interval and the validity interv
 > [!NOTE]  
 >  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
-## CDC cleanup in Azure SQL Database
+## CDC capture and cleanup in Azure SQL Database
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand using the [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) and [sp_cdc_cleanup_change_tables](../system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql.md) procedures.
 
@@ -194,7 +194,7 @@ Sysadmin permissions are required to enable change data capture for SQL Server o
 
 ## General guidelines
 
-For Change data capture (CDC) to function properly, you shouldn't modify any CDC metadata such as CDC schema, CDC system stored procedures, default `cdc` user permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename `cdc` user.
+For Change data capture (CDC) to function properly, you shouldn't manually modify any CDC metadata such as CDC schema, change tables, CDC system stored procedures, default `cdc` user permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename `cdc` user.
 
 Any objects in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) with `is_ms_shipped` property set to `1` shouldn't be modified.
 
@@ -204,7 +204,7 @@ SELECT	name AS object_name
 		,type_desc  
 		,is_ms_shipped  
 FROM sys.objects 
-WHERE is_ms_shipped= 1
+WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
 ```
 

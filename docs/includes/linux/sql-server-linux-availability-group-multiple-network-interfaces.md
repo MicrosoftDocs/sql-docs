@@ -12,7 +12,7 @@ When setting up high availability with servers that have multiple NICs, follow t
 
 - Make sure the `hosts` file is set up so that the server IP addresses for the multiple NICs resolves to the hostname of the Linux server. Do this on each node.
 - When setting up the cluster using Pacemaker, using the hostname of the servers should configure Corosync to set the configuration for all of the NICs. We only want the Pacemaker/Corosync communication over a single NIC. Once the Pacemaker cluster is configured, modify the configuration in the `corosync.conf` file and update the IP address for the dedicated NIC you want to use for the Pacemaker/Corosync communication.
-- The `<hostname>` given in the `corosync.conf` file should be the same as the output given when doing a reverse lookup (`ping -a <ip_address>`), and should be the short name configured on the host. Make sure the `hosts` file also represents the proper IP to name resolution.
+- The `<hostname>` given in the `corosync.conf` file should be the same as the output given when doing a reverse lookup (`ping -a <ip_address>`), and should be the short name configured on the host. Make sure the `hosts` file also represents the proper IP address to name resolution.
 
 The changes to the `corosync.conf` file example is highlighted below:
 

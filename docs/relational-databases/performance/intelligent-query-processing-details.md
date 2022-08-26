@@ -361,7 +361,7 @@ For information about row mode memory grant feedback, visit [Row mode memory gra
 
 ### Percentile and persistence mode memory grant feedback
 
-For information about percentile and persistence mode memory grant feedback, visit [Percentile and persistence mode memory grant feedback](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant--feedback).
+For information about percentile and persistence mode memory grant feedback, visit [Percentile and persistence mode memory grant feedback](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
 
 ## <a id="dop-feedback"></a> Degree of parallelism (DOP) feedback
 

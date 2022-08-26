@@ -58,14 +58,22 @@ After the drivers are installed, configure the server instance.
    > [!NOTE]
    > If `hardware offload enabled` option equals `0`, all offloading and acceleration is disabled, however the accelerator-specific configurations will persist.
 
-1. Configure the server to use hardware offload for a specific accelerator. Run [ALTER SERVER CONFIGURATION](../../t-sql/statements/alter-server-configuration-transact-sql.md) to enable hardware acceleration. The following example sets this configuration for Intel&reg; QAT.
+1. Configure the server to use hardware offload for a specific accelerator. Run [ALTER SERVER CONFIGURATION](../../t-sql/statements/alter-server-configuration-transact-sql.md) to enable hardware acceleration. The following examples set this configuration for Intel&reg; QAT. 
+
+   Choose one of the following examples.
+
+   A. **Offload hardware compression from host CPU**
+
+   Hardware compression configuration protects the host CPU - Intel&reg; QAT hardware mode is designed to protect the underlying host system CPU. This method provides the best performance when the underlying system is under higher workloads.
 
    ```sql
    ALTER SERVER CONFIGURATION   
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT);  
    ```
 
-   If your instance is Enterprise Edition, and you have the Intel&reg; QAT device installed, it will use hardware by default, with software fallback. If you would prefer to only use software offloading, run the following configuration.
+   B. **Optimize backup performance**
+
+   Software mode provides the best performance when the underlying system has less overhead, however, software mode has higher compute overhead compared to MS_XPRESS due to the more intensive compression format being leveraged.
 
    ```sql
    ALTER SERVER CONFIGURATION
@@ -80,6 +88,13 @@ After the drivers are installed, configure the server instance.
 1. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 
 1. After you restart the instance, query [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) to verify the configuration.
+
+   To verify configuration, run:
+
+   ```sql
+   SELECT * FROM sys.dm_server_accelerator_status;
+   GO
+   ```
 
 ## Disable offloading and acceleration
 

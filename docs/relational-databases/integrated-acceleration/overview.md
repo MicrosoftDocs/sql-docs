@@ -20,28 +20,28 @@ This article explains offloading and acceleration to hardware devices.
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] enables integrated offloading and acceleration with [Intel&reg; QuickAssist Technology (QAT)](https://www.intel.com/content/www/us/en/developer/topic-technology/open/quick-assist-technology/overview.html). You can offload backup compression with Intel&reg; QAT to reduce CPU usage, backup completion times, and reduce storage consumption. To back up or restore databases with accelerated compression, install Intel&reg; QAT drivers. For specific information and instructions to use with SQL Server, see [Configure Intel&reg; QuickAssist Technology (QAT)](use-integrated-acceleration-and-offloading.md).
 
-## Use case - Backup and restore operations
+## Back up and restore databases
 
-One use case for integrated acceleration and offloading is [backup compression](../backup-restore/backup-compression-sql-server.md). Compression speeds up backup and restore operations, and saves space. Compression also consumes CPU resources which may impact application performance. Because Intel&reg; QAT is an integrated acceleration and offloading solution, you can use it to back up and restore databases with compression, and reduce the load compression places on the CPU.
+One use case for integrated acceleration and offloading is [backup compression](../backup-restore/backup-compression-sql-server.md). Compression speeds up back up and restore operations, and saves space. Compression also consumes CPU resources which may impact application performance. Because Intel&reg; QAT is an integrated acceleration and offloading solution, you can use it to back up and restore databases with compression, and reduce the load compression places on the CPU.
 
 Backup compression is enabled by including the COMPRESSION keyword for BACKUP T-SQL commands, and is now available with an ALGORITHM parameter to choose between MS_XPRESS (default) and QAT_DEFLATE. For information about how to compress backups, see [Configure Backup Compression (SQL Server)](../backup-restore/configure-backup-compression-sql-server.md).
 
 ## Edition specific capabilities
 
-Integrated acceleration and offloading is supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
+Integrated acceleration and offloading are supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
 - Enterprise edition supports hardware offloading - can use a physical device. If no device is available, it falls back to software based compression.
 
 - Standard edition supports software compression. Standard edition does not offload to hardware even if a device is available.
 
-- Express edition allow compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm.
+- Express edition allows compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm.
 
 > [!NOTE]
 > Hardware is not required to successfully restore a previously compressed backup, regardless of the SQL Server edition. However, to back up or restore databases with accelerated compression, you must install product drivers.
 
 ## Limitations
 
-Integrated acceleration and offloading requires Windows operating system. It is not available on Linux or containers.
+Integrated acceleration and offloading are not available on Linux or containers.
 
 ## Next steps
 

@@ -79,7 +79,7 @@ After the drivers are installed, configure the server instance.
 
 1. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 
-1. After you restart the instance, query [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) to verify the configuration..
+1. After you restart the instance, query [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) to verify the configuration.
 
 ## Disable offloading and acceleration
 
@@ -94,7 +94,7 @@ SET HARDWARE_OFFLOAD = OFF (ACCELERATOR = QAT);
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces an `ALGORITHM` extension for backup compression for [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression).
 
-The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. When using Intel&reg; QAT for backup compression acceleration, the algorithm QAT_DEFLATE initiates an Intel&reg; QAT compressed backup if the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps.  
+The T-SQL BACKUP command WITH COMPRESSION has been extended to allow for a specified backup compression algorithm. For backup compression acceleration, Intel&reg; QAT uses an algorithm called QAT_DEFLATE. If the drivers are available and the SQL Server configuration has been completed successfully as illustrated in the previously documented steps, WITH COMPRESSION initiates an Intel&reg; QAT compressed backup.  
 
 > [!NOTE]
 > The standard compression algorithm is MS_XPRESS and is default compression option.
@@ -138,7 +138,7 @@ The SQL Server backup compression default behavior can be adjusted. You can chan
 
 The status of these options is reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
 
-The `backup compression algorithm` configuration changes the backup compression algorithm default for backup compression. Changing this option will change the default algorithm when the algorithm is not specified on the `BACKUP .. WITH COMPRESSION` command. 
+The `backup compression algorithm` configuration changes the backup compression algorithm default for backup compression. Changing this option will change the default algorithm when the algorithm is not specified on the `BACKUP ... WITH COMPRESSION` command. 
 
 You can view the current default settings for the backup compression in [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md), for example:
 

@@ -87,14 +87,21 @@ After the drivers are installed, configure the server instance.
 
 1. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 
-1. After you restart the instance, query [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) to verify the configuration.
-
-   To verify configuration, run:
+1. To verify the configuration, run:
 
    ```sql
    SELECT * FROM sys.dm_server_accelerator_status;
    GO
    ```
+
+   The query results identify:
+
+   - Hardware or software mode  - `mode_desc`
+   - Reason for the mode - `mode-reason-desc`
+   - Library version - `accelerator_library_version`
+   - Driver version - `accelerator_driver_version`
+
+    For more information, see [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) to verify the configuration.
 
 ## Disable offloading and acceleration
 

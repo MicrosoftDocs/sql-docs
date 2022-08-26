@@ -61,9 +61,9 @@ The steps to create an AG on Linux servers for high availability are different f
 
 For information on setting up an availability group for servers with multiple NICs, see the relevant sections for:
 
-- RHEL
-- SLES
-- Ubuntu
+- [RHEL](sql-server-linux-availability-group-cluster-rhel.md#considerations-for-multiple-network-interfaces-nics)
+- [SLES](sql-server-linux-availability-group-cluster-sles.md#considerations-for-multiple-network-interfaces-nics)
+- [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#considerations-for-multiple-network-interfaces-nics)
 
 [!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
 

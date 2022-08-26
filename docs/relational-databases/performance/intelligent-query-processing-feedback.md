@@ -201,7 +201,7 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-### Percentile and persistence mode memory grant feedback 
+### Percentile and persistence mode memory grant feedback
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
@@ -274,7 +274,9 @@ Percentile-based memory grant errs on the side of reducing spills. Because it's 
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature to called degree of parallelism (DOP) Feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid the issues described above.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) Feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid the issues described above.
+
+Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP Feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 

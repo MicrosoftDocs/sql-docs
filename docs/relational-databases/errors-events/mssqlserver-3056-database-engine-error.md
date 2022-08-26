@@ -67,8 +67,8 @@ The error message includes the name of the unexpected file. Investigate how this
 1. Once you ensure you have a copy, you can remove the file from the folder
 
 1. Take steps to understand why and how this file(s) got added in this system folder and take steps to prevent further occurrence
-   - ensure proper permissions are is in place for user access to this FILESTREAM folder(s)
-   - understand and ensure no applications are creating files in the FILESTREAM folder(s)
+   - Ensure proper permissions are in place for user access to this FILESTREAM folder(s)
+   - Understand and ensure no applications are creating files in the FILESTREAM folder(s)
 
 1. Run a new DBCC CHECKDB and make sure it doesn’t raise any errors
 1. If there are any other CHECKDB errors including 7903,7904,7905,7907, then there has been corruption or tampering of SQL Server FILESTREAM folder  beyond the mere invalid addition of foreign files. This situation not repairable manually

@@ -31,7 +31,7 @@ Row-Level Security (RLS) simplifies the design and coding of security in your ap
   
 The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes your security system more reliable and robust by reducing the surface area of your security system.  
   
-Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   

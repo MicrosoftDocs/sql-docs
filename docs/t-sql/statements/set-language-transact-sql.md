@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "default languages"
 dev_langs:
   - "TSQL"
-ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)

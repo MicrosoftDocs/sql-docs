@@ -1,8 +1,8 @@
 ---
 title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: vanto, xiaoyul
 ms.date: 08/16/2022
 ms.prod: sql

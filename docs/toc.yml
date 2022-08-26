@@ -5031,6 +5031,8 @@ items:
         href: database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md
       - name: filestream access level
         href: database-engine/configure-windows/filestream-access-level-server-configuration-option.md
+      - name: Enable hardware offload
+        href: database-engine/configure-windows/hardware-offload-enable-configuration-option.md
       - name: Configure the fill factor
         href: database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md
       - name: ft crawl bandwidth
@@ -6584,8 +6586,9 @@ items:
     - name: Database Lifecycle Management
       href: relational-databases/database-lifecycle-management.md
     - name: Database mail
-      href: relational-databases/database-mail/database-mail.md
       items:
+      - name: Overview
+        href: relational-databases/database-mail/database-mail.md
       - name: Database Mail Configuration Objects
         href: relational-databases/database-mail/database-mail-configuration-objects.md
       - name: Create a Profile
@@ -6600,16 +6603,18 @@ items:
         href: relational-databases/database-mail/database-mail-external-program.md
       - name: Configure SQL Server Agent Mail to Use Database Mail
         href: relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md
-      - name: Log & Audits
-        href: relational-databases/database-mail/database-mail-log-and-audits.md
+      - name: Log & audits
         items:
+        - name: Overview
+          href: relational-databases/database-mail/database-mail-log-and-audits.md
         - name: SQL Agent Job to archive events
           href: relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
         - name: Check the Status of E-Mail Messages Sent With Database Mail
           href: relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
       - name: Troubleshooting
-        href: relational-databases/database-mail/database-mail-general-troubleshooting.md
         items:
+        - name: Overview
+          href: relational-databases/database-mail/database-mail-general-troubleshooting.md
         - name: Sending test email
           href: relational-databases/database-mail/database-mail-sending-test-email.md
         - name: Common errors
@@ -6617,8 +6622,9 @@ items:
         - name: Mail queued, not delivered 
           href: relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
     - name: Data compression
-      href: relational-databases/data-compression/data-compression.md
       items:
+      - name: Overview
+        href: relational-databases/data-compression/data-compression.md
       - name: Row Compression
         href: relational-databases/data-compression/row-compression-implementation.md
       - name: Page Compression
@@ -6629,9 +6635,16 @@ items:
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
       - name: Disable
         href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
-    - name: Maintenance Plans
-      href: relational-databases/maintenance-plans/maintenance-plans.md
+    - name: Integrated offloading & acceleration
       items:
+      - name: Overview
+        href: relational-databases/integrated-acceleration/overview.md
+      - name: Intel® QuickAssist Technology (QAT)
+        href: relational-databases/integrated-acceleration/intel-quickassist.md
+    - name: Maintenance plans
+      items:
+      - name: Overview
+        href: relational-databases/maintenance-plans/maintenance-plans.md
       - name: Create
         href: relational-databases/maintenance-plans/create-a-maintenance-plan.md
       - name: Maintenance Plan Wizard
@@ -6726,7 +6739,7 @@ items:
           href: relational-databases/policy-based-management/view-the-properties-of-a-policy-based-management-facet.md
         - name: Copy a Facet State to an XML File
           href: relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md
-      - name: Monitor & Enforce Best Practices by using Policy-Based Management
+      - name: Monitor & enforce best practices by using policy-based management
         href: relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md
         items:
         - name: Asymmetric Keys Encryption Strength
@@ -13364,6 +13377,8 @@ items:
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
+      - name: sys.dm_server_accelerator_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md
       - name: sys.dm_server_memory_dumps
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services

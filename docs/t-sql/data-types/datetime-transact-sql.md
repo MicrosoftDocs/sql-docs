@@ -1,27 +1,23 @@
 ---
+title: "datetime (Transact-SQL)"
 description: "datetime (Transact-SQL)"
-title: "datetime (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "datetime_TSQL"
   - "datetime"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "date and time [SQL Server], datetime"
   - "dates [SQL Server], data types"
   - "datetime data type [SQL Server]"
   - "data types [SQL Server], date and time"
-ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime (Transact-SQL)

@@ -1,8 +1,8 @@
 ---
 title: "CREATE EVENT NOTIFICATION (Transact-SQL)"
 description: CREATE EVENT NOTIFICATION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "event notifications [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

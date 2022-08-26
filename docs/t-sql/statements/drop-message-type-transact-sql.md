@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing message types"
 dev_langs:
   - "TSQL"
-ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 ---
 # DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

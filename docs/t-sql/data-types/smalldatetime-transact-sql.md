@@ -1,27 +1,23 @@
 ---
+title: "smalldatetime (Transact-SQL)"
 description: "smalldatetime (Transact-SQL)"
-title: "smalldatetime (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/22/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "smalldatetime_TSQL"
   - "smalldatetime"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "smalldatetime data type [SQL Server]"
   - "dates [SQL Server], data types"
   - "date and time [SQL Server], smalldatetime"
   - "data types [SQL Server], date and time"
-ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

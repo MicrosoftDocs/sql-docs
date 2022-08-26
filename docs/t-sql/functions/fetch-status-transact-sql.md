@@ -3,13 +3,10 @@ title: FETCH_STATUS (Transact-SQL)
 description: "@@FETCH_STATUS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@FETCH_STATUS"
   - "@@FETCH_STATUS_TSQL"

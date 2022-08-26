@@ -1,8 +1,8 @@
 ---
 title: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 description: BEGIN CONVERSATION TIMER (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -29,7 +29,6 @@ helpviewer_keywords:
   - "starting timers [Service Broker]"
 dev_langs:
   - "TSQL"
-ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

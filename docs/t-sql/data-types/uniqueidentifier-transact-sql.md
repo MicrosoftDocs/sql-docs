@@ -1,25 +1,21 @@
 ---
+title: "uniqueidentifier (Transact-SQL)"
 description: "uniqueidentifier (Transact-SQL)"
-title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/01/2017"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "uniqueidentifier"
   - "uniqueidentifier_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "uniqueidentifier data type"
   - "globally unique identifiers [SQL Server]"
   - "GUIDs [SQL Server]"
-ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # uniqueidentifier (Transact-SQL)

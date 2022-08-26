@@ -3,13 +3,10 @@ title: "@@CURSOR_ROWS (Transact-SQL)"
 description: "@@CURSOR_ROWS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@CURSOR_ROWS"
   - "@@CURSOR_ROWS_TSQL"

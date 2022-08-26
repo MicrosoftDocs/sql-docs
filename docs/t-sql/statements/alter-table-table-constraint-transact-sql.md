@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "table_constraint"
 dev_langs:
   - "TSQL"
-ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

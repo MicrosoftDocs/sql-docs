@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "dropping credentials"
 dev_langs:
   - "TSQL"
-ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 ---
 # DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

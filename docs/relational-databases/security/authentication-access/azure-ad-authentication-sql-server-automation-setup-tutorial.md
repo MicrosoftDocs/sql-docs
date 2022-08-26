@@ -126,7 +126,7 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 # [The Azure CLI](#tab/azure-cli)
 
-The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application.
+The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-the-azure-cli).
 
 > [!NOTE]
 > The certificates created for the Azure AD setup are not rotated automatically.
@@ -226,7 +226,7 @@ else
 
 # Login and select subscription
 #
-$login = az login --tenant $tenantId
+$login = az login --tenant $tenantId --use-device-code
 
 if (!$login)
 {
@@ -285,7 +285,7 @@ if ($cert)
 #
 $applications = ConvertFrom-StringArray (az ad app list --display-name $applicationName  --only-show-errors)
 
-if ($applications.length > 0)
+if ($applications.length -gt 0)
 {
     Write-Error "App registration with name '$applicationName' already exists"
     exit 1
@@ -441,7 +441,7 @@ if (!$newPerms)
     Write-Host "Warning: Unable to add permissions to key vault '$keyVaultName' for Arc's service principal's identity '$($arcServicePrincipal.id)'. Arc may not be able to configure Azure AD authentication"
 }
 
-# Create an AAD application
+# Create an Azure AD application
 #
 $application = ConvertFrom-StringArray (az ad app create --display-name $applicationName --only-show-errors)
 
@@ -459,7 +459,7 @@ az ad app permission add --id $application.id --api 00000003-0000-0000-c000-0000
 az ad app permission add --id $application.id --api 00000003-0000-0000-c000-000000000000 --api-permissions 5f8c59db-677d-491f-a6b8-5f174b11ec1d=Scope --only-show-errors # Delegated Group.Read.All
 az ad app permission add --id $application.id --api 00000003-0000-0000-c000-000000000000 --api-permissions a154be20-db9c-4678-8ab7-66f6cc099a59=Scope --only-show-errors # Delegated User.Read.All
 
-# Upload cert to AAD
+# Upload cert to Azure AD
 #
 $certUploadRes = ConvertFrom-StringArray (az ad app credential reset --id $application.id --cert $certSubjectName --keyvault $keyVaultName --append --only-show-errors)
 
@@ -469,13 +469,23 @@ if (!$certUploadRes)
     exit 1
 }
 
+# Remove the version from the secret ID if present
+#
+$secretId = $cert.sid
+
+if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
+    if ($Matches[1])     {
+        $secretId = $Matches[1]
+    }
+}
+
 # Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName
     adminLoginName = $adminAccountName
     adminLoginSid = $adminAccountSid
-    azureCertSecretId = $cert.sid
+    azureCertSecretId = $secretId
     azureCertUri = $cert.id
     azureKeyVaultResourceUID = $keyVault.id
     managedCertSetting = "CUSTOMER MANAGED CERT"
@@ -483,7 +493,7 @@ $instanceSettings = @{
     appRegistrationName = $application.displayName
     appRegistrationSid = $application.appId
     tenantId = $tenantId
-    aadCertSubjectName = $cert.name
+    aadCertSubjectName = $certSubjectName
     adminLoginType = $adminAccountType
 }
 
@@ -514,13 +524,15 @@ if ($extension.properties.Settings.AzureAD)
     {
         $aadSettings += $instanceSettings
     }
+
+    $extension.properties.Settings.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
+    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
-$extension.properties.Settings.AzureAD = $aadSettings
 $settingsString = (ConvertTo-Json $extension.properties.Settings).replace("`"", "\`"").replace("`r`n", "")
 
 # Push settings to Arc
@@ -547,9 +559,152 @@ WindowsAgent.SqlServer westus2 Succeeded
 Success  
 ```
 
+### Setting up an Azure AD admin with existing certificate and application using the Azure CLI
+
+If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up an Azure AD admin, you can use the following CLI script:
+
+```azurecli
+# Set up Azure AD admin for user's existing key vault, certificate, and application  
+# Requires input parameters indicated below
+
+# Connect statement
+AZ Login
+
+#Input parameters
+$subscriptionId="<subscriptionId>" 
+$tenantId="<tenantId>" 
+$machineName="<machineName>"  # hostname 
+$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
+$resourceGroupName="<resourceGroupName>" 
+$keyVaultName="<keyVaultName>"  
+$certSubjectName="<certSubjectName>" # Your existing certificate name
+$applicationName="<applicationName>" # Your existing application name 
+$adminAccountName="<adminAccountName>"
+$adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
+$adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
+
+# Helper function
+#
+function ConvertFrom-StringArray {
+    param (
+        [string[]] $stringArray
+    )
+    if (!$stringArray)
+    {
+        return $null
+    }
+    else
+    {
+        return ConvertFrom-JSON ($stringArray -join "`n")
+    }
+}
+
+$keyVault = ConvertFrom-StringArray (az keyvault show --name $keyVaultName)
+
+if (!$keyVault)
+{
+    Write-Error "Azure key vault '$keyVaultName' does not exist"
+    exit 1
+}
+
+$cert = ConvertFrom-StringArray (az keyvault certificate show --name $certSubjectName --vault-name $keyVaultName 2>$null)
+
+if (!$cert)
+{
+  Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certficate"
+    exit 1    
+}
+
+$secretId = $cert.sid
+
+if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
+    if ($Matches[1])     {
+        $secretId = $Matches[1]
+    }
+}
+
+$application = ConvertFrom-StringArray (az ad app list --display-name $applicationName  --only-show-errors)
+
+if (!$application)
+{
+ Write-Error "Supplied application was not found in the subscription. Please specify an existing application"
+    exit 1    
+}
+
+# Create the settings object to write to the Arc extension
+#
+$instanceSettings = @{
+    instanceName = $instanceName
+    adminLoginName = $adminAccountName
+    adminLoginSid = $adminAccountSid
+    azureCertSecretId = $secretId
+    azureCertUri = $cert.id
+    azureKeyVaultResourceUID = $keyVault.id
+    managedCertSetting = "CUSTOMER MANAGED CERT"
+    managedAppSetting = "CUSTOMER MANAGED APP"
+    appRegistrationName = $application.displayName
+    appRegistrationSid = $application.appId
+    tenantId = $tenantId
+    aadCertSubjectName = $certSubjectName
+    adminLoginType = $adminAccountType
+}
+
+$extension = ConvertFrom-StringArray (az connectedmachine extension show --machine-name $machineName --name "WindowsAgent.SqlServer" --resource-group $resourceGroupName)
+
+if ($extension.properties.Settings.AzureAD)
+{
+    $aadSettings = $extension.properties.Settings.AzureAD
+    $instanceFound = $false
+    $instanceNameLower = $instanceName.ToLower()
+    $instanceIndex = 0
+
+    for (($i = 0); $i -lt $aadSettings.Length; $i++)
+    {
+        if ($aadSettings[$i].instanceName.ToLower() -eq $instanceNameLower)
+        {
+            $instanceIndex = $i
+            $instanceFound = $true
+            break
+        }
+    }
+
+    if ($instanceFound)
+    {
+        $aadSettings[$instanceIndex] = $instanceSettings
+    }
+    else
+    {
+        $aadSettings += $instanceSettings
+    }
+
+    $extension.properties.Settings.AzureAD = $aadSettings
+}
+else
+{
+    $aadSettings = , $instanceSettings
+    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+}
+
+$settingsString = (ConvertTo-Json $extension.properties.Settings).replace("`"", "\`"").replace("`r`n", "")
+
+# Push settings to Arc
+#
+Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+$updateRes = az connectedmachine extension update --machine-name $machineName --name "WindowsAgent.SqlServer" --resource-group $resourceGroupName --settings $settingsString
+
+if (!$updateRes)
+{
+    Write-Error "Failed to update SQL Arc Extension with Azure AD settings"
+    exit 1
+}
+
+Write-Output "Success"
+
+```
+
 # [PowerShell](#tab/azure-powershell)
 
-The PowerShell script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application.
+The PowerShell script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-powershell).
 
 > [!NOTE]
 > The certificates created for the Azure AD setup are not rotated automatically.
@@ -640,7 +795,7 @@ else
 #
 try
 {
-    $loginRes = Invoke-Expression -Command ("Connect-AzAccount " + $tenantIdArgument + " " + $subscriptionIdArgument + " -ErrorAction stop")
+    $loginRes = Invoke-Expression -Command ("Connect-AzAccount " + $tenantIdArgument + " " + $subscriptionIdArgument + " -ErrorAction stop -UseDeviceAuthentication")
 }
 catch
 {
@@ -648,6 +803,31 @@ catch
     Write-Error "Failed to login to Azure. Script can not continue"
     exit 1
 }
+
+# Get subscription ID
+#
+if ([string]::IsNullOrEmpty($subscriptionId))
+{
+    $context = Get-AzContext
+
+    if ($context)
+    {
+        if ($context.Name -Match "[^(]+\(([^)]{36})\)")
+        {
+            if ($Matches[1])
+            {
+                $subscriptionId = $Matches[1]
+            }
+        }
+    }
+}
+
+if ([string]::IsNullOrEmpty($subscriptionId))
+{
+    Write-Error "Failed to find default subscription"
+    exit 1
+}
+
 
 # Check AKV path exists
 #
@@ -717,7 +897,7 @@ if (!$adminAccount)
 
 if ($adminAccount)
 {
-    if ($adminAccount.Length > 1)
+    if ($adminAccount.Length -gt 1)
     {
         Write-Error "Multiple accounts with found with name $adminAccountName"
         exit 1
@@ -815,21 +995,31 @@ catch
     exit 1
 }
 
+# Remove the version from the secret ID if present
+#
+$secretId = $cert.SecretId
+
+if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
+    if ($Matches[1])     {
+        $secretId = $Matches[1]
+    }
+}
+
 # Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName
     adminLoginName = $adminAccountName
     adminLoginSid = $adminAccountSid
-    azureCertSecretId = $cert.SecretId
-    azureCertUri = $cert.Id
+    azureCertSecretId = $secretId.replace(":443", "")
+    azureCertUri = $cert.Id.replace(":443", "")
     azureKeyVaultResourceUID = $keyVault.ResourceId
     managedCertSetting = "CUSTOMER MANAGED CERT"
     managedAppSetting = "CUSTOMER MANAGED APP"
     appRegistrationName = $application.DisplayName
     appRegistrationSid = $application.AppId
     tenantId = $tenantId
-    aadCertSubjectName = $cert.Name
+    aadCertSubjectName = $certSubjectName
     adminLoginType = $adminAccountType
 }
 
@@ -860,13 +1050,142 @@ if ($arcInstance.Setting.AzureAD)
     {
         $aadSettings += $instanceSettings
     }
+
+    $arcInstance.Setting.AzureAD = $aadSettings
 }
 else
 {
     $aadSettings = , $instanceSettings
+    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
 }
 
-$arcInstance.Setting.AzureAD = $aadSettings
+
+Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+
+# Push settings to Arc
+#
+try
+{
+    Update-AzConnectedMachineExtension -MachineName $machineName -Name "WindowsAgent.SqlServer" -ResourceGroupName $resourceGroupName -Setting $arcInstance.Setting
+}
+catch
+{
+    Write-Error $_
+    Write-Error "Failed to write settings to Arc host"
+    exit 1
+}
+
+Write-Output "Success"
+```
+
+### Setting up an Azure AD admin with existing certificate and application using PowerShell
+
+If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up an Azure AD admin, you can use the following PowerShell script:
+
+```powershell
+# Connect statement 
+
+Connect-AzAccount 
+
+#Input parameters 
+
+$subscriptionId="<subscriptionId>" 
+$tenantId="<tenantId>" 
+$machineName="<machineName>"  # hostname 
+$instanceName="<instanceName>"  # SQL Server is define as `machine_name\instance_name` 
+$resourceGroupName="<resourceGroupName>" 
+$keyVaultName="<keyVaultName>"  
+$certSubjectName="<certSubjectName>" # Your existing certificate name
+$applicationName="<applicationName>" # Your existing application name 
+$adminAccountName="<adminAccountName>"
+$adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
+$adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
+
+$keyVault = Get-AzKeyVault -VaultName $keyVaultName
+if (!$keyVault)
+{
+    Write-Error "Supplied key vault was not found in the subscription. Please specify an existing key vault"
+    exit 1
+}
+
+$cert = Get-AzKeyVaultCertificate -VaultName $keyVaultName -Name $certSubjectName
+if (!$cert)
+{
+    Write-Error "Supplied certificate $certSubjectName was not found for this key vault. Please specify an existing certificate"
+    exit 1
+}
+
+$secretId = $cert.SecretId
+
+if ($secretId -Match "(https:\/\/[^\/]+\/secrets\/[^\/]+)(\/.*){0,1}$") {
+    if ($Matches[1])     {
+        $secretId = $Matches[1]
+    }
+}
+
+$application = Get-AzADApplication -DisplayName $applicationName
+if (!$application)
+{
+    Write-Error "Supplied application was not found in the subscription. Please specify an existing application"
+    exit 1
+}
+
+# Create the settings object to write to the Arc extension
+#
+$instanceSettings = @{
+    instanceName = $instanceName
+    adminLoginName = $adminAccountName
+    adminLoginSid = $adminAccountSid
+    azureCertSecretId = $secretId.replace(":443", "")
+    azureCertUri = $cert.Id.replace(":443", "")
+    azureKeyVaultResourceUID = $keyVault.ResourceId
+    managedCertSetting = "CUSTOMER MANAGED CERT"
+    managedAppSetting = "CUSTOMER MANAGED APP"
+    appRegistrationName = $application.DisplayName
+    appRegistrationSid = $application.AppId
+    tenantId = $tenantId
+    aadCertSubjectName = $certSubjectName
+    adminLoginType = $adminAccountType
+}
+
+$arcInstance = Get-AzConnectedMachineExtension -SubscriptionId $subscriptionId -MachineName $machineName -ResourceGroupName $resourceGroupName -Name "WindowsAgent.SqlServer"
+
+if ($arcInstance.Setting.AzureAD)
+{
+    $aadSettings = $arcInstance.Setting.AzureAD
+    $instanceFound = $false
+    $instanceNameLower = $instanceName.ToLower()
+    $instanceIndex = 0
+
+    for (($i = 0); $i -lt $aadSettings.Length; $i++)
+    {
+        if ($aadSettings[$i].instanceName.ToLower() -eq $instanceNameLower)
+        {
+            $instanceIndex = $i
+            $instanceFound = $true
+            break
+        }
+    }
+
+    if ($instanceFound)
+    {
+        $aadSettings[$instanceIndex] = $instanceSettings
+    }
+    else
+    {
+        $aadSettings += $instanceSettings
+    }
+
+    $arcInstance.Setting.AzureAD = $aadSettings
+}
+else
+{
+    $aadSettings = , $instanceSettings
+    $extension.properties.Settings | Add-Member -Name 'AzureAD' -Value $aadSettings -MemberType NoteProperty
+}
+
+
+Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
 
 # Push settings to Arc
 #

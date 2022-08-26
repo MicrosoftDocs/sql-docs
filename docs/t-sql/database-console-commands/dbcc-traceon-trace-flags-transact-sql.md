@@ -1,16 +1,14 @@
 ---
-description: "DBCC TRACEON - Trace Flags (Transact-SQL)"
 title: "Trace Flags (Transact-SQL)"
-ms.custom: ""
+description: "DBCC TRACEON - Trace Flags (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: "wiassaf"
 ms.date: 07/14/2022
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: "wiassaf"
 ms.technology: t-sql
 ms.topic: "language-reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "trace flags [SQL Server], about trace flags"
   - "trace flags [SQL Server]"
   - "global trace flags [SQL Server]"
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "performance [SQL Server], trace"
   - "debugging [SQL Server], trace flags"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 

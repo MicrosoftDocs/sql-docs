@@ -1,23 +1,19 @@
 ---
+title: "IsDescendantOf (Database Engine)"
 description: "IsDescendantOf (Database Engine)"
-title: "IsDescendantOf (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "IsDescendant_TSQL"
-  - "IsDescendant"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IsDescendantOf [Database Engine]"
-ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "IsDescendant_TSQL"
+  - "IsDescendant"
+helpviewer_keywords:
+  - "IsDescendantOf [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # IsDescendantOf (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

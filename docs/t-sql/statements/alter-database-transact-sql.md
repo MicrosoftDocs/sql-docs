@@ -965,13 +965,11 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a pool.
+In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a dedicated SQL pool.
 
+Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles. 
 
-Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
-
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-Provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
 
 ## Syntax
 
@@ -1046,7 +1044,7 @@ Renames the database with the name specified as *new_database_name*.
  
 The 'MODIFY NAME' option has some support limitations in Azure Synapse:
  - Unsupported with Azure Synapse serverless pools
- - Unsupported with SQL dedicated pools created in your Azure Synapse Workspace
+ - Unsupported with dedicated SQL pools created in your Azure Synapse Workspace
  - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse)
 
 #### MAXSIZE   

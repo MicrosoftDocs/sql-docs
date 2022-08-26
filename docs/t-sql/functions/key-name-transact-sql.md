@@ -3,13 +3,10 @@ title: "KEY_NAME (Transact-SQL)"
 description: "KEY_NAME (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "KEY_NAME_TSQL"
   - "KEY_NAME"

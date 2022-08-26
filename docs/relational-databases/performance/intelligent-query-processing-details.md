@@ -349,6 +349,16 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
+## Memory grant feedback
+
+### Batch mode memory grant feedback
+
+For complete information, see [Batch mode memory grant feedback](optimized-plan-forcing-query-store.md).
+
+### Row mode memory grant feedback
+
+For complete information, see [Row mode memory grant feedback](optimized-plan-forcing-query-store.md).
+
 ## <a id="dop-feedback"></a> Degree of parallelism (DOP) feedback
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces a new feature to called DOP feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. 
@@ -357,7 +367,7 @@ Instead of incurring in the pains of an all-encompassing default or manual adjus
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. 
 
-- The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value. 
+- The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
 
 - This feedback is available for queries that operate in the database compatibility level 160 (introduced in SQL Server 2022) or higher.
 

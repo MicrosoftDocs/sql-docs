@@ -5,6 +5,11 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
+f1_keywords:
+  - "parallel queries [SQL Server]"
+  - "processors [SQL Server], parallel queries"
+  - "number of processors for parallel queries"
+  - "degree of parallelism feedback"
 helpviewer_keywords: 
   - "parallel queries [SQL Server]"
   - "processors [SQL Server], parallel queries"
@@ -14,14 +19,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
 ms.custom:
-- contperf-fy20q4
-- event-tier1-build-2022
-ms.date: 08/23/2022
+ms.date: 08/26/2022
 ---
 
 # Query processing feedback features
 
-This article contains in-depth descriptions of various intelligent query processing (IQP) feedback features. The query processing feedback features are part of the Intelligent query processing family of features.
+This article has in-depth descriptions of various intelligent query processing (IQP) feedback features. The query processing feedback features are part of the Intelligent query processing family of features. Query processing feedback is a process by which the query processor in SQL Server, Azure SQL Database, and Azure SQL Managed Instance uses historical data about a query’s execution to decide if the query might receive help from one or more changes to the way it's compiled and executed. The performance data is collected in the [query store](tune-performance-with-the-query-store.md), with various suggestions to improve query execution. If successful, we persist these modifications to disk in memory and/or in the query store for future use. If the suggestions don't yield sufficient improvement, they're discarded, and the query continues to execute without that feedback.
 
 The feedback features discussed in this article are:
 
@@ -34,11 +37,14 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in SQL Server 2022, multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in SQL Server 2022, we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
+
 ### Batch mode memory grant feedback
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 A query's execution plan includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+
 The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:
 
 ```sql
@@ -63,6 +69,20 @@ With memory grant feedback enabled, for the second execution, duration is **1 se
 For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan. Plans with memory grants under 1 MB won't be recalculated for overages.
 
 For an insufficiently sized memory grant condition that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the `spilling_report_to_memory_grant_feedback` extended event. This event returns the node ID from the plan and spilled data size of that node.
+
+The adjusted memory grant shows up in the actual (post-execution) plan via the `GrantedMemory` property.
+
+You can see this property in the root operator of the graphical showplan or in the showplan XML output:
+
+<MemoryGrantInfo SerialRequiredMemory="1024" SerialDesiredMemory="10336" RequiredMemory="1024" DesiredMemory="10336" RequestedMemory="10336" GrantWaitTime="0" GrantedMemory="10336" MaxUsedMemory="9920" MaxQueryMemory="725864" />
+
+To have your workloads automatically eligible for this improvement, enable compatibility level 140 for the database.
+
+Example:
+
+```sql
+ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
+```
 
 #### Memory grant feedback and parameter sensitive scenarios
 
@@ -124,15 +144,23 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.  
+Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.
 
-To enable row mode memory grant feedback in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], enable database compatibility level 150 or higher for the database you're connected to when executing the query.
+To enable row mode memory grant feedback in Azure SQL Database, enable database compatibility level 150 or higher for the database you're connected to when executing the query.
 
-Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
+Example:
 
-Row mode memory grant feedback activity will be visible via the `memory_grant_updated_by_feedback` extended event.
+```sql
+ALTER DATABASE [<database name>] SET COMPATIBILITY_LEVEL = 150;
+```
 
-Starting with row mode memory grant feedback, two new query plan attributes will be shown for actual post-execution plans: `IsMemoryGrantFeedbackAdjusted` and `LastRequestedMemory`, which are added to the `MemoryGrantInfo` query plan XML element.
+As with batch mode memory grant feedback, row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` XEvent. We're also introducing two new query execution plan attributes for better visibility into the current state of a memory grant feedback operation for both row and batch mode.
+
+Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in SQL Server 2022 (16.x) Preview require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
+
+Row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` extended event.
+
+Starting with row mode memory grant feedback, two new query plan attributes is shown for actual post-execution plans: `IsMemoryGrantFeedbackAdjusted` and `LastRequestedMemory`, which are added to the `MemoryGrantInfo` query plan XML element.
 
 - The `LastRequestedMemory` attribute shows the granted memory in Kilobytes (KB) from the prior query execution.
 - The `IsMemoryGrantFeedbackAdjusted` attribute allows you to check the state of memory grant feedback for the statement within an actual query execution plan.
@@ -179,7 +207,7 @@ This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
-Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be significantly out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we're always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
+Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we're always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
 
 :::image type="content" source="./media/memory-grant-feedback-without-percentile-and-persistence-mode.svg" alt-text="A graph of granted vs actual needed memory behavior in Memory Grant feedback without percentile and persistence mode memory grant feedback.":::
 
@@ -189,7 +217,7 @@ Using a percentile-based calculation over recent history of the query, instead o
 
 :::image type="content" source="./media/memory-grant-feedback-with-percentile-and-persistence-mode.svg" alt-text="A graph of granted vs actual needed memory behavior in Memory Grant feedback with percentile and persistence mode memory grant feedback." :::
 
-The query optimizer uses a high percentile of past memory grant sizing requirements for executions of the cached plan to calculate memory grant sizes, using data persisted in the Query Store. The percentile adjustment which will perform the memory grant adjustments is based on the recent history of executions. Over time, the memory grant given reduces spills and wasted memory.
+The query optimizer uses a high percentile of past memory grant sizing requirements for executions of the cached plan to calculate memory grant sizes, using data persisted in the Query Store. The percentile adjustment, which will perform the memory grant adjustments is based on the recent history of executions. Over time, the memory grant given reduces spills and wasted memory.
 
 Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) and [CE feedback](#cardinality-estimation-ce-feedback), also detailed in this article.
 

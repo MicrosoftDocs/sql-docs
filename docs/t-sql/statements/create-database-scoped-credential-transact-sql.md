@@ -1,14 +1,14 @@
 ---
-description: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2019"
+title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATABASE SCOPED CREDENTIAL"
   - "DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_TSQL"
@@ -16,12 +16,11 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
-ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -76,7 +75,7 @@ Here are some applications of database scoped credentials:
 
 - [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure blob storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md). For more information about Azure Synapse storage authentication, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.
 
@@ -133,7 +132,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

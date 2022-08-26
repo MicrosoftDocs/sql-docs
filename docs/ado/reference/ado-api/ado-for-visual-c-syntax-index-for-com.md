@@ -1,22 +1,18 @@
 ---
+title: "ADO for Visual C++ Syntax Index for COM"
 description: "ADO for Visual C++ Syntax Index for COM"
-title: "ADO for Visual C++ Syntax Index for COM | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO for Visual C++ syntax [ADO]"
-  - "syntax indexes [ADO], ADO for Visual C++ syntax"
-ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO for Visual C++ syntax [ADO]"
+  - "syntax indexes [ADO], ADO for Visual C++ syntax"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # ADO for Visual C++ Syntax Index for COM
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++.  

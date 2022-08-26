@@ -6,12 +6,12 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.date: 12/18/2019
-ms.topic: tutorial
 ms.prod: sql
-ms.custom: "seodec18"
 ms.technology: linux
-helpviewer_keywords: 
-  - "Linux, AAD authentication"
+ms.topic: tutorial
+ms.custom: "seodec18"
+helpviewer_keywords:
+  - "Linux, AD authentication"
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
@@ -261,20 +261,11 @@ CONTOSO.COM = {
 
 > [!NOTE]
 > SQL Server login by using an FQDN (for example, CONTOSO.COM\Username) is not supported. Use the CONTOSO\Username format.
-> 
+>  
 > SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
- 
+
 ## Next steps
 
-In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:
-> [!div class="checklist"]
-> * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
-> * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
-> * Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
-> * Create AD-based logins in Transact-SQL
-> * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
-
-Next, explore other security scenarios for SQL Server on Linux.
-
-> [!div class="nextstepaction"]
-> [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
+- [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)

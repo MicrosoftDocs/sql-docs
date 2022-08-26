@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "performance dashboard reports"
   - "perf dashboard"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: pelopes
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Performance Dashboard

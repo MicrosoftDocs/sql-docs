@@ -4,8 +4,8 @@
 title: "kernel function (MicrosoftML) " 
 description: " Kernels supported for use in computing inner products. " 
 keywords: "(MicrosoftML), kernel, linearKernel, maKernel, polynomialKernel, rbfKernel, sigmoidKernel" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

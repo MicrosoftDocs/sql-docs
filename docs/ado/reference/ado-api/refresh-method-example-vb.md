@@ -1,20 +1,16 @@
 ---
+title: "Refresh Method Example (VB)"
 description: "Refresh Method Example (VB)"
-title: "Refresh Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Refresh method [ADO], Visual Basic example"
-ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Refresh method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Refresh Method Example (VB)
 This example demonstrates using the [Refresh](./refresh-method-ado.md) method to refresh the [Parameters](./parameters-collection-ado.md) collection for a stored procedure [Command](./command-object-ado.md) object.  

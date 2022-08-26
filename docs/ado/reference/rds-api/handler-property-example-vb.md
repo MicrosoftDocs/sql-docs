@@ -1,20 +1,16 @@
 ---
+title: "Handler Property Example (VB)"
 description: "Handler Property Example (VB)"
-title: "Handler Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Handler property [ADO], Visual Basic example"
-ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Handler property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Handler Property Example (VB)
 > [!IMPORTANT]

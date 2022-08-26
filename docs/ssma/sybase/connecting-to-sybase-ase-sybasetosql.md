@@ -10,8 +10,10 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to Sybase"
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.sybase.connectsybaseform.f1"
 ---
 
 # Connecting to SAP ASE (SybaseToSQL)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "binding processors [SQL Server]"
   - "affinity64 I/O mask option"
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # affinity64 Input-Output mask Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

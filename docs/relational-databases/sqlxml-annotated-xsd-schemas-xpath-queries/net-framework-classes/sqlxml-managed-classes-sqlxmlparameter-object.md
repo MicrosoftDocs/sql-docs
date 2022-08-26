@@ -1,22 +1,21 @@
 ---
 title: "SqlXmlParameter Object (SQLXML)"
 description: Learn about the properties supported by the SqlXmlParameter object, a SQLXML Managed Class.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "SQLXML Managed Classes, SqlXmlParameter object"
   - "Value property"
   - "Managed Classes [SQLXML], SqlXmlParameter object"
   - "SqlXmlParameter object"
   - "Name property"
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlParameter Object

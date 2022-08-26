@@ -8,12 +8,15 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 02/24/2022
+ms.date: 06/21/2022
+adobe-target: true
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+
+To view the release notes for SSMS 19 Preview 3, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
@@ -21,17 +24,161 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.11](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 18.12.1
+
+- Release number: 18.12.1
+- Build number: 15.0.18424.0
+- Release date: June 21, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x40a)
+
+#### What's new in 18.12.1
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.37. |
+
+#### Bug fixes in 18.12.1
+
+| New Item | Details |
+|----------|---------|
+| Always Encrypted | Fixed issue with Column Master Key creation generating an exception when using Azure Key Vault as they key store. |
+| Data Classification | Fixed issue with "Could not load file or assembly 'Microsoft.InformationProtection, Version=1.10.98.0" after upgrading to SSMS 18.10 or higher.  See [Latest SSMS 18.11.1 breaks the Data Classification. Get missing assembly error after updating](https://feedback.azure.com/d365community/idea/af89d5d7-45a4-ec11-a81c-0022484ee92d). |
+| SSMS General | Resolved error related to dacpac deployment using the Deploy Data-tier application option in Azure SQL DB with MFA. |
+
+#### Known issues (18.12.1)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure portal for container deletion. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [18.12](#1812) | 15.0.18420.0 | June 9, 2022 |
+| [18.11.1](#18111) | 15.0.18410.0 | March 8, 2022 |
+| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
+| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
+| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
+| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+
+### 18.12
+
+- Release number: 18.12
+- Build number: 15.0.18420.0
+- Release date: June 09, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2197629&clcid=0x40a)
+
+#### What's new in 18.12
+
+| New Item | Details |
+|----------|---------|
+| Always Encrypted | Updated AE Tools to only show keys with no expiration date. | 
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.36.2. |
+| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with SQL Server 2022. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
+| Data Classification | Improvements to Data Classification user interface. |
+| Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
+| Query Editor | Added a dialog to allow users to cancel the transaction count check if it takes longer than two seconds when closing the query editor window. |
+| Query Tuning Assistant | Updated user interface for improved accessibility. |
+| Showplan | The Showplan XML schema has been updated to include new attributes related to the Query Store Hint feature. |
+
+#### Bug fixes in 18.12
+
+| New Item | Details |
+|----------|---------|
+| Availability Group Dashboard | Fixed issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error.  See [SSMS 18.11.1 Bug](https://feedback.azure.com/d365community/idea/1603d3a2-73ab-ec11-a81c-6045bd7d1bee). |
+| Analysis Services | Corrected behavior of SSMS not saving Analysis Services settings separately. |
+| Integration Services | Fixed an issue that caused the error "System.ArgumentException: Value does not fall within the expected range" that would be encountered unexpectedly at step "Changing protection level" when deploying SSIS project. |
+| General SSMS | Fixed issue with Technical Support menu link opening to a blank page. |
+| Intellisense | Fixed Intellisense for contained users. |
+| Ledger | Fixed issue with display columns and ledger tables displaying more than once. |
+| Link feature for Azure SQL Managed Instance | Fixed issues related to the automated connection and failover wizards for the link feature. |
+| Query Editor |Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
+| Registered Servers | Fixed issue that caused SSMS crash when displaying registered servers after importing  registered servers from Azure Data Studio via settings.json file. See [SSMS (18.11.1) crashing on "show registered servers"](https://feedback.azure.com/d365community/idea/53d07d5e-7acc-ec11-a81b-6045bd7ac9f9). |
+| Partitioning | Addressed missing option to schedule Agent job in the partitioning wizard. |
+
+#### Known issues (18.12)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure portal for container deletion. |
+
+### 18.11.1
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
+
+- Release number: 18.11.1
+- Build number: 15.0.18410.0
+- Release date: March 08, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40a)
+
+#### What's new in 18.11.1
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
+| Data Classification | Introduced Set Microsoft Information Protection Policy menu option. |
+| Data Classification | Added Microsoft 365 authentication window to set MIP policy. |
+| Data Classification | Classify Data page and Add Classification page display the Microsoft 365 sensitivity labels when in MIP policy mode. |
+| Data Classification | Added warning icon against the columns if the prior classification and current Information Protection policy mode doesn't match. |
+| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Azure SQL Managed Instance.  See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Introduced failover wizard to assist with migration of databases from SQL Server to Azure SQL Managed Instance using the link feature. |
+| Link feature for Azure SQL Managed Instance | Introduced dashboard to monitor the status of the hybrid link established between SQL Server and Azure SQL Managed Instance. |
+
+#### Known issues (18.11.1)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| Availability Group Dashboard | Connecting to the Availability Group Dashboard for an AG on SQL Server 2016 and below results in "unknown property ClusterType" error. | Use SSMS 18.10 to access the AG Dashboard for SQL Server 2016 and earlier. |
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 
 ### 18.11
+
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
 
 - Release number: 18.11
 - Build number: 15.0.18404.0
 - Release date: February 24, 2022
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40a)
 
 #### What's new in 18.11
 
@@ -77,39 +224,14 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| Availability Group Dashboard | Connecting to the Availability Group Dashboard for an AG on SQL Server 2016 and below results in "unknown property ClusterType" error. | Use SSMS 18.10 to access the AG Dashboard for SQL Server 2016 and earlier. |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
-| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
-| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
-| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
-| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
-| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
-| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
-| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
-| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
-
 ### 18.10
 
-![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2168063)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
 
 - Release number: 18.10
 - Build number: 15.0.18390.0
@@ -154,11 +276,10 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ### 18.9.2
 
-![download](media/download-icon.png) [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
 
 - Release number: 18.9.2
 - Build number: 15.0.18386.0
@@ -173,9 +294,9 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.30.0. |
 | Always Encrypted | Scripting support for Ledger tables. |
-| Analysis Services | Support for XMLA endpoint to refresh datasets in PowerBI premium Gen 2. |
+| Analysis Services | Support for XMLA endpoint to refresh datasets in Power BI premium Gen 2. |
 | Azure SQL DB | Adds support for backup_storage_redundancy in database create/modify dialogs. |
-| Azure SQL DB | Adds `create login` script support for AAD-based login syntax. |
+| Azure SQL DB | Adds `create login` script support for Azure AD-based login syntax. |
 | Integration Services | Improvement for IR Creation Wizard, Job Migration Wizard and SSIS package scheduler to support AzureUSGovernment and AzureChinaCloud. |
 | Intellisense | Syntax highlighting for External Language Management and Query Store (query_store_plan_feedback, query_store_query_variant). |
 
@@ -184,16 +305,16 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New Item | Details |
 |----------|---------|
 | Accessibility | Fixes issue in screen reader announcements for dialogs processing information. |
-| Always Encrypted | Fixes issue where sign-in button was not fully visible during Master Key Configuration. |
+| Always Encrypted | Fixes issue where sign-in button wasn't fully visible during Master Key Configuration. |
 | Azure SQL DB | Fixes issue where multiple tenants on an account made SLO changes from database properties unreliable. |
 | Backup/Restore | Fixes issue where browse folder dialog was incorrectly parsing the root of a drive. |
 | Backup/Restore | Fixes issue in restoring a database to point in time using timeline dialog. |
 | General SSMS | Fixes open SqlConnection leaks in object explorer. |
 | High DPI / Scaling | 4k Scaling Fixes in dialogs for Publication Properties, Extended Events, Always Encrypted, Copy Database Wizard, and Database Designer. |
 | Maintenance Plan | Fixes an issue where deleting a maintenance plan removed a DTS package from the server. |
-| Object Explorer | Fixes issue where "Storage" menu item was not appearing for Azure SQL Managed Instance. |
+| Object Explorer | Fixes issue where "Storage" menu item wasn't appearing for Azure SQL Managed Instance. |
 | Replication Tools | Fixes an issue where the script generated is incorrect while configuring ReadOnly Routing. |
-| XEvents | Fixes issue where line endings were not properly displayed in a XEvent popup dialog. |
+| XEvents | Fixes issue where line endings weren't properly displayed in a XEvent popup dialog. |
 
 #### Known issues (18.9.2)
 
@@ -207,7 +328,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.9.1
 
-![download](media/download-icon.png) [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0
@@ -238,7 +359,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.9
 
-![download](media/download-icon.png) [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
@@ -256,7 +377,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.27.0. |
 | Azure SQL DB | Improved the diagnostic reporting when an error occurs while interacting with Azure. |
 | General SSMS | Added command `/resetuserdata` to ssms.exe, which resets the user data including the "Most Recently Used" lists. |
-| General SSMS | Updated MSODBC and OLEDB drivers installed with SSMS. The updated version to MSODBC notably adds a workaround to connection error *AADSTS530000* (AAD configuration with Conditional Access policies that would require Windows Account Manager). See [Using Azure Active Directory](../connect/odbc/using-azure-active-directory.md) for more information. |
+| General SSMS | Updated MSODBC and OLEDB drivers installed with SSMS. The updated version to MSODBC notably adds a workaround to connection error *AADSTS530000* (Azure AD configuration with Conditional Access policies that would require Windows Account Manager). See [Using Azure Active Directory](../connect/odbc/using-azure-active-directory.md) for more information. |
 | IntelliSense/Editor | Added support for [greatest](../t-sql/functions/logical-functions-greatest-transact-sql.md) and [least](../t-sql/functions/logical-functions-least-transact-sql.md) in IntelliSense |
 | IntelliSense/Editor | Added support for BACKUP_STORAGE_REDUNDANCY syntax (CREATE/ALTER DATABASE). |
 | ShowPlan | Always show Estimated Number of Rows for All Executions property |
@@ -266,37 +387,37 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New Item | Details |
 |----------|---------|
 | Accessibility | Fixed issues in narrator: Items order for New Column Master Key UI to move in a logical order from top to bottom, Narrator focus order on Filter Settings.  |
-| Always Encrypted | Fixed the Always Encrypted wizard to not include a port number in key paths for column master keys stored in Azure Key Vault. The bug caused failures in the ODBC and PHP drivers that did not expect port numbers in key paths. |
-| Always On Availability Group | Fixed in issue where the "Add New Availability Group" Wizard does not join AG databases into new AG automatically on secondary replica. |
+| Always Encrypted | Fixed the Always Encrypted wizard to not include a port number in key paths for column master keys stored in Azure Key Vault. The bug caused failures in the ODBC and PHP drivers that didn't expect port numbers in key paths. |
+| Always On Availability Group | Fixed an issue where the "Add New Availability Group" Wizard doesn't join AG databases into new AG automatically on secondary replica. |
 | Auditing | Fixed an issue where SSMS was throwing an error dialog when trying to bring up the Properties on Audit Specification. |
-| Auditing | Fixed an issue were some Audit Specifications wizards and property dialogs where not working properly on some localized versions of SSMS (e.g. Create, Japanese). |
+| Auditing | Fixed an issue were some Audit Specifications wizards and property dialogs were not working properly on some localized versions of SSMS (e.g. Create, Japanese). |
 | Azure SQL DB | Fixed an issue that was causing the "Create firewall rule" to fail in some cases. |
 | Azure SQL DB | Fixed an issue where the "Properties" dialog on a Table was displaying the incorrect server name (local machine instead of the Azure SQL DB server name). |
 | Azure SQL DB | Fixed an issue that was causing the "Create firewall rule" to fail when the server name had invalid characters (such as capital letters) in the name. |
-| Import/Export Data-Tier Application | Fixed in issue where importing a bacpac into SQL Express may fail. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/42347446). |
+| Import/Export Data-Tier Application | Fixed an issue where importing a bacpac into SQL Express may fail. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/42347446). |
 | General SSMS | Fixed a crash (in the Visual Studio Shell) that was causing SSMS to crash when re-docking tabs. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/42651556-ssms-18-8-crashes-when-re-docking-tabs) |
 | General SSMS | Fixed an issue in "Browse folder" dialog that was causing SSMS to stop responding. |
 | General SSMS | Fixed an issue where Object Explorer can lock up the UI thread, and ultimately cause the UI to freeze (and the user to have to hard close the SSMS. |
-| General SSMS | Addressed issue where there is no option available in SSMS to rebuild a clustered columnstore index online. SSMS offers an online ON checkbox on the UI, where we can select if the particular index has to be built online.  |
+| General SSMS | Addressed issue where there's no option available in SSMS to rebuild a clustered columnstore index online. SSMS offers an online ON checkbox on the UI, where we can select if the particular index has to be built online.  |
 | General SSMS | Fixed the logic to page the user to a proper page in most error dialogs originating from exception at the SQLClient (driver) level. Previously, for almost all the error/exceptions, the help button was always tasking the user to a non-existing page. |
 | General SSMS | Fixed issues around the "Server Properties / Processor" UI where SSMS is SSMS shows incorrect CPU Processor information or an error similar to "An item with the same key has already been added." See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/39349960) and another [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40604089). |
 | General SSMS | Fixed errors that may show up while resetting settings. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/42595579). |
 | General SSMS | Fixed an issue that was causing SSMS to throw an error message when trying to use the "PresentOn" feature in QuickLaunch. Also, added back the "PresentOff " functionality, which resets the UI to its regular size. |
 | General SSMS | Fixed the logic that prevents the creation of a (clustered) columnstore index, which was overly restrictive for newer versions of SQL Server. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37061617). |
-| General SSMS | Fixed an issue where SSMS was displaying an incorrect error message when changing the connection of an editor window to DAC ("Dedicated Admin Connection"). The error message was misleading in asserting that the connection was not successful, when indeed it was. *Note: while the error has been removed, due to the nature of DAC, keep in mind that: (1) IntelliSense experience will be significantly limited (2) SSMS will still block the Object Explorer experience when connecting using DAC.* |
+| General SSMS | Fixed an issue where SSMS was displaying an incorrect error message when changing the connection of an editor window to DAC ("Dedicated Admin Connection"). The error message was misleading in asserting that the connection wasn't successful, when indeed it was. *Note: while the error has been removed, due to the nature of DAC, keep in mind that: (1) IntelliSense experience will be significantly limited (2) SSMS will still block the Object Explorer experience when connecting using DAC.* |
 | High DPI/Scaling | Fixed an issue where the Data Collection Wizard could UI could result in being clipped on High DPI monitors (at 150% scaling). |
 | High DPI/Scaling | Fixed an issue where DB Mirroring security wizard may render poorly on High DPI (at 150% scaling). |
 | High DPI/Scaling | Fixed an issue with the "New Job Schedule" dialog which was rendering poorly on High DPI (4K monitors and 200% scaling). |
 | High DPI/Scaling | Fixed an issue with the "New Session" (XEvents) where some elements of the UI were truncated on High DPI (4K monitors and 200% scaling). |
-| Import Flat File | Fixed issue where some messages displayed by the Import Flat File wizard are not localized. |
-| Integration Services | Previous known issue "Remote connections to Integration services may fail with *"The specified service does not exist as an installed service."* on newer Operating system." is corrected by a fix delivered with the OS. |
+| Import Flat File | Fixed issue where some messages displayed by the Import Flat File wizard aren't localized. |
+| Integration Services | Previous known issue "Remote connections to Integration services may fail with *"The specified service doesn't exist as an installed service."* on newer Operating system." is corrected by a fix delivered with the OS. |
 | IntelliSense/Editor | Updated IntelliSense to display more useful information on built-in functions TODATETIMEOFFSET and SWITCHOFFSET. |
-| Log Shipping Wizard | Fixed in issue where Log Shipping Wizard may throw an error "Cannot show requested dialog" when clicking on Edit Job for Transaction Log Backup/Copy/Restore Setting Tab. |
+| Log Shipping Wizard | Fixed in issue where Log Shipping Wizard may throw an error "Can't show requested dialog" when clicking on Edit Job for Transaction Log Backup/Copy/Restore Setting Tab. |
 | Log Viewer | Addressed an issue where on some locales (e.g. Korean) some UI elements looked truncated/clipped. |
 | Maintenance Plans | Fixed an issue where SQL Server Management Studio 15.0.18338.0 can't explore "Expression" property in Maintenance plan. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/42009076). |
-| Query Tuning Advisor | Fixed an issue where an error message like "User does not have enough permissions." was displayed when trying to use the "New Database Upgrade Session" wizard on a database containing a dot in the name.  See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40286740). |
+| Query Tuning Assistant | Fixed an issue where an error message like "User doesn't have enough permissions." was displayed when trying to use the "New Database Upgrade Session" wizard on a database containing a dot in the name.  See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40286740). |
 | SMO/Scripting | Fixed script generation for DW databases where it only worked if the object explorer was connected to logical master instead of the user database. |
-| SSMS Setup | Fixed an issue where SSMS Setup was not properly executing the Post-Install Custom Action, thus not running "ssms.exe /setup". This is believe to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
+| SSMS Setup | Fixed an issue where SSMS Setup wasn't properly executing the Post-Install Custom Action, thus not running `ssms.exe /setup`. This is believed to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
 | Vulnerability Assessment | Disabling menu options "Tasks -> Vulnerability Assessment" for Azure SQL databases and adding collapsible message tip for better user experience for Azure SQL VM users. |
 | XEvent UI | Fixed capability to filter Extended Events using the event name instead of ID. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
 
@@ -312,7 +433,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.8
 
-![download](media/download-icon.png) [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
 
 - Release number: 18.8
 - Build number: 15.0.18369.0
@@ -334,19 +455,19 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New Item | Details |
 |----------|---------|
 | Accessibility | Fixed issues impacting Narrator in the ProgressReport Dialog |
-| Activity Monitor | Fixed an issue where the "Edit Query Text" context menu in "Active Expensive Queries" grid was not working |
+| Activity Monitor | Fixed an issue where the "Edit Query Text" context menu in "Active Expensive Queries" grid wasn't working |
 | Always Encrypted | Fixed an issue where SSMS could throw a runtime error ("Class not found") |
 | High DPI/Scaling | Improved the 4k display of the ProgressReport Dialog |
 | High DPI/Scaling | Fixed in issue on the "New Schedule-  Package" Form in Integration Services |
 | General SSMS |  Fixed an issue where SSMS could be throwing an error when trying to display the properties of a column which has an identity seed or identity increment that exceeds the size of a bigint.
-| General SSMS | Fixed a crash in SSMS caused by a menu item "Projects Export Templates…" which was not meant to be displayed |
+| General SSMS | Fixed a crash in SSMS caused by a menu item "Projects Export Templates…" which wasn't meant to be displayed |
 | General SSMS | Fixed an issue that could cause SSMS to crash when enumerating backups in a folder |
 | General SSMS | Mitigated an issue that was causing SSMS to leak handles and memory when displaying results of queries |
-| General SSMS | Fixed an issue where the users were not able to create clustered columnstore index for columns of particular types (UniqueIdentifier on SQL 2014 and above, VarCharMax/NVarCharMax/VarBinaryMax on SQL 2017 and above) |
-| General SSMS | Fixed a long outstanding issue where the reordering of XML columns in the "Result Grid" was not working. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/32890930) |
+| General SSMS | Fixed an issue where the users weren't able to create clustered columnstore index for columns of particular types (UniqueIdentifier on SQL 2014 and above, VarCharMax/NVarCharMax/VarBinaryMax on SQL 2017 and above) |
+| General SSMS | Fixed a long outstanding issue where the reordering of XML columns in the "Result Grid" wasn't working. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/32890930) |
 | General SSMS | Fixed issue where SSMS was incorrectly displaying a warning about "change tracking not being supported for a database with memory optimized objects " |
 | Generate Scripts Wizard | Fixed a bug inhibiting enumeration of database objects on SQL Server 2014 and older. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). |
-| Replication Tools | Fixed an issue where SQL Replication Monitor was not honoring the autoconnect settings, thus forcing the user to manually reconnect every time. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40394743) |
+| Replication Tools | Fixed an issue where SQL Replication Monitor wasn't honoring the autoconnect settings, thus forcing the user to manually reconnect every time. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40394743) |
 | SMO/Scripting | Fixed an issue when trying to use "Generate Script…" on an encrypted view in SQL Azure DB |
 | XEvent UI | Fixed an issue that could cause SSMS to crash when switching from other applications to SSMS. |
 | XEvent UI | Reverted the improvement from 18.7 that caused a bug in XEvent creation due to additional quotation marks. *This change is temporary and the improvement will return in a subsequent release without the accompanying bug.* |
@@ -359,11 +480,11 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
-| Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
+| Integration Services | Remote connections to Integration services may fail with "The specified service doesn't exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
 
 ### 18.7.1
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
 
 - Release number: 18.7.1
 - Build number: 15.0.18358.0
@@ -382,17 +503,17 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | To solve this issue, uninstall and then reinstall SSMS. |
-| DAX Query Editor | Opening DAX Query Editor causes error “Object not set to instance of an object” | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| DAX Query Editor | Opening DAX Query Editor causes error "Object not set to instance of an object" | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Generate Scripts Wizard | The wizard fails when attempting to enumerate database objects on SQL Server 2014 and older. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Use SSMS 18.6 to select objects in the generate scripts wizard for SQL 2014 and older. |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
-| Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
+| Integration Services | Remote connections to Integration services may fail with "The specified service doesn't exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
 | Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics serverless SQL pool, you need to use SSMS 18.7 or later. |
 
 ### 18.7
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - Release number: 18.7
 - Build number: 15.0.18357.0
@@ -410,7 +531,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Always Encrypted | To recognize the new HSM endpoints, you need to upgrade SSMS. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |
-| Import Flat File | Made an improvement where DW tables are properly cleaned, if there is a failure in data import. |
+| Import Flat File | Made an improvement where DW tables are properly cleaned, if there's a failure in data import. |
 | Resource Governor | Added support for decimal values. |
 | ShowPlan | Added PREDICT operator. |
 | XEvent UI | Added capability to script out Extended Events using the wait_type name. Users are requesting to use the value of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Fix: Added a checkbox and given the option to users, to choose either map_value or map_key for the wait_type filter predicate value. |
@@ -422,7 +543,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Accessibility | Fixed tab ordering of buttons in the "The following settings are not supported by the database" window that pops up when querying against DW. |
 | Accessibility | Import and Export Wizard: the page layout is incorrect in high dpi mode. |
 | Activity Monitor | Fixed an issue where Activity Monitor was pausing when opening the "Processes" tab. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/37050118). |
-| Always On Availability Group | Fixed an issue where Read Scale Availability Group Failover was not working. |
+| Always On Availability Group | Fixed an issue where Read Scale Availability Group Failover wasn't working. |
 | Analysis Services | Updated PowerQuery components to 2.84.982 for AS Tabular models scenarios. |
 | Analysis Services | Fixed an issue that may have resulted in an error when trying to connect to SSAS via msmdpump.dll. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Backup/Restore | Fixed an issue where selecting "View Connection Properties" yielded a SMO error on HostDistribution prop being missing for SQL 2016 and earlier. |
@@ -430,19 +551,19 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Database Diagrams | Fixed an issue that could cause SSMS to crash or stop responding when using Database Diagrams where "Add Table" dialog was not properly displayed. |
 | Database Mirroring | Fixed an issue that was causing mirror configuration to fail. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | General SSMS | Fixed an issue where trying to connect to an Azure SQL DB, which could take several seconds (SQL login in a user database). |
-| General SSMS | Fixed an issue where SSMS was not handling/displaying deadlock captured (.xdl files). |
+| General SSMS | Fixed an issue where SSMS wasn't handling/displaying deadlock captured (.xdl files). |
 | General SSMS | Fixed an issue where trying to open error log settings for SQL Server 2008 R2 and below failed with ErrorLogSizeKb property not found. |
 | General SSMS | General fixes and improvements around [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview) support. |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure portal and SqlPackage.exe behavior). |
-| Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
+| Import Flat File | Fixed an issue where the wizard wasn't detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Integration Services | Fixed an issue that Azure Subscription ComboBox items are duplicate in IR Creation Wizard and Job Migration Wizard when different subscriptions have the same name. |
-| Integration Services | Fixed an issue that sometimes Connect button cannot be enabled in IR Creation Wizard. |
-| Integration Services | Fixed an issue that items of "Use Environment variable" ComboBox in "Set Parameter Value" dialog are not in order. |
+| Integration Services | Fixed an issue that sometimes Connect button can't be enabled in IR Creation Wizard. |
+| Integration Services | Fixed an issue that items of "Use Environment variable" ComboBox in "Set Parameter Value" dialog aren't in order. |
 | Intellisense | Fixed a crash in SSMS that could happen when executing a query. |
 | Intellisense | Fixed an issue where intellisense doesn't work when the user is connected to an Availability Group configured for Read-Only Routing. |
-| Linked Servers | Fixed an issue where a user with CONTROL SERVER permission (but not in sysadmin role) was not able to add a linked server. |
-| Log Viewer | Fixed an issue where a user with VIEW SERVER STATE permissions was not able to view the SQL Server Error Logs. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/32899204). |
+| Linked Servers | Fixed an issue where a user with CONTROL SERVER permission (but not in sysadmin role) wasn't able to add a linked server. |
+| Log Viewer | Fixed an issue where a user with VIEW SERVER STATE permissions wasn't able to view the SQL Server Error Logs. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/32899204). |
 | Object Explorer | Fixed an issue where selecting the **Start PowerShell** menu on some Object Explorer nodes (like "Policy Management", "Extended Events") would cause PowerShell not to start correctly. |
 | Registered Servers | Fixed an issue where SSMS crashed when trying to register a Central Management Server. |
 | Registered Servers | Fixed the issue where menu items to launch Azure Data Studio from Registered Servers was missing. |
@@ -450,8 +571,8 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | ShowPlan | Fixed and issue that was causing SSMS to crash when using Find Node to search for text. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40421650). |
 | ShowPlan | Add KB suffix on the Memory Grant tooltip row |
 | Vulnerability Assessment | Fixed an issue that was causing SSMS to throw an error when trying to set baselines in Vulnerability Assessment. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40578565). |
-| XEvent UI | Fixed the issue where hitting F1 was not landing on the correct page on DOCS. |
-| XEvent UI | Fixed log in XEvent Viewer where the tooltip was not  displaying correctly text containing text encoded using surrogate pairs. |
+| XEvent UI | Fixed the issue where hitting F1 wasn't landing on the correct page on DOCS. |
+| XEvent UI | Fixed log in XEvent Viewer where the tooltip wasn't  displaying correctly text containing text encoded using surrogate pairs. |
 
 #### Known issues (18.7)
 
@@ -468,7 +589,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.6
 
-![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0
@@ -484,7 +605,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Auditing | Added support for SENSITIVE_BATCH_COMPLETED_GROUP action ID (string instead of a number). |
 | Auditing | Added the following fields to the audit viewer: affected_rows, response_rows, connection_id, duration_milliseconds, and data_sensitivity_information. |
 | Data Classification | Update SSMS to support the import/export of policy exported via PowerShell cmdlets. |
-| Import Flat File | Added support for Fixed Width files and file type detection for .csv/.tsv files to ensure they are parsed as csv/tsv files respectively. |
+| Import Flat File | Added support for Fixed Width files and file type detection for .csv/.tsv files to ensure they're parsed as csv/tsv files respectively. |
 | Integration Services | Added support for Azure SQL Managed Instance agent jobs to execute an SSIS package from package store in Azure-SSIS IR. |
 | SMO / Scripting | Added support to script Dynamic Data Masking on [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (formerly SQL Azure DW). |
 | SMO / Scripting | Added support to script Security Policy on [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). |
@@ -495,21 +616,21 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |----------|---------|
 | Accessibility | Adjusted border colors for accessibility on the **Database general properties page** (the border around the grid and name box is darker to set the contrast to > 3:1). |
 | Accessibility | Added handling for query execution to update the narrator (requires NetFx4.8+ installed on the machine). |
-| Always Encrypted | Fixed issue where *New Column Encryption Key* dialog says the CEK is not enclave-enabled even if the CMK is enclave-enabled. |
+| Always Encrypted | Fixed issue where *New Column Encryption Key* dialog says the CEK isn't enclave-enabled even if the CMK is enclave-enabled. |
 | Analysis Services | Fixed an issue viewing Analysis Services partitions that may have caused an unhandled exception. |
 | **Database Diagrams** | Fixed long outstanding issue with **Database Diagrams**, causing both the corruption of existing diagrams and SSMS to crash. If you created or saved a diagram using SSMS 18.0 through 18.5.1, and that diagram includes a *Text Annotation*, you won't be able to open that diagram in any version of SSMS. With this fix, SSMS 18.6 can open and save a diagram created by SSMS 17.9.1 and prior. SSMS 17.9.1 and previous releases can also open the diagram after being saved by SSMS 18.6. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649). |
-| Data Classification | Fixed an issue where the column name does not show in the recommendation panel of the data classification pane. |
+| Data Classification | Fixed an issue where the column name doesn't show in the recommendation panel of the data classification pane. |
 | General SSMS | Fixed an issue where database properties *Size* and *Space Available* have incorrect values for SQL Azure DB (Hyperscale service tier). |
 | General SSMS | Fixed an issue where database properties "Size" display the Max Size instead of the actual size of the database for SQL Azure DBs (note: for DW, it still shows the Max Size). |
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
-| General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| General SSMS | Fixed an issue on the **Statistic Properties** dialog were selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics aren't updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
 | General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
 | Intellisense / Editor | Fixed an issue where an error dialog may pop up when doing File -> New -> Database Engine Query. |
-| Object Explorer | Fixed an issue where *Properties window* was not available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
+| Object Explorer | Fixed an issue where *Properties window* wasn't available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
 | Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
 | Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
 | SMO / Scripting | Updated the logic to create new databases in Azure SQL Database to use Gen5_2 as the default SLO. |
@@ -527,7 +648,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.5.1
 
-![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
 
 - Release number: 18.5.1
 - Build number: 15.0.18333.0
@@ -548,14 +669,14 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 | New Item | Details | Workaround |
 |----------|---------|------------|
-| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
+| General SSMS | There's a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A |
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
 ### 18.5
 
-![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
 
 - Release number: 18.5
 - Build number: 15.0.18330.0
@@ -578,7 +699,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Integration Services | Support migrating on-premises SSIS agent jobs to ADF pipelines and triggers.
 | Integration Services | Made an improvement for the user experience of exporting SSIS projects from SSIS DB. Compared with the old Export, which loaded and upgraded packages in the SSIS project, the new version-independent Export won't load and upgrade packages in the SSIS project. Instead, it keeps packages in the projects as they are in SSIS DB except changing protection level to EncryptSensitiveWithUserKey. |
 | SMO/Scripting | Added new DwMaterializedViewDistribution property to View object. |
-| SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-prem). |
+| SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-premises). |
 | SMO/Scripting | Added *Notebook* as a destination for Generate Scripts wizard. |
 | SMO/Scripting | Added support for *Azure Synapse Analytics serverless SQL pool*. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name, and engineEdition fields can now contain usual comma-separated lists (*platform*: \[*Windows*, *Linux*\]), not only regular expressions (*platform*: *\/Windows\|Linux\/*)
@@ -588,10 +709,10 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 | New Item | Details |
 |----------|---------|
-| Accessibility | SSIS ADF / New Schedule: fixed an issue where the focus order is not logical in the  scan mode of narrator under *New Schedule* wizard. |
-| Accessibility | Stretch database wizard: fixed an issue where the screen reader does not inform about the name of the query table when providing information about the table. |
+| Accessibility | SSIS ADF / New Schedule: fixed an issue where the focus order isn't logical in the  scan mode of narrator under *New Schedule* wizard. |
+| Accessibility | Stretch database wizard: fixed an issue where the screen reader doesn't inform about the name of the query table when providing information about the table. |
 | Analysis Services | Fix cached connection when scripting in AS with Azure AD connection. |
-| Always On | Fixed an issue where the first database added to Always On AG does not join correctly.
+| Always On | Fixed an issue where the first database added to Always On AG doesn't join correctly.
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
@@ -610,25 +731,25 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | General SSMS | Cleaned up the *Database Property Options* grid, which was showing two *Miscellaneous Categories*. |
 | General SSMS | Fixed an issue where the scroll bar started from middle in "Database Properties Options" grid. |
 | General SSMS | Fixed an issue that was causing SSMS to crash when opening .sql file while connected to Analysis Services server. |
-| General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. |
+| General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" doesn't work. |
 | General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37875172). |
-| General SSMS | Fixed issue where occasionally Editor windows was not properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environment*. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37474042). |
-| General SSMS | Fixed an issue where Azure Active Directory authentication was not working through a proxy. |
+| General SSMS | Fixed issue where occasionally Editor windows wasn't properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environment*. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37474042). |
+| General SSMS | Fixed an issue where Azure Active Directory authentication wasn't working through a proxy. |
 | High DPI/Scaling | Fixed an issue where the controls on the *Index properties* could be incorrectly rendered (buttons overlapping grid). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/36030424). |
 | High DPI/Scaling | Fixed multiple issues in *Database Properties* dialog, which might show clipped controls on 4K monitors. |
 | High DPI/Scaling | Fixed Publication and Subscription Wizards on 4k displays. |
 | High DPI/Scaling | Minor fix on New Audit Server Specification page. |
 | High DPI/Scaling | Fixed 4k display issue on High Availability Wizard. |
-| High DPI/Scaling | Fixed an issue where the user was not able to add a target in an Xevent New Session window + Set Session Event Filters in Xevent Session Wizard when display scaling at 125%. |
+| High DPI/Scaling | Fixed an issue where the user wasn't able to add a target in an Xevent New Session window + Set Session Event Filters in Xevent Session Wizard when display scaling at 125%. |
 | High DPI/Scaling | Fixing an issue where controls on the *Backup Database to URL* UI render out of sight under scaling above 100%. |
 |Import flat file | Updated Flat File Import Wizard to allow check all for the allow null column. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38027137). |
 | Object Explorer | Fixed an issue where Object Explorer could display incorrect information when connection strings are used to connect in Connection Dialog. |
 | Object Explorer | Fixed an issue where OE was slow in expanding tables for databases with several thousands tables (20k+). |
 | Query Store UI | Fixed TRC report calculate execution count (for *wait time* metric) as the sum of execution counts for each individual wait category, which is incorrect. But for a single execution of query it will be registered for each of the wait category the query waited for. So, if TRC just sums it across the wait category it will bloat the execution count. Actually it should be the Max across the wait_category. |
-| Query Store UI | Fixed TRC detailed view returns incorrect data when result set is filtered on top x. This happens because the query uses multiple common table expressions, which are then joined together to create the final result set. If top x is pushed into CTE, it sometimes can filters out the required rows. This can sometimes make the result set non-deterministic. The fix is to not push top x clause to CTEs. |
+| Query Store UI | Fixed TRC detailed view returns incorrect data when result set is filtered on top x. This happens because the query uses multiple common table expressions, which are then joined together to create the final result set. If top x is pushed into CTE, it sometimes can filter out the required rows. This can sometimes make the result set non-deterministic. The fix is to not push top x clause to CTEs. |
 | Query Store UI | Fixed Plan summary in both - grid or chart view needs last query execution wait time. Absence of this column is breaking the query. This change set will add this column to the wait stats CTE. |
 | ShowPlan | Improved how SSMS displays estimated row counts for operators with multiple executions: (1) Modified *Estimated Number of Rows* in SSMS to "Estimated Number of Rows Per Execution"; (2) Added a new property *Estimated Number of Rows for All Executions*; (3) Modify the property *Actual Number of Rows* to *Actual Number of Rows for All Executions*. |
-| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that are not determined at runtime). Also SSMS is not disabling the "View" button when the user does not have access to the file (as far as SQL permissions go). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/39063124). |
+| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that aren't determined at runtime). Also SSMS isn't disabling the "View" button when the user doesn't have access to the file (as far as SQL permissions go). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/39063124). |
 | SQL Agent | Fixed the tab ordering on the Job Step page. |
 | SQL Agent | Reversed the position of the "Next" and "Previous" buttons on the Job Step page to put them in a logical order. |
 | SQL Agent | Adjusted the Job Schedule window to not clip the UI. |
@@ -636,9 +757,9 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | SMO/Scripting | Removing explicit sqlvariant cast (illegal T-SQL syntax for SqlOnDemand) which fixes scripting for SqlOnDemand. |
 | SMO/Scripting | Fixed an issue where FILLFACTOR on indexes for SQL Azure was skipped. |
 | SMO/Scripting | Fixed an issue related to scripting External objects. |
-| SMO/Scripting | Fixed an issue where *Generate Scripts* was not allowing choosing the scripting option for Extended Properties against SQL Database. Also, fixed the scripting of such extended properties. |
+| SMO/Scripting | Fixed an issue where *Generate Scripts* wasn't allowing choosing the scripting option for Extended Properties against SQL Database. Also, fixed the scripting of such extended properties. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Wrong help link in XTPHashAvgChainBuckets rule. |
-| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38262124) and [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
+| XEvent UI | Fixed an issue here items in the grid were being selected on hovering. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38262124) and [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 #### Known issues (18.5)
 
@@ -657,7 +778,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.4
 
-![download](media/download-icon.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
 
 - Release number: 18.4
 - Build number: 15.0.18206.0
@@ -712,7 +833,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.3.1
 
-![download](media/download-icon.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 - Release number: 18.3.1
 - Build number: 15.0.18183.0
@@ -766,7 +887,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.2
 
-![download](media/download-icon.png) [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 - Release number: 18.2
 - Build number: 15.0.18142.0
@@ -784,7 +905,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more details. |
 | Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. |
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256 K   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
-| ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
+| ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 
@@ -838,7 +959,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.1
 
-![download](media/download-icon.png) [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1
 - Build number: 15.0.18131.0
@@ -880,7 +1001,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
-| Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |
+| Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the PolyBase/Scale-out Group node (when connected to a compute node). |
 | Object explorer | Fixed an issue where the *Disabled* menu item was still enabled, even after disabling a given Index. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37735375) for more details. |
 | Reports | Correcting report to display GrantedQueryMemory in KB (SQL Performance   Dashboard report). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37167289) for more details. |
 | Reports | Improved the tracing of the log block in Always-On scenarios. |
@@ -908,7 +1029,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.0
 
-![download](media/download-icon.png) [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Release number: 18.0  
 - Build number: 15.0.18118.0  
@@ -990,7 +1111,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |SMO| Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner.|
 |SMO| Exposed new DefaultBackupChecksum property on the Configuration object, which maps to the "backup checksum default" server configuration.|
 |SMO| Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (for example, CU12, RTM).|
-|SMO| Exposed new LastGoodCheckDbTime property on  Database object, which maps to "lastgoodcheckdbtime" database property. If such property isn't available, a default value of 1/1/1900 12:00:00 AM is be returned.|
+|SMO| Exposed new LastGoodCheckDbTime property on the Database object, which maps to the "lastgoodcheckdbtime" database property. If such property isn't available, a default value of `1/1/1900 12:00:00 AM` is returned.|
 |SMO|Moved location for RegSrvr.xml file (Registered Server configuration file) to "%AppData%\Microsoft\SQL Server Management Studio" (unversioned, so it can be shared across versions of SSMS).|
 |SMO|Added "Cloud Witness" as a new quorum type and as a new resource ty'e.|
 |SMO|Added support for "Edge Constraints" in both SMO and SSMS.|
@@ -1009,11 +1130,11 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Crashes and freezes|Fixed a source of common SSMS crashes related to GDI objects.|
 |Crashes and freezes|Fixed a common source of hangs and poor performance when selecting "Script as Create/Update/Drop" (removed unnecessary fetches of SMO objects).|
 |Crashes and freezes|Fixed an issue where system stops responding when connecting to an Azure SQL Database using MFA while ADAL traces are enabled.|
-|Crashes and freezes|Fixed a issue where system stops responding (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).|
-|Crashes and freezes|Fixed a issue where system stops responding when selecting "Reports" in Object Explorer, which could manifest on high latency connections or temporary non-accessibility of the resources.|
+|Crashes and freezes|Fixed an issue where system stops responding (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).|
+|Crashes and freezes|Fixed an issue where system stops responding when selecting "Reports" in Object Explorer, which could manifest on high latency connections or temporary non-accessibility of the resources.|
 |Crashes and freezes|Fixed a crash in SSMS when trying to use Central Management Server and Azure SQL servers. For details, see [SMSS 17.5 application error and crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884).|
-|Crashes and freezes|Fixed a issue where system stops responding in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.|
-|Crashes and freezes|Fixed a issue where system stops responding in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
+|Crashes and freezes|Fixed an issue where system stops responding in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.|
+|Crashes and freezes|Fixed an issue where system stops responding in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
 |Crashes and freezes|Fixed an issue that was causing SSMS to stop responding/crash while editing T-SQL.|
 |Crashes and freezes|Mitigated an issue where SSMS was becoming unresponsive when editing large T-SQL scripts.|
 |Crashes and freezes|Fixed an issue that was causing SSMS to run out of memory when handling the large datasets returned by queries.|
@@ -1180,7 +1301,7 @@ Here are the deprecated and removed Features from SSMS version 18.0.
 
 ### 17.9.1
 
-![download](media/download-icon.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
@@ -1223,7 +1344,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ### 16.5.3
 
-![download](media/download-icon.png) [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - Release number: 16.5.3  
 - Build number: 13.0.16106.4  

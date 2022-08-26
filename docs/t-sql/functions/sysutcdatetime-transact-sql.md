@@ -1,19 +1,19 @@
 ---
+title: "SYSUTCDATETIME (Transact-SQL)"
 description: "SYSUTCDATETIME (Transact-SQL)"
-title: "SYSUTCDATETIME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "12/01/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SYSUTCDATETIME"
   - "SYSUTCDATETIME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "system time [SQL Server]"
   - "functions [SQL Server], date and time"
@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "date and time [SQL Server], SYSUTCDATETIME"
   - "SYSUTCDATETIME function [SQL Server]"
   - "time [SQL Server], system"
-ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

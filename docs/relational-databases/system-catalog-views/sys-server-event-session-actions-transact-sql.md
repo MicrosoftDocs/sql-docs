@@ -1,26 +1,24 @@
 ---
-description: "sys.server_event_session_actions (Transact-SQL)"
-title: "sys.server_event_session_actions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_event_session_actions (Transact-SQL)"
+description: sys.server_event_session_actions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.server_event_session_actions"
   - "server_event_session_actions_TSQL"
   - "server_event_session_actions"
   - "sys.server_event_session_actions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_event_session_actions catalog view"
   - "xe"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_io_virtual_file_stats (Transact-SQL)"
-title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_io_virtual_file_stats (Transact-SQL)"
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_io_virtual_file_stats"
   - "sys.dm_io_virtual_file_stats_TSQL"
   - "sys.dm_io_virtual_file_stats"
   - "dm_io_virtual_file_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_io_virtual_file_stats dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

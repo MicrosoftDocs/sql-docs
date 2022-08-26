@@ -1,21 +1,17 @@
 ---
+title: "CursorOptionEnum"
 description: "CursorOptionEnum"
-title: "CursorOptionEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CursorOptionEnum"
-helpviewer_keywords: 
-  - "CursorOptionEnum enumeration [ADO]"
-ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CursorOptionEnum"
+helpviewer_keywords:
+  - "CursorOptionEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # CursorOptionEnum
 Specifies what functionality the [Supports](./supports-method.md) method should test for.  

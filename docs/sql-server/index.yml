@@ -10,8 +10,11 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 12/02/2021
-  ms.custom: FY22Q2Fresh
-
+  ms.custom:
+  - event-tier1-build-2022
+  - event-tier1-build-2022
+  - FY22Q2Fresh
+  - event-tier1-build-2022
 landingContent:
 
   - title: SQL on Azure
@@ -51,8 +54,10 @@ landingContent:
     linkLists:
     - linkListType: whats-new
       links:
+      - text: SQL Server 2022 Preview
+        url: ./what-s-new-in-sql-server-2022.md
       - text: SQL Server 2019 
-        url: what-s-new-in-sql-server-ver15.md
+        url: ./what-s-new-in-sql-server-2019.md
       - text: SQL Server Big Data Clusters
         url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
@@ -217,7 +222,7 @@ landingContent:
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: SQL Server Machine Learning (R & Python)
         url: ../machine-learning/index.yml
-      - text: Data virtualization with Polybase
+      - text: Data virtualization with PolyBase
         url: ../relational-databases/polybase/polybase-guide.md
 
   - title: Business Intelligence 

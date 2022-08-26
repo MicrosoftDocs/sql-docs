@@ -1,23 +1,21 @@
 ---
-description: "log_shipping_secondary (Transact-SQL)"
-title: "log_shipping_secondary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "log_shipping_secondary (Transact-SQL)"
+description: log_shipping_secondary (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "log_shipping_secondary"
   - "log_shipping_secondary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "log_shipping_secondary system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-author: LitKnd
-ms.author: kendralittle
 ---
 # log_shipping_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

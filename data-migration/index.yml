@@ -8,6 +8,8 @@ metadata:
    ms.topic: hub-page
    ms.prod: sql
    ms.technology: migration-guide
+   author: rwestMSFT
+   ms.author: randolphwest
 
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -31,6 +33,9 @@ conceptualContent:
         - text: Azure Synapse Analytics
           url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
           itemType: how-to-guide
+        - text: Migrate SQL Server to Azure video
+          url: /shows/data-exposed/migrate-sql-server-to-azure?WT.mc_id=dataexposed-c9-niner-mighub
+          itemType: video          
     - title: "Oracle to"
       links:
         - text: Azure Database for PostgreSQL
@@ -220,3 +225,4 @@ additionalContent:
         - title: CCC Marketing (Japan)
           summary: CCC Marketing switched its data analytics infrastructure from Oracle to Microsoft Azure. 
           url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan
+          

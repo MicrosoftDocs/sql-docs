@@ -1,29 +1,25 @@
 ---
+title: "OPENDATASOURCE (Transact-SQL)"
 description: "OPENDATASOURCE (Transact-SQL)"
-title: "OPENDATASOURCE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/26/2019"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPENDATASOURCE"
   - "OPENDATASOURCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data sources [SQL Server]"
   - "OPENDATASOURCE function"
   - "remote data access [SQL Server], OPENDATASOURCE"
   - "ad hoc distributed queries"
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
-ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

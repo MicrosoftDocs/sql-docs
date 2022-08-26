@@ -1,27 +1,23 @@
 ---
+title: "datetime (Transact-SQL)"
 description: "datetime (Transact-SQL)"
-title: "datetime (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "03/04/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "datetime_TSQL"
   - "datetime"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "date and time [SQL Server], datetime"
   - "dates [SQL Server], data types"
   - "datetime data type [SQL Server]"
   - "data types [SQL Server], date and time"
-ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime (Transact-SQL)
@@ -32,7 +28,7 @@ Defines a date that is combined with a time of day with fractional seconds that 
 > [!NOTE]  
 >  Use the **time**, **date**, **datetime2** and **datetimeoffset** data types for new work. These types align with the SQL Standard. They are more portable. **time**, **datetime2** and **datetimeoffset** provide more seconds precision. **datetimeoffset** provides time zone support for globally deployed applications.  
   
-## datetime Description  
+## Description  
   
 |Property|Value|  
 |---|---|
@@ -52,7 +48,8 @@ Defines a date that is combined with a time of day with fractional seconds that 
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
   
-## Supported String Literal Formats for datetime  
+## Supported string literal formats for datetime
+
 The following tables list the supported string literal formats for **datetime**. Except for ODBC, **datetime** string literals are in single quotation marks ('), for example, 'string_literaL'. If the environment isn't **us_english**, the string literals should be in the format N'string_literaL'.
   
 |Numeric|Description|  
@@ -75,7 +72,8 @@ The following tables list the supported string literal formats for **datetime**.
 |---|---|
 |{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|The ODBC API defines escape sequences to represent date and time values, which ODBC calls timestamp data. This ODBC timestamp format is also supported by the OLE DB language definition (DBGUID-SQL) supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Applications that use the ADO, OLE DB, and ODBC-based APIs can use this ODBC timestamp format to represent dates and times.<br /><br /> ODBC timestamp escape sequences are of the format: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* specifies the type of the escape sequence. Timestamps have three *literal_type* specifiers:<br />1) d = date only<br />2) t = time only<br />3) ts = timestamp (time + date)<br /><br /> <br /><br /> - '*constant_value*' is the value of the escape sequence. *constant_value* must follow these formats for each *literal_type*.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   
-## Rounding of datetime Fractional Second Precision  
+## Rounding of datetime fractional second precision  
+
 **datetime** values are rounded to increments of .000, .003, or .007 seconds, as shown in the following table.
   
 |User-specified value|System stored value|  
@@ -85,13 +83,16 @@ The following tables list the supported string literal formats for **datetime**.
 |01/01/98 23:59:59.992<br /><br /> 01/01/98 23:59:59.993<br /><br /> 01/01/98 23:59:59.994|1998-01-01 23:59:59.993|  
 |01/01/98 23:59:59.990<br /><br /> 01/01/98 23:59:59.991|1998-01-01 23:59:59.990|  
   
-## ANSI and ISO 8601 Compliance  
+## ANSI and ISO 8601 compliance
+
 **datetime** isn't ANSI or ISO 8601 compliant.
   
-##  <a name="_datetime"></a> Converting Date and Time Data  
+##  <a name="_datetime"></a> Converting date and time data  
+
 When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it can't recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
-### Converting Other Date and Time Types to the datetime Data Type 
+### Converting other date and time types to the datetime data type 
+
 This section describes what occurs when other date and time data types are converted to the **datetime** data type.  
   
 When the conversion is from **date**, the year, month, and day are copied. The time component is set to 00:00:00.000. The following code shows the results of converting a `date` value to a `datetime` value.  
@@ -108,6 +109,24 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
+> [!NOTE]
+> The example above uses a region specific date format (MM-DD-YY).
+>
+> ```sql
+> DECLARE @date date = '12-21-16';
+> ```
+>
+> You may update the example to match the format for your region.
+>
+> You can also complete the example with the ISO 8601 compliant date format (YYYY-MM-DD). For example:
+>
+> ```sql
+> DECLARE @date date = '2016-12-21';  
+> DECLARE @datetime datetime = @date;  
+> 
+> SELECT @datetime AS '@datetime', @date AS '@date';  
+> ```
+
 When the conversion is from **time(n)**, the time component is copied, and the date component is set to '1900-01-01'. When the fractional precision of the **time(n)** value is greater than three digits, the value will be truncated to fit. The following example shows the results of converting a `time(4)` value to a `datetime` value.  
   
 ```sql
@@ -164,7 +183,8 @@ SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237  
 ```  
   
-## Examples  
+## Examples
+
 The following example compares the results of casting a string to each **date** and **time** data type.
   
 ```sql
@@ -192,6 +212,5 @@ SELECT
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## See also
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
-  

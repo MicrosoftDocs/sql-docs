@@ -1,14 +1,16 @@
 ---
-description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
-ms.custom: ""
-ms.date: 05/25/2021
+description: CREATE TABLE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "FILESTREAM_TSQL"
   - "TABLE"
   - "CREATE_TABLE_TSQL"
@@ -17,9 +19,7 @@ f1_keywords:
   - "TABLE_TSQL"
   - "FILESTREAM_ON"
   - "FILESTREAM_ON_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints"
   - "global temporary tables [SQL Server]"
   - "local temporary tables [SQL Server]"
@@ -45,9 +45,8 @@ helpviewer_keywords:
   - "number of columns per table"
   - "maximum number of bytes per row"
   - "data retention policy"
-ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE TABLE (Transact-SQL)
 
@@ -206,6 +205,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
+    [ WHERE <filter_predicate> ]
     [ WITH ( <index_option> [ ,... n ] ) ]
     [ ON { partition_scheme_name ( column_name )
          | filegroup_name
@@ -219,6 +219,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <table_option> ::=
 {  
     [ DATA_COMPRESSION = { NONE | ROW | PAGE }
+      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+      [ , ...n ] ) ] ]
+    [ XML_COMPRESSION = { ON | OFF }
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
       [ , ...n ] ) ] ]
     [ FILETABLE_DIRECTORY = <directory_name> ]
@@ -279,10 +282,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
   | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
-  | COMPRESSION_DELAY= { 0 | delay [ Minutes ] }
+  | COMPRESSION_DELAY = { 0 | delay [ Minutes ] }
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
        [ ON PARTITIONS ( { partition_number_expression | <range> }
        [ , ...n ] ) ]
+  | XML_COMPRESSION = { ON | OFF }
+      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+      [ , ...n ] ) ] ]
 }
 
 <range> ::=
@@ -514,8 +520,8 @@ Specifies a column used by the system to automatically record information about 
 | Parameter | Required data type | Required nullability | Description |
 |--|--|--|--|
 | ROW | datetime2 | START: `NOT NULL` <br />END: `NOT NULL` | Either the start time for which a row version is valid (START) or the end time for which a row version is valid (END). Use this argument with the `PERIOD FOR SYSTEM_TIME` argument to create a temporal table. |
-| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view. <br />**Applies to:** Azure SQL Database. |
-| SEQUENCE_NUMBER | bigint | START: `NOT NULL` <br />END: `NULL` | The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. <br />**Applies to:** Azure SQL Database. |
+| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view. <br />**Applies to:** SQL Server 2022, Azure SQL Database. |
+| SEQUENCE_NUMBER | bigint | START: `NOT NULL` <br />END: `NULL` | The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. <br />**Applies to:** SQL Server 2022, Azure SQL Database. |
 
 If you attempt to specify a column that does not meet the above data type or nullability requirements, the system will throw an error. If you do not explicitly specify nullability, the system will define the column as `NULL` or `NOT NULL` per the above requirements.
 
@@ -734,7 +740,7 @@ Specifies the order in which the column or columns participating in table constr
 Is the name of the partition scheme that defines the filegroups onto which the partitions of a partitioned table will be mapped. The partition scheme must exist within the database.
 
 [ _partition\_column\_name**.** ]   
-Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed columns that participates in a partition function must be explicitly marked PERSISTED.
+Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed column that participates in a partition function must be explicitly marked PERSISTED.
 
 > [!IMPORTANT]
 > We recommend that you specify NOT NULL on the partitioning column of partitioned tables, and also nonpartitioned tables that are sources or targets of ALTER TABLE...SWITCH operations. Doing this makes sure that any CHECK constraints on partitioning columns do not have to check for null values.
@@ -791,8 +797,22 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+XML_COMPRESSION   
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
+
+ON   
+Columns using the **xml** data type are compressed.
+
+OFF   
+Columns using the **xml** data type are not compressed.
+
 ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**   
-Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
+Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the table is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
+
+> [!NOTE]  
+> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 *partition_number_expression* can be specified in the following ways:
 
@@ -811,6 +831,17 @@ WITH
     DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
     DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 )
+```
+
+You can also specify the `XML_COMPRESSION` option more than once, for example:
+
+```sql
+WITH
+(
+  XML_COMPRESSION = OFF ON PARTITIONS (1),
+  XML_COMPRESSION = ON ON PARTITIONS (2, 4, 6 TO 8),
+  XML_COMPRESSION = OFF ON PARTITIONS (3, 5)
+);
 ```
 
 \<index_option> ::=   
@@ -891,6 +922,9 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
 **Enabling Stretch Database for a table**
 
 When you enable Stretch for a table by specifying `ON`, you can optionally specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more info about enabling Stretch for a table, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
@@ -947,7 +981,7 @@ Specifies the retention period policy for the table. The retention period is spe
 MEMORY_OPTIMIZED    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] does not support memory optimized tables in General Purpose tier.
 
-The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
+The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimize the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 The default value OFF indicates that the table is disk-based.
 
@@ -981,7 +1015,7 @@ Indicates that a HASH index is created.
 Hash indexes are supported only on memory-optimized tables.
 
 LEDGER = ON ( <ledger_option> [, …n ] ) | OFF    
-**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** SQL Server 2022, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.
@@ -1014,7 +1048,7 @@ Each row in the ledger view represents either the creation or deletion of a row 
 | --- | --- | --- |
 | Specified using the `TRANSACTION_ID_COLUMN_NAME` option. `ledger_transaction_id` if not specified. | bigint | The ID of the transaction that created or deleted a row version. |
 | Specified using the `SEQUENCE_NUMBER_COLUMN_NAME` option. `ledger_sequence_number` if not specified. | bigint | The sequence number of a row-level operation within the transaction on the table. |
-| Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `0` (**INSERT**) or `1` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `0` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `1` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `1` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
+| Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `1` (**INSERT**) or `2` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `1` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `2` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `2` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
 | Specified using the `OPERATION_TYPE_DESC_COLUMN_NAME` option. `ledger_operation_type_desc` if not specified. | nvarchar(128) | Contains `INSERT` or `DELETE`. See above for details. |
 
 Transactions that include creating ledger table are captured in [**sys.database_ledger_transactions**](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md).
@@ -1494,7 +1528,22 @@ WITH (DATA_COMPRESSION = ROW);
 
 For additional data compression examples, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-### O. Creating a table that has sparse columns and a column set
+### O. Creating a table that uses XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+The following example creates a table that uses row compression.
+
+```sql
+CREATE TABLE dbo.T1
+(
+    c1 INT,
+    c2 XML
+)
+WITH (XML_COMPRESSION = ON);
+```
+
+### P. Creating a table that has sparse columns and a column set
 
 The following examples show to how to create a table that has a sparse column, and a table that has two sparse columns and a column set. The examples use the basic syntax. For more complex examples, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) and [Use Column Sets](../../relational-databases/tables/use-column-sets.md).
 
@@ -1520,7 +1569,7 @@ CREATE TABLE T1
 );
 ```
 
-### P. Creating a system-versioned disk-based temporal table
+### Q. Creating a system-versioned disk-based temporal table
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -1535,9 +1584,9 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1552,8 +1601,8 @@ CREATE TABLE Department_History
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 NOT NULL,
-    SysEndTime DATETIME2 NOT NULL
+    ValidFrom DATETIME2 NOT NULL,
+    ValidTo DATETIME2 NOT NULL
 );
 
 -- Temporal table
@@ -1563,14 +1612,14 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
-### Q. Creating a system-versioned memory-optimized temporal table
+### R. Creating a system-versioned memory-optimized temporal table
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -1588,9 +1637,9 @@ CREATE TABLE dbo.Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH
 (
@@ -1610,8 +1659,8 @@ CREATE TABLE Department_History
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 NOT NULL,
-    SysEndTime DATETIME2 NOT NULL
+    ValidFrom DATETIME2 NOT NULL,
+    ValidTo DATETIME2 NOT NULL
 );
 
 -- Temporal table
@@ -1621,9 +1670,9 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH
 (
@@ -1631,7 +1680,7 @@ WITH
 );
 ```
 
-### R. Creating a table with encrypted columns
+### S. Creating a table with encrypted columns
 
 The following example creates a table with two encrypted columns. For more information, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -1653,7 +1702,7 @@ CREATE TABLE Customers (
 );
 ```
 
-### S. Create an inline filtered index
+### T. Create an inline filtered index
 
 Creates a table with an inline filtered index.
 
@@ -1665,7 +1714,7 @@ CREATE TABLE t1
 );
 ```
 
-### T. Create an inline index
+### U. Create an inline index
 
 The following shows how to use NONCLUSTERED inline for disk-based tables:
 
@@ -1690,7 +1739,7 @@ CREATE TABLE t3
 );
 ```
 
-### U. Create a temporary table with an anonymously named compound primary key
+### V. Create a temporary table with an anonymously named compound primary key
 
 Creates a table with an anonymously named compound primary key. This is useful to avoid run-time conflicts where two session-scoped temp tables, each in a separate session, use the same name for a constraint.
 
@@ -1715,7 +1764,7 @@ Could not create constraint or index. See previous errors.
 
 The problem arises from the fact that while the temp table name is unique, the constraint names are not.
 
-### V. Using global temporary tables in Azure SQL Database
+### W. Using global temporary tables in Azure SQL Database
 
 Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds 1 row
 
@@ -1783,7 +1832,7 @@ SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
 ```   
 
-### W. Enable Data Retention Policy on a table
+### X. Enable Data Retention Policy on a table
 
 The following example creates a table with data retention enabled and a retention period of 1 week. This example applies to **Azure SQL Edge** only.
 
@@ -1797,7 +1846,7 @@ CREATE TABLE [dbo].[data_retention_table]
 WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
-### X. Creating a updatable ledger table
+### Y. Creating an updatable ledger table
 
 The following example creates an updatable ledger table that is not a temporal table with an anonymous history table (the system will generate the name of the history table) and the generated ledger view name. As the names of the required generated always columns and the additional columns in the ledger view are not specified, the columns will have the default names.
 
@@ -1822,9 +1871,9 @@ CREATE TABLE [HR].[Employees]
 (
     EmployeeID INT NOT NULL PRIMARY KEY,
     Salary Money NOT NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);
 GO
@@ -1843,9 +1892,9 @@ CREATE TABLE [HR].[Employees]
     EndTransactionId BIGINT GENERATED ALWAYS AS TRANSACTION_ID END HIDDEN NULL,
     StartSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL,
     EndSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER END HIDDEN NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (
     SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),

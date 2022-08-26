@@ -4,6 +4,8 @@ description: Command objects use parameters to pass values to SQL statements or 
 ms.date: 11/25/2020
 dev_langs: 
   - "csharp"
+ms.custom:
+- event-tier1-build-2022
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,7 +22,7 @@ ms.author: v-davidengel
 
 Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation. Unlike command text, parameter input is treated as a literal value, not as executable code. This behavior helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.
 
-Parameterized commands can also improve query execution performance, because they help the database server accurately match the incoming command with a proper cached query plan. For more information, see [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) and [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#PlanReuse). In addition to the security and performance benefits, parameterized commands provide a convenient method for organizing values passed to a data source.
+Parameterized commands can also improve query execution performance, because they help the database server accurately match the incoming command with a proper cached query plan. For more information, see [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) and [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#parameters-and-execution-plan-reuse). In addition to the security and performance benefits, parameterized commands provide a convenient method for organizing values passed to a data source.
 
 A <xref:System.Data.Common.DbParameter> object can be created by using its constructor, or by adding it to the <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> by calling the `Add` method of the <xref:System.Data.Common.DbParameterCollection> collection. The `Add` method will take as input either constructor arguments or an existing parameter object, depending on the data provider.
 

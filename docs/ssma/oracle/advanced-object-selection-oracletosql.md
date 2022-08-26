@@ -8,9 +8,14 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.multichecktreeview.f1"
+  - "ssma.oracle"
+
+
 ---
 # Advanced Object Selection  (OracleToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  
@@ -21,7 +26,8 @@ When you first open the dialog box, click **Show Subcategories Items** to displa
   
 Before you use this dialog box, you might want to force SSMA to load all metadata by either converting schemas or saving the project.  
   
-## Options  
+## Options
+
 **Check All Items**  
 Adds a check mark next to all items. These items will be immediately selected in the metadata explorer.  
   
@@ -45,3 +51,6 @@ If items match the filter criteria, the categories or items will appear as you t
 **Clear Filter**  
 Clears the **Filter** box.  
   
+## See Also
+ 
+[Global Settings](global-settings-dialogs-oracletosql.md)

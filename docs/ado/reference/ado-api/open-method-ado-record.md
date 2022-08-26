@@ -1,22 +1,18 @@
 ---
+title: "Open Method (ADO Record)"
 description: "Open Method (ADO Record)"
-title: "Open Method (ADO Record) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Record::raw_Open"
-  - "_Record::Open"
-helpviewer_keywords: 
-  - "Open method [ADO]"
-ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Record::raw_Open"
+  - "_Record::Open"
+helpviewer_keywords:
+  - "Open method [ADO]"
+apitype: "COM"
 ---
 # Open Method (ADO Record)
 Opens an existing [Record](./record-object-ado.md) object, or creates a new item represented by the **Record**, such as a file or directory.  

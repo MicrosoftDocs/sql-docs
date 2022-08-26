@@ -1,22 +1,18 @@
 ---
+title: "Write Method"
 description: "Write Method"
-title: "Write Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::raw_Write"
-  - "_Stream::Write"
-helpviewer_keywords: 
-  - "Write method [ADO]"
-ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::raw_Write"
+  - "_Stream::Write"
+helpviewer_keywords:
+  - "Write method [ADO]"
+apitype: "COM"
 ---
 # Write Method
 Writes binary data to a [Stream](./stream-object-ado.md) object.  

@@ -1,20 +1,18 @@
 ---
-title: "Maintenance Cleanup Task (Maintenance Plan) | Microsoft Docs"
+title: "Maintenance Cleanup Task (Maintenance Plan)"
 description: Learn how to remove old files for maintenance plans, including text reports for maintenance plans and database backup files using the Maintenance Cleanup Task.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Maintenance Cleanup Task dialog box"
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Maintenance Cleanup Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

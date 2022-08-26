@@ -2,29 +2,28 @@
 title: "Python SQL Driver - pyodbc"
 description: "This guide describes installing Python, the ODBC Driver for SQL Server, and pyodbc. Sample code shows how to connect to and interact with a SQL database."
 ms.custom: ""
-ms.date: "10/06/2020"
+ms.date: "03/24/2022"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: David-Engel
 ms.author: v-davidengel
 ---
 # Python SQL Driver - pyodbc
 
-![Download-DownArrow-Circled](../../../ssms/media/download-icon.png)[To install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+This article provides step-by-step guidance for installing and using the Python SQL Driver, pyODBC.
 
 ## Get started
 
-* [Step 1: Configure development environment for pyodbc Python development](step-1-configure-development-environment-for-pyodbc-python-development.md)  
-* [Step 2: Create a SQL database for pyodbc Python development](step-2-create-a-sql-database-for-pyodbc-python-development.md)  
-* [Step 3: Proof of concept connecting to SQL using pyodbc](step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md)  
+* [Step 1: Configure development environment for pyodbc Python development](step-1-configure-development-environment-for-pyodbc-python-development.md).
+* [Step 2: Create a SQL database for pyodbc Python development](step-2-create-a-sql-database-for-pyodbc-python-development.md).
+* [Step 3: Proof of concept connecting to SQL using pyodbc](step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md).
 
 ## Documentation
 
-* [pyodbc documentation](https://mkleehammer.github.io/pyodbc/)  
+For documentation, see [pyodbc documentation](https://mkleehammer.github.io/pyodbc/).
 
 ## Support
 
@@ -35,4 +34,4 @@ To get help, file an [issue in the pyODBC GitHub repository](https://github.com/
 ## Community resources
 
 * [Azure Python Developer Center](https://azure.microsoft.com/develop/python/)  
-* [python.org Community](https://www.python.org/community/)  
+* [python.org Community](https://www.python.org/community/)

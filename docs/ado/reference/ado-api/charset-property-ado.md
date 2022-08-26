@@ -1,21 +1,17 @@
 ---
+title: "Charset Property (ADO)"
 description: "Charset Property (ADO)"
-title: "Charset Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::Charset"
-helpviewer_keywords: 
-  - "Charset property [ADO]"
-ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::Charset"
+helpviewer_keywords:
+  - "Charset property [ADO]"
+apitype: "COM"
 ---
 # Charset Property (ADO)
 Indicates the character set into which the contents of a text [Stream](./stream-object-ado.md) should be translated for storage in the internal buffer of the **Stream** object.  

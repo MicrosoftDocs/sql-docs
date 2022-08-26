@@ -1,29 +1,26 @@
 ---
-description: "SET DEADLOCK_PRIORITY (Transact-SQL)"
-title: "SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET DEADLOCK_PRIORITY (Transact-SQL)"
+description: SET DEADLOCK_PRIORITY (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET DEADLOCK_PRIORITY"
   - "DEADLOCK_PRIORITY_TSQL"
   - "SET_DEADLOCK_PRIORITY_TSQL"
   - "DEADLOCK_PRIORITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deadlocks [SQL Server], priority settings"
   - "DEADLOCK_PRIORITY option"
   - "locking [SQL Server], deadlocks"
   - "priority deadlock settings [SQL Server]"
   - "SET DEADLOCK_PRIORITY statement"
-ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)

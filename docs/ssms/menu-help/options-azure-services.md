@@ -30,7 +30,7 @@ Use this page to specify options related to Azure cloud services. To access this
 | Graph Endpoint | `https://graph.windows.net` | Specifies the URL for Azure Active Directory Graph requests. |
 | Management Portal URL | `https://portal.azure.com` | Specifies the URL for the Management Portal. |
 | Publish Setting File URL | `https://go.microsoft.com/fwlink/?LinkID=335839` | Specifies the URL from which the `.publishsettings` file can be downloaded. |
-| SQL Database Service Principle Name | `https://database.windows.net/` | The Azure SQL Database SPN to obtain a token when using AAD authentication. Also the audience of the JSON Web Token (JWT) for server-side JSON Web Token (JWT) parsing/validation. |
+| SQL Database Service Principal Name | `https://database.windows.net/` | The Azure SQL Database SPN to obtain a token when using AAD authentication. Also the audience of the JSON Web Token (JWT) for server-side JSON Web Token (JWT) parsing/validation. |
 
 ## Resource Management
 

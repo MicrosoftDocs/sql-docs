@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
-title: "sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
+description: sys.dm_clr_loaded_assemblies (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_clr_loaded_assemblies"
   - "sys.dm_clr_loaded_assemblies_TSQL"
   - "dm_clr_loaded_assemblies_TSQL"
   - "sys.dm_clr_loaded_assemblies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_loaded_assemblies dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

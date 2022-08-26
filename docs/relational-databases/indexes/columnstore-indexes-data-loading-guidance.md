@@ -1,16 +1,14 @@
 ---
-description: "Columnstore indexes - Data loading guidance"
-title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore indexes - Data loading guidance"
+description: Columnstore indexes - Data loading guidance
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data loading guidance
@@ -26,12 +24,12 @@ Options and recommendations for loading data into a columnstore index by using t
 
 To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md), or select rows from a staging table.
 
-![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-load-process.png "Loading into a clustered columnstore index")  
   
 As the diagram suggests, a bulk load:
   
 - Does not pre-sort the data. Data is inserted into rowgroups in the order it is received.
-- If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
+- If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to delta rowgroups before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
 - If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
 
 > [!NOTE]
@@ -92,9 +90,9 @@ SELECT col1 /* include actual list of columns in place of col1*/
 FROM [<Staging Table>]
 ```  
   
- There are following optimizations available when loading into clustered columnstore index from staging table:
--   **Log Optimization:** Reduced logging when the data is loaded into compressed rowgroup.   
--   **Locking Optimization:** When loading into compressed rowgroup, the X lock on rowgroup is acquired. However, with delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
+ There are following optimizations available when loading into a clustered columnstore index from staging table:
+-   **Log Optimization:** Reduced logging when the data is loaded into a compressed rowgroup.   
+-   **Locking Optimization:** When loading into a compressed rowgroup, the X lock on rowgroup is acquired. However, with delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
  If you have one or more nonclustered indexes, there is no locking or logging optimization for the index itself, but the optimizations on the clustered columnstore index as described above are still there.  
   
@@ -115,7 +113,7 @@ INSERT INTO [<table-name>] VALUES ('some value' /*replace with actual set of val
 ALTER INDEX [<index-name>] on [<table-name>] REORGANIZE  
 ```  
   
- If you want force a delta rowgroup closed and compressed, you can execute the following command. You may want run this command if you are done loading the rows and don't expect any new rows. By explicitly closing and compressing the delta rowgroup, you can save storage further and improve the analytics query performance. A best practice is to invoke this command if you  don't expect new rows to be inserted.  
+ If you want to force a delta rowgroup closed and compressed, you can execute the following command. You may want run this command if you are done loading the rows and don't expect any new rows. By explicitly closing and compressing the delta rowgroup, you can save storage further and improve the analytics query performance. A best practice is to invoke this command if you  don't expect new rows to be inserted.  
   
 ```sql  
 ALTER INDEX [<index-name>] on [<table-name>] REORGANIZE with (COMPRESS_ALL_ROW_GROUPS = ON)  

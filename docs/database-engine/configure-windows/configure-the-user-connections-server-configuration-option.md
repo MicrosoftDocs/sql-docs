@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "users [SQL Server], simultaneous connections"
   - "maximum number of simultaneous user connections"
   - "connections [SQL Server], simultaneous"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/02/2017"

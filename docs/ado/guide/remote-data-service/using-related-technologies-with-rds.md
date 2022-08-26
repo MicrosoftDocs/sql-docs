@@ -1,18 +1,14 @@
 ---
+title: "Using Related Technologies with RDS"
 description: "Using Related Technologies with RDS"
-title: "Using Related Technologies with RDS | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS related technologies [ADO]"
-ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS related technologies [ADO]"
 ---
 # Using Related Technologies with RDS
 This section contains the following topics.  

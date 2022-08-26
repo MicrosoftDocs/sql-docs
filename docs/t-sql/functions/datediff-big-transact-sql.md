@@ -1,26 +1,24 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL)
 description: "DATEDIFF_BIG (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "01/12/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEDIFF_BIG"
   - "DATEDIFF_BIG_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DATEDIFF_BIG function [SQL Server]"
   - "dates [SQL Server]. functions"
   - "date and time [SQL Server], DATEDIFF_BIG"
   - "functions [SQL Server], time"
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
-ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "01/12/2021"
+dev_langs:
+  - "TSQL"
 ---
 
 # DATEDIFF_BIG (Transact-SQL)

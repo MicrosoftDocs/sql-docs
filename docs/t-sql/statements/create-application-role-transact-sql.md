@@ -1,14 +1,14 @@
 ---
-description: "CREATE APPLICATION ROLE (Transact-SQL)"
-title: "CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE APPLICATION ROLE (Transact-SQL)"
+description: CREATE APPLICATION ROLE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "APPLICATION_ROLE_TSQL"
   - "CREATE APPLICATION ROLE"
   - "sql13.swb.applicationrole.permissions.f1"
@@ -16,17 +16,14 @@ f1_keywords:
   - "APPLICATION ROLE"
   - "CREATE_APPLICATION_ROLE_TSQL"
   - "APPLICATION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE APPLICATION ROLE statement"
   - "application roles [SQL Server], creating"
-ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Adds an application role to the current database.  
   

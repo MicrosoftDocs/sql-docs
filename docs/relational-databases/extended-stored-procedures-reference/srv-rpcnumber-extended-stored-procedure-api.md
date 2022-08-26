@@ -1,31 +1,27 @@
 ---
-title: "srv_rpcnumber (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_rpcnumber (Extended Stored Procedure API)"
 description: Learn how srv_rpcnumber in the Extended Stored Procedure API returns the number component for the current remote stored procedure call.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_rpcnumber"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_rpcnumber"
+apilocation: opends60.dll
+apiname: srv_rpcnumber
+apitype: "DLLExport"
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_rpcnumber (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the number component for the current remote stored procedure call.  
   

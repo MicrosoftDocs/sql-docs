@@ -1,22 +1,18 @@
 ---
+title: "ReadText Method"
 description: "ReadText Method"
-title: "ReadText Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::raw_ReadText"
-  - "_Stream::ReadText"
-helpviewer_keywords: 
-  - "ReadText method [ADO]"
-ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::raw_ReadText"
+  - "_Stream::ReadText"
+helpviewer_keywords:
+  - "ReadText method [ADO]"
+apitype: "COM"
 ---
 # ReadText Method
 Reads specified number of characters from a text [Stream](./stream-object-ado.md) object.  

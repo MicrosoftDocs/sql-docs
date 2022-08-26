@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
-ms.custom: ""
-ms.date: "05/06/2021"
+description: The sys.dm_db_missing_index_group_stats_query dynamic management view returns information about queries that needed a missing index from groups of missing indexes.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "3/7/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_missing_index_group_stats_query_TSQL"
   - "sys.dm_db_missing_index_group_stats_query"
   - "dm_db_missing_index_group_stats_query_TSQL"
   - "dm_db_missing_index_group_stats_query"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_missing_index_group_stats_query dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats_query dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_group_stats_query (Transact-SQL)
@@ -52,7 +50,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
 |**avg_system_impact**|**float**|Average percentage benefit that system queries could experience if this missing index group was implemented. The value means that the query cost would on average drop by this percentage if this missing index group was implemented.|  
   
 ## Remarks  
- Information returned by `sys.dm_db_missing_index_group_stats_query` is updated by every query execution, not by every query compilation or recompilation. Usage statistics are not persisted and are kept only until the database engine is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep the usage statistics after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
+ Information returned by `sys.dm_db_missing_index_group_stats_query` is updated by every query execution, not by every query compilation or recompilation. Usage statistics are not persisted and are kept only until the database engine is restarted. 
+
+Database administrators should periodically make backup copies of the missing index information if they want to keep the usage statistics after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time. You can also [persist missing indexes with Query Store](../indexes/tune-nonclustered-missing-index-suggestions.md#persist-missing-indexes-with-query-store).
  
   >[!NOTE]
   >The result set for this DMV is limited to 600 rows. Each row contains one missing index. If you have more than 600 missing indexes, you should address the existing missing indexes so you can then view the newer ones.
@@ -86,12 +86,16 @@ CROSS APPLY sys.dm_exec_sql_text(misq.last_sql_handle) AS sql_text
 ORDER BY misq.avg_total_user_cost * misq.avg_user_impact * (misq.user_seeks + misq.user_scans) DESC; 
 ```
   
-## See also  
- - [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- - [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- - [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- - [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)   
- - [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
- - [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
- - [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
+## Next steps
+
+Learn more about the missing index feature and related concepts in the following articles:
+
+- [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
+- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)
+- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
+- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)
+- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)
+- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+- [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

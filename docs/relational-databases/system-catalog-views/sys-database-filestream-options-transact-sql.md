@@ -1,25 +1,23 @@
 ---
-description: "sys.database_filestream_options (Transact-SQL)"
-title: "sys.database_filestream_options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_filestream_options (Transact-SQL)"
+description: sys.database_filestream_options (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_filestream_options"
   - "sys.database_filestream_options_TSQL"
   - "database_filestream_options_TSQL"
   - "sys.database_filestream_options"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_filestream_options catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

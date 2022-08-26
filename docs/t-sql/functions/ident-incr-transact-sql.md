@@ -1,25 +1,21 @@
 ---
+title: "IDENT_INCR (Transact-SQL)"
 description: "IDENT_INCR (Transact-SQL)"
-title: "IDENT_INCR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IDENT_INCR"
   - "IDENT_INCR_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "incremental values [SQL Server]"
   - "IDENT_INCR function"
   - "identity columns [SQL Server], IDENT_INCR function"
-ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # IDENT_INCR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

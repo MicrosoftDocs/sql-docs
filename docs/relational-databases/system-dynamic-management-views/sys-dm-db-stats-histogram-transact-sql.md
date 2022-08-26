@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_db_stats_histogram (Transact-SQL)"
-title: "sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "sys.dm_db_stats_histogram (Transact-SQL)"
+description: sys.dm_db_stats_histogram returns the statistics histogram for the specified database object (table or indexed view) in the current database.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 06/06/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_stats_histogram"
   - "sys.dm_db_stats_histogram_TSQL"
   - "dm_db_stats_histogram"
   - "dm_db_stats_histogram_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_stats_histogram dynamic management function"
-ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -34,11 +31,12 @@ Returns the statistics histogram for the specified database object (table or ind
 
 ## Syntax  
   
-```  
+```syntaxsql  
 sys.dm_db_stats_histogram (object_id, stats_id)  
 ```  
   
 ## Arguments  
+
  *object_id*  
  Is the ID of the object in the current database for which properties of one of its statistics is requested. *object_id* is **int**.  
   
@@ -72,8 +70,8 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histogram")  
-  
+ :::image type="content" source="../../relational-databases/system-dynamic-management-views/media/histogram-2.svg" alt-text="Image of how a histogram is calculated from sampled column values.":::  
+
  For each histogram step:  
   
 -   Bold line represents the upper boundary value (*range_high_key*) and the number of times it occurs (*equal_rows*)  
@@ -102,12 +100,14 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-The primary key occupies `stat_id` number 1, so call `sys.dm_db_stats_histogram` for `stat_id` number 2, to return the statistics histogram for the `Country` table.    
-```sql     
+The primary key occupies `stat_id` number 1, so call `sys.dm_db_stats_histogram` for `stat_id` number 2, to return the statistics histogram for the `Country` table.
+
+```sql
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
 ### B. Useful query:   
+
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -117,6 +117,7 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### C. Useful query:
+
 The following example selects from table `Country` with a predicate on column `Country_Name`.
 
 ```sql  
@@ -141,7 +142,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## See Also  
+## Next steps
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Object Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

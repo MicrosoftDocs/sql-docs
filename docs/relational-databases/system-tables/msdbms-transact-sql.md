@@ -1,23 +1,21 @@
 ---
-description: "MSdbms (Transact-SQL)"
-title: "MSdbms (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdbms (Transact-SQL)"
+description: MSdbms (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdbms_TSQL"
   - "MSdbms"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdbms system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSdbms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

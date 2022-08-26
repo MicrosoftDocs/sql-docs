@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ---
 
 # Apache Spark connector: SQL Server & Azure SQL

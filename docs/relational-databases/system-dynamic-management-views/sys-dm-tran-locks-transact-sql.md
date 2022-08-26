@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_locks (Transact-SQL)"
-title: "sys.dm_tran_locks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_locks (Transact-SQL)"
+description: sys.dm_tran_locks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_locks"
   - "sys.dm_tran_locks"
   - "sys.dm_tran_locks_TSQL"
   - "dm_tran_locks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_locks (Transact-SQL)
@@ -67,7 +65,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   A wait request status indicates that the requestor does not currently hold a granted request on the resource.  
   
- Because **sys.dm_tran_locks** is populated from internal lock manager data structures, maintaining this information does not add extra overhead to regular processing. Materializing the view does require access to the lock manager internal data structures. This can have minor effects on the regular processing in the server. These effects should be unnoticeable and should only affect heavily used resources. Because the data in this view corresponds to live lock manager state, the data can change at any time, and rows are added and removed as locks are acquired and released. This view has no historical information.  
+ Because **sys.dm_tran_locks** is populated from internal lock manager data structures, maintaining this information does not add extra overhead to regular processing. Materializing the view does require access to the lock manager internal data structures. This can have minor effects on the regular processing in the server. These effects should be unnoticeable and should only affect heavily used resources. Because the data in this view corresponds to live lock manager state, the data can change at any time, and rows are added and removed as locks are acquired and released. Applications querying this view might experience unpredictable performance due to the nature of protecting the integrity of lock manager structures. This view has no historical information.  
   
  Two requests operate on the same resource only if all the resource-group columns are equal.  
   

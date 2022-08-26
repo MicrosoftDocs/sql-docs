@@ -1,26 +1,25 @@
 ---
 title: CASE (Transact-SQL)
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "01/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CASE_TSQL"
   - "CASE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CASE expression [Transact-SQL]"
   - "simple CASE expression"
   - "comparing expressions"
   - "searched CASE expression"
-ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # CASE (Transact-SQL)

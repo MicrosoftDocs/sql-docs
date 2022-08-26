@@ -1,25 +1,21 @@
 ---
+title: "COLLATIONPROPERTY (Transact-SQL)"
 description: "Collation Functions - COLLATIONPROPERTY (Transact-SQL)"
-title: "COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "COLLATIONPROPERTY_TSQL"
-  - "COLLATIONPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "collations [SQL Server], properties"
-  - "COLLATIONPROPERTY function"
-ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "10/24/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "COLLATIONPROPERTY_TSQL"
+  - "COLLATIONPROPERTY"
+helpviewer_keywords:
+  - "collations [SQL Server], properties"
+  - "COLLATIONPROPERTY function"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # Collation Functions - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

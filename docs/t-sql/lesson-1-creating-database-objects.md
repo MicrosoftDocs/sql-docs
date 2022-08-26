@@ -59,7 +59,7 @@ When you create a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ## Create a Table
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It is also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) fixed database role has these permissions.  
   
@@ -278,7 +278,7 @@ The following statement creates a stored procedure name `pr_Names`, accepts an i
         PRINT 'Products less than ' + CAST(@VarPrice AS varchar(10));  
         -- A second statement starts here  
         SELECT ProductName, Price FROM vw_Names  
-              WHERE Price < @varPrice;  
+              WHERE Price < @VarPrice;  
      END  
   GO    
   ```  

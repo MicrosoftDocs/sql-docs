@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ---
 # Semantic Search (SQL Server)

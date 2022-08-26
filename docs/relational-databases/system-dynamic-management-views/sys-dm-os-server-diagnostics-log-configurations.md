@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_os_server_diagnostics_log_configurations"
-title: "sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_server_diagnostics_log_configurations"
+description: sys.dm_os_server_diagnostics_log_configurations
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations_TSQL"
   - "dm_os_server_diagnostics_log_configurations"
   - "dm_os_server_diagnostics_log_configurations_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations"
+dev_langs:
+  - "TSQL"
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations

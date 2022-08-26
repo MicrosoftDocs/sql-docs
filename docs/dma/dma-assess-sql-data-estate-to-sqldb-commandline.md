@@ -18,7 +18,7 @@ ms.custom:
 ---
 # DMACMD: Assess readiness of a SQL Server data estate migrating to Azure SQL 
 
-With many organizations trying to migrate to Azure, it is critical to assess existing on-premise SQL Server instances and identify the right Azure SQL target - Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs. 
+With many organizations trying to migrate to Azure, it is critical to assess existing on-premises SQL Server instances and identify the right Azure SQL target - Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs. 
 
 [Data Migration Assistant (DMA)](dma-overview.md) helps assess a SQL Server instance for a specific Azure SQL target, and gauges the readiness of SQL Server databases migrating to Azure SQL. Upload DMA assessment results to Azure Migrate hub for a centralized readiness view of the entire data estate. 
 

@@ -64,6 +64,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 6.  Click **OK**.  
   
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
+
+These examples use the `AdventureWorks2019` database, available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+
  **To view the dependencies of a procedure in Query Editor**  
   
  System Function: **sys.dm_sql_referencing_entities**  
@@ -78,7 +81,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
     ```  
-    USE AdventureWorks2008R2;  
+    USE AdventureWorks2019;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
@@ -102,7 +105,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 5.  After the procedure is created, the second example uses the sys.dm_sql_referencing_entities function to display the objects that depend on the procedure.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
     FROM sys.dm_sql_referencing_entities ('Purchasing.uspVendorAllInfo', 'OBJECT');   
@@ -122,7 +125,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
     ```  
-    USE AdventureWorks2008R2;  
+    USE AdventureWorks2019;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
@@ -146,7 +149,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 5.  After the procedure is created, the second example uses the sys.dm_sql_referenced_entities function to display the objects that the procedure depends on.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     SELECT referenced_schema_name, referenced_entity_name,  
     referenced_minor_name,referenced_minor_id, referenced_class_desc,  
@@ -168,7 +171,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
     ```  
-    USE AdventureWorks2008R2;  
+    USE AdventureWorks2019;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
@@ -192,7 +195,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects that depend on the procedure.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     SELECT OBJECT_SCHEMA_NAME ( referencing_id ) AS referencing_schema_name,  
         OBJECT_NAME(referencing_id) AS referencing_entity_name,   
@@ -219,7 +222,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
     ```  
-    USE AdventureWorks2008R2;  
+    USE AdventureWorks2019;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
@@ -243,7 +246,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects the procedure depends on.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
         o.type_desc AS referencing_desciption,   

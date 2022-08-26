@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_nodes (Transact-SQL)"
-title: "sys.dm_os_nodes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_nodes (Transact-SQL)"
+description: sys.dm_os_nodes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_nodes"
   - "dm_os_nodes_TSQL"
   - "dm_os_nodes"
   - "sys.dm_os_nodes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_nodes dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)

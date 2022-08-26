@@ -109,7 +109,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
     ![Screenshot of the Query Designer showing the data that is available to display in the report builder free form report.](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## <a name="List"></a>2. Add and Configure a List  
 In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create Invoices and Forms with Lists](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -131,13 +131,13 @@ You will use a list to display the sales information for sales territories in a 
   
 3.  In the **Dataset name** drop-down list, select **ListDataset**.  
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Right-click inside the list, and then click **Rectangle Properties**.  
   
 6.  On the **General** tab, select the **Add a page break after** check box.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ### To add a new row group and to delete the Details group  
   
@@ -147,7 +147,7 @@ You will use a list to display the sales information for sales territories in a 
   
 2.  In the **Group by** list, select `[Territory].`  
   
-3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Select **OK**.
   
     A column containing the cell `[Territory]` is added to the list.
   
@@ -161,7 +161,7 @@ You will use a list to display the sales information for sales territories in a 
    
 7.  Select **Delete Group only**.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## <a name="Graphics"></a>3. Add Graphic elements  
 One advantage of list data regions is that you can add report items such as rectangles and text boxes anywhere, instead of being limited to a tabular layout. You will enhance the appearance of the report by adding a graphic (a rectangle filled with a color).  
@@ -178,7 +178,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 4.  In **Fill color**, select **Light Gray**.  
    
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click **Run** to preview the report.  
   
@@ -260,7 +260,7 @@ You can add text boxes to display static text that is repeated on each report pa
     =Sum(Fields!Sales.value)  
     ```  
   
-24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+24. Select **OK**.
   
     ![Screenshot that shows a text box in the report builder free form report.](../reporting-services/media/report-builder-free-form-text-box.png)
  
@@ -412,7 +412,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
 
 14. On the **General** tab, under **Legend position**, select the center dot at the bottom. 
   
-15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+15. Select **OK**.
 
 16. Drag to make the chart region taller, if necessary.
 

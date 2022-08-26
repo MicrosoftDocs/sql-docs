@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_tran_version_store (Transact-SQL)"
-title: "sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_version_store (Transact-SQL)"
+description: sys.dm_tran_version_store (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_version_store_TSQL"
   - "sys.dm_tran_version_store"
   - "dm_tran_version_store"
   - "dm_tran_version_store_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_version_store dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a virtual table that displays all version records in the version store. **sys.dm_tran_version_store** is inefficient to run because it queries the entire version store, and the version store can be very large.  
   

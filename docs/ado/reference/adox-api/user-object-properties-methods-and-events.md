@@ -1,18 +1,14 @@
 ---
+title: "User Object Properties, Methods, and Events"
 description: "User Object Properties, Methods, and Events"
-title: "User Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "User object [ADOX], members"
-ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "User object [ADOX], members"
 ---
 # User Object Properties, Methods, and Events
 ## Properties/Collections  

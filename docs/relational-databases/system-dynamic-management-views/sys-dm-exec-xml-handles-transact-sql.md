@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_exec_xml_handles (Transact-SQL)"
-title: "sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_xml_handles (Transact-SQL)"
+description: sys.dm_exec_xml_handles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_xml_handles"
   - "dm_exec_xml_handles_TSQL"
   - "sys.dm_exec_xml_handles_TSQL"
   - "sys.dm_exec_xml_handles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_xml_handles dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-author: pmasl 
-ms.author: pelopes
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
   Returns information about active handles that have been opened by **sp_xml_preparedocument**.  
   

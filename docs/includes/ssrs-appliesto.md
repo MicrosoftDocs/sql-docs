@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
-**APPLIES TO:**
+[!INCLUDE [applies-md](applies-md.md)]

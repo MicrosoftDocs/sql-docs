@@ -1,28 +1,25 @@
 ---
-description: "ALTER SYMMETRIC KEY (Transact-SQL)"
 title: "ALTER SYMMETRIC KEY (Transact-SQL)"
-ms.custom: ""
+description: ALTER SYMMETRIC KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER SYMMETRIC KEY"
   - "ALTER_SYMMETRIC_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying symmetric keys"
   - "encryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], modifying"
   - "cryptography [SQL Server], symmetric keys"
   - "ALTER SYMMETRIC KEY statement"
-ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

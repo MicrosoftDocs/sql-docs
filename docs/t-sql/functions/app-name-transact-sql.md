@@ -1,27 +1,23 @@
 ---
+title: "APP_NAME (Transact-SQL)"
 description: "APP_NAME (Transact-SQL)"
-title: "APP_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "APP_NAME_TSQL"
   - "APP_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "name checking for current session [SQL Server]"
   - "sessions [SQL Server], application names"
   - "applications [SQL Server], names"
   - "current session application names"
   - "APP_NAME function"
-ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,25 +1,21 @@
 ---
+title: "NumericScale Property (ADOX)"
 description: "NumericScale Property (ADOX)"
-title: "NumericScale Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Column::PutNumericScale"
   - "_Column::GetNumericScale"
   - "_Column::NumericScale"
   - "_Column::put_NumericScale"
   - "_Column::get_NumericScale"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NumericScale property [ADOX]"
-ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # NumericScale Property (ADOX)
 Indicates the scale of a numeric value in the column.  

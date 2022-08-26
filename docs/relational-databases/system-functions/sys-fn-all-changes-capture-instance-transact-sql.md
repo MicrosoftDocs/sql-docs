@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_all_changes_<capture_instance>"
   - "sys.fn_all_changes_<capture_instance>"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

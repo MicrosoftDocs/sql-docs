@@ -1,22 +1,22 @@
 ---
+title: "JSON_QUERY (Transact-SQL)"
 description: "JSON_QUERY (Transact-SQL)"
-title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JSON_QUERY"
   - "JSON_QUERY_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "JSON, extracting"
   - "JSON, querying"
   - "JSON_QUERY function"
-ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON_QUERY (Transact-SQL)
 
@@ -73,8 +73,8 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
    "info": {
       "type": 1,
       "address": {
-         "town": "Bristol",
-         "county": "Avon",
+         "town": "Cheltenham",
+         "county": "Gloucestershire",
          "country": "England"
       },
       "tags": ["Sport", "Water polo"]
@@ -90,7 +90,7 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
 |$|Returns the entire JSON text.|Returns the entire JSON text.|N/a|  
 |$.info.type|NULL|Error|Not an object or array.<br /><br /> Use **JSON_VALUE** instead.|  
 |$.info.address.town|NULL|Error|Not an object or array.<br /><br /> Use **JSON_VALUE** instead.|  
-|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/a|  
+|$.info."address"|N'{ "town":"Cheltenham", "county":"Gloucestershire", "country":"England" }'|N'{ "town":"Cheltenham", "county":"Gloucestershire", "country":"England" }'|N/a|  
 |$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/a|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  

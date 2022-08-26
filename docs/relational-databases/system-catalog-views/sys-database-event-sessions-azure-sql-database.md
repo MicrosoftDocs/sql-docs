@@ -1,29 +1,23 @@
 ---
-description: "sys.database_event_sessions (Azure SQL Database)"
-title: "sys.database_event_sessions (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "sys.database_event_sessions"
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "4/18/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
-# sys.database_event_sessions (Azure SQL Database)
+# sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Lists all the event session definitions that exist in the current database, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
-> [!NOTE]
->  The similar catalog view named `sys.server_event_sessions` applies only to [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], and to any later versions.|  
+Lists all the database-scoped event session definitions that exist in the current database. For information about *active* database-scoped event sessions, see [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md).
+
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for managed instances: learn more in [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,6 +34,16 @@ monikerRange: "= azuresqldb-current"
 |startup_state|**bit**|Value determines whether or not session is started automatically when the server starts. The default is 0. Is not nullable. Is one of:<br /><br /> 0 (OFF). The session does not start when the server starts.<br /><br /> 1 (ON). The event session starts when the server starts.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
-  
-  
+
+Requires the VIEW DATABASE STATE permission.  
+
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md) returns server-scoped event session definitions for SQL Server and Azure SQL Managed Instance.
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-targets-azure-sql-database.md)
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

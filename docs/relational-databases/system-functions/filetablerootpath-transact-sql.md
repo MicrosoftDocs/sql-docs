@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTableRootPath function"
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

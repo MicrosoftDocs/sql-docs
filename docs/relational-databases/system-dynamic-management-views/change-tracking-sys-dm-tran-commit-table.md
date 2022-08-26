@@ -1,26 +1,24 @@
 ---
-description: "Change Tracking - sys.dm_tran_commit_table"
-title: "sys.dm_tran_commit_table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_commit_table (Transact-SQL)"
+description: Change Tracking - sys.dm_tran_commit_table
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_commit_table"
   - "dm_tran_commit_table_TSQL"
   - "sys.dm_tran_commit_table"
   - "sys.dm_tran_commit_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_commit_table dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Change Tracking - sys.dm_tran_commit_table
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

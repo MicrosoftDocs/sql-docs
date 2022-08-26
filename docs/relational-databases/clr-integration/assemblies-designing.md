@@ -1,18 +1,16 @@
 ---
-title: "Designing Assemblies | Microsoft Docs"
+title: "Designing Assemblies"
 description: This article describes factors to consider when you design an assembly to host on SQL Server, including packaging, managing, and restrictions on assemblies.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/24/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "designing assemblies [SQL Server]"
   - "assemblies [CLR integration], designing"
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-author: rothja
-ms.author: jroth
 ---
 # Assemblies - Designing
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

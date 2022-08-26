@@ -8,8 +8,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server on Server Core
@@ -76,6 +76,8 @@ The Server Core installation option provides a minimal environment for running s
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
  The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).  
+
+ [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 > [!NOTE]  
 >  Depending on how you received the software (for example, through [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing), your use of the software may be subject to additional terms and conditions.  
@@ -315,7 +317,7 @@ If you accidentally close the command prompt, you can start a new command prompt
  
 1.  Press Ctrl+Shift+Esc to display Task Manager.  
 2.  On the **Applications** tab, click **New Task**.  
-3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then select **OK**.  
   
 ## See also  
  [Install SQL Server Using a Configuration File](./install-sql-server-using-a-configuration-file.md)   

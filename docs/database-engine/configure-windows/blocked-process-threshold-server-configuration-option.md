@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "thresholds [SQL Server]"
   - "blocked process threshold option"
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # blocked process threshold Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

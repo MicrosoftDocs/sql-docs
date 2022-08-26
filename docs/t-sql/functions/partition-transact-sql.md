@@ -1,29 +1,28 @@
 ---
+title: "$PARTITION (Transact-SQL)"
 description: "$PARTITION (Transact-SQL)"
-title: "$PARTITION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "$partition_TSQL"
   - "$partition"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
-ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # $PARTITION (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
+Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -36,64 +35,111 @@ ms.author: kendralittle
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *database_name*  
- Is the name of the database that contains the partition function.  
+
+*database_name*  
+Is the name of the database that contains the partition function.  
   
- *partition_function_name*  
- Is the name of any existing partition function against which a set of partitioning column values are being applied.  
+*partition_function_name*  
+Is the name of any existing partition function against which a set of partitioning column values are being applied.  
   
- *expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) whose data type must either match or be implicitly convertible to the data type of its corresponding partitioning column. *expression* can also be the name of a partitioning column that currently participates in *partition_function_name*.  
+*expression*  
+Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) whose data type must either match or be implicitly convertible to the data type of its corresponding partitioning column. *expression* can also be the name of a partitioning column that currently participates in *partition_function_name*.  
   
-## Return Types  
- **int**  
+## Return types
+
+**int**  
   
 ## Remarks  
- $PARTITION returns an **int** value between 1 and the number of partitions of the partition function.  
+
+$PARTITION returns an **int** value between 1 and the number of partitions of the partition function.  
   
- $PARTITION returns the partition number for any valid value, regardless of whether the value currently exists in a partitioned table or index that uses the partition function.  
+$PARTITION returns the partition number for any valid value, regardless of whether the value currently exists in a partitioned table or index that uses the partition function.  
   
 ## Examples  
   
-### A. Getting the partition number for a set of partitioning column values  
- The following example creates a partition function `RangePF1` that will partition a table or index into four partitions. $PARTITION is used to determine that the value `10`, representing the partitioning column of `RangePF1`, would be put in partition 1 of the table.  
+### A. Get the partition number for a set of partitioning column values  
+
+This example creates a partition function `RangePF1` using [RANGE LEFT](../../relational-databases/partitions/partitioned-tables-and-indexes.md#partition-function) that will partition a table or index into four partitions. $PARTITION is used to determine that the value `10`, representing the partitioning column of `RangePF1`, would be put in partition 1 of the table.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE PARTITION FUNCTION RangePF1 ( INT )  
-AS RANGE FOR VALUES (10, 100, 1000) ;  
-GO  
+AS RANGE LEFT FOR VALUES (10, 100, 1000) ;  
+GO
+
 SELECT $PARTITION.RangePF1 (10) ;  
 GO  
 ```  
   
-### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
- The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
+### B. Get the number of rows in each nonempty partition of a partitioned table or index  
+
+This example shows how to use `$PARTITION` to return the number of rows in each partition of table that contains data.
+
+The example:
+- Creates a partition scheme, `RangePS1`, for the partition function `RangePF1`. 
+- Creates a table, `dbo.PartitionTable`, on the `RangePS1` partition scheme with `col1` as the partitioning column.
+- Inserts four rows into the `dbo.PartitionTable` table. Based on the partition function definition, these rows will be inserted into partitions 2 and 3. Partitions 1 and 4 will remain empty.
+- Queries the `dbo.PartitionTable` and uses `$PARTITION.RangePF1(col1)` in the GROUP BY clause to query the number of rows in each partition that contains data.
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
+> [!NOTE]
+> To execute this example, you must first create the partition function `RangePF1` using the code in the previous example.
   
 ```sql
-USE AdventureWorks2012;  
+CREATE PARTITION SCHEME RangePS1  
+    AS PARTITION RangePF1  
+    ALL TO ('PRIMARY') ;  
 GO  
-SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
-COUNT(*) AS [COUNT] FROM Production.TransactionHistory   
-GROUP BY $PARTITION.TransactionRangePF1(TransactionDate)  
+
+CREATE TABLE dbo.PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+    ON RangePS1 (col1) ;  
+GO
+
+INSERT dbo.PartitionTable (col1, col2)
+VALUES ((1,'a row'),(100,'another row'),(500,'another row'),(1000,'another row'))
+
+
+SELECT 
+	$PARTITION.RangePF1(col1) AS Partition,   
+	COUNT(*) AS [COUNT] 
+FROM dbo.PartitionTable
+GROUP BY $PARTITION.RangePF1(col1)  
 ORDER BY Partition ;  
 GO  
-```  
-  
-### C. Returning all rows from one partition of a partitioned table or index  
- The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
-  
-> [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
+``` 
+
+The `SELECT` query should return the following results:
+
+| Partition | COUNT |
+|-----------|-------|
+| 2         | 1     |
+| 3         | 3     |
+
+Rows are not returned for partitions number 1 and 4, which exist but do not contain data.
+
+### C. Return all rows from one partition of a partitioned table or index  
+
+The following example returns all rows that are in partition 3 of the table `PartitionTable`.  
   
 ```sql  
-SELECT * FROM Production.TransactionHistory  
-WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
-```  
+SELECT col1, col2
+FROM dbo.PartitionTable
+WHERE $PARTITION.RangePF1(col1) = 3 ;  
+```
+
+The query should return the following results:
+
+| col1 | col2         |
+|------|--------------|
+| 101  | another row  |
+| 500  | a third row  |
+| 501  | a fourth row |
   
-## See Also  
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
- 
+## Next steps
+
+Learn more about table partitioning in these articles:
+
+- [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
+- [CREATE PARTITION FUNCTION (Transact-SQL)](../statements/create-partition-function-transact-sql.md)
+- [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
+- [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
+- [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
+- [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)

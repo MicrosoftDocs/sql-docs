@@ -1,22 +1,18 @@
 ---
+title: "More Ways to Move in a Recordset"
 description: "More Ways to Move in a Recordset"
-title: "More Ways to Move in a Recordset | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MoveNext method [ADO]"
   - "MoveLast method [ADO]"
   - "MoveFirst method [ADO]"
   - "Recordset object [ADO], moving"
   - "MovePrevious method [ADO]"
-ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: rothja
-ms.author: jroth
 ---
 # More Ways to Move in a Recordset
 The following four methods are used to move around, or scroll, in the **Recordset**: [MoveFirst, MoveLast, MoveNext, and MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Some of these methods are unavailable on forward-only cursors.)  

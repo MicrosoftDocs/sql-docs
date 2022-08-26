@@ -3,9 +3,9 @@ title: "Install and remove Database Schema Conversion Toolkit (Oracle to Microso
 description: "Learn how to install and remove Database Schema Conversion Toolkit (Oracle to Microsoft SQL) extension."
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: "nahk-ivanov"
-ms.author: "alexiva"
-ms.reviewer: "maghan"
+author: tdoshin
+ms.author: timioshin
+ms.reviewer: maghan
 ms.topic: conceptual
 ms.custom: 
 ms.date: "10/4/2021"

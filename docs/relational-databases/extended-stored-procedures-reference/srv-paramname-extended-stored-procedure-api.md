@@ -1,31 +1,27 @@
 ---
-title: "srv_paramname (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_paramname (Extended Stored Procedure API)"
 description: Learn how srv_paramname in the Extended Stored Procedure API returns the name of a remote stored procedure call parameter.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_paramname"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paramname"
+apilocation: opends60.dll
+apiname: srv_paramname
+apitype: "DLLExport"
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_paramname (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the name of a remote stored procedure call parameter.  
   

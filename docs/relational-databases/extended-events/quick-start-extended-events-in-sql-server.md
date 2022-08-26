@@ -1,30 +1,29 @@
 ---
-title: "Quickstart: Extended events in SQL Server"
+title: "Quickstart: Extended Events in SQL Server"
 description: This quickstart helps you use Extended Events, a lightweight performance monitoring system, to collect data to monitor and troubleshoot problems in SQL Server.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: maghan
+ms.date: "04/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents
 ms.topic: quickstart
+ms.custom: intro-quickstart
 f1_keywords:
-  - sql11.ssms.XeNewEventSession.General.f1
-  - sql11.ssms.XeNewEventSession.Events.f1
-  - sql11.ssms.XeNewEventSession.Targets.f1
-  - sql11.ssms.XeNewEventSession.Advanced.f1
+  - "sql11.ssms.XeNewEventSession.General.f1"
+  - "sql11.ssms.XeNewEventSession.Events.f1"
+  - "sql11.ssms.XeNewEventSession.Targets.f1"
+  - "sql11.ssms.XeNewEventSession.Advanced.f1"
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: maghan
-ms.date: "04/16/2020"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom:
-  - intro-quickstart
 ---
 
 # Quickstart: Extended events in SQL Server
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Extended events is a lightweight performance monitoring system that enables users to collect data needed to monitor and troubleshoot problems in SQL Server. See [Extended events overview](extended-events.md) to learn more about the extended events architecture.  This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using extended events, you can see details about the inner operations of the SQL system and your application. When you create an extended event session, you tell the system:
+Extended Events is a lightweight performance monitoring system that enables users to collect data needed to monitor and troubleshoot problems in SQL Server. See [Extended Events overview](extended-events.md) to learn more about the extended events architecture.  This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using Extended Events, you can see details about the inner operations of the SQL system and your application. When you create an Extended Events session, you tell the system:
 
 - Which occurrences you are interested in.
 - How you want the system to report the data to you.
@@ -40,13 +39,13 @@ This article does the following:
   - Processed versus raw results.
   - Tools for viewing the results in different ways and on different time scales.
 - Shows how you can search for and discover all the available events.
-- Provides the primary key and foreign key relationships that are implicit among the dynamic management views (DMVs) for extended events.
+- Provides the primary key and foreign key relationships that are implicit among the dynamic management views (DMVs) for Extended Events.
 - Describes what more there is to learn in related articles.
 
-Blogs and other informal conversations sometimes refer to extended events by the abbreviation *xevents*.
+Blogs and other informal conversations sometimes refer to Extended Events by the abbreviation *XEvents*.
 
 > [!NOTE]
-> For information about extended events in Azure SQL Database, including code samples, see [Extended events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
+> For information about extended events in Azure SQL Database, including code samples, see [Extended Events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
 ## Preparations before demo
 
@@ -62,9 +61,9 @@ The following preliminaries would be required for you to actually perform the up
 
 ## Demo of SSMS integration
 
-SSMS.exe provides an excellent user interface (UI) for extended events. The UI is so good that many users have no need to engage with extended events by using Transact-SQL or the dynamic management views (DMVs) that target extended events.
+SSMS.exe provides an excellent user interface (UI) for extended events. The UI is so good that many users have no need to engage with Extended Events by using Transact-SQL or the dynamic management views (DMVs) that target extended events.
 
-In this section you can see the UI steps to create an extended event, and to see the data it reports. After the steps, you can read about the concepts involved in the steps for a deeper understanding.
+In this section you can see the UI steps to create an Extended Events session, and to see the data it reports. After the steps, you can read about the concepts involved in the steps for a deeper understanding.
 
 ### Steps of demo
 
@@ -352,7 +351,7 @@ In the SSMS **Object Explorer**, you can right-click your event session node. In
 
 ## Scenarios
 
-There are innumerable scenarios for the effective use of extended events. The following articles provide example scenarios that involve the locks taken during queries.
+There are innumerable scenarios for the effective use of Extended Events. The following articles provide example scenarios that involve the locks taken during queries.
 
 Specific scenarios for event sessions aimed at assessing locks are described in the following articles. The articles also show some advanced techniques, such as using **\@dbid**, and using the dynamic `EXECUTE (@YourSqlString)`:
 
@@ -361,9 +360,9 @@ Specific scenarios for event sessions aimed at assessing locks are described in 
 - [Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
   - This scenario uses the [target package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130)), where the pair of events is sqlserver.lock_acquire and lock_release.
 
-## Terms and concepts in extended events
+## Terms and concepts in Extended Events
 
-The following table lists the terms used for extended events, and describes their meanings.
+The following table lists the terms used for Extended Events, and describes their meanings.
 
 | Term | Description |
 | :--- | :---------- |
@@ -430,7 +429,7 @@ This section briefly mentions a couple of miscellaneous items.
 
 ### Event sessions installed with SQL Server
 
-SQL Server comes with a few extended events already created. All are configured to start whenever the SQL system is started. These event sessions gather data that might be helpful in case of a system error. Like all extended events, they consume only tiny a amount of resources, and Microsoft recommends that they be left alone to run.
+SQL Server comes with a few Extended Events sessions already created. All are configured to start whenever the SQL system is started. These event sessions gather data that might be helpful in case of a system error. Like many event sessions, they consume only tiny a amount of resources, and Microsoft recommends that they be left alone to run.
 
 You can see these event sessions in the SSMS **Object Explorer** under **Management** > **Extended Events** > **Sessions**.  As of June 2016, the list of these installed event sessions is:
 
@@ -438,13 +437,13 @@ You can see these event sessions in the SSMS **Object Explorer** under **Managem
 - system_health
 - telemetry_events
 
-### PowerShell provider for extended events
+### PowerShell provider for Extended Events
 
-You can manage SQL Server extended events by using the SQL Server PowerShell provider. Details are at: [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+You can manage SQL Server Extended Events by using the SQL Server PowerShell provider. Details are at: [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
-### System views for extended events
+### System views for Extended Events
 
-The system views for extended events include:
+The system views for Extended Events include:
 
 - *Catalog views:* for information about event sessions that have been defined by CREATE EVENT SESSION.
 
@@ -471,7 +470,7 @@ The following Transact-SQL SELECT statements can report who has these permission
 
 ### UNION direct permissions plus role derived permissions
 
-The following SELECT...UNION ALL statement returns rows that show who has the necessary permissions for creating event sessions and querying the system catalog views for extended events.
+The following SELECT...UNION ALL statement returns rows that show who has the necessary permissions for creating event sessions and querying the system catalog views for Extended Events.
 
 ```sql
 -- Ascertain who has the permissions listed in the ON clause.

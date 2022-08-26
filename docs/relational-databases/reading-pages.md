@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "pages"
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Reading Pages
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

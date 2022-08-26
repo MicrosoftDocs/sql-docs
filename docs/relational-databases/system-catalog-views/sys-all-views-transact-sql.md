@@ -1,25 +1,23 @@
 ---
-description: "sys.all_views (Transact-SQL)"
-title: "sys.all_views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.all_views (Transact-SQL)"
+description: sys.all_views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.all_views_TSQL"
   - "sys.all_views"
   - "all_views"
   - "all_views_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_views catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_views (Transact-SQL)

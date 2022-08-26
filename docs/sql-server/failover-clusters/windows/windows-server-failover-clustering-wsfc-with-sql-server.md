@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "Windows Server Failover Clustering, with SQL Server"
   - "WSFC, with SQL Server"
   - "quorum [SQL Server]"
+  - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
@@ -75,7 +76,8 @@ ms.author: mathoma
   
  Both [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances use WSFC as a platform technology, registering components as WSFC cluster resources.  Related resources are combined into a *role*, which can be made dependent upon other WSFC cluster resources. The WSFC can then sense and signal the need to restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance or automatically fail it over to a different server node in the WSFC.  
   
-> **IMPORTANT!!** To take full advantage of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On technologies, you should apply several WSFC-related prerequisites.  
+> [!IMPORTANT]  
+> To take full advantage of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On technologies, you should apply several WSFC-related prerequisites.  
 >   
 >  For more information, see: [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
@@ -84,7 +86,8 @@ ms.author: mathoma
   
  In the event of a failover, the WSFC service transfers ownership of instance's resources to a designated failover node. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is then re-started on the failover node, and databases are recovered as usual. At any given moment, only a single node in the cluster can host the FCI and underlying resources.  
   
-> **NOTE:**  An Always On Failover Cluster Instance requires symmetrical shared disk storage such as a storage area network (SAN) or SMB file share.  The shared disk storage volumes must be available to all potential failover nodes in the WSFC cluster.  
+> [!NOTE]  
+> An Always On Failover Cluster Instance requires symmetrical shared disk storage such as a storage area network (SAN) or SMB file share.  The shared disk storage volumes must be available to all potential failover nodes in the WSFC cluster.  
   
  For more information, see: [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
@@ -97,7 +100,8 @@ ms.author: mathoma
   
  At any given moment, only a single [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance may host the primary replica of an availability group's databases, all associated secondary replicas must each reside on a separate instance, and each instance must reside on separate physical nodes.  
   
-> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
+> [!NOTE]  
+> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
 >   
 >  A Failover Cluster Instance (FCI) may be used together with an availability group to enhance the availability of an availability replica. However, to prevent potential race conditions in the WSFC cluster, automatic failover of the availability group is not supported to or from an availability replica that is hosted on a FCI.  
   
@@ -125,7 +129,8 @@ ms.author: mathoma
   
  A *quorum mode* is configured in the WSFC that dictates the methodology used for quorum voting and when to perform an automatic failover or take the cluster offline. 
   
-> **TIP!!** It is best practice to always have an odd number of quorum votes in a WSFC.  For the purposes of quorum voting, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not have to be installed on all nodes in the cluster. An additional server can act as a quorum member, or the WSFC quorum model can be configured to use a remote file share as a tie-breaker.  
+> [!TIP]  
+> It is a best practice to always have an odd number of quorum votes in a WSFC.  For the purposes of quorum voting, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not have to be installed on all nodes in the cluster. An additional server can act as a quorum member, or the WSFC quorum model can be configured to use a remote file share as a tie-breaker.  
 >   
 >  For more information, see: [WSFC Quorum Modes and Voting Configuration (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
@@ -138,7 +143,7 @@ ms.author: mathoma
   
  For more information, see: [WSFC Disaster Recovery through Forced Quorum (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
-##  <a name="AlwaysOnWsfcRelationship"></a> Relationship of SQL Server AlwaysOn Components to WSFC  
+##  <a name="AlwaysOnWsfcRelationship"></a> Relationship of SQL Server Always On Components to WSFC  
  Several layers of relationships exist between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On and WSFC features and components.  
   
  Always On availability groups are hosted on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances.  
@@ -156,7 +161,7 @@ ms.author: mathoma
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
  If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
- ![SQL Server AlwaysOn Component Context Diagram](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server AlwaysOn Component Context Diagram")  
+ ![SQL Server Always On Component Context Diagram](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server Always On Component Context Diagram")  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

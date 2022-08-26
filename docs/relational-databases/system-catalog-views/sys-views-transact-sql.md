@@ -1,22 +1,21 @@
 ---
 title: sys.views (Transact-SQL)
-description: "sys.views (Transact-SQL)"
+description: sys.views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.views_TSQL"
   - "sys.views"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.views catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "05/25/2021"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -34,9 +33,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**has_unchecked_assembly_data**|**bit**|1 = View contains persisted data that depends on an assembly whose definition changed during the last ALTER ASSEMBLY. Resets to 0 after the next successful DBCC CHECKDB or DBCC CHECKTABLE.|  
 |**with_check_option**|**bit**|1 = WITH CHECK OPTION was specified in the view definition.|  
 |**is_date_correlation_view**|**bit**|1 = View was created automatically by the system to store correlation information between datetime columns. Creation of this view was enabled by setting DATE_CORRELATION_OPTIMIZATION to ON.|
-|**ledger_view_type**|**tinyint**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicating if a view is a ledger view for an updatable ledger table.<br/><br/>0 = NON_LEDGER_VIEW<br/>1 = LEDGER_VIEW<br /><br />For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).|
-|**ledger_view_type_desc**|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_view_type column:<br/><br/>NON_LEDGER_VIEW<br/>LEDGER_VIEW|
-|**is_dropped_ledger_view**|**bit**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger view that has been dropped.|
+|**ledger_view_type**|**tinyint**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicating if a view is a ledger view for an updatable ledger table.<br/><br/>0 = NON_LEDGER_VIEW<br/>1 = LEDGER_VIEW<br /><br />For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
+|**ledger_view_type_desc**|**nvarchar(60)**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_view_type column:<br/><br/>NON_LEDGER_VIEW<br/>LEDGER_VIEW|
+|**is_dropped_ledger_view**|**bit**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger view that has been dropped.|
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

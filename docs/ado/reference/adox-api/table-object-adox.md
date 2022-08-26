@@ -1,21 +1,16 @@
 ---
+title: "Table Object (ADOX)"
 description: "Table Object (ADOX)"
-title: "Table Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Table"
-helpviewer_keywords: 
-  - "Table object [ADOX]"
-ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "Table object [ADOX]"
+apitype: "COM"
 ---
 # Table Object (ADOX)
 Represents a database table including columns, indexes, and keys.  

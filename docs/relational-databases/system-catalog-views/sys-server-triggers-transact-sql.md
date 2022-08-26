@@ -1,25 +1,23 @@
 ---
-description: "sys.server_triggers (Transact-SQL)"
-title: "sys.server_triggers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_triggers (Transact-SQL)"
+description: sys.server_triggers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_triggers"
   - "sys.server_triggers_TSQL"
   - "server_triggers_TSQL"
   - "sys.server_triggers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_triggers catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.server_triggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,17 @@
 ---
+title: "RuleEnum"
 description: "RuleEnum"
-title: "RuleEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RuleEnum"
-helpviewer_keywords: 
-  - "RuleEnum enumeration [ADOX]"
-ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RuleEnum"
+helpviewer_keywords:
+  - "RuleEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # RuleEnum
 Specifies the rule to follow when a [Key](./key-object-adox.md) is deleted.  

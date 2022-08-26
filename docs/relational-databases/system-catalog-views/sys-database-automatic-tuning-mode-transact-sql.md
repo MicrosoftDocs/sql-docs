@@ -1,25 +1,24 @@
 ---
 title: "sys.database_automatic_tuning_mode (Transact-SQL)"
 description: Learn how to view automatic tuning mode on SQL Server or Azure SQL Database.
-ms.custom: ""
+author: "danimir"
+ms.author: "danil"
+ms.reviewer: "wiassaf"
 ms.date: "07/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_automatic_tuning_mode_tsql"
   - "database_automatic_tuning_mode"
   - "sys.database_automatic_tuning_mode_tsql"
   - "sys.database_automatic_tuning_mode"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database_automatic_tuning_mode catalog view"
   - "sys.database_automatic_tuning_mode catalog view"
-author: "danimir"
-ms.author: "danil"
-ms.reviewer: "wiassaf"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database\_automatic\_tuning_mode (Transact-SQL)

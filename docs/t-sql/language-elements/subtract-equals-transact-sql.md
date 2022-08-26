@@ -1,28 +1,27 @@
 ---
+title: "-= (Subtraction Assignment) (Transact-SQL)"
 description: "-= (Subtraction Assignment) (Transact-SQL)"
-title: "-= (Subtraction Assignment) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "-="
   - "-=_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compound operators, -="
   - "assignment operators, -="
   - "augmented operators, -="
   - "-= (subtract equals)"
   - "-= (subtraction assignment)"
-ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # -= (Subtraction Assignment) (Transact-SQL)

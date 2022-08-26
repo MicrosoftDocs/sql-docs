@@ -1,23 +1,19 @@
 ---
+title: "ORIGINAL_DB_NAME (Transact-SQL)"
 description: "ORIGINAL_DB_NAME (Transact-SQL)"
-title: "ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ORIGINAL_DB_NAME"
-  - "ORIGINAL_DB_NAME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ORIGINAL_DB_NAME function"
-ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/06/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ORIGINAL_DB_NAME"
+  - "ORIGINAL_DB_NAME_TSQL"
+helpviewer_keywords:
+  - "ORIGINAL_DB_NAME function"
+dev_langs:
+  - "TSQL"
 ---
 # ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

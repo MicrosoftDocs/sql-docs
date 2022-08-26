@@ -1,24 +1,20 @@
 ---
+title: "GROUPING_ID (Transact-SQL)"
 description: "GROUPING_ID (Transact-SQL)"
-title: "GROUPING_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "GROUPING_ID_TSQL"
-  - "GROUPING_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GROUP BY clause, GROUPING_ID"
-  - "GROUPING_ID function"
-ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/03/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "GROUPING_ID_TSQL"
+  - "GROUPING_ID"
+helpviewer_keywords:
+  - "GROUP BY clause, GROUPING_ID"
+  - "GROUPING_ID function"
+dev_langs:
+  - "TSQL"
 ---
 # GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

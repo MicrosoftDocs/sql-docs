@@ -7,7 +7,7 @@ ms.date: 03/22/2021
 ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
-ms.reviewer: dphansen
+ms.reviewer: rothja
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

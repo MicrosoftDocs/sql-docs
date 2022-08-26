@@ -1,23 +1,22 @@
 ---
-description: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP DATABASE SCOPED CREDENTIAL"
   - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP DATABASE SCOPED CREDENTIAL statement"
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
-ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

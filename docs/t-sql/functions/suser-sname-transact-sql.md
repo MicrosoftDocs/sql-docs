@@ -1,19 +1,19 @@
 ---
+title: "SUSER_SNAME (Transact-SQL)"
 description: "SUSER_SNAME (Transact-SQL)"
-title: "SUSER_SNAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SUSER_SNAME_TSQL"
   - "SUSER_SNAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "security identification names [SQL Server]"
   - "logins [SQL Server], users"
   - "SIDs [SQL Server]"
@@ -23,10 +23,9 @@ helpviewer_keywords:
   - "IDs [SQL Server], logins"
   - "identification numbers [SQL Server], logins"
   - "names [SQL Server], logins"
-ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

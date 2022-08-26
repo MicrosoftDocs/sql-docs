@@ -1,28 +1,25 @@
 ---
-description: "CREATE EVENT SESSION (Transact-SQL)"
-title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/10/2019"
+title: "CREATE EVENT SESSION (Transact-SQL)"
+description: CREATE EVENT SESSION creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EVENT SESSION"
   - "SESSION"
   - "EVENT SESSION"
   - "SESSION_TSQL"
   - "EVENT_SESSION_TSQL"
   - "CREATE_EVENT_SESSION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
-ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 
@@ -104,31 +101,31 @@ ON { SERVER | DATABASE }
 
 ## Arguments
 
-*event_session_name*
+#### *event_session_name*
 Is the user-defined name for the event session. *event_session_name* is alphanumeric, can be up to 128 characters, must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and must comply with the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
-ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name*
+#### ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name*
 Is the event to associate with the event session, where:
 
 - *event_module_guid* is the GUID for the module that contains the event.
 - *event_package_name* is the package that contains the action object.
 - *event_name* is the event object.
 
-Events appear in the sys.dm_xe_objects view as object_type 'event'.
+Events appear in the `sys.dm_xe_objects` view as object_type 'event'.
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] }
-Allows customizable attributes for the event to be set. Customizable attributes appear in the sys.dm_xe_object_columns view as column_type 'customizable ' and object_name = *event_name*.
+#### SET { *event_customizable_attribute*= \<value> [ ,...*n*] }
+Allows customizable attributes for the event to be set. Customizable attributes appear in the `sys.dm_xe_object_columns` view as column_type 'customizable ' and object_name = *event_name*.
 
-ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })
+#### ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })
 Is the action to associate with the event session, where:
 
 - *event_module_guid* is the GUID for the module that contains the event.
 - *event_package_name* is the package that contains the action object.
 - *action_name* is the action object.
 
-Actions appear in the sys.dm_xe_objects view as object_type 'action'.
+Actions appear in the `sys.dm_xe_objects` view as object_type 'action'.
 
-WHERE \<predicate_expression>
+#### WHERE \<predicate_expression>
 Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped by the session before being processed by the actions and targets for the session. Predicate expressions are limited to 3000 characters, which limits string arguments.
 
 *event_field_name*
@@ -139,14 +136,14 @@ Is the name of the global predicate source where:
 
 - *event_module_guid* is the GUID for the module that contains the event.
 - *event_package_name* is the package that contains the predicate object.
-- *predicate_source_name* is defined in the sys.dm_xe_objects view as object_type 'pred_source'.
+- *predicate_source_name* is defined in the `sys.dm_xe_objects` view as `object_type` 'pred_source'.
 
 [*event_module_guid*].*event_package_name*.*predicate_compare_name*
 Is the name of the predicate object to associate with the event, where:
 
 - *event_module_guid* is the GUID for the module that contains the event.
 - *event_package_name* is the package that contains the predicate object.
-- *predicate_compare_name* is a global source defined in the sys.dm_xe_objects view as object_type 'pred_compare'.
+- *predicate_compare_name* is a global source defined in the `sys.dm_xe_objects` view as `object_type` 'pred_compare'.
 
 *number*
 Is any numeric type including **decimal**. Limitations are the lack of available physical memory or a number that is too large to be represented as a 64-bit integer.
@@ -154,26 +151,26 @@ Is any numeric type including **decimal**. Limitations are the lack of available
 '*string*'
 Either an ANSI or Unicode string as required by the predicate compare. No implicit string type conversion is performed for the predicate compare functions. Passing the wrong type results in an error.
 
-ADD TARGET [*event_module_guid*].*event_package_name*.*target_name*
+#### ADD TARGET [*event_module_guid*].*event_package_name*.*target_name*
 Is the target to associate with the event session, where:
 
 - *event_module_guid* is the GUID for the module that contains the event.
 - *event_package_name* is the package that contains the action object.
-- *target_name* is the target. Targets appear in sys.dm_xe_objects view as object_type 'target'.
+- *target_name* is the target. Targets appear in `sys.dm_xe_objects` view as `object_type` 'target'.
 
-SET { *target_parameter_name*= \<value> [, ...*n*] }
-Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.
+#### SET { *target_parameter_name*= \<value> [, ...*n*] }
+Sets a target parameter. Target parameters appear in the `sys.dm_xe_object_columns` view as `column_type` 'customizable' and `object_name` = *target_name*.
 
 > [!IMPORTANT]
-> If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).
+> If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md).
 
-WITH ( \<event_session_options> [ ,...*n*] )
+#### WITH ( \<event_session_options> [ ,...*n*] )
 Specifies options to use with the event session.
 
-MAX_MEMORY =*size* [ KB | **MB** ]
+#### MAX_MEMORY =*size* [ KB | **MB** ]
 Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory values in GB range is not recommended.
 
-EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }
+#### EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }
 Specifies the event retention mode to use for handling event loss.
 
 **ALLOW_SINGLE_EVENT_LOSS**
@@ -185,7 +182,7 @@ Full event buffers containing multiple events can be lost from the session. The 
 NO_EVENT_LOSS
 No event loss is allowed. This option ensures that all events raised will be retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. This may cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.
 
-MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }
+#### MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }
 Specifies the amount of time that events will be buffered in memory before being dispatched to event session targets. By default, this value is set to 30 seconds.
 
 *seconds* SECONDS
@@ -197,25 +194,25 @@ Flush buffers to targets only when the buffers are full, or when the event sessi
 > [!NOTE]
 > MAX_DISPATCH_LATENCY = 0 SECONDS is equivalent to MAX_DISPATCH_LATENCY = INFINITE.
 
-MAX_EVENT_SIZE =*size* [ KB | **MB** ]
+#### MAX_EVENT_SIZE =*size* [ KB | **MB** ]
 Specifies the maximum allowable size for events. MAX_EVENT_SIZE should only be set to allow single events larger than MAX_MEMORY; setting it to less than MAX_MEMORY will raise an error. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. If *size* is specified in kilobytes, the minimum allowable size is 64 KB. When MAX_EVENT_SIZE is set, two buffers of *size* are created in addition to MAX_MEMORY. This means that the total memory used for event buffering is MAX_MEMORY + 2 * MAX_EVENT_SIZE.
 
-MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU }
+#### MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU }
 Specifies the location where event buffers are created.
 
 **NONE**
 A single set of buffers are created within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 PER_NODE
-A set of buffers are created for each NUMA node.
+A set of buffers is created for each NUMA node.
 
 PER_CPU
-A set of buffers are created for each CPU.
+A set of buffers is created for each CPU.
 
-TRACK_CAUSALITY = { ON | **OFF** }
+#### TRACK_CAUSALITY = { ON | **OFF** }
 Specifies whether or not causality is tracked. If enabled, causality allows related events on different server connections to be correlated together.
 
-STARTUP_STATE = { ON | **OFF** }
+#### STARTUP_STATE = { ON | **OFF** }
 Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.
 
 > [!NOTE]
@@ -233,7 +230,7 @@ The order of precedence for the logical operators is `NOT` (highest), followed b
 
 ## Permissions
 
-On SQL Server, requires the `ALTER ANY EVENT SESSION` permission.
+On SQL Server and SQL Managed Instance, requires the `ALTER ANY EVENT SESSION` permission.
 On SQL Database, requires the `ALTER ANY DATABASE EVENT SESSION` permission in the database.
 
 ## Examples
@@ -255,18 +252,22 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);
 GO
 ```
-### SQL Database example
 
-For an Azure SQL Database example, see example in [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)
+### Azure SQL example
 
-### Code examples can differ for Azure SQL Database
+In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], store .xel files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file).
+
+### Code examples can differ for Azure SQL Database and SQL Managed Instance
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## See Also
+## See also
 
-- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)
-- [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)
 - [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)
 - [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)
 - [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)
+
+## Next steps
+
+- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)
+- [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)

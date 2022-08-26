@@ -2,15 +2,13 @@
 description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
 ms.custom: "seo-lt-2019"
-ms.date: "05/18/2017"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables
@@ -33,11 +31,16 @@ Managing temporal table data retention begins with determining the required rete
 Once you determine your data retention period, your next step is to develop a plan for managing historical data how and where you store your historical data and how to delete historical data that is older than your retention requirements. The following four approaches for managing historical data in the temporal history table are available:
 
 - [Stretch Database](#using-stretch-database-approach)
+
+  > [!IMPORTANT]  
+  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
+
 - [Table Partitioning](#using-table-partitioning-approach)
 - [Custom Cleanup Script](#using-custom-cleanup-script-approach)
 - [Retention Policy](#using-temporal-history-retention-policy-approach)
 
- With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.
+ With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `ValidTo < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.
 
 > [!NOTE]
 > The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).
@@ -46,6 +49,9 @@ Once you determine your data retention period, your next step is to develop a pl
 
 > [!NOTE]
 > Using the Stretch Database approach only applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 
@@ -119,7 +125,7 @@ ALTER TABLE [<history table name>]
 SET (
       REMOTE_DATA_ARCHIVE = ON
         (
-          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151101 (SysEndTime)
+          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151101 (ValidTo)
             , MIGRATION_STATE = OUTBOUND
         )
     )
@@ -146,7 +152,7 @@ ALTER TABLE [<history table name>]
     (
       REMOTE_DATA_ARCHIVE = ON
         (
-          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
+          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(ValidTo),
             MIGRATION_STATE = OUTBOUND
         )
     )
@@ -163,7 +169,7 @@ Use SQL Server Agent or some other scheduling mechanism to ensure valid predicat
 With table partitioning, you can implement a sliding window approach to move out oldest portion of the historical data from the history table and keep the size of the retained part constant in terms of age - maintaining data in the history table equal to required retention period. The operation of switching data out from the history table is supported while SYSTEM_VERSIONING is ON, which means that you can clean a portion of the history data without introducing a maintenance windows or blocking your regular workloads.
 
 > [!NOTE]
-> In order to perform partition switching, your clustered index on history table must be aligned with the partitioning schema (it has to contain SysEndTime). The default history table created by the system contains a clustered index that includes the SysEndTime and SysStartTime columns, which is optimal for partitioning, inserting new history data, and typical temporal querying. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+> In order to perform partition switching, your clustered index on history table must be aligned with the partitioning schema (it has to contain ValidTo). The default history table created by the system contains a clustered index that includes the ValidTo and ValidFrom columns, which is optimal for partitioning, inserting new history data, and typical temporal querying. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 A sliding window approach has two sets of tasks that you need to perform:
 
@@ -206,7 +212,7 @@ Use the Transact-SQL script in the code window below to create the partition fun
 ```sql
 BEGIN TRANSACTION
 /*Create partition function*/
-    CREATE PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime] (datetime2(7))
+    CREATE PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo] (datetime2(7))
         AS RANGE LEFT FOR VALUES
           (
             N'2015-09-30T23:59:59.999'
@@ -217,14 +223,14 @@ BEGIN TRANSACTION
           , N'2016-02-29T23:59:59.999'
           )
 /*Create partition scheme*/
-    CREATE PARTITION SCHEME [sch_Partition_DepartmentHistory_By_SysEndTime]
-        AS PARTITION [fn_Partition_DepartmentHistory_By_SysEndTime]
+    CREATE PARTITION SCHEME [sch_Partition_DepartmentHistory_By_ValidTo]
+        AS PARTITION [fn_Partition_DepartmentHistory_By_ValidTo]
             TO ([PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY])
 /*Re-create index to be partition-aligned with the partitioning schema*/
     CREATE CLUSTERED INDEX [ix_DepartmentHistory] ON [dbo].[DepartmentHistory]
         (
-            [SysEndTime] ASC
-          , [SysStartTime] ASC
+            [ValidTo] ASC
+          , [ValidFrom] ASC
         )  
     WITH
         (
@@ -237,7 +243,7 @@ BEGIN TRANSACTION
           , ALLOW_PAGE_LOCKS = ON
           , DATA_COMPRESSION = PAGE
         )
-    ON [sch_Partition_DepartmentHistory_By_SysEndTime] ([SysEndTime])
+    ON [sch_Partition_DepartmentHistory_By_ValidTo] ([ValidTo])
 
 COMMIT TRANSACTION;
 ```
@@ -255,8 +261,8 @@ BEGIN TRANSACTION
           , [DeptName] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
           , [ManagerID] [int] NULL
           , [ParentDeptID] [int] NULL
-          , [SysStartTime] [datetime2](7) NOT NULL
-          , [SysEndTime] [datetime2](7) NOT NULL
+          , [ValidFrom] [datetime2](7) NOT NULL
+          , [ValidTo] [datetime2](7) NOT NULL
         ) ON [PRIMARY]
     WITH
         (
@@ -266,8 +272,8 @@ BEGIN TRANSACTION
     CREATE CLUSTERED INDEX [ix_staging_DepartmentHistory_September_2015]
         ON [dbo].[staging_DepartmentHistory_September_2015]
         (
-            [SysEndTime] ASC
-          , [SysStartTime] ASC
+            [ValidTo] ASC
+          , [ValidFrom] ASC
         )
     WITH
         (
@@ -282,7 +288,7 @@ BEGIN TRANSACTION
 /*(3) Create constraints matching the partition that will be switched out*/
     ALTER TABLE [dbo].[staging_DepartmentHistory_September_2015] WITH CHECK
         ADD CONSTRAINT [chk_staging_DepartmentHistory_September_2015_partition_1]
-            CHECK ([SysEndTime]<=N'2015-09-30T23:59:59.999')
+            CHECK ([ValidTo]<=N'2015-09-30T23:59:59.999')
     ALTER TABLE [dbo].[staging_DepartmentHistory_September_2015]
         CHECK CONSTRAINT [chk_staging_DepartmentHistory_September_2015_partition_1]
 /*(4) Switch partition to staging table*/
@@ -295,18 +301,18 @@ BEGIN TRANSACTION
       DROP TABLE [dbo].[staging_DepartmentHIstory_September_2015];
 */
 /*(6) merge range to move lower boundary one month ahead*/
-    ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime]()
+    ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo]()
         MERGE RANGE(N'2015-09-30T23:59:59.999')
 /*(7) Create new empty partition for "April and after" by creating new boundary point and specifying NEXT USED file group*/
-    ALTER PARTITION SCHEME [sch_Partition_DepartmentHistory_By_SysEndTime] NEXT USED [PRIMARY]
-        ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime]() SPLIT RANGE(N'2016-03-31T23:59:59.999')
+    ALTER PARTITION SCHEME [sch_Partition_DepartmentHistory_By_ValidTo] NEXT USED [PRIMARY]
+        ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo]() SPLIT RANGE(N'2016-03-31T23:59:59.999')
 COMMIT TRANSACTION
 ```
 
 You can slightly modify script above and use it in regular monthly maintenance process:
 
 1. In step (1) create new staging table for the month you want to remove (October would be next one in our example).
-2. In step (3) create and check constraint that matches the month of data you want to remove: `[SysEndTime]<=N'2015-10-31T23:59:59.999'` for October partition.
+2. In step (3) create and check constraint that matches the month of data you want to remove: `[ValidTo]<=N'2015-10-31T23:59:59.999'` for October partition.
 3. In step (4) SWITCH partition 1 to newly created staging table.
 4. In step (6) alter partition function by merging lower boundary: `MERGE RANGE(N'2015-10-31T23:59:59.999'` after you moved out data for October.
 5. In step (7) split partition function creating new upper boundary: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` after you moved out data for October.

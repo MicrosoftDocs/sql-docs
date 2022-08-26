@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_clr_tasks (Transact-SQL)"
-title: "sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_clr_tasks (Transact-SQL)"
+description: sys.dm_clr_tasks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_clr_tasks"
   - "sys.dm_clr_tasks_TSQL"
   - "dm_clr_tasks"
   - "dm_clr_tasks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_tasks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_clr_tasks (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a row for all common language runtime (CLR) tasks that are currently running. A [!INCLUDE[tsql](../../includes/tsql-md.md)] batch that contains a reference to a CLR routine creates a separate task for execution of all the managed code in that batch. Multiple statements in the batch that require managed code execution use the same CLR task. The CLR task is responsible for maintaining objects and state pertaining to managed code execution, as well as the transitions between the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the common language runtime.  
   

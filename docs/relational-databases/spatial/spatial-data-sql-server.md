@@ -20,7 +20,8 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Spatial Data (SQL Server)
+# Spatial Data
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries, roads, or lakes.  
@@ -73,4 +74,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
  Introduces spatial indexes and describes tessellation and tessellation schemes.  
   
-  
+## Spatial tools open-source project
+
+[!INCLUDE [Spatial tools project information](../../includes/spatial-tools.md)]

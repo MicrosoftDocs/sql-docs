@@ -1,19 +1,16 @@
 ---
-description: "CREATE FUNCTION (Azure Synapse Analytics)"
-title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE FUNCTION (Azure Synapse Analytics)"
+description: CREATE FUNCTION (Azure Synapse Analytics)
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/17/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +34,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ## Syntax  
   
 ```syntaxsql
--- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
+-- Transact-SQL Scalar Function Syntax  (in dedicated pools in Azure Synapse Analytics and Parallel Data Warehouse)
+-- Not available in the serverless SQL pools in Azure Synapse Analytics
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -59,11 +57,11 @@ RETURNS return_data_type
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
 ```
-> [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ```syntaxsql
--- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+-- Transact-SQL Inline Table-Valued Function Syntax
+-- Preview in dedicated SQL pools in Azure Synapse Analytics
+-- Available in the serverless SQL pools in Azure Synapse Analytics
 CREATE FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] parameter_data_type
     [ = default ] }
@@ -215,9 +213,12 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
 
+> [!NOTE]  
+>  Scalar functions are not available in the serverless SQL pools.
+
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
 
-### A. Creating an inline table-valued function (preview)
+### A. Creating an inline table-valued function
  The following example creates an inline table-valued function to return some key information on modules, filtering by the `objectType` parameter. It includes a default value to return all modules when the function is called with the DEFAULT parameter. This example makes use of some of the system catalog views mentioned in [Metadata](#metadata).
 
 ```sql
@@ -244,7 +245,10 @@ The function can then be called to return all view (**V**) objects with:
 select * from dbo.ModulesByType('V');
 ```
 
-### B. Combining results of an inline table-valued function (preview)
+> [!NOTE]  
+>  Inline table-value functions are available in the serverless SQL pools, but in preview in the dedicated SQL pools.
+
+### B. Combining results of an inline table-valued function
  This simple example uses the previously created inline TVF to demonstrate how its results can be combined with other tables using cross apply. Here, we select all columns from both sys.objects and the results of `ModulesByType` for all rows matching on the *type* column. For more details on using apply, see [FROM clause plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
@@ -253,7 +257,10 @@ FROM sys.objects o
 CROSS APPLY dbo.ModulesByType(o.type);
 GO
 ```
-  
+
+> [!NOTE]  
+>  Inline table-value functions are available in the serverless SQL pools, but in preview in the dedicated SQL pools.
+
 ## See also  
  [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
  [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  

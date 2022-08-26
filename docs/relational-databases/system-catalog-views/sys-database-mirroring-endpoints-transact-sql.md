@@ -1,28 +1,26 @@
 ---
-description: "sys.database_mirroring_endpoints (Transact-SQL)"
-title: "sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_mirroring_endpoints (Transact-SQL)"
+description: sys.database_mirroring_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.database_mirroring_endpoints_TSQL"
   - "database_mirroring_endpoints"
   - "sys.database_mirroring_endpoints"
   - "database_mirroring_endpoints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database mirroring [SQL Server], endpoint"
   - "HADR [SQL Server], endpoint"
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_endpoints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

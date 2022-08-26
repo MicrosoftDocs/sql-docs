@@ -1,29 +1,27 @@
 ---
+title: "ABS (Transact-SQL)"
 description: "ABS (Transact-SQL)"
-title: "ABS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ABS_TSQL"
   - "ABS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "values [SQL Server], positive"
   - "values [SQL Server], absolute"
   - "ABS function"
   - "absolute positive value"
-ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
+
 # ABS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A mathematical function that returns the absolute (positive) value of the specified numeric expression. (`ABS` changes negative values to positive values. `ABS` has no effect on zero or positive values.)
@@ -39,13 +37,17 @@ ABS ( numeric_expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 *numeric_expression*  
 An expression of the exact numeric or approximate numeric data type category.
   
-## Return Types  
+## Return types
+
+
 Returns the same type as *numeric_expression*.
   
-## Examples  
+## Examples
+
 This example shows the results of using the `ABS` function on three different numbers.
   
 ```sql
@@ -53,8 +55,8 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
+
+```sql
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -74,12 +76,9 @@ Returns this error message:
   
 "Arithmetic overflow error converting expression to data type int."
 
-  
 ## See also
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Built-in Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
-  
-  
-

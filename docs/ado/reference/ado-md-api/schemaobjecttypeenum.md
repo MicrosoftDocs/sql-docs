@@ -1,21 +1,17 @@
 ---
+title: "SchemaObjectTypeEnum"
 description: "SchemaObjectTypeEnum"
-title: "SchemaObjectTypeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "SchemaObjectTypeEnum"
-helpviewer_keywords: 
-  - "SchemaObjectTypeEnum enumeration [ADO MD]"
-ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "SchemaObjectTypeEnum"
+helpviewer_keywords:
+  - "SchemaObjectTypeEnum enumeration [ADO MD]"
+apitype: "COM"
 ---
 # SchemaObjectTypeEnum
 Specifies the type of object to be retrieved by the [GetSchemaObject](./getschemaobject-method-ado-md.md) method.  

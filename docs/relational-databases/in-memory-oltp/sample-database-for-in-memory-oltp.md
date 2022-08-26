@@ -1,15 +1,14 @@
 ---
 title: "Sample Database for In-Memory OLTP"
 description: Learn about the In-Memory OLTP feature and its performance benefits. This sample shows memory-optimized tables and natively compiled stored procedures.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf
 ms.date: 03/02/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: wiassaf
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
@@ -46,33 +45,33 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Follow these steps to install the sample:  
   
-1.  Download AdventureWorks2016CTP3.bak and SQLServer2016CTP3Samples.zip from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example 'c:\temp'.  
+1.  Download AdventureWorks2016.bak and SQLServer2016Samples.zip from: [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) to a local folder, for example 'c:\temp'.  
   
 2.  Restore the database backup using [!INCLUDE[tsql](../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
     1.  Identify the target folder and filename for the data file, for example  
   
-         'h:\DATA\AdventureWorks2016CTP3_Data.mdf'  
+         'h:\DATA\AdventureWorks2016_Data.mdf'  
   
     2.  Identify the target folder and filename for the log file, for example  
   
-         'i:\DATA\AdventureWorks2016CTP3_log.ldf'  
+         'i:\DATA\AdventureWorks2016_log.ldf'  
   
         1.  The log file should be placed on a different drive than the data file, ideally a low latency drive such as an SSD or PCIe storage, for maximum performance.  
   
      Example T-SQL script:  
   
     ```sql
-    RESTORE DATABASE [AdventureWorks2016CTP3]   
-      FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
+    RESTORE DATABASE [AdventureWorks2016]   
+      FROM DISK = N'C:\temp\AdventureWorks2016.bak'   
         WITH FILE = 1,    
-      MOVE N'AdventureWorks2016_Data' TO N'h:\DATA\AdventureWorks2016CTP3_Data.mdf',    
-      MOVE N'AdventureWorks2016_Log' TO N'i:\DATA\AdventureWorks2016CTP3_log.ldf',  
-      MOVE N'AdventureWorks2016CTP3_mod' TO N'h:\data\AdventureWorks2016CTP3_mod'  
+      MOVE N'AdventureWorks2016_Data' TO N'h:\DATA\AdventureWorks2016_Data.mdf',    
+      MOVE N'AdventureWorks2016_Log' TO N'i:\DATA\AdventureWorks2016_log.ldf',  
+      MOVE N'AdventureWorks2016_mod' TO N'h:\data\AdventureWorks2016_mod'  
      GO  
     ```  
   
-3.  To view the sample scripts and workload, unpack the file SQLServer2016CTP3Samples.zip to a local folder. Consult the file In-Memory OLTP\readme.txt  for instructions on running the workload.  
+3.  To view the sample scripts and workload, unpack the file SQLServer2016Samples.zip to a local folder. Consult the file In-Memory OLTP\readme.txt  for instructions on running the workload.  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  The sample creates new tables for products and sales orders, based on existing tables in `AdventureWorks`. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
@@ -318,7 +317,7 @@ For more information:
   
  To open the RML Cmd Prompt, follow these instructions:  
   
- In Windows, open the start menu by selecting the Windows key, and type `rml`. Select on "RML Cmd Prompt", which will be in the list of search results.  
+ In Windows, open the start menu by selecting the Windows key, and type `rml`. Select "RML Cmd Prompt", which will be in the list of search results.  
   
  Ensure that the command prompt is located in the RML Utilities installation folder.  
   
@@ -379,7 +378,7 @@ END
   
  As a performance measure for the workload we use the elapsed time as reported by ostress.exe after running the workload.  
   
- The below instructions and measurements use a workload that inserts 10 million sales orders. For instructions to run a scaled-down workload inserting 1 million sales orders, see the instructions in 'In-Memory OLTP\readme.txt' that is part of the SQLServer2016CTP3Samples.zip archive.  
+ The below instructions and measurements use a workload that inserts 10 million sales orders. For instructions to run a scaled-down workload inserting 1 million sales orders, see the instructions in 'In-Memory OLTP\readme.txt' that is part of the SQLServer2016Samples.zip archive.  
   
 ##### Memory-optimized tables  
  We will start by running the workload on memory-optimized tables. The following command opens 100 threads, each running for 5,000 iterations.  Each iteration inserts 20 sales orders in separate transactions. There are 20 inserts per iteration to compensate for the fact that the database is used to generate the data to be inserted. This yield a total of 20 \* 5,000 \* 100 = 10,000,000 sales order inserts.  
@@ -389,7 +388,7 @@ END
  Select the **Copy** button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```console
-ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 2 minutes and 5 seconds. On a second test server with 24 physical (48 logical) cores, this took 1 minute and 0 seconds.  
@@ -404,7 +403,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  Select the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```console
-ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
@@ -419,7 +418,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  To reset the demo, open the RML Cmd Prompt, and execute the following command:  
   
 ```console
-ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
+ostress.exe -S. -E -dAdventureWorks2016 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
  Depending on the hardware, this may take a few minutes to run.  
@@ -755,4 +754,4 @@ ORDER BY state, file_type;
 
 - [In-Memory OLTP &#40;In-Memory Optimization&#41; overview and usage scenarios](./overview-and-usage-scenarios.md)
 - Create a memory-optimized filegroup: [The Memory Optimized Filegroup](the-memory-optimized-filegroup.md)
-- [Script to enable [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
+- [Script to enable [!INCLUDE[inmemory](../../includes/inmemory-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

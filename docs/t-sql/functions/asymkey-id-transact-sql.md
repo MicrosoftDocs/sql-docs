@@ -1,28 +1,24 @@
 ---
+title: "ASYMKEY_ID (Transact-SQL)"
 description: "ASYMKEY_ID (Transact-SQL)"
-title: "ASYMKEY_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsymKey_ID"
   - "ASYMKEY_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asymmetric keys [SQL Server], AsymKey_ID"
   - "ASYMKEY_ID function"
   - "encryption [SQL Server], asymmetric keys"
   - "identification numbers [SQL Server], asymmetric keys"
   - "IDs [SQL Server], asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
-ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ASYMKEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

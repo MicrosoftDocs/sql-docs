@@ -1,14 +1,14 @@
 ---
-description: "CREATE ROLE (Transact-SQL)"
-title: "CREATE ROLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE ROLE (Transact-SQL)"
+description: CREATE ROLE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE ROLE"
   - "DATABASE ROLE"
   - "ROLE_TSQL"
@@ -17,16 +17,13 @@ f1_keywords:
   - "CREATE DATABASE ROLE"
   - "ROLE"
   - "CREATE_DATABASE_ROLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database roles [SQL Server], creating"
   - "CREATE DATABASE ROLE statement"
   - "roles [SQL Server], creating"
   - "CREATE ROLE statement"
-ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE ROLE (Transact-SQL)

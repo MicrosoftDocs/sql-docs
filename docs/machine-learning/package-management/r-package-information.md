@@ -1,11 +1,11 @@
 ---
 title: Get R package information
 description: Learn how to get information about installed R packages on SQL Server Machine Learning Services and SQL Server R Services.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 05/27/2020
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -18,14 +18,17 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-This article describes how to get information about installed R packages on [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
+This article describes how to get information about installed R packages on [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [SQL Server 2019 Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
-::: moniker range="<=sql-server-2017"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 This article describes how to get information about installed R packages on [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 This article describes how to get information about installed R packages on [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
+
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
 
 ## Default R library location
 
@@ -68,9 +71,9 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-## Default Microsoft R packages
-
 ::: moniker range="=sql-server-2016"
+
+## Default Microsoft R packages
 
 The following Microsoft R packages are installed with SQL Server R Services.
 
@@ -83,6 +86,8 @@ The following Microsoft R packages are installed with SQL Server R Services.
 
 ::: moniker range="=sql-server-2017"
 
+## Default Microsoft R packages
+
 The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages | Version | Description |
@@ -94,7 +99,9 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range="=sql-server-ver15||=sql-server-linux-ver15||=azuresqldb-mi-current"
+
+## Default Microsoft R packages
 
 The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
@@ -115,6 +122,7 @@ By default, R packages are refreshed through service packs and cumulative update
 In addition, you can add MicrosoftML and olapR packages to a SQL Server instance through a component upgrade.
 ::: moniker-end
 
+::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15 ||=azuresqldb-mi-current"
 ## Default open-source R packages
 
 R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt).
@@ -125,6 +133,7 @@ For information on which version of R is included with each SQL Server version, 
 
 > [!IMPORTANT]
 > You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.
+::: moniker-end
 
 ## List all installed R packages
 
@@ -174,7 +183,7 @@ print(packageDescription("MicrosoftML"))
 
 ## Next steps
 
-::: moniker range="<=sql-server-2017"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"

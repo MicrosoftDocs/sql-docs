@@ -1,28 +1,24 @@
 ---
+title: "HAS_PERMS_BY_NAME (Transact-SQL)"
 description: "HAS_PERMS_BY_NAME (Transact-SQL)"
-title: "HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HAS_PERMS_BY_NAME"
   - "HAS_PERMS_BY_NAME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], verifying"
   - "current permission status"
   - "checking permission status"
   - "verifying permission status"
   - "testing permissions"
   - "HAS_PERMS_BY_NAME function"
-ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

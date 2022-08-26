@@ -1,22 +1,22 @@
 ---
+title: "JSON_VALUE (Transact-SQL)"
 description: "JSON_VALUE (Transact-SQL)"
-title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "JSON_VALUE function"
   - "JSON, extracting"
   - "JSON, querying"
-ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON_VALUE (Transact-SQL)
 
@@ -46,7 +46,7 @@ JSON_VALUE ( expression , path )
 
 In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
   
- If the format of *path* isn't valid, **JSON_VALUE** returns an error .  
+ If the format of *path* isn't valid, **JSON_VALUE** returns an error.  
   
 ## Return value
 
@@ -106,10 +106,10 @@ SET @jsonInfo=N'{
   
 ```sql  
 SELECT FirstName, LastName,
- JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
+ JSON_VALUE(jsonInfo,'$.info.address.town') AS Town
 FROM Person.Person
-WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
-ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
+WHERE JSON_VALUE(jsonInfo,'$.info.address.state') LIKE 'US%'
+ORDER BY JSON_VALUE(jsonInfo,'$.info.address.town')
 ```  
   
 ### Example 2

@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_os_windows_info (Transact-SQL)"
-title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_windows_info (Transact-SQL)"
+description: sys.dm_os_windows_info (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_windows_info"
   - "dm_os_windows_info_TSQL"
   - "sys.dm_os_windows_info"
   - "sys.dm_os_windows_info_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_windows_info dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

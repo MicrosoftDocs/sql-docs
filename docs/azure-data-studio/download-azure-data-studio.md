@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 02/24/2022 
+ms.date: 08/24/2022
 ---
 
 # Download and install Azure Data Studio
@@ -26,23 +26,23 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.35.0 is the latest general availability (GA) version.
+Azure Data Studio 1.39.0 is the latest general availability (GA) version.
 
-- Release number: 1.35.0
-- Release date: February 24, 2022
+- Release number: 1.39.0
+- Release date: August 24, 2022
 
 | Platform | Download |
 |----------|----------|
-| Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2187459) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2187520)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2187460) |
-| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2187461) |
-| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2187522)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2187521)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2187462) |
+| Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2204567) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2204568)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2204772) |
+| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2204569) |
+| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2204570)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2204774)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2204773) |
 
-> [!Note]
+> [!NOTE]
 > Azure Data Studio currently does not support the ARM architecture.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
-## Install Azure Data Studio 
+## Install Azure Data Studio
 
 ### Windows installation
 
@@ -54,19 +54,19 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 **User installer** (recommended)
 
-1. Download and run the [Azure Data Studio user installer for Windows](https://go.microsoft.com/fwlink/?linkid=2187459).
+1. Download and run the [Azure Data Studio user installer for Windows](https://go.microsoft.com/fwlink/?linkid=2204567).
 
 2. Start the Azure Data Studio app.
 
 **System installer**
 
-1. Download and run the [Azure Data Studio system installer for Windows](https://go.microsoft.com/fwlink/?linkid=2187520).
+1. Download and run the [Azure Data Studio system installer for Windows](https://go.microsoft.com/fwlink/?linkid=2204568).
 
 2. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download the [Azure Data Studio .zip file for Windows](https://go.microsoft.com/fwlink/?linkid=2187460).
+1. Download the [Azure Data Studio .zip file for Windows](https://go.microsoft.com/fwlink/?linkid=2204772).
 
 2. Go to the downloaded file and extract it.
 
@@ -92,9 +92,9 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
-    > [!Note]
+    > [!NOTE]
     > The following example also works with the system installer file.
-    > 
+
     > ```console
     > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
     > ```
@@ -105,7 +105,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 ### macOS installation
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2187461).
+1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2204569).
 
 2. To expand the contents of the .zip file, double-click it.
 
@@ -115,7 +115,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with a .deb file
 
-1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2187522) file.
+1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2204570) file.
 
 2. To extract the .deb file, open a new terminal window, and then run the following commands:
 
@@ -130,7 +130,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     azuredatastudio
     ```
 
-> [!Note]
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
@@ -139,7 +139,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with an .rpm file
 
-1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2187521) file.
+1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2204774) file.
 
 2. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -154,7 +154,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     azuredatastudio
     ```
 
-> [!Note]
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
@@ -163,7 +163,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with a .tar.gz file
 
-1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2187462) file.
+1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2204773) file.
 
 2. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -180,15 +180,13 @@ For Windows, install Azure Data Studio in the background without prompts by doin
     ```bash
     azuredatastudio
     ```
-    
-> [!Note] 
+
+> [!NOTE]
 > You might have missing dependencies. To install them, run the following command:
 >
 > ```bash
 > sudo apt-get install libxss1 libgconf-2-4 libunwind8
 > ```
-
-
 
 #### Windows Subsystem for Linux
 
@@ -206,7 +204,7 @@ For details about the latest release of Azure Data Studio, see [Release notes fo
 
 ## Download the GA release of Azure Data Studio
 
-We recommend that you [download the general availability (GA) release of Azure Data Studio](#download-azure-data-studio). 
+We recommend that you [download the general availability (GA) release of Azure Data Studio](#download-azure-data-studio).
 
 ## Download the insiders build of Azure Data Studio
 
@@ -214,48 +212,26 @@ As an alternative, if you want to try out the beta features and send feedback, y
 
 ## Supported operating systems
 
-Azure Data Studio runs on Windows, macOS, and Linux and is supported on the following platforms:
+Azure Data Studio runs on Windows, macOS, and Linux.  The following versions are supported:
 
-### Windows operating systems
+- Windows: 7 (with SP1), 8, 8.1, 10, 11
+- Windows Server: 2016, 2019, 2022
+- macOS: 10.12+, 11, 12
+- Linux: Debian 9+, RHEL 7+, Ubuntu 18.04+
 
-- Windows 11 (64-bit)
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1)
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
+> [!NOTE]
+> Incremental versions within a major operating system release may no longer be in support by the operating system. Consult the documentation for your operating system to ensure you have received applicable updates.
 
-### macOS operating systems
+## Supported SQL Server versions
 
-- macOS 10.15 Catalina
-- macOS 10.14 Mojave
-- macOS 10.13 High Sierra
-- macOS 10.12 Sierra
-- macOS 11.1  Big Sur
+Azure Data Studio supports connecting to the following versions of SQL Server:
 
-### Linux operating systems
-
-- Red Hat Enterprise Linux (RHEL) 8.3
-- Red Hat Enterprise Linux 8.2
-- Red Hat Enterprise Linux 8.1
-- Red Hat Enterprise Linux 8.0
-- Red Hat Enterprise Linux 7.4
-- Red Hat Enterprise Linux 7.3
-- SUSE Linux Enterprise Server v12 SP2
-- Ubuntu 20.04
-- Ubuntu 18.04
-- Ubuntu 16.04
-
-> [!Note]
->
-> Versions 7.3 and 7.4 of RHEL are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018, and RHEL 7.4 ended August 31, 2019.
->
-> For more information, see the [RHEL 7 Application Compatibility Guide](https://access.redhat.com/articles/rhel-abi-compatibility) or the [RHEL 8 Application Compatibility Guide](https://access.redhat.com/articles/rhel8-abi-compatibility).
+- Azure SQL Database
+- Azure SQL Managed Instance
+- SQL Server 2022 (Preview)
+- SQL Server 2019
+- SQL Server 2017
+- SQL Server 2016
 
 ## System requirements
 

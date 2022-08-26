@@ -1,25 +1,23 @@
 ---
-description: "Database Mail Views (Transact-SQL)"
-title: "Database Mail Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Database Mail Views (Transact-SQL)"
+description: Database Mail Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "monitoring Database Mail"
   - "Database Mail [SQL Server], status information"
   - "Database Mail [SQL Server], troubleshooting"
   - "Database Mail [SQL Server], views"
   - "troubleshooting [SQL Server], Database Mail"
   - "status information [SQL Server], Database Mail"
+dev_langs:
+  - "TSQL"
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

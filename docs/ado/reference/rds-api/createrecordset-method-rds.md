@@ -1,25 +1,21 @@
 ---
+title: "CreateRecordset Method (RDS)"
 description: "CreateRecordset Method (RDS)"
-title: "CreateRecordset Method (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "DataControl::CreateRecordset"
   - "RDS.DataControl::CreateRecordset"
   - "CreateRecordset"
   - "RDSServer.DataFactory::CreateRecordset"
   - "DataFactory::CreateRecordset"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CreateRecordset method [RDS]"
-ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # CreateRecordset Method (RDS)
 Creates an empty, disconnected [Recordset](../ado-api/recordset-object-ado.md).  

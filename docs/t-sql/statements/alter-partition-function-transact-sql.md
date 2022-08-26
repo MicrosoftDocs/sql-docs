@@ -1,19 +1,17 @@
 ---
-description: "ALTER PARTITION FUNCTION (Transact-SQL)"
-title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "ALTER PARTITION FUNCTION (Transact-SQL)"
+description: ALTER PARTITION FUNCTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.date: "4/5/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER PARTITION FUNCTION"
   - "ALTER_PARTITION_FUNCTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "splitting partitions [SQL Server]"
   - "partitioned tables [SQL Server], splitting"
   - "ALTER PARTITION FUNCTION statement"
@@ -23,14 +21,14 @@ helpviewer_keywords:
   - "modifying partition functions"
   - "partition functions [SQL Server], modifying"
   - "partitioned tables [SQL Server], merging"
-ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table partition or index that uses the partition function into two partitions. The statement can also merge two partitions into one less partition.  
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table or index partition that uses the partition function into two partitions. The statement can also merge two partitions into one partition.  
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. ALTER PARTITION FUNCTION affects all of them in a single transaction.  
@@ -47,7 +45,6 @@ ALTER PARTITION FUNCTION partition_function_name()
   | MERGE RANGE ( boundary_value )   
 } [ ; ]  
 ```  
-  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -56,7 +53,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 Is the name of the partition function to be modified.  
   
 SPLIT RANGE ( *boundary_value* )  
-Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] splits one of the existing ranges into two. Of these two ranges, the one with the new *boundary_value* is the new partition.  
+Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the database engine splits one of the existing ranges into two. Of these two ranges, the one with the new *boundary_value* is the new partition.  
   
 A filegroup must exist online. And, the partition scheme that uses the partition function as NEXT USED to hold the new partition must mark the filegroup. A CREATE PARTITION SCHEME statement assigns filegroups to partitions. The CREATE PARTITION FUNCTION statement creates fewer partitions than filegroups to hold them. A CREATE PARTITION SCHEME statement may set aside more filegroups than needed. If that happens, then you'll end up with unassigned filegroups. Also, the partition scheme marks one of the filegroups as NEXT USED. This filegroup holds the new partition. If there are no filegroups the partition scheme marks as NEXT USED, you must use an ALTER PARTITION SCHEME statement. 
 
@@ -74,7 +71,9 @@ Drops a partition and merges any values that exist in the partition into a remai
 >  Limitations with columnstore index: Two nonempty partitions containing a columnstore index can't be merged. You will need to drop or disable the columnstore index before performing this operation  
   
 ## Best Practices  
-Always keep empty partitions at both ends of the partition range. Keep the partitions at both ends to guarantee that the partition split and the partition merge don't incur any data movement. The partition split occurs at the beginning and the partition merge occurs at the end. Avoid splitting or merging populated partitions. Splitting or merging populated partitions can be inefficient. They can be inefficient because the split or merge may cause as much as four times more log generation, and may also cause severe locking.  
+Always keep empty partitions at both ends of the partition range. Keep the partitions at both ends to guarantee that the partition split and the partition merge don't incur any data movement. The partition split occurs at the beginning and the partition merge occurs at the end. Avoid splitting or merging populated partitions. Splitting or merging populated partitions can be inefficient. They can be inefficient because the split or merge may cause as much as four times more log generation, and may also cause severe locking.
+
+The primary reason for placing your partitions on multiple filegroups is to make sure that you can independently perform backup and restore operations on partitions. Learn more about filegroups and partitioning strategies in [Filegroups](../../relational-databases/partitions/partitioned-tables-and-indexes.md#filegroups).
   
 ## Limitations and Restrictions  
 ALTER PARTITION FUNCTION repartitions any tables and indexes that use the function in a single atomic operation. However, this operation occurs offline, and depending on the extent of repartitioning, may be resource-intensive.  
@@ -96,7 +95,7 @@ All filegroups that are affected by ALTER PARTITION FUNCTION must be online.
   
 ALTER PARTITION FUNCTION fails when a disabled clustered index exists on any tables that use the partition function.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
+The database engine doesn't provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
   
 ## Permissions  
 Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  
@@ -109,7 +108,7 @@ Any one of the following permissions can be used to execute ALTER PARTITION FUNC
   
 ## Examples  
   
-### A. Splitting a partition of a partitioned table or index into two partitions  
+### A. Split a partition of a partitioned table or index into two partitions  
 The following example creates a partition function to partition a table or index into four partitions. `ALTER PARTITION FUNCTION` splits one of the partitions into two to create a total of five partitions.  
   
 ```sql  
@@ -127,7 +126,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### B. Merging two partitions of a partitioned table into one partition  
+### B. Merge two partitions of a partitioned table into one partition  
 The following example creates the same partition function as above, and then merges two of the partitions into one partition, for a total of three partitions.  
   
 ```sql  
@@ -145,21 +144,12 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## See Also  
-[Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
-[CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
-[DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
-[CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
-[ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
-[DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
-[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-[sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
-[sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md) [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
-[sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
-[sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
-[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
-  
+## Next steps
+
+Learn more about table partitioning and related concepts in the following articles:
+
+- [CREATE PARTITION FUNCTION (Transact-SQL)](create-partition-function-transact-sql.md)
+- [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
+- [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
+- [CREATE PARTITION SCHEME (Transact-SQL)](create-partition-scheme-transact-sql.md)
+- [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)

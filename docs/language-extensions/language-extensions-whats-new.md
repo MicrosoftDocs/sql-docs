@@ -20,7 +20,7 @@ ms.custom:
 
 ## SQL Server 2019
 
-The new capabilities for [Language Extension](language-extensions-overview.md) in SQL Server 2019 can be found below. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
+The new capabilities for [Language Extension](language-extensions-overview.md) in SQL Server 2019 can be found below. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-2019-release-notes.md).
 
 ### New Python and R language extensions
 

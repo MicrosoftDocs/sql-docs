@@ -1,21 +1,17 @@
 ---
+title: "JScript ADO Programming"
 description: "JScript ADO Programming"
-title: "JScript ADO Programming | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "JScript programming in ADO"
-  - "ADO, JScript programming"
-ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "JScript programming in ADO"
+  - "ADO, JScript programming"
+dev_langs:
+  - "JScript"
 ---
 # JScript ADO Programming
 ## Creating an ADO Project  

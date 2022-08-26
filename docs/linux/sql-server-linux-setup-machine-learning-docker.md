@@ -2,8 +2,8 @@
 title: Install on Docker
 titleSuffix: SQL Server Machine Learning Services
 description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Docker.'
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: how-to

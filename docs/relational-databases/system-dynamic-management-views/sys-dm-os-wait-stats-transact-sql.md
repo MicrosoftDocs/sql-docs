@@ -1,24 +1,23 @@
 ---
-description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
-ms.custom: "contperf-fy21q3"
+description: sys.dm_os_wait_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/24/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: "contperf-fy21q3"
+f1_keywords:
   - "dm_os_wait_stats_TSQL"
   - "dm_os_wait_stats"
   - "sys.dm_os_wait_stats"
   - "sys.dm_os_wait_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_wait_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)

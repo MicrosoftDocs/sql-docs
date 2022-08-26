@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 10/20/2021
+ms.date: 08/19/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -46,14 +46,38 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2022 Reporting Services
+
+## 15.0.8264.8408, 2022/08/19
+*(Product Version: 15.0.1111.106)*
+
+Release Candidate 0 (RC0)
+
+- New portal experience with performance improvements using Angular.
+- Accessibility fixes to many parts of the Portal.
+- Security enhancements.
+- Bug fixes.
+- Deprecation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
+
+
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8115.18148, 2022/04/04 
+*(Product Version: 15.0.1102.962)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed datetime parameter issue affecting specific locales  | &nbsp; |
+| Fixed System.FormatException when retrieving data from ESSBASE  | &nbsp; |
+| Fixed issue where editing security groups on an item could remove all previous settings  | &nbsp; |
+| Fixed PDF search issue in right-to-left languages  | &nbsp; |
 
 ## 15.0.7961.31630, 2021/10/20 
 *(Product Version: 15.0.1102.932)*
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Added `<LINK>` tag in PDFs exported with accessible PDF enabled on textboxs with 'Go to URL' actions.  | &nbsp; |
+| Added `<LINK>` tag in PDFs exported with accessible PDF enabled on textboxes with 'Go to URL' actions.  | &nbsp; |
 | Added `<UL>` and `<LI>` tags in PDFs exported with accessible PDF enabled for textbox Lists | &nbsp; |
 | Fixed an issue with date parameters in Oracle based reports failing with "ORA-01008: not all variables bound"  | &nbsp; |
 
@@ -86,7 +110,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Fixed an issue with certain reports where accessing the parameters option leads to indefinite spinny  | &nbsp; |
 | Fixed issues relating to single quotes in report names  | &nbsp; |
 | Fixed an issue in URL Access causing FindString to not locate matches  | &nbsp; |
-| Fixed an issue where alt text for PDF export were not correctly encoded for multi-byte characters  | &nbsp; |
+| Fixed an issue where alt text for PDF export weren't correctly encoded for multi-byte characters  | &nbsp; |
 | Fixed unwanted appearance of an empty image under a linear element  | &nbsp; |
 | Fixed erroneous Unsupported error for Custom Authentication in Web Edition  | &nbsp; |
 | Fixed an issue where a screen reader was reading an extra row and extra column in a Tablix  | &nbsp; |
@@ -100,6 +124,14 @@ Initial release.
 
 
 ## SQL Server 2017 Reporting Services
+
+## 14.0.600.1860, 2022/04/26 
+*(Product Version: 14.0.600.1860)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue rendering some reports in Edge browser.  | &nbsp; |
+| Fixed an issue for some locales when working with data from an Essbase datasource.  | &nbsp; |
 
 ## 14.0.600.1763, 2021/06/28 
 *(Product Version: 14.0.600.1763)*
@@ -146,7 +178,7 @@ Initial release.
 | :---------- | :------ |
 | Security updates | &nbsp; |
 | Unable to select weekdays when creating a shared weekly schedule | &nbsp; |
-| Report does not display carriage returns properly in Word format | &nbsp; |
+| Report doesn't display carriage returns properly in Word format | &nbsp; |
 | System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
 | An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
 | Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
@@ -162,14 +194,14 @@ Initial release.
 | Fixed issue | Details |
 | :---------- | :------ |
 | Cache report snapshot schedules changes to "Report-specific schedule" after modifying subscription. | &nbsp; |
-| rc:Toolbar=false is not working in Express edition. | &nbsp; |
+| rc:Toolbar=false isn't working in Express edition. | &nbsp; |
 | Certain Thai characters render incorrectly when exporting paginated reports to PDF. | &nbsp; |
 | Deadlock during notification of completed data-driven subscriptions. | &nbsp; |
-| Embedded images are not displayed in certain circumstances when the rc:Toolbar=False parameter used. | &nbsp; |
+| Embedded images aren't displayed in certain circumstances when the rc:Toolbar=False parameter used. | &nbsp; |
 | Unable to create data driven subscriptions for reports that use cascading parameters. | &nbsp; |
 | Unable to edit subscriptions that are configured with an invalid interval. | &nbsp; |
 | Security updates. | &nbsp; |
-| Linked reports UI is not showing. | &nbsp; |
+| Linked reports UI isn't showing. | &nbsp; |
 | Certain paginated reports with nested tablix controls have incorrect fonts. | &nbsp; |
 | Whitespace is incorrectly added to certain paginated reports that contain tablix data regions. | &nbsp; |
 | Header rows disappear when expanding the simple data grids of a mobile report. | &nbsp; |
@@ -181,7 +213,7 @@ The following issue has been fixed:
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Custom Authentication is not returning correct cookie information. | &nbsp; |
+| Custom Authentication isn't returning correct cookie information. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## 14.0.600.892, 2018/08/31
@@ -189,13 +221,13 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size is not scaling if pageHeight is less than 0.5 inches. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
-| Thai character is not exported correctly into the PDF. | &nbsp; |
+| Thai character isn't exported correctly into the PDF. | &nbsp; |
 | Browser Role Behavior Change. | &nbsp; |
-| rc:Toolbar=false does not work in Express edition. | &nbsp; |
+| rc:Toolbar=false doesn't work in Express edition. | &nbsp; |
 | Missing the vertical scrollbar in the parameter prompt area. | &nbsp; |
 | Updated Mobile Report Runtime. | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -204,7 +236,7 @@ The following issue has been fixed:
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Data Driven Subscription page does not show the Delivery Option once it is created. | &nbsp; |
+| Data Driven Subscription page doesn't show the Delivery Option once it is created. | &nbsp; |
 | Upgrading SSRS 2012 to SSRS 2017 results in RSManagement throwing an exception every few seconds. | &nbsp; |
 | Cannot change defaults values for multi-value parameters in IE11. | &nbsp; |
 | Schedules are empty whenever shared schedule is executed. | &nbsp; |
@@ -215,7 +247,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Report Parameter visibility in a linked report is reverted after editing its properties. | &nbsp; |
-| URL Parameter rc:Toolbar=false does not work in Express edition. | &nbsp; |
+| URL Parameter rc:Toolbar=false doesn't work in Express edition. | &nbsp; |
 | Having expressions in a Textbox with the CanGrow property set to false results in values not displaying. | &nbsp; |
 | Added _Learn more_ link for product key in setup. | &nbsp; |
 | Web portal with custom forms authentication ignores sliding expiration cookie. | &nbsp; |

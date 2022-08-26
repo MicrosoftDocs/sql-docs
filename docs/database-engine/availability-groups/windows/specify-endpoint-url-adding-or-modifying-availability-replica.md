@@ -9,6 +9,7 @@ ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
+  - "endpoints [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"

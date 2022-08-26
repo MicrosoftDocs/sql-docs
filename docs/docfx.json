@@ -115,7 +115,6 @@
         "relational-databases/security/**/*.md": "GitHub",
         "relational-databases/sequence-numbers/**/*.md": "GitHub",
         "relational-databases/server-management-objects-smo/**/*.md": "GitHub",
-        "relational-databases/service-broker/**/*.md": "GitHub",
         "relational-databases/spatial/**/*.md": "GitHub",
         "relational-databases/sql-trace/**/*.md": "GitHub",
         "relational-databases/sqlxml/**/*.md": "GitHub",
@@ -233,6 +232,7 @@
         "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016",
         "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017",
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
+        "tools/distributed-replay/*.md": "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15",
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017"
       },

@@ -1,23 +1,21 @@
 ---
-description: "cdc.index_columns (Transact-SQL)"
-title: "cdc.index_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.index_columns (Transact-SQL)"
+description: cdc.index_columns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc.index_columns_TSQL"
   - "cdc.index_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.index_columns"
+dev_langs:
+  - "TSQL"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

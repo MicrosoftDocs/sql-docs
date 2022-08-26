@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)"
-title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)"
+description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_active_snapshot_database_transactions_TSQL"
   - "dm_tran_active_snapshot_database_transactions"
   - "sys.dm_tran_active_snapshot_database_transactions"
   - "dm_tran_active_snapshot_database_transactions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_active_snapshot_database_transactions dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)

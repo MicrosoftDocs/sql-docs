@@ -192,7 +192,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
     -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 are installed by default.  
   
--   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
+-   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](/archive/blogs/), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
   
 ### 1.8 Supported Operating Systems for SQL Server 2012  
 SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1, and Windows 7 SP1 operating systems.  
@@ -403,7 +403,7 @@ Issue: You might receive the following error if you open a knowledge base in the
   
 This occurs because of the difference in the way DQS compares strings in the SQL Server database and C#. The string comparison in the SQL Server database is case insensitive whereas it is case sensitive in C#.  
   
-Let us illustrate this with an example. Consider a user, Domain\user1. The user logs on to the Data Quality Client computer using the "user1" account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as "User1" (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won't match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
+Let us illustrate this with an example. Consider a user, Domain\user1. The user signs in to the Data Quality Client computer using the "user1" account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as "User1" (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won't match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
   
 **Workaround:** To fix this issue, you can do one of the following:  
   
@@ -489,45 +489,46 @@ Issue: Intellisense in SQL Server Management Studio (SSMS) and SQL Server Data T
   
 **Workaround**:  None  
   
-### 5.7 AlwaysOn Availability Groups  
-Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to AlwaysOn Availability Groups, see [AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753166)in Books Online.  
+### 5.7 Always On Availability Groups
+
+Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to Always On Availability Groups, see [Always On Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753166)in Books Online.  
   
-#### 5.7.1 Client-Connectivity for AlwaysOn Availability Groups  
+#### 5.7.1 Client-Connectivity for Always On Availability Groups  
 **Updated on:** August 13, 2012  
   
-This section describes driver support for AlwaysOn Availability Groups and workarounds for not supported drivers.  
+This section describes driver support for Always On Availability Groups and workarounds for not supported drivers.  
   
 **Driver Support**  
   
-The following table summarizes driver support for AlwaysOn Availability Groups:  
+The following table summarizes driver support for Always On Availability Groups:  
   
 |Driver|Multi-Subnet Failover|Application Intent|Read-Only Routing|Multi-Subnet Failover: Faster Single Subnet Endpoint Failover|Multi-Subnet Failover: Named Instance Resolution For SQL Clustered Instances|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET with .NET Framework 4.0 with connectivity patch**\&#42;**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **\&#42;\&#42;**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 4.0 with connectivity patch <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch <sup>2</sup>|Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
-**\&#42;** Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
+<sup>1</sup> Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
+<sup>2</sup> Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover Keyword and Associated Features**  
   
-MultiSubnetFailover is a new connection string keyword used to enable faster failover with AlwaysOn Availability Groups and AlwaysOn Failover Cluster Instances in SQL Server 2012. The following three sub-features are enabled when MultiSubnetFailover=True is set in connection string:  
+MultiSubnetFailover is a new connection string keyword used to enable faster failover with Always On Availability Groups and Always On Failover Cluster Instances in SQL Server 2012. The following three subfeatures are enabled when MultiSubnetFailover=True is set in connection string:  
   
--   Faster multi-subnet failover to a multi-subnet listener for an AlwaysOn Availability Group or Failover Cluster Instances.  
+-   Faster multi-subnet failover to a multi-subnet listener for an Always On Availability Group or Failover Cluster Instances.  
   
-    -   Named instance resolution to a multi-subnet AlwaysOn Failover Cluster Instance.  
+    -   Named instance resolution to a multi-subnet Always On Failover Cluster Instance.  
   
--   Faster single subnet failover to a single subnet listener for an AlwaysOn Availability Group or Failover Cluster Instances.  
+-   Faster single subnet failover to a single subnet listener for an Always On Availability Group or Failover Cluster Instances.  
   
     -   This feature is used when connecting to a listener that has a single IP in a single subnet. This performs more aggressive TCP connection retries to speed up single subnet failovers.  
   
--   Named instance resolution to a multi-subnet AlwaysOn Failover Cluster Instance.  
+-   Named instance resolution to a multi-subnet Always On Failover Cluster Instance.  
   
-    -   This is to add named instance resolution support for an AlwaysOn Failover Cluster Instances with multiple subnet endpoints.  
+    -   This is to add named instance resolution support for an Always On Failover Cluster Instances with multiple subnet endpoints.  
   
 **MultiSubnetFailover=True Not Supported by NET Framework 3.5 or OLEDB**  
   
@@ -566,8 +567,8 @@ This is due to a limitation in the CTP3 build. Future builds will not have this 
 #### 5.7.4 Side by Side Installation of CTP3 with later versions of Failover Cluster Instances is not supported.  
 This is due to a limitation in the CTP3 build. Future builds will not have this restriction. To upgrade failover cluster instances from CTP3 make sure to upgrade all instances on a node at the same time.  
   
-#### 5.7.5  Timeouts may occur when using multi IPs in the same subnet with AlwaysOn  
-**Issue:** When using multi IPs in the same subnet with AlwaysOn, customers may sometimes see a timeout. This happens if the top IP in the list is bad.  
+#### 5.7.5  Timeouts may occur when using multi IPs in the same subnet with Always On  
+**Issue:** When using multi IPs in the same subnet with Always On, customers may sometimes see a timeout. This happens if the top IP in the list is bad.  
   
 **Workaround:** Use 'multisubnetfailover = true' in the connection string.  
   
@@ -599,7 +600,7 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### 7.1 Fixing an MDS installation in a Cluster  
-**Issue:** If you install a clustered instance of the RTM version of SQL Server 2012 with the **Master Data Services** checkbox selected, MDS will be installed on a single node, but it will not be available and will not work on additional nodes that you add to the cluster.  
+**Issue:** If you install a clustered instance of the RTM version of SQL Server 2012 with the **Master Data Services** checkbox selected, MDS will be installed on a single node, but it will not be available and will not work on other nodes that you add to the cluster.  
   
 **Workaround**: To resolve this issue, you must install the SQL Server 2012 Cumulative Release 1 (CU1), performing the following steps:  
   
@@ -607,7 +608,7 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
   
 2.  Download SQL Server 2012 CU1 into a local directory.  
   
-3.  Install SQL Server 2012 with the MDS feature on the primary cluster node, and then install SQL Server 2012 with the MDS feature on any additional cluster nodes.  
+3.  Install SQL Server 2012 with the MDS feature on the primary cluster node, and then install SQL Server 2012 with the MDS feature on any other cluster nodes.  
   
 For more information about the issues, and information about how to perform the above steps, see [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467).  
   
@@ -624,7 +625,7 @@ Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
+SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information, see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

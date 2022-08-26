@@ -38,7 +38,7 @@ sections:
     questions: 
       - question: Is there a way to 'scale out' a stored proc? For example, having it run on compute pool for example?	
         answer: |
-          Not at this time. One option is to deploy SQL Server in an [AlwaysOn Availability Group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). You can then use [readable secondary replica(s)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) to run some processes (ex: ml training/scoring, maintenance activities, etc).
+          Not at this time. One option is to deploy SQL Server in an [Always On Availability Group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). You can then use [readable secondary replica(s)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) to run some processes (ex: ml training/scoring, maintenance activities, etc).
       - question: How to dynamically scale pods of a Pool?
         answer: |
           This is not a supported scenario at this time.          

@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_db_task_space_usage (Transact-SQL)"
-title: "sys.dm_db_task_space_usage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+title: "sys.dm_db_task_space_usage (Transact-SQL)"
+description: sys.dm_db_task_space_usage returns page allocation and deallocation activity by task for the database.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/03/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_task_space_usage_TSQL"
   - "sys.dm_db_task_space_usage_TSQL"
   - "dm_db_task_space_usage"
   - "sys.dm_db_task_space_usage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_task_space_usage dynamic management view"
-ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_task_space_usage (Transact-SQL)
@@ -31,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >  This view is applicable only to the [tempdb database](../../relational-databases/databases/tempdb-database.md).  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_task_space_usage**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_db_task_space_usage`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
   
 |Column name|Data type|Description|  
@@ -59,7 +56,8 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
  Work table caching, temporary table caching, and deferred drop operations affect the number of pages allocated and deallocated in a specified task.  
   
-## User Objects  
+## User objects  
+
  The following objects are included in the user object page counters:  
   
 -   User-defined tables and indexes  
@@ -74,8 +72,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   Tables returned in the table-valued functions  
   
-## Internal Objects  
- Internal objects are only in **tempdb**. The following objects are included in the internal object page counters:  
+## Internal objects  
+
+ Internal objects are only in `tempdb`. The following objects are included in the internal object page counters:  
   
 -   Work tables for cursor or spool operations and temporary large object (LOB) storage  
   
@@ -83,17 +82,18 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 -   Sort runs  
   
-## Physical Joins  
- ![Physical joins for sys.dm_db_session_task_usage](../../relational-databases/system-dynamic-management-views/media/join-dm-db-task-space-usage-1.gif "Physical joins for sys.dm_db_session_task_usage")  
-  
-## Relationship Cardinalities  
+## Physical joins  
+ 
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-db-task-space-usage-1.svg" alt-text="Diagram of physical joins for sys.dm_db_task_space_usage.":::
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-|dm_db_task_space_usage.request_id|dm_exec_requests.request_id|One-to-one|  
-|dm_db_task_space_usage.session_id|dm_exec_requests.session_id|One-to-one|  
+|`dm_db_task_space_usage.request_id`|`dm_exec_requests.request_id`|One-to-one|  
+|`dm_db_task_space_usage.session_id`|`dm_exec_requests.session_id`|One-to-one|  
   
-## See Also  
+## Next steps
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   

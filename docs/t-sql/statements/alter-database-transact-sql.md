@@ -1,18 +1,17 @@
 ---
-description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
-ms.custom: "references_regions"
+description: ALTER DATABASE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: 12/09/2021
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: references_regions
+f1_keywords:
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], modifying"
   - "ALTER DATABASE statement"
   - "databases [SQL Server], renaming"
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "modifying databases"
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
 ---
 # ALTER DATABASE (Transact-SQL)
@@ -684,7 +683,10 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-To alter a database a login must be either the server-level principal login (created by the provisioning process), a member of the `dbmanager` database role in `master`, a member of the `db_owner` database role in the current database, or `dbo` of the database.
+To alter a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database.
+
+To scale databases via T-SQL, ALTER DATABASE permissions are needed.  To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
+
 
 ## Examples
 
@@ -963,12 +965,11 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse, `ALTER DATABASE` modifies the name, maximum size, or service objective for a database.
+In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a dedicated SQL pool.
 
-Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
+Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles. 
 
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-Provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
 
 ## Syntax
 
@@ -1043,7 +1044,7 @@ Renames the database with the name specified as *new_database_name*.
  
 The 'MODIFY NAME' option has some support limitations in Azure Synapse:
  - Unsupported with Azure Synapse serverless pools
- - Unsupported with SQL dedicated pools created in your Azure Synapse Workspace
+ - Unsupported with dedicated SQL pools created in your Azure Synapse Workspace
  - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse)
 
 #### MAXSIZE   

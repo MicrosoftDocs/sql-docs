@@ -1,19 +1,15 @@
 ---
+title: "ADO Events"
 description: "ADO Events"
-title: "ADO Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "events [ADO]"
-  - "ADO, events"
-ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "events [ADO]"
+  - "ADO, events"
 ---
 # ADO Events
 

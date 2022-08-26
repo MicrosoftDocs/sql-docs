@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_operation_status"
-title: "sys.dm_operation_status | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_operation_status"
+description: sys.dm_operation_status
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/05/2017"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_operation_status_TSQL"
   - "dm_operation_status"
   - "sys.dm_operation_status"
   - "sys.dm_operation_status_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_operation_status
 
@@ -37,7 +35,7 @@ monikerRange: "= azuresqldb-current"
 |operation|**nvarchar(60)**|Operation performed on a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], such as CREATE or ALTER.|  
 |state|**tinyint**|The state of the operation.<br /><br /> 0 = Pending<br />1 = In progress<br />2 = Completed<br />3 = Failed<br />4 = Cancelled|  
 |state_desc|**nvarchar(120)**|PENDING = operation is waiting for resource or quota availability.<br /><br /> IN_PROGRESS = operation has started and is in progress.<br /><br /> COMPLETED = operation completed successfully.<br /><br /> FAILED = operation failed. See the **error_desc** column for details.<br /><br /> CANCELLED = operation stopped at the request of the user.|  
-|percent_complete|**int**|Percentage of operation that has completed. Values are not continuous and the valid values are listed below. Not NULL.<br/><br/>0 = Operation not started<br/>50 = Operation in progress<br/>100 = Operation complete|  
+|percent_complete|**int**|Percentage of operation that has completed. Valid values are listed below. Not NULL.<br/><br/>0 = Operation not started<br/><br/>50 = Operation in progress<br/> **For Restore operation** 1 to 99 = Operation in progress and indicates how far along the operation is, in percent.<br/><br/>100 = Operation complete|  
 |error_code|**int**|Code indicating the error that occurred during a failed operation. If the value is 0, it indicates that the operation completed successfully.|  
 |error_desc|**nvarchar(2048)**|Description of the error that occurred during a failed operation.|  
 |error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](../errors-events/database-engine-error-severities.md).|  

@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_nodes_partitions (Transact-SQL)"
-title: "sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_nodes_partitions (Transact-SQL)"
+description: sys.pdw_nodes_partitions (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

@@ -3,15 +3,15 @@ title: Configure Active Directory authentication with SQL Server on Linux-based 
 description: Step by step on how to configure Active Directory authentication with SQL Server on Linux containers using adutil
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
-ms.date: 09/30/2021
+ms.reviewer: randolphwest
+ms.date: 03/07/2022
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
-# Tutorial: Configure Active Directory authentication with SQL Server on Linux  containers
+# Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
 
 This tutorial explains how to configure SQL Server on Linux containers to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
@@ -40,7 +40,7 @@ To set up your container, you'll need to know in advance the port that will be u
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Make sure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -69,17 +69,10 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
 
 1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain, and also should be able to create accounts and SPNs in the domain.
 
-    > [!IMPORTANT]
-    > Before you run this command, the host should already be part of the domain as shown in the previous step.
+    In this example script, a privileged user called `privilegeduser@CONTOSO.COM` has already been created on the domain controller.
 
     ```bash
-    kinit privilegeduser@DOMAIN.COM
-    ```
-
-    Example: For the environment described above, my privileged account is `amvin@CONTOSO.COM`
-
-    ```bash
-    kinit amvin@CONTOSO.COM
+    kinit privilegeduser@CONTOSO.COM
     ```
 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
@@ -171,9 +164,9 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
 ## Create the config files to be used by the SQL Server container
 
-1. Create an `mssql.conf` file with the settings for AD. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1 `, which is our container directory. The content of the `mssql.conf` is as shown below:
+1. Create an `mssql.conf` file with the settings for AD. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is as shown below:
 
-    ```output
+    ```ini
     [network]
     privilegedadaccount = sqluser
     kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
@@ -181,12 +174,12 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
     > [!NOTE]
     >
-    > - `privilagedadaccount`: Privileged AD user to use for AD authentication.
+    > - `privilegedadaccount`: Privileged AD user to use for AD authentication.
     > - `kerberoskeytabfile`: The path in the container where the mssql.keytab file will be located.
 
 1. Create a krb5.conf file. Here's a sample shown below. The casing matters on these files.
 
-    ```output
+    ```ini
     [libdefaults]
     default_realm = CONTOSO.COM
     
@@ -201,7 +194,7 @@ chmod 440 /container/sql1/secrets/mssql.keytab
     .contoso.com = CONTOSO.COM
     contoso.com = CONTOSO.COM
     ```
-    
+
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the SQL Server container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 
 1. Make sure there's enough permission on these folders for the user running the docker/podman command. When the container starts, the user needs access to the folder path created. In this example, we provided the below permissions given to the folder path:
@@ -214,8 +207,11 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
 Run your SQL Server container, and mount the correct AD configuration files that were previously created as shown below:
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>" \
 -p 5433:1433 --name sql1 \
 -v /container/sql1:/var/opt/mssql \
 -v /container/sql1/krb5.conf:/etc/krb5.conf \
@@ -228,7 +224,7 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
 Our example would contain the following commands:
 
 ```bash
-sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
 -v /container/sql1:/var/opt/mssql/ \
 -v /container/sql1/krb5.conf:/etc/krb5.conf \
 --dns-search contoso.com \
@@ -254,9 +250,9 @@ create login [contoso\amvin] From Windows
 SELECT name FROM sys.server_principals;
 ```
 
-## Connect to SQL Server using AD authentication.
+## Connect to SQL Server using AD authentication
 
-To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), log in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
+To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), sign in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
 
 You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to the SQL Server in your container.
 
@@ -264,7 +260,12 @@ You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to 
 sqlcmd -E -S 'sql1.contoso.com, 5433'
 ```
 
-## Next Steps
+## Resources
+
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
+
+## Next steps
 
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)

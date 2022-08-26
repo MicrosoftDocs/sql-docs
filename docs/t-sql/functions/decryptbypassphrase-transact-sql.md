@@ -1,25 +1,21 @@
 ---
+title: "DECRYPTBYPASSPHRASE (Transact-SQL)"
 description: "DECRYPTBYPASSPHRASE (Transact-SQL)"
-title: "DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DECRYPTBYPASSPHRASE"
   - "DECRYPTBYPASSPHRASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "decryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function"
   - "DECRYPTBYPASSPHRASE function"
-ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

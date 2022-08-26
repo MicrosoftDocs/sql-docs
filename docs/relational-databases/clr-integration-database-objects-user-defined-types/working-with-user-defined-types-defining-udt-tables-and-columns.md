@@ -1,15 +1,13 @@
 ---
-title: "Defining UDT Tables and Columns | Microsoft Docs"
+title: "Defining UDT Tables and Columns"
 description: After you register the assembly that contains a UDT definition, you can use it in a column definition.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/05/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user-defined types [CLR integration], columns"
   - "UDTs [CLR integration], columns"
   - "columns [CLR integration]"
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "UDTs [CLR integration], indexes"
   - "user-defined types [CLR integration], indexes"
   - "indexes [CLR integration]"
+dev_langs:
+  - "TSQL"
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
-author: rothja
-ms.author: jroth
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

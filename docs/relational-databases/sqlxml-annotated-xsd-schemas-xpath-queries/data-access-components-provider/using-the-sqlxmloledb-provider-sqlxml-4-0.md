@@ -1,20 +1,19 @@
 ---
 title: "Using the SQLXMLOLEDB Provider (SQLXML)"
 description: View information about using SQLXMLOLEDB Provider-specific properties in ADO applications.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "sample applications [SQLXML]"
   - "SQLXMLOLEDB Provider, samples"
   - "ClientSideXML property"
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)

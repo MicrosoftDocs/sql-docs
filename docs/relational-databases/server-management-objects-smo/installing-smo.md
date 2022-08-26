@@ -40,5 +40,8 @@ See [NuGet Quick Start - Use a Package](/nuget/quickstart/use-a-package) for ins
   
 ## System Requirements
   
- SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 or .NET Core 2.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your 
-target architecture from https://www.microsoft.com/download/details.aspx?id=40784
+ SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 or .NET Core 2.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your target architecture from https://www.microsoft.com/download/details.aspx?id=40784
+
+## Programming Guide
+
+The [SMO Programming Guide](sql-server-management-objects-smo-programming-guide.md) includes additional links to get started with SQL Server Management Objects.

@@ -1,18 +1,16 @@
 ---
-title: "Transaction Lifetimes | Microsoft Docs"
+title: "Transaction Lifetimes"
 description: Learn about transaction lifetimes in SQL Server CLR integration. Transactions started in Transact-SQL stored procedures differ from ones started in managed code.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "lifetimes [SQL Server]"
   - "Transact-SQL vs. managed code"
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-author: rothja
-ms.author: jroth
 ---
 # Transaction Lifetimes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

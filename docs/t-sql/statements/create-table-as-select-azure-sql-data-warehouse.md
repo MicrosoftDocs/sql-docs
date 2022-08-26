@@ -1,18 +1,16 @@
 ---
-description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
-title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/07/2016"
+title: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
+description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: vanto, xiaoyul
+ms.date: 08/16/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -52,6 +50,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <distribution_option> ::=
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )
       | DISTRIBUTION = ROUND_ROBIN 
       | DISTRIBUTION = REPLICATE
     }   
@@ -92,9 +91,20 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 <a name="table-distribution-options-bk"></a>
 
 ### Table distribution options
+For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. For recommendations on which distribution to choose for a table based on actual usage or sample queries, see [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor).
 
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
-The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
+The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE, which has defaults. 
+
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (*Preview*) 
+Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+> [!NOTE]
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
+>     - To regain access to MCD tables, opt-in the preview again. 
+>     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is supported in [SSMS 19 Preview 3](../../ssms/download-sql-server-management-studio-ssms.md).
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
@@ -167,40 +177,44 @@ To avoid data movement in subsequent queries, you can specify `REPLICATE` at the
 ### A. Use CTAS to copy a table 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If for example you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
+Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If, for example,  you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
 
-Let's say you created this table using the default distribution type of `ROUND_ROBIN` distributed since no distribution column was specified in the `CREATE TABLE`.
+Let's say you created this table by specifying `HEAP` and using the default distribution type of `ROUND_ROBIN`.
 
 ```sql
 CREATE TABLE FactInternetSales
 (
-	ProductKey INT NOT NULL,
-	OrderDateKey INT NOT NULL,
-	DueDateKey INT NOT NULL,
-	ShipDateKey INT NOT NULL,
-	CustomerKey INT NOT NULL,
-	PromotionKey INT NOT NULL,
-	CurrencyKey INT NOT NULL,
-	SalesTerritoryKey INT NOT NULL,
-	SalesOrderNumber NVARCHAR(20) NOT NULL,
-	SalesOrderLineNumber TINYINT NOT NULL,
-	RevisionNumber TINYINT NOT NULL,
-	OrderQuantity SMALLINT NOT NULL,
-	UnitPrice MONEY NOT NULL,
-	ExtendedAmount MONEY NOT NULL,
-	UnitPriceDiscountPct FLOAT NOT NULL,
-	DiscountAmount FLOAT NOT NULL,
-	ProductStandardCost MONEY NOT NULL,
-	TotalProductCost MONEY NOT NULL,
-	SalesAmount MONEY NOT NULL,
-	TaxAmt MONEY NOT NULL,
-	Freight MONEY NOT NULL,
-	CarrierTrackingNumber NVARCHAR(25),
-	CustomerPONumber NVARCHAR(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
+)
+WITH( 
+ HEAP, 
+ DISTRIBUTION = ROUND_ROBIN 
 );
 ```
 
-Now you want to create a new copy of this table with a clustered columnstore index so that you can take advantage of the performance of clustered columnstore tables. You also want to distribute this table on ProductKey since you are anticipating joins on this column and want to avoid data movement during joins on ProductKey. Lastly you also want to add partitioning on OrderDateKey so that you can quickly delete old data by dropping old partitions. Here is the CTAS statement which would copy your old table into a new table.
+Now you want to create a new copy of this table with a clustered columnstore index so that you can take advantage of the performance of clustered columnstore tables. You also want to distribute this table on `ProductKey` since you are anticipating joins on this column and want to avoid data movement during joins on `ProductKey`. Lastly you also want to add partitioning on `OrderDateKey` so that you can quickly delete old data by dropping old partitions. Here is the CTAS statement that would copy your old table into a new table:
 
 ```sql
 CREATE TABLE FactInternetSales_new
@@ -239,7 +253,7 @@ DROP TABLE FactInternetSales_old;
 ### B. Use CTAS to change column attributes 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-This example uses CTAS to change data types, nullability, and collation for several columns in the DimCustomer2 table.  
+This example uses CTAS to change data types, nullability, and collation for several columns in the `DimCustomer2` table.  
   
 ```sql  
 -- Original table 
@@ -304,7 +318,8 @@ This simple example shows how to change the distribution method for a table. To 
 
 In most cases you won't need to change a hash-distributed table to a round-robin table. More often, you might need to change a round-robin table to a hash distributed table. For example, you might initially load a new table as round-robin and then later move it to a hash-distributed table to get better join performance.
 
-This example uses the AdventureWorksDW sample database. To load the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] version, see [Load sample data into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+This example uses the AdventureWorksDW sample database. To load the Azure Synapse Analytics version, see [Quickstart: Create and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics using the Azure portal](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+
  
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -350,7 +365,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ### D. Use CTAS to convert a table to a replicated table  
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since DimSalesTerritory is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
+This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since `DimSalesTerritory` is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
 
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -494,7 +509,6 @@ Use CTAS to work around some unsupported features. Besides being able to run you
 
 > [!NOTE]
 > Try to think "CTAS first". If you think you can solve a problem using `CTAS` then that is generally the best way to approach it - even if you are writing more data as a result.
->
 
 <a name="ctas-replace-select-into-bk"></a>
 
@@ -524,119 +538,7 @@ FROM    [dbo].[FactInternetSales]
 ```
 
 <a name="ctas-replace-implicit-joins-bk"></a>
-
-### J. Use CTAS and implicit joins to replace ANSI joins in the `FROM` clause of an `UPDATE` statement  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.
-
-Imagine you had to update this table:
-
-```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(	[EnglishProductCategoryName]	NVARCHAR(50)	NOT NULL
-,	[CalendarYear]			SMALLINT	NOT NULL
-,	[TotalSalesAmount]		MONEY		NOT NULL
-)
-WITH
-(
-	DISTRIBUTION = ROUND_ROBIN
-)
-;
-```
-
-The original query might have looked something like this:
-
-```sql
-UPDATE	acs
-SET		[TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM	[dbo].[AnnualCategorySales] 	AS acs
-JOIN	(
-		SELECT	[EnglishProductCategoryName]
-		,		[CalendarYear]
-		,		SUM([SalesAmount])				AS [TotalSalesAmount]
-		FROM	[dbo].[FactInternetSales]		AS s
-		JOIN	[dbo].[DimDate]					AS d	ON s.[OrderDateKey]				= d.[DateKey]
-		JOIN	[dbo].[DimProduct]				AS p	ON s.[ProductKey]				= p.[ProductKey]
-		JOIN	[dbo].[DimProductSubCategory]	AS u	ON p.[ProductSubcategoryKey]	= u.[ProductSubcategoryKey]
-		JOIN	[dbo].[DimProductCategory]		AS c	ON u.[ProductCategoryKey]		= c.[ProductCategoryKey]
-		WHERE 	[CalendarYear] = 2004
-		GROUP BY
-				[EnglishProductCategoryName]
-		,		[CalendarYear]
-		) AS fis
-ON	[acs].[EnglishProductCategoryName]	= [fis].[EnglishProductCategoryName]
-AND	[acs].[CalendarYear]				= [fis].[CalendarYear]
-;
-```
-
-Since [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] does not support ANSI joins in the `FROM` clause of an `UPDATE` statement, you cannot use this SQL Server code over without changing it slightly.
-
-You can use a combination of a `CTAS` and an implicit join to replace this code:
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT	ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)	AS [EnglishProductCategoryName]
-,		ISNULL(CAST([CalendarYear] AS SMALLINT),0) 						AS [CalendarYear]
-,		ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)						AS [TotalSalesAmount]
-FROM	[dbo].[FactInternetSales]		AS s
-JOIN	[dbo].[DimDate]					AS d	ON s.[OrderDateKey]				= d.[DateKey]
-JOIN	[dbo].[DimProduct]				AS p	ON s.[ProductKey]				= p.[ProductKey]
-JOIN	[dbo].[DimProductSubCategory]	AS u	ON p.[ProductSubcategoryKey]	= u.[ProductSubcategoryKey]
-JOIN	[dbo].[DimProductCategory]		AS c	ON u.[ProductCategoryKey]		= c.[ProductCategoryKey]
-WHERE 	[CalendarYear] = 2004
-GROUP BY
-		[EnglishProductCategoryName]
-,		[CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-
-<a name="ctas-replace-ansi-joins-bk"></a>
-
-### K. Use CTAS to specify which data to keep instead of using ANSI joins in the FROM clause of a DELETE statement  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-Sometimes the best approach for deleting data is to use `CTAS`. Rather than deleting the data simply select the data you want to keep. This especially true for `DELETE` statements that use ansi joining syntax since [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] does not support ANSI joins in the `FROM` clause of a `DELETE` statement.
-
-An example of a converted DELETE statement is available below:
-
-```sql
-CREATE TABLE dbo.DimProduct_upsert
-WITH
-(   Distribution=HASH(ProductKey)
-,   CLUSTERED INDEX (ProductKey)
-)
-AS -- Select Data you wish to keep
-SELECT     p.ProductKey
-,          p.EnglishProductName
-,          p.Color
-FROM       dbo.DimProduct p
-RIGHT JOIN dbo.stg_DimProduct s
-ON         p.ProductKey = s.ProductKey
-;
-
-RENAME OBJECT dbo.DimProduct        TO DimProduct_old;
-RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
-```
-
-<a name="ctas-simplify-merge-bk"></a>
-
-### L. Use CTAS to simplify merge statements  
+### J. Use CTAS to simplify merge statements  
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
@@ -675,7 +577,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### M. Explicitly state data type and nullability of output  
+### K. Explicitly state data type and nullability of output  
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 When migrating SQL Server code to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], you might find you run across this type of coding pattern:
@@ -730,9 +632,9 @@ The value stored for result is different. As the persisted value in the result c
 
 This is particularly important for data migrations. Even though the second query is arguably more accurate there is a problem. The data would be different compared to the source system and that leads to questions of integrity in the migration. This is one of those rare cases where the "wrong" answer is actually the right one!
 
-The reason we see this disparity between the two results is down to implicit type casting. In the first example the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example it was just left to the expression and by default this would result in a NULL definition.  
+The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example it was just left to the expression and by default this would result in a `NULL` definition.  
 
-To resolve these issues you must explicitly set the type conversion and nullability in the `SELECT` portion of the `CTAS` statement. You cannot set these properties in the create table part.
+To resolve these issues, you must explicitly set the type conversion and nullability in the `SELECT` portion of the `CTAS` statement. You cannot set these properties in the create table part.
 
 The example below demonstrates how to fix the code:
 
@@ -750,7 +652,7 @@ Note the following:
 - CAST or CONVERT could have been used
 - ISNULL is used to force NULLability not COALESCE
 - ISNULL is the outermost function
-- The second part of the ISNULL is a constant i.e. 0
+- The second part of the ISNULL is a constant, `0`
 
 > [!NOTE]
 > For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.
@@ -780,7 +682,7 @@ WITH
 
 However, the value field is a calculated expression it is not part of the source data.
 
-To create your partitioned dataset you might want to do this:
+To create your partitioned dataset, consider the following example:
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -804,7 +706,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create')
 ;
 ```
 
-The query would run perfectly fine. The problem comes when you try to perform the partition switch. The table definitions do not match. To make the table definitions match the CTAS needs to be modified.
+The query would run perfectly fine. The problem comes when you try to perform the partition switch. The table definitions do not match. To make the table definitions, match the CTAS needs to be modified.
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -829,7 +731,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 You can see therefore that type consistency and maintaining nullability properties on a CTAS is a good engineering best practice. It helps to maintain integrity in your calculations and also ensures that partition switching is possible.
 
-### N. Create an ordered clustered columnstore index with MAXDOP 1  
+### L. Create an ordered clustered columnstore index with MAXDOP 1  
 ```sql
 CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
 AS SELECT * FROM ExampleTable
@@ -837,7 +739,8 @@ OPTION (MAXDOP 1);
 ```
 
  
-## See Also  
+## Next steps
+
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
@@ -846,4 +749,4 @@ OPTION (MAXDOP 1);
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)

@@ -1,18 +1,14 @@
 ---
+title: "Hierarchy Object Properties, Methods, and Events"
 description: "Hierarchy Object Properties, Methods, and Events"
-title: "Hierarchy Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Hierarchy object [ADO MD], members"
-ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Hierarchy object [ADO MD], members"
 ---
 # Hierarchy Object Properties, Methods, and Events
 ## Properties/Collections  

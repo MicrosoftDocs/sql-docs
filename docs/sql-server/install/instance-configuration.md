@@ -1,5 +1,5 @@
 ---
-title: "Installation Wizard Help | Microsoft Docs"
+title: "Installation Wizard Help"
 description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
 ms.custom:
   - intro-installation
@@ -13,10 +13,8 @@ f1_keywords:
 helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
-ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MikeRayMSFT
-ms.author: mikeray
-ROBOTS: noindex,nofollow
+author: rwestMSFT
+ms.author: randolphwest
 ---
 
 # Installation Wizard help
@@ -423,7 +421,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 ### UI element list
 
-* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).
 
 ## <a name="memory"><a/> Database Engine Configuration - Memory page
 
@@ -484,6 +482,6 @@ The user instance, also known as a child or client instance, is an instance of [
   
 **Add user to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator role**:  Default is off. To add the current Setup user to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator role, select the check box.  
   
-[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users that are members of BUILTIN\Administrators aren't automatically added to the **sysadmin** fixed server role when they connect to [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Only [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users who have been explicitly added to a server-level administrator role can administer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Members of the Built-In\Users group can connect to the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] instance, but they'll have limited permissions to do database tasks. For this reason, users whose [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] privileges are inherited from BUILTIN\Administrators and Built-In\Users in previous releases of Windows must be explicitly granted administrative privileges in instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that are running on [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+[!INCLUDE[winvista](../../includes/winvista-md.md)] users that are members of BUILTIN\Administrators aren't automatically added to the **sysadmin** fixed server role when they connect to [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Only [!INCLUDE[winvista](../../includes/winvista-md.md)] users who have been explicitly added to a server-level administrator role can administer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Members of the Built-In\Users group can connect to the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] instance, but they'll have limited permissions to do database tasks. For this reason, users whose [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] privileges are inherited from BUILTIN\Administrators and Built-In\Users in previous releases of Windows must be explicitly granted administrative privileges in instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that are running on [!INCLUDE[winvista](../../includes/winvista-md.md)].  
   
 To make changes to the user roles after the installation program ends, use [SQL Server Management Studio](../../relational-databases/security/authentication-access/join-a-role.md) or [Transact-SQL](../../t-sql/statements/alter-role-transact-sql.md).

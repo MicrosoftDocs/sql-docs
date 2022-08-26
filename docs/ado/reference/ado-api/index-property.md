@@ -1,21 +1,17 @@
 ---
+title: "Index Property"
 description: "Index Property"
-title: "Index Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset21::Index"
-helpviewer_keywords: 
-  - "Index property"
-ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset21::Index"
+helpviewer_keywords:
+  - "Index property"
+apitype: "COM"
 ---
 # Index Property
 Indicates the name of the index currently in effect for a [Recordset](./recordset-object-ado.md) object.  

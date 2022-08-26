@@ -37,14 +37,14 @@ The code file for this sample is named CacheResultSet.java, and it can be found 
 
 ## Requirements
 
-To run this sample application, set the classpath to include the mssql-jdbc jar file. You also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
+To run this sample application, set the classpath to include the mssql-jdbc jar file. You also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then it uses an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, specifies the server-side cursor type, and runs the SQL statement. The data is returned in a SQLServerResultSet object.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. Then it uses an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, specifies the server-side cursor type, and runs the SQL statement. The data is returned in a SQLServerResultSet object.
 
 Next, the sample code calls the custom timerTest method, passing as arguments the fetch size to use and the result set. The timerTest method then sets the fetch size of the result set by using the setFetchSize method, sets the start time of the test, and then iterates through the result set with a `While` loop. As soon as the `While` loop is exited, the code sets the stop time of the test, and then displays the result of the test including the fetch size, the number of rows processed, and the time it took to execute the test.
 

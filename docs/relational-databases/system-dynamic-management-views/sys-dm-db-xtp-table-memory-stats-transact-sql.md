@@ -1,37 +1,35 @@
 ---
-description: "sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database."
 title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_xtp_table_memory_stats_TSQL"
   - "dm_db_xtp_table_memory_stats"
   - "sys.dm_db_xtp_table_memory_stats"
   - "dm_db_xtp_table_memory_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_table_memory_stats"
-  - "dm_db_xtp_table_memory_stats" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+  - "dm_db_xtp_table_memory_stats"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns memory usage statistics for each [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table (user and system) in the current database. The system tables have negative object IDs and are used to store run-time information for the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine. Unlike user objects, system tables are internal and only exist in-memory, therefore, they are not visible through catalog views. System tables are used to store information such as meta-data for all data/delta files in storage, merge requests, watermarks for delta files to filter rows, dropped tables, and relevant information for recovery and backups. Given that the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine can have up to 8,192 data and delta file pairs, for large in-memory databases, the memory taken by system tables can be a few megabytes.  
+  Returns memory usage statistics for each [!INCLUDE[inmemory](../../includes/inmemory-md.md)] table (user and system) in the current database. The system tables have negative object IDs and are used to store run-time information for the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine. Unlike user objects, system tables are internal and only exist in-memory, therefore, they are not visible through catalog views. System tables are used to store information such as meta-data for all data/delta files in storage, merge requests, watermarks for delta files to filter rows, dropped tables, and relevant information for recovery and backups. Given that the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine can have up to 8,192 data and delta file pairs, for large in-memory databases, the memory taken by system tables can be a few megabytes.  
   
- For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|The object ID of the table. `NULL` for [!INCLUDE[hek_2](../../includes/hek-2-md.md)] system tables.|  
+|object_id|**int**|The object ID of the table. `NULL` for [!INCLUDE[inmemory](../../includes/inmemory-md.md)] system tables.|  
 |memory_allocated_for_table_kb|**bigint**|Memory allocated for this table.|  
 |memory_used_by_table_kb|**bigint**|Memory used by table, including row versions.|  
 |memory_allocated_for_indexes_kb|**bigint**|Memory allocated for indexes on this table.|  
@@ -230,5 +228,5 @@ used_memory_mb       target_memory_mb
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

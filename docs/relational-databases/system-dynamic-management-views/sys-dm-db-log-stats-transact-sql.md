@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_db_log_stats (Transact-SQL)"
-title: "sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_log_stats (Transact-SQL)"
+description: sys.dm_db_log_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_log_stats_TSQL"
   - "sys.dm_db_log_stats"
   - "sys.dm_db_log_stats_TSQL"
   - "dm_db_log_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_log_stats dynamic management function"
-ms.assetid: 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   

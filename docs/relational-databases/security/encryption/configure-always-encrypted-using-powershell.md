@@ -2,7 +2,7 @@
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 description: Learn how to import and use the SqlServer PowerShell module, which provides cmdlets for configuring Always Encrypted in both Azure SQL Database and SQL Server.
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 04/12/2022
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -43,6 +43,9 @@ This example loads the SqlServer module.
 # Import the SQL Server Module.  
 Import-Module "SqlServer" 
 ```
+
+> [!NOTE]
+> This example does not work when using Azure AD multi-factor authentication (MFA). In order to use MFA, the authentication needs to be `Active Directory Interactive` authentication, and the library [System.Data.SqlClient](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) used in PowerShell does not support the `Active Directory Interactive` authentication method.
 
 ## <a name="connectingtodatabase"></a> Connecting to a Database
 

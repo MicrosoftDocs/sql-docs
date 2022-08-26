@@ -3,8 +3,8 @@ title: Extension for Oracle
 description: Learn how to install the Azure Data Studio extension for Oracle, which enables you to connect to Oracle databases.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: nahk-ivanov
-ms.author: "alexiva"
+author: tdoshin
+ms.author: timioshin
 ms.reviewer: "maghan"
 ms.topic: conceptual
 ms.custom:

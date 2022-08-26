@@ -1,16 +1,15 @@
 ---
 title: "Database backup with Memory-optimized tables"
 description: Learn how memory-optimized tables are backed up as part of regular database backups. Read about full database backup and differential backups.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-author: markingmyname
-ms.author: maghan
 ---
 # Backing Up a Database with Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

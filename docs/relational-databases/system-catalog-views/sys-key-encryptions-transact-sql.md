@@ -1,29 +1,27 @@
 ---
-description: "sys.key_encryptions (Transact-SQL)"
-title: "sys.key_encryptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.key_encryptions (Transact-SQL)"
+description: sys.key_encryptions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.key_encryptions"
   - "key_encryptions_TSQL"
   - "sys.key_encryptions_TSQL"
   - "key_encryptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.key_encryptions catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_encryptions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a row for each symmetric key encryption specified by using the ENCRYPTION BY clause of the CREATE SYMMETRIC KEY statement.  
 

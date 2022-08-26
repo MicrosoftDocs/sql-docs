@@ -1,19 +1,15 @@
 ---
+title: "ADO Collections"
 description: "ADO Collections"
-title: "ADO Collections | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO collections [ADO]"
-  - "collections [ADO]"
-ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO collections [ADO]"
+  - "collections [ADO]"
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](./ado-object-model.md).  

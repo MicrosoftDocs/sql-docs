@@ -49,7 +49,7 @@ ms.author: maggies
   
          In **Value field**, choose the name of the field that provides parameter values.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To remove the default values for a report parameter  
   
@@ -59,7 +59,7 @@ ms.author: maggies
   
 3.  In **Select from one of the following options**, click **No default value**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

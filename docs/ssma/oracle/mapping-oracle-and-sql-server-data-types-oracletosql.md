@@ -10,9 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.typemappingeditform.f1"
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)
 Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
@@ -58,7 +60,7 @@ The following procedure shows how to map data types at the project, database, or
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    5.  Select **OK**.
   
 3.  To modify a data type mapping, do the following:  
   
@@ -72,7 +74,7 @@ The following procedure shows how to map data types at the project, database, or
   
     4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
-        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then select **OK**.
   
 4.  To remove a custom data type mapping, do the following:  
   

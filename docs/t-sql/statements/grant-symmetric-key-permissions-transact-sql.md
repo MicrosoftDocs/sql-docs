@@ -1,26 +1,23 @@
 ---
-description: "GRANT Symmetric Key Permissions (Transact-SQL)"
-title: "GRANT Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Symmetric Key Permissions (Transact-SQL)"
+description: GRANT Symmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "symmetric keys [SQL Server], permissions"
   - "permissions [SQL Server], symmetric keys"
   - "encryption [SQL Server], symmetric keys"
   - "GRANT statement, symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
   - "granting permissions [SQL Server], symmetric keys"
-ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,28 +1,26 @@
 ---
 title: "REVOKE Database Principal Permissions"
-description: Revoke permissions on a database user, database role, or application role.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Revoke permissions on a database user, database role, or application role.
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "REVOKE statement, roles"
   - "database user permissions [SQL Server]"
   - "REVOKE statement, users"
   - "application roles [SQL Server], permissions"
-ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions granted or denied on a database user, database role, or application role.  
   

@@ -48,7 +48,7 @@ This section applies to scripts executed from PowerShell and not the SQL Agent. 
 
 The **SqlServer** module comes with:
 
-- [PowerShell Providers](/powershell/module/microsoft.powershell.core/about/about_providers), which enables a simple navigation mechanism similar to file system paths. You can build paths similar to file system paths, where the drive is associated with a SQL Server management object model, and the nodes are based on the object model classes. You can then use familiar commands such as **cd** and **dir** to navigate the paths similar to the way you navigate folders in a command prompt window. You can use other commands, such as **ren** or **del**, to perform actions on the nodes in the path.
+- [PowerShell Providers](/powershell/module/microsoft.powershell.core/about/about_providers), which enables a simple navigation mechanism similar to file system paths. You can build paths similar to file system paths, where the drive is associated with a SQL Server management object model, and the nodes are based on the object model classes. You can then use familiar commands such as **cd** (alias for Set-Location) and **dir** (alias for Get-ChildItem) to navigate the paths similar to the way you navigate folders in a command prompt window. You can use other commands, such as **ren** (alias for Rename-Item) or **del** (alias for Remove-Item), to perform actions on the nodes in the path.
 
 - A set of cmdlets that support actions such as running a **sqlcmd** script containing Transact-SQL or XQuery statements.  
 
@@ -60,13 +60,13 @@ SQL PowerShell cmdlets can be used to manage instances of Azure SQL Database, Az
 
 ## SQL Server identifiers that contain characters not supported in PowerShell paths
 
-The **Encode-Sqlname** and **Decode-Sqlname** cmdlets help you specify SQL Server identifiers that contain characters not supported in PowerShell paths. For more information, see [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).
+The **Encode-Sqlname** (alias for ConvertTo-EncodedSqlName) and **Decode-Sqlname** (alias for ConvertFrom-EncodedSqlName) cmdlets help you specify SQL Server identifiers that contain characters not supported in PowerShell paths. For more information, see [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).
 
 Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a Database Engine object to a path for the SQL Server PowerShell provider. For more information, see [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath).
   
-## Query Expressions and Unique Resource Names  
+## Query Expressions and Uniform Resource Names  
 
-Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerates one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).
+Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerates one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).
 
 ## SQL Server Agent
 

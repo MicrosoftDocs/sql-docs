@@ -33,7 +33,7 @@ The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installa
 ## See also
 [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
 [Using Connection String Keywords with OLE DB Driver](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
-[Using Encryption Without Validation](features/using-encryption-without-validation.md)  
+[Encryption and certificate validation](features/encryption-and-certificate-validation.md)  
 [Universal Data Link (UDL) Configuration](help-topics/data-link-pages.md)  
 [SQL Server Login Dialog Box (OLE DB)](help-topics/sql-server-login-dialog.md)  
 [Initialization and authorization properties (OLE DB driver)](ole-db-data-source-objects/initialization-and-authorization-properties.md)  

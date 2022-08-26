@@ -1,27 +1,25 @@
 ---
 title: "REVOKE Availability Group Permissions"
-description: Revoke permissions on an Always On availability group.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Revoke permissions on an Always On availability group.
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], permissions"
   - "REVOKE statement, availability groups"
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
-ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on an Always On availability group. 
   

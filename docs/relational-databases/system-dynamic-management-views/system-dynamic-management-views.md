@@ -1,16 +1,14 @@
 ---
-description: "Dynamic Management Views (Transact-SQL)"
-title: "Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Dynamic Management Views (Transact-SQL)"
+description: Dynamic Management Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database scoped dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], about dynamic management objects"
   - "server state information [SQL Server]"
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "functions [SQL Server], dynamic management"
   - "server scoped dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Dynamic Management Views

@@ -1,22 +1,21 @@
 ---
 title: "sys.selective_xml_index_paths (Transact-SQL)"
-description: "sys.selective_xml_index_paths (Transact-SQL)"
+description: sys.selective_xml_index_paths (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
+ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "xml_schema_index_TSQL"
   - "xml_schema_index"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_attributes catalog view"
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
-ms.custom: ""
-ms.date: "06/10/2016"
+dev_langs:
+  - "TSQL"
 ---
 # sys.selective_xml_index_paths (Transact-SQL)
 

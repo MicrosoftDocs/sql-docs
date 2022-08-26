@@ -1,28 +1,27 @@
 ---
+title: "USER_ID (Transact-SQL)"
 description: "USER_ID (Transact-SQL)"
-title: "USER_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "USER_ID"
   - "USER_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "USER_ID function"
   - "identification numbers [SQL Server]"
   - "IDs [SQL Server], databases"
   - "users [SQL Server], database ID numbers"
   - "database IDs [SQL Server]"
   - "identification numbers [SQL Server], databases"
-ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # USER_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

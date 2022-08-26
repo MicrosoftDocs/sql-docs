@@ -1,26 +1,24 @@
 ---
-description: "sys.availability_groups (Transact-SQL)"
-title: "sys.availability_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.availability_groups (Transact-SQL)"
+description: sys.availability_groups (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.availability_groups_TSQL"
   - "availability_groups_TSQL"
   - "sys.availability_groups"
   - "availability_groups"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_groups catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

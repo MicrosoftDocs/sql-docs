@@ -1,20 +1,18 @@
 ---
-title: "Defining Durability for Memory-Optimized Objects | Microsoft Docs"
+title: "Defining Durability for Memory-Optimized Objects"
 description: "Learn about the durability options for memory-optimized tables in SQL Server: the default SCHEMA_AND_DATA and SCHEMA_ONLY."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Defining Durability for Memory-Optimized Objects
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   There are two durability options for memory-optimized tables:  
   
@@ -22,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  This option provides durability of both schema and data. The level of data durability depends on whether you commit a transaction as fully durable or with delayed durability. Fully durable transactions provide the same durability guarantee for data and schema, similar to a disk-based table. Delayed durability will improve performance but can potentially result in data loss in case of a server crash or fail over. (For more information about delayed durability, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).)  
   
  SCHEMA_ONLY  
- This option ensures durability of the table schema. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or a reconfiguration occurs in an Azure SQL Database, the table schema persists, but data in the table is lost. (This is unlike a table in tempdb, where both the table and its data are lost upon restart.) A typical scenario for creating a non-durable table is to store transient data, such as a staging table for an ETL process. A SCHEMA_ONLY durability avoids both transaction logging and checkpoint, which can significantly reduce I/O operations.  
+ This option ensures durability of the table schema. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or a reconfiguration occurs in an Azure SQL Database, the table schema persists, but data in the table is lost. (This is unlike a table in tempdb, where both the table and its data are lost upon restart.) A typical scenario for creating a non-durable table is to store transient data, such as a staging table for an ETL process. A SCHEMA_ONLY durability avoids transaction logging, which can significantly reduce I/O operations, but still participates in checkpoint operations to persist only the table schema.
   
  When using the default SCHEMA_AND_DATA tables, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the same durability guarantees as for disk-based tables:  
   

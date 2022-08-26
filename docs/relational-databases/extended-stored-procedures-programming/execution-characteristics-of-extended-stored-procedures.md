@@ -1,26 +1,23 @@
 ---
-description: "Execution Characteristics of Extended Stored Procedures"
 title: "Execution characteristics of extended stored procedures"
+description: Execution Characteristics of Extended Stored Procedures
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], executing"
   - "executing extended stored procedures [SQL Server]"
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
-author: LitKnd
-ms.author: kendralittle
-ms.custom: seo-dt-2019
 ---
 # Execution Characteristics of Extended Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  The execution of an extended stored procedure has these characteristics:  
   

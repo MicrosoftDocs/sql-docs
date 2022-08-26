@@ -1,23 +1,21 @@
 ---
-description: "Databases and Files Catalog Views (Transact-SQL)"
-title: "Databases and Files Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Databases and Files Catalog Views (Transact-SQL)"
+description: Databases and Files Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/18/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "file catalog views [SQL Server]"
   - "catalog views [SQL Server], databases"
   - "database catalog views [SQL Server]"
   - "catalog views [SQL Server], files"
+dev_langs:
+  - "TSQL"
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases and Files Catalog Views (Transact-SQL)

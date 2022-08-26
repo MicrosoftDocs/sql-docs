@@ -1,28 +1,26 @@
 ---
-description: "sys.dm_io_cluster_valid_path_names (Transact-SQL)"
-title: "sys.dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_io_cluster_valid_path_names (Transact-SQL)"
+description: sys.dm_io_cluster_valid_path_names (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_io_cluster_valid_path_names"
   - "dm_io_cluster_valid_path_names_TSQL"
   - "sys.dm_io_cluster_valid_path_names_TSQL"
   - "dm_io_cluster_valid_path_names"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_io_cluster_valid_path_names"
   - "sys.dm_io_cluster_valid_path_names"
   - "cluster valid path names"
   - "csv name"
   - "cluster shared volume names"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

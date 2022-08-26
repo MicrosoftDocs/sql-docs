@@ -1,21 +1,19 @@
 ---
-description: "CREATE RULE (Transact-SQL)"
-title: "CREATE RULE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE RULE (Transact-SQL)"
+description: CREATE RULE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "RULE_TSQL"
   - "CREATE RULE"
   - "CREATE_RULE_TSQL"
   - "RULE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "list rules [SQL Server]"
   - "unbinding rules"
   - "pattern rules [SQL Server]"
@@ -27,9 +25,8 @@ helpviewer_keywords:
   - "rules [SQL Server], precedence"
   - "binding rules [SQL Server]"
   - "rules [SQL Server], creating"
-ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

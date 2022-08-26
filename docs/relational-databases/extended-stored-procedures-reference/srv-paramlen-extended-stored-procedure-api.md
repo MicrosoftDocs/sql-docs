@@ -1,31 +1,27 @@
 ---
-title: "srv_paramlen (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_paramlen (Extended Stored Procedure API)"
 description: Learn how srv_paramlen in the Extended Stored Procedure API returns the data length of a remote stored procedure call parameter.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_paramlen"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paramlen"
+apilocation: opends60.dll
+apiname: srv_paramlen
+apitype: "DLLExport"
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_paramlen (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the data length of a remote stored procedure call parameter. This function has been superseded by the **srv_paraminfo** function.  
   

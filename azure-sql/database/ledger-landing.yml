@@ -1,0 +1,133 @@
+### YamlMime:Landing
+
+title: Ledger documentation
+summary: "Find documentation about ledger for SQL Server 2022 and Azure SQL Database"
+
+metadata:
+  title: Ledger documentation
+  description: "Find ledger documentation for SQL Server 2022 and Azure SQL Database"
+  ms.service: sql-database
+  ms.subservice: security
+  ms.tgt_pltfrm: na
+  ms.devlang:
+  ms.topic: landing-page
+  author: VanMSFT
+  ms.author: vanto
+  ms.reviewer: kendralittle, mathoma
+  ms.date: 07/22/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card 
+  - title: Ledger overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is ledger?
+            url: /sql/relational-databases/security/ledger/ledger-overview
+
+
+  # Card 
+  - title: Ledger concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: What is the database ledger?
+            url: /sql/relational-databases/security/ledger/ledger-database-ledger
+          - text: Append-only ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-append-only-ledger-tables
+          - text: Updatable ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-updatable-ledger-tables
+          - text: Digest management
+            url: /sql/relational-databases/security/ledger/ledger-digest-management
+          - text: Database verification
+            url: /sql/relational-databases/security/ledger/ledger-database-verification
+          - text: Monitor digest uploads
+            url: /sql/relational-databases/security/ledger/ledger-monitor-digest-uploads
+
+
+  # Card 
+  - title: Ledger quickstarts
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Create an Azure SQL Database with ledger enabled
+            url: ledger-create-a-single-database-with-ledger-enabled.md
+
+
+  # Card 
+  - title: Using ledger
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create append-only ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables
+          - text: Create updatable ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
+          - text: Enable automatic digest storage
+            url: /sql/relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage
+          - text: Migrate data from regular tables to ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables
+          - text: Recover ledger database after tampering
+            url: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
+          - text: Verify a ledger table to detect tampering
+            url: /sql/relational-databases/security/ledger/ledger-verify-database
+
+
+
+  # Card
+  - title: Ledger references
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Current ledger limitations
+            url: /sql/relational-databases/security/ledger/ledger-limits
+          - text: Ledger whitepaper
+            url: https://aka.ms/sql-ledger-whitepaper
+
+
+  # Card
+  - title: Ledger System Catalog Views
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: sys.database_ledger_blocks (Transact-SQL)
+            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql
+          - text: sys.database_ledger_transactions (Transact-SQL)
+            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql
+          - text: sys.database_ledger_digest_locations (Transact-SQL)
+            url: /sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql
+          - text: sys.ledger_table_history (Transact-SQL)
+            url: /sql/relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql
+          - text: sys.ledger_column_history (Transact-SQL)
+            url: /sql/relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql
+
+
+  # Card
+  - title: Ledger Store Procedures
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: sys.sp_generate_database_ledger_digest (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql
+          - text: sys.sp_verify_database_ledger (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql
+          - text: sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
+          - text: sys.sp_copy_data_in_batches (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql
+
+
+  # Card 
+  - title: Ledger video references
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed
+            url: /shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
+          - text: Learn how Lenovo reinforces trust using ledger in Azure SQL Database
+            url: https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi

@@ -1,28 +1,25 @@
 ---
-description: "ALTER AVAILABILITY GROUP (Transact-SQL)"
-title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AVAILABILITY GROUP (Transact-SQL)"
+description: ALTER AVAILABILITY GROUP (Transact-SQL)
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "01/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_AVAILABILITY_GROUP_TSQL"
   - "ALTER_AVAILABILITY_TSQL"
   - "ALTER AVAILABILITY GROUP"
   - "ALTER AVAILABILITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "ALTER AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
-ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+dev_langs:
+  - "TSQL"
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,6 +62,7 @@ ALTER AVAILABILITY GROUP group_name
   | DB_FAILOVER  = { ON | OFF }   
   | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+  | ROLE = SECONDARY
   
 <server_instance> ::=   
  { 'system_name[\instance_name]' | 'FCI_network_name[\instance_name]' }  
@@ -229,6 +227,9 @@ Specifies whether distributed transactions are enabled for this Availability Gro
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+
+ROLE
+The only valid parameter is 'SECONDARY', and this SET option is only valid in Distributed Availability Groups.  It is used to fail over a distributed availability group as documented here: [ALTER AVAILABILITY GROUP](../../database-engine/availability-groups/windows/configure-distributed-availability-groups.md) 
   
  ADD DATABASE *database_name*  
  Specifies a list of one or more user databases that you want to add to the availability group. These databases must reside on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the current primary replica. You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  

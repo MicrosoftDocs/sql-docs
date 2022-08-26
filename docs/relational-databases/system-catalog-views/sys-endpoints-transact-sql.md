@@ -1,25 +1,23 @@
 ---
-description: "sys.endpoints (Transact-SQL)"
-title: "sys.endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.endpoints (Transact-SQL)"
+description: sys.endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "endpoints"
   - "sys.endpoints"
   - "endpoints_TSQL"
   - "sys.endpoints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.endpoints catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -8,8 +8,11 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.db2.typemappingeditform.f1"
+
 ---
 # Mapping DB2 and SQL Server Data Types (DB2ToSQL)
 DB2 database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
@@ -55,7 +58,7 @@ The following procedure shows how to map data types at the project, database, or
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    5.  Select **OK**.
   
 3.  To modify a data type mapping, do the following:  
   
@@ -69,7 +72,7 @@ The following procedure shows how to map data types at the project, database, or
   
     4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
-        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then select **OK**.
   
 4.  To remove a custom data type mapping, do the following:  
   

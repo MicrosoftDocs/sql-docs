@@ -1,34 +1,31 @@
 ---
-description: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
-title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
+description: CREATE FULLTEXT STOPLIST (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STOPLIST_TSQL"
   - "FULLTEXT STOPLIST"
   - "STOPLIST"
   - "FULLTEXT_STOPLIST_TSQL"
   - "CREATE FULLTEXT STOPLIST"
   - "CREATE_FULLTEXT_STOPLIST_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stoplists [full-text search]"
   - "CREATE FULLTEXT STOPLIST statement"
   - "full-text search [SQL Server], stoplists"
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
-ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a new full-text stoplist in the current database.  
   

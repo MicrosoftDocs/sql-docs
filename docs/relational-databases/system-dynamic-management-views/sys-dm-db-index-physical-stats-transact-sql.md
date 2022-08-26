@@ -1,30 +1,28 @@
 ---
-description: "sys.dm_db_index_physical_stats (Transact-SQL)"
-title: "sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_index_physical_stats (Transact-SQL)"
+description: sys.dm_db_index_physical_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_index_physical_stats"
   - "sys.dm_db_index_physical_stats_TSQL"
   - "sys.dm_db_index_physical_stats"
   - "dm_db_index_physical_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
+dev_langs:
+  - "TSQL"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns size and fragmentation information for the data and indexes of the specified table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For an index, one row is returned for each level of the B-tree in each partition. For a heap, one row is returned for the IN_ROW_DATA allocation unit of each partition. For large object (LOB) data, one row is returned for the LOB_DATA allocation unit of each partition. If row-overflow data exists in the table, one row is returned for the ROW_OVERFLOW_DATA allocation unit in each partition. Does not return information about xVelocity memory optimized columnstore indexes.  
 
@@ -106,7 +104,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Average record size in bytes.<br /><br /> For an index, the average record size applies to the current level of the B-tree in the IN_ROW_DATA allocation unit.<br /><br /> For a heap, the average record size in the IN_ROW_DATA allocation unit.<br /><br /> For LOB_DATA or ROW_OVERFLOW_DATA allocation units, the average record size in the complete allocation unit.<br /><br /> NULL when *mode* = LIMITED.|  
 |forwarded_record_count|**bigint**|Number of records in a heap that have forward pointers to another data location. (This state occurs during an update, when there is not enough room to store the new row in the original location.)<br /><br /> NULL for any allocation unit other than the IN_ROW_DATA allocation units for a heap.<br /><br /> NULL for heaps when *mode* = LIMITED.|  
 |compressed_page_count|**bigint**|The number of compressed pages.<br /><br /> For heaps, newly allocated pages are not PAGE compressed. A heap is PAGE compressed under two special conditions: when data is bulk imported or when a heap is rebuilt. Typical DML operations that cause page allocations will not be PAGE compressed. Rebuild a heap when the compressed_page_count value grows larger than the threshold you want.<br /><br /> For tables that have a clustered index, the compressed_page_count value indicates the effectiveness of PAGE compression.|  
-|hobt_id|bigint|For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or binary trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if <br /><br /> **Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
+|hobt_id|bigint|For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or B-trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if <br /><br /> **Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
 |column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINING<br /><br /> 3 = FLUSHING<br /><br /> 4 = RETIRING<br /><br /> 5 = READY<br /><br />**Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
 |column_store_delete_buff_state_desc|| NOT VALID -the parent index is not a columnstore index.<br /><br /> OPEN - deleters and scanners use this.<br /><br /> DRAINING - deleters are draining out but scanners still use it.<br /><br /> FLUSHING - buffer is closed and rows in the buffer are being written to the delete bitmap.<br /><br /> RETIRING - rows in the closed delete buffer have been written to the delete bitmap, but the buffer has not been truncated because scanners are still using it. New scanners don't need to use the retiring buffer because the open buffer is enough.<br /><br /> READY - This delete buffer is ready for use. <br /><br /> **Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
 |version_record_count|**bigint**|This is the count of the row version records being maintained in this index.  These row versions are maintained by the [Accelerated Database Recovery](../../relational-databases/accelerated-database-recovery-concepts.md) feature. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  

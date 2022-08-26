@@ -4,8 +4,8 @@
 title: "explore function (olapR) | Microsoft Docs" 
 description: "   Allows for exploration of cube metadata " 
 keywords: "(olapR), explore" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

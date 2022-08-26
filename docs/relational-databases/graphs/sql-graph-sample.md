@@ -67,22 +67,22 @@ CREATE TABLE livesIn AS EDGE;
 CREATE TABLE locatedIn AS EDGE;
 
 -- Insert data into node tables. Inserting into a node table is same as inserting into a regular table
-INSERT INTO Person (Id, name)
+INSERT INTO Person (ID, name)
 	VALUES (1, 'John')
 		 , (2, 'Mary')
 		 , (3, 'Alice')
 		 , (4, 'Jacob')
 		 , (5, 'Julie');
 
-INSERT INTO Restaurant (Id, name, city)
+INSERT INTO Restaurant (ID, name, city)
 	VALUES (1, 'Taco Dell','Bellevue')
 		 , (2, 'Ginger and Spice','Seattle')
 		 , (3, 'Noodle Land', 'Redmond');
 
-INSERT INTO City (Id, name, stateName)
-	VALUES (1,'Bellevue','wa')
-		 , (2,'Seattle','wa')
-		 , (3,'Redmond','wa');
+INSERT INTO City (ID, name, stateName)
+	VALUES (1,'Bellevue','WA')
+		 , (2,'Seattle','WA')
+		 , (3,'Redmond','WA');
 
 -- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.

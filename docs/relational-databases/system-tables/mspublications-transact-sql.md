@@ -1,23 +1,21 @@
 ---
-description: "MSpublications (Transact-SQL)"
-title: "MSpublications (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpublications (Transact-SQL)"
+description: MSpublications (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpublications"
   - "MSpublications_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpublications system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

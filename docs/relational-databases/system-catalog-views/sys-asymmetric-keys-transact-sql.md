@@ -1,29 +1,27 @@
 ---
-description: "sys.asymmetric_keys (Transact-SQL)"
-title: "sys.asymmetric_keys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.asymmetric_keys (Transact-SQL)"
+description: sys.asymmetric_keys (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "asymmetric_keys"
   - "sys.asymmetric_keys_TSQL"
   - "asymmetric_keys_TSQL"
   - "sys.asymmetric_keys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.asymmetric_keys catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.asymmetric_keys (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a row for each asymmetric key.  
   

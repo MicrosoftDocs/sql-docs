@@ -1,19 +1,15 @@
 ---
+title: "Axis Object Properties, Methods, and Events"
 description: "Axis Object Properties, Methods, and Events"
-title: "Axis Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Axis object [ADO MD], members"
-ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Axis object [ADO MD], members"
+apitype: "COM"
 ---
 # Axis Object Properties, Methods, and Events
 ## Properties/Collections  

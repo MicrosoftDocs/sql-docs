@@ -1,23 +1,21 @@
 ---
-description: "MSsnapshotdeliveryprogress (Transact-SQL)"
-title: "MSsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsnapshotdeliveryprogress (Transact-SQL)"
+description: MSsnapshotdeliveryprogress (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsnapshotdeliveryprogress_TSQL"
   - "MSsnapshotdeliveryprogress"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsnapshotdeliveryprogress system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

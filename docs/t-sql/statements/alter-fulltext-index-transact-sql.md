@@ -1,30 +1,27 @@
 ---
-description: "ALTER FULLTEXT INDEX (Transact-SQL)"
-title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER FULLTEXT INDEX (Transact-SQL)"
+description: ALTER FULLTEXT INDEX (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "04/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER FULLTEXT INDEX"
   - "ALTER_FULLTEXT_INDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "modifying full-text indexes"
   - "full-text indexes [SQL Server], modifying"
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
-ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

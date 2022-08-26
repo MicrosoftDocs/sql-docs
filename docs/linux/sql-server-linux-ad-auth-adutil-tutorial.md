@@ -3,151 +3,138 @@ title: Configure Active Directory authentication with SQL Server on Linux using 
 description: Step by step on how to configure Active Directory authentication with SQL Server on Linux using adutil
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
-ms.date: 09/30/2021
+ms.reviewer: vanto, randolphwest
+ms.date: 03/07/2022
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
-# Tutorial: Configure Active Directory authentication with SQL Server on Linux using adutil
+# Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux
 
-This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using [adutil](sql-server-linux-ad-auth-adutil-introduction.md). For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using [**adutil**](sql-server-linux-ad-auth-adutil-introduction.md). For another method of configuring AD authentication using **ktpass**, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install adutil
+> - Install **adutil**
 > - Join Linux machine to your AD domain
-> - Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
-> - Create the SQL Server service keytab file
+> - Create an AD user for SQL Server and set the Service Principal Name (SPN) using **adutil**
+> - Create the SQL Server service keytab (key table) file
 > - Configure SQL Server to use the keytab file
 > - Create AD-based SQL Server logins using Transact-SQL
 > - Connect to SQL Server using AD authentication
 
 ## Prerequisites
 
-The following are required before configuring AD authentication:
+Before configuring AD authentication, you'll need:
 
-- Have an AD Domain Controller (Windows) in your network.
-- Install the adutil tool on the domain joined host machine. 
+- A Windows Domain Controller running Active Directory Domain Services in your network.
+- The **adutil** tool installed on a domain-joined host machine.
 
 ## Domain machine preparation
 
-Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `myubuntu.contoso.com`, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
-For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts SQL Server.
+For this tutorial, we're using an environment in Azure with three virtual machines (VMs). One VM is a Windows Server computer named `adVM.contoso.com`, running as a Domain Controller (DC) with the domain name `contoso.com`. The second VM is a client machine running Windows 10 named `winbox`, which has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts SQL Server.
 
 ## Join the Linux host machine to your AD domain
 
-Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+To join `myubuntu` to the AD domain, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
 ## Install adutil
 
-To install adutil tool, follow the steps explained in: [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md) on the host machine that you added to the domain in the previous step.
+To install **adutil**, follow the steps explained in the article [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md) on the host machine that you added to the domain in the previous step.
 
-## Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
+## Use adutil to create an AD user for SQL Server and set the Service Principal Name (SPN)
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain, and also should be able to create accounts and SPNs in the domain.
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. You must use a privileged account for the `kinit` command, and the host machine should already be part of the domain. The account needs permission to connect to the domain, as well as create accounts and SPNs in the domain.
 
-    > [!IMPORTANT]
-    > Before you run this command, the host machine should already be part of the domain as shown in the previous step.
-
-    ```bash
-    kinit privilegeduser@DOMAIN.COM
-    ```
-
-    Example: For the environment described above, my privileged account is `amvin@CONTOSO.COM`
+    In this example script, a privileged user called `privilegeduser@CONTOSO.COM` has already been created on the domain controller.
 
     ```bash
-    kinit amvin@CONTOSO.COM
+    kinit privilegeduser@CONTOSO.COM
     ```
 
-2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
+1. Using **adutil**, create the new user that will be used as the privileged AD account by SQL Server.
+
+    Passwords can be specified in three different ways. If you use more than one of these methods, they take precedence in the following order:
+
+    - Using the password flag: `--password <password>`
+    - In an environment variable: `ADUTIL_ACCOUNT_PWD`
+    - Interactive input at a command line prompt
+
+    The environment variable or interactive input methods are more secure than the password flag.
 
    ```bash
    adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
-    > [!NOTE]
-    > Passwords may be specified in any of the three ways:
-    >
-    > - Password flag: --password \<password\>
-    > - Environment variables - `ADUTIL_ACCOUNT_PWD`
-    > - Interactive input
-    >
-    > The precedence of password entry methods follows the order of options listed above. The recommended options are to provide the password using Environment variables or interactive input, as they more secure compared to the password flag.
-
-    You can specify the name of the account using the distinguished name (`-distname`) as shown above, or you can also use the Organizational Unit (OU) name as well. The OU name (`--ou`) takes precedence over distinguished name in case you specify both. You can run the below command for more details:
+    You can specify the name of the account using the distinguished name (`--distname`) as shown above, or you can use the Organizational Unit (OU) name. The OU name (`--ou`) takes precedence over distinguished name in case you specify both. You can run the below command for more details:
 
     ```bash
     adutil user create --help
     ```
 
-3. Register SPNs to the principal created above. Use the machine FQDN. In this tutorial, we're using SQL Server's default port, 1433. Your port number could be different.
+1. Register SPNs to the principal created above. You must use the machine's fully qualified domain name (FQDN). In this tutorial, we're using SQL Server's default port, 1433. Your port number could be different.
 
     ```bash
     adutil spn addauto -n sqluser -s MSSQLSvc -H myubuntu.contoso.com -p 1433
     ```
 
-    > [!NOTE]
-    >
-    > - `addauto` will create the SPNs automatically, provided sufficient privileges are present for the kinit account.
-    > - `-n`: Name of the account the SPNs will be assigned to.
-    > - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is `MSSQLSvc`.
-    > - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. In this case, the host name is `myubuntu` and the FQDN is `myubuntu.contoso.com`.
-    > - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port. SQL connections will only work in this case when the SQL Server is listening to the default port, 1433.
+    - `addauto` will create the SPNs automatically, as long as there are sufficient privileges for the `kinit` account.
+    - `-n`: The name of the account the SPNs will be assigned to.
+    - `-s`: The service name to use for generating SPNs. In this case it is for the SQL Server service, which is why the service name is `MSSQLSvc`.
+    - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. In this case, the host name is `myubuntu` and the FQDN is `myubuntu.contoso.com`.
+    - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port. SQL connections will only work in this case when the SQL Server is listening to the default port, 1433.
 
 ## Create the SQL Server service keytab file
 
-Create the keytab file that contains entries for each of the 4 SPNs created previously, and one for the user.
+1. Create the keytab file that contains entries for each of the four SPNs created previously, and one for the user.
 
-```bash
-adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H myubuntu.contoso.com --password 'P@ssw0rd' -s MSSQLSvc 
-```
+    ```bash
+    adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H myubuntu.contoso.com --password 'P@ssw0rd' -s MSSQLSvc 
+    ```
 
-> [!NOTE]
->
-> - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory `/var/opt/mssql/secrets/` should already exist on the host.
-> - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port.
-> - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. In this case, the host name is `myubuntu` and the FQDN is `myubuntu.contoso.com`.
-> - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is `MSSQLSvc`.
-> - `--password`: This is the password of the privileged AD user account that was created earlier.
-> - `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
+    The possible command line options are:
 
-When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the encryption type that is supported by the host and domain.
+    - `-k`: The path where the `mssql.keytab` file will be created. In the above example, the directory `/var/opt/mssql/secrets/` should already exist on the host.
+    - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port.
+    - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. In this case, the host name is `myubuntu` and the FQDN is `myubuntu.contoso.com`.
+    - `-s`: The service name to use for generating SPNs. For this example, the SQL Server service name is `MSSQLSvc`.
+    - `--password`: The password of the privileged AD user account that was created earlier.
+    - `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
 
-If you’d like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
+    You can choose more than one encryption type, as long as your host and domain support the encryption type. In this example, you might choose `aes256-cts-hmac-sha1-96` and `aes128-cts-hmac-sha1-96`. However, you should avoid `arcfour-hmac` in a production environment because it has weak encryption.
 
-```bash
-adutil keytab createauto --help
-```
+    If you'd like to choose the encryption type without being prompted, you can specify your choice of encryption type using the `-e` argument in the above command. For more help on the `adutil keytab` options, run this command:
 
-> [!NOTE]
-> `arcfour-hmac` is a weak encryption and not a recommended encryption type to be used in production environment.
+    ```bash
+    adutil keytab createauto --help
+    ```
 
-Add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to AD:
+1. Add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to AD:
 
-```bash
-adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
-```
+    ```bash
+    adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
+    ```
 
-> [!NOTE]
->
-> - `-k`: Path where you would like the `mssql.keytab` file to be created.
-> - `-p`: Principal to add to the keytab.
+    - `-k`: Path where you would like the `mssql.keytab` file to be created.
+    - `-p`: Principal to add to the keytab.
 
-The adutil keytab create/autocreate doesn't overwrite the previous files, it just appends to the file if already present.
+    The `adutil keytab [ create | autocreate ]` doesn't overwrite the previous files, it just appends to the file if already present.
 
-Ensure the keytab created is owned by the `mssql` user and only the `mssql` user has read/write access to the file. You can run the `chown` and `chmod` commands as shown below:
+1. Make sure the created keytab is owned by the `mssql` user, and that only the `mssql` user has read/write access to the file. You can run the `chown` and `chmod` commands as shown below:
 
-```bash
-chown mssql. /var/opt/mssql/secrets/mssql.keytab
-chmod 440 /var/opt/mssql/secrets/mssql.keytab
-```
+    ```bash
+    chown mssql /var/opt/mssql/secrets/mssql.keytab
+    chmod 440 /var/opt/mssql/secrets/mssql.keytab
+    ```
 
 ## Configure SQL Server to use the keytab
 
@@ -171,22 +158,27 @@ sudo systemctl restart mssql-server
 Connect to the SQL Server and run the following commands to create the login, and confirm that it's listed.
 
 ```sql
-create login [contoso\amvin] From Windows
+CREATE LOGIN [contoso\privilegeduser] FROM WINDOWS;
 SELECT name FROM sys.server_principals;
 ```
 
-## Connect to SQL Server using AD authentication.
+## Connect to SQL Server using AD authentication
 
 To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), log into the SQL Server with your Windows credentials.
 
-You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to the SQL Server using Windows Authentication.
+You can also use a tool like [**sqlcmd**](../tools/sqlcmd-utility.md) to connect to the SQL Server using Windows Authentication.
 
 ```bash
 sqlcmd -E -S 'myubuntu.contoso.com'
 ```
 
-## Next Steps
+## Resources
+
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
+
+## Next steps
 
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
-- If you're interested on how to configure AD authentication with SQL Server on Linux containers, see [Configure Active Directory authentication with SQL Server on Linux  containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
 - [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

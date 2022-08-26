@@ -1,23 +1,21 @@
 ---
-description: "MSsubscriptions (Transact-SQL)"
-title: "MSsubscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscriptions (Transact-SQL)"
+description: MSsubscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscriptions_TSQL"
   - "MSsubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscriptions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

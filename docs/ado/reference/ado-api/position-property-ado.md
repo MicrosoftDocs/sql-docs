@@ -1,21 +1,17 @@
 ---
+title: "Position Property (ADO)"
 description: "Position Property (ADO)"
-title: "Position Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Stream::Position"
-helpviewer_keywords: 
-  - "Position property [ADO]"
-ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Stream::Position"
+helpviewer_keywords:
+  - "Position property [ADO]"
+apitype: "COM"
 ---
 # Position Property (ADO)
 Indicates the current position within a [Stream](./stream-object-ado.md) object.  

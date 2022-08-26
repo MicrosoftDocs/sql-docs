@@ -1,16 +1,14 @@
 ---
-description: "DENY Server Principal Permissions (Transact-SQL)"
-title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Server Principal Permissions (Transact-SQL)"
+description: DENY Server Principal Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DENY statement, impersonate"
   - "permissions [SQL Server], impersonate"
   - "impersonate [SQL Server], denying"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], logins"
   - "servers [SQL Server], permissions"
   - "logins [SQL Server], denying access"
-ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Server Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

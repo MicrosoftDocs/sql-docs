@@ -1,21 +1,17 @@
 ---
+title: "Filter Property"
 description: "Filter Property"
-title: "Filter Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "03/20/2018"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::Filter"
-helpviewer_keywords: 
-  - "Filter property"
-ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
+ms.date: "03/20/2018"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::Filter"
+helpviewer_keywords:
+  - "Filter property"
+apitype: "COM"
 ---
 # Filter Property
 Indicates a filter for data in a [Recordset](./recordset-object-ado.md).  

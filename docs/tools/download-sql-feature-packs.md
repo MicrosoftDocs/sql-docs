@@ -31,7 +31,6 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [SQL Server Backup to Windows Azure Tool](https://go.microsoft.com/fwlink/?LinkID=391033) | Microsoft SQL Server Backup to Windows Azure Tool enables backup to Windows Azure Blob Storage and encrypts and compresses SQL Server backups stored locally or in the cloud. |
-|||
 
 ## Command-line, programming, and T-SQL
 
@@ -42,7 +41,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](sqlpackage/sqlpackage-download.md#dacfx) | The SQL Server Data-tier Application framework (DacFx) is a .NET component that provides application lifecycle services for database development and management and is available in the [SqlPackage](sqlpackage/sqlpackage-download.md) CLI and as a [NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx). The Data-tier Application Framework includes TransactSql.ScriptDOM. |
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
-| [SQL Server Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
+| [SQL Server Management Objects](../relational-databases/server-management-objects-smo/installing-smo.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
 | [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 |||
@@ -53,7 +52,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 |----|-----|
 | [Command Line Utilities for SQL Server](sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
-| [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
+| [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 |||
 
 ## Integration Services

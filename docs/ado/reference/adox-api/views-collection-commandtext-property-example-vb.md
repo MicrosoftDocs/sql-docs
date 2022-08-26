@@ -1,21 +1,17 @@
 ---
+title: "Views Collection, CommandText Property Example (VB)"
 description: "Views Collection, CommandText Property Example (VB)"
-title: "Views Collection, CommandText Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CommandText property [ADOX]"
-  - "Views collection [ADOX], Visual Basic example"
-ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CommandText property [ADOX]"
+  - "Views collection [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Views Collection, CommandText Property Example (VB)
 The following code demonstrates how to use the [Command](./command-property-adox.md) property to update the text of a view.  

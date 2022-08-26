@@ -2,7 +2,7 @@
 description: "catalog.executions (SSISDB Database)"
 title: "catalog.executions (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -47,14 +47,17 @@ ms.author: chugu
 |process_id|**int**|The process ID of the external process, if applicable.|  
 |stopped_by_sid|**varbinary(85)**|The security ID (SID) of the user who stopped the instance of execution.|  
 |stopped_by_name|**nvarchar(128)**|The name of the user who stopped the instance of execution.|  
+|dump_id|**uniqueidentifier**|The ID of an execution dump.|
+|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|machine_name|**nvarchar(128)**|The computer name on which the server instance is running.|
+|worker_agent_id|**uniqueidentifier**|The worker agent ID of Scale Out Worker.|
 |total_physical_memory_kb|**bigint**|The total physical memory (in kilobytes) on the server when the execution is started.|  
 |available_physical_memory_kb|**bigint**|The available physical memory (in kilobytes) on the server when the execution is started.|  
 |total_page_file_kb|**bigint**|The total page memory (in kilobytes) on the server when the execution is started.|  
 |available_page_file_kb|**bigint**|The available page memory (in kilobytes) on the server when the execution is started.|  
-|cpu_count|**int**|The number of logical CPUs on the server when the execution is started.|  
-|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|machine_name|**nvarchar(128)**|The computer name on which the server instance is running.|  
-|dump_id|**uniqueidentifier**|The ID of an execution dump.|  
+|cpu_count|**int**|The number of logical CPUs on the server when the execution is started.|   
+|executed_count|**int**|The number of times the operation was executed.|   
+  
   
 ## Remarks  
  This view displays a row for each instance of execution in the catalog.  

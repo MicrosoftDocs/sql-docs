@@ -1,24 +1,22 @@
 ---
-description: "sys.sql_modules (Transact-SQL)"
 title: "sys.sql_modules (Transact-SQL)"
-ms.custom: ""
+description: sys.sql_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/20/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sql_modules_TSQL"
   - "sql_modules"
   - "sql_modules_TSQL"
   - "sys.sql_modules"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sql_modules catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)
@@ -40,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**null_on_null_input**|**bit**|Module was declared to produce a `NULL` output on any `NULL` input.|  
 |**execute_as_principal_id**|**Int**|ID of the EXECUTE AS database principal.<br /><br /> `NULL` by default or if EXECUTE AS CALLER.<br /><br /> ID of the specified principal if EXECUTE AS SELF or EXECUTE AS \<principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = not natively compiled<br /><br /> 1 = is natively compiled<br /><br /> The default value is 0.|  
-|**is_inlineable**|**bit**|**Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.<br/><br />Indicates whether the module is inlineable or not. Inlineability is based on the conditions specified [here](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = not inlineable<br /><br /> 1 = is inlineable. <br /><br /> For scalar user-defined functions (UDFs), the value will be 1 if the UDF is inlineable, and 0 otherwise. It always contains a value of 1 for inline table-valued functions (TVFs), and 0 for all other module types.<br />|  
+|**is_inlineable**|**bit**|**Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.<br/><br />Indicates whether the module is inlineable or not. Inlineability is based on the conditions specified [here](../user-defined-functions/scalar-udf-inlining.md#requirements).<br /><br /> 0 = not inlineable<br /><br /> 1 = is inlineable. <br /><br /> For scalar user-defined functions (UDFs), the value will be 1 if the UDF is inlineable, and 0 otherwise. It always contains a value of 1 for inline table-valued functions (TVFs), and 0 for all other module types.<br />|  
 |**inline_type**|**bit**|**Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.<br /><br />Indicates whether inlining is turned on for the module currently. <br /><br />0 = inlining is turned off<br /><br /> 1 = inlining is turned on.<br /><br /> For scalar user-defined functions (UDFs), the value will be 1 if inlining is turned on (explicitly or implicitly). The value will always be 1 for inline table-valued functions (TVFs), and 0 for other module types.<br />|  
 
   
@@ -48,6 +46,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The SQL expression for a DEFAULT constraint, object of type D, is found in the [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) catalog view. The SQL expression for a CHECK constraint, object of type C, is found in the [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) catalog view.  
   
  This information is also described in [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ 
+Renaming a stored procedure, function, view, or trigger won't change the name of the corresponding object in the definition column of the `sys.sql_modules` catalog view or the definition returned by the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. For this reason, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name. Learn more in [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

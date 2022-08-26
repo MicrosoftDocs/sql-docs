@@ -8,8 +8,12 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.db2.schemamappingpanel.f1"
+ 
+
 ---
 # Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL)
 In DB2, each database has one or more schemas. By default, SSMA migrates all objects in an DB2 schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database named for the schema. However, you can customize the mapping between DB2 schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  

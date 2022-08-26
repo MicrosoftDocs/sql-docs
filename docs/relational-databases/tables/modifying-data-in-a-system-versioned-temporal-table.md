@@ -2,15 +2,13 @@
 description: "Modifying Data in a System-Versioned Temporal Table"
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2016"
+ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modifying data in a system-versioned temporal table
@@ -55,8 +53,8 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
           , [DeptName]
           , [ManagerID]
           , [ParentDeptID]
-          , SysStartTime
-          , SysEndTime
+          , ValidFrom
+          , ValidTo
     )
        VALUES
          (  11
@@ -86,9 +84,9 @@ CREATE TABLE [dbo].[CompanyLocation]
      [LocID] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY
    , [LocName] [varchar](50) NOT NULL
    , [City] [varchar](50) NOT NULL
-   , [SysStartTime] [datetime2] GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
-   , [SysEndTime] [datetime2] GENERATED ALWAYS AS ROW END HIDDEN NOT NULL
-   , PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])
+   , [ValidFrom] [datetime2] GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
+   , [ValidTo] [datetime2] GENERATED ALWAYS AS ROW END HIDDEN NOT NULL
+   , PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])
 )
 WITH ( SYSTEM_VERSIONING = ON );
 GO
@@ -112,9 +110,9 @@ CREATE TABLE [dbo].[Staging_Department_Partition2]
    , [DeptName] [varchar](50) NOT NULL
    , [ManagerID] [int] NULL
    , [ParentDeptID] [int] NULL
-   , [SysStartTime] [datetime2] GENERATED ALWAYS AS ROW START NOT NULL
-   , [SysEndTime] [datetime2] GENERATED ALWAYS AS ROW END NOT NULL
-   , PERIOD FOR SYSTEM_TIME ( [SysStartTime], [SysEndTime] )
+   , [ValidFrom] [datetime2] GENERATED ALWAYS AS ROW START NOT NULL
+   , [ValidTo] [datetime2] GENERATED ALWAYS AS ROW END NOT NULL
+   , PERIOD FOR SYSTEM_TIME ( [ValidFrom], [ValidTo] )
 ) ON [PRIMARY]
 
 /*Create aligned primary key*/
@@ -163,7 +161,7 @@ However, you cannot update a **PERIOD** column and you cannot update the history
 
 ```sql
 UPDATE [dbo].[Department]
-SET SysStartTime = '2015-09-23 23:48:31.2990175'
+SET ValidFrom = '2015-09-23 23:48:31.2990175'
 WHERE DeptID = 10 ;
 
 Msg 13537, Level 16, State 1, Line 3

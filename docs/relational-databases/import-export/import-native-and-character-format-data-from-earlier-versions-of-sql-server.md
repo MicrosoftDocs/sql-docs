@@ -1,22 +1,20 @@
 ---
 title: "Import native & character format data from earlier versions of SQL Server"
 description: In SQL Server 2019, you can use bcp to import native and character format data from other versions of SQL Server by using the -V switch with a qualifier.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "earlier versions [SQL Server], import and export data formats"
   - "-V switch"
   - "data formats [SQL Server], earlier versions"
   - "previous versions [SQL Server], import and export data formats"
-ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Import native and character format data from earlier versions of SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

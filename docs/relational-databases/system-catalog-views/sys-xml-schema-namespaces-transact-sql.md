@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_namespaces (Transact-SQL)"
-title: "sys.xml_schema_namespaces (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_namespaces (Transact-SQL)"
+description: sys.xml_schema_namespaces (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_namespaces_TSQL"
   - "sys.xml_schema_namespaces"
   - "xml_schema_namespaces"
   - "xml_schema_namespaces_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_namespaces catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

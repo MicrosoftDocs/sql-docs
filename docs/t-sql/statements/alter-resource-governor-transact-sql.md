@@ -1,26 +1,23 @@
 ---
-description: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
-title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
+description: ALTER RESOURCE GOVERNOR (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER RESOURCE GOVERNOR"
   - "ALTER_RESOURCE_GOVERNOR_TSQL"
   - "ALTER RESOURCE GOVERNOR RECONFIGURE"
   - "ALTER_RESOURCE_GOVERNOR_RECONFIGURE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER RESOURCE GOVERNOR"
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
-ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.server_assembly_modules (Transact-SQL)"
-title: "sys.server_assembly_modules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_assembly_modules (Transact-SQL)"
+description: sys.server_assembly_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_assembly_modules_TSQL"
   - "sys.server_assembly_modules"
   - "server_assembly_modules"
   - "sys.server_assembly_modules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_assembly_modules catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,7 +2,7 @@
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
 description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
-ms.date: "05/31/2021"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: v-davidengel
@@ -32,8 +32,8 @@ The Connection tab is provider-specific and displays only the connection propert
 |Password|Type the password to use for authentication when you sign in to the data source.|
 |Blank password|When checked, enables the specified provider to use a blank password in the connection string.|
 |Allow saving password|When checked, allows the password to be saved with the connection string. Whether the password is included in the connection string depends on the functionality of the calling application. <br/><br/>**NOTE:** If saved, the password is returned and saved unmasked and unencrypted.|
-|Use strong encryption for data|When checked, data that is passed through the connection will be encrypted.|
-|Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
+|Use strong encryption for data|When checked, data that is passed through the connection will be encrypted. This option is only available for versions 18.x.x.|
+|Trust server certificate|When unchecked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority. This option is only available for versions 18.x.x.|
 |Select the database|Select or type the database name that you want to access.|
 |Attach a database file as a database name|Specifies the name of the primary file for an attachable database. This database is attached and used as the default database for the data source. In the first textbox under this section, type the database name to use for the attached database file.<br/><br/>Type the full path to the database file to be attached in text box labeled `Using the filename`, or click on the `...` button to browse for the database file.|
 |Change Password|Displays Change SQL Server Password dialog. |
@@ -49,6 +49,9 @@ Use the Advanced tab to view and set additional initialization properties.
 | Connect timeout | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server waits for initialization to complete. If initialization times out, an error is returned and the connection is not created.|
 | Connect retry count | Specifies the number of times that the Microsoft OLE DB Driver for SQL Server will attempt to reconnect in the case of connection loss.|
 | Connect retry interval | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server will wait between reconnection attempts.|
+|Connection encryption|When `Mandatory` or `Strict`, data that is passed through the connection will be encrypted. The `Strict` option additionally encrypts the PRELOGIN packets. This option is only available for versions 19.x.x.|
+|Host name in certificate|The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is only available for versions 19.x.x.|
+|Trust server certificate|When unchecked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority. This option is only available for versions 19.x.x.|
 
 
 > [!NOTE]  

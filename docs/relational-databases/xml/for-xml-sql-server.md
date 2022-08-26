@@ -9,7 +9,7 @@ f1_keywords:
   - "FOR_XML_TSQL"
 dev_langs:
   - TSQL
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FOR XML clause, about FOR XML clause"
   - "PATH FOR XML mode, construction"
   - "EXPLICIT FOR XML mode"
@@ -18,17 +18,16 @@ helpviewer_keywords:
   - "XML [SQL Server], FOR XML clause"
   - "AUTO FOR XML mode"
   - "XML [SQL Server], construction"
-ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.custom: "fresh2019may"
-ms.date: 04/03/2020
+ms.date: 05/05/2022
 # monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # FOR XML (SQL Server)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A SELECT query returns results as a rowset. You can optionally retrieve formal results of a SQL query as XML by specifying the FOR XML clause in the query. The FOR XML clause can be used in top-level queries and in subqueries. The top-level FOR XML clause can be used only in the SELECT statement. In subqueries, FOR XML can be used in the INSERT, UPDATE, and DELETE statements. FOR XML can also be used in assignment statements.
 
@@ -114,7 +113,7 @@ Now the disambiguated query returns the following text:
 <x LastName="Achong"/>
 ```
 
-## See Also
+## See also
 
 [Basic Syntax of the FOR XML Clause](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)  
 [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  

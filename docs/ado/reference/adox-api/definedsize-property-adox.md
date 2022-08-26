@@ -1,25 +1,21 @@
 ---
+title: "DefinedSize Property (ADOX)"
 description: "DefinedSize Property (ADOX)"
-title: "DefinedSize Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Column::DefinedSize"
   - "_Column::put_DefinedSize"
   - "_Column::GetDefinedSize"
   - "_Column::get_DefinedSize"
   - "_Column::PutDefinedSize"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DefinedSize property [ADOX]"
-ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # DefinedSize Property (ADOX)
 Indicates the stated maximum size of the column.  

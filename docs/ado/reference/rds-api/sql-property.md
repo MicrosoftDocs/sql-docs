@@ -1,19 +1,15 @@
 ---
+title: "SQL Property"
 description: "SQL Property"
-title: "SQL Property | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "SQL property [RDS]"
-ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SQL property [RDS]"
+apitype: "COM"
 ---
 # SQL Property
 Indicates the query string used to retrieve the [Recordset](../ado-api/recordset-object-ado.md).  

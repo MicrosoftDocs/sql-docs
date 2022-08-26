@@ -1,29 +1,28 @@
 ---
-description: "sys.dm_exec_text_query_plan (Transact-SQL)"
-title: "sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_text_query_plan (Transact-SQL)"
+description: sys.dm_exec_text_query_plan (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_exec_text_query_plan"
   - "sys.dm_exec_text_query_plan_TSQL"
   - "dm_exec_text_query_plan_TSQL"
   - "sys.dm_exec_text_query_plan"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_text_query_plan dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_text_query_plan (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or for a specific statement within the batch. The query plan specified by the plan handle can either be cached or currently executing. This table-valued function is similar to [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), but has the following differences:  
   
@@ -97,7 +96,7 @@ A value of -1 indicates the end of the batch. The default value is -1.
   
 -   If a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or stored procedure contains a call to a user-defined function or a call to dynamic SQL, for example using EXEC (*string*), the compiled XML Showplan for the user-defined function is not included in the table returned by **sys.dm_exec_text_query_plan** for the batch or stored procedure. Instead, you must make a separate call to **sys.dm_exec_text_query_plan** for the *plan_handle* that corresponds to the user-defined function.  
   
-When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
+When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
   
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  

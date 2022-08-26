@@ -1,28 +1,27 @@
 ---
-description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
+description: ADD SIGNATURE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: 03/16/2021
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADD SIGNATURE statement"
   - "adding digital signatures"
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
-ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 03/16/2021
+dev_langs:
+  - "TSQL"
 ---
 
 # ADD SIGNATURE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Adds a digital signature to a stored procedure, function, assembly, or DML-trigger. Also adds a countersignature to a stored procedure, function, assembly, or DML-trigger.
 

@@ -1,7 +1,7 @@
 ---
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
 description: You can add gauges to a Reporting Services mobile report. Gauges display a single value in a dataset by itself or compared to a goal.
-ms.date: 03/30/2017
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add gauges to mobile reports | Reporting Services
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.
 
 ![PBI_SSMRP_Gauges](../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png)  
@@ -38,7 +41,8 @@ You can filter gauge values by connecting them to navigators on the mobile repor
 
 4. [optional] To change the aggregation, select **Options** and select a different aggregation.
    
-   >**Note**: When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
+   > [!NOTE]  
+   > When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
 
 ## Filter a gauge
   

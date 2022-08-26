@@ -11,8 +11,11 @@ helpviewer_keywords:
   - "connecting to SQL Server 2008, SQL Server permission"
   - "connecting to SQL Server 2008, synchronization"
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka
+f1_keywords: 
+    - "ssma.mysql.connecttotarget.f1" 
+    - "ssma.mysql.connectmssqlform.f1"
 ---
 
 # Connecting to SQL Server (MySQLToSQL)

@@ -1,30 +1,29 @@
 ---
+title: "DECLARE CURSOR (Transact-SQL)"
 description: "DECLARE CURSOR (Transact-SQL)"
-title: "DECLARE CURSOR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "DECLARE_CURSOR_TSQL"
   - "CURSOR_TSQL"
   - "DECLARE CURSOR"
   - "CURSOR"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DECLARE CURSOR statement"
   - "cursors [SQL Server], attributes"
   - "local cursors [SQL Server]"
   - "nesting cursors"
   - "Transact-SQL cursors, attributes"
   - "global cursors [SQL Server]"
-ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

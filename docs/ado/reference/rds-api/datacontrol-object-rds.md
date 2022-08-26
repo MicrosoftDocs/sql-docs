@@ -1,22 +1,18 @@
 ---
+title: "DataControl Object (RDS)"
 description: "DataControl Object (RDS)"
-title: "DataControl Object (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "DataControl"
-  - "RDS.DataControl"
-helpviewer_keywords: 
-  - "DataControl object [ADO]"
-ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "DataControl"
+  - "RDS.DataControl"
+helpviewer_keywords:
+  - "DataControl object [ADO]"
+apitype: "COM"
 ---
 # DataControl Object (RDS)
 Binds a data query [Recordset](../ado-api/recordset-object-ado.md) to one or more controls (for example, a text box, grid control, or combo box) to display the **Recordset** data on a Web page.  

@@ -1,23 +1,21 @@
 ---
-description: "sysmergeschemachange (Transact-SQL)"
-title: "sysmergeschemachange (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergeschemachange (Transact-SQL)"
+description: sysmergeschemachange (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergeschemachange_TSQL"
   - "sysmergeschemachange"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergeschemachange system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

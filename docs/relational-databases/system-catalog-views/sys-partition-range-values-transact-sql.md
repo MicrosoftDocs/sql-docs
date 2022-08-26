@@ -1,25 +1,23 @@
 ---
-description: "sys.partition_range_values (Transact-SQL)"
-title: "sys.partition_range_values (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.partition_range_values (Transact-SQL)"
+description: sys.partition_range_values (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.partition_range_values"
   - "partition_range_values_TSQL"
   - "partition_range_values"
   - "sys.partition_range_values_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.partition_range_values catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_range_values (Transact-SQL)

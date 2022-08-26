@@ -1,21 +1,20 @@
 ---
 title: "Find objects with the most locks using Extended Events"
 description: This article shows how to find objects that have the most locks. Database administrators may need to find most locked objects to improve database performance.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "objects [SQL Server], extended events"
   - "xe"
   - "extended events [SQL Server], locks"
   - "objects [SQL Server], locks"
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-author: LitKnd
-ms.author: kendralittle
-ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find the Objects That Have the Most Locks Taken on Them
@@ -101,7 +100,7 @@ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmans
 > The preceding Transact-SQL code example runs on SQL Server on-premises, but might _not quite run on Azure SQL Database._ The core portions of the example directly involving Events, such as `ADD EVENT sqlserver.lock_acquired` do work on Azure SQL Database too. But preliminary items, such as `sys.server_event_sessions` must be edited to their Azure SQL Database counterparts like `sys.database_event_sessions` for the example to run.
 > For more information about these minor differences between SQL Server on-premises versus Azure SQL Database, see the following articles:
 > - [Extended events in Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
-> - [System objects that support extended events](xevents-references-system-objects.md)
+> - [System objects that support Extended Events](xevents-references-system-objects.md)
 
 After the statements in the preceding Transact-SQL script finish, the **Results** tab of Query Editor displays the following columns:
   

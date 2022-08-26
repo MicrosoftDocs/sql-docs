@@ -1,22 +1,18 @@
 ---
+title: "ChangePassword Method (ADOX)"
 description: "ChangePassword Method (ADOX)"
-title: "ChangePassword Method (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_User25::raw_ChangePassword"
-  - "_User25::ChangePassword"
-helpviewer_keywords: 
-  - "ChangePassword method [ADOX]"
-ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_User25::raw_ChangePassword"
+  - "_User25::ChangePassword"
+helpviewer_keywords:
+  - "ChangePassword method [ADOX]"
+apitype: "COM"
 ---
 # ChangePassword Method (ADOX)
 Changes the password for a [user](./user-object-adox.md) account.  

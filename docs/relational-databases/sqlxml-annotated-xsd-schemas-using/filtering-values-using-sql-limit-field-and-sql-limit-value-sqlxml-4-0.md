@@ -1,24 +1,20 @@
 ---
 title: "Filter with sql:limit-field and sql:limit-value (SQLXML)"
-description: Learn how to use the sql:limit-field and sql:limit-value annotations in SQLXML 4.0 to filter the data returned by a query on the basis of a limiting value.
+description: "Learn how to use the sql:limit-field and sql:limit-value annotations in SQLXML 4.0 to filter the data returned by a query on the basis of a limiting value."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "annotated XSD schemas, filtering values"
   - "limiting values [SQLXML]"
   - "limit-value annotation"
   - "limit-field annotation"
-  - "sql:limit-field"
-  - "sql:limit-value"
-  - "filtering [SQLXML]"
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)

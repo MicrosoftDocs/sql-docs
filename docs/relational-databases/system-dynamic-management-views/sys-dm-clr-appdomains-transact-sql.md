@@ -1,29 +1,27 @@
 ---
-description: "sys.dm_clr_appdomains (Transact-SQL)"
-title: "sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_clr_appdomains (Transact-SQL)"
+description: sys.dm_clr_appdomains (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_clr_appdomains"
   - "sys.dm_clr_appdomains"
   - "dm_clr_appdomains_TSQL"
   - "sys.dm_clr_appdomains_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns a row for each application domain in the server. Application domain (**AppDomain**) is a construct in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that is the unit of isolation for an application. You can use this view to understand and troubleshoot CLR integration objects that are executing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Returns a row for each application domain in the server. Application domain (**AppDomain**) is a construct in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that is the unit of isolation for an application. You can use this view to understand and troubleshoot CLR integration objects that are executing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  There are several types of CLR integration managed database objects. For general information about these objects, see [Building Database Objects with Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Whenever these objects are executed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **AppDomain** under which it can load and execute the required code. The isolation level for an **AppDomain** is one **AppDomain** per database per owner. That is, all CLR objects owned by a user are always executed in the same **AppDomain** per-database (if a user registers CLR database objects in different databases, the CLR database objects will run in different application domains). An **AppDomain** is not destroyed after the code finishes execution. Instead, it is cached in memory for future executions. This improves performance.  
   

@@ -1,16 +1,13 @@
 ---
+title: "Error Object Properties Example (VB)"
 description: "Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)"
-title: "Error Object Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Number property [ADO], Visual Basic example"
   - "Source property [ADO], Visual Basic example"
   - "NativeError property [ADO], Visual Basic example"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "HelpFile property [ADO], Visual Basic example"
   - "SQLState property [ADO], Visual Basic example"
   - "HelpContext property [ADO], Visual Basic example"
-ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)
 This example triggers an error, traps it, and displays the [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md), and [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) properties of the resulting [Error](../../../ado/reference/ado-api/error-object.md) object.  

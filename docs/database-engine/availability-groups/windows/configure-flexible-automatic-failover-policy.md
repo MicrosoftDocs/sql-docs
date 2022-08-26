@@ -10,6 +10,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
+  - "failover [SQL Server], Always On Availability Groups"
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
@@ -97,8 +98,9 @@ ms.custom: "seo-lt-2019"
         |3|Three|On critical server error. Any condition of lower value is satisfied or an internal critical server error occurs.<br /><br /> This is the default level.|  
         |4|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |5|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
+    
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#FClevel).  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
   
     -   To configure the health check timeout threshold, use the HEALTH_CHECK_TIMEOUT = *n* option, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds)  
   
@@ -125,8 +127,8 @@ ms.custom: "seo-lt-2019"
         |**OnCriticalServerError**|Three|On critical server error. Any condition of lower value is satisfied or an internal critical server error occurs.<br /><br /> This is the default level.|  
         |**OnModerateServerError**|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |**OnAnyQualifiedFailureConditions**|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
-  
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
+         
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#FClevel).   
   
          For example, the following command changes the failure-condition level of an existing availability group, `AG1`, to level one.  
   

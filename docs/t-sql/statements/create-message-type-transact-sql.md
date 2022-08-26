@@ -1,14 +1,14 @@
 ---
-description: "CREATE MESSAGE TYPE (Transact-SQL)"
-title: "CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE MESSAGE TYPE (Transact-SQL)"
+description: CREATE MESSAGE TYPE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_MESSAGE_TSQL"
   - "MESSAGE_TSQL"
   - "MESSAGE"
@@ -17,18 +17,15 @@ f1_keywords:
   - "MESSAGE TYPE"
   - "MESSAGE_TYPE_TSQL"
   - "CREATE MESSAGE TYPE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML [Service Broker]"
   - "validation [Service Broker]"
   - "message types [Service Broker], creating"
   - "empty messages [SQL Server]"
   - "binary [SQL Server], message types"
   - "CREATE MESSAGE TYPE statement"
-ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

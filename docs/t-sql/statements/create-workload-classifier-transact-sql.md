@@ -1,25 +1,23 @@
 ---
-description: "CREATE WORKLOAD Classifier (Transact-SQL)"
-title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE WORKLOAD Classifier (Transact-SQL)"
+description: CREATE WORKLOAD Classifier (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.reviewer: "wiassaf"
 ms.date: 01/24/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WORKLOAD CLASSIFIER"
   - "WORKLOAD_CLASSIFIER_TSQL"
   - "CREATE WORKLOAD CLASSIFIER"
   - "CREATE_WORKLOAD_CLASSIFIER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE WORKLOAD CLASSIFIER statement"
-ms.assetid: 
-author: ronortloff
-ms.author: rortloff
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
@@ -65,7 +63,7 @@ WITH
  The security account used to classified against.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
 
 > [!NOTE]
-> Use the ```user_name()``` function, when connected to the system, to verify the membername that the classification process will use to classify the request.  Verifying the membername with the ```user_name()``` function can be helpful troubleshooting AAD or service principle classification issues.  If ```user_name()``` returns "dbo" you can use "dbo" as the membername to classify the requests.  Keep in mind all members of the "dbo" role will be classified.  Additional classification parameters such as *WLM_LABEL* or *WLM_CONTEXT* can also be used to specifically classify requests from multiple AAD accounts mapping to the "dbo" role.
+> Use the ```user_name()``` function, when connected to the system, to verify the membername that the classification process will use to classify the request.  Verifying the membername with the ```user_name()``` function can be helpful troubleshooting AAD or service principal classification issues.  If ```user_name()``` returns "dbo" you can use "dbo" as the membername to classify the requests.  Keep in mind all members of the "dbo" role will be classified.  Additional classification parameters such as *WLM_LABEL* or *WLM_CONTEXT* can also be used to specifically classify requests from multiple AAD accounts mapping to the "dbo" role.
  
  *WLM_LABEL*   
  Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.

@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_filestream_file_io_requests (Transact-SQL)"
-title: "sys.dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_filestream_file_io_requests (Transact-SQL)"
+description: sys.dm_filestream_file_io_requests (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_filestream_file_io_requests"
   - "dm_filestream_file_io_requests"
   - "sys.dm_filestream_file_io_requests_TSQL"
   - "dm_filestream_file_io_requests_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_filestream_file_io_requests catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

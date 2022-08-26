@@ -1,23 +1,21 @@
 ---
-description: "MSdbms_datatype (Transact-SQL)"
-title: "MSdbms_datatype (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdbms_datatype (Transact-SQL)"
+description: MSdbms_datatype (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdbms_datatype"
   - "MSdbms_datatype_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdbms_datatype system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

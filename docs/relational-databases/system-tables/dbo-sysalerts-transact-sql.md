@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysalerts (Transact-SQL)"
-title: "dbo.sysalerts (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysalerts (Transact-SQL)"
+description: dbo.sysalerts (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysalerts"
   - "sysalerts_TSQL"
   - "dbo.sysalerts_TSQL"
   - "sysalerts"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysalerts system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

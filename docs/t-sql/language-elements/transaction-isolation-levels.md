@@ -1,22 +1,21 @@
 ---
+title: "Transaction Isolation Levels"
 description: "Transaction Isolation Levels"
-title: "Transaction Isolation Levels | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "locking [SQL Server], hints"
   - "isolation levels [SQL Server], metadata access"
   - "hints [SQL Server], locking"
-ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Transaction Isolation Levels
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

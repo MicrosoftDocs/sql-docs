@@ -1,21 +1,17 @@
 ---
+title: "SaveOptionsEnum"
 description: "SaveOptionsEnum"
-title: "SaveOptionsEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "SaveOptionsEnum"
-helpviewer_keywords: 
-  - "SaveOptionsEnum enumeration [ADO]"
-ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "SaveOptionsEnum"
+helpviewer_keywords:
+  - "SaveOptionsEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # SaveOptionsEnum
 Specifies whether a file should be created or overwritten when saving from a [Stream](./stream-object-ado.md) object. The values can be **adSaveCreateNotExist** or **adSaveCreateOverWrite**..  

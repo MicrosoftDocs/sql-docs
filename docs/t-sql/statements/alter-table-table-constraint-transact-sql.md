@@ -1,22 +1,20 @@
 ---
-description: "ALTER TABLE table_constraint (Transact-SQL)"
-title: "table_constraint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CONSTRAINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "table_constraint"
-ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
+title: "table_constraint (Transact-SQL)"
+description: ALTER TABLE table_constraint (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.technology: t-sql
+ms.topic: reference
+ms.custom: event-tier1-build-2022
+f1_keywords:
+  - "CONSTRAINT_TSQL"
+helpviewer_keywords:
+  - "table_constraint"
+dev_langs:
+  - "TSQL"
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -187,11 +185,12 @@ ms.author: vanto
  When FOREIGN KEY or CHECK constraints are added, all existing data is verified for constraint violations unless the WITH NOCHECK option is specified. If any violations occur, ALTER TABLE fails and an error is returned. When a new PRIMARY KEY or UNIQUE constraint is added to an existing column, the data in the column or columns must be unique. If duplicate values are found, ALTER TABLE fails. The WITH NOCHECK option has no effect when PRIMARY KEY or UNIQUE constraints are added.  
   
  Each PRIMARY KEY and UNIQUE constraint generates an index. The number of UNIQUE and PRIMARY KEY constraints cannot cause the number of indexes on the table to exceed 999 nonclustered indexes and 1 clustered index. Foreign key constraints do not automatically generate an index. However, foreign key columns are frequently used in join criteria in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index on the foreign key columns enables the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to quickly find related data in the foreign key table.  
+
+ SQL Server 2022 introduces resumable operations for adding table constraints for primary key and unique key constraints. For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](../../relational-databases/security/resumable-add-table-constraints.md).
   
 ## Examples  
  For examples, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
   

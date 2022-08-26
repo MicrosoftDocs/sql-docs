@@ -1,23 +1,21 @@
 ---
-description: "MSpeer_request (Transact-SQL)"
-title: "MSpeer_request (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpeer_request (Transact-SQL)"
+description: MSpeer_request (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpeer_request"
   - "MSpeer_request_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpeer_request system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

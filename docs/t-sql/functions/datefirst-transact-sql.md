@@ -1,21 +1,18 @@
 ---
+title: "@@DATEFIRST (Transact-SQL)"
 description: "@@DATEFIRST (Transact-SQL)"
-title: "@@DATEFIRST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATE_FORMAT_TSQL"
   - "DATE FORMAT"
   - "@@DATEFIRST_TSQL"
   - "@@DATEFIRST"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "date and time [SQL Server], SET DATEFIRST"
   - "first day of week [SQL Server]"
@@ -29,10 +26,9 @@ helpviewer_keywords:
   - "@@DATEFIRST function [SQL Server]"
   - "functions [SQL Server], date and time"
   - "options [SQL Server], date"
-ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # &#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

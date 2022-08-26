@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_filestream_file_io_handles (Transact-SQL)"
-title: "sys.dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_filestream_file_io_handles (Transact-SQL)"
+description: sys.dm_filestream_file_io_handles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_filestream_file_io_handles"
   - "sys.dm_filestream_file_io_handles"
   - "dm_filestream_file_io_handles_TSQL"
   - "sys.dm_filestream_file_io_handles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_filestream_file_io_handle catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

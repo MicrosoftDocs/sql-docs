@@ -1,23 +1,24 @@
 ---
-title: Administration resources for Big Data Clusters 
+title: Administration resources for Big Data Clusters
 titleSuffix: SQL Server
-description: This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: wiassaf, dacoelho
+description: Learn how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI azdata commands.
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 09/28/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: overview
+ms.custom: kr2b-contr-experiment
 ---
 
-# Administration resources for Big Data Clusters
+# Administration resources for SQL Server 2019 Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
+This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and [Azure Data CLI azdata](../azdata/reference/reference-azdata-app.md) commands.
 
 ## Know your architecture
 
@@ -27,9 +28,9 @@ Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../inclu
 
 ## Manage and operate with tools
 
-The following articles describe how to manage and operate big data clusters: 
+The following articles describe how to manage and operate Big Data Clusters:
 
-- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+- [Connect to a SQL Server Big Data Cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md)
 - [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md)
@@ -37,7 +38,7 @@ The following articles describe how to manage and operate big data clusters:
 
 ## Monitor with tools
 
-The following articles describe how to monitor Big Data Clusters: 
+The following articles describe how to monitor Big Data Clusters:
 
 - [Monitor Big Data Clusters status by using Azure Data Studio](cluster-monitor-ads.md)
 - [Monitor Big Data Clusters by using azdata and kubectl](cluster-monitor-cmdlet.md)
@@ -54,6 +55,38 @@ The following articles list many of the Jupyter Notebooks that are available in 
 - [Monitoring clusters by using notebooks](cluster-monitor-notebooks.md)
 - [Gathering and analyzing logs in a cluster by using notebooks](cluster-logging-notebooks.md)
 
+### Where to find [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] administration notebooks
+
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience by using Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
+
+1. To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut **Ctrl**+**Shift**+**P** or select **View**, and then **Command Palette**. Select **Add Remote Book**.
+
+1. In the **Add Remote Book** dialog box, select the desired latest version for operational notebooks. Select **Add**, as shown below:
+
+   ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
+
+1. Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook.
+
+   > [!NOTE]
+   > Make sure you select the correct notebook version. It should match the cumulative update version of your big data cluster.
+
+1. Select the version of the notebooks base on the cumulative update of your big data cluster:
+
+   ![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
+
+1. When you select **Add**, you gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio:
+
+   ![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
+
+### How to use these notebooks
+
+To learn how to use the notebooks, see these articles:
+
+- [Monitor Big Data Clusters by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in a big data cluster by using notebooks](cluster-logging-notebooks.md)
+- [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
+- [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
+
 ## Big Data Clusters troubleshooting resources
 
 The following articles describe how to troubleshoot Big Data Clusters:
@@ -65,42 +98,10 @@ The following articles describe how to troubleshoot Big Data Clusters:
 - [Troubleshoot HDFS in SQL Server Big Data Clusters](troubleshoot-hdfs.md)
 
 The following articles describe how to troubleshoot big data clusters deployed in Active Directory mode:
+
 - [Troubleshoot SQL Server Big Data Clusters Active Directory integration](troubleshoot-active-directory.md) 
 - [Troubleshoot Active Directory mode login failures](troubleshoot-ad-login-failed-untrusted-domain.md)
 - [Troubleshoot Big Data Clusters Active Directory mode deployment stopped](troubleshoot-ad-reverse-lookup-zone.md)
-
-
-## Where to find [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] administration notebooks 
-
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
-
-To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut `Ctrl+Shift+P` (or select **View**, and then **Command Palette**). Select **Add Remote Book**. 
-
-In the **Add Remote Book** dialogue, select the desired latest version for operational notebooks. Select **Add**, as shown below:
-
-![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
-
-Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook. 
-
-   > [!NOTE]
-   > Make sure you select the correct notebook version. It should to match the cumulative update version of your big data cluster.
-
-Select the version of the notebooks base on the cumulative update of your big data cluster:
-
-![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
-
-When you select **Add**, you'll gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio: 
-
-![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
-
-### How to use these notebooks 
-
-To learn how to use the notebooks, see these articles:
-
-- [Monitor Big Data Clusters by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-- [Gathering and analyzing logs in a big data cluster by using notebooks](cluster-logging-notebooks.md)
-- [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
-- [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 
 ## Next steps
 

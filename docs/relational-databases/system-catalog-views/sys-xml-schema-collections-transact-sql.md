@@ -1,29 +1,28 @@
 ---
-description: "sys.xml_schema_collections (Transact-SQL)"
-title: "sys.xml_schema_collections (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_collections (Transact-SQL)"
+description: sys.xml_schema_collections (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_collections_TSQL"
   - "sys.xml_schema_collections"
   - "xml_schema_collections"
   - "xml_schema_collections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_collections catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.xml_schema_collections (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a row per XML schema collection. An XML schema collection is a named set of XSD definitions. The XML schema collection itself is contained in a relational schema, and it is identified by a schema-scoped [!INCLUDE[tsql](../../includes/tsql-md.md)] name. The following tuples are unique: xml_collection_id, and schema_id and name.  
   

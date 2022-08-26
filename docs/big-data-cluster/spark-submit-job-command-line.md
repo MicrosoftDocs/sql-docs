@@ -2,13 +2,13 @@
 title: "Submit Spark jobs: Command-line tools"
 titleSuffix: SQL Server Big Data Clusters
 description: Submit Spark jobs on SQL Server Big Data Clusters by using command-line tools.
-author: dacoelho
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: MikeRayMSFT
 ms.date: 04/01/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Submit Spark jobs by using command-line tools

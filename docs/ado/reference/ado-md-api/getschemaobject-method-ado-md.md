@@ -1,22 +1,18 @@
 ---
+title: "GetSchemaObject Method (ADO MD)"
 description: "GetSchemaObject Method (ADO MD)"
-title: "GetSchemaObject Method (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "GetSchemaObject"
-  - "Cellset::GetSchemaObject"
-helpviewer_keywords: 
-  - "GetSchemaObject method [ADO MD]"
-ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "GetSchemaObject"
+  - "Cellset::GetSchemaObject"
+helpviewer_keywords:
+  - "GetSchemaObject method [ADO MD]"
+apitype: "COM"
 ---
 # GetSchemaObject Method (ADO MD)
 Retrieves an ADO MD schema object ([Dimension](./dimension-object-ado-md.md), [Hierarchy](./hierarchy-object-ado-md.md), [Level](./level-object-ado-md.md), or [Member](./member-object-ado-md.md)) by its [UniqueName](./uniquename-property-ado-md.md).  

@@ -1,23 +1,20 @@
 ---
-description: "Windows Collation Name (Transact-SQL)"
-title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Windows Collation Name (Transact-SQL)"
+description: Windows Collation Name (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Windows collations [SQL Server]"
   - "names [SQL Server], collations"
   - "collations [SQL Server], Windows collations"
   - "Collation Designator"
-ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Windows Collation Name (Transact-SQL)

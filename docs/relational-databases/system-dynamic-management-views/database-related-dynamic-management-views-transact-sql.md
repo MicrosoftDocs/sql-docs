@@ -1,20 +1,18 @@
 ---
-description: "Database Related Dynamic Management Views (Transact-SQL)"
-title: "Database Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Database Related Dynamic Management Views (Transact-SQL)"
+description: Database Related Dynamic Management Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/18/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], database"
+dev_langs:
+  - "TSQL"
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

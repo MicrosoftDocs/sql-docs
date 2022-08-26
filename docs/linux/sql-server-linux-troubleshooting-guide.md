@@ -3,7 +3,7 @@ title: Troubleshoot SQL Server on Linux
 description: Troubleshoot SQL Server running on Linux or in a Docker container. Learn where to find information about supported features and known limitations.
 author: VanMSFT 
 ms.author: vanto
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ms.date: 02/24/2022
 ms.topic: troubleshooting
 ms.prod: sql
@@ -38,11 +38,11 @@ If you have difficulty connecting to your Linux [!INCLUDE[ssNoVersion](../includ
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
    >
-   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart#connect).
 
 - If applicable, check that you opened the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] port (default 1433) on the firewall.
 
-- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart#remote).
 
 - Verify that the user name and password don't contain any typos, extra spaces, or incorrect casing.
 

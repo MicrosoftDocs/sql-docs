@@ -1,17 +1,15 @@
 ---
-description: "sys.external_data_sources (Transact-SQL)"
 title: "sys.external_data_sources (Transact-SQL)"
-ms.custom: ""
+description: sys.external_data_sources (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/02/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_data_sources (Transact-SQL)

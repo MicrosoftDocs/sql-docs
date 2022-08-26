@@ -1,26 +1,23 @@
 ---
 title: CONTEXT_INFO (Transact-SQL)
 description: "CONTEXT_INFO (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONTEXT_INFO_TSQL"
   - "CONTEXT_INFO"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONTEXT_INFO function"
   - "Multiple Active Result Sets"
   - "context information [SQL Server]"
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/24/2017"
+dev_langs:
+  - "TSQL"
 ---
 # CONTEXT_INFO (Transact-SQL)
 
@@ -46,7 +43,7 @@ If **context_info** was not set:
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] returns a unique session-specific GUID.  
   
 ## Remarks  
-The Multiple Active Result Sets (MARS) feature enables applications to run multiple batches, or requests, at the same time, on the same connection. When one of the MARS connection batches runs SET CONTEXT_INFO, the `CONTEXT_INFO` function returns the new context value, when the `CONTEXT_INFO` function runs in the same batch as the SET statement. If the `CONTEXT_INFO` function runs in one or more of the other connection batches, the `CONTEXT_FUNCTION` does not return the new value unless those batches started after completion of the batch that ran the SET statement.
+The Multiple Active Result Sets (MARS) feature enables applications to run multiple batches, or requests, at the same time, on the same connection. When one of the MARS connection batches runs SET CONTEXT_INFO, the `CONTEXT_INFO` function returns the new context value, when the `CONTEXT_INFO` function runs in the same batch as the SET statement. If the `CONTEXT_INFO` function runs in one or more of the other connection batches, the `CONTEXT_INFO` function does not return the new value unless those batches started after completion of the batch that ran the SET statement.
   
 ## Permissions  
 Requires no special permissions. The following system views store the context information, but querying these views directly requires SELECT and VIEW SERVER STATE permissions:

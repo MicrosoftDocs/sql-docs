@@ -1,21 +1,17 @@
 ---
+title: "Cell Object (ADO MD)"
 description: "Cell Object (ADO MD)"
-title: "Cell Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Cell"
-helpviewer_keywords: 
-  - "Cell object [ADO MD]"
-ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Cell"
+helpviewer_keywords:
+  - "Cell object [ADO MD]"
+apitype: "COM"
 ---
 # Cell Object (ADO MD)
 Represents the data at the intersection of axis coordinates contained in a cellset.  

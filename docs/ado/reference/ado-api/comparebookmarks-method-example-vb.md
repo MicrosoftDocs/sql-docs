@@ -1,20 +1,16 @@
 ---
+title: "CompareBookmarks Method Example (VB)"
 description: "CompareBookmarks Method Example (VB)"
-title: "CompareBookmarks Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CompareBookmarks method [ADO], Visual Basic example"
-ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CompareBookmarks method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # CompareBookmarks Method Example (VB)
 This example demonstrates the [CompareBookmarks](./comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  

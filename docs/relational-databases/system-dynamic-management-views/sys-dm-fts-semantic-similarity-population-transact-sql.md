@@ -1,24 +1,23 @@
 ---
-description: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
-title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
+description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_fts_semantic_similarity_population_TSQL"
   - "sys.dm_fts_semantic_similarity_population"
   - "dm_fts_semantic_similarity_population"
   - "sys.dm_fts_semantic_similarity_population_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-author: pmasl 
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

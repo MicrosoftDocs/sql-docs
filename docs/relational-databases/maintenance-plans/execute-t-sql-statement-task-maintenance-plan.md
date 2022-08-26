@@ -1,20 +1,18 @@
 ---
-description: "Execute T-SQL Statement Task (Maintenance Plan)"
-title: "Execute T-SQL Statement Task (Maintenance Plan) | Microsoft Docs"
-ms.custom: ""
+title: "Execute T-SQL Statement Task (Maintenance Plan)"
+description: Execute T-SQL Statement Task (Maintenance Plan)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.tsql.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Execute T-SQL Statement Task dialog box"
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

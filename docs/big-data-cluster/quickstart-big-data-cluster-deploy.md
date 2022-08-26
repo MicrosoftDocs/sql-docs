@@ -4,13 +4,12 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
-ms.date: 06/22/2020
-ms.topic: conceptual
+ms.reviewer: hudequei
+ms.date: 04/18/2022
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-deployment
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 
 # Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
@@ -38,7 +37,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 
 ## Log in to your Azure account
 
-The script uses Azure CLI to automate the creation of an AKS cluster. Before running the script, you must log in to your Azure account with Azure CLI at least once. Run the following command from a command prompt.
+  The script uses Azure CLI to automate the creation of an AKS cluster. Before running the script, you must log in to your Azure account with Azure CLI at least once. Run the following command from a command prompt. For more information, see [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli).
 
 ```
 az login
@@ -46,7 +45,7 @@ az login
 
 ## Download the deployment script
 
-This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **azdata**, you should be able to run the script successfully in this tutorial. 
+This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **azdata**, you should be able to run the script successfully in this tutorial.  
 
 In a Windows PowerShell or Linux bash prompt, run the following command to download the deployment script from GitHub.
 

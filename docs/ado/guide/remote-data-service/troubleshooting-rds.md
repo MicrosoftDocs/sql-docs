@@ -1,18 +1,14 @@
 ---
+title: "Troubleshooting RDS"
 description: "Troubleshooting RDS"
-title: "Troubleshooting RDS | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "troubleshooting RDS [ADO]"
-ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "troubleshooting RDS [ADO]"
 ---
 # Troubleshooting RDS
 > [!IMPORTANT]

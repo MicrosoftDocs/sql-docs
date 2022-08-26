@@ -2,7 +2,7 @@
 title: "Using Transparent Network IP Resolution"
 description: "Learn about Transparent Network IP Resolution in the ODBC Driver for SQL Server and how it affects the MultiSubnetFailover feature."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "03/14/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,7 +37,7 @@ The `TransparentNetworkIPResolution` connection string and DSN keyword controls 
 
 Keyword|Values|Default
 -|-|-
-`TransparentNetworkIPResolution`|`Yes`, `No`|`Yes`
+`TransparentNetworkIPResolution`|`Enabled`, `Disabled`|`Enabled`
 
 The `SQL_COPT_SS_TNIR` pre-connection attribute allows an application to control this setting programmatically:
 

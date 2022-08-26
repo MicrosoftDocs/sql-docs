@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], NUMA support"
   - "non-uniform memory access"
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Map TCP IP Ports to NUMA Nodes (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

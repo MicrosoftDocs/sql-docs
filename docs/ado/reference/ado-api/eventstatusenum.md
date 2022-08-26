@@ -1,21 +1,17 @@
 ---
+title: "EventStatusEnum"
 description: "EventStatusEnum"
-title: "EventStatusEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "EventStatusEnum"
-helpviewer_keywords: 
-  - "EventStatusEnum enumeration [ADO]"
-ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "EventStatusEnum"
+helpviewer_keywords:
+  - "EventStatusEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # EventStatusEnum
 Specifies the current status of the execution of an event.  

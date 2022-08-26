@@ -1,21 +1,20 @@
 ---
 title: "Executing XPath Queries (SQLXMLOLEDB Provider)"
 description: Learn how to use SQLXMLOLEDB Provider-specific properties when executing XPath queries.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing XPath queries"
   - "queries [SQLXML], SQLXMLOLEDB Provider"
   - "Base Path property"
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)

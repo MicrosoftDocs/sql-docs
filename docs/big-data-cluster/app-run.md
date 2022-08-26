@@ -1,15 +1,15 @@
 ---
-title: Run applications with azdata 
+title: Run applications with azdata
 titleSuffix: SQL Server Big Data Clusters
 description: Running applications with azdata on SQL Server 2019 big data clusters.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 08/16/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Run apps with azdata - SQL Server Big Data Clusters

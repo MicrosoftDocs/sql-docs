@@ -1,18 +1,16 @@
 ---
-description: "ALTER AUTHORIZATION (Transact-SQL)"
-title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AUTHORIZATION (Transact-SQL)"
+description: ALTER AUTHORIZATION (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AUTHORIZATION_TSQL"
   - "ALTER AUTHORIZATION"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "owners [SQL Server], transferring"
   - "modifying entity ownership"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "transferring ownership"
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
-ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -179,7 +176,7 @@ If the target entity is not a database and the entity is being transferred to a 
  Also, note the following:
 
 > [!IMPORTANT]
-> The only reliable way to find the owner of a object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
+> The only reliable way to find the owner of an object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
 
 ## Special Cases and Conditions
 
@@ -218,7 +215,7 @@ The new owner principal must be one of the following:
 - A federated user (not a group) present in Azure AD.
 - A managed user (not a group) or an application present in Azure AD.
 
-If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-configure).
 
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**
 You must connect to the target database to change the owner of that database.
@@ -385,4 +382,3 @@ Azure AD requires brackets `[]` around the user name.
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
-

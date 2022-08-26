@@ -1,18 +1,16 @@
 ---
-description: "Job Activity Monitor (Filter Settings)"
-title: "Job Activity Monitor (Filter Settings) | Microsoft Docs"
-ms.custom: ""
+title: "Job Activity Monitor (Filter Settings)"
+description: Job Activity Monitor (Filter Settings)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.jobactivitymon.filter.f1"
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Job Activity Monitor (Filter Settings)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

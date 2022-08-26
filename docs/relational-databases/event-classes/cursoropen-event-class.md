@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorOpen Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **CursorOpen** event class describes cursor open events that occur in application programming interface (API) cursors. Cursor open events occur when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] defines the SQL statement to be associated with the cursor and the cursor options, and then populates the cursor.  
   
  Include the **CursorOpen** event class in traces that are recording the performance of cursors. When the **CursorOpen** event class is included in a trace, the amount of overhead incurred depends on how frequently cursors are used against the database during the trace. If cursors are used extensively, the trace may significantly impede performance.  

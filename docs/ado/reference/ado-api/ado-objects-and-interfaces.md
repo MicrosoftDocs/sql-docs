@@ -1,19 +1,15 @@
 ---
+title: "ADO Objects and Interfaces"
 description: "ADO Objects and Interfaces"
-title: "ADO Objects and Interfaces | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO, objects and interfaces"
-  - "objects [ADO]"
-ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO, objects and interfaces"
+  - "objects [ADO]"
 ---
 # ADO Objects and Interfaces
 The relationships between these objects are represented in the [ADO Object Model](./ado-object-model.md).  

@@ -4,12 +4,12 @@ titleSuffix: SQL Server Big Data Clusters
 description: This guide covers streaming use cases and how to stream by using SQL Server Big Data Clusters capabilities.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
-ms.metadata: seo-lt-2019
+ms.reviewer: hudequei
 ms.date: 10/05/2021
-ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: guide
+ms.metadata: seo-lt-2019
 ---
 
 # SQL Server Big Data Clusters Spark Streaming guide

@@ -24,7 +24,7 @@ The virtual environments used for GitHub Actions hosted runners and Azure Pipeli
 
 ### Self-hosted virtual environments
 
-If you are utilizing SqlPackage in a self-hosted virtual environment such as a self-hosted Azure DevOps agent, it is recommended to [update the application](sqlpackage-download.md) on a regular basis to maintain the environment with the latest version.
+If you're utilizing SqlPackage in a self-hosted virtual environment such as a self-hosted Azure DevOps agent, it's recommended to [update the application](sqlpackage-download.md) regularly to maintain the environment with the latest version.
 
 ## Tracking deployments
 
@@ -34,15 +34,15 @@ There are a few files related to SqlPackage that can be captured as pipeline art
 - **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action, see [below example](#obtaining-sqlpackage-diagnostics-in-a-pipeline-agent)
 - **Output from script action prior to publish action:**  Use the [Script](sqlpackage-script.md) SqlPackage action before invoking a publish action
 
-## Additional SqlPackage Examples
+## Other SqlPackage examples
 
 ### Checking the SqlPackage version
 
-During troubleshooting efforts, it is important to know the SqlPackage version is in use.  Capturing this information can be done by adding a step to the pipeline to run SqlPackage with the `/version` parameter.  Examples are given below based on the Microsoft and GitHub managed environments, self-hosted environments may have different installation paths for the working directory.
+During troubleshooting efforts, it's important to know the SqlPackage version is in use.  Capturing this information can be done by adding a step to the pipeline to run SqlPackage with the `/version` parameter.  Examples are given below based on the Microsoft and GitHub managed environments, self-hosted environments may have different installation paths for the working directory.
 
 #### Azure Pipelines
 
-By using the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
+When the [script](/azure/devops/pipelines/yaml-schema#script) keyword is used in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
 
 ```yaml
 - script: sqlpackage.exe /version
@@ -52,7 +52,7 @@ By using the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an 
 
 #### GitHub Actions
 
-By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
+By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
 
 ```yaml
 - name: get sqlpackage version
@@ -118,10 +118,10 @@ Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub A
 
 ### Update SqlPackage on the pipeline agent
 
-In some scenarios, the current version of SqlPackage installed in the pipeline environment may be insufficient. If the environment cannot be directly modified, an additional step can be used to install a newer version of SqlPackage during the pipeline run. It is important to run the install step before running any DacPac or BacPac operations in the pipeline. This task can be combined with a step to [check the version](#checking-the-sqlpackage-version) to ensure that the upgrade completed as expected.
+In some scenarios, the current version of SqlPackage installed in the pipeline environment may be insufficient. If the environment can't be directly modified, an additional step can be used to install a newer version of SqlPackage during the pipeline run. It's important to run the install step before running any DacPac or BacPac operations in the pipeline. This task can be combined with a step to [check the version](#checking-the-sqlpackage-version) to ensure that the upgrade completed as expected.
 
 #### Azure Pipelines
-By using the [PowerShell](/azure/devops/pipelines/tasks/utility/powershell) task in an Azure Pipeline, a step can be added to an Azure Pipeline that downloads the desired MSI and installs it silently. 
+When the [PowerShell](/azure/devops/pipelines/tasks/utility/powershell) task is used in an Azure Pipeline, a step can be added to an Azure Pipeline that downloads the desired MSI and installs it silently. 
 
 ```yaml
 - task: PowerShell@2
@@ -137,4 +137,4 @@ By using the [PowerShell](/azure/devops/pipelines/tasks/utility/powershell) task
 
 ## Next steps
 
-- Learn more about [sqlpackage](sqlpackage.md)
+- Learn more about [SqlPackage](sqlpackage.md)

@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
-title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
+description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/05/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_workload_groups_history_ex_TSQL"
   - "sys.dm_resource_governor_workload_groups_history_ex"
   - "dm_resource_governor_workload_groups_history_ex"
   - "dm_resource_governor_workload_groups_history_ex_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

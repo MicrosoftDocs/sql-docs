@@ -8,8 +8,9 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - contperf-fy21q3
-  - intro-installation
+- contperf-fy21q3
+- intro-installation
+- event-tier1-build-2022
 zone_pivot_groups: sqlml-platforms
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
@@ -27,6 +28,8 @@ Learn how to install an R custom runtime for running external R scripts with SQL
 The custom runtime can run machine learning scripts and uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
 
 Use your own version of the R runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ::: zone pivot="platform-windows"
 [!INCLUDE [R custom runtime - Windows](includes/custom-runtime-r-windows.md)]
@@ -73,8 +76,8 @@ Use the following SQL script to verify the installation and functionality of the
 
 ```sql
 EXEC sp_execute_external_script
-	@language =N'myR',
-	@script=N'
+    @language =N'R',
+    @script=N'
 print(R.home());
 print(file.path(R.home("bin"), "R"));
 print(R.version);

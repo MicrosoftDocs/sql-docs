@@ -1,25 +1,23 @@
 ---
-description: "sys.assemblies (Transact-SQL)"
-title: "sys.assemblies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.assemblies (Transact-SQL)"
+description: sys.assemblies (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.assemblies"
   - "assemblies_TSQL"
   - "sys.assemblies_TSQL"
   - "assemblies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.assemblies catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.assemblies (Transact-SQL)

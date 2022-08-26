@@ -1,29 +1,27 @@
 ---
-description: "sys.cryptographic_providers (Transact-SQL)"
-title: "sys.cryptographic_providers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.cryptographic_providers (Transact-SQL)"
+description: sys.cryptographic_providers (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cryptographic_providers"
   - "sys.cryptographic_providers"
   - "sys.cryptographic_providers_TSQL"
   - "cryptographic_providers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.cryptographic_providers catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-author: VanMSFT
-ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.cryptographic_providers (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each registered cryptographic provider.  
     

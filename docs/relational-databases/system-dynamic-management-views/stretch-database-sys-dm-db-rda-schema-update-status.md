@@ -1,32 +1,33 @@
 ---
-title: "sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_rda_schema_update_status (Transact-SQL)"
 description: Learn how sys.dm_db_rda_schema_update_status contains a row for each schema update task for the remote data archive of each Stretch-enabled table in the database.
-ms.custom: ""
-ms.date: "06/10/2016"
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_rda_schema_update_status"
   - "sys.dm_db_rda_schema_update_status_TSQL"
   - "dm_db_rda_schema_update_status"
   - "dm_db_rda_schema_update_status_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_rda_schema_update_status dynamic management view"
-ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: pmasl 
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status
+
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.  
-  
- **dm_db_rda_schema_update_status** is scoped to the current database context. Make sure you are in the database context of the Stretch-enabled table for which you want to see schema update status.  
-  
+Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
+`sys.dm_db_rda_schema_update_status` is scoped to the current database context. Make sure you are in the database context of the Stretch-enabled table for which you want to see schema update status.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|The ID of the local Stretch-enabled table whose remote data archive schema is being updated.|  
@@ -40,9 +41,8 @@ ms.author: pelopes
 |**end_time_utc**|**datetime**|The UTC time at which the remote data archive schema update finished.|  
 |**error_number**|**int**|If the remote data archive schema update fails, the error number of the error that occurred; otherwise, null.|  
 |**error_severity**|**int**|If the remote data archive schema update fails, the severity of the error that occurred; otherwise, null.|  
-|**error_state**|**int**|If the remote data archive schema update fails, the state of the error that occurred; otherwise, null. The error_state indicates the condition or location where the error occurred.|  
-  
-## See Also  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
-  
-  
+|**error_state**|**int**|If the remote data archive schema update fails, the state of the error that occurred; otherwise, null. The error_state indicates the condition or location where the error occurred.|
+
+## See also
+
+- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)

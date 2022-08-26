@@ -4,11 +4,11 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes how to deploy non-root containers in SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 06/22/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Non-root Big Data Clusters containers

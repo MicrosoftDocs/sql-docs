@@ -1,25 +1,23 @@
 ---
-description: "sys.trace_categories (Transact-SQL)"
-title: "sys.trace_categories (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trace_categories (Transact-SQL)"
+description: sys.trace_categories (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "trace_categories"
   - "trace_categories_TSQL"
   - "sys.trace_categories"
   - "sys.trace_categories_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trace_categories catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.trace_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +26,8 @@ ms.author: wiassaf
   
  For a complete list of supported trace events, see [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
-> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Event catalog views instead.  
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Event catalog views instead.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

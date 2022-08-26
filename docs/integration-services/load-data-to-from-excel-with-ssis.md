@@ -49,19 +49,9 @@ You can import data from Excel or export data to Excel with SSIS by using one of
 
 Before you can import data from Excel or export data to Excel with SSIS, you may have to download the connectivity components for Excel if they're not already installed. The connectivity components for Excel are not installed by default.
 
-Download the latest version of the connectivity components for Excel here: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). The latest version of the components can open files created by earlier versions of Excel.
+Use the table within [Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) to understand if additional components are necessary for your environment.
 
-### Notes about the download and installation
-
--   Make sure that you download the Access Database Engine 2016 *Redistributable* and not the Microsoft Access 2016 *Runtime*.
-
--   If the computer already has a 32-bit version of Office, then you have to install the 32-bit version of the components. You also have to ensure that you run the SSIS package in 32-bit mode, or run the 32-bit version of the Import and Export Wizard.
-
--   If you have a Microsoft 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
-
-    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
-
-    If you have trouble installing the 2016 redistributable, install the 2010 redistributable instead from here: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (There is no redistributable for Excel 2013.)
+**Note:** The Office System Drivers are only supported under certain scenarios, please refer to [Considerations for server-side Automation of Office](https://support.microsoft.com/topic/considerations-for-server-side-automation-of-office-48bcfe93-8a89-47f1-0bce-017433ad79e2) for specific guidance.
 
 ## <a name="specify-excel"></a> Specify Excel as your data source
 

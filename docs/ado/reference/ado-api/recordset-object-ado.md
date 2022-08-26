@@ -1,21 +1,17 @@
 ---
+title: "Recordset Object (ADO)"
 description: "Recordset Object (ADO)"
-title: "Recordset Object (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset"
-helpviewer_keywords: 
-  - "Recordset object [ADO]"
-ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset"
+helpviewer_keywords:
+  - "Recordset object [ADO]"
+apitype: "COM"
 ---
 # Recordset Object (ADO)
 Represents the entire set of records from a base table or the results of an executed command. At any time, the **Recordset** object refers to only a single record within the set as the current record.  

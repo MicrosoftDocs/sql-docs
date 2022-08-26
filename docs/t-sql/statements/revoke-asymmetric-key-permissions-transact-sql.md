@@ -1,25 +1,22 @@
 ---
-description: "REVOKE Asymmetric Key Permissions (Transact-SQL)"
-title: "REVOKE Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Asymmetric Key Permissions (Transact-SQL)"
+description: REVOKE Asymmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], permissions"
   - "REVOKE statement, asymmetric keys"
-ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on an asymmetric key.  
   

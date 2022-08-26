@@ -1,22 +1,21 @@
 ---
-description: "Full-Text Search and Semantic Search Catalog Views (Transact-SQL)"
-title: "Full-Text Search and Semantic Search Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Full-Text Search and Semantic Search Catalog Views (Transact-SQL)"
+description: Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalog views [SQL Server], full-text search"
   - "full-text search [SQL Server], catalog views"
   - "full-text indexes [SQL Server], catalog views"
+dev_langs:
+  - "TSQL"
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_os_memory_clerks (Transact-SQL)"
 title: "sys.dm_os_memory_clerks (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_os_memory_clerks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/18/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_memory_clerks"
   - "sys.dm_os_memory_clerks"
   - "dm_os_memory_clerks_TSQL"
   - "sys.dm_os_memory_clerks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_memory_clerks dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_clerks (Transact-SQL)
@@ -120,11 +118,11 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_FSCHUNKER     |      This memory clerk is used for various allocations by [FILESTREAM](../blob/filestream-sql-server.md) functionality for creating filestream chunks.   |
 |MEMORYCLERK_FULLTEXT     |     This memory clerk is used for allocations by Full-Text engine structures.   |
 |MEMORYCLERK_FULLTEXT_SHMEM     |   This memory clerk is used for allocations by Full-Text engine structures related to Shared memory connectivity with the Full Text Daemon process.      |
-|MEMORYCLERK_HADR     |     This memory clerk is used for memory allocations by AlwaysOn functionality     |
+|MEMORYCLERK_HADR     |     This memory clerk is used for memory allocations by Always On functionality     |
 |MEMORYCLERK_HOST     |    This memory clerk is used for allocations by SQL OS functionality.     |
 |MEMORYCLERK_LANGSVC     |     This memory clerk is used for allocations by SQL T-SQL statements and commands (parser, algebrizer, etc.)    |
 |MEMORYCLERK_LWC     |   This memory clerk is used for allocations by Full-Text [Semantic Search](../search/semantic-search-sql-server.md) engine       |
-|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [Polybase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
+|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [PolyBase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
 |MEMORYCLERK_QSRANGEPREFETCH     |  This memory clerk is used for allocations during query execution for query scan range prefetch.      |
 |MEMORYCLERK_QUERYDISKSTORE     |     This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.    |
 |MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |   This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.      |
@@ -146,7 +144,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SQLEXTENSIBILITY     |    This memory clerk is used for allocations by the [Extensibility Framework](../../machine-learning/concepts/extensibility-framework.md) for running external Python or R scripts on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server-side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |    Deprecated     |
-|MEMORYCLERK_SQLLOGPOOL     |   This memory clerk is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log Pool.  Log Pool is a cache  used to improve performance when reading the transaction log. Specifically it improves log cache utilization during multiple log reads, reduces disk I/O log reads and allows sharing of log scans. Primary consumers of log pool are AlwaysOn (Change Capture and Send), Redo Manager, Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC, Backup/Restore.    |
+|MEMORYCLERK_SQLLOGPOOL     |   This memory clerk is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log Pool.  Log Pool is a cache  used to improve performance when reading the transaction log. Specifically it improves log cache utilization during multiple log reads, reduces disk I/O log reads and allows sharing of log scans. Primary consumers of log pool are Always On (Change Capture and Send), Redo Manager, Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC, Backup/Restore.    |
 |MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used for memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
 |MEMORYCLERK_SQLQERESERVATIONS     |     This memory clerk is used for Memory Grant allocations, that is memory allocated to queries to perform sort and hash operations during query execution. For more information on Query Execution reservations (memory grants), see [this blog](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)     |
 |MEMORYCLERK_SQLQUERYCOMPILE     |    This memory clerk is used by Query optimizer for allocating memory during query compiling.   |

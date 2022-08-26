@@ -1,21 +1,17 @@
 ---
+title: "CursorLocationEnum"
 description: "CursorLocationEnum"
-title: "CursorLocationEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CursorLocationEnum"
-helpviewer_keywords: 
-  - "CursorLocationEnum enumeration [ADO]"
-ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CursorLocationEnum"
+helpviewer_keywords:
+  - "CursorLocationEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # CursorLocationEnum
 Specifies the location of the cursor service.  

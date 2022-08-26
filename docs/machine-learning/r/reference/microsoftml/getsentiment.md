@@ -4,8 +4,8 @@
 title: "getSentiment function (MicrosoftML) " 
 description: " Scores natural language text and creates a column that  contains probabilities that the sentiments in the text are positive. " 
 keywords: "(MicrosoftML), getSentiment, nlp, sentiment, text, transform" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

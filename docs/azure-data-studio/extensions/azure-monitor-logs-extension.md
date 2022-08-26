@@ -57,10 +57,10 @@ To set up an Azure Monitor Log workspace, follow the steps below.
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Azure Monitor Logs*.
     2. For **Workspace ID**, enter in your Log Analytics Workspace ID.
-    3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
+    3. For **Authentication type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
     5. For **Database**, select the same Workspace ID.
-    6. For **Server Group**, use *Default*.
+    6. For **Server group**, use *Default*.
         1. You can use this field to organize your servers in a specific group.
     7. For **Name (optional)**, leave blank.
         1. You can use this field to give your server an alias.

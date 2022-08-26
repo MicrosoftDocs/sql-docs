@@ -1,29 +1,14 @@
 ---
 title: "Using the sql:identity and sql:guid Annotations"
-description: Learn how to use the sql:identity and sql:guid annotations in an XSD schema to define the behavior of an XML updategram.
-ms.custom: ""
+description: "Learn how to use the sql:identity and sql:guid annotations in an XSD schema to define the behavior of an XML updategram."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
-  - "sql:guid"
-  - "annotated XSD schemas, IDENTITY-type columns"
-  - "annotated XSD schemas, GUID values"
-  - "DiffGrams [SQLXML], annotations"
-  - "identity annotation"
-  - "XSD schemas [SQLXML], GUID values"
-  - "GUIDs [SQLXML]"
-  - "guid annotation"
-  - "sql:identity"
-  - "IDENTITY-type column"
-  - "XSD schemas [SQLXML], IDENTITY-type columns"
-  - "updategrams [SQLXML], GUID values"
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the sql:identity and sql:guid Annotations

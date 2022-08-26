@@ -1,34 +1,32 @@
 ---
-description: "sys.dm_database_copies (Azure SQL Database)"
-title: "sys.dm_database_copies (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
+title: "sys.dm_database_copies (Azure SQL Database)"
+description: sys.dm_database_copies (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/30/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_database_copies_TSQL"
   - "sys.dm_database_copies"
   - "dm_database_copies"
   - "sys.dm_database_copies_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_database_copies"
   - "sys.dm_database_copies"
+dev_langs:
+  - "TSQL"
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Returns information about the database copy.  
+Returns information about ongoing database copy operations for a database in Azure SQL Database.
   
-To return information about geo-replication links, use the [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) or [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) views (available in SQL Database V12).
-  
-  
+To return information about geo-replication links, use the [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) or [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) views.
+
+
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|The ID of the current database in the `sys.databases` view.|  
@@ -50,10 +48,21 @@ To return information about geo-replication links, use the [sys.geo_replication_
 |**is_interlink_connected**|bit|Reserved field.|  
 |**is_offline_secondary**|bit|Reserved field.|  
   
-## Permissions  
- This view is only available in the **master** database to the server-level principal login.  
+## Permissions 
+
+This view is only available in the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) to the server-level principal login.  
   
-## Remarks  
- You can use the **sys.dm_database_copies** view in the **master** database of the source or target [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. When the database copy completes successfully and the new database becomes ONLINE, the row in the **sys.dm_database_copies** view is removed automatically.  
-  
-  
+## Remarks
+
+You can use the **sys.dm_database_copies** view in the **master** database of the source or target [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database. When the database copy completes successfully and the new database becomes ONLINE, the row in the **sys.dm_database_copies** view is removed automatically.  
+
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Copy a transactionally consistent copy of a database in Azure SQL Database](/azure/azure-sql/database/database-copy)
+- [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-geo-replication-link-status-azure-sql-database.md)
+- [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
+- [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)
+- [Auto-failover groups overview & best practices (Azure SQL Managed Instance)](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi)

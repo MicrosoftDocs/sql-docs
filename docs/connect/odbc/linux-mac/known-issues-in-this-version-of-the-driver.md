@@ -20,7 +20,7 @@ This article contains a list of known issues with the Microsoft ODBC Driver 13, 
 
 ## Known issues
 
-Additional issues will be posted on the [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers).  
+Additional issues will be posted on the [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/sql-server-blog/bg-p/SQLServer/label-name/SQLServerDrivers).  
 
 - Due to system library limitations, Alpine Linux supports fewer character encodings and locales. For example, `en_US.UTF-8` isn't available. For more information, see [`musl libc` - functional differences from `glibc`](https://wiki.musl-libc.org/functional-differences-from-glibc.html).
 

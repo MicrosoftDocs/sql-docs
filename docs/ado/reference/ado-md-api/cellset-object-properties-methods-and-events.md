@@ -1,18 +1,14 @@
 ---
+title: "Cellset Object Properties, Methods, and Events"
 description: "Cellset Object Properties, Methods, and Events"
-title: "Cellset Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Cellset object [ADO MD], members"
-ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Cellset object [ADO MD], members"
 ---
 # Cellset Object Properties, Methods, and Events
 ## Properties/Collections  

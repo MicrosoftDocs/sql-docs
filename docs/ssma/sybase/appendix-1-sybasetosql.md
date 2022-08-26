@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Appendix"
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Appendix - 1 (SybaseToSQL)
 Quick view of the SSMA Console command line options:  

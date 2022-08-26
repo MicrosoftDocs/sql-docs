@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "servers [SQL Server], remote"
   - "remote access option"
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Remote Servers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,7 +18,7 @@ ms.author: v-davidengel
 
 This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Azure Active Directory (Azure AD) authentication, which is a mechanism to connect to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview).
+You can use Azure Active Directory (Azure AD) authentication, which is a mechanism to connect to Azure SQL Database using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview).
 
 Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
 
@@ -48,7 +48,7 @@ For **ActiveDirectoryMSI** authentication, the below components must be installe
 
 - Java 8 or above
 - Microsoft JDBC Driver 7.2 (or higher) for SQL Server
-- Client Environment must be an Azure Resource and must have "Identity" feature support enabled.
+- Client Environment must be an Azure Resource and must have "Identity" feature support enabled. Azure Virtual Machine, Azure App Service, and Azure Function App environments are supported by the JDBC driver.
 - A contained database user that represents your Azure Resource's System Assigned Managed Identity or User Assigned Managed Identity, or one of the groups your Managed Identity belongs to, must exist in the target database, and must have the CONNECT permission.
 
 For other authentication modes, the below components must be installed on the client machine:
@@ -533,3 +533,13 @@ If the connection is successful, you should see the following message as output:
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>
 ```
+
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 
+- [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+- [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  

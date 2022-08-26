@@ -29,7 +29,7 @@ The following are instructions to help you determine the SKU recommendations and
 ## Prerequisites
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
-- Install the minimum version [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) on the tools machine where the SKU recommendations console application is running.
+- Install the minimum version [.NET Core 3.1](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=3.1.0) on the tools machine where the SKU recommendations console application is running.
 - Ensure the account used to connect to your SQL Server on-premises source has sysadmin permission.
 
 > [!NOTE]
@@ -80,7 +80,7 @@ Below is a sample ConfigFile equivalent to the performance data collection actio
   }
   ```
 
-Sample config files for all of the actions can be found in the `Example` folder under DMA installation path: AssessSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
+Sample config files for all of the actions can be found in the `Example` folder under DMA installation path: GetMetadataSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
 
 After the command executes, the performance and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server, and instance name. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM.
 
@@ -110,6 +110,7 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **overwrite** (_Optional_): Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
 - **displayResult** (_Optional_): Whether or not to print the SKU recommendation results to the console. (Default: true)
 - **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%\Microsoft\SqlAssessment)
+- **suppressPreviewFeatures** (_Optional_):  If set to true any Azure feature that is in a preview period will not be included in the recommendation. (Default: false)
 
 Advanced settings for the SKU recommendations can be found in the `Console.Settings.json` file in the root directory. Currently, it includes the following customizable parameters:
 
@@ -168,12 +169,21 @@ In order to get SKU recommendations for a specific Azure SQL platform instead of
 --elasticStrategy true
 ```
 
-**Sample 3: Getting SKU recommendations  for Azure SQL Virtual Machine.**
+**Sample 3: Getting SKU recommendations for Azure SQL Virtual Machine.**
 
 ```
 .\SqlAssessment.exe GetSkuRecommendation 
 --outputFolder C:\Output 
 --targetPlatform AzureSqlVirtualMachine
+```
+
+**Sample 4: Getting SKU recommendations for Azure SQL Virtual Machine and surpressing preview features.**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlVirtualMachine
+--suppressPreviewFeatures True
 ```
 
 The following is an example output of an Azure SQL Database recommendation:

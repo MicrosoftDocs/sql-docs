@@ -2,7 +2,7 @@
 title: "Local audit usage and diagnostic data collection"
 description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
 ms.custom: seo-lt-2019
-ms.date: 03/27/2019
+ms.date: 04/12/2022
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -30,7 +30,7 @@ For SQL Server 2016 CU2 and CU3, local audit is configurable at the instance lev
  - Removing or disabling the SQL CEIP service is not supported. 
  - Removing the SQL CEIP resources from the Cluster Group is not supported. 
 
-To opt out of the data collection, see [Turning local audit on or off](#turning-local-audit-on-or-off)
+Opting out of SQL Server usage and diagnostic data collection is supported, but the service can't be removed or disabled. To opt out of the data collection, see [Turning local audit on or off](#turning-local-audit-on-or-off)
 
 ## Prerequisites 
 
@@ -63,7 +63,7 @@ Do the following steps to get the SQL Server CEIP service logon account
 
 3. Right-click on the service and choose **Properties**. 
 
-4. Select on the **Log On** tab. The Logon account is in listed in **This Account**. 
+4. Select the **Log On** tab. The Logon account is in listed in **This Account**. 
 
 ### Configure a new folder for the local audit files.    
 

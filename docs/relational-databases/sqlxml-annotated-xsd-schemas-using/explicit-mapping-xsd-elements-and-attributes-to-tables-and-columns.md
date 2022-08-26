@@ -1,34 +1,18 @@
 ---
 title: "Custom XSD mappings to tables/columns (SQLXML)"
 description: Learn how to create a custom mapping in an SQLXML XPath query between the elements and attributes of an XSD schema and the tables and columns of a relational database.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "explicit schema mapping [SQLXML]"
   - "XPath queries [SQLXML], annotated XSD schemas in queries"
-  - "sql:field"
-  - "row mapping [SQLXML]"
-  - "attribute mapping [SQLXML], explicit mapping"
-  - "field annotation"
-  - "XSD schemas [SQLXML], mapping attributes and elements"
-  - "names [SQLXML]"
-  - "relation annotation"
-  - "table/view mapping [SQLXML], explicit mapping"
-  - "sql:relation"
-  - "mapping schema [SQLXML], explicit mapping"
-  - "annotated XSD schemas, mapping attributes and elements"
-  - "column mapping [SQLXML]"
-  - "element mapping [SQLXML], explicit mapping"
-  - "table mapping [SQLXML], explicit mapping"
-  - "element/attribute mapping [SQLXML]"
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Custom XSD mappings to tables/columns (SQLXML)

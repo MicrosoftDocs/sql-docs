@@ -1,23 +1,22 @@
 ---
-description: "sys.dm_repl_schemas (Transact-SQL)"
-title: "sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_repl_schemas (Transact-SQL)"
+description: sys.dm_repl_schemas (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_repl_schemas_TSQL"
   - "dm_repl_schemas"
   - "sys.dm_repl_schemas_TSQL"
   - "sys.dm_repl_schemas"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_repl_schemas dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,15 @@
 ---
 title: "Introduction to Annotated XSD Schemas (SQLXML)"
 description: Learn about creating XML views of relational data using the XML Schema Definition (XSD) language (SQLXML 4.0).
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "namespaces [SQLXML], annotated XSD schemas"
   - "mapping schema [SQLXML], about mapping schema"
   - "views [SQLXML]"
@@ -19,9 +21,6 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)

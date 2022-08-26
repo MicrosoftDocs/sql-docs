@@ -1,26 +1,25 @@
 ---
-description: "Logical Functions - LEAST (Transact-SQL)"
 title: "LEAST (Transact-SQL)"
-ms.custom: ""
-ms.date: "04/14/2021"
+description: "The LEAST logical functions returns the minimum value from a list of one or more expressions."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "03/11/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "LEAST"
   - "LEAST_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "LEAST function"
-author: jmsteen
-ms.author: josteen
-ms.reviewer: wiassaf
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest"
 ---
 # Logical Functions - LEAST (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+
+[!INCLUDE [sqlserver-2022-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi-asa-svrless-poolonly.md)]
 
  This function returns the minimum value from a list of one or more expressions. 
 
@@ -110,41 +109,31 @@ Glacier
 
 ### C. Simple example with table
   
- This example returns the minimum value from a list of column arguments and ignores `NULL` values during comparison. 
+ This example returns the minimum value from a list of column arguments and ignores `NULL` values during comparison. This sample uses the `AdventureWorksLT` database, which can be quickly installed as the sample database for a new Azure SQL Database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#deploy-to-azure-sql-database).
   
 ```sql  
-USE AdventureWorks2019; 
-GO 
+SELECT P.Name, P.SellStartDate, P.DiscontinuedDate, PM.ModifiedDate AS ModelModifiedDate
+    , LEAST(P.SellStartDate, P.DiscontinuedDate, PM.ModifiedDate) AS EarliestDate
+FROM SalesLT.Product AS P
+INNER JOIN SalesLT.ProductModel AS PM on P.ProductModelID = PM.ProductModelID
+WHERE LEAST(P.SellStartDate, P.DiscontinuedDate, PM.ModifiedDate) >='2007-01-01'
+AND P.SellStartDate >='2007-01-01'
+AND P.Name LIKE 'Touring %'
+ORDER BY P.Name;
+``` 
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] `EarliestDate` chooses the least date value of the three values, ignoring `NULL`.
+  
+```  
+Name                   SellStartDate           DiscontinuedDate    ModelModifiedDate       EarliestDate
+---------------------- ----------------------- ------------------- ----------------------- -----------------------
+Touring Pedal          2007-07-01 00:00:00.000 NULL                2009-05-16 16:34:29.027 2007-07-01 00:00:00.000
+Touring Tire           2007-07-01 00:00:00.000 NULL                2007-06-01 00:00:00.000 2007-06-01 00:00:00.000
+Touring Tire Tube      2007-07-01 00:00:00.000 NULL                2007-06-01 00:00:00.000 2007-06-01 00:00:00.000
 
-SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
-      , LEAST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Sales 
-FROM Sales.SalesPerson AS sp 
-WHERE sp.SalesYTD < 3000000; 
-GO  
-  
+(3 rows affected)
 ```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-SalesQuota            SalesYTD              SalesLastYear         Sales 
---------------------- --------------------- --------------------- --------------------- 
-                 NULL           559697.5639                 .0000                 .0000 
-          250000.0000          1453719.4653          1620276.8966           250000.0000 
-          300000.0000          2315185.6110          1849640.9418           300000.0000 
-          250000.0000          1352577.1325          1927059.1780           250000.0000 
-          250000.0000          2458535.6169          2073505.9999           250000.0000 
-          250000.0000          2604540.7172          2038234.6549           250000.0000 
-          250000.0000          1573012.9383          1371635.3158           250000.0000 
-          300000.0000          1576562.1966                 .0000                 .0000 
-                 NULL           172524.4512                 .0000                 .0000 
-          250000.0000          1421810.9242          2278548.9776           250000.0000 
-                 NULL           519905.9320                 .0000                 .0000 
-          250000.0000          1827066.7118          1307949.7917           250000.0000 
 
-(12 rows affected) 
-  
-```  
 ### D. Using `LEAST` with local variables
 
  This example uses `LEAST` to determine the minimum value of a list of local variables within the predicate of a `WHERE` clause. 
@@ -167,10 +156,10 @@ WHERE Correlation < LEAST(@PredictionA, @PredictionB);
 GO 
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Only values less than 0.65 are displayed.
   
 ```  
-VarX   Correlation 
+VarX       Correlation 
 ---------- ----------- 
 Var1              .200 
 Var3              .610 
@@ -183,39 +172,38 @@ Var3              .610
  This example uses `LEAST` to determine the minimum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE dbo.products (    
-    prod_id INT IDENTITY(1,1),    
-    listprice smallmoney NULL 
+CREATE TABLE dbo.studies (    
+    VarX varchar(10) NOT NULL,    
+    Correlation decimal(4, 3) NULL 
 ); 
 
-INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
 GO 
 
-DECLARE @PriceX smallmoney = 19.99;  
+DECLARE @VarX decimal(4, 3) = 0.59;  
 
-SELECT LEAST(listprice, 40, @PriceX) as LeastPrice  
-FROM dbo.products;
+SELECT VarX, Correlation, LEAST(Correlation, 1.0, @VarX) AS LeastVar  
+FROM dbo.studies;
 GO 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-LeastPrice
-------------
-     14.9900
-     19.9900
-     19.9900
+VarX       Correlation           LeastVar
+---------- --------------------- ---------------------
+Var1       0.200                 0.200
+Var2       0.825                 0.590
+Var3       0.610                 0.590
 
-(3 rows affected) 
+(3 rows affected)
 ```  
 
   
-## See also  
- [GREATEST &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-greatest-transact-sql.md)  
- [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)  
- [MIN &#40;Transact-SQL&#41;](../../t-sql/functions/min-transact-sql.md)  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
-  
-  
+## Next steps
+
+- [GREATEST &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-greatest-transact-sql.md)  
+- [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)  
+- [MIN &#40;Transact-SQL&#41;](../../t-sql/functions/min-transact-sql.md)  
+- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
+- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  

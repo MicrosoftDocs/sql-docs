@@ -1,24 +1,23 @@
 ---
-title: "SELECTs and JOINs from system views for extended events"
-description: There are system views of extended events in SQL Server and Azure SQL Database. Learn how event session information is represented in different perspectives.
+title: "SELECTs and JOINs from system views for Extended Events"
+description: There are system views of Extended Events in SQL Server and Azure SQL Database. Learn how event session information is represented in different perspectives.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
-ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-author: LitKnd
-ms.author: kendralittle
 ms.custom: seo-lt-2019
+ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
-This article explains the two sets of system views that relate to extended events in SQL Server and in Azure SQL Database. The article illustrates:
+This article explains the two sets of system views that relate to Extended Events in SQL Server and in Azure SQL Database. The article illustrates:
 
 - How to JOIN various system views.
 - How to SELECT particular kinds of information from the system views.
@@ -32,7 +31,7 @@ Most of the examples are written for SQL Server. But with minor edits they would
 ## A. Foundational information
 
 
-There are two sets of system views for extended events:
+There are two sets of system views for Extended Events:
 
 
 #### Catalog views:
@@ -53,7 +52,7 @@ There are two sets of system views for extended events:
     - For the same reason, *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
 
 
-- Name prefix for extended events DMVs is:
+- Name prefix for Extended Events DMVs is:
     - *sys.dm\_xe\_\** is the name prefix on SQL Server.
     - *sys.dm\_xe\_database\_\** is generally the name prefix on SQL Database.
 
@@ -77,7 +76,7 @@ This section matches and correlates three different technological perspectives o
 Every month it is wise to [install the latest update of SSMS](../../ssms/download-sql-server-management-studio-ssms.md), to avoid unexpected failures.
 
 
-Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
+Reference documentation about the catalog views for Extended Events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
 
 
 &nbsp;

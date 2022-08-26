@@ -1,20 +1,16 @@
 ---
+title: "NextRecordset Method Example (VC++)"
 description: "NextRecordset Method Example (VC++)"
-title: "NextRecordset Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NextRecordset method [ADO], VC++ example"
-ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "NextRecordset method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # NextRecordset Method Example (VC++)
 This example uses the [NextRecordset](./nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  

@@ -1,20 +1,18 @@
 ---
-title: "SqlContext Object | Microsoft Docs"
+title: "SqlContext Object"
 description: When you invoke managed code in SQL Server in a user connection, access to the context of the caller is abstracted in a SqlContext object.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Windows identity [CLR integration]"
   - "SqlContext object"
   - "context [CLR integration]"
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
-author: rothja
-ms.author: jroth
 ---
 # SqlContext Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

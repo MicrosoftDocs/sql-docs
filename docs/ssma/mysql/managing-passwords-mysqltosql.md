@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Managing Passwords (MySQLToSQL)
 This article is about securing database passwords and the procedure to import or export them across servers.

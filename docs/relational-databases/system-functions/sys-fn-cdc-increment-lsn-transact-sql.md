@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_cdc_increment_lsn"
   - "sys.fn_cdc_increment_lsn"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

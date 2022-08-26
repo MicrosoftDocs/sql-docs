@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.swb.restoredb.files.f1"
   - "sql13.swb.restoredb.files.f1 in the code"
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore Database (Files Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,21 @@
 ---
-description: "CREATE PARTITION FUNCTION (Transact-SQL)"
-title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/19/2018"
+title: "CREATE PARTITION FUNCTION (Transact-SQL)"
+description: CREATE PARTITION FUNCTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE PARTITION FUNCTION"
   - "PARTITION"
   - "PARTITION FUNCTION"
   - "PARTITION_FUNCTION_TSQL"
   - "PARTITION_TSQL"
   - "CREATE_PARTITION_FUNCTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RANGE RIGHT partition functions"
   - "RANGE LEFT partition functions"
   - "partitioned indexes [SQL Server], functions"
@@ -25,14 +23,13 @@ helpviewer_keywords:
   - "partition functions [SQL Server], creating"
   - "partitioned tables [SQL Server], functions"
   - "CREATE PARTITION FUNCTION statement"
-ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], a table or index can have a maximum of 15,000 partitions.  
+Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a [partitioned table or index](../../relational-databases/partitions/partitioned-tables-and-indexes.md). A table or index can have a maximum of 15,000 partitions.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -166,7 +163,7 @@ GO
 ```  
   
 ### F. Creating partitions for multiple years  
- The following partition function partitions a table or index into 50 partitions on a **datetime2** column. There is one partitions for each month between January 2007 and January 2011.  
+ The following partition function partitions a table or index into 50 partitions on a **datetime2** column. There is one partition for each month between January 2007 and January 2011.  
   
 ```sql  
 --Create date partition function with increment by month.  
@@ -184,23 +181,13 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## See Also  
- [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
- [$PARTITION &#40;Transact-SQL&#41;](../../t-sql/functions/partition-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
-  
+## Next steps
 
+Learn more about table partitioning and related concepts in the following articles: 
+
+- [CREATE PARTITION SCHEME (Transact-SQL)](create-partition-scheme-transact-sql.md)
+- [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
+- [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
+- [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
+- [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
+- [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)

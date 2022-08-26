@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_conflicts_info (Transact-SQL)"
-title: "MSmerge_conflicts_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_conflicts_info (Transact-SQL)"
+description: MSmerge_conflicts_info (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_conflicts_info_TSQL"
   - "MSmerge_conflicts_info"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_conflicts_info system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

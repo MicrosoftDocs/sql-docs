@@ -1,24 +1,20 @@
 ---
+title: "DBCC HELP (Transact-SQL)"
 description: "DBCC HELP (Transact-SQL)"
-title: "DBCC HELP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC HELP"
   - "DBCC_HELP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC statement syntax information"
   - "DBCC HELP statement"
-ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC HELP (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

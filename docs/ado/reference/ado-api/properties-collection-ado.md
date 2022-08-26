@@ -1,23 +1,19 @@
 ---
+title: "Properties Collection (ADO)"
 description: "Properties Collection (ADO)"
-title: "Properties Collection (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_ADO::get_Properties"
   - "_ADO::Properties"
   - "_ADO::GetProperties"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Properties collection [ADO]"
-ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Properties Collection (ADO)
 Contains all the [Property](./property-object-ado.md) objects for a specific instance of an object.  

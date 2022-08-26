@@ -50,7 +50,9 @@ ms.author: chugu
   
 ## Active/Passive Modes  
  An FTP connection manager can send and receive files using either active mode or passive mode. In active mode, the server initiates the data connection, and in passive mode, the client initiates the data connection.  
-  
+> [!NOTE]
+> Passive Mode is recommended for SSIS Integration Runtime (IR), as SSIS IR might not be able to accept incoming TCP connections.
+ 
 ## Configuration of the FTP Connection Manager  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   

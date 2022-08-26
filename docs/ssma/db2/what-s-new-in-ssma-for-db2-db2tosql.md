@@ -1,20 +1,28 @@
 ---
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
-author: nahk-ivanov
 ms.prod: sql
-ms.custom:
-  - intro-whats-new
-ms.date: "04/29/2021"
-ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: alexiva
+author: cpichuka
+ms.author: cpichuka
+ms.reviewer: ""
+ms.custom: intro-whats-new
+ms.date: "04/29/2021"
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+## SSMA v9.1
+
+The v9.1 release of SSMA for DB2 contains minor performance improvements, bug fixes and enhanced get help experience.
+
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for DB2 contains minor performance improvements, bug fixes and online help viewer support.
+
+* Add support for LISTAGG() for DB2 LUW
 
 ## SSMA v8.24
 

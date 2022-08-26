@@ -1,22 +1,18 @@
 ---
+title: "BOF, EOF, and Bookmark Properties Example (VB)"
 description: "BOF, EOF, and Bookmark Properties Example (VB)"
-title: "BOF, EOF, and Bookmark Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BOF property [ADO], Visual Basic example"
   - "Bookmark property [ADO], Visual Basic example"
   - "EOF property [ADO], Visual Basic example"
-ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # BOF, EOF, and Bookmark Properties Example (VB)
 This example uses the [BOF](./bof-eof-properties-ado.md) and [EOF](./bof-eof-properties-ado.md) properties to display a message if a user tries to move past the first or last record of a [Recordset](./recordset-object-ado.md). It uses the [Bookmark](./bookmark-property-ado.md) property to let the user flag a record in a **Recordset** and return to it later.  

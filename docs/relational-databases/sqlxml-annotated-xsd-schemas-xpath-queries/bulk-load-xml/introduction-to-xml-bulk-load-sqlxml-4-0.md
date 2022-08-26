@@ -1,22 +1,21 @@
 ---
 title: "Introduction to XML Bulk Load (SQLXML)"
 description: Learn about the XML Bulk Load utility, a stand-alone COM object in SQLXML 4.0 that allows you to load semistructured XML data into Microsoft SQL Server tables.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "nontransacted XML Bulk Load operations"
   - "XML Bulk Load [SQLXML], about XML Bulk Load"
   - "bulk load [SQLXML], about bulk load"
   - "transacted XML Bulk Load operations"
   - "streaming XML data"
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "Failover Cluster Instances [SQL Server], see failover clustering [SQL Server]"
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], Failover Cluster Instances"
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT

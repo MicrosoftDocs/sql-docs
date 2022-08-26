@@ -4,8 +4,8 @@
 title: "executeStoredProcedure function (sqlrutils) | Microsoft Docs" 
 description: " executeStoredProcedure: Executes a stored procedure registered with the database " 
 keywords: "(sqlrutils), executeStoredProcedure" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

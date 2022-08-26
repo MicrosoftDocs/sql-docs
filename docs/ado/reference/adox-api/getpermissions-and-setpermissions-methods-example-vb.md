@@ -1,21 +1,17 @@
 ---
+title: "GetPermissions and SetPermissions Methods Example (VB)"
 description: "GetPermissions and SetPermissions Methods Example (VB)"
-title: "GetPermissions and SetPermissions Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "SetPermissions method [ADOX], Visual Basic example"
-  - "GetPermissions method [ADOX], Visual Basic example"
-ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "SetPermissions method [ADOX], Visual Basic example"
+  - "GetPermissions method [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # GetPermissions and SetPermissions Methods Example (VB)
 This example demonstrates the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods. The following code gives full access for the Orders table to the Admin user.  

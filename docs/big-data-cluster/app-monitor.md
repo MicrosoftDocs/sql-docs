@@ -2,14 +2,14 @@
 title: Monitor applications with azdata and Grafana Dashboard
 titleSuffix: SQL Server Big Data Clusters
 description: Monitoring applications with azdata and Grafana on SQL Server 2019 big data cluster.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 06/28/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Monitor applications with azdata and Grafana Dashboard

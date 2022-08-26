@@ -1,21 +1,19 @@
 ---
 title: "Format files to import & export data"
 description: When you bulk import to a SQL Server table or bulk export from a table, a format file can store field format information for a data file relative to a table.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk exporting [SQL Server], format files"
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server]"
-ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Format files to import or export data (SQL Server)
 

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "client connections [SQL Server]"
   - "network connections [SQL Server], client configuration"
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Client Network Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

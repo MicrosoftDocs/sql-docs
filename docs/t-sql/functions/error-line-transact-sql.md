@@ -1,28 +1,24 @@
 ---
-description: "ERROR_LINE (Transact-SQL)"
 title: ERROR_LINE (Transact-SQL)
-ms.custom: ""
+description: "ERROR_LINE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ERROR_LINE"
   - "ERROR_LINE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], line number"
   - "messages [SQL Server], line number"
   - "TRY...CATCH [SQL Server]"
   - "line number of error [SQL Server]"
   - "ERROR_LINE function"
   - "CATCH block"
-ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 
 # ERROR_LINE (Transact-SQL)

@@ -1,20 +1,18 @@
 ---
-title: "CLR Integration Security | Microsoft Docs"
+title: "CLR Integration Security"
 description: SQL Server integration with the .NET Framework CLR security manages access between objects. Security checks performed on objects depend on the calls involved.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 07/22/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "security [CLR integration]"
   - "authorization [CLR integration]"
   - "common language runtime [SQL Server], security"
   - "database objects [CLR integration], security"
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-author: rothja
-ms.author: jroth
 ---
 
 # CLR Integration Security

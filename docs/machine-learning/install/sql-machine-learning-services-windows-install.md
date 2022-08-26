@@ -3,20 +3,24 @@ title: Install on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2021
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
-monikerRange: ">=sql-server-2017"
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows
 
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
 Learn how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+
+> [!IMPORTANT]
+> These instructions apply to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -52,7 +56,7 @@ For more information on which SQL Server editions support Python and R integrati
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-2019.md).
 ::: moniker-end
 
 ## Run setup
@@ -169,7 +173,7 @@ The license agreement covers:
 
 For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+1. In Control Panel, select **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 
 2. Create a new User or System variable. 
 
@@ -182,17 +186,12 @@ This step requires a server restart. If you are about to enable script execution
 
 ## Enable script execution
 
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
-
-    > [!TIP]
-    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
-    > 
-    > You can also use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), which supports administrative tasks and queries against SQL Server.
+1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services.
   
-2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
+2. Connect to the instance where you installed Machine Learning Services, select **New Query** to open a query window, and run the following command:
 
     ```sql
-    sp_configure
+    EXEC sp_configure
     ```
 
     The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
@@ -288,7 +287,9 @@ Follow these steps to bring the Machine Learning Services to the same version as
  
    Here is an example output from SQL Server 2019 Cumulative Update (CU) 8:
  
-   *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64)   Nov  2 2020 18:35:09   Copyright (C) 2019 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 (X64) (Build 19042: ) (Hypervisor)*
+   ```
+   Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64)   Nov  2 2020 18:35:09   Copyright (C) 2019 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 (X64) (Build 19042: ) (Hypervisor)
+   ```
 
    For more information, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
 

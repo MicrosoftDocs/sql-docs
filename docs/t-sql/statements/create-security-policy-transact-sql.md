@@ -1,14 +1,14 @@
 ---
-description: "CREATE SECURITY POLICY (Transact-SQL)"
-title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SECURITY POLICY (Transact-SQL)"
+description: CREATE SECURITY POLICY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SECURITY_POLICY_TSQL"
   - "CREATE SECURITY"
   - "SECURITY"
@@ -17,15 +17,12 @@ f1_keywords:
   - "SECURITY POLICY"
   - "SECURITY_TSQL"
   - "CREATE SECURITY POLICY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RLS"
   - "CREATE SECURITY POLICY statement"
   - "Row-Level Security"
-ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
 

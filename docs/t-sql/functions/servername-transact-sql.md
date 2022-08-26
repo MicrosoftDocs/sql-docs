@@ -1,24 +1,23 @@
 ---
+title: "@@SERVERNAME (Transact-SQL)"
 description: "@@SERVERNAME (Transact-SQL)"
-title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@SERVERNAME"
   - "@@SERVERNAME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@SERVERNAME function"
   - "local servers [SQL Server]"
-ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

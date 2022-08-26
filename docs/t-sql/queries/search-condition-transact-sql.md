@@ -1,20 +1,19 @@
 ---
+title: "Search Condition (Transact-SQL)"
 description: "Search Condition (Transact-SQL)"
-title: "Search Condition (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/15/2018"
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "search"
   - "Search Condition"
   - "condition"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OR operator [Transact-SQL]"
   - "CONTAINS predicate (Transact-SQL)"
   - "ESCAPE keyword"
@@ -26,6 +25,7 @@ helpviewer_keywords:
   - "EXISTS keyword"
   - "search conditions [SQL Server], about search conditions"
   - "NOT operator [Transact-SQL]"
+  - "IS [NOT] DISTINCT FROM [Transact-SQL]"
   - "BETWEEN operator"
   - "SOME | ANY keyword"
   - "predicates [full-text search]"
@@ -34,17 +34,17 @@ helpviewer_keywords:
   - "precedence [SQL Server], logical operators"
   - "logical operators [SQL Server], precedence"
   - "LIKE comparisons"
-ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Search Condition (Transact-SQL)
+# Search condition (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Is a combination of one or more predicates that use the logical operators AND, OR, and NOT.  
+A combination of one or more predicates that use the logical operators AND, OR, and NOT.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- Syntax for SQL Server and Azure SQL Database  
   
 <search_condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+    MATCH (<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
 
 <search_condition_without_match> ::= 
     { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
@@ -65,6 +65,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   [ ESCAPE 'escape_character' ]   
     | expression [ NOT ] BETWEEN expression AND expression   
     | expression IS [ NOT ] NULL   
+    | expression IS [ NOT ] DISTINCT FROM   
     | CONTAINS   
   ( { column | * } , '<contains_search_condition>' )   
     | FREETEXT ( { column | * } , 'freetext_string' )   
@@ -102,7 +103,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     | expression [ NOT ] BETWEEN expression AND expression   
     | expression IS [ NOT ] NULL   
     | expression [ NOT ] IN (subquery | expression [ ,...n ] )   
-    | expression [ NOT ] EXISTS (subquery)     }   
+    | expression [ NOT ] EXISTS (subquery)
+    }
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -112,7 +114,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Specifies the conditions for the rows returned in the result set for a SELECT statement, query expression, or subquery. For an UPDATE statement, specifies the rows to be updated. For a DELETE statement, specifies the rows to be deleted. There is no limit to the number of predicates that can be included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement search condition.  
   
  \<graph_search_pattern>  
- Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](match-sql-graph.md)
  
  NOT  
  Negates the Boolean expression specified by the predicate. For more information, see [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
@@ -175,18 +177,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  IS [ NOT ] NULL  
  Specifies a search for null values, or for values that are not null, depending on the keywords used. An expression with a bitwise or arithmetic operator evaluates to NULL if any one of the operands is NULL.  
+
+ IS [ NOT ] DISTINCT FROM  
+ Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](is-distinct-from-transact-sql.md).
   
  CONTAINS  
- Searches columns that contain character-based data for precise or less precise (*fuzzy*) matches to single words and phrases, the proximity of words within a certain distance of one another, and weighted matches. This option can only be used with SELECT statements. For more information, see [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ Searches columns that contain character-based data for precise or less precise (*fuzzy*) matches to single words and phrases, the proximity of words within a certain distance of one another, and weighted matches. This option can only be used with SELECT statements. For more information, see [CONTAINS &#40;Transact-SQL&#41;](contains-transact-sql.md).  
   
  FREETEXT  
- Provides a simple form of natural language query by searching columns that contain character-based data for values that match the meaning instead of the exact words in the predicate. This option can only be used with SELECT statements. For more information, see [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md).  
+ Provides a simple form of natural language query by searching columns that contain character-based data for values that match the meaning instead of the exact words in the predicate. This option can only be used with SELECT statements. For more information, see [FREETEXT &#40;Transact-SQL&#41;](freetext-transact-sql.md).  
   
  [ NOT ] IN  
  Specifies the search for an expression, based on whether the expression is included in or excluded from a list. The search expression can be a constant or a column name, and the list can be a set of constants or, more typically, a subquery. Enclose the list of values in parentheses. For more information, see [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Can be considered a restricted SELECT statement and is similar to \<query_expression> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Can be considered a restricted SELECT statement and is similar to \<query_expression> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](select-transact-sql.md).  
   
  ALL  
  Used with a comparison operator and a subquery. Returns TRUE for \<predicate> when all values retrieved for the subquery satisfy the comparison operation, or FALSE when not all values satisfy the comparison or when the subquery returns no rows to the outer statement. For more information, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
@@ -203,7 +208,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
   
 ### A. Using WHERE with LIKE and ESCAPE syntax  
- The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because _ is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the _ character.  
+ The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because `_` is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the `_` character.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -250,17 +255,15 @@ FROM DimEmployee
 WHERE LastName LIKE N'%and%';  
 ```  
   
-## See Also  
- [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
-  
-  
+## See also
 
+- [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)
+- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)
+- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)
+- [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)
+- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)
+- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)
+- [FROM &#40;Transact-SQL&#41;](from-transact-sql.md)
+- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](update-transact-sql.md)

@@ -3,18 +3,22 @@ title: Set up a Python data science client
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/04/2019
+ms.date: 08/11/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2016-2019 2019 linux only](../../includes/applies-to-version/sqlserver2016-2019-2019linux-only.md)]
 
 Python integration is available in SQL Server 2017 and later, when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
+
+> [!NOTE]
+> Currently this article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] for Linux only.
 
 To develop and deploy Python solutions for SQL Server, install Microsoft's [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and other Python libraries your development workstation. The revoscalepy library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
@@ -27,22 +31,23 @@ To validate the installation, you can use built-in Jupyter Notebooks as describe
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://youtu.be/D5erljpJDjE).
 
-> [!Note]
-> An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, [open a Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
-
 ## Commonly used tools
 
 Whether you are a Python developer new to SQL, or a SQL developer new to Python and in-database analytics, you will need both a Python development tool and a T-SQL query editor such as [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to exercise all of the capabilities of in-database analytics.
 
-For Python development, you can use Jupyter Notebooks, which comes bundled in the Anaconda distribution installed by SQL Server. This article explains how to start Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
+For Python development, you can use Jupyter Notebooks, which come bundled in the Anaconda distribution installed by SQL Server. This article explains how to start Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
 
 SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can step through other quickstarts to learn about [SSMS and embedded Python](../tutorials/quickstart-python-create-script.md).
 
 ## 1 - Install Python packages
 
-Local workstations must have the same Python package versions as those on SQL Server, including the base Anaconda 4.2.0 with Python 3.5.2 distribution, and Microsoft-specific packages.
+Local workstations must have the same Python package versions as those on SQL Server, including the base [Anaconda 4.2.0](https://anaconda.org/conda-forge/opencv/files?version=4.2.0) with [Python 3.5.2 distribution](https://www.python.org/downloads/release/python-352/), and Microsoft-specific packages.
 
-An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
+An installation script adds three Microsoft-specific libraries to the Python client. The script installs: 
+
+- [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. 
+- [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. 
+- [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) which applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
 1. Download an installation script.
 
@@ -59,18 +64,18 @@ An installation script adds three Microsoft-specific libraries to the Python cli
    .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls"
    ```
 
-If you omit the install folder, the default is C:\Program Files\Microsoft\PyForMLS.
+If you omit the install folder, the default is `%ProgramFiles%\Microsoft\PyForMLS`.
 
 Installation takes some time to complete. You can monitor progress in the PowerShell window. When setup is finished, you have a complete set of packages. 
 
 > [!Tip] 
-> We recommend the [Python for Windows FAQ](https://docs.python.org/3/faq/windows.html) for general purppose information on running Python programs on Windows.
+> We recommend the [Python for Windows FAQ](https://docs.python.org/3/faq/windows.html) for general purpose information on running Python programs on Windows.
 
 ## 2 - Locate executables
 
 Still in PowerShell, list the contents of the installation folder to confirm that Python.exe, scripts, and other packages are installed. 
 
-1. Enter `cd \` to go to the root drive, and then enter the path you specified for `-InstallFolder` in the previous step. If you omitted this parameter during installation, the default is `cd C:\Program Files\Microsoft\PyForMLS`.
+1. Enter `cd \` to go to the root drive, and then enter the path you specified for `-InstallFolder` in the previous step. If you omitted this parameter during installation, the default is `cd %ProgramFiles%\Microsoft\PyForMLS`.
 
 2. Enter `dir *.exe` to list the executables. You should see **python.exe**, **pythonw.exe**, and **uninstall-anaconda.exe**.
 
@@ -87,7 +92,7 @@ On systems having multiple versions of Python, remember to use this particular P
 
 Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run some Python code containing the libraries you just installed.
 
-1. At the PowerShell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
+1. At the PowerShell prompt, still in the `%ProgramFiles%\Microsoft\PyForMLS` directory, open Jupyter Notebooks from the Scripts folder:
 
    ```powershell
    .\Scripts\jupyter-notebook
@@ -97,7 +102,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
    Another way to start is double-click **jupyter-notebook.exe**. 
 
-2. Click **New** and then click **Python 3**.
+2. Select **New** and then select **Python 3**.
 
    ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
 
@@ -146,7 +151,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database used for the remaining steps in this article.
 
-### 1 - Create the irissql database remotely
+### 5-1 - Create the irissql database remotely
 
 ```python
 import pyodbc
@@ -163,7 +168,7 @@ cnxn.close()
 print("Database created")
 ```
 
-### 2 - Import Iris sample from SkLearn
+### 5-2 - Import Iris sample from SkLearn
 
 ```python
 from sklearn import datasets
@@ -174,7 +179,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### 3 - Use Revoscalepy APIs to create a table and load the Iris data
+### 5-3 - Use Revoscalepy APIs to create a table and load the Iris data
 
 ```python
 from revoscalepy import RxSqlServerData, rx_data_step
@@ -191,9 +196,9 @@ print("Sklearn Iris sample loaded into Iris table")
 
 Before trying this next step, make sure you have permissions on the SQL Server instance and a connection string to the [Iris sample database](../tutorials/demo-data-iris-in-sql.md). If the database doesn't exist and you have sufficient permissions, you can [create a database using these inline instructions](#create-iris-remotely).
 
-Replace the connection string with valid values. The sample code uses `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` but your code should specify a remote server, possibly with an instance name, and a credential option that maps to database user login.
+Replace the connection string with valid values. The sample code uses `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` but your code should specify a remote server, possibly with an instance name, and a credential option that maps to a database login.
 
-### Define a function
+### 6-1 Define a function
 
 The following code defines a function that you will send to SQL Server in a later step. When executed, it uses data and libraries (revoscalepy, pandas, matplotlib) on the remote server to create scatter plots of the iris data set. It returns the bytestream of the .png back to Jupyter Notebooks to render in the browser.
 
@@ -221,7 +226,7 @@ def send_this_func_to_sql():
     return buf.getvalue()
 ```
 
-### Send the function to SQL Server
+### 6-2 Send the function to SQL Server
 
 In this example, create the remote compute context and then send the execution of the function to SQL Server with [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec). The **rx_exec** function is useful because it accepts a compute context as an argument. Any function that you want to execute remotely must have a compute context argument. Some functions, such as [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) support this argument directly. For operations that don't, you can use **rx_exec** to deliver your code in a remote compute context.
 
@@ -255,20 +260,20 @@ Because developers frequently work with multiple versions of Python, setup does 
 
 ### Command line
 
-When you run **Python.exe** from C:\Program Files\Microsoft\PyForMLS (or whatever location you specified for the Python client library installation), you have access to the full Anaconda distribution plus the Microsoft Python modules, **revoscalepy** and **microsoftml**.
+When you run **Python.exe** from `%ProgramFiles%\Microsoft\PyForMLS` (or whatever location you specified for the Python client library installation), you have access to the full Anaconda distribution plus the Microsoft Python modules, **revoscalepy** and **microsoftml**.
 
-1. Go to C:\Program Files\Microsoft\PyForMLS and double-click **Python.exe**.
-2. Open interactive help: `help()`
+1. Go to `%ProgramFiles%\Microsoft\PyForMLS` and execute **Python.exe**.
+2. Open interactive help: `help()`.
 3. Type the name of a module at the help prompt: `help> revoscalepy`. Help returns the name, package contents, version, and file location.
 4. Return version and package information at the **help>** prompt: `revoscalepy`. Press Enter a few times to exit help.
-5. Import a module: `import revoscalepy`
+5. Import a module: `import revoscalepy`.
 
 
 ### Jupyter Notebooks
 
 This article uses built-in Jupyter Notebooks to demonstrate function calls to **revoscalepy**. If you are new to this tool, the following screenshot illustrates how the pieces fit together and why it all "just works". 
 
-The parent folder C:\Program Files\Microsoft\PyForMLS contains Anaconda plus the Microsoft packages. Jupyter Notebooks is included in Anaconda, under the Scripts folder, and the Python executables are auto-registered with Jupyter Notebooks. Packages found under site-packages can be imported into a notebook, including the three Microsoft packages used for data science and machine learning.
+The parent folder `%ProgramFiles%\Microsoft\PyForMLS` contains Anaconda plus the Microsoft packages. Jupyter Notebooks is included in Anaconda, under the Scripts folder, and the Python executables are auto-registered with Jupyter Notebooks. Packages found under site-packages can be imported into a notebook, including the three Microsoft packages used for data science and machine learning.
 
   ![Executables and libraries](media/jupyter-notebook-python-registration.png)
 
@@ -280,19 +285,19 @@ If you have [Python in Visual Studio](https://code.visualstudio.com/docs/languag
 
 | Configuration setting | value |
 |-----------------------|-------|
-| **Prefix path** | C:\Program Files\Microsoft\PyForMLS |
-| **Interpreter path** | C:\Program Files\Microsoft\PyForMLS\python.exe |
-| **Windowed interpreter** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
+| **Prefix path** | `%ProgramFiles%\Microsoft\PyForMLS` |
+| **Interpreter path** | `%ProgramFiles%\Microsoft\PyForMLS\python.exe` |
+| **Windowed interpreter** | `%ProgramFiles%\Microsoft\PyForMLS\pythonw.exe` |
 
-For help configuring a Python environment, see [Managing Python environments in Visual Studio](/visualstudio/python/managing-python-environments-in-visual-studio).
+For help with configuring a Python environment, see [Managing Python environments in Visual Studio](/visualstudio/python/managing-python-environments-in-visual-studio).
 
 ### PyCharm
 
 In PyCharm, set the interpreter to the Python executable installed.
 
-1. In a new project, in Settings, click **Add Local**.
+1. In a new project, in Settings, select **Add Local**.
 
-2. Enter `C:\Program Files\Microsoft\PyForMLS\`.
+2. Enter `%ProgramFiles%\Microsoft\PyForMLS\`.
 
 You can now import **revoscalepy**, **microsoftml**, or **azureml** modules. You can also choose **Tools** > **Python Console** to open an interactive window.
 

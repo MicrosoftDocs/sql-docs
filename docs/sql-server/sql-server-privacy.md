@@ -1,7 +1,7 @@
 ---
 title: SQL Server privacy supplement
 description: SQL Server privacy supplement
-ms.date: 05/12/2021
+ms.date: 05/31/2022
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: "wopeter"
@@ -17,7 +17,17 @@ ms.author: mikeray
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can install the SQL Server IaaS Agent Extension on your virtual machine and register your SQL virtual machine resource with the SQL VM resource provider, as described [here](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
+This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine, a container, or a physical server using an applicable Azure service, environment information may be sent to Microsoft so that Microsoft can install the necessary SQL Server extension and register the installed SQL Server instances in your Azure account.
+
+The applicable Azure services include:
+
+- Azure Virtual Machines
+- Azure VMware Solution
+- Azure Kubernetes Service
+- Azure Arc-enabled Servers
+- Azure Arc-enabled VMware vSphere
+- Azure Arc-enabled Kubernetes
+- Azure Stack HCI  
 
 Refer to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) for more information about privacy. 
 
@@ -113,6 +123,9 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contains customer data to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains customer data to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
+> [!NOTE]
+> Power View support is no longer available after SQL Server 2017.
+
 ## Non-personal data
 
 1. Data received from an organization, or generated from their use of the product. It's linkable to an organization and doesn't contain customer data.
@@ -124,7 +137,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
      |Scenario  |Access restrictions  |Retention requirements|
      |---------|---------|---------|
-     | Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft doesn't use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
+     | Microsoft may collect generic usage data of SQL Server instances running SQL Server with an applicable Azure Service for the express purpose of giving customers optional benefits within Azure. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server with an applicable Azure service to access the specific benefits in Azure. </br></br>Microsoft doesn't use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
 
 2. Data that describes or is used to configure servers, databases, tables, and other resources created or provided by customers. It includes database table and column names but not the contents of database rows or other customer data. Customers shouldn't place any personal data in those fields or create applications designed to store personal data in these fields. For the permitted usage scenarios below, only hash form is used to determine usage patterns to improve the product.
 

@@ -1,25 +1,24 @@
 ---
+title: "@@PACK_RECEIVED (Transact-SQL)"
 description: "@@PACK_RECEIVED (Transact-SQL)"
-title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@PACK_RECEIVED_TSQL"
   - "@@PACK_RECEIVED"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@PACK_RECEIVED function"
   - "number of packets read"
   - "packets [SQL Server], number read"
-ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

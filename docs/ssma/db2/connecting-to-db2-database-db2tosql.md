@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to DB2 Database (DB2ToSQL)
@@ -92,7 +92,7 @@ Metadata about the DB2 database is not automatically refreshed. The metadata in 
 
      To view the definitions of the color coding, click the **Legend** button.
 
-5. [!INCLUDE[click OK](../../includes/clickok-md.md)]
+5. Select **OK**.
 
 ## Next Step
 

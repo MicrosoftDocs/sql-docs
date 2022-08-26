@@ -1,27 +1,25 @@
 ---
-description: "sys.query_store_runtime_stats_interval (Transact-SQL)"
-title: "sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.query_store_runtime_stats_interval (Transact-SQL)"
+description: sys.query_store_runtime_stats_interval (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"
   - "SYS.QUERY_STORE_RUNTIME_STATS_INTERVAL"
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL_TSQL"
   - "SYS.QUERY_STORE_RUNTIME_STATS_INTERVAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_store_runtime_stats_interval catalog view"
   - "query_store_runtime_stats_interval catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

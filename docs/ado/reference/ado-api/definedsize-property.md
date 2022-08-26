@@ -1,21 +1,17 @@
 ---
+title: "DefinedSize Property"
 description: "DefinedSize Property"
-title: "DefinedSize Property | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Field20::DefinedSize"
-helpviewer_keywords: 
-  - "DefinedSize property [ADO]"
-ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Field20::DefinedSize"
+helpviewer_keywords:
+  - "DefinedSize property [ADO]"
+apitype: "COM"
 ---
 # DefinedSize Property
 Indicates the data capacity of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

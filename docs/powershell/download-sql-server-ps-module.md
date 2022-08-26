@@ -27,7 +27,7 @@ There are two SQL Server PowerShell modules:
 - **SQLPS**: The SQLPS is the module used by [SQL Agent](sql-server-powershell.md#sql-server-agent) to run agent jobs in agent job steps using the PowerShell subsystem.
 
 > [!NOTE]
-> The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
+> The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.1 or greater.
 
 For help topics, go to:
 
@@ -48,33 +48,32 @@ For help topics, go to:
 You can use the [PowerShell extension](../azure-data-studio/extensions/powershell-extension.md), which provides rich PowerShell editor support in Azure Data Studio.
 
 ## Installing or updating the SqlServer module
+To install the SqlServer module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session and run `Install-Module SQLServer`.
 
-To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session as an administrator. You can also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
+```powershell
+Install-Module -Name SqlServer
+```
 
-You can also use *Install-Module SQLServer -Scope CurrentUser* to run elevated permissions. This cmdlet is useful for users who aren't administrators in their environment. However, since the scope is limited to the current user, other users on the same machine can't use the module.
+If running on Windows PowerShell you can use `Install-Module SQLServer -Scope CurrentUser` to install the module for just the current user and avoid needing elevated permissions.
 
-### Install the SqlServer module
-
-Run the following command in your PowerShell session to install the SqlServer module for all users:
+### Install the SqlServer module for all users
+To install the SqlServer module for all users run the command below in an elevated PowerShell session; start a PowerShell session as administrator:
 
 ```powershell
 Install-Module -Name SqlServer
 ```
 
 ### To view the versions of the SqlServer module installed
-
 Execute the following command to see the versions of the SqlServer module that have been installed
 
 ```powershell
 Get-Module SqlServer -ListAvailable
 ```
 
-### Install for the current user rather than as an administrator
-
-If you aren't able to run the PowerShell session as an administrator, install for the current user using the following command:
+To view the version of the SqlServer module loaded in the current session
 
 ```powershell
-Install-Module -Name SqlServer -Scope CurrentUser
+(Get-Module SqlServer).Version
 ```
 
 ### To overwrite a previous version of the SqlServer module
@@ -93,7 +92,7 @@ Install-Module -Name SqlServer -AllowClobber
 When updated versions of the **SqlServer** module are available, you can install the newer version using the following command:
 
 ```powershell
-Install-Module -Name SqlServer -AllowClobber
+Update-Module -Name SqlServer -AllowClobber
 ```
 
 You can use the `Update-Module` command to install the newest version of the SQLServer PowerShell module, but that doesn't remove older versions. It installs the newer version side by side to allow you the ability to experiment with the latest version, yet still have older modules installed.
@@ -151,11 +150,11 @@ Install-Module SqlServer -RequiredVersion 21.1.18218-preview -AllowPrerelease
 
 ## SQL Server PowerShell on Linux
 
-Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) to see how to install SQL Server PowerShell on Linux.
+Visit [Manage SQL Server on Linux with PowerShell](../linux/sql-server-linux-manage-powershell-core.md) to see how to install SQL Server PowerShell on Linux.
 
 ## Other modules
 
-- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - SQL service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - SQL service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell.
 
 - [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - Module with DSC resources for deployment and configuration of Microsoft SQL Server.
 

@@ -1,14 +1,14 @@
 ---
-description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
-title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "BEGIN CONVERSATION TIMER (Transact-SQL)"
+description: BEGIN CONVERSATION TIMER (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONVERSATION"
   - "BEGIN_CONVERSATION_TSQL"
   - "TIMER_TSQL"
@@ -19,9 +19,7 @@ f1_keywords:
   - "BEGIN_CONVERSATION_TIMER_TSQL"
   - "CONVERSATION_TSQL"
   - "BEGIN CONVERSATION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BEGIN CONVERSATION TIMER statement"
   - "DialogTimer message"
   - "dialogs [Service Broker], beginning"
@@ -29,10 +27,8 @@ helpviewer_keywords:
   - "timer messages [Service Broker]"
   - "conversations [Service Broker], timers"
   - "starting timers [Service Broker]"
-  - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
-ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,25 +1,21 @@
 ---
+title: "DECRYPTBYASYMKEY (Transact-SQL)"
 description: "DECRYPTBYASYMKEY (Transact-SQL)"
-title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DECRYPTBYASYMKEY"
   - "DECRYPTBYASYMKEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asymmetric keys [SQL Server], DECRYPTBYASYMKEY function"
   - "DECRYPTBYASYMKEY function"
   - "decryption [SQL Server], asymmetric keys"
-ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

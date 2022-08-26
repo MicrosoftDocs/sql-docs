@@ -1,25 +1,24 @@
 ---
+title: "CONTINUE (Transact-SQL)"
 description: "CONTINUE (Transact-SQL)"
-title: "CONTINUE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "CONTINUE_TSQL"
   - "CONTINUE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restarting WHILE loop"
   - "CONTINUE keyword"
   - "WHILE keyword"
-ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # CONTINUE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], execution plans"
   - "tuning queries [SQL Server]"
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Compare and Analyze Execution Plans

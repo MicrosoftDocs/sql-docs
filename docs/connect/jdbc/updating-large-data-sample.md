@@ -27,14 +27,14 @@ The code file for this sample is named UpdateLargeData.java, and can be found in
 
 ## Requirements
 
-To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. You must also set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application will throw the common "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
+To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. You must also set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application will throw the common "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 > [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. This sample uses the [isWrapperFor](reference/iswrapperfor-method-sqlserverstatement.md) and [unwrap](reference/unwrap-method-sqlserverstatement.md) methods, which are introduced in the JDBC 4.0 API, to access the driver-specific response buffering methods. In order to compile and run this sample, you will need sqljdbc4.jar class library, which provides support for JDBC 4.0. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database. Then, the sample code creates a Statement object and uses the [isWrapperFor](reference/iswrapperfor-method-sqlserverstatement.md) method to check whether the Statement object is a wrapper for the specified [SQLServerStatement](reference/sqlserverstatement-class.md) class. The [unwrap](reference/unwrap-method-sqlserverstatement.md) method is used to access the driver-specific response buffering methods.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Then, the sample code creates a Statement object and uses the [isWrapperFor](reference/iswrapperfor-method-sqlserverstatement.md) method to check whether the Statement object is a wrapper for the specified [SQLServerStatement](reference/sqlserverstatement-class.md) class. The [unwrap](reference/unwrap-method-sqlserverstatement.md) method is used to access the driver-specific response buffering methods.
 
 Next, the sample code sets the response buffering mode as "**adaptive**" by using the [setResponseBuffering](reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](reference/sqlserverstatement-class.md) class and also demonstrates how to get the adaptive buffering mode.
 

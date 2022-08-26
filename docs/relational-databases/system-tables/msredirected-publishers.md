@@ -1,23 +1,21 @@
 ---
-description: "MSRedirected_publishers (Transact-SQL)"
-title: "MSRedirected_publishers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSRedirected_publishers (Transact-SQL)"
+description: MSRedirected_publishers (Transact-SQL)
+author: briancarrig
+ms.author: brcarrig
 ms.date: "10/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSRedirected_publishers_TSQL"
   - "MSRedirected_publishers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSRedirected_publishers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: ea3dd634-28e1-4676-befc-d9bda87e6c1d
-author: briancarrig
-ms.author: brcarrig
 ---
 # MSRedirected_publishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

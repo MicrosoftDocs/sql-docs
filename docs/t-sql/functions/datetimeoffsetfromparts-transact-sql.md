@@ -1,24 +1,20 @@
 ---
+title: "DATETIMEOFFSETFROMPARTS (Transact-SQL)"
 description: "DATETIMEOFFSETFROMPARTS (Transact-SQL)"
-title: "DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "DATETIMEOFFSETFROMPARTS_TSQL"
-  - "DATETIMEOFFSETFROMPARTS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "DATETIMEOFFSETFROMPARTS function"
-ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "07/29/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "DATETIMEOFFSETFROMPARTS_TSQL"
+  - "DATETIMEOFFSETFROMPARTS"
+helpviewer_keywords:
+  - "DATETIMEOFFSETFROMPARTS function"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

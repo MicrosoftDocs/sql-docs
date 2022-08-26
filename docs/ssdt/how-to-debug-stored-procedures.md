@@ -22,6 +22,9 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
   
 > [!WARNING]  
 > The following procedure uses entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+
+> [!NOTE]
+> Transact\-SQL debugging isn't available for Azure SQL Database or Azure SQL Managed Instance.
   
 ### To debug stored procedures  
   

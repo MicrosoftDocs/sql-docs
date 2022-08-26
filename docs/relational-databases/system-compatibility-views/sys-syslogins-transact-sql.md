@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.syslogins compatibility view"
   - "syslogins system table"
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

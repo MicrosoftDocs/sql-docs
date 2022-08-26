@@ -1,23 +1,21 @@
 ---
-description: "CURRENT_TRANSACTION_ID (Transact-SQL)"
 title: CURRENT_TRANSACTION_ID (Transact-SQL)
-ms.custom: ""
+description: "CURRENT_TRANSACTION_ID (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CURRENT_TRANSACTION_ID"
   - "CURRENT_TRANSACTION_ID_TSQL"
   - "sys.CURRENT_TRANSACTION_ID"
   - "sys.CURRENT_TRANSACTION_ID_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CURRENT_TRANSACTION_ID function"
-ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 
 # CURRENT_TRANSACTION_ID (Transact-SQL)

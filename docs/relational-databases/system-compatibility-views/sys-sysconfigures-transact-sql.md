@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysconfigures compatibility view"
   - "sysconfigures system table"
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.sysconfigures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

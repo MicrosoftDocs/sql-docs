@@ -2,8 +2,8 @@
 title: Extensibility Framework API
 titleSuffix: SQL Server Language Extensions
 description: You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
-author: dphansen
-ms.author: davidph 
+author: rothja
+ms.author: jroth 
 ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql

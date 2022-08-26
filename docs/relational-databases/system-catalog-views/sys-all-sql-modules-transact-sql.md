@@ -1,25 +1,23 @@
 ---
-description: "sys.all_sql_modules (Transact-SQL)"
-title: "sys.all_sql_modules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.all_sql_modules (Transact-SQL)"
+description: sys.all_sql_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "all_sql_modules_TSQL"
   - "sys.all_sql_modules"
   - "all_sql_modules"
   - "sys.all_sql_modules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_sql_modules catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_sql_modules (Transact-SQL)

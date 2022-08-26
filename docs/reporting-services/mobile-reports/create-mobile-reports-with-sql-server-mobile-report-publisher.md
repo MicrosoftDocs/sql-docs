@@ -1,7 +1,7 @@
 ---
 title: "Create mobile reports with SQL Server Mobile Report Publisher | Microsoft Docs"
 description: "Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations."
-ms.date: 02/09/2022
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,14 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
 
-
->[!NOTE]
->  This feature is deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. 
->  
->  Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
- 
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
 With [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and a variety of other form factors. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to treemaps and custom maps. 

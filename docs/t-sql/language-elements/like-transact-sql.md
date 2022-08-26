@@ -1,21 +1,21 @@
 ---
+title: "LIKE (Transact-SQL)"
 description: "LIKE (Transact-SQL)"
-title: "LIKE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ESCAPE"
   - "LIKE"
   - "ESCAPE_TSQL"
   - "LIKE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ESCAPE keyword"
   - "% (wildcard - character(s) to match)"
   - "ASCII pattern matching"
@@ -28,10 +28,9 @@ helpviewer_keywords:
   - "LIKE comparisons"
   - "matching patterns [SQL Server]"
   - "NOT LIKE keyword"
-ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
 |%|Any string of zero or more characters.|WHERE title LIKE '%computer%' finds all book titles with the word 'computer' anywhere in the book title.|  
 |_ (underscore)|Any single character.|WHERE au_fname LIKE '_ean' finds all four-letter first names that end with ean (Dean, Sean, and so on).|  
 |[ ]|Any single character within the specified range ([a-f]) or set ([abcdef]).|WHERE au_lname LIKE '[C-P]arsen' finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.|  
-|[^]|Any single character not within the specified range ([^a-f]) or set ([^abcdef]).|WHERE au_lname LIKE 'de[^l]%' all author last names starting with de and where the following letter isn't l.|  
+|[^]|Any single character not within the specified range ([^a-f]) or set ([^abcdef]).|WHERE au_lname LIKE 'de[^l]%' finds all author last names starting with de and where the following letter isn't l.|  
   
  *escape_character*  
  Is a character put in front of a wildcard character to indicate that the wildcard is interpreted as a regular character and not as a wildcard. *escape_character* is a character expression that has no default and must evaluate to only one character.  

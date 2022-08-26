@@ -1,19 +1,16 @@
 ---
+title: "HAS_DBACCESS (Transact-SQL)"
 description: "HAS_DBACCESS (Transact-SQL)"
-title: "HAS_DBACCESS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/23/2017"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HAS_DBACCESS_TSQL"
   - "HAS_DBACCESS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], verifying"
   - "permissions [SQL Server], user access status"
   - "HAS_DBACCESS"
@@ -22,10 +19,9 @@ helpviewer_keywords:
   - "users [SQL Server], access rights status"
   - "testing permissions"
   - "status information [SQL Server], user access"
-ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # HAS_DBACCESS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

@@ -5,7 +5,7 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
-ms.date: 09/07/2020
+ms.date: 03/31/2022
 ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
@@ -36,13 +36,13 @@ sudo systemctl status docker
 sudo systemctl start docker
 ```
 
-On Windows, verify that you are launching PowerShell or your command-prompt as an Administrator.
+On Windows, verify that you're launching PowerShell or your command-prompt as an Administrator.
 
 ## SQL Server container startup errors
 
 If the SQL Server container fails to run, try the following tests:
 
-- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, you are attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
+- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, you're attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
 
     <!--SQL Server 2017 on Linux -->
     ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -104,9 +104,9 @@ If the SQL Server container fails to run, try the following tests:
 
 - Make sure that you meet the minimum memory and disk requirements specified in the [prerequisites](quickstart-install-connect-docker.md#requirements) section of the quickstart article.
 
-- If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
+- If you're using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
 
-- If your SQL Server Docker container exits immediately after starting, check your docker logs. If you are using PowerShell on Windows with the `docker run` command, use double quotes instead of single quotes. With PowerShell Core, use single quotes.
+- If your SQL Server Docker container exits immediately after starting, check your docker logs. If you're using PowerShell on Windows with the `docker run` command, use double quotes instead of single quotes. With PowerShell Core, use single quotes.
 
 - Review the [SQL Server setup and error logs](#errorlogs).
 
@@ -165,7 +165,7 @@ If you can't connect to the SQL Server instance running in your container, try t
 
 - Make sure that your SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output. If not, use `docker start <Container ID>` to start it.
 
-- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
+- If you mapped to a non-default host port (not 1433), make sure you're specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
 
     ::: zone pivot="cs1-bash"
     ```bash
@@ -185,13 +185,13 @@ If you can't connect to the SQL Server instance running in your container, try t
     ```
     ::: zone-end
 
-- If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you are using the SA password associated with the data you're attaching to.
+- If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `MSSQL_SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you're using the SA password associated with the data you're attaching to.
 
 - Review the [SQL Server setup and error logs](#errorlogs).
 
 ## SQL Server Availability Groups
 
-If you are using Docker with SQL Server Availability Groups, there are two additional requirements.
+If you're using Docker with SQL Server Availability Groups, there are two additional requirements.
 
 - Map the port that is used for replica communication (default 5022). For example, specify `-p 5022:5022` as part of your `docker run` command.
 
@@ -199,7 +199,7 @@ If you are using Docker with SQL Server Availability Groups, there are two addit
 
 ## <a id="errorlogs"></a> SQL Server setup and error logs
 
-You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs. You can get the container ID by running the command `docker ps`.
+You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container isn't running, first start the container. Then use an interactive command-prompt to inspect the logs. You can get the container ID by running the command `docker ps`.
 
 ```bash
 docker start <ContainerID>
@@ -233,7 +233,7 @@ To start a bash terminal in the container run:
 docker exec -it <Container ID> /bin/bash
 ```
 
-Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
+Now you can run commands as though you're running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
 
 ## Next steps
 

@@ -1,26 +1,23 @@
 ---
-description: "DROP SEARCH PROPERTY LIST (Transact-SQL)"
-title: "DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP SEARCH PROPERTY LIST (Transact-SQL)"
+description: DROP SEARCH PROPERTY LIST (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_SEARCH_PROPERTY_LIST_TSQL"
   - "DROP SEARCH PROPERTY LIST"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "DROP SEARCH PROPERTY LIST statement"
   - "search property lists [SQL Server], dropping"
   - "search property lists [SQL Server], deleting"
-ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

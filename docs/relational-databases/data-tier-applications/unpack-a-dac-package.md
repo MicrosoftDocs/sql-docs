@@ -16,7 +16,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Unpack a DAC Package
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Use the Unpack Data-tier Application dialog box to unzip the scripts and files from a data-tier application (DAC) package. The scripts and files are placed in a folder where they can be reviewed before the package is used to deploy the DAC into a production system. The contents of one DAC can also be compared with the contents of another package unpacked to another folder.  
   
 1.  **Before you begin:**  [Security](#Security)  
@@ -57,7 +57,8 @@ ms.author: wiassaf
 ###  <a name="Browse"></a> Browse for Folder  
  Use this page to choose the destination folder for the unpack operation. Optionally, you can also create a new folder.  
   
- **Folder list** - Displays the file hierarchy for your computer. Expand the nodes to navigate to the folder in which to unpack the DAC package. Click on the folder and then click **OK**.  
+ **Folder list** - Displays the file hierarchy for your computer. Expand the nodes to navigate to the folder in which to unpack the DAC package. Select the folder and then select **OK**.  
+
   
  **Make New Folder** - Opens a dialog in which you can specify the name for a new folder to be created in the folder you have currently selected in the folder hierarchy.  
   

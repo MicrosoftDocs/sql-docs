@@ -1,21 +1,17 @@
 ---
+title: "OriginalValue Property (ADO)"
 description: "OriginalValue Property (ADO)"
-title: "OriginalValue Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Field20::OriginalValue"
-helpviewer_keywords: 
-  - "OriginalValue property [ADO]"
-ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Field20::OriginalValue"
+helpviewer_keywords:
+  - "OriginalValue property [ADO]"
+apitype: "COM"
 ---
 # OriginalValue Property (ADO)
 Indicates the value of a [Field](./field-object.md) that existed in the record before any changes were made.  

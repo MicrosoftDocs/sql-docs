@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "contained database, enabling"
   - "contained database authentication option"
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # contained database authentication Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

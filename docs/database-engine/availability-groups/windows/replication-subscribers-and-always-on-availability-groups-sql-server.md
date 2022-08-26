@@ -9,8 +9,10 @@ ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "failover subscribers with AlwaysOn"
+  - "failover subscribers with Always On"
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
+  - "replication [SQL Server], Always On Availability Groups"
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma

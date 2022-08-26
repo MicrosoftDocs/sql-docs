@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_trace_geteventinfo function"
   - "status information [SQL Server], events"
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

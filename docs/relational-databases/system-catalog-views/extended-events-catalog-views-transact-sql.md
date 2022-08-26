@@ -1,21 +1,19 @@
 ---
-description: "Extended Events Catalog Views (Transact-SQL)"
-title: "Extended Events Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Extended Events Catalog Views (Transact-SQL)"
+description: Extended Events Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "xe"
   - "catalog views [SQL Server], extended events"
+dev_langs:
+  - "TSQL"
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Extended Events Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

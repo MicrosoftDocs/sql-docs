@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC Data Source Administrator"
   - "opening ODBC Data Source Administrator"
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Open the ODBC Data Source Administrator
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,18 @@
 ---
+title: "Clear Method (ADO)"
 description: "Clear Method (ADO)"
-title: "Clear Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Errors::raw_Clear"
-  - "Errors::Clear"
-helpviewer_keywords: 
-  - "Clear method [ADO]"
-ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Errors::raw_Clear"
+  - "Errors::Clear"
+helpviewer_keywords:
+  - "Clear method [ADO]"
+apitype: "COM"
 ---
 # Clear Method (ADO)
 Removes all the [Error](./error-object.md) objects from the [Errors](./errors-collection-ado.md) collection.  

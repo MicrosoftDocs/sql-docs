@@ -11,6 +11,7 @@ ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
   - "log shipping [SQL Server], AlwaysOn Availability Groups"
+  - "log shipping [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT

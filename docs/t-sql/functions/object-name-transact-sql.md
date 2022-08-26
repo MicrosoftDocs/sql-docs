@@ -1,19 +1,16 @@
 ---
+title: "OBJECT_NAME (Transact-SQL)"
 description: "OBJECT_NAME (Transact-SQL)"
-title: "OBJECT_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OBJECT_NAME"
   - "OBJECT_NAME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OBJECT_NAME function"
   - "viewing database object names"
   - "objects [SQL Server], names"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "displaying database object names"
   - "database objects [SQL Server]"
   - "names [SQL Server], database objects"
-ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

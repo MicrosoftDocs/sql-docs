@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_io_cluster_shared_drives (Transact-SQL)"
-title: "sys.dm_io_cluster_shared_drives (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_io_cluster_shared_drives (Transact-SQL)"
+description: sys.dm_io_cluster_shared_drives (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_io_cluster_shared_drives_TSQL"
   - "sys.dm_io_cluster_shared_drives"
   - "dm_io_cluster_shared_drives_TSQL"
   - "dm_io_cluster_shared_drives"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_io_cluster_shared_drives dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_cluster_shared_drives (Transact-SQL)

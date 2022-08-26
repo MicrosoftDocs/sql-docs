@@ -1,21 +1,17 @@
 ---
+title: "Hierarchy Object (ADO MD)"
 description: "Hierarchy Object (ADO MD)"
-title: "Hierarchy Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Hierarchy"
-helpviewer_keywords: 
-  - "Hierarchy object [ADO MD]"
-ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Hierarchy"
+helpviewer_keywords:
+  - "Hierarchy object [ADO MD]"
+apitype: "COM"
 ---
 # Hierarchy Object (ADO MD)
 Represents one way in which the members of a [dimension](./dimension-object-ado-md.md) can be aggregated or "rolled up." A dimension can be aggregated along one or more hierarchies.  

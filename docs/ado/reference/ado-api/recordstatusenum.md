@@ -1,21 +1,17 @@
 ---
+title: "RecordStatusEnum"
 description: "RecordStatusEnum"
-title: "RecordStatusEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "RecordStatusEnum"
-helpviewer_keywords: 
-  - "RecordStatusEnum enumeration [ADO]"
-ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "RecordStatusEnum"
+helpviewer_keywords:
+  - "RecordStatusEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # RecordStatusEnum
 Specifies the [status](./status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  

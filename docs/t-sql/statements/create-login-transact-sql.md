@@ -1,21 +1,19 @@
 ---
-description: "CREATE LOGIN (Transact-SQL)"
 title: "CREATE LOGIN (Transact-SQL)"
-ms.custom: ""
-ms.date: 08/11/2021
+description: CREATE LOGIN (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: 03/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_LOGIN_TSQL"
   - "CREATE LOGIN"
   - "LOGIN_TSQL"
   - "LOGIN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "passwords [SQL Server], logins"
   - "mapping logins [SQL Server]"
   - "logins [SQL Server], creating"
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE LOGIN (Transact-SQL)
 
@@ -335,7 +333,10 @@ CREATE LOGIN Andreas
 ```syntaxsql
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
- { WITH <option_list> }
+  { 
+    FROM EXTERNAL PROVIDER
+    | WITH <option_list> [,..] 
+  }
 
 <option_list> ::=
     PASSWORD = { 'password' }
@@ -345,7 +346,16 @@ CREATE LOGIN login_name
 ## Arguments
 
 #### *login_name*
-Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
+
+> [!NOTE]
+> [Azure Active Directory (Azure AD) server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) are currently in public preview for Azure SQL Database.
+
+When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
+
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+
+#### FROM EXTERNAL PROVIDER </br>
+Specifies that the login is for Azure AD Authentication.
 
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
@@ -416,6 +426,16 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
+### C. Create a login using an Azure AD account
+
+The following example creates a login in the SQL Database logical server,`bob@contoso.com` that exists in the Azure AD domain called `contoso`.
+
+```sql
+Use master
+CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+GO
+```
+
 ## See Also
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -467,7 +487,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ## Arguments
 
 #### *login_name*
-When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) Principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
+When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
 Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
 

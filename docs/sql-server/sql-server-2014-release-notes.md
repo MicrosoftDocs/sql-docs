@@ -13,7 +13,7 @@ ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)
@@ -35,7 +35,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 |Feature|Description|For more information|
 |---|---|---|
-|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
+|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved Always On Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysON XEvents and performance counters|New AlwaysON XEvents and performance counters to improve diagnostics when troubleshooting latency issues with AlwaysON. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) and [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |Change tracking cleanup|A new stored procedure sp_flush_CT_internal_table_on_demand cleans up change tracking internal tables on demand.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema, metadata, and statistics but without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
@@ -342,7 +342,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
     This workaround will allow the Wizard to complete adding the replica in Azure.  
   
-2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Azure](/previous-versions/azure/dn376546(v=azure.100))  
+2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for Always On Availability Groups in Azure](/previous-versions/azure/dn376546(v=azure.100))  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

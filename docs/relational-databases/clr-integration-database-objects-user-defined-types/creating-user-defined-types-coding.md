@@ -1,16 +1,13 @@
 ---
-title: "Coding User-Defined Types | Microsoft Docs"
-description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
-ms.custom: ""
+title: "Coding User-Defined Types"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validation [CLR integration]"
   - "UDTs [CLR integration], coding"
   - "UserDefined serialization format [CLR integration]"
@@ -28,9 +25,10 @@ helpviewer_keywords:
   - "Currency UDT"
   - "validating UDT values"
   - "exposing UDT properties [CLR integration]"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-author: rothja
-ms.author: jroth
 ---
 # Creating User-Defined Types - Coding
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

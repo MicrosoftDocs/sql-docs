@@ -116,10 +116,10 @@ ms.author: maggies
   
          If the `MyDateTime.Value` string has a UTC offset, the `DateTime.Parse` function first adjusts for the UTC offset (7 A.M. - [`+08:00`] to the UTC time of 11 P.M. the night before). The `DateTime.Parse` function then applies the local report server UTC offset and, if necessary, adjusts the time again for Daylight Saving Time. For example, in Redmond, Washington, the local time offset adjusted for Daylight Saving Time is `[-07:00]`, or 7 hours earlier than 11 PM. The result is the following **DateTime** value: `2007-07-06 04:07:07 PM` (July 6, 2007 at 4:07 P.M).  
   
- For more information about converting strings to **DateTime** data types, see [Parsing Date and Time Strings](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatting Date and Time for a Specific Culture](https://go.microsoft.com/fwlink/?LinkId=89704), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime) on MSDN.  
+ For more information about converting strings to **DateTime** data types, see [Parsing Date and Time Strings](/dotnet/api/system.datetime.parse), [Formatting Date and Time for a Specific Culture](/dotnet/standard/base-types/formatting-types), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime).  
+
   
--   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
-  
+-   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).    
 -   Change the report dataset query to use [!INCLUDE[tsql](../../includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function **DatePart** to add a column for the year and a column for the UTC time zone converted to minutes:  
   
      `SELECT`  
@@ -142,4 +142,3 @@ ms.author: maggies
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-  

@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
   - "CHANGE_TRACKING_CURRENT_VERSION"
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a version that is associated with the last committed transaction. This version can be used when you enumerate changes by using [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   

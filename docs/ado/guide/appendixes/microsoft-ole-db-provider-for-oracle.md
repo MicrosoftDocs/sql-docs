@@ -1,20 +1,16 @@
 ---
+title: "Microsoft OLE DB Provider for Oracle"
 description: "Microsoft OLE DB Provider for Oracle Overview"
-title: "Microsoft OLE DB Provider for Oracle | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: 11/08/2018
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for Oracle"
   - "OLE DB provider for Oracle [ADO]"
   - "Oracle provider [ADO]"
-ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: rothja
-ms.author: jroth
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]

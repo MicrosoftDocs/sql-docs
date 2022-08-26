@@ -1,21 +1,17 @@
 ---
+title: "Field (ADO for Visual C++ Syntax)"
 description: "Field (ADO for Visual C++ Syntax)"
-title: "Field (ADO for Visual C++ Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Field collection [ADO], ADO for Visual C++ syntax"
-ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Field collection [ADO], ADO for Visual C++ syntax"
+dev_langs:
+  - "C++"
+apitype: "COM"
 ---
 # Field (ADO for Visual C++ Syntax)
 ## Methods  

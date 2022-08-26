@@ -1,22 +1,18 @@
 ---
+title: "Item Property (ADO MD Cellset)"
 description: "Item Property (ADO MD Cellset)"
-title: "Item Property (ADO MD Cellset) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Item"
-  - "Cellset::Item"
-helpviewer_keywords: 
-  - "Item property [ADO MD]"
-ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Item"
+  - "Cellset::Item"
+helpviewer_keywords:
+  - "Item property [ADO MD]"
+apitype: "COM"
 ---
 # Item Property (ADO MD Cellset)
 Retrieves a cell from a [cellset](./cellset-object-ado-md.md) using its coordinates.  

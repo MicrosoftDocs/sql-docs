@@ -1,43 +1,43 @@
 ---
-title: "Example: Renaming the &lt;row&gt; Element | Microsoft Docs"
+title: "Example: Renaming the &lt;row&gt; Element"
 description: View an example of renaming an XML row element by specifying an optional argument to RAW mode in the FOR XML clause.
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RAW mode, renaming <row> example"
-ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Example: Renaming the &lt;row&gt; Element
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  For each row in the result set, the RAW mode generates an element `<row>`. You can optionally specify another name for this element by specifying an optional argument to the RAW mode, as shown in this query. The query returns a <`ProductModel`> element for each row in the rowset.  
-  
-## Example  
-  
-```  
-SELECT ProductModelID, Name   
-FROM Production.ProductModel  
-WHERE ProductModelID=122  
-FOR XML RAW ('ProductModel'), ELEMENTS  
-GO  
-```  
-  
- This is the result. Because the `ELEMENTS` directive is added in the query, the result is element-centric.  
-  
-```  
-<ProductModel>  
-  <ProductModelID>122</ProductModelID>  
-  <Name>All-Purpose Bike Stand</Name>  
-</ProductModel>   
-```  
-  
-## See Also  
- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
-  
-  
+# Example: Rename the &lt;row&gt; element
+
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+For each row in the result set, the RAW mode generates an element `<row>`. You can optionally specify another name for this element by specifying an optional argument to the RAW mode, as shown in this query. The query returns a `<ProductModel>` element for each row in the rowset.
+
+## Example
+
+```sql
+SELECT ProductModelID, Name
+FROM Production.ProductModel
+WHERE ProductModelID = 122
+FOR XML RAW ('ProductModel'), ELEMENTS;
+GO
+```
+
+This is the result. Because the `ELEMENTS` directive is added in the query, the result is element-centric.
+
+```xml
+<ProductModel>
+  <ProductModelID>122</ProductModelID>
+  <Name>All-Purpose Bike Stand</Name>
+</ProductModel>
+```
+
+## See also
+
+- [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)

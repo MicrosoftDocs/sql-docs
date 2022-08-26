@@ -1,25 +1,23 @@
 ---
-description: "sys.stats_columns (Transact-SQL)"
-title: "sys.stats_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.stats_columns (Transact-SQL)"
+description: sys.stats_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "stats_columns_TSQL"
   - "stats_columns"
   - "sys.stats_columns"
   - "sys.stats_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.stats_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats_columns (Transact-SQL)

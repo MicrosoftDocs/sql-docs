@@ -1,23 +1,19 @@
 ---
+title: "GetDescendant (Database Engine)"
 description: "GetDescendant (Database Engine)"
-title: "GetDescendant (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "GetDescendant_TSQL"
-  - "GetDescendant"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetDescendant [Database Engine]"
-ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "GetDescendant_TSQL"
+  - "GetDescendant"
+helpviewer_keywords:
+  - "GetDescendant [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # GetDescendant (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

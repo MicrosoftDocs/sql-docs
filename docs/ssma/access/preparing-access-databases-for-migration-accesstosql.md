@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "versions of Access"
   - "workgroup security"
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # Preparing Access databases for migration (AccessToSQL)
 Before you migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must determine which databases to migrate and ensure that those databases are ready for migration.  
@@ -29,7 +29,7 @@ Before you migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssn
 ## Determining when to migrate to SQL Server  
 The Jet database engine, which is used as the database engine for Access, is a flexible, easy-to-use solution for data management. However, as databases become larger and more mission critical, many users find that they require greater performance, security, or availability. For applications that require a more robust data platform, consider moving the underlying databases for those applications to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about deciding when to migrate, see the [migration information page](https://go.microsoft.com/fwlink/?LinkId=68571) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web site.  
   
-After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can continue to use Access by using linked tables, or you can manually migrate your applications to [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-based code that interacts directly with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can continue to use Access by using linked tables, or you can manually migrate your applications to [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-based code that interacts directly with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Determining which databases to migrate  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access can locate Access databases for you. You can then export metadata about those databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to export and query metadata, see [Exporting an Access Inventory](exporting-an-access-inventory-accesstosql.md).  

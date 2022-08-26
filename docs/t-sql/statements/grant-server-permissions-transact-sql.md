@@ -1,23 +1,20 @@
 ---
-description: "GRANT Server Permissions (Transact-SQL)"
-title: "GRANT Server Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Server Permissions (Transact-SQL)"
+description: GRANT Server Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GRANT statement, servers"
   - "permissions [SQL Server], servers"
   - "servers [SQL Server], permissions"
   - "granting permissions [SQL Server], servers"
-ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # GRANT Server Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

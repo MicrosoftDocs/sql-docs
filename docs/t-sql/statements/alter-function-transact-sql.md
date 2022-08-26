@@ -1,29 +1,26 @@
 ---
-description: "ALTER FUNCTION (Transact-SQL)"
-title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER FUNCTION (Transact-SQL)"
+description: ALTER FUNCTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_FUNCTION_TSQL"
   - "ALTER FUNCTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER FUNCTION statement"
   - "modifying functions"
   - "functions [SQL Server], modifying"
-ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Alters an existing [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR function that was previously created by executing the CREATE FUNCTION statement, without changing permissions and without affecting any dependent functions, stored procedures, or triggers.  
   
@@ -219,7 +216,7 @@ RETURNS return_data_type
  [ *type_schema_name.* ] *parameter_data_type*  
  Is the parameter data type and optionally, the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types **cursor** and **table** cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] looks for the *parameter_data_type* in the following order:  
+ If *type_schema_name* is not specified, the [!INCLUDE[ssdenoversion-md](../../includes/ssdenoversion-md.md)] looks for the *parameter_data_type* in the following order:  
   
 -   The schema that contains the names of SQL Server system data types.  
   

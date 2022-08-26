@@ -1,25 +1,21 @@
 ---
+title: "Precision Property (ADOX)"
 description: "Precision Property (ADOX)"
-title: "Precision Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Column::put_Precision"
   - "_Column::PutPrecision"
   - "_Column::GetPrecision"
   - "_Column::get_Precision"
   - "_Column::Precision"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Precision property [ADOX]"
-ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Precision Property (ADOX)
 Indicates the maximum precision of data values in the [Column](./column-object-adox.md).  

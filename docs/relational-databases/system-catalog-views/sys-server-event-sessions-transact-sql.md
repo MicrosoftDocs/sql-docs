@@ -1,31 +1,32 @@
 ---
-description: "sys.server_event_sessions (Transact-SQL)"
-title: "sys.server_event_sessions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "sys.server_event_sessions (Transact-SQL)"
+description: sys.server_event_sessions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/30/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_event_sessions"
   - "server_event_sessions_TSQL"
   - "sys.server_event_sessions_TSQL"
   - "sys.server_event_sessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_event_sessions catalog view"
   - "xe"
+dev_langs:
+  - "TSQL"
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.server_event_sessions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Lists all the event session definitions that exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Lists all the server-scoped event session definitions that exist in SQL Server or Azure SQL Managed Instance.
+
+> [!NOTE]
+>  Azure SQL Database supports only database-scoped event sessions. See the related view, [sys.database_event_sessions](sys-database-event-sessions-azure-sql-database.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,12 +42,14 @@ ms.author: wiassaf
 |track_causality|**bit**|Enable or disable causality tracking. If set to 1 (ON), tracking is enabled and related events on different server connections can be correlated. The default setting is 0 (OFF). Is not nullable.|  
 |startup_state|**bit**|Value determines whether or not session is started automatically when the server starts. The default is 0. Is not nullable. Is one of:<br /><br /> 0 (OFF). The session does not start when the server starts.<br /><br /> 1 (ON). The event session starts when the server starts.|  
   
-## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+## Permissions
+
+Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)
+- [Extended Events](../../relational-databases/extended-events/extended-events.md)

@@ -1,27 +1,26 @@
 ---
+title: "@@TEXTSIZE (Transact-SQL)"
 description: "@@TEXTSIZE (Transact-SQL)"
-title: "@@TEXTSIZE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "@@TEXTSIZE"
   - "@@TEXTSIZE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET statement, TEXTSIZE option"
   - "SELECT statement [SQL Server], text size returned"
   - "TEXTSIZE option"
   - "@@TEXTSIZE function"
   - "text size returned [SQL Server]"
-ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

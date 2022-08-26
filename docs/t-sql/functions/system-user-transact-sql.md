@@ -1,19 +1,19 @@
 ---
+title: "SYSTEM_USER (Transact-SQL)"
 description: "SYSTEM_USER (Transact-SQL)"
-title: "SYSTEM_USER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SYSTEM_USER_TSQL"
   - "SYSTEM_USER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current user names"
   - "system-supplied user names [SQL Server]"
   - "users [SQL Server], logins"
@@ -23,10 +23,9 @@ helpviewer_keywords:
   - "inserting system user name into table"
   - "system usernames [SQL Server]"
   - "users [SQL Server], names"
-ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SYSTEM_USER (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

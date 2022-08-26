@@ -1,21 +1,17 @@
 ---
+title: "GetRowsOptionEnum"
 description: "GetRowsOptionEnum"
-title: "GetRowsOptionEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "GetRowsOptionEnum"
-helpviewer_keywords: 
-  - "GetRowsOptionEnum enumeration [ADO]"
-ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "GetRowsOptionEnum"
+helpviewer_keywords:
+  - "GetRowsOptionEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # GetRowsOptionEnum
 Specifies how many records to retrieve from a [Recordset](./recordset-object-ado.md).  

@@ -1,25 +1,23 @@
 ---
-description: "sys.spatial_index_tessellations (Transact-SQL)"
-title: "sys.spatial_index_tessellations (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.spatial_index_tessellations (Transact-SQL)"
+description: sys.spatial_index_tessellations (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "spatial_index_tessellations"
   - "sys.spatial_index_tessellations_TSQL"
   - "spatial_index_tessellations_TSQL"
   - "sys.spatial_index_tessellations"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.spatial_index_tessellations catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

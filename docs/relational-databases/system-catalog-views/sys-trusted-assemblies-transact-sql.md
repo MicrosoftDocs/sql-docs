@@ -1,23 +1,21 @@
 ---
-description: "sys.trusted_assemblies (Transact-SQL)"
-title: "sys.trusted_assemblies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trusted_assemblies (Transact-SQL)"
+description: sys.trusted_assemblies (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "trusted_assemblies_TSQL"
   - "trusted_assemblies"
   - "sys.trusted_assemblies_TSQL"
   - "sys.trusted_assemblies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trusted_assemblies"
-ms.assetid: 
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trusted_assemblies (Transact-SQL)  

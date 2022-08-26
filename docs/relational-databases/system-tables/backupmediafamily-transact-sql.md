@@ -1,23 +1,21 @@
 ---
-title: "backupmediafamily (Transact-SQL) | Microsoft Docs"
+title: "backupmediafamily (Transact-SQL)"
 description: Reference for backupmediafamily, which contains one row for each media family.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "backupmediafamily"
   - "backupmediafamily_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backupmediafamily system table"
   - "backup media [SQL Server], backupmediafamily system table"
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # backupmediafamily (Transact-SQL)
 

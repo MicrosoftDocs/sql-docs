@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
-author: nahk-ivanov
+author: cpichuka
 ms.prod: sql
 ms.custom:
   - intro-whats-new
@@ -9,12 +9,19 @@ ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-ms.author: alexiva
+ms.author: cpichuka
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v9.1
+
+The v9.1 release of SSMA for Access contains minor performance improvements,bug fixes and enhanced get help experience.
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for Access contains minor performance improvements, bug fixes and online help viewer support.
 
 ## SSMA v8.24
 

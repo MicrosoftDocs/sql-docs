@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server Database Engine
@@ -53,7 +53,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
     > [!NOTE]  
     >  In this release, selecting the **Data Quality Services** check box in setup does not install the Data Quality Services (DQS) server. You will have to perform additional steps post installation to install DQS server. For more information, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
     
-- [Polybase Query Service for External Data](../../relational-databases/polybase/polybase-guide.md) - is an optional component. Starting with SQL Server 2019, Java connector for HDFS data sources is also available.
+- [PolyBase Query Service for External Data](../../relational-databases/polybase/polybase-guide.md) - is an optional component. Starting with SQL Server 2019, Java connector for HDFS data sources is also available.
 
   
  The following additional features are options for many typical user scenarios:  

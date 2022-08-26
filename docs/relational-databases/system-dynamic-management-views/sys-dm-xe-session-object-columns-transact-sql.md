@@ -1,30 +1,30 @@
 ---
-description: "sys.dm_xe_session_object_columns (Transact-SQL)"
-title: "sys.dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
+title: "sys.dm_xe_session_object_columns (Transact-SQL)"
+description: sys.dm_xe_session_object_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xe_session_object_columns_TSQL"
   - "sys.dm_xe_session_object_columns_TSQL"
   - "dm_xe_session_object_columns"
   - "sys.dm_xe_session_object_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "xe"
   - "sys.dm_xe_session_object_columns dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Shows the configuration values for objects that are bound to a session.  
+Shows the configuration values for objects that are bound to an *active* server-scoped session.
+
+Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_database_session_object_columns](sys-dm-xe-database-session-object-columns-azure-sql-database.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -39,15 +39,19 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship Cardinalities  
+### Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns.object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid,<br /><br /> sys.dm_xe_objects.name|Many-to-one|  
 |dm_xe_session_object_columns.column_name,<br /><br /> dm_xe_session_object_columns.column_id|sys.dm_xe_object_columns.name,<br /><br /> sys.dm_xe_object_columns.column_id|Many-to-one|  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
-  
+## Next steps
 
+Learn more about related concepts in the following articles:
+
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
+- [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
+- [Extended events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)

@@ -1,22 +1,18 @@
 ---
+title: "Hierarchies Collection (ADO MD)"
 description: "Hierarchies Collection (ADO MD)"
-title: "Hierarchies Collection (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Dimension::Hierarchies"
-  - "Hierarchies"
-helpviewer_keywords: 
-  - "Hierarchies collection [ADO MD]"
-ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Dimension::Hierarchies"
+  - "Hierarchies"
+helpviewer_keywords:
+  - "Hierarchies collection [ADO MD]"
+apitype: "COM"
 ---
 # Hierarchies Collection (ADO MD)
 Contains the set of [Hierarchy](./hierarchy-object-ado-md.md) objects from a dimension.  

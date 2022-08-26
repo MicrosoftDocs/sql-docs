@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

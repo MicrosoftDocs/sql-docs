@@ -1,11 +1,14 @@
 ---
 title: "OPEN MASTER KEY (Transact-SQL)"
-description: "OPEN MASTER KEY (Transact-SQL)"
+description: OPEN MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPEN MASTER KEY DECRYPTION BY PASSWORD"
   - "OPEN_MASTER_KEY_DECRYPTION_BY_PASSWORD_TSQL"
   - "MASTER_KEY_TSQL"
@@ -14,21 +17,15 @@ f1_keywords:
   - "MASTER KEY DECRYPTION"
   - "OPEN MASTER KEY"
   - "MASTER_KEY_DECRYPTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "opening Database Master Keys"
   - "encryption [SQL Server], Database Master Key"
   - "cryptography [SQL Server], Database Master Key"
   - "master key decryption"
   - "OPEN MASTER KEY statement"
   - "database master key [SQL Server], opening"
-ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
-author: VanMSFT
-ms.author: vanto
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.reviewer: ""
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

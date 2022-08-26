@@ -1,19 +1,15 @@
 ---
+title: "RDS Programming Model with Objects"
 description: "RDS Programming Model with Objects"
-title: "RDS Programming Model with Objects | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS programming model [ADO]"
-  - "RDS objects [ADO]"
-ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS programming model [ADO]"
+  - "RDS objects [ADO]"
 ---
 # RDS Programming Model with Objects
 The goal of RDS is to gain access to and update data sources through an intermediary such as IIS. The programming model specifies the sequence of activities necessary to accomplish this goal. The object model specifies the objects whose methods and properties affect the programming model.  

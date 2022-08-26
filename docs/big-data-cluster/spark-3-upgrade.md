@@ -2,13 +2,13 @@
 title: Spark 3 upgrade guide
 titleSuffix: SQL Server Big Data Clusters
 description: Spark 3 upgrade guide
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # SQL Server Big Data Clusters Spark 3 upgrade guide

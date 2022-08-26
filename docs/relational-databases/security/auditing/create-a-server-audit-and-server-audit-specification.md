@@ -2,7 +2,7 @@
 title: "Create Server Audit & Server Audit Specification"
 description: Learn how to create a SQL Server audit and server audit specific using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
-ms.date: "10/16/2019"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-author: DavidTrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # Create a Server Audit and Server Audit Specification
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

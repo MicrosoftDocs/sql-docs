@@ -1,23 +1,20 @@
 ---
-description: "DROP SERVER AUDIT  (Transact-SQL)"
-title: "DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+title: "DROP SERVER AUDIT  (Transact-SQL)"
+description: DROP SERVER AUDIT  (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP SERVER AUDIT"
   - "DROP_SERVER_AUDIT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP SERVER AUDIT statement"
-ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +47,7 @@ DROP SERVER AUDIT audit_name
   
 ```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
-STATE = OFF;  
+WITH (STATE = OFF);    
 GO  
 DROP SERVER AUDIT HIPAA_Audit;  
 GO  

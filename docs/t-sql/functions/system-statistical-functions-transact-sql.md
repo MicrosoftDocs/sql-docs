@@ -1,22 +1,21 @@
 ---
+title: "System Statistical Functions (Transact-SQL)"
 description: "System Statistical Functions (Transact-SQL)"
-title: "System Statistical Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "statistical functions [SQL Server]"
   - "system statistical functions [SQL Server]"
   - "functions [SQL Server], statistical"
-ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # System Statistical Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

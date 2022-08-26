@@ -1,25 +1,21 @@
 ---
-description: "IS_SRVROLEMEMBER (Transact-SQL)"
 title: IS_SRVROLEMEMBER (Transact-SQL)
-ms.custom: ""
+description: "IS_SRVROLEMEMBER (Transact-SQL)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IS_SRVROLEMEMBER_TSQL"
   - "IS_SRVROLEMEMBER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "roles [SQL Server], members"
   - "IS_SRVROLEMEMBER function"
   - "members [SQL Server], verifying"
-ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 
 # IS_SRVROLEMEMBER (Transact-SQL)
@@ -77,7 +73,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  When the login parameter is a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_SRVROLEMEMBER will fail and might return incorrect or incomplete data.  
   
- If the domain controller is not available, the call to IS_SRVROLEMEMBER will return accurate information when the Windows principle can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If the domain controller is not available, the call to IS_SRVROLEMEMBER will return accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
  **IS_SRVROLEMEMBER** always returns 0 when a Windows group is used as the login argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified server role.  
   

@@ -5,8 +5,8 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "01/31/2022"
@@ -29,7 +29,7 @@ ms.date: "01/31/2022"
   
 4.  In the **Enter the object names to select** box, type the name of the per-service SID name. To locate it, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). (For the [!INCLUDE[ssDE](../../includes/ssde-md.md)] per service SID name, use **NT SERVICE\MSSQLSERVER** for a default instance, or **NT SERVICE\MSSQL$InstanceName** for a named instance.)  
   
-5.  Select **Check Names** to validate the entry. (If the validation fails, it might advise you that the name was not found. When you select **OK**, a **Multiple Names Found** dialog box appears. Now select the per-service SID name, either **MSSQLSERVER** or **NT SERVICE\MSSQL$InstanceName**, and then select **OK**. Select **OK** again to return to the **Permissions** dialog box.)   
+5.  Select **Check Names** to validate the entry. (If the validation fails, it might advise you that the name was not found. When you select **OK**, a **Multiple Names Found** dialog box appears. Now select the per-service SID name, either **NT SERVICE\MSSQLSERVER** or **NT SERVICE\MSSQL$InstanceName**, and then select **OK**. Select **OK** again to return to the **Permissions** dialog box.)   
 
 6.  In the **Group or user** names box, select the per-service SID name, and then in the **Permissions for** \<name> box, select the **Allow** check box for **Full control**.  
   

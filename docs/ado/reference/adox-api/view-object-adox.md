@@ -1,21 +1,16 @@
 ---
+title: "View Object (ADOX)"
 description: "View Object (ADOX)"
-title: "View Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "View"
-helpviewer_keywords: 
-  - "View object [ADOX]"
-ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords: 
+helpviewer_keywords:
+  - "View object [ADOX]"
+apitype: "COM"
 ---
 # View Object (ADOX)
 Represents a filtered set of records or a virtual table. When used in conjunction with the ADO [Command](../ado-api/command-object-ado.md) object, the **View** object can be used for adding, deleting, or modifying views.  

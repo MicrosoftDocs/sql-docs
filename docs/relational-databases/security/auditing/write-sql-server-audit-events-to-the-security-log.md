@@ -2,7 +2,7 @@
 title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
 description: Learn how to write SQL Server audit events to the Windows Security log. Find out about the limitations and restrictions to using that log.
 ms.custom: ""
-ms.date: "09/21/2017"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "audits [SQL Server], writing to Security Log"
   - "security logs [SQL Server]"
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
 ---  
 # Write SQL Server Audit Events to the Security Log  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 6.  In the **Select Users, Computers, or Groups** dialog box, either type the name of the user account, such as **domain1\user1** and then click **OK**, or click **Advanced** and search for the account.  
   
-7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Close the Security Policy tool.  
   
@@ -84,7 +84,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 ##  <a name="secpolPermission"></a> To configure the audit object access setting in Windows using secpol  
   
-1.  If the operating system is earlier than [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] or Windows Server 2008, on the **Start** menu, click **Run**.  
+1.  If the operating system is earlier than [!INCLUDE[winvista](../../../includes/winvista-md.md)] or Windows Server 2008, on the **Start** menu, click **Run**.  
   
 2.  Type **secpol.msc** and then click **OK**. If the **User Access Control** dialog box appears, click **Continue**.  
   
@@ -94,7 +94,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 5.  On the **Local Security Setting** tab, in the **Audit these attempts** area, select both **Success** and **Failure**.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Close the Security Policy tool.  
   

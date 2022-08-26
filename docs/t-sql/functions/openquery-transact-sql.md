@@ -1,28 +1,24 @@
 ---
+title: "OPENQUERY (Transact-SQL)"
 description: "OPENQUERY (Transact-SQL)"
-title: "OPENQUERY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPENQUERY_TSQL"
   - "OPENQUERY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DELETE statement [SQL Server], OPENQUERY function"
   - "OPENQUERY function"
   - "FROM clause, OPENQUERY function"
   - "UPDATE statement [SQL Server], OPENQUERY function"
   - "pass-through queries [SQL Server]"
   - "INSERT statement [SQL Server], OPENQUERY function"
-ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # OPENQUERY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,14 +75,14 @@ VALUES ('NewTitle');
 ```  
   
 ### C. Executing a DELETE pass-through query  
- The following example uses a pass-through `DELETE` query to delete the row inserted in example C.  
+ The following example uses a pass-through `DELETE` query to delete the row inserted in example B.  
   
 ```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### D. Executing a SELECT pass-through query  
- The following example uses a pass-through `SELECT` query to select the row inserted in example C.  
+ The following example uses a pass-through `SELECT` query to select the row inserted in example B.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  

@@ -1,22 +1,18 @@
 ---
+title: "GetString Method (ADO)"
 description: "GetString Method (ADO)"
-title: "GetString Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset20::raw_GetString"
-  - "Recordset20::GetString"
-helpviewer_keywords: 
-  - "GetString method [ADO]"
-ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset20::raw_GetString"
+  - "Recordset20::GetString"
+helpviewer_keywords:
+  - "GetString method [ADO]"
+apitype: "COM"
 ---
 # GetString Method (ADO)
 Returns the [Recordset](./recordset-object-ado.md) as a string.  

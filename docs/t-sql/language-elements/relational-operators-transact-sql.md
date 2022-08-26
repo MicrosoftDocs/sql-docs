@@ -1,20 +1,21 @@
 ---
+title: "Relational operators (Transact-SQL)"
 description: "Relational operators (Transact-SQL)"
-title: "Relational operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom:
+  - "event-tier1-build-2022"
+helpviewer_keywords:
   - "Relational operators [Transact-SQL], about operators"
   - "Relational operators [Transact-SQL]"
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 
 # Relational operators (Transact-SQL)
@@ -23,6 +24,7 @@ A relational operator is a syntax element that can accept one or more named or u
 
 SQL Server implements the following relational operators:
 
+- [GENERATE_SERIES &#40;Transact-SQL&#41;](../functions/generate-series-transact-sql.md)
 - [OPENDATASOURCE (Transact-SQL)](../functions/opendatasource-transact-sql.md)
 - [OPENQUERY (Transact-SQL)](../functions/openquery-transact-sql.md)
 - [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)

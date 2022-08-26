@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server, automatic startup"
   - "starting SQL Server, automatically"
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SCM Services - Set an Instance to Start Automatically
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,16 @@
 ---
+title: "ADO Error Reference"
 description: "ADO Error Reference"
-title: "ADO Error Reference | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "errors [ADO], number reference"
   - "errors [ADO], ErrorValueEnum"
   - "ErrorValueEnum enumeration [ADO]"
-ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: rothja
-ms.author: jroth
 ---
 # ADO Errors
 The **ErrorValueEnum** constant describes the ADO error values. For a complete listing of these enumerated constants, including values, see [Appendix B: ADO Errors](../appendixes/appendix-b-ado-errors.md). This section will examine some of the more interesting errors and explain some specific situations that can raise them, or solutions to fix the problem. Both the **ErrorValueEnum** constant and the short positive decimal number are listed.

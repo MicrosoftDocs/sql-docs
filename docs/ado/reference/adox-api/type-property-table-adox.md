@@ -1,23 +1,19 @@
 ---
+title: "Type Property (Table) (ADOX)"
 description: "Type Property (Table) (ADOX)"
-title: "Type Property (Table) (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Table::Type"
   - "_Table::GetType"
   - "_Table::get_Type"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Type property [ADOX]"
-ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Type Property (Table) (ADOX)
 Indicates the type of a table.  

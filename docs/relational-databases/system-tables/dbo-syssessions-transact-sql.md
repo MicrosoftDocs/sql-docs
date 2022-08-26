@@ -1,24 +1,22 @@
 ---
-description: "dbo.syssessions (Transact-SQL)"
-title: "dbo.syssessions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.syssessions (Transact-SQL)"
+description: dbo.syssessions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "12/30/2019"
 ms.prod: sql
-ms.reviewer: 
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.syssessions_TSQL"
   - "dbo.syssessions"
   - "syssessions_TSQL"
   - "syssessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syssessions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.syssessions (Transact-SQL)
 

@@ -6,6 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
 ms.topic: how-to
+ms.custom:
+- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 
@@ -85,7 +87,7 @@ Using the following guidelines will help you avoid "package not found" errors.
 
 ## See also
 
-::: moniker range="<=sql-server-2017"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"

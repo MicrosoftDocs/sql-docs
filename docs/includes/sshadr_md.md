@@ -1,1 +1,0 @@
- AlwaysOn Availability Groups 

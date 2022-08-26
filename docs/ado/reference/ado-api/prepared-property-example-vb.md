@@ -1,20 +1,16 @@
 ---
+title: "Prepared Property Example (VB)"
 description: "Prepared Property Example (VB)"
-title: "Prepared Property Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Prepared property [ADO], Visual Basic example"
-ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Prepared property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Prepared Property Example (VB)
 This example demonstrates the [Prepared](./prepared-property-ado.md) property by opening two [Command](./command-object-ado.md) objects - one prepared and one not prepared.  

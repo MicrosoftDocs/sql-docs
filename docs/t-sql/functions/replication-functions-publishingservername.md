@@ -1,24 +1,23 @@
 ---
+title: "PUBLISHINGSERVERNAME (Transact-SQL)"
 description: "Replication Functions - PUBLISHINGSERVERNAME"
-title: "PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "PUBLISHINGSERVERNAME_TSQL"
   - "PUBLISHINGSERVERNAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PUBLISHINGSERVERNAME function"
   - "Publishers [SQL Server replication], names"
-ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Replication Functions - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

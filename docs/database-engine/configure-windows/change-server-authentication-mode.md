@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "authentication [SQL Server], changing modes"
   - "server authentication mode [SQL Server]"
   - "modifying server authentication mode"
-author: markingmyname
+author: rwestMSFT
 ms.reviewer: ""
-ms.author: maghan
+ms.author: randolphwest
 ms.custom: FY22Q2Fresh
 ms.date: 11/17/2021
 ---

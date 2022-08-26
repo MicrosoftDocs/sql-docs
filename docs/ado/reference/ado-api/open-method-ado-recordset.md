@@ -1,22 +1,18 @@
 ---
+title: "Open Method (ADO Recordset)"
 description: "Open Method (ADO Recordset)"
-title: "Open Method (ADO Recordset) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::raw_Open"
-  - "Recordset15::Open"
-helpviewer_keywords: 
-  - "Open method [ADO]"
-ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::raw_Open"
+  - "Recordset15::Open"
+helpviewer_keywords:
+  - "Open method [ADO]"
+apitype: "COM"
 ---
 # Open Method (ADO Recordset)
 Opens a cursor on a [Recordset](./recordset-object-ado.md) object.  

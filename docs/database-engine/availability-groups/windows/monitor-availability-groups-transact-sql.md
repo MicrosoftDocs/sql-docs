@@ -10,10 +10,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
+  - "dynamic management views [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], databases"
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
+  - "catalog views [SQL Server], Always On Availability Groups"
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma

@@ -1,24 +1,21 @@
 ---
 title: REVOKE Database Scoped Credential (Transact-SQL)
-description: "REVOKE Database Scoped Credential (Transact-SQL)"
+description: REVOKE Database Scoped Credential (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "REVOKE DATABASE SCOPED CREDENTIAL"
   - "REVOKE_DATABASE_SCOPED_CREDENTIAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVOKE statements, database scoped credentials"
   - "revoking permissions [SQL Server], database scoped credentials"
-ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "12/16/2016"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

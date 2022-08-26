@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Uninstalling the Extension Pack"
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # Removing SSMA  for Oracle Components (OracleToSQL)
 When you have finished migrating databases from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless your migrated databases no longer use functions in the **ssma_oracle** schema of the **sysdb** database.  
@@ -24,7 +24,7 @@ You can uninstall SSMA by using **Add or Remove Programs**.
   
 1.  In Control Panel, open **Add or Remove Programs**.  
   
-2.  Select **[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
+2.  Select **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
   
 3.  To confirm that you want to uninstall SSMA, click **Yes**.  
   

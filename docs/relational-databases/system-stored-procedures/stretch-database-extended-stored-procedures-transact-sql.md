@@ -3,9 +3,9 @@ title: "Extended Stored Procedures (Transact-SQL)"
 description: Learn about extended stored procedures that you can use when you work with Stretch-enabled databases. See how to reconcile columns and perform other tasks.
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
-ms.date: "06/10/2016"
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: stored-procedures
 ms.topic: "reference"
 dev_langs: 
@@ -20,6 +20,9 @@ ms.author: maghan
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  This section describes the extended stored procedures that are related to Stretch Database.  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
 ## In This Section  
 [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) 

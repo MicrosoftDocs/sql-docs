@@ -1,23 +1,21 @@
 ---
-description: "Delete an Index"
-title: "Delete an Index | Microsoft Docs"
-ms.custom: ""
+title: "Delete an Index"
+description: Delete an Index
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing indexes"
   - "deleting indexes"
   - "dropping indexes"
   - "indexes [SQL Server], dropping"
   - "index deletions [SQL Server]"
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current || >= sql-server-2016"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Delete an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

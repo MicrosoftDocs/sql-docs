@@ -1,8 +1,9 @@
 ---
 description: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 title: "sys.sp_generate_database_ledger_digest (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -11,16 +12,14 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # sys.sp_generate_database_ledger_digest (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Generates the ledger digest, which is the hash of the last block in sys.database_ledger_blocks. If the last block is open (transactions have been grouped to the block but no final block hash has been generated), this stored procedure will close the block and generate the hash. Future transactions will then be assigned to the next block.
-
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
@@ -29,6 +28,8 @@ For more information on database ledger, see [Azure SQL Database ledger](/azure/
 ```syntaxsql
 EXEC sys.sp_generate_database_ledger_digest
 ```
+## Arguments
+None
 
 ## Return code values
 
@@ -38,7 +39,7 @@ EXEC sys.sp_generate_database_ledger_digest
 
 |Column name|Description|  
 |-----------------|---------------|
-|**latest_digest**|A JSON document containing the following data:<br/><br/>`database_name` - the name of the database. <br/>`block_id` – same as block_id from the last row in sys.database_ledger.<br/>`hash` – a hexadecimal string representing a SHA-256 hash of the last row in sys.database_ledger.<br/>`last_transaction_commit_time` - same as commit_time from the last row in sys.database_ledger in the ISO 8601 format.<br/>`digest_time` – the time when the digest was generated in the ISO 8601 format.
+|**latest_digest**|A JSON document containing the following data:<br/><br/>`database_name` - the name of the database. <br/>`block_id` – same as block_id from the last row in sys.database_ledger_blocks.<br/>`hash` – a hexadecimal string representing a SHA-256 hash of the last row in sys.database_ledger_blocks.<br/>`last_transaction_commit_time` - same as commit_time from the last row in sys.database_ledger_blocks in the ISO 8601 format.<br/>`digest_time` – the time when the digest was generated in the ISO 8601 format.
 
 **Example JSON**
 
@@ -58,11 +59,5 @@ Users with the **public** role are allowed to execute this stored procedure.
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](../system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](../system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](../system-catalog-views/sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](../system-catalog-views/sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](sys-sp-verify-database-ledger-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+- [Digest management](../security/ledger/ledger-digest-management.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

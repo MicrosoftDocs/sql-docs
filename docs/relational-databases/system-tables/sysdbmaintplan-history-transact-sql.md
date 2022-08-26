@@ -1,30 +1,28 @@
 ---
-description: "sysdbmaintplan_history (Transact-SQL)"
-title: "sysdbmaintplan_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdbmaintplan_history (Transact-SQL)"
+description: sysdbmaintplan_history (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdbmaintplan_history_TSQL"
   - "sysdbmaintplan_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdbmaintplan_history system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This table is stored in the **msdb** database.  
   
- [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
   
 |Column name|Data type|Description|  

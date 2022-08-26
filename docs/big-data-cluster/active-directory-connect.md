@@ -2,13 +2,13 @@
 title: Connect in Active Directory mode
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to connect to SQL Server Big Data Clusters in an Active Directory domain.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/30/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Connect [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]: Active Directory mode

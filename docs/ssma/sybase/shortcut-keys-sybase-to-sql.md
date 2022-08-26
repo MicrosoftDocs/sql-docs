@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Shortcut Keys(Sybase To SQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

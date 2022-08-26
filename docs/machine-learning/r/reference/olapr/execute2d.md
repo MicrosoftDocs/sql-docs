@@ -4,8 +4,8 @@
 title: "execute2D function (olapR) | Microsoft Docs" 
 description: "   Takes a Query object or an MDX string, and returns the result as a data frame. " 
 keywords: "(olapR), execute2D" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
@@ -89,8 +89,9 @@ Multi-dimensional query results are flattened to 2D using a standard flattening 
 
 ## References
 
-Creating a Demo OLAP Cube (the same as the one used in the examples): 
-[`https://docs.microsoft.com/en-us/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
+Creating a Demo OLAP Cube (the same as the one used in the examples):
+
+- [Multidimensional Modeling (Adventure Works Tutorial)](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
 
 

@@ -1,23 +1,21 @@
 ---
-description: "MSdistpublishers (Transact-SQL)"
-title: "MSdistpublishers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdistpublishers (Transact-SQL)"
+description: MSdistpublishers (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdistpublishers"
   - "MSdistpublishers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdistpublishers system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

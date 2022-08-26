@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Broker See Service Broker"
   - "SQL Server Service Broker"
   - "Service Broker"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "06/07/2021"

@@ -107,10 +107,10 @@ distrib [-?]
  Is the number of rows to send in a bulk copy operation. When performing a **bcp in** operation, the batch size is the number of rows to send to the server as one transaction, and also the number of rows that must be sent before the Distribution Agent logs a **bcp** progress message. When performing a **bcp out** operation, a fixed batch size of **1000** is used.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100 and the max is 10000.
+ Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100 and the max is 10000. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000 and the max is 10000. 
+ Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000 and the max is 10000. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.
   
  **-Continuous**  
  Specifies whether the agent attempts to poll replicated transactions continually. If specified, the agent polls replicated transactions from the source at polling intervals, even if there are no transactions pending.  
@@ -203,7 +203,7 @@ distrib [-?]
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
 
 **-MultiSubnetFailover**
- Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.   
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an Always On availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.   
   **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
 
   
@@ -235,7 +235,7 @@ distrib [-?]
  Specifies the quoted identifier character to use. The first character of the value indicates the value the Distribution Agent uses. If **QuotedIdentifier** is used with no value, the Distribution Agent uses a space. If **QuotedIdentifier** is not used, the Distribution Agent uses whatever quoted identifier the Subscriber supports.  
   
  **-SkipErrors** _native_error_id_ [**:**_...n_]  
- Is a colon-separated list that specifies the error numbers to be skipped by this agent.  
+ Is a colon-separated list that specifies the error numbers to be skipped by this agent. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
@@ -259,7 +259,7 @@ distrib [-?]
 |**3**|OLE DB data source|  
   
  **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
- Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions.  
+ Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.  
   
 > [!NOTE]  
 >  If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  

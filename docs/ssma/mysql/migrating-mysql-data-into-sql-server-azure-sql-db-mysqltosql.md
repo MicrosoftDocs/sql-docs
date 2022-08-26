@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "Data Migration, server side data migration"
   - "Data Migration,client side data migration"
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
+f1_keywords: 
+    - "ssma.mysql.migratedata.f1"
 ---
 # Migrating MySQL Data into SQL Server - Azure SQL Database (MySQLToSQL)
 After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can migrate data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
@@ -94,14 +96,38 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
   
 5.  In the **Connect to MySQL** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to MySQL, see [Connect to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    If the target database is SQL Server, then, enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to SQL Server, see [Connect to SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md)  
+    If the target database is SQL Server then enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to SQL Server, see [Connect to SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md)  
   
-    If the target database is SQL Azure, then enter the connection credentials in the **Connect to SQL Azure** dialog box, and click **Connect**. For more information on connecting to SQL Azure, see [Connect to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    If the target database is SQL Azure then enter the connection credentials in the **Connect to SQL Azure** dialog box, and click **Connect**. For more information on connecting to SQL Azure, see [Connect to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
     Messages will appear in the **Output** pane. When the migration is complete, the **Data Migration Report** appears. If any data did not migrate, click the row that contains the errors, and then click **Details**. When you are finished with the report, click **Close**. For more information on Data Migration Report, see [Data Migration Report (SSMA Common)](../sybase/data-migration-report-sybasetosql.md)  
   
 > [!NOTE]  
 > When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.  
+
+## Migrating data at scale (Preview)
+
+When large data size needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the Azure data factory pipeline and the scalability of cloud to migrate on-premises or external Oracle data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data to Azure SQL PaaS or SQL VM.
+
+1. For large offline migration, click on Migrate data at scale. 
+
+1. Provide Azure active directory account for authentication. Once you entered the user name, click on connect.
+
+1. Select the tenant and the subscription that already has the Azure SQL VM or Azure SQL database or managed instance configured and click next.
+
+1. The next step in the migrate workflow is to provide the data source credentials followed by  the target SQL credentials.
+
+1. For this migration, either you can use existing Azure resources -  resource group and the data factory name  or click new to create a resource group and Azure data factory for migration.
+
+1. In order to migrate an external data source,  an integration runtime is required. Either click new and follow the steps to create the integration runtime or use an existing integration service. To create an integration service, a gateway installation needs to be configured and a key needs to be supplied to configure integration runtime.
+
+1. Finally, provide a unique data  migration name. Migration name supports characters and numeric values. Avoid any special characters.
+
+1. If the target tables contain data, it will be truncated and reloaded. A warning dialog box will appear.  Select OK to proceed or cancel to avoid truncate and load activity.
+
+1. It takes few minutes to create Azure data factory components. The status bar will provide the progress of the pipeline creation. If the pipeline is created successfully, a message will be written in the output log "A data factory pipeline [PipelineName] is created for the data migration activity."
+
+1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
 ## See Also  
 [Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

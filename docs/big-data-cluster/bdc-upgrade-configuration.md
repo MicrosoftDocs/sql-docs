@@ -4,11 +4,11 @@ titleSuffix: SQL Server Big Data Clusters
 description: Upgrade to a Configuration Management Enabled Big Data Cluster
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rahul.ajmera, dacoelho
+ms.reviewer: rahul.ajmera, hudequei
 ms.date: 02/11/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # Upgrading to a Configuration Management Enabled Cluster (CU8 or lower to CU9+)

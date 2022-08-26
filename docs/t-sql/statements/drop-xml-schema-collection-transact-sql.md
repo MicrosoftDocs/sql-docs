@@ -1,28 +1,25 @@
 ---
-description: "DROP XML SCHEMA COLLECTION (Transact-SQL)"
-title: "DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP XML SCHEMA COLLECTION (Transact-SQL)"
+description: DROP XML SCHEMA COLLECTION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP XML SCHEMA COLLECTION"
   - "DROP_XML_SCHEMA_COLLECTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting XML schema collections"
   - "XML schema collections [SQL Server], removing"
   - "schema collections [SQL Server], removing"
   - "removing XML schema collections"
   - "dropping XML schema collections"
   - "DROP XML SCHEMA COLLECTION statement"
-ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

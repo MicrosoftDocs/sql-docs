@@ -1,30 +1,26 @@
 ---
+title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
-title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/25/2020"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "FREESYSTEMCACHE_TSQL"
   - "DBCC_FREESYSTEMCACHE_TSQL"
   - "DBCC FREESYSTEMCACHE"
   - "FREESYSTEMCACHE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "clearing unused cache entries"
   - "DBCC FREESYSTEMCACHE statement"
   - "unused cache entries"
   - "releasing unused cache entries"
   - "freeing unused cache entries"
   - "cleaning unused cache entries"
-ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -82,7 +78,7 @@ The following example illustrates how to clean caches that are dedicated to a sp
   
 ```sql
 -- Clean all the caches with entries specific to the resource pool named "default".  
-DBCC FREESYSTEMCACHE ('ALL', default);  
+DBCC FREESYSTEMCACHE ('ALL', [default]);  
 ```  
   
 ### B. Releasing entries from their respective caches after they become unused  

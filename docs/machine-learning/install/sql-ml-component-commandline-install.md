@@ -3,13 +3,14 @@ title: Install from a command prompt
 description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/16/2021
+ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services with R and Python from the command line
@@ -19,9 +20,12 @@ This article provides instructions for installing [SQL Server Machine Learning S
 
 You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+
 ## Pre-install checklist
 
-+ Run commands from an elevated command prompt. 
++ Run commands from an elevated command prompt.
 
 + A database engine instance is required for in-database installations. You cannot install just R or Python features, although you can [add them incrementally to an existing instance](#add-existing). If you want just R and Python without the database engine, install the [standalone server](#shared-feature).
 
@@ -38,6 +42,9 @@ The **/FEATURES** argument is required, as are licensing term agreements.
 When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the **/Q** parameter, or Quiet Simple mode by using the **/QS** parameter. The **/QS** switch only shows progress, does not accept any input, and displays no error messages if encountered. The **/QS** parameter is only supported when **/Action=install** is specified.
 
 ::: moniker range="=sql-server-2016"
+
+### Command line arguments for SQL Server 2016
+
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server R Services (In-Database).  |
@@ -49,6 +56,9 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
+
+### Command line arguments for SQL Server 2017
+
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
@@ -63,7 +73,10 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="=sql-server-ver15"
+
+### Command line arguments for SQL Server 2019
+
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
@@ -79,6 +92,18 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 ::: moniker-end
 
+
+::: moniker range="=sql-server-ver16"
+
+### Command line arguments for SQL Server 2022
+
+| Arguments | Description |
+|-----------|-------------|
+| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
+| /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|
+
+::: moniker-end
+
 ## <a name="indb"></a> In-database instance installations
 
 In-database analytics are available for database engine instances, required for adding the **AdvancedAnalytics** feature to your installation. You can install a database engine instance with advanced analytics, or [add it to an existing instance](#add-existing). 
@@ -88,7 +113,20 @@ To view progress information without the interactive on-screen prompts, use the 
 > [!IMPORTANT]
 > After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation configuration](#post-install) for instructions.
 
-::: moniker range=">=sql-server-2017"
+::: moniker range="=sql-server-ver16"
+### SQL Server 2022 Machine Learning Services: database engine, advanced analytics 
+
+For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
+
+```cmd
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
+/IACCEPTSQLSERVERLICENSETERMS
+```
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017 || =sql-server-ver15"
 ### SQL Server Machine Learning Services: database engine, advanced analytics with Python and R
 
 For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
@@ -132,10 +170,11 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 
 Applies to in-database installations only.
 
-When setup is finished, you have a database engine instance with R and Python, the Microsoft R and Python packages, Microsoft R Open, Anaconda, tools, samples, and scripts that are part of the distribution. 
+When SQL Setup for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is finished, you have a database engine instance with R and Python, the Microsoft R and Python packages, Microsoft R Open, Anaconda, tools, samples, and scripts that are part of the distribution. 
+
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 Two more tasks are required to complete the installation:
-
 
 ::: moniker range=">=sql-server-2017"
 1. Restart the database engine service.
@@ -146,9 +185,10 @@ Two more tasks are required to complete the installation:
 ::: moniker range="=sql-server-2016"
 1. Restart the database engine service.
 
-1. SQL Server R Services: Enable external scripts before you can use the feature. Follow the instructions in  [Install SQL Server R Services (In-Database)](sql-r-services-windows-install.md) as your next step. 
+1. SQL Server R Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server R Services (In-Database)](sql-r-services-windows-install.md) as your next step. 
 ::: moniker-end
 
+::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
 When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
@@ -157,10 +197,34 @@ When adding in-database advanced analytics to an existing database engine instan
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
+::: moniker-end
+::: moniker range="=sql-server-ver16"
+## <a name="add-existing-2022"></a> Add advanced analytics to an existing database engine instance
+
+When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2022 or later database engine, you can add the Machine Learning Services feature with the following:
+
+```cmd  
+Setup.exe /qs /ACTION=Install /FEATURES=ADVANCEDANALYTICS /INSTANCENAME=MSSQLSERVER 
+/IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
+```
+
+::: moniker-end
+::: moniker range="=sql-server-ver16"
+## <a name="silent-sql2022"></a> Silent install for SQL Server 2022
+
+For a silent installation of SQL Server 2022, use the following sample:
+ 
+```cmd  
+Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
+/IACCEPTSQLSERVERLICENSETERMS 
+```
+::: moniker-end
+::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 ## <a name="silent"></a> Silent install
 
-A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. For Python, CAB files must be located in %TEMP*. For R, you can set the folder path using You can the temp directory for this.
+A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. For Python, CAB files must be located in %TEMP*. For R, you can set the folder path using you can the temp directory for this.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
@@ -169,7 +233,13 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
+::: moniker-end
+
 ## <a name="shared-feature"></a> Standalone server installations
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
+
+**Applies to: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]** only.
 
 A standalone server is a "shared feature" not bound to a database engine instance. The following examples show valid syntax for installation of the standalone server.
 
@@ -181,6 +251,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
+
 ::: moniker range="=sql-server-2016"
 SQL Server R Server is R-only:
 
@@ -190,7 +261,9 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 ```
 ::: moniker-end
 
-When setup is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 
+When SQL Setup for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 
+
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 To open an R console window, go to `\Program files\Microsoft SQL Server\150(or 140,130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](/machine-learning-server/r/tutorial-r-to-revoscaler).
 

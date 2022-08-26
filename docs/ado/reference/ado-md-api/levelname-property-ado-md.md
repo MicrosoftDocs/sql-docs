@@ -1,22 +1,18 @@
 ---
+title: "LevelName Property (ADO MD)"
 description: "LevelName Property (ADO MD)"
-title: "LevelName Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Member::LevelName"
-  - "LevelName"
-helpviewer_keywords: 
-  - "LevelName property [ADO MD]"
-ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Member::LevelName"
+  - "LevelName"
+helpviewer_keywords:
+  - "LevelName property [ADO MD]"
+apitype: "COM"
 ---
 # LevelName Property (ADO MD)
 Indicates the name of the level of a [member](./member-object-ado-md.md).  

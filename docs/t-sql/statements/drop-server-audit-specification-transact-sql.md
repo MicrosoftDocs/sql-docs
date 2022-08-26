@@ -1,25 +1,22 @@
 ---
-description: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL)"
-title: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL)"
+description: DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_SERVER_AUDIT_SPECIFICATION_TSQL"
   - "DROP SERVER AUDIT SPECIFICATION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
   - "DROP SERVER AUDIT SPECIFICATION statement"
-ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

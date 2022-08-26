@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_broker_connections (Transact-SQL)"
-title: "sys.dm_broker_connections (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/08/2016"
+title: "sys.dm_broker_connections (Transact-SQL) "
+description: sys.dm_broker_connections returns a row for each Service Broker network connection.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/03/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_broker_connections"
   - "dm_broker_connections"
   - "sys.dm_broker_connections_TSQL"
   - "dm_broker_connections_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_broker_connections dynamic management view"
-ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,18 +55,16 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## Physical Joins  
- ![Joins for sys.dm_broker_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-broker-connections-1.gif "Joins for sys.dm_broker_connections")  
+## Physical joins  
+
+:::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-broker-connections-1.svg" alt-text="Diagram of physical joins for sys.dm_broker_connections.":::
   
-## Relationship Cardinalities  
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-|**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|One-to-one|  
+|`dm_broker_connections.connection_id`|`dm_exec_connections.connection_id`|One-to-one|  
   
-## See Also  
+## Next steps
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
-  
-  
-

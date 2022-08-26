@@ -1,31 +1,28 @@
 ---
-description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
-ms.custom: ""
-ms.date: 04/13/2021
+description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams."
+author: markingmyname
+ms.author: maghan
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
   - "CREATE_EXTERNAL_FILE_FORMAT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "External"
   - "External, file format"
   - "PolyBase, external file format"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
-Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
-To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
+Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table. To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
 The following file formats are supported:
   
@@ -38,10 +35,12 @@ The following file formats are supported:
 - Parquet
 
 - JSON - Applies to Azure SQL Edge only. For information on using OPENROWSET to import JSON data in other platforms, see [Import JSON documents into SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) or [Query JSON files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
+ 
+- Delta - Applies to the [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+ 
+## Syntax
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax
   
 ### [Delimited text](#tab/delimited)
 ```syntaxsql
@@ -121,9 +120,18 @@ WITH (
     ]);  
 ```
 
-> [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
+### [Delta table](#tab/delta)
+```syntaxsql
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+         FORMAT_TYPE = DELTA  
+         -- DATA_COMPRESSION is available only in SQL Server
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
+    ]);  
+```
 ---
   
 ## Arguments  
@@ -131,7 +139,7 @@ WITH (
 Specifies a name for the external file format.
  
 ### FORMAT_TYPE 
-`FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]`
+`FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT | DELTA ]`
 
 Specifies the format of the external data.
   
@@ -146,9 +154,9 @@ Specifies the format of the external data.
 
   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`
 
 - DELIMITEDTEXT
   Specifies a text format with column delimiters, also called field terminators.
@@ -156,72 +164,82 @@ Specifies the format of the external data.
 - JSON
   Specifies a JSON format. Applies to Azure SQL Edge only. 
 
+- DELTA
+  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] 
+
+
 ### DATA\_COMPRESSION
  `DATA_COMPRESSION = *data_compression_method*`  
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
  To work properly, Gzip compressed files must have the ".gz" file extension.
  
- #### [Delimited text](#tab/delimited)
+#### [Delimited text](#tab/delimited)
  The DELIMITEDTEXT format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
 
 #### [RC](#tab/rc)
  The RCFILE format type supports this compression method:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
   
 #### [ORC](#tab/orc)
  The ORC file format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [Parquet](#tab/parquet)
  The PARQUET file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [JSON](#tab/json)
  The JSON file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
+-   DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+
+### [Delta table](#tab/delta)
+ N/A
+ 
 ---  
+
+
 ### Delimited text format options
 
 The format options described in this section are optional and only apply to delimited text files.
 
 #### FIELD_TERMINATOR
 `FIELD_TERMINATOR = *field_terminator*`  
-Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
+Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character `|`. For guaranteed support, we recommend using one or more ASCII characters.
   
   
 Examples:  
   
--   FIELD_TERMINATOR = '|'  
+-   `FIELD_TERMINATOR = '|' `
   
--   FIELD_TERMINATOR = ' '  
+-   `FIELD_TERMINATOR = ' '  `
   
--   FIELD_TERMINATOR = ꞌ\tꞌ  
+-   `FIELD_TERMINATOR = ꞌ\tꞌ  `
   
--   FIELD_TERMINATOR = '~|~'  
+-   `FIELD_TERMINATOR = '~|~'  `
   
 #### STRING_DELIMITER
 `STRING_DELIMITER = *string_delimiter*`
 
-Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
+Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ASCII characters.
  
   
  Examples:  
 
--   STRING_DELIMITER = '"'
+-   `STRING_DELIMITER = '"'`
 
--   STRING_DELIMITER = '0x22' -- Double quote hex
+-   `STRING_DELIMITER = '0x22'` -- Double quote hex
   
--   STRING_DELIMITER = '*'  
+-   `STRING_DELIMITER = '*'  `
   
--   STRING_DELIMITER = ꞌ,ꞌ  
+-   `STRING_DELIMITER = ꞌ,ꞌ  `
   
--   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
+-   `STRING_DELIMITER = '0x7E0x7E'`  -- Two tildes (for example, `~~`)
  
 #### FIRST_ROW
  `FIRST_ROW = *First_row_int*`  
@@ -263,17 +281,17 @@ Notes about the table:
   
 |Date Type|Example|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|In addition to year, month and day, this date format includes 00-24 hours, 00-59 minutes, 00-59 seconds, and 3 digits for milliseconds.|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|In addition to year, month and day, this date format includes 00-12 hours, 00-59 minutes, 00-59 seconds, 3 digits for milliseconds, and AM, am, PM, or pm. |  
-|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes.|  
-|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, no seconds, and AM, am, PM, or pm.|  
-|Date|DATE_FORMAT =  'yyyy-MM-dd'|Year, month, and day. No time element is included.|  
-|Date|DATE_FORMAT = 'yyyy-MMM-dd'|Year, month, and day. When month is specified with 3 M's, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
-|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds.|  
-|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, and AM, am, PM, or pm.|  
-|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds, and the timezone offset which you put in the input file as `{+&#124;-}HH:ss`. For example, since Los Angeles time without daylight savings is 8 hours behind UTC, a value of -08:00 in the input file specifies the timezone for Los Angeles.|  
-|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, (AM, am, PM, or pm), and the timezone offset. See the description in the previous row.|  
-|Time|DATE_FORMAT = 'HH:mm:ss'|There is no date value, only 00-23 hours, 00-59 minutes, and 00-59 seconds.|  
+|DateTime|DATE_FORMAT = `yyyy-MM-dd HH:mm:ss.fff`|In addition to year, month and day, this date format includes 00-24 hours, 00-59 minutes, 00-59 seconds, and 3 digits for milliseconds.|  
+|DateTime|DATE_FORMAT = `yyyy-MM-dd hh:mm:ss.ffftt`|In addition to year, month and day, this date format includes 00-12 hours, 00-59 minutes, 00-59 seconds, 3 digits for milliseconds, and AM, am, PM, or pm. |  
+|SmallDateTime|DATE_FORMAT =  `yyyy-MM-dd HH:mm`|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes.|  
+|SmallDateTime|DATE_FORMAT =  `yyyy-MM-dd hh:mmtt`|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, no seconds, and AM, am, PM, or pm.|  
+|Date|DATE_FORMAT =  `yyyy-MM-dd`|Year, month, and day. No time element is included.|  
+|Date|DATE_FORMAT = `yyyy-MMM-dd`|Year, month, and day. When month is specified with 3 M's, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
+|DateTime2|DATE_FORMAT = `yyyy-MM-dd HH:mm:ss.fffffff`|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds.|  
+|DateTime2|DATE_FORMAT = `yyyy-MM-dd hh:mm:ss.ffffffftt`|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, and AM, am, PM, or pm.|  
+|DateTimeOffset|DATE_FORMAT = `yyyy-MM-dd HH:mm:ss.fffffff zzz`|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds, and the timezone offset which you put in the input file as `{+&#124;-}HH:ss`. For example, since Los Angeles time without daylight savings is 8 hours behind UTC, a value of -08:00 in the input file specifies the timezone for Los Angeles.|  
+|DateTimeOffset|DATE_FORMAT = `yyyy-MM-dd hh:mm:ss.ffffffftt zzz`|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, (AM, am, PM, or pm), and the timezone offset. See the description in the previous row.|  
+|Time|DATE_FORMAT = `HH:mm:ss`|There is no date value, only 00-23 hours, 00-59 minutes, and 00-59 seconds.|  
   
  ##### Supported date and time formats
  
@@ -296,17 +314,17 @@ Notes about the table:
   
  Details:  
   
--   To separate month, day and year values, you can use '-', '/', or '.'. For simplicity, the table uses only the ' - ' separator.
+-   To separate month, day and year values, you can use `-`, `/`, or `.`. For simplicity, the table uses only the ` - ` separator.
   
 -   To specify the month as text, use three or more characters. Months with one or two characters are interpreted as a number.
   
--   To separate time values, use the ':' symbol.
+-   To separate time values, use the `:` symbol.
   
 -   Letters enclosed in square brackets are optional.
   
--   The letters 'tt' designate [AM|PM|am|pm]. AM is the default. When 'tt' is specified, the hour value (hh) must be in the range of 0 to 12.
+-   The letters `tt` designate [AM|PM|am|pm]. AM is the default. When `tt` is specified, the hour value (hh) must be in the range of 0 to 12.
   
--   The letters 'zzz' designate the time zone offset for the system's current time zone in the format {+|-}HH:ss].
+-   The letters `zzz` designate the time zone offset for the system's current time zone in the format {+|-}HH:ss].
  
 #### USE_TYPE_DEFAULT 
  `USE_TYPE_DEFAULT = { TRUE | FALSE }`
@@ -323,7 +341,7 @@ Notes about the table:
 -   1900-01-01 if the column is a date column.
   
  **FALSE**  
- Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
+ Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string `NULL`.
  
 #### ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
@@ -342,7 +360,7 @@ Notes about the table:
   
 ## Limitations and Restrictions
   
- The row delimiter in delimited-text files must be supported by Hadoop's LineRecordReader. That is, it must be either '\r', '\n', or '\r\n'. These delimiters are not user-configurable.
+ The row delimiter in delimited-text files must be supported by Hadoop's LineRecordReader. That is, it must be either `\r`, `\n`, or `\r\n`. These delimiters are not user-configurable.
   
  The combinations of supported SerDe methods with RCFiles, and the supported data compression methods are listed previously in this article. Not all combinations are supported.
   
@@ -358,14 +376,14 @@ Notes about the table:
 ## Performance
  Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
   
- Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2 which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
+ Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
   
 ## Examples  
   
 ### A. Create a DELIMITEDTEXT external file format  
- This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character '|'. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION isn't specified, the text file is uncompressed.
+ This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character `|`. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION isn't specified, the text file is uncompressed.
   
- For a delimited text file, the data compression method can either be the default Codec, 'org.apache.hadoop.io.compress.DefaultCodec', or the Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
+ For a delimited text file, the data compression method can either be the default Codec, `org.apache.hadoop.io.compress.DefaultCodec`, or the Gzip Codec, `org.apache.hadoop.io.compress.GzipCodec`.
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
@@ -379,7 +397,7 @@ WITH (
 ```  
   
 ### B. Create an RCFile external file format  
- This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
+ This example creates an external file format for a RCFile that uses the `serialization/deserialization` method `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -391,7 +409,7 @@ WITH (
 ```  
   
 ### C. Create an ORC external file format  
- This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
+ This example creates an external file format for an ORC file that compresses the data with the `org.apache.io.compress.SnappyCodec` data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```sql 
 CREATE EXTERNAL FILE FORMAT orcfile1  
@@ -402,7 +420,7 @@ WITH (
 ```  
   
 ### D. Create a PARQUET external file format  
- This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
+ This example creates an external file format for a Parquet file that compresses the data with the `org.apache.io.compress.SnappyCodec` data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
@@ -411,8 +429,11 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
- This example creates an external file format for CSV file with a single header row. 
+<a id="e-create-a-delimited-text-file-skipping-header-row-azure-synapse-analytics-only"></a>
+### E. Create a Delimited Text File Skipping Header Row 
+**Applies To:** Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+
+ This example creates an external file format for CSV file with a single header row. For more information, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT skipHeader_CSV
@@ -424,8 +445,11 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+
 ### F. Create a JSON external file format  
- This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
+**Applies to:**  Azure SQL Edge
+
+ This example creates an external file format for a JSON file that compresses the data with the `org.apache.io.compress.SnappyCodec` data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
   
 ```sql  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  
@@ -435,9 +459,22 @@ WITH (
 );  
 ```  
 
-## See Also
- [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
- [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  
+### G. Create a Delta table external file format
+
+This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If DATA_COMPRESSION isn't specified, the default is no compression. For more information, see [Virtualize delta table file with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
+
+```sql
+CREATE EXTERNAL FILE FORMAT DeltaFileFormat
+WITH(
+    FORMAT_TYPE = DELTA,
+  DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);
+```
+
+## Next steps 
+
+ - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
+ - [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
+ - [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ - [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

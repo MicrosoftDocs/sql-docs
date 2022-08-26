@@ -1,17 +1,16 @@
 ---
-description: "SQL and Parallel Data Warehouse Dynamic Management Views"
 title: "SQL and Parallel Data Warehouse Dynamic Management Views"
-ms.custom: seo-dt-2019
+description: SQL and Parallel Data Warehouse Dynamic Management Views
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/28/2021
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

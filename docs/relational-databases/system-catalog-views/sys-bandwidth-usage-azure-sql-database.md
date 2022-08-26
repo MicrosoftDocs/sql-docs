@@ -1,68 +1,51 @@
 ---
-description: "sys.bandwidth_usage (Azure SQL Database)"
-title: "sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/28/2019"
+title: "sys.bandwidth_usage (Azure SQL Database)"
+description: sys.bandwidth_usage (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/30/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "bandwidth_usage"
   - "sys.bandwidth_usage"
   - "bandwidth_usage_TSQL"
   - "sys.bandwidth_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.bandwidth_usage"
   - "bandwidth_usage"
+dev_langs:
+  - "TSQL"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-> [!NOTE]
-> This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
-  
- Returns information about the network bandwidth used by each database in a **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 database server**, . Each row returned for a given database summarizes a single direction and class of usage over a one-hour period.  
-  
- **This has been deprecated in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
+>[!IMPORTANT]
+> This view is unused and is preserved for backwards compatibility.
   
  The **sys.bandwidth_usage** view contains the following columns.  
   
 |Column Name|Description|  
 |-----------------|-----------------|  
-|**time**|The hour when the bandwidth was consumed. The rows in this view are on a per-hour basis. For example, 2009-09-19 02:00:00.000 means that the bandwidth was consumed on September 19, 2009 between 2:00 A.M. and 3:00 A.M.|  
-|**database_name**|The name of the database that used bandwidth.|  
-|**direction**|The type of bandwidth that was used, one of:<br /><br /> Ingress: Data that is moving into the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Egress: Data that is moving out of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|The class of bandwidth that was used, one of:<br />Internal: Data that is moving within the Azure platform.<br />External: Data that is moving out of the Azure platform.<br /><br /> This class is returned only if the database is engaged in a continuous copy relationship between regions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then "Interlink" rows are not returned. For more information, see the "Remarks" section later in this topic.|  
-|**time_period**|The time period when the usage occurred is either Peak or OffPeak. The Peak time is based on the region in which the server was created. For example, if a server was created in the "US_Northwest" region, the Peak time is defined as being between 10:00 A.M. and 6:00 P.M. PST.|  
-|**quantity**|The amount of bandwidth, in kilobytes (KBs), that was used.|  
+|**time**| This column is unused and is preserved for backwards compatibility.|  
+|**database_name**|This column is unused and is preserved for backwards compatibility.|  
+|**direction**|This column is unused and is preserved for backwards compatibility.|  
+|**class**|This column is unused and is preserved for backwards compatibility.|  
+|**time_period**|This column is unused and is preserved for backwards compatibility.|  
+|**quantity**|This column is unused and is preserved for backwards compatibility.|  
   
-## Permissions
+## See also
 
- This view is only available in the **master** database to the server-level principal login.  
-  
-## Remarks  
-  
-### External and Internal Classes
+- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](/azure/azure-sql/database/connectivity-architecture)
+- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
 
- For each database used at a given time, the **sys.bandwidth_usage** view returns rows that show the class and direction of bandwidth usage. The following example illustrates data that might be exposed for a given database. In this example, the time is 2012-04-21 17:00:00, which occurs during the peak time period. The database name is Db1. In this example, **sys.bandwidth_usage** has returned a row for all four combinations of the Ingress and Egress directions and External and Internal classes, as follows:  
-  
-|time|database_name|direction|class|time_period|quantity|  
-|----------|--------------------|---------------|-----------|------------------|--------------|  
-|2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
-|2012-04-21 17:00:00|Db1|Egress|Internal|Peak|3525|  
-  
-### Interpreting Data Direction for [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]
+## Next steps
 
- For [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)], bandwidth-usage data is visible in the logical master database on both sides of a continuous copy relationship. So you must interpret the ingress and egress direction indicators from the perspective of the databases that you are querying. For example, consider a replication stream that transfers 1MB of data from the source server to the target server. In this case, on the source server the 1MB counts toward total data sent, and on the target server, the 1MB is recorded as data received.  
-  
-> [!NOTE]  
-> The bulk of data transferred is from the source server to the target server, in the direction of user data flow. However, some data transfer is required in the other direction.  
+Learn more about Azure SQL Database in the following articles:
+
+- [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
+- [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
+- [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-errors-issues)

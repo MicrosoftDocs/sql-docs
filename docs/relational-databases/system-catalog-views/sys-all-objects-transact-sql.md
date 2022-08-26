@@ -1,24 +1,22 @@
 ---
-description: "sys.all_objects (Transact-SQL)"
-title: "sys.all_objects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.all_objects (Transact-SQL)"
+description: sys.all_objects (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/20/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.all_objects"
   - "all_objects_TSQL"
   - "all_objects"
   - "sys.all_objects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_objects catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_objects (Transact-SQL)

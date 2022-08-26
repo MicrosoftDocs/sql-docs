@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
-author: nahk-ivanov
+author: cpichuka
 ms.prod: sql
 ms.custom:
   - intro-whats-new
@@ -10,11 +10,26 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-ms.author: alexiva
+ms.author: cpichuka
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v9.1
+
+The v9.1 release of SSMA for Oracle contains the following changes:
+
+* Support for at scale data migration from Oracle to SQL with integration of Azure Data factory
+* Add support for exclusion of system generated invisble column for conversion and data migration 
+* Improve get help experience
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for Oracle contains the following changes:
+
+* Add support for VARRAY and TABLE  user defined types at schema level
+* Add support for conversion for arguments, parameter and local declaration for user defined types
 
 ## SSMA v8.24
 

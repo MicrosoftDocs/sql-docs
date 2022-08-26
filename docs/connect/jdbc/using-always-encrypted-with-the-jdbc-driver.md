@@ -2,7 +2,7 @@
 title: Use Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted with the JDBC driver to encrypt sensitive data on the server.
 ms.custom: ""
-ms.date: 01/31/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,7 +19,7 @@ ms.author: v-davidengel
 
 This page provides information on how to develop Java applications to use [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) with the Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
 
-Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this behaviour by transparently encrypting and decrypting sensitive data in the client application. The driver figures out which query parameters correspond to Always Encrypted database columns, and encrypts the values of those parameters before it sends them to the database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted API reference for the JDBC driver](always-encrypted-api-reference-for-the-jdbc-driver.md).
+Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this behavior by transparently encrypting and decrypting sensitive data in the client application. The driver figures out which query parameters correspond to Always Encrypted database columns, and encrypts the values of those parameters before it sends them to the database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted API reference for the JDBC driver](always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ## Prerequisites
 
@@ -550,7 +550,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 
 Always Encrypted can also be enabled for individual queries. For more information, see [Controlling the performance impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed. You also need to make sure:
 
-- The application has the *`VIEW ANY COLUMN MASTER KEY DEFINITION`* and *`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions in Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
+- The application has the _`VIEW ANY COLUMN MASTER KEY DEFINITION`_ and _`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`_ database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions in Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - The application can access the column master key that protects the column encryption keys, which encrypt the queried database columns. To use the Java Key Store provider, you need to provide extra credentials in the connection string. For more information, see [Use Java Key Store provider](#use-java-key-store-provider).
 
 ### Configuring how java.sql.Time values are sent to the server
@@ -565,6 +565,11 @@ For more information on this property, see [Configuring How java.sql.Time Values
 ### Configuring how String values are sent to the server
 
 The **`sendStringParametersAsUnicode`** connection property is used to configure how String values are sent to SQL Server. If set to true, String parameters are sent to the server in Unicode format. If set to false, String parameters are sent in non-Unicode format, such as ASCII or MBCS, instead of Unicode. The default value for this property is true. When Always Encrypted is enabled and a `char`/`varchar`/`varchar(max)` column is encrypted, the value of **`sendStringParametersAsUnicode`** must be set to false. If this property is set to true, the driver will throw an exception when decrypting data from an encrypted `char`/`varchar`/`varchar(max)` column that has Unicode characters. For more information on this property, see [Setting the Connection Properties](setting-the-connection-properties.md).
+
+> [!IMPORTANT]
+> If `sendStringParametersAsUnicode` is set to `true` and unicode data is inserted into a `char`/`varchar` column encrypted with Always Encrypted, data loss may occur without an error being reported. The data loss may only be detected when trying to decrypt the data after reading it back from the server. An error like `Decryption failed. The last 10 bytes of the encrypted column encryption key are: 'C3-D9-10-4E-C1-45-8B-94-A2-43'. The first 10 bytes of ciphertext are: '01-9B-9D-A6-3E-40-22-53-15-9B'.` might be the result.
+>
+> It is important to use correct column data types and specify the correct data type for parameters when inserting encrypted data. If unicode data is expected, use `nchar`/`nvarchar` columns and `setNString()` methods. The server can't perform implicit data conversions and has limited ability to detect data errors when Always Encrypted is enabled.
 
 ## Retrieving and modifying data in encrypted columns
 
@@ -715,7 +720,9 @@ This section describes common categories of errors when querying encrypted colum
 
 Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Here's what you can do to avoid data type conversion errors. Make sure that:
 
-- you use the proper setter methods when passing values for parameters that target encrypted columns. Ensure that the SQL Server data type of the parameter is exactly the same as the type of the target column or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. API methods have been added to the `SQLServerPreparedStatement`, `SQLServerCallableStatement`, and `SQLServerResultSet` classes to pass parameters corresponding to specific SQL Server data types. For example, if a column isn't encrypted you can use the `setTimestamp()` method to pass a parameter to a datetime2 or to a datetime column. But when a column is encrypted you'll have to use the exact method representing the type of the column in the database. For example, use `setTimestamp()` to pass values to an encrypted datetime2 column and use `setDateTime()` to pass values to an encrypted datetime column. See [Always Encrypted API Reference for the JDBC Driver](always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new APIs.
+- you use the proper setter methods when passing values for parameters that target encrypted columns. Ensure that the SQL Server data type of the parameter is exactly the same as the type of the target column or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. API methods have been added to the `SQLServerPreparedStatement`, `SQLServerCallableStatement`, and `SQLServerResultSet` classes to pass parameters corresponding to specific SQL Server data types. For a complete list of new APIs, see [Always Encrypted API Reference for the JDBC Driver](always-encrypted-api-reference-for-the-jdbc-driver.md). The following are some examples of adjustments that may be needed when using Always Encrypted:
+  - You can use the `setTimestamp()` method to pass a parameter to a non-encrypted datetime2 or datetime column. But when a column is encrypted you have to use the exact method representing the type of the column in the database. Use `setTimestamp()` to pass values to an encrypted datetime2 column and use `setDateTime()` to pass values to an encrypted datetime column.
+  - You can use the `setBinary()` method to pass a parameter to a non-encrypted `varbinary(max)` or `binary` column. The driver defaults to the `BINARY` data type for `setBinary()` parameters and the server can implicitly convert the data to insert into a `varbinary(max)` column. But when a `varbinary(max)` column is encrypted you have to specify a more exact type for the parameter data. Example: `preparedStatement.setObject(1, binaryData, java.sql.JDBCType.LONGVARBINARY)`
 - the precision and scale of parameters targeting columns of the decimal and numeric SQL Server data types is the same as the precision and scale configured for the target column. API methods have been added to the `SQLServerPreparedStatement`, `SQLServerCallableStatement`, and `SQLServerResultSet` classes to accept precision and scale along with data values for parameters/columns representing decimal and numeric data types. See [Always Encrypted API Reference for the JDBC Driver](always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new/overloaded APIs.
 - the fractional seconds precision/scale of parameters targeting columns of `datetime2`, `datetimeoffset`, or time SQL Server data types isn't greater than the fractional seconds precision/scale for the target column in queries that modify values of the target column. API methods have been added to the `SQLServerPreparedStatement`, `SQLServerCallableStatement`, and `SQLServerResultSet` classes to accept fractional seconds precision/scale along with data values for parameters representing these data types. For a complete list of new/overloaded APIs, see [Always Encrypted API Reference for the JDBC Driver](always-encrypted-api-reference-for-the-jdbc-driver.md).
 
@@ -811,6 +818,10 @@ catch (SQLException e) {
 }
 ```
 
+### Query parameter metadata caching
+
+To reduce the number of round trips to the database, the Microsoft JDBC Driver for SQL Server can cache encryption-related information for query parameters. As of version 11.2.0, encryption-related information for parameters returned from [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) calls will be cached by the driver if the associated SQL Server process doesn't use secure enclaves. For caching with the use of secure enclaves, the server must support re-establishing of the enclave session in cases where the session is no longer valid.
+
 ### Column encryption key caching
 
 To reduce the number of calls to a column master key store to decrypt column encryption keys, the Microsoft JDBC Driver for SQL Server caches the plaintext column encryption keys in memory. After the driver receives the encrypted column encryption key value from the database metadata, the driver first tries to find the plaintext column encryption key corresponding to the encrypted key value. The driver calls the keystore containing the column master key only if it can't find the encrypted column encryption key value in the cache.
@@ -838,7 +849,7 @@ With `SQLServerBulkCopy`, you can copy data that is already encrypted and stored
 - Set the `allowEncryptedValueModifications` option. For more information, see [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 > [!NOTE]
-> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
+> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server doesn't check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
 
 ## See also
 

@@ -1,22 +1,20 @@
 ---
-description: "DROP EXTERNAL LIBRARY (Transact-SQL)"
-title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP EXTERNAL LIBRARY (Transact-SQL)"
+description: DROP EXTERNAL LIBRARY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+manager: cgronlund
 ms.date: 08/26/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP EXTERNAL LIBRARY"
   - "DROP_EXTERNAL_LIBRARY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP EXTERNAL LIBRARY"
-author: dphansen
-ms.author: davidph
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  

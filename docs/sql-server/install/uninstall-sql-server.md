@@ -1,5 +1,5 @@
 ---
-title: "Uninstall SQL Server 2016 | Microsoft Docs"
+title: "Uninstall SQL Server | Microsoft Docs"
 description: Use these resources to uninstall an instance of SQL Server 2019 completely and prepare the system so that you can reinstall SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +8,11 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Uninstall SQL Server 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   Follow the articles below to uninstall an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

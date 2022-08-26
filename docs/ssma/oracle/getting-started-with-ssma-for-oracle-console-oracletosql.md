@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Oracle Console, Console Output Conventions"
   - "Oracle Console, Launching Console"
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # Getting Started with SSMA  for Oracle Console (OracleToSQL)
 This section describes the procedure to launch and get started with the Oracle console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

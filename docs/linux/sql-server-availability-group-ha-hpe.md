@@ -1,64 +1,63 @@
 ---
 title: "Deploy availability group with HPE Serviceguard - SQL Server on Linux"
 description: Use HPE Serviceguard as the cluster manager to achieve high availability with an availability group on SQL Server on Linux
-ms.date: 01/15/2021
+ms.date: 04/11/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: tutorial
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
+ms.reviewer: vanto, randolphwest
 ms.custom:
   - intro-deployment
 ---
 
-# Tutorial - Setup a three node Always On availability group with HPE Serviceguard for Linux 
+# Tutorial - Setup a three node Always On availability group with HPE Serviceguard for Linux
 
 This tutorial explains how to configure SQL Server Always On availability group with HPE Serviceguard for Linux running on on-premises Virtual Machines (VMs) or in Azure based Virtual Machines.
 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
 > [!NOTE]
+>  
 > Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation of HPE Serviceguard cluster and quorum management.
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> * Install SQL Server on all the three VMs that will be part of the availability group
-> * Install HPE Serviceguard on the VMs
-> * Create the HPE Serviceguard cluster
-> * Create the availability group and add a sample database to the availability group
-> * Deploy the SQL Server workload on the availability group through Serviceguard cluster manager
-> * Perform an automatic failover and join the node back to cluster
+>  
+> - Install SQL Server on all the three VMs that will be part of the availability group
+> - Install HPE Serviceguard on the VMs
+> - Create the HPE Serviceguard cluster
+> - Create the availability group and add a sample database to the availability group
+> - Deploy the SQL Server workload on the availability group through Serviceguard cluster manager
+> - Perform an automatic failover and join the node back to cluster
 
 ## Prerequisites
 
-* In Azure, create three Linux-based VMs (Virtual Machines). To create Linux-based virtual machines in Azure, see [Quickstart: Create Linux virtual machine in Azure portal](/azure/virtual-machines/linux/quick-create-portal). When deploying the VMs, please make sure to use HPE Serviceguard supported Linux distributions. You could also deploy the VMs locally in an on-premises environment if you prefer.
+- In Azure, create three Linux-based VMs (Virtual Machines). To create Linux-based virtual machines in Azure, see [Quickstart: Create Linux virtual machine in Azure portal](/azure/virtual-machines/linux/quick-create-portal). When deploying the VMs, make sure to use HPE Serviceguard supported Linux distributions. You could also deploy the VMs locally in an on-premises environment if you prefer.
 
-   For an example of a supported distribution, see [HPE Serviceguard for Linux](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488). Check with HPE for information about support for public cloud environments.
+  For an example of a supported distribution, see [HPE Serviceguard for Linux](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488). Check with HPE for information about support for public cloud environments.
 
-   The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
+  The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
-* SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
+- SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
 
-* Ensure that you have a OpenJDK java runtime installed on the VMs.
-
-   > [!NOTE]
-   > IBM java sdk is not supported.
+- Ensure that you have a OpenJDK Java runtime installed on the VMs. The IBM Java SDK is not supported.
 
 ## Install SQL Server
 
-On all the three VMs, please follow one of the below steps based on the Linux distribution that you choose for this tutorial, to install SQL Server and tools.
+On all the three VMs, follow one of the below steps based on the Linux distribution that you choose for this tutorial, to install SQL Server and tools.
 
 ### RHEL
 
-* [Install SQL Server on Red Hat](quickstart-install-connect-red-hat.md#install)
-* [Tools](quickstart-install-connect-red-hat.md#tools)
+- [Install SQL Server on Red Hat](quickstart-install-connect-red-hat.md#install)
+- [Tools](quickstart-install-connect-red-hat.md#tools)
 
 ### SLES
 
-* [Install SQL Server on SLES](quickstart-install-connect-suse.md#install)
-* [Tools](quickstart-install-connect-suse.md#tools)
+- [Install SQL Server on SLES](quickstart-install-connect-suse.md#install)
+- [Tools](quickstart-install-connect-suse.md#tools)
 
 After you complete this step, you should have SQL Server service and tools installed on all three VMs that will participate in the availability group.
 
@@ -66,7 +65,7 @@ After you complete this step, you should have SQL Server service and tools insta
 
 In this step, install HPE Serviceguard for Linux on all three VMs. The following table describes the role each server plays in the cluster.
 
-|Number of VMs | HPE Servicguard role | Microsoft SQL Server availability group replica role|
+|Number of VMs | HPE Serviceguard role | Microsoft SQL Server availability group replica role|
 |--------------|-----------------|------------|
 |1 | HPE Serviceguard cluster nodes | Primary replica |
 |1 or more | HPE Serviceguard cluster node | Secondary replica |
@@ -128,7 +127,7 @@ set hadr.hadrenabled 1 sudo systemctl restart mssql-serve
 
 ### Enable an `AlwaysOn_health` event session - (Optional)
 
-Optionally enable AlwaysOn availability groups extended events to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of SQL Server:
+Optionally enable Always On availability groups extended events to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of SQL Server:
 
 ```tsql
 ALTER EVENT SESSION AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -296,4 +295,4 @@ For HPE Serviceguard, refer to the section [**Testing the setup for failover rea
 
 ## Next steps
 
-Learn more about Always On [Availability Groups on Linux](sql-server-linux-availability-group-overview.md).
+- Learn more about Always On [Availability Groups on Linux](sql-server-linux-availability-group-overview.md).

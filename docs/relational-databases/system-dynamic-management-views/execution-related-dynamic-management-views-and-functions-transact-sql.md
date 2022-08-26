@@ -1,20 +1,18 @@
 ---
-description: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
-ms.custom: ""
+description: Execution Related Dynamic Management Views and Functions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/28/2021
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dynamic management objects [SQL Server], execution"
   - "execution-related dynamic management objects [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || >= aps-pdw-2016 || = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2016||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,17 @@
 ---
-description: "DROP MASTER KEY (Transact-SQL)"
-title: "DROP MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP MASTER KEY (Transact-SQL)"
+description: DROP MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP MASTER KEY"
   - "DROP_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing Database Master Keys"
   - "database master key [SQL Server], removing"
   - "encryption [SQL Server], Database Master Key"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "cryptography [SQL Server], Database Master Key"
   - "dropping Database Master Keys"
   - "deleting Database Master Keys"
-ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
   Removes the master key from the current database.  
   

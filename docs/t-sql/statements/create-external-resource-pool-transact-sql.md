@@ -1,27 +1,24 @@
 ---
-description: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL)"
-title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL)"
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+manager: cgronlund
 ms.date: "08/06/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning-services
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL RESOURCE POOL"
   - "CREATE EXTERNAL_RESOURCE_POOL_TSQL"
   - "EXTERNAL RESOURCE POOL"
   - "EXTERNAL_RESOURCE_POOL_TSQL"
   - "EXTERNAL RESOURCE"
   - "EXTERNAL_RESOURCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE EXTERNAL RESOURCE POOL statement"
-ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-author: dphansen
-ms.author: davidph
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)

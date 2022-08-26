@@ -1,35 +1,31 @@
 ---
+title: "DBCC DBREINDEX (Transact-SQL)"
 description: "DBCC DBREINDEX (Transact-SQL)"
-title: "DBCC DBREINDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC DBREINDEX"
   - "DBREINDEX_TSQL"
   - "DBREINDEX"
   - "DBCC_DBREINDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index rebuilding [SQL Server]"
   - "rebuilding indexes"
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
-ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

@@ -1,19 +1,16 @@
 ---
-description: "SET RESULT_SET_CACHING (Transact-SQL)"
-title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET RESULT_SET_CACHING (Transact-SQL)"
+description: SET RESULT_SET_CACHING (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
 ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
 dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-author: XiaoyuMSFT
-ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
@@ -45,9 +42,12 @@ Enables result set caching for the current client session.  Result set caching c
 **OFF**   
 Disable result set caching for the current client session.
 
+> [!NOTE]
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](../functions/decryptbykey-transact-sql.md). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level]() or [database-level](./alter-database-transact-sql-set-options.md)) at the time of execution.
+
 ## Examples
 
-Query the result_cache_hit column in [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) with a query’s request_id to see if this query was executed with a result cache hit or miss.
+Query the result_cache_hit column in [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) with a query's request_id to see if this query was executed with a result cache hit or miss.
 
 ```sql
 SELECT result_cache_hit

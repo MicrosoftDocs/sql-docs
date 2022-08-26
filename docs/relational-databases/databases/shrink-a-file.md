@@ -1,8 +1,9 @@
 ---
-title: "Shrink a File | Microsoft Docs"
+title: "Shrink a file"
 description: Learn how to shrink a data or log file in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,45 +18,37 @@ helpviewer_keywords:
   - "reducing file size"
   - "size [SQL Server], files"
   - "file size [SQL Server]"
-ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Shrink a File
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to shrink a data or log file in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# Shrink a file
+
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+This article describes how to shrink a data or log file in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Shrinking data files recovers space by moving pages of data from the end of the file to unoccupied space closer to the front of the file. When enough free space is created at the end of the file, data pages at end of the file can be deallocated and returned to the file system.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To shrink a data or log file, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   The primary data file cannot be made smaller than the size of the primary file in the model database.  
   
 ###  <a name="Recommendations"></a> Recommendations  
+
+-   A shrink operation is most effective after an operation that creates a large amount of unused storage space, such as a large DELETE statement, truncate table, or a drop table operation.  
+
+- Most databases require some free space to be available for regular day-to-day operations. If you shrink a database file repeatedly and notice that the database size grows again, this indicates that the free space is required for regular operations. In these cases, repeatedly shrinking the database file is a wasted operation. Autogrow events necessary to grow the database file a hinder performance.
   
 -   Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+
+-   Unless you have a specific requirement, do not set the AUTO_SHRINK database option to ON.  
+
+## Remarks 
+
+Shrink operations in progress can block other queries on the database, and can be blocked by queries already in progress. Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], shrink file operations have a WAIT_AT_LOW_PRIORITY option. This feature is a new additional option for `DBCC SHRINKDATABASE` and `DBCC SHRINKFILE`. If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain the necessary locks due to a long-running query already in progress, the shrink operation will eventually time out after one minute and silently exit, preventing other queries from being blocked. WAIT_AT_LOW_PRIORITY applies to data files (.mdf & .ndf). It does not apply to transaction log files. For more information, see [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
+
+###  <a name="Security"></a><a name="Permissions"></a>Permissions  
  Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -66,7 +59,7 @@ ms.author: wiassaf
   
 2.  Expand **Databases** and then right-click the database that you want to shrink.  
   
-3.  Point to **Tasks**, point to **Shrink**, and then click **Files**.  
+3.  Point to **Tasks**, point to **Shrink**, and then select **Files**.  
   
      **Database**  
      Displays the name of the selected database.  
@@ -117,7 +110,7 @@ ms.author: wiassaf
   
      Selecting this option moves all data from the specified file to other files in the filegroup. The empty file can then be deleted. This option is the same as executing DBCC SHRINKFILE with the EMPTYFILE option.  
   
-9. Click **OK**.  
+9. Select **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -125,17 +118,23 @@ ms.author: wiassaf
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example uses [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## See Also  
- [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
- [Shrink a Database](../../relational-databases/databases/shrink-a-database.md)   
- [Delete Data or Log Files from a Database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
-  
-  
+## See also  
+
+ - [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)
+ - [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)  
+ - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
+ - [FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
+
+## Next steps
+
+ - [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
+ - [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)
+ - [Delete Data or Log Files from a Database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
+ - [Shrink a database](../../relational-databases/databases/shrink-a-database.md)

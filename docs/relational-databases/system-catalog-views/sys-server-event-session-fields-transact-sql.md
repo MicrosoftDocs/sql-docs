@@ -1,26 +1,24 @@
 ---
-description: "sys.server_event_session_fields (Transact-SQL)"
-title: "sys.server_event_session_fields (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.server_event_session_fields (Transact-SQL)"
+description: sys.server_event_session_fields (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_event_session_fields"
   - "server_event_session_fields_TSQL"
   - "sys.server_event_session_fields"
   - "sys.server_event_session_fields_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_event_session_fields catalog view"
   - "xe"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "execution plans [SQL Server], comparing"
   - "Query Store, comparing plans"
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Compare execution plans

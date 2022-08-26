@@ -1,18 +1,14 @@
 ---
+title: "ADOX Object Model"
 description: "ADOX Object Model"
-title: "ADOX Object Model | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADOX, object model"
-ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADOX, object model"
 ---
 # ADOX Object Model
 The following diagram illustrates how objects are represented and related in ADOX. For more information about a specific object or collection, see the specific reference topic, or [ADOX Objects](./adox-objects.md) and [ADOX Collections](./adox-collections.md).  

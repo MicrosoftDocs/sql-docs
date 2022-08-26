@@ -11,6 +11,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
   - "read-intent connections [AlwaysOn Availability Groups]"
+  - "read-intent connections [Always On Availability Groups]"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"

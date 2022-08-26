@@ -7,8 +7,8 @@ ms.technology:
 ms.prod_service: "database-engine"
 ms.reviewer: "MikeRayMSFT"
 ms.topic: conceptual
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: rothj
 ms.custom: seo-dt-2019
 ---

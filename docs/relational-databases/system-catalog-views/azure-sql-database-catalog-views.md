@@ -1,23 +1,21 @@
 ---
-description: "Azure SQL Database Catalog Views"
-title: "Azure SQL Database Catalog Views | Microsoft Docs"
-ms.custom: 
+title: "Azure SQL Database Catalog Views"
+description: Azure SQL Database Catalog Views
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/20/2015"
-ms.service: sql-database 
-ms.reviewer: ""
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Azure SQL Database catalog views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # Azure SQL Database Catalog Views
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 The following catalog views are available in this section.  
 

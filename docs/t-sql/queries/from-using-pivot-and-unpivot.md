@@ -9,6 +9,8 @@ ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
   - "PIVOT_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "FROM clause, UNPIVOT operator"
   - "unpivoting tables"

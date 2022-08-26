@@ -1,6 +1,6 @@
 ---
 title: "Finding and Viewing Reports in the web portal (Report Builder) | Microsoft Docs"
-description: Report Manager is a Web-based tool that includes features for viewing and managing reports. It is part of a report server installation.
+description: Report Manager is a Web-based tool that includes features for viewing and managing reports. It's part of a report server installation.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,9 +11,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Finding and Viewing Reports in the web portal (Report Builder and SSRS)
-  Report Manager is a Web-based tool that includes features for viewing and managing reports. It is part of a report server installation. To open Report Manager, type the Report Manager URL in a browser window. For information on browser requirements, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). For more information about how a Report Manager URL might be configured on your report server, contact your system administrator. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../report-server/configure-web-portal.md).  
+  Report Manager is a Web-based tool that includes features for viewing and managing reports. It's part of a report server installation. To open Report Manager, type the Report Manager URL in a browser window. For information on browser requirements, see [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). For more information about how a Report Manager URL might be configured on your report server, contact your system administrator. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../report-server/configure-web-portal.md).  
   
- The permissions that the system administrator set on the report server determine what you can see when you use Report Manager. Permissions are granted via a role assignment. To find and view reports, your role assignment must include the View Reports task. To find a report on a report server, search for it by name or description, or browse report server folders. You can only search or browse for reports that have been published or uploaded to the report server.  
+ The system administrator sets permissions on the report server. Those permissions determine what you can see when you use Report Manager. Permissions are granted via a role assignment. To find and view reports, your role assignment must include the View Reports task. To find a report on a report server, search for it by name or description, or browse report server folders. You can only search or browse for reports that have been published or uploaded to the report server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,7 +33,7 @@ Report Manager Ribbon
 -   To navigate up through the folder hierarchy, in the row of links at the top of the page, click the name of the folder whose contents you want to see. **(1)** in the above image.  
   
 ## Opening a Report  
- After you find a report, click the report name to open it. The report is rendered in HTML and appears in the Contents page in Report Manager. Reports are always cached by the browser session, so if you open a report, you can usually return to it by clicking the **Back** button. This is true even if you were required to supply a user name and password to run the report. You cannot fully close a rendered report until you close the browser.  
+ After you find a report, click the report name to open it. The report is rendered in HTML and appears in the Contents page in Report Manager. Reports are always cached by the browser session, so if you open a report, you can usually return to it by clicking the **Back** button. This is true even if you were required to supply a user name and password to run the report. You can't fully close a rendered report until you close the browser.  
   
  Not all reports that are visible in the folder hierarchy are immediately accessible. Some reports may prompt you for your user name and password to determine whether you can access the data source for the report. 
 
@@ -43,7 +43,7 @@ Report Manager Ribbon
   
 -   To search for items in Report Manager, type a search string in the **Search** text box at the top of the page. **(2)** in the above image. Searches begin at the top node in the folder hierarchy and then proceed through every branch. If you do not have permission to access a specific branch, that branch is skipped. This applies to My Reports folders that belong to other users, and to other folders that are not generally available. Only reports and items that you have permission to view are included in the search results.  
   
--   To search for an item by name or description, specify all or part of the text that you want to match. The search string is not case-sensitive. You cannot use search operators such as plus (+) or minus (-) symbols to require or exclude search criteria.  
+-   To search for an item by name or description, specify all or part of the text that you want to match. The search string is not case-sensitive. You can't use search operators such as plus (+) or minus (-) symbols to require or exclude search criteria.  
   
 -   To search for specific text within a report, use the toolbar at the top of the report.  
   

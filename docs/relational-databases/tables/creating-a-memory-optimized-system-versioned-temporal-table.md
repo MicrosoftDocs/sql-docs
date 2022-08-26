@@ -2,15 +2,13 @@
 description: "Creating a Memory-Optimized System-Versioned Temporal Table"
 title: "Creating a Memory-Optimized System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2016"
+ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table
@@ -35,9 +33,9 @@ CREATE TABLE dbo.Department
       DepartmentName varchar(50) NOT NULL,
       ManagerID int NULL,
       ParentDepartmentNumber char(10) NULL,
-      SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-      SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-      PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+      ValidFrom datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+      ValidTo datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+      PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
    )
 WITH
    (
@@ -56,7 +54,7 @@ CREATE TABLE Department_History
       DepartmentName varchar(50) NOT NULL,
       ManagerID int NULL,
       ParentDepartmentNumber char(10) NULL,
-      SysStartTime datetime2 NOT NULL, SysEndTime datetime2 NOT NULL
+      ValidFrom datetime2 NOT NULL, ValidTo datetime2 NOT NULL
    )
 ;
 --Temporal table
@@ -66,9 +64,9 @@ CREATE TABLE Department
       DepartmentName varchar(50) NOT NULL,
       ManagerID INT NULL,
       ParentDepartmentNumber char(10) NULL,
-      SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-      SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-      PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+      ValidFrom datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+      ValidTo datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+      PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
    )
 WITH
    (

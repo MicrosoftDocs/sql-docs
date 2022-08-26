@@ -38,7 +38,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 For specific guidance on your options for SQL Server end of support, see the following article:
 
-- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-support-overview.md)
 
 ## Next steps
 

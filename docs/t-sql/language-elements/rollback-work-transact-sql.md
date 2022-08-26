@@ -1,28 +1,27 @@
 ---
-description: "ROLLBACK WORK (Transact-SQL)"
 title: ROLLBACK WORK (Transact-SQL)
-ms.custom: ""
+description: "ROLLBACK WORK (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ROLLBACK WORK"
   - "ROLLBACK_WORK_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction rollbacks [SQL Server]"
   - "erasing data modifications [SQL Server]"
   - "ROLLBACK WORK statement"
   - "roll back transactions [SQL Server]"
   - "rolling back transactions, ROLLBACK WORK"
   - "savepoints [SQL Server]"
-ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # ROLLBACK WORK (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

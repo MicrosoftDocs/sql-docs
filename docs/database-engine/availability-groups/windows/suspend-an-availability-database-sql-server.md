@@ -110,7 +110,7 @@ ms.author: mathoma
   
     ```  
     Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityDatabases\MyDb3  
     ```  
   
     > [!NOTE]  

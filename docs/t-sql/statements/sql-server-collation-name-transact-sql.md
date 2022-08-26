@@ -1,22 +1,19 @@
 ---
-description: "SQL Server Collation Name (Transact-SQL)"
-title: "SQL Server Collation Name (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Collation Name (Transact-SQL)"
+description: SQL Server Collation Name (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collations [SQL Server], SQL collations"
   - "SQL collations"
   - "names [SQL Server], collations"
-ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Collation Name (Transact-SQL)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "requesting encrypted connections"
   - "installing certificates"
   - "security [SQL Server], encryption"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "01/12/2021"

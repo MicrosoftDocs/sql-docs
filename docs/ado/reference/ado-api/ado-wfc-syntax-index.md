@@ -1,20 +1,16 @@
 ---
+title: "ADO - WFC Syntax Index"
 description: "ADO - WFC Syntax Index"
-title: "ADO - WFC Syntax Index | Microsoft Docs"
-ms.technology: ado
-ms.custom: 
-ms.date: "02/15/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "syntax indexes [ADO], ADO/WFC"
-  - "ADO/WFC syntax index [ADO]"
-ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
+ms.date: "02/15/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "syntax indexes [ADO], ADO/WFC"
+  - "ADO/WFC syntax index [ADO]"
+apitype: "COM"
 ---
 # ADO - WFC Syntax Index
 The ADO Language Reference uses the Microsoft Visual Basic programming language to illustrate ADO method and property syntax. This index is a cross-reference to the ADO Language Reference topics, based on ADO for Windows Foundation Classes (ADO/WFC). When differences in syntax arise, use the function signatures in this index, as opposed to the syntax listings in the language reference topic.  

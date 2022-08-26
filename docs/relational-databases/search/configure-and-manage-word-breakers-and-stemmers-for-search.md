@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"

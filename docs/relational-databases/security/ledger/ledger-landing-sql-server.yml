@@ -1,0 +1,132 @@
+### YamlMime:Landing
+
+title: Ledger documentation
+summary: "Find documentation about ledger for SQL Server 2022 and Azure SQL Database"
+
+metadata:
+  title: Ledger documentation
+  description: "Find ledger documentation for SQL Server 2022 and Azure SQL Database"
+  ms.service: sql-database
+  ms.subservice: security
+  ms.tgt_pltfrm: na
+  ms.devlang:
+  ms.custom:
+  - event-tier1-build-2022
+  ms.topic: landing-page
+  author: VanMSFT
+  ms.author: vanto
+  ms.reviewer: kendralittle, mathoma
+  ms.date: 07/22/2022
+  monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+  titleSuffix: SQL Server and Azure SQL Database
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card 
+  - title: Ledger overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is ledger?
+            url: ledger-overview.md
+
+
+  # Card 
+  - title: Ledger concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: What is the database ledger?
+            url: ledger-database-ledger.md
+          - text: Append-only ledger tables
+            url: ledger-append-only-ledger-tables.md
+          - text: Updatable ledger tables
+            url: ledger-updatable-ledger-tables.md
+          - text: Digest management
+            url: ledger-digest-management.md
+          - text: Database verification
+            url: ledger-database-verification.md
+          - text: Monitor digest uploads
+            url: ledger-monitor-digest-uploads.md
+
+
+  # Card 
+  - title: Using ledger
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure a ledger database
+            url: ledger-how-to-configure-ledger-database.md
+          - text: Create append-only ledger tables
+            url: ledger-how-to-append-only-ledger-tables.md
+          - text: Create updatable ledger tables
+            url: ledger-how-to-updatable-ledger-tables.md
+          - text: Enable automatic digest storage
+            url: ledger-how-to-enable-automatic-digest-storage.md
+          - text: Migrate data from regular tables to ledger tables
+            url: ledger-how-to-migrate-data-to-ledger-tables.md
+          - text: Recover ledger database after tampering
+            url: ledger-how-to-recover-after-tampering.md
+          - text: Verify a ledger table to detect tampering
+            url: ledger-verify-database.md
+
+
+  # Card
+  - title: Ledger references
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Current ledger considerations and limitations
+            url: ledger-limits.md
+          - text: Ledger whitepaper
+            url: https://aka.ms/sql-ledger-whitepaper
+          - text: Microsoft Customer Story - Lenovo reinforces customer trust with ledger in Azure SQL Database
+            url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
+          - text: Microsoft Customer Story - RTGS.global automates financial transfers, unlocks trillions in capital with Azure
+            url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
+
+
+  # Card
+  - title: Ledger System Catalog Views
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: sys.database_ledger_blocks (Transact-SQL)
+            url: ../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md
+          - text: sys.database_ledger_transactions (Transact-SQL)
+            url: ../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md
+          - text: sys.database_ledger_digest_locations (Transact-SQL)
+            url: ../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md
+          - text: sys.ledger_table_history (Transact-SQL)
+            url: ../../system-catalog-views/sys-ledger-table-history-transact-sql.md
+          - text: sys.ledger_column_history (Transact-SQL)
+            url: ../../system-catalog-views/sys-ledger-column-history-transact-sql.md
+
+
+  # Card
+  - title: Ledger Stored Procedures
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: sys.sp_generate_database_ledger_digest (Transact-SQL)
+            url: ../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md
+          - text: sys.sp_verify_database_ledger (Transact-SQL)
+            url: ../../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
+          - text: sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
+            url: ../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
+          - text: sys.sp_copy_data_in_batches (Transact-SQL)
+            url: ../../system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md
+
+
+  # Card 
+  - title: Ledger video references
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed
+            url: /shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
+          - text: Learn how Lenovo reinforces trust using ledger in Azure SQL Database
+            url: https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi

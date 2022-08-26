@@ -1,28 +1,25 @@
 ---
-description: "ALTER CERTIFICATE (Transact-SQL)"
-title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER CERTIFICATE (Transact-SQL)"
+description: ALTER CERTIFICATE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_CERTIFICATE_TSQL"
   - "ALTER CERTIFICATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTION BY PASSWORD option"
   - "encryption [SQL Server], certificates"
   - "modifying certificates"
   - "private keys [SQL Server]"
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
-ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER CERTIFICATE (Transact-SQL)

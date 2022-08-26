@@ -1,27 +1,24 @@
 ---
-description: "DROP ROUTE (Transact-SQL)"
-title: "DROP ROUTE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP ROUTE (Transact-SQL)"
+description: DROP ROUTE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP ROUTE"
   - "DROP_ROUTE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping routes"
   - "DROP ROUTE statement"
   - "deleting routes"
   - "routes [Service Broker], removing"
   - "removing routes"
-ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

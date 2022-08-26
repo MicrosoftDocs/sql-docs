@@ -1,7 +1,7 @@
 ---
 title: "Connecting to Oracle Database (OracleToSQL) | Microsoft Docs"
 description: Learn how to connect to the Oracle database to migrate that Oracle database to SQL Server. SSMA obtains and displays metadata about all Oracle schemas.
-author: "nahk-ivanov"
+author: cpichuka
 
 ms.prod: sql
 ms.custom: ""
@@ -12,7 +12,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
-ms.author: "alexiva"
+ms.author: cpichuka
+f1_keywords: 
+  - "ssma.oracle.connectoracleform.f1"
 ---
 
 # Connecting to Oracle Database (OracleToSQL)
@@ -144,7 +146,7 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
 
    To view the definitions of the color coding, click the **Legend** button.
 
-5. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+5. Select **OK**.
 
 ## Next steps
 

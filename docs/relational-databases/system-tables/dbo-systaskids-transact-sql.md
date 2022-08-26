@@ -1,25 +1,23 @@
 ---
-description: "dbo.systaskids (Transact-SQL)"
-title: "dbo.systaskids (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.systaskids (Transact-SQL)"
+description: dbo.systaskids (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "systaskids_TSQL"
   - "dbo.systaskids"
   - "systaskids"
   - "dbo.systaskids_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "systaskids system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

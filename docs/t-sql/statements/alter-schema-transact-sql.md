@@ -1,27 +1,24 @@
 ---
-description: "ALTER SCHEMA (Transact-SQL)"
-title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SCHEMA (Transact-SQL)"
+description: ALTER SCHEMA (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER SCHEMA"
   - "ALTER_SCHEMA_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], transferring"
   - "transferring objects between schemas"
   - "ALTER SCHEMA statement"
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
-ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)

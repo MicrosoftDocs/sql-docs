@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ms.custom:
   - intro-installation
@@ -62,7 +62,9 @@ FEATURES=SQL,Tools
 3. Cancel the setup without actually completing the installation, to generate the INI file. 
   
     > [!NOTE]  
-    >  The setup infrastructure writes out all the appropriate parameters for the actions that were run, with the exception of sensitive information such as passwords. The /IAcceptSQLServerLicenseTerms parameter is also not written out to the configuration file and requires either a modification of the configuration file or a value to be supplied at the command prompt. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md). In addition, a value is included for Boolean parameters where a value is usually not supplied through the command prompt. 
+    >  The setup infrastructure writes out all the appropriate parameters for the actions that were run, with the exception of sensitive information such as passwords. The /IAcceptSQLServerLicenseTerms parameter is also not written out to the configuration file and requires either a modification of the configuration file or a value to be supplied at the command prompt. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md). In addition, a value is included for Boolean parameters where a value is usually not supplied through the command prompt.
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ## Using the configuration file to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 

@@ -1,22 +1,18 @@
 ---
+title: "EOS and LineSeparator Properties and SkipLine Method Example (VB)"
 description: "EOS and LineSeparator Properties and SkipLine Method Example (VB)"
-title: "EOS and LineSeparator Properties and SkipLine Method Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "LineSeparator property [ADO], Visual Basic example"
   - "Skipline method [ADO], Visual Basic example"
   - "EOS property [ADO], Visual Basic example"
-ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # EOS and LineSeparator Properties and SkipLine Method Example (VB)
 This example demonstrates how to manipulate text streams one line at a time. The effect of changing the line separator from the default carriage return/linefeed (**adCRLF**) to simply linefeed (**adLF**) or carriage return (**adCR**) is shown.  

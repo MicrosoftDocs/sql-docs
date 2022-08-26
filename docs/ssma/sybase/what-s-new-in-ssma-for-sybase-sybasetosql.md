@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
-author: nahk-ivanov
+author: cpichuka
 ms.prod: sql
 ms.custom:
   - intro-whats-new
@@ -10,12 +10,24 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: alexiva
+ms.author: cpichuka
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v9.1
+The v9.1 release of SSMA for SAP ASE contains the following changes:
+
+ * Minor performance improvements, bug fixes and enhanced get help experience  
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for SAP ASE contains the following changes:
+
+* New offline at scale data migration support
+* Enhanced data migration architecture
+* Online help viewer support
 
 ## SSMA v8.24
 

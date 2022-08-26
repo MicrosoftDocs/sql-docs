@@ -1,27 +1,23 @@
 ---
+title: "@@MAX_PRECISION (Transact-SQL)"
 description: "@@MAX_PRECISION (Transact-SQL)"
-title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@MAX_PRECISION_TSQL"
   - "@@MAX_PRECISION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precision [SQL Server], @@MAX_PRECISION"
   - "numeric data type, precision level"
   - "decimal data type, precision level"
   - "@@MAX_PRECISION function"
   - "data types [SQL Server], precision"
-ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

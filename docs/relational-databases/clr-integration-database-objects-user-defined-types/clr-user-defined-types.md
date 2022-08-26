@@ -1,13 +1,13 @@
 ---
-title: "CLR User-Defined Types | Microsoft Docs"
+title: "CLR User-Defined Types"
 description: This article describes the process for creating user-defined types (UDTs) to store CLR objects in a SQL Server database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validation [CLR integration]"
   - "types [CLR integration]"
   - "UserDefined serialization format [CLR integration]"
@@ -30,8 +30,6 @@ helpviewer_keywords:
   - "invoking UDT methods"
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-author: rothja
-ms.author: jroth
 ---
 # CLR User-Defined Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

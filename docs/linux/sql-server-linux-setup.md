@@ -4,20 +4,24 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/20/2022
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
-  - sqlfreshmay19
-  - intro-installation
+- sqlfreshmay19
+- intro-installation
+- event-tier1-build-2022
 ms.technology: linux
-ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 on Linux.
+This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
+
+> [!TIP]  
+> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.1 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
 
 For other deployment scenarios, see:
 
@@ -25,8 +29,8 @@ For other deployment scenarios, see:
 - [Docker containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
-> [!TIP]
-> This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+
 > - [RHEL quickstart](quickstart-install-connect-red-hat.md)
 > - [SLES quickstart](quickstart-install-connect-suse.md)
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
@@ -36,24 +40,19 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Supported version(s) | Get |
-|-----|-----|----- |
-| **Red Hat Enterprise Linux** | 7.7 - 7.9, 8.0 - 8.5  | [Get RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
-| **SUSE Linux Enterprise Server** | v12 SP3 - SP5 | [Get SLES v12](https://www.suse.com/products/server) |
-| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |
+[!INCLUDE [linux-supported-platforms-2017](../includes/linux/linux-supported-platforms-2017.md)]
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
 
-[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](../includes/linux/linux-supported-platforms-2019.md)]
 
 ::: moniker-end
 
@@ -96,11 +95,11 @@ You can install SQL Server 2017 or SQL Server 2019 on Linux from the command lin
 | Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) |
 | Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) |
 
-You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
+You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Update or Upgrade SQL Server
+## <a id="upgrade"></a> Update or upgrade SQL Server
 
 To update the **mssql-server** package to the latest release, use one of the following commands based on your platform:
 

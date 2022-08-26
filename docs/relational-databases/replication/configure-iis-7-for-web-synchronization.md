@@ -25,7 +25,7 @@ ms.author: "mathoma"
  For an overview of the entire configuration process, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
+>  Make sure that your application uses only [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
   
  To use Web synchronization, you must configure IIS by completing the following steps. Each step is described in detail in this topic.  
   
@@ -165,7 +165,8 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
  In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md).  
   
- **Important** The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
+ > [!IMPORTANT]  
+ > The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
   
  The account used for the SQL Server Replication Listener must have permissions as described in the Merge Agent Security topic, in the "Connect to the Publisher or Distributor" section.  
   

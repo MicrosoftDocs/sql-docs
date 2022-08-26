@@ -2,8 +2,8 @@
 title: Call Java runtime
 titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
-author: dphansen
-ms.author: davidph 
+author: rothja
+ms.author: jroth 
 ms.date: 06/25/2020
 ms.topic: how-to
 ms.prod: sql

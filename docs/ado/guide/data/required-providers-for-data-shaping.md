@@ -1,19 +1,15 @@
 ---
+title: "Required Providers for Data Shaping"
 description: "Required Providers for Data Shaping"
-title: "Required Providers for Data Shaping | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "providers [ADO], data shaping"
-  - "data shaping [ADO], providers required"
-ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "providers [ADO], data shaping"
+  - "data shaping [ADO], providers required"
 ---
 # Required Providers for Data Shaping
 Data shaping typically requires two providers. The service provider, [Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), supplies the data shaping functionality, and a data provider, such as the OLE DB Provider for SQL Server, supplies rows of data to populate the shaped [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

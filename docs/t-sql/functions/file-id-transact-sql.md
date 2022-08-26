@@ -1,28 +1,24 @@
 ---
+title: "FILE_ID (Transact-SQL)"
 description: "FILE_ID (Transact-SQL)"
-title: "FILE_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILE_ID"
   - "FILE_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDs [SQL Server], files"
   - "file IDs [SQL Server]"
   - "FILE_ID function"
   - "names [SQL Server], files"
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
-ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

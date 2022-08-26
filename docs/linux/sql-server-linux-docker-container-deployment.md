@@ -3,7 +3,7 @@ title: Deploy and connect to SQL Server Docker containers
 description: Explore how SQL Server can be deployed on Docker containers and learn about various tools to connect to SQL Server from inside and outside the container
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto, rwestMSFT
+ms.reviewer: vanto, randolphwest
 ms.custom:
   - contperf-fy21q1
   - intro-deployment
@@ -223,6 +223,9 @@ There are scenarios where you might not want to use the latest SQL Server contai
 
 3. To run a new container with that image, specify the tag name in the `docker run` command. In the following command, replace `<image_tag>` with the version you want to run.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:<image_tag>
@@ -254,19 +257,19 @@ For example, the following command pulls the Cumulative Update 15 for [!INCLUDE[
 
 ::: zone pivot="cs1-bash"
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
@@ -285,7 +288,7 @@ Review the requirements and run procedures in the [quickstart](quickstart-instal
 ::: zone pivot="cs1-bash"
 ```bash
 docker run --name sqlenterprise \
--e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+-e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
 -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
@@ -294,7 +297,7 @@ docker run --name sqlenterprise \
 ::: zone pivot="cs1-powershell"
 ```PowerShell
 docker run --name sqlenterprise `
--e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+-e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
 -e "MSSQL_PID=Enterprise" -p 1433:1433 `
 -d "mcr.microsoft.com/mssql/server:2019-latest"
 ```
@@ -303,7 +306,7 @@ docker run --name sqlenterprise `
 ::: zone pivot="cs1-cmd"
 ```cmd
 docker run --name sqlenterprise `
--e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" ^
+-e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" ^
 -e "MSSQL_PID=Enterprise" -p 1433:1433 ^
 -d "mcr.microsoft.com/mssql/server:2019-latest"
 ```

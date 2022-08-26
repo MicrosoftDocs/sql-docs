@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_input_buffer (Transact-SQL)"
-title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_input_buffer (Transact-SQL)"
+description: sys.dm_exec_input_buffer (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_input_buffer"
   - "sys.dm_exec_input_buffer _tsql"
   - "dm_exec_input_buffer"
   - "dm_exec_input_buffer_tsql"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)

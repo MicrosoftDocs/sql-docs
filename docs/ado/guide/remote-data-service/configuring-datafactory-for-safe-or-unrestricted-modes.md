@@ -1,18 +1,14 @@
 ---
+title: "Configuring DataFactory for Safe or Unrestricted Modes"
 description: "Configuring DataFactory for Safe or Unrestricted Modes"
-title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DataFactory configuration in RDS [ADO]"
-ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DataFactory configuration in RDS [ADO]"
 ---
 # Configuring DataFactory for Safe or Unrestricted Modes
 > [!IMPORTANT]

@@ -1,23 +1,19 @@
 ---
+title: "CONNECTIONPROPERTY (Transact-SQL)"
 description: "CONNECTIONPROPERTY (Transact-SQL)"
-title: "CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CONNECTIONPROPERTY_TSQL"
-  - "CONNECTIONPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CONNECTIONPROPERTY statement"
-ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: markingmyname
 ms.author: maghan
+ms.date: "07/24/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "CONNECTIONPROPERTY_TSQL"
+  - "CONNECTIONPROPERTY"
+helpviewer_keywords:
+  - "CONNECTIONPROPERTY statement"
+dev_langs:
+  - "TSQL"
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysfulltextcatalogs compatibility view"
   - "sysfulltextcatalogs system table"
 ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

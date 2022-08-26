@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_session_transactions (Transact-SQL)"
-title: "sys.dm_tran_session_transactions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_session_transactions (Transact-SQL)"
+description: sys.dm_tran_session_transactions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_tran_session_transactions"
   - "sys.dm_tran_session_transactions"
   - "sys.dm_tran_session_transactions_TSQL"
   - "dm_tran_session_transactions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_session_transactions dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_session_transactions (Transact-SQL)

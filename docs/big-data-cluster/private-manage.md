@@ -2,13 +2,13 @@
 title: Manage SQL Server Big Data Clusters in Azure Kubernetes Service (AKS) private cluster
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to manage a SQL Server Big Data Clusters in Azure Kubernetes Service (AKS) private cluster.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Manage SQL Server Big Data Clusters in AKS private cluster

@@ -1,18 +1,16 @@
 ---
-title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
+title: "DATEDIFF (Transact-SQL)"
 description: "Transact-SQL reference for the DATEDIFF function. Returns the numerical difference between a start and end date based on datepart."
+author: markingmyname
+ms.author: maghan
 ms.date: "07/18/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEDIFF_TSQL"
   - "DATEDIFF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "DATEDIFF function [SQL Server]"
   - "time [SQL Server], crossed boundaries"
@@ -27,10 +25,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
   - "crossing date time boundaries [SQL Server]"
   - "calculating dates times [SQL Server]"
-ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
 

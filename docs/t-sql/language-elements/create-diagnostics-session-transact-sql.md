@@ -1,17 +1,16 @@
 ---
+title: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
 description: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
-title: "CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+ms.custom: ""
+dev_langs:
   - "TSQL"
-ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-author: ronortloff
-ms.author: rortloff
 monikerRange: ">= aps-pdw-2016"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)

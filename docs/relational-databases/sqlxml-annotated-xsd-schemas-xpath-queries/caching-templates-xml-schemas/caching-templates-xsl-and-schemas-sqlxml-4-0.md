@@ -1,20 +1,19 @@
 ---
 title: "Caching Templates, XSL, and Schemas (SQLXML)"
-description: View information about caching templates, XSL, and schemas in SQLXML 4.0. 
+description: View information about caching templates, XSL, and schemas in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "SQLXML, caching"
   - "cache [SQLXML]"
   - "memory [SQLXML]"
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)

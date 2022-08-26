@@ -1,28 +1,24 @@
 ---
+title: "BeginTrans, CommitTrans, RollbackTrans Events (ADO)"
 description: "BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)"
-title: "BeginTrans, CommitTrans, RollbackTrans Events (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "CommitTransComplete"
   - "Connection::BeginTransComplete"
   - "Connection::RollbackTransComplete"
   - "Connection::CommitTransComplete"
   - "RollbackTransComplete"
   - "BeginTransComplete"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CommitTransComplete event [ADO]"
   - "RollbackTransComplete event [ADO]"
   - "BeginTransComplete event [ADO]"
-ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)
 These events will be called after the associated operation on the [Connection](./connection-object-ado.md) object finishes executing.  

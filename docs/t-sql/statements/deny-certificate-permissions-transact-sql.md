@@ -1,26 +1,23 @@
 ---
-description: "DENY Certificate Permissions (Transact-SQL)"
-title: "DENY Certificate Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Certificate Permissions (Transact-SQL)"
+description: DENY Certificate Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], permissions"
   - "permissions [SQL Server], certificates"
   - "DENY statement, certificates"
   - "denying permissions [SQL Server], certificates"
-ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Certificate Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a certificate.  
 

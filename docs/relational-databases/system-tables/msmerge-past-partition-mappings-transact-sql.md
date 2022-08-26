@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_past_partition_mappings (Transact-SQL)"
-title: "MSmerge_past_partition_mappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_past_partition_mappings (Transact-SQL)"
+description: MSmerge_past_partition_mappings (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_past_partition_mappings"
   - "MSmerge_past_partition_mappings_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_past_partition_mappings system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

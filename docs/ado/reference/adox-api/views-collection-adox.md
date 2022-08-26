@@ -1,22 +1,18 @@
 ---
+title: "Views Collection (ADOX)"
 description: "Views Collection (ADOX)"
-title: "Views Collection (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Catalog::Views"
-  - "Views"
-helpviewer_keywords: 
-  - "Views collection [ADOX]"
-ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Catalog::Views"
+  - "Views"
+helpviewer_keywords:
+  - "Views collection [ADOX]"
+apitype: "COM"
 ---
 # Views Collection (ADOX)
 Contains all [View](./view-object-adox.md) objects of a catalog.  

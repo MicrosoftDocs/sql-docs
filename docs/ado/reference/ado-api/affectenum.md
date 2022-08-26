@@ -1,21 +1,17 @@
 ---
+title: "AffectEnum"
 description: "AffectEnum"
-title: "AffectEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "AffectEnum"
-helpviewer_keywords: 
-  - "AffectEnum enumeration [ADO]"
-ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "AffectEnum"
+helpviewer_keywords:
+  - "AffectEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # AffectEnum
 Specifies which records are affected by an operation.  

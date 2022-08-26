@@ -1,25 +1,23 @@
 ---
-description: "sys.assembly_modules (Transact-SQL)"
-title: "sys.assembly_modules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.assembly_modules (Transact-SQL)"
+description: sys.assembly_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.assembly_modules"
   - "sys.assembly_modules_TSQL"
   - "assembly_modules"
   - "assembly_modules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.assembly_modules catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.assembly_modules (Transact-SQL)

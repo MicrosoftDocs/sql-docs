@@ -3,10 +3,8 @@ title: "CAST and CONVERT (Transact-SQL)"
 description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/23/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:

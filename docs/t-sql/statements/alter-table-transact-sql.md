@@ -1,8 +1,8 @@
 ---
 title: ALTER TABLE (Transact-SQL)
 description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql

@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "deleting certificates"
 dev_langs:
   - "TSQL"
-ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP CERTIFICATE (Transact-SQL)

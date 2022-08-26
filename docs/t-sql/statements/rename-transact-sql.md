@@ -1,10 +1,10 @@
 ---
 title: "RENAME (Transact-SQL)"
-description: RENAME (Transact-SQL)
+description: "RENAME (Transact-SQL) renames a user-created table."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "WilliamDAssafMSFT"
-ms.date: "07/20/2021"
+ms.date: 08/24/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
@@ -17,12 +17,12 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 
 Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-> [!NOTE]
-> To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+This article applies to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
 
-
-> [!NOTE]
-> Renaming standalone dedicated SQL pools (formerly SQL DW) is supported. Renaming a dedicated SQL pool in Azure Synapse Analytics isn't currently supported.
+ - To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+ - To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. 
+ - Renaming standalone dedicated SQL pools (formerly SQL DW) is supported. Renaming a dedicated SQL pool in Azure Synapse Analytics workspaces isn't currently supported. 
+ - [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 
 ## Syntax
@@ -33,11 +33,10 @@ Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. R
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
 [;]
-
 ```
 
 ```syntaxsql
--- Syntax for Analytics Platform System
+-- Syntax for Analytics Platform System (PDW) 
 
 -- Rename a table
 RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ] table_name TO new_table_name
@@ -51,33 +50,30 @@ RENAME DATABASE [::] database_name TO new_database_name
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
-> [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
 ## Arguments
 
-RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*
+#### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ] *table_name* TO *new_table_name*
 **APPLIES TO:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined table. Specify the table to be renamed with a one-, two-, or three-part name. Specify the new table *new_table_name* as a one-part name.
 
-RENAME DATABASE [::] [ *database_name* TO *new_database_name*
+#### RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
+Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reserved database names:
 
-- master
-- model
-- msdb
-- tempdb
-- pdwtempdb1
-- pdwtempdb2
-- DWConfiguration
-- DWDiagnostics
-- DWQueue
+- `master`
+- `model`
+- `msdb`
+- `tempdb`
+- `pdwtempdb1`
+- `pdwtempdb2`
+- `DWConfiguration`
+- `DWDiagnostics`
+- `DWQueue`
 
 
-RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+#### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a column in a table. 
@@ -183,3 +179,8 @@ RENAME OBJECT::Customer COLUMN FName TO FirstName;
 
 RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```
+
+## Next steps
+
+ - [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)
+ - [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)

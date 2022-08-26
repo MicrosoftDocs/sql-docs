@@ -1,8 +1,8 @@
 ---
 title: CREATE VIEW (Transact-SQL)
 description: CREATE VIEW (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 09/08/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

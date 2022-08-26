@@ -1,8 +1,8 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
 description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: vanto, xiaoyul
 ms.date: 08/16/2022
 ms.prod: sql

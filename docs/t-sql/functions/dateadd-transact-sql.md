@@ -3,10 +3,8 @@ title: "DATEADD (Transact-SQL)"
 description: "Transact-SQL reference for the DATEADD function. This function returns a date that has been modified by the specified date part."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:

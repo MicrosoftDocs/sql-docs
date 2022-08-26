@@ -1044,8 +1044,10 @@ Renames the database with the name specified as *new_database_name*.
  
 The 'MODIFY NAME' option has some support limitations in Azure Synapse:
  - Unsupported with Azure Synapse serverless pools
- - Unsupported with SQL dedicated pools created in your Azure Synapse Workspace
- - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse), including those with a [connected workspace](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/workspace-connected-create)
+ - Unsupported with dedicated SQL pools created in your Azure Synapse Workspace
+
+ - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse), including those with a [connected workspace](/azure/synapse-analytics/sql-data-warehouse/workspace-connected-create)
+
 
 #### MAXSIZE   
 The default is 245,760 GB (240 TB).

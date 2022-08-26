@@ -134,6 +134,10 @@ landingContent:
   # Card
   - title: Migrate from SQL Server
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Migration and modernization FAQ
+            url: migration-guides/modernization.md
       - linkListType: deploy
         links:
           - text: Azure SQL Database

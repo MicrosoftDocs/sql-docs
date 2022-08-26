@@ -57,7 +57,7 @@ To connect SQL Server to an S3-compatible object storage, two sets of permission
 
 On SQL Server the user account that is used to issue BACKUP or RESTORE commands should be in the **db_backupoperator** database role with **Alter any credential** permissions.
 
-On the storage layer the user (`Access Key ID`) must have both **ListBucket** and **WriteOnly** permissions.
+On the storage layer, the user (`Access Key ID`) must have both **ListBucket** and **WriteOnly** permissions.
 
 ### Restore Permissions
 
@@ -65,7 +65,7 @@ If the database being restored does not exist, the user must have `CREATE DATABA
 
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
 
-On the storage layer the user (`Access Key ID`) must have both **ListBucket** and **ReadOnly** permissions.
+On the storage layer, the user (`Access Key ID`) must have both **ListBucket** and **ReadOnly** permissions.
 
 ## Supported features
 
@@ -247,7 +247,7 @@ Virtual host example:
 
 <!-- The name of the credential must include the bucket name. -->
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
-- The Access Key ID and Secret Key ID must not contain a colon. Access Key Id and Secret Key ID is the user and password created on the S3-compliant object storage.
+- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compliant object storage.
 - Only alphanumeric values are allowed.
 - The Access Key ID must have proper permissions on the S3-compatible object storage.
 
@@ -293,7 +293,7 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to backup and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
@@ -317,7 +317,7 @@ WITH REPLACE
 
 ### Using region for backup and restore
 
-The following example shows how to backup and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database

@@ -142,7 +142,7 @@ If you have a cluster running with one or more nodes, add more cluster nodes wit
 
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 - The root user on the existing nodes has SSH keys in place for passwordless login. 
-- `Csync2` is configured on the existing nodes. For more information,see Configuring Csync2 with YaST. 
+- `Csync2` is configured on the existing nodes. For more information, see Configuring Csync2 with YaST. 
 
 1. Log in as root to the physical or virtual machine supposed to join the cluster. 
 2. Start the bootstrap script by executing: 
@@ -178,7 +178,7 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
    >[!NOTE]
    >`admin_addr` is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information,see Section 4.1.2, Option no-quorum-policy. 
+After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, see Section 4.1.2, Option no-quorum-policy. 
 
 ## Set cluster property cluster-recheck-interval
 

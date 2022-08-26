@@ -122,7 +122,7 @@ If the FSCTL is issued after the handle has been written to, the last write oper
 
 **File System APIs and Supported Isolation Levels**
 
-When a file system API cannot open a file because of an isolation violation, an ERROR_SHARING_VIOLATION exception is returned. This isolation violation occurs when two transactions try to access the same file. The outcome of the access operation depends on the mode the file was opened in and the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the transaction is running on. The following table outlines the possibly outcomes for two transactions that are accessing the same file.
+When a file system API cannot open a file because of an isolation violation, an ERROR_SHARING_VIOLATION exception is returned. This isolation violation occurs when two transactions try to access the same file. The outcome of the access operation depends on the mode the file was opened in and the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the transaction is running on. The following table outlines the possible outcomes for two transactions that are accessing the same file.
 
 |Transaction 1|Transaction 2|Outcome on SQL Server 2008|Outcome on SQL Server 2008 R2 and later versions|  
 |-------------------|-------------------|--------------------------------|------------------------------------------------------|  

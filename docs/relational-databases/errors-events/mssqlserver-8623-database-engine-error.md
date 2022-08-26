@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "8623 (Database Engine error)"
 ms.assetid: 
 author: shaunbeasley
-ms.author: mathoma
+ms.author: shaunbe
 ---
 # MSSQLSERVER_8623
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

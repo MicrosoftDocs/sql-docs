@@ -3,13 +3,10 @@ title: "ENCRYPTBYASYMKEY (Transact-SQL)"
 description: "ENCRYPTBYASYMKEY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "ENCRYPTBYASYMKEY"
   - "ENCRYPTBYASYMKEY_TSQL"

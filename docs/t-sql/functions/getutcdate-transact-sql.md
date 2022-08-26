@@ -3,13 +3,10 @@ title: "GETUTCDATE (Transact-SQL)"
 description: "GETUTCDATE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "12/02/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "GETUTCDATE"
   - "GETUTCDATE_TSQL"

@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory authentication tha
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial
@@ -469,7 +469,7 @@ if (!$certUploadRes)
     exit 1
 }
 
-# Create the settings object to write to the Arc extension
+# Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName
@@ -525,12 +525,12 @@ $settingsString = (ConvertTo-Json $extension.properties.Settings).replace("`"", 
 
 # Push settings to Arc
 #
-Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+Write-Host "Writing Azure AD setting to Azure extension for SQL Server. This may take several minutes..."
 $updateRes = az connectedmachine extension update --machine-name $machineName --name "WindowsAgent.SqlServer" --resource-group $resourceGroupName --settings $settingsString
 
 if (!$updateRes)
 {
-    Write-Error "Failed to update SQL Arc Extension with Azure AD settings"
+    Write-Error "Failed to update Azure extension for SQL Server with Azure AD settings"
     exit 1
 }
 
@@ -815,7 +815,7 @@ catch
     exit 1
 }
 
-# Create the settings object to write to the Arc extension
+# Create the settings object to write to the Azure extension for SQL Server
 #
 $instanceSettings = @{
     instanceName = $instanceName

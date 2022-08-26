@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 08/22/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:

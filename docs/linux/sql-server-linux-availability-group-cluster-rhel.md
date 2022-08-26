@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 01/23/2020
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -100,7 +100,9 @@ After you register the subscription, complete the following steps to configure P
    
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/linux/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
-After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster. 
+After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster.
+
+[!INCLUDE [Considerations for multiple NICs](../includes/linux/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## Configure fencing (STONITH)
 

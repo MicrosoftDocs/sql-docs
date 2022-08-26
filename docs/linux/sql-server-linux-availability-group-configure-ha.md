@@ -59,18 +59,11 @@ The steps to create an AG on Linux servers for high availability are different f
 
 ### Considerations for multiple Network Interfaces (NICs)
 
-When setting up high availability with servers that have multiple NICs, follow these suggestions:
+For information on setting up an availability group for servers with multiple NICs, see the relevant sections for:
 
-- Make sure the `hosts` file is set up so that the server IP addresses for the multiple NICs resolves to the hostname of the Linux server. Do this on each node.
-- When setting up the cluster using Pacemaker, using the hostname of the servers should configure Corosync to set the configuration for all of the NICs. We only want the Pacemaker/Corosync communication over a single NIC. Once the Pacemaker cluster is configured, modify the configuration in the `corosync.conf` file similar to the following for each node:
-
-   ```output
-   ring0_addr: <ip_address_of_NIC1>
-   name: <hostname>
-   nodeid: <Node ID>
-   ```
-   
-- The `<hostname>` given in the `corosync.conf` file should be the same as the output given when doing a reverse lookup (`ping -a <ip_address>`), whether it's the FQDN or the shortname that is conigured in the host. Make sure the `hosts` file also represents the proper IP to name resolution.
+- RHEL
+- SLES
+- Ubuntu
 
 [!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
 

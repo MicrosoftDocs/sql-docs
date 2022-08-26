@@ -41,9 +41,9 @@ More resources for Azure SQL Database:
 
 More resources for SQL Server and Azure SQL Managed Instance:
 
-- [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+- [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](managed-instance/monitoring-with-dmvs.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
-- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+- [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)
 - [Overview of Azure SQL Managed Instance resource limits](managed-instance/resource-limits.md)

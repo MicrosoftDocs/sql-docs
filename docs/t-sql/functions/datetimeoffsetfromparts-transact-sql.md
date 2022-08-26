@@ -3,13 +3,10 @@ title: "DATETIMEOFFSETFROMPARTS (Transact-SQL)"
 description: "DATETIMEOFFSETFROMPARTS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DATETIMEOFFSETFROMPARTS_TSQL"
   - "DATETIMEOFFSETFROMPARTS"

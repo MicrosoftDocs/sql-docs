@@ -11,7 +11,7 @@ ms.author: v-davidengel
 ---
 # Python SQL Driver - pyodbc
 
-![Download-DownArrow-Circled](../../../ssms/media/download-icon.png)[Install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 This article provides step-by-step guidance for installing and using the Python SQL Driver, pyODBC.
 

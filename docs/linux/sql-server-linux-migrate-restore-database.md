@@ -55,7 +55,7 @@ There are several ways to create a backup file of a database on Windows. The fol
 
 1. In the **Backup Up Database** dialog, verify that **Backup type** is **Full** and **Back up to** is **Disk**. Note name and location of the file. For example, a database named **YourDB** on SQL Server 2016 has a default backup path of `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
 
-1. Click **OK** to back up your database.
+1. Select **OK** to back up your database.
 
 > [!NOTE]
 > Another option is to run a Transact-SQL query to create the backup file. The following Transact-SQL command performs the same actions as the previous steps for a database called **YourDB**:

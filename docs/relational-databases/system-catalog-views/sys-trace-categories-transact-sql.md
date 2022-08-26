@@ -26,7 +26,8 @@ ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
   
  For a complete list of supported trace events, see [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
-> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Event catalog views instead.  
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Event catalog views instead.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

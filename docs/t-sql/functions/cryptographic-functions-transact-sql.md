@@ -3,13 +3,10 @@ title: "Cryptographic Functions (Transact-SQL)"
 description: "Cryptographic Functions (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "functions [SQL Server], cryptographic"
   - "crypto functions"

@@ -32,7 +32,7 @@ The Query Store feature provides you with insight on query plan choice and perfo
 ## <a name="Enabling"></a> Enable the Query Store
 
 - Query Store is enabled by default for new Azure SQL Database and Azure SQL Managed Instance databases.
-- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], we recommend enabling Query Store on new and existing databases.
+- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. It is enabled by default in the `READ_WRITE` mode for new databases starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], we recommend enabling Query Store on all databases.
 - Query Store is not enabled by default for new Azure Synapse Analytics databases. 
 
 ### Use the Query Store page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
@@ -133,13 +133,16 @@ The data stored about queries can be analyzed as workloads on a replica set basi
 Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) set up and configured.
 
 > [!IMPORTANT]
-> **APPLIES TO**: SQL Server 2022 (16.x) CTP 2.x
-> 
-> You must enable the following set of trace flags before you can enable Query Store for secondary replicas: 12606, 12607, 12608, 12610, T12624. To enable these trace flags:
+> **APPLIES TO**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+>
+> Query Store for secondary replicas is a *preview* feature. It is not intended for production deployments. See: [release notes](../../sql-server/sql-server-2022-release-notes.md).
+>
+> You must enable trace flag 12606 before you can enable Query Store for secondary replicas. To enable the trace flags:
+>
 > 1. Open the services management console (services.msc from the **Run** menu).
-> 1. Right-click on the **SQL Server** service for SQL Server 2022 CTP 2 and select **Properties**.
+> 1. Right-click on the **SQL Server** service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and select **Properties**.
 > 1. If the service status is *Running*, select **Stop**. This will stop the installed instance.
-> 1. In the **Start parameters** box, add the values: `-T12606 -T12607 -T12608 -T12610 -T12624`
+> 1. In the **Start parameters** box, add the values: `-T12606`
 > 1. Select **Start** to start the service.
 > 1. Select **OK**.
 
@@ -427,7 +430,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 7 days.
 
 #### Delete ad-hoc queries
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "dropping roles"
 dev_langs:
   - "TSQL"
-ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 ---
 # DROP RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

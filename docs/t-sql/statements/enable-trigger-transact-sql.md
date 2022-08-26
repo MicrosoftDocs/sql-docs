@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "ENABLE TRIGGER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 ---
 # ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

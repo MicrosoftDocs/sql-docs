@@ -75,7 +75,6 @@
         "sql-server/**/*.md": "GitHub",
         "ssms/**/*.md": "GitHub",
         "tools/**/*.md": "GitHub",
-        "t-sql/**/*.md": "GitHub",
         "relational-databases/*.md": "GitHub",
         "relational-databases/automatic-tuning/**/*.md": "GitHub",
         "relational-databases/backup-restore/**/*.md": "GitHub",

@@ -222,7 +222,8 @@ By default, the horizontal axis displays values in a general format that is auto
   
 7.  In the **Axis Title** box, type **Sales in thousands** and press Enter.  
 
-    >**Note:** While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
+    > [!NOTE]  
+    > While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
   
 9. Click **Run** to preview the report.  
   

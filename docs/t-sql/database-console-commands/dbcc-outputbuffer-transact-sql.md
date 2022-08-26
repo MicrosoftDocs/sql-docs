@@ -1,27 +1,23 @@
 ---
+title: "DBCC OUTPUTBUFFER (Transact-SQL)"
 description: "DBCC OUTPUTBUFFER (Transact-SQL)"
-title: "DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC OUTPUTBUFFER"
   - "OUTPUTBUFFER_TSQL"
   - "OUTPUTBUFFER"
   - "DBCC_OUTPUTBUFFER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC OUTPUTBUFFER statement"
   - "output buffers"
   - "current output buffer"
-ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

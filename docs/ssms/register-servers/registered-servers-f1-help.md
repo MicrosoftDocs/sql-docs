@@ -58,7 +58,8 @@ ms.author: "maghan"
  **Remember password**  
  Store the password you have entered. This option is only available if you have clicked **Basic** or **Forms Authentication**.  
   
-> **NOTE:** If you have stored the password and want to stop storing it, clear this check box and then click **Save**.  
+> [!NOTE]  
+> If you have stored the password and want to stop storing it, clear this check box and then click **Save**.  
   
  **Registered server name**  
  The name you want to appear in Registered Servers. This name does not have to match the name in the **Server name** box.  

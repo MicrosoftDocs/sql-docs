@@ -4,7 +4,7 @@ description: Auto-failover groups let you manage geo-replication and automatic /
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: high-availability
-ms.custom: sql-db-mi-split
+ms.custom: "azure-sql-split"
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic

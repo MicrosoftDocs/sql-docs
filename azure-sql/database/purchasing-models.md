@@ -8,6 +8,7 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.custom:
   - "sqldbrb=1"
+  - "azure-sql-split"
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf

@@ -1,8 +1,8 @@
 ---
 title: "DELETE (Transact-SQL)"
 description: DELETE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "11/19/2021"
 ms.prod: sql
 ms.technology: t-sql
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "deleting data"
 dev_langs:
   - "TSQL"
-ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)

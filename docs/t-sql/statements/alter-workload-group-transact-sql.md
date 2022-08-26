@@ -1,8 +1,8 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL)
 description: "Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 08/10/2022
 ms.prod: sql

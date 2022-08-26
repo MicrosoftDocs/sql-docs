@@ -293,8 +293,6 @@ select @je;
 
 select * from jobs.job_executions where job_execution_id = @je;
 
--- Execute a specific version of a job (e.g. version 1)
-exec jobs.sp_start_job 'CreateTableTest', 1;
 ```
 
 ## Schedule execution of a job

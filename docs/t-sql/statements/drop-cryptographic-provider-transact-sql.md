@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

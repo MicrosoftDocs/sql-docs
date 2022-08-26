@@ -42,7 +42,8 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 `[ @job_name = ] 'job_name'`
  The name of the job from which the step will be removed. *job_name*is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *job_id* or *job_name* must be specified; both cannot be specified.  
+> [!NOTE]  
+> Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
 `[ @step_id = ] step_id`
  The identification number of the step being removed. *step_id*is **int**, with no default.  
@@ -58,7 +59,8 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  For more information about the steps associated with a particular job, run **sp_help_jobstep**.  
   
-> **NOTE:** Calling **sp_delete_jobstep** with a *step_id* value of zero deletes all job steps for the job.  
+> [!NOTE]  
+> Calling **sp_delete_jobstep** with a *step_id* value of zero deletes all job steps for the job.  
   
  Microsoft SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   

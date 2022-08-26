@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "DROP FULLTEXT CATALOG statement"
 dev_langs:
   - "TSQL"
-ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

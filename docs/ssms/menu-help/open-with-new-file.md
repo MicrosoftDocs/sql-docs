@@ -20,7 +20,7 @@ You can open a document in one or more editors by clicking **Open** on the **Fil
   
 ## Options  
 **Select a program to open**  
-Lists the editors available in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio for the selected type of file. Choose the editor with which to open the document from the list displayed, or click **Add** to include a new editor in the list.  
+Lists the editors available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio for the selected type of file. Choose the editor with which to open the document from the list displayed, or click **Add** to include a new editor in the list.  
   
 **Open**  
 Click **Open** to open the document in the selected editor.  

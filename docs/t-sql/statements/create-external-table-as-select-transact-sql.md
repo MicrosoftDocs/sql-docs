@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/25/2022
+ms.date: 08/26/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference

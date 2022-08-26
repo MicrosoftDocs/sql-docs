@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "digital signatures [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 ---
 # DROP SIGNATURE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

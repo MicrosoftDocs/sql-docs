@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "roles, server"
 dev_langs:
   - "TSQL"
-ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 ---
 # CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,8 +1,8 @@
 ---
 title: "CREATE ASSEMBLY (Transact-SQL)"
 description: CREATE ASSEMBLY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "GRANT statement, system objects"
 dev_langs:
   - "TSQL"
-ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 ---
 # GRANT System Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

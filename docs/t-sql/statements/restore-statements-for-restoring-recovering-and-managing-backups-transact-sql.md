@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019​"
+ms.custom: seo-lt-2019​
 helpviewer_keywords:
   - "restoring files [SQL Server], RESTORE statement"
   - "RESTORE statement, about restore operations"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)

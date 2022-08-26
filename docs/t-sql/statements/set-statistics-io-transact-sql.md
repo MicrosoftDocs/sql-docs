@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "statistical information [SQL Server], disk activity"
 dev_langs:
   - "TSQL"
-ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	

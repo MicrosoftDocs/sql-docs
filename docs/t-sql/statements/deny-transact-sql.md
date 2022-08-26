@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "denying permissions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

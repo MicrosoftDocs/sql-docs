@@ -1,8 +1,8 @@
 ---
 title: "DROP ASSEMBLY (Transact-SQL)"
 description: DROP ASSEMBLY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "WITH NO DEPENDENTS option"
 dev_langs:
   - "TSQL"
-ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 ---
 # DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

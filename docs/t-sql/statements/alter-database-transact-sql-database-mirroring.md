@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 description: ALTER DATABASE Database Mirroring (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], Transact-SQL"
 dev_langs:
   - "TSQL"
-ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 

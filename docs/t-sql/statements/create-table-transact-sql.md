@@ -1,8 +1,8 @@
 ---
 title: CREATE TABLE (Transact-SQL)
 description: CREATE TABLE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
@@ -47,7 +47,6 @@ helpviewer_keywords:
   - "data retention policy"
 dev_langs:
   - "TSQL"
-ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 ---
 # CREATE TABLE (Transact-SQL)
 

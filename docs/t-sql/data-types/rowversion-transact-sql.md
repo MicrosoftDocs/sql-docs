@@ -1,19 +1,16 @@
 ---
+title: "rowversion (Transact-SQL)"
 description: "rowversion (Transact-SQL)"
-title: "rowversion (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/22/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "timestamp_TSQL"
   - "timestamp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rowversion data type"
   - "size [SQL Server], rowversion"
   - "row version-stamping [SQL Server]"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "timestamp data type"
   - "timestamp columns"
   - "size [SQL Server], timestamp"
-ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # rowversion (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

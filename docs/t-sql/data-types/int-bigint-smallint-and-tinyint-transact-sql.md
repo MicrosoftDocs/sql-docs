@@ -1,13 +1,13 @@
 ---
-title: "int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs"
+title: "int, bigint, smallint, and tinyint (Transact-SQL)"
 description: "Transact-SQL reference for int, bigint, smallint, and tinyint data types. These data types are used to represent integer data."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 09/08/2017
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "bigint_TSQL"
   - "smallint"
   - "bigint"
@@ -16,17 +16,14 @@ f1_keywords:
   - "int_TSQL"
   - "int"
   - "tinyint"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "exact numeric data [SQL Server]"
   - "numeric data"
   - "tinyint data type"
   - "int data type"
   - "smallint data type"
-ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)

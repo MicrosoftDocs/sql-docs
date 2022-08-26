@@ -1,8 +1,8 @@
 ---
 title: CREATE XML INDEX (Transact-SQL)
 description: CREATE XML INDEX (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
 ms.prod: sql

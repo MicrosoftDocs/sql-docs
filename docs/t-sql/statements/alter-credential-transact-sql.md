@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "ALTER CREDENTIAL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER CREDENTIAL (Transact-SQL)

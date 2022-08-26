@@ -14,7 +14,7 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 ---
-# "Tools to monitor Always On availability groups"
+# Tools to monitor Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   To monitor the properties and state of an Always On availability group you can use the following tools.  
   

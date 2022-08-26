@@ -6,10 +6,9 @@ ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 07/28/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "GENERATE_SERIES"
   - "GENERATE_SERIES_TSQL"

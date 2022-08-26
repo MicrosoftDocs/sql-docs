@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "GRANT statement, objects"
 dev_langs:
   - "TSQL"
-ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Object Permissions (Transact-SQL)

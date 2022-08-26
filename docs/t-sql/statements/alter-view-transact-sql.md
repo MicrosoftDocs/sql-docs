@@ -1,8 +1,8 @@
 ---
 title: "ALTER VIEW (Transact-SQL)"
 description: ALTER VIEW (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "ALTER VIEW statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER VIEW (Transact-SQL)

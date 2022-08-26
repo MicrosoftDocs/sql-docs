@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], impersonation"
 dev_langs:
   - "TSQL"
-ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

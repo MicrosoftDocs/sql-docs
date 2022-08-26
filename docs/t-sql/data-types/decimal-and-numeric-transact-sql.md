@@ -1,27 +1,24 @@
 ---
-title: "decimal and numeric (Transact-SQL) | Microsoft Docs"
+title: "decimal and numeric (Transact-SQL)"
 description: "Transact-SQL reference for the decimal and numeric data types. Decimal and numeric are synonyms for numeric data types that have a fixed precision and scale."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/10/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "decimal"
   - "decimal_TSQL"
   - "numeric"
   - "numeric_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "decimal data type"
   - "decimal data type, about decimal data type"
   - "numeric data type"
   - "numeric data type, about numeric data type"
-ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # decimal and numeric (Transact-SQL)

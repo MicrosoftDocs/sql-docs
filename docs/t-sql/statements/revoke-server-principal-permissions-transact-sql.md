@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "REVOKE statement, impersonation"
   - "permissions [SQL Server], impersonation"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "REVOKE statement, logins"
 dev_langs:
   - "TSQL"
-ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

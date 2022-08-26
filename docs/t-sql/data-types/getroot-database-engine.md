@@ -1,23 +1,19 @@
 ---
+title: "GetRoot (Database Engine)"
 description: "GetRoot (Database Engine)"
-title: "GetRoot (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "GetRoot"
-  - "GetRoot_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetRoot [Database Engine]"
-ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "GetRoot"
+  - "GetRoot_TSQL"
+helpviewer_keywords:
+  - "GetRoot [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 
 # GetRoot (Database Engine)

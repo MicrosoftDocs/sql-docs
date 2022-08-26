@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], certificates"
 dev_langs:
   - "TSQL"
-ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 ---
 # DENY Certificate Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

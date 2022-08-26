@@ -1,13 +1,13 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)"
 description: ALTER DATABASE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 12/09/2021
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "references_regions"
+ms.custom: references_regions
 f1_keywords:
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"
@@ -965,13 +965,11 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a pool.
+In Azure Synapse, `ALTER DATABASE` modifies certain configuration options of a dedicated SQL pool.
 
+Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles. 
 
-Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
-
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-Provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
 
 ## Syntax
 

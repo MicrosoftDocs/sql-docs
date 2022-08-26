@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "permissions [SQL Server], database roles"
@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)

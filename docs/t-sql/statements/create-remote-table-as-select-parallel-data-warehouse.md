@@ -1,8 +1,8 @@
 ---
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
 description: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: wiassaf
 ms.date: 08/10/2017
 ms.prod: sql
@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 monikerRange: ">=aps-pdw-2016"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)

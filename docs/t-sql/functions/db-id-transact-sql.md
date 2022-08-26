@@ -3,13 +3,10 @@ title: "DB_ID (Transact-SQL)"
 description: "DB_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "08/13/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DB_ID_TSQL"
   - "DB_ID"

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

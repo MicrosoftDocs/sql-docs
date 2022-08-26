@@ -71,7 +71,7 @@ To run an assessment, you have to be a member of the SQL Server **sysadmin** rol
 
 ## Supported source and target versions
 
-DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions are:
+DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions for assessment are:
 
 ### Sources
 

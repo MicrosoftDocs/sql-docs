@@ -7,8 +7,7 @@ ms.date: 04/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ISJSON"
   - "ISJSON_TSQL"

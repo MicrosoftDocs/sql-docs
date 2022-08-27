@@ -101,7 +101,7 @@ The name of the credential is not required to match the exact URL path. Here is 
 1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups`
 1. `s3://10.193.16.183:8787/myS3Bucket`
 
-If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server. Bucket name needs to be present part of the credential name.
+If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server.
 
 ### Unsupported option FILE_SNAPSHOT
 

@@ -1,10 +1,6 @@
 ---
 title: "Query Hints (Transact-SQL)"
 description: "Query hints specify that the indicated hints are used in the scope of a query. They affect all operators in the statement."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf
-ms.date: 08/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -55,7 +51,12 @@ helpviewer_keywords:
   - "QUERY_PLAN_PROFILE query hint"
 dev_langs:
   - "TSQL"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
+ms.date: 08/03/2022
 ---
+
 # Hints (Transact-SQL) - Query
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -343,7 +344,7 @@ The following hint names are supported:
    Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-adaptive-joins).  
    **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 - 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'  
-   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-memory-grant-feedback).  
+   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#batch-mode-memory-grant-feedback).  
    **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 - 'DISABLE_DEFERRED_COMPILATION_TV'  
   Disables table variable deferred compilation. For more information, see [Table variable deferred compilation](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).  
@@ -365,7 +366,7 @@ The following hint names are supported:
 - 'DISABLE_PARAMETER_SNIFFING'  
    Instructs Query Optimizer to use average data distribution while compiling a query with one or more parameters. This instruction makes the query plan independent on the parameter value that was first used when the query was compiled. This hint name is equivalent to [trace flag](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../statements/alter-database-scoped-configuration-transact-sql.md) setting `PARAMETER_SNIFFING = OFF`.
 - 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'  
-  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-details.md#row-mode-memory-grant-feedback).  
+  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback).  
   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 - 'DISABLE_TSQL_SCALAR_UDF_INLINING'  
   Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).  

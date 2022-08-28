@@ -176,7 +176,7 @@ If you specify a join hint in the same query's FROM clause for a specific table 
 
 #### DISABLE_OPTIMIZED_PLAN_FORCING
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Disables [Optimized plan forcing](../../relational-databases/performance/optimized-plan-forcing-query-store.md) for a query.
 

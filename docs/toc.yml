@@ -11208,6 +11208,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
           href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
+        - name: 3056
+          href: relational-databases/errors-events/mssqlserver-3056-database-engine-error.md
         - name: 3151
           href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
         - name: 3156

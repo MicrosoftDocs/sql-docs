@@ -28,7 +28,7 @@ This article provides the detailed resource limits for single databases in Azure
 > - Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).\
 > - For scaling guidance and considerations, see [Scale a single database](single-database-scale.md).
 
-Each read-only replica of a database has its own resources, such as vCores, memory, data IOPS, tempdb, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.
+Each read-only replica of a database has its own resources, such as vCores, memory, data IOPS, `tempdb`, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.
 
 You can set the service tier, compute size (service objective), and storage amount for a single database using:
 
@@ -730,7 +730,7 @@ This section includes details on previously available hardware.
 
 #### General Purpose Gen4 hardware (part 2 of 2)
 
-|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|

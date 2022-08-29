@@ -144,7 +144,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Columnstore support|Yes|Yes|Yes|Yes|Yes| 
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
 |Max data size (GB)|3072|4096|4096|4096|4096|
-|Max log size (GB) <sup>2</sup>|922|1229|1229|1229|1024|
+|Max log size (GB) <sup>2</sup>|922|1229|1229|1229|1229|
 |TempDB max data size (GB)|768|1024|1280|2560|2560|
 |Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
@@ -360,10 +360,10 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Columnstore support|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|37.94|52.23|131.68|331|
 |Max data size (GB)|4096|4096|4096|4096|
-|Max log size (GB) <sup>2</sup>|1229|1229|1229|1024|
+|Max log size (GB) <sup>2</sup>|1229|1229|1229|1229|
 |TempDB max data size (GB)|1024|1280|2560|2560|
 |[Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB)|4829|4829|4829|4829|
-|Storage type|ocal SSD|Local SSD|Local SSD|Local SSD|
+|Storage type|Local SSD|Local SSD|Local SSD|Local SSD|
 |Read IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Write IO latency (approximate)|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Max data IOPS per pool <sup>3</sup>|144,000|180,000|256,000|409,600|

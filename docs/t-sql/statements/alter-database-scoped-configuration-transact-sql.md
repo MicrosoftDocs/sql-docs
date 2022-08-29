@@ -38,7 +38,7 @@ This command enables several database configuration settings at the **individual
 > [!IMPORTANT]
 > Different `DATABASE SCOPED CONFIGURATION` options are supported in different versions of SQL Server or Azure services. This page describes **all** `DATABASE SCOPED CONFIGURATION` options. Versions where applicable are described in the text below. Make sure that you use the syntax that is available in the version of service that you are using.
 
-The following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
+The following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **Applies to** line for each setting in the [Arguments](#arguments) section: 
 
 - Clear procedure cache.
 - Set the MAXDOP parameter to a recommended value (1,2, ...) for the primary database based on what works best for that particular workload, and set a different value for secondary replica databases used by reporting queries. For guidance on choosing a MAXDOP, review [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
@@ -150,7 +150,7 @@ Clears the procedure (plan) cache for the database, and can be executed both on 
 
 Specify a query plan handle to clear a single query plan from the plan cache.
 
-**APPLIES TO**: Specifying a query plan handle is available in starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to:** Specifying a query plan handle is available in starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 #### MAXDOP **=** {\<value> | PRIMARY }
 **\<value>**
@@ -204,7 +204,7 @@ This value is only valid on secondaries while the database in on the primary, an
 
 Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**, which disables query optimization hotfixes that were released after the highest available compatibility level was introduced for a specific version (post-RTM). Setting this to **ON** is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 > [!TIP]
 > To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
@@ -216,7 +216,7 @@ This value is only valid on secondaries while the database in on the primary, an
 
 #### IDENTITY_CACHE **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.
 
@@ -225,7 +225,7 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 #### INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable Interleaved execution for multi-statement table-valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -236,7 +236,7 @@ Allows you to enable or disable Interleaved execution for multi-statement table-
 
 #### BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -245,7 +245,7 @@ Allows you to enable or disable batch mode memory grant feedback at the database
 
 #### BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -254,7 +254,7 @@ Allows you to enable or disable batch mode adaptive joins at the database scope 
 
 #### TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
 Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining is part of the [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
@@ -263,7 +263,7 @@ Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope 
 
 #### ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to select options to cause the engine to automatically elevate supported operations to online. The default is OFF, which means operations will not be elevated to online unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_ONLINE. These options will only apply to operations that are supported for online.
 
@@ -283,7 +283,7 @@ This value elevates operations that support ONLINE. Operations that do not suppo
 
 #### ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are supported for resumable.
 
@@ -300,13 +300,13 @@ This value elevates operations that support RESUMABLE. Operations that do not su
 
 #### OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Enables or disables a compiled plan stub to be stored in cache when a batch is compiled for the first time. The default is OFF. Once the database scoped configuration OPTIMIZE_FOR_AD_HOC_WORKLOADS is enabled for a database, a compiled plan stub will be stored in cache when a batch is compiled for the first time. Plan stubs have a smaller memory footprint compared to the size of the full compiled plan. If a batch is compiled or executed again, the compiled plan stub will be removed and replaced with a full compiled plan.
 
 #### XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
 
@@ -314,7 +314,7 @@ Module-level execution statistics for natively compiled T-SQL modules are collec
 
 #### XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
@@ -324,7 +324,7 @@ For more information about performance monitoring of natively compiled [!INCLUDE
 
 #### ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (row mode is supported in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
@@ -333,7 +333,7 @@ Allows you to enable or disable row mode memory grant feedback at the database s
 
 #### MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Allows you to disable memory grant feedback percentile for all query executions originating from the database.
 
@@ -342,7 +342,7 @@ Allows you to disable memory grant feedback percentile for all query executions 
 
 #### MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Allows you to disable memory grant feedback persistence for all query executions originating from the database.
 
@@ -351,7 +351,7 @@ Allows you to disable memory grant feedback persistence for all query executions
 
 #### BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
@@ -360,7 +360,7 @@ Allows you to enable or disable batch mode on rowstore at the database scope whi
 
 #### DEFERRED_COMPILATION_TV **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
@@ -378,7 +378,7 @@ Enables an optimized mechanism for query plan forcing, applicable to all forms o
 
 #### GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows setting the auto-drop functionality for [global temporary tables](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
 
@@ -389,7 +389,7 @@ Allows setting the auto-drop functionality for [global temporary tables](../../t
 
 #### LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md). The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms and is enabled by default.
 
@@ -397,7 +397,7 @@ Allows you to enable or disable the [lightweight query profiling infrastructure]
 
 #### VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable the new `String or binary data would be truncated` error message. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new, more specific error message (2628) for this scenario:
 
@@ -411,13 +411,13 @@ For database compatibility level 140 or lower, error message 2628 remains an opt
 
 #### LAST_QUERY_PLAN_STATS **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 #### PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (in minutes) the resumable index is being paused before being automatically aborted by the engine.
 
@@ -430,13 +430,13 @@ The current value for this option is displayed in [sys.database_scoped_configura
 
 #### ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
 #### DW_COMPATIBILITY_LEVEL **=** { **AUTO** | 10 | 20 | 9000 } 
 
-**APPLIES TO**: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
+**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
 
 Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations.
 
@@ -449,37 +449,37 @@ Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors 
 
 #### EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Allows you to control whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics may cause a noticeable performance overhead. This can be avoided by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`.
 
 #### ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 
 
 If asynchronous statistics update is enabled, enabling this configuration will cause the background request updating statistics to wait for a Sch-M lock on a low priority queue, to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
 
 #### OPTIMIZED_PLAN_FORCING **=** { **ON** | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
 
 Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
 
 #### DOP_FEEDBACK = { ON | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled.
 
 #### PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
 
 #### LEDGER_DIGEST_STORAGE_ENDPOINT = { &lt;endpoint URL string&gt; | OFF }
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Enables or disables uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account or a ledger in Azure Confidential Ledger. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
 
@@ -624,7 +624,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 ### G. Set IDENTITY_CACHE
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example disables the identity cache.
 
@@ -634,7 +634,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 
 ### H. Set OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example enables a compiled plan stub to be stored in cache when a batch is compiled for the first time.
 
@@ -644,7 +644,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### I. Set ELEVATE_ONLINE
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example sets ELEVATE_ONLINE to FAIL_UNSUPPORTED.
 
@@ -654,7 +654,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 
 ### J. Set ELEVATE_RESUMABLE
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example sets ELEVATE_RESUMABLE to WHEN_SUPPORTED.
 
@@ -664,7 +664,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### K. Clear a query plan from the plan cache
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example clears a specific plan from the procedure cache
 
@@ -674,7 +674,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 ### L. Set paused duration
 
-**APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 This example sets the resumable index paused duration to 60 minutes.
 
@@ -685,7 +685,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ### M. Enable and disable uploading ledger digests
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 This example enables uploading ledger digests to an Azure storage account.
 

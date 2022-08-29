@@ -94,11 +94,23 @@ Specifically:
 
 ### Limits
 
+WIP
+
 ### Throttling
+
+WIP
 
 ### HTTPS and TLS
 
 Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption protocol are supported. 
+
+### HTTP Redirects
+
+sp_invoke_external_rest_endpoint will not automatically follow any HTTP redirect received as a response from the invoked endpoint.
+
+### HTTP Headers
+
+WIP
 
 ### Allow-Listed Endpoints
 
@@ -127,8 +139,7 @@ API Management| *.azure-api.net
 
 ### Credentials Usage
 
-
-###
+WIP
 
 ## Permissions  
    
@@ -136,9 +147,44 @@ Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.
 
 ## Examples  
   
-WIP
+### A. Call an Azure Function using an HTTP Trigger binding, no authentication
+
+The following example calls the Azure Function available at ''
+
+```sql
+DECLARE @ret INT, @response NVARCHAR(MAX);
+
+EXEC @ret = sp_invoke_external_rest_endpoint 
+	@url = N'https://my-function.azurewebsites.net/api/function-name?key1=value1',
+	@headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
+	@payload = N'{"some":{"data":"here"}}',
+	@response = @response OUTPUT;
+	
+SELECT @ret AS ReturnCode, @response AS Response;
+```
+
+### A. Call an Azure Function using an HTTP Trigger binding, using function-key authentication
+
+The following example calls the Azure Function available at ''
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [https://my-function.azurewebsites.net/api/function-name]
+WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
+
+DECLARE @ret INT, @response NVARCHAR(MAX);
+
+EXEC @ret = sp_invoke_external_rest_endpoint 
+	@url = N'https://echo-function.azurewebsites.net/api/EchoFunction?key1=value1',
+	@headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
+  @credential = [https://my-function.azurewebsites.net/api/function-name],
+	@payload = N'{"some":{"data":"here"}}',  
+	@response = @response OUTPUT;
+	
+SELECT @ret AS ReturnCode, @response AS Response;
+```
+
 
 ## See Also  
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [API Management](https://docs.microsoft.com/en-us/azure/api-management/)
+- [API Management](https://docs.microsoft.com/azure/api-management/)

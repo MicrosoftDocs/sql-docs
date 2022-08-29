@@ -451,7 +451,7 @@ Encryption can be used as a way to ensure that only specific application users w
 - Use Cell-level Encryption (CLE). See the article, [Encrypt a Column of Data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) for details.
 - Use Always Encrypted, but be aware of its limitation. The limitations are listed below.
 
-**Best practices**
+**Best practices**:
 
 When using CLE:
 
@@ -678,7 +678,7 @@ Restrict access to the storage account to support Separation of Duties and to se
 **How to implement**:
 
 - When saving Audit logs to Azure Storage, make sure that access to the Storage Account is restricted to the minimal security principles. Control who has access to the storage account.
-- For more information, see [Authorizing access to Azure Storage](/azure/storage/common/authorize-data-access?toc=%2fazure%2fstorage%2fblobs%2ftoc.json).
+- For more information, see [Authorizing access to Azure Storage](/azure/storage/common/authorize-data-access?toc=/azure/storage/blobs/toc.json).
 
 **Best practices**:
 
@@ -753,7 +753,7 @@ Use a unified infrastructure security management system that strengthens the sec
 
 **How to implement**:
 
-- Monitor SQL-related security recommendations and active threats in [Microsoft Defender for Cloud](https://azure.microsoft.com/documentation/services/security-center/).
+- Monitor SQL-related security recommendations and active threats in [Microsoft Defender for Cloud](/azure/defender-for-cloud/).
 
 ## Common security threats and potential mitigations
 

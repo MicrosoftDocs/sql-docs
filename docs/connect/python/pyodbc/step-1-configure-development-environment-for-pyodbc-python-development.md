@@ -36,7 +36,7 @@ This article explains how to configure your development environment for pyodbc P
 
 ## Linux
 
-Installing on Linux is very similar. If the instructions below don't work, see the [pyODBC Install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install), which have more details for different Linux distributions.
+Installing on Linux is similar. If the instructions below don't work, see the [pyODBC Install instructions](https://github.com/mkleehammer/pyodbc/wiki/Install), which have more details for different Linux distributions.
 
 1. **Open terminal**.
 

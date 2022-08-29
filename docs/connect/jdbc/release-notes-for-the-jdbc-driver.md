@@ -18,8 +18,8 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ## <a id="112"></a> 11.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
 
 Release number: 11.2.0  
 Released: August 4, 2022
@@ -42,8 +42,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 Release number: 11.2.0  
 Released: August 4, 2022
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2186163)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2186164)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2186163)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2186164)**
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40a)  
@@ -85,8 +85,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ## <a id="102"></a> 10.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
 
 Release number: 10.2.1  
 Released: May 12, 2022
@@ -118,8 +118,8 @@ Fixed issues in 10.2.1:
 Release number: 10.2.0  
 Released: January 31, 2022
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2186163)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2186164)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2186163)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2186164)**
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40a)  
@@ -157,8 +157,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ## <a id="94"></a> 9.4
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2183120)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2183223)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.4.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2183120)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2183223)**
 
 Release number: 9.4.1  
 Released: December 7, 2021
@@ -189,8 +189,8 @@ Fixed issues in 9.4.1:
 Version number: 9.4.0  
 Released: July 30, 2021
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2168494)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.4.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2168494)**  
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40a)  
@@ -231,8 +231,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ## <a id="92"></a> 9.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2155948)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2155949)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2155948)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2155949)**  
 
 Version number: 9.2.1  
 Released: March 02, 2021
@@ -262,8 +262,8 @@ Fixed issues in 9.2.1:
 Version number: 9.2.0  
 Released: January 29, 2021
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 9.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
@@ -303,8 +303,8 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 ## <a id="84"></a> 8.4
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
 
 Version number: 8.4.1  
 Released: August 27, 2020
@@ -375,8 +375,8 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 ## <a id="82"></a> 8.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 8.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 8.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
 
 Version number: 8.2.2
 Released: March 24, 2020
@@ -450,8 +450,8 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 
 ## <a id="74"> 7.4.1
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122613)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122613)**  
 
 Version number: 7.4.1  
 Released: August 2, 2019
@@ -519,8 +519,8 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 
 ## <a id="72"> 7.2.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.2.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122435)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122434)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.2.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122435)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122434)**  
 
 Version number: 7.2.2  
 Released: April 16, 2019
@@ -607,8 +607,8 @@ Released: January 31, 2019
 
 ## 7.0
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122713)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122614)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122713)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 7.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122614)**  
 
 Version number: 7.0.0  
 Released: July 31, 2018
@@ -674,8 +674,8 @@ Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on "Mi
 
 ## 6.4
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.4 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122436)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122537)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.4 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122436)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122537)**  
 
 Version number: 6.4.0  
 Released: February 27, 2018
@@ -740,8 +740,8 @@ The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Dire
 
 ## 6.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122616)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122615)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122616)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122615)**  
 
 Version number: 6.2.2  
 Released: September 29, 2017
@@ -808,8 +808,8 @@ Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specificat
 
 ## 6.0
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122617)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122714)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122617)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122714)**  
 
 Version number: 6.0.8112  
 Released: January 17, 2017
@@ -855,8 +855,8 @@ The driver now supports transparent connections to Always On Availability Groups
 
 ## 4.2
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 4.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122538)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 4.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122437)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122538)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122437)**  
 
 Version number: 4.2.8112  
 Released: August 24, 2015

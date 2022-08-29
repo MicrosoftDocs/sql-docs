@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_readerrorlog"
 author: pijocoder
-ms.author: maghan
+ms.author: jopilov
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "02/08/2022"

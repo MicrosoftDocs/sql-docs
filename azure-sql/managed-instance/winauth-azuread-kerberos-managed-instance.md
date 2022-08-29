@@ -1,5 +1,5 @@
 ---
-title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory (Preview)
+title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory 
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory.
 services: sql-database
@@ -13,7 +13,7 @@ ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
 ---
 
-# Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory (Preview)
+# Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
 
 This article describes how to configure a managed instance to support [Windows Authentication for Azure AD principals](winauth-azuread-overview.md). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
 

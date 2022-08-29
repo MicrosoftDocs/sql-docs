@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 08/11/2022
+ms.date: 08/15/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -21,19 +21,19 @@ For the latest release notes, see [SQL Server 2019 Big Data Clusters platform re
 
 ## <a id="cu17"></a> CU17 (August 2022)
 
-Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters. Updated to Kubernetes version 1.23.1.
+Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters, [KB 5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4236.7| 2019-CU17-ubuntu-20.04| [KB 5016394](https://support.microsoft.com/help/5016394) |
+|15.0.4249.2| 2019-CU17-ubuntu-20.04| [KB 5016394](https://support.microsoft.com/help/5016394) |
 
 ## <a id="cu16"></a> CU16 GDR (June 2022)
 
-Cumulative Update 16 (CU16) GDR release for SQL Server 2019 Big Data Clusters.
+Cumulative Update 16 (CU16) GDR release for SQL Server 2019 Big Data Clusters
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4236.7|[2019-CU16-GDR3-ubuntu-20.04]| [KB 5014356](https://support.microsoft.com/help/5014356) |
+|15.0.4236.7|[2019-CU16-GDR3-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 17](release-notes-cumulative-update-17.md)   |
 
 
 ## <a id="cu16"></a> CU16 (May 2022)
@@ -64,7 +64,7 @@ Cumulative Update 14 (CU14) release for SQL Server Big Data Clusters.
 |15.0.4188.2|[2019-CU14-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 14](release-notes-cumulative-update-14.md) |
 
 > [!WARNING]
-   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
 
 ## <a id="cu13"></a> CU13 (September 2021)
 

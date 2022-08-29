@@ -175,7 +175,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
   
  Specifies the type of data exchange during synchronization, which can be one of the following:  
   
@@ -291,7 +291,7 @@ replmerg [-?]
 This parameter is on the list for possible deprecation soon. We recommend setting the **ParallelUploadDownload** parameter to 0 and avoiding use of the "High Volume Server-to-Server" Merge agent Profile, as **ParallelUploadDownload** is set to 1 in this profile.
 
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]
   
  **-PacketSize**  
  Is the packet size, in bytes. The default is 4096 (bytes).  

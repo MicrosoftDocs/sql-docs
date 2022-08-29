@@ -1,28 +1,24 @@
 ---
+title: "datetimeoffset (Transact-SQL)"
 description: "datetimeoffset (Transact-SQL)"
-title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "datetimeoffset_TSQL"
   - "datetimeoffset"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "date and time [SQL Server], datetimeoffset"
   - "datetimeoffset data type [SQL Server]"
   - "dates [SQL Server], data types"
   - "data types [SQL Server], date and time"
   - "time zones [SQL Server]"
-ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetimeoffset (Transact-SQL)

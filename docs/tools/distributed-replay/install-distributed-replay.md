@@ -97,7 +97,8 @@ Assuming you use the default file locations and a standard installation, the bas
 
     - To install the client service, select **Distributed Replay Client**.
 
-     **Important**: When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:
+      > [!IMPORTANT]  
+      > When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:
 
     - Domain user account
 

@@ -23,7 +23,7 @@ This article is about the **remote access** configuration option, which is a dep
 This option affects servers that are added by using [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) and [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). You should leave **remote access** enabled (the default) if you use [linked servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 If you reached this page because you're having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following articles instead:
   

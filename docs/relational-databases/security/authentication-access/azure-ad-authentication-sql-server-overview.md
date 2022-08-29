@@ -4,7 +4,7 @@ description: Learn about Azure Active Directory authentication support for SQL S
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/23/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -35,7 +35,7 @@ If your Windows Server Active Directory is federated with Azure AD, users can au
 
 ## Connect SQL Server to Azure with Azure AD
 
-For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [SQL Server Azure Arc extension](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
+For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [Azure extension for SQL Server](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
 
 To get started, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 
@@ -72,6 +72,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 - [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
 - [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
+- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
 
 ## Next steps
 

@@ -97,7 +97,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 > [!NOTE]  
 >  For more information about the data returned by the getColumns method, see "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
- In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
+ In the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
   
  The DATA_TYPE column has the following changes:  
   

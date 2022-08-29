@@ -4,13 +4,15 @@ description: Learn how to deploy a SQL Server on Linux container to Azure Kubern
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh
-ms.date: 05/30/2022
+ms.date: 08/17/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: quickstart
 ---
 
 # Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts
+
+[!INCLUDE [sql-linux](../includes/applies-to-version/sql-linux.md)]
 
 This quickstart takes you through the steps to deploy SQL Server on Linux containers to [Azure Kubernetes Service](/azure/aks/) (AKS) with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
 
@@ -145,6 +147,10 @@ Once you've connected, you'll be able to expand the SQL Server instance in **Obj
 ## Clean up resources
 
 If you're not going to continue using your AKS cluster, remember to [delete your cluster](/azure/aks/kubernetes-walkthrough#delete-the-cluster).
+
+## See also
+
+- [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](sql-server-linux-deploy-ansible.md)
 
 ## Next steps
 

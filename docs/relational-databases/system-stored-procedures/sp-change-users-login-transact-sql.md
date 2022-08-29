@@ -24,7 +24,7 @@ ms.author: vanto
 
   Maps an existing database user to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. 
   
- > [!IMPORTANT]
+ > [!IMPORTANT]  
  > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) instead.  
   
   
@@ -60,7 +60,8 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Password= ] '*password*'  
  Is the password assigned to a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is created by specifying **Auto_Fix**. If a matching login already exists, the user and login are mapped and *password* is ignored. If a matching login does not exist, sp_change_users_login creates a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and assigns *password* as the password for the new login. *password* is **sysname**, and must not be NULL.  
   
-> **IMPORTANT!!** Always use a [strong Password!](../../relational-databases/security/strong-passwords.md)
+> [!IMPORTANT]  
+> Always use a [strong Password!](../../relational-databases/security/strong-passwords.md)
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

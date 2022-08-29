@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "conversations [Service Broker], moving"
 dev_langs:
   - "TSQL"
-ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 ---
 # MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

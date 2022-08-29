@@ -18,10 +18,11 @@ ms.date: "08/03/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Writing Transact-SQL Statements
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Welcome to the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../includes/tsql-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] implementation of the SQL standard. This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../includes/tsql-md.md)] language and not as a replacement for a [!INCLUDE[tsql](../includes/tsql-md.md)] class. The statements in this tutorial are intentionally simple, and are not meant to represent the complexity found in a typical production database.  
   
->**NOTE:** If you are a beginner you might find it easier to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] instead of writing [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
+> [!NOTE]  
+> If you are a beginner you might find it easier to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] instead of writing [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
 ## Finding More Information  
 To find more information about any specific statement, either search for the statement by name in SQL Server Books Online, or use the Contents to browse the 1,800 language elements listed alphabetically under [Transact-SQL Reference &#40;Database Engine&#41;](./language-reference.md). Another good strategy for finding information is to search for key words that are related to the subject matter you are interested in. For example, if you want to know how to return a part of a date (such as the month), search the index for **dates [SQL Server]**, and then select **dateparts**. This takes you to the topic [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). As another example, to find out how to work with strings, search for **string functions**. This takes you to the topic [String Functions &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  

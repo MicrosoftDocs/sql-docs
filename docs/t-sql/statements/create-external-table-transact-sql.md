@@ -1,8 +1,8 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 06/30/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -54,7 +54,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 This command creates an external table for PolyBase to access data stored in a Hadoop cluster or Azure blob storage PolyBase external table that references data stored in a Hadoop cluster or Azure blob storage.
 
-**APPLIES TO**: SQL Server 2016 (or higher)
+**Applies to:** SQL Server 2016 (or higher)
 
 Use an external table with an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 

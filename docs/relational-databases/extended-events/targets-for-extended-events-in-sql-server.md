@@ -3,7 +3,7 @@ title: "Targets for Extended Events in SQL Server"
 description: This article explains package0 targets for Extended Events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/27/2022
+ms.date: 08/29/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents
@@ -234,15 +234,14 @@ The 'slots' parameter default is 256. If you assign another value, the value is 
 - For example, slots=59 would be rounded up to =64.
   
 > [!NOTE]
-> During an extended events session with **histogram** as the target sometimes, you can see unexpected results. Some events might not appear at the same time when other events' count show a higher value than they should.
+> During an Extended Events session with **histogram** as the target sometimes, you can see unexpected results. Some events might not appear at the same time when other events' count show a higher value than they should.
 
 This is a side effect of the histogram target design. The histogram entity uses a hashing function to aggregate entities into buckets. Therefore, depending on the selection of the aggregation field, two objects might be stored in the same bucket, and both the objects are shown under the name of the one executed first.
 
 This can also happen when you use the `NO_EVENT_LOSS` parameter. Consider the following scenario:
 
 - You set up an Extended Events session, using histogram as the target and grouping by `object_id`, to collect stored procedure execution.
-- You execute the Stored Procedure A.
-- Then, you execute Stored Procedure B.
+- You execute the Stored Procedure A. Then, you execute Stored Procedure B.
 
 If both the stored procedures' `object_id` returns the same value for the hash function, the histogram will show Stored Procedure A being executed twice, and the Stored Procedure B will not appear.
 

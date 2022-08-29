@@ -22,7 +22,7 @@ dev_langs:
   - "TSQL"
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   

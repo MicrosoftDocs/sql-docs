@@ -53,12 +53,12 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 ## Arguments
 
 #### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ] *table_name* TO *new_table_name*
-**APPLIES TO:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined table. Specify the table to be renamed with a one-, two-, or three-part name. Specify the new table *new_table_name* as a one-part name.
 
 #### RENAME DATABASE [::] [ *database_name* TO *new_database_name*
-**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reserved database names:
 
@@ -74,7 +74,7 @@ Change the name of a user-defined database from *database_name* to *new_database
 
 
 #### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
-**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a column in a table. 
 
@@ -114,7 +114,7 @@ Renaming a table takes a shared lock on the DATABASE object, a shared lock on th
 
 ### A. Rename a database
 
-**APPLIES TO:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only
+**Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only
 
 This example renames the user-defined database AdWorks to AdWorks2.
 
@@ -128,7 +128,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ### B. Rename a table
 
-**APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example renames the Customer table to Customer1.
 
@@ -143,7 +143,7 @@ When renaming a table, all objects and properties associated with the table are 
 
 ### C. Move a table to a different schema
 
-**APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 If your intent is to move the object to a different schema, use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md). For example, the following statement moves the table item from the product schema to the dbo schema.
 
@@ -153,7 +153,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### D. Terminate sessions before renaming a table
 
-**APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You'll need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
@@ -169,7 +169,7 @@ KILL 'SID1234';
 
 ### E. Rename a column 
 
-**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example renames the FName column of the Customer table to FirstName.
 

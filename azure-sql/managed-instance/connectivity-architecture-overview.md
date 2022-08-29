@@ -131,9 +131,9 @@ These rules are necessary to ensure outbound management traffic flow. See [parag
 ### Mandatory user defined routes with service-aided subnet configuration
 These routes are necessary to ensure that management traffic is routed directly to a destination. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
-|Name|Address prefix|Next hop|
+|Name|Address prefix|Next hop <sup>2</sup>|
 |----|--------------|-------|
-|subnet-to-vnetlocal|MI SUBNET|Virtual network|
+|subnet-to-vnetlocal|MI SUBNET <sup>1</sup>|Virtual network|
 |mi-azurecloud-REGION-internet|AzureCloud.REGION|Internet|
 |mi-azurecloud-REGION_PAIR-internet|AzureCloud.REGION_PAIR|Internet|
 |mi-azuremonitor-internet|AzureMonitor|Internet|
@@ -148,9 +148,9 @@ These routes are necessary to ensure that management traffic is routed directly 
 |mi-azureactivedirectory-internet|AzureActiveDirectory|Internet|
 
 
-\* MI SUBNET refers to the IP address range for the subnet in the form x.x.x.x/y. You can find this information in the Azure portal, in subnet properties.
+<sup>1</sup> MI SUBNET refers to the IP address range for the subnet in the form x.x.x.x/y. You can find this information in the Azure portal, in subnet properties.
 
-\** If the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than routing the traffic to the Internet. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed in. For more details check [UDR documentation page](/azure/virtual-network/virtual-networks-udr-overview).
+<sup>2</sup> If the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than routing the traffic to the Internet. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed in. For more details check [UDR documentation page](/azure/virtual-network/virtual-networks-udr-overview).
 
 In addition, you can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance (NVA).
 

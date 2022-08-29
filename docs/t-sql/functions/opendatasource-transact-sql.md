@@ -3,13 +3,10 @@ title: "OPENDATASOURCE (Transact-SQL)"
 description: "OPENDATASOURCE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "09/26/2019"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENDATASOURCE"
   - "OPENDATASOURCE_TSQL"

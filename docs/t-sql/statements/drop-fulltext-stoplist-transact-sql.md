@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 dev_langs:
   - "TSQL"
-ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "TAKE OWNERSHIP"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

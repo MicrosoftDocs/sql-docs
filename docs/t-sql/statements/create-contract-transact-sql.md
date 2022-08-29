@@ -1,8 +1,8 @@
 ---
 title: "CREATE CONTRACT (Transact-SQL)"
 description: CREATE CONTRACT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "message types [Service Broker], contracts"
 dev_langs:
   - "TSQL"
-ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 ---
 # CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

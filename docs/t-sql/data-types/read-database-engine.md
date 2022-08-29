@@ -1,23 +1,19 @@
 ---
+title: "Read (Database Engine)"
 description: "Read (Database Engine) by using CSharp"
-title: "Read (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "Read_TSQL"
-  - "Read"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Read [Database Engine]"
-ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "04/16/2020"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "Read_TSQL"
+  - "Read"
+helpviewer_keywords:
+  - "Read [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # Read (Database Engine) by using CSharp
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

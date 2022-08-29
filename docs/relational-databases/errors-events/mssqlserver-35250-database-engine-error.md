@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "35250 (Database Engine error)"
 ms.assetid: 
 author: pijocoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_35250
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

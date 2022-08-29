@@ -1,8 +1,8 @@
 ---
 title: "CREATE SERVICE (Transact-SQL)"
 description: CREATE SERVICE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "contracts [Service Broker], service creation"
 dev_langs:
   - "TSQL"
-ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 ---
 # CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

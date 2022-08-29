@@ -7,7 +7,6 @@ ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
 ms.custom:

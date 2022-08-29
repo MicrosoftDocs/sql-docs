@@ -11,7 +11,7 @@ ms.custom:
 ms.topic: conceptual
 author: davidtrigano
 ms.author: datrigan
-ms.reviewer: wiassaf, vanto, sstein, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/09/2021
 tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

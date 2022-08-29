@@ -1,8 +1,8 @@
 ---
 title: "ALTER QUEUE (Transact-SQL)"
 description: ALTER QUEUE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
 dev_langs:
   - "TSQL"
-ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 ---
 # ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

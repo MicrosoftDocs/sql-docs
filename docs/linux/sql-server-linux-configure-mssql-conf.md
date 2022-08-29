@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 08/23/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -174,7 +174,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 
 ## <a id="azure-ad"></a> Configure Azure Active Directory authentication
 
-Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for SQL Server. For more information, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
+Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for SQL Server. To configure Azure AD, you must install the Azure extension for SQL Server following the installation of SQL Server. For information on how to configure Azure AD, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
 
 ### Change the default Azure AD certificate path
 
@@ -186,14 +186,17 @@ sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/l
 
 In the previous example, `/path/to/new/location.pfx` is your preferred path *including* the certificate name.
 
-The certificate downloaded by the SQL Server Azure Arc agent for Azure AD authentication will now be stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+The certificate for Azure AD authentication downloaded by the Azure extension for SQL Server, will now be stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+
+> [!NOTE]  
+> The default Azure AD certificate path can be changed at any time after SQL Server is installed, but must be changed *before* enabling Azure AD.
 
 ### Azure AD configuration options
 
 The following options are used by Azure AD authentication for an instance of SQL Server running on Linux.
 
 > [!WARNING]  
-> Azure AD parameters are configured by the Azure Arc agent, and should not be reconfigured manually.
+> Azure AD parameters are configured by the Azure extension for SQL Server, and should not be reconfigured manually. They are listed here for information purposes.
 
 |Option |Description |
 |--- |--- |

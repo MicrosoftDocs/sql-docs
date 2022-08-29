@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "estimated execution information [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

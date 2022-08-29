@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "DROP EXTERNAL RESOURCE POOL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

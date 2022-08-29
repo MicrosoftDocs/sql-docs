@@ -8,7 +8,7 @@ ms.custom: sqldbrb=1, devx-track-azurepowershell
 ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: vanto, sstein
+ms.reviewer: vanto
 ms.date: 02/08/2021
 ---
 # Configure public endpoint in Azure SQL Managed Instance

@@ -3,13 +3,10 @@ title: DBTS (Transact-SQL)
 description: "@@DBTS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@DBTS_TSQL"
   - "@@DBTS"

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "column encryption key, drop"
 dev_langs:
   - "TSQL"
-ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 

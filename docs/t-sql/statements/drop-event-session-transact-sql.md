@@ -1,8 +1,8 @@
 ---
 title: "DROP EVENT SESSION (Transact-SQL)"
 description: DROP EVENT SESSION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "DROP EVENT SESSION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 ---
 # DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

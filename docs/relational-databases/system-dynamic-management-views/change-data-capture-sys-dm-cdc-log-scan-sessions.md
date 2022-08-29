@@ -49,7 +49,10 @@ dev_langs:
 |**failed_sessions_count**|**int**|Number of sessions that failed.|  
   
 ## Remarks  
- The values in this dynamic management view are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started.  
+
+The `sys.dm_cdc_log_scan_sessions` can contain up to 32 scan sessions and an aggregate of all the scan sessions with `session_id= 0`. So, at any given time, this dynamic management view can contain a maximum of 33 rows.
+
+ The values in this dynamic management view are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted or a failover (local & GeoDR) occurs.  
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the `sys.dm_cdc_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  

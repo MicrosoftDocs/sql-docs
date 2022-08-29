@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
 ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.technology: t-sql
 ms.topic: reference
 helpviewer_keywords:
@@ -28,9 +27,9 @@ Learn about the categories of built-in functions you can use with SQL databases.
 
 ## Aggregate functions
 
-Aggregate functions perform a calculation on a set of values and return a single value. They are allowed in the select list or the HAVING clause of a SELECT statement. You can use an aggregation in combination with the GROUP BY clause to calculate the aggregation on categories of rows. Use the OVER clause to calculate the aggregation on a specific range of value. The OVER clause cannot follow the GROUPING or GROUPING_ID aggregations.
+Aggregate functions perform a calculation on a set of values and return a single value. They're allowed in the select list or the HAVING clause of a SELECT statement. You can use an aggregation in combination with the GROUP BY clause to calculate the aggregation on categories of rows. Use the OVER clause to calculate the aggregation on a specific range of value. The OVER clause can't follow the GROUPING or GROUPING_ID aggregations.
 
-All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
+All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
 ## Analytic functions
 
@@ -62,6 +61,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[Conversion Functions](conversion-functions-transact-sql.md)|Support data type casting and converting.|  
 |[Cursor Functions](cursor-functions-transact-sql.md)|Return information about cursors.|  
 |[Date and Time Data Types and Functions](date-and-time-data-types-and-functions-transact-sql.md)|Perform operations on a date and time input values and return string, numeric, or date and time values.|  
+|[Graph Functions](graph-functions-transact-sql.md)|Perform operations to convert to and from character representations of graph node and edge IDs.|
 |[JSON Functions](json-functions-transact-sql.md)|Validate, query, or change JSON data.|  
 |[Logical Functions](logical-functions-choose-transact-sql.md)|Perform logical operations.|  
 |[Mathematical Functions](mathematical-functions-transact-sql.md)|Perform calculations based on input values provided as parameters to the functions, and return numeric values.|  
@@ -74,7 +74,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 
 ## Function determinism
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions are either deterministic or nondeterministic. Functions are deterministic when they always return the same result any time they are called by using a specific set of input values. Functions are nondeterministic when they could return different results every time they are called, even with the same specific set of input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions are either deterministic or nondeterministic. Functions are deterministic when they always return the same result anytime they're called by using a specific set of input values. Functions are nondeterministic when they could return different results every time they're called, even with the same specific set of input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)
 
 ## Function collation
 

@@ -1,19 +1,16 @@
 ---
-description: "DBCC (Transact-SQL)"
 title: DBCC (Transact-SQL)
-ms.custom: ""
+description: "DBCC (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC"
   - "DBCC_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transactional consistency"
   - "Database Console Command statements"
   - "status information [SQL Server], DBCC statements"
@@ -34,9 +31,8 @@ helpviewer_keywords:
   - "current DBCC statement status"
   - "progress reporting [DBCC statements]"
   - "informational statements [SQL Server]"
-ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC (Transact-SQL)

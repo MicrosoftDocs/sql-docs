@@ -69,7 +69,7 @@ HRESULT BCPColFmt(
   
  You do not have to copy all of the data in a user file to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table. To skip a column, specify the format of the data for the column setting the idxServerCol parameter to 0. In order to skip a field, you still need all the information for the method to work correctly.  
   
- **Note** The [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) function can be used to persist the format specification provided through **BCPColFmt**.  
+ The [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) function can be used to persist the format specification provided through **BCPColFmt**.  
   
 ## Arguments  
  *idxUserDataCol*[in]  

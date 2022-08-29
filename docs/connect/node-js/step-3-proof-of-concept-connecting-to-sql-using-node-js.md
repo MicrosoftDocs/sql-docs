@@ -14,7 +14,7 @@ ms.author: v-davidengel
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 
-![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples, which use the same crucial functions are available on GitHub:
 

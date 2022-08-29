@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "functions [SQL Server], execution context"
 dev_langs:
   - "TSQL"
-ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 ---
 # EXECUTE AS Clause (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

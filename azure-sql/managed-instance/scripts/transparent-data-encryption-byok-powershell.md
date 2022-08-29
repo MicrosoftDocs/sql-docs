@@ -10,7 +10,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: vanto, sstein
+ms.reviewer: vanto
 ms.date: 05/18/2022
 ---
 

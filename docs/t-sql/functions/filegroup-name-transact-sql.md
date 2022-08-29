@@ -3,13 +3,10 @@ title: "FILEGROUP_NAME (Transact-SQL)"
 description: "FILEGROUP_NAME (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "FILEGROUP_NAME_TSQL"
   - "FILEGROUP_NAME"

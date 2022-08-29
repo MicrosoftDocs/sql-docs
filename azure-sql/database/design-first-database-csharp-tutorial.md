@@ -45,7 +45,7 @@ Follow these steps to create a blank database.
 1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
 2. On the **New** page, select **Databases** in the Azure Marketplace section, and then click **SQL Database** in the **Featured** section.
 
-   ![create empty-database](./media/design-first-database-csharp-tutorial/create-empty-database.png)
+   :::image type="content" source="./media/design-first-database-csharp-tutorial/create-empty-database.png" alt-text="create empty-database":::
 
 3. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
 
@@ -65,7 +65,7 @@ Follow these steps to create a blank database.
     | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: uppercase characters, lowercase characters, numbers, and non-alphanumeric characters. |
     | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
 
-    ![create database-server](./media/design-first-database-csharp-tutorial/create-database-server.png)
+    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="create database-server":::
 
 5. Click **Select**.
 6. Click **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
@@ -78,7 +78,7 @@ Follow these steps to create a blank database.
 
 9. On the toolbar, click **Notifications** to monitor the deployment process.
 
-   ![Screenshot shows Notifications in the Azure portal with Deployment in progress.](./media/design-first-database-csharp-tutorial/notification.png)
+   :::image type="content" source="./media/design-first-database-csharp-tutorial/notification.png" alt-text="Screenshot shows Notifications in the Azure portal with Deployment in progress.":::
 
 ## Create a server-level IP firewall rule
 
@@ -89,19 +89,19 @@ SQL Database creates an IP firewall at the server-level. This firewall prevents 
 
 1. After the deployment is complete, click **SQL databases** from the left-hand menu and then click *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as *yourserver.database.windows.net*) and provides options for further configuration.
 
-2. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
+1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-   ![server name](./media/design-first-database-csharp-tutorial/server-name.png)
+   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="server name":::
 
-3. Click **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
+1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   ![server-level IP firewall rule](./media/design-first-database-csharp-tutorial/server-firewall-rule.png)
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
 
-4. Click **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+1. Click **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
-5. Click **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
+1. Click **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
 
-6. Click **OK** and then close the **Firewall settings** page.
+1. Click **OK** and then close the **Firewall settings** page.
 
 Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
 

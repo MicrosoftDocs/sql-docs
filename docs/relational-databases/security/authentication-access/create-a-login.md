@@ -168,7 +168,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server\_name_. Select **OK**.
   
-    > **NOTE:** Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
+    > [!NOTE]  
+    > Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
 3.  If you select **Specific objects...**:  
   

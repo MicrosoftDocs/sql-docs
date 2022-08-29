@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
 dev_langs:
   - "TSQL"
-ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,7 +18,7 @@ helpviewer_keywords:
 This article describes how to configure the **priority boost** configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
 Use the **priority boost** option to specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should run at a higher scheduling priority than other processes on the same [!INCLUDE [winserver2008-md](../../includes/winserver2008-md.md)] or [!INCLUDE [winserver2008r2-md](../../includes/winserver2008r2-md.md)] computer. If you set this option to 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs at a priority base of 13 in the [!INCLUDE [winserver2008-md](../../includes/winserver2008-md.md)] or [!INCLUDE [winserver2008r2-md](../../includes/winserver2008r2-md.md)] scheduler. The default is 0, which is a priority base of 7.
 

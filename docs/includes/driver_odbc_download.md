@@ -1,1 +1,1 @@
-![Download](../ssms/media/download-icon.png)[Download ODBC Driver](../connect/odbc/download-odbc-driver-for-sql-server.md)
+:::image type="icon" source="media/download.svg" border="false"::: [Download ODBC driver](../connect/odbc/download-odbc-driver-for-sql-server.md)

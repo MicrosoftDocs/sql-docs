@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

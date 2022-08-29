@@ -13,6 +13,7 @@ ms.date: 04/22/2022
 ms.custom:
   - "references_regions"
   - "ignite-fall-2021"
+  - "azure-sql-split"
 ---
 # vCore purchasing model - Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

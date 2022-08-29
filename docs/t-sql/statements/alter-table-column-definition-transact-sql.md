@@ -1,8 +1,8 @@
 ---
 title: "column_definition (Transact-SQL)"
 description: ALTER TABLE column_definition (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "column definitions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE column_definition (Transact-SQL)

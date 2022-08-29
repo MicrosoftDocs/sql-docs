@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "SET ANSI_NULL_DFLT_OFF statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)

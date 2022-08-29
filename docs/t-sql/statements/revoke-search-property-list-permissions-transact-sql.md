@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "full-text search [SQL Server], permissions"
   - "search property lists [SQL Server], permissions"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "REVOKE statement, search property list permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

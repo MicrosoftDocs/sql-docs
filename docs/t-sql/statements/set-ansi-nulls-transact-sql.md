@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "comparison operators [SQL Server], null values"
 dev_langs:
   - "TSQL"
-ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||azuresqldb-current"
 ---
 # SET ANSI_NULLS (Transact-SQL)

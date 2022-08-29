@@ -71,18 +71,17 @@ To set up a server-level firewall rule:
 
 1. In the Azure portal, select **SQL databases** from the left-hand menu, and select your database on the **SQL databases** page.
 
-    ![server firewall rule](./media/secure-database-tutorial/server-name.png)
+    :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="server name":::
 
     > [!NOTE]
     > Be sure to copy your fully qualified server name (such as *yourserver.database.windows.net*) for use later in the tutorial.
 
-1. On the **Overview** page, select **Set server firewall**. The **Firewall settings** page for the server opens.
+1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   1. Select **Add client IP** on the toolbar to add your current IP address to a new firewall rule. The rule can open port 1433 for a single IP address or a range of IP addresses. Select **Save**.
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
 
-      ![set server firewall rule](./media/secure-database-tutorial/server-firewall-rule2.png)
-
-   1. Select **OK** and close the **Firewall settings** page.
+1. Select **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+1. Select **OK** to save your firewall settings. 
 
 You can now connect to any database in the server with the specified IP address or IP address range.
 
@@ -111,20 +110,20 @@ To set up a database-level firewall rule:
 
 Make sure you're using the appropriate Azure Active Directory (AD) managed domain. To select the AD domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Azure AD and the logical SQL server hosting your database or data warehouse.
 
-   ![choose-ad](./media/secure-database-tutorial/8choose-ad.png)
+   :::image type="content" source="./media/secure-database-tutorial/8choose-ad.png" alt-text="choose-ad":::
 
 To set the Azure AD administrator:
 
 1. In the Azure portal, on the **SQL server** page, select **Active Directory admin**. Next select **Set admin**.
 
-    ![select active directory](./media/secure-database-tutorial/admin-settings.png)  
+    :::image type="content" source="./media/secure-database-tutorial/admin-settings.png" alt-text="select active directory":::  
 
     > [!IMPORTANT]
     > You need to be a "Global Administrator" to perform this task.
 
 1. On the **Add admin** page, search and select the AD user or group and choose **Select**. All members and groups of your Active Directory are listed, and entries grayed out are not supported as Azure AD administrators. See [Azure AD features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
 
-    ![select admin](./media/secure-database-tutorial/admin-select.png)
+    :::image type="content" source="./media/secure-database-tutorial/admin-select.png" alt-text="select admin":::
 
     > [!IMPORTANT]
     > Azure role-based access control (Azure RBAC) only applies to the portal and isn't propagated to SQL Server.
@@ -225,7 +224,7 @@ To copy a secure connection string:
 
 1. Select a driver tab and copy the complete connection string.
 
-    ![ADO.NET connection string](./media/secure-database-tutorial/connection.png)
+    :::image type="content" source="./media/secure-database-tutorial/connection.png" alt-text="ADO.NET connection string":::
 
 ## Enable security features
 
@@ -248,17 +247,17 @@ To enable Microsoft Defender for SQL:
 
    1. Select **ON** under **Microsoft Defender for SQL** to enable the feature. Choose a storage account for saving vulnerability assessment results. Then select **Save**.
 
-      ![Navigation pane](./media/secure-database-tutorial/threat-settings.png)
+      :::image type="content" source="./media/secure-database-tutorial/threat-settings.png" alt-text="Navigation pane":::
 
       You can also configure emails to receive security alerts, storage details, and threat detection types.
 
 1. Return to the **SQL databases** page of your database and select **Defender for Cloud** under the **Security** section. Here you'll find various security indicators available for the database.
 
-    ![Threat status](./media/secure-database-tutorial/threat-status.png)
+    :::image type="content" source="./media/secure-database-tutorial/threat-status.png" alt-text="Threat status":::
 
 If anomalous activities are detected, you receive an email with information on the event. This includes the nature of the activity, database, server, event time, possible causes, and recommended actions to investigate and mitigate the potential threat. If such an email is received, select the **Azure SQL Auditing Log** link to launch the Azure portal and show relevant auditing records for the time of the event.
 
-   ![Threat detection email](./media/secure-database-tutorial/threat-email.png)
+   :::image type="content" source="./media/secure-database-tutorial/threat-email.png" alt-text="Threat detection email":::
 
 ### Auditing
 
@@ -290,11 +289,11 @@ To enable auditing:
 
    1. Select **Save**.
 
-      ![Audit settings](./media/secure-database-tutorial/audit-settings.png)
+      :::image type="content" source="./media/secure-database-tutorial/audit-settings.png" alt-text="Audit settings":::
 
 1. Now you can select **View audit logs** to view database events data.
 
-    ![Audit records](./media/secure-database-tutorial/audit-records.png)
+    :::image type="content" source="./media/secure-database-tutorial/audit-records.png" alt-text="Audit records":::
 
 > [!IMPORTANT]
 > See [SQL Database auditing](./auditing-overview.md) on how to further customize audit events using PowerShell or REST API.
@@ -311,11 +310,11 @@ To enable data masking:
 
 1. Under **Dynamic data masking** settings, select **Add mask** to add a masking rule. Azure will automatically populate available database schemas, tables, and columns to choose from.
 
-    ![Mask settings](./media/secure-database-tutorial/mask-settings.png)
+    :::image type="content" source="./media/secure-database-tutorial/mask-settings.png" alt-text="Mask settings":::
 
 1. Select **Save**. The selected information is now masked for privacy.
 
-    ![Mask example](./media/secure-database-tutorial/mask-query.png)
+    :::image type="content" source="./media/secure-database-tutorial/mask-query.png" alt-text="Mask example":::
 
 ### Transparent data encryption
 
@@ -329,7 +328,7 @@ To enable or verify encryption:
 
 1. If necessary, set **Data encryption** to **ON**. Select **Save**.
 
-    ![Transparent Data Encryption](./media/secure-database-tutorial/encryption-settings.png)
+    :::image type="content" source="./media/secure-database-tutorial/encryption-settings.png" alt-text="Transparent Data Encryption":::
 
 > [!NOTE]
 > To view encryption status, connect to the database using [SSMS](connect-query-ssms.md) and query the `encryption_state` column of the [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) view. A state of `3` indicates the database is encrypted.

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sequence number object, dropping"
 dev_langs:
   - "TSQL"
-ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 ---
 # DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

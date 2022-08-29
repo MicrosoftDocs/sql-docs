@@ -1,8 +1,8 @@
 ---
 title: "ALTER SERVICE (Transact-SQL)"
 description: ALTER SERVICE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 04/12/2022
 ms.prod: sql

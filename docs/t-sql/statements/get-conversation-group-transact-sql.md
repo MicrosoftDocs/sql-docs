@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "conversations [Service Broker], groups"
 dev_langs:
   - "TSQL"
-ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "identity columns [SQL Server], explicit values"
 dev_langs:
   - "TSQL"
-ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)

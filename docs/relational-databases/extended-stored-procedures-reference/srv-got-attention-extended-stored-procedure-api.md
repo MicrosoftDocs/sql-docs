@@ -21,7 +21,7 @@ ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Checks whether the current connection or task needs to be aborted and returns TRUE if the connection is killed or the batch is aborted  
   

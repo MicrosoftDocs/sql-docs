@@ -61,7 +61,8 @@ If a worksheet contains calculated cells or formulas, only the resulting display
   
 There are no restrictions on where you store Excel files you import into the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. However, if you move or rename the file after importing, you won't be able to refresh that data through the **refresh all data** command found in the Data View.   
   
->**Note**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] doesn't automatically refresh Excel data. You can refresh the data through the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
+> [!NOTE]  
+> [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] doesn't automatically refresh Excel data. You can refresh the data through the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
   
 ## Dates  
   

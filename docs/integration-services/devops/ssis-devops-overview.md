@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 
-[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace. SSIS DevOps supports **Azure DevOps Services**, **Azure DevOps Server 2019** and above.
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 

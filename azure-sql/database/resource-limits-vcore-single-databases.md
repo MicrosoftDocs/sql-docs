@@ -297,7 +297,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|1|1
+|Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
 |Read Scale-out|N/A|N/A|N/A|N/A|N/A|
 |Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|

@@ -12,7 +12,7 @@ ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/14/2022
+ms.date: 08/29/2022
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -66,7 +66,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|
 |:--- | --: |--: |--: |--: |---: | 
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|
 |Max number DBs per pool <sup>1</sup>|100|200|500|500|500|
@@ -174,7 +174,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14| GP_Fsv2_16|
 |:---| ---:|---:|---:|---:|---:|
-|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|8|10|12|14|16|
 |Memory (GB)|15.1|18.9|22.7|26.5|30.2|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -209,7 +209,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Fsv2_18|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32| GP_Fsv2_36|GP_Fsv2_72|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|18|20|24|32|36|72|
 |Memory (GB)|34.0|37.8|45.4|60.5|68.0|136.0|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|
@@ -244,7 +244,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8|
 |:--- | --: |--: |--: |--: |
-|Hardware|DC|DC|DC|DC|
+|Compute generation|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|100|400|400|400|
@@ -281,7 +281,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|
 |:--- | --: |--: |--: |--: |---: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|4|6|8|10|12|
 |Memory (GB)|20.8|31.1|41.5|51.9|62.3|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|100|
@@ -317,7 +317,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|BC_Gen5_14|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|
 |:--- | --: |--: |--: |--: | --: | 
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|14|16|18|20|24|
 |Memory (GB)|72.7|83|93.4|103.8|124.6|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|
@@ -353,7 +353,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: | --: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|
 |vCores|32|40|80|128|
 |Memory (GB)|166.1|207.6|415.2|625|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|
@@ -394,7 +394,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Hardware|M-series|M-series|M-series|M-series|M-series|M-series|
+|Compute generation|M-series|M-series|M-series|M-series|M-series|M-series|
 |vCores|8|10|12|14|16|18|
 |Memory (GB)|235.4|294.3|353.2|412.0|470.9|529.7|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|
@@ -430,7 +430,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
-|Hardware|M-series|M-series|M-series|M-series|M-series|
+|Compute generation|M-series|M-series|M-series|M-series|M-series|
 |vCores|20|24|32|64|128|
 |Memory (GB)|588.6|706.3|941.8|1883.5|3767.0|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|
@@ -465,7 +465,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|
 |:--- | --: |--: |--: |--: |
-|Hardware|DC|DC|DC|DC|
+|Compute generation|DC|DC|DC|DC|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|
@@ -547,7 +547,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|
 |Memory (GB)|7|14|21|28|35|42|
 |Max number DBs per pool <sup>1</sup>|100|200|500|500|500|500|
@@ -582,7 +582,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Max number DBs per pool <sup>1</sup>|500|500|500|500|500|500|
@@ -622,7 +622,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|2|3|4|5|6|
 |Memory (GB)|14|21|28|35|42|
 |Max number DBs per pool <sup>1</sup>|50|100|100|100|100|
@@ -658,7 +658,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 |Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|100|100|

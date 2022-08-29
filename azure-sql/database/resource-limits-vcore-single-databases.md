@@ -56,11 +56,11 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 The [serverless compute tier](serverless-tier-overview.md) is currently available on standard-series (Gen5) hardware only.
 
-### <a id="gen5-hardware-part-1-1"></a>General Purpose Serverless Standard-series (Gen5) compute generation (part 1 of 3)
+### <a id="gen5-hardware-part-1-1"></a>General Purpose Serverless Standard-series (Gen5) compute (part 1 of 3)
 
 |Compute size (service objective)|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:--- | --: |--: |--: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |Min-max vCores|0.5 - 1|0.5 - 2|0.5 - 4|0.75 - 6|1.0 - 8|
 |Min-max memory (GB)|2.02 - 3|2.05 - 6|2.10 - 12|2.25 - 18|3.00 - 24|
 |Min-max auto-pause delay (minutes)|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|
@@ -87,12 +87,12 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-1"></a>General Purpose Serverless Standard-series (Gen5) compute generation (part 2 of 3)
+### <a id="gen5-hardware-part-2-1"></a>General Purpose Serverless Standard-series (Gen5) compute (part 2 of 3)
 
 
 |Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
 |:--- | --: |--: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|
 |Min-max vCores|1.25 - 10|1.50 - 12|1.75 - 14|2.00 - 16|
 |Min-max memory (GB)|3.75 - 30|4.50 - 36|5.25 - 42|6.00 - 48|
 |Min-max auto-pause delay (minutes)|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|
@@ -117,11 +117,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-3-1"></a>General Purpose Standard-series Serverless (Gen5) compute generation (part 3 of 3)
+### <a id="gen5-hardware-part-3-1"></a>General Purpose Standard-series Serverless (Gen5) compute (part 3 of 3)
 
 |Compute size (service objective)|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
 |:--- | --: |--: |--: |--: |--:|
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |Min-max vCores|2.25-18|2.5-20|3-24|4-32|5-40|
 |Min-max memory (GB)|6.75-54|7.5-60|9-72|12-96|15-120|
 |Min-max auto-pause delay (minutes)|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|
@@ -154,7 +154,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|HS_Gen5_2|HS_Gen5_4|HS_Gen5_6|HS_Gen5_8|HS_Gen5_10|HS_Gen5_12|HS_Gen5_14|
 |:--- | --: |--: |--: |--: |---: | --: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|12|14|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|62.3|72.7|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
@@ -188,7 +188,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|HS_Gen5_16|HS_Gen5_18|HS_Gen5_20|HS_Gen5_24|HS_Gen5_32|HS_Gen5_40|HS_Gen5_80|
 |:--- | --: |--: |--: |--: |---: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|16|18|20|24|32|40|80|
 |Memory (GB)|83|93.4|103.8|124.6|166.1|207.6|415.2|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
@@ -220,7 +220,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|
 |:--- | --: |--: |--: |--: |
-|Hardware|DC-series|DC-series|DC-series|DC-series|
+|Compute generation|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|
@@ -250,11 +250,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
 
-### <a id="gen5-hardware-part-1-3"></a>General purpose Standard-series (Gen5) compute generation (part 1 of 3)
+### <a id="gen5-hardware-part-1-3"></a>General purpose Standard-series (Gen5) compute (part 1 of 3)
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|
 |:--- | --: |--: |--: |--: |---: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -278,11 +278,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute generation (part 2 of 3)
+### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute (part 2 of 3)
 
 |Compute size (service objective)|GP_Gen5_12|GP_Gen5_14|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|
 |:--- | --: |--: |--: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|12|14|16|18|20|
 |Memory (GB)|62.3|72.7|83|93.4|103.8|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -307,11 +307,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 
-### <a id="gen5-hardware-part-3-3"></a>General purpose Standard-series (Gen5) compute generation (part 3 of 3)
+### <a id="gen5-hardware-part-3-3"></a>General purpose Standard-series (Gen5) compute (part 3 of 3)
 
 |Compute size (service objective)|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
 |:--- | --: |--: |--: |--: |---: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|24|32|40|80|128|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -341,7 +341,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14|GP_Fsv2_16|
 |:---| ---:|---:|---:|---:|---:|
-|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|8|10|12|14|16|
 |Memory (GB)|15.1|18.9|22.7|26.5|30.2|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -370,7 +370,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|GP_Fsv2_18|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32| GP_Fsv2_36|GP_Fsv2_72|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Hardware|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
+|Compute generation|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|Fsv2-series|
 |vCores|18|20|24|32|36|72|
 |Memory (GB)|34.0|37.8|45.4|60.5|68.0|136.0|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -399,7 +399,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 |Compute size (service objective)|GP_DC_2|GP_DC_4|GP_DC_6|GP_DC_8| 
 |:---| ---:|---:|---:|---:|
-|Hardware|DC-series|DC-series|DC-series|DC-series|
+|Compute generation|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Columnstore support|Yes|Yes|Yes|Yes|
@@ -432,7 +432,7 @@ Remove: BC_Gen5_12|BC_Gen5_14|
 
 |Compute size (service objective)|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|
 |:--- | --: |--: |--: |--: |--: | 
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -465,7 +465,7 @@ Remove: BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 
 |Compute size (service objective)|BC_Gen5_12|BC_Gen5_14|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|
 |:--- | --: |--: |--: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|12|14|16|18|20|
 |Memory (GB)|62.3|72.7|83|93.4|103.8|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -498,7 +498,7 @@ Remove: BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 
-|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|24|32|40|80|128|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -533,7 +533,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
 |:---| ---:|---:|---:|---:|---:|---:|
-|Hardware|M-series|M-series|M-series|M-series|M-series|M-series|
+|Compute generation|M-series|M-series|M-series|M-series|M-series|M-series|
 |vCores|8|10|12|14|16|18|
 |Memory (GB)|235.4|294.3|353.2|412.0|470.9|529.7|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -563,7 +563,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
-|Hardware|M-series|M-series|M-series|M-series|M-series|
+|Compute generation|M-series|M-series|M-series|M-series|M-series|
 |vCores|20|24|32|64|128|
 |Memory (GB)|588.6|706.3|941.8|1883.5|3767.0|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
@@ -593,7 +593,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 |Compute size (service objective)|BC_DC_2|BC_DC_4|BC_DC_6|BC_DC_8|
 |:--- | --: |--: |--: |--: |
-|Hardware|DC-series|DC-series|DC-series|DC-series|
+|Compute generation|DC-series|DC-series|DC-series|DC-series|
 |vCores|2|4|6|8|
 |Memory (GB)|9|18|27|36|
 |Columnstore support|Yes|Yes|Yes|Yes|
@@ -632,7 +632,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|HS_Gen4_1|HS_Gen4_2|HS_Gen4_3|HS_Gen4_4|HS_Gen4_5|HS_Gen4_6|
 |:--- | --: |--: |--: |---: | --: |--: |
-|hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|
 |Memory (GB)|7|14|21|28|35|42|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
@@ -665,7 +665,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|HS_Gen4_7|HS_Gen4_8|HS_Gen4_9|HS_Gen4_10|HS_Gen4_16|HS_Gen4_24|
 |:--- | ---: |--: |--: | --: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
@@ -704,7 +704,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|
 |Memory (GB)|7|14|21|28|35|42|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -732,7 +732,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -765,7 +765,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|1|2|3|4|5|6|
 |Memory (GB)|7|14|21|28|35|42|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -795,7 +795,7 @@ This section includes details on previously available hardware.
 
 |Compute size (service objective)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--- | --: |--: |--: |--: |--: |--: |
-|Hardware|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
+|Compute generation|Gen4|Gen4|Gen4|Gen4|Gen4|Gen4|
 |vCores|7|8|9|10|16|24|
 |Memory (GB)|49|56|63|70|112|159.5|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|Yes|

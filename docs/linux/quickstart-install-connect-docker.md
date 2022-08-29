@@ -551,7 +551,11 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    ```
 
    > [!TIP]
-   > You can omit the password on the command-line to be prompted to enter it.
+   > You can omit the password on the command-line to be prompted to enter it. Here's an example:    
+    
+   ```bash
+     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+   ```
 
 3. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 

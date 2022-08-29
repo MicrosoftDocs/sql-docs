@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/1429/2022
+ms.date: 08/29/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

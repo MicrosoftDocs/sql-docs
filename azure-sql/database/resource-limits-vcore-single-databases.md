@@ -12,7 +12,7 @@ ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/26/2022
+ms.date: 08/29/2022
 ---
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -253,7 +253,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 ### <a id="gen5-hardware-part-1-3"></a>General purpose Standard-series (Gen5) compute (part 1 of 3)
 
 |Compute size (service objective)|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|
-|:--- | --: |--: |--: |--: |---: |
+|:--- | --: |--: |--: |--: |--: |
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
 |vCores|2|4|6|8|10|
 |Memory (GB)|10.4|20.8|31.1|41.5|51.9|
@@ -428,8 +428,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### <a id="gen5-hardware-part-1-4"></a>Business critical Standard-series (Gen5) compute generation (part 1 of 3)
 
-Remove: BC_Gen5_12|BC_Gen5_14|
-
 |Compute size (service objective)|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|
 |:--- | --: |--: |--: |--: |--: | 
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
@@ -459,9 +457,6 @@ Remove: BC_Gen5_12|BC_Gen5_14|
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 2 of 3)
-
-Add: BC_Gen5_12|BC_Gen5_14|
-Remove: BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 
 |Compute size (service objective)|BC_Gen5_12|BC_Gen5_14|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|
 |:--- | --: |--: |--: |--: |--: |
@@ -493,8 +488,6 @@ Remove: BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 3 of 3)
-
-
 
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 

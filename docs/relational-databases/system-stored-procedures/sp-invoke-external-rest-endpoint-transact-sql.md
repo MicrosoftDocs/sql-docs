@@ -44,37 +44,95 @@ EXEC @returnValue = sp_invoke_external_rest_endpoint
 ## Arguments  
 
 #### `@url = N'url' `
- URL of the HTTPS REST endpoint to be called. *url* is **nvarchar(4000)** with no default.
+URL of the HTTPS REST endpoint to be called. *url* is **nvarchar(4000)** with no default.
 
 #### `[ @payload =  N'payload' ]`
- Payload that must be sent to the HTTPS REST endpoint. *payload* is **nvarchar(max)** with no default. Optional.
+Payload that must be sent to the HTTPS REST endpoint. *payload* is **nvarchar(max)** with no default. Optional.
 
 #### `[ @headers =  N'headers' ]`
- Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. *headers* is **nvarchar(4000)** with no default. Optional.
+Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. *headers* is **nvarchar(4000)** with no default. Optional.
 
 #### `[ @method =  N'method' ]`
- HTTP method to be used to call the URL. Can only be one of the following values: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`. *method* is **nvarchar(6)** with no `POST` as default value. Optional.
+HTTP method to be used to call the URL. Can only be one of the following values: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`. *method* is **nvarchar(6)** with no `POST` as default value. Optional.
 
 #### `[ @timeout = seconds ]`
- Time in seconds allowed for the HTTPS call to run. If full HTTP request and response cannot be sent and received within the defined timeout in seconds, stored procedure execution will be halted, and an exception will raised. Timeout starts when HTTP connection starts and ends when the response, payload included if any, has been received. *timeout* is a positive **smallint** with a default value 5. Optional.Accepted values: 1 to 230.
+Time in seconds allowed for the HTTPS call to run. If full HTTP request and response cannot be sent and received within the defined timeout in seconds, stored procedure execution will be halted, and an exception will raised. Timeout starts when HTTP connection starts and ends when the response, payload included if any, has been received. *timeout* is a positive **smallint** with a default value 5. Optional.Accepted values: 1 to 230.
 
 #### `[ @credential =  credential ]`
- Indicate what DATABASE SCOPED CREDENTIAL object will be used to inject authentication info in the HTTPS request. *credential* is a **sysname** with no default value. Optional.
+Indicate what DATABASE SCOPED CREDENTIAL object will be used to inject authentication info in the HTTPS request. *credential* is a **sysname** with no default value. Optional.
 
 #### `[ @response = @variable OUTPUT ]`
- Allow the response to be passed into the specified variable. *response* is a **nvarchar(max)**. Optional.
+Allow the response to be passed into the specified variable. *response* is a **nvarchar(max)**. Optional.
 
-## Return Code Values  
+## Return Values  
 
-WIP
+Execution will return 0 if the HTTP call was done and the HTTP status code received is a 2xx status code (Success). If the HTTP Status code received is not in the 2xx range, the return value will be the HTTP Status code received. If the HTTP cannot be done at all an exception will be raised. 
 
 ## Remarks  
 
-WIP
+Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the @response output parameter. @response contains a JSON document with the following schema: 
+
+```json
+{
+  "response": {    
+    "status": {
+      "http": {
+        "code": "",
+        "description": ""
+      }
+    },
+    "headers": {}
+  },
+  "result": {}
+}
+```
+
+Specifically:
+
+- `response`: a JSON object that contains the HTTP result and additional response metadata.
+- `result`: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (No Content).
+
+### Limits
+
+### Throttling
+
+### HTTPS and TLS
+
+Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption protocol are supported. 
+
+### Allow-Listed Endpoints
+
+Only calls to endpoints in the following services are allowed:
+
+Azure Service | Domain
+------ | ------
+Azure Functions  | *.azurewebsites.net  
+Azure Apps Service | *.azurewebsites.net  
+Azure App Service Environment	| *.appserviceenvironment.net
+Azure Static Web Apps	| *.azurestaticapps.net
+Azure Logic Apps | *.logic.azure.com
+Azure Event Hubs | *.servicebus.windows.net
+Azure Event Grid | *.eventgrid.azure.net
+Azure Cognitive Services | *.cognitiveservices.azure.com
+PowerApps / Dataverse	| *.api.crm.dynamics.com
+Azure Container Instances	| *.azurecontainer.io
+Power BI | api.powerbi.com
+Microsoft Graph	| graph.microsoft.com
+Analysis Services	| *.asazure.windows.net
+IoT Central	| *.azureiotcentral.com
+API Management| *.azure-api.net
+
+> [!NOTE]
+> If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make ti available to sp_invoke_external_rest_endpoint
+
+### Credentials Usage
+
+
+###
 
 ## Permissions  
    
-WIP
+Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.  
 
 ## Examples  
   
@@ -82,4 +140,5 @@ WIP
 
 ## See Also  
 
-WIP 
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [API Management](https://docs.microsoft.com/en-us/azure/api-management/)

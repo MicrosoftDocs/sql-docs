@@ -13,7 +13,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Create, alter, and drop secondary selective XML indexes
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.
 

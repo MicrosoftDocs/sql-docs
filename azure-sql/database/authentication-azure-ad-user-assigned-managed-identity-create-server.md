@@ -1,14 +1,14 @@
 ---
 title: Create an Azure SQL logical server using a user-assigned managed identity
-description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
-ms.service: sql-database
-ms.subservice: security
-ms.topic: conceptual
+description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 06/30/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 ---
 
 # Create an Azure SQL Database server with a user-assigned managed identity

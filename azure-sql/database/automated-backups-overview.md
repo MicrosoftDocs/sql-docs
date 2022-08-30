@@ -2,21 +2,19 @@
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Database
 description: Learn how Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.custom:
-  - "references_regions"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-  -  "azure-sql-split"
-ms.topic: conceptual
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: mathoma, wiassaf, danil
 ms.date: 07/20/2022
-monikerRange: "= azuresql || = azuresql-db "
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom:
+  - "references_regions"
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database
 

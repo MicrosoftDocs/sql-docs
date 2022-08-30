@@ -1,16 +1,14 @@
 ---
 title: In-Memory sample
-description: Try Azure SQL Database In-Memory technologies with OLTP and columnstore sample. 
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: sample
+description: Try Azure SQL Database In-Memory technologies with OLTP and columnstore sample.
 author: srinia
 ms.author: srinia
 ms.reviewer: mathoma, kendralittle
 ms.date: 12/18/2018
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: sample
+ms.custom: sqldbrb=1
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # In-Memory sample

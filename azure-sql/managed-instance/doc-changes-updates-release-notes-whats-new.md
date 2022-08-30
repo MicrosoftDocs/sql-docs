@@ -2,15 +2,15 @@
 title: What's new?
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the new features and documentation improvements for Azure SQL Managed Instance.
-services: sql-database
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 08/01/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
-ms.custom: references_regions, ignite-fall-2021
-ms.devlang: 
 ms.topic: conceptual
-ms.date: 08/01/2022
+ms.custom:
+  - references_regions
+  - ignite-fall-2021
 ---
 # What's new in Azure SQL Managed Instance?
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]

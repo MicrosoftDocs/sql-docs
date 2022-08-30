@@ -2,18 +2,16 @@
 title: What's new?
 titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
-services:
-  - "sql-database"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 08/01/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=2"
   - "references_regions"
   - "ignite-fall-2021"
-ms.topic: conceptual
-ms.date: 08/01/2022
 ---
 # What's new in Azure SQL Database?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

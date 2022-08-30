@@ -1,17 +1,14 @@
 ---
 title: Using the elastic database client library with Dapper
 description: Using the elastic database client library with Dapper.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/04/2018
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: "sqldbrb=1"
 ---
 # Using the elastic database client library with Dapper
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

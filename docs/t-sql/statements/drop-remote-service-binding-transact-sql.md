@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "DROP REMOTE SERVICE BINDING statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

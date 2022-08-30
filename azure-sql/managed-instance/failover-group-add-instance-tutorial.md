@@ -1,17 +1,17 @@
 ---
 title: "Tutorial: Add SQL Managed Instance to a failover group"
-titleSuffix: Azure SQL Managed Instance 
-description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: 
-ms.topic: tutorial
+titleSuffix: Azure SQL Managed Instance
+description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance.
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma
 ms.date: 06/02/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: tutorial
+ms.custom:
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 # Tutorial: Add SQL Managed Instance to a failover group
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

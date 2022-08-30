@@ -12,7 +12,7 @@ ms.devlang:
 ms.topic: sample
 author: SudhirRaparla
 ms.author: nvraparl
-ms.reviewer: carlrab, wiassaf, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 02/11/2022
 ---
 

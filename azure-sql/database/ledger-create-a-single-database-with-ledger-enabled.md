@@ -1,15 +1,14 @@
 ---
 title: Create a single database with ledger enabled
 description: Create a single database in Azure SQL Database with ledger enabled by using the Azure portal.
-ms.service: sql-database
-ms.subservice: security
-ms.topic: quickstart
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: "05/24/2022"
-ms.custom:
-  - "mode-other"
+ms.service: sql-database
+ms.subservice: security
+ms.topic: quickstart
+ms.custom: "mode-other"
 ---
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled

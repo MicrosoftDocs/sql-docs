@@ -119,7 +119,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## Query Store for secondary replicas
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together.
 
@@ -133,13 +133,16 @@ The data stored about queries can be analyzed as workloads on a replica set basi
 Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) set up and configured.
 
 > [!IMPORTANT]
-> **APPLIES TO**: SQL Server 2022 (16.x) CTP 2.x
-> 
-> You must enable the following set of trace flags before you can enable Query Store for secondary replicas: 12606, 12607, 12608, 12610, T12624. To enable these trace flags:
+> **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+>
+> Query Store for secondary replicas is a *preview* feature. It is not intended for production deployments. See: [release notes](../../sql-server/sql-server-2022-release-notes.md).
+>
+> You must enable trace flag 12606 before you can enable Query Store for secondary replicas. To enable the trace flags:
+>
 > 1. Open the services management console (services.msc from the **Run** menu).
-> 1. Right-click on the **SQL Server** service for SQL Server 2022 CTP 2 and select **Properties**.
+> 1. Right-click on the **SQL Server** service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and select **Properties**.
 > 1. If the service status is *Running*, select **Stop**. This will stop the installed instance.
-> 1. In the **Start parameters** box, add the values: `-T12606 -T12607 -T12608 -T12610 -T12624`
+> 1. In the **Start parameters** box, add the values: `-T12606`
 > 1. Select **Start** to start the service.
 > 1. Select **OK**.
 

@@ -1,8 +1,8 @@
 ---
 title: "CREATE RESOURCE POOL (Transact-SQL)"
 description: CREATE RESOURCE POOL (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "CREATE RESOURCE POOL"
 dev_langs:
   - "TSQL"
-ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

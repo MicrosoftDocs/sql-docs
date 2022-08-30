@@ -25,7 +25,6 @@ helpviewer_keywords:
   - "CREATE CERTIFICATE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE CERTIFICATE (Transact-SQL)

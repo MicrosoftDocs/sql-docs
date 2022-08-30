@@ -2,23 +2,19 @@
 title: Azure CLI samples for Azure SQL Database & Managed Instances
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Find Azure CLI script samples to create and manage Azure SQL Database and Azure SQL Managed Instance.
-services:
-  - "sql-database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
+ms.date: 12/22/2021
 ms.service: sql-db-mi
 ms.subservice: deployment-configuration
+ms.topic: sample
 ms.custom:
   - "overview-samples"
   - "mvc"
   - "sqldbrb=2"
   - "devx-track-azurecli"
   - "seo-azure-cli"
-ms.devlang:
-  - "azurecli"
-ms.topic: sample
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mathoma
-ms.date: 12/22/2021
 keywords:
   - "sql database"
   - "managed instance"
@@ -26,6 +22,7 @@ keywords:
   - "azure cli examples"
   - "azure cli code samples"
   - "azure cli script examples"
+ms.devlang: "azurecli"
 ---
 
 # Azure CLI samples for Azure SQL Database and SQL Managed Instance

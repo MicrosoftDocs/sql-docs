@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "digital signatures [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 ---
 
 # ADD SIGNATURE (Transact-SQL)

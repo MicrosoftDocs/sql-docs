@@ -3,13 +3,10 @@ title: "@@LOCK_TIMEOUT (Transact-SQL)"
 description: "@@LOCK_TIMEOUT (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "09/19/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@LOCK_TIMEOUT"
   - "@@LOCK_TIMEOUT_TSQL"

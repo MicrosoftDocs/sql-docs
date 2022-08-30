@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)

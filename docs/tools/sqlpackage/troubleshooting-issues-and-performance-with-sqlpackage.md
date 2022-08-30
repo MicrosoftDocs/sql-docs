@@ -61,6 +61,20 @@ The schema model is compiled in memory, so for large database schemas the memory
 
 By default, SqlPackage sets the maximum server parallelism to 8.  If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter may improve performance.
 
+### Handling access token
+
+Using the `/AccessToken:` or `/at:` parameter enables token-based authentication for SqlPackage, however passing the token to the command can be tricky.  If you are parsing an access token object in PowerShell either explicitly pass the string value or wrap the reference to the token property in $().  For example:
+
+```powershell
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) 
+```
+
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
 

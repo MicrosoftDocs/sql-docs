@@ -10494,7 +10494,13 @@ items:
     - name: SQL Database Projects
       href: azure-data-studio/extensions/sql-database-project-extension.md
     - name: SQL Bindings for Azure Functions
+      items: 
+      - name: Overview
       href: tools/visual-studio-code/create-azure-function-with-mssql.md
+      - From Object Explorer
+      href: tools/visual-studio-code/create-azure-function-with-mssql-OE.md
+      - From Command Palette
+      href: tools/visual-studio-code/create-azure-function-with-mssql-command-palette.md
 - name: Tutorials
   items:
   - name: SQL Server

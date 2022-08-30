@@ -28,7 +28,7 @@ Table OE Command:
 View OE Command:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from View." source="./media/create-azure-function-with-mssql/create-function-view-object-explorer.png":::
 
-See further documentation to create an Azure function with SQL bindings from the command palette [here](create-azure-function-with-mssql-OE.md).
+See further documentation to create an Azure function with SQL bindings from the SQL Server object explorer [here](create-azure-function-with-mssql-OE.md).
 
 ## From the Command Palette 
 Run the `MS SQL: Create Azure Function with SQL Binding` command from the command palette to create a new function with a SQL binding. 

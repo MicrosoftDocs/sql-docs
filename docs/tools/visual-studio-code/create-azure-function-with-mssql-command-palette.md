@@ -15,7 +15,7 @@ ms.date: 8/24/2022
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## Overview 
-Microsoft SQL Bindings for VS Code enable users to develop Azure Functions with Azure SQL bindings
+Microsoft SQL Bindings for VS Code enable users to develop Azure Functions with Azure SQL bindings, see further documentation [here](create-azure-function-with-mssql.md).
 
 ## From the Command Palette 
 Run the `MS SQL: Create Azure Function with SQL Binding` command from the command palette to create a new function with a SQL binding. 
@@ -53,7 +53,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 :::image type="content" alt-text="Prompt to select connection string setting" source="./media/create-azure-function-with-mssql/create-new-sql-connection-string-setting.png":::
 
-If you `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
+If you select `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
 
 :::image type="content" alt-text="Prompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
@@ -61,16 +61,17 @@ If you're creating the `Azure Function with SQL Binding` to an existing Azure Fu
 
 :::image type="content" alt-text="Prompt to save the password to the SQL connection string" source="./media/create-azure-function-with-mssql/password-prompt.png":::
 
-If `Yes`, then the password will be saved to the local.settings.json file. If `No` then the extension will warn you that the password won't be saved to the local.settings.json file, and you'll need to manually add the password later to the local.settings.json file.
+If `Yes`, then the password will be saved to the local.settings.json file. If `No` then the extension will warn you that the password won't be saved to the local.settings.json file (shown below), and you'll need to manually add the password later to the local.settings.json file.
 
 :::image type="content" alt-text="Warning to add password to SQL connection string later manually" source="./media/create-azure-function-with-mssql/do-not-save-password.png":::
 
 The extension will then prompt you to provide the namespace for the Azure Function. 
 :::image type="content" alt-text="Prompt for namespace for the Azure Function" source="./media/create-azure-function-with-mssql/namespace-for-function.png":::
 
-If you're creating a brand new Azure Function project with SQL binding, then the extension will prompt whether you would like to include the password for the connection string in the local.settings.json file (discussed here).
+If you're creating a brand new Azure Function project with SQL binding, then the extension will prompt whether you would like to include the password for the connection string in the local.settings.json file.
 
 A progress notification will appear to indicate that the Azure Function has completed.
+
 :::image type="content" alt-text="Finished creating Azure Function Project" source="./media/create-azure-function-with-mssql/finished-creating-project.png":::
 
 Once the Azure Function is created, the extension will generate the code either for an `Input` or `Output` binding shown [here](create-azure-function-with-mssql.md#generated-code-for-azure-functions-with-sql-bindings).
@@ -90,7 +91,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 :::image type="content" alt-text="Prompt to select connection string setting" source="./media/create-azure-function-with-mssql/create-new-sql-connection-string-setting.png":::
 
-If you `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
+If you select `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
 
 :::image type="content" alt-text="Prompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
@@ -111,7 +112,7 @@ The extension will then prompt you whether you would like to include the passwor
 
 :::image type="content" alt-text="Prompt to save the password to the SQL connection string" source="./media/create-azure-function-with-mssql/password-prompt.png":::
 
-If `Yes`, then the password will be saved to the local.settings.json file. If `No` then the extension will warn you that the password won't be saved to the local.settings.json file, and you'll need to manually add the password later to the local.settings.json file.
+If `Yes`, then the password will be saved to the local.settings.json file. If `No` then the extension will warn you that the password won't be saved to the local.settings.json file (shown below), and you'll need to manually add the password later to the local.settings.json file.
 
 :::image type="content" alt-text="Warning to add password to SQL connection string later manually" source="./media/create-azure-function-with-mssql/do-not-save-password.png":::
 

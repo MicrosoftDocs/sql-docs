@@ -33,14 +33,15 @@ See further documentation to create an Azure function with SQL bindings from the
 ## From the Command Palette 
 Run the `MS SQL: Create Azure Function with SQL Binding` command from the command palette to create a new function with a SQL binding. 
 
-:::image type="content" alt-text="VS Code notification to create a new azure function project since none were found in folder" source="./media/create-azure-function-with-mssql/create-azure-function-using-command-palette.png":::
+:::image type="content" alt-text="VS Code command palette command `MS SQL: Create Azure Function with SQL Binding (preview)" source="./media/create-azure-function-with-mssql/create-azure-function-using-command-palette.png":::
 
 See further documentation to create an Azure function with SQL bindings from the command palette [here](create-azure-function-with-mssql-command-palette.md).
 
 ### In an existing Azure Function
 
 Open the C# Azure Function in an editor and then run the `MS SQL: Add SQL Binding` command from the command palette to add a SQL binding to an existing function.
-:::image type="content" alt-text="VS Code notification to create a new azure function project since none were found in folder" source="./media/create-azure-function-with-mssql/add-sql-binding-command-palette.png":::
+
+:::image type="content" alt-text="VS Code command palette command `MS SQL: Add SQL Binding (preview)" source="./media/create-azure-function-with-mssql/add-sql-binding-command-palette.png":::
 
 See further documentation [here](create-azure-function-with-mssql-command-palette.md).
 

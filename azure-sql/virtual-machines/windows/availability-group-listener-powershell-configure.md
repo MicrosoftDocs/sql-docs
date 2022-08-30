@@ -1,20 +1,16 @@
 ---
 title: Configure availability group listeners and load balancer (PowerShell)
 description: Configure Availability Group listeners on the Azure Resource Manager model, using an internal load balancer with one or more IP addresses.
-services: virtual-machines
-documentationcenter: na
 author: adbadram
-editor: monicar
-ms.assetid: 14b39cde-311c-4ddf-98f3-8694e01a7d3b
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.custom: "seo-lt-2019, devx-track-azurepowershell"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019, devx-track-azurepowershell
+documentationCenter: na
+editor: monicar
 ---
 # Configure one or more Always On availability group listeners
 

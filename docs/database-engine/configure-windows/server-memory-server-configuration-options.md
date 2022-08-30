@@ -172,7 +172,7 @@ Use the following methods to determine whether the SQL Server instance is using 
     SELECT osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
     FROM sys.dm_os_memory_nodes omn 
     INNER JOIN sys.dm_os_nodes osn ON (omn.memory_node_id = osn.memory_node_id) 
-    WHERE osn.node_state_desc <> 'ONLINE DAC' 
+    WHERE osn.node_state_desc <> 'ONLINE DAC';
     ```
 
 - The current SQL Server error log will report the message, "Using locked pages in the memory manager" during server startup.

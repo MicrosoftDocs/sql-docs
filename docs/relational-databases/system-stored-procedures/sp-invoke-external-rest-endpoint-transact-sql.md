@@ -110,7 +110,13 @@ sp_invoke_external_rest_endpoint will not automatically follow any HTTP redirect
 
 ### HTTP Headers
 
-WIP
+sp_invoke_external_rest_endpoint will automatically inject the following headers in the HTTP request
+
+-	`content-type`: set to `application/json; charset=utf-8`
+-	`accept`: set to `application/json`
+-	`user-agent`: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
+
+If the same headers are also specied via the `@headers` parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
 
 ### Allow-Listed Endpoints
 
@@ -139,7 +145,48 @@ API Management| *.azure-api.net
 
 ### Credentials Usage
 
-WIP
+Some REST endpoints requires authentication in order to be properly invoked. Authentication can be done by passing some specific key-value pairs in the querystring or in the HTTP headers set with the request.
+
+It is possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by sp_invoke_external_rest_endpoint to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL you used the IDENTITY parameter to specify what authentication data will be passed to the ivoked endpoint and how. IDENTITY supports three options:
+
+- `HTTPEndpointHeaders`: send specified authentication data using the request headers
+- `HTTPEndpointQueryString`: send specified authentication data using the query string
+- `Managed Identity`: send the System Assigned Managed Identity using the request headers
+
+the created DATABASE SCOPED CREDENTIAL can ben used vai the `@credential` parameter:
+
+```
+EXEC sp_invoke_external_rest_endpoint 
+  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+```
+
+#### HTTPEndpointHeaders
+
+With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the request headers. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
+```
+
+#### HTTPEndpointQueryString
+
+With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the query string. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
+```
+
+#### Managed Identity
+
+With this IDENTITY value the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure AAD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad))
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
+```
 
 ## Permissions  
    
@@ -147,38 +194,38 @@ Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.
 
 ## Examples  
   
-### A. Call an Azure Function using an HTTP Trigger binding, no authentication
+### A. Call an Azure Function using an HTTP trigger binding without authentication
 
-The following example calls the Azure Function available at ''
+The following example calls an Azure Function using an HTTP trigger binding allowing anonymous access
 
 ```sql
 DECLARE @ret INT, @response NVARCHAR(MAX);
 
 EXEC @ret = sp_invoke_external_rest_endpoint 
-	@url = N'https://my-function.azurewebsites.net/api/function-name?key1=value1',
-	@headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
-	@payload = N'{"some":{"data":"here"}}',
-	@response = @response OUTPUT;
+  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
+  @payload = N'{"some":{"data":"here"}}',
+  @response = @response OUTPUT;
 	
 SELECT @ret AS ReturnCode, @response AS Response;
 ```
 
-### A. Call an Azure Function using an HTTP Trigger binding, using function-key authentication
+### A. Call an Azure Function using an HTTP Trigger binding with an authorization key
 
-The following example calls the Azure Function available at ''
+The following example calls an Azure Function using an HTTP trigger binding configured to require an authorization key. The authorization key will be passed in the `x-function-key` header as required by Azure Functions. More info here: [Azure Functions - API key authorization](https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger#api-key-authorization)
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL [https://my-function.azurewebsites.net/api/function-name]
+CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
 
 DECLARE @ret INT, @response NVARCHAR(MAX);
 
 EXEC @ret = sp_invoke_external_rest_endpoint 
-	@url = N'https://echo-function.azurewebsites.net/api/EchoFunction?key1=value1',
-	@headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
-  @credential = [https://my-function.azurewebsites.net/api/function-name],
-	@payload = N'{"some":{"data":"here"}}',  
-	@response = @response OUTPUT;
+  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
+  @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>],
+  @payload = N'{"some":{"data":"here"}}',  
+  @response = @response OUTPUT;
 	
 SELECT @ret AS ReturnCode, @response AS Response;
 ```

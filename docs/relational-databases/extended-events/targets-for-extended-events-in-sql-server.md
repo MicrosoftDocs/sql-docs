@@ -233,7 +233,6 @@ The 'slots' parameter default is 256. If you assign another value, the value is 
 
 - For example, slots=59 would be rounded up to =64.
   
-> [!NOTE]
 > During an Extended Events session with **histogram** as the target sometimes, you can see unexpected results. Some events might not appear at the same time when other events' count show a higher value than they should.
 
 This is a side effect of the histogram target design. The histogram entity uses a hashing function to aggregate entities into buckets. Therefore, depending on the selection of the aggregation field, two objects might be stored in the same bucket, and both the objects are shown under the name of the one executed first.

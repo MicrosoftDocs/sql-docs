@@ -54,6 +54,6 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ## Next steps
 
 [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
+[You aren't able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

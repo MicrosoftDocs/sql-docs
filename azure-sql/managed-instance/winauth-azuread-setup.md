@@ -1,16 +1,14 @@
 ---
-title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos 
+title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows Authentication access to Azure SQL Managed Instance using Azure Active Directory and Kerberos.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: conceptual
 ---
 
 

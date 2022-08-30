@@ -1,12 +1,12 @@
 ---
-title: Configure an availability group listener for SQL Server on RHEL virtual machines in Azure - Linux virtual machines | Microsoft Docs
+title: Configure an availability group listener for SQL Server on RHEL virtual machines in Azure - Linux virtual machines
 description: Learn about setting up an availability group listener in SQL Server on RHEL virtual machines in Azure
-ms.service: virtual-machines-sql
-ms.subservice: hadr
-ms.topic: tutorial
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/11/2020
+ms.service: virtual-machines-sql
+ms.subservice: hadr
+ms.topic: tutorial
 ---
 # Tutorial: Configure an availability group listener for SQL Server on RHEL virtual machines in Azure
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

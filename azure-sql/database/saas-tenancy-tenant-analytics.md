@@ -1,17 +1,14 @@
 ---
 title: Cross-tenant analytics using extracted data
 description: Cross-tenant analytics queries using data extracted from multiple Azure SQL databases in a single tenant app.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scenario
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 12/18/2018
+ms.service: sql-database
+ms.subservice: scenario
+ms.topic: tutorial
+ms.custom: "sqldbrb=1"
 ---
 # Cross-tenant analytics using extracted data - single-tenant app
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

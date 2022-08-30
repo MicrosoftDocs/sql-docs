@@ -2,18 +2,16 @@
 title: General Purpose service tier
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about the General Purpose service tier for Azure SQL Database and Azure SQL Managed Instance.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.custom:
-  - "sqldbrb=2"
-  - "azure-sql-split"
-ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 04/13/2022
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=2"
+  - "azure-sql-split"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # General Purpose service tier - Azure SQL Database and Azure SQL Managed Instance

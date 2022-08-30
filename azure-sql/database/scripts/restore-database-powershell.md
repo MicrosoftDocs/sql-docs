@@ -1,19 +1,15 @@
 ---
 title: "PowerShell: Restore an automatic backup of a database in SQL Database"
 description: Use an Azure PowerShell example script to restore a database in SQL Database to an earlier point in time from automatic backups.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.custom:
-  - "devx-track-azurepowershell"
-ms.devlang:
-  - "PowerShell"
-ms.topic: sample
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/27/2019
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: sample
+ms.custom: "devx-track-azurepowershell"
+ms.devlang: "PowerShell"
 ---
 
 # Use PowerShell to restore a database to an earlier point in time

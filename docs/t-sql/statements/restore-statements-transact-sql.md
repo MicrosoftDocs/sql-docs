@@ -350,11 +350,11 @@ Restoring a database clears the plan cache for the database being restored. Clea
 
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.
 
-### Integrated offloading and acceleration for backup compression and decompression
+### Integrated acceleration and offloading for backup compression and decompression
 
 [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. For more information, see [Backup COMPRESSION](backup-transact-sql.md#compression). 
 
-If you have configured [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/intel-quickassist.md), the following example completes the back up with the accelerator solution, with QATzip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.
+If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md, the following example completes the back up with the accelerator solution, with QATzip library using QZ_DEFLATE_GZIP_EXT with the compression level 1.
 
 SQL Server backups compressed using QAT_DEFLATE will support all T-SQL RESTORE operations. The `RESTORE {DATABASE|LOG}` statements for restoring and recovering databases from backups, will support all recovery arguments, such as `WITH MOVE`, `PARTIAL`, `STOPAT`, `KEEP REPLICATION`, `KEEP CDC` and `RESTRICTED_USER`. Auxiliary RESTORE commands will also be supported for all backup compression algorithms. Auxiliary RESTORE commands include `RESTORE FILELISTONLY`, `RESTORE HEADERONLY`, `RESTORE VERIFYONLY`, and more. 
 

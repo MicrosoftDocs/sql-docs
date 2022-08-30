@@ -4993,7 +4993,9 @@ items:
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
         href: database-engine/configure-windows/backup-checksum-default.md
-      - name: View or Configure the backup compression default
+      - name: backup compression algorithm
+        href: database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md
+      - name: backup compression default
         href: database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
       - name: blocked process threshold
         href: database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md
@@ -6635,12 +6637,12 @@ items:
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
       - name: Disable
         href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
-    - name: Integrated offloading & acceleration
+    - name: Integrated acceleration & offloading
       items:
       - name: Overview
         href: relational-databases/integrated-acceleration/overview.md
-      - name: Intel® QuickAssist Technology (QAT)
-        href: relational-databases/integrated-acceleration/intel-quickassist.md
+      - name: Use integrated acceleration and offloading solutions
+        href: relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md
     - name: Maintenance plans
       items:
       - name: Overview

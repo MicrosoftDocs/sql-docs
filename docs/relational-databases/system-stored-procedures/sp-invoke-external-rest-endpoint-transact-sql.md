@@ -89,8 +89,8 @@ Response of the HTTP call and the resulting data sent back by the invoked endpoi
 
 Specifically:
 
-- `response`: a JSON object that contains the HTTP result and additional response metadata.
-- `result`: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (No Content).
+- *response*: a JSON object that contains the HTTP result and additional response metadata.
+- *result*: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (No Content).
 
 ### Limits
 
@@ -112,9 +112,9 @@ sp_invoke_external_rest_endpoint will not automatically follow any HTTP redirect
 
 sp_invoke_external_rest_endpoint will automatically inject the following headers in the HTTP request
 
--	`content-type`: set to `application/json; charset=utf-8`
--	`accept`: set to `application/json`
--	`user-agent`: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
+-	*content-type*: set to `application/json; charset=utf-8`
+-	*accept*: set to `application/json`
+-	*user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
 If the same headers are also specied via the `@headers` parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
 
@@ -143,17 +143,17 @@ API Management| *.azure-api.net
 > [!NOTE]
 > If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make ti available to sp_invoke_external_rest_endpoint
 
-### Credentials Usage
+## Credentials
 
 Some REST endpoints requires authentication in order to be properly invoked. Authentication can be done by passing some specific key-value pairs in the querystring or in the HTTP headers set with the request.
 
 It is possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by sp_invoke_external_rest_endpoint to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL you used the IDENTITY parameter to specify what authentication data will be passed to the ivoked endpoint and how. IDENTITY supports three options:
 
-- `HTTPEndpointHeaders`: send specified authentication data using the request headers
-- `HTTPEndpointQueryString`: send specified authentication data using the query string
-- `Managed Identity`: send the System Assigned Managed Identity using the request headers
+- *HTTPEndpointHeaders*`: send specified authentication data using the **request headers**
+- *HTTPEndpointQueryString*: send specified authentication data using the **query string**
+- *Managed Identity*: send the System Assigned **Managed Identity** using the request headers
 
-the created DATABASE SCOPED CREDENTIAL can ben used vai the `@credential` parameter:
+the created DATABASE SCOPED CREDENTIAL can ben used via the `@credential` parameter:
 
 ```
 EXEC sp_invoke_external_rest_endpoint 
@@ -161,7 +161,7 @@ EXEC sp_invoke_external_rest_endpoint
   @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 ```
 
-#### HTTPEndpointHeaders
+### [Request Headers](#tab/service-principal)
 
 With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the request headers. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
@@ -170,16 +170,16 @@ CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNC
 WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
 ```
 
-#### HTTPEndpointQueryString
+### [Query String](#tab/service-principal)
 
 With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the query string. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
-WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
+WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key-here>"}';
 ```
 
-#### Managed Identity
+### [Managed Identity](#tab/managed-identity)
 
 With this IDENTITY value the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure AAD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad))
 

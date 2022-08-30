@@ -1,21 +1,15 @@
 ---
-title: Backup and restore for SQL Server on Azure VMs | Microsoft Docs
+title: Backup and restore for SQL Server on Azure VMs
 description: Describes backup and restore considerations for SQL Server databases running on Azure Virtual Machines.
-services: virtual-machines-windows
-documentationcenter: na
 author: adbadram
-editor: ''
-tags: azure-resource-management
-ms.assetid: 95a89072-0edf-49b5-88ed-584891c0e066
-ms.service: virtual-machines-sql
-ms.subservice: backup
-
-ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 06/04/2018
 ms.author: adbadram
 ms.reviewer: mathoma
+ms.date: 06/04/2018
+ms.service: virtual-machines-sql
+ms.subservice: backup
+ms.topic: conceptual
+documentationCenter: na
+tags: azure-resource-management
 ---
 # Backup and restore for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -40,7 +34,7 @@ The following sections describe each option in more detail. The final section of
 
 Automated Backup provides an automatic backup service for SQL Server Standard and Enterprise editions running on a Windows VM in Azure. This service is provided by the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md), which is automatically installed on SQL Server Windows virtual machine images in the Azure portal.
 
-All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 30 days.
+All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 90 days.
 
 SQL Server 2016 and higher VMs offer more customization options with Automated Backup v2. These improvements include:
 

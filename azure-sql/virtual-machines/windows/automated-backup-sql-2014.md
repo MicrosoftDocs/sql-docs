@@ -1,21 +1,16 @@
 ---
 title: Automated Backup for SQL Server 2014 Azure virtual machines
 description: Explains the Automated Backup feature for SQL Server 2014 VMs running in Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: bdc63fd1-db49-4e76-87d5-b5c6a890e53c
+ms.author: pamela
+ms.reviewer: pamela
+ms.date: 05/03/2018
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/03/2018
-ms.author: pamela
-ms.reviewer: pamela 
 ms.custom: devx-track-azurepowershell
+documentationCenter: na
+tags: azure-resource-manager
 ---
 
 # Automated Backup for SQL Server 2014 virtual machines (Resource Manager)

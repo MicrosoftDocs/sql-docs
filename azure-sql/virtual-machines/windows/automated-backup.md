@@ -1,21 +1,16 @@
 ---
-title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs | Microsoft Docs
+title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs
 description: This article explains the Automated Backup feature for SQL Server 2016/2017 VMs running on Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: ebd23868-821c-475b-b867-06d4a2e310c7
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 12/21/2021
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
-ms.author: pamela
-ms.reviewer: mathoma 
 ms.custom: devx-track-azurepowershell
+documentationCenter: na
+tags: azure-resource-manager
 ---
 
 # Automated Backup v2 for Azure virtual machines (Resource Manager)

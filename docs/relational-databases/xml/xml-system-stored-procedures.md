@@ -19,7 +19,7 @@ ms.author: mikeray
 ---
 # XML system stored procedures
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 SQL Server provides the following system stored procedures that are used together with OPENXML:
 

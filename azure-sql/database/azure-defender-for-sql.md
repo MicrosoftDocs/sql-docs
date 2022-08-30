@@ -1,15 +1,14 @@
 ---
 title: Microsoft Defender for SQL
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
+author: bmansheim
 ms.author: benmansheim
 manager: rkarlin
-author: bmansheim
 ms.date: 06/15/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: "sqldbrb=2"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Microsoft Defender for SQL

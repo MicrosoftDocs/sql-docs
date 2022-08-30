@@ -40,7 +40,7 @@ The following sections describe each option in more detail. The final section of
 
 Automated Backup provides an automatic backup service for SQL Server Standard and Enterprise editions running on a Windows VM in Azure. This service is provided by the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md), which is automatically installed on SQL Server Windows virtual machine images in the Azure portal.
 
-All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 30 days.
+All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 90 days.
 
 SQL Server 2016 and higher VMs offer more customization options with Automated Backup v2. These improvements include:
 

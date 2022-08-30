@@ -116,7 +116,7 @@ sp_invoke_external_rest_endpoint will automatically inject the following headers
 -	*accept*: set to `application/json`
 -	*user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
-If the same headers are also specied via the `@headers` parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
+If the same headers are also specied via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
 
 ### Allow-Listed Endpoints
 
@@ -147,13 +147,13 @@ API Management| *.azure-api.net
 
 Some REST endpoints requires authentication in order to be properly invoked. Authentication can be done by passing some specific key-value pairs in the querystring or in the HTTP headers set with the request.
 
-It is possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by sp_invoke_external_rest_endpoint to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL you used the IDENTITY parameter to specify what authentication data will be passed to the ivoked endpoint and how. IDENTITY supports three options:
+It is possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by sp_invoke_external_rest_endpoint to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL you used the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports three options:
 
-- *HTTPEndpointHeaders*`: send specified authentication data using the **request headers**
-- *HTTPEndpointQueryString*: send specified authentication data using the **query string**
-- *Managed Identity*: send the System Assigned **Managed Identity** using the request headers
+- `HTTPEndpointHeaders`: send specified authentication data using the **Request Headers**
+- `HTTPEndpointQueryString`: send specified authentication data using the **Query String**
+- `Managed Identity`: send the System Assigned **Managed Identity** using the request headers
 
-the created DATABASE SCOPED CREDENTIAL can ben used via the `@credential` parameter:
+the created DATABASE SCOPED CREDENTIAL can ben used via the @credential parameter:
 
 ```
 EXEC sp_invoke_external_rest_endpoint 
@@ -161,7 +161,7 @@ EXEC sp_invoke_external_rest_endpoint
   @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 ```
 
-### [Request Headers](#tab/service-principal)
+### [Request Headers](#tab/request-headers)
 
 With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the request headers. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
@@ -170,7 +170,7 @@ CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNC
 WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
 ```
 
-### [Query String](#tab/service-principal)
+### [Query String](#tab/query-string)
 
 With this IDENTITY value the DATABASE SCOPED CREDENTIAL will be added to the query string. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
@@ -188,9 +188,29 @@ CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNC
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
 
+Database users who access a DATABASE SCOPED CREDENTIAL must have permission to use that credential.
+
+### Credential name rules
+
+WIP
+
+### Grant permissions to use credential
+
+To use the credential, a database user must have `REFERENCES` permission on a specific credential:
+
+```sql
+GRANT REFERENCES ON CREDENTIAL::[<CREDENTIAL_NAME>] TO [<PRINCIPAL>];
+```
+
 ## Permissions  
    
 Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.  
+
+For example:
+
+```sql
+GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
+```
 
 ## Examples  
   

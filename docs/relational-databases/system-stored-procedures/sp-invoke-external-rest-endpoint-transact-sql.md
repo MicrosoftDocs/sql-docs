@@ -188,6 +188,8 @@ CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNC
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
 
+---
+
 Database users who access a DATABASE SCOPED CREDENTIAL must have permission to use that credential.
 
 ### Credential name rules

@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Values for &lt;xsd:simpleType&gt; declarations
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.
 

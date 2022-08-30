@@ -16,7 +16,7 @@ ms.author: mikeray
 ---
 # Retrieve and query XML data
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that aren't preserved when they're stored in databases.
 

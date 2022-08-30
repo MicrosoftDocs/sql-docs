@@ -1,20 +1,17 @@
 ---
 title: XEvent Event File code
 description: Provides PowerShell and Transact-SQL for a two-phase code sample that demonstrates the Event File target in an extended event on Azure SQL Database and SQL Managed Instance. Azure Storage is a required part of this scenario.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.devlang:
-  - "PowerShell"
-ms.topic: sample
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/25/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: sample
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+ms.devlang: "PowerShell"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Event File target code for extended events in Azure SQL Database and SQL Managed Instance

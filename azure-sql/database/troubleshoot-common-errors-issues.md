@@ -1,8 +1,10 @@
 ---
 title: Troubleshoot common connection issues to Azure SQL Database
 description: Provides steps to troubleshoot Azure SQL Database connection issues and resolve other Azure SQL Database or Azure SQL Managed Instance specific issues
-services:
-  - "sql-database"
+author: ramakoni1
+ms.author: ramakoni
+ms.reviewer: wiassaf, mathoma, vanto
+ms.date: 01/18/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
@@ -10,10 +12,6 @@ ms.custom:
   - "seo-lt-2019"
   - "OKR 11/2019"
   - "sqldbrb=1"
-author: ramakoni1
-ms.author: ramakoni
-ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/18/2022
 ---
 
 # Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance

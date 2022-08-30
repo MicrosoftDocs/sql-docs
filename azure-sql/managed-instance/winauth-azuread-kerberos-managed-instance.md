@@ -1,16 +1,14 @@
 ---
-title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory 
+title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
 ---
 
 # Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory

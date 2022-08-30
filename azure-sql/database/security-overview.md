@@ -2,17 +2,14 @@
 title: Security Overview
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about security in Azure SQL Database and Azure SQL Managed Instance, including how it differs from SQL Server.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: wiassaf, vanto, emlisa, mathoma
 ms.date: 08/23/2021
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: "sqldbrb=2"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # An overview of Azure SQL Database and SQL Managed Instance security capabilities

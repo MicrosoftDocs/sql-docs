@@ -13,7 +13,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Specify paths and optimization hints for selective XML indexes
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.
 

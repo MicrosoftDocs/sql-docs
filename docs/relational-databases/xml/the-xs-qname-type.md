@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # The xs:QName type
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support types derived from **xs:QName** by the use of an XML schema restriction element. Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently doesn't support union types with **QName** as a member type.
 

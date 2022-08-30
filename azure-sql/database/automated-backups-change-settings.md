@@ -1,21 +1,19 @@
 ---
-title: Change automated backup settings 
+title: Change automated backup settings
 titleSuffix: Azure SQL Database
-description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Database by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API. 
-services:
-  - "sql-database"
+description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Database by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
+author: SudhirRaparla
+ms.author: nvraparl
+ms.reviewer: wiassaf, mathoma, danil
+ms.date: 07/20/2022
 ms.service: sql-database
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
   - "azure-sql-split"
-ms.topic: conceptual
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Change automated backup settings for Azure SQL Database

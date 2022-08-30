@@ -5,12 +5,10 @@ description: Learn how to analyze deadlocks and prevent them from reoccurring in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
-services:
-  - "sql-database"
+ms.date: 4/8/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.date: 4/8/2022
 ---
 
 # Analyze and prevent deadlocks in Azure SQL Database

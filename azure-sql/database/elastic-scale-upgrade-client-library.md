@@ -1,17 +1,14 @@
 ---
 title: Upgrade to the latest elastic database client library
 description: Use NuGet to upgrade elastic database client library.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/03/2019
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: "sqldbrb=1"
 ---
 # Upgrade an app to use the latest elastic database client library
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

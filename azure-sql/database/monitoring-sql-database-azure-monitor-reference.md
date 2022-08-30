@@ -3,13 +3,12 @@ title: Monitoring Azure SQL Database with Azure Monitor reference
 description: Important reference material needed when you monitor Azure SQL Database with Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.topic: conceptual
 ms.reviewer: mathoma, dfurman
+ms.date: 07/29/2022
 ms.service: sql-database
 ms.subservice: performance
-ms.custom:
-  - "subject-monitoring"
-ms.date: 07/29/2022
+ms.topic: conceptual
+ms.custom: "subject-monitoring"
 monikerRange: "= azuresql || = azuresql-db"
 ---
 

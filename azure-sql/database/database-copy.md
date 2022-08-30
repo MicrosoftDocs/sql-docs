@@ -1,19 +1,17 @@
 ---
 title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: data-movement
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 6/14/2022
+ms.service: sql-database
+ms.subservice: data-movement
+ms.topic: how-to
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 

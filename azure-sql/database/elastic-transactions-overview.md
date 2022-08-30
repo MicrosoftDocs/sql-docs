@@ -1,16 +1,16 @@
 ---
 title: Distributed transactions across cloud databases
 description: Overview of Elastic Database Transactions with Azure SQL Database and Azure SQL Managed Instance.
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-  - "ignite-fall-2021"
-ms.topic: conceptual
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/02/2021
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "ignite-fall-2021"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Distributed transactions across cloud databases

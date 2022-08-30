@@ -1,22 +1,19 @@
 ---
 title: Use .NET to connect and query a database on Windows, Linux, or macOS
-description: This topic shows you how to use .NET to create a program that connects to a database in Azure SQL Database, or Azure SQL Managed Instance, and queries it using Transact-SQL statements.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: connect
-ms.custom:
-  - "sqldbrb=2"
-  - "devx-track-csharp"
-  - "mode-other"
-ms.devlang:
-  - "csharp"
-ms.topic: quickstart
+description: This topic shows you how to use .NET to create a program that connects to a database in Azure SQL Database, or Azure SQL Managed Instance, and queries it using Transact-SQL statements.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/17/2022
+ms.service: sql-database
+ms.subservice: connect
+ms.topic: quickstart
+ms.custom:
+  - "sqldbrb=2"
+  - "devx-track-csharp"
+  - "mode-other"
+ms.devlang: "csharp"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use .NET (C#) to query a database

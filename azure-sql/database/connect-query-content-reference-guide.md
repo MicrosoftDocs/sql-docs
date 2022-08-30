@@ -1,18 +1,15 @@
 ---
 title: Connect and query
-description: Links to Azure SQL Database quickstarts showing how to connect to and query Azure SQL Database, and Azure SQL Managed Instance.
 titleSuffix: Azure SQL Database & SQL Managed Instance
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: connect
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: guide
+description: Links to Azure SQL Database quickstarts showing how to connect to and query Azure SQL Database, and Azure SQL Managed Instance.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/17/2021
+ms.service: sql-database
+ms.subservice: connect
+ms.topic: guide
+ms.custom: "sqldbrb=1"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure SQL Database and Azure SQL Managed Instance connect and query articles

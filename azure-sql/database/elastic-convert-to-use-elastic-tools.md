@@ -1,17 +1,14 @@
 ---
 title: Migrate existing databases to scale out
 description: Convert sharded databases to use Elastic Database tools by creating a shard map manager
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/25/2019
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: "sqldbrb=1"
 ---
 # Migrate existing databases to scale out
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

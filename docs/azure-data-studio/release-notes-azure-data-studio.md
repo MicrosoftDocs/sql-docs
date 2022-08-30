@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 08/24/2022
+ms.date: 08/30/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,44 +19,18 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### August 2022
+### August 2022 (hotfix)
 
-Azure Data Studio 1.39.0 is the latest general availability (GA) release.
+Azure Data Studio 1.39.1 is the latest general availability (GA) release.
 
-- Release number: 1.39.0
-- Release date: August 24, 2022
+- Release number: 1.39.1
+- Release date: August 30, 2022
 
-#### What's new in 1.39.0
-
-| New Item | Details |
-|----------|---------|
-| Deployment Wizard | Azure Data Studio now supports SQL Server 2022 (Preview) in the Deployment Wizard for both local and container installation. |
-| Object Explorer | Added Ledger icons and scripting support to Object Explorer for Ledger objects. |
-| Dashboard | Added hexadecimal values to support color detection. |
-| Query Plan Viewer | Added the ability to copy text from cells in the Properties Pane of a query plan. |
-| Query Plan Viewer | Introduced a "find node" option in plan comparison to search for nodes in either the original or added plan. |
-| Table Designer | Now supports the ability to add included columns to a nonclustered index, and the ability to create filtered indexes. |
-| SQL Projects | Publish options were added to the Publish Dialog. |
-| Query History Extension | Added double-click support for query history to either open the query or immediately execute it, based on user configuration. |
-
-#### Bug fixes in 1.39.0
+#### Bug fixes in 1.39.1
 
 | New Item | Details |
 |----------|---------|
-| Dashboard | Fixed an accessibility issue that prevented users from being able to access tooltip information using the keyboard. |
-| Voiceover | Fixed a bug that caused voiceover errors across the Dashboard, SQL Projects, SQL Import Wizard, and SQL Migration extensions. |
-| Schema Compare | Fixed a bug that caused the UI to jump back to the top of the options list after selecting/deselecting any option. |
-| Schema Compare | Fixed a bug involving Schema Compare (.SCMP) file incompatibility with Database Project information causing errors when reading and using information stored in this file type. |
-| Object Explorer | Fixed a bug that caused menu items in Object Explorer not to show up for non-English languages. |
-| Table Designer | Fixed a bug that caused the History Table name not to be consistent with the current table name when working with System-Versioned Tables. |
-| Table Designer | Fixed a bug in the Primary Key settings that caused the "Allow Nulls" option to be checked, but disabled, preventing users from changing this option. |
-| Query Editor | Fixed a bug that prevented the SQLCMD in T-SQL from working correctly, giving false errors when running scripts in Azure Data Studio. |
-| Query Editor | Fixed a bug that caused user-specified zoom settings to reset to default when selecting JSON values after query that returned JSON dataset was ran. |
-| SQL Projects | Fixed a bug that caused the "Generate Script" command to not work correctly when targeting a new Azure SQL Database. |
-| Notebooks | Fixed a bug that caused pasted images to disappear from editor after going out of edit mode. |
-| Notebooks | Fixed a bug that caused a console error message to appear after opening a markdown file. |
-| Notebooks | Fixed a bug that prevented markdown cell toolbar shortcuts from working after creating a new split view cell. |
-| Notebooks | Fixed a bug that caused text cells to be erroneously created in split view mode when the notebook default text edit mode was set to "Markdown". |
+| Object Explorer | Fixed bug that caused Database Trees in server connections to not expand in the Object Explorer. |
 
 ## Azure Data Studio feedback
 
@@ -66,6 +40,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
+| [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|
 | [July 2022](#july-2022) | 1.38.0 | July 27, 2022 |N/A|
 | [June 2022](#june-2022) | 1.37.0 | June 15, 2022 |N/A|
 | [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
@@ -107,6 +82,43 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!NOTE]
 > All previous versions of Azure Data Studio are not supported.
+
+### August 2022
+
+- Release number: 1.39.0
+- Release date: August 24, 2022
+
+#### What's new in 1.39.0
+
+| New Item | Details |
+|----------|---------|
+| Deployment Wizard | Azure Data Studio now supports SQL Server 2022 (Preview) in the Deployment Wizard for both local and container installation. |
+| Object Explorer | Added Ledger icons and scripting support to Object Explorer for Ledger objects. |
+| Dashboard | Added hexadecimal values to support color detection. |
+| Query Plan Viewer | Added the ability to copy text from cells in the Properties Pane of a query plan. |
+| Query Plan Viewer | Introduced a "find node" option in plan comparison to search for nodes in either the original or added plan. |
+| Table Designer | Now supports the ability to add included columns to a nonclustered index, and the ability to create filtered indexes. |
+| SQL Projects | Publish options were added to the Publish Dialog. |
+| Query History Extension | Added double-click support for query history to either open the query or immediately execute it, based on user configuration. |
+
+#### Bug fixes in 1.39.0
+
+| New Item | Details |
+|----------|---------|
+| Dashboard | Fixed an accessibility issue that prevented users from being able to access tooltip information using the keyboard. |
+| Voiceover | Fixed a bug that caused voiceover errors across the Dashboard, SQL Projects, SQL Import Wizard, and SQL Migration extensions. |
+| Schema Compare | Fixed a bug that caused the UI to jump back to the top of the options list after selecting/deselecting any option. |
+| Schema Compare | Fixed a bug involving Schema Compare (.SCMP) file incompatibility with Database Project information causing errors when reading and using information stored in this file type. |
+| Object Explorer | Fixed a bug that caused menu items in Object Explorer not to show up for non-English languages. |
+| Table Designer | Fixed a bug that caused the History Table name not to be consistent with the current table name when working with System-Versioned Tables. |
+| Table Designer | Fixed a bug in the Primary Key settings that caused the "Allow Nulls" option to be checked, but disabled, preventing users from changing this option. |
+| Query Editor | Fixed a bug that prevented the SQLCMD in T-SQL from working correctly, giving false errors when running scripts in Azure Data Studio. |
+| Query Editor | Fixed a bug that caused user-specified zoom settings to reset to default when selecting JSON values after query that returned JSON dataset was ran. |
+| SQL Projects | Fixed a bug that caused the "Generate Script" command to not work correctly when targeting a new Azure SQL Database. |
+| Notebooks | Fixed a bug that caused pasted images to disappear from editor after going out of edit mode. |
+| Notebooks | Fixed a bug that caused a console error message to appear after opening a markdown file. |
+| Notebooks | Fixed a bug that prevented markdown cell toolbar shortcuts from working after creating a new split view cell. |
+| Notebooks | Fixed a bug that caused text cells to be erroneously created in split view mode when the notebook default text edit mode was set to "Markdown". |
 
 ### July 2022
 

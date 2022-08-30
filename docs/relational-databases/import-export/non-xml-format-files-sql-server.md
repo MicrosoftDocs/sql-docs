@@ -43,7 +43,7 @@ The following illustration illustrates the format-file fields for a sample non-X
 
 :::image type="content" source="media/non-xml-format-files-sql-server/format-file-structure.gif" alt-text="Identifies the fields of a non-xml format file.":::
 
-The **Version** and **Number of columns** fields occur one time only. Their meanings are describes in the following table.
+The **Version** and **Number of columns** fields occur one time only. Their meanings are described in the following table.
 
 |Format-file field|Description|  
 |------------------------|-----------------|  

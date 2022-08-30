@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This articles describes how to use the [bcp utility](../../tools/bcp-utility.md) to create a format file for a particular table. The format file is based on the data-type option specified (**-n**, **-c**, **-w**,or **-N**) and the table or view delimiters.
+This article describes how to use the [bcp utility](../../tools/bcp-utility.md) to create a format file for a particular table. The format file is based on the data-type option specified (**-n**, **-c**, **-w**,or **-N**) and the table or view delimiters.
 
 When you bulk import into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a format file to a flexible system for writing data files that requires little or no editing to comply with other data formats or to read data files from other software programs.
 

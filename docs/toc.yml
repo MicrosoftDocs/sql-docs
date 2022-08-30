@@ -10496,11 +10496,11 @@ items:
     - name: SQL Bindings for Azure Functions
       items: 
       - name: Overview
-      href: tools/visual-studio-code/create-azure-function-with-mssql.md
-      - From Object Explorer
-      href: tools/visual-studio-code/create-azure-function-with-mssql-OE.md
-      - From Command Palette
-      href: tools/visual-studio-code/create-azure-function-with-mssql-command-palette.md
+        href: tools/visual-studio-code/create-azure-function-with-mssql.md
+      - name: From Object Explorer Tutorial
+        href: tools/visual-studio-code/create-azure-function-with-mssql-OE.md
+      - name: From Command Palette Tutorial
+        href: tools/visual-studio-code/create-azure-function-with-mssql-command-palette.md
 - name: Tutorials
   items:
   - name: SQL Server

@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 08/30/2022
 ---
 # Replicate a database by using the link feature in SSMS - Azure SQL Managed Instance
 
@@ -29,7 +29,7 @@ To replicate your databases to SQL Managed Instance through the link, you need t
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v18.12 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Server Management Studio v18.12.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 ### Set up database recovery and backup

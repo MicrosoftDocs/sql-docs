@@ -2,18 +2,16 @@
 title: High availability
 titleSuffix: Azure SQL Database and SQL Managed Instance
 description: Learn about the Azure SQL Database and SQL Managed Instance service high availability capabilities and features
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: high-availability
-ms.custom:
-  - "sqldbrb=2"
-  - "references_regions"
-ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, emlisa
 ms.date: 04/13/2022
+ms.service: sql-db-mi
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=2"
+  - "references_regions"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

@@ -83,7 +83,7 @@ ms.author: mathoma
     > [!NOTE]  
     >  For information about the session-time property of availability replicas, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   You suspend a secondary database on the secondary replica. The secondary replica ceases to be synchronized, and its synchronization-health state is marked as NOT_HEALTHY. the secondary replica cannot become healthy again until the suspended secondary database is either resumed and resynchronized or removed from the availability group.  
+-   You suspend a secondary database on the secondary replica. The secondary replica ceases to be synchronized, and its synchronization-health state is marked as NOT_HEALTHY. The secondary replica cannot become healthy again until the suspended secondary database is either resumed and resynchronized or removed from the availability group.  
   
 -   You add a primary database the availability group. Previously synchronized secondary replicas enter the NOT_HEALTHY synchronization-health state. This state indicates that at least one database is in the NOT SYNCHRONIZING synchronization state. A given secondary replica cannot be HEALTHY again until a corresponding secondary database has been prepared on the replica, has been joined to the availability group, and has become synchronized with the new primary database.  
   

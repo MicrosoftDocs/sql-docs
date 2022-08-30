@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "skipping columns when importing"
   - "format files [SQL Server], skipping columns"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Skip a Table Column (SQL Server)
 

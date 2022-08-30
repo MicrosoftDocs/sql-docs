@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "format files [SQL Server], skipping data fields"
   - "skipping data fields when importing"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a format file to skip a data field (SQL Server)
 

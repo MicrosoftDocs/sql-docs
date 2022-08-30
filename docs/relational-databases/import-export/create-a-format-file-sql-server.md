@@ -9,7 +9,7 @@ ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "format files [SQL Server], creating"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Format File (SQL Server)
 

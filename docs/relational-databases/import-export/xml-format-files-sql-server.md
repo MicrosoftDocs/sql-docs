@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "format files [SQL Server], XML format files"
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)
 

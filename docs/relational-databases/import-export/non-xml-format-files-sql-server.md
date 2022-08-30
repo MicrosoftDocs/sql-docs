@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "non-XML format files"
   - "format files [SQL Server], non-XML format files"
   - "bulk importing [SQL Server], format files"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Non-XML format files (SQL Server)
 

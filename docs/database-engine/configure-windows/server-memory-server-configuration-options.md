@@ -177,7 +177,7 @@ Use the following methods to determine whether the SQL Server instance is using 
 
 - The current SQL Server error log will report the message, "Using locked pages in the memory manager" during server startup.
 
-- The "Memory Manager" section of the [DBCC MEMORYSTATUS](https://docs.microsoft.com/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage#memory-manager) output will show a nonzero value for the "AWE Allocated" item.
+- The Memory Manager section of the [DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage#memory-manager) output will show a nonzero value for the `AWE Allocated` item.
 
 ## Multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

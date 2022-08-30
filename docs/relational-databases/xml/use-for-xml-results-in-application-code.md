@@ -21,7 +21,7 @@ ms.author: mikeray
 ---
 # Use FOR XML Results in application code
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 By using FOR XML clauses with SQL queries, you can retrieve and even cast query results as XML data. This functionality allows you to do the following when FOR XML query results can be used in XML application code:
 

@@ -1,16 +1,14 @@
 ---
-title: How Windows Authentication for Azure SQL Managed Instance is implemented with Azure AD and Kerberos 
+title: How Windows Authentication for Azure SQL Managed Instance is implemented with Azure AD and Kerberos
 titleSuffix: Azure SQL Managed Instance
 description: Learn how Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory (Azure AD) and Kerberos.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: conceptual
 ---
 
 # How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos 

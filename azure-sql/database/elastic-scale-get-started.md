@@ -1,17 +1,14 @@
 ---
 title: Get started with Elastic Database Tools
 description: Basic explanation of the Elastic Database Tools feature of Azure SQL Database, including an easy-to-run sample app.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: "sqldbrb=1"
 ---
 # Get started with Elastic Database Tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

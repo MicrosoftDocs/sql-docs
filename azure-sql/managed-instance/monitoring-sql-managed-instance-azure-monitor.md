@@ -3,13 +3,12 @@ title: Monitoring Azure SQL Managed Instance with Azure Monitor
 description: Start here to learn how to monitor Azure SQL Managed Instance with Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.topic: conceptual
 ms.reviewer: mathoma
+ms.date: 08/03/2022
 ms.service: sql-managed-instance
 ms.subservice: performance
-ms.custom:
-  - "subject-monitoring"
-ms.date: 08/03/2022
+ms.topic: conceptual
+ms.custom: "subject-monitoring"
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 

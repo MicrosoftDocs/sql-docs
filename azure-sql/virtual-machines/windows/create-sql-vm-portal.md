@@ -1,21 +1,16 @@
 ---
 title: Provision SQL Server on Azure VM (Azure portal)
-description: This detailed guide explains available configuration options when deploying your SQL Server on Azure VM by using the Azure portal. 
-services: virtual-machines-windows
-documentationcenter: na
+description: This detailed guide explains available configuration options when deploying your SQL Server on Azure VM by using the Azure portal.
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: 1aff691f-a40a-4de2-b6a0-def1384e086e
-ms.service: virtual-machines-sql
-ms.subservice: deployment
-
-ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: infrastructure-services
-ms.date: 12/21/2021
 ms.author: pamela
 ms.reviewer: mathoma
+ms.date: 12/21/2021
+ms.service: virtual-machines-sql
+ms.subservice: deployment
+ms.topic: how-to
 ms.custom: contperf-fy22q1-portal
+documentationCenter: na
+tags: azure-resource-manager
 ---
 # Provision SQL Server on Azure VM (Azure portal)
 

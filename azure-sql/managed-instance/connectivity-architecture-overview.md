@@ -1,17 +1,15 @@
 ---
 title: Connectivity architecture
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance communication and connectivity architecture as well as how the components direct traffic to a managed instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: fasttrack-edit
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova
 ms.date: 04/29/2021
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom: fasttrack-edit
 ---
 
 # Connectivity architecture for Azure SQL Managed Instance

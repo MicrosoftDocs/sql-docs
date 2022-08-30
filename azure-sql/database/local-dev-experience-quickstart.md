@@ -1,14 +1,12 @@
 ---
 title: "Quickstart: Create a local development environment for Azure SQL Database"
 description: Create a local development environment for Azure SQL Database using this hands-on guide.
-services:
-  - "sql-database"
-ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: quickstart
 ms.date: 05/24/2022
+ms.service: sql-database
+ms.topic: quickstart
 ---
 
 # Quickstart: Create a local development environment for Azure SQL Database

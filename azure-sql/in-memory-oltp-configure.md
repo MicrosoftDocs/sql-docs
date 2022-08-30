@@ -1,15 +1,14 @@
 ---
 title: In-Memory OLTP improves SQL txn perf
 description: Adopt In-Memory OLTP to improve transactional performance in an existing database in Azure SQL Database and Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-database
-ms.custom: sqldbrb=2
-ms.subservice: performance
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, kendralittle
 ms.date: 11/07/2018
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Use In-Memory OLTP to improve your application performance in Azure SQL Database and Azure SQL Managed Instance

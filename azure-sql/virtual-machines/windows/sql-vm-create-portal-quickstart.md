@@ -1,19 +1,16 @@
 ---
-title: Create SQL Server on a Windows virtual machine in the Azure portal | Microsoft Docs
+title: Create SQL Server on a Windows virtual machine in the Azure portal
 description: This tutorial shows how to create a Windows virtual machine with SQL Server in the Azure portal.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 07/11/2019
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: infrastructure-services
-ms.date: 07/11/2019
-ms.author: pamela
-ms.reviewer: mathoma
 ms.custom: mode-ui
+documentationCenter: na
+tags: azure-resource-manager
 ---
 
 # Quickstart: Create SQL Server on a Windows virtual machine in the Azure portal

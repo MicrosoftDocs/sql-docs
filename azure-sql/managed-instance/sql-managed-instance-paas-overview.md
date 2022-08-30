@@ -1,16 +1,14 @@
 ---
 title: What is Azure SQL Managed Instance?
 description: Learn about how Azure SQL Managed Instance provides near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: overview
 author: niko-neugebauer
 ms.author: nneugebauer
 ms.reviewer: mathoma, vanto
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: overview
+ms.custom: sqldbrb=1
 ---
 
 # What is Azure SQL Managed Instance?

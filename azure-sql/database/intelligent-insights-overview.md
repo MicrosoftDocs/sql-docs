@@ -1,17 +1,14 @@
 ---
 title: Monitor database performance with Intelligent Insights
 description: Intelligent Insights in Azure SQL Database and Azure SQL Managed Instance uses built-in intelligence to continuously monitor database usage through artificial intelligence and detect disruptive events that cause poor performance.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/31/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: "sqldbrb=2"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Intelligent Insights using AI to monitor and troubleshoot database performance (preview)

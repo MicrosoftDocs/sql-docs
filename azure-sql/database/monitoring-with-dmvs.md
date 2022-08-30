@@ -2,18 +2,16 @@
 title: Monitor performance using DMVs
 titleSuffix: Azure SQL Database
 description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: 
-  - "azure-sql-split"
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/03/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom:
+  - "azure-sql-split"
+  - "sqldbrb=2"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Database performance using dynamic management views

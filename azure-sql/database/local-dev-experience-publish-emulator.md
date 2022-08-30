@@ -1,16 +1,13 @@
 ---
 title: Publish a Database Project for Azure SQL Database to the local emulator
 description: Learn how to publish a Database Project for Azure SQL Database to the local emulator.
-services:
-  - "sql-database"
-ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: how-to
 ms.date: 05/24/2022
-ms.custom:
-  - "template-how-to"
+ms.service: sql-database
+ms.topic: how-to
+ms.custom: "template-how-to"
 ---
 
 # Publish a Database Project for Azure SQL Database to the local emulator 

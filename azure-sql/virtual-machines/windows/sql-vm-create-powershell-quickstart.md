@@ -1,19 +1,18 @@
 ---
-title: Create SQL Server on a Windows virtual machine with Azure PowerShell | Microsoft Docs
+title: Create SQL Server on a Windows virtual machine with Azure PowerShell
 description: This tutorial shows how to use Azure PowerShell to create a Windows virtual machine running SQL Server 2017.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 12/21/2018
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: infrastructure-services
-ms.date: 12/21/2018
-ms.author: pamela
-ms.reviewer: mathoma
-ms.custom: devx-track-azurepowershell, mode-api
+ms.custom:
+  - devx-track-azurepowershell
+  - mode-api
+documentationCenter: na
+tags: azure-resource-manager
 ---
 
 # Quickstart: Create SQL Server on a Windows virtual machine with Azure PowerShell

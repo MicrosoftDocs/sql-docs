@@ -1,14 +1,11 @@
 ---
 title: Troubleshoot SQL Insights (preview)
 description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/29/2022
-services:
-  - "sql-database"
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

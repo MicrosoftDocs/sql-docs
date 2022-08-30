@@ -1,16 +1,15 @@
 ---
-title: Use Azure CLI to enable transparent data encryption 
+title: Use Azure CLI to enable transparent data encryption
 description: Enable transparent data encryption in Azure SQL Managed Instance using CLI and your own key.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: kr2b-contr-experiment
-ms.devlang: azurecli
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: vanto 
-ms.date: 05/18/2022 
+ms.reviewer: vanto
+ms.date: 05/18/2022
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
+ms.devlang: azurecli
 ---
 
 # Azure CLI script to enable transparent data encryption using your own key

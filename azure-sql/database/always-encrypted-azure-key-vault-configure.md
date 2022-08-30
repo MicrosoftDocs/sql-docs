@@ -1,23 +1,21 @@
 ---
 title: "Configure Always Encrypted by using Azure Key Vault"
 description: This tutorial shows you how to secure sensitive data in a database in Azure SQL Database with data encryption by using the Always Encrypted wizard in SQL Server Management Studio.
-keywords:
-  - "data encryption"
-  - "encryption key"
-  - "cloud encryption"
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/02/2020
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
+keywords:
+  - "data encryption"
+  - "encryption key"
+  - "cloud encryption"
 ---
 # Configure Always Encrypted by using Azure Key Vault 
 

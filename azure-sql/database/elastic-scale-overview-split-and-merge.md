@@ -1,18 +1,16 @@
 ---
 title: Moving data between scaled-out cloud databases
 description: Explains how to manipulate shards and move data via a self-hosted service using elastic database APIs.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
 ---
 # Moving data between scaled-out cloud databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

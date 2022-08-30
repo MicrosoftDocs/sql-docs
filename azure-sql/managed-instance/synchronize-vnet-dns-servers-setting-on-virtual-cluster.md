@@ -1,13 +1,12 @@
 ---
 title: Synchronize virtual network DNS servers setting on SQL Managed Instance virtual cluster
 description: Learn how synchronize virtual network DNS servers setting on SQL Managed Instance virtual cluster.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
 author: srdan-bozovic-msft
 ms.author: srbozovi
+ms.date: 01/17/2021
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.date: 01/17/2021 
 ms.custom: devx-track-azurepowershell
 ---
 

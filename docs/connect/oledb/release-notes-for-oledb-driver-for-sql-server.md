@@ -57,7 +57,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fix a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
+| Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fixed a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
 | Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
 
 ## 18.6.3

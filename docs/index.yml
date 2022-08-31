@@ -188,7 +188,7 @@ additionalContent:
             url: machine-learning/index.yml
           - text: SQL Server Big Data Clusters
             url: ./big-data-cluster/big-data-cluster-overview.md
-          - text: Data Virtualization with Polybase
+          - text: Data Virtualization with PolyBase
             url: relational-databases/polybase/polybase-guide.md
           - text: Microsoft Analytics Platform System
             url: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md

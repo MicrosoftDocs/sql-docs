@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "cryptography [SQL Server], system objects"
 dev_langs:
   - "TSQL"
-ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 ---
 # DENY System Object Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on system objects such as stored procedures, extended stored procedures, functions, and views.  
   

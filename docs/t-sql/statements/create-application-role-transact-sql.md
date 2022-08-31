@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "application roles [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Adds an application role to the current database.  
   

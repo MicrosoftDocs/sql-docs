@@ -63,7 +63,7 @@ Do the following steps to get the SQL Server CEIP service logon account
 
 3. Right-click on the service and choose **Properties**. 
 
-4. Select on the **Log On** tab. The Logon account is in listed in **This Account**. 
+4. Select the **Log On** tab. The Logon account is in listed in **This Account**. 
 
 ### Configure a new folder for the local audit files.    
 

@@ -1,22 +1,19 @@
 ---
-title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
+title: "Specify Field and Row Terminators (SQL Server)"
 description: Field terminators and row terminators indicate to programs that read the data file where one field or row ends and another field or row begins.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bcp utility [SQL Server], terminators"
   - "field terminators [SQL Server]"
   - "data formats [SQL Server], terminators"
   - "row terminators [SQL Server]"
   - "terminators [SQL Server]"
-ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Field and Row Terminators (SQL Server)
@@ -24,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
 > [!IMPORTANT]
->  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
+>  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  
  The **bcp** command, BULK INSERT statement, and the OPENROWSET bulk rowset provider support a variety of characters as field or row terminators and always look for the first instance of each terminator. The following table lists the supported characters for terminators.  

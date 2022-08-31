@@ -1,48 +1,49 @@
 ---
-title: "Deprecated database engine features in SQL Server 2017 | Microsoft Docs"
+title: "Deprecated database engine features in SQL Server 2017"
 titleSuffix: "SQL Server 2019"
 description: Find out about deprecated database engine features that are still available in SQL Server 2017 (14.x), but shouldn't be used in new applications.
-ms.custom: "seo-lt-2019"
-ms.date: "03/03/2021"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
-ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
-# Deprecated Database Engine Features in SQL Server 2017
+# Deprecated Database Engine features in SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.  
-  
+  This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features shouldn't be used in new applications.
+
 When a feature is marked deprecated, it means:
+
 - The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
 - We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
-- For new development work, do not use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.     
+- For new development work, don't use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.
 
-You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
+You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).
 
-The values of these counters are also available by executing the following statement:  
+The values of these counters are also available by executing the following statement:
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## Features deprecated in the next version of SQL Server
-The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
+
+The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features won't be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
 
 ### Back up and Restore
 
@@ -54,7 +55,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
+Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Levels are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 
@@ -66,7 +67,7 @@ Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-| Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 are not deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm | 253 |
+| Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 aren't deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm | 253 |
 | Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm | None |
 
 ### Remote servers
@@ -86,7 +87,7 @@ Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [
 
 ## Features deprecated in a future version of SQL Server
 
-The following SQL Server Database Engine features are supported in the next version of SQL Server. The specific version of SQL Server has not been determined.
+The following SQL Server Database Engine features are supported in the next version of SQL Server. The specific version of SQL Server hasn't been determined.
 
 ### Back up and restore
 
@@ -107,8 +108,8 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Korean_Wansung_Unicode <br /><br /> Lithuanian_Classic <br /><br /> SQL_AltDiction_CP1253_CS_AS | None. These collations exist in  SQL Server 2005 (9.x), but are not visible through fn_helpcollations. | Korean_Wansung_Unicode <br /><br /> Lithuanian_Classic <br /><br /> SQL_AltDiction_CP1253_CS_AS |
-| Hindi <br /><br /> Macedonian | These collations exist in  SQL Server 2005 (9.x) and higher, but are not visible through fn_helpcollations. Use Macedonian_FYROM_90 and Indic_General_90 instead.|Hindi <br /><br /> Macedonian |
+| Korean_Wansung_Unicode <br /><br /> Lithuanian_Classic <br /><br /> SQL_AltDiction_CP1253_CS_AS | None. These collations exist in  SQL Server 2005 (9.x), but aren't visible through fn_helpcollations. | Korean_Wansung_Unicode <br /><br /> Lithuanian_Classic <br /><br /> SQL_AltDiction_CP1253_CS_AS |
+| Hindi <br /><br /> Macedonian | These collations exist in  SQL Server 2005 (9.x) and higher, but aren't visible through fn_helpcollations. Use Macedonian_FYROM_90 and Indic_General_90 instead.|Hindi <br /><br /> Macedonian |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
 ### Data types
@@ -181,7 +182,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| database mirroring | Always On availability groups<br /><br /> If your edition of SQL Server does not support Always On availability groups, use log shipping. | DATABASE_MIRRORING |
+| database mirroring | Always On availability groups<br /><br /> If your edition of SQL Server doesn't support Always On availability groups, use log shipping. | DATABASE_MIRRORING |
 
 ### Index options
 
@@ -221,7 +222,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| DB-Library<br /><br />Embedded SQL for C|Although the Database Engine still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the SQL Server Database Engine drops support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. SQL Server 2019 (15.x) does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from SQL Server version 6.5, SQL Server 7.0, or SQL Server 2000 (8.x). | None |
+| DB-Library<br /><br />Embedded SQL for C|Although the Database Engine still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it doesn't include the files or documentation required to do programming work on applications that use these APIs. A future version of the SQL Server Database Engine drops support for connections from DB-Library or Embedded SQL applications. Don't use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. SQL Server 2019 (15.x) doesn't include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from SQL Server version 6.5, SQL Server 7.0, or SQL Server 2000 (8.x). | None |
 
 ### Security
 
@@ -240,7 +241,7 @@ The following SQL Server Database Engine features are supported in the next vers
 | sp_defaultdb<br /><br /> sp_defaultlanguage | ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage |
 | sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin |
 | USER_ID|DATABASE_PRINCIPAL_ID | USER_ID |
-| sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in SQL Server 2008. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx). | sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission |
+| sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output doesn't reflect changes to the permissions hierarchy implemented in SQL Server 2008. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx). | sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission |
 | GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY, and REVOKE-specific permissions.|ALL Permission |
 | PERMISSIONS intrinsic function | Query sys.fn_my_permissions instead. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
@@ -283,7 +284,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| sysaltfiles<br /><br />syscacheobjects<br /><br />syscolumns<br /><br />syscomments<br /><br />sysconfigures<br /><br />sysconstraints<br /><br />syscurconfigs<br /><br />sysdatabases<br /><br />sysdepends<br /><br />sysdevices<br /><br />sysfilegroups<br /><br />sysfiles<br /><br />sysforeignkeys<br /><br />sysfulltextcatalogs<br /><br />sysindexes<br /><br />sysindexkeys<br /><br />syslockinfo<br /><br />syslogins<br /><br />sysmembers<br /><br />sysmessages<br /><br />sysobjects<br /><br />sysoledbusers<br /><br />sysopentapes<br /><br />sysperfinfo<br /><br />syspermissions<br /><br />sysprocesses<br /><br />sysprotects<br /><br />sysreferences<br /><br />sysremotelogins<br /><br />sysservers<br /><br />systypes<br /><br />sysusers|Compatibility views. For more information, see [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br />**Important:** The compatibility views do not expose metadata for features that were introduced in  SQL Server 2005 (9.x). We recommend that you upgrade your applications to use catalog views. For more information, see [Catalog Views &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md). | sysaltfiles<br /><br />syscacheobjects<br /><br />syscolumns<br /><br />syscomments<br /><br />sysconfigures<br /><br />sysconstraints<br /><br />syscurconfigs<br /><br />sysdatabases<br /><br />sysdepends<br /><br />sysdevices<br /><br />sysfilegroups<br /><br />sysfiles<br /><br />sysforeignkeys<br /><br />sysfulltextcatalogs<br /><br />sysindexes<br /><br />sysindexkeys<br /><br />syslockinfo<br /><br />syslogins<br /><br />sysmembers<br /><br />sysmessages<br /><br />sysobjects<br /><br />sysoledbusers<br /><br />sysopentapes<br /><br />sysperfinfo<br /><br />syspermissions<br /><br />sysprocesses<br /><br />sysprotects<br /><br />sysreferences<br /><br />sysremotelogins<br /><br />sysservers<br /><br />systypes<br /><br />sysusers |
+| sysaltfiles<br /><br />syscacheobjects<br /><br />syscolumns<br /><br />syscomments<br /><br />sysconfigures<br /><br />sysconstraints<br /><br />syscurconfigs<br /><br />sysdatabases<br /><br />sysdepends<br /><br />sysdevices<br /><br />sysfilegroups<br /><br />sysfiles<br /><br />sysforeignkeys<br /><br />sysfulltextcatalogs<br /><br />sysindexes<br /><br />sysindexkeys<br /><br />syslockinfo<br /><br />syslogins<br /><br />sysmembers<br /><br />sysmessages<br /><br />sysobjects<br /><br />sysoledbusers<br /><br />sysopentapes<br /><br />sysperfinfo<br /><br />syspermissions<br /><br />sysprocesses<br /><br />sysprotects<br /><br />sysreferences<br /><br />sysremotelogins<br /><br />sysservers<br /><br />systypes<br /><br />sysusers|Compatibility views. For more information, see [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br />**Important:** The compatibility views don't expose metadata for features that were introduced in  SQL Server 2005 (9.x). We recommend that you upgrade your applications to use catalog views. For more information, see [Catalog Views &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md). | sysaltfiles<br /><br />syscacheobjects<br /><br />syscolumns<br /><br />syscomments<br /><br />sysconfigures<br /><br />sysconstraints<br /><br />syscurconfigs<br /><br />sysdatabases<br /><br />sysdepends<br /><br />sysdevices<br /><br />sysfilegroups<br /><br />sysfiles<br /><br />sysforeignkeys<br /><br />sysfulltextcatalogs<br /><br />sysindexes<br /><br />sysindexkeys<br /><br />syslockinfo<br /><br />syslogins<br /><br />sysmembers<br /><br />sysmessages<br /><br />sysobjects<br /><br />sysoledbusers<br /><br />sysopentapes<br /><br />sysperfinfo<br /><br />syspermissions<br /><br />sysprocesses<br /><br />sysprotects<br /><br />sysreferences<br /><br />sysremotelogins<br /><br />sysservers<br /><br />systypes<br /><br />sysusers |
 | sys.numbered_procedures<br /><br />sys.numbered_procedure_parameters | None | numbered_procedures<br /><br />numbered_procedure_parameters |
 
 ### SQL Trace stored procedures, functions, and catalog views
@@ -302,7 +303,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| The use of the vardecimal storage format. | Vardecimal storage format is deprecated. SQL Server 2019 (15.x) data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format. | Vardecimal storage format |
+| The use of the vardecimal storage format. | Vardecimal storage format is deprecated. SQL Server 2019 (15.x) data compression, compresses decimal values, and other data types. We recommend that you use data compression instead of the vardecimal storage format. | Vardecimal storage format |
 | Use of the sp_db_vardecimal_storage_format procedure.|Vardecimal storage format is deprecated. SQL Server 2019 (15.x) data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format. | sp_db_vardecimal_storage_format |
 | Use of the sp_estimated_rowsize_reduction_for_vardecimal procedure.|Use data compression and the sp_estimate_data_compression_savings procedure instead. |sp_estimated_rowsize_reduction_for_vardecimal |
 
@@ -317,18 +318,18 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| :: function-calling sequence | Replaced by SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
+| `::` function-calling sequence | Replaced by SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
 | Three-part and four-part column references. | Two-part names are the standard-compliant behavior.|More than two-part column name |
 | A string enclosed in quotation marks used as a column alias for an expression in a SELECT list:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | String literals as column aliases |
-| Numbered procedures | None. Do not use. | ProcNums |
+| Numbered procedures | None. Don't use. | ProcNums |
 | *table_name.index_name* syntax in DROP INDEX|*index_name* ON *table_name* syntax in DROP INDEX.|DROP INDEX with two-part name |
 | Not ending  Transact-SQL  statements with a semicolon.|End  Transact-SQL  statements with a semicolon ( ; ). | None |
 | GROUP BY ALL|Use custom case-by-case solution with UNION or derived table. | GROUP BY ALL |
 | ROWGUIDCOL as a column name in DML statements.|Use $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL as a column name in DML statements.|Use $identity.|IDENTITYCOL |
 | Use of #, ## as temporary table and temporary stored procedure names. | Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures
-| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers. | Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. | '\@' and names that start with '\@\@' as  Transact-SQL identifiers |
-| Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value. | DEFAULT keyword as a default value |
+| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers. | Don't use \@ or \@\@ or names that begin with \@\@ as identifiers. | '\@' and names that start with '\@\@' as  Transact-SQL identifiers |
+| Use of DEFAULT keyword as default value.|Don't use the word DEFAULT as a default value. | DEFAULT keyword as a default value |
 | Use of a space as a separator between table hints.|Use a comma to separate table hints. | Multiple table hints without comma |
 | The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode | Use COUNT_BIG (\*). | Index view selects list without COUNT_BIG(\*) |
 | The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints |
@@ -358,8 +359,9 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | Inline XDR Schema Generation | The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. | XMLDATA |
 
-> [!NOTE]
-> The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
-  
-## See Also  
- [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  
+> [!NOTE]  
+> The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).
+
+## See also
+
+- [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)

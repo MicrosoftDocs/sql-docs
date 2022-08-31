@@ -11,7 +11,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Modify user-defined functions
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can modify user-defined functions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying user-defined functions as described below won't change the functions' permissions, nor will it affect any dependent functions, stored procedures, or triggers.
 
@@ -31,9 +31,9 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-1. Select on the plus sign next to the database that contains the function you wish to modify.
+1. Select the plus sign next to the database that contains the function you wish to modify.
 
-1. Select on the plus sign next to the **Programmability** folder.
+1. Select the plus sign next to the **Programmability** folder.
 
 1. Select the plus sign next to the folder that contains the function you wish to modify:
 

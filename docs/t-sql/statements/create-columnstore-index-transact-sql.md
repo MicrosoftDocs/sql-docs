@@ -1,8 +1,9 @@
 ---
-description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
-ms.custom: ""
-ms.date: 06/08/2022
+description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
+author: markingmyname
+ms.author: maghan
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -23,8 +24,6 @@ helpviewer_keywords:
   - "columnstore index, creating"
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -84,7 +83,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics, Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, SQL Server 2022 (16.0) and later
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -124,11 +123,15 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 
 #### ORDER
 
-*Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]*
+*Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later*
 
-You can create an ordered, clustered columnstore index on columns of any data type, except for string columns. Use the `column_store_order_ordinal` column in `sys.index_columns` to determine the order of the column or columns for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). To convert to an ordered, clustered columnstore index, the existing index must be a clustered columnstore index.
+An ordered clustered columnstore index can be created on columns of any data type except for string columns. Use the `column_store_order_ordinal` column in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-#### WITH options
+To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index.
+
+LOB data types (the (max) length data types) cannot be the key of an ordered clustered columnstore index.
+
+### WITH options
 
 ##### DROP_EXISTING = [OFF] | ON
 
@@ -321,7 +324,7 @@ You can create a columnstore index on a temporary table. When the table is dropp
 ## Filtered indexes  
 
 A *filtered index* is an optimized, nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
-  
+
 ### Required SET options for filtered indexes  
 
 The SET options in the required value column are required whenever any of the following conditions occur:  
@@ -711,14 +714,40 @@ CREATE TABLE xDimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey
 WITH ( DISTRIBUTION = HASH(ProductKey),  
     CLUSTERED INDEX (ProductKey) )  
 AS SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey FROM DimProduct;  
-  
---Change the existing clustered index   
---to a clustered columnstore index with the same name.  
---Look up the name of the index before running this statement.  
-CREATE CLUSTERED COLUMNSTORE INDEX [<index_name>]
+```
+
+Look up the name of the clustered index automatically created for the new table in the system metadata, using `sys.indexes`. For example:
+
+```sql
+SELECT i.object_id, i.name, t.object_id, t.name, i.type_desc
+FROM sys.indexes i   
+INNER JOIN sys.tables t ON i.object_id = t.object_id
+WHERE i.type_desc = 'CLUSTERED'
+AND t.name = 'xdimProduct';
+```
+
+Now, you can choose to:
+
+1. Drop the existing clustered columnstore index with an automatically-created name, then create a new clustered columnstore index with a user-defined name. 
+2. Drop and replace the existing index with a clustered columnstore index, keeping the same system-generated name, such as `ClusteredIndex_1bd8af8797f7453182903cc68df48541`.
+
+For example:
+
+```sql
+--1. DROP the existing clustered columnstore index with an automatically-created name, for example:
+DROP INDEX ClusteredIndex_1bd8af8797f7453182903cc68df48541 on xdimProduct;
+GO
+CREATE CLUSTERED COLUMNSTORE INDEX [<new_index_name>]
+ON xdimProduct;
+GO
+
+--Or, 
+--2. Change the existing clustered index to a clustered columnstore index with the same name.  
+CREATE CLUSTERED COLUMNSTORE INDEX [ClusteredIndex_1bd8af8797f7453182903cc68df48541]
 ON xdimProduct   
-WITH ( DROP_EXISTING = ON );  
-```  
+WITH ( DROP_EXISTING = ON );
+GO
+```
   
 ### B. Rebuild a clustered columnstore index  
 

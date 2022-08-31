@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Column names with the path specified as data()
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 If the path specified as column name is `data()`, the value is treated as an atomic value in the generated XML. A space character is added to the XML if the next item in the serialization is also an atomic value. This is useful when you're creating list typed element and attribute values. The following query retrieves the product model ID, name, and list of products in that product model.
 

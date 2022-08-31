@@ -1,16 +1,16 @@
 ---
-title: T-SQL differences between SQL Server & Azure SQL Managed Instance 
-description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Managed Instance and SQL Server. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.devlang: 
-ms.topic: reference
+title: T-SQL differences between SQL Server & Azure SQL Managed Instance
+description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Managed Instance and SQL Server.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 04/19/2022
-ms.custom: seoapril2019, sqldbrb=1
+ms.date: 08/15/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - seoapril2019
+  - sqldbrb=1
 ---
 
 # T-SQL differences between SQL Server & Azure SQL Managed Instance
@@ -311,7 +311,7 @@ The following table types aren't supported:
 
 - [FILESTREAM](/sql/relational-databases/blob/filestream-sql-server)
 - [FILETABLE](/sql/relational-databases/blob/filetables-sql-server)
-- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except Polybase, in preview)
+- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except PolyBase)
 - [MEMORY_OPTIMIZED](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) (not supported only in General Purpose tier)
 
 For information about how to create and alter tables, see [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) and [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).
@@ -404,8 +404,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 
 ### PolyBase
 
-Work on enabling Polybase support in SQL Managed Instance is [in progress](https://feedback.azure.com/d365community/idea/ccc44856-3425-ec11-b6e6-000d3a4f0f84). In the meantime, as a workaround you can use linked servers to [a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/) or SQL Server to query data from files stored in Azure Data Lake or Azure Storage.   
-For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
+[Data virtualization with Azure SQL Managed Instance](data-virtualization-overview.md) enables you to execute Transact-SQL (T-SQL) queries against data from files stored in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. Parquet and delimited text (CSV) file formats are directly supported. The JSON file format is indirectly supported by specifying the CSV file format where queries return every document as a separate row. It's possible to parse rows further using `JSON_VALUE` and `OPENJSON`. For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
 
 ### Replication
 
@@ -487,7 +486,7 @@ Service broker is enabled by default and cannot be disabled. The following ALTER
   - `scan for startup procs`
 - The following [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) options are ignored and have no effect: 
   - `Ole Automation Procedures`
-- `sp_execute_external_scripts` isn't supported. See [sp_execute_external_scripts](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql#examples).
+- `sp_execute_external_scripts` is only supported for [Machine Learning Services for SQL MI](machine-learning-services-overview.md), otherwise **sp_execute_external_scripts** is not supported for SQL Managed Instance. See [sp_execute_external_scripts](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql#examples).
 - `xp_cmdshell` isn't supported. See [xp_cmdshell](/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql).
 - `Extended stored procedures` aren't supported, and this includes `sp_addextendedproc` and `sp_dropextendedproc`. This functionality won't be supported because it's on a deprecation path for SQL Server. For more information, see [Extended Stored Procedures](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming).
 - `sp_attach_db`, `sp_attach_single_file_db`, and `sp_detach_db` aren't supported. See [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql), [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql), and [sp_detach_db](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql).

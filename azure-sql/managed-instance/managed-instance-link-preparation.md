@@ -1,17 +1,14 @@
 ---
 title: Prepare environment for Managed Instance link
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: 
-ms.devlang: 
-ms.topic: guide
+description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 08/30/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: guide
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -56,7 +53,7 @@ Ensure that your SQL Server version has the appropriate servicing update install
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
@@ -85,15 +82,16 @@ To confirm that the Always On availability groups feature is enabled, run the fo
 
 ```sql
 -- Run on SQL Server
--- Is Always On enabled on this SQL Server instance?
-declare @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
-select
-    @IsHadrEnabled as IsHadrEnabled,
-    case @IsHadrEnabled
-        when 0 then 'The Always On availability groups is disabled.'
-        when 1 then 'The Always On availability groups is enabled.'
-        else 'Unknown status.'
-    end as 'HadrStatus'
+-- Is Always On enabled on this SQL Server
+DECLARE @IsHadrEnabled sql_variant = (select SERVERPROPERTY('IsHadrEnabled'))
+SELECT
+    @IsHadrEnabled as 'Is HADR enabled',
+    CASE @IsHadrEnabled
+        WHEN 0 THEN 'Always On availability groups is DISABLED.'
+        WHEN 1 THEN 'Always On availability groups is ENABLED.'
+        ELSE 'Unknown status.'
+    END
+	as 'HADR status'
 ```
 
 The above query will display if Always On availability group is enabled, or not, on your SQL Server.
@@ -243,7 +241,6 @@ If the response is unsuccessful, verify the following network settings:
 - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
 - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
 
-
 ### Test the connection from SQL Managed Instance to SQL Server
 
 To check that SQL Managed Instance can reach SQL Server, you first create a test endpoint. Then you use the SQL Agent to run a PowerShell script with the `tnc` command pinging SQL Server on port 5022 from the managed instance.
@@ -280,63 +277,111 @@ tnc localhost -port 5022
 A successful test shows `TcpTestSucceeded : True`. You can then proceed to creating a SQL Agent job on the managed instance to try testing the SQL Server test endpoint on port 5022 from the managed instance.
 
 Next, create a SQL Agent job on the managed instance called `NetHelper` by running the following T-SQL script on the managed instance. Replace:
-- `SQL_SERVER_ADDRESS` with the IP address of SQL Server that can be accessed from managed instance.
+- `<SQL_SERVER_IP_ADDRESS>` with the IP address of SQL Server that can be accessed from managed instance.
 
 ```sql
 -- Run on managed instance
--- SQL_SERVER_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
-DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_ADDRESS>'
+-- SQL_SERVER_IP_ADDRESS should be an IP address that could be accessed from the SQL Managed Instance host machine.
+DECLARE @SQLServerIpAddress NVARCHAR(MAX) = '<SQL_SERVER_IP_ADDRESS>' -- insert your SQL Server IP address in here
 DECLARE @tncCommand NVARCHAR(MAX) = 'tnc ' + @SQLServerIpAddress + ' -port 5022 -InformationLevel Quiet'
 DECLARE @jobId BINARY(16)
 
-EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper', 
-    @enabled=1, 
-    @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.', 
-    @category_name=N'[Uncategorized (Local)]', 
+IF EXISTS(select * from msdb.dbo.sysjobs where name = 'NetHelper') THROW 70000, 'Agent job NetHelper already exists. Please rename the job, or drop the existing job before creating it again.', 1
+-- To delete NetHelper job run: EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'
+
+EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
+    @enabled=1,
+    @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.',
+    @category_name=N'[Uncategorized (Local)]',
     @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
 
-EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'tnc step', 
-    @step_id=1, 
-    @os_run_priority=0, @subsystem=N'PowerShell', 
-    @command = @tncCommand, 
-    @database_name=N'master', 
+EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
+    @step_id=1,
+    @os_run_priority=0, @subsystem=N'PowerShell',
+    @command = @tncCommand,
+    @database_name=N'master',
     @flags=40
 
 EXEC msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
 
 EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
 
-EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
 ```
 
-Run the SQL Agent job by running the following T-SQL command on the managed instance: 
+>[!TIP]
+> In case that you need to modify the IP address of your SQL Server for the connectivity probe from managed instance, delete NetHelper job by running `EXEC msdb.dbo.sp_delete_job @job_name=N'NetHelper'`, and re-create NetHelper job using the script above.
+
+Then, create a stored procedure `ExecuteNetHelper` that will help run the job and obtain results from the network probe. Run the following T-SQL script on managed instance:
 
 ```sql
 -- Run on managed instance
-EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
+IF EXISTS(SELECT * FROM sys.objects WHERE name = 'ExecuteNetHelper') 
+	THROW 70001, 'Stored procedure ExecuteNetHelper already exists. Rename or drop the existing procedure before creating it again.', 1
+GO
+CREATE PROCEDURE ExecuteNetHelper AS
+-- To delete the procedure run: DROP PROCEDURE ExecuteNetHelper
+BEGIN
+  -- Start the job.
+  DECLARE @NetHelperstartTimeUtc datetime = getutcdate()
+  DECLARE @stop_exec_date datetime = null
+  EXEC msdb.dbo.sp_start_job @job_name = N'NetHelper'
+  
+  -- Wait for job to complete and then see the outcome.
+  WHILE (@stop_exec_date is null)
+  BEGIN
+  
+    -- Wait and see if the job has completed.
+    WAITFOR DELAY '00:00:01'
+    SELECT @stop_exec_date = sja.stop_execution_date
+    FROM msdb.dbo.sysjobs sj JOIN msdb.dbo.sysjobactivity sja ON sj.job_id = sja.job_id
+    WHERE sj.name = 'NetHelper'
+  
+    -- If job has completed, get the outcome of the network test.
+    IF (@stop_exec_date is not null)
+    BEGIN
+      SELECT 
+        sj.name JobName, sjsl.date_modified as 'Date executed', sjs.step_name as 'Step executed', sjsl.log as 'Connectivity status'
+      FROM
+        msdb.dbo.sysjobs sj
+        LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs ON sj.job_id = sjs.job_id
+        LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl ON sjs.step_uid = sjsl.step_uid
+      WHERE
+        sj.name = 'NetHelper'
+    END
+  
+    -- In case of operation timeout (90 seconds), print timeout message.
+    IF (datediff(second, @NetHelperstartTimeUtc, getutcdate()) > 90)
+    BEGIN
+  	SELECT 'NetHelper timed out during the network check. Please investigate SQL Agent logs for more information.'
+      BREAK;
+    END
+  END
+END
 ```
 
-Run the following query on the managed instance to show the log of the SQL Agent job: 
+Run the following query on managed instance to execute the stored procedure that will execute the NetHelper agent job and show the resulting log:
 
 ```sql
 -- Run on managed instance
-SELECT 
-    sj.name JobName, sjs.step_id, sjs.step_name, sjsl.log, sjsl.date_modified
-FROM
-    msdb.dbo.sysjobs sj
-    LEFT OUTER JOIN msdb.dbo.sysjobsteps sjs
-    ON sj.job_id = sjs.job_id
-    LEFT OUTER JOIN msdb.dbo.sysjobstepslogs sjsl
-    ON sjs.step_uid = sjsl.step_uid
-WHERE
-    sj.name = 'NetHelper'
+EXEC ExecuteNetHelper
+
 ```
 
-If the connection is successful, the log will show `True`. If the connection is unsuccessful, the log will show `False`. 
+If the connection was successful, the log will show `True`. If the connection was unsuccessful, the log will show `False`. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-output-tnchelper.png" alt-text="Screenshot that shows the expected output of the NetHelper SQL Agent job.":::
 
-Finally, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
+If the connection was unsuccessful, verify the following items: 
+
+- The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
+- An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
+- If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
+- SQL Server is running.
+- There exists test endpoint on SQL Server.
+
+After resolving issues, rerun NetHelper network probe again by running `EXEC ExecuteNetHelper` on managed instance.
+
+Finally, after the network test has been successful, drop the test endpoint and certificate on SQL Server by using the following T-SQL commands: 
 
 ```sql
 -- Run on SQL Server
@@ -345,13 +390,6 @@ GO
 DROP CERTIFICATE TEST_CERT
 GO
 ```
-
-If the connection is unsuccessful, verify the following items: 
-
-- The firewall on the host SQL Server instance allows inbound and outbound communication on port 5022. 
-- An NSG rule for the virtual network that hosts SQL Managed Instance allows communication on port 5022. 
-- If your SQL Server instance is on an Azure VM, an NSG rule allows communication on port 5022 on the virtual network that hosts the VM.
-- SQL Server is running. 
 
 > [!CAUTION]
 > Proceed with the next steps only if you've validated network connectivity between your source and target environments. Otherwise, troubleshoot network connectivity issues before proceeding.
@@ -362,7 +400,7 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 

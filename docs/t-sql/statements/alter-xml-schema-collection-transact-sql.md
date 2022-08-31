@@ -1,8 +1,8 @@
 ---
 title: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
 description: ALTER XML SCHEMA COLLECTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "multiple schema namespaces"
 dev_langs:
   - "TSQL"
-ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

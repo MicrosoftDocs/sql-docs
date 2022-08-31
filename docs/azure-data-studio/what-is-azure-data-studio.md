@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - sqlfreshmay19
   - intro-overview
-ms.date: "10/20/2020"
+ms.date: 7/11/2022
 ---
 
 # What is Azure Data Studio?
@@ -161,6 +161,10 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Import\Export DACPAC|Yes|Yes|
 |SQL Projects|Preview||
 |Schema Compare|Yes||
+
+## SQL Tools Service
+
+Azure Data Studio uses the [SqlToolsService](https://github.com/microsoft/sqltoolsservice) as the SQL API layer to the application.  SQL Tools Service is .NET-based and is open source under the MIT license. For SQL connectivity, SQL Tools Service uses [Microsoft.Data.SqlClient](https://github.com/dotnet/SqlClient) as the SQL driver.
 
 ## Next steps
 

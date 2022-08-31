@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "35250 (Database Engine error)"
 ms.assetid: 
 author: pijocoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_35250
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,10 +92,11 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 **Multiple processes listening on the same port**
 
-- If **telnet**/**Test-NetConnection** connection works using ServerName but fails using IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is configured to listen on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections. To find the owning process:
+- If **telnet**/**Test-NetConnection** connection works using ServerName but fails using IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is configured to listen on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections. To find the owning process of port 5022 for example, run this command:
 
   ```powershell
-  Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
+  $port = "5022"
+  Get-Process -Id (Get-NetTCPConnection -LocalPort $port).OwningProcess |Select-Object Name, ProductVersion, Path, Id
   ```
 
 **Blocked endpoint (firewall, anti-virus)**
@@ -118,10 +119,11 @@ This message occurs when attempting to join secondary databases to an Always On 
   Get-NetTCPConnection -LocalPort <port_number>
   ```
 
-- You can also find the port-owning process: run a command like this (e.g. using port 1433)
+- You can also find the port-owning process: run a command like this (e.g. using port 5022)
 
   ```powershell
-  Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
+  $port = "5022"
+  Get-Process -Id (Get-NetTCPConnection -LocalPort $port).OwningProcess |Select-Object Name, ProductVersion, Path, Id
   ```
 
 #### 3. Check for errors in the system

@@ -1,13 +1,13 @@
 ---
 title: Create and utilize Azure Active Directory server logins
 description: This article guides you through creating and utilizing Azure Active Directory logins in the virtual master database of Azure SQL
-ms.service: sql-db-mi
-ms.subservice: security
-ms.topic: tutorial
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 03/14/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: tutorial
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -103,7 +103,7 @@ In this tutorial, you learn how to:
 
 ## Grant server-level roles to Azure AD logins
 
-You can add logins to the [built-in server-level roles](security-server-roles.md#built-in-server-level-roles), such as the **##MS_DefinitionReader##**, **##MS_ServerStateReader##**, or **##MS_ServerStateManager##** role.
+You can add logins to the [fixed server-level roles](security-server-roles.md#fixed-server-level-roles), such as the **##MS_DefinitionReader##**, **##MS_ServerStateReader##**, or **##MS_ServerStateManager##** role.
 
 > [!NOTE]
 > The server-level roles mentioned here are not supported for Azure AD groups.

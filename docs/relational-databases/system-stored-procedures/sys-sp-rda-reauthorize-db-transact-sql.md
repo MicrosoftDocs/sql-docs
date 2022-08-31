@@ -2,9 +2,9 @@
 title: "sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs"
 description: Learn how to use sys.sp_rda_reauthorize_db to restore the authenticated connection between a local Stretch-enabled database and a remote database.
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
@@ -22,6 +22,9 @@ ms.author: maghan
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restores the authenticated connection between a local database enabled for Stretch and the remote database.  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

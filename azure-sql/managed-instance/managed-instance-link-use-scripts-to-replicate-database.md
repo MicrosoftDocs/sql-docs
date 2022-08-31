@@ -2,15 +2,13 @@
 title: Replicate a database with the link via T-SQL & PowerShell scripts
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to use a Managed Instance link with T-SQL and PowerShell scripts to replicate a database from SQL Server to Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.devlang: 
-ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 06/11/2022
+ms.date: 07/04/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: guide
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance
@@ -68,7 +66,7 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 | SQL Managed Instance name | Short, single-word SQL Managed Instance name. For example: *managedinstance1*. | See the name of your managed instance in the Azure portal. |
 | SQL Managed Instance FQDN | Fully qualified domain name (FQDN) of your SQL Managed Instance. For example: *managedinstance1.6d710bcf372b.database.windows.net*. | See the host name on the SQL Managed Instance overview page in the Azure portal. |
 | Resolvable domain name | DNS name that can be resolved to an IP address. For example, running `nslookup sqlserver1.domain.com` should return an IP address such as 10.0.0.1. | Run `nslookup` command from the command prompt. |
-| SQL Server IP | IP address of your SQL Server. In case of multiple IPs on SQL Server, choose IP address that is accessible from Azure. | Run `ifconfig` command from the command prompt of host OS running the SQL Server. |
+| SQL Server IP | IP address of your SQL Server. In case of multiple IPs on SQL Server, choose IP address that is accessible from Azure. | Run `ipconfig` command from the command prompt of host OS running the SQL Server. |
 
 ## Establish trust between instances
 
@@ -114,6 +112,9 @@ Then, generate an authentication certificate on SQL Server. In the script below 
 - `@cert_expiry_date` with the desired certificate expiration date (future date).
 
 Record this date and set a self-reminder to rotate (update) SQL server certificate before its expiry to ensure continuous operation of the link.
+
+> [!IMPORTANT]
+> It is strongly recommended to use the auto-generated certificate name from this script. While customizing your own certificate name on SQL Server is allowed, this name should not contain any `\` characters.
 
 ```sql
 -- Create the SQL Server certificate for the instance link
@@ -253,7 +254,7 @@ Next, import the obtained public key of managed instance security certificate to
 - `<PublicKey>` with the PublicKey value obtained in the previous step (from Azure Cloud Shell, starting with `0x`). You don't need to use quotation marks.
 
 > [!IMPORTANT]
-> The name of the certificate must be the SQL Managed Instance FQDN and should not be modified.
+> The name of the certificate must be SQL Managed Instance FQDN and should not be modified. The link will not be operational if using a custom name.
 
 ```sql
 -- Run on SQL Server
@@ -315,7 +316,7 @@ SELECT * FROM sys.certificates
 
 ## Create a mirroring endpoint on SQL Server
 
-If you don't have an existing availability group or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with earlier generated SQL Server certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
+If you don't have an existing availability group, or a mirroring endpoint on SQL Server, the next step is to create a mirroring endpoint on SQL Server and secure it with earlier generated SQL Server certificate. If you do have an existing availability group or mirroring endpoint, go straight to the next section, [Alter an existing endpoint](#alter-an-existing-endpoint).
 
 To verify that you don't have an existing database mirroring endpoint created, use the following script:
 
@@ -531,9 +532,9 @@ Alternatively, you can use SSMS Object Explorer to find availability groups and 
 
 ## Create a link
 
-The final step of the setup process is to create the link. At this time, you accomplish this by making a REST API call. 
+The final step of the setup process is to create the link. 
 
-You can invoke direct API calls to Azure by using various API clients. For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace:
+For simplicity of the process, sign in to the Azure portal and run the following PowerShell script from Azure Cloud Shell. Replace:
 - `<ManagedInstanceName>` with the short name of your managed instance. 
 - `<AGName>` with the name of the availability group created on SQL Server. 
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 

@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "fasttrack-edit"
+ms.custom: fasttrack-edit
 f1_keywords:
   - "ALTER MASTER KEY"
   - "ALTER_MASTER_KEY_TSQL"
@@ -25,7 +25,6 @@ helpviewer_keywords:
   - "DROP ENCRYPTION BY SERVICE MASTER KEY phrase"
 dev_langs:
   - "TSQL"
-ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER MASTER KEY (Transact-SQL)

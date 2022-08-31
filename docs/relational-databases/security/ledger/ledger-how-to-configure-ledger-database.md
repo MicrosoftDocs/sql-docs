@@ -47,7 +47,7 @@ This article provides information on configuring a [ledger database](ledger-over
 
 ## Enable ledger database using T-SQL
 
-Open a query editor like [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)and connect to your logical SQL Server. The below example creates a General Purpose database. The `WITH LEDGER=ON` clause will create the ledger database.
+Open a query editor like [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)and connect to your logical SQL Server. The below example creates a General Purpose database. The `WITH LEDGER=ON` clause will create the ledger database.
 
 ```sql
 CREATE DATABASE Database01
@@ -111,7 +111,7 @@ This article provides information on creating a [ledger database](ledger-overvie
 ## Prerequisites
 
 - SQL Server 2022
-- [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)
 
 ## Create a ledger database using T-SQL
 
@@ -122,7 +122,7 @@ This article provides information on creating a [ledger database](ledger-overvie
    CREATE DATABASE MyLedgerDB  WITH LEDGER = ON;
    ```
 
-For more information, see [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql).
+For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).
 
 ::: zone-end
 

@@ -10,13 +10,16 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.date: 07/25/2022
 monikerRange: "= azuresqldb-current"
+zone_pivot_groups: as1-azuresql-sql
 ---
 
 # Enable automatic digest storage
 
-[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 and Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+
+::: zone pivot="as1-azure-sql-database"
 
 In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
@@ -79,11 +82,40 @@ az sql db ledger-digest-uploads enable \
 ```
 
 ---
+::: zone-end
+
+::: zone pivot="as1-sql-server"
+
+In this article, we'll describe how you can configure automatic generation and storage of database digests through using T-SQL in **SQL Server 2022**. For information on configuring automatic generation and storage of database digests in Azure SQL Database, use the switch at the top of this page to toggle over to Azure SQL Database.
+
+## Prerequisites
+
+- SQL Server 2022
+- [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)
+- An Azure Blob Storage
+- An Azure Storage container
+- A [SQL Server credential](../authentication-access/credentials-database-engine.md). For more information, see [Digest Management](ledger-digest-management.md).  
+
+## Enable database digest uploads using T-SQL
+
+To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account. To disable uploading ledger digests, set the option value to `OFF`. The default is `OFF`.
+
+1. Sign into your SQL Server 2022 instance using SSMS or Azure Data Studio.
+1. Configure automatic generation and storage of database digests using the following T-SQL statement:
+
+   ```sql
+   ALTER DATABASE SCOPED CONFIGURATION
+    SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net';
+   ```
+
+For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).
+
+::: zone-end
 
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
 - [Digest management](ledger-digest-management.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)
-- [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
-- [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)
+- [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
+- [sp_verify_database_ledger_from_digest_storage](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)

@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "SET XACT_ABORT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET XACT_ABORT (Transact-SQL)

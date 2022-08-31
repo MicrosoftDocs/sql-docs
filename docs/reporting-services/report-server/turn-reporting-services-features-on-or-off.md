@@ -62,7 +62,7 @@ ms.author: maggies
   
     -   To turn off the Report Server Web service, set **WebServiceAndHTTPAccessEnabled** to **False**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="Sched"></a> Scheduled Events and Delivery  
   

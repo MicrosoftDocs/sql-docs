@@ -2,15 +2,14 @@
 title: Playbook for addressing common security requirements
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article provides common security requirements and best practices in Azure SQL Database and Azure SQL Managed Instance.
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=2"
 author: VanMSFT
 ms.author: vanto
-ms.topic: article
-ms.date: 04/27/2022
 ms.reviewer: wiassaf, mathoma
+ms.date: 04/27/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: article
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -645,7 +644,7 @@ Advanced threat protection enables you to detect and respond to potential threat
 
 - Configure [Microsoft Defender for SQL](azure-defender-for-sql.md) for a specific server or a managed instance. You can also configure Microsoft Defender for SQL for all servers and managed instances in a subscription by enabling [Microsoft Defender for Cloud](/azure/security-center/security-center-pricing).
 
-- For a full investigation experience, it's recommended to enable [SQL Database Auditing](/azure/azure-sql/database/auditing-overview). With auditing, you can track database events and write them to an audit log in an Azure Storage account or Azure Log Analytics workspace.
+- For a full investigation experience, it's recommended to enable [SQL Database Auditing](./auditing-overview.md). With auditing, you can track database events and write them to an audit log in an Azure Storage account or Azure Log Analytics workspace.
 
 ### Audit critical security events
 
@@ -653,13 +652,13 @@ Tracking of database events helps you understand database activity. You can gain
 
 **How to implement**:
 
-- Enable [SQL Database Auditing](/azure/azure-sql/database/auditing-overview) or [Managed Instance Auditing](../managed-instance/auditing-configure.md) to track database events and write them to an audit log in your Azure Storage account, Log Analytics workspace (preview), or Event Hubs (preview).
+- Enable [SQL Database Auditing](./auditing-overview.md) or [Managed Instance Auditing](../managed-instance/auditing-configure.md) to track database events and write them to an audit log in your Azure Storage account, Log Analytics workspace (preview), or Event Hubs (preview).
 
 - Audit logs can be written to an Azure Storage account, to a Log Analytics workspace for consumption by Azure Monitor logs, or to event hub for consumption using event hub. You can configure any combination of these options, and audit logs will be written to each.
 
 **Best practices**:
 
-- By configuring [SQL Database Auditing](/azure/azure-sql/database/auditing-overview) on your server or [Managed Instance Auditing](../managed-instance/auditing-configure.md) to audit events, all existing and newly created databases on that server will be audited.
+- By configuring [SQL Database Auditing](./auditing-overview.md) on your server or [Managed Instance Auditing](../managed-instance/auditing-configure.md) to audit events, all existing and newly created databases on that server will be audited.
 - By default auditing policy includes all actions (queries, stored procedures and successful and failed logins) against the databases, which may result in high volume of audit logs. It's recommended for customers to [configure auditing for different types of actions and action groups using PowerShell](./auditing-overview.md#manage-auditing). Configuring this will help control the number of audited actions, and minimize the risk of event loss. Custom audit configurations allow customers to capture only the audit data that is needed.
 - Audit logs can be consumed directly in the [Azure portal](https://portal.azure.com/), or from the storage location that was configured.
 
@@ -668,7 +667,7 @@ Tracking of database events helps you understand database activity. You can gain
 
 **Further resources**:
 
-- [SQL Database Auditing](/azure/azure-sql/database/auditing-overview)
+- [SQL Database Auditing](./auditing-overview.md)
 - [SQL Server Auditing](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)
 
 ### Secure audit logs
@@ -739,7 +738,7 @@ Monitor who accesses sensitive data and capture queries on sensitive data in aud
 **How to implement**:
 
 - Use SQL Audit and Data Classification in combination.
-  - In your [SQL Database Audit](/azure/azure-sql/database/auditing-overview) log, you can track access specifically to sensitive data. You can also view information such as the data that was accessed, as well as its sensitivity label. For more information, see [Data Discovery and Classification](data-discovery-and-classification-overview.md) and [Auditing access to sensitive data](data-discovery-and-classification-overview.md#audit-sensitive-data).
+  - In your [SQL Database Audit](./auditing-overview.md) log, you can track access specifically to sensitive data. You can also view information such as the data that was accessed, as well as its sensitivity label. For more information, see [Data Discovery and Classification](data-discovery-and-classification-overview.md) and [Auditing access to sensitive data](data-discovery-and-classification-overview.md#audit-sensitive-data).
 
 **Best practices**:
 

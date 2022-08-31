@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "DROP SYMMETRIC KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)

@@ -3,10 +3,10 @@ title: "What's new in Data Migration Assistant (SQL Server)"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
 ms.custom:
   - intro-whats-new
-ms.date: "11/05/2019"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "dma"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: dma
 ms.topic: conceptual
 keywords:
@@ -22,7 +22,7 @@ ms.author: aciortea
 
 This article lists the additions in each release of Data Migration Assistant.
 
-## Data Migration Assistant v 5.6
+## Data Migration Assistant v5.6
 
 The v5.6 release of the Data Migration Assistant provides support for:
 
@@ -40,7 +40,7 @@ In addition, this release of Data Migration Assistant provides bug fixes and imp
 - Fixed T-SQL parser bug.
 - Changed some blocking issues to warnings.
 
-## Data Migration Assistant v 5.5
+## Data Migration Assistant v5.5
 
 The v5.5 release of the Data Migration Assistant provides support for:
 
@@ -55,7 +55,7 @@ In addition, this release of Data Migration Assistant provides bug fixes and imp
 - Fixed an issue related to incorrect SKU recommendations for environments with highly variable workload patterns.
 - Fixed an issue affecting data collection in high memory environments.
 
-## Data Migration Assistant v 5.4
+## Data Migration Assistant v5.4
 
 The v5.4 release of the Data Migration Assistant provides support for:
 - New console experience that provides recommendations as well as explanations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
@@ -67,7 +67,7 @@ In addition, this release of Data Migration Assistant provides bug fixes for the
 - Fixed missing rule to detect three-part or four-part cross-database references when assessing Azure SQL Database targets.
 - Fixed `specified value for 'AssessmentDatabases' is invalid` error when using AssessTargetReadiness option in DMA command line.
 
-## Data Migration Assistant v 5.3
+## Data Migration Assistant v5.3
 
 The v5.3 release of the Data Migration Assistant provides support for:
 - External application ad hoc query assessment in command line. 
@@ -81,13 +81,13 @@ In addition, this release of Data Migration Assistant has been updated to .NET 4
 - Users encountered issues uploading JSON assessment reports to Azure Migrate.
 - Cannot migrate the objects containing Chinese characters.
 
-## Data Migration Assistant v 5.2
+## Data Migration Assistant v5.2
 
 The v5.2 release of the Data Migration Assistant provides support for:
 - Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.
 - Command line support for uploading assessments to Azure Migrate with support for Azure Government and national clouds.  Now, you can completely automate uploading the assessments to Azure migrate project to get a consolidated Azure SQL readiness report. 
 
-## Data Migration Assistant v 5.0
+## Data Migration Assistant v5.0
 
 The v5.0 release of the Data Migration Assistant provides support for:
 
@@ -232,6 +232,9 @@ The v2.1 release of Data Migration Assistant includes the following additions:
 ## Data Migration Assistant v2.0
 
 The v2.0 release of Data Migration Assistant includes improved Stretch database feature recommendations to provide proper prioritized tables that maximize the storage savings.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../includes/ssnotedepfutureavoid-md.md)]
 
 ## Data Migration Assistant v1.0
 

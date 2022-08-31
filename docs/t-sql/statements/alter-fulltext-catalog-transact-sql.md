@@ -1,8 +1,8 @@
 ---
 title: "ALTER FULLTEXT CATALOG (Transact-SQL)"
 description: ALTER FULLTEXT CATALOG (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], reorganizing"
 dev_langs:
   - "TSQL"
-ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Changes the properties of a full-text catalog.  
   

@@ -2,17 +2,14 @@
 title: Export a database to a BACPAC file
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal or a CLI
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: data-movement
 author: WilliamDAssafMSFT
-ms.custom:
-  - "sqldbrb=2"
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 12/10/2021
+ms.service: sql-db-mi
+ms.subservice: data-movement
 ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance
@@ -20,6 +17,9 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 When you need to export a database for archiving or for moving to another platform, you can export the database schema and data to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
+
+> [!NOTE]
+> Export functionality on Azure SQL Hyperscale databases tier is now in preview.
 
 ## Considerations
 

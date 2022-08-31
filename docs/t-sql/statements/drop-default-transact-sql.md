@@ -1,8 +1,8 @@
 ---
 title: "DROP DEFAULT (Transact-SQL)"
 description: DROP DEFAULT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "defaults [SQL Server], removing"
 dev_langs:
   - "TSQL"
-ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 ---
 # DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +23,7 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
   Removes one or more user-defined defaults from the current database.  
   
 > [!IMPORTANT]
->  DROP DEFAULT will be removed in the next version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use DROP DEFAULT in new development work, and plan to modify applications that currently use them. Instead, use default definitions that you can create by using the DEFAULT keyword of [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
+>  DROP DEFAULT will be removed in the next version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use DROP DEFAULT in new development work, and plan to modify applications that currently use them. Instead, use default definitions that you can create by using the DEFAULT keyword of [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

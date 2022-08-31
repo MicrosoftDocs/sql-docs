@@ -122,7 +122,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_HOST     |    This memory clerk is used for allocations by SQL OS functionality.     |
 |MEMORYCLERK_LANGSVC     |     This memory clerk is used for allocations by SQL T-SQL statements and commands (parser, algebrizer, etc.)    |
 |MEMORYCLERK_LWC     |   This memory clerk is used for allocations by Full-Text [Semantic Search](../search/semantic-search-sql-server.md) engine       |
-|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [Polybase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
+|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [PolyBase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
 |MEMORYCLERK_QSRANGEPREFETCH     |  This memory clerk is used for allocations during query execution for query scan range prefetch.      |
 |MEMORYCLERK_QUERYDISKSTORE     |     This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.    |
 |MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |   This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.      |

@@ -1,23 +1,14 @@
 ---
-title: SQL Server application patterns on VMs | Microsoft Docs
+title: SQL Server application patterns on VMs
 description: This article covers application patterns for SQL Server on Azure Virtual Machines. It provides solution architects and developers a foundation for good application architecture and design.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management,azure-resource-manager
-
-ms.assetid: 41863c8d-f3a3-4584-ad86-b95094365e05
-ms.service: virtual-machines-sql
-ms.subservice: management
-
-ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/31/2017
 ms.author: pamela
 ms.reviewer: mathoma
-
+ms.date: 05/31/2017
+ms.service: virtual-machines-sql
+ms.subservice: management
+ms.topic: conceptual
+tags: azure-service-management, azure-resource-manager
 ---
 # Application patterns and development strategies for SQL Server on Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -247,7 +238,7 @@ In n-tier hybrid application pattern, you can implement the following workflow i
       * With secure point-to-site connection, you can establish network connectivity between your virtual network in Azure and your individual computers running anywhere. It is mostly recommended for development and test purposes.
       
       For information on how to connect to SQL Server in Azure, see [Connect to a SQL Server virtual machine on Azure](ways-to-connect-to-sql.md).
-4. Set up scheduled jobs and alerts that back up on-premises data in a virtual machine disk in Azure. For more information, see [SQL Server Backup and Restore with Azure Blob Storage](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service) and [Backup and Restore for SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/backup-restore).
+4. Set up scheduled jobs and alerts that back up on-premises data in a virtual machine disk in Azure. For more information, see [SQL Server Backup and Restore with Azure Blob Storage](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service) and [Backup and Restore for SQL Server on Azure Virtual Machines](./backup-restore.md).
 5. Depending on your application’s needs, you can implement one of the following three common scenarios:
    
    1. You can keep your web server, application server, and insensitive data in a database server in Azure whereas you keep the sensitive data on-premises.

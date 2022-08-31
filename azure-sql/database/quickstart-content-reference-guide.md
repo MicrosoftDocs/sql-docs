@@ -1,17 +1,14 @@
 ---
 title: Single database quickstart content reference
-description: 'Find a content reference of all the quickstarts that help you quickly get started with Azure SQL Database.'
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: guide
+description: "Find a content reference of all the quickstarts that help you quickly get started with Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 07/29/2019
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: guide
+ms.custom: sqldbrb=1
 ---
 # Getting started with single databases in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -40,7 +37,7 @@ These quickstarts enable you to quickly create or import your database to Azure 
 
 ## Hands-on learning modules
 
-The following Microsoft Learn modules help you learn for free about Azure SQL Database.
+The following free Learn modules help you learn about Azure SQL Database.
 
 - [Provision a database in SQL Database to store application data](/learn/modules/provision-azure-sql-db/)
 - [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/)

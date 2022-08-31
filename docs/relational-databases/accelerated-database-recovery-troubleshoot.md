@@ -1,7 +1,7 @@
 ---
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
-ms.date: "06/10/2022"
+ms.date: 07/14/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -23,7 +23,9 @@ This article helps administrators diagnose issues with accelerated database reco
 
 ## Examine the persistent version store (PVS)
 
-Leverage the `sys.dm_tran_persistent_version_store_stats` DMV to identify if the size of the accelerated database recovery (ADR) PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
+Leverage the [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md) DMV to identify if the size of the accelerated database recovery (ADR) PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
+
+Included in the following sample script is the column `sys.dm_tran_persistent_version_store_stats.pvs_off_row_page_skipped_oldest_aborted_xdesid`, which was added in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] and contains the number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions.
 
 The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted transaction, and other details:
 
@@ -41,7 +43,8 @@ SELECT
  asdt.session_id AS active_transaction_session_id,
  asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds,
  pvss.pvs_off_row_page_skipped_low_water_mark,
- pvss.pvs_off_row_page_skipped_min_useful_xts
+ pvss.pvs_off_row_page_skipped_min_useful_xts,
+ pvss.pvs_off_row_page_skipped_oldest_aborted_xdesid -- SQL Server 2022 only
 FROM sys.dm_tran_persistent_version_store_stats AS pvss
 CROSS APPLY (SELECT SUM(size*8.) AS total_db_size_kb FROM sys.database_files WHERE [state] = 0 and [type] = 0 ) AS df 
 LEFT JOIN sys.dm_tran_database_transactions AS dt
@@ -57,7 +60,7 @@ WHERE pvss.database_id = DB_ID();
 
 1. Check `pvs_pct_of_database_size` size, note any difference from the typical, compared to baselines during other periods of application activity. PVS is considered large if it's significantly larger than baseline or if it is close to 50% of the size of the database. Use the following steps as a troubleshooting aid for a PVS that is large.
 
-2. Active transactions prevent cleaning up the PVS. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a long time by querying `sys.dm_tran_database_transactions` based on the transaction ID. Check for long-running, active transactions with a query like the below sample, which declares variables to set thresholds for duration or log amount:
+2. Active, long-running transactions in any database where ADR is enabled can prevent cleanup of the PVS. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a long time by querying `sys.dm_tran_database_transactions` based on the transaction ID. Check for long-running, active transactions with a query like the below sample, which declares variables to set thresholds for duration or log amount:
 
     ```sql
     DECLARE @longTxThreshold int = 1800; --number of seconds to use as a duration threshold for long-running transactions
@@ -87,7 +90,10 @@ WHERE pvss.database_id = DB_ID();
     
     With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s).
 
-    For more information on troubleshooting long-running queries, see [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries) or [Identify query performance issues in Azure SQL](/azure/azure-sql/identify-query-performance-issues).
+    For more information on troubleshooting long-running queries, see: 
+     - [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries)
+     - [Identify query performance issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues)
+     - [Identify query performance issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues)
 
 <a id="pvs-active-snapshot-scans"></a>
 
@@ -108,7 +114,7 @@ WHERE pvss.database_id = DB_ID();
     
     To prevent delays to PVS cleanup:
 
-    1. Consider killing the long active transaction session that is delaying PVS cleanup, if possible. 
+    1. Consider killing the long active transaction session that is delaying PVS cleanup, if possible. Long-running transactions in any database where ADR is enabled may delay ADR PVS cleanup.
     1. Tune long-running queries to reduce query duration and locks required. For more information and guidance, see [Understand and resolve blocking in SQL Server](/troubleshoot/sql/performance/understand-resolve-blocking) or [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking).
     1. Review the application to determine the nature of the problematic active snapshot scan. Consider a different isolation level, such as READ COMMITTED, instead of SNAPSHOT or READ COMMITTED SNAPSHOT for long-running queries that are delaying ADR PVS cleanup. This problem occurs more frequently with SNAPSHOT isolation level.
     1. This issue can occur in SQL Server, Azure SQL Managed Instance, and elastic pools of Azure SQL Database, but not in singleton Azure SQL databases. In Azure SQL Database elastic pools, consider moving databases out of the elastic pool that have long-running queries using READ COMMIT SNAPSHOT or SNAPSHOT isolation levels.
@@ -148,13 +154,19 @@ For example,
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
+## Use trace flags to capture cleanup failures
+ 
+  *Applies to [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and later*
+
+  Trace flag 4025 can be enabled to record ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes. For more information, see [DBCC TRACEON (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
+
 ## See also
 
 - [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md)
 - [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md)
 - [sys.dm_tran_aborted_transactions](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md)
 
-## Next steps 
+## Next steps
 
 - [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](accelerated-database-recovery-management.md)

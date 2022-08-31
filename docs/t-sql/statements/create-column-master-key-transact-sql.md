@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "Always Encrypted, create column master key"
 dev_langs:
   - "TSQL"
-ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]

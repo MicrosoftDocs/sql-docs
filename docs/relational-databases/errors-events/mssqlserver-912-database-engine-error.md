@@ -10,7 +10,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "912 (Database Engine error)"
 author: PijoCoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_912
  [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

@@ -17,7 +17,7 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  The Extended Stored Procedure API is enabled for Unicode data; however, it is not enabled for Unicode metadata. The #define Unicode directive does not have any effect on the Extended Stored Procedure API.  
   

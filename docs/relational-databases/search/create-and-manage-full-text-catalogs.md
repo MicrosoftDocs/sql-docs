@@ -50,7 +50,7 @@ GO
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
 
 ##  <a name="props"></a> Get the properties of a full-text catalog  
 Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function **FULLTEXTCATALOGPROPERTY** to get the value of various properties related to full-text catalogs. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).

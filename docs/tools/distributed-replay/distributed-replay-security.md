@@ -30,7 +30,8 @@ The following table describes the accounts that are used for Distributed Replay.
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay client service account|Can be a domain user account or local user account. If you use a local user account, the controller, client, and target SQL Server must all be running on the same computer.<br /><br /> **\*\* Security Note \*\*** We recommend that the account isn't a member of the local Administrators group in Windows.|  
 |Interactive user account that is used to run the Distributed Replay administration tool|Can be either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.|
 
-**Important**: When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:  
+> [!IMPORTANT]  
+> When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:  
 
 - Domain user account
 
@@ -137,4 +138,4 @@ We recommend that you only use Distributed Replay in a test environment. After y
 ## See also
 
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)
+- [Install Distributed Replay - Overview](./install-distributed-replay.md)

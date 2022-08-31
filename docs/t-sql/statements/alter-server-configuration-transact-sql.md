@@ -1,8 +1,8 @@
 ---
 title: "ALTER SERVER CONFIGURATION (Transact-SQL)"
 description: ALTER SERVER CONFIGURATION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "setting process affinity"
 dev_langs:
   - "TSQL"
-ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,6 +42,7 @@ SET <optionspec>
    | <buffer_pool_extension>  
    | <soft_numa>  
    | <memory_optimized>
+   | <hardware_offload>
 }  
   
 <process_affinity> ::=   
@@ -102,6 +102,13 @@ SET <optionspec>
    | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
    | [ HYBRID_BUFFER_POOL = { ON | OFF }
    }  
+
+<hardware_offload> ::=
+   HARDWARE_OFFLOAD
+   {   
+     ON 
+   | OFF
+   }
 ```  
   
 
@@ -274,6 +281,17 @@ When combined with TEMPDB_METADATA = ON, specifies the user-defined resource poo
 HYBRID_BUFFER_POOL = ON | OFF <br>
 Enables or disables hybrid buffer pool at the instance level. Requires a restart to take effect.
 
+**\<hardware_offload> ::=**
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]).
+
+ON <br>
+Enables the use of integrated offloading and acceleration for the instance.  Requires restart.
+
+OFF <br>
+Disables all instance-level use of integrated offloading and acceleration. Requires a restart to take effect.
+
+For more information, see [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md).
 
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  

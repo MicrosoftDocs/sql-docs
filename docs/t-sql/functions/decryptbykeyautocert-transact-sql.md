@@ -3,13 +3,10 @@ title: "DECRYPTBYKEYAUTOCERT (Transact-SQL)"
 description: "DECRYPTBYKEYAUTOCERT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/09/2015"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DECRYPTBYKEYAUTOCERT"
   - "DECRYPTBYKEYAUTOCERT_TSQL"

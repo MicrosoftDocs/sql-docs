@@ -1,17 +1,14 @@
 ---
 title: Elastic Database tools glossary
 description: Explanation of terms used for elastic database tools
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/04/2018
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Elastic Database tools glossary
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

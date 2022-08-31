@@ -2,9 +2,9 @@
 title: "sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs"
 description: Learn to use sys.sp_rda_test_connection to test the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 07/25/2022
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
@@ -39,6 +39,9 @@ EXECUTE sys.sp_rda_test_connection
 ## Arguments  
  @database_name = N'*db_name*'  
  The name of the Stretch-enabled SQL Server database. This parameter is optional.  
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
  @server_address = N'*azure_server_fully_qualified_address*'  
  The fully qualified address of the Azure server.  

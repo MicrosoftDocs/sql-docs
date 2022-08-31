@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "SET OFFSETS statement"
 dev_langs:
   - "TSQL"
-ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 ---
 # SET OFFSETS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the offset (position relative to the start of a statement) of specified keywords in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to DB-Library applications.  
   

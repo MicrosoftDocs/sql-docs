@@ -52,7 +52,7 @@ Tracer tokens inserted into the publication before this date are deleted. The da
 Is the name of the Publisher. The data type is **sysname**. The default value is *null*.
 
 > [!NOTE]
-> This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers or when executing the stored procedure from distributor.
+> This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers or when executing the stored procedure from distributor.
 
 `[ @publisher_db= ] 'publisher_db'`  
 Is the name of the publication database. The data type is **sysname**. The default value is NULL. This parameter is ignored if the stored procedure is executed at the Publisher.

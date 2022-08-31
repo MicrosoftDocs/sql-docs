@@ -1,23 +1,22 @@
 ---
-title: Use Azure CLI to enable transparent data encryption 
+title: Use Azure CLI to enable transparent data encryption
 description: Enable transparent data encryption in Azure SQL Managed Instance using CLI and your own key.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: kr2b-contr-experiment
-ms.devlang: azurecli
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: vanto 
-ms.date: 05/18/2022 
+ms.reviewer: vanto
+ms.date: 05/18/2022
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
+ms.devlang: azurecli
 ---
 
 # Azure CLI script to enable transparent data encryption using your own key
 
 [!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqlmi.md)]
 
-This Azure CLI script example configures transparent data encryption (TDE) in Azure SQL Managed Instance, using a customer-managed key from Azure Key Vault. This is often referred to as a bring-your-own-key (BYOK) scenario for TDE. To learn more about TDE with customer-managed key, see [TDE Bring Your Own Key to Azure SQL](/azure/azure-sql/database/transparent-data-encryption-byok-overview).
+This Azure CLI script example configures transparent data encryption (TDE) in Azure SQL Managed Instance, using a customer-managed key from Azure Key Vault. This is often referred to as a bring-your-own-key (BYOK) scenario for TDE. To learn more about TDE with customer-managed key, see [TDE Bring Your Own Key to Azure SQL](../../database/transparent-data-encryption-byok-overview.md).
 
 This sample requires an existing managed instance, see [Use Azure CLI to create an Azure SQL Managed Instance](create-configure-managed-instance-cli.md).
 
@@ -54,4 +53,4 @@ This script uses the following commands. Each command in the table links to comm
 
 For more information on Azure CLI, see [Azure CLI documentation](/cli/azure).
 
-Additional SQL Database CLI script samples can be found in the [Azure SQL Database documentation](/azure/azure-sql/database/az-cli-script-samples-content-guide).
+Additional SQL Database CLI script samples can be found in the [Azure SQL Database documentation](../../database/az-cli-script-samples-content-guide.md).

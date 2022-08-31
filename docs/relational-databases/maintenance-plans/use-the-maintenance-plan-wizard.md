@@ -77,7 +77,8 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
     4.  Select either **Separate schedules for each task** or **Single schedule for the entire plan or no schedule** to specify the recurring schedule of the maintenance plan.  
   
-        > **NOTE:** If you select **Separate schedules for each task**, you will need to follow the steps in **e.** below for each task in your maintenance plan.  
+        > [!NOTE]  
+        > If you select **Separate schedules for each task**, you will need to follow the steps in **e.** below for each task in your maintenance plan.  
   
     5.  If you selected **Single schedule for the entire plan or no schedule**, under **Schedule**, click **Change**.  
   
@@ -130,15 +131,18 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
 6.  On the **Select Target Servers** page, select the servers where you want to run the maintenance plan. This page is only visible on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that are configured as master servers.  
   
-    > **NOTE:** To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured, and the local server should be configured as a master server. In multiserver environments, this page displays the **(local)** master server and all corresponding target servers.  
+    > [!NOTE]  
+    > To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured, and the local server should be configured as a master server. In multiserver environments, this page displays the **(local)** master server and all corresponding target servers.  
   
 7.  On the **Select Maintenance Tasks** page, select one or more maintenance tasks to add to the plan. When you have selected all of the necessary tasks, click **Next**.  
   
-    > **NOTE:** The tasks you select here will determine which pages you will need to complete after the **Select Maintenance Task Order** page below.  
+    > [!NOTE]  
+    > The tasks you select here will determine which pages you will need to complete after the **Select Maintenance Task Order** page below.  
   
 8.  On the **Select Maintenance Task Order** page, select a task and click either **Move Up...** or **Move Down...** to change its order of execution. When finished, or if you are satisfied with the current order of tasks, click **Next**.  
   
-    > **NOTE:** If you selected **Separate schedules for each task** on the **Select Plan Properties** page above, you will not be able to change the order of the maintenance tasks on this page.  
+    > [!NOTE]  
+    > If you selected **Separate schedules for each task** on the **Select Plan Properties** page above, you will not be able to change the order of the maintenance tasks on this page.  
   
 ## Define Database Check Integrity (CHECKDB)  
   
@@ -178,7 +182,8 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
 1.  On the **Define Shrink Database Task** page, create a task that attempts to reduce the size of the selected databases by using the `DBCC SHRINKDATABASE` statement, with either the `NOTRUNCATE` or `TRUNCATEONLY` option. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). When complete, click **Next**.  
   
-    > **WARNING!!!!** Data moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
+    > [!WARNING]  
+    > Data moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
   
      The following options are available on this page.  
   
@@ -251,7 +256,8 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations will wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.  
   
-    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    > [!NOTE]  
+    > Online index operations are not available in every edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
      Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
@@ -354,7 +360,8 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **Create a sub-directory for each database** check box  
      Create a sub-directory under the specified disk directory that contains the database backup for each database being backed up as part of the maintenance plan.  
   
-    > **IMPORTANT!** The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
+    > [!IMPORTANT]  
+    > The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
   
      **Folder** box  
      Specify the folder to contain the automatically created database files. This option is disabled if you selected URL as the backup destination.  
@@ -362,7 +369,8 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **SQL Credential**  
      Select a SQL Credential used to authenticate to Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
-    > **IMPORTANT!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
+    > [!IMPORTANT]  
+    > The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
      **Azure storage container**  
      Specify the name of the Azure storage container  
@@ -424,7 +432,8 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
 1.  On the **Define Maintenance Cleanup Task** page, specify the types of files to delete as part of the maintenance plan, including text reports created by maintenance plans and database backup files. This task uses the `EXEC xp_delete_file` statement. When finished, click **Next**.  
   
-    > **IMPORTANT!!** This task does not automatically delete files in the subfolders of the specified directory. This precaution reduces the possibility of a malicious attack that uses the Maintenance Cleanup task to delete files. If you want to delete files in first-level subfolders, you must select **Include first-level subfolders**.  
+    > [!IMPORTANT]  
+    > This task does not automatically delete files in the subfolders of the specified directory. This precaution reduces the possibility of a malicious attack that uses the Maintenance Cleanup task to delete files. If you want to delete files in first-level subfolders, you must select **Include first-level subfolders**.  
   
      The following options are available on this page.  
   
@@ -474,7 +483,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the location of the file that will contain the report.  
   
      **E-mail report** check box  
-     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
+     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
   
      **Agent operator**  
      Specify the recipient of the e-mail.  

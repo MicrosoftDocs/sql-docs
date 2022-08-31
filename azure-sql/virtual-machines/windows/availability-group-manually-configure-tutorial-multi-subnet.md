@@ -1,21 +1,15 @@
 ---
 title: "Tutorial: Configure availability group in multiple subnets"
 description: "This tutorial shows how to create an Always On availability group within multiple subnets for SQL Server on Azure Virtual Machines (VMs). "
-services: virtual-machines
-documentationCenter: na
 author: adbadram
-editor: monicar
-tags: azure-service-management
-
-ms.assetid: 08a00342-fee2-4afe-8824-0db1ed4b8fca
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
+editor: monicar
+tags: azure-service-management
 ---
 
 # Tutorial: Configure an availability group in multiple subnets (SQL Server on Azure VMs)
@@ -375,7 +369,6 @@ To test the connection, follow these steps:
 
 > [!NOTE]
 > - While connecting to availability group on different subnets, setting `MultiSubnetFailover=true` provides faster detection of and connection to the current primary replica. See [Connecting with MultiSubnetFailover](/dotnet/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery#connecting-with-multisubnetfailover)
-> - Setting `MultiSubnetFailover=True` isn't required with .NET Framework 4.6.1 or later versions.
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: "Maps in Reporting Services mobile reports | Microsoft Docs"
 description: SQL Server Mobile Report Publisher provides three types of map visualization, and built-in maps for continents and a number of individual countries.
-ms.date: 03/30/2017
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Maps in Reporting Services mobile reports
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Maps are a great way to visualize geographical data. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] provides three different types of map visualization, and built-in maps for continents and a number of individual countries. You can also [upload and use custom maps](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
 ## Types of maps  
@@ -54,7 +57,8 @@ To display real data in your map, you need to set values for at least two of the
   
 2. Select **Add Data**, then either **Local Excel** or **SSRS Server**.  
   
-   > **Tip**: Make sure the [data is in a format that works for mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > [!TIP]  
+   > Make sure the [data is in a format that works for mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Select the worksheets you want and select **Import**.  
    You see your data in the [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  

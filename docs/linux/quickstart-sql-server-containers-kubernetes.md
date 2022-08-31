@@ -6,7 +6,7 @@ ms.author: randolphwest
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
-ms.date: 05/26/2022
+ms.date: 08/18/2022
 ms.custom:
   - template-quickstart
   - seo-lt-2019
@@ -35,10 +35,10 @@ This quickstart uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) t
 
 1. Create an SA password in the Kubernetes cluster. Kubernetes can manage sensitive configuration information, like passwords as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-2. To create a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`, run the following command. Remember to pick your own complex password:
+2. To create a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `MSSQL_SA_PASSWORD`, run the following command. Remember to pick your own complex password:
 
    ```console
-   kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+   kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```
 
 ## Create storage
@@ -120,7 +120,11 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
 
 The container hosting the SQL Server instance is described as a Kubernetes *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster. The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
+You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+
+- The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
+- The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
+- The manifest describes resource *requests* and *limits*. These are based on the minimum [system requirements](sql-server-linux-setup.md#system).
 
 1. Create a manifest (a YAML file) to describe the deployment. The following example describes a deployment, including a container based on the SQL Server container image.
 
@@ -146,6 +150,13 @@ You will create a manifest to describe the container, based on the SQL Server [m
          containers:
          - name: mssql
            image: mcr.microsoft.com/mssql/server:2019-latest
+           resources:
+             requests:
+               memory: "2G"
+               cpu: "2000m"
+             limits:
+               memory: "2G"
+               cpu: "2000m"
            ports:
            - containerPort: 1433
            env:
@@ -153,11 +164,11 @@ You will create a manifest to describe the container, based on the SQL Server [m
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
-                 key: SA_PASSWORD
+                 key: MSSQL_SA_PASSWORD
            volumeMounts:
            - name: mssqldb
              mountPath: /var/opt/mssql
@@ -186,13 +197,13 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
    - `persistentVolumeClaim`: This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This tutorial uses `mssql-data`.
 
-   - `name: SA_PASSWORD`: Configures the container image to set the SA password, as defined in this section.
+   - `name: MSSQL_SA_PASSWORD`: Configures the container image to set the SA password, as defined in this section.
 
      ```yaml
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD
+         key: MSSQL_SA_PASSWORD
      ```
 
      When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password.

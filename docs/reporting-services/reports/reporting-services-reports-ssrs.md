@@ -31,6 +31,8 @@ ms.author: maggies
 -   Define a report once and display it in a variety of ways. You can export the report to multiple file formats, or deliver the report to subscribers as e-mail or to a shared file. You can create multiple linked reports that apply separate parameter sets to the same report definition.  
   
 -   Use report parts, shared data sources, shared queries, and subreports to define data visualizations for re-use.  
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   Manage report data sources separately from the report definition. For example, you can change from a test data source to a production data source without changing the report.  
   

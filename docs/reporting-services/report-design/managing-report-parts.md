@@ -13,7 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Managing Report Parts
-  Report parts can be reused in paginated reports, by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
+Report parts can be reused in paginated reports, by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
   
 ## Managing Report Parts  
  To manage report parts, you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal for a report server in native mode, or application pages for a report server in SharePoint integrated mode.  

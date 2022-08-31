@@ -3,10 +3,8 @@ title: "CAST and CONVERT (Transact-SQL)"
 description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/23/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
@@ -42,7 +40,7 @@ These functions convert an expression of one data type to another.
 
 ## Syntax  
   
-```sqlsyntax 
+```syntaxsql 
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   

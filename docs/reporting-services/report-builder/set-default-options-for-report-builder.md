@@ -29,7 +29,9 @@ ms.author: maggies
  Report Builder will save report parts that you publish to this folder. If the folder does not exist yet and you have permissions to create folders on the report server, Report Builder will create this folder.  
   
  You do not need to restart Report Builder for this setting to take effect.  
-  
+ 
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
  **Show this number of recent sites and servers**  
  Specify the number of recent sites and connections to show in the **Open Report** and **Save As Report** dialog boxes.  
   

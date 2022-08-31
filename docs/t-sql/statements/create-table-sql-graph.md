@@ -3,7 +3,8 @@ title: "CREATE TABLE (SQL Graph)"
 description: CREATE TABLE (SQL Graph)
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-ms.date: "09/09/2019"
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
@@ -126,6 +127,9 @@ Creating a temporary table as node or edge table is not supported.
 Creating a node or edge table as a temporal table is not supported.
 
 Stretch database is not supported for node or edge table.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
 

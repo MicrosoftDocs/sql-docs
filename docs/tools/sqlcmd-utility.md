@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "GO command"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.custom: seo-lt-2019
-ms.date: 02/02/2022
+ms.date: 07/28/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -33,6 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!NOTE]  
 > For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
@@ -50,8 +51,8 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ### Windows
 
-**[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
-<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
@@ -307,7 +308,8 @@ We recommend that you use a [strong password](../relational-databases/security/s
   
  If the user name and password combination is incorrect, an error message is generated.  
   
-**NOTE!**  The OSQLPASSWORD environment variable was kept for backward compatibility. The SQLCMDPASSWORD environment variable takes precedence over the OSQLPASSWORD environment variable. Now that OSQLPASSWORD is no longer shared, the utilities **sqlcmd** and **osql** can be used next to each other without interference. Old scripts will continue to work.  
+ > [!NOTE]  
+ > The OSQLPASSWORD environment variable was kept for backward compatibility. The SQLCMDPASSWORD environment variable takes precedence over the OSQLPASSWORD environment variable. Now that OSQLPASSWORD is no longer shared, the utilities **sqlcmd** and **osql** can be used next to each other without interference. Old scripts will continue to work.  
   
  If the **-P** option is used with the **-E** option, an error message is generated.  
   
@@ -496,17 +498,17 @@ We recommend that you use a [strong password](../relational-databases/security/s
  **-Y** _fixed_length_type_display_width_  
  Sets the **sqlcmd** scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`. The default is 0 (unlimited). Limits the number of characters that are returned for the following data types:  
   
-- **char(** _n_ **)**, where 1<=n<=8000  
+- **char(*n*)**, where 1 <= n <= 8000  
   
-- **nchar(n** _n_ **)**, where 1<=n<=4000  
+- **nchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varchar(n** _n_ **)**, where 1<=n<=8000  
+- **varchar(*n*)**, where 1 <= *n* <= 8000  
   
-- **nvarchar(n** _n_ **)**, where 1<=n<=4000  
+- **nvarchar(*n*)**, where 1 <= *n* <= 4000  
   
-- **varbinary(n** _n_ **)**, where 1<=n\<=4000  
+- **varbinary(*n*)**, where 1 <= *n* <= 4000  
   
-- **variant**  
+- **sql_variant**  
   
  **Error Reporting Options**  
   **-b**  

@@ -1,20 +1,18 @@
 ---
 title: "Use character format to import & export data"
 description: Character format uses character data format for all columns. This is useful working with other programs or copying to an instance from another database vendor.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "data formats [SQL Server], character"
   - "character formats [SQL Server]"
-ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Use character format to import or export data (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,7 +21,7 @@ Character format is recommended when you bulk export data to a text file that is
 Character format uses the character data format for all columns. Storing information in character format is useful when the data is used with another program, such as a spreadsheet, or when the data needs to be copied into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from another database vendor such as Oracle.  
   
 > [!NOTE]
->  When you bulk transfer data between instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the data file contains Unicode character data but not any extended or DBCS characters, use the Unicode character format. For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
+>  When you bulk transfer data between instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the data file contains Unicode character data but not any extended or DBCS characters, use the Unicode character format. For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
 |In this Topic:|
 |---|

@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "statistical information [SQL Server], profiles"
 dev_langs:
   - "TSQL"
-ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Displays the profile information for a statement. STATISTICS PROFILE works for ad hoc queries, views, and stored procedures.  
   

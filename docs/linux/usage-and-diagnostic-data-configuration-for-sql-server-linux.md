@@ -65,7 +65,10 @@ To disable usage and diagnostic data collection on docker, you must have Docker 
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-2. Run the container image
+2. Run the container image.
+
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest

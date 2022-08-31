@@ -1,16 +1,14 @@
 ---
 title: "Quickstart: Create an Azure SQL Managed Instance (portal)"
 description: Create a managed instance, network environment, and client VM for access using the Azure portal in this quickstart.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: mode-ui
-ms.devlang: 
-ms.topic: quickstart
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: quickstart
+ms.custom: mode-ui
 ---
 # Quickstart: Create an Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -60,11 +58,11 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 | Setting| Suggested value | Description |
 | ------ | --------------- | ----------- |
-| **Service Tier** | Select one of the options. | Based on your scenario, select one of the following options: </br> <ul><li>**General Purpose**: for most production workloads, and the default option.</li><li>**Business Critical**: designed for low-latency workloads with high resiliency to failures and fast failovers.</li></ul><BR>For more information, review [service tiers](service-tiers-managed-instance-vcore.md) and [resource limits](/azure/azure-sql/managed-instance/resource-limits).|
+| **Service Tier** | Select one of the options. | Based on your scenario, select one of the following options: </br> <ul><li>**General Purpose**: for most production workloads, and the default option.</li><li>**Business Critical**: designed for low-latency workloads with high resiliency to failures and fast failovers.</li></ul><BR>For more information, review [service tiers](service-tiers-managed-instance-vcore.md) and [resource limits](./resource-limits.md).|
 | **Hardware Configuration** | Select one of the options. | Hardware configuration generally defines the compute and memory limits and other characteristics that impact the performance of the workload. **Gen5** is the default.|
 | **vCore compute model** | Select an option. | vCores represent exact amount of compute resources that are always provisioned for your workload. **Eight vCores** is the default.|
-| **Storage in GB** | Select an option. | Storage size in GB, select based on expected data size. If migrating existing data from on-premises or on various cloud platforms, see [Migration overview: SQL Server to SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview).|
-| **Azure Hybrid Benefit** | Check option if applicable. | For leveraging an existing license for Azure. For more information, see [Azure Hybrid Benefit - Azure SQL Database & SQL Managed Instance](/azure/azure-sql/azure-hybrid-benefit). |
+| **Storage in GB** | Select an option. | Storage size in GB, select based on expected data size. If migrating existing data from on-premises or on various cloud platforms, see [Migration overview: SQL Server to SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md).|
+| **Azure Hybrid Benefit** | Check option if applicable. | For leveraging an existing license for Azure. For more information, see [Azure Hybrid Benefit - Azure SQL Database & SQL Managed Instance](../azure-hybrid-benefit.md). |
 | **Backup storage redundancy** | Select **Geo-redundant backup storage**. | Storage redundancy inside Azure for backup storage. Note that this value cannot be changed later. Geo-redundant backup storage is default and recommended, though Zone and Local redundancy allow for more cost flexibility and single region data residency. For more information, see [Backup Storage redundancy](../database/automated-backups-overview.md?tabs=managed-instance#backup-storage-redundancy).|
 
 

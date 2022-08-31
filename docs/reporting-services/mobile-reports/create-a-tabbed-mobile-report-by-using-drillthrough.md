@@ -1,7 +1,7 @@
 ---
 title: "Create a tabbed mobile report by using drillthrough | Reporting Services mobile reports | Microsoft Docs"
 description: Learn how to create a Reporting Services mobile report that looks and acts like a tabbed report by using drillthrough and parameters.
-ms.date: 03/30/2017
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Create a tabbed mobile report by using drillthrough
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Learn how to create a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report that looks and acts like a tabbed report by using drillthrough and parameters.
 
 For example, in this report, the gauges across the top act like tabs. When you click the Transportation gauge, the data in the rest of the chart is filtered to the transportation data.

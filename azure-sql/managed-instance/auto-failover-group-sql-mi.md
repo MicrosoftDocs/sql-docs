@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: sql-db-mi-split
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
-ms.date: 06/02/2022
+ms.date: 07/08/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)
@@ -99,12 +98,12 @@ Deploy both managed instances to [paired regions](/azure/availability-zones/cros
 Connectivity between the virtual network subnets hosting primary and secondary instance must be established and maintained for uninterrupted geo-replication traffic flow. There are multiple ways to provide connectivity between the instances that you can choose among based on your network topology and policies:
 
  * [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview)
- * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
  * [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+ * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
 
 > [!IMPORTANT]
 > [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is the recommended way for establishing connectivity between two instances in a failover group. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
-To be able to use global virtual network peering for SQL managed instances hosted in subnets created before 9/22/2020, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instances, as it will move the instance into a new virtual cluster that supports global virtual network peering.
+Global virtual network peering is supported for instances hosted in subnets created since 9/22/2020. To be able to use global virtual network peering for SQL managed instances hosted in subnets created before 9/22/2020, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instance, as it will move the instance into a new virtual cluster that supports global virtual network peering.
 
 Regardless of the connectivity mechanism, there are requirements that must be fulfilled for geo-replication traffic to flow:
 - The Network Security Group (NSG) rules on the subnet hosting **primary** instance allow:
@@ -113,7 +112,7 @@ Regardless of the connectivity mechanism, there are requirements that must be fu
 - The Network Security Group (NSG) rules on the subnet hosting **secondary** instance allow:
   - **Inbound** traffic on port 5022 and port range 11000-11999 from the subnet hosting the primary instance.
   - **Outbound** traffic on port 5022 and port range 11000-11999 to the subnet hosting the primary instance.
-- IP address ranges of subnets hosting primary and secondary instance must not overlap.
+- IP address ranges of VNets hosting primary and secondary instance must not overlap.
 - There's no indirect overlap of IP address range between the VNets hosting primary and secondary instance and any other VNets they are peered with via local virtual network peering or other means 
 
 Additionally, if you're using other mechanisms for providing connectivity between the instances than the recommended [global virtual network peering](/azure/virtual-network/virtual-network-peering-overview), you need to ensure the following:
@@ -122,11 +121,11 @@ Additionally, if you're using other mechanisms for providing connectivity betwee
 - If you deploy auto-failover groups in a hub-and-spoke network topology cross-region, replication traffic should go directly between the two managed instance subnets rather than directed through the hub networks. It will help you avoid connectivity and replication speed issues.
 
 > [!IMPORTANT]
-> Alternative ways of providing connectivity between the instances involving additional networking devices may make troubleshooting process in case of connectivity or replication speed issues very difficult and significantly prolong the resolution time.
+> Alternative ways of providing connectivity between the instances involving additional networking devices may make troubleshooting process in case of connectivity or replication speed issues very difficult and require active involvement of network administrators and significantly prolong the resolution time.
 
 ## Initial seeding 
 
-When establishing a failover group between managed instances, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, number of replicated databases, workload intensity on the primary databases, and the speed of the link between the virtual networks hosting primary and secondary instance that mostly depends on the way connectivity is established. Under normal circumstances, seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for all user databases in parallel.
+When establishing a failover group between managed instances, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, number of replicated databases, workload intensity on the primary databases, and the speed of the link between the virtual networks hosting primary and secondary instance that mostly depends on the way connectivity is established. Under normal circumstances, and when connectivity is established using recommended global virtual network peering, seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for a batch of user databases in parallel - not necessarily for all databases at the same time. Multiple batches may be needed if there are many databases hosted on the instance.
 
 If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100-GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
 
@@ -186,6 +185,11 @@ To learn more, see [Replication of logins and agent jobs](https://techcommunity.
 
 Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
 
+## Scaling instances
+
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+
+The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be re-seeded during an upgrade or downgrade process.
 
 ## <a name="using-failover-groups-and-virtual-network-rules"></a> Use failover groups and virtual network service endpoints
 
@@ -208,7 +212,7 @@ Due to the high latency of wide area networks, geo-replication uses an asynchron
 Auto-failover group reports its status describing the current state of the data replication:
 
 - Seeding - [Initial seeding](auto-failover-group-sql-mi.md#initial-seeding) is taking place after creation of the failover group, until all user databases are initialized on the secondary instance. Failover process cannot be initiated while auto-failover group is in the Seeding status, since user databases aren't copied to secondary instance yet.
-- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Seeding status.
+- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Synchronizing status.
 - Failover in progress - this status indicates that either automatically or manually initiated failover process is in progress. No changes to the failover group or additional failovers can be initiated while the auto-failover group is in this status.
 
 ## Permissions
@@ -233,6 +237,8 @@ Be aware of the following limitations:
 
 - Failover groups can't be created between two instances in the same Azure region.
 - Failover groups can't be renamed. You will need to delete the group and re-create it with a different name.
+- A failover group contains exactly two managed instances. Adding additional instances to the failover group is unsupported. 
+- An instance can participate only in one failover group at any moment. 
 - Database rename isn't supported for databases in failover group. You will need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however will not be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.

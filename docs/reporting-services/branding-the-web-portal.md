@@ -14,19 +14,19 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading stylesheet (CSS) knowledge to create it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
 
 ## Creating the brand package
   
-A brand package for Reporting Services consists of three items and is packaged as a zip file.   
+A brand package for Reporting Services consists of three items and is packaged as a zip file.
   
 - colors.json  
 - metadata.xml  
 - logo.png (optional)  
   
-The files must have the names listed above. Package the files above into a zip file. The zip file can be named however you like.  
+The files must have the names listed above. Package these files into a zip file. The zip file can be named however you like.  
   
 ### metadata.xml
   
@@ -71,7 +71,7 @@ The LESS stylesheet contains blocks that reference some predefined LESS variable
 }  
 ```
   
-While this resembles CSS syntax, the color values, prefixed with the @symbol, are unique to LESS. They are variables whose values are set by the json file.  
+While this syntax resembles CSS, the color values prefixed with the @symbol are unique to LESS. They're variables whose values are set by the json file.  
   
 For example, if the colors.json file had the following values.  
 
@@ -91,7 +91,7 @@ The processed output would look up the **\@primaryButtonBg** LESS variable and s
 
 All of the primary buttons would be rendered dark green with white text.  
   
-The colors.json file, for Reporting Services, has two main categories which items are grouped.  
+The colors.json file, for Reporting Services, has two main categories in which items are grouped.  
   
 - **Interface**: includes items that are specific to the Reporting Services web portal.  
 - **Theme**: includes items that are specific to mobile reports that you create.  
@@ -107,23 +107,25 @@ The interface section is broken down into the following groupings.
 |Neutral Tertiary|Site settings backgrounds.|  
 |Danger/Warning/Success messages|Colors for those messages.|  
 |KPI|Controls the colors for a good (1), neutral (0), neutral (-1) and none.|  
-|||
 
-The first time you connect to a server with the Mobile Report Publisher, that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
+::: moniker range="<=sql-server-ver15"
+
+The first time you connect to a server with the Mobile Report Publisher that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
   
 ![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
-  
+You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
+::: moniker-end 
+ 
 ### Using a logo
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
-The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
+The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290 px x 60 px.  
    
 ## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
   
-To add, download, or remove a brand package, you can do the following.  
+Follow these steps to add, download, or remove a brand package.  
   
 1.  Select the **gear** in the upper right.  
   
@@ -135,11 +137,11 @@ To add, download, or remove a brand package, you can do the following.
   
     ![Screenshot of the Site Settings page with the Branding option selected.](../reporting-services/media/ssrsbranding.png) 
   
-**Currently installed brand package** will either display the name of the package that has been uploaded, or it will display None.  
+**Currently installed brand package** either displays the name of the package that has been uploaded, or it displays None.  
   
-**Upload brand package** will prompt you to select a zip file from a local folder and then apply the package to the web portal. You will see it take effect immediately.  
+**Upload brand package** prompts you to select a zip file from a local folder and then apply the package to the web portal. You see it take effect immediately.  
   
-You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
+You can also **Download** or **Remove** the package. Removing the package resets the web portal to the default brand immediately.  
   
 ## metadata.xml example
 

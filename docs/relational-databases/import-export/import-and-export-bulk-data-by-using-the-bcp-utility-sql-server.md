@@ -1,21 +1,19 @@
 ---
 title: "Import & export bulk data with bcp"
 description: Use bcp to export data from anywhere in a SQL Server database that SELECT works. Bulk export data from a table or from a query and bulk import from a file.
+author: markingmyname
+ms.author: maghan
+ms.date: "09/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk exporting [SQL Server], bcp utility"
   - "bulk importing [SQL Server], bcp utility"
   - "bcp utility [SQL Server], about bcp utility"
-ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.date: "09/28/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 
 # Import and export bulk data using bcp (SQL Server)
@@ -40,7 +38,8 @@ This topic provides an overview for using the [bcp utility](../../tools/bcp-util
   
  The **bcp** command provides switches that you use to specify the data type of the data file and other information. If these switches are not specified, the command prompts for formatting information, such as the type of data fields in a data file. The command then asks whether you want to create a format file that contains your interactive responses. If you want flexibility for future bulk-import or bulk-export operations, a format file is often useful. You can specify the format file on later **bcp** commands for equivalent data files. For more information, see [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
->**Note!!** The bcp utility is written by using the ODBC bulk-copy.
+> [!NOTE]  
+> The bcp utility is written by using the ODBC bulk-copy.
   
  For a description of the **bcp** command syntax, see [bcp Utility](../../tools/bcp-utility.md).  
   

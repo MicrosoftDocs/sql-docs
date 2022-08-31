@@ -269,7 +269,7 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](../includes/linux/sql-linux-quickstart-connect-query.md)]
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -316,7 +316,7 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](../includes/linux/sql-linux-quickstart-connect-query.md)]
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -363,6 +363,6 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](../includes/linux/sql-linux-quickstart-connect-query.md)]
 
 ::: moniker-end

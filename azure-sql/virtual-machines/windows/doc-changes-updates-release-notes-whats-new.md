@@ -1,25 +1,33 @@
 ---
 title: Documentation changes for SQL Server on Azure Virtual Machines
 description: Learn about the new features and improvements for different releases of SQL Server on Azure Virtual Machines.
-services: virtual-machines-windows
 author: MashaMSFT
 ms.author: mathoma
-tags: azure-service-management
-ms.assetid: 2fa5ee6b-51a6-4237-805f-518e6c57d11b
+ms.reviewer: randolphwest
+ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/24/2022
-ms.reviewer: randolphwest
 ms.custom: ignite-fall-2021
+tags: azure-service-management
 ---
 # Documentation changes for SQL Server on Azure Virtual Machines
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
+
+
+
+
+## July 2022
+
+| Changes | Details |
+| --- | --- |
+| **Azure CLI for SQL best practices assessment**| It's now possible to configure the [SQL best practices assessment](sql-assessment-for-sql-vm.md) feature using the Azure CLI. |
+| **Configure tempdb from Azure portal** | It's now possible to configure your tempdb settings, such as the number of files, initial size, and autogrowth ratio for an existing SQL Server instance by using the Azure portal. See [manage SQL Server VM from portal](manage-sql-vm-portal.md#storage) to learn more. |
+
+
 
 ## May 2022
 

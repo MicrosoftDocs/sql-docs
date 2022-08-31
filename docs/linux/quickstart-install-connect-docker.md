@@ -110,9 +110,12 @@ Before starting the following steps, make sure that you've selected your preferr
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 --hostname sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
@@ -125,7 +128,7 @@ Before starting the following steps, make sure that you've selected your preferr
    > If you are using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
@@ -134,7 +137,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
@@ -150,7 +153,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -201,7 +204,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
 
-1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+1. As a final step, change your SA password because the `MSSQL_SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -242,9 +245,12 @@ Before starting the following steps, make sure that you've selected your preferr
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 --hostname sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2019-latest
@@ -257,7 +263,7 @@ Before starting the following steps, make sure that you've selected your preferr
    > If you are using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2019-latest
@@ -266,7 +272,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2019-latest
@@ -282,7 +288,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -333,7 +339,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
 
-1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+1. As a final step, change your SA password because the `MSSQL_SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -374,9 +380,12 @@ Before starting the following steps, make sure that you've selected your preferr
 
 1. To run the Linux container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
 
+   > [!IMPORTANT]  
+   > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 --hostname sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2022-latest
@@ -389,7 +398,7 @@ Before starting the following steps, make sure that you've selected your preferr
    > If you are using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2022-latest
@@ -398,7 +407,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2022-latest
@@ -414,7 +423,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -465,14 +474,14 @@ Before starting the following steps, make sure that you've selected your preferr
 
    Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
 
-1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+1. As a final step, change your SA password because the `MSSQL_SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
 
 ::: moniker-end
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 ## <a id="sapassword"></a> Change the system administrator password
 
-The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance that gets created during setup. After you create your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
+The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance that gets created during setup. After you create your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password.
 
    ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
@@ -542,7 +551,11 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    ```
 
    > [!TIP]
-   > You can omit the password on the command-line to be prompted to enter it.
+   > You can omit the password on the command-line to be prompted to enter it. Here's an example:    
+    
+   ```bash
+     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+   ```
 
 3. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 

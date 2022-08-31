@@ -16,7 +16,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Request schemas as results with XMLDATA and XMLSCHEMA
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following query returns the XML-DATA schema that describes the document structure.
 

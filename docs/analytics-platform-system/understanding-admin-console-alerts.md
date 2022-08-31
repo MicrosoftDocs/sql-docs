@@ -1,12 +1,12 @@
 ---
 title: Admin Console alerts in Analytics Platform System
 description: Learn about the Admin Console alerts in Analytics Platform System, including severity and whether action is required.
-author: ronortloff
+author: WilliamDAssafMSFT
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: troubleshooting
 ms.date: 06/23/2022
-ms.author: rortloff
+ms.author: wiassaf
 ms.custom:
 - seo-dt-2019
 - kr2b-contr-experiment

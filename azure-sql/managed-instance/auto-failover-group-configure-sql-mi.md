@@ -1,19 +1,19 @@
 ---
 title: Configure an auto-failover group
-description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: devx-track-azurecli, sql-db-mi-split
-ms.topic: how-to
-ms.devlang: 
+description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell.
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
-ms.date: 06/02/2022
+ms.date: 07/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurecli
+  - "azure-sql-split"
 ---
 # Configure an auto-failover group for Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/auto-failover-group-configure-sql-db.md)
@@ -32,17 +32,17 @@ Consider the following prerequisites:
 - The secondary managed instance must be empty that is, contain no user databases.
 - The two instances of SQL Managed Instance need to be the same service tier, and have the same storage size. While not required, it's strongly recommended that two instances have equal compute size, to make sure that secondary instance can sustainably process the changes being replicated from the primary instance, including the periods of peak activity.
 - The IP address range(s) of the virtual network hosting the primary instance must not overlap with IP address range(s) of the virtual network hosting the secondary instance.
-- Network Security Groups (NSG) rules on subnet hosting instance must have port 5022 and the port range 11000-11999 open inbound and outbound for connections from and to the subnet hosting the other managed instance. This applies to both subnets, hosting primary and secondary instance.
+- Network Security Groups (NSG) rules on subnet hosting instance must have port 5022 (TCP) and the port range 11000-11999 (TCP) open inbound and outbound for connections from and to the subnet hosting the other managed instance. This applies to both subnets, hosting primary and secondary instance.
 - The secondary SQL Managed Instance is configured during its creation with the correct DNS zone ID. It's accomplished by passing the primary instance's zone ID as the value of DnsZonePartner parameter when creating the secondary instance. If not passed as a parameter, the zone ID is generated as a random string when the first instance is created in each VNet and the same ID is assigned to all other instances in the same subnet. Once assigned, the DNS zone can't be modified. 
 - The collation and time zone of the secondary managed instance must match that of the primary managed instance.
 - Managed instances should be deployed in [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Managed instances residing in geo-paired regions benefit from significantly higher geo-replication speed compared to unpaired regions.
 
 ## Enabling connectivity between the instances
 
-Connectivity between the virtual network subnets hosting primary and secondary instance must be established for uninterrupted geo-replication traffic flow. [Global virtual network peering]() is **recommended** as the most performant and robust way for establishing the connectivity. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks. To learn about alternative ways of establishing connectivity, see [enabling replication traffic between instances](auto-failover-group-sql-mi.md#enabling-replication-traffic-between-two-instances).
+Connectivity between the virtual network subnets hosting primary and secondary instance must be established for uninterrupted geo-replication traffic flow. [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is **recommended** as the most performant and robust way for establishing the connectivity. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks. To learn about alternative ways of establishing connectivity, see [enabling replication traffic between instances](auto-failover-group-sql-mi.md#enabling-replication-traffic-between-two-instances).
 
 > [!IMPORTANT]
-> Alternative ways of providing connectivity between the instances involving additional networking devices may make troubleshooting process in case of connectivity or replication speed issues very difficult and significantly prolong the resolution time.
+> Alternative ways of providing connectivity between the instances involving additional networking devices may make troubleshooting process in case of connectivity or replication speed issues very difficult and require active involvement of network administrators and significantly prolong the resolution time.
 
 # [Portal](#tab/azure-portal)
 
@@ -81,43 +81,44 @@ Create global virtual network peering between virtual networks hosting primary a
 
    ```powershell-interactive
    # Peer the virtual networks
-   Write-host "Peering primary VNet to secondary VNet..."
+   Write-host "Retreiving primary VNet and secondary VNet..."
 
    $primaryVirtualNetwork  = Get-AzVirtualNetwork `
                      -Name $primaryVNet `
-                     -ResourceGroupName $resourceGroupName
+                     -ResourceGroupName $primaryResourceGroupName
    
    $secondaryVirtualNetwork = Get-AzVirtualNetwork -Name $secondaryVNet `
-                                   -ResourceGroupName $resourceGroupName
+                                   -ResourceGroupName $secondaryResourceGroupName
 
   Write-host "Peering primary VNet to secondary VNet..."
   
   Add-AzVirtualNetworkPeering `
-    -Name primaryVnet-secondaryVNet `
+    -Name $primaryVnetToSecondaryVNetPeeringName `
     -VirtualNetwork $primaryVirtualNetwork `
     -RemoteVirtualNetworkId $secondaryVirtualNetwork.Id
    
   Write-host "Peering secondary VNet to primary VNet..."
    
   Add-AzVirtualNetworkPeering `
-    -Name secondaryVNet-primaryVNet`
+    -Name $secondaryVNetToPrimaryVNetPeeringName`
     -VirtualNetwork $secondaryVirtualNetwork `
     -RemoteVirtualNetworkId $primaryVirtualNetwork.Id
   
-  Write-host "Checking peering state on the primary virtual network..."
+  Write-host "Checking peering state on the primary virtual network, expecting state Connected..."
 
   Get-AzVirtualNetworkPeering `
-  -ResourceGroupName $resourceGroupName `
+  -ResourceGroupName $primaryResourceGroupName `
   -VirtualNetworkName $primaryVNet `
   | Select PeeringState
 
-  Write-host "Checking peering state on the secondary virtual network..."
+  Write-host "Checking peering state on the secondary virtual network, expecting state Connected..."
 
   Get-AzVirtualNetworkPeering `
-  -ResourceGroupName $resourceGroupName `
+  -ResourceGroupName $secondaryResourceGroupName `
   -VirtualNetworkName $secondaryVNet `
   | Select PeeringState
    ```
+
 
 ---
 
@@ -131,7 +132,7 @@ Create the failover group for your SQL Managed Instances by using the Azure port
 
 1. Select **Azure SQL** in the left-hand menu of the [Azure portal](https://portal.azure.com). If **Azure SQL** isn't in the list, select **All services**, then type Azure SQL in the search box. (Optional) Select the star next to **Azure SQL** to add it as a favorite item to the left-hand navigation.
 1. Select the primary managed instance you want to add to the failover group.  
-1. Under **Settings**, navigate to **Instance Failover Groups** and then choose to **Add group** to open the **Instance Failover Group** page.
+1. Under **Settings**, navigate to **Instance Failover Groups** and then choose to **Add group** to open the instance failover group creation page.
 
    ![Add a failover group](./media/auto-failover-group-configure-sql-mi/add-failover-group.png)
 
@@ -181,6 +182,9 @@ Test failover of your failover group using the Azure portal.
 1. Note managed instances in the primary and in the secondary role. If failover succeeded, the two instances should have switched roles.
 
    ![Managed instances have switched roles after failover](./media/auto-failover-group-configure-sql-mi/mi-switched-after-failover.png)
+   
+> [!IMPORTANT]
+> If roles didn't switch, check the connectivity between the instances and related NSG and firewall rules. Proceed with the next step only after roles switch.
 
 1. Go to the new _secondary_ managed instance and select **Failover** once again to fail the primary instance back to the primary role.
 
@@ -260,8 +264,9 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 1. Create instance C with same size as B and in the same DNS zone.
 2. Connect to instance B and manually failover to switch the primary instance to B. Instance A will become the new secondary instance automatically.
 3. Delete the failover group between instances A and B. At this point, log in attempts using failover group endpoints will be failing. The secondary databases on A will be disconnected from the primaries and will become read-write databases.
-4. Create a failover group with the same name between instance A and C. Follow the instructions in the [failover group with managed instance tutorial](failover-group-add-instance-tutorial.md). This is a size-of-data operation and will complete when all databases from instance A are seeded and synchronized. At this point login attempts will stop failing.
-5. Delete instance A if not needed to avoid unnecessary charges.
+4. Create a failover group with the same name between instance B and C. Follow the instructions in the [failover group with managed instance tutorial](failover-group-add-instance-tutorial.md). This is a size-of-data operation and will complete when all databases from instance A are seeded and synchronized. At this point login attempts will stop failing.
+5. Manually failover to switch the C instance to primary role. Instance B will become the new secondary instance automatically.
+6. Delete instance A if not needed to avoid unnecessary charges.
 
 > [!CAUTION]
 > After step 3 and until step 4 is completed the databases in instance A will remain unprotected from a catastrophic failure of instance A.

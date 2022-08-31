@@ -4,7 +4,7 @@ description: This quickstart shows how to install SQL Server on SUSE Linux Enter
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/20/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -29,7 +29,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) v15. Then you can connect with **sqlcmd** to create your first database and run queries.
 
 > [!WARNING]  
-> SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
+> SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
 
 For more information on supported platforms, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 
@@ -130,7 +130,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    ```
 
    > [!WARNING]  
-   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
+   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
 
    > [!TIP]  
    > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) version of this article.
@@ -209,4 +209,4 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](../includes/linux/sql-linux-quickstart-connect-query.md)]

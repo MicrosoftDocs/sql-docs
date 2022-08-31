@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"
@@ -47,7 +46,7 @@ JSON_VALUE ( expression , path )
 
 In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
   
- If the format of *path* isn't valid, **JSON_VALUE** returns an error .  
+ If the format of *path* isn't valid, **JSON_VALUE** returns an error.  
   
 ## Return value
 
@@ -107,10 +106,10 @@ SET @jsonInfo=N'{
   
 ```sql  
 SELECT FirstName, LastName,
- JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
+ JSON_VALUE(jsonInfo,'$.info.address.town') AS Town
 FROM Person.Person
-WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
-ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
+WHERE JSON_VALUE(jsonInfo,'$.info.address.state') LIKE 'US%'
+ORDER BY JSON_VALUE(jsonInfo,'$.info.address.town')
 ```  
   
 ### Example 2

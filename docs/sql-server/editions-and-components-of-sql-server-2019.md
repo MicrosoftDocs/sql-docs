@@ -2,7 +2,7 @@
 description: "Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
 title: "Editions and supported features of SQL Server 2019"
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 07/25/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -195,7 +195,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
 |In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
-|Stretch database|Yes|Yes|Yes|Yes|Yes|
+|Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|
 |Data compression|Yes|Yes|Yes|Yes|Yes|

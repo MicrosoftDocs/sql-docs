@@ -12,7 +12,7 @@ ms.custom:
   - "sqldbrb=2"
   - "mode-other"
   - "kr2b-contr-experiment"
-ms.devlang: "ruby"
+ms.devlang: ruby
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

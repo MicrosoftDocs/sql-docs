@@ -8,7 +8,7 @@ ms.date: 07/28/2020
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 keywords:
   - "cloud disaster recovery"
   - "disaster recovery solutions"

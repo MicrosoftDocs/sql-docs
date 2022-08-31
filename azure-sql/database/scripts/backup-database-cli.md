@@ -8,8 +8,8 @@ ms.date: 01/26/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: sample
-ms.custom: "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.custom: devx-track-azurecli
+ms.devlang: azurecli
 ---
 
 # Backup an Azure SQL single database to an Azure storage container using the Azure CLI

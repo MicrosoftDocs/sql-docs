@@ -8,7 +8,7 @@ ms.date: 06/30/2021
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom: "subject-cost-optimization"
+ms.custom: subject-cost-optimization
 ---
 
 # Plan and manage costs for Azure SQL Database

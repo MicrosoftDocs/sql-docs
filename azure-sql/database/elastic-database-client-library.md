@@ -8,7 +8,7 @@ ms.date: 09/25/2018
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Building scalable cloud databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

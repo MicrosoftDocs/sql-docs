@@ -8,7 +8,7 @@ ms.date: 04/19/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "references_regions"
+ms.custom: references_regions
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

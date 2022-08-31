@@ -8,7 +8,7 @@ ms.date: 04/13/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Azure SQL Database traffic migration to newer Gateways
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

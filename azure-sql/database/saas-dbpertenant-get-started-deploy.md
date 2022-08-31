@@ -8,7 +8,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Deploy and explore a multitenant SaaS app that uses the database-per-tenant pattern with Azure SQL Database
 

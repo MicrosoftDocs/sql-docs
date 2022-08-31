@@ -10,7 +10,6 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
 ms.custom: seo-lt-2019
-documentationCenter: na
 tags: azure-resource-manager
 ---
 

@@ -1,14 +1,13 @@
 ---
 title: SQL Database Projects extension
 description: Install and use the SQL Database Projects extension for Azure Data Studio and VS Code.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 05/24/2022
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
 ---
 
 # SQL Database Projects extension (Preview)

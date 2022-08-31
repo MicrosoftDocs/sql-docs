@@ -1,14 +1,14 @@
 ---
 title: Azure Data Studio Troubleshooting
-description: 'Learn how to get logs and troubleshoot Azure Data Studio, which is helpful in reporting bug reports.'
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
+description: "Learn how to get logs and troubleshoot Azure Data Studio, which is helpful in reporting bug reports."
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: hanqin, maghan
-ms.custom: seodec18
 ms.date: 11/24/2020
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
+ms.custom: seodec18
 ---
 
 # Azure Data Studio Troubleshooting

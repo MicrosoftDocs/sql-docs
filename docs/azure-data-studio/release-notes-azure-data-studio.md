@@ -1,14 +1,16 @@
 ---
 title: Azure Data Studio release notes
 description: This article has release notes for Azure Data Studio.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.custom: seodec18, contperf-fy21q4
 ms.date: 08/30/2022
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
+ms.custom:
+  - seodec18
+  - contperf-fy21q4
 ---
 
 # Release notes for Azure Data Studio

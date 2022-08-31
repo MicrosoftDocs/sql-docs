@@ -4,12 +4,11 @@ description: This tutorial shows how you can deploy SQL Server in a container.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: markingmyname
-ms.topic: tutorial
+ms.date: 7/22/2022
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.custom:
-  - intro-deployment
-ms.date: 7/22/2022
+ms.topic: tutorial
+ms.custom: intro-deployment
 ---
 
 # Deploy SQL Server in a container using Azure Data Studio

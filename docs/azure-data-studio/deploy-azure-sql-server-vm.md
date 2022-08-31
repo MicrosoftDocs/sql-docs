@@ -4,12 +4,11 @@ description: This tutorial shows how you can create SQL Server on Azure Virtual 
 author: ninarn
 ms.author: ninarn
 ms.reviewer: alayu, maghan
-ms.topic: tutorial
+ms.date: 10/14/2020
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.custom:
-  - intro-deployment
-ms.date: 10/14/2020
+ms.topic: tutorial
+ms.custom: intro-deployment
 ---
 
 # Create SQL Server on Azure Virtual Machines using Azure Data Studio

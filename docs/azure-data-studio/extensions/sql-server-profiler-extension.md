@@ -1,14 +1,14 @@
 ---
 title: SQL Server Profiler extension
 description: Learn how to install and use the SQL Server Profiler extension. An easy-to-use SQL Server tracing solution similar to the SQL Server Management (SSMS) Profiler.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-ms.custom: seodec18
 ms.date: 06/28/2021
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
+ms.custom: seodec18
 ---
 
 # SQL Server Profiler extension (Preview)

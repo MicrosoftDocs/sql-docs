@@ -1,14 +1,13 @@
 ---
 title: "Database Schema Conversion Toolkit overview"
 description: "Learn about Database Schema Conversion Toolkit, a portfolio of Azure Data Studio extensions that automate database schema conversion between different database platforms."
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.topic: conceptual
-ms.custom:
 ms.date: "10/4/2021"
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Database Schema Conversion Toolkit (DSCT)

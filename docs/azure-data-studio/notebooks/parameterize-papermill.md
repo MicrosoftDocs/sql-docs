@@ -1,14 +1,13 @@
 ---
 title: Parameterize notebooks in Azure Data Studio with Papermill
 description: Learn how to create a parameterized notebook in Azure Data Studio by using Papermill.
-ms.topic: how-to
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: vasubhog
 ms.author: vabhog
 ms.reviewer: mikeray, alayu, maghan
-ms.custom: ""
 ms.date: 06/18/2021
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: how-to
 ---
 
 # Create a parameterized notebook by using Papermill

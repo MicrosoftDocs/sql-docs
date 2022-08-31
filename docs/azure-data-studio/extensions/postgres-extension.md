@@ -1,14 +1,13 @@
 ---
 title: PostgreSQL extension
 description: Learn how to install the Azure Data Studio PostgreSQL extension. It enables you to connect to, query, and develop for Postgres databases.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: sunilagarwal
 ms.author: sunila
 ms.reviewer: alayu, maghan
-ms.custom: 
 ms.date: 03/19/2019
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
 ---
 
 # PostgreSQL extension (Preview)

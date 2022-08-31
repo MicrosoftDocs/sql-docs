@@ -1,14 +1,13 @@
 ---
 title: Build and Publish a Project
 description: Build and Publish with SQL Server Database Projects extension
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 10/27/2021
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Build and Publish a project

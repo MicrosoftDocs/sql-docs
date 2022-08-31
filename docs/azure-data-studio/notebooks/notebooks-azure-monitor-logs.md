@@ -1,14 +1,13 @@
 ---
 title: Notebooks with Azure Monitor Logs in Azure Data Studio
 description: This tutorial shows how you can create and run a notebook with Azure Monitor Logs.
-ms.topic: how-to
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
-ms.custom: ""
 ms.date: 11/03/2021
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: how-to
 ---
 # Create and run a notebook with Azure Monitor Logs (Preview)
 

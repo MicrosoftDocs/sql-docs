@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Connect and query PostgreSQL"
 description: Do a quickstart in which you use Azure Data Studio to connect to PostgreSQL, and then use SQL statements to create and query a database.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: "sunilagarwal"
 ms.author: "sunila"
 ms.reviewer: "alayu, maghan"
+ms.date: "09/18/2019"
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
 ms.topic: "quickstart"
 ms.custom:
   - seodec18
   - intro-quickstart
-ms.date: "09/18/2019"
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query PostgreSQL

@@ -1,17 +1,17 @@
 ---
 title: Download and install Azure Data Studio
 description: Download and install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: overview
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
+ms.date: 08/30/2022
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: overview
 ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 08/30/2022
 ---
 
 # Download and install Azure Data Studio

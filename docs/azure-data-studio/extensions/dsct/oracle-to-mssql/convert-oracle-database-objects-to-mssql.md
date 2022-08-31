@@ -1,14 +1,12 @@
 ---
 title: "Convert Oracle database objects to Microsoft SQL"
 description: "Learn how to use Database Schema Conversion Toolkit (Oracle to Microsoft SQL) to convert Oracle database objects to Microsoft SQL platform."
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.topic: conceptual
-ms.custom:
 ms.date: "10/4/2021"
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Convert Oracle database objects to Microsoft SQL

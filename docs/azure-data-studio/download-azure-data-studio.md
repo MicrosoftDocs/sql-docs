@@ -290,7 +290,7 @@ To uninstall apps you've downloaded from the App Store, use Launchpad.
 
 ## Uninstall Azure Data Studio from Linux
 
-### In Debian
+### In Ubuntu/Debian
 
 You can uninstall Azure Data Studio under Debian or Ubuntu Linux.
 
@@ -299,7 +299,7 @@ To list installed software type, run the following commands:
 ```bash
 dpkg --list
 dpkg --list | less
-dpkg --list | grep apache
+dpkg --list | grep azuredatastudio
 ```
 
 To delete the software, run the following commands:

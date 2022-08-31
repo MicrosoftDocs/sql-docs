@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurepowershell"
-ms.devlang: "PowerShell"
+ms.devlang: PowerShell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Event File target code for extended events in Azure SQL Database and SQL Managed Instance

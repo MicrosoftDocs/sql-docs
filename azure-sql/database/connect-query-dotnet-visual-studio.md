@@ -13,7 +13,7 @@ ms.custom:
   - "devx-track-csharp"
   - "sqldbrb=2"
   - "mode-ui"
-ms.devlang: "csharp"
+ms.devlang: csharp
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use .NET and C# in Visual Studio to connect to and query a database

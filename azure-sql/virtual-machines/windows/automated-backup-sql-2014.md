@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell
-documentationCenter: na
 tags: azure-resource-manager
 ---
 

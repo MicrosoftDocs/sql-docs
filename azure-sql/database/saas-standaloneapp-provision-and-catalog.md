@@ -8,7 +8,7 @@ ms.date: 09/24/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Provision and catalog new tenants using the  application per tenant SaaS pattern
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -22,7 +22,7 @@ keywords:
   - "azure cli examples"
   - "azure cli code samples"
   - "azure cli script examples"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Azure CLI samples for Azure SQL Database and SQL Managed Instance

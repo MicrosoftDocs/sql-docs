@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # How to use Azure PowerShell to provision SQL Server on Azure Virtual Machines

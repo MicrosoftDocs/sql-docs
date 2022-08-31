@@ -7,7 +7,7 @@ ms.date: 2/16/2022
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Import or export an Azure SQL Database using Private Link without allowing Azure services to access the server
 

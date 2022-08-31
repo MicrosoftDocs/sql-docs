@@ -7,7 +7,7 @@ ms.date: 01/14/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: guide
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Configure and manage content reference - Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -8,7 +8,7 @@ ms.date: 09/19/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Cross-tenant analytics using extracted data - multi-tenant app
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

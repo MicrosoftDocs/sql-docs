@@ -12,7 +12,7 @@ ms.topic: quickstart
 ms.custom:
   - "sqldbrb=2"
   - "mode-api"
-ms.devlang: "golang"
+ms.devlang: golang
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance

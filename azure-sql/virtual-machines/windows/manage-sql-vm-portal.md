@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
 ms.custom: ignite-fall-2021
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Manage SQL Server VMs by using the Azure portal

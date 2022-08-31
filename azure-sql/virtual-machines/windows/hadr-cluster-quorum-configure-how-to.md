@@ -8,7 +8,6 @@ ms.date: "06/01/2021"
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-service-management
 ---
 

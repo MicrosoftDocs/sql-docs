@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article
 ms.custom: devx-track-azurepowershell
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Automated Patching for SQL Server on Azure virtual machines (Resource Manager)

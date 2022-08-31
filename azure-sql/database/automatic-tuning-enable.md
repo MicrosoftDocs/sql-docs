@@ -8,7 +8,7 @@ ms.date: 06/06/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Enable automatic tuning in the Azure portal to monitor queries and improve workload performance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

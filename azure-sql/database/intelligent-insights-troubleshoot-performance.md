@@ -8,7 +8,7 @@ ms.date: 11/04/2021
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: troubleshooting
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues with Intelligent Insights

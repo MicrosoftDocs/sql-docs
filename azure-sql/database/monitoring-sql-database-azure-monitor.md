@@ -8,7 +8,7 @@ ms.date: 07/29/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "subject-monitoring"
+ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db"
 ---
 

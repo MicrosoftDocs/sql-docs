@@ -8,7 +8,7 @@ ms.date: 03/01/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "azure-sql-split"
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Database)

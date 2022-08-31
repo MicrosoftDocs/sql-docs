@@ -8,7 +8,6 @@ ms.date: 12/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-service-management
 ---
 

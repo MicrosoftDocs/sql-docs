@@ -9,7 +9,7 @@ ms.date: 05/02/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 tags: azure-synapse
 ---
 # Data Discovery & Classification

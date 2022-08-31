@@ -8,7 +8,7 @@ ms.date: 10/18/2021
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Get started with Elastic Database Tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

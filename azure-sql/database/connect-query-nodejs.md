@@ -15,7 +15,7 @@ ms.custom:
   - "sqldbrb=2"
   - "devx-track-js"
   - "mode-api"
-ms.devlang: "javascript"
+ms.devlang: javascript
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use Node.js to query a database in Azure SQL Database or Azure SQL Managed Instance

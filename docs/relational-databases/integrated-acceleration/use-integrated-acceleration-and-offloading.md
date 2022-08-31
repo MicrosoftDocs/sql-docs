@@ -64,15 +64,15 @@ After the drivers are installed, configure the server instance.
 
    a. **Enable accelerator hardware offloading**
 
-   Hardware compression configuration protects the host CPU - Intel&reg; QAT hardware mode is designed to protect the underlying host system CPU. This method provides the best performance when the underlying system is under higher workloads.
+   Hardware compression configuration protects the host CPU - Intel&reg; QAT hardware mode is designed to protect the underlying host system CPU. This method performs best when the underlying system is under higher workloads.
 
    ```sql
    ALTER SERVER CONFIGURATION   
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT);  
    ```
 
-> [!Tip]
-> If the hardware device fails for any reason the accelerator has the ability to fallback to software mode gracefully.
+   > [!Tip]
+   > If the hardware device fails for any reason, the accelerator can gracefully fall back to software mode.
 
    b. **Force enable accelerator software mode**
 
@@ -83,8 +83,8 @@ After the drivers are installed, configure the server instance.
 
    Standard edition only supports SOFTWARE mode. For more information on edition specifics, see [Edition specific capabilities](intel-quickassist.md#edition-specific-capabilities).
 
-> [!IMPORTANT]
-> The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode and compared to MS_XPRESS, varies based on a number of factors. The factors of the compute capabilities of the host SQL Server, the workload pressure the host system may be under during backup execution, and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
+   > [!IMPORTANT]
+   > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode compared to MS_XPRESS varies based on several factors. The workload pressure the host system may be under during backup execution and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
 
 4. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 
@@ -100,11 +100,11 @@ After the drivers are installed, configure the server instance.
    - `mode_desc` - NONE, SOFTWARE, or HARDWARE mode
    - `mode_reason_desc` - Reason for the mode
    - `accelerator_library_version` - User mode accelerator version
-   - `accelerator_driver_version` - Kernal mode accelerator version
+   - `accelerator_driver_version` - Kernel mode accelerator version
 
-   If the mode description is either SOFTWARE or HARDWARE the accelerator is enabled. The `mode_reason_desc` explains why the result is either SOFTWARE or HARDWARE mode.
+The accelerator is enabled if the mode description is either SOFTWARE or HARDWARE. The `mode_reason_desc` explains why the result is either SOFTWARE or HARDWARE mode.
 
-   If other results are found, refer to the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) for troubleshooting.
+If other results are found, refer to the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) for troubleshooting.
 
 ## Disable offloading and acceleration
 
@@ -158,8 +158,8 @@ The table below gives a summary of the BACKUP DATABASE with COMPRESSION options 
 > The examples in the table above specify DISK as destination. The actual destination may be DISK, TAPE, or URL.
 
 ### Default configurations
- 
-The SQL Server backup compression default behavior can be adjusted. You can change the server default configuration as well as other options. You can enable or disable hardware acceleration, you can enable backup compression as a default, and you can also change the default compression algorithm as by using `sp_configure`.  
+
+The SQL Server backup compression default behavior can be adjusted. You can change the server default configuration and other options. You can enable or disable hardware acceleration, you can enable backup compression as a default, and you can also change the default compression algorithm as by using `sp_configure`.  
 
 The status of these options is reflected in the [sys.configurations (Transact-SQL)](../system-catalog-views/sys-configurations-transact-sql.md). View the configuration of offload and acceleration configuration with the [sys.dm_server_accelerator_status (Transact-SQL)](../system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md) dynamic management view. 
 
@@ -182,7 +182,7 @@ To change these configuration settings, use [sp_configure (Transact-SQL)](../sys
 ```sql
 EXEC sp_configure 'backup compression default', 1;   
 RECONFIGURE; 
-``` 
+```
 
 No restart of SQL Server is required for this change to take effect. 
 
@@ -226,11 +226,11 @@ To restore an Intel&reg; QAT compressed backup, the correct assemblies must be l
 
 ### Backup history
 
-You can view the compression algorithm and history of all SQL Server backup and restore operations on an instance in [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md) system table. A new column was added to this system table for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], `compression_algorithm` which indicates `MS_EXPRESS` or `QAT_DEFLATE`, for example.
+You can view the compression algorithm and history of all SQL Server backup and restore operations on an instance in [backupset (Transact-SQL)](../system-tables/backupset-transact-sql.md) system table. A new column was added to this system table for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], `compression_algorithm`, which indicates `MS_EXPRESS` or `QAT_DEFLATE`, for example.
 
 ## Service start - after configuration
 
-After you configure integrated acceleration and offloading, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they're available. For the Intel&reg; QAT accelerator, the user space library is QATzip. This library provides a number of features. The QATzip software library is a user space software API that can interface with the QAT kernel driver API. It's used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel&reg; QAT devices.
+After you configure integrated acceleration and offloading, every time the SQL Server service starts, the SQL Server process looks for the required user space software library that interfaces with the hardware acceleration device driver API and loads the software assemblies if they're available. For the Intel&reg; QAT accelerator, the user space library is QATzip. This library provides many features. The QATzip software library is a user space software API that can interface with the QAT kernel driver API. It's used primarily by applications that are looking to accelerate the compression and decompression of files using one or more Intel&reg; QAT devices.
 
 In the case of the Windows operating system, there's a complimentary software library to QATzip, the Intel Intelligent Storage Library (ISA-L). This serves as a software fallback mechanism for QATzip in the case of hardware failure, and a software-based option when the hardware isn't available.
 
@@ -239,10 +239,10 @@ In the case of the Windows operating system, there's a complimentary software li
 
 ## Next steps
 
- - [Integrated acceleration and offloading](overview.md)
- - [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
- - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
- - [BACKUP COMPRESSION (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression)
- - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
- - [View or configure the backup compression algorithm Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md)
- - [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)
+- [Integrated acceleration and offloading](overview.md)
+- [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
+- [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
+- [BACKUP COMPRESSION (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md#compression)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [View or configure the backup compression algorithm Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md)
+- [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)

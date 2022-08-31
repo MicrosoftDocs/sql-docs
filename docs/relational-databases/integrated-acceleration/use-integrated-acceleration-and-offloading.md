@@ -71,8 +71,8 @@ After the drivers are installed, configure the server instance.
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT);  
    ```
 
-> [!Tip]
-> If the hardware device fails for any reason the accelerator has the ability to fallback to software mode gracefully.
+   > [!Tip]
+   > If the hardware device fails for any reason the accelerator has the ability to fallback to software mode gracefully.
 
    b. **Force enable accelerator software mode**
 
@@ -83,8 +83,8 @@ After the drivers are installed, configure the server instance.
 
    Standard edition only supports SOFTWARE mode. For more information on edition specifics, see [Edition specific capabilities](intel-quickassist.md#edition-specific-capabilities).
 
-> [!IMPORTANT]
-> The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode and compared to MS_XPRESS, varies based on a number of factors. The factors of the compute capabilities of the host SQL Server, the workload pressure the host system may be under during backup execution, and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
+   > [!IMPORTANT]
+   > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode and compared to MS_XPRESS, varies based on a number of factors. The factors of the compute capabilities of the host SQL Server, the workload pressure the host system may be under during backup execution, and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
 
 4. Restart the SQL Server instance. You need to restart the SQL Server instance after you run a command to `SET HARDWARE_OFFLOAD = ...`.
 

@@ -6,7 +6,6 @@ ms.author: luczhan
 ms.reviewer: alayu, maghan
 ms.date: 07/02/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ms.custom: intro-installation
 ---

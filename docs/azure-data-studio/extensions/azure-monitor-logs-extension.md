@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.date: 11/03/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: conceptual
 ---
 

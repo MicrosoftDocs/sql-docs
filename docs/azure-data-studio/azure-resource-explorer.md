@@ -6,7 +6,6 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ms.custom: seodec18
 ---

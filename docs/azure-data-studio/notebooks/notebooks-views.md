@@ -5,7 +5,6 @@ author: markingmyname
 ms.author: maghan
 ms.date: 10/27/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ms.custom: seo-lt-2019
 ---

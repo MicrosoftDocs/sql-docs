@@ -6,7 +6,6 @@ ms.author: ninarn
 ms.reviewer: alayu, maghan
 ms.date: 10/14/2020
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: tutorial
 ms.custom: intro-deployment
 ---

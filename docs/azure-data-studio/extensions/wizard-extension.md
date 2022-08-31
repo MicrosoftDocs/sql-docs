@@ -6,7 +6,6 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.date: 08/28/2020
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: conceptual
 ---
 

@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ms.custom:
   - seodec18

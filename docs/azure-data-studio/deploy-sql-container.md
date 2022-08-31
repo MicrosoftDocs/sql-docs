@@ -6,7 +6,6 @@ ms.author: drskwier
 ms.reviewer: markingmyname
 ms.date: 7/22/2022
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: tutorial
 ms.custom: intro-deployment
 ---

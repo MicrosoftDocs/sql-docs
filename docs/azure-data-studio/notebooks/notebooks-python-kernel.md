@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: mikeray, alayu
 ms.date: 07/01/2020
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ---
 

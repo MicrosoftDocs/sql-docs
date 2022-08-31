@@ -6,7 +6,6 @@ ms.author: vabhog
 ms.reviewer: mikeray, alayu, maghan
 ms.date: 06/14/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ---
 

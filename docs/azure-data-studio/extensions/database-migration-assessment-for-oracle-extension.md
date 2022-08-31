@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: niball
 ms.date: 04/27/2022
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: conceptual
 ---
 

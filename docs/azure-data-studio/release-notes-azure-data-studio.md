@@ -6,7 +6,6 @@ ms.author: timioshin
 ms.reviewer: maghan
 ms.date: 08/30/2022
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: conceptual
 ms.custom:
   - seodec18

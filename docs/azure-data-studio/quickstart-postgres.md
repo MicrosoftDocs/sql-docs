@@ -6,7 +6,6 @@ ms.author: "sunila"
 ms.reviewer: "alayu, maghan"
 ms.date: "09/18/2019"
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: "quickstart"
 ms.custom:
   - seodec18

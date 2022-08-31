@@ -6,7 +6,6 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.date: 09/22/2020
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ms.custom: intro-deployment
 ---

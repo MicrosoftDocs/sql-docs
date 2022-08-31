@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.date: 06/28/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ---
 

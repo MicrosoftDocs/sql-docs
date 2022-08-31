@@ -6,7 +6,6 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.date: 11/03/2021
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: how-to
 ---
 # Create and run a notebook with Azure Monitor Logs (Preview)

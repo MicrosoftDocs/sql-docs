@@ -6,7 +6,6 @@ ms.author: "aanelson"
 ms.reviewer: "alayu, maghan"
 ms.date: "04/19/2019"
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 ms.topic: conceptual
 ---
 

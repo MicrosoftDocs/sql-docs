@@ -20,12 +20,12 @@ Azure Functions support for [SQL bindings](https://aka.ms/sqlbindings) is availa
 > Currently, the SQL bindings extension only supports C# Azure Functions. JavaScript and Python Azure Functions support SQL bindings but are not supported by the SQL bindings extension at this time.
 
 ## From the Object Explorer 
-To create an Azure Function from a specific `Table` or `View` in object explorer (OE), right-click on a table or view from a connected server in SQL Serve object explorer and select `Create Azure Function with SQL Binding.` 
+To create an Azure Function from a specific `Table` or `View` in object explorer (OE), right-click on a table or view from a connected server in SQL Server object explorer and select `Create Azure Function with SQL Binding.` 
 
-Table OE Command:
+**Table OE Command**:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from Table." source="./media/create-azure-function-with-mssql/create-function-table-object-explorer.png":::
 
-View OE Command:
+**View OE Command**:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from View." source="./media/create-azure-function-with-mssql/create-function-view-object-explorer.png":::
 
 See further documentation to create an Azure function with SQL bindings from the SQL Server object explorer [here](create-azure-function-with-mssql-OE.md).
@@ -122,3 +122,10 @@ namespace Company.Function
     }
 }
 ```
+
+## Next steps
+
+- [Use the mssql extension to query a SQL instance](mssql-extensions.md).
+- [Learn more about SQL bindings for Azure Functions](../../../azure-sql/azure/azure-functions/functions-bindings-azure-sql).
+- [Create Azure Function with SQL binding through the object explorer tutorial](create-azure-function-with-mssql-OE.md).
+- [Create Azure Function with SQL binding through the command palette tutorial](create-azure-function-with-mssql-command-palette.md).

@@ -18,12 +18,12 @@ ms.date: 8/24/2022
 Microsoft SQL Bindings for VS Code enable users to develop Azure Functions with Azure SQL bindings, see further documentation [here](create-azure-function-with-mssql.md).
 
 ## From the Object Explorer 
-To create an Azure Function from a specific `Table` or `View` in object explorer (OE), right-click on a table or view from a connected server in SQL Serve object explorer and select `Create Azure Function with SQL Binding.` 
+To create an Azure Function from a specific `Table` or `View` in object explorer (OE), right-click on a table or view from a connected server in SQL Server object explorer and select `Create Azure Function with SQL Binding.` 
 
-Table OE Command:
+**Table OE Command**:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from Table." source="./media/create-azure-function-with-mssql/create-function-table-object-explorer.png":::
 
-View OE Command:
+**View OE Command**:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from View." source="./media/create-azure-function-with-mssql/create-function-view-object-explorer.png":::
 
 If you haven't yet created the Azure Function project, a VS Code prompt will appear to aid in creating a new Azure Function project.
@@ -49,7 +49,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 :::image type="content" alt-text="Prompt to select connection string setting" source="./media/create-azure-function-with-mssql/create-new-sql-connection-string-setting.png":::
 
-If you select `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
+If you select `Create new local app setting`, then the extension will prompt you to enter the connection string name and value.
 
 :::image type="content" alt-text="Prompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
@@ -72,3 +72,10 @@ A progress notification will appear to indicate that the Azure Function has comp
 :::image type="content" alt-text="Finished creating Azure Function Project" source="./media/create-azure-function-with-mssql/finished-creating-project.png":::
 
 Once the Azure Function is created, the extension will generate the code either for an `Input` or `Output` binding shown [here](create-azure-function-with-mssql.md#generated-code-for-azure-functions-with-sql-bindings).
+
+## Next steps
+
+- [Create Azure Function with SQL binding overview](create-azure-function-with-mssql.md).
+- [Use the mssql extension to query a SQL instance](mssql-extensions.md).
+- [Learn more about SQL bindings for Azure Functions](../../../azure-sql/azure/azure-functions/functions-bindings-azure-sql).
+- [Create Azure Function with SQL binding through the command palette tutorial](create-azure-function-with-mssql-command-palette.md).

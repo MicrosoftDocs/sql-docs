@@ -20,7 +20,7 @@ Microsoft SQL Bindings for VS Code enable users to develop Azure Functions with 
 ## From the Command Palette 
 Run the `MS SQL: Create Azure Function with SQL Binding` command from the command palette to create a new function with a SQL binding. 
 
-:::image type="content" alt-text="VS Code command palette command `MS SQL: Create Azure Function with SQL Binding )(preview)" source="./media/create-azure-function-with-mssql/create-azure-function-using-command-palette.png":::
+:::image type="content" alt-text="VS Code command palette command `MS SQL: Create Azure Function with SQL Binding (preview)" source="./media/create-azure-function-with-mssql/create-azure-function-using-command-palette.png":::
 
 The extension will then prompt you to select the object type to insert (`Input binding`) or upsert into (`Output binding`), either a `Table` or `View`.
 
@@ -53,7 +53,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 :::image type="content" alt-text="Prompt to select connection string setting" source="./media/create-azure-function-with-mssql/create-new-sql-connection-string-setting.png":::
 
-If you select `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
+If you select `Create new local app setting`, then the extension will prompt you to enter the connection string name and value.
 
 :::image type="content" alt-text="Prompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
@@ -92,7 +92,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 :::image type="content" alt-text="Prompt to select or create a new connection string setting" source="./media/create-azure-function-with-mssql/create-new-sql-connection-string-setting.png":::
 
-If you select `Create new local app setting` then the extension will prompt you to enter the connection string name and value.
+If you select `Create new local app setting`, then the extension will prompt you to enter the connection string name and value.
 
 :::image type="content" alt-text="Prompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
@@ -118,3 +118,10 @@ If `Yes`, then the password will be saved to the local.settings.json file. If `N
 :::image type="content" alt-text="Warning to add password to SQL connection string later manually" source="./media/create-azure-function-with-mssql/do-not-save-password.png":::
 
 Once the Azure Function is created, the extension will generate the code either for an `Input` or `Output` binding shown [here](create-azure-function-with-mssql.md#generated-code-for-azure-functions-with-sql-bindings).
+
+## Next steps
+
+- [Create Azure Function with SQL binding overview](create-azure-function-with-mssql.md).
+- [Use the mssql extension to query a SQL instance](mssql-extensions.md).
+- [Learn more about SQL bindings for Azure Functions](../../../azure-sql/azure/azure-functions/functions-bindings-azure-sql).
+- [Create Azure Function with SQL binding through the object explorer tutorial](create-azure-function-with-mssql-OE.md).

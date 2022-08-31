@@ -1,14 +1,12 @@
 ---
-title: Database Migration Assessment for Oracle extension 
-description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database migration path. 
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+title: Database Migration Assessment for Oracle extension
+description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database migration path.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: niball
-ms.topic: conceptual
-ms.custom:
 ms.date: 04/27/2022
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Database Migration Assessment for Oracle extension (Preview)

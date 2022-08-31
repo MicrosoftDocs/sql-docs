@@ -1,15 +1,13 @@
 ---
 title: "Azure Cosmos DB API for MongoDB extension (preview)"
 description: Learn how to install the Azure Data Studio Azure Cosmos DB for MongoDB API extension. It enables you to connect to and query a collection.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 author: seesharprun
 ms.author: sidandrews
 ms.reviewer: esarroyo
 ms.date: 05/10/2022
+ms.prod: azure-data-studio
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 ---
 
 # Azure Cosmos DB API for MongoDB extension (Preview)

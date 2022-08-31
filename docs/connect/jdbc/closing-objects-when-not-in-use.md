@@ -1,16 +1,12 @@
 ---
 title: Closing objects when not in use
 description: In JDBC programming, it's important to close objects when the aren't in use. Closing improves performance and frees up client and server resources quickly.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Closing objects when not in use
 

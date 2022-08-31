@@ -1,17 +1,15 @@
 ---
 title: "SqlCommand execution with a SqlNotificationRequest"
 description: "Demonstrates configuring a SqlCommand object to work with a query notification."
-ms.date: "08/15/2019"
-dev_langs:
-  - "csharp"
-ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 
 # SqlCommand execution with a SqlNotificationRequest

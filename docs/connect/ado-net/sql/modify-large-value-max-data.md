@@ -1,17 +1,15 @@
 ---
 title: "Modifying large-value (max) data in ADO.NET"
 description: "Describes how to work with the large-value data types."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Modifying large-value (max) data in ADO.NET
 

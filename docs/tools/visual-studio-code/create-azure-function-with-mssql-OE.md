@@ -76,6 +76,6 @@ Once the Azure Function is created, the extension will generate the code either 
 ## Next steps
 
 - [Create Azure Function with SQL binding overview](create-azure-function-with-mssql.md).
-- [Use the mssql extension to query a SQL instance](mssql-extensions.md).
-- [Learn more about SQL bindings for Azure Functions](../../../azure-sql/azure/azure-functions/functions-bindings-azure-sql).
+- [Learn more about SQL bindings for Azure Functions](https://aka.ms/sqlbindings).
 - [Create Azure Function with SQL binding through the command palette tutorial](create-azure-function-with-mssql-command-palette.md).
+- [Use the mssql extension to query a SQL instance](mssql-extensions.md).

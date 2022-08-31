@@ -14,7 +14,7 @@ ms.custom:
   - "sqldbrb=2"
   - "devx-track-python"
   - "mode-api"
-ms.devlang: "python"
+ms.devlang: python
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use Python to query a database

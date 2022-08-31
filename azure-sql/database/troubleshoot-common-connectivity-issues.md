@@ -8,7 +8,7 @@ ms.date: 01/14/2020
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 keywords:
   - "sql connection"
   - "connection string"

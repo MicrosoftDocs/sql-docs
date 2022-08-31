@@ -8,7 +8,7 @@ ms.date: 04/09/2021
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Scale elastic pool resources in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

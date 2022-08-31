@@ -8,7 +8,7 @@ ms.date: 05/10/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -8,7 +8,7 @@ ms.date: 06/21/2019
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Restore your Azure SQL Database or failover to a secondary
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

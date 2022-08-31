@@ -8,7 +8,7 @@ ms.date: 11/07/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Deploy and explore a standalone single-tenant application that uses Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

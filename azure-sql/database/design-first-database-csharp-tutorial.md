@@ -8,7 +8,10 @@ ms.date: 07/29/2019
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
-ms.custom: "seo-lt-2019, sqldbrb=1, devx-track-csharp"
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
+  - devx-track-csharp
 ---
 # Tutorial: Design a relational database in Azure SQL Database C&#x23; and ADO.NET
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

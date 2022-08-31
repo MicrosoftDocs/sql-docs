@@ -8,7 +8,6 @@ ms.date: 03/02/2022
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-service-management
 ---
 # Security considerations for SQL Server on Azure Virtual Machines

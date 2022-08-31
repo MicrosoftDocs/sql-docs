@@ -8,7 +8,7 @@ ms.date: 07/19/2022
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Best practices for Azure SQL Data Sync 
 

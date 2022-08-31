@@ -9,7 +9,7 @@ ms.date: 03/23/2020
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=3"
+ms.custom: sqldbrb=3
 keywords:
   - "sql database security"
   - "database security management"

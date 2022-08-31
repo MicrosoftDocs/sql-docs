@@ -8,7 +8,7 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Find and apply performance recommendations
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

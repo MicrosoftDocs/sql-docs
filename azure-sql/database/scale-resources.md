@@ -8,7 +8,7 @@ ms.date: 06/25/2019
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

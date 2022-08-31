@@ -9,7 +9,7 @@ ms.date: 10/18/2021
 ms.service: sql-db-mi
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 keywords:
   - "business continuity"
   - "cloud business continuity"

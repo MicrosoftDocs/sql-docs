@@ -8,7 +8,7 @@ ms.date: 03/18/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
-ms.custom: "sqldbrb=3"
+ms.custom: sqldbrb=3
 keywords:
   - "introduction to sql"
   - "intro to sql"

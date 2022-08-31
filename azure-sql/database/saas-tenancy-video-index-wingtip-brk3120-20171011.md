@@ -8,7 +8,7 @@ ms.date: 12/18/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Video indexed and annotated for multi-tenant SaaS app using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -12,7 +12,7 @@ ms.topic: how-to
 ms.custom:
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Azure SQL connectivity settings

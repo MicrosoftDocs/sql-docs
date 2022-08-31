@@ -8,8 +8,7 @@ ms.date: 07/30/2019
 ms.service: virtual-machines-sql
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: "seo-lt-2019"
-documentationCenter: na
+ms.custom: seo-lt-2019
 tags: azure-resource-manager
 ---
 # Move a SQL Server VM to another region within Azure with Azure Site Recovery

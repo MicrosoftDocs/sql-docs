@@ -241,7 +241,7 @@ BEGIN
 END;
 ```
 
-When the `SELECT` statement in *MyProc2- is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` is not known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
+When the `SELECT` statement in `MyProc2` is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` is not known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
 
 ### Processing Other Statements
 

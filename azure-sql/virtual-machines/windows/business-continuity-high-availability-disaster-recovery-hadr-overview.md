@@ -8,7 +8,6 @@ ms.date: 06/27/2020
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-service-management
 ---
 # Business continuity and HADR for SQL Server on Azure Virtual Machines

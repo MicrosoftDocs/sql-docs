@@ -11,7 +11,6 @@ ms.topic: quickstart
 ms.custom:
   - devx-track-azurepowershell
   - mode-api
-documentationCenter: na
 tags: azure-resource-manager
 ---
 

@@ -8,7 +8,7 @@ ms.date: 04/05/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Get started with SQL Database dynamic data masking with the Azure portal
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

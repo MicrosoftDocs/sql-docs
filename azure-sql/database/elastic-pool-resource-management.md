@@ -8,7 +8,7 @@ ms.date: 3/30/2022
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Resource management in dense elastic pools

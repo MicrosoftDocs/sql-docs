@@ -8,7 +8,6 @@ ms.date: 01/29/2020
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-documentationCenter: na
 tags: azure-service-management
 ---
 # Configure a workgroup availability group 

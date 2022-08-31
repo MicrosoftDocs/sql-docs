@@ -8,7 +8,7 @@ ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: reference
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # SQL Database audit log format

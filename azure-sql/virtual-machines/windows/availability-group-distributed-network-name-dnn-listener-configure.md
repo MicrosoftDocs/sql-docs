@@ -8,7 +8,6 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Configure a DNN listener for an availability group

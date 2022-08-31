@@ -8,7 +8,7 @@ ms.date: 12/18/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Multi-tenant applications with elastic database tools and row-level security
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

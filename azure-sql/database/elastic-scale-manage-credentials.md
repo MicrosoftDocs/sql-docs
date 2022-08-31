@@ -8,7 +8,7 @@ ms.date: 01/03/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Credentials used to access the Elastic Database client library
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

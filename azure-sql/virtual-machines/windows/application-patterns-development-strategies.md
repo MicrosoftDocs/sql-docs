@@ -8,8 +8,7 @@ ms.date: 05/31/2017
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-documentationCenter: na
-tags: azure-service-management,azure-resource-manager
+tags: azure-service-management, azure-resource-manager
 ---
 # Application patterns and development strategies for SQL Server on Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

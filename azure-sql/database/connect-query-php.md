@@ -12,7 +12,7 @@ ms.topic: quickstart
 ms.custom:
   - "sqldbrb=2"
   - "mode-other"
-ms.devlang: "php"
+ms.devlang: php
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use PHP to query a database in Azure SQL Database

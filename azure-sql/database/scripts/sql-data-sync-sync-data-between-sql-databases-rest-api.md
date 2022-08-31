@@ -8,8 +8,8 @@ ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
-ms.custom: "sqldbrb=1"
-ms.devlang: "rest-api"
+ms.custom: sqldbrb=1
+ms.devlang: rest-api
 ---
 
 # Use REST API to sync data between multiple databases 

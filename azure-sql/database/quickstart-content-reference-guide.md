@@ -8,7 +8,7 @@ ms.date: 07/29/2019
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: guide
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Getting started with single databases in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

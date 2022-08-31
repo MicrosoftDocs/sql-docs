@@ -8,7 +8,6 @@ ms.date: 12/21/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Configure storage for SQL Server VMs

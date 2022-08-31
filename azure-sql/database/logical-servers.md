@@ -8,7 +8,7 @@ ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "devx-track-azurecli"
+ms.custom: devx-track-azurecli
 ---
 # What is a logical SQL server in Azure SQL Database and Azure Synapse?
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

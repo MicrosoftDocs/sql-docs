@@ -7,7 +7,7 @@ ms.date: 02/25/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom: "template-how-to"
+ms.custom: template-how-to
 ---
 
 

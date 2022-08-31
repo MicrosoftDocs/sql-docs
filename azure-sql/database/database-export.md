@@ -9,7 +9,7 @@ ms.date: 12/10/2021
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance

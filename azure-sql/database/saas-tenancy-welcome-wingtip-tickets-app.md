@@ -8,8 +8,8 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
-keywords: "sql database tutorial"
+ms.custom: sqldbrb=1
+keywords: sql database tutorial
 ---
 # The Wingtip Tickets SaaS application
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

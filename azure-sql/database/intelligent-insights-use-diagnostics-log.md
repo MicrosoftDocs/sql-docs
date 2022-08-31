@@ -8,7 +8,7 @@ ms.date: 01/31/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 ---
 
 # Use the Intelligent Insights performance diagnostics log of Azure SQL Database and Azure SQL Managed Instance performance issues

@@ -8,7 +8,7 @@ ms.date: 08/09/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Hyperscale service tier

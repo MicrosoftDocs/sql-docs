@@ -8,7 +8,7 @@ ms.date: 09/24/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Introduction to a multitenant SaaS app that uses the database-per-tenant pattern with Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

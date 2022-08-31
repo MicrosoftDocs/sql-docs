@@ -8,7 +8,7 @@ ms.date: 07/16/2022
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

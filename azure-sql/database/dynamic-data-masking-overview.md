@@ -8,7 +8,7 @@ ms.date: 04/05/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 tags: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

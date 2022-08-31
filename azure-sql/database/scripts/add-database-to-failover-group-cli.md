@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Add a database to a failover group using the Azure CLI

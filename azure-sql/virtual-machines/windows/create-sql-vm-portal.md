@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
 ms.custom: contperf-fy22q1-portal
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Provision SQL Server on Azure VM (Azure portal)

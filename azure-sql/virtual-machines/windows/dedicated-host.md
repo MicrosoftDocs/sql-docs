@@ -8,7 +8,6 @@ ms.date: 08/12/2019
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Run SQL Server VM on an Azure Dedicated Host 

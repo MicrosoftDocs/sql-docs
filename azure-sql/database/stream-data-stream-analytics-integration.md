@@ -8,7 +8,7 @@ ms.date: 11/04/2019
 ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Stream data into Azure SQL Database using Azure Stream Analytics integration (preview)

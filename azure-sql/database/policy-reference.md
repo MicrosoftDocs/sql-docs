@@ -7,7 +7,7 @@ ms.date: 03/08/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
-ms.custom: "subject-policy-reference"
+ms.custom: subject-policy-reference
 ---
 # Azure Policy built-in definitions for Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

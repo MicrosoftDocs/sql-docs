@@ -9,7 +9,7 @@ ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Save costs for resources with reserved capacity - Azure SQL Database & SQL Managed Instance

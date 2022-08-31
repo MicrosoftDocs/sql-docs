@@ -7,7 +7,7 @@ ms.date: 03/12/2019
 ms.service: sql-db-mi
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Manage databases in Azure SQL Database by using Azure Automation

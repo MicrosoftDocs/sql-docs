@@ -8,7 +8,7 @@ ms.date: 04/08/2019
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # What is a single database in Azure SQL Database?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

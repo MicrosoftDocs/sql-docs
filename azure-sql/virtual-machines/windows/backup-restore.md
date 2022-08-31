@@ -8,7 +8,6 @@ ms.date: 06/04/2018
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-resource-management
 ---
 # Backup and restore for SQL Server on Azure VMs

@@ -8,7 +8,7 @@ ms.date: 08/11/2022
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # How to migrate your SQLite database to Azure SQL Database serverless

@@ -8,7 +8,7 @@ ms.date: 11/14/2019
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Application development overview - SQL Database & SQL Managed Instance

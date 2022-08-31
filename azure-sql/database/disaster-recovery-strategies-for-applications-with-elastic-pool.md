@@ -8,7 +8,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: "sqldbrb-1"
+ms.custom: sqldbrb-1
 ---
 # Disaster recovery strategies for applications using Azure SQL Database elastic pools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

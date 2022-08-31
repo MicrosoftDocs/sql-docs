@@ -11,7 +11,7 @@ ms.subservice: performance
 ms.topic: conceptual
 dev_langs:
   - "TSQL"
-ms.devlang: "tsql"
+ms.devlang: tsql
 ---
 # Configure the max degree of parallelism (MAXDOP) in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

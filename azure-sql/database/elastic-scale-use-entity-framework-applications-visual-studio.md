@@ -8,7 +8,7 @@ ms.date: 01/04/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: sample
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Elastic Database client library with Entity Framework
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

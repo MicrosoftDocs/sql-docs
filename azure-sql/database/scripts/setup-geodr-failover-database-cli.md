@@ -8,7 +8,7 @@ ms.date: 01/26/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Configure active geo-replication for a single database in Azure SQL Database using the Azure CLI

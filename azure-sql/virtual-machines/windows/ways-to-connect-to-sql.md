@@ -8,7 +8,6 @@ ms.date: 12/12/2017
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Connect to a SQL Server virtual machine on Azure

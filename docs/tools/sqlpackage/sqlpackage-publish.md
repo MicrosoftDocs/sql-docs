@@ -35,7 +35,7 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 
 # example publish using short form parameter names, skips schema validation
 SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
-    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyExtraction=False
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyDeployment=False
 
 # example publish using Azure Active Directory Service Principal
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \

@@ -1,21 +1,19 @@
 ---
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Managed Instance
-description: Learn how Azure SQL Managed Instance automatically backs up all databases and provides point-in-time restore capability. 
-services:
-  - "sql-database"
+description: Learn how Azure SQL Managed Instance automatically backs up all databases and provides point-in-time restore capability.
+author: MilanMSFT
+ms.author: mlazic
+ms.reviewer: mathoma, wiassaf, danil
+ms.date: 07/20/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
   - "azure-sql-split"
-ms.topic: conceptual
-author: MilanMSFT
-ms.author: mlazic
-ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups in Azure SQL Managed Instance

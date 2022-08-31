@@ -52,8 +52,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />0: NONE<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning.|  
-|**has_compile_replay_script**|bit|**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded.|
-|**is_optimized_plan_forcing_disabled**|bit|**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether optimized plan forcing was disabled for the plan:<BR/><BR/> 0 = disabled.<BR/><BR/> 1 = not disabled.|
+|**has_compile_replay_script**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded.|
+|**is_optimized_plan_forcing_disabled**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether optimized plan forcing was disabled for the plan:<BR/><BR/> 0 = disabled.<BR/><BR/> 1 = not disabled.|
 
 ## Plan forcing limitations
 Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 

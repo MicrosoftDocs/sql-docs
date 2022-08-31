@@ -1,10 +1,10 @@
 ---
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 12/17/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: include
-ms.date: 12/17/2020
-author: MashaMSFT
-ms.author: mathoma
 ---
 
   You can use one of these quickstarts to create and then configure a database:

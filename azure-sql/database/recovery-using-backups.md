@@ -2,16 +2,14 @@
 title: Restore a database from a backup
 titleSuffix: Azure SQL Database
 description: Learn about point-in-time restore, which enables you to roll back a database in Azure SQL Database up to 35 days.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.topic: how-to
-ms.custom: "azure-sql-split"
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: how-to
+ms.custom: azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Restore a database from a backup in Azure SQL Database

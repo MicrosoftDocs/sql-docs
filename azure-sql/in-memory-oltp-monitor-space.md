@@ -1,16 +1,14 @@
 ---
-title: Monitor XTP In-memory storage 
+title: Monitor XTP In-memory storage
 description: Estimate and monitor XTP In-memory storage use, capacity; resolve capacity error 41823
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: sqldbrb=2
-ms.devlang: 
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, kendralittle
 ms.date: 01/25/2019
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Monitor In-Memory OLTP storage in Azure SQL Database and Azure SQL Managed Instance

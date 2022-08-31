@@ -1,15 +1,13 @@
 ---
 title: Hyperscale distributed functions architecture
 description: Learn how Hyperscale databases are architected to scale out storage and compute resources for Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
 ---
 
 # Hyperscale distributed functions architecture

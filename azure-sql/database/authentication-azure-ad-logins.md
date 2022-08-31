@@ -1,13 +1,13 @@
 ---
 title: Azure Active Directory server principals
 description: Using Azure Active Directory server principals (logins) in Azure SQL
-ms.service: sql-db-mi
-ms.subservice: security
-ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 08/24/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

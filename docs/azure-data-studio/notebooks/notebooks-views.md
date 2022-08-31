@@ -1,14 +1,12 @@
 ---
 title: Use Jupyter Notebooks views
 description: Learn how to use notebook views
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
 ms.date: 10/27/2021
+ms.prod: azure-data-studio
+ms.topic: how-to
+ms.custom: seo-lt-2019
 ---
 
 # Notebook views (Preview)

@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |database_name|**sysname**|For type RDBMS, the name of the remote database. For type, SHARD_MAP_MANAGER, the name of the shard map manager database. NULL for other types of external data sources.||  
 |shard_map_name|**sysname**|For type SHARD_MAP_MANAGER, the name of the shard map. NULL for other types of external data sources.||  
 |connection_options|**nvarchar(4000)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later <BR /><BR />JSON-formatted string, containing options for the external data source parameters, dependent on the type of external data source. | |
-|pushdown|**nvarchar(256)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later <BR /><BR /> NOT NULL. Whether pushdown is enabled. For more information, see [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md).|ON, OFF |
+|pushdown|**nvarchar(256)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.<br /><br />NOT NULL. Whether pushdown is enabled. For more information, see [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md).|ON, OFF |
 
 ## Permissions  
  The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell
-documentationCenter: na
 tags: azure-resource-manager
 ---
 # Register multiple SQL VMs in Azure with the SQL IaaS Agent extension

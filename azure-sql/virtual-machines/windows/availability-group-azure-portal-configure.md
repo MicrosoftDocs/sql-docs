@@ -8,8 +8,10 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: article
-ms.custom: "seo-lt-2019, devx-track-azurecli, devx-track-azurepowershell"
-documentationCenter: na
+ms.custom:
+  - seo-lt-2019
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Use Azure portal to configure an availability group (Preview) for SQL Server on Azure VM 

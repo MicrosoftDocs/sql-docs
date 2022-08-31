@@ -7,7 +7,7 @@ ms.date: 03/10/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: sample
-ms.custom: "subject-policy-compliancecontrols"
+ms.custom: subject-policy-compliancecontrols
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure Policy Regulatory Compliance controls for Azure SQL Database & SQL Managed Instance

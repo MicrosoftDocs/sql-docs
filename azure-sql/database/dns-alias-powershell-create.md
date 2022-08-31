@@ -12,8 +12,8 @@ ms.custom:
   - "seo-lt-2019 sqldbrb=1"
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
-keywords: "dns sql database"
-ms.devlang: "PowerShell"
+keywords: dns sql database
+ms.devlang: PowerShell
 ---
 # PowerShell for DNS Alias to Azure SQL Database
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

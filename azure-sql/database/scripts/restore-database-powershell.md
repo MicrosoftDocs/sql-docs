@@ -8,8 +8,8 @@ ms.date: 03/27/2019
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: sample
-ms.custom: "devx-track-azurepowershell"
-ms.devlang: "PowerShell"
+ms.custom: devx-track-azurepowershell
+ms.devlang: PowerShell
 ---
 
 # Use PowerShell to restore a database to an earlier point in time

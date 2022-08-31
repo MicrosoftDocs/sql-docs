@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.custom:
   - na
   - devx-track-azurepowershell
-documentationCenter: na
 editor: monicar
 tags: azure-service-management
 ---

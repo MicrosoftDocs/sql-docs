@@ -8,8 +8,8 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: sample
-ms.custom: "sqldbrb=1"
-ms.devlang: "PowerShell"
+ms.custom: sqldbrb=1
+ms.devlang: PowerShell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Ring Buffer target code for extended events in Azure SQL Database

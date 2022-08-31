@@ -8,7 +8,7 @@ ms.date: 06/30/2021
 ms.service: sql-db-mi
 ms.subservice: deployment-configuration
 ms.topic: guide
-ms.custom: "overview-samples sqldbrb=2"
+ms.custom: overview-samples sqldbrb=2
 ---
 
 # Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance

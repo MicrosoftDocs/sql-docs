@@ -9,7 +9,7 @@ ms.date: 06/09/2021
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

@@ -8,7 +8,7 @@ ms.date: 10/30/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Run ad hoc analytics queries across multiple databases (Azure SQL Database)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

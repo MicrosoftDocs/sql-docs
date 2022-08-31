@@ -9,7 +9,7 @@ ms.date: 08/27/2019
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
-ms.custom: "sqldbrb=3"
+ms.custom: sqldbrb=3
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

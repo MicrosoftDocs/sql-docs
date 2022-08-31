@@ -9,7 +9,7 @@ ms.date: 08/23/2021
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # An overview of Azure SQL Database and SQL Managed Instance security capabilities

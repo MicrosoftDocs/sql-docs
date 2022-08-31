@@ -8,8 +8,10 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom: "seo-lt-2019, devx-track-azurecli, devx-track-azurepowershell"
-documentationCenter: na
+ms.custom:
+  - seo-lt-2019
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
 # Use PowerShell or Az CLI to configure an availability group for SQL Server on Azure VM 

@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Move a database in SQL Database in a SQL elastic pool using the Azure CLI

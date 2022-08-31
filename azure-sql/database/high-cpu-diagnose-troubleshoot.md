@@ -9,7 +9,7 @@ ms.date: 04/06/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 ---
 # Diagnose and troubleshoot high CPU on Azure SQL Database
 

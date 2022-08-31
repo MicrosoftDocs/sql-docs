@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 05/24/2022
 ms.service: sql-database
 ms.topic: how-to
-ms.custom: "template-how-to"
+ms.custom: template-how-to
 ---
 
 # Create a project for a local Azure SQL Database development environment

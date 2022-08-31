@@ -9,7 +9,7 @@ ms.date: 04/27/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

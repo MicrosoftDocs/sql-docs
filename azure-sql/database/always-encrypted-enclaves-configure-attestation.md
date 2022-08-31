@@ -8,7 +8,7 @@ ms.date: 07/14/2021
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom: "devx-track-azurepowershell"
+ms.custom: devx-track-azurepowershell
 keywords:
   - "encrypt data"
   - "sql encryption"

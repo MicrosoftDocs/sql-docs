@@ -8,7 +8,7 @@ ms.date: 04/27/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: reference
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Extended events in Azure SQL Database 

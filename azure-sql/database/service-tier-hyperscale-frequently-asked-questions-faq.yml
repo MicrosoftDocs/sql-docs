@@ -284,7 +284,7 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) in public preview. At least 1 HA secondary replica and the use of zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least 1 HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
 
       - question: |
           How often are database backups taken?

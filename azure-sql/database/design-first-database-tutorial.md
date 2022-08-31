@@ -8,7 +8,7 @@ ms.date: 07/29/2019
 ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Tutorial: Design a relational database in Azure SQL Database using SSMS
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -11,7 +11,7 @@ ms.custom:
   - "devx-track-java"
   - "devx-track-azurecli"
   - "mode-api"
-ms.devlang: "java"
+ms.devlang: java
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

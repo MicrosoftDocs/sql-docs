@@ -8,7 +8,7 @@ ms.date: 04/27/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: "seoapril2019 sqldbrb=1"
+ms.custom: seoapril2019 sqldbrb=1
 ---
 # Tutorial: Secure a database in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

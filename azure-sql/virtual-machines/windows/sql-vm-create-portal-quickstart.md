@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
 ms.custom: mode-ui
-documentationCenter: na
 tags: azure-resource-manager
 ---
 

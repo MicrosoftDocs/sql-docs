@@ -8,7 +8,7 @@ ms.date: 11/14/2018
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: how-to
-ms.custom: "data sync"
+ms.custom: data sync
 ---
 # Automate the replication of schema changes in Azure SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

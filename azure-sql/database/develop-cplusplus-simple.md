@@ -8,8 +8,8 @@ ms.date: 12/12/2018
 ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
-ms.devlang: "cpp"
+ms.custom: sqldbrb=1
+ms.devlang: cpp
 ---
 # Connect to SQL Database using C and C++
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

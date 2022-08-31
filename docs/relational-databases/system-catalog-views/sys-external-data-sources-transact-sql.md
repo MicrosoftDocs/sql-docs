@@ -1,9 +1,9 @@
 ---
 title: "sys.external_data_sources (Transact-SQL)"
-description: sys.external_data_sources (Transact-SQL)
+description: "The sys.external_data_sources system catalog view contains a row for each external data source in the current database."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/02/2021"
+ms.date: "08/31/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects
@@ -31,13 +31,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |credential_id|**int**|The object ID of the database scoped credential used to connect to the external data source.||  
 |database_name|**sysname**|For type RDBMS, the name of the remote database. For type, SHARD_MAP_MANAGER, the name of the shard map manager database. NULL for other types of external data sources.||  
 |shard_map_name|**sysname**|For type SHARD_MAP_MANAGER, the name of the shard map. NULL for other types of external data sources.||  
-  
+|connection_options|**nvarchar(4000)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later <BR /><BR />JSON-formatted string, containing options for the external data source parameters, dependent on the type of external data source. | |
+|pushdown|**nvarchar(256)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later <BR /><BR /> NOT NULL. Whether pushdown is enabled. For more information, see [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md).|ON, OFF |
+
 ## Permissions  
  The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
+## Next steps
+
   - [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
   - [sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
   - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+  - [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md)
+  - [Introducing data virtualization with PolyBase](../polybase/polybase-guide.md)
   
   

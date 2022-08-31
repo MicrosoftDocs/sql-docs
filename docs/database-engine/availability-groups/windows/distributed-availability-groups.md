@@ -57,6 +57,8 @@ Because the distributed availability groups feature did not exist in SQL Server 
 > [!NOTE]
 > Distributed availability groups can not be configured with Standard edition or mix of Standard and Enterprise edition.
 
+---this needs to be changed to reflect that standard edition is now supported start in SQL 2019 CU17 
+
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 
 1. Start by updating the replicas of the second availability group in the distributed availability group.

@@ -2,12 +2,12 @@
 title: "What's new"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: charlesfeddersen
+ms.author: charlesf
+ms.reviewer: "martinle"
+ms.date: "12/01/2021"
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
-ms.date: "12/01/2021"
-ms.author: charlesf
-ms.reviewer: "martinle"
 ms.custom:
   - seo-dt-2019
   - intro-whats-new

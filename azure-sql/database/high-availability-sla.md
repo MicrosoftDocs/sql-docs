@@ -128,7 +128,7 @@ Use [Azure PowerShell](/powershell/azure/install-az-ps) or the [Azure CLI](/cli/
 
 Specify the `-ZoneRedundant` parameter to enable zone redundancy for your Hyperscale database by using Azure PowerShell. The database must have at least 1 high availability replica and zone-redundant backup storage must be specified.
 
-To enable zone redundancy using Azure Powershell, use the following example command: 
+To enable zone redundancy using Azure PowerShell, use the following example command: 
 
 ```powershell
 New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" `

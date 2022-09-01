@@ -1,17 +1,15 @@
 ---
 title: "Windows applications using callbacks"
 description: "Provides an example demonstrating how to execute an asynchronous command safely, correctly handling interaction with a form and its contents from a separate thread."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Windows applications using callbacks
 

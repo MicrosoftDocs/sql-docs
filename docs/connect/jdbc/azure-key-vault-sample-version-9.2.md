@@ -1,15 +1,13 @@
 ---
 title: Azure Key Vault sample
 description: This JDBC code example demonstrates how to use Azure Key Vault as your key store provider for Always Encrypted.
-ms.custom: ""
-ms.date: 01/31/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
 author: lilgreenbird
 ms.author: v-susanh
+ms.reviewer: v-davidengel
+ms.date: 01/31/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Azure Key Vault sample version 9.2
 

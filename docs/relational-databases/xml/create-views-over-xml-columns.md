@@ -14,7 +14,7 @@ ms.author: mikeray
 ---
 # Create views over XML columns
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can use an **xml** type column to create views. The following example creates a view in which the value from an `xml` type column is retrieved using the `value()` method of the **xml** data type.
 

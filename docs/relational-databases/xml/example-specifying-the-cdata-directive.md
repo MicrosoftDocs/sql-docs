@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Example: Specify the CDATA directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 If the directive is set to **CDATA**, the contained data isn't entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.
 

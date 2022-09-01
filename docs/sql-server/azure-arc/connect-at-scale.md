@@ -9,16 +9,16 @@ ms.prod: sql
 ms.topic: conceptual
 ---
 
-# Connect SQL Server instances to Azure Arc at scale
+# Connect SQL Server instances to Azure at scale
 
 This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.
 
 ## Connecting at-scale using Azure policy
 
-You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers, and will assign `Azure Connected SQL Server Onboarding` role to Arc managed identity in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
+You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the __Azure extension for SQL Server__ (*WindowsAgent.SqlServer*) on all Azure Arc connected servers, and will assign `Azure Connected SQL Server Onboarding` role to Arc managed identity in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension will automatically register it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
->The **SQL Server - Azure Arc** resources for the SQL Server instances will be created in the same region and the resource group as the corresponding **Server - Azure Arc** resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.
+>The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding **Server - Azure Arc** resource. Because __Azure extension for SQL Server__  synchronizes with Azure once an hour, it may take up to one hour before these resources are created.
 
 ## Connecting multiple SQL Server instances using script
 
@@ -116,11 +116,11 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 ## Validate successful onboarding
 
-After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You'll see a new **Server - Azure Arc** for each connected machine and a new **SQL Server - Azure Arc** resource for each connected SQL Server instance within approximately 1 minute. If these resources aren't created, it means something went wrong during the extension installation and activation process. See [Troubleshoot SQL Server extension](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
+After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You'll see a new **Server - Azure Arc** for each connected machine and a new **SQL Server - Azure Arc** resource for each connected SQL Server instance within approximately 1 minute. If these resources aren't created, it means something went wrong during the extension installation and activation process. See [Troubleshoot Azure extension for SQL Server](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
 
 :::image type="content" source="./media/join-at-scale/successful-onboard.png" alt-text="Screenshot showing a successful onboard.":::
 
-## Troubleshoot SQL Server extension
+## Troubleshoot Azure extension for SQL Server
 
 Before you start, note the logs location. The extension log is created in this folder:
 `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`

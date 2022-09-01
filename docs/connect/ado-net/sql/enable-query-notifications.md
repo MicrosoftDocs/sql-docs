@@ -1,17 +1,15 @@
 ---
 title: Enabling query notifications
 description: Learn how to use query notifications, including the requirements for enabling and using them.
-ms.date: 04/20/2021
-dev_langs:
-  - "csharp"
-ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Enabling query notifications
 

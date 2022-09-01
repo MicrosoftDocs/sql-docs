@@ -1,17 +1,15 @@
 ---
 title: "Inserting an image from a file"
 description: "Describes how to work with an image from a file."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Inserting an image from a file
 

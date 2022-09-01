@@ -1,17 +1,15 @@
 ---
 title: "Multiple bulk copy operations"
 description: "Describes how to do multiple bulk copy operations of data into an instance of SQL Server using the SqlBulkCopy class."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Multiple bulk copy operations
 

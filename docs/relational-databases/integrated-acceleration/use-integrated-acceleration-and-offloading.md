@@ -1,5 +1,5 @@
 ---
-title: Configure Integrated acceleration and offloading
+title: Configure integrated acceleration and offloading
 description: Describes how to use integrated acceleration and offloading solution for an instance of SQL Server.
 ms.date: 08/16/2022
 ms.prod: sql
@@ -10,7 +10,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 
-# Configure Integrated acceleration and offloading
+# Configure integrated acceleration and offloading
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 

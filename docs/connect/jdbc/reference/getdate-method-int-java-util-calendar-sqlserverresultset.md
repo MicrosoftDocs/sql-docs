@@ -1,21 +1,15 @@
 ---
+title: "getDate Method (int, java.util.Calendar) (SQLServerResultSet)"
 description: "getDate Method (int, java.util.Calendar) (SQLServerResultSet)"
-title: "getDate Method (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getDate (int, java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getDate (int, java.util.Calendar)"
+apitype: "Assembly"
 ---
 # getDate Method (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

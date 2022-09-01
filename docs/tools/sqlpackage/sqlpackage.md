@@ -130,6 +130,20 @@ For parameter and property information specific to a particular action, use the 
 sqlpackage.exe /Action:Publish /?
 ```
 
+## Temporary files
+
+During SqlPackage operations the table data is written to temporary files before compression or after decompression. For large databases these temporary files can take up a significant amount of disk space but their location can be specified.  The export and extract operations include an optional property to specify `/p:TempDirectoryForTableData` to override the SqlPackage's default value.
+
+The default value is established by [GetTempPath](https://docs.microsoft.com/dotnet/api/system.io.path.gettemppath) within SqlPackage.
+
+For Windows, the following environment variables are checked in the following order and the first path that exists is used:
+1. The path specified by the TMP environment variable.
+2. The path specified by the TEMP environment variable.
+3. The path specified by the USERPROFILE environment variable.
+4. The Windows directory.
+
+For Linux and macOS, if the path is not specified in the TMPDIR environment variable, the default path /tmp/ is used.
+
 ## SqlPackage and database users
 
 [Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.

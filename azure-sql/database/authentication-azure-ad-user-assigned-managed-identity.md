@@ -1,7 +1,7 @@
 ---
 title: User-assigned managed identity in Azure AD for Azure SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: User-assigned managed identities (UMI) in Azure AD (AD) for Azure SQL Database and SQL Managed Instance.
+description: Learn how to use user-assigned managed identities in Azure AD (Azure AD) for Azure SQL Database and SQL Managed Instance.
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
@@ -16,25 +16,30 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Azure Active Directory (AD) supports two types of managed identities: System-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
+Azure Active Directory (Azure AD) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
-A system-assigned managed identity is automatically assigned to a managed instance when it is created. When using Azure AD authentication with Azure SQL Managed Instance, a managed identity must be assigned to the server identity. Previously, only a system-assigned managed identity could be assigned to the Managed Instance or SQL Database server identity. With support for user-assigned managed identity, the UMI can be assigned to Azure SQL Managed Instance or Azure SQL Database as the instance or server identity. This feature is now supported for SQL Database.
+A system-assigned managed identity is automatically assigned to a managed instance when it's created. When you're using Azure AD authentication with Azure SQL Managed Instance, you must assign a managed identity to the server identity. 
 
-In addition to using UMI and SMI as the server or instance identity, the UMI and SMI can be used to access the database using the SQL connection string option `Authentication=Active Directory Managed Identity`. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
-There will need to be a SQL user mapped to the managed identity in the target database.
+Previously, only a system-assigned managed identity could be assigned to the Managed Instance or SQL Database server identity. With support for user-assigned managed identity, the UMI can be assigned to Azure SQL Managed Instance or Azure SQL Database as the instance or server identity. This feature is now supported for SQL Database.
+
+In addition to using a UMI and an SMI as the server or instance identity, you can use them to access the database by using the SQL connection string option `Authentication=Active Directory Managed Identity`. You need to map a SQL user to the managed identity in the target database. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
 ## Benefits of using user-assigned managed identities
 
-There are several benefits of using UMI as a server identity.
+There are several benefits of using a UMI as a server identity:
 
-- User flexibility to create and maintain their own user-assigned managed identities for a given tenant. UMI can be used as server identities for Azure SQL. UMI is managed by the user, compared to an SMI, which identity is uniquely defined per server, and assigned by the system.
-- In the past, the Azure AD [Directory Readers](authentication-aad-directory-readers-role.md) role was required when using SMI as the server or instance identity. With the introduction of accessing Azure AD using [Microsoft Graph](/graph/api/resources/azure-ad-overview), users concerned with giving high-level permissions such as the Directory Readers role to the SMI or UMI can alternatively give lower-level permissions so that the server or instance identity can access [Microsoft Graph](/graph/api/resources/azure-ad-overview). For more information on providing Directory Readers permissions and it's function, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
-- Users can choose a specific UMI to be the server or instance identity for all SQL Databases or Managed Instances in the tenant, or have multiple UMIs assigned to different servers or instances. For example, different UMIs can be used in different servers representing different features. For example, a UMI serving transparent data encryption in one server, and a UMI serving Azure AD authentication in another server.
-- UMI is needed to create an Azure SQL logical server configured with transparent data encryption (TDE) with customer-managed keys (CMK). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).
-- User-assigned managed identities are independent from logical servers or managed instances. When a logical server or instance is deleted, the system-assigned managed identity is deleted as well. User-assigned managed identities aren't deleted with the server.
+- User flexibility to create and maintain their own user-assigned managed identities for a tenant. You can use UMIs as server identities for Azure SQL. A UMI is managed by the user, whereas an SMI is uniquely defined per server and assigned by the system.
+- In the past, you needed the Azure AD [Directory Readers](authentication-aad-directory-readers-role.md) role when using an SMI as the server or instance identity. With the introduction of accessing Azure AD through [Microsoft Graph](/graph/api/resources/azure-ad-overview), users concerned with giving high-level permissions such as the Directory Readers role to the SMI or UMI can alternatively give lower-level permissions so that the server or instance identity can access [Microsoft Graph](/graph/api/resources/azure-ad-overview). 
+
+  For more information on providing Directory Readers permissions and its function, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
+- Users can choose a specific UMI to be the server or instance identity for all SQL databases or managed instances in the tenant. Or they can have multiple UMIs assigned to different servers or instances. 
+
+  UMIs can be used in different servers to represent different features. For example, a UMI can serve transparent data encryption (TDE) in one server, and a UMI can serve Azure AD authentication in another server.
+- You need a UMI to create an Azure SQL logical server configured with TDE with customer-managed keys (CMKs). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).
+- User-assigned managed identities are independent from logical servers or managed instances. When a logical server or instance is deleted, the system-assigned managed identity is alsdo deleted. User-assigned managed identities aren't deleted with the server.
 
 > [!NOTE]
-> The instance identity (SMI or UMI) must be enabled to allow support for Azure AD authentication in Managed Instance. For SQL Database, enabling the server identity is optional and required only if an Azure AD service principal (Azure AD application) oversees creating and managing Azure AD users, groups, or application in the server. For more information, see [Azure Active Directory service principal with Azure SQL](authentication-aad-service-principal.md).
+> You must enable the instance identity (SMI or UMI) to allow support for Azure AD authentication in Managed Instance. For SQL Database, enabling the server identity is optional and required only if an Azure AD service principal (Azure AD application) oversees creating and managing Azure AD users, groups, or applications in the server. For more information, see [Azure Active Directory service principal with Azure SQL](authentication-aad-service-principal.md).
 
 ## Creating a user-assigned managed identity
 
@@ -42,7 +47,9 @@ For information on how to create a user-assigned managed identity, see [Manage u
 
 ## Permissions
 
-Once the UMI is created, some permissions are needed to allow the UMI to read from [Microsoft Graph](/graph/api/resources/azure-ad-overview) as the server identity. Grant the permissions below, or give the UMI the [Directory Readers](authentication-aad-directory-readers-role-tutorial.md) role. These permissions should be granted before provisioning an Azure SQL logical server or managed instance. Once the permissions are granted to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
+After the UMI is created, some permissions are needed to allow the UMI to read from [Microsoft Graph](/graph/api/resources/azure-ad-overview) as the server identity. Grant the following permissions, or give the UMI the [Directory Readers](authentication-aad-directory-readers-role-tutorial.md) role. 
+
+These permissions should be granted before you provision an Azure SQL logical server or managed instance. After you grant the permissions to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
 
 > [!IMPORTANT]
 > Only a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) can grant these permissions.

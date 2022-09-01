@@ -1,17 +1,15 @@
 ---
 title: "Date and time data"
 description: "Describes how to use the new date and time data types introduced in SQL Server 2008."
-ms.date: "09/30/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/30/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Date and time data
 

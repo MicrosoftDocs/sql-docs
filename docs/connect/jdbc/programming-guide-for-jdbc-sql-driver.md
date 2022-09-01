@@ -1,16 +1,12 @@
 ---
 title: Programming guide
 description: Get started with the Microsoft JDBC Driver for SQL Server and learn the basics of programming database applications using Java.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Programming guide for JDBC SQL driver
 

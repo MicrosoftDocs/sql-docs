@@ -1,16 +1,12 @@
 ---
 title: Performing batch operations
 description: Learn how to use batch operations to improve performance using the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Performing batch operations
 

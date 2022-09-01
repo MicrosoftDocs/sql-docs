@@ -1,16 +1,12 @@
 ---
 title: JDBC 4.1 compliance
 description: Read about how the JDBC Driver for SQL Server is compliant with the JDBC 4.1 specification.
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # JDBC 4.1 compliance for the JDBC driver
 

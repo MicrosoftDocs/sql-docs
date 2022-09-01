@@ -42,11 +42,13 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 Before you install PolyBase on your SQL Server instances, decide whether you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
+Scale-out group functionality is retired and removed from the product in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. PolyBase data virtualization will continue to be fully supported as a scale-up feature in SQL Server. For more information, see [Big data options on the Microsoft SQL Server platform](../../big-data-cluster/big-data-options.md).
+
 For the PolyBase service account, choose:
 - the default virtual service account (VSA) for stand-alone installations of PolyBase.
 - a domain account, with a group managed service account (gMSA) preferred, for installations in a PolyBase scale-out group. For more information, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
-For a PolyBase scale-out group, make sure that:
+For a PolyBase scale-out group in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], make sure that:
 
 - All the machines are on the same domain.
 - You use the same domain service account and password during PolyBase installation.
@@ -63,14 +65,12 @@ After installation of PolyBase to either standalone or in a scale-out group, you
 
 1. On the Feature Selection page, select **PolyBase Query Service for External Data**.
 
-   :::image type="content" source="media/polybase-installation/install-wizard.png" alt-text="Screenshot of the Feature Selection page of SQL Setup, showing Polybase services.":::
-
    > [!NOTE]  
-   >SQL Server 2019 PolyBase now includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
+   > Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], PolyBase includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
 
 1. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.
 
-   In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#enable).
+   In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#single-node-or-polybase-scale-out-group).
 
 1. On the PolyBase Configuration page, select one of the two options. For more information, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
@@ -201,3 +201,5 @@ To change the service accounts for the PolyBase Engine and PolyBase Data Movemen
 ## Next steps
 
 See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).
+
+- [Big data options on the Microsoft SQL Server platform](../../big-data-cluster/big-data-options.md)

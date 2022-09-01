@@ -1,14 +1,13 @@
 ---
 title: "Transactions and concurrency"
 description: "Describes how to use Microsoft SqlClient Data Provider for SQL Server with transactions and concurrency."
-ms.date: "11/24/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/24/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Transactions and concurrency
 

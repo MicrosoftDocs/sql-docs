@@ -1,16 +1,15 @@
 ---
 title: AppContext switches in SqlClient
 description: Learn about the AppContext switches available in SqlClient and how to use them to modify some default behaviors.
-ms.date: 06/01/2022
-dev_langs: 
-  - "csharp"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
+ms.date: 06/01/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # AppContext switches in Sqlclient
 

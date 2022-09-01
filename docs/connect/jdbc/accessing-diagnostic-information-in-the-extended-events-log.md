@@ -1,16 +1,12 @@
 ---
 title: Accessing diagnostic information in the extended events log
 description: Learn how to access extended events on the server that are related to events from the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 05/06/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 05/06/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Accessing diagnostic information in the extended events log
 

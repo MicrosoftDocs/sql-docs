@@ -1,16 +1,13 @@
 ---
-title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
+title: "Step 1: Configure development environment for ADO.NET development"
 description: "Describes how to configure the environment for ADO.NET development."
-ms.custom: ""
-ms.date: "08/15/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 1: Configure development environment for ADO.NET development
 

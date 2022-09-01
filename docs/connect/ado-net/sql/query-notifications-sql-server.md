@@ -1,15 +1,13 @@
 ---
 title: "Query notifications in SQL Server"
 description: "Describes how .NET applications can request notification from SQL Server when data has changed."
-ms.date: "08/15/2019"
-ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Query notifications in SQL Server
 

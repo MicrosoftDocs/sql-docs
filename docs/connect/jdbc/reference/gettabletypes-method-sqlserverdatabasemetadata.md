@@ -48,7 +48,7 @@ public java.sql.ResultSet getTableTypes()
 >  For more information about the data returned by the getTableTypes method, see "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getTableTypes method to return the table type information in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database, given that the database is specified in the connection String.  
+ The following example demonstrates how to use the getTableTypes method to return the table type information in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database, given that the database is specified in the connection String.  
   
 ```  
 public static void executeGetTableTypes(Connection con) {  

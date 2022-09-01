@@ -1,9 +1,9 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.date: 07/25/2022
+author: markingmyname
+ms.author: maghan
+ms.date: 08/26/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.technology: t-sql
@@ -126,11 +126,7 @@ WITH (
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
          FORMAT_TYPE = DELTA  
-         -- DATA_COMPRESSION is available only in SQL Server
-     [ , DATA_COMPRESSION = {  
-        'org.apache.hadoop.io.compress.SnappyCodec'  
-      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
-    ]);  
+      );  
 ```
 ---
   
@@ -200,7 +196,9 @@ Specifies the format of the external data.
 
 ### [Delta table](#tab/delta)
  N/A
+ 
 ---  
+
 
 ### Delimited text format options
 
@@ -459,14 +457,13 @@ WITH (
 
 ### G. Create a Delta table external file format
 
-This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If DATA_COMPRESSION isn't specified, the default is no compression. For more information, see [Virtualize delta table file with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
+This example creates an external file format for Delta table type file format. This example applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Virtualize delta table file with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
 ```sql
 CREATE EXTERNAL FILE FORMAT DeltaFileFormat
 WITH(
-    FORMAT_TYPE = DELTA,
-  DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-);
+    FORMAT_TYPE = DELTA
+    );
 ```
 
 ## Next steps 

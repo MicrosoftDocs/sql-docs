@@ -90,7 +90,10 @@ WHERE pvss.database_id = DB_ID();
     
     With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s).
 
-    For more information on troubleshooting long-running queries, see [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries) or [Identify query performance issues in Azure SQL](/azure/azure-sql/identify-query-performance-issues).
+    For more information on troubleshooting long-running queries, see: 
+     - [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries)
+     - [Identify query performance issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues)
+     - [Identify query performance issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues)
 
 <a id="pvs-active-snapshot-scans"></a>
 

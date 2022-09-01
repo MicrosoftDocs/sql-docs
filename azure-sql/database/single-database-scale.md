@@ -1,19 +1,17 @@
 ---
 title: Scale single database resources
 description: This article describes how to scale the compute and storage resources available for a single database in Azure SQL Database.
-services:
-  - "sql-database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 08/01/2022
 ms.service: sql-database
 ms.subservice: performance
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=1"
   - "references_regions"
   - "devx-track-azurepowershell"
-ms.topic: conceptual
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 07/27/2022
 ---
 # Scale single database resources in Azure SQL Database
 
@@ -104,6 +102,13 @@ else {
     "No service tier change or compute rescaling operation found"
 }
 ```
+
+## Permissions
+
+To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+
+To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
+
 
 ## Additional considerations
 

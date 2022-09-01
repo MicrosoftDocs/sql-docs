@@ -1,21 +1,15 @@
 ---
 title: Automated Backup for SQL Server 2014 Azure virtual machines
 description: Explains the Automated Backup feature for SQL Server 2014 VMs running in Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: bdc63fd1-db49-4e76-87d5-b5c6a890e53c
+ms.author: pamela
+ms.reviewer: pamela
+ms.date: 05/03/2018
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/03/2018
-ms.author: mathoma
-ms.reviewer: pamela 
 ms.custom: devx-track-azurepowershell
+tags: azure-resource-manager
 ---
 
 # Automated Backup for SQL Server 2014 virtual machines (Resource Manager)
@@ -58,7 +52,7 @@ The following table describes the options that can be configured for Automated B
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
 | **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2014 Standard or Enterprise. |
-| **Retention Period** | 1-30 days (30 days) | The number of days to retain a backup. |
+| **Retention Period** | 1-90 days (90 days) | The number of days to retain a backup. |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and machine name. |
 | **Encryption** | Enable/Disable (Disabled) | Enables or disables encryption. When encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** | Password text | A password for encryption keys. This is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |

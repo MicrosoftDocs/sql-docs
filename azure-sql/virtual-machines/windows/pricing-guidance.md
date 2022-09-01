@@ -1,22 +1,15 @@
 ---
 title: Price guidance & managing costs
 description: Provides best practices for choosing the right SQL Server virtual machine pricing model.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
-ms.assetid: 
-ms.service: virtual-machines-sql
-ms.subservice: management
-
-ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 08/09/2018
 ms.author: pamela
 ms.reviewer: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 08/09/2018
+ms.service: virtual-machines-sql
+ms.subservice: management
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+tags: azure-service-management
 ---
 # Pricing guidance for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

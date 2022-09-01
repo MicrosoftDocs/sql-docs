@@ -1,17 +1,14 @@
 ---
 title: Monitoring and performance tuning
 description: An overview of monitoring and performance tuning capabilities and methodology in Azure SQL Database and Azure SQL Managed Instance.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 04/14/2022
+ms.date: 07/29/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance
@@ -163,3 +160,5 @@ Additionally, you can use [Extended Events](/sql/relational-databases/extended-e
 - For more information about intelligent performance recommendations for single and pooled databases, see [Database advisor performance recommendations](database-advisor-implement-performance-recommendations.md).
 - For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
 - [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
+- [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
+- [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

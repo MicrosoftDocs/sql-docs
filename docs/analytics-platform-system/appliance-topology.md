@@ -1,13 +1,13 @@
 ---
 title: Appliance topology
-description: Displays summary information on the entire Analytics Platform System.  
-author: charlesfeddersen 
+description: Displays summary information on the entire Analytics Platform System.
+author: charlesfeddersen
+ms.author: charlesf
+ms.reviewer: martinle
+ms.date: 04/17/2018
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: charlesf
-ms.reviewer: martinle
 ---
 
 # Appliance topology - Analytics Platform System

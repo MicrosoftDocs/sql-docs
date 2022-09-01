@@ -2,7 +2,7 @@
 title: ODBC DSN and connection string keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -42,6 +42,7 @@ The following table lists the available keywords and the attributes for each pla
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0+) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
 | [HostnameInCertificate](dsn-connection-string-attribute.md#hostnameincertificate) (v18.0+) | | LMW |
+| [IpAddressPreference](dsn-connection-string-attribute.md#ipaddresspreference) (v18.1+) | | LMW |
 | [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8)| | LMW |
 | [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -60,8 +61,10 @@ The following table lists the available keywords and the attributes for each pla
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Replication](dsn-connection-string-attribute.md#replication) | | LMW |
+| [RetryExec](dsn-connection-string-attribute.md#retryexec) (18.1+) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [ServerCertificate](dsn-connection-string-attribute.md#servercertificate) (v18.1+) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
@@ -249,6 +252,51 @@ Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
 |No|(Default) Replication login won't be used. |
 |Yes| Triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
 
+### RetryExec
+
+Configurable retry logic is available starting in version 18.1. It automatically re-executes specific ODBC function calls based on configurable conditions. This feature can be enabled through the connection string using the **RetryExec** keyword, along with a list of retry rules. Each retry rule has three colon separated components: an error match, retry policy, and a query match.
+
+The query match determines the retry rule to be used for a given execution, and is matched with the incoming command text (SQLExecDirect) or the prepared command text in the statement object (SQLExecute). If more than one rule matches, the first matching one in the list is used. This allows rules to be listed in order of increasing generality. If no rule matches, then no retry is applied.
+
+When the execution results in an error, and there is an applicable retry rule, its error match is used to determine if the execution should be retried.
+
+The value of the RetryExec keyword is a list of semicolon seperated retry rules.  
+`RetryExec={rule1;rule2}`
+
+A retry rule is as follows: `<errormatch>:<retrypolicy>:<querymatch>`
+
+**Error Match:** A comma seperated list of error codes. For example, specifying **1000,2000** would be the error codes you want to retry.
+
+**Retry Policy:** Specifies the delay until the next retry. The first parameter would be the number of retries while the second would be the delay. For example **3,10+7** would be 3 tries starting at 10 and each following retry would increment by 7 seconds. Note that if +7 isn't specified, then each following retry is exponentially doubled.
+
+**Query Match:** Specifies the query you want to match with. If nothing is specified, then it applies to all queries. Specifying **SELECT** would mean for all queries that start with select.
+
+Combining all 3 above components together to use in a connection string would be:
+
+`RetryExec={1000,2000:3,10+7:SELECT}`
+
+Which would mean: "For errors 1000 and 2000, on a query that starts with SELECT. Retry twice with an intial delay of 10 seconds and adding 7 seconds for each following attempt"
+
+**Examples**
+
+`40501,40540:4,5`
+
+For errors 40501 and 40540, retry up to 4 times, with an initial delay of 5 seconds, and exponential doubling between each retry. This applies to all queries.
+
+`49919:2,10+:CREATE`
+
+For error 49919 on a query that starts with CREATE, retry at most twice, initially after 10s, and then 20s.
+
+`49918,40501,10928:5,10+5:SELECT c1`
+
+For errors, 49918, 40501, and 10928 on queries starting with SELECT c1, retry up to 5 times, waiting 10 seconds on the first retry and increasing the wait by 5 seconds thereafter.
+
+The above 3 rules can be specified together in the connection string as follows: 
+
+`RetryExec={49918,40501,10928:5,10+5:SELECT c1;49919:2,10+:CREATE;40501,40540:4,5}`
+
+Note that the most general (match-all) rule has been placed at the end, to allow the two more specific rules before it to match their respective queries.
+
 ## ClientCertificate
 
 Specifies the certificate to be used for authentication. The options are:
@@ -271,9 +319,18 @@ Specifies a file location of the private key for `PEM` or `DER` certificates tha
 
 In case if private key file is password protected then password keyword is required. If the password contains any "`,`" characters, an extra "`,`" character is added immediately after each one. For example, if the password is "`a,b,c`", the escaped password present in the connection string is "`a,,b,,c`".
 
+
 ### HostnameInCertificate
 
 Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
+
+### IpAddressPreference
+
+Available starting with version 18.1, this option allows the user to specify the type of IP Address they want to prioritize for connections. The possible options are "IpAddress= [ IPv4First | IPv6First | UsePlatformDefault]." UsePlatformDefault connects to addresses in the order they are provided by the system call to resolve the server name. The default value is IPv4First, which corresponds to the behavior in previous versions.
+
+### ServerCertificate
+
+Available starting with version 18.1, this option can be used with the strict encryption mode. The **ServerCertificate** keyword is used to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the **ServerCertificate** provided is an exact match.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 

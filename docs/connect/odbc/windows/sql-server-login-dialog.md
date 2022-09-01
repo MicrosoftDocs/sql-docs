@@ -2,7 +2,7 @@
 title: "SQL Server Login Dialog Box (ODBC)"
 description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "08/08/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -98,6 +98,10 @@ When selected, data that is passed through the connection will be encrypted. Log
 ### Connection Encryption
 
 Declares the connection encryption mode to be used. Selecting the **Optional** or **Mandatory** option is equivalent to having **Use strong encryption for data** unselected or selected, respectively. When **Strict** is used, the connection will be encrypted using TDS 8.0. This option is available in ODBC Driver 18 and newer.
+
+### Server certificate (optional)
+
+Specifies the server certificate (PEM, DER, or CER format) to match against the certificate returned by the server during encryption negotiation. When specified, certificate validation is done by checking if the server's certificate is an exact match against the certificate specified. The **Hostname in certificate** option is ignored when a server certificate is specified. This option is applicable only when **Connection Encryption** is set to **Strict** and is available in ODBC Driver 18.1 and newer.
 
 ### Hostname in certificate (optional)
 

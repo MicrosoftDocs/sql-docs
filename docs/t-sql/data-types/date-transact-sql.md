@@ -1,27 +1,23 @@
 ---
+title: "date (Transact-SQL)"
 description: "date (Transact-SQL)"
-title: "date (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "date_TSQL"
   - "date"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], date"
   - "date and time [SQL Server], date"
   - "dates [SQL Server], data types"
   - "date data type [SQL Server]"
   - "data types [SQL Server], date and time"
-ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -56,7 +52,7 @@ The following tables show the valid string literal formats for the **date** data
   
 |Numeric|Description|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd, and [yy]yy represent month, day, and year in a string with slash marks (/), hyphens (-), or periods (.) as separators.<br /><br /> Only four- or two-digit years are supported. Use four-digit years whenever possible. To specify an integer from 0001 to 9999 that represents the cutoff year for interpreting two-digit years as four-digit years, use the [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Note!** For Informatica, YYYY is limited to the range 1582 to 9999.<br /><br /> A two-digit year that is less than or equal to the last two digits of the cutoff year is in the same century as the cutoff year. A two-digit year greater than the last two digits of the cutoff year is in the century that comes before the cutoff year. For example, if the two-digit year cutoff is the default 2049, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950.<br /><br /> The default date format is determined by the current language setting. You can change the date format by using the [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) and [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) statements.<br /><br /> The **ydm** format isn't supported for **date**.|  
+|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd, and [yy]yy represent month, day, and year in a string with slash marks (/), hyphens (-), or periods (.) as separators.<br /><br /> Only four- or two-digit years are supported. Use four-digit years whenever possible. To specify an integer from 0001 to 9999 that represents the cutoff year for interpreting two-digit years as four-digit years, use the [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Note:** For Informatica, YYYY is limited to the range 1582 to 9999.<br /><br /> A two-digit year that is less than or equal to the last two digits of the cutoff year is in the same century as the cutoff year. A two-digit year greater than the last two digits of the cutoff year is in the century that comes before the cutoff year. For example, if the two-digit year cutoff is the default 2049, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950.<br /><br /> The default date format is determined by the current language setting. You can change the date format by using the [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) and [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) statements.<br /><br /> The **ydm** format isn't supported for **date**.|  
   
 |Alphabetical|Description|  
 |------------------|-----------------|  

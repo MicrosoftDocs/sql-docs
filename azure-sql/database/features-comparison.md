@@ -2,15 +2,13 @@
 title: Compare the database engine features of SQL Database and SQL Managed Instance
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: This article compares the database engine features of Azure SQL Database and Azure SQL Managed Instance
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 12/14/2021
+ms.date: 08/12/2022
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -49,7 +47,7 @@ The following table lists the major features of SQL Server and provides informat
 | [Certificates and asymmetric keys](/sql/relational-databases/security/sql-server-certificates-and-asymmetric-keys) | Yes, without access to file system for `BACKUP` and `CREATE` operations. | Yes, without access to file system for `BACKUP` and `CREATE` operations - see [certificate differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#certificates). |
 | [Change data capture - CDC](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | Yes, for S3 tier and above. Basic, S0, S1, S2 are not supported. | Yes |
 | [Collation - server/instance](/sql/relational-databases/collations/set-or-change-the-server-collation) | No, default server collation `SQL_Latin1_General_CP1_CI_AS` is always used. | Yes, can be set when the [instance is created](../managed-instance/create-template-quickstart.md) and can't be updated later. |
-| [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) | Yes - [Premium tier, Standard tier - S3 and above, General Purpose tier, Business Critical, and Hyperscale tiers](/sql/relational-databases/indexes/columnstore-indexes-overview) |Yes |
+| [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) | Yes - [Premium tier, Standard tier - S3 and above, General Purpose tier, Business Critical, and Hyperscale tiers](/sql/relational-databases/indexes/columnstore-indexes-overview). |Yes |
 | [Common language runtime - CLR](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts) | No | Yes, but without access to file system in `CREATE ASSEMBLY` statement - see [CLR differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#clr) |
 | [Credentials](/sql/relational-databases/security/authentication-access/credentials-database-engine) | Yes, but only [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql). | Yes, but only **Azure Key Vault** and `SHARED ACCESS SIGNATURE` are supported - see [details](../managed-instance/transact-sql-tsql-differences-sql-server.md#credential) |
 | [Cross-database/three-part name queries](/sql/relational-databases/linked-servers/linked-servers-database-engine) | No - see [Elastic queries](elastic-query-overview.md) | Yes|
@@ -87,7 +85,7 @@ The following table lists the major features of SQL Server and provides informat
 | [OPENQUERY](/sql/t-sql/functions/openquery-transact-sql)|No|Yes, only to SQL Database, SQL Managed Instance and SQL Server. See [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md)|
 | [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql)|Yes, only to import from Azure Blob storage. |Yes, only to SQL Database, SQL Managed Instance and SQL Server, and to import from Azure Blob storage. See [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md)|
 | [Operators](/sql/t-sql/language-elements/operators-transact-sql) | Most - see individual operators |Yes - see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
-| [Polybase](/sql/relational-databases/polybase/polybase-guide) | No. You can query data in the files placed on Azure Blob Storage using `OPENROWSET` function or use [an external table that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/read-azure-storage-files-using-synapse-sql-external-tables/). | No. You can query data in the files placed on Azure Blob Storage using `OPENROWSET` function, a linked server that references [serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/), [SQL Database](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-63-it-is-possible-to-create-linked-server-in/ba-p/369168), or SQL Server. |
+| [Polybase](/sql/relational-databases/polybase/polybase-guide) | No. You can query data in the files placed on Azure Blob Storage using `OPENROWSET` function or use [an external table that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/read-azure-storage-files-using-synapse-sql-external-tables/). | Yes, for Azure Data Lake Storage (ADLS) and Azure Blob Storage as data source. See [Data Virtualization with Azure SQL Managed Instance](../managed-instance/data-virtualization-overview.md) for more details. |
 | [Query Notifications](/sql/relational-databases/native-client/features/working-with-query-notifications) | No | Yes |
 | [Machine Learning Services](/sql/advanced-analytics/what-is-sql-server-machine-learning) (_Formerly R Services_)| No | Yes, see [Machine Learning Services in Azure SQL Managed Instance](../managed-instance/machine-learning-services-overview.md) |
 | [Recovery models](/sql/relational-databases/backup-restore/recovery-models-sql-server) | Only Full Recovery that guarantees high availability is supported. Simple and Bulk Logged recovery models are not available. | Only Full Recovery that guarantees high availability is supported. Simple and Bulk Logged recovery models are not available. |
@@ -110,7 +108,7 @@ The following table lists the major features of SQL Server and provides informat
 | Time zone choice | No | [Yes](../managed-instance/timezones-overview.md), and it must be configured when the SQL Managed Instance is created. |
 | [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) | No | Yes, but only limited set of global trace flags. See [DBCC differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#dbcc) |
 | [Transactional Replication](../managed-instance/replication-transactional-overview.md) | Yes, [Transactional and snapshot replication subscriber only](migrate-to-database-from-sql-server.md) | Yes, in [public preview](/sql/relational-databases/replication/replication-with-sql-database-managed-instance). See the constraints [here](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication). |
-| [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes - General Purpose, Business Critical, and Hyperscale (in preview) service tiers only| [Yes](transparent-data-encryption-tde-overview.md) |
+| [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes - General Purpose, Business Critical, and Hyperscale service tiers only.| [Yes](transparent-data-encryption-tde-overview.md) |
 | Windows authentication | No | Yes, see [Windows Authentication for Azure Active Directory principals (Preview)](../managed-instance/winauth-azuread-overview.md). |
 | [Windows Server Failover Clustering](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). |
 
@@ -120,14 +118,14 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 
 | **Platform feature** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 | --- | --- | --- |
-| [Active geo-replication](active-geo-replication-overview.md) | Yes - all service tiers. Public Preview in Hyperscale. | No, see [Auto-failover groups](auto-failover-group-sql-db.md) as an alternative. |
-| [Auto-failover groups](auto-failover-group-sql-db.md) | Yes - all service tiers. Public Preview in Hyperscale. | Yes, see [Auto-failover groups](auto-failover-group-sql-db.md).|
+| [Active geo-replication](active-geo-replication-overview.md) | Yes - all service tiers. | No, see [Auto-failover groups](auto-failover-group-sql-db.md) as an alternative. |
+| [Auto-failover groups](auto-failover-group-sql-db.md) | Yes - all service tiers. | Yes, see [Auto-failover groups](auto-failover-group-sql-db.md).|
 | Auto-scale | Yes, but only in [serverless model](serverless-tier-overview.md). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
 | [Automatic backups](automated-backups-overview.md) | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
 | [Automatic tuning (indexes)](/sql/relational-databases/automatic-tuning/automatic-tuning)| [Yes](automatic-tuning-overview.md)| No |
 | [Availability Zones](/azure/availability-zones/az-overview) | Yes | No |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | No |
-| Backup retention | Yes. 7 days default, max 35 days. Hyperscale backups are currently limited to a 7 day retention period. | Yes. 7 days default, max 35 days. |
+| [Short-term backup retention](automated-backups-overview.md#short-term-retention) | Yes. 7 days default, max 35 days. | Yes. 7 days default, max 35 days. |
 | [Data Migration Service (DMS)](/sql/dma/dma-overview) | Yes | Yes |
 | [Elastic jobs](elastic-jobs-overview.md) | Yes - see [Elastic jobs (preview)](elastic-jobs-overview.md) | No ([SQL Agent](../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent) can be used instead). |
 | File system access | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. |
@@ -165,7 +163,7 @@ Azure SQL Database and Azure SQL Managed Instance support various data tools tha
 | [BACPAC file (export)](/sql/relational-databases/data-tier-applications/export-a-data-tier-application) | Yes - see [SQL Database export](database-export.md) | Yes - see [SQL Managed Instance export](database-export.md) |
 | [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database) | Yes - see [SQL Database import](database-import.md) | Yes - see [SQL Managed Instance import](database-import.md) |
 | [Data Quality Services (DQS)](/sql/data-quality-services/data-quality-services) | No | No |
-| [Master Data Services (MDS)](/sql/master-data-services/master-data-services-overview-mds) | No | No. Host MDS on an Azure VM. While SQL Managed Instance cannot run MDS as a service, it can host [MDS databases](/sql/master-data-services/master-data-services-host-database-on-managed-instance) for a MDS service installed on Azure Virtual Machine, using SQL Server authentication. |
+| [Master Data Services (MDS)](/sql/master-data-services/master-data-services-overview-mds) | No | No. Host MDS on an Azure VM. While SQL Managed Instance cannot run MDS as a service, it can host [MDS databases](/sql/master-data-services/master-data-services-host-database-on-managed-instance) for an MDS service installed on Azure Virtual Machine, using SQL Server authentication. |
 | [SMO](/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | [Yes](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) | Yes [version 150](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) |
 | [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) | Yes | Yes |
 | [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) | Yes | Yes [version 18.0 and higher](/sql/ssms/download-sql-server-management-studio-ssms) |
@@ -179,7 +177,7 @@ You can use different migration methods to move your data between SQL Server, Az
 
 | **Source** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 | --- | --- | --- |
-| SQL Server (on-prem, AzureVM, Amazon RDS) | **Online:**  [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** [Data Migration Service (DMS)](/sql/dma/dma-overview), [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP | **Online:** [Data Migration Service (DMS)](/sql/dma/dma-overview), [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** Native backup/restore, [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP, [Snapshot replication](../managed-instance/replication-transactional-overview.md) |
+| SQL Server (on-premises, AzureVM, Amazon RDS) | **Online:**  [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** [Data Migration Service (DMS)](/sql/dma/dma-overview), [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP | **Online:** [Data Migration Service (DMS)](/sql/dma/dma-overview), [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** Native backup/restore, [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP, [Snapshot replication](../managed-instance/replication-transactional-overview.md) |
 | Single database | **Offline:** [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP | **Offline:** [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP |
 | SQL Managed Instance | **Online:** [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP, [Snapshot replication](../managed-instance/replication-transactional-overview.md) | **Online:** [Transactional Replication](../managed-instance/replication-transactional-overview.md) <br/> **Offline:** Cross-instance point-in-time restore ([Azure PowerShell](/powershell/module/az.sql/restore-azsqlinstancedatabase#examples) or [Azure CLI](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Cross-instance-point-in-time-restore-in-Azure-SQL-Database/ba-p/386208)), [Native backup/restore](../managed-instance/restore-sample-database-quickstart.md), [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), BCP, [Snapshot replication](../managed-instance/replication-transactional-overview.md) |
 

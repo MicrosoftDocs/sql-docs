@@ -2,7 +2,7 @@
 title: Understanding encryption support
 description: Learn how to ensure the JDBC driver uses TLS encryption to secure connections to a SQL database.
 ms.custom: ""
-ms.date: 04/01/2021
+ms.date: 08/08/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: vanto
@@ -27,7 +27,7 @@ If the application doesn't request encryption, the [!INCLUDE[jdbcNoVersion](../.
 
 ## Remarks
 
-To allow applications to use TLS encryption, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] has introduced the following connection properties starting with the version 1.2 release: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, and **hostNameInCertificate**. For more information, see [Setting the connection properties](setting-the-connection-properties.md).
+To allow applications to use TLS encryption, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] has introduced the following connection properties starting with the version 1.2 release: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, and **hostNameInCertificate**. To allow the driver to use TDS 8.0 with TLS encryption, the connection property **serverCertificate** has been introduced starting with the version 11.2 release. For more information, see [Setting the connection properties](setting-the-connection-properties.md).
 
 The following table summarizes how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] version behaves for possible TLS connection scenarios. Each scenario uses a different set of TLS connection properties. The table includes:
 
@@ -51,6 +51,7 @@ The following table summarizes how the [!INCLUDE[jdbcNoVersion](../../includes/j
 | **encrypt** = true<br/> **trustServerCertificate** = false or blank<br/> **hostNameInCertificate** = value<br/> **trustStore** = blank<br/> **trustStorePassword** = value<br/> | The driver requests to use TLS encryption with the server.<br /><br /> If the server requires the client to support TLS encryption or if the server supports encryption, the driver will initiate the TLS certificate exchange.<br /><br /> The driver will use the **trustStorePassword** property value to check the integrity of the default trustStore file. Also, the driver will use the **hostNameInCertificate** property value to validate the TLS certificate.<br /><br /> If the server isn't configured to support encryption, the driver will raise an error and terminate the connection. |
 | **encrypt** = true<br/> **trustServerCertificate** = false or blank<br/> **hostNameInCertificate** = value<br/> **trustStore** = value<br/> **trustStorePassword** = blank<br/> | The driver requests to use TLS encryption with the server.<br /><br /> If the server requires the client to support TLS encryption or if the server supports encryption, the driver will initiate the TLS certificate exchange.<br /><br /> The driver will use the **trustStore** property value to look up the location of the trustStore file. Also, the driver will use the **hostNameInCertificate** property value to validate the TLS certificate.<br /><br /> If the server isn't configured to support encryption, the driver will raise an error and terminate the connection. |
 | **encrypt** = true<br/> **trustServerCertificate** = false or blank<br/> **hostNameInCertificate** = value<br/> **trustStore** = value<br/> **trustStorePassword** = value<br/> | The driver requests to use TLS encryption with the server.<br /><br /> If the server requires the client to support TLS encryption or if the server supports encryption, the driver will initiate the TLS certificate exchange.<br /><br /> The driver will use the **trustStore** property value to find the certificate trustStore file and **trustStorePassword** property value to check the integrity of the trustStore file. Also, the driver will use the **hostNameInCertificate** property value to validate the TLS certificate.<br /><br /> If the server isn't configured to support encryption, the driver will raise an error and terminate the connection. |
+| **encrypt** = strict<br/> **hostNameInCertificate** = value<br/> **trustStore** = blank<br/> **trustStorePassword** = blank<br/> **serverCertificate** = value<br/> | The driver requests to use TDS 8.0 `strict` TLS encryption with the server.<br /><br /> The driver will initiate the TLS handshake and certificate exchange with the server as the first action.<br /><br /> The **trustServerCertificate** setting is ignored and treated as false in `strict` mode.<br /><br /> The driver will use the optional **hostNameInCertificate** or **serverCertificate** properties to validate the server TLS certificate.<br /><br /> If the server isn't configured to support TDS 8 connections, the driver will raise an error and terminate the connection. |
 
 If the encrypt property is set to **true**, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] uses the JVM's default JSSE security provider to negotiate TLS encryption with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default security provider may not support all of the features required to negotiate TLS encryption successfully. For example, the default security provider may not support the size of the RSA public key used in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS certificate. In this case, the default security provider might raise an error that will cause the JDBC driver to terminate the connection. To resolve this issue, one of the following options can be used:
 
@@ -67,6 +68,8 @@ During the TLS handshake, the server sends its public key certificate to the cli
 - The certificate isn't expired.
 - The Common Name (CN) in the Subject or a DNS name in the Subject Alternate Name (SAN) of the certificate exactly matches the **serverName** value specified in the connection string or, if specified, the **hostNameInCertificate** property value.
 - A DNS name can include wild-card characters. Prior version 7.2, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] doesn't support wild-card matching. That is, abc.com won't match \*.com but \*.com will match \*.com. With version 7.2 and up, standard certificate wild-card matching is supported.
+
+For use of TDS 8.0 with `strict` encryption, the **serverCertifcate** property value provides the path to a server certificate to be used for server certificate validation. This file must use the PEM file format. The certificate received from the server must match this certificate exactly.
 
 ## See also
 

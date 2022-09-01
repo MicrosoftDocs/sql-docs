@@ -1,8 +1,8 @@
 ---
 title: "CREATE SCHEMA (Transact-SQL)"
 description: CREATE SCHEMA (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "12/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "CREATE SCHEMA statement"
 dev_langs:
   - "TSQL"
-ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE SCHEMA (Transact-SQL)

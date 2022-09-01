@@ -1,19 +1,17 @@
 ---
 title: Azure SQL Database connectivity architecture
-description: This article explains the Azure SQL Database connectivity architecture for database connections from within Azure or from outside of Azure.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: connect
-ms.custom:
-  - "fasttrack-edit"
-  - "sqldbrb=1"
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-ms.topic: conceptual
+description: This article explains the Azure SQL Database connectivity architecture for database connections from within Azure or from outside of Azure.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 07/13/2022
+ms.service: sql-database
+ms.subservice: connect
+ms.topic: conceptual
+ms.custom:
+  - "fasttrack-edit"
+  - "sqldbrb=1"
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -47,6 +45,9 @@ Servers in SQL Database and Azure Synapse support the following three options fo
 - **Default:** This is the connection policy in effect on all servers after creation unless you explicitly alter the connection policy to either `Proxy` or `Redirect`. The default policy is`Redirect` for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and `Proxy`for all client connections originating outside (for example, connections from your local workstation).
 
 We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you will need to meet the additional requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises then you may need to work with your network admin to allow network traffic through your corporate firewall.
+
+> [!IMPORTANT]
+> Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy).
 
 ## Connectivity from within Azure
 

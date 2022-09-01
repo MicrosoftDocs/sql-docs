@@ -24,7 +24,7 @@ You can uninstall SSMA by using **Add or Remove Programs**.
   
 1.  In Control Panel, open **Add or Remove Programs**.  
   
-2.  Select **[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
+2.  Select **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
   
 3.  To confirm that you want to uninstall SSMA, click **Yes**.  
   

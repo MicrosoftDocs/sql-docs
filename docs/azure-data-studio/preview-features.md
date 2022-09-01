@@ -1,14 +1,12 @@
 ---
 title: Preview features in Azure Data Studio
 description: Learn more about Azure Data Studio preview features and how to enable and use them.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-ms.custom:
 ms.date: 10/14/2020
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Preview features in Azure Data Studio
@@ -72,22 +70,26 @@ You can enable or disable preview features anytime in your Settings.
 ### First-party extensions in preview
 
 * Admin Pack for SQL Server
+* Azure Monitor Logs
+* Azure SQL Edge Deployment
 * Azure Synapse Analytics Insights
 * Central Management Servers
+* Cosmos
 * Database Administration Tool Extensions for Windows
+* Database Migration Assessment for Oracle
 * Kusto
-* Language packs
+* Machine Learning
+* Managed Instance Dashboard
+* Oracle
 * PostgreSQL
 * PowerShell
 * Query History
 * SandDance for Azure Data Studio
 * Server Reports
 * SQL Assessment
+* SQL Database Projects
 * SQL Server Agent
 * SQL Server Profiler
-* Machine Learning
-* Managed Instance Dashboard
-* Visual Studio IntelliCode
 * whoisactive
 
 ## Next steps

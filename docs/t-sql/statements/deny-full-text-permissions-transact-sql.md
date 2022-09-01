@@ -1,8 +1,8 @@
 ---
 title: "DENY Full-Text Permissions (Transact-SQL)"
 description: DENY Full-Text Permissions (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "DENY statement, full-text permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 ---
 # DENY Full-Text Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

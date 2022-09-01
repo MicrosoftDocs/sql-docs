@@ -2,16 +2,16 @@
 title: Configure & manage content reference
 titleSuffix: Azure SQL Managed Instance
 description: A reference guide of content that teaches you how to configure and manage Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1, ignite-fall-2021
-ms.devlang: 
-ms.topic: guide
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, danil
 ms.date: 03/22/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: guide
+ms.custom:
+  - sqldbrb=1
+  - ignite-fall-2021
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -79,7 +79,7 @@ In this article you can find a content reference to various guides, scripts, and
 ## Monitoring and tuning
 
 - [Manual tuning](../database/performance-guidance.md)
-- [Use DMVs to monitor performance](../database/monitoring-with-dmvs.md)
+- [Use DMVs to monitor performance](monitoring-with-dmvs.md)
 - [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
 - [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md)
 - [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md)

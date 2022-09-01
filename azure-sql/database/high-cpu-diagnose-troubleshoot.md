@@ -2,17 +2,14 @@
 title: Diagnose and troubleshoot high CPU
 titleSuffix: Azure SQL Database
 description: Learn to diagnose and troubleshoot high CPU problems in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/06/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 ---
 # Diagnose and troubleshoot high CPU on Azure SQL Database
 
@@ -58,7 +55,7 @@ Common causes of new and unusual high CPU utilization are:
 
 * New queries in the workload that use a large amount of CPU.
 * An increase in the frequency of regularly running queries.
-* Query plan regression, including regression due to [parameter sensitive plan (PSP) problems](../identify-query-performance-issues.md), resulting in one or more queries consuming more CPU.
+* Query plan regression, including regression due to [parameter sensitive plan (PSP) problems](identify-query-performance-issues.md), resulting in one or more queries consuming more CPU.
 * A significant increase in compilation or recompilation of query plans.
 * Databases where queries use [excessive parallelism](configure-max-degree-of-parallelism.md#excessive-parallelism).
 
@@ -70,7 +67,7 @@ Examine:
     - [Review CPU metrics and related top queries in the Azure portal](#review-cpu-usage-metrics-and-related-top-queries-in-the-azure-portal) 
     - [Query the top recent 15 queries by CPU usage](#query-the-top-recent-15-queries-by-cpu-usage) with Transact-SQL.
     - [Use interactive Query Store tools in SSMS to identify top queries by CPU time](#use-interactive-query-store-tools-to-identify-top-queries-by-cpu-time)
-- Are some queries in the workload using more CPU per execution than they did in the past? If so, has the query execution plan changed? These queries may [have parameter sensitive plan (PSP) problems](../identify-query-performance-issues.md). Use either of the following techniques to investigate. Look for queries with multiple query execution plans with significant variation in CPU usage:
+- Are some queries in the workload using more CPU per execution than they did in the past? If so, has the query execution plan changed? These queries may [have parameter sensitive plan (PSP) problems](identify-query-performance-issues.md). Use either of the following techniques to investigate. Look for queries with multiple query execution plans with significant variation in CPU usage:
     - [Query the top recent 15 queries by CPU usage](#query-the-top-recent-15-queries-by-cpu-usage) with Transact-SQL.
     - [Use interactive Query Store tools in SSMS to identify top queries by CPU time](#use-interactive-query-store-tools-to-identify-top-queries-by-cpu-time)
 - Is there evidence of a large amount of compilation or recompilation occurring? Query the [most frequently compiled queries by query hash](#query-the-most-frequently-compiled-queries-by-query-hash) and review how frequently they compile.
@@ -122,20 +119,20 @@ Find currently running queries with CPU usage and execution plans by executing t
 
 ```sql
 SELECT
-	req.session_id,
-	req.status,
-	req.start_time,
-	req.cpu_time AS 'cpu_time_ms',
-	req.logical_reads,
-	req.dop,
-	s.login_name,
-	s.host_name,
-	s.program_name,
-	object_name(st.objectid,st.dbid) 'ObjectName',
-	REPLACE (REPLACE (SUBSTRING (st.text,(req.statement_start_offset/2) + 1,
-		((CASE req.statement_end_offset	WHEN -1	THEN DATALENGTH(st.text) 
-		ELSE req.statement_end_offset END - req.statement_start_offset)/2) + 1),
-		CHAR(10), ' '), CHAR(13), ' ') AS statement_text,
+    req.session_id,
+    req.status,
+    req.start_time,
+    req.cpu_time AS 'cpu_time_ms',
+    req.logical_reads,
+    req.dop,
+    s.login_name,
+    s.host_name,
+    s.program_name,
+    object_name(st.objectid,st.dbid) 'ObjectName',
+    REPLACE (REPLACE (SUBSTRING (st.text,(req.statement_start_offset/2) + 1,
+        ((CASE req.statement_end_offset    WHEN -1    THEN DATALENGTH(st.text) 
+        ELSE req.statement_end_offset END - req.statement_start_offset)/2) + 1),
+        CHAR(10), ' '), CHAR(13), ' ') AS statement_text,
     qp.query_plan,
     qsx.query_plan as query_plan_with_in_flight_statistics
 FROM sys.dm_exec_requests as req  
@@ -310,7 +307,7 @@ Part of your troubleshooting should include learning more about the queries iden
 
 - If you found new queries using significant CPU appearing in the workload, validate that indexes have been optimized for those queries. You can [tune indexes manually](#tune-indexes-manually) or [reduce CPU usage with automatic index tuning](#reduce-cpu-usage-with-automatic-index-tuning). Evaluate if your [max degree of parallelism](#reduce-cpu-usage-by-tuning-the-max-degree-of-parallelism) setting is correct for your increased workload.
 - If you found that the overall execution count of queries is higher than it used to be, [tune indexes for your highest CPU consuming queries](#tune-indexes-manually) and consider [automatic index tuning](#reduce-cpu-usage-with-automatic-index-tuning). Evaluate if your [max degree of parallelism](#reduce-cpu-usage-by-tuning-the-max-degree-of-parallelism) setting is correct for your increased workload.
-- If you found queries in the workload with [parameter sensitive plan (PSP) problems](../identify-query-performance-issues.md), consider [automatic plan correction (force plan)](#reduce-cpu-usage-with-automatic-plan-correction-force-plan). You can also [manually force a plan in Query Store](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql) or tune the Transact-SQL for the query to result in a consistently high-performing query plan.
+- If you found queries in the workload with [parameter sensitive plan (PSP) problems](identify-query-performance-issues.md), consider [automatic plan correction (force plan)](#reduce-cpu-usage-with-automatic-plan-correction-force-plan). You can also [manually force a plan in Query Store](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql) or tune the Transact-SQL for the query to result in a consistently high-performing query plan.
 - If you found evidence that a large amount of compilation or recompilation is occurring, [tune the queries so that they are properly parameterized or do not require recompile hints](#tune-your-application-queries-and-database-settings).
 - If you found that queries are using excessive parallelism, [tune the max degree of parallelism](#reduce-cpu-usage-by-tuning-the-max-degree-of-parallelism).
 
@@ -344,7 +341,7 @@ In examining your top queries, you may find [application characteristics to tune
 
 You may also choose to manually tune the top CPU using queries identified in your workload. Manual tuning options include rewriting Transact-SQL statements, [forcing plans](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql) in Query Store, and applying [query hints](/sql/t-sql/queries/hints-transact-sql-query).
 
-If you identify cases where queries sometimes use an execution plan which is not optimal for performance, review the solutions in [queries that parameter sensitive plan (PSP) problems](../identify-query-performance-issues.md)
+If you identify cases where queries sometimes use an execution plan which is not optimal for performance, review the solutions in [queries that parameter sensitive plan (PSP) problems](identify-query-performance-issues.md)
 
 If you identify non-parameterized queries with a high number of plans, consider parameterizing these queries, making sure to fully declare parameter data types, including length and precision. This may be done by modifying the queries, creating a [plan guide to force parameterization](/sql/relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides) of a specific query, or by enabling [forced parameterization](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) at the database level.
 
@@ -388,5 +385,5 @@ Learn more about monitoring and performance tuning Azure SQL Database in the fol
 * [Enable automatic tuning to monitor queries and improve workload performance](automatic-tuning-enable.md)
 * [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide)
 * [Best practices with Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store)
-* [Detectable types of query performance bottlenecks in Azure SQL Database](../identify-query-performance-issues.md)
+* [Detectable types of query performance bottlenecks in Azure SQL Database](identify-query-performance-issues.md)
 * [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)

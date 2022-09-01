@@ -1,23 +1,19 @@
 ---
-description: "ToString (Database Engine)"
 title: ToString (Database Engine)
-ms.custom: ""
-ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "ToString"
-  - "ToString_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ToString [Database Engine]"
-ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
+description: "ToString (Database Engine)"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 10/05/2021
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "ToString"
+  - "ToString_TSQL"
+helpviewer_keywords:
+  - "ToString [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 
 # ToString (Database Engine)

@@ -2,16 +2,14 @@
 title: Management operations overview
 titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance management operations duration and best practices.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: overview
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 08/20/2021
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: overview
+ms.custom: ignite-fall-2021
 ---
 
 # Overview of Azure SQL Managed Instance management operations

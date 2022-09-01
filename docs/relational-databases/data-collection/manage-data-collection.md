@@ -57,7 +57,8 @@ ms.author: mathoma
   
  You can use the stored procedures, functions, and views that are provided to create your own end-to-end data collection scenarios.  
   
->**IMPORTANT!!** Unlike regular stored procedures, the data collector stored procedures use strictly typed parameters and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+> [!IMPORTANT]  
+> Unlike regular stored procedures, the data collector stored procedures use strictly typed parameters and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../ssms/object/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the **sqlcmd** utility. For more information, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   

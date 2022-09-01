@@ -51,8 +51,8 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ### Windows
 
-**[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
-<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
@@ -308,7 +308,8 @@ We recommend that you use a [strong password](../relational-databases/security/s
   
  If the user name and password combination is incorrect, an error message is generated.  
   
-**NOTE!**  The OSQLPASSWORD environment variable was kept for backward compatibility. The SQLCMDPASSWORD environment variable takes precedence over the OSQLPASSWORD environment variable. Now that OSQLPASSWORD is no longer shared, the utilities **sqlcmd** and **osql** can be used next to each other without interference. Old scripts will continue to work.  
+ > [!NOTE]  
+ > The OSQLPASSWORD environment variable was kept for backward compatibility. The SQLCMDPASSWORD environment variable takes precedence over the OSQLPASSWORD environment variable. Now that OSQLPASSWORD is no longer shared, the utilities **sqlcmd** and **osql** can be used next to each other without interference. Old scripts will continue to work.  
   
  If the **-P** option is used with the **-E** option, an error message is generated.  
   

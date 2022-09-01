@@ -1,15 +1,15 @@
 ---
 title: Configure minimal TLS version - managed instance
 description: "Learn how to configure minimal TLS version for managed instance"
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: devx-track-azurepowershell, devx-track-azurecli
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: 
-ms.date: 05/25/2020 
+ms.date: 05/25/2020
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 # Configure minimal TLS version in Azure SQL Managed Instance

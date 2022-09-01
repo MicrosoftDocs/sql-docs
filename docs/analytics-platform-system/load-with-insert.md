@@ -1,13 +1,13 @@
 ---
 title: Load data with INSERT
 description: Using the T-SQL INSERT statement to load data into a Parallel Data Warehouse (PDW) distributed or replicated table.
-author: charlesfeddersen 
+author: charlesfeddersen
+ms.author: charlesf
+ms.reviewer: martinle
+ms.date: 04/17/2018
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: charlesf
-ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
 

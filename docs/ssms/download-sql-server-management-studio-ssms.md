@@ -35,9 +35,9 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-To download SSMS 19 Preview 2, visit [Download SSMS 19](download-sql-server-management-studio-ssms-19.md).
+To download SSMS 19 Preview 3, visit [Download SSMS 19](download-sql-server-management-studio-ssms-19.md).
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.12.1 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.12.1 upgrades it to 18.12.1.
 

@@ -6,7 +6,7 @@ ms.author: randolphwest
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
-ms.date: 05/26/2022
+ms.date: 08/18/2022
 ms.custom:
   - template-quickstart
   - seo-lt-2019
@@ -120,7 +120,11 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
 
 The container hosting the SQL Server instance is described as a Kubernetes *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster. The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
+You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+
+- The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
+- The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
+- The manifest describes resource *requests* and *limits*. These are based on the minimum [system requirements](sql-server-linux-setup.md#system).
 
 1. Create a manifest (a YAML file) to describe the deployment. The following example describes a deployment, including a container based on the SQL Server container image.
 
@@ -146,6 +150,13 @@ You will create a manifest to describe the container, based on the SQL Server [m
          containers:
          - name: mssql
            image: mcr.microsoft.com/mssql/server:2019-latest
+           resources:
+             requests:
+               memory: "2G"
+               cpu: "2000m"
+             limits:
+               memory: "2G"
+               cpu: "2000m"
            ports:
            - containerPort: 1433
            env:

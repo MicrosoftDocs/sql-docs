@@ -1,21 +1,18 @@
 ---
-description: "DBCC CLEANTABLE (Transact-SQL)"
 title: DBCC CLEANTABLE (Transact-SQL)
-ms.custom: ""
+description: "DBCC CLEANTABLE (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CLEANTABLE_TSQL"
   - "DBCC_CLEANTABLE_TSQL"
   - "DBCC CLEANTABLE"
   - "CLEANTABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disk space [SQL Server], reclaiming"
   - "reclaiming space"
   - "reallocating space"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "space [SQL Server], reclaiming"
   - "deleting columns"
   - "dropping columns"
-ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC CLEANTABLE (Transact-SQL)

@@ -1,29 +1,26 @@
 ---
-description: "DBCC SHOWCONTIG (Transact-SQL)"
 title: DBCC SHOWCONTIG (Transact-SQL)
-ms.custom: ""
+description: "DBCC SHOWCONTIG (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/17/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC_SHOWCONTIG_TSQL"
   - "DBCC SHOWCONTIG"
   - "SHOWCONTIG"
   - "SHOWCONTIG_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying defragmentation information"
   - "DBCC SHOWCONTIG statement"
   - "defragmenting indexes"
   - "leaf level defragmenting"
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
-ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC SHOWCONTIG (Transact-SQL)
@@ -33,7 +30,7 @@ ms.author: umajay
 Displays fragmentation information for the data and indexes of the specified table or view.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

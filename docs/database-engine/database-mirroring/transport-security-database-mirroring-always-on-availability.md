@@ -68,7 +68,7 @@ ms.author: mikeray
   
 |ALGORITHM value|Description|  
 |---------------------|-----------------|  
-|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> <strong>\*\* Warning \*\*</strong> The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.|  
+|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> <strong>\*\* Warning \*\*</strong> The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.|  
 |AES|Specifies that the endpoint must use the AES algorithm.|  
 |AES RC4|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the AES algorithm.|  
 |RC4 AES|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.|  

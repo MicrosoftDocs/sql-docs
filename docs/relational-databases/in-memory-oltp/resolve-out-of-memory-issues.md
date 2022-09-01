@@ -13,7 +13,7 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 # Resolve Out Of Memory issues
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] uses more memory and in different ways than does [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is possible that the amount of memory you installed and allocated for [!INCLUDE[hek_2](../../includes/hek-2-md.md)] becomes inadequate for your growing needs. If so, you could run out of memory. This topic covers how to recover from an OOM situation. See [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) for guidance that can help you avoid many OOM situations.  
+[!INCLUDE [inmemory-md](../../includes/inmemory-md.md)] uses more memory and in different ways than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does. It is possible that the amount of memory you installed and allocated for [!INCLUDE[inmemory](../../includes/inmemory-md.md)] becomes inadequate for your growing needs. If so, you could run out of memory. This topic covers how to recover from an OOM situation. See [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) for guidance that can help you avoid many OOM situations.  
   
 ## Covered in this topic  
   
@@ -93,9 +93,9 @@ If the server does have enough physical memory, but you are still seeing this er
 #### Increase available memory  
   
 ##### Increase value of MAX_MEMORY_PERCENT on the resource pool  
- If you have not created a named resource pool for your in-memory tables you should do that and bind your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] databases to it. See the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) for guidance on creating and binding your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] databases to a resource pool.  
+ If you have not created a named resource pool for your in-memory tables you should do that and bind your [!INCLUDE[inmemory](../../includes/inmemory-md.md)] databases to it. See the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) for guidance on creating and binding your [!INCLUDE[inmemory](../../includes/inmemory-md.md)] databases to a resource pool.  
   
- If your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
+ If your [!INCLUDE[inmemory](../../includes/inmemory-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
   
  Increase the value of MAX_MEMORY_PERCENT.   
 This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70% of installed memory.  

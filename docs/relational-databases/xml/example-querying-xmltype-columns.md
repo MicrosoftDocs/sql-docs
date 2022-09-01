@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Example: Query XMLType columns
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following query includes columns of **xml** type. The query retrieves product model ID, name, and manufacturing steps at the first location from the `Instructions` column of the **xml** type.
 
@@ -26,11 +26,10 @@ USE AdventureWorks2012;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('
-declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"
-   /MI:root/MI:Location[1]/MI:step
-')
+declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+/MI:root/MI:Location[1]/MI:step')
 FROM Production.ProductModel
-FOR XML RAW ('ProductModelData');
+FOR XML RAW ('ProductModelData')
 GO
 ```
 
@@ -52,9 +51,8 @@ USE AdventureWorks2012;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('
-declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"
-   /MI:root/MI:Location[1]/MI:step
-') as ManuSteps
+declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+/MI:root/MI:Location[1]/MI:step') as ManuSteps
 FROM Production.ProductModel
 FOR XML RAW ('ProductModelData');
 GO

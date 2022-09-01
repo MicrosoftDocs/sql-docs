@@ -108,7 +108,7 @@ Create your failover group and add your database to it using PowerShell.
    ```
 
 > [!NOTE]
-> It's possible to deploy your auto-failover group across subscriptions by using the `-PartnerSubscriptionId` parameter in Azure Powershell starting with [Az.SQL 3.11.0](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). To learn more, review the following [Example](https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabasefailovergroup?view=azps-8.2.0#example-3). 
+> It's possible to deploy your auto-failover group across subscriptions by using the `-PartnerSubscriptionId` parameter in Azure Powershell starting with [Az.SQL 3.11.0](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). To learn more, review the following [Example](/powershell/module/az.sql/new-azsqldatabasefailovergroup#example-3). 
 
 ---
 

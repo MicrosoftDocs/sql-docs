@@ -1,15 +1,13 @@
 ---
 title: "SQL Server Express security"
 description: "Describes security considerations for SQL Server Express."
-ms.date: "09/26/2019"
-ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/26/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server Express security
 

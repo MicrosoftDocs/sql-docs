@@ -1,16 +1,13 @@
 ---
 title: Client Certificate Authentication for loopback scenarios
 description: Learn how to use client certificates for authentication in loopback scenarios on SQL Server.
-ms.custom: ""
-ms.date: 07/31/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 
 author: David-Engel
 ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: 07/31/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Client Certificate Authentication for Loopback Scenarios
 

@@ -58,7 +58,6 @@ You can enable or disable preview features anytime in your Settings.
 * Database Administration Tool Extensions for Windows
 * Database Migration Assessment for Oracle
 * Kusto
-* Machine Learning
 * Managed Instance Dashboard
 * Oracle
 * PostgreSQL

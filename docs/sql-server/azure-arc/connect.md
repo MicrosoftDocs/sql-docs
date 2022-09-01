@@ -5,7 +5,7 @@ description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 07/30/2021
+ms.date: 08/31/2021
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
@@ -13,9 +13,9 @@ ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you can install the Azure Arc agent with the SQL Server extension when you are installing SQL Server on Windows Operating System. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you are installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup#install-sql-server-2022).
 
-You can connect your SQL Server instance to Azure Arc by following these steps.
+You can connect your existing SQL Server instance to Azure Arc by following these steps.
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Initiate the connection from Azure
 
-If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension, "*SQL Server Extension - Azure Arc*".  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions using the Azure portal, Azure PowerShell or Azure CLI.
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing **Azure extension for SQL Server**. The Windows version of this extension can be found in the extension manager as "*WindowsAgent.SqlServer*".  Once installed, **Azure extension for SQL Server** will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [__Azure connected machine agent__](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
 >1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.
@@ -68,11 +68,11 @@ To assign the *Azure Connected SQL Server Onboarding* role to Arc machine manage
    - For **Select**, search for your **Server - Azure Arc** name and select it.
 1. Click **Save**.
 
-To install the SQL Server extension, use the following steps:
+To install the Azure extension for SQL Server, use the following steps:
 
 1. Open the __Server - Azure Arc__ resource. 
 2. Under __Extensions__, click __+ Add__ 
-1. Select `SQL Server Extension - Azure Arc` from the list and click __Create__.
+1. Select `WindowsAgent.SqlServer` from the list and click __Create__.
 
 # [PowerShell](#tab/powershell)
 
@@ -83,7 +83,7 @@ $spID = (Get-AzADServicePrincipal -DisplayName $arcMachineName).Id
 New-AzRoleAssignment -ObjectId $spID RoleDefinitionName "Azure Connected SQL Server Onboarding" -ResourceGroupName {resource group name}
 ```
 
-To install the SQL Server extension, run:
+To install *Azure extension for SQL Server*, run:
 
 ```powershell
 $Settings = @{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}
@@ -99,7 +99,7 @@ spID=$(az resource list -n <ArcMachineName> --query [*].identity.principalId --o
 az role assignment create --assignee $spID --role 'Azure Connected SQL Server Onboarding' --scope /subscriptions/<mySubscriptionID>/resourceGroups/<myResourceGroup>
 ```
 
-To install the SQL Server Extension - Azure Arc for Windows Operating System, run:
+To install *Azure extension for SQL Server* for Windows Operating System, run:
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
@@ -107,13 +107,13 @@ To install the SQL Server Extension - Azure Arc for Windows Operating System, ru
 
 ---
 
-To install the SQL Server Extension - Azure Arc for Linux operating system, run:
+To install *Azure extension for SQL Server* for Linux operating system, run:
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
 
-SQL Server Extension - Azure Arc for Linux is available for preview.
+*Azure extension for SQL Server* for Linux is available for preview.
 
 ---
 
@@ -122,7 +122,7 @@ SQL Server Extension - Azure Arc for Linux is available for preview.
 
 ## Initiate the connection from the target machine
 
-If the server is not an Arc-Server enabled yet, you can initiate the connection from the target machine using the onboarding script. This script onboard the server to Arc-Server and as well as install "SQL Server Extension - Azure Arc".
+If the server is not an Arc-Server enabled yet, you can initiate the connection from the target machine using the onboarding script. This script onboard the server to Arc-Server and as well as install *Azure extension for SQL Server*.
 
 ### Generate a onboarding script for SQL Server
 
@@ -144,7 +144,7 @@ If the server is not an Arc-Server enabled yet, you can initiate the connection 
 
 ### Connect SQL Server instances to Azure Arc
 
-In this step you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs the SQL Server extension. If the machine itself does not have the guest configuration agent installed, the script first installs it then installs the SQL Server extension. The guest agent and the SQL extension will in turn register the connected server and the SQL Server instances on it as the __Server - Azure Arc__ and __SQL Server - Azure Arc__ resources respectively.
+In this step you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs *Azure extension for SQL Server*. If the machine itself does not have the *Azure connected machine agent* installed, the script first installs it then installs *Azure extension for SQL Server*. *Azure connected machine agent* will register the connected server as a __Server - Azure Arc__ resource, and *Azure extension for SQL Server* will register the SQL Server instances on it as __SQL Server - Azure Arc__ resources.
 
 > [!IMPORTANT]
 > Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
@@ -183,7 +183,7 @@ Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly register
 
 ## Delete your SQL Server - Azure Arc resource
 
-To delete your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and select the **Delete** button. It will delete this resource and instruct the SQL Server extension on the machine to stop monitoring this SQL Server instance.  
+To delete your __SQL Server - Azure Arc__ resource, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and select the **Delete** button. 
 
 ![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
 

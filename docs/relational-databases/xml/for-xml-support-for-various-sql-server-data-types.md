@@ -16,7 +16,7 @@ ms.author: mikeray
 ---
 # FOR XML support for various SQL Server data types
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The articles in this section describe FOR XML support for data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

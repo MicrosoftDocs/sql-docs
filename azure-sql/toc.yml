@@ -6,7 +6,7 @@
     href: azure-sql-iaas-vs-paas-what-is-overview.md
   - name: Migrate to Azure SQL 
     href: migration-guides/index.yml
-  - name: Migration and modernization FAQ
+  - name: Migrating SQL Server Workloads FAQ
     href: migration-guides/modernization.md
 
 - name: Shared SQL DB & SQL MI docs

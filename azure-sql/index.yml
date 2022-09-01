@@ -136,7 +136,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Migration and modernization FAQ
+          - text: Migrating SQL Server Workloads FAQ
             url: migration-guides/modernization.md
       - linkListType: deploy
         links:

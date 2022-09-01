@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Deny permissions on an XML schema collection
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Permission can be denied to either create a new XML schema collection or use an existing one.
 

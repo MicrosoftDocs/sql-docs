@@ -78,7 +78,7 @@ Unlike most other targets:
 - The event_counter has no parameters.
 - Unlike most targets, the event_counter target processes *synchronously* the data it receives.
     - Synchronous is acceptable for the simple event_counter because the event_counter involves so little processing.
-    - The database engine will disconnect from any target that is too slow and, which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
+    - The database engine will disconnect from any target that is too slow, and which thereby threatens to slow the performance of the database engine. This is one reason why most targets process *asynchronously*.
 
 #### Example output captured by event_counter
 

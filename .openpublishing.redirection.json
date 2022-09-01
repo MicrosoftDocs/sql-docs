@@ -41281,6 +41281,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/integrated-acceleration/intel-quickassist.md",
+      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
       "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
       "redirect_document_id": false

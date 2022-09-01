@@ -1,5 +1,5 @@
 ---
-title: Connect and query an Azure SQL database
+title: Connect and query an Azure SQL Database
 description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database.
 author: yualan
 ms.author: alayu
@@ -13,7 +13,7 @@ ms.custom:
   - seo-lt-2019
   - intro-quickstart
 ---
-# Quickstart: Use Azure Data Studio to connect and query Azure SQL database
+# Quickstart: Use Azure Data Studio to connect and query Azure SQL Database
 
 In this quickstart, you'll  use Azure Data Studio to connect to an Azure SQL Database server. You'll then run Transact-SQL (T-SQL) statements to create and query the TutorialDB database, which is used in other Azure Data Studio tutorials.
 

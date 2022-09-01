@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Generate XML from rowsets with FOR XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can generate an **xml** data type instance from a rowset by using FOR XML with the new **TYPE** directive.
 

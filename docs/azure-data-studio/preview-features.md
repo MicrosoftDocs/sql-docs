@@ -43,46 +43,24 @@ You can enable or disable preview features anytime in your Settings.
 * Backup / Restore
 * Deployments
     * SQL Edge
-    * SQL Server Big Data Cluster
-    * SQL Server container image
-    * SQL Server on Windows
 * Feature tour
-* SQLCMD mode
-* New Welcome page
 
 ### Notebook features in preview
 
 * Dotnet interactive support
-* Markdown toolbar
-* New Notebook toolbar
-* Notebook kernels
-    * Kusto
-    * PowerShell
-    * PySpark
-    * Python
-    * Spark | Scala
-    * Spark | R
-    * SQL
-* Open Notebook from browser
-* Pinned Notebooks
-* Python dependencies wizard
 
 ### First-party extensions in preview
 
-* Admin Pack for SQL Server
 * Azure Monitor Logs
 * Azure SQL Edge Deployment
-* Azure Synapse Analytics Insights
 * Central Management Servers
 * Cosmos
 * Database Administration Tool Extensions for Windows
 * Database Migration Assessment for Oracle
 * Kusto
-* Machine Learning
 * Managed Instance Dashboard
 * Oracle
 * PostgreSQL
-* PowerShell
 * Query History
 * SandDance for Azure Data Studio
 * Server Reports

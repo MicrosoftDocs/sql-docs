@@ -1,17 +1,15 @@
 ---
 title: "Specifying XML values as parameters"
 description: "Demonstrates how to pass XML data as a parameter to a command."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Specifying XML values as parameters
 

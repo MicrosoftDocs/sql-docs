@@ -1,15 +1,13 @@
 ---
 title: "SqlClient support for LocalDB"
 description: "Describes SqlClient support for LocalDB databases."
-ms.date: "08/15/2019"
-ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SqlClient support for LocalDB
 

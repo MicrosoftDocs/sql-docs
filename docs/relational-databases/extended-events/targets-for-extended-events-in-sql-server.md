@@ -349,7 +349,8 @@ sqlserver      checkpoint_end     database_id  NULL
 
 ## pair_matching target
 
-The **pair_matching** target enables you to detect start events that occurs without a corresponding end event. For instance, it might be a problem when a `lock_acquired` event occurs but no matching `lock_released` event follows in a timely manner.
+The **pair_matching** target enables you to detect start events that occur without a corresponding end event. For instance, it might be a problem when a `lock_acquired` event occurs but no matching `lock_released` event follows in a timely manner.
+
 
 The system doesn't automatically match start and end events. Instead, you explain the matching to the system in your CREATE EVENT SESSION statement. When a start and end event are matched, the pair is discarded so everyone can focus on the unmatched start events.
 

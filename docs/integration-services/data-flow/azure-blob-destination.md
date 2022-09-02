@@ -20,7 +20,7 @@ ms.author: chugu
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
- The **Azure Blob Destination** component enables an SSIS package to write data to an Azure blob. The supported file formats are: CSV and AVRO. 
+ The **Azure Blob Destination** component enables an SSIS package to write data to an Azure Blob. The supported file formats are: CSV and AVRO. 
    
  Drag-drop **Azure Blob Destination** to the data flow designer and double-click it to see the editor).  
   

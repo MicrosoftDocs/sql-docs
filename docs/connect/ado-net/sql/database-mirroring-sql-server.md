@@ -1,17 +1,15 @@
 ---
 title: Database mirroring in SQL Server
 description: Learn about database mirroring and considering things like failover events in your ADO.NET application during development.
-ms.date: "09/30/2019"
-dev_langs:
-  - "csharp"
-ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/30/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Database mirroring in SQL Server
 

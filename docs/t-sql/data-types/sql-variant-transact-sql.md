@@ -1,26 +1,22 @@
 ---
-description: "sql_variant (Transact-SQL)"
 title: sql_variant (Transact-SQL)
-ms.custom: ""
+description: "sql_variant (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/12/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql_variant"
   - "sql_variant_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sql_variant comparisons"
   - "storing data [SQL Server], sql_variant"
   - "sql_variant data type"
   - "storage [SQL Server], sql_variant"
-ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 
 # sql_variant (Transact-SQL)

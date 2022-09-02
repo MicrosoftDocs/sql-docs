@@ -1,17 +1,15 @@
 ---
 title: "Retrieve data by a DataReader"
 description: Learn how to retrieve data using a DataReader in ADO.NET with this sample code. DataReader provides an unbuffered stream of data.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Retrieve data by a DataReader
 

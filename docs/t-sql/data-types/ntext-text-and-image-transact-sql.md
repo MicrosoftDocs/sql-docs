@@ -1,26 +1,23 @@
 ---
-description: "The ntext, text, and image data types are deprecated data types for storing large non-Unicode and Unicode character and binary data."
 title: "ntext, text, and image (Transact-SQL)"
-ms.custom: ""
+description: "The ntext, text, and image data types are deprecated data types for storing large non-Unicode and Unicode character and binary data."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "04/13/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "ntext_TSQL"
   - "ntext"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text data type, about text data type"
   - "text [SQL Server], data types"
   - "ntext data type"
   - "ntext data type, about ntext data type"
   - "image data type, about image data type"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # ntext, text, and image (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

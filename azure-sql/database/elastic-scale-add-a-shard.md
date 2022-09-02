@@ -8,8 +8,7 @@ ms.date: 08/17/2022
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
-services: "sql-database"
+ms.custom: sqldbrb=1
 ---
 # Adding a shard using Elastic Database tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

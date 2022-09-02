@@ -1,23 +1,16 @@
 ---
 title: Configure a SQL Server Always On availability group across different regions
 description: This article explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region.
-services: virtual-machines
-documentationCenter: na
 author: adbadram
-editor: monicar
-tags: azure-service-management
-
-ms.assetid: 388c464e-a16e-4c9d-a0d5-bb7cf5974689
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: "05/02/2017"
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: "05/02/2017"
-ms.author: adbadram
-ms.custom: "seo-lt-2019"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019
+editor: monicar
+tags: azure-service-management
 ---
 
 # Configure a SQL Server Always On availability group across different Azure regions

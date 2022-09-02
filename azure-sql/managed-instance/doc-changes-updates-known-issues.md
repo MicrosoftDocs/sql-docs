@@ -1,16 +1,14 @@
 ---
 title: Known issues
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions. 
-services: sql-database
+description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 03/17/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
-ms.custom: references_regions
-ms.devlang: 
 ms.topic: conceptual
-ms.date: 03/17/2022
+ms.custom: references_regions
 ---
 # Known issues with Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

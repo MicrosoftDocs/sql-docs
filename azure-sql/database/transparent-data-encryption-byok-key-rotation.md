@@ -2,19 +2,17 @@
 title: Rotate TDE protector (PowerShell & the Azure CLI)
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to rotate the Transparent data encryption (TDE) protector for a server in Azure used by Azure SQL Database and Azure Synapse Analytics using PowerShell and the Azure CLI.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-ms.topic: how-to
 author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/18/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - "seo-lt-2019 sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 ---
 # Rotate the Transparent data encryption (TDE) protector
 
@@ -34,7 +32,7 @@ This article discusses both automated and manual methods to rotate the TDE prote
 > [!NOTE]
 > A paused dedicated SQL pool in Azure Synapse Analytics must be resumed before key rotations.
 >
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
+> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics dedicated SQL pools (formerly SQL DW). For documentation on transparent data encryption (TDE) for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 > [!IMPORTANT]
 > Do not delete previous versions of the key after a rollover. When keys are rolled over, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.

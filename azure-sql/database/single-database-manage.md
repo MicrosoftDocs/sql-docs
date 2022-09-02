@@ -1,18 +1,16 @@
 ---
 title: Create & manage servers and single databases
 description: Learn about creating and managing servers and single databases in Azure SQL Database using the Azure portal, PowerShell, the Azure CLI, Transact-SQL (T-SQL), and Rest-API.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: deployment-configuration
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 03/12/2019
+ms.service: sql-database
+ms.subservice: deployment-configuration
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
 ---
 # Create and manage servers and single databases in Azure SQL Database
 

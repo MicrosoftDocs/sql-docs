@@ -1,15 +1,13 @@
 ---
 title: "The context connection"
 description: "Describes the context connection."
-ms.date: "08/15/2019"
-ms.assetid: e443ca86-9243-4234-a822-ed10a53a9de0
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # The context connection
 

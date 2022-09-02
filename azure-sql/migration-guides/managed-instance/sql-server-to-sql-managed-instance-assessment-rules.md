@@ -1,15 +1,14 @@
 ---
 title: "Assessment rules for SQL Server to Azure SQL Managed Instance migration"
 description: Assessment rules to identify issues with the source SQL Server instance that must be addressed before migrating to Azure SQL Managed Instance.
-ms.service: sql-managed-instance
-ms.subservice: migration-guide
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: how-to
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: migration-guide
+ms.topic: how-to
+ms.custom: ignite-fall-2021
 ---
 # Assessment rules for SQL Server to  Azure SQL Managed Instance migration
 [!INCLUDE[appliesto--sqlmi](../../includes/appliesto-sqlmi.md)]

@@ -1,15 +1,17 @@
 ---
 title: "Azure Resource Manager: Create an Azure SQL Managed Instance"
 description: Learn how to create an Azure SQL Managed Instance by using an Azure Resource Manager template.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: subject-armqs, devx-track-azurepowershell, mode-arm
-ms.topic: quickstart
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma
 ms.date: 06/22/2020
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: quickstart
+ms.custom:
+  - subject-armqs
+  - devx-track-azurepowershell
+  - mode-arm
 ---
 
 # Quickstart: Create an Azure SQL Managed Instance using an ARM template

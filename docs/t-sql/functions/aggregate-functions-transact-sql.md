@@ -3,13 +3,10 @@ title: "Aggregate Functions (Transact-SQL)"
 description: "Aggregate Functions (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/15/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "functions [SQL Server], aggregate"
   - "aggregate functions [SQL Server], about aggregate functions"

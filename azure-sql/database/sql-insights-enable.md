@@ -1,14 +1,11 @@
 ---
 title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 08/03/2022
-services:
-  - "sql-database"
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

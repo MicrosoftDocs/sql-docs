@@ -1,20 +1,18 @@
 ---
 title: Register with SQL IaaS Agent extension (Linux)
 description: Learn how to register your SQL Server on Linux Azure VM with the SQL IaaS Agent extension to enable Azure features, as well as for compliance, and improved manageability.
-services: virtual-machines-windows
-documentationcenter: na
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-Linux-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021
-ms.author: adbadram
-ms.reviewer: mathoma 
-ms.custom: devx-track-azurecli, devx-track-azurepowershell, contperf-fy21q2
-
+ms.custom:
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - contperf-fy21q2
+tags: azure-resource-manager
 ---
 # Register Linux SQL Server VM with SQL IaaS Agent extension 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

@@ -1,15 +1,14 @@
 ---
 title: Best practices for Azure SQL Data Sync
 description: Learn about best practices for configuring and running Azure SQL Data Sync.
-ms.service: sql-database
-ms.subservice: sql-data-sync
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/19/2022
+ms.service: sql-database
+ms.subservice: sql-data-sync
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Best practices for Azure SQL Data Sync 
 

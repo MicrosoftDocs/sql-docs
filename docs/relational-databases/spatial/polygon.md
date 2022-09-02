@@ -62,21 +62,21 @@ DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
   
 As `@g4` and `@g5` show an accepted **Polygon** instance may not be a valid **Polygon** instance. `@g5` also shows that a Polygon instance needs to only contain a ring with any four points to be accepted.  
   
-The following examples throw a `System.FormatException` because the **Polygon** instances are not accepted.  
+The following examples throw a `System.FormatException` because the **Polygon** instances aren't accepted.  
   
 ```sql  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
-`@g1` is not accepted because the **LineString** instance for the exterior ring does not contain enough points. `@g2` is not accepted because the starting point of the exterior ring **LineString** instance is not the same as the ending point. The following example has an acceptable exterior ring, but the interior ring is not acceptable. This also throws a `System.FormatException`.  
+`@g1` isn't accepted because the **LineString** instance for the exterior ring doesn't contain enough points. `@g2` isn't accepted because the starting point of the exterior ring **LineString** instance isn't the same as the ending point. The following example has an acceptable exterior ring, but the interior ring isn't acceptable. This also throws a `System.FormatException`.  
   
 ```sql  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
 ### Valid instances  
- The interior rings of a **Polygon** can touch both themselves and each other at single tangent points, but if the interior rings of a **Polygon** cross, the instance is not valid.  
+ The interior rings of a **Polygon** can touch both themselves and each other at single tangent points, but if the interior rings of a **Polygon** cross, the instance isn't valid.  
   
  The following example shows valid **Polygon** instances.  
   
@@ -87,7 +87,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` is valid because the two interior rings touch at a single point and do not cross each other. The following example shows `Polygon` instances that are not valid.  
+ `@g3` is valid because the two interior rings touch at a single point and do not cross each other. The following example shows `Polygon` instances that aren't valid.  
   
 ```sql   
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -99,12 +99,12 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` is not valid because the inner ring touches the exterior ring in two places. `@g2` is not valid because the second inner ring in within the interior of the first inner ring. `@g3` is not valid because the two inner rings touch at multiple consecutive points. `@g4` is not valid because the interiors of the two inner rings overlap. `@g5` is not valid because the exterior ring is not the first ring. `@g6` is not valid because the ring does not have at least three distinct points.  
+ `@g1` isn't valid because the inner ring touches the exterior ring in two places. `@g2` isn't valid because the second inner ring in within the interior of the first inner ring. `@g3` isn't valid because the two inner rings touch at multiple consecutive points. `@g4` isn't valid because the interiors of the two inner rings overlap. `@g5` isn't valid because the exterior ring isn't the first ring. `@g6` isn't valid because the ring doesn't have at least three distinct points.  
   
 
 ##  Orientation of spatial data
 
-The ring orientation of a polygon is not an important factor in the planar system. The _OGC Simple Features for SQL Specification_ doesn't dictate a ring ordering, and SQL Server doesn't enforce ring ordering.
+The ring orientation of a polygon isn't an important factor in the planar system. The _OGC Simple Features for SQL Specification_ doesn't dictate a ring ordering, and SQL Server doesn't enforce ring ordering.
 
 In an ellipsoidal system, a polygon without an orientation has no meaning, or is ambiguous. For example, does a ring around the equator describe the northern or southern hemisphere? If we use the geography data type to store the spatial instance, we must specify the orientation of the ring and accurately describe the location of the instance.
 
@@ -140,7 +140,7 @@ When the compatibility level is 100 or below in SQL Server then the geography da
 
 - Any geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) or Well-Known Binary (WKB) representation that produces an object larger than a hemisphere throws an ArgumentException.
 
-- The geography data type methods that require the input of two geography instances, such as STIntersection(), STUnion(), STDifference(), and STSymDifference(), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.
+- The geography data type methods that require the input of two geography instances, (such as STIntersection(), STUnion(), STDifference(), and STSymDifference()), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.
  
 Orientation can be reversed leveraging the [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md) extended method.
 
@@ -158,7 +158,7 @@ SET @g = geometry::STPolyFromText(
   
 
 ### Example B.   
-An instance that is not valid may be entered and converted to a valid `geometry` instance. In the following example of a `Polygon`, the interior and exterior rings overlap and the instance is not valid.  
+An instance that isn't valid may be entered and converted to a valid `geometry` instance. In the following example of a `Polygon`, the interior and exterior rings overlap and the instance isn't valid.  
   
 ```sql  
 DECLARE @g geometry;  

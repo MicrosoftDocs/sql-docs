@@ -50,7 +50,7 @@ For documentation and support for mode_reason_desc values, see [Intel&reg; Quick
 ## Next steps
 
  - [Hardware offload enabled configuration option](../../database-engine/configure-windows/hardware-offload-enable-configuration-option.md)
- - [Integrated offloading and acceleration](../integrated-acceleration/overview.md)
+ - [Integrated acceleration and offloading](../integrated-acceleration/overview.md)
  - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
  - [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
  - [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)

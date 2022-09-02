@@ -27,7 +27,6 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 ## Syntax  
   
 ```  
-  
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
@@ -49,7 +48,10 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## Remarks  
  This method throws a **FormatException** if the input is not well-formatted.  
-  
+
+> [!Note]
+> The order in which the points are listed matters for geography polygons. It determines if the polygon area is to the inside or outside of the given ring. See [Polygon](../../relational-databases/spatial/polygon.md#orientation-of-spatial-data) for more information.
+
 ## Examples  
  The following example uses `STPolyFromText()` to create a `geography` instance.  
   
@@ -61,5 +63,3 @@ SELECT @g.ToString();
   
 ## See Also  
  [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
-  
-  

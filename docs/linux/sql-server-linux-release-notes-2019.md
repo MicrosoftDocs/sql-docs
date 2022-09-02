@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # Release notes for SQL Server 2019 on Linux
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
+[!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 The following release notes apply to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 

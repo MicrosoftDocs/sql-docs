@@ -71,4 +71,4 @@ ON d.database_id = slo.database_id;
 
 ## Next steps
 
- - [Monitor Azure SQL Database with Azure Monitor](/azure/azure-sql/database/monitoring-sql-database-azure-monitor.md)
+ - [Monitor Azure SQL Database with Azure Monitor](/azure/azure-sql/database/monitoring-sql-database-azure-monitor)

@@ -1,11 +1,11 @@
 ---
-title: The link feature
+title: Link feature for Azure SQL Managed Instance (preview)
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the link feature for Azure SQL Managed Instance to continuously replicate data from SQL Server to the cloud, or migrate your SQL Server databases with the best possible minimum downtime.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.reviewer: mathoma, danil, randolphwest
+ms.date: 09/01/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual

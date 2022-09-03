@@ -14,7 +14,7 @@ ms.custom: references_regions
 
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
-To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a **Azure  extension for SQL Server** to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a **SQL Server – Azure Arc** resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
+To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > Servers__. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
 ## Architecture
 
@@ -70,7 +70,7 @@ Review [networking configuration, transport layer security, and resource provide
 
 The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](connect.md#prerequisites) section.
 
-If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
+If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing Arc-enabled SQL Server resources to the new namespace.
 
 ## Supported Azure regions
 

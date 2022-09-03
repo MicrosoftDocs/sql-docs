@@ -50,23 +50,26 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Initiate the connection from Azure
 
-If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing **Azure extension for SQL Server**. The Windows version of this extension can be found in the extension manager as "*WindowsAgent.SqlServer*".  Once installed, **Azure extension for SQL Server** will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [__Azure connected machine agent__](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing *Azure extension for SQL Server*. The Windows version of this extension can be found in the extension manager as "*WindowsAgent.SqlServer*".  Once installed, Azure extension for SQL Server will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
->1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.
->2. The __SQL Server - Azure Arc__ resource for each SQL Server instance installed on the machine will be created in the same region and the resource group as the corresponding __Server - Azure Arc__ resource.
+>1. The Managed System Identity used by the Azure connected machine agent must have the *Azure Connected SQL Server Onboarding* role at resource group level.
+>2. The Azure resource with type `SQL Server - Azurde Arc` representing the SQL Server instance installed installed on teh machine machine will use the same region and the resource group as the Azure resources for Arc-enabled servers.
 
 # [Azure portal](#tab/azure)
 
-To assign the *Azure Connected SQL Server Onboarding* role to Arc machine managed identity, use the following steps:
+To assign the *Azure Connected SQL Server Onboarding* role the Managed System Identity, use the following steps:
 
-1. Select the resource group that contains the **Server - Azure Arc** resource
+1. Select the resource group that contains the Arce-enabled Server resource
 1. Select **Access control (IAM)** on the left side of the resource group page
 1. Click **+ Add** and select **Add role assignment**
-   - For **Role**, select `Azure Connected SQL Server Onboarding`
-   - For **Assign access to**, select `User, group or service principal`
-   - For **Select**, search for your **Server - Azure Arc** name and select it.
-1. Click **Save**.
+1. For **Role**, select `Azure Connected SQL Server Onboarding` and click __Next__.
+1. For **Assign access to**, select `Managed identity`
+1. Click **+Select members**
+   - For Subscription, select the name of your subscription
+   - For Managed identity, select `Server - Azure Arc`
+   - For Select, select the name (only if you want to assign the role to a specific server)
+1. Click **Close**.
 
 To install the Azure extension for SQL Server, use the following steps:
 

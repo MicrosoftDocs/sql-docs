@@ -142,7 +142,7 @@ SELECT bs.database_name,
                                                           checkpoint_lsn,
                                                           begins_log_chain,
                                                           bms.is_password_protected
-                                                 ROM msdb.dbo.backupset bs
+                                                 FROM msdb.dbo.backupset bs
 LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
 INNER JOIN msdb.dbo.backupmediaset bms ON bs.[media_set_id] = bms.[media_set_id]
 WHERE bs.backup_start_date > DATEADD(MONTH, -2, sysdatetime()) --only look at last two months

@@ -1,11 +1,10 @@
 ---
 title: "Dynamic Management Views (Transact-SQL)"
-description: Dynamic Management Views (Transact-SQL)
+description: "Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/29/2017"
+ms.date: "09/01/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Dynamic Management Views
@@ -84,6 +82,8 @@ FROM sys.dm_os_wait_stats;
         [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)
 
         [I O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)
+        
+        [PolyBase Dynamic Management Views](../../relational-databases/polybase/polybase-troubleshooting.md)
     :::column-end:::
     :::column:::
         [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
@@ -114,7 +114,7 @@ FROM sys.dm_os_wait_stats;
     :::column-end:::
 :::row-end:::
 
-## See Also  
+## Next steps
  [GRANT Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
  [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  

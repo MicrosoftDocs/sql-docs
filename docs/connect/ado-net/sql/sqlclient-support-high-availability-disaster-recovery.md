@@ -1,15 +1,13 @@
 ---
 title: "SqlClient support for high availability, disaster recovery"
 description: "Describes SqlClient support for high-availability, disaster recovery (Always On) availability groups."
-ms.date: "08/15/2019"
-ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SqlClient support for high availability, disaster recovery
 

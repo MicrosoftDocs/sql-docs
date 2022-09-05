@@ -1,17 +1,15 @@
 ---
 title: "SQL Server Express user instances"
 description: "Describes support for SQL Server Express user instances."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # SQL Server Express user instances
 

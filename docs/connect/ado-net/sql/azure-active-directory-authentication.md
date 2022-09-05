@@ -1,16 +1,15 @@
 ---
 title: Using Azure Active Directory authentication with SqlClient
 description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
-ms.date: 12/14/2021
-dev_langs: 
-  - "csharp"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
+ms.date: 12/14/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 
 # Using Azure Active Directory authentication with SqlClient

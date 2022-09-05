@@ -1,16 +1,12 @@
 ---
 title: Configuring how java.sql.Time values are sent
 description: Learn how to configure how java.sql.Time values are sent to the server using the sendTimeAsDatetime connection option.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Configuring how java.sql.Time values are sent
 

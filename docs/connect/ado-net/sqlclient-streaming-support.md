@@ -1,15 +1,13 @@
 ---
 title: "SqlClient streaming support"
 description: Discusses how to write applications that stream data from SQL Server without having it fully loaded in memory.
-ms.date: "12/04/2020"
-ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "12/04/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SqlClient streaming support
 

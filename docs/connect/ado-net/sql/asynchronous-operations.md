@@ -1,15 +1,13 @@
 ---
 title: "Asynchronous operations"
 description: "Describes how to perform asynchronous database operations by using an API that is modeled after the asynchronous model used by the .NET Framework."
-ms.date: "09/30/2019"
-ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/30/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Asynchronous operations
 

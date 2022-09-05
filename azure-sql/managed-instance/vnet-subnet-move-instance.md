@@ -16,7 +16,7 @@ ms.custom: ignite-fall-2021
 
 Azure SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range).
 
-This article teaches you to move your managed instance from one subnet to another (in the same v-net or a different one), similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
+This article teaches you to move your managed instance from one subnet to another (in the same VNet or a different one), similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
 
 Moving the instance to another subnet triggers the following virtual cluster operations:
 - The destination subnet builds out or resizes the virtual cluster.
@@ -67,7 +67,7 @@ Depending on the subnet state and designation, the following adjustments may be 
 Consider the following limitations when choosing a destination subnet for an existing instance:
 - SQL Managed Instance can be moved to the subnet that is either:
  1. Empty
- 2. In a peered vNet (if you are moving to a subnet in another vNet you must [establish the peering](../../virtual-network/tutorial-connect-virtual-networks-portal.md))
+ 2. In a peered vNet (if you are moving to a subnet in another vNet you must [establish the peering](/azure/virtual-network/tutorial-connect-virtual-networks-portal.md))
  3. Specially prepared subnet that retains the DNS zone of SQL Managed Instance that is being moved. This can be done by populating an empty subnet with new SQL Managed Instances that are created with populated dnsZonePartner parameter. This parameter as a value accepts the id of SQL Managed Instance [see docs](api-references-create-manage-instance.md)and in this case you can use the instance that would later be moved to the new subnet.
 (Please note that apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.)
 

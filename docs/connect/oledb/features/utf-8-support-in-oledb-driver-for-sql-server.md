@@ -1,15 +1,13 @@
 ---
 title: UTF-8 Support in OLE DB Driver for SQL Server
 description: Learn about OLE DB Driver for SQL Server support for the UTF-8 server encoding and UTF-8 client encoding.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-kaywon
 ms.date: "12/13/2021"
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: v-kaywon
-ms.author: v-davidengel
-author: David-Engel
 ---
 
 # UTF-8 Support in OLE DB Driver for SQL Server

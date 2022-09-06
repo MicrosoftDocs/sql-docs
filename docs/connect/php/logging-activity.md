@@ -1,18 +1,14 @@
 ---
 title: "Logging activity"
 description: "Learn how to configure different combinations of logging options when using the Microsoft Drivers for PHP for SQL Server"
-ms.custom: ""
-ms.date: "09/22/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "logging activity"
-ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "09/22/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "logging activity"
 ---
 # Logging Activity
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

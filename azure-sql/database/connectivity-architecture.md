@@ -30,7 +30,7 @@ The following diagram provides a high-level overview of the connectivity archite
 
 The following steps describe how a connection is established to Azure SQL Database:
 
-- Clients connect to the gateway, that has a public IP address and listens on port 1433.
+- Clients connect to the gateway that has a public IP address and listens on port 1433.
 - The gateway, depending on the effective connection policy, redirects or proxies the traffic to the right database cluster.
 - Inside the database cluster, traffic is forwarded to the appropriate database.
 
@@ -86,7 +86,7 @@ Periodically, we will retire Gateways using old hardware and migrate the traffic
 | Canada East          | 40.86.226.166, 52.242.30.154, 40.69.105.9 , 40.69.105.10 | 40.69.105.32/29|
 | Central US           | 13.67.215.62, 52.182.137.15, 104.208.21.1, 13.89.169.20 | 104.208.21.192/29, 13.89.168.192/29, 52.182.136.192/29 |
 | China East           | 139.219.130.35 |  52.130.112.136/29 |
-| China East 2         | 40.73.82.1 | 52.130.120.88/29 |  
+| China East 2         | 40.73.82.1 | 52.130.120.88/29 |
 | China North          | 139.219.15.17      | 52.130.128.88/29 |
 | China North 2        | 40.73.50.0         | 52.130.40.64/29 |
 | East Asia            | 52.175.33.150, 13.75.32.4, 13.75.32.14, 20.205.77.200, 20.205.83.224  | 13.75.32.192/29, 13.75.33.192/29 |

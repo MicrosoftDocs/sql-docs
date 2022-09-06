@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual

@@ -1,21 +1,15 @@
 ---
+title: "getTypeMap Method (SQLServerConnection)"
 description: "getTypeMap Method (SQLServerConnection)"
-title: "getTypeMap Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.getTypeMap"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.getTypeMap"
+apitype: "Assembly"
 ---
 # getTypeMap Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

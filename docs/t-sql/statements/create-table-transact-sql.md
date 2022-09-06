@@ -103,7 +103,7 @@ column_name <data_type>
     [ FILESTREAM ]
     [ COLLATE collation_name ]
     [ SPARSE ]
-    [ MASKED WITH ( FUNCTION = 'mask_function') ]
+    [ MASKED WITH ( FUNCTION = 'mask_function' ) ]
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed , increment ) ]
     [ NOT FOR REPLICATION ]
@@ -148,7 +148,7 @@ column_name <data_type>
 <column_index> ::=
  INDEX index_name [ CLUSTERED | NONCLUSTERED ]
     [ WITH ( <index_option> [ ,... n ] ) ]
-    [ ON { partition_scheme_name (column_name )
+    [ ON { partition_scheme_name ( column_name )
          | filegroup_name
          | default
          }
@@ -186,7 +186,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 {
     { PRIMARY KEY | UNIQUE }
         [ CLUSTERED | NONCLUSTERED ]
-        (column [ ASC | DESC ] [ ,... n ] )
+        ( column_name [ ASC | DESC ] [ ,... n ] )
         [
             WITH FILLFACTOR = fillfactor
            | WITH ( <index_option> [ ,... n ] )
@@ -194,7 +194,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ ON { partition_scheme_name (partition_column_name)
             | filegroup | "default" } ]
     | FOREIGN KEY
-        ( column [ ,... n ] )
+        ( column_name [ ,... n ] )
         REFERENCES referenced_table_name [ ( ref_column [ ,... n ] ) ]
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
@@ -205,7 +205,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 {
     {
       INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
-         (column_name [ ASC | DESC ] [ ,... n ] )
+         ( column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
@@ -349,11 +349,11 @@ column_name <data_type>
 {
    { PRIMARY KEY | UNIQUE }
      {
-       NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])
-       | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
+       NONCLUSTERED ( column_name [ ASC | DESC ] [ ,... n ])
+       | NONCLUSTERED HASH ( column_name [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
                     }
     | FOREIGN KEY
-        ( column [ ,... n ] )
+        ( column_name [ ,... n ] )
         REFERENCES referenced_table_name [ ( ref_column [ ,... n ] ) ]
     | CHECK ( logical_expression )
 }
@@ -364,8 +364,8 @@ column_name <data_type>
 
 <table_index> ::=
   INDEX index_name
-{   [ NONCLUSTERED ] HASH ( column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
-  | [ NONCLUSTERED ] ( column [ ASC | DESC ] [ ,... n ] )
+{   [ NONCLUSTERED ] HASH ( column_name [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
+  | [ NONCLUSTERED ] ( column_name [ ASC | DESC ] [ ,... n ] )
       [ ON filegroup_name | default ]
   | CLUSTERED COLUMNSTORE [ WITH ( COMPRESSION_DELAY = { 0 | delay [ Minutes ] } ) ]
       [ ON filegroup_name | default ]
@@ -448,7 +448,7 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 >
 > `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row.
 >
-> In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `TEXTIMAGE_ON "default"` or `TEXTIMAGE_ON [default]`. If `"default"` is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> In this context, *default* is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `TEXTIMAGE_ON "default"` or `TEXTIMAGE_ON [default]`. If `"default"` is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 #### FILESTREAM_ON { *partition_scheme_name* | filegroup | "default" }
 
@@ -456,7 +456,7 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 
 Specifies the filegroup for FILESTREAM data.
 
-If the table contains FILESTREAM data and the table is partitioned, the FILESTREAM_ON clause must be included and must specify a partition scheme of FILESTREAM filegroups. This partition scheme must use the same partition function and partition columns as the partition scheme for the table; otherwise, an error is raised.
+If the table contains FILESTREAM data and the table is partitioned, the FILESTREAM_ON clause must be included, and must specify a partition scheme of FILESTREAM filegroups. This partition scheme must use the same partition function and partition columns as the partition scheme for the table; otherwise, an error is raised.
 
 If the table isn't partitioned, the FILESTREAM column can't be partitioned. FILESTREAM data for the table must be stored in a single filegroup. This filegroup is specified in the FILESTREAM_ON clause.
 
@@ -469,11 +469,11 @@ As with ON and `TEXTIMAGE_ON`, the value set by using `CREATE TABLE` for `FILEST
 
 The filegroup in the `FILESTREAM_ON <filegroup>` clause, or each FILESTREAM filegroup that is named in the partition scheme, must have one file defined for the filegroup. This file must be defined by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.
 
-For related FILESTREAM topics, see [Binary Large Object - Blob Data](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
+For related FILESTREAM articles, see [Binary Large Object - Blob Data](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
 #### [ *type_schema_name.* ] *type_name*
 
-Specifies the data type of the column, and the schema to which it belongs. For disk-based tables, the data type can be one of the following:
+Specifies the data type of the column, and the schema to which it belongs. For disk-based tables, use one of the following data types:
 
 - A system data type
 - An alias type based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type. Alias data types are created with the `CREATE TYPE` statement before they can be used in a table definition. The NULL or NOT NULL assignment for an alias data type can be overridden during the `CREATE TABLE` statement. However, the length specification can't be changed; the length for an alias data type can't be specified in a `CREATE TABLE` statement.
@@ -597,7 +597,8 @@ Creates the specified index on the specified filegroup. If no location is specif
 
 Creates the specified index on the default filegroup.
 
-The term default, in this context, isn't a keyword. It is an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If "default" is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> [!NOTE]  
+> In this context, *default* is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If `"default"` is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 #### [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]
 
@@ -607,7 +608,7 @@ Specifies the placement of FILESTREAM data for the table when a clustered index 
 
 *filestream_filegroup_name* is the name of a FILESTREAM filegroup. The filegroup must have one file defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.
 
-If the table is partitioned, the `FILESTREAM_ON` clause must be included and must specify a partition scheme of FILESTREAM filegroups that uses the same partition function and partition columns as the partition scheme for the table. Otherwise, an error is raised.
+If the table is partitioned, the `FILESTREAM_ON` clause must be included, and must specify a partition scheme of FILESTREAM filegroups that uses the same partition function and partition columns as the partition scheme for the table. Otherwise, an error is raised.
 
 If the table isn't partitioned, the FILESTREAM column can't be partitioned. FILESTREAM data for the table must be stored in a single filegroup that is specified in the `FILESTREAM_ON` clause.
 
@@ -631,11 +632,11 @@ Specifies encrypting columns by using the [Always Encrypted](../../relational-da
 
 - ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
 
-  **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.
+  **Deterministic encryption** uses a method that always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.
 
   **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but it prevents any computations and indexing on encrypted columns, unless your SQL Server instance supports Always Encrypted with secure enclaves. See [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.
 
-  If you are using Always Encrypted (without secure enclaves), use deterministic encryption for columns that will be searched with parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which isn't grouped with other records or used to join tables, and which isn't searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.
+  If you are using Always Encrypted (without secure enclaves), use deterministic encryption for columns that will be searched with parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which isn't grouped with other records or used to join tables, and which isn't searched for because you use other columns (such as a transaction number) to find the row that contains the encrypted column of interest.
 
   If you are using Always Encrypted with secure enclaves, randomized encryption is a recommended encryption type.
 
@@ -643,26 +644,26 @@ Specifies encrypting columns by using the [Always Encrypted](../../relational-da
 
 - ALGORITHM
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
+  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
 
-Must be `'AEAD_AES_256_CBC_HMAC_SHA_256'`.
+  Must be `'AEAD_AES_256_CBC_HMAC_SHA_256'`.
 
-For more information including feature constraints, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+  For more information including feature constraints, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 #### SPARSE
 
 Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. Sparse columns can't be designated as NOT NULL. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
 
-#### MASKED WITH ( FUNCTION = '*mask_function*')
+#### MASKED WITH ( FUNCTION = '*mask_function*' )
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
 
 Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Four functions are available:
 
-- default()
-- email()
-- partial()
-- random()
+- `default()`
+- `email()`
+- `partial()`
+- `random()`
 
 Requires `ALTER ANY MASK` permission.
 
@@ -794,7 +795,7 @@ An optional keyword that indicates the start of the definition of a PRIMARY KEY,
 
   A logical expression that returns TRUE or FALSE. Alias data types can't be part of the expression.
 
-- *column*
+- *column_name*
 
   A column or list of columns, in parentheses, used in table constraints to indicate the columns used in the constraint definition.
 
@@ -828,7 +829,7 @@ The name of the column set. A column set is an untyped XML representation that c
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument in conjunction with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 #### COMPRESSION_DELAY
 
@@ -840,7 +841,7 @@ For a disk-based table, delay specifies the minimum number of minutes a delta ro
 
 The default is 0 minutes.
 
-For recommendations on when to use `COMPRESSION_DELAY`, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
+For recommendations on when to use `COMPRESSION_DELAY`, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
 #### <table_option> ::=
 
@@ -985,7 +986,7 @@ Specifies the windows-compatible FileTable directory name. This name should be u
 
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
 
-Specifies the name of the collation to be applied to the `Name` column in the FileTable. The collation must be case-insensitive to comply with Windows operating system file naming semantics. If this value isn't specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.
+Specifies the name of the collation to be applied to the `Name` column in the FileTable. The collation must be case-insensitive to comply with Windows operating system file naming semantics. If this value isn't specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised, and the CREATE TABLE operation fails.
 
 - *collation_name*
 
@@ -1013,7 +1014,7 @@ Specifies the name to be used for the unique constraint that is automatically cr
 
 Specifies the name to be used for the unique constraint that is automatically created on the **parent_path_locator** and **name** columns in the FileTable. If this value isn't specified, the system generates a name for the constraint.
 
-#### SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]
+#### SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = *schema_name*.*history_table_name* [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]
 
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
@@ -1023,7 +1024,7 @@ If the history table doesn't exist, the system generates a new history table mat
 
 If the `HISTORY_TABLE` argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration isn't replicated automatically from the current table to the history table.  When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records don't overlap. Performing the data consistency check is the default.
 
-Use this argument in conjunction with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables isn't allowed.
+Use this argument with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables isn't allowed.
 
 #### REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [ ,... *n* ] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }
 
@@ -1391,7 +1392,7 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 
 - CHECK constraints can't be defined on **text**, **ntext**, or **image** columns.
 
-## Additional constraint information
+## Further constraint information
 
 - An index created for a constraint can't be dropped by using `DROP INDEX`; the constraint must be dropped by using `ALTER TABLE`. An index created for and used by a constraint can be rebuilt by using `ALTER INDEX ... REBUILD`. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
 - Constraint names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that the name can't start with a number sign (#). If *constraint_name* isn't supplied, a system-generated name is assigned to the constraint. The constraint name appears in any error message about constraint violations.
@@ -1919,7 +1920,7 @@ The problem arises from the fact that while the temp table name is unique, the c
 
 ### W. Use global temporary tables in Azure SQL Database
 
-Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds 1 row
+Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds one row
 
 ```sql
 CREATE TABLE ##test (
@@ -1987,7 +1988,7 @@ SELECT * FROM tempdb.sys.database_files;
 
 ### X. Enable Data Retention Policy on a table
 
-The following example creates a table with data retention enabled and a retention period of 1 week. This example applies to **Azure SQL Edge** only.
+The following example creates a table with data retention enabled and a retention period of one week. This example applies to **Azure SQL Edge** only.
 
 ```sql
 CREATE TABLE [dbo].[data_retention_table]

@@ -5,7 +5,7 @@ description: This article explains the Azure SQL Database connectivity architect
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 09/02/2022
+ms.date: 09/06/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure. 
+This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
 
 - For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md). 
 - This article does *not* apply to **Azure SQL Managed Instance**. Refer to [Connectivity architecture for Azure SQL Managed Instance](../managed-instance/connectivity-architecture-overview.md).
@@ -61,7 +61,7 @@ If you are connecting from within Azure your connections have a connection polic
 
 If you are connecting from outside Azure, your connections have a connection policy of `Proxy` by default. A policy of `Proxy` means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway. The following diagram illustrates this traffic flow.
 
-:::image type="content" source="./media/connectivity-architecture/connectivity-onprem.svg" alt-text="Diagram that shows how the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.":::
+:::image type="content" source="./media/connectivity-architecture/connectivity-outside-azure.svg" alt-text="Diagram that shows how the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.":::
 
 > [!IMPORTANT]  
 > Open TCP ports 1434 and 14000-14999 to enable [Connecting with DAC](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#connecting-with-dac).
@@ -129,4 +129,3 @@ Periodically, we will retire Gateways using old hardware and migrate the traffic
 - For general application development overview information, see [SQL Database Application Development Overview](develop-overview.md).
 - Refer to [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519)
 - [What is a logical SQL server in Azure SQL Database and Azure Synapse?](logical-servers.md)
-- 

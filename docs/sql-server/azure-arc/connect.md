@@ -187,32 +187,30 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ---
 
-## Validate the SQL Server - Azure Arc resources
+## Validate the Arc-enabled SQL Server resources
 
-Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly registered __SQL Server - Azure Arc__ resource to validate.
+Go __Azure Arc > SQL Server__ and open the newly registered Arc-enabled SQL Server resource  to validate.
 
 ![Validate connected SQL server ](media/join/validate-sql-server-azure-arc.png)
 
-## Delete your SQL Server - Azure Arc resource
+## Delete your Arc-enabled SQL Server resource
 
-To delete your __SQL Server - Azure Arc__ resource, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and select the **Delete** button. 
-
-![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
+To delete your Arc-enabled SQL Server resource, go to __Azure Arc > SQL Server__, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button. 
 
 > [!IMPORTANT]
-> Because there could be multiple SQL Server instances installed on the same machine, the *Delete* button will not uninstall the SQL Server extension.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
+> Because there could be multiple SQL Server instances installed on the same machine, the *Delete* button will not uninstall Azure extension for SQL Server on that machine.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
 
-## Restore a deleted SQL Server - Azure Arc resource
+## Restore a deleted Arc-enabled SQL Server resource
 
-If you deleted your SQL Server instance by mistake, you can restore its __SQL Server - Azure Arc__ resource with the following steps.
+If you deleted your Arc-enabled SQL Server resource by mistake, you can restore it with the following steps.
 
-1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Please make sure to replace "WindowsAgent.SqlServer" with "LinuxAgent.SqlServer" for SQL Servers running on Linux Operating system in the commands below.
+1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Please make sure to select the correct vesion for your OS.
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
- > [!NOTE]
-   > The location property must match the location of the **Server - Azure Arc** resource for the server specified by the *--machine-name* parameter.
+ > [!IMPORTANT]
+   > The location property must match the location of the Arc-enabled SQL Server resource for the server specified by the *--machine-name* parameter.
 
 2. Check to make sure your instance is in the exclusion list (see the value of the _excludedSqlInstances_ property).
 

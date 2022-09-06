@@ -5,7 +5,7 @@ description: Learn about automated backups for Hyperscale databases in Azure SQL
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
+ms.date: 09/14/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: conceptual

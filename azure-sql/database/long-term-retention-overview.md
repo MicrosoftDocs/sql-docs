@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/13/2021
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual

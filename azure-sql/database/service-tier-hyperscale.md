@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/09/2022
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual

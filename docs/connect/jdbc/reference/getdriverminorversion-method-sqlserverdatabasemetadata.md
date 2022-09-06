@@ -1,21 +1,15 @@
 ---
+title: "getDriverMinorVersion Method (SQLServerDatabaseMetaData)"
 description: "getDriverMinorVersion Method (SQLServerDatabaseMetaData)"
-title: "getDriverMinorVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getDriverMinorVersion"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: adb6ae29-025e-4ab3-a6e4-133fc29fb98b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getDriverMinorVersion"
+apitype: "Assembly"
 ---
 # getDriverMinorVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

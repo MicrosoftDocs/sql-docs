@@ -1,21 +1,15 @@
 ---
+title: "executeUpdate Method (java.lang.String, int)"
 description: "executeUpdate Method (java.lang.String, int)"
-title: "executeUpdate Method (java.lang.String, int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.executeUpdate (java.lang.String, int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.executeUpdate (java.lang.String, int)"
+apitype: "Assembly"
 ---
 # executeUpdate Method (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "getMoreResults Method (SQLServerStatement)"
 description: "getMoreResults Method (SQLServerStatement)"
-title: "getMoreResults Method (SQLServerStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.getMoreResults"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.getMoreResults"
+apitype: "Assembly"
 ---
 # getMoreResults Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "isReadOnly Method (SQLServerDatabaseMetaData)"
 description: "isReadOnly Method (SQLServerDatabaseMetaData)"
-title: "isReadOnly Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.isReadOnly"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: d1569e03-b7bd-486a-af0b-d3f108f712dc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.isReadOnly"
+apitype: "Assembly"
 ---
 # isReadOnly Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

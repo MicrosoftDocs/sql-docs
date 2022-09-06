@@ -1,16 +1,12 @@
 ---
+title: "getSendTimeAsDatetime Method (SQLServerDataSource)"
 description: "getSendTimeAsDatetime Method (SQLServerDataSource)"
-title: "getSendTimeAsDatetime Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getSendTimeAsDatetime Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

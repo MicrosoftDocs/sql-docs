@@ -1,21 +1,15 @@
 ---
+title: "getTimestamp Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)"
 description: "getTimestamp Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)"
-title: "getTimestamp Method (java.lang.String, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getTimestamp (java.lang.String, java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getTimestamp (java.lang.String, java.util.Calendar)"
+apitype: "Assembly"
 ---
 # getTimestamp Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

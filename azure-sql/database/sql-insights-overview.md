@@ -12,7 +12,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 # Monitor your SQL deployments with SQL Insights (preview)
 
-[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-sqlvm.md)]
+[!INCLUDE [sqldb-sqlmi-sqlvm](../includes/appliesto-sqldb-sqlmi-sqlvm.md)]
 
 
 SQL Insights (preview) is a comprehensive solution for monitoring any product in the [Azure SQL family](../index.yml). SQL Insights uses [dynamic management views](./monitoring-with-dmvs.md) to expose the data that you need to monitor health, diagnose problems, and tune performance.

@@ -310,7 +310,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Compute size (service objective)|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
 |:--- | --: |--: |--: |--: |---: |
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128|
+|vCores|24|32|40|80|128<sup>3</sup>|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
@@ -332,6 +332,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> The 128 vCore offering is currently in Public Preview.
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -490,7 +492,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128|
+|vCores|24|32|40|80|128<sup>3</sup>|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|25.25|37.94|52.23|131.64|331|
@@ -515,6 +517,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> The 128 vCore offering is currently in Public Preview.
 
 ## Business Critical - provisioned compute - M-series
 

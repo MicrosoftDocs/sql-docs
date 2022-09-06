@@ -51,6 +51,10 @@ Follow the below steps to install this product in an offline environment:
 - SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
 
 ## Known issues
+  **Version 4.2**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+ 
   **Version 4.1**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**

@@ -1,21 +1,15 @@
 ---
+title: "getDatabaseMajorVersion Method (SQLServerDatabaseMetaData)"
 description: "getDatabaseMajorVersion Method (SQLServerDatabaseMetaData)"
-title: "getDatabaseMajorVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getDatabaseMajorVersion"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 30860c07-e84b-428a-922a-ba63c070cd9c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getDatabaseMajorVersion"
+apitype: "Assembly"
 ---
 # getDatabaseMajorVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

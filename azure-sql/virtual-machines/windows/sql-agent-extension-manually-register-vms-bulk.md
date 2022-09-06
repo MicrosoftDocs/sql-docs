@@ -1,20 +1,15 @@
 ---
 title: Register multiple SQL VMs in Azure with the SQL IaaS Agent extension
-description: Bulk register SQL Server VMs with the SQL IaaS Agent extension to improve manageability. 
-services: virtual-machines-windows
-documentationcenter: na
+description: Bulk register SQL Server VMs with the SQL IaaS Agent extension to improve manageability.
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021
-ms.author: adbadram
-ms.reviewer: mathoma 
 ms.custom: devx-track-azurepowershell
-
+tags: azure-resource-manager
 ---
 # Register multiple SQL VMs in Azure with the SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

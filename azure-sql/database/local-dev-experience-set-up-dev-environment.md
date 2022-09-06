@@ -1,14 +1,12 @@
 ---
 title: Set up a local development environment for Azure SQL Database
 description: How to set up a local development environment for Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: how-to
 ms.date: 05/24/2022
+ms.service: sql-database
+ms.topic: how-to
 ---
 
 # Set up a local development environment for Azure SQL Database

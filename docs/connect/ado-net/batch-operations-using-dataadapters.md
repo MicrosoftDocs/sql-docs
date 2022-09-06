@@ -1,16 +1,14 @@
 ---
 title: "Batch operations using DataAdapters"
 description: Describes enhancing application performance by reducing the number of round trips to SQL Server when applying updates from the DataSet.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Batch operations using DataAdapters
 

@@ -1,16 +1,12 @@
 ---
 title: Finding additional information
 description: For more information about the Microsoft JDBC Driver for SQL Server and SQL development in general, see these other resources.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Finding additional JDBC driver information
 

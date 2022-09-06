@@ -1,15 +1,13 @@
 ---
 title: "Access to Azure SQL Database: Migration guide"
-description: In this guide, you learn how to migrate your Microsoft Access databases to an Azure SQL database by using SQL Server Migration Assistant for Access (SSMA for Access). 
-ms.service: sql-database
-ms.subservice: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
+description: In this guide, you learn how to migrate your Microsoft Access databases to an Azure SQL database by using SQL Server Migration Assistant for Access (SSMA for Access).
 author: mokabiru
 ms.author: mokabiru
 ms.reviewer: mathoma, kendralittle
 ms.date: 03/19/2021
+ms.service: sql-database
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 
 # Migration guide: Access to Azure SQL Database

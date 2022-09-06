@@ -2,18 +2,16 @@
 title: What's new?
 titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
-services:
-  - "sql-database"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 08/01/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=2"
   - "references_regions"
   - "ignite-fall-2021"
-ms.topic: conceptual
-ms.date: 08/01/2022
 ---
 # What's new in Azure SQL Database?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -45,7 +43,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Database emulator](local-dev-experience-sql-database-emulator.md) | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. | 
 | [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. | 
 | [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
-| [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
+
 
 ## General availability (GA)
 
@@ -53,6 +51,7 @@ The following table lists the features of Azure SQL Database that have transitio
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | August 2022 |The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
 | [Query Store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-current&preserve-view=true) | August 2022 | Use query hints to optimize your query execution via the OPTION clause. |
 | [Named Replicas](service-tier-hyperscale-replicas.md#named-replica) for Hyperscale databases | June 2022 | Named Replicas enable a broad variety of read scale-out scenarios, and easily implement near-real time hybrid transactional and analytical processing (HTAP) solutions. |
 | [Active geo-replication](./active-geo-replication-overview.md) and [Auto-failover groups](./auto-failover-group-sql-db.md) for Hyperscale databases | June 2022 | Active geo-replication and Auto-failover groups provide a turn-key business continuity solution for Hyperscale databases, letting you perform quick disaster recovery of databases in case of a regional disaster or a large scale outage.|
@@ -77,6 +76,13 @@ Learn about significant changes to the Azure SQL Database documentation.
 | **128 vCore** | It's now possible to provision your Azure SQL Database with up to 128 vCores in both the General Purpose, and Business Critical service tiers. See [resource limits](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) to learn more. | 
 | **Gen5 rename** | The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**. | 
 
+
+
+### August 2022
+
+| Changes | Details |
+| --- | --- |
+| **Zone redundant configuration for Hyperscale databases** | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. This configuration option is now generally available. To learn more, review  [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). |
 
 ### June 2022
 
@@ -111,7 +117,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | Changes | Details |
 | --- | --- |
 | **GA for maintenance window** | The [maintenance window](maintenance-window.md) feature allows you to configure a maintenance schedule for your Azure SQL Database and receive advance notifications of maintenance windows. [Maintenance window advance notifications](../database/advance-notifications.md) are in public preview for databases configured to use a non-default [maintenance window](maintenance-window.md).| 
-| **Hyperscale zone redundant configuration preview** | It's now possible to create new Hyperscale databases with zone redundancy to make your databases resilient to a much larger set of failures. This feature is currently in preview for the Hyperscale service tier. To learn more, see [Hyperscale zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview). | 
+| **Hyperscale zone redundant configuration preview** | It's now possible to create new Hyperscale databases with zone redundancy to make your databases resilient to a much larger set of failures. This feature is currently in preview for the Hyperscale service tier. To learn more, see [Hyperscale zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). | 
 | **Hyperscale storage redundancy GA** | Choosing your storage redundancy for your databases in the Hyperscale service tier is now generally available. See [Configure backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) to learn more. |
 
 

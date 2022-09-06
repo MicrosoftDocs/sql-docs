@@ -1,7 +1,7 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
-ms.date: 07/25/2022
+ms.date: 08/22/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -134,11 +134,22 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Performance
 
-- **Push computation to Hadoop.** PolyBase pushes some computations to the external source to optimize the overall query. The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources. For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md). 
+- **Push computation to Hadoop.** (Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only.) PolyBase pushes some computations to the external source to optimize the overall query. The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources. For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md). 
 
 - **Scale compute resources.** (Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only.) To improve query performance, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and Hadoop nodes, and it adds compute resources for operating on the external data. 
 
 [!INCLUDE[polybase-scaleout-banner-retirement](../../includes/polybase-scaleout-banner-retirement.md)]
+
+## Upgrading to SQL Server 2022
+
+Starting in SQL Server 2022 Hadoop is no longer supported. It is required to manually recreate external data sources previously created with TYPE = HADOOP, and any external table that uses this external data source.
+
+Users will also need to configure their external data sources to use new connectors when connecting to Azure Storage.
+
+| External Data Source | From | To |
+|:--|:--|:--|
+| Azure Blob Storage | wasb[s] | abs |
+| ADLS Gen 2 | abfs[s] | adls |
 
 ## Next steps
 

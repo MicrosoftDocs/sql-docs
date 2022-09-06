@@ -1,15 +1,13 @@
 ---
-title: Homepage for SQL client programming | Microsoft Docs
+title: Homepage for SQL client programming
 description: Page with annotated links to downloads and documentation for different languages and operating systems, for connecting to SQL Server or to Azure SQL Database.
 author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-daveng
 ms.date: 11/07/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: v-daveng
-ms.author: v-davidengel
 ---
 # Homepage for client programming to Microsoft SQL Server
 

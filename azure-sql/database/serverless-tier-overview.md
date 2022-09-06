@@ -1,19 +1,17 @@
 ---
 title: Serverless compute tier
 description: This article describes the new serverless compute tier and compares it with the existing provisioned compute tier for Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "test sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom:
+  - "test sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 ---
 # Azure SQL Database serverless
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

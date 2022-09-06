@@ -30,9 +30,9 @@ SqlPackage /Action:Import {parameters} {properties}
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
-# example import using short form parameter names, skips schema validation
+# example import using short form parameter names
 SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
-    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac" /p:VerifyExtraction=False
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac"
 
 # example import using Azure Active Directory Service Principal
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \

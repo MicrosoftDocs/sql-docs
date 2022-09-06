@@ -1,21 +1,15 @@
 ---
+title: "executeUpdate Method (java.lang.String, java.lang.String)"
 description: "executeUpdate Method (java.lang.String, java.lang.String)"
-title: "executeUpdate Method (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.executeUpdate (java.lang.String[])"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.executeUpdate (java.lang.String[])"
+apitype: "Assembly"
 ---
 # executeUpdate Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

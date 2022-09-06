@@ -1,21 +1,15 @@
 ---
+title: "getCharacterStream Method (int)"
 description: "getCharacterStream Method (int)"
-title: "getCharacterStream Method (int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getCharacterStream (int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getCharacterStream (int)"
+apitype: "Assembly"
 ---
 # getCharacterStream Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

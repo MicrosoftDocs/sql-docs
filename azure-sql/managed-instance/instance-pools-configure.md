@@ -2,15 +2,16 @@
 title: Deploy SQL Managed Instance to an instance pool
 titleSuffix: Azure SQL Managed Instance
 description: This article describes how to create and manage Azure SQL Managed Instance pools (preview).
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: devx-track-azurepowershell, devx-track-azurecli
-ms.topic: how-to
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 09/05/2019
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 # Deploy Azure SQL Managed Instance to an instance pool
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

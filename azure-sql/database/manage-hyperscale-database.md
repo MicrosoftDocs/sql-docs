@@ -1,15 +1,13 @@
 ---
 title: How to manage a Hyperscale database
 description: How to manage a Hyperscale database, including migrating to Hyperscale, restoring to a different region, and reverse migration.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
 ---
 
 # How to manage a Hyperscale database

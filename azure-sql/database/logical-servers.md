@@ -1,17 +1,14 @@
 ---
 title: What is a server in Azure SQL Database and Azure Synapse Analytics?
 description: Learn about logical SQL servers used by Azure SQL Database and Azure Synapse Analytics, and how to manage them.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "devx-track-azurecli"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 03/12/2019
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom: devx-track-azurecli
 ---
 # What is a logical SQL server in Azure SQL Database and Azure Synapse?
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

@@ -1,21 +1,15 @@
 ---
+title: "getHoldability Method (SQLServerConnection)"
 description: "getHoldability Method (SQLServerConnection)"
-title: "getHoldability Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.getHoldability"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.getHoldability"
+apitype: "Assembly"
 ---
 # getHoldability Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

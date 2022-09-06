@@ -1,21 +1,15 @@
 ---
+title: "getCatalogs Method (SQLServerDatabaseMetaData)"
 description: "getCatalogs Method (SQLServerDatabaseMetaData)"
-title: "getCatalogs Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getCatalogs"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getCatalogs"
+apitype: "Assembly"
 ---
 # getCatalogs Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

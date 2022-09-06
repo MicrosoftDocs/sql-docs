@@ -1,21 +1,15 @@
 ---
+title: "getProcedureColumns Method (SQLServerDatabaseMetaData)"
 description: "getProcedureColumns Method (SQLServerDatabaseMetaData)"
-title: "getProcedureColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getProcedureColumns"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getProcedureColumns"
+apitype: "Assembly"
 ---
 # getProcedureColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

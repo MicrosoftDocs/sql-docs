@@ -1,15 +1,17 @@
 ---
 title: Create Azure SQL Managed Instance - Quickstart
 description: Create an instance of Azure SQL Managed Instance using Azure PowerShell.
-services: sql-managed-instance
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: contperf-fy21q1, devx-track-azurecli, devx-track-azurepowershell, mode-api
-ms.topic: quickstart
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: 
 ms.date: 06/25/2021
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: quickstart
+ms.custom:
+  - contperf-fy21q1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - mode-api
 ---
 # Quickstart: Create a managed instance using Azure PowerShell
 

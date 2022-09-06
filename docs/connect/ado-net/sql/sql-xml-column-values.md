@@ -1,17 +1,15 @@
 ---
 title: "SQL XML column values"
 description: "Demonstrates how to retrieve and work with XML data retrieved from SQL Server."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # SQL XML column values
 

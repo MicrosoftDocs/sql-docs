@@ -2,15 +2,14 @@
 title: Playbook for addressing common security requirements
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article provides common security requirements and best practices in Azure SQL Database and Azure SQL Managed Instance.
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=2"
 author: VanMSFT
 ms.author: vanto
-ms.topic: article
-ms.date: 04/27/2022
 ms.reviewer: wiassaf, mathoma
+ms.date: 04/27/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: article
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

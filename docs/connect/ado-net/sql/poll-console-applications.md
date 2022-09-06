@@ -1,17 +1,15 @@
 ---
 title: "Polling in console applications"
 description: "Provides an example demonstrating the use of polling to wait for the completion of an asynchronous command execution from a console application. This technique is also valid in a class library or other application without a user interface."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Polling in console applications
 

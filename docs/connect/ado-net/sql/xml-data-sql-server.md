@@ -1,15 +1,13 @@
 ---
 title: "XML data in SQL Server"
 description: "Describes how to work with XML data retrieved from SQL Server."
-ms.date: "08/15/2019"
-ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # XML data in SQL Server
 

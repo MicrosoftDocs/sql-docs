@@ -1,22 +1,21 @@
 ---
 title: APPROX_PERCENTILE_CONT (Transact-SQL)
 description: A function that returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification.
+author: blakhani-msft
+ms.author: blakhani
+ms.reviewer: "maghan"
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PERCENTILE_CONT_TSQL"
   - "PERCENTILE_CONT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
-author: blakhani-msft
-ms.author: blakhani 
-ms.reviewer: "maghan"
-ms.custom: ""
-ms.date: 07/25/2022
+dev_langs:
+  - "TSQL"
 monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 

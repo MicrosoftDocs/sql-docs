@@ -1,14 +1,12 @@
 ---
-title: Database Migration Assessment for Oracle extension 
-description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database migration path. 
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+title: Database Migration Assessment for Oracle extension
+description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database migration path.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: niball
-ms.topic: conceptual
-ms.custom:
 ms.date: 04/27/2022
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Database Migration Assessment for Oracle extension (Preview)
@@ -183,9 +181,9 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
     b. Perform tnsping and see if the Service ID gets resolved.
 
-- Unable to access Database Migration Assessment reports for Oracle after upgrading to version 1.5
+- Unable to access Database Migration Assessment reports for Oracle after upgrading to version 2.0
 
-    Reason: When Azure data studio Oracle extension is upgraded to latest version (version 1.5 and above), the assessment reports will be inaccessible.
+    Reason: When Database Migration Assessment for Oracle extension is upgraded to latest version (v2.0 and above), the assessment reports will be inaccessible.
 
     Workaround:  Uninstall and install the prior version of Database migration assessment (v1.4.1)  to download the previously assessed reports. Please follow the steps below to use previous version of the extension
 
@@ -193,7 +191,7 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
         • Current assessment Directory: Path is given under Extension settings > Oracle Assessment: Assessment Path > Local path to store your assessments.
 
-        • Previous version build: Download the Previous build (version 1.4.1) on local system.
+        • Previous version build: Download the Previous [build](https://download.microsoft.com/download/6/8/3/683f7dad-c720-43bc-865e-b456491d3f86/azuredatastudio-dma-oracle-1.4.1.vsix) (v1.4.1) on local system.
 
     1. Troubleshooting steps
 

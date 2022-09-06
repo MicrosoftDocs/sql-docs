@@ -1,16 +1,12 @@
 ---
 title: Getting the driver version
 description: Learn how and where to find the version of the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 05/03/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 05/03/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Getting the driver version
 

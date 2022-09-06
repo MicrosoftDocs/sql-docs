@@ -1,15 +1,14 @@
 ---
 title: "Assessment rules for SQL Server to Azure SQL Database migration"
 description: Assessment rules to identify issues with the source SQL Server instance that must be addressed before migrating to Azure SQL Database.
-ms.service: sql-database
-ms.subservice: migration-guide
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: how-to
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma, kendralittle
 ms.date: 12/15/2020
+ms.service: sql-database
+ms.subservice: migration-guide
+ms.topic: how-to
+ms.custom: ignite-fall-2021
 ---
 # Assessment rules for SQL Server to Azure SQL Database migration
 [!INCLUDE[appliesto--sqldb](../../includes/appliesto-sqldb.md)]

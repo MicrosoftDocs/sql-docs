@@ -1,15 +1,13 @@
 ---
 title: Audit to storage account behind VNet and firewall
 description: Configure auditing to write database events on a storage account behind virtual network and firewall
-services:
-  - "sql-database"
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-author: sravanisaluru
-ms.author: srsaluru
-ms.date: "03/23/2022"
-ms.reviewer: wiassaf, vanto, mathoma
 ms.custom:
   - "azure-synapse"
   - "subject-rbac-steps"

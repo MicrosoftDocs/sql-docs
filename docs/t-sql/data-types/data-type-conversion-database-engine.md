@@ -1,16 +1,13 @@
 ---
+title: "Data type conversion (Database Engine)"
 description: "Data type conversion (Database Engine)"
-title: "Data type conversion (Database Engine) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CAST function"
   - "converting data types [SQL Server]"
   - "CONVERT function"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "implicit data type conversions"
   - "explicit data type conversions [SQL Server]"
   - "converting data types [SQL Server], about converting data types"
-ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data type conversion (Database Engine)

@@ -2,13 +2,13 @@
 title: Server roles
 titleSuffix: Azure SQL Database
 description: This article provides an overview of server roles for the logical server of Azure SQL Database
-ms.service: sql-database
-ms.subservice: security
 author: AndreasWolter
 ms.author: anwolter
-ms.topic: conceptual
-ms.date: 07/12/2022
 ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 07/12/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 ---
 
 # Azure SQL Database server roles for permission management

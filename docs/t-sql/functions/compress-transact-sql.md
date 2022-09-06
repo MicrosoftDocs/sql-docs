@@ -3,13 +3,10 @@ title: "COMPRESS (Transact-SQL)"
 description: "COMPRESS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "10/11/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: "reference"
-ms.custom: ""
 f1_keywords:
   - "COMPRESS"
   - "COMPRESS_TSQL"

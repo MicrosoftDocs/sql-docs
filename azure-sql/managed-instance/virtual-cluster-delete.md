@@ -1,16 +1,16 @@
 ---
 title: Delete a subnet after deleting a SQL Managed Instance
-description: Learn how to delete an Azure virtual network after deleting an Azure SQL Managed Instance. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
+description: Learn how to delete an Azure virtual network after deleting an Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 03/25/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
 ---
 
 # Delete a subnet after deleting an Azure SQL Managed Instance

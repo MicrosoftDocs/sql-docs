@@ -3,13 +3,10 @@ title: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "06/25/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OBJECT_SCHEMA_NAME"
   - "OBJECT_SCHEMA_NAME_TSQL"

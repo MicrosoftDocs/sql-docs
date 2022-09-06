@@ -1,17 +1,15 @@
 ---
 title: "Provider statistics for SQL Server"
 description: "Describes support for obtaining SQL Server run-time statistics."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Provider statistics for SQL Server
 

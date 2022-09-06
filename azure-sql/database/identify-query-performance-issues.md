@@ -2,16 +2,14 @@
 title: Detectable types of query performance bottlenecks
 titleSuffix: Azure SQL Database
 description: Learn about types of query performance issues in Azure SQL Database and how to identify and resolve queries with these issues.
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: azure-sql-split
-ms.devlang: 
-ms.topic: troubleshooting
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
 ms.date: 08/03/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: troubleshooting
+ms.custom: azure-sql-split
 monikerRange: "=azuresql||=azuresql-db"
 ---
 

@@ -1,14 +1,16 @@
 ---
 title: Use Insight widgets to monitor servers and databases
 description: Learn how to use Azure Data Studio insight widgets to turn queries that monitor servers and databases into insightful visualizations.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
-ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
+ms.prod: azure-data-studio
+ms.topic: how-to
+ms.custom:
+  - seodec18
+  - sqlfreshmay19
+  - seo-lt-2019
 ---
 
 # Manage servers and databases with Insight widgets in Azure Data Studio

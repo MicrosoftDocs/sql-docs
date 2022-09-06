@@ -1,17 +1,15 @@
 ---
-title: The link feature
+title: Link feature for Azure SQL Managed Instance (preview)
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the link feature for Azure SQL Managed Instance to continuously replicate data from SQL Server to the cloud, or migrate your SQL Server databases with the best possible minimum downtime.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: conceptual
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, danil
-ms.date: 08/12/2022
+ms.reviewer: mathoma, danil, randolphwest
+ms.date: 09/01/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: conceptual
+ms.custom: ignite-fall-2021
 ---
 # Link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -41,7 +39,7 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.12](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2016, 2019 and 2022. |
+| [SSMS 18.12.1](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2016, 2019 and 2022. |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]

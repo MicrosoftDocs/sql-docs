@@ -233,7 +233,7 @@ sections:
       - question: |
           Do I lose any functionality or capabilities after migration to the Hyperscale service tier?
         answer: |
-          Yes. Some Azure SQL Database features are not supported in Hyperscale yet, including but not limited to long term backup retention. If some of these features are enabled for your database, migration to Hyperscale may be blocked, or these features will stop working after migration. We expect these limitations to be temporary. For details, see [Known limitations](service-tier-hyperscale.md#known-limitations).
+          Yes. Some Azure SQL Database features are not supported in Hyperscale yet. If some of these features are enabled for your database, migration to Hyperscale may be blocked, or these features will stop working after migration. We expect these limitations to be temporary. For details, see [Known limitations](service-tier-hyperscale.md#known-limitations).
 
       - question: |
           Can I move my on-premises SQL Server database, or my SQL Server database in a cloud virtual machine to Hyperscale?

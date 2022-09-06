@@ -1,16 +1,12 @@
 ---
+title: "setClob Method (int, java.io.Reader, long)"
 description: "setClob Method (int, java.io.Reader, long)"
-title: "setClob Method (int, java.io.Reader, long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setClob Method (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

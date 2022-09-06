@@ -1,21 +1,15 @@
 ---
+title: "setString Method (SQLServerClob)"
 description: "setString Method (SQLServerClob)"
-title: "setString Method (SQLServerClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerClob.setString"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerClob.setString"
+apitype: "Assembly"
 ---
 # setString Method (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -42,6 +42,32 @@ If you need to download the installer in a language other than the one detected 
 
 ## Previous releases
 
+## 19.1
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2206472)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2206473)  
+
+Released: August 31, 2022
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Implement Application-Layer Protocol Negotiation (ALPN) extension | The driver implements the Application-Layer Protocol Negotiation (ALPN) extension when TDS 8.0 protocol is used. |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fixed a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
+| Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
+| Fixed issue with HostnameInCertificate property being passed through the SNI layer | The HostnameInCertificate value has been separated from the SNI layer and is now aligned with https behavior. |
+| Restored functionality of ProtocolOrder and TCPKeepAlive registry properties | The MSOLEDBSQL driver now adjusts the TCP Keep-Alive, Keep-Alive Interval, and the network Protocol Order based on the values set for the corresponding registry entries. |
+
 ## 18.6.4
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2206347)  

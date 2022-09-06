@@ -1,21 +1,15 @@
 ---
+title: "execute Method (SQLServerPreparedStatement)"
 description: "execute Method (SQLServerPreparedStatement)"
-title: "execute Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.execute"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.execute"
+apitype: "Assembly"
 ---
 # execute Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

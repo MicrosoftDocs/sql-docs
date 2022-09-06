@@ -1,21 +1,15 @@
 ---
+title: "getPortNumber Method (SQLServerDataSource)"
 description: "getPortNumber Method (SQLServerDataSource)"
-title: "getPortNumber Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getPortNumber"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.getPortNumber"
+apitype: "Assembly"
 ---
 # getPortNumber Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "releaseSavepoint Method (SQLServerConnection)"
 description: "releaseSavepoint Method (SQLServerConnection)"
-title: "releaseSavepoint Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.releaseSavepoint"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.releaseSavepoint"
+apitype: "Assembly"
 ---
 # releaseSavepoint Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

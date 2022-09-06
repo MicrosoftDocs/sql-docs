@@ -1,16 +1,12 @@
 ---
+title: "createNClob Method (SQLServerConnection)"
 description: "createNClob Method (SQLServerConnection)"
-title: "createNClob Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # createNClob Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

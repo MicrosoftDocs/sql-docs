@@ -1,21 +1,15 @@
 ---
+title: "getCatalogSeparator Method (SQLServerDatabaseMetaData)"
 description: "getCatalogSeparator Method (SQLServerDatabaseMetaData)"
-title: "getCatalogSeparator Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getCatalogSeparator"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getCatalogSeparator"
+apitype: "Assembly"
 ---
 # getCatalogSeparator Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

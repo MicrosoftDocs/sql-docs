@@ -1,16 +1,12 @@
 ---
+title: "ISQLServerStatement Interface"
 description: "ISQLServerStatement Interface"
-title: "ISQLServerStatement Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # ISQLServerStatement Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

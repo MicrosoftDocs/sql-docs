@@ -1,16 +1,12 @@
 ---
 title: "Using statements with SQL"
 description: "Learn an overview of using different types of SQL statements with the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using statements with SQL
 

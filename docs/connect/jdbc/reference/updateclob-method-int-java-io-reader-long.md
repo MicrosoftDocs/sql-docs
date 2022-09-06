@@ -1,16 +1,12 @@
 ---
+title: "updateClob Method (int, java.io.Reader, long)"
 description: "updateClob Method (int, java.io.Reader, long)"
-title: "updateClob Method (int, java.io.Reader, long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateClob Method (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

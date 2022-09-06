@@ -1,16 +1,12 @@
 ---
 title: "Understanding data type conversions"
 description: "Learn the specifics of how the JDBC Driver for SQL Server handles data type conversions between JDBC and database data types."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Understanding data type conversions

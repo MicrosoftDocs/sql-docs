@@ -1,16 +1,12 @@
 ---
+title: "valueOf Method (java.sql.Timestamp, int)"
 description: "valueOf Method (java.sql.Timestamp, int)"
-title: "valueOf Method (java.sql.Timestamp, int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # valueOf Method (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,16 +1,12 @@
 ---
 title: "Using adaptive buffering"
 description: "Learn how using adaptive buffering eliminates the overhead of server cursors when retrieving large-value data using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using adaptive buffering

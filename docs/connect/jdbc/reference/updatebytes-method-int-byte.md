@@ -1,21 +1,15 @@
 ---
+title: "updateBytes Method (int, byte)"
 description: "updateBytes Method (int, byte)"
-title: "updateBytes Method (int, byte) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateBytes (int, byte[])"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateBytes (int, byte[])"
+apitype: "Assembly"
 ---
 # updateBytes Method (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

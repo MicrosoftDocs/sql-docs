@@ -1,16 +1,12 @@
 ---
+title: "getServerPreparedStatementDiscardThreshold Method (SQLServerDataSource)"
 description: "getServerPreparedStatementDiscardThreshold Method (SQLServerDataSource)"
-title: "getServerPreparedStatementDiscardThreshold Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid:
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getServerPreparedStatementDiscardThreshold Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

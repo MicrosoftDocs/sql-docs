@@ -1,16 +1,12 @@
 ---
+title: "getNString Method (java.lang.String) (SQLServerResultSet)"
 description: "getNString Method (java.lang.String) (SQLServerResultSet)"
-title: "getNString Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getNString Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

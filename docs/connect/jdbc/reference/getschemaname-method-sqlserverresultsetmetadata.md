@@ -1,21 +1,15 @@
 ---
+title: "getSchemaName Method (SQLServerResultSetMetaData)"
 description: "getSchemaName Method (SQLServerResultSetMetaData)"
-title: "getSchemaName Method (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSetMetaData.getSchemaName"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSetMetaData.getSchemaName"
+apitype: "Assembly"
 ---
 # getSchemaName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

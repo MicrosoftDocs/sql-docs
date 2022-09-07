@@ -4,15 +4,42 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/25/2022
+ms.date: 09/07/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## September 2022
 
-## July 26, 2022
+This release is published September 13, 2022
+
+### Image tag
+
+`v1.1.2074.2`
+
+### Azure extension for SQL Server
+
+- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have beedn released with the same image tag.
+- SQL Server 2022 RC0 includes the option of installing Azure extension for SQL Server during setup. 
+- The extesion is now available for Azure Arc-enabled VMWare vSphere. It can be installed on any VMWare VM that is *Azure enabled* and *Guest management enabled* and has SQL Server instance(s).
+- The extension now supports HTTP proxy servers on the Linux platforms.
+
+### Azure Active Directory authentication 
+
+- Azure extesnion for SQL Server has been emhanced to support configuring Active Directory authentication using mssql-conf.
+
+### Known issues
+
+- Azure extension for SQL Server is not listed as a supported extension on the extension management blade of the VMWare VM in Portal. To install it use the following command, where {OS} should be *Windows* or *Linux* depending on the VM image. 
+
+ ```console
+az connectedvmware vm extension create --location eastus --resource-group ArcLab-Arc-vSphere --vm-name ArcLab-PG-LT --name {OS}Agent.SqlServer --publisher Microsoft.AzureData --type {OS}Agent.SqlServer --settings @c:\temp\sql_extension_settings.json –debug
+```
+
+
+## July 2022
 
 This release is published July 26, 2022
 
@@ -20,10 +47,13 @@ This release is published July 26, 2022
 
 `v1.0.2019.2`
 
-### Arc-enabled SQL Server
+### Azure extension for SQL Server
 
-- Preview support for SQL Server Extension - Azure Arc for SQL Servers running on Linux operating system
-- Azure Active Directory authentication configuration enabled via SQL Server Extension - Azure Arc for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, running on Linux operating system
+- Preview support for Azure extesnion for SQL Server on Linux operating system
+
+### Azure Active Directory authentication 
+
+- Azure Active Directory authentication configuration enabled for SQL Server 2022 via Azure Extension for SQL Server [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, running on Linux operating system
 
 ## July 30, 2021
 
@@ -31,7 +61,7 @@ Azure Arc-enabled SQL Server releases for general availability support
 
 ### Breaking changes
 
-This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding **SQL Server - Azure Arc** resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing **SQL Server - Azure Arc** resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).
+This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding Arc-enabled SQL Server resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing Arc-enabled SQL Server resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).
 
 > [!IMPORTANT]
 > If you installed a version of SQL Server extension during the preview, make sure it is updated to version 1.1.1668.43 or later. An extension can be updated using the *Extention* pane of the specific connected server resource.

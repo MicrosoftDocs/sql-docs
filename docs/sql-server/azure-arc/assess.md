@@ -1,20 +1,20 @@
 ---
-title: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers  instance
-description: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers instance
+title: Configure on-demand SQL Assessment on an Azure Arc-enabled SQL Server instance
+description: Configure on-demand SQL Assessment on an Azure Arc-enabled SQL Server instance
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/25/2022
+ms.date: 09/06/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
-# Configure SQL Assessment | SQL Server on Azure Arc-enabled servers
+# Configure SQL Assessment | Azure Arc-enabled SQL Server
 
-SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an instance of SQL Server on Azure Arc-enabled servers.
+SQL Assessment provides a mechanism to evaluate the configuration of your SQL Server. This article provides instructions for using SQL Assessment on an instance of Azure Arc-enabled SQL Server.
 
 ## Prerequisites
 
-- Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Arc-enabled SQL Server](connect.md).
 
   > [!NOTE]
   > On-demand SQL Assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
@@ -29,9 +29,9 @@ SQL Assessment provides a mechanism to evaluate your configuration of SQL Server
 
 ## Run on-demand SQL Assessment
 
-1. Open your SQL Server – Azure Arc resource and select **Environment Health** in the left pane.
+1. Open your Arc-enabled SQL Server resource and select **Environment Health** in the left pane.
 
-   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Screenshot showing the Environment Health screen of a SQL Server - Azure Arc resource.":::
+   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Screenshot showing the Environment Health screen of an Arc-enabled SQL Server resource.":::
 
    If the MMA extension isn't installed, you can't initiate the on-demand SQL Assessment.
 

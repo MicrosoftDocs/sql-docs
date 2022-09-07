@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "DROP DATABASE AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 ---
 # DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

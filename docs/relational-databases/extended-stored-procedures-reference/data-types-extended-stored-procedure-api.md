@@ -17,7 +17,7 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  To use the Extended Stored Procedure API data types, include the Srv.h header file in your program.  
   

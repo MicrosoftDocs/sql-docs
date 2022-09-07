@@ -1,18 +1,16 @@
 ---
 title: Elastic Database Jobs (preview)
-description: 'Configure Elastic Database Jobs (preview) to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database'
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: elastic-jobs
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
-ms.topic: conceptual
+description: "Configure Elastic Database Jobs (preview) to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database"
 author: srinia
 ms.author: srinia
 ms.reviewer: wiassaf, mathoma
 ms.date: 05/03/2022
+ms.service: sql-database
+ms.subservice: elastic-jobs
+ms.topic: conceptual
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 # Create, configure, and manage elastic jobs (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -23,7 +21,7 @@ If you have not used Elastic jobs, [learn more about the job automation concepts
 
 ## Create and configure the agent
 
-1. Create or identify an empty S0 or higher database. This database will be used as the *Job database* during Elastic Job agent creation.
+1. Create or identify an empty S1 or higher database. This database will be used as the *Job database* during Elastic Job agent creation.
 2. Create an Elastic Job agent in the [portal](https://portal.azure.com/#create/Microsoft.SQLElasticJobAgent) or with [PowerShell](elastic-jobs-powershell-create.md#create-the-elastic-job-agent).
 
    ![Creating Elastic Job agent](./media/elastic-jobs-overview/create-elastic-job-agent.png)

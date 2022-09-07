@@ -1,8 +1,8 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL)"
 description: CREATE FUNCTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -38,7 +38,6 @@ helpviewer_keywords:
   - "functions [SQL Server], invoking"
 dev_langs:
   - "TSQL"
-ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 ---
 # CREATE FUNCTION (Transact-SQL)
 

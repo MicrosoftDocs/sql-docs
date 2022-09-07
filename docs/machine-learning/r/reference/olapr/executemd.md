@@ -88,16 +88,11 @@ Returns an error if the Query is invalid.
 
 ## References
 
-Creating a Demo OLAP Cube (the same as the one used in the examples): 
-[`https://docs.microsoft.com/en-us/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
-
-
-
+Creating a Demo OLAP Cube (the same as the one used in the examples): [Multidimensional Modeling (Adventure Works Tutorial)](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
 ## See also
 
 [Query](Query.md), [OlapConnection](OlapConnection.md), [execute2D](Execute2D.md), [explore](Explore.md), array
-
 
 ## Examples
 

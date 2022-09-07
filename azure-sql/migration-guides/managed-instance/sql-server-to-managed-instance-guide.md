@@ -1,15 +1,13 @@
 ---
 title: "SQL Server to Azure SQL Managed Instance: Migration guide"
-description: This guide teaches you to migrate your SQL Server databases to Azure SQL Managed Instance. 
-ms.service: sql-managed-instance
-ms.subservice: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
-author: mokabiru
-ms.author: mokabiru
+description: This guide teaches you to migrate your SQL Server databases to Azure SQL Managed Instance.
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, danil, randolphwest
 ms.date: 04/11/2022
+ms.service: sql-managed-instance
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 # Migration guide: SQL Server to Azure SQL Managed Instance
 
@@ -20,8 +18,7 @@ This guide helps you migrate your SQL Server instance to Azure SQL Managed Insta
 You can migrate SQL Server running on-premises or on: 
 
 - SQL Server on Virtual Machines  
-- Amazon Web Services (AWS) EC2 
-- Amazon Relational Database Service (AWS RDS) 
+- Amazon Web Services (AWS) EC2
 - Compute Engine (Google Cloud Platform - GCP)  
 - Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
 

@@ -1,22 +1,18 @@
 ---
+title: "Data type synonyms (Transact-SQL)"
 description: "Data type synonyms (Transact-SQL)"
-title: "Data type synonyms (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], synonyms"
   - "alternate names [SQL Server]"
   - "synonyms [SQL Server], data types"
-ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # Data type synonyms (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

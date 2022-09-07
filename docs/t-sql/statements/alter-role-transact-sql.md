@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "names [SQL Server], database roles"
 dev_langs:
   - "TSQL"
-ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER ROLE (Transact-SQL)
@@ -60,12 +59,12 @@ ALTER ROLE role_name
 
 ## Arguments
  *role_name*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies the database role to change.  
   
  ADD MEMBER *database_principal*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to add the database principal to the membership of a database role.  
   
@@ -74,7 +73,7 @@ ALTER ROLE role_name
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
 DROP MEMBER *database_principal*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to remove a database principal from the membership of a database role.  
   
@@ -83,7 +82,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
 WITH NAME = *new_name*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to change the name of a user-defined database role. The new name must not already exist in the database.  
   
@@ -113,7 +112,7 @@ Additionally, to change the membership in a fixed database role you need:
 ## Examples  
   
 ### A. Change the name of a database role  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](../../samples/adventureworks-install-configure.md) sample database.
   
@@ -122,7 +121,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### B. Add or remove role members  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](../../samples/adventureworks-install-configure.md) sample database.
   
@@ -133,7 +132,7 @@ ALTER ROLE Sales DROP MEMBER Barry;
 ```  
 
 ### C. Add a role member to special roles for Azure SQL Database and Azure Synapse Analytics
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Azure SQL Database and Azure Synapse), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Azure SQL Database and Azure Synapse), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 This example creates a SQL login in the master database, creates a database user that's related to that server login, and adds the database user as a member of the special role `dbmanager`. The example allows the user permissions to create and drop databases on an Azure SQL Database logical server. Run the example on the master database of the Azure SQL Database logical server.
 

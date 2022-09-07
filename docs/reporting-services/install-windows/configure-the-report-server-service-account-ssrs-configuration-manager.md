@@ -6,11 +6,13 @@ ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
-ms.custom: seo-lt-2019​, seo-mmd-2019
-ms.date: 08/26/2021 
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 08/17/2022 
 ---
 
 # Configure the Report Server Service Account (Report Server Configuration Manager)
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
   
@@ -64,6 +66,10 @@ ms.date: 08/26/2021
 ## Choosing an Account
 
  For best results, specify an account that has network connection permissions, with access to network domain controllers and corporate SMTP servers or gateways. The following table summarizes the accounts and provides recommendations for using them.  
+  
+> [!NOTE]  
+> [Group Managed Service Accounts (gMSAs)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) are not supported as a report server service account.
+  
   
 |Account|Explanation|  
 |-------------|-----------------|  

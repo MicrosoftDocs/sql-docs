@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER SERVER AUDIT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)

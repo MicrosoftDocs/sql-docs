@@ -1,8 +1,8 @@
 ---
 title: CREATE SEQUENCE (Transact-SQL)
 description: CREATE SEQUENCE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "number, sequence"
 dev_langs:
   - "TSQL"
-ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 ---
 
 # CREATE SEQUENCE (Transact-SQL)

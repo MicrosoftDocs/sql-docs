@@ -1,21 +1,14 @@
 ---
-title: Backup and restore for SQL Server on Azure VMs | Microsoft Docs
+title: Backup and restore for SQL Server on Azure VMs
 description: Describes backup and restore considerations for SQL Server databases running on Azure Virtual Machines.
-services: virtual-machines-windows
-documentationcenter: na
 author: adbadram
-editor: ''
-tags: azure-resource-management
-ms.assetid: 95a89072-0edf-49b5-88ed-584891c0e066
-ms.service: virtual-machines-sql
-ms.subservice: backup
-
-ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 06/04/2018
 ms.author: adbadram
 ms.reviewer: mathoma
+ms.date: 06/04/2018
+ms.service: virtual-machines-sql
+ms.subservice: backup
+ms.topic: conceptual
+tags: azure-resource-management
 ---
 # Backup and restore for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -40,7 +33,7 @@ The following sections describe each option in more detail. The final section of
 
 Automated Backup provides an automatic backup service for SQL Server Standard and Enterprise editions running on a Windows VM in Azure. This service is provided by the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md), which is automatically installed on SQL Server Windows virtual machine images in the Azure portal.
 
-All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 30 days.
+All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 90 days.
 
 SQL Server 2016 and higher VMs offer more customization options with Automated Backup v2. These improvements include:
 
@@ -122,23 +115,23 @@ The following table summarizes the capabilities of each backup and restore optio
 
 | Option | Automated Backup | Azure Backup for SQL | Manual backup |
 |---|---|---|---|
-| Requires additional Azure service |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Configure backup policy in Azure portal | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Restore databases in Azure portal |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Manage multiple servers in one dashboard |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Point-in-time restore | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) |
-| 15-minute Recovery Point Objective (RPO) | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) |
-| Short-term backup retention policy (days) | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Long-term backup retention policy (months, years) |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Built-in support for SQL Server Always On |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Backup to Azure Storage account(s) | ![Green checkmark.](./media/backup-restore/yes.png)(automatic) | ![Green checkmark.](./media/backup-restore/yes.png)(automatic) | ![Green checkmark.](./media/backup-restore/yes.png)(customer managed) |
-| Management of storage and backup files | | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Backup to attached disks on the VM |   |   | ![Green checkmark.](./media/backup-restore/yes.png) |
-| Central customizable backup reports |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Consolidated email alerts for failures |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Customize monitoring based on Azure Monitor logs |   | ![Green checkmark.](./media/backup-restore/yes.png) |   |
-| Monitor backup jobs with SSMS or Transact-SQL scripts | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) | ![Green checkmark.](./media/backup-restore/yes.png) |
-| Restore databases with SSMS or Transact-SQL scripts | ![Green checkmark.](./media/backup-restore/yes.png) |   | ![Green checkmark.](./media/backup-restore/yes.png) |
+| Requires additional Azure service |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Configure backup policy in Azure portal | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Restore databases in Azure portal |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Manage multiple servers in one dashboard |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Point-in-time restore | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: |
+| 15-minute Recovery Point Objective (RPO) | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: |
+| Short-term backup retention policy (days) | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false":::  |   |
+| Long-term backup retention policy (months, years) |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Built-in support for SQL Server Always On |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Backup to Azure Storage account(s) | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false":::(automatic) | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false":::(automatic) | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: (customer managed) |
+| Management of storage and backup files |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Backup to attached disks on the VM |   |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: |
+| Central customizable backup reports |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Consolidated email alerts for failures |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Customize monitoring based on Azure Monitor logs |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: |   |
+| Monitor backup jobs with SSMS or Transact-SQL scripts | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Azure Backup for SQL." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: |
+| Restore databases with SSMS or Transact-SQL scripts | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Automated Backup." border="false"::: |   | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Manual backup." border="false"::: |
 
 ## Next steps
 

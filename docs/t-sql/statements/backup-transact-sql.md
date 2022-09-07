@@ -3,7 +3,7 @@ title: "BACKUP (Transact-SQL)"
 description: BACKUP (Transact-SQL) backs up a SQL database.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 05/10/2022
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
@@ -133,7 +133,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 <general_WITH_options> [ ,...n ]::=
 --Backup Set Options
    COPY_ONLY
- | { COMPRESSION | NO_COMPRESSION }
+ | [ COMPRESSION [ ALGORITHM = { MS_XPRESS | accelerator_algorithm } ] | NO_COMPRESSION ]
  | DESCRIPTION = { 'text' | @text_variable }
  | NAME = { backup_set_name | @backup_set_name_var }
  | CREDENTIAL
@@ -355,8 +355,9 @@ Copy-only backups should be used in situations in which a backup is taken for a 
 
 For more information, see [Copy-Only Backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-#### { COMPRESSION | NO_COMPRESSION }    
-In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
+#### <a name="compression"></a>[ COMPRESSION [ ALGORITHM = ( { MS_XPRESS | accelerator_algorithm } ) ] | NO_COMPRESSION ]
+ 
+Specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
 
 At installation, the default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
@@ -367,6 +368,12 @@ Explicitly enables backup compression.
 
 NO_COMPRESSION    
 Explicitly disables backup compression.
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. The default is `MS_XPRESS`. If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md, the following example completes the back up with the accelerator solution, with QATzip library using `QZ_DEFLATE` with the compression level 1.
+
+```sql
+BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE) 
+```
 
 #### DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }    
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
@@ -1225,7 +1232,7 @@ Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and
 
 **Before you begin**, see "Acquire and Configure a Backup Server" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-There are two types of backups in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A *full database backup* is a backup of an entire [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. A *differential database backup* only includes changes made since the last full backup. A backup of a user database includes database users, and database roles. A backup of the master database includes logins.
+There are two types of backups in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A *full database backup* is a backup of an entire [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. A *differential database backup* only includes changes made since the last full backup. A backup of a user database includes database users, and database roles. A backup of the `master` database includes logins.
 
 For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
@@ -1253,10 +1260,10 @@ BACKUP DATABASE database_name
 ## Arguments
 
 #### *database_name*
-The name of the database on which to create a backup. The database can be the master database or a user database.
+The name of the database on which to create a backup. The database can be the `master` database or a user database.
 
 #### TO DISK = '\\\\*UNC_path*\\*backup_directory*'    
-The network path and directory to which [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will write the backup files. For example, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+The network path and directory to which [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will write the backup files. For example, `\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup`.
 
 - The path to the backup directory name must already exist and must be specified as a fully qualified universal naming convention (UNC) path.
 - The backup directory, *backup_directory*, must not exist before running the backup command. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the backup directory.
@@ -1274,7 +1281,7 @@ Specifies the name of the backup. The backup name can be different from the data
 
 - Names can have a maximum of 128 characters.
 - Cannot include a path.
-- Must begin with a letter or number character or an underscore (_). Special characters permitted are the underscore (\_), hyphen (-), or space ( ). Backup names cannot end with a space character.
+- Must begin with a letter or number character or an underscore (`_`). Special characters permitted are the underscore (`_`), hyphen (-), or space ( ). Backup names cannot end with a space character.
 - The statement will fail if *backup_name* already exists in the specified location.
 
 This name is stored in the metadata, and will be displayed when the backup header is restored with RESTORE HEADERONLY.
@@ -1290,7 +1297,7 @@ For example:
 
 ## Permissions
 
-Requires the `BACKUP DATABASE` permission or membership in the **db_backupoperator** fixed database role. The master database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The master database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.
+Requires the `BACKUP DATABASE` permission or membership in the **db_backupoperator** fixed database role. The `master` database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The `master` database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.
 
 Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. To add these network credentials to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.
 
@@ -1326,7 +1333,7 @@ Full backups and differential backups are stored in separate directories. Naming
 ::: moniker range=">=aps-pdw-2016"
 ## Limitations and Restrictions
 
-You cannot perform a differential backup of the master database. Only full backups of the master database are supported.
+You cannot perform a differential backup of the `master` database. Only full backups of the `master` database are supported.
 
 The backup files are stored in a format suitable only for restoring the backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance by using the [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) statement.
 
@@ -1400,7 +1407,7 @@ EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';
 
 ### C. Create a full backup of a user database
 
-The following example creates a full backup of the Invoices user database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `Invoices2013` directory and will save the backup files to the `\\10.192.63.147\backups\yearly\Invoices2013Full` directory.
+The following example creates a full backup of the Invoices user database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `Invoices2013` directory and will save the backup files to the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` directory.
 
 ```sql
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
@@ -1408,7 +1415,7 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
 
 ### D. Create a differential backup of a user database
 
-The following example creates a differential backup, which includes all changes made since the last full backup of the Invoices database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory to which it will store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
+The following example creates a differential backup, which includes all changes made since the last full backup of the `Invoices` database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory to which it will store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
 
 The differential backup will only run successfully if the last full backup of Invoices completed successfully.
 
@@ -1420,7 +1427,7 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
 
 ### E. Create a full backup of the master database
 
-The following example creates a full backup of the `master` database and stores it in the directory '\\\10.192.63.147\backups\2013\daily\20130722\master'.
+The following example creates a full backup of the `master` database and stores it in the directory `\\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master`, where IP is a network IP address.
 
 ```sql
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';

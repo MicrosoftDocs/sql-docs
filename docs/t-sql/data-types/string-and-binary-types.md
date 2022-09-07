@@ -1,21 +1,17 @@
 ---
+title: "String and Binary Types"
 description: "String and Binary Types"
-title: "String and Binary Types | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data types [SQL Server]"
-  - "LOB data [SQL Server]"
-ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/23/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data types [SQL Server]"
+  - "LOB data [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # String and Binary Types
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,21 +1,15 @@
 ---
+title: "registerOutParameter Method (SQLServerCallableStatement)"
 description: "registerOutParameter Method (SQLServerCallableStatement)"
-title: "registerOutParameter Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.registerOutParameter"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.registerOutParameter"
+apitype: "Assembly"
 ---
 # registerOutParameter Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

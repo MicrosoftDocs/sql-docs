@@ -1,14 +1,13 @@
 ---
 title: Configurable retry logic core APIs in SqlClient
 description: Learn how to use the configurable retry logic core APIs to implement custom retry logic in your application with Microsoft.Data.SqlClient.
-ms.date: 03/22/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-deshtehari
+ms.date: 03/22/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Configurable retry logic core APIs in SqlClient
 

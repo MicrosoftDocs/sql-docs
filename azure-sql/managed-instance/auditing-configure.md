@@ -1,18 +1,16 @@
 ---
 title: SQL Managed Instance auditing
 description: Learn how to get started with Azure SQL Managed Instance auditing using T-SQL
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
-f1_keywords: 
-  - "mi.azure.sqlaudit.general.f1"
 author: sravanisaluru
 ms.author: srsaluru
-ms.date: "03/25/2022"
 ms.reviewer: vanto
+ms.date: "03/25/2022"
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=1
+f1_keywords:
+  - "mi.azure.sqlaudit.general.f1"
 ---
 # Get started with Azure SQL Managed Instance auditing
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

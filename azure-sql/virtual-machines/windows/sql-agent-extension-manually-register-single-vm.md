@@ -1,21 +1,18 @@
 ---
 title: Register with SQL IaaS Extension (Windows)
-description: Learn how to register your SQL Server on Windows Azure VM with the SQL IaaS Agent extension to enable Azure features, as well as for compliance, and improved manageability. 
-services: virtual-machines-windows
-documentationcenter: na
+description: Learn how to register your SQL Server on Windows Azure VM with the SQL IaaS Agent extension to enable Azure features, as well as for compliance, and improved manageability.
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021
-ms.author: adbadram
-ms.reviewer: mathoma 
-ms.custom: devx-track-azurecli, devx-track-azurepowershell, contperf-fy21q2
-
-
+ms.custom:
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - contperf-fy21q2
+tags: azure-resource-manager
 ---
 # Register Windows SQL Server VM with SQL IaaS Extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

@@ -1,20 +1,15 @@
 ---
 title: "Checklist: Best practices & guidelines"
 description: Provides a quick checklist to review your best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 03/22/2022
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/22/2022
-ms.author: pamela
 ms.custom: contperf-fy21q3
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Checklist: Best practices for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 dev_langs:
   - "TSQL"
-ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

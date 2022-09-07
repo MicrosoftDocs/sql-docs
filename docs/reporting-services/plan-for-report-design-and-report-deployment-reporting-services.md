@@ -103,7 +103,7 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
 |ReportViewer control in product|Version of RDL for local preview|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010|2008 RDL|  
 |[!INCLUDE[vsprvs2005](../includes/vsprvs2005-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs2008](../includes/vsprvs2008-md.md)]|2005 RDL|  
   
  For more information, see the following:  

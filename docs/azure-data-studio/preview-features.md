@@ -1,14 +1,12 @@
 ---
 title: Preview features in Azure Data Studio
 description: Learn more about Azure Data Studio preview features and how to enable and use them.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-ms.custom:
 ms.date: 10/14/2020
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Preview features in Azure Data Studio
@@ -45,46 +43,24 @@ You can enable or disable preview features anytime in your Settings.
 * Backup / Restore
 * Deployments
     * SQL Edge
-    * SQL Server Big Data Cluster
-    * SQL Server container image
-    * SQL Server on Windows
 * Feature tour
-* SQLCMD mode
-* New Welcome page
 
 ### Notebook features in preview
 
 * Dotnet interactive support
-* Markdown toolbar
-* New Notebook toolbar
-* Notebook kernels
-    * Kusto
-    * PowerShell
-    * PySpark
-    * Python
-    * Spark | Scala
-    * Spark | R
-    * SQL
-* Open Notebook from browser
-* Pinned Notebooks
-* Python dependencies wizard
 
 ### First-party extensions in preview
 
-* Admin Pack for SQL Server
 * Azure Monitor Logs
 * Azure SQL Edge Deployment
-* Azure Synapse Analytics Insights
 * Central Management Servers
 * Cosmos
 * Database Administration Tool Extensions for Windows
 * Database Migration Assessment for Oracle
 * Kusto
-* Machine Learning
 * Managed Instance Dashboard
 * Oracle
 * PostgreSQL
-* PowerShell
 * Query History
 * SandDance for Azure Data Studio
 * Server Reports

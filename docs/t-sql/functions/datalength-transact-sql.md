@@ -3,13 +3,10 @@ title: "DATALENGTH (Transact-SQL)"
 description: "DATALENGTH (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/20/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DATALENGTH_TSQL"
   - "DATALENGTH"

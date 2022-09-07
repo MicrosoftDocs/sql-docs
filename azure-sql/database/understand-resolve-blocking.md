@@ -2,17 +2,15 @@
 title: Understand and resolve Azure SQL blocking problems
 titleSuffix: Azure SQL Database
 description: An overview of Azure SQL database-specific topics on blocking and troubleshooting.
-services:
-  - "sql-database"
-dev_langs:
-  - "TSQL"
-ms.service: sql-database
-ms.subservice: performance
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 4/8/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
+dev_langs:
+  - "TSQL"
 ---
 # Understand and resolve Azure SQL Database blocking problems
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,14 +1,12 @@
 ---
 title: Make predictions with Machine Learning extension
 description: Learn how to use Machine Learning extension for Azure Data Studio to make predictions with an ONNX model in your database.
+author: rothja
+ms.author: jroth
+ms.date: 06/09/2020
 ms.prod: azure-data-studio
 ms.technology: machine-learning
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-ms.reviewer:
-ms.custom: 
-ms.date: 06/09/2020
 ---
 
 # Make predictions with Machine Learning extension for Azure Data Studio (Preview)
@@ -28,7 +26,7 @@ Learn how to use the [Machine Learning extension for Azure Data Studio](machine-
 
 Follow the steps below to use an ONNX model to make predictions.
 
-1. Select on **Make predictions**.
+1. Select **Make predictions**.
 
 1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, select **Yes**.
 

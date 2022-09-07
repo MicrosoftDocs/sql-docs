@@ -23,7 +23,7 @@ After you determine the size, you must provide disk space sufficient to hold the
 A good starting point for sizing storage for this area is to reserve four times the size of durable, in-memory tables. Monitor the space usage and be prepared to expand the storage that's available to it if necessary.
   
 ## Storage IOPS  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can significantly increase your workload throughput. Therefore, it is important to ensure that IO is not a bottleneck.  
+ [!INCLUDE[inmemory](../../includes/inmemory-md.md)] can significantly increase your workload throughput. Therefore, it is important to ensure that IO is not a bottleneck.  
   
 -   When migrating disk-based tables to memory-optimized tables, make sure that the transaction log is on a storage media that can support increased transaction log activity. For example, if your storage media supports transaction log operations at 100 MB/sec, and memory-optimized tables result in five times greater performance, the transaction log's storage media must be able to also support five times performance improvement, to prevent the transaction log activity from becoming a performance bottleneck.  
   

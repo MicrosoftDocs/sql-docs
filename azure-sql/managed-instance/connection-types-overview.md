@@ -1,15 +1,14 @@
 ---
 title: Connection types
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance connection types
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: connect
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: vanto
-ms.date: 12/01/2021 
+ms.date: 12/01/2021
+ms.service: sql-managed-instance
+ms.subservice: connect
+ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ---
 

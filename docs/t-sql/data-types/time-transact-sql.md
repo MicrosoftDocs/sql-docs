@@ -1,27 +1,23 @@
 ---
+title: "time (Transact-SQL)"
 description: "time (Transact-SQL)"
-title: "time (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 06/07/2017
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "time_TSQL"
   - "time"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "time [SQL Server]"
   - "date and time [SQL Server], time"
   - "data types [SQL Server], date and time"
   - "time data type [SQL Server]"
-ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # time (Transact-SQL)

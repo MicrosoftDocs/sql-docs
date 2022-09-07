@@ -7,7 +7,7 @@ ms.date: 09/06/2022
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: subject-monitoring
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi || = azuresql-vm"
 ---
 
 # Monitor your SQL deployments with SQL Insights (preview)

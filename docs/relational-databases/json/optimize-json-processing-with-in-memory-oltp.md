@@ -90,7 +90,7 @@ CREATE TABLE xtp.Product(
 	Data nvarchar(4000),
 
 	MadeIn AS CAST(JSON_VALUE(Data, '$.MadeIn') as NVARCHAR(50)) PERSISTED,
-	Cost   AS CAST(JSON_VALUE(Data, '$.ManufacturingCost') as float)
+	Cost   AS CAST(JSON_VALUE(Data, '$.ManufacturingCost') as float) PERSISTED
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```

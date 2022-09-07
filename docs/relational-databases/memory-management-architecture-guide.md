@@ -374,6 +374,5 @@ Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[s
 - [Writing Pages](../relational-databases/writing-pages.md)
 - [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)
 - [Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
-- [Troubleshoot out of memory or low memory issues in SQL Server](../troubleshoot/sql/performance/troubleshoot-memory-issues.md)
+- [Troubleshoot out of memory or low memory issues in SQL Server](/troubleshoot/sql/performance/troubleshoot-memory-issues.md)
 - [Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)
-

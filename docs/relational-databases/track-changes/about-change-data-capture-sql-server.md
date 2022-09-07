@@ -33,7 +33,7 @@ A good example of a data consumer that this technology targets is an extraction,
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
-To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
+To learn about Change Data Capture, you can also refer to this Data Exposed episode:
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Performance considerations

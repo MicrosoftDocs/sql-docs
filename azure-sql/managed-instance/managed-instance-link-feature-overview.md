@@ -45,9 +45,8 @@ You'll also need the following tooling:
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
-> SQL Managed Instance link feature is available in all public Azure regions. 
->
-> National clouds are currently not supported.
+> SQL Managed Instance link feature is available in all public Azure regions.
+> National cloud support is provided for Azure for US Government only, and no other national clouds at this time.
 
 ## Overview
 

@@ -57,7 +57,7 @@ In this step, you will create a new Azure SQL Database logical server and a new 
 
 1. Browse to the [Select SQL deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
 1. If you are not already signed in to Azure portal, sign in when prompted.
-1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
+1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**. 
 
    :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Add to Azure SQL":::
 

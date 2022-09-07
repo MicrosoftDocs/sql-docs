@@ -1,16 +1,12 @@
 ---
 title: Data source sample
 description: This sample demonstrates how to connect to SQL Server and retrieve data by using a stored procedure.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Data source sample

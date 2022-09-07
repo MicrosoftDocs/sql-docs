@@ -1,15 +1,15 @@
 ---
-title: 'AD mode deployment becomes unresponsive: sparkhead pods'
+title: "AD mode deployment becomes unresponsive: sparkhead pods"
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy sparkhead pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: wiassaf
 ms.date: 06/17/2022
-ms.custom: kr2b-contr-experiment
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: troubleshooting
+ms.custom: kr2b-contr-experiment
 ---
 
 # Active Directory mode deployment becomes unresponsive: sparkhead pods

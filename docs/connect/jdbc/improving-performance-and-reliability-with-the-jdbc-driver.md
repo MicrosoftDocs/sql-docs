@@ -1,16 +1,12 @@
 ---
 title: Improving performance and reliability
 description: Learn about various techniques for improving application performance and reliability when using the Microsoft JDBC driver for SQL Server.
-ms.custom: ""
-ms.date: 01/12/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 01/12/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Improving performance and reliability (JDBC)

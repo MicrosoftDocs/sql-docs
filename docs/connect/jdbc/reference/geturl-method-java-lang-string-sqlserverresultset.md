@@ -1,21 +1,15 @@
 ---
+title: "getURL Method (java.lang.String) (SQLServerResultSet)"
 description: "getURL Method (java.lang.String) (SQLServerResultSet)"
-title: "getURL Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getURL (java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getURL (java.lang.String)"
+apitype: "Assembly"
 ---
 # getURL Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

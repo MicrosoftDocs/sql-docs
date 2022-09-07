@@ -1,21 +1,15 @@
 ---
+title: "getSuperTypes Method (SQLServerDatabaseMetaData)"
 description: "getSuperTypes Method (SQLServerDatabaseMetaData)"
-title: "getSuperTypes Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getSuperTypes"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getSuperTypes"
+apitype: "Assembly"
 ---
 # getSuperTypes Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

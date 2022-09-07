@@ -2,15 +2,13 @@
 title: What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?
 titleSuffix: Azure SQL Managed Instance
 description: Learn about Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: overview
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: overview
 ---
 
 # What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? 

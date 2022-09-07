@@ -1,16 +1,12 @@
 ---
 title: National character set support
 description: Learn how to support national character set conversions in the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # National character set support
 

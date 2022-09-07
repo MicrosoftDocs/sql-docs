@@ -1,17 +1,14 @@
 ---
 title: Fail over a database with the link via T-SQL & PowerShell scripts
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use Transact-SQL and PowerShell scripts to fail over a database from SQL Server to SQL Managed Instance by using the Managed Instance link. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: 
-ms.devlang: 
-ms.topic: guide
+description: Learn how to use Transact-SQL and PowerShell scripts to fail over a database from SQL Server to SQL Managed Instance by using the Managed Instance link.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 07/04/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: guide
 ---
 
 # Failover (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 

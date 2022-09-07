@@ -1,19 +1,15 @@
 ---
 title: "REST API: Sync between multiple databases"
 description: Use a REST API example script to sync between multiple databases.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: sql-data-sync
-ms.custom:
-  - "sqldbrb=1"
-ms.devlang:
-  - "rest-api"
-ms.topic: sample
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
+ms.service: sql-database
+ms.subservice: sql-data-sync
+ms.topic: sample
+ms.custom: sqldbrb=1
+ms.devlang: rest-api
 ---
 
 # Use REST API to sync data between multiple databases 

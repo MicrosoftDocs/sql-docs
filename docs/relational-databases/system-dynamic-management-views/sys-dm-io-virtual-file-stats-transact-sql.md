@@ -50,7 +50,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+ **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
  ID of the database. *database_id* is int, with no default. Valid inputs are the ID number of a database or NULL. When NULL is specified, all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
 ID of the file. *file_id* is int, with no default. Valid inputs are the ID number of a file or NULL. When NULL is specified, all files on the database are returned.  
   
@@ -95,7 +95,7 @@ The counters are initialized to empty whenever the SQL Server (MSSQLSERVER) serv
 
 ### A. Return statistics for a log file
 
-**Applies to:** SQL Server (starting with 2008), Azure SQL Database
+**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
  The following example returns statistics for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   

@@ -1,21 +1,15 @@
 ---
+title: "setBigDecimal Method (SQLServerPreparedStatement)"
 description: "setBigDecimal Method (SQLServerPreparedStatement)"
-title: "setBigDecimal Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.setBigDecimal"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.setBigDecimal"
+apitype: "Assembly"
 ---
 # setBigDecimal Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

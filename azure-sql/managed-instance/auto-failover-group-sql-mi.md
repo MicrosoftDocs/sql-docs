@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: "azure-sql-split"
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
 ms.date: 07/08/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)

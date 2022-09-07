@@ -10,7 +10,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "9017 (Database Engine error)"
 author: pijocoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_9017
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

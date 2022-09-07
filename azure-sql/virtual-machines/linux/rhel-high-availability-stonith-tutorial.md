@@ -1,12 +1,11 @@
 ---
-title: Configure availability groups for SQL Server on RHEL virtual machines in Azure - Linux virtual machines | Microsoft Docs
+title: Configure availability groups for SQL Server on RHEL virtual machines in Azure - Linux virtual machines
 description: Learn about setting up high availability in an RHEL cluster environment and set up STONITH
-ms.service: virtual-machines-sql
-ms.subservice: 
-ms.topic: tutorial
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/25/2020
+ms.service: virtual-machines-sql
+ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on RHEL virtual machines in Azure 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

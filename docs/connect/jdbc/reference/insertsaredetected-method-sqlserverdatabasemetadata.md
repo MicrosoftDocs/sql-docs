@@ -1,21 +1,15 @@
 ---
+title: "insertsAreDetected Method (SQLServerDatabaseMetaData)"
 description: "insertsAreDetected Method (SQLServerDatabaseMetaData)"
-title: "insertsAreDetected Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.insertsAreDetected"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.insertsAreDetected"
+apitype: "Assembly"
 ---
 # insertsAreDetected Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

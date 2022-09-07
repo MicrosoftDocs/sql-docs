@@ -8,7 +8,7 @@ ms.date: 03/24/2021
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 ---
 # Use Resource Health to troubleshoot connectivity for Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

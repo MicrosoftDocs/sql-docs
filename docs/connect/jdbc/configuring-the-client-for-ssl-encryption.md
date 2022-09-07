@@ -1,16 +1,13 @@
 ---
 title: Configuring the client for encryption
 description: Learn about client-side encryption and certificate trust to ensure the security of clients using the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 03/31/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: vanto
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-davidengel
+ms.reviewer: vanto
+ms.date: 03/31/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Configuring the client for encryption
 

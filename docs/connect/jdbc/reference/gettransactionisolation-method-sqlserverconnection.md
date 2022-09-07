@@ -1,21 +1,15 @@
 ---
+title: "getTransactionIsolation Method (SQLServerConnection)"
 description: "getTransactionIsolation Method (SQLServerConnection)"
-title: "getTransactionIsolation Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.getTransactionIsolation"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.getTransactionIsolation"
+apitype: "Assembly"
 ---
 # getTransactionIsolation Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

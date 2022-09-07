@@ -1,16 +1,12 @@
 ---
+title: "getDateTimeOffset Method (SQLServerCallableStatement)"
 description: "getDateTimeOffset Method (SQLServerCallableStatement)"
-title: "getDateTimeOffset Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getDateTimeOffset Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "execute Method (java.lang.String, int[])"
 description: "execute Method (java.lang.String, int[])"
-title: "execute Method (java.lang.String, int[]) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/07/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.execute (javal.lang.String.int[])"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "02/07/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.execute (javal.lang.String.int[])"
+apitype: "Assembly"
 ---
 # execute Method (java.lang.String, int[])
 

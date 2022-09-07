@@ -1,21 +1,15 @@
 ---
+title: "getGeneratedKeys Method (SQLServerStatement)"
 description: "getGeneratedKeys Method (SQLServerStatement)"
-title: "getGeneratedKeys Method (SQLServerStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.getGeneratedKeys"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.getGeneratedKeys"
+apitype: "Assembly"
 ---
 # getGeneratedKeys Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

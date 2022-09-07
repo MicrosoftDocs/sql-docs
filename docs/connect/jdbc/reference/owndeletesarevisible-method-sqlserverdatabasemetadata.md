@@ -1,21 +1,15 @@
 ---
+title: "ownDeletesAreVisible Method (SQLServerDatabaseMetaData)"
 description: "ownDeletesAreVisible Method (SQLServerDatabaseMetaData)"
-title: "ownDeletesAreVisible Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.ownDeletesAreVisible"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.ownDeletesAreVisible"
+apitype: "Assembly"
 ---
 # ownDeletesAreVisible Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

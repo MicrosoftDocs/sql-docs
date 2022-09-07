@@ -8,8 +8,8 @@ ms.date: 12/12/2018
 ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
-ms.devlang: "cpp"
+ms.custom: sqldbrb=1
+ms.devlang: cpp
 ---
 # Connect to SQL Database using C and C++
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -78,7 +78,7 @@ Congratulations! You have now successfully connected to Azure SQL using C++ and 
 
 ## <a id="Linux"></a>Step 5: Connecting from a Linux C/C++ application
 
-In case you haven't heard the news yet, Visual Studio now allows you to develop C++ Linux application as well. You can read about this new scenario in the [Visual C++ for Linux Development](https://blogs.msdn.microsoft.com/vcblog/20../../visual-c-for-linux-development/) blog. To build for Linux, you need a remote machine where your Linux distro is running. If you don't have one available, you can set one up quickly using [Linux Azure Virtual machines](/azure/virtual-machines/linux/quick-create-cli?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+In case you haven't heard the news yet, Visual Studio now allows you to develop C++ Linux application as well. You can read about this new scenario in the [Visual C++ for Linux Development](https://blogs.msdn.microsoft.com/vcblog/20../../visual-c-for-linux-development/) blog. To build for Linux, you need a remote machine where your Linux distro is running. If you don't have one available, you can set one up quickly using [Linux Azure Virtual machines](/azure/virtual-machines/linux/quick-create-cli?toc=/azure/virtual-machines/linux/toc.json).
 
 For this tutorial, let us assume that you have an Ubuntu 16.04 Linux distribution set up. The steps here should also apply to Ubuntu 15.10, Red Hat 6, and Red Hat 7.
 

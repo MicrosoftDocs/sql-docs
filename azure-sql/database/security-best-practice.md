@@ -454,7 +454,7 @@ Encryption can be used as a way to ensure that only specific application users w
 - Use Cell-level Encryption (CLE). See the article, [Encrypt a Column of Data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) for details.
 - Use Always Encrypted, but be aware of its limitation. The limitations are listed below.
 
-**Best practices**
+**Best practices**:
 
 When using CLE:
 

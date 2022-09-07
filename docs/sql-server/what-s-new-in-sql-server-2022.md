@@ -40,7 +40,7 @@ This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
 - On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For SQL Server 2022 Preview on Linux, packages are coming soon. For information about Community Technology Preview (CTP) packages, you can see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- For SQL Server 2022 Preview on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
@@ -51,12 +51,12 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Query Store](#query-store-and-intelligent-query-processing)
+- [Intelligent query processing](#query-store-and-intelligent-query-processing)
   - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
-  - Snapshot backups
+  - Improved snapshot backup support
 - [Platform](#platform)
-  - Integrated offloading & acceleration
+  - Integrated acceleration & offloading
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
@@ -143,7 +143,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-|Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated offloading & acceleration](../relational-databases/integrated-acceleration/overview.md). |
+|Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. |
 
 ## Language

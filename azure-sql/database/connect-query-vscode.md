@@ -12,7 +12,7 @@ ms.topic: quickstart
 ms.custom:
   - "sqldbrb=2"
   - "mode-ui"
-keywords: "connect to sql database"
+keywords: connect to sql database
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Use Visual Studio Code to connect and query 

@@ -8,7 +8,7 @@ ms.date: 02/11/2019
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 keywords:
   - "database migration"
   - "sql server database migration"

@@ -208,8 +208,6 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 
 | Area | Unsupported feature or service |
 |-----|-----|
-| **Azure support** | Azure Arc agent |
-| | Azure Synapse Link |
 | **Data governance** | Microsoft Purview integration |
 | **Database engine** | Merge replication |
 | | Stretch DB |
@@ -224,12 +222,10 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 | | Alerts |
 | | Managed Backup |
 | **High Availability** | Database mirroring |
-| | Distributed availability groups: changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` |
 | | Distributed availability groups: multiple TCP connections |
 | **Security** | Extensible Key Management (EKM) |
 | | Windows integrated authentication for linked servers |
 | | Windows integrated authentication for availability group (AG) endpoints |
-| | Azure Active Directory authentication |
 | | Always Encrypted with secure enclaves |
 | | TLS 1.3 |
 | **Services** | SQL Server Browser |

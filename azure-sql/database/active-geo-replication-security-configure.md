@@ -8,7 +8,7 @@ ms.date: 12/18/2018
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Configure and manage Azure SQL Database security for geo-restore or failover
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

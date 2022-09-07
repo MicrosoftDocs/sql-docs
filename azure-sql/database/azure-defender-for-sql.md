@@ -8,7 +8,7 @@ ms.date: 06/15/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Microsoft Defender for SQL

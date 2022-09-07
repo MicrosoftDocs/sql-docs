@@ -1,17 +1,15 @@
 ---
 title: "Performance counters in SqlClient"
 description: Use Microsoft SqlClient Data Provider for SQL Server performance counters to monitor your application status and its connection resources by using Windows Performance Monitor or programmatically in .NET Framework.
-ms.date: "12/04/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "12/04/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Performance counters in SqlClient
 

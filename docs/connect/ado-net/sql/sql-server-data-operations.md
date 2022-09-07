@@ -1,15 +1,13 @@
 ---
 title: "SQL Server data operations in ADO.NET"
 description: "Describes how to work with data in SQL Server. Contains sections about bulk copy operations, MARS, asynchronous operations, and table-valued parameters."
-ms.date: "08/15/2019"
-ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server data operations in ADO.NET
 

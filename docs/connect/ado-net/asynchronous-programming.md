@@ -1,14 +1,12 @@
 ---
 title: Asynchronous programming
 description: Learn about asynchronous programming in the Microsoft SqlClient Data Provider for SQL Server.
-ms.date: 12/04/2020
-ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 12/04/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Asynchronous programming
 

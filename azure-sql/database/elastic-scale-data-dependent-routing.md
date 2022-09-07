@@ -8,7 +8,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Use data-dependent routing to route a query to an appropriate database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

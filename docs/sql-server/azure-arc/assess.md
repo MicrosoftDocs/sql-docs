@@ -12,10 +12,8 @@ ms.topic: conceptual
 
 SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an instance of SQL Server on Azure Arc-enabled servers.
 
- > [!NOTE]
-  > The environment health assessment will soon be upgraded to a much richer SQL Server Best Practice Assessmnet (SQL BPA). At that point, you may have to re-configure the SQL BPA assessment and continue to get SQL Server assessments.  You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytical workspace used by Environmnet Health assessments.  You can also query and export the previous assessmnets data into Excel, steps here [Integrate Log Analytics and Excel](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-excel)
-
-
+> [!NOTE]
+> The environment health assessment will soon be upgraded to a much richer SQL Server Best Practice Assessment (SQL BPA). At that point, you may have to re-configure the SQL BPA assessment and continue to get SQL Server assessments.  You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytical workspace used by Environment Health assessments.  You can also query and export the previous assessments data into Excel. See the steps at [Integrate Log Analytics and Excel](/azure/azure-monitor/logs/log-excel)
 
 ## Prerequisites
 

@@ -39,17 +39,19 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
     - (2) Shows a list of all Private Endpoint Connections (PECs)
     - (3) Corresponding Private Endpoint (PE) created
     
-:::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot of all PECs." lightbox="media/private-endpoint/pec-list-before.png":::
+   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot of all PECs." lightbox="media/private-endpoint/pec-list-before.png":::
 
 1. Select an individual PEC from the list by selecting it.
-:::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot selected PEC." lightbox="media/private-endpoint/pec-select.png":::
+
+   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot selected PEC." lightbox="media/private-endpoint/pec-select.png":::
 
 1. The SQL admin can choose to approve or reject a PEC and optionally add a short text response.
-:::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot of PEC approval." lightbox="media/private-endpoint/pec-approve.png":::
+
+   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot of PEC approval." lightbox="media/private-endpoint/pec-approve.png":::
 
 1. After approval or rejection, the list will reflect the appropriate state along with the response text.
 
-:::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot of all PECs after approval." lightbox="media/private-endpoint/pec-list-after.png":::
+   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot of all PECs after approval." lightbox="media/private-endpoint/pec-list-after.png":::
 
 1. Finally selecting the private endpoint name 
    :::image type="content" source="media/private-endpoint/pec-click.png" alt-text="Screenshot of PEC details." lightbox="media/private-endpoint/pec-click.png":::   
@@ -72,7 +74,7 @@ First, ensure that your private endpoint connections are enabled and configured.
 1. Go to the **Networking** page of your logical server.
 1. Select the **Deny public network access** checkbox.
 
-:::image type="content" source="./media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows selecting the Deny public network access option." lightbox="./media/private-endpoint/pec-deny-public-access.png":::
+   :::image type="content" source="./media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows selecting the Deny public network access option." lightbox="./media/private-endpoint/pec-deny-public-access.png":::
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
 

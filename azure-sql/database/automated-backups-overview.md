@@ -218,7 +218,7 @@ Updating the backup storage redundancy for an existing database applies the chan
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
 
 > [!NOTE]
-> Long-term retention for Hyperscale service tier databases is currently in preview.
+> Long-term retention for Hyperscale databases is currently in preview.
 
 ## Backup storage costs
 

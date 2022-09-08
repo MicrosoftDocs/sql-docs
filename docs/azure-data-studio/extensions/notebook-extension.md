@@ -1,9 +1,9 @@
 ---
 title: Create a Jupyter Notebook extension
 description: Learn about how to package notebooks into an extension by using the extension generator.
-author: yualan
-ms.author: alayu
-ms.reviewer: alayu, maghan
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: erinstellato
 ms.date: 08/28/2020
 ms.prod: azure-data-studio
 ms.topic: conceptual

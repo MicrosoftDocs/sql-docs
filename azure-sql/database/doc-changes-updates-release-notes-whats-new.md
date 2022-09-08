@@ -75,7 +75,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | --- | --- |
 | **128 vCore** | It's now possible to provision your Azure SQL Database with up to 128 vCores in both the General Purpose, and Business Critical service tiers. See [resource limits](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) to learn more. | 
 | **Gen5 rename** | The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**. | 
-
+| **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your auto-failover group for a single database across subscriptions by using Azure PowerShell. To learn more, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db&preserve-view=true#create-failover-group). |
 
 
 ### August 2022

@@ -24,13 +24,13 @@ You can create the resource group for Azure SQL Database ahead of time or while 
 
 To create a server using the [Azure portal](https://portal.azure.com), create a new [server](logical-servers.md) resource from Azure Marketplace. Alternatively, you can create the server when you deploy an Azure SQL Database.
 
-  ![create server](./media/single-database-manage/create-logical-sql-server.png)
+  :::image type="content" source="./media/single-database-manage/create-logical-sql-server.png" alt-text="create server":::
 
 ### Create a blank or sample database
 
 To create a single Azure SQL Database using the [Azure portal](https://portal.azure.com), choose the Azure SQL Database resource in Azure Marketplace. You can create the resource group and server ahead of time or while creating the single database itself. You can create a blank database or create a sample database based on Adventure Works LT.
 
-  ![create database-1](./media/single-database-manage/create-database-1.png)
+  :::image type="content" source="./media/single-database-manage/create-database-1.png" alt-text="create database-1":::
 
 > [!IMPORTANT]
 > For information on selecting the pricing tier for your database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
@@ -41,7 +41,7 @@ To manage an existing server, navigate to the server using a number of methods -
 
 To manage an existing database, navigate to the **SQL databases** page and select the database you wish to manage. The following screenshot shows how to begin setting a server-level firewall for a database from the **Overview** page for a database.
 
-   ![server firewall rule](./media/single-database-manage/server-firewall-rule.png)
+   :::image type="content" source="./media/single-database-manage/server-firewall-rule.png" alt-text="server firewall rule":::
 
 > [!IMPORTANT]
 > To configure performance properties for a database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).

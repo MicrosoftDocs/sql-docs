@@ -80,6 +80,7 @@ The following example creates a named replica `WideWorldImporters_NamedReplica` 
 2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
     :::image type="content" source="./media/named-replicas-configure-portal\azure-create-named-replicas.png" alt-text="Screenshot that shows create named replica step.":::
+
 3. Choose Named replica under Replica configuration, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
 
     :::image type="content" source="./media/named-replicas-configure-portal/azure-choose-named-replica.png" alt-text="Screenshot that shows configuration of named replica.":::
@@ -136,14 +137,19 @@ Open named replica database page, and then select **Compute + storage**. Update 
 :::image type="content" source="./media/named-replicas-configure-portal/azure-update-named-replica.png" alt-text="Screenshot that shows named replica service level objective update.":::
 
 # [T-SQL](#tab/tsql)
+
 ```sql
 ALTER DATABASE [WideWorldImporters_NamedReplica] MODIFY (SERVICE_OBJECTIVE = 'HS_Gen5_4')
 ```
+
 # [PowerShell](#tab/azure-powershell)
+
 ```azurepowershell
 Set-AzSqlDatabase -ResourceGroup "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters_NamedReplica" -RequestedServiceObjectiveName "HS_Gen5_4"
 ```
+
 # [Azure CLI](#tab/azure-cli)
+
 ```azurecli
 az sql db update -g MyResourceGroup -s contosoeast -n WideWorldImporters_NamedReplica --service-objective HS_Gen5_4
 ```

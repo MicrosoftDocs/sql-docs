@@ -36,13 +36,13 @@ The following steps show you how to connect to your virtual machine using a remo
 
 1. After deployment completes, go to the virtual machine resource.
 
-   ![Screenshot shows a virtual machine Overview page with a Connect button.](./media/database-import-export-azure-services-off/vm.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/vm.png" alt-text="Screenshot shows a virtual machine Overview page with a Connect button.":::
 
 2. Select **Connect**.
 
    A Remote Desktop Protocol file (.rdp file) form appears with the public IP address and port number for the virtual machine.
 
-   ![RDP form](./media/database-import-export-azure-services-off/rdp.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="RDP form":::
 
 3. Select **Download RDP File**.
 
@@ -73,11 +73,11 @@ The following steps create a server-level IP firewall rule for your virtual mach
 
 2. Copy this fully qualified server name to use when connecting to your server and its databases.
 
-   ![server name](./media/database-import-export-azure-services-off/server-name.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="server name":::
 
 3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
 
-   ![server-level IP firewall rule](./media/database-import-export-azure-services-off/server-firewall-rule.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
 
 4. Choose **Add client IP** on the toolbar to add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 

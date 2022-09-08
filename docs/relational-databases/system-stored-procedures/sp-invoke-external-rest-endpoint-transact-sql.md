@@ -118,6 +118,9 @@ sp_invoke_external_rest_endpoint will automatically inject the following headers
 
 If the same headers are also specied via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
 
+> [!WARNING]
+> If you are testing invocation of the REST endpoint also with other tools, like [curl](https://curl.se/) or any modern REST client, like [Postman](https://www.postman.com/) or [Innsomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by sp_invoke_external_rest_endpoint to have the same behavior and results.
+
 ### Allow-Listed Endpoints
 
 Only calls to endpoints in the following services are allowed:
@@ -190,13 +193,13 @@ WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 
 ---
 
-Database users who access a DATABASE SCOPED CREDENTIAL must have permission to use that credential.
-
 ### Credential name rules
 
 WIP
 
 ### Grant permissions to use credential
+
+Database users who access a DATABASE SCOPED CREDENTIAL must have permission to use that credential.
 
 To use the credential, a database user must have `REFERENCES` permission on a specific credential:
 

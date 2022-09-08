@@ -39,7 +39,7 @@ You can use SQL Database auditing to:
 
 ### Auditing limitations
 
-- **User managed identity** authentication type for enabling auditing to **storage** is not currently supported.
+- **User managed identity** authentication type for enabling auditing to **storage behind firewall** is not currently supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - /rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
@@ -132,8 +132,9 @@ You have the option of choosing a different storage destination for this auditin
 
 ### <a id="audit-storage-destination"></a>Audit to storage destination
 
-To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved, and then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
+To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved,you can use two storage authentication types i.e., managed identity and storage access keys.For managed identity, we support system and user managed identity. By default, it picks primary user identity that is assigned to the server, if there is no user identity then it will create system assigned identity and use it for authentication purpose .Then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
 
+ 
 > [!NOTE] 
 > If you are deploying from the Azure portal, be sure that the storage account is in the same region as your database and server. If you are deploying through other methods, the storage account can be in any region.
 

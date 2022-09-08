@@ -47,7 +47,7 @@ SERVERPROPERTY ( 'propertyname' )
 
 #### *propertyname*
 
-An expression that contains the property information to be returned for the server. *propertyname* can be one of the values below. Use of a *propertyname* that is invalid or not supported on that version of the Database Engine will return NULL.
+An expression that contains the property information to be returned for the server. *propertyname* can be one of the values below. Use of a *propertyname* that is invalid or not supported on that version of the Database Engine will return `NULL`.
 
 | Property | Values returned |
 | -------------- | -------------- |

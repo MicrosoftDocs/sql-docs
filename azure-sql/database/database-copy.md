@@ -45,7 +45,7 @@ If you use server level logins for data access and copy the database to a differ
 
 To copy a database by using the Azure portal, open the page for your database, and then choose **Copy** to open the **Create SQL Database - Copy database** page. Fill in the values for the target server where you want to copy your database to. 
 
-   ![Database copy](./media/database-copy/database-copy.png)
+   :::image type="content" source="./media/database-copy/database-copy.png" alt-text="Database copy":::
 
 ## Copy using PowerShell or the Azure CLI
 

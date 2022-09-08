@@ -81,6 +81,8 @@ Execution will return 0 if the HTTP call was done and the HTTP status code recei
 
 ## Remarks  
 
+### Response format
+
 Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the @response output parameter. @response contains a JSON document with the following schema: 
 
 ```json
@@ -102,6 +104,26 @@ Specifically:
 
 - *response*: a JSON object that contains the HTTP result and additional response metadata.
 - *result*: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (No Content).
+
+In the `response` section, aside the HTTP status code and description, the entire set of received response headers will be provided in the 'headers' object. The following is an example of the `response` section:
+
+```json
+"response": {
+  "status": {
+    "http": {
+      "code": 200,
+      "description": "OK"
+    }
+  },
+  "headers": {
+    "Date": "Thu, 08 Sep 2022 21:51:22 GMT",
+    "Content-Length": "1345",
+    "Content-Type": "application\/json; charset=utf-8",
+    "Server": "Kestrel",    
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    }
+  }
+```
 
 ### Limits
 

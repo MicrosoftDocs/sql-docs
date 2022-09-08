@@ -59,34 +59,34 @@ ALTER ROLE role_name
 
 ## Arguments
  *role_name*  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Managed Instance  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), Azure SQL Database, Azure SQL Managed Instance  
   
  Specifies the database role to change.  
   
  ADD MEMBER *database_principal*  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Managed Instance 
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), Azure SQL Database, Azure SQL Managed Instance 
   
  Specifies to add the database principal to the membership of a database role.  
   
 -   *database_principal* is a database user or a user-defined database role.  
   
--   *database_principal* cannot be a fixed database role or a server principal.  
+-   *database_principal* can't be a fixed database role or a server principal.  
   
 DROP MEMBER *database_principal*  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Managed Instance  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), Azure SQL Database, Azure SQL Managed Instance  
   
  Specifies to remove a database principal from the membership of a database role.  
   
 -   *database_principal* is a database user or a user-defined database role.  
   
--   *database_principal* cannot be a fixed database role or a server principal.  
+-   *database_principal* can't be a fixed database role or a server principal.  
   
 WITH NAME = *new_name*  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Managed Instance  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), Azure SQL Database, Azure SQL Managed Instance  
   
  Specifies to change the name of a user-defined database role. The new name must not already exist in the database.  
   
- Changing the name of a database role does not change ID number, owner, or permissions of the role.  
+ Changing the name of a database role doesn't change ID number, owner, or permissions of the role.  
   
 ## Permissions  
  To run this command you need one or more of these permissions or memberships:  
@@ -100,7 +100,7 @@ Additionally, to change the membership in a fixed database role you need:
 -   Membership in the **db_owner** fixed database role  
   
 ## Limitations and restrictions  
- You cannot change the name of a fixed database role.  
+ You can't change the name of a fixed database role.  
   
 ## Metadata  
  These system views contain information about database roles and database principals.  
@@ -112,7 +112,7 @@ Additionally, to change the membership in a fixed database role you need:
 ## Examples  
   
 ### A. Change the name of a database role  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Managed Instance  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), Azure SQL Database, Azure SQL Managed Instance  
   
  The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](../../samples/adventureworks-install-configure.md) sample database.
   
@@ -121,7 +121,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### B. Add or remove role members  
- **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Managed Instance  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), Azure SQL Database, Azure SQL Managed Instance  
   
  This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](../../samples/adventureworks-install-configure.md) sample database.
   
@@ -134,7 +134,7 @@ ALTER ROLE Sales DROP MEMBER Barry;
 ### C. Add a role member to special roles for Azure SQL Database
  **Applies to:** Azure SQL Database
   
-This example creates a SQL login in the virtual master database, creates a database user that's related to that server login, and adds the database user as a member of the special role `dbmanager`. The example allows the user permissions to create and drop databases on an Azure SQL Database logical server. Run the example on the virtual master database of the Azure SQL Database logical server.
+This example creates a SQL login in the virtual master database, creates a database user that's related to that server login, and adds the database user as a member of the special role `dbmanager`. The example allows the user permissions to create and drop databases on an Azure SQL Database logical server. Run the example in the virtual master database of the Azure SQL Database logical server.
 
   
 ```sql  

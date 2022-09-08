@@ -22,7 +22,7 @@ Each major version of the OLE DB Driver for SQL Server uses its own set of regis
 
 Replace the `{major_version}` placeholder in the above keys depending on the major version of the driver, for example: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI19.0` is the base key for versions 19.x.x.
 
-## Encryption and Certificate Validation
+## Encryption and certificate validation
 
 ### Force protocol encryption
 

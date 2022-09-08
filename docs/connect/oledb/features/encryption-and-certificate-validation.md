@@ -32,16 +32,11 @@ Applications may also request encryption of all network traffic by using connect
 
 For information about connection string keywords, see [Using connection string keywords with OLE DB driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 
-To enable encryption to be used when a certificate hasn't been provisioned on the server, the **`Force Protocol Encryption`** and the **`Trust Server Certificate`** client registry settings can be set. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
-
-## Registry settings 
-
-Encryption and Trust Server Certificate can be set using registry entries. For more information see 
-[Registry settings](./registry-settings.md)
+To enable encryption to be used when a certificate hasn't been provisioned on the server, the **`Force Protocol Encryption`** and the **`Trust Server Certificate`** client [registry settings](./registry-settings.md) can be set. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
 
 ## Encryption and certificate validation behavior
 
-Application settings never reduce the level of security set in the registry, but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
+Application settings never reduce the level of security set in the registry (see [Registry settings](./registry-settings.md#encryption-and-certificate-validation) for more details), but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
 Version 19 of the OLE DB Driver for SQL Server introduces breaking changes in the encryption related APIs. For more information, see [Encryption property changes](../major-version-differences.md#encryption-property-changes).
 

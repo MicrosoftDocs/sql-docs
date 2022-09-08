@@ -52,7 +52,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 - If *server auditing is enabled*, it *always applies to the database*. The database will be audited, regardless of the database auditing settings.
 
-- When auditing policy is defined at the database-level to a Log Analytics workspace or an Event Hub destination, the following operations will not keep the source database-level auditing policy:
+- When auditing policy is defined at the database-level to a Log Analytics workspace or an Event Hubs destination, the following operations will not keep the source database-level auditing policy:
     - [Database copy](database-copy.md)
     - [Point-in-time restore](recovery-using-backups.md)
     - [Geo-replication](active-geo-replication-overview.md) (Secondary database will not have database-level auditing)
@@ -78,7 +78,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 - For details about the log format, hierarchy of the storage folder and naming conventions, see the [Blob Audit Log Format Reference](./audit-log-format.md).
 - Auditing on [Read-Only Replicas](read-scale-out.md) is automatically enabled. For further details about the hierarchy of the storage folders, naming conventions, and log format, see the [SQL Database Audit Log Format](audit-log-format.md).
 - When using Azure AD Authentication, failed logins records will *not* appear in the SQL audit log. To view failed login audit records, you need to visit the [Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins), which logs details of these events.
-- Logins are routed by the gateway to the specific instance where the database is located.  In the case of AAD logins, the credentials are verified before attempting to use that user to login into the requested database.  In the case of failure, the requested database is never accessed, so no auditing occurs.  In the case of SQL logins, the credentials are verified on the requested data, so in this case they can be audited.  Successful logins, which obviously reach the database, are audited in both cases.
+- Logins are routed by the gateway to the specific instance where the database is located.  In the case of Azure AD logins, the credentials are verified before attempting to use that user to login into the requested database.  In the case of failure, the requested database is never accessed, so no auditing occurs.  In the case of SQL logins, the credentials are verified on the requested data, so in this case they can be audited.  Successful logins, which obviously reach the database, are audited in both cases.
 - After you've configured your auditing settings, you can turn on the new threat detection feature and configure emails to receive security alerts. When you use threat detection, you receive proactive alerts on anomalous database activities that can indicate potential security threats. For more information, see [Getting started with threat detection](threat-detection-overview.md).
 - After a database with auditing enabled is copied to another [logical server](logical-servers.md), you may receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
 
@@ -97,7 +97,7 @@ The following section describes the configuration of auditing using the Azure po
 
   > [!NOTE]
   > - Enabling auditing on a paused dedicated SQL pool is not possible. To enable auditing, un-pause the dedicated SQL pool. Learn more about [dedicated SQL pool](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool).
-  > - When auditing is configured to a Log Analytics workspace or to an Event Hub destination via the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with "SQLSecurityAuditEvents" category enabled.
+  > - When auditing is configured to a Log Analytics workspace or to an Event Hubs destination via the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with "SQLSecurityAuditEvents" category enabled.
 
 1. Go to the [Azure portal](https://portal.azure.com).
 2. Navigate to **Auditing** under the Security heading in your **SQL database** or **SQL server** pane.
@@ -151,7 +151,7 @@ To configure writing audit logs to a Log Analytics workspace, select **Log Analy
 
 For more details about Azure Monitor Log Analytics workspace, see [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment)
    
-### <a id="audit-event-hub-destination"></a>Audit to Event Hub destination
+### <a id="audit-event-hub-destination"></a>Audit to Event Hubs destination
 
 To configure writing audit logs to an event hub, select **Event Hub**. Select the event hub where logs will be written and then click **Save**. Be sure that the event hub is in the same region as your database and server.
 

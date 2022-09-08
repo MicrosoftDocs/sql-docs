@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/13/2021
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -18,7 +18,10 @@ Many applications have regulatory, compliance, or other business purposes that r
 Long-term retention can be enabled for Azure SQL Database and for Azure SQL Managed Instance. This article provides a conceptual overview of long-term retention. To configure long-term retention, see [Configure Azure SQL Database LTR](long-term-backup-retention-configure.md) and [Configure Azure SQL Managed Instance LTR](../managed-instance/long-term-backup-retention-configure.md). 
 
 > [!NOTE]
-> You can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to LTR beyond 35 days.
+> - You can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to LTR beyond 35 days.
+
+> [!NOTE]
+> Long-term retention for Hyperscale databases is now in preview.
 
 
 

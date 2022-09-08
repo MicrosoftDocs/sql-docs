@@ -46,7 +46,7 @@ ALL specifies all supported caches.
 _pool\_name_ specifies a resource governor pool cache. Only entries associated with this pool are freed. To list the available pool names run:
 
 ```sql
-SELECT name FROM sys.dm_os_memory_clerks
+SELECT name FROM sys.dm_resource_governor_resource_pools
 ```
 
 Most, but not all, caches can be individually freed using this command.

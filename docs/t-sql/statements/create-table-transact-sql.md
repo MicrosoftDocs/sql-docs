@@ -816,10 +816,10 @@ An optional keyword that indicates the start of the definition of a PRIMARY KEY,
 
 - WITH FILLFACTOR = *fillfactor*
 
-Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value isn't specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.
+  Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value isn't specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.
 
-> [!IMPORTANT]  
-> Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.
+  > [!IMPORTANT]  
+  > Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.
 
 #### *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 

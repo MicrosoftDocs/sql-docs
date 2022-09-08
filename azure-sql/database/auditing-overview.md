@@ -132,7 +132,7 @@ You have the option of choosing a different storage destination for this auditin
 
 ### <a id="audit-storage-destination"></a>Audit to storage destination
 
-To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved,you can use two storage authentication types i.e., managed identity and storage access keys.For managed identity, we support system and user managed identity. By default, it picks primary user identity that is assigned to the server, if there is no user identity then it will create system assigned identity and use it for authentication purpose .Then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
+To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where you want to save your logs. You can use the following two storage authentication types:  managed identity and storage access keys. For managed identity, system and user managed identity is supported. By default, the primary user identity assigned to the server is selected. If there is no user identity, then a system assigned identity is created and used for authentication purposes. After you have chosen an authentication type, select a retention period by opening **Advanced properties* and selecting **Save**. Logs older than the retention period are deleted.
 
  
 > [!NOTE] 

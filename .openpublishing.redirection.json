@@ -59454,7 +59454,7 @@
       "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
       "redirect_document_id": false
-    }
+    },
     {
       "source_path": "docs/sql-server/partner-big-data-cluster.md",
       "redirect_url": "/sql/big-data-cluster/partner-big-data-cluster",

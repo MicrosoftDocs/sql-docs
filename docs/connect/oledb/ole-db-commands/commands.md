@@ -1,18 +1,15 @@
 ---
-title: "Commands (OLE DB driver) | Microsoft Docs"
+title: "Commands (OLE DB driver)"
 description: Learn about the ICommand interface in the OLE DB Driver for SQL Server, including syntax, parameters, preparing commands, and commands with multiple results.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB Driver for SQL Server, commands"
-  - "commands [OLE DB]"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB Driver for SQL Server, commands"
+  - "commands [OLE DB]"
 ---
 # Commands
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

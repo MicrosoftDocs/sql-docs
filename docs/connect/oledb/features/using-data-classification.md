@@ -1,18 +1,16 @@
 ---
-title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
+title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server"
 description: Learn how to use Microsoft OLE DB Driver for SQL Server to obtain classification information.
-ms.custom: ""
-ms.date: "02/18/2022"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OLE DB Driver for SQL Server, data classification"
 author: David-Engel
 ms.author: v-davidengel
 manager: kenvh
+ms.reviewer: v-davidengel
+ms.date: "02/18/2022"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OLE DB Driver for SQL Server, data classification"
 ---
 # Using data classification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]

@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_server_info"
 description: "sqlsrv_server_info"
-title: "sqlsrv_server_info | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_server_info"
-apitype: "NA"
-helpviewer_keywords: 
-  - "API Reference, sqlsrv_server_info"
-  - "sqlsrv_server_info"
-ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "API Reference, sqlsrv_server_info"
+  - "sqlsrv_server_info"
+apiname: "sqlsrv_server_info"
+apitype: "NA"
 ---
 # sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

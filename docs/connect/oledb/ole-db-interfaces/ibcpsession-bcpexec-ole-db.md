@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPExec (OLE DB driver) | Microsoft Docs"
+title: "IBCPSession::BCPExec (OLE DB driver)"
 description: "The IBCPSession::BCPExec method copies data from a user file to a database table or vice versa in OLE DB Driver for SQL Server."
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPExec (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPExec method"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPExec method"
+apiname: "IBCPSession::BCPExec (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPExec (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

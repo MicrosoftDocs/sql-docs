@@ -1,18 +1,15 @@
 ---
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: 06/16/2022
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
-ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 

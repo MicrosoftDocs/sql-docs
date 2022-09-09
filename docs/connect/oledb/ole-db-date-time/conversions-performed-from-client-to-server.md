@@ -1,17 +1,14 @@
 ---
-title: "Conversions Performed from Client to Server | Microsoft Docs"
+title: "Conversions Performed from Client to Server"
 description: Learn about date/time conversions performed between a client application written with OLE DB Driver for SQL Server and SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "conversions [OLE DB], client to server"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "conversions [OLE DB], client to server"
 ---
 # Conversions Performed from Client to Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

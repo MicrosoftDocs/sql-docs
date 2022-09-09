@@ -1,16 +1,12 @@
 ---
 title: "PDO::errorInfo"
 description: "API reference for the PDO::errorInfo function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "01/29/2021"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/29/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

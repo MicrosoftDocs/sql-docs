@@ -1,18 +1,15 @@
 ---
 title: "Finding More OLE DB Driver for SQL Server Information"
 description: Use these resources for more information about OLE DB Driver for SQL Server and other types of data access programming.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "MSOLEDBSQL, additional resources"
-  - "OLE DB Driver for SQL Server, additional resources"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "MSOLEDBSQL, additional resources"
+  - "OLE DB Driver for SQL Server, additional resources"
 ---
 # Finding More OLE DB Driver for SQL Server Information
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

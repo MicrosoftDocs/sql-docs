@@ -1,21 +1,15 @@
 ---
+title: "setStatementPoolingCacheSize Method (SQLServerConnection)"
 description: "setStatementPoolingCacheSize Method (SQLServerConnection)"
-title: "setStatementPoolingCacheSize Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.setStatementPoolingCacheSize"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid:
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.setStatementPoolingCacheSize"
+apitype: "Assembly"
 ---
 # setStatementPoolingCacheSize Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

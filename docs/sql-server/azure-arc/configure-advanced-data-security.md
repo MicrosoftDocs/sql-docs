@@ -55,14 +55,10 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 1. Click on the __Microsoft Defender for Cloud__ tile and then on __Enable Microsoft Defender for Cloud__.
 
-1. Select the workspace that you've configured for the MMA extension in the previous step
-
-1. Select **Azure Defender On**. Make sure the option for **SQL servers on machines** is turned on.
-
-   :::image type="content" source="media/configure-advanced-data-security/enable-azure-defender.png" alt-text="Screenshot showing how to upgrade workspace.":::
-
+1. Follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#set-up-microsoft-defender-for-sql-servers-on-machines)..
+ 
 > [!NOTE]
-   > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Azure Defender for SQL. After that, auto scans are be performed every week on Sunday.
+   > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.
 
 ## Explore
 
@@ -89,5 +85,4 @@ Explore security anomalies and threats in Azure Security Center.
 
 ## Next steps
 
-- To configure Azure Defender for SQL Server at scale, see [Enable Azure Defender for SQL servers on machines](/azure/security-center/defender-for-sql-usage).
-- You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details,see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).
+- You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details, see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).

@@ -21,22 +21,13 @@ This release is published September 13, 2022
 
 ### Azure extension for SQL Server
 
-- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have beedn released with the same image tag.
+- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have been released with the same image tag.
 - SQL Server 2022 RC0 includes the option of installing Azure extension for SQL Server during setup. 
-- The extesion is now available for Azure Arc-enabled VMWare vSphere. It can be installed on any VMWare VM that is *Azure enabled* and *Guest management enabled* and has SQL Server instance(s).
 - The extension now supports HTTP proxy servers on the Linux platforms.
 
 ### Azure Active Directory authentication 
 
-- Azure extesnion for SQL Server has been emhanced to support configuring Active Directory authentication using mssql-conf.
-
-### Known issues
-
-- Azure extension for SQL Server is not listed as a supported extension on the extension management blade of the VMWare VM in Portal. To install it use the following command, where {OS} should be *Windows* or *Linux* depending on the VM image. 
-
- ```console
-az connectedvmware vm extension create --location eastus --resource-group ArcLab-Arc-vSphere --vm-name ArcLab-PG-LT --name {OS}Agent.SqlServer --publisher Microsoft.AzureData --type {OS}Agent.SqlServer --settings @c:\temp\sql_extension_settings.json –debug
-```
+- Azure extesnion for SQL Server has been enhanced to support configuring Active Directory authentication using mssql-conf. For more details, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
 
 
 ## July 2022

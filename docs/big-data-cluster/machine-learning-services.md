@@ -218,8 +218,8 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ### Deploy
 
- - [Operationalize using stored procedures](./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&view=sql-server-ver15)
- - [Convert R code for SQL Server](./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&view=sql-server-ver15)
+ - [Operationalize using stored procedures](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&view=sql-server-ver15)
+ - [Convert R code for SQL Server](../machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&view=sql-server-ver15)
 
 ### Predictions
 

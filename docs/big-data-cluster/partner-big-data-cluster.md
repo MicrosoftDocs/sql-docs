@@ -40,9 +40,9 @@ To learn more about some of our other partners, see [High availability, and disa
 [7]: ./media/partner-hadr-sql-server/vmware-logo.png
 
 <!--Article links-->
-[hadr_partners]: ./partner-hadr-sql-server.md
-[management_partners]: ./partner-management-sql-server.md
-[monitor_partners]: ./partner-monitor-sql-server.md
+[hadr_partners]: ../sql-server/partner-hadr-sql-server.md
+[management_partners]: ../sql-server/partner-management-sql-server.md
+[monitor_partners]: ../sql-server/partner-monitor-sql-server.md
 
 <!--Website links -->
 [delltech_website]:https://www.delltechnologies.com/en-us/solutions/microsoft/index.htm

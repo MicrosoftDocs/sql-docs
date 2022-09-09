@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "cost threshold for parallelism option"
+helpviewer_keywords:
+  - "cost threshold for parallelism option"
 ---
 # Configure the cost threshold for parallelism Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

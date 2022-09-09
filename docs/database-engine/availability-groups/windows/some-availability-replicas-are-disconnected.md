@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.agdashboard.agp7allconnected.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.agp7allconnected.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Some availability replicas are disconnected
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "max text repl size option"
+helpviewer_keywords:
+  - "max text repl size option"
 ---
 # Configure the max text repl size Server Configuration Option
  [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]

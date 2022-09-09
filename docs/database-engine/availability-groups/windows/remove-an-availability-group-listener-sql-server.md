@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygroup.removeaglistener.default.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], listeners"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], listeners"
 ---
 # Remove an availability group listener (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

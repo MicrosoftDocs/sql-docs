@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
-helpviewer_keywords: "Availability Groups [SQL Server], domain independent"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], domain independent"
 ---
 # Create a domain-independent availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords: ", policies"
+helpviewer_keywords:
+  - ", policies"
 ---
 # View Availability Replica Properties (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

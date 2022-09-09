@@ -7,7 +7,8 @@ ms.date: "06/04/2013"
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: "sql13.dqs.kb.openkb.f1"
+f1_keywords:
+  - "sql13.dqs.kb.openkb.f1"
 ---
 # Open a Knowledge Base
 

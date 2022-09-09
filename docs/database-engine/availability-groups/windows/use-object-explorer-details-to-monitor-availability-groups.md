@@ -7,7 +7,8 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: "sql13.swb.availabilitygroup.OEdetails.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.OEdetails.f1"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], databases"

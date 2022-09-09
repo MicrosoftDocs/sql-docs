@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: reference
 ms.custom: seo-lt-2019
-helpviewer_keywords: "Availability Groups [SQL Server], managing"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], managing"
 ---
 # Administration of an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

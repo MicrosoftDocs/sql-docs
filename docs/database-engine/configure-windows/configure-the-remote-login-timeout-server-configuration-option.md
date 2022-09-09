@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "remote login timeout option"
+helpviewer_keywords:
+  - "remote login timeout option"
 ---
 # Configure the remote login timeout Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,7 +10,8 @@ ms.topic: conceptual
 ms.custom:
   - seodec18
   - intro-overview
-helpviewer_keywords: "Availability Groups [SQL Server], distributed"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], distributed"
 ---
 # Distributed availability groups
 

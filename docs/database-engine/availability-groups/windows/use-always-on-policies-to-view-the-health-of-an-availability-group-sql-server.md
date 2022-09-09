@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

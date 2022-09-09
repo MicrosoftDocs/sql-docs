@@ -8,7 +8,8 @@ ms.date: 04/07/2021
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-f1_keywords: "common criteria compliance"
+f1_keywords:
+  - "common criteria compliance"
 helpviewer_keywords:
   - "CC (common criteria) [Database Engine]"
   - "common criteria compliance [Database Engine]"

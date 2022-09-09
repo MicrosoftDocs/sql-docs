@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.agdashboard.f1"
+f1_keywords:
+  - "sql13.swb.agdashboard.f1"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"

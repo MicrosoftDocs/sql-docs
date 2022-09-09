@@ -10,7 +10,8 @@ ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords: "breaking changes 2017 [SQL Server]"
+helpviewer_keywords:
+  - "breaking changes 2017 [SQL Server]"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Breaking changes to database engine in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]

@@ -7,7 +7,8 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: "sql13.dqs.kb.importprojectvalues.f1"
+f1_keywords:
+  - "sql13.dqs.kb.importprojectvalues.f1"
 ---
 # Import Cleansing Project Values into a Domain
 

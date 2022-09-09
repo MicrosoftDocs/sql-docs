@@ -7,7 +7,8 @@ ms.date: "06/01/2020"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "ADR cleaner retry timeout (min)"
+helpviewer_keywords:
+  - "ADR cleaner retry timeout (min)"
 ---
 # ADR cleaner retry timeout (min) configuration option
 

@@ -7,7 +7,9 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-ms.custom: ag-guide, seodec18
+ms.custom:
+  - ag-guide
+  - seodec18
 ---
 # Monitor performance for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

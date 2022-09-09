@@ -7,8 +7,10 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: "sql13.swb.agdashboard.drp2joined.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.drp2joined.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Secondary database is not joined
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

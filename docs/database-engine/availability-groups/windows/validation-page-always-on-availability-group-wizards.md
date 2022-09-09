@@ -12,7 +12,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.validation.f1"
   - "sql13.swb.adddatabasewizard.validation.f1"
   - "sql13.swb.newagwizard.validation.f1"
-helpviewer_keywords: ", listeners"
+helpviewer_keywords:
+  - ", listeners"
 ---
 # Validation Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

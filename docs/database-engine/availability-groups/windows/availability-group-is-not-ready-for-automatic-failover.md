@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: end-user-help
 ms.custom: seodec18
-f1_keywords: "sql13.swb.agdashboard.agp3autofailover.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.agp3autofailover.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Always On availability group is not ready for automatic failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "cursor threshold option"
+helpviewer_keywords:
+  - "cursor threshold option"
 ---
 # Configure the cursor threshold Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

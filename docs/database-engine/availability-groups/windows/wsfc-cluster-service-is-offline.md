@@ -7,8 +7,10 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: "sql13.swb.agdashboard.agp1WSFCquorum.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.agp1WSFCquorum.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 monikerRange: ">=sql-server-2016"
 ---
 # WSFC cluster service is offline

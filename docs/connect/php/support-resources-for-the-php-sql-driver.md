@@ -7,7 +7,8 @@ ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: "support"
+helpviewer_keywords:
+  - "support"
 ---
 # Support resources for the Microsoft Drivers for PHP for SQL Server
 

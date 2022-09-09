@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygroup.removeprimarydb.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.removeprimarydb.f1"
 helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], removing"

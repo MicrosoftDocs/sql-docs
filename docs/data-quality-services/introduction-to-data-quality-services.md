@@ -7,7 +7,8 @@ ms.date: "03/05/2012"
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
-helpviewer_keywords: "Domains"
+helpviewer_keywords:
+  - "Domains"
 ---
 # Introduction to Data Quality Services
 

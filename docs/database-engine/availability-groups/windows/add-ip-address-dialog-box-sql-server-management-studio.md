@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: end-user-help
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygrouplistener.addipaddress.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

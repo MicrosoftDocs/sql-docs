@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: troubleshooting
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Availability replica does not have a healthy role for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

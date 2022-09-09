@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords: "Availability Groups [SQL Server], creating"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], creating"
 ---
 # Use the New Availability Group Dialog Box (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

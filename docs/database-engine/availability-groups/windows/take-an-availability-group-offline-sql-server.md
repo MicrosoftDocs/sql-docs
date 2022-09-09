@@ -7,7 +7,8 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: "Availability Groups [SQL Server], take offline"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], take offline"
 ---
 # Take an Availability Group Offline (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

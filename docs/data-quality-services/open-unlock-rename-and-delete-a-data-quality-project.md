@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.dqs.dqproject.opendqproject.f1"
+f1_keywords:
+  - "sql13.dqs.dqproject.opendqproject.f1"
 helpviewer_keywords:
   - "data quality project,delete"
   - "data quality project,rename"

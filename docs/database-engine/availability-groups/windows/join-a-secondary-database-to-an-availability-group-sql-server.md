@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
-f1_keywords: "sql13.swb.availabilitygroup.joindbs.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.joindbs.f1"
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "secondary databases [SQL Server]"

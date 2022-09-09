@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: end-user-help
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.addreplicawizard.enterpasswords.f1"
+f1_keywords:
+  - "sql13.swb.addreplicawizard.enterpasswords.f1"
 ---
 # Enter Passwords Page (Add Replica Wizard) for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

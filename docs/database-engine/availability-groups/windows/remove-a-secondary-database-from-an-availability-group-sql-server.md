@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seodec18
-f1_keywords: "sql13.swb.availabilitygroup.unjoindb.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.unjoindb.f1"
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], removing"

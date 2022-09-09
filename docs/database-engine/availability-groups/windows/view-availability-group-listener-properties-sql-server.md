@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygrouplistenerproperties.general.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], monitoring"
+f1_keywords:
+  - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], monitoring"
 ---
 # View Availability Group Listener Properties (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,8 @@ ms.date: "06/01/2020"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "ADR Preallocation Factor"
+helpviewer_keywords:
+  - "ADR Preallocation Factor"
 ---
 # ADR Preallocation Factor configuration option
 

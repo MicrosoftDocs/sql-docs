@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygroup.suspenddatamove.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.suspenddatamove.f1"
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"

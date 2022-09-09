@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seodec18
-f1_keywords: "VS.ToolsOptionsPages.Alwayson.Dashboard"
+f1_keywords:
+  - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ---
 # Options (SQL Server Always On, Dashboard Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

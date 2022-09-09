@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
-f1_keywords: "sql13.swb.availabilitygroup.joinreplica.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.joinreplica.f1"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], joining"

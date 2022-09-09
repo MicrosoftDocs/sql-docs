@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords: "Availability Groups [SQL Server], databases"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], databases"
 ---
 # Start Data Movement on an Always On Secondary Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

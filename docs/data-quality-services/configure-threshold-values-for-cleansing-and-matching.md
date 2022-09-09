@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.dqs.admin.config.general.f1"
+f1_keywords:
+  - "sql13.dqs.admin.config.general.f1"
 helpviewer_keywords:
   - "cleansing,threshold value"
   - "cleansing threshold values"

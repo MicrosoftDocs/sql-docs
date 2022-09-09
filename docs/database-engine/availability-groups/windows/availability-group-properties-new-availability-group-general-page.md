@@ -9,7 +9,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: end-user-help
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygroupproperties.general.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroupproperties.general.f1"
 ---
 # Availability Group Properties: New Availability Group (General Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -9,7 +9,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seo-lt-2019
-f1_keywords: "sql13.swb.availabilitygroup.newaglistener.general.f1"
+f1_keywords:
+  - "sql13.swb.availabilitygroup.newaglistener.general.f1"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], client connectivity"

@@ -7,7 +7,8 @@ ms.date: 08/12/2022
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "priority boost option"
+helpviewer_keywords:
+  - "priority boost option"
 ---
 # Configure the priority boost server configuration option
 

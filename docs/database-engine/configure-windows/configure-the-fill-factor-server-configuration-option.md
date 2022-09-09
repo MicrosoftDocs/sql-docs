@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "fill factor option [SQL Server]"
+helpviewer_keywords:
+  - "fill factor option [SQL Server]"
 ---
 # Configure the fill factor Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

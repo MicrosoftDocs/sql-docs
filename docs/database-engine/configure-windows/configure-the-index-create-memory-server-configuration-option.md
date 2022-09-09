@@ -7,7 +7,8 @@ ms.date: "11/24/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "index create memory option"
+helpviewer_keywords:
+  - "index create memory option"
 ---
 # Configure the index create memory Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

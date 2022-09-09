@@ -7,7 +7,9 @@ ms.date: "01/27/2022"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
-ms.custom: ag-guide, seodec18
+ms.custom:
+  - ag-guide
+  - seodec18
 ---
 # Configure extended events for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

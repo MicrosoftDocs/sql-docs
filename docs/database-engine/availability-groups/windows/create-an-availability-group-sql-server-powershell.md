@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
-helpviewer_keywords: "Availability Groups [SQL Server], creating"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], creating"
 ---
 # Create an Always On availability group using PowerShell
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

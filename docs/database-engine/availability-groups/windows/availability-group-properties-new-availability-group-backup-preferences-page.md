@@ -8,8 +8,10 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: end-user-help
 ms.custom: seodec18
-f1_keywords: "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
-helpviewer_keywords: "read-only routing"
+f1_keywords:
+  - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
+helpviewer_keywords:
+  - "read-only routing"
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

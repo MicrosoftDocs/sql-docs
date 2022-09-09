@@ -7,8 +7,10 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: "sql13.swb.agdashboard.agp6allroleshealthy.issues.f1"
-helpviewer_keywords: "Availability Groups [SQL Server], policies"
+f1_keywords:
+  - "sql13.swb.agdashboard.agp6allroleshealthy.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Some availability replicas do not have a healthy role
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

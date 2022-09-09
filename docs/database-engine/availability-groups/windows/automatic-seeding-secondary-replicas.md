@@ -8,7 +8,8 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
 ms.custom: seo-lt-2019
-helpviewer_keywords: "Automatic seeding [SQL Server], secondary replica"
+helpviewer_keywords:
+  - "Automatic seeding [SQL Server], secondary replica"
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

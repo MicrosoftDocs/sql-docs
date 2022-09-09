@@ -7,7 +7,8 @@ ms.date: "11/22/2011"
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: "sql13.dqs.dm.cdvaluerelations.f1"
+f1_keywords:
+  - "sql13.dqs.dm.cdvaluerelations.f1"
 ---
 # Use Value Relations in a Composite Domain
 

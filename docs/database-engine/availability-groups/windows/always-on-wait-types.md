@@ -7,7 +7,9 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: how-to
-ms.custom: ag-guide, seodec18
+ms.custom:
+  - ag-guide
+  - seodec18
 ---
 # Identify waits associated with availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,8 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: "scan for startup procs option"
+helpviewer_keywords:
+  - "scan for startup procs option"
 ---
 # Configure the scan for startup procs Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

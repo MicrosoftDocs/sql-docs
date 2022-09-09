@@ -7,7 +7,8 @@ ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: "requirements"
+helpviewer_keywords:
+  - "requirements"
 ---
 
 # System requirements for the Microsoft Drivers for PHP for SQL Server

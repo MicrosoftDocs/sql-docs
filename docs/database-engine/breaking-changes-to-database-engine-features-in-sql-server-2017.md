@@ -7,12 +7,10 @@ ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: release-landing
 ms.topic: conceptual
 ms.custom: seo-lt-2019
-helpviewer_keywords:
-  - "breaking changes 2017 [SQL Server]"
+helpviewer_keywords: "breaking changes 2017 [SQL Server]"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Breaking changes to Database Engine features in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]

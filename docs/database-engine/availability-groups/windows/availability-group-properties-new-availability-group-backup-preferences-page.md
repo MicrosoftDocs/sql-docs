@@ -1,19 +1,15 @@
 ---
 title: "Availability Group Properties: Backup Preferences Page"
 description: "A description of the various properties found on the 'Backup preference' page of the 'New Availability Group' wizard in SQL Server Management Studio."
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: end-user-help
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
-helpviewer_keywords: 
-  - "read-only routing"
-ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: end-user-help
+ms.custom: seodec18
+f1_keywords: "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
+helpviewer_keywords: "read-only routing"
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

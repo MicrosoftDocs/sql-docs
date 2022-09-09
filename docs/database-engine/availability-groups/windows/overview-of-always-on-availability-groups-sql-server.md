@@ -1,22 +1,22 @@
 ---
 title: "What is an Always On availability group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups."
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 07/04/2022
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-overview
-ms.date: 07/04/2022
-ms.prod: sql
-ms.reviewer: randolphwest
-ms.technology: availability-groups
-ms.topic: conceptual
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # What is an Always On availability group?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

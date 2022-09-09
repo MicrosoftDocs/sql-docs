@@ -1,23 +1,19 @@
 ---
-description: "Configure Severity Levels for DQS Log Files"
 title: "Configure Severity Levels for DQS Log Files"
+description: "Configure Severity Levels for DQS Log Files"
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.admin.config.log.f1"
-helpviewer_keywords: 
+f1_keywords: "sql13.dqs.admin.config.log.f1"
+helpviewer_keywords:
   - "severity levels"
   - "log files,severity levels"
   - "dqs log files,severity levels"
   - "logging,severity levels"
   - "configure severity levels"
-ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: swinarko
-ms.author: sawinark
 ---
 # Configure Severity Levels for DQS Log Files
 

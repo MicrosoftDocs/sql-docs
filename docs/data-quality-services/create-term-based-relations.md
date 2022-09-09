@@ -1,17 +1,13 @@
 ---
-description: "Create Term-Based Relations"
 title: "Create Term-Based Relations"
-ms.date: "11/08/2011"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.kbtermsbased.f1"
-ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
+description: "Create Term-Based Relations"
 author: swinarko
 ms.author: sawinark
+ms.date: "11/08/2011"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
+f1_keywords: "sql13.dqs.dm.kbtermsbased.f1"
 ---
 # Create Term-Based Relations
 

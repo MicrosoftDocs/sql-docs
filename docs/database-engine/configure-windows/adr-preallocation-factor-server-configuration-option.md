@@ -1,16 +1,13 @@
 ---
-title: "ADR Preallocation Factor configuration option | Microsoft Docs"
+title: "ADR Preallocation Factor configuration option"
 description: "Explains the SQL Server instance configuration setting for ADR Preallocation Factor."
-ms.custom: ""
-ms.date: "06/01/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ADR Preallocation Factor"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/01/2020"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords: "ADR Preallocation Factor"
 ---
 # ADR Preallocation Factor configuration option
 

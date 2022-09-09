@@ -1,17 +1,14 @@
 ---
 title: "Automatic seeding for secondary replicas"
 description: "Learn about how automatic seeding can initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
-ms.custom: seo-lt-2019 
-ms.date: "03/05/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-- "Automatic seeding [SQL Server], secondary replica"
-ms.assetid: 
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/05/2021"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
+helpviewer_keywords: "Automatic seeding [SQL Server], secondary replica"
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

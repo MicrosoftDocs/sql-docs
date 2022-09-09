@@ -1,18 +1,13 @@
 ---
-title: "allow updates Server Configuration Option | Microsoft Docs"
+title: "allow updates Server Configuration Option"
 description: "Learn about the obsolete SQL Server configuration option 'allow updates.' See how using this option will cause RECONFIGURE statements to fail."
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "allow updates option"
-ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords: "allow updates option"
 ---
 # allow updates Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

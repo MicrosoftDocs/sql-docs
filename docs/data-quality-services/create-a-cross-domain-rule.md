@@ -1,18 +1,15 @@
 ---
-description: "Create a Cross-Domain Rule"
 title: "Create a Cross-Domain Rule"
-ms.date: "11/22/2011"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
-ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
+description: "Create a Cross-Domain Rule"
 author: swinarko
 ms.author: sawinark
+ms.date: "11/22/2011"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.dm.testcdrule.f1"
+  - "sql13.dqs.dm.cdrules.f1"
 ---
 # Create a Cross-Domain Rule
 

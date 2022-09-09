@@ -1,15 +1,13 @@
 ---
 title: "Monitor performance for availability groups"
 description: "This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios."
-ms.custom: "ag-guide, seodec18"
-ms.date: "06/13/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/13/2017"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: ag-guide, seodec18
 ---
 # Monitor performance for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

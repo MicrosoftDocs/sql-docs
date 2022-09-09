@@ -1,19 +1,15 @@
 ---
 title: "Availability replicas not synchronizing data"
 description: "Possible causes and resolutions for when one or more availability replicas in an Always On availability group are not synchronizing data with the primary replica."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp4synchronizing.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords: "sql13.swb.agdashboard.agp4synchronizing.issues.f1"
+helpviewer_keywords: "Availability Groups [SQL Server], policies"
 ---
 # Some availability replicas are not synchronizing data
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

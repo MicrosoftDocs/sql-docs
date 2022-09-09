@@ -1,21 +1,18 @@
 ---
 title: "Availability group wizard: Validation Page"
 description: "This topic describes the options found on the Validation page of the Always On availability group wizard."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.addreplicawizard.validation.f1"
   - "sql13.swb.adddatabasewizard.validation.f1"
   - "sql13.swb.newagwizard.validation.f1"
-helpviewer_keywords: 
-  - ", listeners"
-ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-author: MashaMSFT
-ms.author: mathoma
+helpviewer_keywords: ", listeners"
 ---
 # Validation Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

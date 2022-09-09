@@ -1,20 +1,17 @@
 ---
 title: "Add a database to an availability group with the 'Availability Group Wizard'"
-description: "Add a database to an Always On availability group using the 'Availability Group Wizard' within SQL Server Management Studio." 
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-f1_keywords: 
-  - "sql13.swb.adddatabasewizard.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], wizards"
-  - "Availability Groups [SQL Server], databases"
-ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
+description: "Add a database to an Always On availability group using the 'Availability Group Wizard' within SQL Server Management Studio."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
+f1_keywords: "sql13.swb.adddatabasewizard.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], wizards"
+  - "Availability Groups [SQL Server], databases"
 ---
 # Add a database to an Always On availability group with the 'Availability Group Wizard'
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

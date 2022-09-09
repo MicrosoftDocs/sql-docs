@@ -1,16 +1,12 @@
 ---
 title: "Ruby Driver"
 description: "Learn how to connect to, select, and insert data in a SQL Database using Ruby on Windows, Linux, or macOS."
-ms.custom: ""
-ms.date: "10/06/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "10/06/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Ruby Driver for SQL Server
 

@@ -1,21 +1,18 @@
 ---
 title: "Remove a secondary database from an availability group"
 description: "Steps to remove a secondary database from an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.unjoindb.f1"
-helpviewer_keywords: 
+ms.custom: seodec18
+f1_keywords: "sql13.swb.availabilitygroup.unjoindb.f1"
+helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

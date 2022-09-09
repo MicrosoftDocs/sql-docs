@@ -532,6 +532,33 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
+
+### K. Use a managed identity for an external source 
+
+The following examples shows use to create a credential by using a managed identity and then creating an external source and loading data from a CSV file. 
+
+First, create the credential and external sorce:
+
+``sql
+CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';
+
+CREATE EXTERNAL DATA SOURCE SampleSource
+WITH (TYPE = BLOB_STORAGE,
+LOCATION = 'https://****************.blob.core.windows.net/curriculum',
+CREDENTIAL = sampletestcred
+```
+
+Next, use the following query to laod data from the CSV file: 
+
+```sql
+SELECT * FROM OPENROWSET(
+BULK 'Test - Copy.csv',
+DATA_SOURCE = 'SampleSource',
+SINGLE_CLOB
+) as test
+```
+
+
 ### Additional Examples
 
 For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, see the following topics:

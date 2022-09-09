@@ -1,21 +1,15 @@
 ---
+title: "deleteRow Method (SQLServerResultSet)"
 description: "deleteRow Method (SQLServerResultSet)"
-title: "deleteRow Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.deleteRow"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/20/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.deleteRow"
+apitype: "Assembly"
 ---
 # deleteRow Method (SQLServerResultSet)
 

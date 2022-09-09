@@ -1,21 +1,15 @@
 ---
+title: "getImportedKeys Method (SQLServerDatabaseMetaData)"
 description: "getImportedKeys Method (SQLServerDatabaseMetaData)"
-title: "getImportedKeys Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getImportedKeys"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getImportedKeys"
+apitype: "Assembly"
 ---
 # getImportedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

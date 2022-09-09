@@ -1,16 +1,12 @@
 ---
+title: "SQLServerClob Methods"
 description: "SQLServerClob Methods"
-title: "SQLServerClob Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 839f9c67-4cd4-4e07-a0ef-ba62591e9e5a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerClob Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

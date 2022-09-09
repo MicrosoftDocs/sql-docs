@@ -1,21 +1,15 @@
 ---
+title: "getMajorVersion Method (SQLServerDriver)"
 description: "getMajorVersion Method (SQLServerDriver)"
-title: "getMajorVersion Method (SQLServerDriver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDriver.getMajorVersion"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDriver.getMajorVersion"
+apitype: "Assembly"
 ---
 # getMajorVersion Method (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

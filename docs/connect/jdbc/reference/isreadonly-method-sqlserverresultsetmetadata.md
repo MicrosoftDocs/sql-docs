@@ -1,21 +1,15 @@
 ---
+title: "isReadOnly Method (SQLServerResultSetMetaData)"
 description: "isReadOnly Method (SQLServerResultSetMetaData)"
-title: "isReadOnly Method (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSetMetaData.isReadOnly"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSetMetaData.isReadOnly"
+apitype: "Assembly"
 ---
 # isReadOnly Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

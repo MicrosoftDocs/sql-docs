@@ -1,16 +1,12 @@
 ---
 title: "Connection Options"
 description: "This topic lists the options that are permitted in the associative array of sqlsrv_connect in the SQLSRV driver or the keywords that are permitted in the data source name the PDO_SQLSRV driver."
-ms.custom: ""
-ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/02/2022"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Connection Options
 

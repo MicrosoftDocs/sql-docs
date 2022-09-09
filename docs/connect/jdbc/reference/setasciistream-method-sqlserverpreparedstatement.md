@@ -1,16 +1,12 @@
 ---
+title: "setAsciiStream Method (SQLServerPreparedStatement)"
 description: "setAsciiStream Method (SQLServerPreparedStatement)"
-title: "setAsciiStream Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setAsciiStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

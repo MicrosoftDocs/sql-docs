@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the [intelligent query processing family of features](intelligent-query-processing.md). Optimized plan forcing, introduced with database compatibility level 160, reduces compilation overhead for repeating forced queries and requires the Query Store to be enabled and in "read write" mode. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the [intelligent query processing family of features](intelligent-query-processing.md). Optimized plan forcing reduces compilation overhead for repeating *forced* queries and requires the Query Store to be enabled and in "read write" mode. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 ## Optimized plan forcing implementation
 
@@ -49,7 +49,7 @@ You can enable or disable optimized plan forcing for a database. When optimized 
 
 ### Enable or disable optimized plan forcing for a database
 
-Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will not have optimized plan forcing enabled by default.
+Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will have optimized plan forcing enabled by default.
 
 To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled. Find example code in [Example A](#a-enable-query-store-and-optimized-plan-forcing-for-a-database), or learn more about Query Store in [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 
@@ -111,10 +111,10 @@ GO
 
 ### C. Force a plan and disable optimized plan forcing in Query Store
 
-The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance. 
+The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance.  The sp_query_store_force_plan stored procedure will also accept an optional third `@replica_group_id` parameter.  This can be used to force a plan on a specific replica.  A value of 0 - `@replica_group_id=0` will be used if this parameter is omitted.
 
 ```sql
-EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @disable_optimized_plan_forcing=1;
+EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @disable_optimized_plan_forcing=0;
 GO
 ```
 
@@ -145,8 +145,8 @@ SELECT ProductID, OrderQty, SUM(LineTotal) AS Total
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
 GROUP BY ProductID, OrderQty  
-ORDER BY ProductID, OrderQty  
-OPTION (DISABLE_OPTIMIZED_PLAN_FORCING);
+ORDER BY ProductID, OrderQty
+OPTION(USE HINT('DISABLE_OPTIMIZED_PLAN_FORCING');
 GO 
 ```
 

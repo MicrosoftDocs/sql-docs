@@ -1,21 +1,15 @@
 ---
+title: "supportsGroupBy Method (SQLServerDatabaseMetaData)"
 description: "supportsGroupBy Method (SQLServerDatabaseMetaData)"
-title: "supportsGroupBy Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsGroupBy"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsGroupBy"
+apitype: "Assembly"
 ---
 # supportsGroupBy Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

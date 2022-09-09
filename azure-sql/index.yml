@@ -157,7 +157,7 @@ landingContent:
           - text: SQL Server Management Studio (SSMS)
             url: database/connect-query-ssms.md
           - text: Azure Data Studio
-            url: /sql/azure-data-studio/quickstart-sql-database?toc=%2Fazure%2Fazure-sql%2Ftoc.json
+            url: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
           - text: Azure portal
             url: database/connect-query-portal.md 
           - text: Visual Studio (.NET)

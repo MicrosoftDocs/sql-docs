@@ -1,15 +1,12 @@
 ---
-title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
+title: "Service Principal Names (SPNs) in Client Connections (OLE DB)"
 description: Learn about OLE DB Driver for SQL Server properties and member functions that support service principal names in client applications.
-ms.custom: ""
-ms.date: "12/08/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "12/08/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB) in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

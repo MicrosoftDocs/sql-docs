@@ -1,15 +1,12 @@
 ---
 title: Download the Microsoft Drivers for PHP for SQL Server
 description: Download the Microsoft Drivers for PHP for SQL Server to develop PHP applications that connect to SQL Server and Azure SQL Database.
-ms.custom: ""
-ms.date: 06/16/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 06/16/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Download the Microsoft Drivers for PHP for SQL Server
 

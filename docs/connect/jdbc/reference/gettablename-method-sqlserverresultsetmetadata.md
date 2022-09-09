@@ -1,21 +1,15 @@
 ---
+title: "getTableName Method (SQLServerResultSetMetaData)"
 description: "getTableName Method (SQLServerResultSetMetaData)"
-title: "getTableName Method (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSetMetaData.getTableName"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSetMetaData.getTableName"
+apitype: "Assembly"
 ---
 # getTableName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

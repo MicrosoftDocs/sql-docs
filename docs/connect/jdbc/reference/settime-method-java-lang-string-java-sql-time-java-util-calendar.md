@@ -1,21 +1,15 @@
 ---
+title: "setTime Method to time and calendar values"
 description: "setTime Method (java.lang.String, java.sql.Time, java.util.Calendar)"
-title: "setTime Method to time and calendar values | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time, java.lang.Calendar))"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time, java.lang.Calendar))"
+apitype: "Assembly"
 ---
 # setTime Method (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

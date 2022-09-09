@@ -1,21 +1,15 @@
 ---
+title: "getFloat Method (int) (SQLServerResultSet)"
 description: "getFloat Method (int) (SQLServerResultSet)"
-title: "getFloat Method (int) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getFloat (int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getFloat (int)"
+apitype: "Assembly"
 ---
 # getFloat Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

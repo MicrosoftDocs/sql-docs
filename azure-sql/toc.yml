@@ -141,7 +141,7 @@
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
-        href: /azure/azure-monitor/insights/azure-sql?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-monitor/insights/azure-sql?toc=/azure/azure-sql/toc.json
       - name: SQL Insights (preview)
         items:
         - name: Overview
@@ -260,13 +260,13 @@
       - name: Use Spark Connector
         href: database/spark-connector.md
       - name: Use ASP.NET App Service
-        href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?toc=/azure/azure-sql/toc.json
       - name: Use Azure Functions
-        href: /azure/azure-functions/functions-scenario-database-table-cleanup?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-functions/functions-scenario-database-table-cleanup?toc=/azure/azure-sql/toc.json
       - name: Use Azure Logic Apps
-        href: /azure/connectors/connectors-create-api-sqlazure?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
-        href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
       - name: Server-side CLR/.NET integration
         href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
       - name: Java
@@ -1042,25 +1042,25 @@
         - name: Python
           items:
           - name: Run Python scripts
-            href: /sql/machine-learning/tutorials/quickstart-python-create-script?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-create-script?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Data structures and objects
-            href: /sql/machine-learning/tutorials/quickstart-python-data-structures?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-data-structures?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Python functions
-            href: /sql/machine-learning/tutorials/quickstart-python-functions?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-functions?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Train and score a model
-            href: /sql/machine-learning/tutorials/quickstart-python-train-score-model?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-train-score-model?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Deploy ONNX models
-            href: /azure/azure-sql-edge/deploy-onnx?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
         - name: R
           items:
           - name: Run R scripts
-            href: /sql/machine-learning/tutorials/quickstart-r-create-script?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-create-script?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Data types and objects
-            href: /sql/machine-learning/tutorials/quickstart-r-data-types-and-objects?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-data-types-and-objects?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: R functions
-            href: /sql/machine-learning/tutorials/quickstart-r-functions?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-functions?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Train and score a model
-            href: /sql/machine-learning/tutorials/quickstart-r-train-score-model?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-train-score-model?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
       - name: Tutorials
         items:
         - name: Python

@@ -28,6 +28,9 @@ A set of supported time zones is inherited from the underlying operating system 
 
 A list with names of the supported time zones is exposed through the [sys.time_zone_info](/sql/relational-databases/system-catalog-views/sys-time-zone-info-transact-sql) system view.
 
+> [!NOTE]
+> On August 8, 2022, the Chilean government made an official announcement about a Daylight-Saving Time (DST) [time zone change](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290). Starting at 12:00 a.m. Saturday, September 10, 2022, until 12:00 a.m. Saturday, April 1, 2023, the official time will advance 60 minutes. The change affects the following three time zones: **Pacific SA Standard Time**, **Easter Island Standard Time** and **Magallanes Standard Time**. Azure SQL Managed Instances using affected time zones will not reflect the changes [until Microsoft releases an OS update](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290) to support this and Azure SQL Managed Instance service absorbs the update on the OS level. If you need to alter affected time zones for your managed instances, please be aware of the [limitations](#limitations) and follow the guidance from the documentation.
+
 ## Set a time zone
 
 A time zone of a managed instance can be set during instance creation only. The default time zone is UTC.
